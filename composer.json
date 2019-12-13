@@ -1,0 +1,25 @@
+{
+    "name": "tencentcloud/tencentcloud-sdk-php-intl-en",
+    "description": "TencentCloudApi php sdk",
+    "type": "library",
+    "homepage": "https://github.com/TencentCloud/tencentcloud-sdk-php-intl-en",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "coolli",
+            "email": "tencentcloudapi@tencent.com",
+            "homepage": "https://intl.cloud.tencent.com/document/sdk/PHP",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.33",
+        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/psr7": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "TencentCloud\\": "./src/TencentCloud"
+        }
+    }
+}

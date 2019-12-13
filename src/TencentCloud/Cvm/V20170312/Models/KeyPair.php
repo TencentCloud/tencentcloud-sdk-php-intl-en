@@ -1,0 +1,137 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cvm\V20170312\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getKeyId() 获取Key pair `ID`, the unique identifier of a key pair.
+ * @method void setKeyId(string $KeyId) 设置Key pair `ID`, the unique identifier of a key pair.
+ * @method string getKeyName() 获取Key pair name.
+ * @method void setKeyName(string $KeyName) 设置Key pair name.
+ * @method integer getProjectId() 获取`ID` of the project to which a key pair belongs.
+ * @method void setProjectId(integer $ProjectId) 设置`ID` of the project to which a key pair belongs.
+ * @method string getDescription() 获取Key pair description.
+ * @method void setDescription(string $Description) 设置Key pair description.
+ * @method string getPublicKey() 获取Content of public key in a key pair.
+ * @method void setPublicKey(string $PublicKey) 设置Content of public key in a key pair.
+ * @method string getPrivateKey() 获取Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+ * @method void setPrivateKey(string $PrivateKey) 设置Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+ * @method array getAssociatedInstanceIds() 获取`ID` list of instances associated with a key.
+ * @method void setAssociatedInstanceIds(array $AssociatedInstanceIds) 设置`ID` list of instances associated with a key.
+ * @method string getCreatedTime() 获取Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method void setCreatedTime(string $CreatedTime) 设置Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ */
+
+/**
+ *Describes key pair information.
+ */
+class KeyPair extends AbstractModel
+{
+    /**
+     * @var string Key pair `ID`, the unique identifier of a key pair.
+     */
+    public $KeyId;
+
+    /**
+     * @var string Key pair name.
+     */
+    public $KeyName;
+
+    /**
+     * @var integer `ID` of the project to which a key pair belongs.
+     */
+    public $ProjectId;
+
+    /**
+     * @var string Key pair description.
+     */
+    public $Description;
+
+    /**
+     * @var string Content of public key in a key pair.
+     */
+    public $PublicKey;
+
+    /**
+     * @var string Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+     */
+    public $PrivateKey;
+
+    /**
+     * @var array `ID` list of instances associated with a key.
+     */
+    public $AssociatedInstanceIds;
+
+    /**
+     * @var string Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     */
+    public $CreatedTime;
+    /**
+     * @param string $KeyId Key pair `ID`, the unique identifier of a key pair.
+     * @param string $KeyName Key pair name.
+     * @param integer $ProjectId `ID` of the project to which a key pair belongs.
+     * @param string $Description Key pair description.
+     * @param string $PublicKey Content of public key in a key pair.
+     * @param string $PrivateKey Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+     * @param array $AssociatedInstanceIds `ID` list of instances associated with a key.
+     * @param string $CreatedTime Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("KeyName",$param) and $param["KeyName"] !== null) {
+            $this->KeyName = $param["KeyName"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("PublicKey",$param) and $param["PublicKey"] !== null) {
+            $this->PublicKey = $param["PublicKey"];
+        }
+
+        if (array_key_exists("PrivateKey",$param) and $param["PrivateKey"] !== null) {
+            $this->PrivateKey = $param["PrivateKey"];
+        }
+
+        if (array_key_exists("AssociatedInstanceIds",$param) and $param["AssociatedInstanceIds"] !== null) {
+            $this->AssociatedInstanceIds = $param["AssociatedInstanceIds"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
+        }
+    }
+}

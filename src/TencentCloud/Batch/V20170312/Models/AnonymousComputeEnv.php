@@ -1,0 +1,96 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Batch\V20170312\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getEnvType() 获取Compute environment management type
+ * @method void setEnvType(string $EnvType) 设置Compute environment management type
+ * @method EnvData getEnvData() 获取Compute environment's specific parameters
+ * @method void setEnvData(EnvData $EnvData) 设置Compute environment's specific parameters
+ * @method array getMountDataDisks() 获取Data disk mounting option
+ * @method void setMountDataDisks(array $MountDataDisks) 设置Data disk mounting option
+ * @method AgentRunningMode getAgentRunningMode() 获取Agent running mode; applicable for Windows
+ * @method void setAgentRunningMode(AgentRunningMode $AgentRunningMode) 设置Agent running mode; applicable for Windows
+ */
+
+/**
+ *Compute environment
+ */
+class AnonymousComputeEnv extends AbstractModel
+{
+    /**
+     * @var string Compute environment management type
+     */
+    public $EnvType;
+
+    /**
+     * @var EnvData Compute environment's specific parameters
+     */
+    public $EnvData;
+
+    /**
+     * @var array Data disk mounting option
+     */
+    public $MountDataDisks;
+
+    /**
+     * @var AgentRunningMode Agent running mode; applicable for Windows
+     */
+    public $AgentRunningMode;
+    /**
+     * @param string $EnvType Compute environment management type
+     * @param EnvData $EnvData Compute environment's specific parameters
+     * @param array $MountDataDisks Data disk mounting option
+     * @param AgentRunningMode $AgentRunningMode Agent running mode; applicable for Windows
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("EnvData",$param) and $param["EnvData"] !== null) {
+            $this->EnvData = new EnvData();
+            $this->EnvData->deserialize($param["EnvData"]);
+        }
+
+        if (array_key_exists("MountDataDisks",$param) and $param["MountDataDisks"] !== null) {
+            $this->MountDataDisks = [];
+            foreach ($param["MountDataDisks"] as $key => $value){
+                $obj = new MountDataDisk();
+                $obj->deserialize($value);
+                array_push($this->MountDataDisks, $obj);
+            }
+        }
+
+        if (array_key_exists("AgentRunningMode",$param) and $param["AgentRunningMode"] !== null) {
+            $this->AgentRunningMode = new AgentRunningMode();
+            $this->AgentRunningMode->deserialize($param["AgentRunningMode"]);
+        }
+    }
+}

@@ -1,0 +1,257 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Clb\V20180317\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getListenerId() 获取CLB listener ID
+ * @method void setListenerId(string $ListenerId) 设置CLB listener ID
+ * @method integer getListenerPort() 获取CLB listener port
+ * @method void setListenerPort(integer $ListenerPort) 设置CLB listener port
+ * @method integer getInstancePort() 获取Backend forwarding port of a listener
+ * @method void setInstancePort(integer $InstancePort) 设置Backend forwarding port of a listener
+ * @method string getListenerName() 获取Listener name
+ * @method void setListenerName(string $ListenerName) 设置Listener name
+ * @method string getProtocol() 获取Listener protocol type
+ * @method void setProtocol(string $Protocol) 设置Listener protocol type
+ * @method integer getSessionExpire() 获取Session persistence time
+ * @method void setSessionExpire(integer $SessionExpire) 设置Session persistence time
+ * @method integer getHealthSwitch() 获取Whether health check is enabled. 1: enabled; 0: disabled.
+ * @method void setHealthSwitch(integer $HealthSwitch) 设置Whether health check is enabled. 1: enabled; 0: disabled.
+ * @method integer getTimeOut() 获取Response timeout period
+ * @method void setTimeOut(integer $TimeOut) 设置Response timeout period
+ * @method integer getIntervalTime() 获取Check interval
+ * @method void setIntervalTime(integer $IntervalTime) 设置Check interval
+ * @method integer getHealthNum() 获取Health threshold
+ * @method void setHealthNum(integer $HealthNum) 设置Health threshold
+ * @method integer getUnhealthNum() 获取Unhealthy threshold
+ * @method void setUnhealthNum(integer $UnhealthNum) 设置Unhealthy threshold
+ * @method string getHttpHash() 获取A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+ * @method void setHttpHash(string $HttpHash) 设置A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+ * @method integer getHttpCode() 获取Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+ * @method void setHttpCode(integer $HttpCode) 设置Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+ * @method string getHttpCheckPath() 获取Health check path for HTTP and HTTPS listeners of a public network classic CLB
+ * @method void setHttpCheckPath(string $HttpCheckPath) 设置Health check path for HTTP and HTTPS listeners of a public network classic CLB
+ * @method string getSSLMode() 获取Authentication method for an HTTPS listener of a public network classic CLB
+ * @method void setSSLMode(string $SSLMode) 设置Authentication method for an HTTPS listener of a public network classic CLB
+ * @method string getCertId() 获取Server certificate ID for an HTTPS listener of a public network classic CLB
+ * @method void setCertId(string $CertId) 设置Server certificate ID for an HTTPS listener of a public network classic CLB
+ * @method string getCertCaId() 获取Client certificate ID for an HTTPS listener of a public network classic CLB
+ * @method void setCertCaId(string $CertCaId) 设置Client certificate ID for an HTTPS listener of a public network classic CLB
+ * @method integer getStatus() 获取Listener status. Value range: 0 (creating), 1 (running)
+ * @method void setStatus(integer $Status) 设置Listener status. Value range: 0 (creating), 1 (running)
+ */
+
+/**
+ *Classic CLB listener information
+ */
+class ClassicalListener extends AbstractModel
+{
+    /**
+     * @var string CLB listener ID
+     */
+    public $ListenerId;
+
+    /**
+     * @var integer CLB listener port
+     */
+    public $ListenerPort;
+
+    /**
+     * @var integer Backend forwarding port of a listener
+     */
+    public $InstancePort;
+
+    /**
+     * @var string Listener name
+     */
+    public $ListenerName;
+
+    /**
+     * @var string Listener protocol type
+     */
+    public $Protocol;
+
+    /**
+     * @var integer Session persistence time
+     */
+    public $SessionExpire;
+
+    /**
+     * @var integer Whether health check is enabled. 1: enabled; 0: disabled.
+     */
+    public $HealthSwitch;
+
+    /**
+     * @var integer Response timeout period
+     */
+    public $TimeOut;
+
+    /**
+     * @var integer Check interval
+     */
+    public $IntervalTime;
+
+    /**
+     * @var integer Health threshold
+     */
+    public $HealthNum;
+
+    /**
+     * @var integer Unhealthy threshold
+     */
+    public $UnhealthNum;
+
+    /**
+     * @var string A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+     */
+    public $HttpHash;
+
+    /**
+     * @var integer Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+     */
+    public $HttpCode;
+
+    /**
+     * @var string Health check path for HTTP and HTTPS listeners of a public network classic CLB
+     */
+    public $HttpCheckPath;
+
+    /**
+     * @var string Authentication method for an HTTPS listener of a public network classic CLB
+     */
+    public $SSLMode;
+
+    /**
+     * @var string Server certificate ID for an HTTPS listener of a public network classic CLB
+     */
+    public $CertId;
+
+    /**
+     * @var string Client certificate ID for an HTTPS listener of a public network classic CLB
+     */
+    public $CertCaId;
+
+    /**
+     * @var integer Listener status. Value range: 0 (creating), 1 (running)
+     */
+    public $Status;
+    /**
+     * @param string $ListenerId CLB listener ID
+     * @param integer $ListenerPort CLB listener port
+     * @param integer $InstancePort Backend forwarding port of a listener
+     * @param string $ListenerName Listener name
+     * @param string $Protocol Listener protocol type
+     * @param integer $SessionExpire Session persistence time
+     * @param integer $HealthSwitch Whether health check is enabled. 1: enabled; 0: disabled.
+     * @param integer $TimeOut Response timeout period
+     * @param integer $IntervalTime Check interval
+     * @param integer $HealthNum Health threshold
+     * @param integer $UnhealthNum Unhealthy threshold
+     * @param string $HttpHash A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+     * @param integer $HttpCode Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+     * @param string $HttpCheckPath Health check path for HTTP and HTTPS listeners of a public network classic CLB
+     * @param string $SSLMode Authentication method for an HTTPS listener of a public network classic CLB
+     * @param string $CertId Server certificate ID for an HTTPS listener of a public network classic CLB
+     * @param string $CertCaId Client certificate ID for an HTTPS listener of a public network classic CLB
+     * @param integer $Status Listener status. Value range: 0 (creating), 1 (running)
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
+            $this->ListenerId = $param["ListenerId"];
+        }
+
+        if (array_key_exists("ListenerPort",$param) and $param["ListenerPort"] !== null) {
+            $this->ListenerPort = $param["ListenerPort"];
+        }
+
+        if (array_key_exists("InstancePort",$param) and $param["InstancePort"] !== null) {
+            $this->InstancePort = $param["InstancePort"];
+        }
+
+        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
+            $this->ListenerName = $param["ListenerName"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("SessionExpire",$param) and $param["SessionExpire"] !== null) {
+            $this->SessionExpire = $param["SessionExpire"];
+        }
+
+        if (array_key_exists("HealthSwitch",$param) and $param["HealthSwitch"] !== null) {
+            $this->HealthSwitch = $param["HealthSwitch"];
+        }
+
+        if (array_key_exists("TimeOut",$param) and $param["TimeOut"] !== null) {
+            $this->TimeOut = $param["TimeOut"];
+        }
+
+        if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
+            $this->IntervalTime = $param["IntervalTime"];
+        }
+
+        if (array_key_exists("HealthNum",$param) and $param["HealthNum"] !== null) {
+            $this->HealthNum = $param["HealthNum"];
+        }
+
+        if (array_key_exists("UnhealthNum",$param) and $param["UnhealthNum"] !== null) {
+            $this->UnhealthNum = $param["UnhealthNum"];
+        }
+
+        if (array_key_exists("HttpHash",$param) and $param["HttpHash"] !== null) {
+            $this->HttpHash = $param["HttpHash"];
+        }
+
+        if (array_key_exists("HttpCode",$param) and $param["HttpCode"] !== null) {
+            $this->HttpCode = $param["HttpCode"];
+        }
+
+        if (array_key_exists("HttpCheckPath",$param) and $param["HttpCheckPath"] !== null) {
+            $this->HttpCheckPath = $param["HttpCheckPath"];
+        }
+
+        if (array_key_exists("SSLMode",$param) and $param["SSLMode"] !== null) {
+            $this->SSLMode = $param["SSLMode"];
+        }
+
+        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
+            $this->CertId = $param["CertId"];
+        }
+
+        if (array_key_exists("CertCaId",$param) and $param["CertCaId"] !== null) {
+            $this->CertCaId = $param["CertCaId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+    }
+}
