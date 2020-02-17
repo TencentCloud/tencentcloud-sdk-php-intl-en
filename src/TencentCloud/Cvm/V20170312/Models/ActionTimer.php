@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Externals getExternals() 获取Additional data
- * @method void setExternals(Externals $Externals) 设置Additional data
- * @method string getTimerAction() 获取Timer name. Currently `TerminateInstances` is the only supported value.
- * @method void setTimerAction(string $TimerAction) 设置Timer name. Currently `TerminateInstances` is the only supported value.
- * @method string getActionTime() 获取Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
- * @method void setActionTime(string $ActionTime) 设置Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+ * @method Externals getExternals() Obtain Additional data
+ * @method void setExternals(Externals $Externals) Set Additional data
+ * @method string getTimerAction() Obtain Timer name. Currently `TerminateInstances` is the only supported value.
+ * @method void setTimerAction(string $TimerAction) Set Timer name. Currently `TerminateInstances` is the only supported value.
+ * @method string getActionTime() Obtain Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+ * @method void setActionTime(string $ActionTime) Set Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
  */
 
 /**
@@ -55,7 +55,7 @@ class ActionTimer extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

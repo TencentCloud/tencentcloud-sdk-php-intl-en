@@ -18,34 +18,34 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取Policy ID
- * @method void setPolicyId(integer $PolicyId) 设置Policy ID
- * @method string getPolicyName() 获取Policy name
+ * @method integer getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
+ * @method string getPolicyName() Obtain Policy name
 Note: This field may return null, indicating that no valid value was found.
- * @method void setPolicyName(string $PolicyName) 设置Policy name
+ * @method void setPolicyName(string $PolicyName) Set Policy name
 Note: This field may return null, indicating that no valid value was found.
- * @method string getAddTime() 获取Time created
+ * @method string getAddTime() Obtain Time created
 Note: This field may return null, indicating that no valid value was found.
- * @method void setAddTime(string $AddTime) 设置Time created
+ * @method void setAddTime(string $AddTime) Set Time created
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getCreateMode() 获取How the policy was created: 1: Via console; 2: Via syntax
+ * @method integer getCreateMode() Obtain How the policy was created: 1: Via console; 2: Via syntax
 Note: This field may return null, indicating that no valid value was found.
- * @method void setCreateMode(integer $CreateMode) 设置How the policy was created: 1: Via console; 2: Via syntax
+ * @method void setCreateMode(integer $CreateMode) Set How the policy was created: 1: Via console; 2: Via syntax
 Note: This field may return null, indicating that no valid value was found.
- * @method string getPolicyType() 获取Valid values: `user` and `QCS`
+ * @method string getPolicyType() Obtain Valid values: `user` and `QCS`
 Note: This field may return null, indicating that no valid value was found.
- * @method void setPolicyType(string $PolicyType) 设置Valid values: `user` and `QCS`
+ * @method void setPolicyType(string $PolicyType) Set Valid values: `user` and `QCS`
 Note: This field may return null, indicating that no valid value was found.
- * @method string getRemark() 获取
- * @method void setRemark(string $Remark) 设置
- * @method string getOperateOwnerUin() 获取
- * @method void setOperateOwnerUin(string $OperateOwnerUin) 设置
- * @method string getOperateUin() 获取
- * @method void setOperateUin(string $OperateUin) 设置
- * @method integer getOperateUinType() 获取
- * @method void setOperateUinType(integer $OperateUinType) 设置
- * @method integer getDeactived() 获取
- * @method void setDeactived(integer $Deactived) 设置
+ * @method string getRemark() Obtain 
+ * @method void setRemark(string $Remark) Set 
+ * @method string getOperateOwnerUin() Obtain 
+ * @method void setOperateOwnerUin(string $OperateOwnerUin) Set 
+ * @method string getOperateUin() Obtain 
+ * @method void setOperateUin(string $OperateUin) Set 
+ * @method integer getOperateUinType() Obtain 
+ * @method void setOperateUinType(integer $OperateUinType) Set 
+ * @method integer getDeactived() Obtain 
+ * @method void setDeactived(integer $Deactived) Set 
  */
 
 /**
@@ -127,7 +127,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

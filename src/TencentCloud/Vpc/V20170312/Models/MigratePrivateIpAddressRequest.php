@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSourceNetworkInterfaceId() 获取当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method void setSourceNetworkInterfaceId(string $SourceNetworkInterfaceId) 设置当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method string getDestinationNetworkInterfaceId() 获取待迁移的目的弹性网卡实例ID。
- * @method void setDestinationNetworkInterfaceId(string $DestinationNetworkInterfaceId) 设置待迁移的目的弹性网卡实例ID。
- * @method string getPrivateIpAddress() 获取迁移的内网IP地址，例如：10.0.0.6。
- * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置迁移的内网IP地址，例如：10.0.0.6。
+ * @method string getSourceNetworkInterfaceId() Obtain ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
+ * @method void setSourceNetworkInterfaceId(string $SourceNetworkInterfaceId) Set ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
+ * @method string getDestinationNetworkInterfaceId() Obtain ID of the destination ENI instance to be migrated.
+ * @method void setDestinationNetworkInterfaceId(string $DestinationNetworkInterfaceId) Set ID of the destination ENI instance to be migrated.
+ * @method string getPrivateIpAddress() Obtain The private IP to be migrated, such as 10.0.0.6.
+ * @method void setPrivateIpAddress(string $PrivateIpAddress) Set The private IP to be migrated, such as 10.0.0.6.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class MigratePrivateIpAddressRequest extends AbstractModel
 {
     /**
-     * @var string 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
+     * @var string ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
      */
     public $SourceNetworkInterfaceId;
 
     /**
-     * @var string 待迁移的目的弹性网卡实例ID。
+     * @var string ID of the destination ENI instance to be migrated.
      */
     public $DestinationNetworkInterfaceId;
 
     /**
-     * @var string 迁移的内网IP地址，例如：10.0.0.6。
+     * @var string The private IP to be migrated, such as 10.0.0.6.
      */
     public $PrivateIpAddress;
     /**
-     * @param string $SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param string $DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。
-     * @param string $PrivateIpAddress 迁移的内网IP地址，例如：10.0.0.6。
+     * @param string $SourceNetworkInterfaceId ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
+     * @param string $DestinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
+     * @param string $PrivateIpAddress The private IP to be migrated, such as 10.0.0.6.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

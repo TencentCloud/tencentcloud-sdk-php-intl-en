@@ -18,8 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceTypes() 获取List of CVM instance types
- * @method void setInstanceTypes(array $InstanceTypes) 设置List of CVM instance types
+ * @method array getInstanceTypes() Obtain List of CVM instance types
+ * @method void setInstanceTypes(array $InstanceTypes) Set List of CVM instance types
  */
 
 /**
@@ -39,7 +39,7 @@ class ComputeEnvData extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

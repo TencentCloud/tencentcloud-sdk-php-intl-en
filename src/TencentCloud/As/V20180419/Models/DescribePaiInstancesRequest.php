@@ -18,14 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取Queries by PAI instance ID.
- * @method void setInstanceIds(array $InstanceIds) 设置Queries by PAI instance ID.
- * @method array getFilters() 获取Filter.
- * @method void setFilters(array $Filters) 设置Filter.
- * @method integer getLimit() 获取Number of returned results. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) 设置Number of returned results. Default value: 20. Maximum value: 100.
- * @method integer getOffset() 获取Offset. Default value: 0.
- * @method void setOffset(integer $Offset) 设置Offset. Default value: 0.
+ * @method array getInstanceIds() Obtain Queries by PAI instance ID.
+ * @method void setInstanceIds(array $InstanceIds) Set Queries by PAI instance ID.
+ * @method array getFilters() Obtain Filter.
+ * @method void setFilters(array $Filters) Set Filter.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribePaiInstancesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

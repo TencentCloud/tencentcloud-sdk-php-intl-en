@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDiskId() 获取ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method void setDiskId(string $DiskId) 设置ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method integer getDiskSize() 获取Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
- * @method void setDiskSize(integer $DiskSize) 设置Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+ * @method string getDiskId() Obtain ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method void setDiskId(string $DiskId) Set ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method integer getDiskSize() Obtain Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+ * @method void setDiskSize(integer $DiskSize) Set Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
  */
 
 /**
@@ -47,7 +47,7 @@ class ResizeDiskRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,15 +18,15 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInternetChargeType() 获取TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
+ * @method string getInternetChargeType() Obtain TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
- * @method void setInternetChargeType(string $InternetChargeType) 设置TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
+ * @method void setInternetChargeType(string $InternetChargeType) Set TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
- * @method integer getInternetMaxBandwidthOut() 获取Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
- * @method string getBandwidthpkgSubType() 获取Bandwidth package type, such as SINGLEISP
+ * @method integer getInternetMaxBandwidthOut() Obtain Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
+ * @method string getBandwidthpkgSubType() Obtain Bandwidth package type, such as SINGLEISP
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBandwidthpkgSubType(string $BandwidthpkgSubType) 设置Bandwidth package type, such as SINGLEISP
+ * @method void setBandwidthpkgSubType(string $BandwidthpkgSubType) Set Bandwidth package type, such as SINGLEISP
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

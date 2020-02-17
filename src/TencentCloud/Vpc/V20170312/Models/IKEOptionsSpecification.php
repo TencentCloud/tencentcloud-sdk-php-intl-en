@@ -18,116 +18,116 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
- * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
- * @method string getPropoAuthenAlgorithm() 获取认证算法：可选值：'MD5', 'SHA1'，默认为MD5
- * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) 设置认证算法：可选值：'MD5', 'SHA1'，默认为MD5
- * @method string getExchangeMode() 获取协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
- * @method void setExchangeMode(string $ExchangeMode) 设置协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
- * @method string getLocalIdentity() 获取本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
- * @method void setLocalIdentity(string $LocalIdentity) 设置本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
- * @method string getRemoteIdentity() 获取对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
- * @method void setRemoteIdentity(string $RemoteIdentity) 设置对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
- * @method string getLocalAddress() 获取本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
- * @method void setLocalAddress(string $LocalAddress) 设置本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
- * @method string getRemoteAddress() 获取对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
- * @method void setRemoteAddress(string $RemoteAddress) 设置对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
- * @method string getLocalFqdnName() 获取本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
- * @method void setLocalFqdnName(string $LocalFqdnName) 设置本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
- * @method string getRemoteFqdnName() 获取对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
- * @method void setRemoteFqdnName(string $RemoteFqdnName) 设置对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
- * @method string getDhGroupName() 获取DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
- * @method void setDhGroupName(string $DhGroupName) 设置DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
- * @method integer getIKESaLifetimeSeconds() 获取IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
- * @method void setIKESaLifetimeSeconds(integer $IKESaLifetimeSeconds) 设置IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
- * @method string getIKEVersion() 获取IKE版本
- * @method void setIKEVersion(string $IKEVersion) 设置IKE版本
+ * @method string getPropoEncryAlgorithm() Obtain Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+ * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) Set Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+ * @method string getPropoAuthenAlgorithm() Obtain Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+ * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) Set Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+ * @method string getExchangeMode() Obtain Negotiation mode. Available values: 'AGGRESSIVE' and 'MAIN'. Default is MAIN.
+ * @method void setExchangeMode(string $ExchangeMode) Set Negotiation mode. Available values: 'AGGRESSIVE' and 'MAIN'. Default is MAIN.
+ * @method string getLocalIdentity() Obtain Type of local identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
+ * @method void setLocalIdentity(string $LocalIdentity) Set Type of local identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
+ * @method string getRemoteIdentity() Obtain Type of remote identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
+ * @method void setRemoteIdentity(string $RemoteIdentity) Set Type of remote identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
+ * @method string getLocalAddress() Obtain Local identity. When ADDRESS is selected for LocalIdentity, LocalAddress is required. The default LocalAddress is the public IP of the VPN gateway.
+ * @method void setLocalAddress(string $LocalAddress) Set Local identity. When ADDRESS is selected for LocalIdentity, LocalAddress is required. The default LocalAddress is the public IP of the VPN gateway.
+ * @method string getRemoteAddress() Obtain Remote identity. When ADDRESS is selected for RemoteIdentity, RemoteAddress is required.
+ * @method void setRemoteAddress(string $RemoteAddress) Set Remote identity. When ADDRESS is selected for RemoteIdentity, RemoteAddress is required.
+ * @method string getLocalFqdnName() Obtain Local identity. When FQDN is selected for LocalIdentity, LocalFqdnName is required.
+ * @method void setLocalFqdnName(string $LocalFqdnName) Set Local identity. When FQDN is selected for LocalIdentity, LocalFqdnName is required.
+ * @method string getRemoteFqdnName() Obtain Remote identity. When FQDN is selected for RemoteIdentity, RemoteFqdnName is required.
+ * @method void setRemoteFqdnName(string $RemoteFqdnName) Set Remote identity. When FQDN is selected for RemoteIdentity, RemoteFqdnName is required.
+ * @method string getDhGroupName() Obtain DH group. Specify the DH group used for exchanging the key via IKE. Available values: 'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', and 'GROUP24'.
+ * @method void setDhGroupName(string $DhGroupName) Set DH group. Specify the DH group used for exchanging the key via IKE. Available values: 'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', and 'GROUP24'.
+ * @method integer getIKESaLifetimeSeconds() Obtain IKE SA lifetime (in sec). Value range: 60-604800
+ * @method void setIKESaLifetimeSeconds(integer $IKESaLifetimeSeconds) Set IKE SA lifetime (in sec). Value range: 60-604800
+ * @method string getIKEVersion() Obtain IKE version
+ * @method void setIKEVersion(string $IKEVersion) Set IKE version
  */
 
 /**
- *IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
+ *Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
  */
 class IKEOptionsSpecification extends AbstractModel
 {
     /**
-     * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+     * @var string Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
      */
     public $PropoEncryAlgorithm;
 
     /**
-     * @var string 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+     * @var string Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
      */
     public $PropoAuthenAlgorithm;
 
     /**
-     * @var string 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+     * @var string Negotiation mode. Available values: 'AGGRESSIVE' and 'MAIN'. Default is MAIN.
      */
     public $ExchangeMode;
 
     /**
-     * @var string 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+     * @var string Type of local identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
      */
     public $LocalIdentity;
 
     /**
-     * @var string 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+     * @var string Type of remote identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
      */
     public $RemoteIdentity;
 
     /**
-     * @var string 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+     * @var string Local identity. When ADDRESS is selected for LocalIdentity, LocalAddress is required. The default LocalAddress is the public IP of the VPN gateway.
      */
     public $LocalAddress;
 
     /**
-     * @var string 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+     * @var string Remote identity. When ADDRESS is selected for RemoteIdentity, RemoteAddress is required.
      */
     public $RemoteAddress;
 
     /**
-     * @var string 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+     * @var string Local identity. When FQDN is selected for LocalIdentity, LocalFqdnName is required.
      */
     public $LocalFqdnName;
 
     /**
-     * @var string 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+     * @var string Remote identity. When FQDN is selected for RemoteIdentity, RemoteFqdnName is required.
      */
     public $RemoteFqdnName;
 
     /**
-     * @var string DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+     * @var string DH group. Specify the DH group used for exchanging the key via IKE. Available values: 'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', and 'GROUP24'.
      */
     public $DhGroupName;
 
     /**
-     * @var integer IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+     * @var integer IKE SA lifetime (in sec). Value range: 60-604800
      */
     public $IKESaLifetimeSeconds;
 
     /**
-     * @var string IKE版本
+     * @var string IKE version
      */
     public $IKEVersion;
     /**
-     * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
-     * @param string $PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
-     * @param string $ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
-     * @param string $LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
-     * @param string $RemoteIdentity 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
-     * @param string $LocalAddress 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
-     * @param string $RemoteAddress 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
-     * @param string $LocalFqdnName 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
-     * @param string $RemoteFqdnName 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
-     * @param string $DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
-     * @param integer $IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
-     * @param string $IKEVersion IKE版本
+     * @param string $PropoEncryAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+     * @param string $PropoAuthenAlgorithm Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+     * @param string $ExchangeMode Negotiation mode. Available values: 'AGGRESSIVE' and 'MAIN'. Default is MAIN.
+     * @param string $LocalIdentity Type of local identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
+     * @param string $RemoteIdentity Type of remote identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
+     * @param string $LocalAddress Local identity. When ADDRESS is selected for LocalIdentity, LocalAddress is required. The default LocalAddress is the public IP of the VPN gateway.
+     * @param string $RemoteAddress Remote identity. When ADDRESS is selected for RemoteIdentity, RemoteAddress is required.
+     * @param string $LocalFqdnName Local identity. When FQDN is selected for LocalIdentity, LocalFqdnName is required.
+     * @param string $RemoteFqdnName Remote identity. When FQDN is selected for RemoteIdentity, RemoteFqdnName is required.
+     * @param string $DhGroupName DH group. Specify the DH group used for exchanging the key via IKE. Available values: 'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', and 'GROUP24'.
+     * @param integer $IKESaLifetimeSeconds IKE SA lifetime (in sec). Value range: 60-604800
+     * @param string $IKEVersion IKE version
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

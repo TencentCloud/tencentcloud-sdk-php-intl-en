@@ -18,28 +18,28 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomainName() 获取PAI instance domain name.
- * @method void setDomainName(string $DomainName) 设置PAI instance domain name.
- * @method InternetAccessible getInternetAccessible() 获取Information of the public network bandwidth configuration.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置Information of the public network bandwidth configuration.
- * @method string getInitScript() 获取Base64-encoded string of the launch script.
- * @method void setInitScript(string $InitScript) 设置Base64-encoded string of the launch script.
- * @method array getZones() 获取List of availability zones.
- * @method void setZones(array $Zones) 设置List of availability zones.
- * @method string getVpcId() 获取VpcId.
- * @method void setVpcId(string $VpcId) 设置VpcId.
- * @method array getSubnetIds() 获取List of subnets.
- * @method void setSubnetIds(array $SubnetIds) 设置List of subnets.
- * @method string getInstanceName() 获取Instance display name.
- * @method void setInstanceName(string $InstanceName) 设置Instance display name.
- * @method array getInstanceTypes() 获取List of instance models.
- * @method void setInstanceTypes(array $InstanceTypes) 设置List of instance models.
- * @method LoginSettings getLoginSettings() 获取Instance login settings.
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置Instance login settings.
- * @method string getInstanceChargeType() 获取Instance billing type.
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置Instance billing type.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取Relevant parameter settings for the prepaid mode (i.e., monthly subscription). This parameter can specify the purchased usage period, whether to set automatic renewal, and other attributes of the instance purchased on a prepaid basis. If the billing method of the specified instance is prepaid, this parameter is required.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置Relevant parameter settings for the prepaid mode (i.e., monthly subscription). This parameter can specify the purchased usage period, whether to set automatic renewal, and other attributes of the instance purchased on a prepaid basis. If the billing method of the specified instance is prepaid, this parameter is required.
+ * @method string getDomainName() Obtain PAI instance domain name.
+ * @method void setDomainName(string $DomainName) Set PAI instance domain name.
+ * @method InternetAccessible getInternetAccessible() Obtain Information of the public network bandwidth configuration.
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Information of the public network bandwidth configuration.
+ * @method string getInitScript() Obtain Base64-encoded string of the launch script.
+ * @method void setInitScript(string $InitScript) Set Base64-encoded string of the launch script.
+ * @method array getZones() Obtain List of availability zones.
+ * @method void setZones(array $Zones) Set List of availability zones.
+ * @method string getVpcId() Obtain VpcId.
+ * @method void setVpcId(string $VpcId) Set VpcId.
+ * @method array getSubnetIds() Obtain List of subnets.
+ * @method void setSubnetIds(array $SubnetIds) Set List of subnets.
+ * @method string getInstanceName() Obtain Instance display name.
+ * @method void setInstanceName(string $InstanceName) Set Instance display name.
+ * @method array getInstanceTypes() Obtain List of instance models.
+ * @method void setInstanceTypes(array $InstanceTypes) Set List of instance models.
+ * @method LoginSettings getLoginSettings() Obtain Instance login settings.
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings.
+ * @method string getInstanceChargeType() Obtain Instance billing type.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type.
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Relevant parameter settings for the prepaid mode (i.e., monthly subscription). This parameter can specify the purchased usage period, whether to set automatic renewal, and other attributes of the instance purchased on a prepaid basis. If the billing method of the specified instance is prepaid, this parameter is required.
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). This parameter can specify the purchased usage period, whether to set automatic renewal, and other attributes of the instance purchased on a prepaid basis. If the billing method of the specified instance is prepaid, this parameter is required.
  */
 
 /**
@@ -119,7 +119,7 @@ class CreatePaiInstanceRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

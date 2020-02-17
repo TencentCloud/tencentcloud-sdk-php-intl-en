@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getIpv6AddressSet() 获取分配给弹性网卡的`IPv6`地址列表。
- * @method void setIpv6AddressSet(array $Ipv6AddressSet) 设置分配给弹性网卡的`IPv6`地址列表。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getIpv6AddressSet() Obtain The list of `IPv6` addresses assigned to ENIs.
+ * @method void setIpv6AddressSet(array $Ipv6AddressSet) Set The list of `IPv6` addresses assigned to ENIs.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AssignIpv6AddressesResponse extends AbstractModel
 {
     /**
-     * @var array 分配给弹性网卡的`IPv6`地址列表。
+     * @var array The list of `IPv6` addresses assigned to ENIs.
      */
     public $Ipv6AddressSet;
 
@@ -39,7 +39,7 @@ class AssignIpv6AddressesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $Ipv6AddressSet 分配给弹性网卡的`IPv6`地址列表。
+     * @param array $Ipv6AddressSet The list of `IPv6` addresses assigned to ENIs.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class AssignIpv6AddressesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

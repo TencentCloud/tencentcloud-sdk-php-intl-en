@@ -18,8 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
- * @method void setInstanceIds(array $InstanceIds) 设置ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+ * @method array getInstanceIds() Obtain ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+ * @method void setInstanceIds(array $InstanceIds) Set ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeInstancesDiskNumRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

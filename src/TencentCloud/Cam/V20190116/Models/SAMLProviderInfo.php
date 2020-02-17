@@ -18,14 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取SAML identity provider name
- * @method void setName(string $Name) 设置SAML identity provider name
- * @method string getDescription() 获取SAML identity provider description
- * @method void setDescription(string $Description) 设置SAML identity provider description
- * @method string getCreateTime() 获取Time SAML identity provider created
- * @method void setCreateTime(string $CreateTime) 设置Time SAML identity provider created
- * @method string getModifyTime() 获取Time SAML identity provider last modified
- * @method void setModifyTime(string $ModifyTime) 设置Time SAML identity provider last modified
+ * @method string getName() Obtain SAML identity provider name
+ * @method void setName(string $Name) Set SAML identity provider name
+ * @method string getDescription() Obtain SAML identity provider description
+ * @method void setDescription(string $Description) Set SAML identity provider description
+ * @method string getCreateTime() Obtain Time SAML identity provider created
+ * @method void setCreateTime(string $CreateTime) Set Time SAML identity provider created
+ * @method string getModifyTime() Obtain Time SAML identity provider last modified
+ * @method void setModifyTime(string $ModifyTime) Set Time SAML identity provider last modified
  */
 
 /**
@@ -63,7 +63,7 @@ class SAMLProviderInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

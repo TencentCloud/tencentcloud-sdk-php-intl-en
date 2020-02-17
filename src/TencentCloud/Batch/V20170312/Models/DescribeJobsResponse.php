@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getJobSet() 获取List of instances
- * @method void setJobSet(array $JobSet) 设置List of instances
- * @method integer getTotalCount() 获取Number of eligible instances
- * @method void setTotalCount(integer $TotalCount) 设置Number of eligible instances
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getJobSet() Obtain List of instances
+ * @method void setJobSet(array $JobSet) Set List of instances
+ * @method integer getTotalCount() Obtain Number of eligible instances
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeJobsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

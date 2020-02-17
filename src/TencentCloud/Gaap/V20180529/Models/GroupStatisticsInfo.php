@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getGroupId() 获取Connection group ID
- * @method void setGroupId(string $GroupId) 设置Connection group ID
- * @method string getGroupName() 获取Connection group name
- * @method void setGroupName(string $GroupName) 设置Connection group name
- * @method array getProxySet() 获取List of connections of a connection group
- * @method void setProxySet(array $ProxySet) 设置List of connections of a connection group
+ * @method string getGroupId() Obtain Connection group ID
+ * @method void setGroupId(string $GroupId) Set Connection group ID
+ * @method string getGroupName() Obtain Connection group name
+ * @method void setGroupName(string $GroupName) Set Connection group name
+ * @method array getProxySet() Obtain List of connections of a connection group
+ * @method void setProxySet(array $ProxySet) Set List of connections of a connection group
  */
 
 /**
@@ -55,7 +55,7 @@ class GroupStatisticsInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

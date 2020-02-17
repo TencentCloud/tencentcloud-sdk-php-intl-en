@@ -18,14 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStdoutRedirectPath() 获取Standard output redirection path
- * @method void setStdoutRedirectPath(string $StdoutRedirectPath) 设置Standard output redirection path
- * @method string getStderrRedirectPath() 获取Standard error redirection path
- * @method void setStderrRedirectPath(string $StderrRedirectPath) 设置Standard error redirection path
- * @method string getStdoutRedirectFileName() 获取Standard output redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
- * @method void setStdoutRedirectFileName(string $StdoutRedirectFileName) 设置Standard output redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
- * @method string getStderrRedirectFileName() 获取Standard error redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
- * @method void setStderrRedirectFileName(string $StderrRedirectFileName) 设置Standard error redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
+ * @method string getStdoutRedirectPath() Obtain Standard output redirection path
+ * @method void setStdoutRedirectPath(string $StdoutRedirectPath) Set Standard output redirection path
+ * @method string getStderrRedirectPath() Obtain Standard error redirection path
+ * @method void setStderrRedirectPath(string $StderrRedirectPath) Set Standard error redirection path
+ * @method string getStdoutRedirectFileName() Obtain Standard output redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
+ * @method void setStdoutRedirectFileName(string $StdoutRedirectFileName) Set Standard output redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
+ * @method string getStderrRedirectFileName() Obtain Standard error redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
+ * @method void setStderrRedirectFileName(string $StderrRedirectFileName) Set Standard error redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
  */
 
 /**
@@ -64,7 +64,7 @@ class RedirectInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

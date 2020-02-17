@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getId() 获取Id
- * @method void setId(integer $Id) 设置Id
- * @method array getInstanceClusterNode() 获取Node details
- * @method void setInstanceClusterNode(array $InstanceClusterNode) 设置Node details
+ * @method integer getId() Obtain Id
+ * @method void setId(integer $Id) Set Id
+ * @method array getInstanceClusterNode() Obtain Node details
+ * @method void setInstanceClusterNode(array $InstanceClusterNode) Set Node details
  */
 
 /**
@@ -47,7 +47,7 @@ class InstanceNode extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

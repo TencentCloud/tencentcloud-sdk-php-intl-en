@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKeyId() 获取Key pair ID in the format of `skey-xxxxxxxx`. <br><br>You can obtain the available key pair IDs in two ways: <br><li>Log in to the [console](https://console.cloud.tencent.com/cvm/sshkey) to query the key pair IDs. <br><li>Call [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) and look for `KeyId` in the response.
- * @method void setKeyId(string $KeyId) 设置Key pair ID in the format of `skey-xxxxxxxx`. <br><br>You can obtain the available key pair IDs in two ways: <br><li>Log in to the [console](https://console.cloud.tencent.com/cvm/sshkey) to query the key pair IDs. <br><li>Call [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) and look for `KeyId` in the response.
- * @method string getKeyName() 获取New key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
- * @method void setKeyName(string $KeyName) 设置New key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
- * @method string getDescription() 获取New key pair description. You can specify any name you like, but its length cannot exceed 60 characters.
- * @method void setDescription(string $Description) 设置New key pair description. You can specify any name you like, but its length cannot exceed 60 characters.
+ * @method string getKeyId() Obtain Key pair ID in the format of `skey-xxxxxxxx`. <br><br>You can obtain the available key pair IDs in two ways: <br><li>Log in to the [console](https://console.cloud.tencent.com/cvm/sshkey) to query the key pair IDs. <br><li>Call [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) and look for `KeyId` in the response.
+ * @method void setKeyId(string $KeyId) Set Key pair ID in the format of `skey-xxxxxxxx`. <br><br>You can obtain the available key pair IDs in two ways: <br><li>Log in to the [console](https://console.cloud.tencent.com/cvm/sshkey) to query the key pair IDs. <br><li>Call [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) and look for `KeyId` in the response.
+ * @method string getKeyName() Obtain New key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+ * @method void setKeyName(string $KeyName) Set New key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+ * @method string getDescription() Obtain New key pair description. You can specify any name you like, but its length cannot exceed 60 characters.
+ * @method void setDescription(string $Description) Set New key pair description. You can specify any name you like, but its length cannot exceed 60 characters.
  */
 
 /**
@@ -55,7 +55,7 @@ class ModifyKeyPairAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

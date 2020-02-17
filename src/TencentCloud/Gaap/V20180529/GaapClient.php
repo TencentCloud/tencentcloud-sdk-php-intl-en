@@ -32,7 +32,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
 * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) This API (CreateCertificate) is used to create the GAAP certificates and configuration files, including basic authentication configuration files, client CA certificates, server SSL certificates, GAAP SSL certificates, and origin server CA certificates.
 * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) This API (CreateDomain) is used to create the access domain name for the HTTP/HTTPS listener. Clients request the backend data by accessing this domain.
 This API only supports connections of version 3.0.
-* @method Models\CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(Models\CreateDomainErrorPageInfoRequest $req) 定制域名指定错误码的错误响应
+* @method Models\CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(Models\CreateDomainErrorPageInfoRequest $req) This API is used to customize the error code of an error response to the specified domain name.
 * @method Models\CreateHTTPListenerResponse CreateHTTPListener(Models\CreateHTTPListenerRequest $req) This API (CreateHTTPListener) is used to create an HTTP listener in the connection instance.
 * @method Models\CreateHTTPSListenerResponse CreateHTTPSListener(Models\CreateHTTPSListenerRequest $req) This API (CreateHTTPListener) is used to create an HTTPS listener in the connection instance.
 * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) This API (CreateProxy) is used to create an acceleration connection with specified configuration.
@@ -45,7 +45,7 @@ This API only supports connections of version 3.0.
 * @method Models\CreateUDPListenersResponse CreateUDPListeners(Models\CreateUDPListenersRequest $req) This API (CreateTCPListeners) is used to batch create UDP listeners of single connections or connection groups.
 * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) This API (DeleteCertificate) is used to delete certificates.
 * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) This API (DeleteDomain) is only applicable to layer-7 listeners. It is used to delete the domain names of this listener, and all the rules under the domain name. All rules bound to the origin server are unbound automatically.
-* @method Models\DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(Models\DeleteDomainErrorPageInfoRequest $req) 删除域名的定制错误
+* @method Models\DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(Models\DeleteDomainErrorPageInfoRequest $req) This API is used to delete a custom error code for a domain name.
 * @method Models\DeleteListenersResponse DeleteListeners(Models\DeleteListenersRequest $req) This API (DeleteListeners) is used to batch delete the listeners of a connection or connection group, including layer-4/7 listeners.
 * @method Models\DeleteProxyGroupResponse DeleteProxyGroup(Models\DeleteProxyGroupRequest $req) This API (DeleteProxyGroup) is used to delete a connection group.
 * @method Models\DeleteRuleResponse DeleteRule(Models\DeleteRuleRequest $req) This API (DeleteRule) is used to delete the forwarding rules of HTTP/HTTPS listeners.
@@ -57,7 +57,7 @@ This API only supports connections of version 3.0.
 * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) This API (DescribeCertificates) is used to query the list of available certificates.
 * @method Models\DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(Models\DescribeCountryAreaMappingRequest $req) This API (DescribeCountryAreaMapping) is used to obtain the country/region code mapping table.
 * @method Models\DescribeDestRegionsResponse DescribeDestRegions(Models\DescribeDestRegionsRequest $req) This API (DescribeDestRegions) is used to query an origin server region (i.e., the region in which the origin server locates).
-* @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前订制域名的错误响应
+* @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) This API is used to query the custom error response to a domain name.
 * @method Models\DescribeGroupAndStatisticsProxyResponse DescribeGroupAndStatisticsProxy(Models\DescribeGroupAndStatisticsProxyRequest $req) This is an internal API. It is used to query the information of connections and connection groups from which the statistics can be derived.
 * @method Models\DescribeGroupDomainConfigResponse DescribeGroupDomainConfig(Models\DescribeGroupDomainConfigRequest $req) This API (DescribeGroupDomainConfig) is used to obtain the domain name resolution configuration details of a connection group.
 * @method Models\DescribeHTTPListenersResponse DescribeHTTPListeners(Models\DescribeHTTPListenersRequest $req) This API (DescribeHTTPListeners) is used to query HTTP listener information.
@@ -79,9 +79,9 @@ This API only supports connections of version 3.0.
 * @method Models\DescribeResourcesByTagResponse DescribeResourcesByTag(Models\DescribeResourcesByTagRequest $req) This API (DescribeResourcesByTag) is used to query corresponding resource information by tags, including connection, connection group, and origin server.
 * @method Models\DescribeRuleRealServersResponse DescribeRuleRealServers(Models\DescribeRuleRealServersRequest $req) This API (DescribeRuleRealServers) is used to query forwarding rules-related origin server information, including information of origin servers that can be bound and have been bound.
 * @method Models\DescribeRulesResponse DescribeRules(Models\DescribeRulesRequest $req) This API (DescribeRules) is used to query all rule information of a listener, including the domain names, paths, and list of bound origin servers. For version 3.0 connections, this API returns the advanced authentication configuration information of the domain name.
-* @method Models\DescribeRulesByRuleIdsResponse DescribeRulesByRuleIds(Models\DescribeRulesByRuleIdsRequest $req) 本接口（DescribeRulesByRuleIds）用于根据规则ID拉取规则信息列表。支持一个或者多个规则信息的拉取。一次最多支持10个规则信息的拉取。
+* @method Models\DescribeRulesByRuleIdsResponse DescribeRulesByRuleIds(Models\DescribeRulesByRuleIdsRequest $req) This API is used to pull the list of rules based on rule ID. It supports pulling 1 to 10 rules at a time.
 * @method Models\DescribeSecurityPolicyDetailResponse DescribeSecurityPolicyDetail(Models\DescribeSecurityPolicyDetailRequest $req) This API is used to obtain security policy details.
-* @method Models\DescribeSecurityRulesResponse DescribeSecurityRules(Models\DescribeSecurityRulesRequest $req) 本接口（DescribeSecurityRules）用于根据安全规则ID查询安全规则详情列表。支持一个或多个安全规则的查询。一次最多支持20个安全规则的查询。
+* @method Models\DescribeSecurityRulesResponse DescribeSecurityRules(Models\DescribeSecurityRulesRequest $req) This API is used to query the list of security rules based on security rule ID. It supports querying 1 to 20 security rules at a time.
 * @method Models\DescribeTCPListenersResponse DescribeTCPListeners(Models\DescribeTCPListenersRequest $req) This API (DescribeTCPListeners) is used to query the TCP listener information of a single connection or connection group.
 * @method Models\DescribeUDPListenersResponse DescribeUDPListeners(Models\DescribeUDPListenersRequest $req) This API (DescribeUDPListeners) is used to query the UDP listener information of a single connection or connection group.
 * @method Models\DestroyProxiesResponse DestroyProxies(Models\DestroyProxiesRequest $req) This API (DestroyProxies) is used to terminate a connection. If terminated, no fees will be incurred.
@@ -110,22 +110,10 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
 
 class GaapClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "gaap.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2018-05-29";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

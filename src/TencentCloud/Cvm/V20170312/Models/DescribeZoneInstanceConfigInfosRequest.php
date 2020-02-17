@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取Filters.
+ * @method array getFilters() Obtain Filters.
 
 <li> `zone` - String - Optional - Filter results by availability zone.</li>
 
@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>`instance-type` - String - Optional - Filter results by model. Different instance models have different configurations. You can call `DescribeInstanceTypeConfigs` to query the latest configuration list or refer to the documentation on instance types. If this parameter is not specified, `S1.SMALL1` will be used by default.</li>
 
 <li>`instance-charge-type` - String - Optional - Filter results by instance billing method. `POSTPAID_BY_HOUR`: pay-as-you-go | `CDHPAID`: you are only billed for CDH instances, not the CVMs running on the CDH instances.</li>
- * @method void setFilters(array $Filters) 设置Filters.
+ * @method void setFilters(array $Filters) Set Filters.
 
 <li> `zone` - String - Optional - Filter results by availability zone.</li>
 
@@ -71,7 +71,7 @@ class DescribeZoneInstanceConfigInfosRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,22 +18,22 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getJobIds() 获取Instance ID
- * @method void setJobIds(array $JobIds) 设置Instance ID
- * @method array getFilters() 获取Filter
+ * @method array getJobIds() Obtain Instance ID
+ * @method void setJobIds(array $JobIds) Set Instance ID
+ * @method array getFilters() Obtain Filter
 <li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
 <li> job-name - String - Required: No - (Filter) Filter by job name.</li>
 <li> job-state - String - Required: No - (Filter) Filter by job state.</li>
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
- * @method void setFilters(array $Filters) 设置Filter
+ * @method void setFilters(array $Filters) Set Filter
 <li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
 <li> job-name - String - Required: No - (Filter) Filter by job name.</li>
 <li> job-state - String - Required: No - (Filter) Filter by job state.</li>
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
- * @method integer getOffset() 获取Offset
- * @method void setOffset(integer $Offset) 设置Offset
- * @method integer getLimit() 获取Number of returned results
- * @method void setLimit(integer $Limit) 设置Number of returned results
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain Number of returned results
+ * @method void setLimit(integer $Limit) Set Number of returned results
  */
 
 /**
@@ -79,7 +79,7 @@ class DescribeJobsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

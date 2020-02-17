@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method integer getLimit() 获取Number of entries per page
- * @method void setLimit(integer $Limit) 设置Number of entries per page
- * @method integer getOffset() 获取Page offset
- * @method void setOffset(integer $Offset) 设置Page offset
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method integer getLimit() Obtain Number of entries per page
+ * @method void setLimit(integer $Limit) Set Number of entries per page
+ * @method integer getOffset() Obtain Page offset
+ * @method void setOffset(integer $Offset) Set Page offset
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeInstanceAccountRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

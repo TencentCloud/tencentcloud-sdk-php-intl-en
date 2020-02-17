@@ -18,13 +18,13 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRenewFlag() 获取Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
+ * @method string getRenewFlag() Obtain Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRenewFlag(string $RenewFlag) 设置Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
+ * @method void setRenewFlag(string $RenewFlag) Set Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPeriod() 获取Cycle, indicating the number of months (reserved field)
+ * @method integer getPeriod() Obtain Cycle, indicating the number of months (reserved field)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPeriod(integer $Period) 设置Cycle, indicating the number of months (reserved field)
+ * @method void setPeriod(integer $Period) Set Cycle, indicating the number of months (reserved field)
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

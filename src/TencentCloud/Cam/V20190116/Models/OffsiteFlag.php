@@ -18,16 +18,16 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getVerifyFlag() 获取Verification identifier
- * @method void setVerifyFlag(integer $VerifyFlag) 设置Verification identifier
- * @method integer getNotifyPhone() 获取Phone notification
- * @method void setNotifyPhone(integer $NotifyPhone) 设置Phone notification
- * @method integer getNotifyEmail() 获取Email notification
- * @method void setNotifyEmail(integer $NotifyEmail) 设置Email notification
- * @method integer getNotifyWechat() 获取WeChat notification
- * @method void setNotifyWechat(integer $NotifyWechat) 设置WeChat notification
- * @method integer getTips() 获取
- * @method void setTips(integer $Tips) 设置
+ * @method integer getVerifyFlag() Obtain Verification identifier
+ * @method void setVerifyFlag(integer $VerifyFlag) Set Verification identifier
+ * @method integer getNotifyPhone() Obtain Phone notification
+ * @method void setNotifyPhone(integer $NotifyPhone) Set Phone notification
+ * @method integer getNotifyEmail() Obtain Email notification
+ * @method void setNotifyEmail(integer $NotifyEmail) Set Email notification
+ * @method integer getNotifyWechat() Obtain WeChat notification
+ * @method void setNotifyWechat(integer $NotifyWechat) Set WeChat notification
+ * @method integer getTips() Obtain 
+ * @method void setTips(integer $Tips) Set 
  */
 
 /**
@@ -71,7 +71,7 @@ class OffsiteFlag extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

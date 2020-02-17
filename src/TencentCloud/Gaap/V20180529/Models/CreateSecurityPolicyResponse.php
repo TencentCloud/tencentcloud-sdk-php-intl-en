@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPolicyId() 获取Security policy ID
- * @method void setPolicyId(string $PolicyId) 设置Security policy ID
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getPolicyId() Obtain Security policy ID
+ * @method void setPolicyId(string $PolicyId) Set Security policy ID
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class CreateSecurityPolicyResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

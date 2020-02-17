@@ -18,7 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getSecurityRuleIds() Obtain List of security rule IDs. Up to 20 security rules are supported.
+ * @method void setSecurityRuleIds(array $SecurityRuleIds) Set List of security rule IDs. Up to 20 security rules are supported.
  */
 
 /**
@@ -26,22 +27,27 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeSecurityRulesRequest extends AbstractModel
 {
-
     /**
-
+     * @var array List of security rule IDs. Up to 20 security rules are supported.
+     */
+    public $SecurityRuleIds;
+    /**
+     * @param array $SecurityRuleIds List of security rule IDs. Up to 20 security rules are supported.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("SecurityRuleIds",$param) and $param["SecurityRuleIds"] !== null) {
+            $this->SecurityRuleIds = $param["SecurityRuleIds"];
+        }
     }
 }

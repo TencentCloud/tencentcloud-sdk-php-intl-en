@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInfo() 获取The UID of the user to be deleted and an array corresponding to the User Group IDs
- * @method void setInfo(array $Info) 设置The UID of the user to be deleted and an array corresponding to the User Group IDs
+ * @method array getInfo() Obtain The UID of the user to be deleted and an array corresponding to the User Group IDs
+ * @method void setInfo(array $Info) Set The UID of the user to be deleted and an array corresponding to the User Group IDs
  */
 
 /**
@@ -39,7 +39,7 @@ class RemoveUserFromGroupRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

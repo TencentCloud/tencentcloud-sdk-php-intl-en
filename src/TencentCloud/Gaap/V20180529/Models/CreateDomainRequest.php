@@ -18,19 +18,19 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID.
- * @method void setListenerId(string $ListenerId) 设置Listener ID.
- * @method string getDomain() 获取Domain name to be created. Each listener supports up to 100 domain names.
- * @method void setDomain(string $Domain) 设置Domain name to be created. Each listener supports up to 100 domain names.
- * @method string getCertificateId() 获取Server certificate, which is used for the HTTPS interaction between client and GAAP.
- * @method void setCertificateId(string $CertificateId) 设置Server certificate, which is used for the HTTPS interaction between client and GAAP.
- * @method string getClientCertificateId() 获取Client CA certificate, which is used for the HTTPS interaction between client and GAAP.
+ * @method string getListenerId() Obtain Listener ID.
+ * @method void setListenerId(string $ListenerId) Set Listener ID.
+ * @method string getDomain() Obtain Domain name to be created. Each listener supports up to 100 domain names.
+ * @method void setDomain(string $Domain) Set Domain name to be created. Each listener supports up to 100 domain names.
+ * @method string getCertificateId() Obtain Server certificate, which is used for the HTTPS interaction between client and GAAP.
+ * @method void setCertificateId(string $CertificateId) Set Server certificate, which is used for the HTTPS interaction between client and GAAP.
+ * @method string getClientCertificateId() Obtain Client CA certificate, which is used for the HTTPS interaction between client and GAAP.
 This field is required only when the mutual authentication method is adopted.
- * @method void setClientCertificateId(string $ClientCertificateId) 设置Client CA certificate, which is used for the HTTPS interaction between client and GAAP.
+ * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate, which is used for the HTTPS interaction between client and GAAP.
 This field is required only when the mutual authentication method is adopted.
- * @method array getPolyClientCertificateIds() 获取Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
+ * @method array getPolyClientCertificateIds() Obtain Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
- * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
  */
 
@@ -79,7 +79,7 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

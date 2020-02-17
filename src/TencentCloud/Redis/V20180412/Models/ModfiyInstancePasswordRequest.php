@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getOldPassword() 获取Old password of an instance
- * @method void setOldPassword(string $OldPassword) 设置Old password of an instance
- * @method string getPassword() 获取New password of an instance
- * @method void setPassword(string $Password) 设置New password of an instance
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getOldPassword() Obtain Old password of an instance
+ * @method void setOldPassword(string $OldPassword) Set Old password of an instance
+ * @method string getPassword() Obtain New password of an instance
+ * @method void setPassword(string $Password) Set New password of an instance
  */
 
 /**
@@ -55,7 +55,7 @@ class ModfiyInstancePasswordRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

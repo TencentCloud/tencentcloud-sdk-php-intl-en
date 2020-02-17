@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Redis instance ID
- * @method void setInstanceId(string $InstanceId) 设置Redis instance ID
- * @method string getPassword() 获取Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
- * @method void setPassword(string $Password) 设置Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
- * @method boolean getNoAuth() 获取Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
- * @method void setNoAuth(boolean $NoAuth) 设置Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
+ * @method string getInstanceId() Obtain Redis instance ID
+ * @method void setInstanceId(string $InstanceId) Set Redis instance ID
+ * @method string getPassword() Obtain Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+ * @method void setPassword(string $Password) Set Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+ * @method boolean getNoAuth() Obtain Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
+ * @method void setNoAuth(boolean $NoAuth) Set Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
  */
 
 /**
@@ -55,7 +55,7 @@ class ResetPasswordRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

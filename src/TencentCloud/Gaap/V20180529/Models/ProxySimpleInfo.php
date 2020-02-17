@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProxyId() 获取Connection ID
- * @method void setProxyId(string $ProxyId) 设置Connection ID
- * @method string getProxyName() 获取Connection name
- * @method void setProxyName(string $ProxyName) 设置Connection name
- * @method array getListenerList() 获取Listener list
- * @method void setListenerList(array $ListenerList) 设置Listener list
+ * @method string getProxyId() Obtain Connection ID
+ * @method void setProxyId(string $ProxyId) Set Connection ID
+ * @method string getProxyName() Obtain Connection name
+ * @method void setProxyName(string $ProxyName) Set Connection name
+ * @method array getListenerList() Obtain Listener list
+ * @method void setListenerList(array $ListenerList) Set Listener list
  */
 
 /**
@@ -55,7 +55,7 @@ class ProxySimpleInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

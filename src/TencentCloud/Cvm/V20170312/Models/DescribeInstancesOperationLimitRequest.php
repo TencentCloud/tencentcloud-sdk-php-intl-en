@@ -18,11 +18,11 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The instance ID format is `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688)). The maximum number of instance IDs in each request is 100.
- * @method void setInstanceIds(array $InstanceIds) 设置Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The instance ID format is `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688)). The maximum number of instance IDs in each request is 100.
- * @method string getOperation() 获取Operation on the instance(s).
+ * @method array getInstanceIds() Obtain Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The instance ID format is `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688)). The maximum number of instance IDs in each request is 100.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The instance ID format is `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688)). The maximum number of instance IDs in each request is 100.
+ * @method string getOperation() Obtain Operation on the instance(s).
 <li> INSTANCE_DEGRADE: downgrade the instance configurations</li>
- * @method void setOperation(string $Operation) 设置Operation on the instance(s).
+ * @method void setOperation(string $Operation) Set Operation on the instance(s).
 <li> INSTANCE_DEGRADE: downgrade the instance configurations</li>
  */
 
@@ -51,7 +51,7 @@ class DescribeInstancesOperationLimitRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

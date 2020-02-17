@@ -18,18 +18,18 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAccessRegion() 获取Acceleration region name.
- * @method void setAccessRegion(string $AccessRegion) 设置Acceleration region name.
- * @method integer getBandwidth() 获取Connection bandwidth cap. Unit: Mbps.
- * @method void setBandwidth(integer $Bandwidth) 设置Connection bandwidth cap. Unit: Mbps.
- * @method string getDestRegion() 获取Origin server region name. It’s an old parameter, please switch to RealServerRegion.
- * @method void setDestRegion(string $DestRegion) 设置Origin server region name. It’s an old parameter, please switch to RealServerRegion.
- * @method integer getConcurrency() 获取Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
- * @method void setConcurrency(integer $Concurrency) 设置Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
- * @method string getRealServerRegion() 获取Origin server region name; It’s a new parameter.
- * @method void setRealServerRegion(string $RealServerRegion) 设置Origin server region name; It’s a new parameter.
- * @method integer getConcurrent() 获取Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
- * @method void setConcurrent(integer $Concurrent) 设置Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
+ * @method string getAccessRegion() Obtain Acceleration region name.
+ * @method void setAccessRegion(string $AccessRegion) Set Acceleration region name.
+ * @method integer getBandwidth() Obtain Connection bandwidth cap. Unit: Mbps.
+ * @method void setBandwidth(integer $Bandwidth) Set Connection bandwidth cap. Unit: Mbps.
+ * @method string getDestRegion() Obtain Origin server region name. It’s an old parameter, please switch to RealServerRegion.
+ * @method void setDestRegion(string $DestRegion) Set Origin server region name. It’s an old parameter, please switch to RealServerRegion.
+ * @method integer getConcurrency() Obtain Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
+ * @method void setConcurrency(integer $Concurrency) Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
+ * @method string getRealServerRegion() Obtain Origin server region name; It’s a new parameter.
+ * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region name; It’s a new parameter.
+ * @method integer getConcurrent() Obtain Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
+ * @method void setConcurrent(integer $Concurrent) Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
  */
 
 /**
@@ -79,7 +79,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDirectConnectGatewayId() 获取专线网关ID，形如：dcg-prpqlmg1
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID，形如：dcg-prpqlmg1
- * @method array getRoutes() 获取需要连通的IDC网段列表
- * @method void setRoutes(array $Routes) 设置需要连通的IDC网段列表
+ * @method string getDirectConnectGatewayId() Obtain The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+ * @method array getRoutes() Obtain The list of IDC IP range that must be connected
+ * @method void setRoutes(array $Routes) Set The list of IDC IP range that must be connected
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string 专线网关ID，形如：dcg-prpqlmg1
+     * @var string The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @var array 需要连通的IDC网段列表
+     * @var array The list of IDC IP range that must be connected
      */
     public $Routes;
     /**
-     * @param string $DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
-     * @param array $Routes 需要连通的IDC网段列表
+     * @param string $DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+     * @param array $Routes The list of IDC IP range that must be connected
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

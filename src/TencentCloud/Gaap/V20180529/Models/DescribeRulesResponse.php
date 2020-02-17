@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDomainRuleSet() 获取Rule information list classified by domain name type
- * @method void setDomainRuleSet(array $DomainRuleSet) 设置Rule information list classified by domain name type
- * @method integer getTotalCount() 获取Total quantity of domain names under this listener
- * @method void setTotalCount(integer $TotalCount) 设置Total quantity of domain names under this listener
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getDomainRuleSet() Obtain Rule information list classified by domain name type
+ * @method void setDomainRuleSet(array $DomainRuleSet) Set Rule information list classified by domain name type
+ * @method integer getTotalCount() Obtain Total quantity of domain names under this listener
+ * @method void setTotalCount(integer $TotalCount) Set Total quantity of domain names under this listener
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeRulesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

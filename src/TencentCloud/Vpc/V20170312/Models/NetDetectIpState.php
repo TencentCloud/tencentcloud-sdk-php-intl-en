@@ -18,24 +18,24 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDetectDestinationIp() 获取The destination IPv4 address of network detection.
- * @method void setDetectDestinationIp(string $DetectDestinationIp) 设置The destination IPv4 address of network detection.
- * @method integer getState() 获取The detection result.
+ * @method string getDetectDestinationIp() Obtain The destination IPv4 address of network detection.
+ * @method void setDetectDestinationIp(string $DetectDestinationIp) Set The destination IPv4 address of network detection.
+ * @method integer getState() Obtain The detection result.
 0: successful;
 -1: no packet loss occurred during routing;
 -2: packet loss occurred when outbound traffic is blocked by the ACL;
 -3: packet loss occurred when inbound traffic is blocked by the ACL;
 -4: other errors.
- * @method void setState(integer $State) 设置The detection result.
+ * @method void setState(integer $State) Set The detection result.
 0: successful;
 -1: no packet loss occurred during routing;
 -2: packet loss occurred when outbound traffic is blocked by the ACL;
 -3: packet loss occurred when inbound traffic is blocked by the ACL;
 -4: other errors.
- * @method integer getDelay() 获取The latency. Unit: ms.
- * @method void setDelay(integer $Delay) 设置The latency. Unit: ms.
- * @method integer getPacketLossRate() 获取The packet loss rate.
- * @method void setPacketLossRate(integer $PacketLossRate) 设置The packet loss rate.
+ * @method integer getDelay() Obtain The latency. Unit: ms.
+ * @method void setDelay(integer $Delay) Set The latency. Unit: ms.
+ * @method integer getPacketLossRate() Obtain The packet loss rate.
+ * @method void setPacketLossRate(integer $PacketLossRate) Set The packet loss rate.
  */
 
 /**
@@ -83,7 +83,7 @@ class NetDetectIpState extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

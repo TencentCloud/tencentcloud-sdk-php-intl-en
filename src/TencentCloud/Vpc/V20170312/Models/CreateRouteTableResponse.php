@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method RouteTable getRouteTable() 获取路由表对象。
- * @method void setRouteTable(RouteTable $RouteTable) 设置路由表对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method RouteTable getRouteTable() Obtain Route table object.
+ * @method void setRouteTable(RouteTable $RouteTable) Set Route table object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRouteTableResponse extends AbstractModel
 {
     /**
-     * @var RouteTable 路由表对象。
+     * @var RouteTable Route table object.
      */
     public $RouteTable;
 
@@ -39,7 +39,7 @@ class CreateRouteTableResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param RouteTable $RouteTable 路由表对象。
+     * @param RouteTable $RouteTable Route table object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateRouteTableResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

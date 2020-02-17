@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNationCountryName() 获取Country name
- * @method void setNationCountryName(string $NationCountryName) 设置Country name
- * @method string getNationCountryInnerCode() 获取Country internal code
- * @method void setNationCountryInnerCode(string $NationCountryInnerCode) 设置Country internal code
+ * @method string getNationCountryName() Obtain Country name
+ * @method void setNationCountryName(string $NationCountryName) Set Country name
+ * @method string getNationCountryInnerCode() Obtain Country internal code
+ * @method void setNationCountryInnerCode(string $NationCountryInnerCode) Set Country internal code
  */
 
 /**
@@ -47,7 +47,7 @@ class NationCountryInnerInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

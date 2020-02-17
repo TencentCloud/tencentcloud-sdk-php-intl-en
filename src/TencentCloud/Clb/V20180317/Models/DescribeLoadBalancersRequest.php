@@ -18,46 +18,46 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getLoadBalancerIds() 获取CLB instance ID.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置CLB instance ID.
- * @method string getLoadBalancerType() 获取CLB instance network type:
+ * @method array getLoadBalancerIds() Obtain CLB instance ID.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID.
+ * @method string getLoadBalancerType() Obtain CLB instance network type:
 OPEN: public network; INTERNAL: private network.
- * @method void setLoadBalancerType(string $LoadBalancerType) 设置CLB instance network type:
+ * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
 OPEN: public network; INTERNAL: private network.
- * @method integer getForward() 获取CLB instance type. 1: generic CLB instance; 0: classic CLB instance
- * @method void setForward(integer $Forward) 设置CLB instance type. 1: generic CLB instance; 0: classic CLB instance
- * @method string getLoadBalancerName() 获取CLB instance name.
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置CLB instance name.
- * @method string getDomain() 获取Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
- * @method void setDomain(string $Domain) 设置Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
- * @method array getLoadBalancerVips() 获取VIP address of a CLB instance (there can be multiple addresses)
- * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置VIP address of a CLB instance (there can be multiple addresses)
- * @method array getBackendPublicIps() 获取Public IP of the real server bound to a CLB.
- * @method void setBackendPublicIps(array $BackendPublicIps) 设置Public IP of the real server bound to a CLB.
- * @method array getBackendPrivateIps() 获取Private IP of the real server bound to a CLB.
- * @method void setBackendPrivateIps(array $BackendPrivateIps) 设置Private IP of the real server bound to a CLB.
- * @method integer getOffset() 获取Data offset. Default value: 0.
- * @method void setOffset(integer $Offset) 设置Data offset. Default value: 0.
- * @method integer getLimit() 获取Number of CLB instances to be returned. Default value: 20.
- * @method void setLimit(integer $Limit) 设置Number of CLB instances to be returned. Default value: 20.
- * @method string getOrderBy() 获取Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
- * @method void setOrderBy(string $OrderBy) 设置Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
- * @method integer getOrderType() 获取1: reverse; 0: sequential. Default value: reverse by creation time |
- * @method void setOrderType(integer $OrderType) 设置1: reverse; 0: sequential. Default value: reverse by creation time |
- * @method string getSearchKey() 获取Search field which fuzzy matches name, domain name, or VIP.
- * @method void setSearchKey(string $SearchKey) 设置Search field which fuzzy matches name, domain name, or VIP.
- * @method integer getProjectId() 获取ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
- * @method void setProjectId(integer $ProjectId) 设置ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
- * @method integer getWithRs() 获取Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
- * @method void setWithRs(integer $WithRs) 设置Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
- * @method string getVpcId() 获取VPC where a CLB instance resides, such as vpc-bhqkbhdx.
+ * @method integer getForward() Obtain CLB instance type. 1: generic CLB instance; 0: classic CLB instance
+ * @method void setForward(integer $Forward) Set CLB instance type. 1: generic CLB instance; 0: classic CLB instance
+ * @method string getLoadBalancerName() Obtain CLB instance name.
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name.
+ * @method string getDomain() Obtain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+ * @method void setDomain(string $Domain) Set Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+ * @method array getLoadBalancerVips() Obtain VIP address of a CLB instance (there can be multiple addresses)
+ * @method void setLoadBalancerVips(array $LoadBalancerVips) Set VIP address of a CLB instance (there can be multiple addresses)
+ * @method array getBackendPublicIps() Obtain Public IP of the real server bound to a CLB.
+ * @method void setBackendPublicIps(array $BackendPublicIps) Set Public IP of the real server bound to a CLB.
+ * @method array getBackendPrivateIps() Obtain Private IP of the real server bound to a CLB.
+ * @method void setBackendPrivateIps(array $BackendPrivateIps) Set Private IP of the real server bound to a CLB.
+ * @method integer getOffset() Obtain Data offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Data offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of CLB instances to be returned. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Number of CLB instances to be returned. Default value: 20.
+ * @method string getOrderBy() Obtain Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+ * @method void setOrderBy(string $OrderBy) Set Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+ * @method integer getOrderType() Obtain 1: reverse; 0: sequential. Default value: reverse by creation time |
+ * @method void setOrderType(integer $OrderType) Set 1: reverse; 0: sequential. Default value: reverse by creation time |
+ * @method string getSearchKey() Obtain Search field which fuzzy matches name, domain name, or VIP.
+ * @method void setSearchKey(string $SearchKey) Set Search field which fuzzy matches name, domain name, or VIP.
+ * @method integer getProjectId() Obtain ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+ * @method void setProjectId(integer $ProjectId) Set ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+ * @method integer getWithRs() Obtain Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
+ * @method void setWithRs(integer $WithRs) Set Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
+ * @method string getVpcId() Obtain VPC where a CLB instance resides, such as vpc-bhqkbhdx.
 Basic network does not support queries by VpcId.
- * @method void setVpcId(string $VpcId) 设置VPC where a CLB instance resides, such as vpc-bhqkbhdx.
+ * @method void setVpcId(string $VpcId) Set VPC where a CLB instance resides, such as vpc-bhqkbhdx.
 Basic network does not support queries by VpcId.
- * @method string getSecurityGroup() 获取Security group ID, such as sg-m1cc9123
- * @method void setSecurityGroup(string $SecurityGroup) 设置Security group ID, such as sg-m1cc9123
- * @method string getMasterZone() 获取Master AZ, such as "100001" (Guangzhou Zone 1)
- * @method void setMasterZone(string $MasterZone) 设置Master AZ, such as "100001" (Guangzhou Zone 1)
+ * @method string getSecurityGroup() Obtain Security group ID, such as sg-m1cc9123
+ * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-m1cc9123
+ * @method string getMasterZone() Obtain Master AZ, such as "100001" (Guangzhou Zone 1)
+ * @method void setMasterZone(string $MasterZone) Set Master AZ, such as "100001" (Guangzhou Zone 1)
  */
 
 /**
@@ -183,7 +183,7 @@ Basic network does not support queries by VpcId.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

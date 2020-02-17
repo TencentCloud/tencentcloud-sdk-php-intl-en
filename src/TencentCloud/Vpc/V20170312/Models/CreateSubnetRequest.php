@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method string getSubnetName() 获取子网名称，最大长度不能超过60个字节。
- * @method void setSubnetName(string $SubnetName) 设置子网名称，最大长度不能超过60个字节。
- * @method string getCidrBlock() 获取子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
- * @method void setCidrBlock(string $CidrBlock) 设置子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
- * @method string getZone() 获取子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
- * @method void setZone(string $Zone) 设置子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+ * @method string getVpcId() Obtain The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method void setVpcId(string $VpcId) Set The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method string getSubnetName() Obtain The subnet name. The maximum length is 60 bytes.
+ * @method void setSubnetName(string $SubnetName) Set The subnet name. The maximum length is 60 bytes.
+ * @method string getCidrBlock() Obtain The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+ * @method void setCidrBlock(string $CidrBlock) Set The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+ * @method string getZone() Obtain The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
+ * @method void setZone(string $Zone) Set The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
  */
 
 /**
@@ -34,36 +34,36 @@ use TencentCloud\Common\AbstractModel;
 class CreateSubnetRequest extends AbstractModel
 {
     /**
-     * @var string 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public $VpcId;
 
     /**
-     * @var string 子网名称，最大长度不能超过60个字节。
+     * @var string The subnet name. The maximum length is 60 bytes.
      */
     public $SubnetName;
 
     /**
-     * @var string 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
+     * @var string The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
      */
     public $CidrBlock;
 
     /**
-     * @var string 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+     * @var string The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
      */
     public $Zone;
     /**
-     * @param string $VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param string $SubnetName 子网名称，最大长度不能超过60个字节。
-     * @param string $CidrBlock 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
-     * @param string $Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+     * @param string $VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param string $SubnetName The subnet name. The maximum length is 60 bytes.
+     * @param string $CidrBlock The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+     * @param string $Zone The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRealServerId() 获取Origin server ID
- * @method void setRealServerId(string $RealServerId) 设置Origin server ID
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method integer getWithinTime() 获取Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
- * @method void setWithinTime(integer $WithinTime) 设置Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
- * @method string getRuleId() 获取Rule ID
- * @method void setRuleId(string $RuleId) 设置Rule ID
+ * @method string getRealServerId() Obtain Origin server ID
+ * @method void setRealServerId(string $RealServerId) Set Origin server ID
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method integer getWithinTime() Obtain Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
+ * @method void setWithinTime(integer $WithinTime) Set Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
+ * @method string getRuleId() Obtain Rule ID
+ * @method void setRuleId(string $RuleId) Set Rule ID
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeRealServerStatisticsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

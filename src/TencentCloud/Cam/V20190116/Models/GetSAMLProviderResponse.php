@@ -18,18 +18,18 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取SAML identity provider name
- * @method void setName(string $Name) 设置SAML identity provider name
- * @method string getDescription() 获取SAML identity provider description
- * @method void setDescription(string $Description) 设置SAML identity provider description
- * @method string getCreateTime() 获取Time SAML identity provider created
- * @method void setCreateTime(string $CreateTime) 设置Time SAML identity provider created
- * @method string getModifyTime() 获取Time SAML identity provider last modified
- * @method void setModifyTime(string $ModifyTime) 设置Time SAML identity provider last modified
- * @method string getSAMLMetadata() 获取SAML identity provider metadata document
- * @method void setSAMLMetadata(string $SAMLMetadata) 设置SAML identity provider metadata document
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getName() Obtain SAML identity provider name
+ * @method void setName(string $Name) Set SAML identity provider name
+ * @method string getDescription() Obtain SAML identity provider description
+ * @method void setDescription(string $Description) Set SAML identity provider description
+ * @method string getCreateTime() Obtain Time SAML identity provider created
+ * @method void setCreateTime(string $CreateTime) Set Time SAML identity provider created
+ * @method string getModifyTime() Obtain Time SAML identity provider last modified
+ * @method void setModifyTime(string $ModifyTime) Set Time SAML identity provider last modified
+ * @method string getSAMLMetadata() Obtain SAML identity provider metadata document
+ * @method void setSAMLMetadata(string $SAMLMetadata) Set SAML identity provider metadata document
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -79,7 +79,7 @@ class GetSAMLProviderResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

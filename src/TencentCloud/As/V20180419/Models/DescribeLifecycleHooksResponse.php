@@ -18,12 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getLifecycleHookSet() 获取Array of lifecycle hooks
- * @method void setLifecycleHookSet(array $LifecycleHookSet) 设置Array of lifecycle hooks
- * @method integer getTotalCount() 获取Total quantity
- * @method void setTotalCount(integer $TotalCount) 设置Total quantity
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getLifecycleHookSet() Obtain Array of lifecycle hooks
+ * @method void setLifecycleHookSet(array $LifecycleHookSet) Set Array of lifecycle hooks
+ * @method integer getTotalCount() Obtain Total quantity
+ * @method void setTotalCount(integer $TotalCount) Set Total quantity
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeLifecycleHooksResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

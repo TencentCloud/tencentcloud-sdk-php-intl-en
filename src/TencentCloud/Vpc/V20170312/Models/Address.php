@@ -18,46 +18,46 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressId() 获取`EIP`的`ID`，是`EIP`的唯一标识。
- * @method void setAddressId(string $AddressId) 设置`EIP`的`ID`，是`EIP`的唯一标识。
- * @method string getAddressName() 获取`EIP`名称。
- * @method void setAddressName(string $AddressName) 设置`EIP`名称。
- * @method string getAddressStatus() 获取Possible `EIP` states are 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.
- * @method void setAddressStatus(string $AddressStatus) 设置Possible `EIP` states are 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.
- * @method string getAddressIp() 获取外网IP地址
- * @method void setAddressIp(string $AddressIp) 设置外网IP地址
- * @method string getInstanceId() 获取绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
- * @method void setInstanceId(string $InstanceId) 设置绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
- * @method string getCreatedTime() 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
- * @method string getNetworkInterfaceId() 获取绑定的弹性网卡ID
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置绑定的弹性网卡ID
- * @method string getPrivateAddressIp() 获取绑定的资源内网ip
- * @method void setPrivateAddressIp(string $PrivateAddressIp) 设置绑定的资源内网ip
- * @method boolean getIsArrears() 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
- * @method void setIsArrears(boolean $IsArrears) 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
- * @method boolean getIsBlocked() 获取资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
- * @method void setIsBlocked(boolean $IsBlocked) 设置资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
- * @method boolean getIsEipDirectConnection() 获取eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
- * @method void setIsEipDirectConnection(boolean $IsEipDirectConnection) 设置eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
- * @method string getAddressType() 获取eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
- * @method void setAddressType(string $AddressType) 设置eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
- * @method boolean getCascadeRelease() 获取eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
- * @method void setCascadeRelease(boolean $CascadeRelease) 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+ * @method string getAddressId() Obtain `EIP` `ID`, the unique ID of the `EIP`.
+ * @method void setAddressId(string $AddressId) Set `EIP` `ID`, the unique ID of the `EIP`.
+ * @method string getAddressName() Obtain The `EIP` name.
+ * @method void setAddressName(string $AddressName) Set The `EIP` name.
+ * @method string getAddressStatus() Obtain Possible `EIP` states are 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.
+ * @method void setAddressStatus(string $AddressStatus) Set Possible `EIP` states are 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.
+ * @method string getAddressIp() Obtain The public IP address
+ * @method void setAddressIp(string $AddressIp) Set The public IP address
+ * @method string getInstanceId() Obtain The ID of the bound resource instance. This can be a `CVM` or `NAT`.
+ * @method void setInstanceId(string $InstanceId) Set The ID of the bound resource instance. This can be a `CVM` or `NAT`.
+ * @method string getCreatedTime() Obtain The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method void setCreatedTime(string $CreatedTime) Set The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method string getNetworkInterfaceId() Obtain The ID of the bound ENI
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the bound ENI
+ * @method string getPrivateAddressIp() Obtain The private IP of the bound resources
+ * @method void setPrivateAddressIp(string $PrivateAddressIp) Set The private IP of the bound resources
+ * @method boolean getIsArrears() Obtain The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
+ * @method void setIsArrears(boolean $IsArrears) Set The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
+ * @method boolean getIsBlocked() Obtain The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
+ * @method void setIsBlocked(boolean $IsBlocked) Set The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
+ * @method boolean getIsEipDirectConnection() Obtain Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
+ * @method void setIsEipDirectConnection(boolean $IsEipDirectConnection) Set Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
+ * @method string getAddressType() Obtain The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+ * @method void setAddressType(string $AddressType) Set The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+ * @method boolean getCascadeRelease() Obtain Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
+ * @method void setCascadeRelease(boolean $CascadeRelease) Set Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
  */
 
 /**
- *描述 EIP 信息
+ *Detailed EIP information
  */
 class Address extends AbstractModel
 {
     /**
-     * @var string `EIP`的`ID`，是`EIP`的唯一标识。
+     * @var string `EIP` `ID`, the unique ID of the `EIP`.
      */
     public $AddressId;
 
     /**
-     * @var string `EIP`名称。
+     * @var string The `EIP` name.
      */
     public $AddressName;
 
@@ -67,75 +67,75 @@ class Address extends AbstractModel
     public $AddressStatus;
 
     /**
-     * @var string 外网IP地址
+     * @var string The public IP address
      */
     public $AddressIp;
 
     /**
-     * @var string 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * @var string The ID of the bound resource instance. This can be a `CVM` or `NAT`.
      */
     public $InstanceId;
 
     /**
-     * @var string 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * @var string The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
      */
     public $CreatedTime;
 
     /**
-     * @var string 绑定的弹性网卡ID
+     * @var string The ID of the bound ENI
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string 绑定的资源内网ip
+     * @var string The private IP of the bound resources
      */
     public $PrivateAddressIp;
 
     /**
-     * @var boolean 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * @var boolean The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
      */
     public $IsArrears;
 
     /**
-     * @var boolean 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * @var boolean The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
      */
     public $IsBlocked;
 
     /**
-     * @var boolean eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * @var boolean Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
      */
     public $IsEipDirectConnection;
 
     /**
-     * @var string eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * @var string The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
      */
     public $AddressType;
 
     /**
-     * @var boolean eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * @var boolean Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
      */
     public $CascadeRelease;
     /**
-     * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
-     * @param string $AddressName `EIP`名称。
+     * @param string $AddressId `EIP` `ID`, the unique ID of the `EIP`.
+     * @param string $AddressName The `EIP` name.
      * @param string $AddressStatus Possible `EIP` states are 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.
-     * @param string $AddressIp 外网IP地址
-     * @param string $InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
-     * @param string $CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
-     * @param string $NetworkInterfaceId 绑定的弹性网卡ID
-     * @param string $PrivateAddressIp 绑定的资源内网ip
-     * @param boolean $IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
-     * @param boolean $IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
-     * @param boolean $IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
-     * @param string $AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
-     * @param boolean $CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * @param string $AddressIp The public IP address
+     * @param string $InstanceId The ID of the bound resource instance. This can be a `CVM` or `NAT`.
+     * @param string $CreatedTime The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     * @param string $NetworkInterfaceId The ID of the bound ENI
+     * @param string $PrivateAddressIp The private IP of the bound resources
+     * @param boolean $IsArrears The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
+     * @param boolean $IsBlocked The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
+     * @param boolean $IsEipDirectConnection Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
+     * @param string $AddressType The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+     * @param boolean $CascadeRelease Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

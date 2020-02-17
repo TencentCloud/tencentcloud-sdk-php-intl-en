@@ -18,15 +18,15 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvId() 获取Compute environment ID
- * @method void setEnvId(string $EnvId) 设置Compute environment ID
- * @method integer getOffset() 获取Offset
- * @method void setOffset(integer $Offset) 设置Offset
- * @method integer getLimit() 获取Number of returned results
- * @method void setLimit(integer $Limit) 设置Number of returned results
- * @method Filter getFilters() 获取Filter
+ * @method string getEnvId() Obtain Compute environment ID
+ * @method void setEnvId(string $EnvId) Set Compute environment ID
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain Number of returned results
+ * @method void setLimit(integer $Limit) Set Number of returned results
+ * @method Filter getFilters() Obtain Filter
 <li> compute-node-id - String - Required: No - (Filter) Filter by compute node ID.</li>
- * @method void setFilters(Filter $Filters) 设置Filter
+ * @method void setFilters(Filter $Filters) Set Filter
 <li> compute-node-id - String - Required: No - (Filter) Filter by compute node ID.</li>
  */
 
@@ -67,7 +67,7 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

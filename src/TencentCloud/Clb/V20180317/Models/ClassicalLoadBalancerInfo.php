@@ -18,11 +18,11 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Real server ID
- * @method void setInstanceId(string $InstanceId) 设置Real server ID
- * @method array getLoadBalancerIds() 获取List of CLB instance IDs
+ * @method string getInstanceId() Obtain Real server ID
+ * @method void setInstanceId(string $InstanceId) Set Real server ID
+ * @method array getLoadBalancerIds() Obtain List of CLB instance IDs
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置List of CLB instance IDs
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of CLB instance IDs
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -51,7 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

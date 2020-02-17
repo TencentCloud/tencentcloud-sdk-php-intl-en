@@ -18,10 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取Policy ID
- * @method void setPolicyId(integer $PolicyId) 设置Policy ID
- * @method integer getAttachGroupId() 获取User Group ID
- * @method void setAttachGroupId(integer $AttachGroupId) 设置User Group ID
+ * @method integer getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
+ * @method integer getAttachGroupId() Obtain User Group ID
+ * @method void setAttachGroupId(integer $AttachGroupId) Set User Group ID
  */
 
 /**
@@ -47,7 +47,7 @@ class AttachGroupPolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

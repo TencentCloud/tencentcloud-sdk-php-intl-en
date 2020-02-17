@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取符合条件的对象数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的对象数。
- * @method array getInstanceSet() 获取关联实例列表。
- * @method void setInstanceSet(array $InstanceSet) 设置关联实例列表。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The number of objects meeting the condition.
+ * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
+ * @method array getInstanceSet() Obtain The list of associated instances.
+ * @method void setInstanceSet(array $InstanceSet) Set The list of associated instances.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCcnAttachedInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的对象数。
+     * @var integer The number of objects meeting the condition.
      */
     public $TotalCount;
 
     /**
-     * @var array 关联实例列表。
+     * @var array The list of associated instances.
      */
     public $InstanceSet;
 
@@ -46,8 +46,8 @@ class DescribeCcnAttachedInstancesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 符合条件的对象数。
-     * @param array $InstanceSet 关联实例列表。
+     * @param integer $TotalCount The number of objects meeting the condition.
+     * @param array $InstanceSet The list of associated instances.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeCcnAttachedInstancesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

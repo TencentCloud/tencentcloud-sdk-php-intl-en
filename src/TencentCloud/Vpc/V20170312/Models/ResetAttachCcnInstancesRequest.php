@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method string getCcnUin() 获取CCN所属UIN（根账号）。
- * @method void setCcnUin(string $CcnUin) 设置CCN所属UIN（根账号）。
- * @method array getInstances() 获取重新申请关联网络实例列表。
- * @method void setInstances(array $Instances) 设置重新申请关联网络实例列表。
+ * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method string getCcnUin() Obtain The UIN (root account) to which the CCN belongs.
+ * @method void setCcnUin(string $CcnUin) Set The UIN (root account) to which the CCN belongs.
+ * @method array getInstances() Obtain The list of network instances that re-apply for association.
+ * @method void setInstances(array $Instances) Set The list of network instances that re-apply for association.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ResetAttachCcnInstancesRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public $CcnId;
 
     /**
-     * @var string CCN所属UIN（根账号）。
+     * @var string The UIN (root account) to which the CCN belongs.
      */
     public $CcnUin;
 
     /**
-     * @var array 重新申请关联网络实例列表。
+     * @var array The list of network instances that re-apply for association.
      */
     public $Instances;
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param string $CcnUin CCN所属UIN（根账号）。
-     * @param array $Instances 重新申请关联网络实例列表。
+     * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param string $CcnUin The UIN (root account) to which the CCN belongs.
+     * @param array $Instances The list of network instances that re-apply for association.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

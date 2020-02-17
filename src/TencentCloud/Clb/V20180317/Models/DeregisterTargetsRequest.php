@@ -18,18 +18,18 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID in the format of lb-12345678
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID in the format of lb-12345678
- * @method string getListenerId() 获取Listener ID in the format of lbl-12345678
- * @method void setListenerId(string $ListenerId) 设置Listener ID in the format of lbl-12345678
- * @method array getTargets() 获取List of real servers to be unbound. Array length limit: 20
- * @method void setTargets(array $Targets) 设置List of real servers to be unbound. Array length limit: 20
- * @method string getLocationId() 获取Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
- * @method void setLocationId(string $LocationId) 设置Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
- * @method string getDomain() 获取Target rule domain name. This parameter does not take effect if LocationId is specified
- * @method void setDomain(string $Domain) 设置Target rule domain name. This parameter does not take effect if LocationId is specified
- * @method string getUrl() 获取Target rule URL. This parameter does not take effect if LocationId is specified
- * @method void setUrl(string $Url) 设置Target rule URL. This parameter does not take effect if LocationId is specified
+ * @method string getLoadBalancerId() Obtain CLB instance ID in the format of lb-12345678
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID in the format of lb-12345678
+ * @method string getListenerId() Obtain Listener ID in the format of lbl-12345678
+ * @method void setListenerId(string $ListenerId) Set Listener ID in the format of lbl-12345678
+ * @method array getTargets() Obtain List of real servers to be unbound. Array length limit: 20
+ * @method void setTargets(array $Targets) Set List of real servers to be unbound. Array length limit: 20
+ * @method string getLocationId() Obtain Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+ * @method void setLocationId(string $LocationId) Set Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+ * @method string getDomain() Obtain Target rule domain name. This parameter does not take effect if LocationId is specified
+ * @method void setDomain(string $Domain) Set Target rule domain name. This parameter does not take effect if LocationId is specified
+ * @method string getUrl() Obtain Target rule URL. This parameter does not take effect if LocationId is specified
+ * @method void setUrl(string $Url) Set Target rule URL. This parameter does not take effect if LocationId is specified
  */
 
 /**
@@ -79,7 +79,7 @@ class DeregisterTargetsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressId() 获取标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
- * @method void setAddressId(string $AddressId) 设置标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
- * @method string getAddressName() 获取修改后的 EIP 名称。长度上限为20个字符。
- * @method void setAddressName(string $AddressName) 设置修改后的 EIP 名称。长度上限为20个字符。
- * @method string getEipDirectConnection() 获取Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
- * @method void setEipDirectConnection(string $EipDirectConnection) 设置Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
+ * @method string getAddressId() Obtain The unique ID of the EIP, such as `eip-11112222`.
+ * @method void setAddressId(string $AddressId) Set The unique ID of the EIP, such as `eip-11112222`.
+ * @method string getAddressName() Obtain The EIP name after modification. The maximum length is 20 characters.
+ * @method void setAddressName(string $AddressName) Set The EIP name after modification. The maximum length is 20 characters.
+ * @method string getEipDirectConnection() Obtain Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
+ * @method void setEipDirectConnection(string $EipDirectConnection) Set Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAddressAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * @var string The unique ID of the EIP, such as `eip-11112222`.
      */
     public $AddressId;
 
     /**
-     * @var string 修改后的 EIP 名称。长度上限为20个字符。
+     * @var string The EIP name after modification. The maximum length is 20 characters.
      */
     public $AddressName;
 
@@ -46,8 +46,8 @@ class ModifyAddressAttributeRequest extends AbstractModel
      */
     public $EipDirectConnection;
     /**
-     * @param string $AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
-     * @param string $AddressName 修改后的 EIP 名称。长度上限为20个字符。
+     * @param string $AddressId The unique ID of the EIP, such as `eip-11112222`.
+     * @param string $AddressName The EIP name after modification. The maximum length is 20 characters.
      * @param string $EipDirectConnection Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
      */
     function __construct()
@@ -55,7 +55,7 @@ class ModifyAddressAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

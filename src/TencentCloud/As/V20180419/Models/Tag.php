@@ -18,13 +18,13 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKey() 获取Tag key
- * @method void setKey(string $Key) 设置Tag key
- * @method string getValue() 获取Tag value
- * @method void setValue(string $Value) 设置Tag value
- * @method string getResourceType() 获取Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+ * @method string getKey() Obtain Tag key
+ * @method void setKey(string $Key) Set Tag key
+ * @method string getValue() Obtain Tag value
+ * @method void setValue(string $Value) Set Tag value
+ * @method string getResourceType() Obtain Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourceType(string $ResourceType) 设置Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+ * @method void setResourceType(string $ResourceType) Set Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -59,7 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

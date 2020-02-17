@@ -18,18 +18,18 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStartTime() 获取Backup start time
- * @method void setStartTime(string $StartTime) 设置Backup start time
- * @method string getBackupId() 获取Backup ID
- * @method void setBackupId(string $BackupId) 设置Backup ID
- * @method string getBackupType() 获取Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
- * @method void setBackupType(string $BackupType) 设置Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
- * @method integer getStatus() 获取Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
- * @method void setStatus(integer $Status) 设置Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
- * @method string getRemark() 获取Backup remarks
- * @method void setRemark(string $Remark) 设置Backup remarks
- * @method integer getLocked() 获取Whether a backup is locked. 0: no; 1: yes
- * @method void setLocked(integer $Locked) 设置Whether a backup is locked. 0: no; 1: yes
+ * @method string getStartTime() Obtain Backup start time
+ * @method void setStartTime(string $StartTime) Set Backup start time
+ * @method string getBackupId() Obtain Backup ID
+ * @method void setBackupId(string $BackupId) Set Backup ID
+ * @method string getBackupType() Obtain Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+ * @method void setBackupType(string $BackupType) Set Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+ * @method integer getStatus() Obtain Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+ * @method void setStatus(integer $Status) Set Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+ * @method string getRemark() Obtain Backup remarks
+ * @method void setRemark(string $Remark) Set Backup remarks
+ * @method integer getLocked() Obtain Whether a backup is locked. 0: no; 1: yes
+ * @method void setLocked(integer $Locked) Set Whether a backup is locked. 0: no; 1: yes
  */
 
 /**
@@ -79,7 +79,7 @@ class RedisBackupSet extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

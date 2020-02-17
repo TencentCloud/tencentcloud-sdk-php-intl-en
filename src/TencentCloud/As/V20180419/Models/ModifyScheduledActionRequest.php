@@ -18,22 +18,22 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getScheduledActionId() 获取ID of the scheduled task to be edited
- * @method void setScheduledActionId(string $ScheduledActionId) 设置ID of the scheduled task to be edited
- * @method string getScheduledActionName() 获取Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
- * @method void setScheduledActionName(string $ScheduledActionName) 设置Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
- * @method integer getMaxSize() 获取The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
- * @method void setMaxSize(integer $MaxSize) 设置The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
- * @method integer getMinSize() 获取The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
- * @method void setMinSize(integer $MinSize) 设置The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
- * @method integer getDesiredCapacity() 获取The desired number of instances set for the auto scaling group when the scheduled task is triggered.
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置The desired number of instances set for the auto scaling group when the scheduled task is triggered.
- * @method string getStartTime() 获取Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
- * @method void setStartTime(string $StartTime) 设置Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
- * @method string getEndTime() 获取End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
- * @method void setEndTime(string $EndTime) 设置End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
- * @method string getRecurrence() 获取Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
- * @method void setRecurrence(string $Recurrence) 设置Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
+ * @method string getScheduledActionId() Obtain ID of the scheduled task to be edited
+ * @method void setScheduledActionId(string $ScheduledActionId) Set ID of the scheduled task to be edited
+ * @method string getScheduledActionName() Obtain Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
+ * @method void setScheduledActionName(string $ScheduledActionName) Set Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
+ * @method integer getMaxSize() Obtain The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
+ * @method void setMaxSize(integer $MaxSize) Set The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
+ * @method integer getMinSize() Obtain The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
+ * @method void setMinSize(integer $MinSize) Set The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
+ * @method integer getDesiredCapacity() Obtain The desired number of instances set for the auto scaling group when the scheduled task is triggered.
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set The desired number of instances set for the auto scaling group when the scheduled task is triggered.
+ * @method string getStartTime() Obtain Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+ * @method void setStartTime(string $StartTime) Set Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+ * @method string getEndTime() Obtain End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
+ * @method void setEndTime(string $EndTime) Set End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
+ * @method string getRecurrence() Obtain Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
+ * @method void setRecurrence(string $Recurrence) Set Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
  */
 
 /**
@@ -95,7 +95,7 @@ class ModifyScheduledActionRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

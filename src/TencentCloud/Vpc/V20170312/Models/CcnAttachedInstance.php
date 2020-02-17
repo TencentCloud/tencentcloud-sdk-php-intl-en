@@ -18,148 +18,148 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取云联网实例ID。
- * @method void setCcnId(string $CcnId) 设置云联网实例ID。
- * @method string getInstanceType() 获取关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
- * @method void setInstanceType(string $InstanceType) 设置关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
- * @method string getInstanceId() 获取关联实例ID。
- * @method void setInstanceId(string $InstanceId) 设置关联实例ID。
- * @method string getInstanceName() 获取关联实例名称。
- * @method void setInstanceName(string $InstanceName) 设置关联实例名称。
- * @method string getInstanceRegion() 获取关联实例所属大区，例如：ap-guangzhou。
- * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例所属大区，例如：ap-guangzhou。
- * @method string getInstanceUin() 获取关联实例所属UIN（根账号）。
- * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）。
- * @method array getCidrBlock() 获取关联实例CIDR。
- * @method void setCidrBlock(array $CidrBlock) 设置关联实例CIDR。
- * @method string getState() 获取关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
- * @method void setState(string $State) 设置关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
- * @method string getAttachedTime() 获取关联时间。
- * @method void setAttachedTime(string $AttachedTime) 设置关联时间。
- * @method string getCcnUin() 获取云联网所属UIN（根账号）。
- * @method void setCcnUin(string $CcnUin) 设置云联网所属UIN（根账号）。
+ * @method string getCcnId() Obtain The ID of a CCN instance.
+ * @method void setCcnId(string $CcnId) Set The ID of a CCN instance.
+ * @method string getInstanceType() Obtain The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+ * @method void setInstanceType(string $InstanceType) Set The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+ * @method string getInstanceId() Obtain The ID of the associated instance.
+ * @method void setInstanceId(string $InstanceId) Set The ID of the associated instance.
+ * @method string getInstanceName() Obtain The name of the associated instance.
+ * @method void setInstanceName(string $InstanceName) Set The name of the associated instance.
+ * @method string getInstanceRegion() Obtain The region to which the associated instance belongs, such as `ap-guangzhou`.
+ * @method void setInstanceRegion(string $InstanceRegion) Set The region to which the associated instance belongs, such as `ap-guangzhou`.
+ * @method string getInstanceUin() Obtain The UIN (root account) to which the associated instance belongs.
+ * @method void setInstanceUin(string $InstanceUin) Set The UIN (root account) to which the associated instance belongs.
+ * @method array getCidrBlock() Obtain The CIDR of the associated instance.
+ * @method void setCidrBlock(array $CidrBlock) Set The CIDR of the associated instance.
+ * @method string getState() Obtain The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
+ * @method void setState(string $State) Set The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
+ * @method string getAttachedTime() Obtain Association Time.
+ * @method void setAttachedTime(string $AttachedTime) Set Association Time.
+ * @method string getCcnUin() Obtain The UIN (root account) to which the CCN belongs.
+ * @method void setCcnUin(string $CcnUin) Set The UIN (root account) to which the CCN belongs.
  */
 
 /**
- *云联网（CCN）关联实例（Instance）对象
+ *The instance object associated with a CCN
  */
 class CcnAttachedInstance extends AbstractModel
 {
     /**
-     * @var string 云联网实例ID。
+     * @var string The ID of a CCN instance.
      */
     public $CcnId;
 
     /**
-     * @var string 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * @var string The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
      */
     public $InstanceType;
 
     /**
-     * @var string 关联实例ID。
+     * @var string The ID of the associated instance.
      */
     public $InstanceId;
 
     /**
-     * @var string 关联实例名称。
+     * @var string The name of the associated instance.
      */
     public $InstanceName;
 
     /**
-     * @var string 关联实例所属大区，例如：ap-guangzhou。
+     * @var string The region to which the associated instance belongs, such as `ap-guangzhou`.
      */
     public $InstanceRegion;
 
     /**
-     * @var string 关联实例所属UIN（根账号）。
+     * @var string The UIN (root account) to which the associated instance belongs.
      */
     public $InstanceUin;
 
     /**
-     * @var array 关联实例CIDR。
+     * @var array The CIDR of the associated instance.
      */
     public $CidrBlock;
 
     /**
-     * @var string 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+     * @var string The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
      */
     public $State;
 
     /**
-     * @var string 关联时间。
+     * @var string Association Time.
      */
     public $AttachedTime;
 
     /**
-     * @var string 云联网所属UIN（根账号）。
+     * @var string The UIN (root account) to which the CCN belongs.
      */
     public $CcnUin;
     /**
-     * @param string $CcnId 云联网实例ID。
-     * @param string $InstanceType 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-     * @param string $InstanceId 关联实例ID。
-     * @param string $InstanceName 关联实例名称。
-     * @param string $InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
-     * @param string $InstanceUin 关联实例所属UIN（根账号）。
-     * @param array $CidrBlock 关联实例CIDR。
-     * @param string $State 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
-     * @param string $AttachedTime 关联时间。
-     * @param string $CcnUin 云联网所属UIN（根账号）。
+     * @param string $CcnId The ID of a CCN instance.
+     * @param string $InstanceType The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+     * @param string $InstanceId The ID of the associated instance.
+     * @param string $InstanceName The name of the associated instance.
+     * @param string $InstanceRegion The region to which the associated instance belongs, such as `ap-guangzhou`.
+     * @param string $InstanceUin The UIN (root account) to which the associated instance belongs.
+     * @param array $CidrBlock The CIDR of the associated instance.
+     * @param string $State The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
+     * @param string $AttachedTime Association Time.
+     * @param string $CcnUin The UIN (root account) to which the CCN belongs.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

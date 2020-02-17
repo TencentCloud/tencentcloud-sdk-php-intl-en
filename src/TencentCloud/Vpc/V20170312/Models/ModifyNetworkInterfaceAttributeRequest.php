@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-pxir56ns。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-pxir56ns。
- * @method string getNetworkInterfaceName() 获取弹性网卡名称，最大长度不能超过60个字节。
- * @method void setNetworkInterfaceName(string $NetworkInterfaceName) 设置弹性网卡名称，最大长度不能超过60个字节。
- * @method string getNetworkInterfaceDescription() 获取弹性网卡描述，可任意命名，但不得超过60个字符。
- * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述，可任意命名，但不得超过60个字符。
- * @method array getSecurityGroupIds() 获取指定绑定的安全组，例如:['sg-1dd51d']。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置指定绑定的安全组，例如:['sg-1dd51d']。
+ * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-pxir56ns`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-pxir56ns`.
+ * @method string getNetworkInterfaceName() Obtain The name of the ENI. The maximum length is 60 characters.
+ * @method void setNetworkInterfaceName(string $NetworkInterfaceName) Set The name of the ENI. The maximum length is 60 characters.
+ * @method string getNetworkInterfaceDescription() Obtain ENI description can be named freely, but the maximum length is 60 characters.
+ * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) Set ENI description can be named freely, but the maximum length is 60 characters.
+ * @method array getSecurityGroupIds() Obtain The specified security groups to be bound with, such as ['sg-1dd51d'].
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The specified security groups to be bound with, such as ['sg-1dd51d'].
  */
 
 /**
@@ -34,36 +34,36 @@ use TencentCloud\Common\AbstractModel;
 class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例ID，例如：eni-pxir56ns。
+     * @var string The ID of the ENI instance, such as `eni-pxir56ns`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string 弹性网卡名称，最大长度不能超过60个字节。
+     * @var string The name of the ENI. The maximum length is 60 characters.
      */
     public $NetworkInterfaceName;
 
     /**
-     * @var string 弹性网卡描述，可任意命名，但不得超过60个字符。
+     * @var string ENI description can be named freely, but the maximum length is 60 characters.
      */
     public $NetworkInterfaceDescription;
 
     /**
-     * @var array 指定绑定的安全组，例如:['sg-1dd51d']。
+     * @var array The specified security groups to be bound with, such as ['sg-1dd51d'].
      */
     public $SecurityGroupIds;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
-     * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
-     * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
-     * @param array $SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。
+     * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-pxir56ns`.
+     * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
+     * @param string $NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
+     * @param array $SecurityGroupIds The specified security groups to be bound with, such as ['sg-1dd51d'].
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

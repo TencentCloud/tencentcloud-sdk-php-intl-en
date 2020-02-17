@@ -18,26 +18,26 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
- * @method array getFilters() 获取过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
- * @method void setFilters(array $Filters) 设置过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
- * @method string getCcnId() 获取云联网实例ID
- * @method void setCcnId(string $CcnId) 设置云联网实例ID
- * @method string getOrderField() 获取排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
- * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
- * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain The returned quantity
+ * @method void setLimit(integer $Limit) Set The returned quantity
+ * @method array getFilters() Obtain Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+ * @method void setFilters(array $Filters) Set Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+ * @method string getCcnId() Obtain The ID of the CCN instance
+ * @method void setCcnId(string $CcnId) Set The ID of the CCN instance
+ * @method string getOrderField() Obtain The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
+ * @method void setOrderField(string $OrderField) Set The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
+ * @method string getOrderDirection() Obtain Order methods. Ascending: `ASC`, Descending: `DESC`.
+ * @method void setOrderDirection(string $OrderDirection) Set Order methods. Ascending: `ASC`, Descending: `DESC`.
  */
 
 /**
@@ -46,56 +46,56 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCcnAttachedInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量
+     * @var integer Offset
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer The returned quantity
      */
     public $Limit;
 
     /**
-     * @var array 过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+     * @var array Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
      */
     public $Filters;
 
     /**
-     * @var string 云联网实例ID
+     * @var string The ID of the CCN instance
      */
     public $CcnId;
 
     /**
-     * @var string 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     * @var string The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
      */
     public $OrderField;
 
     /**
-     * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @var string Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public $OrderDirection;
     /**
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
-     * @param array $Filters 过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
-     * @param string $CcnId 云联网实例ID
-     * @param string $OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
-     * @param string $OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @param integer $Offset Offset
+     * @param integer $Limit The returned quantity
+     * @param array $Filters Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+     * @param string $CcnId The ID of the CCN instance
+     * @param string $OrderField The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
+     * @param string $OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

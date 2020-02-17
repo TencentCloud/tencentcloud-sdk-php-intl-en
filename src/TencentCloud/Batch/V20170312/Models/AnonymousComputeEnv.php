@@ -18,14 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvType() 获取Compute environment management type
- * @method void setEnvType(string $EnvType) 设置Compute environment management type
- * @method EnvData getEnvData() 获取Compute environment's specific parameters
- * @method void setEnvData(EnvData $EnvData) 设置Compute environment's specific parameters
- * @method array getMountDataDisks() 获取Data disk mounting option
- * @method void setMountDataDisks(array $MountDataDisks) 设置Data disk mounting option
- * @method AgentRunningMode getAgentRunningMode() 获取Agent running mode; applicable for Windows
- * @method void setAgentRunningMode(AgentRunningMode $AgentRunningMode) 设置Agent running mode; applicable for Windows
+ * @method string getEnvType() Obtain Compute environment management type
+ * @method void setEnvType(string $EnvType) Set Compute environment management type
+ * @method EnvData getEnvData() Obtain Compute environment's specific parameters
+ * @method void setEnvData(EnvData $EnvData) Set Compute environment's specific parameters
+ * @method array getMountDataDisks() Obtain Data disk mounting option
+ * @method void setMountDataDisks(array $MountDataDisks) Set Data disk mounting option
+ * @method AgentRunningMode getAgentRunningMode() Obtain Agent running mode; applicable for Windows
+ * @method void setAgentRunningMode(AgentRunningMode $AgentRunningMode) Set Agent running mode; applicable for Windows
  */
 
 /**
@@ -63,7 +63,7 @@ class AnonymousComputeEnv extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

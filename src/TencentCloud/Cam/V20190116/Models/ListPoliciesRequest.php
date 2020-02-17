@@ -18,14 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getRp() 获取Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
- * @method void setRp(integer $Rp) 设置Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
- * @method integer getPage() 获取Page number. Starts from 1 and cannot be greater than 200. Default is 1
- * @method void setPage(integer $Page) 设置Page number. Starts from 1 and cannot be greater than 200. Default is 1
- * @method string getScope() 获取Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
- * @method void setScope(string $Scope) 设置Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
- * @method string getKeyword() 获取Filter by policy name
- * @method void setKeyword(string $Keyword) 设置Filter by policy name
+ * @method integer getRp() Obtain Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
+ * @method void setRp(integer $Rp) Set Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
+ * @method integer getPage() Obtain Page number. Starts from 1 and cannot be greater than 200. Default is 1
+ * @method void setPage(integer $Page) Set Page number. Starts from 1 and cannot be greater than 200. Default is 1
+ * @method string getScope() Obtain Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
+ * @method void setScope(string $Scope) Set Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
+ * @method string getKeyword() Obtain Filter by policy name
+ * @method void setKeyword(string $Keyword) Set Filter by policy name
  */
 
 /**
@@ -63,7 +63,7 @@ class ListPoliciesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

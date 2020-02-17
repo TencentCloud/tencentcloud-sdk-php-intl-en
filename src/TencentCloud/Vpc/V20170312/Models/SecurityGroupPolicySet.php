@@ -18,44 +18,44 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVersion() 获取安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
- * @method void setVersion(string $Version) 设置安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
- * @method array getEgress() 获取出站规则。
- * @method void setEgress(array $Egress) 设置出站规则。
- * @method array getIngress() 获取入站规则。
- * @method void setIngress(array $Ingress) 设置入站规则。
+ * @method string getVersion() Obtain The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+ * @method void setVersion(string $Version) Set The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+ * @method array getEgress() Obtain Outbound policy.
+ * @method void setEgress(array $Egress) Set Outbound policy.
+ * @method array getIngress() Obtain Inbound policy.
+ * @method void setIngress(array $Ingress) Set Inbound policy.
  */
 
 /**
- *安全组规则集合
+ *Security group policy set
  */
 class SecurityGroupPolicySet extends AbstractModel
 {
     /**
-     * @var string 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     * @var string The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
      */
     public $Version;
 
     /**
-     * @var array 出站规则。
+     * @var array Outbound policy.
      */
     public $Egress;
 
     /**
-     * @var array 入站规则。
+     * @var array Inbound policy.
      */
     public $Ingress;
     /**
-     * @param string $Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
-     * @param array $Egress 出站规则。
-     * @param array $Ingress 入站规则。
+     * @param string $Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+     * @param array $Egress Outbound policy.
+     * @param array $Ingress Inbound policy.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

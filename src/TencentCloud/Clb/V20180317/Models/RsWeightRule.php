@@ -18,18 +18,18 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取CLB listener ID
- * @method void setListenerId(string $ListenerId) 设置CLB listener ID
- * @method array getTargets() 获取List of real servers for which to modify the weight
- * @method void setTargets(array $Targets) 设置List of real servers for which to modify the weight
- * @method string getLocationId() 获取Forwarding rule ID
- * @method void setLocationId(string $LocationId) 设置Forwarding rule ID
- * @method string getDomain() 获取Target rule domain name. This parameter does not take effect if LocationId is specified
- * @method void setDomain(string $Domain) 设置Target rule domain name. This parameter does not take effect if LocationId is specified
- * @method string getUrl() 获取Target rule URL. This parameter does not take effect if LocationId is specified
- * @method void setUrl(string $Url) 设置Target rule URL. This parameter does not take effect if LocationId is specified
- * @method integer getWeight() 获取New forwarding weight of a real server. Value range: 0-100.
- * @method void setWeight(integer $Weight) 设置New forwarding weight of a real server. Value range: 0-100.
+ * @method string getListenerId() Obtain CLB listener ID
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method array getTargets() Obtain List of real servers for which to modify the weight
+ * @method void setTargets(array $Targets) Set List of real servers for which to modify the weight
+ * @method string getLocationId() Obtain Forwarding rule ID
+ * @method void setLocationId(string $LocationId) Set Forwarding rule ID
+ * @method string getDomain() Obtain Target rule domain name. This parameter does not take effect if LocationId is specified
+ * @method void setDomain(string $Domain) Set Target rule domain name. This parameter does not take effect if LocationId is specified
+ * @method string getUrl() Obtain Target rule URL. This parameter does not take effect if LocationId is specified
+ * @method void setUrl(string $Url) Set Target rule URL. This parameter does not take effect if LocationId is specified
+ * @method integer getWeight() Obtain New forwarding weight of a real server. Value range: 0-100.
+ * @method void setWeight(integer $Weight) Set New forwarding weight of a real server. Value range: 0-100.
  */
 
 /**
@@ -79,7 +79,7 @@ class RsWeightRule extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

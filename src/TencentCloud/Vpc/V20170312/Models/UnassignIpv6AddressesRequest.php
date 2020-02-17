@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
- * @method array getIpv6Addresses() 获取指定的`IPv6`地址列表，单次最多指定10个。
- * @method void setIpv6Addresses(array $Ipv6Addresses) 设置指定的`IPv6`地址列表，单次最多指定10个。
+ * @method string getNetworkInterfaceId() Obtain The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+ * @method array getIpv6Addresses() Obtain The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
+ * @method void setIpv6Addresses(array $Ipv6Addresses) Set The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class UnassignIpv6AddressesRequest extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * @var string The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var array 指定的`IPv6`地址列表，单次最多指定10个。
+     * @var array The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
      */
     public $Ipv6Addresses;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
-     * @param array $Ipv6Addresses 指定的`IPv6`地址列表，单次最多指定10个。
+     * @param string $NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+     * @param array $Ipv6Addresses The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

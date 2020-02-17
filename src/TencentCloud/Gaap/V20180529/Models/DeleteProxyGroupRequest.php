@@ -18,8 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getGroupId() 获取ID of the connection group to be deleted.
- * @method void setGroupId(string $GroupId) 设置ID of the connection group to be deleted.
+ * @method string getGroupId() Obtain ID of the connection group to be deleted.
+ * @method void setGroupId(string $GroupId) Set ID of the connection group to be deleted.
  */
 
 /**
@@ -39,7 +39,7 @@ class DeleteProxyGroupRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

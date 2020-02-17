@@ -18,40 +18,40 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取The `ID` of a `VPC` instance, such as `vpc-12345678`.
- * @method void setVpcId(string $VpcId) 设置The `ID` of a `VPC` instance, such as `vpc-12345678`.
- * @method string getSubnetId() 获取The ID of a subnet instance, such as subnet-12345678.
- * @method void setSubnetId(string $SubnetId) 设置The ID of a subnet instance, such as subnet-12345678.
- * @method string getNetDetectName() 获取The name of a network detection instance. The maximum length is 60 characters.
- * @method void setNetDetectName(string $NetDetectName) 设置The name of a network detection instance. The maximum length is 60 characters.
- * @method array getDetectDestinationIp() 获取The array of detection destination IPv4 addresses, which contains at most two IP addresses.
- * @method void setDetectDestinationIp(array $DetectDestinationIp) 设置The array of detection destination IPv4 addresses, which contains at most two IP addresses.
- * @method string getNextHopType() 获取The type of the next hop. Currently supported types are:
+ * @method string getVpcId() Obtain The `ID` of a `VPC` instance, such as `vpc-12345678`.
+ * @method void setVpcId(string $VpcId) Set The `ID` of a `VPC` instance, such as `vpc-12345678`.
+ * @method string getSubnetId() Obtain The ID of a subnet instance, such as subnet-12345678.
+ * @method void setSubnetId(string $SubnetId) Set The ID of a subnet instance, such as subnet-12345678.
+ * @method string getNetDetectName() Obtain The name of a network detection instance. The maximum length is 60 characters.
+ * @method void setNetDetectName(string $NetDetectName) Set The name of a network detection instance. The maximum length is 60 characters.
+ * @method array getDetectDestinationIp() Obtain The array of detection destination IPv4 addresses, which contains at most two IP addresses.
+ * @method void setDetectDestinationIp(array $DetectDestinationIp) Set The array of detection destination IPv4 addresses, which contains at most two IP addresses.
+ * @method string getNextHopType() Obtain The type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
- * @method void setNextHopType(string $NextHopType) 设置The type of the next hop. Currently supported types are:
+ * @method void setNextHopType(string $NextHopType) Set The type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
- * @method string getNextHopDestination() 获取The next-hop destination gateway. The value is related to NextHopType.
+ * @method string getNextHopDestination() Obtain The next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
- * @method void setNextHopDestination(string $NextHopDestination) 设置The next-hop destination gateway. The value is related to NextHopType.
+ * @method void setNextHopDestination(string $NextHopDestination) Set The next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
- * @method string getNetDetectDescription() 获取Network detection description.
- * @method void setNetDetectDescription(string $NetDetectDescription) 设置Network detection description.
+ * @method string getNetDetectDescription() Obtain Network detection description.
+ * @method void setNetDetectDescription(string $NetDetectDescription) Set Network detection description.
  */
 
 /**
@@ -127,7 +127,7 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

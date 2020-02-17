@@ -18,7 +18,7 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getCertificateType() 获取Certificate type. Where:
+ * @method integer getCertificateType() Obtain Certificate type. Where:
 0: basic authentication configuration;
 1: client CA certificate;
 2: server SSL certificate;
@@ -26,7 +26,7 @@ use TencentCloud\Common\AbstractModel;
 4: connection SSL certificate.
 -1: all types.
 The default value is -1.
- * @method void setCertificateType(integer $CertificateType) 设置Certificate type. Where:
+ * @method void setCertificateType(integer $CertificateType) Set Certificate type. Where:
 0: basic authentication configuration;
 1: client CA certificate;
 2: server SSL certificate;
@@ -34,10 +34,10 @@ The default value is -1.
 4: connection SSL certificate.
 -1: all types.
 The default value is -1.
- * @method integer getOffset() 获取Offset. The default value is 0.
- * @method void setOffset(integer $Offset) 设置Offset. The default value is 0.
- * @method integer getLimit() 获取Quantity limit. The default value is 20.
- * @method void setLimit(integer $Limit) 设置Quantity limit. The default value is 20.
+ * @method integer getOffset() Obtain Offset. The default value is 0.
+ * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
+ * @method integer getLimit() Obtain Quantity limit. The default value is 20.
+ * @method void setLimit(integer $Limit) Set Quantity limit. The default value is 20.
  */
 
 /**
@@ -83,7 +83,7 @@ The default value is -1.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取任务ID
- * @method void setTaskId(integer $TaskId) 设置任务ID
- * @method string getResult() 获取执行结果，包括"SUCCESS", "FAILED", "RUNNING"
- * @method void setResult(string $Result) 设置执行结果，包括"SUCCESS", "FAILED", "RUNNING"
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTaskId() Obtain Job ID
+ * @method void setTaskId(integer $TaskId) Set Job ID
+ * @method string getResult() Obtain The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
+ * @method void setResult(string $Result) Set The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskResultResponse extends AbstractModel
 {
     /**
-     * @var integer 任务ID
+     * @var integer Job ID
      */
     public $TaskId;
 
     /**
-     * @var string 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+     * @var string The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
      */
     public $Result;
 
@@ -46,8 +46,8 @@ class DescribeTaskResultResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TaskId 任务ID
-     * @param string $Result 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+     * @param integer $TaskId Job ID
+     * @param string $Result The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeTaskResultResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

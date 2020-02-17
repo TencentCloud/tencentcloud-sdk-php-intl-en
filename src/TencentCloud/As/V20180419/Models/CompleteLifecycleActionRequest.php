@@ -18,14 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLifecycleHookId() 获取Lifecycle hook ID
- * @method void setLifecycleHookId(string $LifecycleHookId) 设置Lifecycle hook ID
- * @method string getLifecycleActionResult() 获取Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
- * @method void setLifecycleActionResult(string $LifecycleActionResult) 设置Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
- * @method string getInstanceId() 获取Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
- * @method void setInstanceId(string $InstanceId) 设置Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
- * @method string getLifecycleActionToken() 获取Either "InstanceId" or "LifecycleActionToken" must be specified
- * @method void setLifecycleActionToken(string $LifecycleActionToken) 设置Either "InstanceId" or "LifecycleActionToken" must be specified
+ * @method string getLifecycleHookId() Obtain Lifecycle hook ID
+ * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
+ * @method string getLifecycleActionResult() Obtain Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+ * @method void setLifecycleActionResult(string $LifecycleActionResult) Set Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+ * @method string getInstanceId() Obtain Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+ * @method string getLifecycleActionToken() Obtain Either "InstanceId" or "LifecycleActionToken" must be specified
+ * @method void setLifecycleActionToken(string $LifecycleActionToken) Set Either "InstanceId" or "LifecycleActionToken" must be specified
  */
 
 /**
@@ -63,7 +63,7 @@ class CompleteLifecycleActionRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

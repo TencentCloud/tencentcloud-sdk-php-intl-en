@@ -18,12 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getLoadBalancers() 获取List of CLB instances
+ * @method array getLoadBalancers() Obtain List of CLB instances
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancers(array $LoadBalancers) 设置List of CLB instances
+ * @method void setLoadBalancers(array $LoadBalancers) Set List of CLB instances
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -51,7 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

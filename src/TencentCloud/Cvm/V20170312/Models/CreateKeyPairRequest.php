@@ -18,13 +18,13 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKeyName() 获取Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
- * @method void setKeyName(string $KeyName) 设置Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
- * @method integer getProjectId() 获取The ID of the project to which the new key pair belongs.
+ * @method string getKeyName() Obtain Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+ * @method void setKeyName(string $KeyName) Set Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+ * @method integer getProjectId() Obtain The ID of the project to which the new key pair belongs.
 You can query the project IDs in two ways:
 <li>Query the project IDs in the project list.
 <li>Call `DescribeProject` and look for `projectId` in the response.
- * @method void setProjectId(integer $ProjectId) 设置The ID of the project to which the new key pair belongs.
+ * @method void setProjectId(integer $ProjectId) Set The ID of the project to which the new key pair belongs.
 You can query the project IDs in two ways:
 <li>Query the project IDs in the project list.
 <li>Call `DescribeProject` and look for `projectId` in the response.
@@ -59,7 +59,7 @@ You can query the project IDs in two ways:
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

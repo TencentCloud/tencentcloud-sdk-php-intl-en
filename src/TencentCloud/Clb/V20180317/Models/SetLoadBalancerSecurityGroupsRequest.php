@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method array getSecurityGroups() 获取Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
- * @method void setSecurityGroups(array $SecurityGroups) 设置Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getSecurityGroups() Obtain Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
+ * @method void setSecurityGroups(array $SecurityGroups) Set Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
  */
 
 /**
@@ -47,7 +47,7 @@ class SetLoadBalancerSecurityGroupsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

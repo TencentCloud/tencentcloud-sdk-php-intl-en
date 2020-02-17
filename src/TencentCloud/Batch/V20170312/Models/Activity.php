@@ -18,29 +18,29 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getActivityId() 获取Activity ID
- * @method void setActivityId(string $ActivityId) 设置Activity ID
- * @method string getComputeNodeId() 获取Compute node ID
- * @method void setComputeNodeId(string $ComputeNodeId) 设置Compute node ID
- * @method string getComputeNodeActivityType() 获取Compute node activity type: creation or termination
- * @method void setComputeNodeActivityType(string $ComputeNodeActivityType) 设置Compute node activity type: creation or termination
- * @method string getEnvId() 获取Compute environment ID
- * @method void setEnvId(string $EnvId) 设置Compute environment ID
- * @method string getCause() 获取Cause
- * @method void setCause(string $Cause) 设置Cause
- * @method string getActivityState() 获取Active status
- * @method void setActivityState(string $ActivityState) 设置Active status
- * @method string getStateReason() 获取State reason
- * @method void setStateReason(string $StateReason) 设置State reason
- * @method string getStartTime() 获取Activity start time
- * @method void setStartTime(string $StartTime) 设置Activity start time
- * @method string getEndTime() 获取Activity end time
+ * @method string getActivityId() Obtain Activity ID
+ * @method void setActivityId(string $ActivityId) Set Activity ID
+ * @method string getComputeNodeId() Obtain Compute node ID
+ * @method void setComputeNodeId(string $ComputeNodeId) Set Compute node ID
+ * @method string getComputeNodeActivityType() Obtain Compute node activity type: creation or termination
+ * @method void setComputeNodeActivityType(string $ComputeNodeActivityType) Set Compute node activity type: creation or termination
+ * @method string getEnvId() Obtain Compute environment ID
+ * @method void setEnvId(string $EnvId) Set Compute environment ID
+ * @method string getCause() Obtain Cause
+ * @method void setCause(string $Cause) Set Cause
+ * @method string getActivityState() Obtain Active status
+ * @method void setActivityState(string $ActivityState) Set Active status
+ * @method string getStateReason() Obtain State reason
+ * @method void setStateReason(string $StateReason) Set State reason
+ * @method string getStartTime() Obtain Activity start time
+ * @method void setStartTime(string $StartTime) Set Activity start time
+ * @method string getEndTime() Obtain Activity end time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) 设置Activity end time
+ * @method void setEndTime(string $EndTime) Set Activity end time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() 获取CVM instance ID
+ * @method string getInstanceId() Obtain CVM instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) 设置CVM instance ID
+ * @method void setInstanceId(string $InstanceId) Set CVM instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -119,7 +119,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

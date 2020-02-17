@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPrivateIpAddress() 获取`VPC`内网`IP`。
- * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置`VPC`内网`IP`。
- * @method string getCidrBlock() 获取所属子网`CIDR`。
- * @method void setCidrBlock(string $CidrBlock) 设置所属子网`CIDR`。
- * @method string getPrivateIpAddressType() 获取内网`IP`类型。
- * @method void setPrivateIpAddressType(string $PrivateIpAddressType) 设置内网`IP`类型。
- * @method string getCreatedTime() 获取`IP`申请时间。
- * @method void setCreatedTime(string $CreatedTime) 设置`IP`申请时间。
+ * @method string getPrivateIpAddress() Obtain `VPC` private `IP`.
+ * @method void setPrivateIpAddress(string $PrivateIpAddress) Set `VPC` private `IP`.
+ * @method string getCidrBlock() Obtain The `CIDR` belonging to the subnet.
+ * @method void setCidrBlock(string $CidrBlock) Set The `CIDR` belonging to the subnet.
+ * @method string getPrivateIpAddressType() Obtain Private `IP` type.
+ * @method void setPrivateIpAddressType(string $PrivateIpAddressType) Set Private `IP` type.
+ * @method string getCreatedTime() Obtain `IP` application time.
+ * @method void setCreatedTime(string $CreatedTime) Set `IP` application time.
  */
 
 /**
- *VPC内网IP对象。
+ *VPC private IP object.
  */
 class VpcPrivateIpAddress extends AbstractModel
 {
     /**
-     * @var string `VPC`内网`IP`。
+     * @var string `VPC` private `IP`.
      */
     public $PrivateIpAddress;
 
     /**
-     * @var string 所属子网`CIDR`。
+     * @var string The `CIDR` belonging to the subnet.
      */
     public $CidrBlock;
 
     /**
-     * @var string 内网`IP`类型。
+     * @var string Private `IP` type.
      */
     public $PrivateIpAddressType;
 
     /**
-     * @var string `IP`申请时间。
+     * @var string `IP` application time.
      */
     public $CreatedTime;
     /**
-     * @param string $PrivateIpAddress `VPC`内网`IP`。
-     * @param string $CidrBlock 所属子网`CIDR`。
-     * @param string $PrivateIpAddressType 内网`IP`类型。
-     * @param string $CreatedTime `IP`申请时间。
+     * @param string $PrivateIpAddress `VPC` private `IP`.
+     * @param string $CidrBlock The `CIDR` belonging to the subnet.
+     * @param string $PrivateIpAddressType Private `IP` type.
+     * @param string $CreatedTime `IP` application time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,24 +18,24 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSecurityGroupIds() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
- * @method array getFilters() 获取Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+ * @method array getSecurityGroupIds() Obtain The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+ * @method array getFilters() Obtain Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
 <li>security-group-id - String - (Filter condition) The security group ID.</li>
 <li>project-id - Integer - (Filter condition) The project ID.</li>
 <li>security-group-name - String - (Filter condition) The security group name.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
- * @method void setFilters(array $Filters) 设置Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+ * @method void setFilters(array $Filters) Set Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
 <li>security-group-id - String - (Filter condition) The security group ID.</li>
 <li>project-id - Integer - (Filter condition) The project ID.</li>
 <li>security-group-name - String - (Filter condition) The security group name.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
- * @method string getOffset() 获取偏移量。
- * @method void setOffset(string $Offset) 设置偏移量。
- * @method string getLimit() 获取返回数量。
- * @method void setLimit(string $Limit) 设置返回数量。
+ * @method string getOffset() Obtain Offset.
+ * @method void setOffset(string $Offset) Set Offset.
+ * @method string getLimit() Obtain The returned quantity.
+ * @method void setLimit(string $Limit) Set The returned quantity.
  */
 
 /**
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * @var array The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
      */
     public $SecurityGroupIds;
 
@@ -59,31 +59,31 @@ class DescribeSecurityGroupsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 偏移量。
+     * @var string Offset.
      */
     public $Offset;
 
     /**
-     * @var string 返回数量。
+     * @var string The returned quantity.
      */
     public $Limit;
     /**
-     * @param array $SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * @param array $SecurityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
      * @param array $Filters Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
 <li>security-group-id - String - (Filter condition) The security group ID.</li>
 <li>project-id - Integer - (Filter condition) The project ID.</li>
 <li>security-group-name - String - (Filter condition) The security group name.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-     * @param string $Offset 偏移量。
-     * @param string $Limit 返回数量。
+     * @param string $Offset Offset.
+     * @param string $Limit The returned quantity.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

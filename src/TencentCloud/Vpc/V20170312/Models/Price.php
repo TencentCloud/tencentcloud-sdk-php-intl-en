@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ItemPrice getInstancePrice() 获取实例价格。
- * @method void setInstancePrice(ItemPrice $InstancePrice) 设置实例价格。
- * @method ItemPrice getBandwidthPrice() 获取网络价格。
- * @method void setBandwidthPrice(ItemPrice $BandwidthPrice) 设置网络价格。
+ * @method ItemPrice getInstancePrice() Obtain Instance price.
+ * @method void setInstancePrice(ItemPrice $InstancePrice) Set Instance price.
+ * @method ItemPrice getBandwidthPrice() Obtain Network price.
+ * @method void setBandwidthPrice(ItemPrice $BandwidthPrice) Set Network price.
  */
 
 /**
- *价格
+ *Price
  */
 class Price extends AbstractModel
 {
     /**
-     * @var ItemPrice 实例价格。
+     * @var ItemPrice Instance price.
      */
     public $InstancePrice;
 
     /**
-     * @var ItemPrice 网络价格。
+     * @var ItemPrice Network price.
      */
     public $BandwidthPrice;
     /**
-     * @param ItemPrice $InstancePrice 实例价格。
-     * @param ItemPrice $BandwidthPrice 网络价格。
+     * @param ItemPrice $InstancePrice Instance price.
+     * @param ItemPrice $BandwidthPrice Network price.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

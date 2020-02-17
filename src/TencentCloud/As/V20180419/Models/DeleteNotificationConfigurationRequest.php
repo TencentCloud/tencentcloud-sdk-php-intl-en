@@ -18,8 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingNotificationId() 获取ID of the notification to be deleted.
- * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置ID of the notification to be deleted.
+ * @method string getAutoScalingNotificationId() Obtain ID of the notification to be deleted.
+ * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set ID of the notification to be deleted.
  */
 
 /**
@@ -39,7 +39,7 @@ class DeleteNotificationConfigurationRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,18 +18,18 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoSnapshotPolicyId() 获取Scheduled snapshot policy ID.
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置Scheduled snapshot policy ID.
- * @method array getPolicy() 获取The policy for executing the scheduled snapshot.
- * @method void setPolicy(array $Policy) 设置The policy for executing the scheduled snapshot.
- * @method string getAutoSnapshotPolicyName() 获取The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
- * @method void setAutoSnapshotPolicyName(string $AutoSnapshotPolicyName) 设置The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
- * @method boolean getIsActivated() 获取Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
- * @method void setIsActivated(boolean $IsActivated) 设置Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
- * @method boolean getIsPermanent() 获取Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
- * @method void setIsPermanent(boolean $IsPermanent) 设置Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
- * @method integer getRetentionDays() 获取The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
- * @method void setRetentionDays(integer $RetentionDays) 设置The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+ * @method string getAutoSnapshotPolicyId() Obtain Scheduled snapshot policy ID.
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Scheduled snapshot policy ID.
+ * @method array getPolicy() Obtain The policy for executing the scheduled snapshot.
+ * @method void setPolicy(array $Policy) Set The policy for executing the scheduled snapshot.
+ * @method string getAutoSnapshotPolicyName() Obtain The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+ * @method void setAutoSnapshotPolicyName(string $AutoSnapshotPolicyName) Set The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+ * @method boolean getIsActivated() Obtain Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+ * @method void setIsActivated(boolean $IsActivated) Set Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+ * @method boolean getIsPermanent() Obtain Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+ * @method void setIsPermanent(boolean $IsPermanent) Set Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+ * @method integer getRetentionDays() Obtain The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+ * @method void setRetentionDays(integer $RetentionDays) Set The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
  */
 
 /**
@@ -79,7 +79,7 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

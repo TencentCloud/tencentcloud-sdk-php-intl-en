@@ -18,35 +18,35 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getRuleId() 获取Forwarding rule ID
- * @method void setRuleId(string $RuleId) 设置Forwarding rule ID
- * @method string getScheduler() 获取Scheduling policy:
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getRuleId() Obtain Forwarding rule ID
+ * @method void setRuleId(string $RuleId) Set Forwarding rule ID
+ * @method string getScheduler() Obtain Scheduling policy:
 rr: round robin;
 wrr: weighted round robin;
 lc: least connections.
- * @method void setScheduler(string $Scheduler) 设置Scheduling policy:
+ * @method void setScheduler(string $Scheduler) Set Scheduling policy:
 rr: round robin;
 wrr: weighted round robin;
 lc: least connections.
- * @method integer getHealthCheck() 获取Whether to enable the origin server health check:
+ * @method integer getHealthCheck() Obtain Whether to enable the origin server health check:
 1: enable;
 0: disable.
- * @method void setHealthCheck(integer $HealthCheck) 设置Whether to enable the origin server health check:
+ * @method void setHealthCheck(integer $HealthCheck) Set Whether to enable the origin server health check:
 1: enable;
 0: disable.
- * @method RuleCheckParams getCheckParams() 获取Health check configuration parameters
- * @method void setCheckParams(RuleCheckParams $CheckParams) 设置Health check configuration parameters
- * @method string getPath() 获取Forwarding rule path
- * @method void setPath(string $Path) 设置Forwarding rule path
- * @method string getForwardProtocol() 获取Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
+ * @method RuleCheckParams getCheckParams() Obtain Health check configuration parameters
+ * @method void setCheckParams(RuleCheckParams $CheckParams) Set Health check configuration parameters
+ * @method string getPath() Obtain Forwarding rule path
+ * @method void setPath(string $Path) Set Forwarding rule path
+ * @method string getForwardProtocol() Obtain Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
- * @method void setForwardProtocol(string $ForwardProtocol) 设置Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
+ * @method void setForwardProtocol(string $ForwardProtocol) Set Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
- * @method string getForwardHost() 获取The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+ * @method string getForwardHost() Obtain The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
- * @method void setForwardHost(string $ForwardHost) 设置The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+ * @method void setForwardHost(string $ForwardHost) Set The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
  */
 
@@ -123,7 +123,7 @@ If `ForwardHost=default`, the domain name of rule will be used. For other cases,
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

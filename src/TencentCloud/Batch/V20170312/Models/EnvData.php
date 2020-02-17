@@ -18,38 +18,38 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceType() 获取CVM instance type, which cannot be present together with InstanceTypes or InstanceTypeOptions at the same time.
- * @method void setInstanceType(string $InstanceType) 设置CVM instance type, which cannot be present together with InstanceTypes or InstanceTypeOptions at the same time.
- * @method string getImageId() 获取CVM image ID
- * @method void setImageId(string $ImageId) 设置CVM image ID
- * @method SystemDisk getSystemDisk() 获取Information of the instance's system disk configuration
- * @method void setSystemDisk(SystemDisk $SystemDisk) 设置Information of the instance's system disk configuration
- * @method array getDataDisks() 获取Information of the instance's data disk configuration
- * @method void setDataDisks(array $DataDisks) 设置Information of the instance's data disk configuration
- * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取Information of the VPC configuration, which cannot be specified together with Zones and VirtualPrivateClouds.
- * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置Information of the VPC configuration, which cannot be specified together with Zones and VirtualPrivateClouds.
- * @method InternetAccessible getInternetAccessible() 获取Information of the public network bandwidth configuration
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置Information of the public network bandwidth configuration
- * @method string getInstanceName() 获取CVM instance display name
- * @method void setInstanceName(string $InstanceName) 设置CVM instance display name
- * @method LoginSettings getLoginSettings() 获取Instance login settings
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置Instance login settings
- * @method array getSecurityGroupIds() 获取Security group of the instance
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置Security group of the instance
- * @method EnhancedService getEnhancedService() 获取Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
- * @method void setEnhancedService(EnhancedService $EnhancedService) 设置Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
- * @method string getInstanceChargeType() 获取CVM instance billing method <br><li>POSTPAID_BY_HOUR: pay-as-you-go by the hour <br><li>SPOTPAID: bidding <br>Default value: POSTPAID_BY_HOUR.
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置CVM instance billing method <br><li>POSTPAID_BY_HOUR: pay-as-you-go by the hour <br><li>SPOTPAID: bidding <br>Default value: POSTPAID_BY_HOUR.
- * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取Market-related options of the instance, such as parameters related to spot instance
- * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置Market-related options of the instance, such as parameters related to spot instance
- * @method array getInstanceTypes() 获取List of CVM instance types, which cannot be present together with InstanceType or InstanceTypeOptions at the same time. After the field is specified, the system will try creating compute nodes in the order of the models until successful creation and then stop the traversal process. Up to 10 models are supported.
- * @method void setInstanceTypes(array $InstanceTypes) 设置List of CVM instance types, which cannot be present together with InstanceType or InstanceTypeOptions at the same time. After the field is specified, the system will try creating compute nodes in the order of the models until successful creation and then stop the traversal process. Up to 10 models are supported.
- * @method InstanceTypeOptions getInstanceTypeOptions() 获取CVM instance model configuration, which cannot be present together with InstanceType or InstanceTypes at the same time.
- * @method void setInstanceTypeOptions(InstanceTypeOptions $InstanceTypeOptions) 设置CVM instance model configuration, which cannot be present together with InstanceType or InstanceTypes at the same time.
- * @method array getZones() 获取List of availability zones (creation of CVM instances across availability zones is supported), which cannot be specified together with VirtualPrivateCloud or VirtualPrivateClouds at the same time.
- * @method void setZones(array $Zones) 设置List of availability zones (creation of CVM instances across availability zones is supported), which cannot be specified together with VirtualPrivateCloud or VirtualPrivateClouds at the same time.
- * @method array getVirtualPrivateClouds() 获取List of VPCs (creation of CVM instances across VPCs is supported), which cannot be specified together with VirtualPrivateCloud or Zones at the same time.
- * @method void setVirtualPrivateClouds(array $VirtualPrivateClouds) 设置List of VPCs (creation of CVM instances across VPCs is supported), which cannot be specified together with VirtualPrivateCloud or Zones at the same time.
+ * @method string getInstanceType() Obtain CVM instance type, which cannot be present together with InstanceTypes or InstanceTypeOptions at the same time.
+ * @method void setInstanceType(string $InstanceType) Set CVM instance type, which cannot be present together with InstanceTypes or InstanceTypeOptions at the same time.
+ * @method string getImageId() Obtain CVM image ID
+ * @method void setImageId(string $ImageId) Set CVM image ID
+ * @method SystemDisk getSystemDisk() Obtain Information of the instance's system disk configuration
+ * @method void setSystemDisk(SystemDisk $SystemDisk) Set Information of the instance's system disk configuration
+ * @method array getDataDisks() Obtain Information of the instance's data disk configuration
+ * @method void setDataDisks(array $DataDisks) Set Information of the instance's data disk configuration
+ * @method VirtualPrivateCloud getVirtualPrivateCloud() Obtain Information of the VPC configuration, which cannot be specified together with Zones and VirtualPrivateClouds.
+ * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) Set Information of the VPC configuration, which cannot be specified together with Zones and VirtualPrivateClouds.
+ * @method InternetAccessible getInternetAccessible() Obtain Information of the public network bandwidth configuration
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Information of the public network bandwidth configuration
+ * @method string getInstanceName() Obtain CVM instance display name
+ * @method void setInstanceName(string $InstanceName) Set CVM instance display name
+ * @method LoginSettings getLoginSettings() Obtain Instance login settings
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings
+ * @method array getSecurityGroupIds() Obtain Security group of the instance
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group of the instance
+ * @method EnhancedService getEnhancedService() Obtain Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
+ * @method void setEnhancedService(EnhancedService $EnhancedService) Set Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
+ * @method string getInstanceChargeType() Obtain CVM instance billing method <br><li>POSTPAID_BY_HOUR: pay-as-you-go by the hour <br><li>SPOTPAID: bidding <br>Default value: POSTPAID_BY_HOUR.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set CVM instance billing method <br><li>POSTPAID_BY_HOUR: pay-as-you-go by the hour <br><li>SPOTPAID: bidding <br>Default value: POSTPAID_BY_HOUR.
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market-related options of the instance, such as parameters related to spot instance
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market-related options of the instance, such as parameters related to spot instance
+ * @method array getInstanceTypes() Obtain List of CVM instance types, which cannot be present together with InstanceType or InstanceTypeOptions at the same time. After the field is specified, the system will try creating compute nodes in the order of the models until successful creation and then stop the traversal process. Up to 10 models are supported.
+ * @method void setInstanceTypes(array $InstanceTypes) Set List of CVM instance types, which cannot be present together with InstanceType or InstanceTypeOptions at the same time. After the field is specified, the system will try creating compute nodes in the order of the models until successful creation and then stop the traversal process. Up to 10 models are supported.
+ * @method InstanceTypeOptions getInstanceTypeOptions() Obtain CVM instance model configuration, which cannot be present together with InstanceType or InstanceTypes at the same time.
+ * @method void setInstanceTypeOptions(InstanceTypeOptions $InstanceTypeOptions) Set CVM instance model configuration, which cannot be present together with InstanceType or InstanceTypes at the same time.
+ * @method array getZones() Obtain List of availability zones (creation of CVM instances across availability zones is supported), which cannot be specified together with VirtualPrivateCloud or VirtualPrivateClouds at the same time.
+ * @method void setZones(array $Zones) Set List of availability zones (creation of CVM instances across availability zones is supported), which cannot be specified together with VirtualPrivateCloud or VirtualPrivateClouds at the same time.
+ * @method array getVirtualPrivateClouds() Obtain List of VPCs (creation of CVM instances across VPCs is supported), which cannot be specified together with VirtualPrivateCloud or Zones at the same time.
+ * @method void setVirtualPrivateClouds(array $VirtualPrivateClouds) Set List of VPCs (creation of CVM instances across VPCs is supported), which cannot be specified together with VirtualPrivateCloud or Zones at the same time.
  */
 
 /**
@@ -159,7 +159,7 @@ class EnvData extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

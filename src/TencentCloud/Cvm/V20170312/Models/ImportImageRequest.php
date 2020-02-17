@@ -18,22 +18,22 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getArchitecture() 获取OS architecture of the image to be imported, `x86_64` or `i386`.
- * @method void setArchitecture(string $Architecture) 设置OS architecture of the image to be imported, `x86_64` or `i386`.
- * @method string getOsType() 获取OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
- * @method void setOsType(string $OsType) 设置OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
- * @method string getOsVersion() 获取OS version of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
- * @method void setOsVersion(string $OsVersion) 设置OS version of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
- * @method string getImageUrl() 获取Address on COS where the image to be imported is stored.
- * @method void setImageUrl(string $ImageUrl) 设置Address on COS where the image to be imported is stored.
- * @method string getImageName() 获取Image name
- * @method void setImageName(string $ImageName) 设置Image name
- * @method string getImageDescription() 获取Image description
- * @method void setImageDescription(string $ImageDescription) 设置Image description
- * @method boolean getDryRun() 获取Dry run to check the parameters without performing the operation
- * @method void setDryRun(boolean $DryRun) 设置Dry run to check the parameters without performing the operation
- * @method boolean getForce() 获取Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
- * @method void setForce(boolean $Force) 设置Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
+ * @method string getArchitecture() Obtain OS architecture of the image to be imported, `x86_64` or `i386`.
+ * @method void setArchitecture(string $Architecture) Set OS architecture of the image to be imported, `x86_64` or `i386`.
+ * @method string getOsType() Obtain OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
+ * @method void setOsType(string $OsType) Set OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
+ * @method string getOsVersion() Obtain OS version of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
+ * @method void setOsVersion(string $OsVersion) Set OS version of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
+ * @method string getImageUrl() Obtain Address on COS where the image to be imported is stored.
+ * @method void setImageUrl(string $ImageUrl) Set Address on COS where the image to be imported is stored.
+ * @method string getImageName() Obtain Image name
+ * @method void setImageName(string $ImageName) Set Image name
+ * @method string getImageDescription() Obtain Image description
+ * @method void setImageDescription(string $ImageDescription) Set Image description
+ * @method boolean getDryRun() Obtain Dry run to check the parameters without performing the operation
+ * @method void setDryRun(boolean $DryRun) Set Dry run to check the parameters without performing the operation
+ * @method boolean getForce() Obtain Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
+ * @method void setForce(boolean $Force) Set Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
  */
 
 /**
@@ -95,7 +95,7 @@ class ImportImageRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getType() 获取Real server type. Value range: CVM, ENI (coming soon)
- * @method void setType(string $Type) 设置Real server type. Value range: CVM, ENI (coming soon)
- * @method string getInstanceId() 获取Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
- * @method void setInstanceId(string $InstanceId) 设置Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
- * @method integer getWeight() 获取Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
- * @method void setWeight(integer $Weight) 设置Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
- * @method array getPublicIpAddresses() 获取Public IP of a real server
+ * @method string getType() Obtain Real server type. Value range: CVM, ENI (coming soon)
+ * @method void setType(string $Type) Set Real server type. Value range: CVM, ENI (coming soon)
+ * @method string getInstanceId() Obtain Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
+ * @method void setInstanceId(string $InstanceId) Set Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
+ * @method integer getWeight() Obtain Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+ * @method void setWeight(integer $Weight) Set Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+ * @method array getPublicIpAddresses() Obtain Public IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置Public IP of a real server
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPrivateIpAddresses() 获取Private IP of a real server
+ * @method array getPrivateIpAddresses() Obtain Private IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置Private IP of a real server
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() 获取Real server instance names
+ * @method string getInstanceName() Obtain Real server instance names
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) 设置Real server instance names
+ * @method void setInstanceName(string $InstanceName) Set Real server instance names
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRunFlag() 获取Real server status
+ * @method integer getRunFlag() Obtain Real server status
 1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRunFlag(integer $RunFlag) 设置Real server status
+ * @method void setRunFlag(integer $RunFlag) Set Real server status
 1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
 Note: This field may return null, indicating that no valid values can be obtained.
  */
@@ -107,7 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

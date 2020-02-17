@@ -18,22 +18,22 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取Sub-user username
- * @method void setName(string $Name) 设置Sub-user username
- * @method string getRemark() 获取Sub-user remarks
- * @method void setRemark(string $Remark) 设置Sub-user remarks
- * @method integer getConsoleLogin() 获取Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
- * @method void setConsoleLogin(integer $ConsoleLogin) 设置Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
- * @method string getPassword() 获取Sub-user’s console login password. If no password rules have been set, the default rules require the password to have at least 8 characters, at least one lowercase letter, one uppercase letter, one number, and one special character. This value is valid only when the sub-user is allowed to log in to the console. If no value is specified, and console login is allowed, the system will automatically generate a password. The automatically generated passwords are 32 characters long and contain letters (both upper and lower cases), numbers, and special characters.
- * @method void setPassword(string $Password) 设置Sub-user’s console login password. If no password rules have been set, the default rules require the password to have at least 8 characters, at least one lowercase letter, one uppercase letter, one number, and one special character. This value is valid only when the sub-user is allowed to log in to the console. If no value is specified, and console login is allowed, the system will automatically generate a password. The automatically generated passwords are 32 characters long and contain letters (both upper and lower cases), numbers, and special characters.
- * @method integer getNeedResetPassword() 获取If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
- * @method void setNeedResetPassword(integer $NeedResetPassword) 设置If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
- * @method string getPhoneNum() 获取Mobile number
- * @method void setPhoneNum(string $PhoneNum) 设置Mobile number
- * @method string getCountryCode() 获取Country/Area Code
- * @method void setCountryCode(string $CountryCode) 设置Country/Area Code
- * @method string getEmail() 获取Email
- * @method void setEmail(string $Email) 设置Email
+ * @method string getName() Obtain Sub-user username
+ * @method void setName(string $Name) Set Sub-user username
+ * @method string getRemark() Obtain Sub-user remarks
+ * @method void setRemark(string $Remark) Set Sub-user remarks
+ * @method integer getConsoleLogin() Obtain Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
+ * @method void setConsoleLogin(integer $ConsoleLogin) Set Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
+ * @method string getPassword() Obtain Sub-user’s console login password. If no password rules have been set, the default rules require the password to have at least 8 characters, at least one lowercase letter, one uppercase letter, one number, and one special character. This value is valid only when the sub-user is allowed to log in to the console. If no value is specified, and console login is allowed, the system will automatically generate a password. The automatically generated passwords are 32 characters long and contain letters (both upper and lower cases), numbers, and special characters.
+ * @method void setPassword(string $Password) Set Sub-user’s console login password. If no password rules have been set, the default rules require the password to have at least 8 characters, at least one lowercase letter, one uppercase letter, one number, and one special character. This value is valid only when the sub-user is allowed to log in to the console. If no value is specified, and console login is allowed, the system will automatically generate a password. The automatically generated passwords are 32 characters long and contain letters (both upper and lower cases), numbers, and special characters.
+ * @method integer getNeedResetPassword() Obtain If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
+ * @method void setNeedResetPassword(integer $NeedResetPassword) Set If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
+ * @method string getPhoneNum() Obtain Mobile number
+ * @method void setPhoneNum(string $PhoneNum) Set Mobile number
+ * @method string getCountryCode() Obtain Country/Area Code
+ * @method void setCountryCode(string $CountryCode) Set Country/Area Code
+ * @method string getEmail() Obtain Email
+ * @method void setEmail(string $Email) Set Email
  */
 
 /**
@@ -95,7 +95,7 @@ class UpdateUserRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

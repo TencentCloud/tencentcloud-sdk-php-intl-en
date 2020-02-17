@@ -18,13 +18,13 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getWindows() 获取Supported Windows OS
+ * @method array getWindows() Obtain Supported Windows OS
 Note: This field may return null, indicating that no valid value is found.
- * @method void setWindows(array $Windows) 设置Supported Windows OS
+ * @method void setWindows(array $Windows) Set Supported Windows OS
 Note: This field may return null, indicating that no valid value is found.
- * @method array getLinux() 获取Supported Linux OS
+ * @method array getLinux() Obtain Supported Linux OS
 Note: This field may return null, indicating that no valid value is found.
- * @method void setLinux(array $Linux) 设置Supported Linux OS
+ * @method void setLinux(array $Linux) Set Supported Linux OS
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

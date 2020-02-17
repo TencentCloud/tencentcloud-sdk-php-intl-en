@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRegionId() 获取Region ID
- * @method void setRegionId(string $RegionId) 设置Region ID
- * @method string getRegionName() 获取Region name in Chinese or English
- * @method void setRegionName(string $RegionName) 设置Region name in Chinese or English
- * @method array getConcurrentList() 获取Value array of the available concurrence
- * @method void setConcurrentList(array $ConcurrentList) 设置Value array of the available concurrence
- * @method array getBandwidthList() 获取Value array of the available bandwidth
- * @method void setBandwidthList(array $BandwidthList) 设置Value array of the available bandwidth
+ * @method string getRegionId() Obtain Region ID
+ * @method void setRegionId(string $RegionId) Set Region ID
+ * @method string getRegionName() Obtain Region name in Chinese or English
+ * @method void setRegionName(string $RegionName) Set Region name in Chinese or English
+ * @method array getConcurrentList() Obtain Value array of the available concurrence
+ * @method void setConcurrentList(array $ConcurrentList) Set Value array of the available concurrence
+ * @method array getBandwidthList() Obtain Value array of the available bandwidth
+ * @method void setBandwidthList(array $BandwidthList) Set Value array of the available bandwidth
  */
 
 /**
@@ -63,7 +63,7 @@ class AccessRegionDetial extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

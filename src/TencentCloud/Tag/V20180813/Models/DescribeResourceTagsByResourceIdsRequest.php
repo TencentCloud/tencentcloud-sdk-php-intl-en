@@ -18,18 +18,18 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getServiceType() 获取Service type.
- * @method void setServiceType(string $ServiceType) 设置Service type.
- * @method string getResourcePrefix() 获取Resource prefix.
- * @method void setResourcePrefix(string $ResourcePrefix) 设置Resource prefix.
- * @method array getResourceIds() 获取Unique resource ID.
- * @method void setResourceIds(array $ResourceIds) 设置Unique resource ID.
- * @method string getResourceRegion() 获取The resource’s region.
- * @method void setResourceRegion(string $ResourceRegion) 设置The resource’s region.
- * @method integer getOffset() 获取Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method void setOffset(integer $Offset) 设置Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method integer getLimit() 获取Page size. The default value is 0.
- * @method void setLimit(integer $Limit) 设置Page size. The default value is 0.
+ * @method string getServiceType() Obtain Service type.
+ * @method void setServiceType(string $ServiceType) Set Service type.
+ * @method string getResourcePrefix() Obtain Resource prefix.
+ * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix.
+ * @method array getResourceIds() Obtain Unique resource ID.
+ * @method void setResourceIds(array $ResourceIds) Set Unique resource ID.
+ * @method string getResourceRegion() Obtain The resource’s region.
+ * @method void setResourceRegion(string $ResourceRegion) Set The resource’s region.
+ * @method integer getOffset() Obtain Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+ * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+ * @method integer getLimit() Obtain Page size. The default value is 0.
+ * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
  */
 
 /**
@@ -79,7 +79,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

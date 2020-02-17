@@ -18,41 +18,41 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取Task ID
+ * @method integer getTaskId() Obtain Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskId(integer $TaskId) 设置Task ID
+ * @method void setTaskId(integer $TaskId) Set Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() 获取Start time
+ * @method string getStartTime() Obtain Start time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) 设置Start time
+ * @method void setStartTime(string $StartTime) Set Start time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTaskType() 获取Task type
+ * @method string getTaskType() Obtain Task type
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskType(string $TaskType) 设置Task type
+ * @method void setTaskType(string $TaskType) Set Task type
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() 获取Instance name
+ * @method string getInstanceName() Obtain Instance name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) 设置Instance name
+ * @method void setInstanceName(string $InstanceName) Set Instance name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() 获取Instance ID
+ * @method string getInstanceId() Obtain Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProjectId() 获取Project ID
+ * @method integer getProjectId() Obtain Project ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProjectId(integer $ProjectId) 设置Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getProgress() 获取Task progress
+ * @method float getProgress() Obtain Task progress
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(float $Progress) 设置Task progress
+ * @method void setProgress(float $Progress) Set Task progress
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() 获取End time
+ * @method string getEndTime() Obtain End time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) 设置End time
+ * @method void setEndTime(string $EndTime) Set End time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getResult() 获取Task status
+ * @method integer getResult() Obtain Task status
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResult(integer $Result) 设置Task status
+ * @method void setResult(integer $Result) Set Task status
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -139,7 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

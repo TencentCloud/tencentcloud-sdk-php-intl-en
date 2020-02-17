@@ -18,16 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDB() 获取Database
- * @method void setDB(integer $DB) 设置Database
- * @method string getKey() 获取Big key
- * @method void setKey(string $Key) 设置Big key
- * @method string getType() 获取Type
- * @method void setType(string $Type) 设置Type
- * @method integer getSize() 获取Size
- * @method void setSize(integer $Size) 设置Size
- * @method integer getUpdatetime() 获取Data timestamp
- * @method void setUpdatetime(integer $Updatetime) 设置Data timestamp
+ * @method integer getDB() Obtain Database
+ * @method void setDB(integer $DB) Set Database
+ * @method string getKey() Obtain Big key
+ * @method void setKey(string $Key) Set Big key
+ * @method string getType() Obtain Type
+ * @method void setType(string $Type) Set Type
+ * @method integer getSize() Obtain Size
+ * @method void setSize(integer $Size) Set Size
+ * @method integer getUpdatetime() Obtain Data timestamp
+ * @method void setUpdatetime(integer $Updatetime) Set Data timestamp
  */
 
 /**
@@ -71,7 +71,7 @@ class BigKeyInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -1,0 +1,49 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+namespace TencentCloud\Monitor\V20180724;
+use TencentCloud\Common\AbstractClient;
+use TencentCloud\Common\Profile\ClientProfile;
+use TencentCloud\Common\Credential;
+use TencentCloud\Monitor\V20180724\Models as Models;
+
+/**
+* @method Models\DescribeBaseMetricsResponse DescribeBaseMetrics(Models\DescribeBaseMetricsRequest $req) This API is used to get the details of basic metrics.
+* @method Models\GetMonitorDataResponse GetMonitorData(Models\GetMonitorDataRequest $req) This API is used to get the monitoring data of a Tencent Cloud product by passing in the product's namespace, object dimension description, and monitoring metric.
+API call rate limit: 20 calls/sec, 1,200 calls/min.
+If you need to call a lot of metrics and objects, there may be cases where the call fails due to the rate limit. It is recommended to spread the call requests as much as possible over time.
+ */
+
+class MonitorClient extends AbstractClient
+{
+    protected $endpoint = "monitor.tencentcloudapi.com";
+
+    protected $version = "2018-07-24";
+
+    function __construct($credential, $region, $profile=null)
+    {
+        parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
+    }
+
+    public function returnResponse($action, $response)
+    {
+        $respClass = "TencentCloud"."\\".ucfirst("monitor")."\\"."V20180724\\Models"."\\".ucfirst($action)."Response";
+        $obj = new $respClass();
+        $obj->deserialize($response);
+        return $obj;
+    }
+}

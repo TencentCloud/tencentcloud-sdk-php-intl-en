@@ -18,38 +18,38 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvId() 获取Compute environment ID
- * @method void setEnvId(string $EnvId) 设置Compute environment ID
- * @method string getEnvName() 获取Compute environment name
+ * @method string getEnvId() Obtain Compute environment ID
+ * @method void setEnvId(string $EnvId) Set Compute environment ID
+ * @method string getEnvName() Obtain Compute environment name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnvName(string $EnvName) 设置Compute environment name
+ * @method void setEnvName(string $EnvName) Set Compute environment name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEnvDescription() 获取Compute environment description
+ * @method string getEnvDescription() Obtain Compute environment description
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnvDescription(string $EnvDescription) 设置Compute environment description
+ * @method void setEnvDescription(string $EnvDescription) Set Compute environment description
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEnvType() 获取Compute environment type. Only "MANAGED" type is supported
- * @method void setEnvType(string $EnvType) 设置Compute environment type. Only "MANAGED" type is supported
- * @method EnvData getEnvData() 获取Compute environment parameter
- * @method void setEnvData(EnvData $EnvData) 设置Compute environment parameter
- * @method array getMountDataDisks() 获取Data disk mounting option
+ * @method string getEnvType() Obtain Compute environment type. Only "MANAGED" type is supported
+ * @method void setEnvType(string $EnvType) Set Compute environment type. Only "MANAGED" type is supported
+ * @method EnvData getEnvData() Obtain Compute environment parameter
+ * @method void setEnvData(EnvData $EnvData) Set Compute environment parameter
+ * @method array getMountDataDisks() Obtain Data disk mounting option
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMountDataDisks(array $MountDataDisks) 设置Data disk mounting option
+ * @method void setMountDataDisks(array $MountDataDisks) Set Data disk mounting option
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInputMappings() 获取Input mapping
+ * @method array getInputMappings() Obtain Input mapping
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInputMappings(array $InputMappings) 设置Input mapping
+ * @method void setInputMappings(array $InputMappings) Set Input mapping
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAuthentications() 获取Authorization information
+ * @method array getAuthentications() Obtain Authorization information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAuthentications(array $Authentications) 设置Authorization information
+ * @method void setAuthentications(array $Authentications) Set Authorization information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getNotifications() 获取Notification information
+ * @method array getNotifications() Obtain Notification information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNotifications(array $Notifications) 设置Notification information
+ * @method void setNotifications(array $Notifications) Set Notification information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDesiredComputeNodeCount() 获取Number of desired compute nodes
- * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置Number of desired compute nodes
+ * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
+ * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
  */
 
 /**
@@ -135,7 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,16 +18,16 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取Tag key.
- * @method void setTagKey(string $TagKey) 设置Tag key.
- * @method string getTagValue() 获取Tag value.
- * @method void setTagValue(string $TagValue) 设置Tag value.
- * @method string getResourceId() 获取Resource ID.
- * @method void setResourceId(string $ResourceId) 设置Resource ID.
- * @method string getTagKeyMd5() 获取Tag key MD5 value.
- * @method void setTagKeyMd5(string $TagKeyMd5) 设置Tag key MD5 value.
- * @method string getTagValueMd5() 获取Tag value MD5 value.
- * @method void setTagValueMd5(string $TagValueMd5) 设置Tag value MD5 value.
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method string getTagValue() Obtain Tag value.
+ * @method void setTagValue(string $TagValue) Set Tag value.
+ * @method string getResourceId() Obtain Resource ID.
+ * @method void setResourceId(string $ResourceId) Set Resource ID.
+ * @method string getTagKeyMd5() Obtain Tag key MD5 value.
+ * @method void setTagKeyMd5(string $TagKeyMd5) Set Tag key MD5 value.
+ * @method string getTagValueMd5() Obtain Tag value MD5 value.
+ * @method void setTagValueMd5(string $TagValueMd5) Set Tag value MD5 value.
  */
 
 /**
@@ -71,7 +71,7 @@ class TagResource extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

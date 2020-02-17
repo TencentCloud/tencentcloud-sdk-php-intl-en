@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getServiceTemplateGroupName() 获取协议端口模板集合名称
- * @method void setServiceTemplateGroupName(string $ServiceTemplateGroupName) 设置协议端口模板集合名称
- * @method array getServiceTemplateIds() 获取协议端口模板实例ID，例如：ppm-4dw6agho。
- * @method void setServiceTemplateIds(array $ServiceTemplateIds) 设置协议端口模板实例ID，例如：ppm-4dw6agho。
+ * @method string getServiceTemplateGroupName() Obtain Group name of the protocol port template.
+ * @method void setServiceTemplateGroupName(string $ServiceTemplateGroupName) Set Group name of the protocol port template.
+ * @method array getServiceTemplateIds() Obtain Instance ID of the protocol port template, such as `ppm-4dw6agho`.
+ * @method void setServiceTemplateIds(array $ServiceTemplateIds) Set Instance ID of the protocol port template, such as `ppm-4dw6agho`.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceTemplateGroupRequest extends AbstractModel
 {
     /**
-     * @var string 协议端口模板集合名称
+     * @var string Group name of the protocol port template.
      */
     public $ServiceTemplateGroupName;
 
     /**
-     * @var array 协议端口模板实例ID，例如：ppm-4dw6agho。
+     * @var array Instance ID of the protocol port template, such as `ppm-4dw6agho`.
      */
     public $ServiceTemplateIds;
     /**
-     * @param string $ServiceTemplateGroupName 协议端口模板集合名称
-     * @param array $ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
+     * @param string $ServiceTemplateGroupName Group name of the protocol port template.
+     * @param array $ServiceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

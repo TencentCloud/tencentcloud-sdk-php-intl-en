@@ -18,14 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method array getListenerIds() 获取List of listener IDs
- * @method void setListenerIds(array $ListenerIds) 设置List of listener IDs
- * @method string getProtocol() 获取Listener protocol type
- * @method void setProtocol(string $Protocol) 设置Listener protocol type
- * @method integer getPort() 获取Listener port
- * @method void setPort(integer $Port) 设置Listener port
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getListenerIds() Obtain List of listener IDs
+ * @method void setListenerIds(array $ListenerIds) Set List of listener IDs
+ * @method string getProtocol() Obtain Listener protocol type
+ * @method void setProtocol(string $Protocol) Set Listener protocol type
+ * @method integer getPort() Obtain Listener port
+ * @method void setPort(integer $Port) Set Listener port
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeTargetsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

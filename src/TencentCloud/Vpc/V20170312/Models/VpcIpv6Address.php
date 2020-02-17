@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIpv6Address() 获取`VPC`内`IPv6`地址。
- * @method void setIpv6Address(string $Ipv6Address) 设置`VPC`内`IPv6`地址。
- * @method string getCidrBlock() 获取所属子网 `IPv6` `CIDR`。
- * @method void setCidrBlock(string $CidrBlock) 设置所属子网 `IPv6` `CIDR`。
- * @method string getIpv6AddressType() 获取`IPv6`类型。
- * @method void setIpv6AddressType(string $Ipv6AddressType) 设置`IPv6`类型。
- * @method string getCreatedTime() 获取`IPv6`申请时间。
- * @method void setCreatedTime(string $CreatedTime) 设置`IPv6`申请时间。
+ * @method string getIpv6Address() Obtain `VPC` private `IPv6` address
+ * @method void setIpv6Address(string $Ipv6Address) Set `VPC` private `IPv6` address
+ * @method string getCidrBlock() Obtain The `IPv6` `CIDR` belonging to the subnet.
+ * @method void setCidrBlock(string $CidrBlock) Set The `IPv6` `CIDR` belonging to the subnet.
+ * @method string getIpv6AddressType() Obtain `IPv6` type.
+ * @method void setIpv6AddressType(string $Ipv6AddressType) Set `IPv6` type.
+ * @method string getCreatedTime() Obtain `IPv6` application time.
+ * @method void setCreatedTime(string $CreatedTime) Set `IPv6` application time.
  */
 
 /**
- *VPC内网IPv6对象。
+ *VPC private IPv6 object.
  */
 class VpcIpv6Address extends AbstractModel
 {
     /**
-     * @var string `VPC`内`IPv6`地址。
+     * @var string `VPC` private `IPv6` address
      */
     public $Ipv6Address;
 
     /**
-     * @var string 所属子网 `IPv6` `CIDR`。
+     * @var string The `IPv6` `CIDR` belonging to the subnet.
      */
     public $CidrBlock;
 
     /**
-     * @var string `IPv6`类型。
+     * @var string `IPv6` type.
      */
     public $Ipv6AddressType;
 
     /**
-     * @var string `IPv6`申请时间。
+     * @var string `IPv6` application time.
      */
     public $CreatedTime;
     /**
-     * @param string $Ipv6Address `VPC`内`IPv6`地址。
-     * @param string $CidrBlock 所属子网 `IPv6` `CIDR`。
-     * @param string $Ipv6AddressType `IPv6`类型。
-     * @param string $CreatedTime `IPv6`申请时间。
+     * @param string $Ipv6Address `VPC` private `IPv6` address
+     * @param string $CidrBlock The `IPv6` `CIDR` belonging to the subnet.
+     * @param string $Ipv6AddressType `IPv6` type.
+     * @param string $CreatedTime `IPv6` application time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

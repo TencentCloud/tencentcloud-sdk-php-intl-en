@@ -18,26 +18,26 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getComputeNodeId() 获取Compute node ID
- * @method void setComputeNodeId(string $ComputeNodeId) 设置Compute node ID
- * @method string getComputeNodeInstanceId() 获取Compute node instance ID. In a CVM scenario, this parameter is the CVM InstanceId
- * @method void setComputeNodeInstanceId(string $ComputeNodeInstanceId) 设置Compute node instance ID. In a CVM scenario, this parameter is the CVM InstanceId
- * @method string getComputeNodeState() 获取Compute node state
- * @method void setComputeNodeState(string $ComputeNodeState) 设置Compute node state
- * @method integer getCpu() 获取Number of CPU cores
- * @method void setCpu(integer $Cpu) 设置Number of CPU cores
- * @method integer getMem() 获取Memory size in GiB
- * @method void setMem(integer $Mem) 设置Memory size in GiB
- * @method string getResourceCreatedTime() 获取Resource creation time
- * @method void setResourceCreatedTime(string $ResourceCreatedTime) 设置Resource creation time
- * @method integer getTaskInstanceNumAvailable() 获取Available capacity of the compute node when running TaskInstance. 0 means that the compute node is busy.
- * @method void setTaskInstanceNumAvailable(integer $TaskInstanceNumAvailable) 设置Available capacity of the compute node when running TaskInstance. 0 means that the compute node is busy.
- * @method string getAgentVersion() 获取BatchCompute Agent version
- * @method void setAgentVersion(string $AgentVersion) 设置BatchCompute Agent version
- * @method array getPrivateIpAddresses() 获取Private IP of the instance
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置Private IP of the instance
- * @method array getPublicIpAddresses() 获取Public IP of the instance
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置Public IP of the instance
+ * @method string getComputeNodeId() Obtain Compute node ID
+ * @method void setComputeNodeId(string $ComputeNodeId) Set Compute node ID
+ * @method string getComputeNodeInstanceId() Obtain Compute node instance ID. In a CVM scenario, this parameter is the CVM InstanceId
+ * @method void setComputeNodeInstanceId(string $ComputeNodeInstanceId) Set Compute node instance ID. In a CVM scenario, this parameter is the CVM InstanceId
+ * @method string getComputeNodeState() Obtain Compute node state
+ * @method void setComputeNodeState(string $ComputeNodeState) Set Compute node state
+ * @method integer getCpu() Obtain Number of CPU cores
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores
+ * @method integer getMem() Obtain Memory size in GiB
+ * @method void setMem(integer $Mem) Set Memory size in GiB
+ * @method string getResourceCreatedTime() Obtain Resource creation time
+ * @method void setResourceCreatedTime(string $ResourceCreatedTime) Set Resource creation time
+ * @method integer getTaskInstanceNumAvailable() Obtain Available capacity of the compute node when running TaskInstance. 0 means that the compute node is busy.
+ * @method void setTaskInstanceNumAvailable(integer $TaskInstanceNumAvailable) Set Available capacity of the compute node when running TaskInstance. 0 means that the compute node is busy.
+ * @method string getAgentVersion() Obtain BatchCompute Agent version
+ * @method void setAgentVersion(string $AgentVersion) Set BatchCompute Agent version
+ * @method array getPrivateIpAddresses() Obtain Private IP of the instance
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private IP of the instance
+ * @method array getPublicIpAddresses() Obtain Public IP of the instance
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public IP of the instance
  */
 
 /**
@@ -111,7 +111,7 @@ class ComputeNode extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

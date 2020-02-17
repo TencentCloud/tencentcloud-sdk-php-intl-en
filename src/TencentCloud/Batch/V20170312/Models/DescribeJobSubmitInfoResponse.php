@@ -18,20 +18,20 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取Instance ID
- * @method void setJobId(string $JobId) 设置Instance ID
- * @method string getJobName() 获取Instance name
- * @method void setJobName(string $JobName) 设置Instance name
- * @method string getJobDescription() 获取Instance description
- * @method void setJobDescription(string $JobDescription) 设置Instance description
- * @method integer getPriority() 获取Job priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the job
- * @method void setPriority(integer $Priority) 设置Job priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the job
- * @method array getTasks() 获取Task information
- * @method void setTasks(array $Tasks) 设置Task information
- * @method array getDependences() 获取Dependency information
- * @method void setDependences(array $Dependences) 设置Dependency information
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getJobId() Obtain Instance ID
+ * @method void setJobId(string $JobId) Set Instance ID
+ * @method string getJobName() Obtain Instance name
+ * @method void setJobName(string $JobName) Set Instance name
+ * @method string getJobDescription() Obtain Instance description
+ * @method void setJobDescription(string $JobDescription) Set Instance description
+ * @method integer getPriority() Obtain Job priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the job
+ * @method void setPriority(integer $Priority) Set Job priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the job
+ * @method array getTasks() Obtain Task information
+ * @method void setTasks(array $Tasks) Set Task information
+ * @method array getDependences() Obtain Dependency information
+ * @method void setDependences(array $Dependences) Set Dependency information
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -87,7 +87,7 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

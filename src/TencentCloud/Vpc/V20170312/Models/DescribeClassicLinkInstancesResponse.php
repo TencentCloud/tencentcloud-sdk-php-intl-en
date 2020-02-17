@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取符合条件的实例数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
- * @method array getClassicLinkInstanceSet() 获取私有网络和基础网络互通设备。
- * @method void setClassicLinkInstanceSet(array $ClassicLinkInstanceSet) 设置私有网络和基础网络互通设备。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
+ * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
+ * @method array getClassicLinkInstanceSet() Obtain Classiclink instance.
+ * @method void setClassicLinkInstanceSet(array $ClassicLinkInstanceSet) Set Classiclink instance.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeClassicLinkInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的实例数量。
+     * @var integer The number of instances meeting the filter condition.
      */
     public $TotalCount;
 
     /**
-     * @var array 私有网络和基础网络互通设备。
+     * @var array Classiclink instance.
      */
     public $ClassicLinkInstanceSet;
 
@@ -46,8 +46,8 @@ class DescribeClassicLinkInstancesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 符合条件的实例数量。
-     * @param array $ClassicLinkInstanceSet 私有网络和基础网络互通设备。
+     * @param integer $TotalCount The number of instances meeting the filter condition.
+     * @param array $ClassicLinkInstanceSet Classiclink instance.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeClassicLinkInstancesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

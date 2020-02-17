@@ -18,16 +18,16 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPage() 获取Page number, beginning from 1
- * @method void setPage(integer $Page) 设置Page number, beginning from 1
- * @method integer getRp() 获取Number of lines per page, no more than 200
- * @method void setRp(integer $Rp) 设置Number of lines per page, no more than 200
- * @method string getRoleId() 获取Role ID, used to specify a role. Input either `RoleId` or `RoleName`
- * @method void setRoleId(string $RoleId) 设置Role ID, used to specify a role. Input either `RoleId` or `RoleName`
- * @method string getRoleName() 获取Role name, used to specify a role. Input either `RoleId` or `RoleName`
- * @method void setRoleName(string $RoleName) 设置Role name, used to specify a role. Input either `RoleId` or `RoleName`
- * @method string getPolicyType() 获取Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
- * @method void setPolicyType(string $PolicyType) 设置Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
+ * @method integer getPage() Obtain Page number, beginning from 1
+ * @method void setPage(integer $Page) Set Page number, beginning from 1
+ * @method integer getRp() Obtain Number of lines per page, no more than 200
+ * @method void setRp(integer $Rp) Set Number of lines per page, no more than 200
+ * @method string getRoleId() Obtain Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+ * @method void setRoleId(string $RoleId) Set Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+ * @method string getRoleName() Obtain Role name, used to specify a role. Input either `RoleId` or `RoleName`
+ * @method void setRoleName(string $RoleName) Set Role name, used to specify a role. Input either `RoleId` or `RoleName`
+ * @method string getPolicyType() Obtain Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
+ * @method void setPolicyType(string $PolicyType) Set Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
  */
 
 /**
@@ -71,7 +71,7 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

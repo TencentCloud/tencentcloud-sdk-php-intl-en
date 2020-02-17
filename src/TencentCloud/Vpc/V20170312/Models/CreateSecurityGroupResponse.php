@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method SecurityGroup getSecurityGroup() 获取安全组对象。
- * @method void setSecurityGroup(SecurityGroup $SecurityGroup) 设置安全组对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method SecurityGroup getSecurityGroup() Obtain Security group object.
+ * @method void setSecurityGroup(SecurityGroup $SecurityGroup) Set Security group object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateSecurityGroupResponse extends AbstractModel
 {
     /**
-     * @var SecurityGroup 安全组对象。
+     * @var SecurityGroup Security group object.
      */
     public $SecurityGroup;
 
@@ -39,7 +39,7 @@ class CreateSecurityGroupResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param SecurityGroup $SecurityGroup 安全组对象。
+     * @param SecurityGroup $SecurityGroup Security group object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateSecurityGroupResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

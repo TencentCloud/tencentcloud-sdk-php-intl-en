@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getNatGatewaySet() 获取NAT网关对象数组。
- * @method void setNatGatewaySet(array $NatGatewaySet) 设置NAT网关对象数组。
- * @method integer getTotalCount() 获取符合条件的NAT网关对象个数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的NAT网关对象个数。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getNatGatewaySet() Obtain NAT gateway object array.
+ * @method void setNatGatewaySet(array $NatGatewaySet) Set NAT gateway object array.
+ * @method integer getTotalCount() Obtain The number of NAT gateway object sets meeting the conditions.
+ * @method void setTotalCount(integer $TotalCount) Set The number of NAT gateway object sets meeting the conditions.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNatGatewaysResponse extends AbstractModel
 {
     /**
-     * @var array NAT网关对象数组。
+     * @var array NAT gateway object array.
      */
     public $NatGatewaySet;
 
     /**
-     * @var integer 符合条件的NAT网关对象个数。
+     * @var integer The number of NAT gateway object sets meeting the conditions.
      */
     public $TotalCount;
 
@@ -46,8 +46,8 @@ class DescribeNatGatewaysResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $NatGatewaySet NAT网关对象数组。
-     * @param integer $TotalCount 符合条件的NAT网关对象个数。
+     * @param array $NatGatewaySet NAT gateway object array.
+     * @param integer $TotalCount The number of NAT gateway object sets meeting the conditions.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeNatGatewaysResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

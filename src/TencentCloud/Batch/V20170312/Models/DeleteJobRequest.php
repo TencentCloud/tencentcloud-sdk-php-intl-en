@@ -18,8 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取Job ID
- * @method void setJobId(string $JobId) 设置Job ID
+ * @method string getJobId() Obtain Job ID
+ * @method void setJobId(string $JobId) Set Job ID
  */
 
 /**
@@ -39,7 +39,7 @@ class DeleteJobRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getGroupId() 获取User group ID
- * @method void setGroupId(integer $GroupId) 设置User group ID
- * @method integer getPage() 获取Page number; default is 1
- * @method void setPage(integer $Page) 设置Page number; default is 1
- * @method integer getRp() 获取Number of entries per page; default is 20
- * @method void setRp(integer $Rp) 设置Number of entries per page; default is 20
+ * @method integer getGroupId() Obtain User group ID
+ * @method void setGroupId(integer $GroupId) Set User group ID
+ * @method integer getPage() Obtain Page number; default is 1
+ * @method void setPage(integer $Page) Set Page number; default is 1
+ * @method integer getRp() Obtain Number of entries per page; default is 20
+ * @method void setRp(integer $Rp) Set Number of entries per page; default is 20
  */
 
 /**
@@ -55,7 +55,7 @@ class ListUsersForGroupRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

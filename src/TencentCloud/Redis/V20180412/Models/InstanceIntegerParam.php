@@ -18,24 +18,24 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getParamName() 获取Parameter name
- * @method void setParamName(string $ParamName) 设置Parameter name
- * @method string getValueType() 获取Parameter type: Integer
- * @method void setValueType(string $ValueType) 设置Parameter type: Integer
- * @method string getNeedRestart() 获取Whether restart is required after a modification is made. Value range: true, false
- * @method void setNeedRestart(string $NeedRestart) 设置Whether restart is required after a modification is made. Value range: true, false
- * @method string getDefaultValue() 获取Default value of the parameter
- * @method void setDefaultValue(string $DefaultValue) 设置Default value of the parameter
- * @method string getCurrentValue() 获取Current value of a parameter
- * @method void setCurrentValue(string $CurrentValue) 设置Current value of a parameter
- * @method string getTips() 获取Parameter description
- * @method void setTips(string $Tips) 设置Parameter description
- * @method string getMin() 获取Minimum value of a parameter
- * @method void setMin(string $Min) 设置Minimum value of a parameter
- * @method string getMax() 获取Maximum value of a parameter
- * @method void setMax(string $Max) 设置Maximum value of a parameter
- * @method integer getStatus() 获取Parameter status. 1: modifying; 2: modified
- * @method void setStatus(integer $Status) 设置Parameter status. 1: modifying; 2: modified
+ * @method string getParamName() Obtain Parameter name
+ * @method void setParamName(string $ParamName) Set Parameter name
+ * @method string getValueType() Obtain Parameter type: Integer
+ * @method void setValueType(string $ValueType) Set Parameter type: Integer
+ * @method string getNeedRestart() Obtain Whether restart is required after a modification is made. Value range: true, false
+ * @method void setNeedRestart(string $NeedRestart) Set Whether restart is required after a modification is made. Value range: true, false
+ * @method string getDefaultValue() Obtain Default value of the parameter
+ * @method void setDefaultValue(string $DefaultValue) Set Default value of the parameter
+ * @method string getCurrentValue() Obtain Current value of a parameter
+ * @method void setCurrentValue(string $CurrentValue) Set Current value of a parameter
+ * @method string getTips() Obtain Parameter description
+ * @method void setTips(string $Tips) Set Parameter description
+ * @method string getMin() Obtain Minimum value of a parameter
+ * @method void setMin(string $Min) Set Minimum value of a parameter
+ * @method string getMax() Obtain Maximum value of a parameter
+ * @method void setMax(string $Max) Set Maximum value of a parameter
+ * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
+ * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
  */
 
 /**
@@ -103,7 +103,7 @@ class InstanceIntegerParam extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

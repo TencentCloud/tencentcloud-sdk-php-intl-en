@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取Instance ID
- * @method void setJobId(string $JobId) 设置Instance ID
- * @method string getTaskName() 获取Task name
- * @method void setTaskName(string $TaskName) 设置Task name
- * @method integer getTaskInstanceIndex() 获取Task instance index
- * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置Task instance index
+ * @method string getJobId() Obtain Instance ID
+ * @method void setJobId(string $JobId) Set Instance ID
+ * @method string getTaskName() Obtain Task name
+ * @method void setTaskName(string $TaskName) Set Task name
+ * @method integer getTaskInstanceIndex() Obtain Task instance index
+ * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) Set Task instance index
  */
 
 /**
@@ -55,7 +55,7 @@ class TerminateTaskInstanceRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,16 +18,16 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getType() 获取Type of a local disk.
- * @method void setType(string $Type) 设置Type of a local disk.
- * @method string getPartitionType() 获取Attributes of a local disk.
- * @method void setPartitionType(string $PartitionType) 设置Attributes of a local disk.
- * @method integer getMinSize() 获取Minimum size of a local disk.
- * @method void setMinSize(integer $MinSize) 设置Minimum size of a local disk.
- * @method integer getMaxSize() 获取Maximum size of a local disk.
- * @method void setMaxSize(integer $MaxSize) 设置Maximum size of a local disk.
- * @method string getRequired() 获取
- * @method void setRequired(string $Required) 设置
+ * @method string getType() Obtain Type of a local disk.
+ * @method void setType(string $Type) Set Type of a local disk.
+ * @method string getPartitionType() Obtain Attributes of a local disk.
+ * @method void setPartitionType(string $PartitionType) Set Attributes of a local disk.
+ * @method integer getMinSize() Obtain Minimum size of a local disk.
+ * @method void setMinSize(integer $MinSize) Set Minimum size of a local disk.
+ * @method integer getMaxSize() Obtain Maximum size of a local disk.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum size of a local disk.
+ * @method string getRequired() Obtain 
+ * @method void setRequired(string $Required) Set 
  */
 
 /**
@@ -71,7 +71,7 @@ class LocalDiskType extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

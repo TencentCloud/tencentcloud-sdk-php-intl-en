@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取Instance list
- * @method void setInstanceIds(array $InstanceIds) 设置Instance list
+ * @method array getInstanceIds() Obtain Instance list
+ * @method void setInstanceIds(array $InstanceIds) Set Instance list
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeInstanceSecurityGroupRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

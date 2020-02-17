@@ -18,12 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoSnapshotPolicyId() 获取The ID of the newly created scheduled snapshot policy.
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置The ID of the newly created scheduled snapshot policy.
- * @method string getNextTriggerTime() 获取The time that initial backup will start.
- * @method void setNextTriggerTime(string $NextTriggerTime) 设置The time that initial backup will start.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getAutoSnapshotPolicyId() Obtain The ID of the newly created scheduled snapshot policy.
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set The ID of the newly created scheduled snapshot policy.
+ * @method string getNextTriggerTime() Obtain The time that initial backup will start.
+ * @method void setNextTriggerTime(string $NextTriggerTime) Set The time that initial backup will start.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class CreateAutoSnapshotPolicyResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,8 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProjectId() 获取Project ID
- * @method void setProjectId(integer $ProjectId) 设置Project ID
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeGroupAndStatisticsProxyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

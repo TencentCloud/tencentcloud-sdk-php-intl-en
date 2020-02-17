@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取`HAVIP`所在私有网络`ID`。
- * @method void setVpcId(string $VpcId) 设置`HAVIP`所在私有网络`ID`。
- * @method string getSubnetId() 获取`HAVIP`所在子网`ID`。
- * @method void setSubnetId(string $SubnetId) 设置`HAVIP`所在子网`ID`。
- * @method string getHaVipName() 获取`HAVIP`名称。
- * @method void setHaVipName(string $HaVipName) 设置`HAVIP`名称。
- * @method string getVip() 获取指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
- * @method void setVip(string $Vip) 设置指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
+ * @method string getVpcId() Obtain The `ID` of the VPC to which the `HAVIP` belongs.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the VPC to which the `HAVIP` belongs.
+ * @method string getSubnetId() Obtain The `ID` of the subnet to which the `HAVIP` belongs.
+ * @method void setSubnetId(string $SubnetId) Set The `ID` of the subnet to which the `HAVIP` belongs.
+ * @method string getHaVipName() Obtain The name of the `HAVIP`.
+ * @method void setHaVipName(string $HaVipName) Set The name of the `HAVIP`.
+ * @method string getVip() Obtain The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
+ * @method void setVip(string $Vip) Set The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
  */
 
 /**
@@ -34,36 +34,36 @@ use TencentCloud\Common\AbstractModel;
 class CreateHaVipRequest extends AbstractModel
 {
     /**
-     * @var string `HAVIP`所在私有网络`ID`。
+     * @var string The `ID` of the VPC to which the `HAVIP` belongs.
      */
     public $VpcId;
 
     /**
-     * @var string `HAVIP`所在子网`ID`。
+     * @var string The `ID` of the subnet to which the `HAVIP` belongs.
      */
     public $SubnetId;
 
     /**
-     * @var string `HAVIP`名称。
+     * @var string The name of the `HAVIP`.
      */
     public $HaVipName;
 
     /**
-     * @var string 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
+     * @var string The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
      */
     public $Vip;
     /**
-     * @param string $VpcId `HAVIP`所在私有网络`ID`。
-     * @param string $SubnetId `HAVIP`所在子网`ID`。
-     * @param string $HaVipName `HAVIP`名称。
-     * @param string $Vip 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
+     * @param string $VpcId The `ID` of the VPC to which the `HAVIP` belongs.
+     * @param string $SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+     * @param string $HaVipName The name of the `HAVIP`.
+     * @param string $Vip The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

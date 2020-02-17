@@ -18,8 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getErrorPageSet() Obtain Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setErrorPageSet(array $ErrorPageSet) Set Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -28,10 +32,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDomainErrorPageInfoResponse extends AbstractModel
 {
     /**
+     * @var array Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ErrorPageSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param array $ErrorPageSet Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -39,13 +51,22 @@ class DescribeDomainErrorPageInfoResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ErrorPageSet",$param) and $param["ErrorPageSet"] !== null) {
+            $this->ErrorPageSet = [];
+            foreach ($param["ErrorPageSet"] as $key => $value){
+                $obj = new DomainErrorPageInfo();
+                $obj->deserialize($value);
+                array_push($this->ErrorPageSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

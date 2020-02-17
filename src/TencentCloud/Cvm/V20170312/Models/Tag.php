@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKey() 获取Tag key
- * @method void setKey(string $Key) 设置Tag key
- * @method string getValue() 获取Tag value
- * @method void setValue(string $Value) 设置Tag value
+ * @method string getKey() Obtain Tag key
+ * @method void setKey(string $Key) Set Tag key
+ * @method string getValue() Obtain Tag value
+ * @method void setValue(string $Value) Set Tag value
  */
 
 /**
@@ -47,7 +47,7 @@ class Tag extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

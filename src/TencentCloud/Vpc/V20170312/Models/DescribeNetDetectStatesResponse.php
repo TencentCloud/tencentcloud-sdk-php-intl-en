@@ -18,16 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getNetDetectStateSet() 获取The array of network detection verification results that meet requirements.
+ * @method array getNetDetectStateSet() Obtain The array of network detection verification results that meet requirements.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNetDetectStateSet(array $NetDetectStateSet) 设置The array of network detection verification results that meet requirements.
+ * @method void setNetDetectStateSet(array $NetDetectStateSet) Set The array of network detection verification results that meet requirements.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() 获取The number of network detection verification results that meet requirements.
+ * @method integer getTotalCount() Obtain The number of network detection verification results that meet requirements.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) 设置The number of network detection verification results that meet requirements.
+ * @method void setTotalCount(integer $TotalCount) Set The number of network detection verification results that meet requirements.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

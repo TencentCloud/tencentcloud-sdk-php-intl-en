@@ -18,42 +18,42 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSnapshotId() 获取Snapshot ID.
- * @method void setSnapshotId(string $SnapshotId) 设置Snapshot ID.
- * @method Placement getPlacement() 获取Location of the snapshot.
- * @method void setPlacement(Placement $Placement) 设置Location of the snapshot.
- * @method string getDiskUsage() 获取The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method void setDiskUsage(string $DiskUsage) 设置The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method string getDiskId() 获取ID of the cloud disk used to create this snapshot.
- * @method void setDiskId(string $DiskId) 设置ID of the cloud disk used to create this snapshot.
- * @method integer getDiskSize() 获取Size of the cloud disk used to create this snapshot (in GB).
- * @method void setDiskSize(integer $DiskSize) 设置Size of the cloud disk used to create this snapshot (in GB).
- * @method string getSnapshotState() 获取Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
- * @method void setSnapshotState(string $SnapshotState) 设置Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
- * @method string getSnapshotName() 获取Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
- * @method void setSnapshotName(string $SnapshotName) 设置Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
- * @method integer getPercent() 获取The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
- * @method void setPercent(integer $Percent) 设置The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
- * @method string getCreateTime() 获取Creation time of the snapshot.
- * @method void setCreateTime(string $CreateTime) 设置Creation time of the snapshot.
- * @method string getDeadlineTime() 获取The expiration time of the snapshot. If the snapshot is permanently retained, this field is blank.
- * @method void setDeadlineTime(string $DeadlineTime) 设置The expiration time of the snapshot. If the snapshot is permanently retained, this field is blank.
- * @method boolean getEncrypt() 获取Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
- * @method void setEncrypt(boolean $Encrypt) 设置Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
- * @method boolean getIsPermanent() 获取Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
- * @method void setIsPermanent(boolean $IsPermanent) 设置Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
- * @method array getCopyingToRegions() 获取The destination region to which the snapshot is being replicated. Default value is [ ].
- * @method void setCopyingToRegions(array $CopyingToRegions) 设置The destination region to which the snapshot is being replicated. Default value is [ ].
- * @method boolean getCopyFromRemote() 获取Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
- * @method void setCopyFromRemote(boolean $CopyFromRemote) 设置Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
- * @method array getImages() 获取List of images associated with snapshot.
- * @method void setImages(array $Images) 设置List of images associated with snapshot.
- * @method integer getImageCount() 获取Number of images associated with snapshot.
- * @method void setImageCount(integer $ImageCount) 设置Number of images associated with snapshot.
- * @method string getSnapshotType() 获取Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
- * @method void setSnapshotType(string $SnapshotType) 设置Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
- * @method integer getShareReference() 获取Number of snapshots currently shared
- * @method void setShareReference(integer $ShareReference) 设置Number of snapshots currently shared
+ * @method string getSnapshotId() Obtain Snapshot ID.
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID.
+ * @method Placement getPlacement() Obtain Location of the snapshot.
+ * @method void setPlacement(Placement $Placement) Set Location of the snapshot.
+ * @method string getDiskUsage() Obtain The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+ * @method void setDiskUsage(string $DiskUsage) Set The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+ * @method string getDiskId() Obtain ID of the cloud disk used to create this snapshot.
+ * @method void setDiskId(string $DiskId) Set ID of the cloud disk used to create this snapshot.
+ * @method integer getDiskSize() Obtain Size of the cloud disk used to create this snapshot (in GB).
+ * @method void setDiskSize(integer $DiskSize) Set Size of the cloud disk used to create this snapshot (in GB).
+ * @method string getSnapshotState() Obtain Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+ * @method void setSnapshotState(string $SnapshotState) Set Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+ * @method string getSnapshotName() Obtain Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+ * @method void setSnapshotName(string $SnapshotName) Set Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+ * @method integer getPercent() Obtain The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
+ * @method void setPercent(integer $Percent) Set The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
+ * @method string getCreateTime() Obtain Creation time of the snapshot.
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the snapshot.
+ * @method string getDeadlineTime() Obtain The expiration time of the snapshot. If the snapshot is permanently retained, this field is blank.
+ * @method void setDeadlineTime(string $DeadlineTime) Set The expiration time of the snapshot. If the snapshot is permanently retained, this field is blank.
+ * @method boolean getEncrypt() Obtain Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+ * @method void setEncrypt(boolean $Encrypt) Set Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+ * @method boolean getIsPermanent() Obtain Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+ * @method void setIsPermanent(boolean $IsPermanent) Set Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+ * @method array getCopyingToRegions() Obtain The destination region to which the snapshot is being replicated. Default value is [ ].
+ * @method void setCopyingToRegions(array $CopyingToRegions) Set The destination region to which the snapshot is being replicated. Default value is [ ].
+ * @method boolean getCopyFromRemote() Obtain Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+ * @method void setCopyFromRemote(boolean $CopyFromRemote) Set Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+ * @method array getImages() Obtain List of images associated with snapshot.
+ * @method void setImages(array $Images) Set List of images associated with snapshot.
+ * @method integer getImageCount() Obtain Number of images associated with snapshot.
+ * @method void setImageCount(integer $ImageCount) Set Number of images associated with snapshot.
+ * @method string getSnapshotType() Obtain Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+ * @method void setSnapshotType(string $SnapshotType) Set Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+ * @method integer getShareReference() Obtain Number of snapshots currently shared
+ * @method void setShareReference(integer $ShareReference) Set Number of snapshots currently shared
  */
 
 /**
@@ -175,7 +175,7 @@ class Snapshot extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

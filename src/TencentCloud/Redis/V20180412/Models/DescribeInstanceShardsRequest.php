@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method boolean getFilterSlave() 获取Whether to filter out the slave node information
- * @method void setFilterSlave(boolean $FilterSlave) 设置Whether to filter out the slave node information
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method boolean getFilterSlave() Obtain Whether to filter out the slave node information
+ * @method void setFilterSlave(boolean $FilterSlave) Set Whether to filter out the slave node information
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeInstanceShardsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

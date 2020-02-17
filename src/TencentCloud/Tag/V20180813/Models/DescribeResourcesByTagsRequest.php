@@ -18,22 +18,22 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTagFilters() 获取Tag filtering arrays.
- * @method void setTagFilters(array $TagFilters) 设置Tag filtering arrays.
- * @method integer getCreateUin() 获取Tag creator uin.
- * @method void setCreateUin(integer $CreateUin) 设置Tag creator uin.
- * @method integer getOffset() 获取Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method void setOffset(integer $Offset) 设置Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method integer getLimit() 获取Page size. The default value is 15.
- * @method void setLimit(integer $Limit) 设置Page size. The default value is 15.
- * @method string getResourcePrefix() 获取Resource prefix.
- * @method void setResourcePrefix(string $ResourcePrefix) 设置Resource prefix.
- * @method string getResourceId() 获取Unique resource ID.
- * @method void setResourceId(string $ResourceId) 设置Unique resource ID.
- * @method string getResourceRegion() 获取The resource’s region.
- * @method void setResourceRegion(string $ResourceRegion) 设置The resource’s region.
- * @method string getServiceType() 获取Service type.
- * @method void setServiceType(string $ServiceType) 设置Service type.
+ * @method array getTagFilters() Obtain Tag filtering arrays.
+ * @method void setTagFilters(array $TagFilters) Set Tag filtering arrays.
+ * @method integer getCreateUin() Obtain Tag creator uin.
+ * @method void setCreateUin(integer $CreateUin) Set Tag creator uin.
+ * @method integer getOffset() Obtain Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+ * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+ * @method integer getLimit() Obtain Page size. The default value is 15.
+ * @method void setLimit(integer $Limit) Set Page size. The default value is 15.
+ * @method string getResourcePrefix() Obtain Resource prefix.
+ * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix.
+ * @method string getResourceId() Obtain Unique resource ID.
+ * @method void setResourceId(string $ResourceId) Set Unique resource ID.
+ * @method string getResourceRegion() Obtain The resource’s region.
+ * @method void setResourceRegion(string $ResourceRegion) Set The resource’s region.
+ * @method string getServiceType() Obtain Service type.
+ * @method void setServiceType(string $ServiceType) Set Service type.
  */
 
 /**
@@ -95,7 +95,7 @@ class DescribeResourcesByTagsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

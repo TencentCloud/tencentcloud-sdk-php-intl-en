@@ -18,18 +18,18 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getBeginTime() 获取Start time
- * @method void setBeginTime(string $BeginTime) 设置Start time
- * @method string getEndTime() 获取End time
- * @method void setEndTime(string $EndTime) 设置End time
- * @method integer getMinQueryTime() 获取Slow log threshold in microseconds
- * @method void setMinQueryTime(integer $MinQueryTime) 设置Slow log threshold in microseconds
- * @method integer getLimit() 获取Number of entries per page
- * @method void setLimit(integer $Limit) 设置Number of entries per page
- * @method integer getOffset() 获取Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) 设置Offset, which is an integral multiple of `Limit`
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getBeginTime() Obtain Start time
+ * @method void setBeginTime(string $BeginTime) Set Start time
+ * @method string getEndTime() Obtain End time
+ * @method void setEndTime(string $EndTime) Set End time
+ * @method integer getMinQueryTime() Obtain Slow log threshold in microseconds
+ * @method void setMinQueryTime(integer $MinQueryTime) Set Slow log threshold in microseconds
+ * @method integer getLimit() Obtain Number of entries per page
+ * @method void setLimit(integer $Limit) Set Number of entries per page
+ * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
+ * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
  */
 
 /**
@@ -79,7 +79,7 @@ class DescribeSlowLogRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

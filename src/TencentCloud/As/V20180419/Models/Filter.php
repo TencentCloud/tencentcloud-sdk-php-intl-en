@@ -18,10 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取Field to be filtered.
- * @method void setName(string $Name) 设置Field to be filtered.
- * @method array getValues() 获取Filter value of the field.
- * @method void setValues(array $Values) 设置Filter value of the field.
+ * @method string getName() Obtain Field to be filtered.
+ * @method void setName(string $Name) Set Field to be filtered.
+ * @method array getValues() Obtain Filter value of the field.
+ * @method void setValues(array $Values) Set Filter value of the field.
  */
 
 /**
@@ -58,7 +58,7 @@ class Filter extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

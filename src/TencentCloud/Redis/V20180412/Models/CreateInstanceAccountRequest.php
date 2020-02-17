@@ -18,18 +18,18 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getAccountName() 获取Sub-account name
- * @method void setAccountName(string $AccountName) 设置Sub-account name
- * @method string getAccountPassword() 获取Sub-account password
- * @method void setAccountPassword(string $AccountPassword) 设置Sub-account password
- * @method array getReadonlyPolicy() 获取Routing policy. Enter `master` for master node or `replication` for slave node
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置Routing policy. Enter `master` for master node or `replication` for slave node
- * @method string getPrivilege() 获取Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
- * @method void setPrivilege(string $Privilege) 设置Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
- * @method string getRemark() 获取Sub-account description information
- * @method void setRemark(string $Remark) 设置Sub-account description information
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getAccountName() Obtain Sub-account name
+ * @method void setAccountName(string $AccountName) Set Sub-account name
+ * @method string getAccountPassword() Obtain Sub-account password
+ * @method void setAccountPassword(string $AccountPassword) Set Sub-account password
+ * @method array getReadonlyPolicy() Obtain Routing policy. Enter `master` for master node or `replication` for slave node
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Enter `master` for master node or `replication` for slave node
+ * @method string getPrivilege() Obtain Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+ * @method void setPrivilege(string $Privilege) Set Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+ * @method string getRemark() Obtain Sub-account description information
+ * @method void setRemark(string $Remark) Set Sub-account description information
  */
 
 /**
@@ -79,7 +79,7 @@ class CreateInstanceAccountRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

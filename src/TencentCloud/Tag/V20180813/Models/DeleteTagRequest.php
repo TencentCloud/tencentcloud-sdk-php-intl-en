@@ -18,10 +18,10 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取The tag key to be deleted.
- * @method void setTagKey(string $TagKey) 设置The tag key to be deleted.
- * @method string getTagValue() 获取The tag value to be deleted.
- * @method void setTagValue(string $TagValue) 设置The tag value to be deleted.
+ * @method string getTagKey() Obtain The tag key to be deleted.
+ * @method void setTagKey(string $TagKey) Set The tag key to be deleted.
+ * @method string getTagValue() Obtain The tag value to be deleted.
+ * @method void setTagValue(string $TagValue) Set The tag value to be deleted.
  */
 
 /**
@@ -47,7 +47,7 @@ class DeleteTagRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

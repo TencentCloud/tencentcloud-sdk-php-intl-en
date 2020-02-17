@@ -18,16 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method boolean getStatus() 获取Execution status: true or false
- * @method void setStatus(boolean $Status) 设置Execution status: true or false
- * @method string getSubnetId() 获取Subnet ID
- * @method void setSubnetId(string $SubnetId) 设置Subnet ID
- * @method string getVpcId() 获取VPC ID
- * @method void setVpcId(string $VpcId) 设置VPC ID
- * @method string getVip() 获取VIP address
- * @method void setVip(string $Vip) 设置VIP address
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method boolean getStatus() Obtain Execution status: true or false
+ * @method void setStatus(boolean $Status) Set Execution status: true or false
+ * @method string getSubnetId() Obtain Subnet ID
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID
+ * @method string getVpcId() Obtain VPC ID
+ * @method void setVpcId(string $VpcId) Set VPC ID
+ * @method string getVip() Obtain VIP address
+ * @method void setVip(string $Vip) Set VIP address
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -71,7 +71,7 @@ class ModifyNetworkConfigResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

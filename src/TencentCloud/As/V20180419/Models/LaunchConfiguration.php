@@ -18,62 +18,62 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProjectId() 获取Project ID of the instance.
- * @method void setProjectId(integer $ProjectId) 设置Project ID of the instance.
- * @method string getLaunchConfigurationId() 获取Launch configuration ID.
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置Launch configuration ID.
- * @method string getLaunchConfigurationName() 获取Launch configuration name.
- * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置Launch configuration name.
- * @method string getInstanceType() 获取Instance model.
- * @method void setInstanceType(string $InstanceType) 设置Instance model.
- * @method SystemDisk getSystemDisk() 获取Information of the instance's system disk configuration.
- * @method void setSystemDisk(SystemDisk $SystemDisk) 设置Information of the instance's system disk configuration.
- * @method array getDataDisks() 获取Information of the instance's data disk configuration.
- * @method void setDataDisks(array $DataDisks) 设置Information of the instance's data disk configuration.
- * @method LimitedLoginSettings getLoginSettings() 获取Instance login settings.
- * @method void setLoginSettings(LimitedLoginSettings $LoginSettings) 设置Instance login settings.
- * @method InternetAccessible getInternetAccessible() 获取Information of the public network bandwidth configuration.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置Information of the public network bandwidth configuration.
- * @method array getSecurityGroupIds() 获取Security group of the instance.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置Security group of the instance.
- * @method array getAutoScalingGroupAbstractSet() 获取Auto scaling group associated with the launch configuration.
- * @method void setAutoScalingGroupAbstractSet(array $AutoScalingGroupAbstractSet) 设置Auto scaling group associated with the launch configuration.
- * @method string getUserData() 获取Custom data.
+ * @method integer getProjectId() Obtain Project ID of the instance.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the instance.
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID.
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID.
+ * @method string getLaunchConfigurationName() Obtain Launch configuration name.
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Launch configuration name.
+ * @method string getInstanceType() Obtain Instance model.
+ * @method void setInstanceType(string $InstanceType) Set Instance model.
+ * @method SystemDisk getSystemDisk() Obtain Information of the instance's system disk configuration.
+ * @method void setSystemDisk(SystemDisk $SystemDisk) Set Information of the instance's system disk configuration.
+ * @method array getDataDisks() Obtain Information of the instance's data disk configuration.
+ * @method void setDataDisks(array $DataDisks) Set Information of the instance's data disk configuration.
+ * @method LimitedLoginSettings getLoginSettings() Obtain Instance login settings.
+ * @method void setLoginSettings(LimitedLoginSettings $LoginSettings) Set Instance login settings.
+ * @method InternetAccessible getInternetAccessible() Obtain Information of the public network bandwidth configuration.
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Information of the public network bandwidth configuration.
+ * @method array getSecurityGroupIds() Obtain Security group of the instance.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group of the instance.
+ * @method array getAutoScalingGroupAbstractSet() Obtain Auto scaling group associated with the launch configuration.
+ * @method void setAutoScalingGroupAbstractSet(array $AutoScalingGroupAbstractSet) Set Auto scaling group associated with the launch configuration.
+ * @method string getUserData() Obtain Custom data.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserData(string $UserData) 设置Custom data.
+ * @method void setUserData(string $UserData) Set Custom data.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreatedTime() 获取Creation time of the launch configuration.
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time of the launch configuration.
- * @method EnhancedService getEnhancedService() 获取Conditions of enhancement services for the instance and their settings.
- * @method void setEnhancedService(EnhancedService $EnhancedService) 设置Conditions of enhancement services for the instance and their settings.
- * @method string getImageId() 获取Image ID.
- * @method void setImageId(string $ImageId) 设置Image ID.
- * @method string getLaunchConfigurationStatus() 获取Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
- * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) 设置Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
- * @method string getInstanceChargeType() 获取Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
+ * @method string getCreatedTime() Obtain Creation time of the launch configuration.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time of the launch configuration.
+ * @method EnhancedService getEnhancedService() Obtain Conditions of enhancement services for the instance and their settings.
+ * @method void setEnhancedService(EnhancedService $EnhancedService) Set Conditions of enhancement services for the instance and their settings.
+ * @method string getImageId() Obtain Image ID.
+ * @method void setImageId(string $ImageId) Set Image ID.
+ * @method string getLaunchConfigurationStatus() Obtain Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
+ * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) Set Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
+ * @method string getInstanceChargeType() Obtain Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
 <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
 <br><li>SPOTPAID: Bidding
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
 <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
 <br><li>SPOTPAID: Bidding
- * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInstanceTypes() 获取List of instance models.
- * @method void setInstanceTypes(array $InstanceTypes) 设置List of instance models.
- * @method array getInstanceTags() 获取List of tags.
- * @method void setInstanceTags(array $InstanceTags) 设置List of tags.
- * @method integer getVersionNumber() 获取Version number.
- * @method void setVersionNumber(integer $VersionNumber) 设置Version number.
- * @method string getUpdatedTime() 获取Update time.
- * @method void setUpdatedTime(string $UpdatedTime) 设置Update time.
- * @method string getCamRoleName() 获取CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
- * @method void setCamRoleName(string $CamRoleName) 设置CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
- * @method string getLastOperationInstanceTypesCheckPolicy() 获取Value of InstanceTypesCheckPolicy upon the last operation.
- * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) 设置Value of InstanceTypesCheckPolicy upon the last operation.
- * @method HostNameSettings getHostNameSettings() 获取CVM HostName settings.
- * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置CVM HostName settings.
+ * @method array getInstanceTypes() Obtain List of instance models.
+ * @method void setInstanceTypes(array $InstanceTypes) Set List of instance models.
+ * @method array getInstanceTags() Obtain List of tags.
+ * @method void setInstanceTags(array $InstanceTags) Set List of tags.
+ * @method integer getVersionNumber() Obtain Version number.
+ * @method void setVersionNumber(integer $VersionNumber) Set Version number.
+ * @method string getUpdatedTime() Obtain Update time.
+ * @method void setUpdatedTime(string $UpdatedTime) Set Update time.
+ * @method string getCamRoleName() Obtain CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
+ * @method void setCamRoleName(string $CamRoleName) Set CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
+ * @method string getLastOperationInstanceTypesCheckPolicy() Obtain Value of InstanceTypesCheckPolicy upon the last operation.
+ * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) Set Value of InstanceTypesCheckPolicy upon the last operation.
+ * @method HostNameSettings getHostNameSettings() Obtain CVM HostName settings.
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM HostName settings.
  */
 
 /**
@@ -239,7 +239,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

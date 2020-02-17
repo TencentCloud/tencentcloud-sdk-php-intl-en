@@ -18,14 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOperation() 获取Operations on an instance.
- * @method void setOperation(string $Operation) 设置Operations on an instance.
- * @method string getInstanceId() 获取Instance ID.
- * @method void setInstanceId(string $InstanceId) 设置Instance ID.
- * @method integer getCurrentCount() 获取Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
- * @method void setCurrentCount(integer $CurrentCount) 设置Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
- * @method integer getLimitCount() 获取Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
- * @method void setLimitCount(integer $LimitCount) 设置Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
+ * @method string getOperation() Obtain Operations on an instance.
+ * @method void setOperation(string $Operation) Set Operations on an instance.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method integer getCurrentCount() Obtain Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
+ * @method void setCurrentCount(integer $CurrentCount) Set Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
+ * @method integer getLimitCount() Obtain Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
+ * @method void setLimitCount(integer $LimitCount) Set Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
  */
 
 /**
@@ -63,7 +63,7 @@ class OperationCountLimit extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

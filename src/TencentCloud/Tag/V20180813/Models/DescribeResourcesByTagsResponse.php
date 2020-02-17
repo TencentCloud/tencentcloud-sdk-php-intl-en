@@ -18,18 +18,18 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Total number of results.
- * @method void setTotalCount(integer $TotalCount) 设置Total number of results.
- * @method integer getOffset() 获取Data offset.
- * @method void setOffset(integer $Offset) 设置Data offset.
- * @method integer getLimit() 获取Number of entries per page.
+ * @method integer getTotalCount() Obtain Total number of results.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of results.
+ * @method integer getOffset() Obtain Data offset.
+ * @method void setOffset(integer $Offset) Set Data offset.
+ * @method integer getLimit() Obtain Number of entries per page.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setLimit(integer $Limit) 设置Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
 Note: This field may return null, indicating that no valid value is found.
- * @method array getRows() 获取Resource tag.
- * @method void setRows(array $Rows) 设置Resource tag.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getRows() Obtain Resource tag.
+ * @method void setRows(array $Rows) Set Resource tag.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -75,7 +75,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

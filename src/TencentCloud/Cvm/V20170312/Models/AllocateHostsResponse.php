@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getHostIdSet() 获取The ID list of the CVM instances newly created on the CDH.
- * @method void setHostIdSet(array $HostIdSet) 设置The ID list of the CVM instances newly created on the CDH.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getHostIdSet() Obtain The ID list of the CVM instances newly created on the CDH.
+ * @method void setHostIdSet(array $HostIdSet) Set The ID list of the CVM instances newly created on the CDH.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class AllocateHostsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

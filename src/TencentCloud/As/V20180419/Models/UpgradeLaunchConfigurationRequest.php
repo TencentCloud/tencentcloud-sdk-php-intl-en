@@ -18,56 +18,56 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLaunchConfigurationId() 获取Launch configuration ID.
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置Launch configuration ID.
- * @method string getImageId() 获取Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
- * @method void setImageId(string $ImageId) 设置Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
- * @method array getInstanceTypes() 获取List of instance models. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
- * @method void setInstanceTypes(array $InstanceTypes) 设置List of instance models. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
- * @method string getLaunchConfigurationName() 获取Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
- * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
- * @method array getDataDisks() 获取Information of the instance's data disk configuration. If this parameter is not specified, no data disk is purchased by default. Up to 11 data disks can be supported.
- * @method void setDataDisks(array $DataDisks) 设置Information of the instance's data disk configuration. If this parameter is not specified, no data disk is purchased by default. Up to 11 data disks can be supported.
- * @method EnhancedService getEnhancedService() 获取Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
- * @method void setEnhancedService(EnhancedService $EnhancedService) 设置Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
- * @method string getInstanceChargeType() 获取Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID.
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID.
+ * @method string getImageId() Obtain Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
+ * @method void setImageId(string $ImageId) Set Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
+ * @method array getInstanceTypes() Obtain List of instance models. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
+ * @method void setInstanceTypes(array $InstanceTypes) Set List of instance models. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
+ * @method string getLaunchConfigurationName() Obtain Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
+ * @method array getDataDisks() Obtain Information of the instance's data disk configuration. If this parameter is not specified, no data disk is purchased by default. Up to 11 data disks can be supported.
+ * @method void setDataDisks(array $DataDisks) Set Information of the instance's data disk configuration. If this parameter is not specified, no data disk is purchased by default. Up to 11 data disks can be supported.
+ * @method EnhancedService getEnhancedService() Obtain Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
+ * @method void setEnhancedService(EnhancedService $EnhancedService) Set Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
+ * @method string getInstanceChargeType() Obtain Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
 <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
 <br><li>SPOTPAID: Bidding
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
 <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
 <br><li>SPOTPAID: Bidding
- * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
- * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
- * @method string getInstanceTypesCheckPolicy() 获取Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
+ * @method string getInstanceTypesCheckPolicy() Obtain Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
 <br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
 <br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
 
 Common reasons why an instance type is unavailable include stock-out of the instance type and the corresponding cloud disk.
 If a model in InstanceTypes does not exist or has been deactivated, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
- * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) 设置Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
+ * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
 <br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
 <br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
 
 Common reasons why an instance type is unavailable include stock-out of the instance type and the corresponding cloud disk.
 If a model in InstanceTypes does not exist or has been deactivated, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
- * @method InternetAccessible getInternetAccessible() 获取Configuration information of public network bandwidth. If this parameter is not specified, the default public network bandwidth is 0 Mbps.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置Configuration information of public network bandwidth. If this parameter is not specified, the default public network bandwidth is 0 Mbps.
- * @method LoginSettings getLoginSettings() 获取Login settings of the instance. This parameter is used to set the login password and key for the instance, or to keep the original login settings for the image. By default, a random password is generated and sent to the user via the internal message.
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置Login settings of the instance. This parameter is used to set the login password and key for the instance, or to keep the original login settings for the image. By default, a random password is generated and sent to the user via the internal message.
- * @method integer getProjectId() 获取Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
- * @method void setProjectId(integer $ProjectId) 设置Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
- * @method array getSecurityGroupIds() 获取The security group of instance. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置The security group of instance. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
- * @method SystemDisk getSystemDisk() 获取System disk configuration of the instance. If this parameter is not specified, the default value will be assigned to it.
- * @method void setSystemDisk(SystemDisk $SystemDisk) 设置System disk configuration of the instance. If this parameter is not specified, the default value will be assigned to it.
- * @method string getUserData() 获取Base64-encoded custom data of up to 16 KB.
- * @method void setUserData(string $UserData) 设置Base64-encoded custom data of up to 16 KB.
- * @method array getInstanceTags() 获取List of tags. This parameter is used to bind up to 10 tags to newly added instances.
- * @method void setInstanceTags(array $InstanceTags) 设置List of tags. This parameter is used to bind up to 10 tags to newly added instances.
- * @method string getCamRoleName() 获取CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
- * @method void setCamRoleName(string $CamRoleName) 设置CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
- * @method HostNameSettings getHostNameSettings() 获取CVM HostName settings.
- * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置CVM HostName settings.
+ * @method InternetAccessible getInternetAccessible() Obtain Configuration information of public network bandwidth. If this parameter is not specified, the default public network bandwidth is 0 Mbps.
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Configuration information of public network bandwidth. If this parameter is not specified, the default public network bandwidth is 0 Mbps.
+ * @method LoginSettings getLoginSettings() Obtain Login settings of the instance. This parameter is used to set the login password and key for the instance, or to keep the original login settings for the image. By default, a random password is generated and sent to the user via the internal message.
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set Login settings of the instance. This parameter is used to set the login password and key for the instance, or to keep the original login settings for the image. By default, a random password is generated and sent to the user via the internal message.
+ * @method integer getProjectId() Obtain Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
+ * @method array getSecurityGroupIds() Obtain The security group of instance. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The security group of instance. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
+ * @method SystemDisk getSystemDisk() Obtain System disk configuration of the instance. If this parameter is not specified, the default value will be assigned to it.
+ * @method void setSystemDisk(SystemDisk $SystemDisk) Set System disk configuration of the instance. If this parameter is not specified, the default value will be assigned to it.
+ * @method string getUserData() Obtain Base64-encoded custom data of up to 16 KB.
+ * @method void setUserData(string $UserData) Set Base64-encoded custom data of up to 16 KB.
+ * @method array getInstanceTags() Obtain List of tags. This parameter is used to bind up to 10 tags to newly added instances.
+ * @method void setInstanceTags(array $InstanceTags) Set List of tags. This parameter is used to bind up to 10 tags to newly added instances.
+ * @method string getCamRoleName() Obtain CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
+ * @method void setCamRoleName(string $CamRoleName) Set CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
+ * @method HostNameSettings getHostNameSettings() Obtain CVM HostName settings.
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM HostName settings.
  */
 
 /**
@@ -203,7 +203,7 @@ If a model in InstanceTypes does not exist or has been deactivated, a verificati
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

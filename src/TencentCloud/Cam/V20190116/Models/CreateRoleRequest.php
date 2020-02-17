@@ -18,14 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRoleName() 获取Role name
- * @method void setRoleName(string $RoleName) 设置Role name
- * @method string getPolicyDocument() 获取Policy document
- * @method void setPolicyDocument(string $PolicyDocument) 设置Policy document
- * @method string getDescription() 获取Role description
- * @method void setDescription(string $Description) 设置Role description
- * @method integer getConsoleLogin() 获取If login is allowed
- * @method void setConsoleLogin(integer $ConsoleLogin) 设置If login is allowed
+ * @method string getRoleName() Obtain Role name
+ * @method void setRoleName(string $RoleName) Set Role name
+ * @method string getPolicyDocument() Obtain Policy document
+ * @method void setPolicyDocument(string $PolicyDocument) Set Policy document
+ * @method string getDescription() Obtain Role description
+ * @method void setDescription(string $Description) Set Role description
+ * @method integer getConsoleLogin() Obtain If login is allowed
+ * @method void setConsoleLogin(integer $ConsoleLogin) Set If login is allowed
  */
 
 /**
@@ -63,7 +63,7 @@ class CreateRoleRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

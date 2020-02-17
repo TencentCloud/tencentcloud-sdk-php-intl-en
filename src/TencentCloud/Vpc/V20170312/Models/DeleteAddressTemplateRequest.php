@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressTemplateId() 获取IP地址模板实例ID，例如：ipm-09o5m8kc。
- * @method void setAddressTemplateId(string $AddressTemplateId) 设置IP地址模板实例ID，例如：ipm-09o5m8kc。
+ * @method string getAddressTemplateId() Obtain The IP address template instance ID, such as `ipm-09o5m8kc`.
+ * @method void setAddressTemplateId(string $AddressTemplateId) Set The IP address template instance ID, such as `ipm-09o5m8kc`.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class DeleteAddressTemplateRequest extends AbstractModel
 {
     /**
-     * @var string IP地址模板实例ID，例如：ipm-09o5m8kc。
+     * @var string The IP address template instance ID, such as `ipm-09o5m8kc`.
      */
     public $AddressTemplateId;
     /**
-     * @param string $AddressTemplateId IP地址模板实例ID，例如：ipm-09o5m8kc。
+     * @param string $AddressTemplateId The IP address template instance ID, such as `ipm-09o5m8kc`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressTemplateGroupName() 获取IP地址模板集合名称。
- * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) 设置IP地址模板集合名称。
- * @method string getAddressTemplateGroupId() 获取IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
- * @method void setAddressTemplateGroupId(string $AddressTemplateGroupId) 设置IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
- * @method array getAddressTemplateIdSet() 获取IP地址模板ID。
- * @method void setAddressTemplateIdSet(array $AddressTemplateIdSet) 设置IP地址模板ID。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getAddressTemplateGroupName() Obtain IP address template group name.
+ * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) Set IP address template group name.
+ * @method string getAddressTemplateGroupId() Obtain IP address template group instance ID, such as `ipmg-dih8xdbq`.
+ * @method void setAddressTemplateGroupId(string $AddressTemplateGroupId) Set IP address template group instance ID, such as `ipmg-dih8xdbq`.
+ * @method array getAddressTemplateIdSet() Obtain IP address template ID.
+ * @method void setAddressTemplateIdSet(array $AddressTemplateIdSet) Set IP address template ID.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
  */
 
 /**
- *IP地址模板集合
+ *IP address template group
  */
 class AddressTemplateGroup extends AbstractModel
 {
     /**
-     * @var string IP地址模板集合名称。
+     * @var string IP address template group name.
      */
     public $AddressTemplateGroupName;
 
     /**
-     * @var string IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
+     * @var string IP address template group instance ID, such as `ipmg-dih8xdbq`.
      */
     public $AddressTemplateGroupId;
 
     /**
-     * @var array IP地址模板ID。
+     * @var array IP address template ID.
      */
     public $AddressTemplateIdSet;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
     /**
-     * @param string $AddressTemplateGroupName IP地址模板集合名称。
-     * @param string $AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
-     * @param array $AddressTemplateIdSet IP地址模板ID。
-     * @param string $CreatedTime 创建时间。
+     * @param string $AddressTemplateGroupName IP address template group name.
+     * @param string $AddressTemplateGroupId IP address template group instance ID, such as `ipmg-dih8xdbq`.
+     * @param array $AddressTemplateIdSet IP address template ID.
+     * @param string $CreatedTime Creation Time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

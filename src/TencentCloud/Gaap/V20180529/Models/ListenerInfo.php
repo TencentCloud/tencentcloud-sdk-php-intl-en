@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method integer getPort() 获取Listening port
- * @method void setPort(integer $Port) 设置Listening port
- * @method string getProtocol() 获取Listener protocol type
- * @method void setProtocol(string $Protocol) 设置Listener protocol type
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method integer getPort() Obtain Listening port
+ * @method void setPort(integer $Port) Set Listening port
+ * @method string getProtocol() Obtain Listener protocol type
+ * @method void setProtocol(string $Protocol) Set Listener protocol type
  */
 
 /**
@@ -63,7 +63,7 @@ class ListenerInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

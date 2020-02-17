@@ -18,8 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getImageIds() 获取List of the IDs of the instances to be deleted.
- * @method void setImageIds(array $ImageIds) 设置List of the IDs of the instances to be deleted.
+ * @method array getImageIds() Obtain List of the IDs of the instances to be deleted.
+ * @method void setImageIds(array $ImageIds) Set List of the IDs of the instances to be deleted.
  */
 
 /**
@@ -39,7 +39,7 @@ class DeleteImagesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

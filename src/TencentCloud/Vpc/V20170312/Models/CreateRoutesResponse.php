@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取新增的实例个数。
- * @method void setTotalCount(integer $TotalCount) 设置新增的实例个数。
- * @method array getRouteTableSet() 获取路由表对象。
- * @method void setRouteTableSet(array $RouteTableSet) 设置路由表对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The number of newly added instances.
+ * @method void setTotalCount(integer $TotalCount) Set The number of newly added instances.
+ * @method array getRouteTableSet() Obtain Route table object.
+ * @method void setRouteTableSet(array $RouteTableSet) Set Route table object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateRoutesResponse extends AbstractModel
 {
     /**
-     * @var integer 新增的实例个数。
+     * @var integer The number of newly added instances.
      */
     public $TotalCount;
 
     /**
-     * @var array 路由表对象。
+     * @var array Route table object.
      */
     public $RouteTableSet;
 
@@ -46,8 +46,8 @@ class CreateRoutesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 新增的实例个数。
-     * @param array $RouteTableSet 路由表对象。
+     * @param integer $TotalCount The number of newly added instances.
+     * @param array $RouteTableSet Route table object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class CreateRoutesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

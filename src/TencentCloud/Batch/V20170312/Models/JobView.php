@@ -18,26 +18,26 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取Instance ID
- * @method void setJobId(string $JobId) 设置Instance ID
- * @method string getJobName() 获取Instance name
- * @method void setJobName(string $JobName) 设置Instance name
- * @method string getJobState() 获取Instance state
- * @method void setJobState(string $JobState) 设置Instance state
- * @method integer getPriority() 获取Instance priority
- * @method void setPriority(integer $Priority) 设置Instance priority
- * @method Placement getPlacement() 获取Location information
+ * @method string getJobId() Obtain Instance ID
+ * @method void setJobId(string $JobId) Set Instance ID
+ * @method string getJobName() Obtain Instance name
+ * @method void setJobName(string $JobName) Set Instance name
+ * @method string getJobState() Obtain Instance state
+ * @method void setJobState(string $JobState) Set Instance state
+ * @method integer getPriority() Obtain Instance priority
+ * @method void setPriority(integer $Priority) Set Instance priority
+ * @method Placement getPlacement() Obtain Location information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPlacement(Placement $Placement) 设置Location information
+ * @method void setPlacement(Placement $Placement) Set Location information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() 获取Creation time
- * @method void setCreateTime(string $CreateTime) 设置Creation time
- * @method string getEndTime() 获取End time
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getEndTime() Obtain End time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) 设置End time
+ * @method void setEndTime(string $EndTime) Set End time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TaskMetrics getTaskMetrics() 获取Task statistical metrics
- * @method void setTaskMetrics(TaskMetrics $TaskMetrics) 设置Task statistical metrics
+ * @method TaskMetrics getTaskMetrics() Obtain Task statistical metrics
+ * @method void setTaskMetrics(TaskMetrics $TaskMetrics) Set Task statistical metrics
  */
 
 /**
@@ -103,7 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

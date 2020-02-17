@@ -18,10 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLaunchConfigurationId() 获取This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getLaunchConfigurationId() Obtain This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class CreateLaunchConfigurationResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

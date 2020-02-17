@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpnGatewayId() 获取VPN网关实例ID。
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- * @method string getVpnConnectionId() 获取VPN通道实例ID。形如：vpnx-f49l6u0z。
- * @method void setVpnConnectionId(string $VpnConnectionId) 设置VPN通道实例ID。形如：vpnx-f49l6u0z。
- * @method CustomerGatewayVendor getCustomerGatewayVendor() 获取对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
- * @method void setCustomerGatewayVendor(CustomerGatewayVendor $CustomerGatewayVendor) 设置对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
- * @method string getInterfaceName() 获取通道接入设备物理接口名称。
- * @method void setInterfaceName(string $InterfaceName) 设置通道接入设备物理接口名称。
+ * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
+ * @method string getVpnConnectionId() Obtain The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+ * @method void setVpnConnectionId(string $VpnConnectionId) Set The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+ * @method CustomerGatewayVendor getCustomerGatewayVendor() Obtain Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
+ * @method void setCustomerGatewayVendor(CustomerGatewayVendor $CustomerGatewayVendor) Set Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
+ * @method string getInterfaceName() Obtain Name of the physical API for tunnel access device.
+ * @method void setInterfaceName(string $InterfaceName) Set Name of the physical API for tunnel access device.
  */
 
 /**
@@ -34,36 +34,36 @@ use TencentCloud\Common\AbstractModel;
 class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string VPN网关实例ID。
+     * @var string The ID of the VPN gateway instance.
      */
     public $VpnGatewayId;
 
     /**
-     * @var string VPN通道实例ID。形如：vpnx-f49l6u0z。
+     * @var string The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
      */
     public $VpnConnectionId;
 
     /**
-     * @var CustomerGatewayVendor 对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
+     * @var CustomerGatewayVendor Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
      */
     public $CustomerGatewayVendor;
 
     /**
-     * @var string 通道接入设备物理接口名称。
+     * @var string Name of the physical API for tunnel access device.
      */
     public $InterfaceName;
     /**
-     * @param string $VpnGatewayId VPN网关实例ID。
-     * @param string $VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
-     * @param CustomerGatewayVendor $CustomerGatewayVendor 对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
-     * @param string $InterfaceName 通道接入设备物理接口名称。
+     * @param string $VpnGatewayId The ID of the VPN gateway instance.
+     * @param string $VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+     * @param CustomerGatewayVendor $CustomerGatewayVendor Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
+     * @param string $InterfaceName Name of the physical API for tunnel access device.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

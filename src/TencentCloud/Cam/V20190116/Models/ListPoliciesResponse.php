@@ -18,28 +18,28 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalNum() 获取Total number of policies
- * @method void setTotalNum(integer $TotalNum) 设置Total number of policies
- * @method array getList() 获取Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
+ * @method integer getTotalNum() Obtain Total number of policies
+ * @method void setTotalNum(integer $TotalNum) Set Total number of policies
+ * @method array getList() Obtain Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
 `policyId`: Policy ID 
 `policyName`: Policy name
 `addTime`: Time policy created
 `type`: 1 is custom policy; 2 is preset policy 
 `description`: Policy description 
 `createMode`: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax.
- * @method void setList(array $List) 设置Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
+ * @method void setList(array $List) Set Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
 `policyId`: Policy ID 
 `policyName`: Policy name
 `addTime`: Time policy created
 `type`: 1 is custom policy; 2 is preset policy 
 `description`: Policy description 
 `createMode`: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax.
- * @method array getServiceTypeList() 获取Reserved field
+ * @method array getServiceTypeList() Obtain Reserved field
 Note: This field may return null, indicating that no valid value was found.
- * @method void setServiceTypeList(array $ServiceTypeList) 设置Reserved field
+ * @method void setServiceTypeList(array $ServiceTypeList) Set Reserved field
 Note: This field may return null, indicating that no valid value was found.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -91,7 +91,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

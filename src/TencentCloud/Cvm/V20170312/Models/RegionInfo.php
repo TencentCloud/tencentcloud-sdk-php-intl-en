@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRegion() 获取Region name, such as `ap-guangzhou`
- * @method void setRegion(string $Region) 设置Region name, such as `ap-guangzhou`
- * @method string getRegionName() 获取Region description, such as South China (Guangzhou)
- * @method void setRegionName(string $RegionName) 设置Region description, such as South China (Guangzhou)
- * @method string getRegionState() 获取Whether the region is available
- * @method void setRegionState(string $RegionState) 设置Whether the region is available
+ * @method string getRegion() Obtain Region name, such as `ap-guangzhou`
+ * @method void setRegion(string $Region) Set Region name, such as `ap-guangzhou`
+ * @method string getRegionName() Obtain Region description, such as South China (Guangzhou)
+ * @method void setRegionName(string $RegionName) Set Region description, such as South China (Guangzhou)
+ * @method string getRegionState() Obtain Whether the region is available
+ * @method void setRegionState(string $RegionState) Set Whether the region is available
  */
 
 /**
@@ -55,7 +55,7 @@ class RegionInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

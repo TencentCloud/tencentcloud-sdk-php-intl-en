@@ -18,8 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLaunchConfigurationId() 获取ID of the launch configuration to be deleted.
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置ID of the launch configuration to be deleted.
+ * @method string getLaunchConfigurationId() Obtain ID of the launch configuration to be deleted.
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set ID of the launch configuration to be deleted.
  */
 
 /**
@@ -39,7 +39,7 @@ class DeleteLaunchConfigurationRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

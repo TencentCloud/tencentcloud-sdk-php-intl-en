@@ -18,92 +18,92 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPrivateIpAddress() 获取内网IP地址。
- * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置内网IP地址。
- * @method boolean getPrimary() 获取是否是主IP。
- * @method void setPrimary(boolean $Primary) 设置是否是主IP。
- * @method string getPublicIpAddress() 获取公网IP地址。
- * @method void setPublicIpAddress(string $PublicIpAddress) 设置公网IP地址。
- * @method string getAddressId() 获取EIP实例ID，例如：eip-11112222。
- * @method void setAddressId(string $AddressId) 设置EIP实例ID，例如：eip-11112222。
- * @method string getDescription() 获取内网IP描述信息。
- * @method void setDescription(string $Description) 设置内网IP描述信息。
- * @method boolean getIsWanIpBlocked() 获取公网IP是否被封堵。
- * @method void setIsWanIpBlocked(boolean $IsWanIpBlocked) 设置公网IP是否被封堵。
- * @method string getState() 获取IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的
- * @method void setState(string $State) 设置IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的
+ * @method string getPrivateIpAddress() Obtain Private IP address.
+ * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Private IP address.
+ * @method boolean getPrimary() Obtain Whether it is a primary IP.
+ * @method void setPrimary(boolean $Primary) Set Whether it is a primary IP.
+ * @method string getPublicIpAddress() Obtain Public IP address.
+ * @method void setPublicIpAddress(string $PublicIpAddress) Set Public IP address.
+ * @method string getAddressId() Obtain EIP instance ID, such as `eip-11112222`。
+ * @method void setAddressId(string $AddressId) Set EIP instance ID, such as `eip-11112222`。
+ * @method string getDescription() Obtain Private IP description.
+ * @method void setDescription(string $Description) Set Private IP description.
+ * @method boolean getIsWanIpBlocked() Obtain Whether the public IP is blocked.
+ * @method void setIsWanIpBlocked(boolean $IsWanIpBlocked) Set Whether the public IP is blocked.
+ * @method string getState() Obtain IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available
+ * @method void setState(string $State) Set IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available
  */
 
 /**
- *内网IP信息
+ *Private IP information
  */
 class PrivateIpAddressSpecification extends AbstractModel
 {
     /**
-     * @var string 内网IP地址。
+     * @var string Private IP address.
      */
     public $PrivateIpAddress;
 
     /**
-     * @var boolean 是否是主IP。
+     * @var boolean Whether it is a primary IP.
      */
     public $Primary;
 
     /**
-     * @var string 公网IP地址。
+     * @var string Public IP address.
      */
     public $PublicIpAddress;
 
     /**
-     * @var string EIP实例ID，例如：eip-11112222。
+     * @var string EIP instance ID, such as `eip-11112222`。
      */
     public $AddressId;
 
     /**
-     * @var string 内网IP描述信息。
+     * @var string Private IP description.
      */
     public $Description;
 
     /**
-     * @var boolean 公网IP是否被封堵。
+     * @var boolean Whether the public IP is blocked.
      */
     public $IsWanIpBlocked;
 
     /**
-     * @var string IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的
+     * @var string IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available
      */
     public $State;
     /**
-     * @param string $PrivateIpAddress 内网IP地址。
-     * @param boolean $Primary 是否是主IP。
-     * @param string $PublicIpAddress 公网IP地址。
-     * @param string $AddressId EIP实例ID，例如：eip-11112222。
-     * @param string $Description 内网IP描述信息。
-     * @param boolean $IsWanIpBlocked 公网IP是否被封堵。
-     * @param string $State IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的
+     * @param string $PrivateIpAddress Private IP address.
+     * @param boolean $Primary Whether it is a primary IP.
+     * @param string $PublicIpAddress Public IP address.
+     * @param string $AddressId EIP instance ID, such as `eip-11112222`。
+     * @param string $Description Private IP description.
+     * @param boolean $IsWanIpBlocked Whether the public IP is blocked.
+     * @param string $State IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

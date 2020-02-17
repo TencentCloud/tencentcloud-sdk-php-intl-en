@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取符合条件的对象数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的对象数。
- * @method array getGatewayFlowMonitorDetailSet() 获取网关流量监控明细。
- * @method void setGatewayFlowMonitorDetailSet(array $GatewayFlowMonitorDetailSet) 设置网关流量监控明细。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The number of objects meeting the condition.
+ * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
+ * @method array getGatewayFlowMonitorDetailSet() Obtain The gateway traffic monitoring details.
+ * @method void setGatewayFlowMonitorDetailSet(array $GatewayFlowMonitorDetailSet) Set The gateway traffic monitoring details.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的对象数。
+     * @var integer The number of objects meeting the condition.
      */
     public $TotalCount;
 
     /**
-     * @var array 网关流量监控明细。
+     * @var array The gateway traffic monitoring details.
      */
     public $GatewayFlowMonitorDetailSet;
 
@@ -46,8 +46,8 @@ class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 符合条件的对象数。
-     * @param array $GatewayFlowMonitorDetailSet 网关流量监控明细。
+     * @param integer $TotalCount The number of objects meeting the condition.
+     * @param array $GatewayFlowMonitorDetailSet The gateway traffic monitoring details.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取Tag key.
- * @method void setTagKey(string $TagKey) 设置Tag key.
- * @method array getTagValue() 获取Tag value array. “**OR**” relation if multiple values.
- * @method void setTagValue(array $TagValue) 设置Tag value array. “**OR**” relation if multiple values.
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method array getTagValue() Obtain Tag value array. “**OR**” relation if multiple values.
+ * @method void setTagValue(array $TagValue) Set Tag value array. “**OR**” relation if multiple values.
  */
 
 /**
@@ -47,7 +47,7 @@ class TagFilter extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

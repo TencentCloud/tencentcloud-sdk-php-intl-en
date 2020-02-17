@@ -18,16 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRegionId() 获取Region ID
- * @method void setRegionId(string $RegionId) 设置Region ID
- * @method string getRegionName() 获取Region name
- * @method void setRegionName(string $RegionName) 设置Region name
- * @method string getRegionShortName() 获取Region abbreviation
- * @method void setRegionShortName(string $RegionShortName) 设置Region abbreviation
- * @method string getArea() 获取Name of the area where a region is located
- * @method void setArea(string $Area) 设置Name of the area where a region is located
- * @method array getZoneSet() 获取AZ information
- * @method void setZoneSet(array $ZoneSet) 设置AZ information
+ * @method string getRegionId() Obtain Region ID
+ * @method void setRegionId(string $RegionId) Set Region ID
+ * @method string getRegionName() Obtain Region name
+ * @method void setRegionName(string $RegionName) Set Region name
+ * @method string getRegionShortName() Obtain Region abbreviation
+ * @method void setRegionShortName(string $RegionShortName) Set Region abbreviation
+ * @method string getArea() Obtain Name of the area where a region is located
+ * @method void setArea(string $Area) Set Name of the area where a region is located
+ * @method array getZoneSet() Obtain AZ information
+ * @method void setZoneSet(array $ZoneSet) Set AZ information
  */
 
 /**
@@ -71,7 +71,7 @@ class RegionConf extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

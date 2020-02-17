@@ -18,24 +18,24 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvId() 获取Compute environment ID
- * @method void setEnvId(string $EnvId) 设置Compute environment ID
- * @method string getEnvName() 获取Compute environment name
- * @method void setEnvName(string $EnvName) 设置Compute environment name
- * @method Placement getPlacement() 获取Location information
- * @method void setPlacement(Placement $Placement) 设置Location information
- * @method string getCreateTime() 获取Compute environment creation time
- * @method void setCreateTime(string $CreateTime) 设置Compute environment creation time
- * @method array getComputeNodeSet() 获取List of compute nodes
- * @method void setComputeNodeSet(array $ComputeNodeSet) 设置List of compute nodes
- * @method ComputeNodeMetrics getComputeNodeMetrics() 获取Compute node statistical metrics
- * @method void setComputeNodeMetrics(ComputeNodeMetrics $ComputeNodeMetrics) 设置Compute node statistical metrics
- * @method integer getDesiredComputeNodeCount() 获取Number of desired compute nodes
- * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置Number of desired compute nodes
- * @method string getEnvType() 获取Compute environment type
- * @method void setEnvType(string $EnvType) 设置Compute environment type
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getEnvId() Obtain Compute environment ID
+ * @method void setEnvId(string $EnvId) Set Compute environment ID
+ * @method string getEnvName() Obtain Compute environment name
+ * @method void setEnvName(string $EnvName) Set Compute environment name
+ * @method Placement getPlacement() Obtain Location information
+ * @method void setPlacement(Placement $Placement) Set Location information
+ * @method string getCreateTime() Obtain Compute environment creation time
+ * @method void setCreateTime(string $CreateTime) Set Compute environment creation time
+ * @method array getComputeNodeSet() Obtain List of compute nodes
+ * @method void setComputeNodeSet(array $ComputeNodeSet) Set List of compute nodes
+ * @method ComputeNodeMetrics getComputeNodeMetrics() Obtain Compute node statistical metrics
+ * @method void setComputeNodeMetrics(ComputeNodeMetrics $ComputeNodeMetrics) Set Compute node statistical metrics
+ * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
+ * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
+ * @method string getEnvType() Obtain Compute environment type
+ * @method void setEnvType(string $EnvType) Set Compute environment type
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -103,7 +103,7 @@ class DescribeComputeEnvResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
+ * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class DeleteCcnRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public $CcnId;
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

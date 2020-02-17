@@ -18,30 +18,30 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getCcnIds() 获取CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
- * @method void setCcnIds(array $CcnIds) 设置CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
- * @method array getFilters() 获取Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
+ * @method array getCcnIds() Obtain The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
+ * @method void setCcnIds(array $CcnIds) Set The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
+ * @method array getFilters() Obtain Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
 <li>ccn-id - String - (Filter condition) The unique ID of the CCN, such as `vpc-f49l6u0z`.</li>
 <li>ccn-name - String - (Filter condition) The CCN name.</li>
 <li>ccn-description - String - (Filter condition) CCN description.</li>
 <li>state - String - (Filter condition) The instance status. 'ISOLATED': Isolated (the account is in arrears and the service is suspended.) 'AVAILABLE': Running.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key.</li>
 <li>`tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see this example: **Querying the list of CCNs bound to tags**.</li>
- * @method void setFilters(array $Filters) 设置Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
+ * @method void setFilters(array $Filters) Set Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
 <li>ccn-id - String - (Filter condition) The unique ID of the CCN, such as `vpc-f49l6u0z`.</li>
 <li>ccn-name - String - (Filter condition) The CCN name.</li>
 <li>ccn-description - String - (Filter condition) CCN description.</li>
 <li>state - String - (Filter condition) The instance status. 'ISOLATED': Isolated (the account is in arrears and the service is suspended.) 'AVAILABLE': Running.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key.</li>
 <li>`tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see this example: **Querying the list of CCNs bound to tags**.</li>
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
- * @method string getOrderField() 获取排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
- * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
- * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain The returned quantity
+ * @method void setLimit(integer $Limit) Set The returned quantity
+ * @method string getOrderField() Obtain Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
+ * @method void setOrderField(string $OrderField) Set Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
+ * @method string getOrderDirection() Obtain Order methods. Ascending: `ASC`, Descending: `DESC`.
+ * @method void setOrderDirection(string $OrderDirection) Set Order methods. Ascending: `ASC`, Descending: `DESC`.
  */
 
 /**
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCcnsRequest extends AbstractModel
 {
     /**
-     * @var array CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
+     * @var array The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
      */
     public $CcnIds;
 
@@ -66,26 +66,26 @@ class DescribeCcnsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量
+     * @var integer Offset
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer The returned quantity
      */
     public $Limit;
 
     /**
-     * @var string 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+     * @var string Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
      */
     public $OrderField;
 
     /**
-     * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @var string Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public $OrderDirection;
     /**
-     * @param array $CcnIds CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
+     * @param array $CcnIds The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
      * @param array $Filters Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
 <li>ccn-id - String - (Filter condition) The unique ID of the CCN, such as `vpc-f49l6u0z`.</li>
 <li>ccn-name - String - (Filter condition) The CCN name.</li>
@@ -93,17 +93,17 @@ class DescribeCcnsRequest extends AbstractModel
 <li>state - String - (Filter condition) The instance status. 'ISOLATED': Isolated (the account is in arrears and the service is suspended.) 'AVAILABLE': Running.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key.</li>
 <li>`tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see this example: **Querying the list of CCNs bound to tags**.</li>
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
-     * @param string $OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
-     * @param string $OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @param integer $Offset Offset
+     * @param integer $Limit The returned quantity
+     * @param string $OrderField Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
+     * @param string $OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

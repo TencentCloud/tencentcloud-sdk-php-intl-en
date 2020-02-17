@@ -18,16 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getOperation() 获取Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
- * @method void setOperation(string $Operation) 设置Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
- * @method string getVip() 获取VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
- * @method void setVip(string $Vip) 设置VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
- * @method string getVpcId() 获取VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
- * @method void setVpcId(string $VpcId) 设置VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
- * @method string getSubnetId() 获取Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
- * @method void setSubnetId(string $SubnetId) 设置Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getOperation() Obtain Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
+ * @method void setOperation(string $Operation) Set Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
+ * @method string getVip() Obtain VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
+ * @method void setVip(string $Vip) Set VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
+ * @method string getVpcId() Obtain VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+ * @method void setVpcId(string $VpcId) Set VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+ * @method string getSubnetId() Obtain Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
  */
 
 /**
@@ -71,7 +71,7 @@ class ModifyNetworkConfigRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

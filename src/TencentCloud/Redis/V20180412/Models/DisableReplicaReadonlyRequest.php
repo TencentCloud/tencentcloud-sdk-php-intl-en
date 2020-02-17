@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Serial ID of an instance
- * @method void setInstanceId(string $InstanceId) 设置Serial ID of an instance
+ * @method string getInstanceId() Obtain Serial ID of an instance
+ * @method void setInstanceId(string $InstanceId) Set Serial ID of an instance
  */
 
 /**
@@ -39,7 +39,7 @@ class DisableReplicaReadonlyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

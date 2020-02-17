@@ -18,20 +18,20 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProjectId() 获取Queries the project ID to which the origin server belongs. -1: all projects.
- * @method void setProjectId(integer $ProjectId) 设置Queries the project ID to which the origin server belongs. -1: all projects.
- * @method string getSearchValue() 获取Origin server IP or domain name to be queried. The fuzzy match is supported.
- * @method void setSearchValue(string $SearchValue) 设置Origin server IP or domain name to be queried. The fuzzy match is supported.
- * @method integer getOffset() 获取Offset, which is 0 by default.
- * @method void setOffset(integer $Offset) 设置Offset, which is 0 by default.
- * @method integer getLimit() 获取Quantity of values to return. The default value is 20 and the maximum value is 50.
- * @method void setLimit(integer $Limit) 设置Quantity of values to return. The default value is 20 and the maximum value is 50.
- * @method array getTagSet() 获取Tag list. If this field exists, the list of the resources with the tag will be pulled.
+ * @method integer getProjectId() Obtain Queries the project ID to which the origin server belongs. -1: all projects.
+ * @method void setProjectId(integer $ProjectId) Set Queries the project ID to which the origin server belongs. -1: all projects.
+ * @method string getSearchValue() Obtain Origin server IP or domain name to be queried. The fuzzy match is supported.
+ * @method void setSearchValue(string $SearchValue) Set Origin server IP or domain name to be queried. The fuzzy match is supported.
+ * @method integer getOffset() Obtain Offset, which is 0 by default.
+ * @method void setOffset(integer $Offset) Set Offset, which is 0 by default.
+ * @method integer getLimit() Obtain Quantity of values to return. The default value is 20 and the maximum value is 50.
+ * @method void setLimit(integer $Limit) Set Quantity of values to return. The default value is 20 and the maximum value is 50.
+ * @method array getTagSet() Obtain Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the origin servers tagged any of them will be pulled.
- * @method void setTagSet(array $TagSet) 设置Tag list. If this field exists, the list of the resources with the tag will be pulled.
+ * @method void setTagSet(array $TagSet) Set Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the origin servers tagged any of them will be pulled.
- * @method array getFilters() 获取Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
- * @method void setFilters(array $Filters) 设置Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
+ * @method array getFilters() Obtain Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
+ * @method void setFilters(array $Filters) Set Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
  */
 
 /**
@@ -83,7 +83,7 @@ It supports up to 5 tags. If there are two or more tags, the origin servers tagg
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

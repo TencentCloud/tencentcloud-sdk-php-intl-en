@@ -18,76 +18,76 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
- * @method string getRouteTableName() 获取路由表名称。
- * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
- * @method array getAssociationSet() 获取路由表关联关系。
- * @method void setAssociationSet(array $AssociationSet) 设置路由表关联关系。
- * @method array getRouteSet() 获取路由表策略集合。
- * @method void setRouteSet(array $RouteSet) 设置路由表策略集合。
- * @method boolean getMain() 获取是否默认路由表。
- * @method void setMain(boolean $Main) 设置是否默认路由表。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getVpcId() Obtain VPC instance ID.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID.
+ * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
+ * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
+ * @method string getRouteTableName() Obtain Route table name.
+ * @method void setRouteTableName(string $RouteTableName) Set Route table name.
+ * @method array getAssociationSet() Obtain The association relationships of the route table.
+ * @method void setAssociationSet(array $AssociationSet) Set The association relationships of the route table.
+ * @method array getRouteSet() Obtain Route table policy set.
+ * @method void setRouteSet(array $RouteSet) Set Route table policy set.
+ * @method boolean getMain() Obtain Whether it is the default route table.
+ * @method void setMain(boolean $Main) Set Whether it is the default route table.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
  */
 
 /**
- *路由表对象
+ *Route table object
  */
 class RouteTable extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。
+     * @var string VPC instance ID.
      */
     public $VpcId;
 
     /**
-     * @var string 路由表实例ID，例如：rtb-azd4dt1c。
+     * @var string The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public $RouteTableId;
 
     /**
-     * @var string 路由表名称。
+     * @var string Route table name.
      */
     public $RouteTableName;
 
     /**
-     * @var array 路由表关联关系。
+     * @var array The association relationships of the route table.
      */
     public $AssociationSet;
 
     /**
-     * @var array 路由表策略集合。
+     * @var array Route table policy set.
      */
     public $RouteSet;
 
     /**
-     * @var boolean 是否默认路由表。
+     * @var boolean Whether it is the default route table.
      */
     public $Main;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
     /**
-     * @param string $VpcId VPC实例ID。
-     * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param string $RouteTableName 路由表名称。
-     * @param array $AssociationSet 路由表关联关系。
-     * @param array $RouteSet 路由表策略集合。
-     * @param boolean $Main 是否默认路由表。
-     * @param string $CreatedTime 创建时间。
+     * @param string $VpcId VPC instance ID.
+     * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+     * @param string $RouteTableName Route table name.
+     * @param array $AssociationSet The association relationships of the route table.
+     * @param array $RouteSet Route table policy set.
+     * @param boolean $Main Whether it is the default route table.
+     * @param string $CreatedTime Creation Time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

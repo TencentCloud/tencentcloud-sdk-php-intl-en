@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressTemplateName() 获取IP地址模版名称
- * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP地址模版名称
- * @method array getAddresses() 获取地址信息，支持 IP、CIDR、IP 范围。
- * @method void setAddresses(array $Addresses) 设置地址信息，支持 IP、CIDR、IP 范围。
+ * @method string getAddressTemplateName() Obtain The name of the IP address template
+ * @method void setAddressTemplateName(string $AddressTemplateName) Set The name of the IP address template
+ * @method array getAddresses() Obtain Address information, including IP, CIDR and IP address range.
+ * @method void setAddresses(array $Addresses) Set Address information, including IP, CIDR and IP address range.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class CreateAddressTemplateRequest extends AbstractModel
 {
     /**
-     * @var string IP地址模版名称
+     * @var string The name of the IP address template
      */
     public $AddressTemplateName;
 
     /**
-     * @var array 地址信息，支持 IP、CIDR、IP 范围。
+     * @var array Address information, including IP, CIDR and IP address range.
      */
     public $Addresses;
     /**
-     * @param string $AddressTemplateName IP地址模版名称
-     * @param array $Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * @param string $AddressTemplateName The name of the IP address template
+     * @param array $Addresses Address information, including IP, CIDR and IP address range.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

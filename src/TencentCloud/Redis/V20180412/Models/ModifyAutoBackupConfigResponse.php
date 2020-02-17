@@ -18,14 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getAutoBackupType() 获取Auto backup type: 1 "scheduled rollback"
- * @method void setAutoBackupType(integer $AutoBackupType) 设置Auto backup type: 1 "scheduled rollback"
- * @method array getWeekDays() 获取Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
- * @method void setWeekDays(array $WeekDays) 设置Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
- * @method string getTimePeriod() 获取Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
- * @method void setTimePeriod(string $TimePeriod) 设置Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getAutoBackupType() Obtain Auto backup type: 1 "scheduled rollback"
+ * @method void setAutoBackupType(integer $AutoBackupType) Set Auto backup type: 1 "scheduled rollback"
+ * @method array getWeekDays() Obtain Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+ * @method void setWeekDays(array $WeekDays) Set Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+ * @method string getTimePeriod() Obtain Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+ * @method void setTimePeriod(string $TimePeriod) Set Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -63,7 +63,7 @@ class ModifyAutoBackupConfigResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

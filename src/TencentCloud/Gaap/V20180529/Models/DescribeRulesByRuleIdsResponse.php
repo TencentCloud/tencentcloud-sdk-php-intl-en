@@ -18,8 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The number of returned rules.
+ * @method void setTotalCount(integer $TotalCount) Set The number of returned rules.
+ * @method array getRuleSet() Obtain List of returned rules.
+ * @method void setRuleSet(array $RuleSet) Set List of returned rules.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -28,10 +32,22 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRulesByRuleIdsResponse extends AbstractModel
 {
     /**
+     * @var integer The number of returned rules.
+     */
+    public $TotalCount;
+
+    /**
+     * @var array List of returned rules.
+     */
+    public $RuleSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param integer $TotalCount The number of returned rules.
+     * @param array $RuleSet List of returned rules.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -39,13 +55,26 @@ class DescribeRulesByRuleIdsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("RuleSet",$param) and $param["RuleSet"] !== null) {
+            $this->RuleSet = [];
+            foreach ($param["RuleSet"] as $key => $value){
+                $obj = new RuleInfo();
+                $obj->deserialize($value);
+                array_push($this->RuleSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -18,19 +18,19 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProxyId() 获取Connection ID
- * @method void setProxyId(string $ProxyId) 设置Connection ID
- * @method string getStartTime() 获取Start time (2019-03-25 12:00:00)
- * @method void setStartTime(string $StartTime) 设置Start time (2019-03-25 12:00:00)
- * @method string getEndTime() 获取End time (2019-03-25 12:00:00)
- * @method void setEndTime(string $EndTime) 设置End time (2019-03-25 12:00:00)
- * @method array getMetricNames() 获取Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
- * @method void setMetricNames(array $MetricNames) 设置Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
- * @method integer getGranularity() 获取Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
+ * @method string getProxyId() Obtain Connection ID
+ * @method void setProxyId(string $ProxyId) Set Connection ID
+ * @method string getStartTime() Obtain Start time (2019-03-25 12:00:00)
+ * @method void setStartTime(string $StartTime) Set Start time (2019-03-25 12:00:00)
+ * @method string getEndTime() Obtain End time (2019-03-25 12:00:00)
+ * @method void setEndTime(string $EndTime) Set End time (2019-03-25 12:00:00)
+ * @method array getMetricNames() Obtain Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
+ * @method void setMetricNames(array $MetricNames) Set Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
+ * @method integer getGranularity() Obtain Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
 Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
 Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
- * @method void setGranularity(integer $Granularity) 设置Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
+ * @method void setGranularity(integer $Granularity) Set Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
 Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
 Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
@@ -83,7 +83,7 @@ Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

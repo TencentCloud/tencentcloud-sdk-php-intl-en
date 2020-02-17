@@ -18,16 +18,16 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKeyName() 获取Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
- * @method void setKeyName(string $KeyName) 设置Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
- * @method integer getProjectId() 获取The ID of the [project](https://cloud.tencent.com/document/product/378/10861) to which the created key pair belongs.<br><br>You can retrieve the project ID in two ways:<br><li>Query the project ID in [Project Management](https://console.cloud.tencent.com/project).<br><li>Call [DescribeProject](https://cloud.tencent.com/document/api/378/4400) and search for `projectId` in the response.
+ * @method string getKeyName() Obtain Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+ * @method void setKeyName(string $KeyName) Set Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+ * @method integer getProjectId() Obtain The ID of the [project](https://cloud.tencent.com/document/product/378/10861) to which the created key pair belongs.<br><br>You can retrieve the project ID in two ways:<br><li>Query the project ID in [Project Management](https://console.cloud.tencent.com/project).<br><li>Call [DescribeProject](https://cloud.tencent.com/document/api/378/4400) and search for `projectId` in the response.
 
 If you want to use the default project, specify 0 for the parameter.
- * @method void setProjectId(integer $ProjectId) 设置The ID of the [project](https://cloud.tencent.com/document/product/378/10861) to which the created key pair belongs.<br><br>You can retrieve the project ID in two ways:<br><li>Query the project ID in [Project Management](https://console.cloud.tencent.com/project).<br><li>Call [DescribeProject](https://cloud.tencent.com/document/api/378/4400) and search for `projectId` in the response.
+ * @method void setProjectId(integer $ProjectId) Set The ID of the [project](https://cloud.tencent.com/document/product/378/10861) to which the created key pair belongs.<br><br>You can retrieve the project ID in two ways:<br><li>Query the project ID in [Project Management](https://console.cloud.tencent.com/project).<br><li>Call [DescribeProject](https://cloud.tencent.com/document/api/378/4400) and search for `projectId` in the response.
 
 If you want to use the default project, specify 0 for the parameter.
- * @method string getPublicKey() 获取Content of the public key in the key pair in the `OpenSSH RSA` format.
- * @method void setPublicKey(string $PublicKey) 设置Content of the public key in the key pair in the `OpenSSH RSA` format.
+ * @method string getPublicKey() Obtain Content of the public key in the key pair in the `OpenSSH RSA` format.
+ * @method void setPublicKey(string $PublicKey) Set Content of the public key in the key pair in the `OpenSSH RSA` format.
  */
 
 /**
@@ -63,7 +63,7 @@ If you want to use the default project, specify 0 for the parameter.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

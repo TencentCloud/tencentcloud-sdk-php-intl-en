@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
- * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
- * @method array getDestinationIpPortTranslationNatRules() 获取NAT网关的端口转换规则。
- * @method void setDestinationIpPortTranslationNatRules(array $DestinationIpPortTranslationNatRules) 设置NAT网关的端口转换规则。
+ * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
+ * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
+ * @method array getDestinationIpPortTranslationNatRules() Obtain The port forwarding rules of the NAT gateway.
+ * @method void setDestinationIpPortTranslationNatRules(array $DestinationIpPortTranslationNatRules) Set The port forwarding rules of the NAT gateway.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest extends AbstractModel
 {
     /**
-     * @var string NAT网关的ID，形如：`nat-df45454`。
+     * @var string The ID of the NAT gateway, such as `nat-df45454`.
      */
     public $NatGatewayId;
 
     /**
-     * @var array NAT网关的端口转换规则。
+     * @var array The port forwarding rules of the NAT gateway.
      */
     public $DestinationIpPortTranslationNatRules;
     /**
-     * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
-     * @param array $DestinationIpPortTranslationNatRules NAT网关的端口转换规则。
+     * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+     * @param array $DestinationIpPortTranslationNatRules The port forwarding rules of the NAT gateway.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,8 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomainNameType() 获取Domain name type
- * @method void setDomainNameType(string $DomainNameType) 设置Domain name type
+ * @method string getDomainNameType() Obtain Domain name type
+ * @method void setDomainNameType(string $DomainNameType) Set Domain name type
  */
 
 /**
@@ -39,7 +39,7 @@ class PreviewPaiDomainNameRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

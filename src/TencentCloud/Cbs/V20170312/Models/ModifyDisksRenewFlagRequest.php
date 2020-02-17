@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDiskIds() 获取IDs of one or more cloud disks to be operated.
- * @method void setDiskIds(array $DiskIds) 设置IDs of one or more cloud disks to be operated.
- * @method string getRenewFlag() 获取Cloud disk renewal flag. Value range: <br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically. <br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but do not renew automatically. <br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
- * @method void setRenewFlag(string $RenewFlag) 设置Cloud disk renewal flag. Value range: <br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically. <br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but do not renew automatically. <br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
+ * @method array getDiskIds() Obtain IDs of one or more cloud disks to be operated.
+ * @method void setDiskIds(array $DiskIds) Set IDs of one or more cloud disks to be operated.
+ * @method string getRenewFlag() Obtain Cloud disk renewal flag. Value range: <br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically. <br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but do not renew automatically. <br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
+ * @method void setRenewFlag(string $RenewFlag) Set Cloud disk renewal flag. Value range: <br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically. <br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but do not renew automatically. <br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
  */
 
 /**
@@ -47,7 +47,7 @@ class ModifyDisksRenewFlagRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

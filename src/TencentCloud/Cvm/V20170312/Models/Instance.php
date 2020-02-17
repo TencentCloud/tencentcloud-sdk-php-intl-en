@@ -18,66 +18,66 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Placement getPlacement() 获取Location of the instance
- * @method void setPlacement(Placement $Placement) 设置Location of the instance
- * @method string getInstanceId() 获取Instance `ID`
- * @method void setInstanceId(string $InstanceId) 设置Instance `ID`
- * @method string getInstanceType() 获取Instance model
- * @method void setInstanceType(string $InstanceType) 设置Instance model
- * @method integer getCPU() 获取Number of CPU cores of the instance; unit: core
- * @method void setCPU(integer $CPU) 设置Number of CPU cores of the instance; unit: core
- * @method integer getMemory() 获取Memory capacity; unit: `GB`.
- * @method void setMemory(integer $Memory) 设置Memory capacity; unit: `GB`.
- * @method string getRestrictState() 获取Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
- * @method void setRestrictState(string $RestrictState) 设置Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
- * @method string getInstanceName() 获取Instance name
- * @method void setInstanceName(string $InstanceName) 设置Instance name
- * @method string getInstanceChargeType() 获取Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
- * @method SystemDisk getSystemDisk() 获取Information on the system disk of the instance
- * @method void setSystemDisk(SystemDisk $SystemDisk) 设置Information on the system disk of the instance
- * @method array getDataDisks() 获取Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
- * @method void setDataDisks(array $DataDisks) 设置Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
- * @method array getPrivateIpAddresses() 获取List of private IPs of the instance's primary ENI.
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置List of private IPs of the instance's primary ENI.
- * @method array getPublicIpAddresses() 获取List of public IPs of the instance's primary ENI.
+ * @method Placement getPlacement() Obtain Location of the instance
+ * @method void setPlacement(Placement $Placement) Set Location of the instance
+ * @method string getInstanceId() Obtain Instance `ID`
+ * @method void setInstanceId(string $InstanceId) Set Instance `ID`
+ * @method string getInstanceType() Obtain Instance model
+ * @method void setInstanceType(string $InstanceType) Set Instance model
+ * @method integer getCPU() Obtain Number of CPU cores of the instance; unit: core
+ * @method void setCPU(integer $CPU) Set Number of CPU cores of the instance; unit: core
+ * @method integer getMemory() Obtain Memory capacity; unit: `GB`.
+ * @method void setMemory(integer $Memory) Set Memory capacity; unit: `GB`.
+ * @method string getRestrictState() Obtain Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+ * @method void setRestrictState(string $RestrictState) Set Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+ * @method string getInstanceName() Obtain Instance name
+ * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceChargeType() Obtain Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+ * @method SystemDisk getSystemDisk() Obtain Information on the system disk of the instance
+ * @method void setSystemDisk(SystemDisk $SystemDisk) Set Information on the system disk of the instance
+ * @method array getDataDisks() Obtain Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+ * @method void setDataDisks(array $DataDisks) Set Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+ * @method array getPrivateIpAddresses() Obtain List of private IPs of the instance's primary ENI.
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set List of private IPs of the instance's primary ENI.
+ * @method array getPublicIpAddresses() Obtain List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置List of public IPs of the instance's primary ENI.
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid value is found.
- * @method InternetAccessible getInternetAccessible() 获取Information on instance bandwidth.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置Information on instance bandwidth.
- * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取Information on the VPC where the instance resides.
- * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置Information on the VPC where the instance resides.
- * @method string getImageId() 获取`ID` of the image used to create the instance.
- * @method void setImageId(string $ImageId) 设置`ID` of the image used to create the instance.
- * @method string getRenewFlag() 获取Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
- * @method void setRenewFlag(string $RenewFlag) 设置Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
- * @method string getCreatedTime() 获取Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method string getExpiredTime() 获取Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method void setExpiredTime(string $ExpiredTime) 设置Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method string getOsName() 获取Operating system name.
- * @method void setOsName(string $OsName) 设置Operating system name.
- * @method array getSecurityGroupIds() 获取Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
- * @method LoginSettings getLoginSettings() 获取Login settings of the instance. Currently only the key associated with the instance is returned.
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置Login settings of the instance. Currently only the key associated with the instance is returned.
- * @method string getInstanceState() 获取Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
- * @method void setInstanceState(string $InstanceState) 设置Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
- * @method array getTags() 获取List of tags associated with the instance.
- * @method void setTags(array $Tags) 设置List of tags associated with the instance.
- * @method string getStopChargingMode() 获取Instance billing method after shutdown.
+ * @method InternetAccessible getInternetAccessible() Obtain Information on instance bandwidth.
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Information on instance bandwidth.
+ * @method VirtualPrivateCloud getVirtualPrivateCloud() Obtain Information on the VPC where the instance resides.
+ * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) Set Information on the VPC where the instance resides.
+ * @method string getImageId() Obtain `ID` of the image used to create the instance.
+ * @method void setImageId(string $ImageId) Set `ID` of the image used to create the instance.
+ * @method string getRenewFlag() Obtain Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+ * @method void setRenewFlag(string $RenewFlag) Set Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+ * @method string getCreatedTime() Obtain Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method string getExpiredTime() Obtain Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method string getOsName() Obtain Operating system name.
+ * @method void setOsName(string $OsName) Set Operating system name.
+ * @method array getSecurityGroupIds() Obtain Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
+ * @method LoginSettings getLoginSettings() Obtain Login settings of the instance. Currently only the key associated with the instance is returned.
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set Login settings of the instance. Currently only the key associated with the instance is returned.
+ * @method string getInstanceState() Obtain Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+ * @method void setInstanceState(string $InstanceState) Set Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+ * @method array getTags() Obtain List of tags associated with the instance.
+ * @method void setTags(array $Tags) Set List of tags associated with the instance.
+ * @method string getStopChargingMode() Obtain Instance billing method after shutdown.
 Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
- * @method void setStopChargingMode(string $StopChargingMode) 设置Instance billing method after shutdown.
+ * @method void setStopChargingMode(string $StopChargingMode) Set Instance billing method after shutdown.
 Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
- * @method string getUuid() 获取
- * @method void setUuid(string $Uuid) 设置
- * @method string getLatestOperation() 获取
- * @method void setLatestOperation(string $LatestOperation) 设置
- * @method string getLatestOperationState() 获取
- * @method void setLatestOperationState(string $LatestOperationState) 设置
- * @method string getLatestOperationRequestId() 获取
- * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置
+ * @method string getUuid() Obtain 
+ * @method void setUuid(string $Uuid) Set 
+ * @method string getLatestOperation() Obtain 
+ * @method void setLatestOperation(string $LatestOperation) Set 
+ * @method string getLatestOperationState() Obtain 
+ * @method void setLatestOperationState(string $LatestOperationState) Set 
+ * @method string getLatestOperationRequestId() Obtain 
+ * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set 
  */
 
 /**
@@ -263,7 +263,7 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

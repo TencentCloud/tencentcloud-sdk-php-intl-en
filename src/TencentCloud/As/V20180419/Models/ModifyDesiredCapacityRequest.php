@@ -18,10 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID
- * @method integer getDesiredCapacity() 获取Desired capacity
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置Desired capacity
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method integer getDesiredCapacity() Obtain Desired capacity
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired capacity
  */
 
 /**
@@ -47,7 +47,7 @@ class ModifyDesiredCapacityRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

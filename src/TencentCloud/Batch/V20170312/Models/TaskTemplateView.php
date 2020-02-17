@@ -18,16 +18,16 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskTemplateId() 获取Task template ID
- * @method void setTaskTemplateId(string $TaskTemplateId) 设置Task template ID
- * @method string getTaskTemplateName() 获取Task template name
- * @method void setTaskTemplateName(string $TaskTemplateName) 设置Task template name
- * @method string getTaskTemplateDescription() 获取Task template description
- * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置Task template description
- * @method Task getTaskTemplateInfo() 获取Task template information
- * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置Task template information
- * @method string getCreateTime() 获取Creation time
- * @method void setCreateTime(string $CreateTime) 设置Creation time
+ * @method string getTaskTemplateId() Obtain Task template ID
+ * @method void setTaskTemplateId(string $TaskTemplateId) Set Task template ID
+ * @method string getTaskTemplateName() Obtain Task template name
+ * @method void setTaskTemplateName(string $TaskTemplateName) Set Task template name
+ * @method string getTaskTemplateDescription() Obtain Task template description
+ * @method void setTaskTemplateDescription(string $TaskTemplateDescription) Set Task template description
+ * @method Task getTaskTemplateInfo() Obtain Task template information
+ * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) Set Task template information
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
  */
 
 /**
@@ -71,7 +71,7 @@ class TaskTemplateView extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

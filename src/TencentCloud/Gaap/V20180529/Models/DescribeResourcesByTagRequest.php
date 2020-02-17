@@ -18,16 +18,16 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取Tag key.
- * @method void setTagKey(string $TagKey) 设置Tag key.
- * @method string getTagValue() 获取Tag value.
- * @method void setTagValue(string $TagValue) 设置Tag value.
- * @method string getResourceType() 获取Resource type, including:
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method string getTagValue() Obtain Tag value.
+ * @method void setTagValue(string $TagValue) Set Tag value.
+ * @method string getResourceType() Obtain Resource type, including:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
 If this field is not specified, all resources with the tag will be queried.
- * @method void setResourceType(string $ResourceType) 设置Resource type, including:
+ * @method void setResourceType(string $ResourceType) Set Resource type, including:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
@@ -71,7 +71,7 @@ If this field is not specified, all resources with the tag will be queried.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

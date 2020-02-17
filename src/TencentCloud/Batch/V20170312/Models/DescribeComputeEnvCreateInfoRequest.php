@@ -18,8 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvId() 获取Compute environment ID
- * @method void setEnvId(string $EnvId) 设置Compute environment ID
+ * @method string getEnvId() Obtain Compute environment ID
+ * @method void setEnvId(string $EnvId) Set Compute environment ID
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeComputeEnvCreateInfoRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

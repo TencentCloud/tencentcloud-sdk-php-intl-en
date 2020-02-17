@@ -18,10 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method SpotMarketOptions getSpotOptions() 获取Options related to bidding
- * @method void setSpotOptions(SpotMarketOptions $SpotOptions) 设置Options related to bidding
- * @method string getMarketType() 获取Market option type. Currently `spot` is the only supported value.
- * @method void setMarketType(string $MarketType) 设置Market option type. Currently `spot` is the only supported value.
+ * @method SpotMarketOptions getSpotOptions() Obtain Options related to bidding
+ * @method void setSpotOptions(SpotMarketOptions $SpotOptions) Set Options related to bidding
+ * @method string getMarketType() Obtain Market option type. Currently `spot` is the only supported value.
+ * @method void setMarketType(string $MarketType) Set Market option type. Currently `spot` is the only supported value.
  */
 
 /**
@@ -47,7 +47,7 @@ class InstanceMarketOptionsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

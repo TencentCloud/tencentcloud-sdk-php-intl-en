@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSubnetId() 获取子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+ * @method string getSubnetId() Obtain The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
+ * @method void setSubnetId(string $SubnetId) Set The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class DeleteSubnetRequest extends AbstractModel
 {
     /**
-     * @var string 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+     * @var string The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
      */
     public $SubnetId;
     /**
-     * @param string $SubnetId 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+     * @param string $SubnetId The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

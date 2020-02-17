@@ -18,108 +18,108 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getHaVipId() 获取`HAVIP`的`ID`，是`HAVIP`的唯一标识。
- * @method void setHaVipId(string $HaVipId) 设置`HAVIP`的`ID`，是`HAVIP`的唯一标识。
- * @method string getHaVipName() 获取`HAVIP`名称。
- * @method void setHaVipName(string $HaVipName) 设置`HAVIP`名称。
- * @method string getVip() 获取虚拟IP地址。
- * @method void setVip(string $Vip) 设置虚拟IP地址。
- * @method string getVpcId() 获取`HAVIP`所在私有网络`ID`。
- * @method void setVpcId(string $VpcId) 设置`HAVIP`所在私有网络`ID`。
- * @method string getSubnetId() 获取`HAVIP`所在子网`ID`。
- * @method void setSubnetId(string $SubnetId) 设置`HAVIP`所在子网`ID`。
- * @method string getNetworkInterfaceId() 获取`HAVIP`关联弹性网卡`ID`。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置`HAVIP`关联弹性网卡`ID`。
- * @method string getInstanceId() 获取被绑定的实例`ID`。
- * @method void setInstanceId(string $InstanceId) 设置被绑定的实例`ID`。
- * @method string getAddressIp() 获取绑定`EIP`。
- * @method void setAddressIp(string $AddressIp) 设置绑定`EIP`。
- * @method string getState() 获取状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
- * @method void setState(string $State) 设置状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getHaVipId() Obtain The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
+ * @method void setHaVipId(string $HaVipId) Set The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
+ * @method string getHaVipName() Obtain The name of the `HAVIP`.
+ * @method void setHaVipName(string $HaVipName) Set The name of the `HAVIP`.
+ * @method string getVip() Obtain The virtual IP address.
+ * @method void setVip(string $Vip) Set The virtual IP address.
+ * @method string getVpcId() Obtain The `ID` of the VPC to which the `HAVIP` belongs.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the VPC to which the `HAVIP` belongs.
+ * @method string getSubnetId() Obtain The `ID` of the subnet to which the `HAVIP` belongs.
+ * @method void setSubnetId(string $SubnetId) Set The `ID` of the subnet to which the `HAVIP` belongs.
+ * @method string getNetworkInterfaceId() Obtain The `ID` of the ENI associated with the `HAVIP`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The `ID` of the ENI associated with the `HAVIP`.
+ * @method string getInstanceId() Obtain The `ID` of the bound instance.
+ * @method void setInstanceId(string $InstanceId) Set The `ID` of the bound instance.
+ * @method string getAddressIp() Obtain Bound `EIP`.
+ * @method void setAddressIp(string $AddressIp) Set Bound `EIP`.
+ * @method string getState() Obtain Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li>
+ * @method void setState(string $State) Set Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li>
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
  */
 
 /**
- *描述 HAVIP 信息
+ *HAVIP description information
  */
 class HaVip extends AbstractModel
 {
     /**
-     * @var string `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+     * @var string The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
      */
     public $HaVipId;
 
     /**
-     * @var string `HAVIP`名称。
+     * @var string The name of the `HAVIP`.
      */
     public $HaVipName;
 
     /**
-     * @var string 虚拟IP地址。
+     * @var string The virtual IP address.
      */
     public $Vip;
 
     /**
-     * @var string `HAVIP`所在私有网络`ID`。
+     * @var string The `ID` of the VPC to which the `HAVIP` belongs.
      */
     public $VpcId;
 
     /**
-     * @var string `HAVIP`所在子网`ID`。
+     * @var string The `ID` of the subnet to which the `HAVIP` belongs.
      */
     public $SubnetId;
 
     /**
-     * @var string `HAVIP`关联弹性网卡`ID`。
+     * @var string The `ID` of the ENI associated with the `HAVIP`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string 被绑定的实例`ID`。
+     * @var string The `ID` of the bound instance.
      */
     public $InstanceId;
 
     /**
-     * @var string 绑定`EIP`。
+     * @var string Bound `EIP`.
      */
     public $AddressIp;
 
     /**
-     * @var string 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+     * @var string Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li>
      */
     public $State;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
     /**
-     * @param string $HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
-     * @param string $HaVipName `HAVIP`名称。
-     * @param string $Vip 虚拟IP地址。
-     * @param string $VpcId `HAVIP`所在私有网络`ID`。
-     * @param string $SubnetId `HAVIP`所在子网`ID`。
-     * @param string $NetworkInterfaceId `HAVIP`关联弹性网卡`ID`。
-     * @param string $InstanceId 被绑定的实例`ID`。
-     * @param string $AddressIp 绑定`EIP`。
-     * @param string $State 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
-     * @param string $CreatedTime 创建时间。
+     * @param string $HaVipId The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
+     * @param string $HaVipName The name of the `HAVIP`.
+     * @param string $Vip The virtual IP address.
+     * @param string $VpcId The `ID` of the VPC to which the `HAVIP` belongs.
+     * @param string $SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+     * @param string $NetworkInterfaceId The `ID` of the ENI associated with the `HAVIP`.
+     * @param string $InstanceId The `ID` of the bound instance.
+     * @param string $AddressIp Bound `EIP`.
+     * @param string $State Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li>
+     * @param string $CreatedTime Creation Time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

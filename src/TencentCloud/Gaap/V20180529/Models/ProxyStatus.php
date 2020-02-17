@@ -18,9 +18,9 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Connection instance ID.
- * @method void setInstanceId(string $InstanceId) 设置Connection instance ID.
- * @method string getStatus() 获取Connection status.
+ * @method string getInstanceId() Obtain Connection instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Connection instance ID.
+ * @method string getStatus() Obtain Connection status.
 Where:
 RUNNING: running;
 CREATING: creating;
@@ -32,7 +32,7 @@ ADJUSTING: adjusting configuration
 ISOLATING: isolating;
 ISOLATED: isolated;
 UNKNOWN: unknown status.
- * @method void setStatus(string $Status) 设置Connection status.
+ * @method void setStatus(string $Status) Set Connection status.
 Where:
 RUNNING: running;
 CREATING: creating;
@@ -91,7 +91,7 @@ UNKNOWN: unknown status.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,31 +18,31 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRuleId() 获取Rule information
- * @method void setRuleId(string $RuleId) 设置Rule information
- * @method string getListenerId() 获取Listener information
- * @method void setListenerId(string $ListenerId) 设置Listener information
- * @method string getDomain() 获取Rule domain name
- * @method void setDomain(string $Domain) 设置Rule domain name
- * @method string getPath() 获取Rule path
- * @method void setPath(string $Path) 设置Rule path
- * @method string getRealServerType() 获取Origin server type
- * @method void setRealServerType(string $RealServerType) 设置Origin server type
- * @method string getScheduler() 获取Forwarding policy of the origin server
- * @method void setScheduler(string $Scheduler) 设置Forwarding policy of the origin server
- * @method integer getHealthCheck() 获取Health check identifier: 1 (enable), 0 (disable).
- * @method void setHealthCheck(integer $HealthCheck) 设置Health check identifier: 1 (enable), 0 (disable).
- * @method integer getRuleStatus() 获取Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
- * @method void setRuleStatus(integer $RuleStatus) 设置Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
- * @method RuleCheckParams getCheckParams() 获取Health check parameters
- * @method void setCheckParams(RuleCheckParams $CheckParams) 设置Health check parameters
- * @method array getRealServerSet() 获取Bound origin server information
- * @method void setRealServerSet(array $RealServerSet) 设置Bound origin server information
- * @method integer getBindStatus() 获取Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
- * @method void setBindStatus(integer $BindStatus) 设置Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
- * @method string getForwardHost() 获取The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+ * @method string getRuleId() Obtain Rule information
+ * @method void setRuleId(string $RuleId) Set Rule information
+ * @method string getListenerId() Obtain Listener information
+ * @method void setListenerId(string $ListenerId) Set Listener information
+ * @method string getDomain() Obtain Rule domain name
+ * @method void setDomain(string $Domain) Set Rule domain name
+ * @method string getPath() Obtain Rule path
+ * @method void setPath(string $Path) Set Rule path
+ * @method string getRealServerType() Obtain Origin server type
+ * @method void setRealServerType(string $RealServerType) Set Origin server type
+ * @method string getScheduler() Obtain Forwarding policy of the origin server
+ * @method void setScheduler(string $Scheduler) Set Forwarding policy of the origin server
+ * @method integer getHealthCheck() Obtain Health check identifier: 1 (enable), 0 (disable).
+ * @method void setHealthCheck(integer $HealthCheck) Set Health check identifier: 1 (enable), 0 (disable).
+ * @method integer getRuleStatus() Obtain Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+ * @method void setRuleStatus(integer $RuleStatus) Set Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+ * @method RuleCheckParams getCheckParams() Obtain Health check parameters
+ * @method void setCheckParams(RuleCheckParams $CheckParams) Set Health check parameters
+ * @method array getRealServerSet() Obtain Bound origin server information
+ * @method void setRealServerSet(array $RealServerSet) Set Bound origin server information
+ * @method integer getBindStatus() Obtain Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+ * @method void setBindStatus(integer $BindStatus) Set Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+ * @method string getForwardHost() Obtain The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setForwardHost(string $ForwardHost) 设置The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+ * @method void setForwardHost(string $ForwardHost) Set The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -131,7 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

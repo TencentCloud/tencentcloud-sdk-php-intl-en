@@ -18,14 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getUser() 获取Docker Hub username or Tencent Registry username
- * @method void setUser(string $User) 设置Docker Hub username or Tencent Registry username
- * @method string getPassword() 获取Docker Hub password or Tencent Registry password
- * @method void setPassword(string $Password) 设置Docker Hub password or Tencent Registry password
- * @method string getImage() 获取For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
- * @method void setImage(string $Image) 设置For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
- * @method string getServer() 获取For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
- * @method void setServer(string $Server) 设置For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
+ * @method string getUser() Obtain Docker Hub username or Tencent Registry username
+ * @method void setUser(string $User) Set Docker Hub username or Tencent Registry username
+ * @method string getPassword() Obtain Docker Hub password or Tencent Registry password
+ * @method void setPassword(string $Password) Set Docker Hub password or Tencent Registry password
+ * @method string getImage() Obtain For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+ * @method void setImage(string $Image) Set For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+ * @method string getServer() Obtain For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
+ * @method void setServer(string $Server) Set For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
  */
 
 /**
@@ -63,7 +63,7 @@ class Docker extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

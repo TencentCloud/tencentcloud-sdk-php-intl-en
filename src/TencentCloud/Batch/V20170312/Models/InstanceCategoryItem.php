@@ -18,10 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceCategory() 获取Instance type name
- * @method void setInstanceCategory(string $InstanceCategory) 设置Instance type name
- * @method array getInstanceFamilySet() 获取List of instance families
- * @method void setInstanceFamilySet(array $InstanceFamilySet) 设置List of instance families
+ * @method string getInstanceCategory() Obtain Instance type name
+ * @method void setInstanceCategory(string $InstanceCategory) Set Instance type name
+ * @method array getInstanceFamilySet() Obtain List of instance families
+ * @method void setInstanceFamilySet(array $InstanceFamilySet) Set List of instance families
  */
 
 /**
@@ -47,7 +47,7 @@ class InstanceCategoryItem extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

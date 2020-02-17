@@ -18,18 +18,18 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method integer getPort() 获取Binding port
- * @method void setPort(integer $Port) 设置Binding port
- * @method string getInstanceId() 获取CVM instance ID
- * @method void setInstanceId(string $InstanceId) 设置CVM instance ID
- * @method string getEniIp() 获取ENI IP
- * @method void setEniIp(string $EniIp) 设置ENI IP
- * @method integer getWeight() 获取Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
- * @method void setWeight(integer $Weight) 设置Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
- * @method string getLocationId() 获取Layer-7 rule ID
- * @method void setLocationId(string $LocationId) 设置Layer-7 rule ID
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method integer getPort() Obtain Binding port
+ * @method void setPort(integer $Port) Set Binding port
+ * @method string getInstanceId() Obtain CVM instance ID
+ * @method void setInstanceId(string $InstanceId) Set CVM instance ID
+ * @method string getEniIp() Obtain ENI IP
+ * @method void setEniIp(string $EniIp) Set ENI IP
+ * @method integer getWeight() Obtain Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+ * @method void setWeight(integer $Weight) Set Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+ * @method string getLocationId() Obtain Layer-7 rule ID
+ * @method void setLocationId(string $LocationId) Set Layer-7 rule ID
  */
 
 /**
@@ -79,7 +79,7 @@ class BatchTarget extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

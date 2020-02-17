@@ -18,19 +18,19 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getGroupId() 获取Connection group ID
- * @method void setGroupId(string $GroupId) 设置Connection group ID
- * @method string getStartTime() 获取Start time
- * @method void setStartTime(string $StartTime) 设置Start time
- * @method string getEndTime() 获取End time
- * @method void setEndTime(string $EndTime) 设置End time
- * @method array getMetricNames() 获取Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
- * @method void setMetricNames(array $MetricNames) 设置Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
- * @method integer getGranularity() 获取Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
+ * @method string getGroupId() Obtain Connection group ID
+ * @method void setGroupId(string $GroupId) Set Connection group ID
+ * @method string getStartTime() Obtain Start time
+ * @method void setStartTime(string $StartTime) Set Start time
+ * @method string getEndTime() Obtain End time
+ * @method void setEndTime(string $EndTime) Set End time
+ * @method array getMetricNames() Obtain Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
+ * @method void setMetricNames(array $MetricNames) Set Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
+ * @method integer getGranularity() Obtain Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
 Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
 Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
- * @method void setGranularity(integer $Granularity) 设置Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
+ * @method void setGranularity(integer $Granularity) Set Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
 Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
 Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
@@ -83,7 +83,7 @@ Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

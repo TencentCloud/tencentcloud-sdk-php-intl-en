@@ -18,12 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getDomainName() 获取Instance domain name
- * @method void setDomainName(string $DomainName) 设置Instance domain name
- * @method string getPaiMateUrl() 获取
- * @method void setPaiMateUrl(string $PaiMateUrl) 设置
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getDomainName() Obtain Instance domain name
+ * @method void setDomainName(string $DomainName) Set Instance domain name
+ * @method string getPaiMateUrl() Obtain 
+ * @method void setPaiMateUrl(string $PaiMateUrl) Set 
  */
 
 /**
@@ -55,7 +55,7 @@ class PaiInstance extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getListenerId() 获取ID of the listener to be deleted
- * @method void setListenerId(string $ListenerId) 设置ID of the listener to be deleted
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getListenerId() Obtain ID of the listener to be deleted
+ * @method void setListenerId(string $ListenerId) Set ID of the listener to be deleted
  */
 
 /**
@@ -47,7 +47,7 @@ class DeleteListenerRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

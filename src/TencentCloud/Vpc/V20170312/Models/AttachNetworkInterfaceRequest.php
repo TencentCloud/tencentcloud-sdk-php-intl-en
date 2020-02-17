@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method string getInstanceId() 获取CVM实例ID。形如：ins-r8hr2upy。
- * @method void setInstanceId(string $InstanceId) 设置CVM实例ID。形如：ins-r8hr2upy。
+ * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method string getInstanceId() Obtain The ID of the CVM instance, such as `ins-r8hr2upy`.
+ * @method void setInstanceId(string $InstanceId) Set The ID of the CVM instance, such as `ins-r8hr2upy`.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class AttachNetworkInterfaceRequest extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * @var string The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string CVM实例ID。形如：ins-r8hr2upy。
+     * @var string The ID of the CVM instance, such as `ins-r8hr2upy`.
      */
     public $InstanceId;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param string $InstanceId CVM实例ID。形如：ins-r8hr2upy。
+     * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+     * @param string $InstanceId The ID of the CVM instance, such as `ins-r8hr2upy`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

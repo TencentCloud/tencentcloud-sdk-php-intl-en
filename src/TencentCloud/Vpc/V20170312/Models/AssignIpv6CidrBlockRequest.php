@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+ * @method string getVpcId() Obtain The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class AssignIpv6CidrBlockRequest extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * @var string The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public $VpcId;
     /**
-     * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * @param string $VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

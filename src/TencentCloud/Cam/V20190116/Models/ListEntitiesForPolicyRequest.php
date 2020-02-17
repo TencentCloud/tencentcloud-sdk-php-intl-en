@@ -18,14 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取Policy ID
- * @method void setPolicyId(integer $PolicyId) 设置Policy ID
- * @method integer getPage() 获取Page number, which starts from 1. Default is 1
- * @method void setPage(integer $Page) 设置Page number, which starts from 1. Default is 1
- * @method integer getRp() 获取Number of entries per page; 20 by default
- * @method void setRp(integer $Rp) 设置Number of entries per page; 20 by default
- * @method string getEntityFilter() 获取Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
- * @method void setEntityFilter(string $EntityFilter) 设置Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
+ * @method integer getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
+ * @method integer getPage() Obtain Page number, which starts from 1. Default is 1
+ * @method void setPage(integer $Page) Set Page number, which starts from 1. Default is 1
+ * @method integer getRp() Obtain Number of entries per page; 20 by default
+ * @method void setRp(integer $Rp) Set Number of entries per page; 20 by default
+ * @method string getEntityFilter() Obtain Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
+ * @method void setEntityFilter(string $EntityFilter) Set Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
  */
 
 /**
@@ -63,7 +63,7 @@ class ListEntitiesForPolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

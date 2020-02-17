@@ -18,20 +18,20 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID
- * @method string getLifecycleHookName() 获取Lifecycle hook name, which can contain Chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 bytes.
- * @method void setLifecycleHookName(string $LifecycleHookName) 设置Lifecycle hook name, which can contain Chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 bytes.
- * @method string getLifecycleTransition() 获取Scenario for the lifecycle hook. Valid values: "INSTANCE_LAUNCHING" and "INSTANCE_TERMINATING"
- * @method void setLifecycleTransition(string $LifecycleTransition) 设置Scenario for the lifecycle hook. Valid values: "INSTANCE_LAUNCHING" and "INSTANCE_TERMINATING"
- * @method string getDefaultResult() 获取Defined actions when lifecycle hook times out. Valid values: "CONTINUE" and "ABANDON". Default value: "CONTINUE"
- * @method void setDefaultResult(string $DefaultResult) 设置Defined actions when lifecycle hook times out. Valid values: "CONTINUE" and "ABANDON". Default value: "CONTINUE"
- * @method integer getHeartbeatTimeout() 获取The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
- * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) 设置The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
- * @method string getNotificationMetadata() 获取Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
- * @method void setNotificationMetadata(string $NotificationMetadata) 设置Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
- * @method NotificationTarget getNotificationTarget() 获取Notification target
- * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置Notification target
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getLifecycleHookName() Obtain Lifecycle hook name, which can contain Chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 bytes.
+ * @method void setLifecycleHookName(string $LifecycleHookName) Set Lifecycle hook name, which can contain Chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 bytes.
+ * @method string getLifecycleTransition() Obtain Scenario for the lifecycle hook. Valid values: "INSTANCE_LAUNCHING" and "INSTANCE_TERMINATING"
+ * @method void setLifecycleTransition(string $LifecycleTransition) Set Scenario for the lifecycle hook. Valid values: "INSTANCE_LAUNCHING" and "INSTANCE_TERMINATING"
+ * @method string getDefaultResult() Obtain Defined actions when lifecycle hook times out. Valid values: "CONTINUE" and "ABANDON". Default value: "CONTINUE"
+ * @method void setDefaultResult(string $DefaultResult) Set Defined actions when lifecycle hook times out. Valid values: "CONTINUE" and "ABANDON". Default value: "CONTINUE"
+ * @method integer getHeartbeatTimeout() Obtain The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+ * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+ * @method string getNotificationMetadata() Obtain Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
+ * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
+ * @method NotificationTarget getNotificationTarget() Obtain Notification target
+ * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
  */
 
 /**
@@ -87,7 +87,7 @@ class CreateLifecycleHookRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

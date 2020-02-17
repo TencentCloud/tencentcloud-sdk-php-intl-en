@@ -18,19 +18,19 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLocationId() 获取Forwarding rule ID
- * @method void setLocationId(string $LocationId) 设置Forwarding rule ID
- * @method string getDomain() 获取Domain name of the forwarding rule
+ * @method string getLocationId() Obtain Forwarding rule ID
+ * @method void setLocationId(string $LocationId) Set Forwarding rule ID
+ * @method string getDomain() Obtain Domain name of the forwarding rule
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) 设置Domain name of the forwarding rule
+ * @method void setDomain(string $Domain) Set Domain name of the forwarding rule
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUrl() 获取Forwarding rule Url
+ * @method string getUrl() Obtain Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) 设置Forwarding rule Url
+ * @method void setUrl(string $Url) Set Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTargets() 获取Health check status of the real server bound to this rule
+ * @method array getTargets() Obtain Health check status of the real server bound to this rule
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargets(array $Targets) 设置Health check status of the real server bound to this rule
+ * @method void setTargets(array $Targets) Set Health check status of the real server bound to this rule
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -75,7 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

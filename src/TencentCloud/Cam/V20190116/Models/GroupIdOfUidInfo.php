@@ -18,10 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getUid() 获取Sub-user UID
- * @method void setUid(integer $Uid) 设置Sub-user UID
- * @method integer getGroupId() 获取User Group ID
- * @method void setGroupId(integer $GroupId) 设置User Group ID
+ * @method integer getUid() Obtain Sub-user UID
+ * @method void setUid(integer $Uid) Set Sub-user UID
+ * @method integer getGroupId() Obtain User Group ID
+ * @method void setGroupId(integer $GroupId) Set User Group ID
  */
 
 /**
@@ -47,7 +47,7 @@ class GroupIdOfUidInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

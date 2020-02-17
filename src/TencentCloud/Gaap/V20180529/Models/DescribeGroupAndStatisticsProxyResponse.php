@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getGroupSet() 获取Information of connection groups that the statistics can be derived from
- * @method void setGroupSet(array $GroupSet) 设置Information of connection groups that the statistics can be derived from
- * @method integer getTotalCount() 获取Connection group quantity
- * @method void setTotalCount(integer $TotalCount) 设置Connection group quantity
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getGroupSet() Obtain Information of connection groups that the statistics can be derived from
+ * @method void setGroupSet(array $GroupSet) Set Information of connection groups that the statistics can be derived from
+ * @method integer getTotalCount() Obtain Connection group quantity
+ * @method void setTotalCount(integer $TotalCount) Set Connection group quantity
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeGroupAndStatisticsProxyResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

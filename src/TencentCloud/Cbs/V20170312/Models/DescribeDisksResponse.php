@@ -18,12 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取The quantity of cloud disks meeting the conditions.
- * @method void setTotalCount(integer $TotalCount) 设置The quantity of cloud disks meeting the conditions.
- * @method array getDiskSet() 获取List of cloud disk details.
- * @method void setDiskSet(array $DiskSet) 设置List of cloud disk details.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The quantity of cloud disks meeting the conditions.
+ * @method void setTotalCount(integer $TotalCount) Set The quantity of cloud disks meeting the conditions.
+ * @method array getDiskSet() Obtain List of cloud disk details.
+ * @method void setDiskSet(array $DiskSet) Set List of cloud disk details.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeDisksResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

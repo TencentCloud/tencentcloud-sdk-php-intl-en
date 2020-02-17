@@ -18,14 +18,14 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTagKeys() 获取Tag key list.
- * @method void setTagKeys(array $TagKeys) 设置Tag key list.
- * @method integer getCreateUin() 获取Creator `Uin`. If not specified, `Uin` is only used as the query condition.
- * @method void setCreateUin(integer $CreateUin) 设置Creator `Uin`. If not specified, `Uin` is only used as the query condition.
- * @method integer getOffset() 获取Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method void setOffset(integer $Offset) 设置Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method integer getLimit() 获取Page size. The default value is 0.
- * @method void setLimit(integer $Limit) 设置Page size. The default value is 0.
+ * @method array getTagKeys() Obtain Tag key list.
+ * @method void setTagKeys(array $TagKeys) Set Tag key list.
+ * @method integer getCreateUin() Obtain Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+ * @method void setCreateUin(integer $CreateUin) Set Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+ * @method integer getOffset() Obtain Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+ * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+ * @method integer getLimit() Obtain Page size. The default value is 0.
+ * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeTagValuesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

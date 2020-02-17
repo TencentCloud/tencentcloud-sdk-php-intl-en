@@ -18,20 +18,20 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getZoneId() 获取AZ ID, such as ap-guangzhou-3
- * @method void setZoneId(string $ZoneId) 设置AZ ID, such as ap-guangzhou-3
- * @method string getZoneName() 获取AZ name
- * @method void setZoneName(string $ZoneName) 设置AZ name
- * @method boolean getIsSaleout() 获取Whether a product is sold out in an AZ
- * @method void setIsSaleout(boolean $IsSaleout) 设置Whether a product is sold out in an AZ
- * @method boolean getIsDefault() 获取Whether it is a default AZ
- * @method void setIsDefault(boolean $IsDefault) 设置Whether it is a default AZ
- * @method array getNetWorkType() 获取Network type. basenet: basic network; vpcnet: VPC
- * @method void setNetWorkType(array $NetWorkType) 设置Network type. basenet: basic network; vpcnet: VPC
- * @method array getProductSet() 获取Information of an AZ, such as product specifications in it
- * @method void setProductSet(array $ProductSet) 设置Information of an AZ, such as product specifications in it
- * @method integer getOldZoneId() 获取AZ ID, such as 100003
- * @method void setOldZoneId(integer $OldZoneId) 设置AZ ID, such as 100003
+ * @method string getZoneId() Obtain AZ ID, such as ap-guangzhou-3
+ * @method void setZoneId(string $ZoneId) Set AZ ID, such as ap-guangzhou-3
+ * @method string getZoneName() Obtain AZ name
+ * @method void setZoneName(string $ZoneName) Set AZ name
+ * @method boolean getIsSaleout() Obtain Whether a product is sold out in an AZ
+ * @method void setIsSaleout(boolean $IsSaleout) Set Whether a product is sold out in an AZ
+ * @method boolean getIsDefault() Obtain Whether it is a default AZ
+ * @method void setIsDefault(boolean $IsDefault) Set Whether it is a default AZ
+ * @method array getNetWorkType() Obtain Network type. basenet: basic network; vpcnet: VPC
+ * @method void setNetWorkType(array $NetWorkType) Set Network type. basenet: basic network; vpcnet: VPC
+ * @method array getProductSet() Obtain Information of an AZ, such as product specifications in it
+ * @method void setProductSet(array $ProductSet) Set Information of an AZ, such as product specifications in it
+ * @method integer getOldZoneId() Obtain AZ ID, such as 100003
+ * @method void setOldZoneId(integer $OldZoneId) Set AZ ID, such as 100003
  */
 
 /**
@@ -87,7 +87,7 @@ class ZoneCapacityConf extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

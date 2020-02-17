@@ -18,132 +18,132 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDestinationCidrBlock() 获取目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
- * @method string getGatewayType() 获取下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-SSLVPN：sslvpn网关；
-NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
-CCN：云联网。
- * @method void setGatewayType(string $GatewayType) 设置下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-SSLVPN：sslvpn网关；
-NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
-CCN：云联网。
- * @method string getGatewayId() 获取下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
- * @method void setGatewayId(string $GatewayId) 设置下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
- * @method integer getRouteId() 获取路由策略ID。
- * @method void setRouteId(integer $RouteId) 设置路由策略ID。
- * @method string getRouteDescription() 获取路由策略描述。
- * @method void setRouteDescription(string $RouteDescription) 设置路由策略描述。
- * @method boolean getEnabled() 获取是否启用
- * @method void setEnabled(boolean $Enabled) 设置是否启用
- * @method string getRouteType() 获取路由类型，目前我们支持的类型有：
-USER：用户路由；
-NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
-CCN：云联网路由，系统默认下发，不可编辑与删除。
-用户只能添加和操作 USER 类型的路由。
- * @method void setRouteType(string $RouteType) 设置路由类型，目前我们支持的类型有：
-USER：用户路由；
-NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
-CCN：云联网路由，系统默认下发，不可编辑与删除。
-用户只能添加和操作 USER 类型的路由。
+ * @method string getDestinationCidrBlock() Obtain Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
+ * @method string getGatewayType() Obtain The type of the next hop. Currently supported types include:
+CVM: Public gateway-type CVM;
+VPN: VPN gateway;
+DIRECTCONNECT: Direct connect gateway;
+PEERCONNECTION: Peering connection;
+SSLVPN: sslvpn gateway;
+NAT: NAT gateway; 
+NORMAL_CVM: Normal CVM;
+EIP: The public IP of the CVM;
+CCN: Cloud Connect Network.
+ * @method void setGatewayType(string $GatewayType) Set The type of the next hop. Currently supported types include:
+CVM: Public gateway-type CVM;
+VPN: VPN gateway;
+DIRECTCONNECT: Direct connect gateway;
+PEERCONNECTION: Peering connection;
+SSLVPN: sslvpn gateway;
+NAT: NAT gateway; 
+NORMAL_CVM: Normal CVM;
+EIP: The public IP of the CVM;
+CCN: Cloud Connect Network.
+ * @method string getGatewayId() Obtain Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
+ * @method void setGatewayId(string $GatewayId) Set Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
+ * @method integer getRouteId() Obtain The ID of the routing policy.
+ * @method void setRouteId(integer $RouteId) Set The ID of the routing policy.
+ * @method string getRouteDescription() Obtain The description of the routing policy.
+ * @method void setRouteDescription(string $RouteDescription) Set The description of the routing policy.
+ * @method boolean getEnabled() Obtain Whether it is enabled
+ * @method void setEnabled(boolean $Enabled) Set Whether it is enabled
+ * @method string getRouteType() Obtain The route type. Currently, the following types are supported:
+USER: User route;
+NETD: Network probe route. When creating a network probe route, the system delivers by default. It cannot be edited or deleted;
+CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
+Users can only add and operate USER-type routes.
+ * @method void setRouteType(string $RouteType) Set The route type. Currently, the following types are supported:
+USER: User route;
+NETD: Network probe route. When creating a network probe route, the system delivers by default. It cannot be edited or deleted;
+CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
+Users can only add and operate USER-type routes.
  */
 
 /**
- *路由策略对象
+ *Routing policy object
  */
 class Route extends AbstractModel
 {
     /**
-     * @var string 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
+     * @var string Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
      */
     public $DestinationCidrBlock;
 
     /**
-     * @var string 下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-SSLVPN：sslvpn网关；
-NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
-CCN：云联网。
+     * @var string The type of the next hop. Currently supported types include:
+CVM: Public gateway-type CVM;
+VPN: VPN gateway;
+DIRECTCONNECT: Direct connect gateway;
+PEERCONNECTION: Peering connection;
+SSLVPN: sslvpn gateway;
+NAT: NAT gateway; 
+NORMAL_CVM: Normal CVM;
+EIP: The public IP of the CVM;
+CCN: Cloud Connect Network.
      */
     public $GatewayType;
 
     /**
-     * @var string 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
+     * @var string Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
      */
     public $GatewayId;
 
     /**
-     * @var integer 路由策略ID。
+     * @var integer The ID of the routing policy.
      */
     public $RouteId;
 
     /**
-     * @var string 路由策略描述。
+     * @var string The description of the routing policy.
      */
     public $RouteDescription;
 
     /**
-     * @var boolean 是否启用
+     * @var boolean Whether it is enabled
      */
     public $Enabled;
 
     /**
-     * @var string 路由类型，目前我们支持的类型有：
-USER：用户路由；
-NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
-CCN：云联网路由，系统默认下发，不可编辑与删除。
-用户只能添加和操作 USER 类型的路由。
+     * @var string The route type. Currently, the following types are supported:
+USER: User route;
+NETD: Network probe route. When creating a network probe route, the system delivers by default. It cannot be edited or deleted;
+CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
+Users can only add and operate USER-type routes.
      */
     public $RouteType;
     /**
-     * @param string $DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
-     * @param string $GatewayType 下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-SSLVPN：sslvpn网关；
-NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
-CCN：云联网。
-     * @param string $GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
-     * @param integer $RouteId 路由策略ID。
-     * @param string $RouteDescription 路由策略描述。
-     * @param boolean $Enabled 是否启用
-     * @param string $RouteType 路由类型，目前我们支持的类型有：
-USER：用户路由；
-NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
-CCN：云联网路由，系统默认下发，不可编辑与删除。
-用户只能添加和操作 USER 类型的路由。
+     * @param string $DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
+     * @param string $GatewayType The type of the next hop. Currently supported types include:
+CVM: Public gateway-type CVM;
+VPN: VPN gateway;
+DIRECTCONNECT: Direct connect gateway;
+PEERCONNECTION: Peering connection;
+SSLVPN: sslvpn gateway;
+NAT: NAT gateway; 
+NORMAL_CVM: Normal CVM;
+EIP: The public IP of the CVM;
+CCN: Cloud Connect Network.
+     * @param string $GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
+     * @param integer $RouteId The ID of the routing policy.
+     * @param string $RouteDescription The description of the routing policy.
+     * @param boolean $Enabled Whether it is enabled
+     * @param string $RouteType The route type. Currently, the following types are supported:
+USER: User route;
+NETD: Network probe route. When creating a network probe route, the system delivers by default. It cannot be edited or deleted;
+CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
+Users can only add and operate USER-type routes.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

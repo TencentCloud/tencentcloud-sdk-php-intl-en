@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAccountAttributeSet() 获取用户账号属性对象
- * @method void setAccountAttributeSet(array $AccountAttributeSet) 设置用户账号属性对象
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getAccountAttributeSet() Obtain User account attribute object
+ * @method void setAccountAttributeSet(array $AccountAttributeSet) Set User account attribute object
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountAttributesResponse extends AbstractModel
 {
     /**
-     * @var array 用户账号属性对象
+     * @var array User account attribute object
      */
     public $AccountAttributeSet;
 
@@ -39,7 +39,7 @@ class DescribeAccountAttributesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $AccountAttributeSet 用户账号属性对象
+     * @param array $AccountAttributeSet User account attribute object
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class DescribeAccountAttributesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

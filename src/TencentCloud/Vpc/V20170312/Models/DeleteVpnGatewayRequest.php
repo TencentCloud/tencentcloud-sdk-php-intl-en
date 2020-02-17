@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpnGatewayId() 获取VPN网关实例ID。
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
+ * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class DeleteVpnGatewayRequest extends AbstractModel
 {
     /**
-     * @var string VPN网关实例ID。
+     * @var string The ID of the VPN gateway instance.
      */
     public $VpnGatewayId;
     /**
-     * @param string $VpnGatewayId VPN网关实例ID。
+     * @param string $VpnGatewayId The ID of the VPN gateway instance.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

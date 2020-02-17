@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
- * @method void setInstanceId(string $InstanceId) 设置ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
- * @method string getBackupId() 获取Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
- * @method void setBackupId(string $BackupId) 设置Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
- * @method string getPassword() 获取Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
- * @method void setPassword(string $Password) 设置Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
+ * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
+ * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
+ * @method string getBackupId() Obtain Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
+ * @method void setBackupId(string $BackupId) Set Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
+ * @method string getPassword() Obtain Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
+ * @method void setPassword(string $Password) Set Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
  */
 
 /**
@@ -55,7 +55,7 @@ class RestoreInstanceRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

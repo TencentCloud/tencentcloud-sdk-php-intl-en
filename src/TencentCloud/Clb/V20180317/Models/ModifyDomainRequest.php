@@ -18,14 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getListenerId() 获取CLB listener ID
- * @method void setListenerId(string $ListenerId) 设置CLB listener ID
- * @method string getDomain() 获取Legacy domain name under a listener.
- * @method void setDomain(string $Domain) 设置Legacy domain name under a listener.
- * @method string getNewDomain() 获取New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
- * @method void setNewDomain(string $NewDomain) 设置New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getListenerId() Obtain CLB listener ID
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method string getDomain() Obtain Legacy domain name under a listener.
+ * @method void setDomain(string $Domain) Set Legacy domain name under a listener.
+ * @method string getNewDomain() Obtain New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
+ * @method void setNewDomain(string $NewDomain) Set New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
  */
 
 /**
@@ -63,7 +63,7 @@ class ModifyDomainRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

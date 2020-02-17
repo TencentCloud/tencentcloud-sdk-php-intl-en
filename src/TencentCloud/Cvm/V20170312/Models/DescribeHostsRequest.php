@@ -18,22 +18,22 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取Filters.
+ * @method array getFilters() Obtain Filters.
 <li> `zone` - String - Optional - Filter results by availability zone.</li>
 <li> `project-id` - Integer - Optional - Filter results by project ID. You can call `DescribeProject` or log in to the console to view the list of existing projects. You can also create a new project by calling `AddProject`.</li>
 <li> `host-id` - String - Optional - Filter results by CDH ID. CDH IDs are in the format of `host-11112222`.</li>
 <li> `host-name` - String - Optional - Filter results by CDH instance name.</li>
 <li> `host-state` - String - Optional - Filter results by CDH instance state. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</li>
- * @method void setFilters(array $Filters) 设置Filters.
+ * @method void setFilters(array $Filters) Set Filters.
 <li> `zone` - String - Optional - Filter results by availability zone.</li>
 <li> `project-id` - Integer - Optional - Filter results by project ID. You can call `DescribeProject` or log in to the console to view the list of existing projects. You can also create a new project by calling `AddProject`.</li>
 <li> `host-id` - String - Optional - Filter results by CDH ID. CDH IDs are in the format of `host-11112222`.</li>
 <li> `host-name` - String - Optional - Filter results by CDH instance name.</li>
 <li> `host-state` - String - Optional - Filter results by CDH instance state. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</li>
- * @method integer getOffset() 获取Offset; default value: 0.
- * @method void setOffset(integer $Offset) 设置Offset; default value: 0.
- * @method integer getLimit() 获取Number of results returned; default value: 20; maximum: 100.
- * @method void setLimit(integer $Limit) 设置Number of results returned; default value: 20; maximum: 100.
+ * @method integer getOffset() Obtain Offset; default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset; default value: 0.
+ * @method integer getLimit() Obtain Number of results returned; default value: 20; maximum: 100.
+ * @method void setLimit(integer $Limit) Set Number of results returned; default value: 20; maximum: 100.
  */
 
 /**
@@ -75,7 +75,7 @@ class DescribeHostsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

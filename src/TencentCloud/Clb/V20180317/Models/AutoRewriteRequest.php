@@ -18,12 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getListenerId() 获取HTTPS:443 listener ID
- * @method void setListenerId(string $ListenerId) 设置HTTPS:443 listener ID
- * @method array getDomains() 获取Domain name to be redirected under an HTTPS:443 listener
- * @method void setDomains(array $Domains) 设置Domain name to be redirected under an HTTPS:443 listener
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getListenerId() Obtain HTTPS:443 listener ID
+ * @method void setListenerId(string $ListenerId) Set HTTPS:443 listener ID
+ * @method array getDomains() Obtain Domain name to be redirected under an HTTPS:443 listener
+ * @method void setDomains(array $Domains) Set Domain name to be redirected under an HTTPS:443 listener
  */
 
 /**
@@ -55,7 +55,7 @@ class AutoRewriteRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

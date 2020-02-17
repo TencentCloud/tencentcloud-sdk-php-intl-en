@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIp() 获取Source IP
- * @method void setIp(string $Ip) 设置Source IP
- * @method integer getConn() 获取Number of connections
- * @method void setConn(integer $Conn) 设置Number of connections
- * @method integer getCmd() 获取Command
- * @method void setCmd(integer $Cmd) 设置Command
+ * @method string getIp() Obtain Source IP
+ * @method void setIp(string $Ip) Set Source IP
+ * @method integer getConn() Obtain Number of connections
+ * @method void setConn(integer $Conn) Set Number of connections
+ * @method integer getCmd() Obtain Command
+ * @method void setCmd(integer $Cmd) Set Command
  */
 
 /**
@@ -55,7 +55,7 @@ class SourceInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

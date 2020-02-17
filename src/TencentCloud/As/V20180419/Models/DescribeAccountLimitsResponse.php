@@ -18,16 +18,16 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getMaxNumberOfLaunchConfigurations() 获取Maximum number of launch configurations allowed for creation by the user account
- * @method void setMaxNumberOfLaunchConfigurations(integer $MaxNumberOfLaunchConfigurations) 设置Maximum number of launch configurations allowed for creation by the user account
- * @method integer getNumberOfLaunchConfigurations() 获取Current number of launch configurations under the user account
- * @method void setNumberOfLaunchConfigurations(integer $NumberOfLaunchConfigurations) 设置Current number of launch configurations under the user account
- * @method integer getMaxNumberOfAutoScalingGroups() 获取Maximum number of auto scaling groups allowed for creation by the user account
- * @method void setMaxNumberOfAutoScalingGroups(integer $MaxNumberOfAutoScalingGroups) 设置Maximum number of auto scaling groups allowed for creation by the user account
- * @method integer getNumberOfAutoScalingGroups() 获取Current number of auto scaling groups under the user account
- * @method void setNumberOfAutoScalingGroups(integer $NumberOfAutoScalingGroups) 设置Current number of auto scaling groups under the user account
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getMaxNumberOfLaunchConfigurations() Obtain Maximum number of launch configurations allowed for creation by the user account
+ * @method void setMaxNumberOfLaunchConfigurations(integer $MaxNumberOfLaunchConfigurations) Set Maximum number of launch configurations allowed for creation by the user account
+ * @method integer getNumberOfLaunchConfigurations() Obtain Current number of launch configurations under the user account
+ * @method void setNumberOfLaunchConfigurations(integer $NumberOfLaunchConfigurations) Set Current number of launch configurations under the user account
+ * @method integer getMaxNumberOfAutoScalingGroups() Obtain Maximum number of auto scaling groups allowed for creation by the user account
+ * @method void setMaxNumberOfAutoScalingGroups(integer $MaxNumberOfAutoScalingGroups) Set Maximum number of auto scaling groups allowed for creation by the user account
+ * @method integer getNumberOfAutoScalingGroups() Obtain Current number of auto scaling groups under the user account
+ * @method void setNumberOfAutoScalingGroups(integer $NumberOfAutoScalingGroups) Set Current number of auto scaling groups under the user account
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -71,7 +71,7 @@ class DescribeAccountLimitsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

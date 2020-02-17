@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method array getInstances() 获取拒绝关联实例列表。
- * @method void setInstances(array $Instances) 设置拒绝关联实例列表。
+ * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method array getInstances() Obtain The list of instances whose association is rejected.
+ * @method void setInstances(array $Instances) Set The list of instances whose association is rejected.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class RejectAttachCcnInstancesRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public $CcnId;
 
     /**
-     * @var array 拒绝关联实例列表。
+     * @var array The list of instances whose association is rejected.
      */
     public $Instances;
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param array $Instances 拒绝关联实例列表。
+     * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param array $Instances The list of instances whose association is rejected.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

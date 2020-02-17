@@ -18,64 +18,64 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRegion() 获取地域，例如：ap-guangzhou
- * @method void setRegion(string $Region) 设置地域，例如：ap-guangzhou
- * @method integer getBandwidthLimit() 获取出带宽上限，单位：Mbps
- * @method void setBandwidthLimit(integer $BandwidthLimit) 设置出带宽上限，单位：Mbps
- * @method boolean getIsBm() 获取是否黑石地域，默认`false`。
- * @method void setIsBm(boolean $IsBm) 设置是否黑石地域，默认`false`。
- * @method string getDstRegion() 获取目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDstRegion(string $DstRegion) 设置目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getDstIsBm() 获取目的地域是否为黑石地域，默认`false`。
- * @method void setDstIsBm(boolean $DstIsBm) 设置目的地域是否为黑石地域，默认`false`。
+ * @method string getRegion() Obtain Region, such as `ap-guangzhou`
+ * @method void setRegion(string $Region) Set Region, such as `ap-guangzhou`
+ * @method integer getBandwidthLimit() Obtain The outbound bandwidth cap. Units: Mbps
+ * @method void setBandwidthLimit(integer $BandwidthLimit) Set The outbound bandwidth cap. Units: Mbps
+ * @method boolean getIsBm() Obtain Whether it is a BM region. The default is `false`.
+ * @method void setIsBm(boolean $IsBm) Set Whether it is a BM region. The default is `false`.
+ * @method string getDstRegion() Obtain The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value.
+ * @method void setDstRegion(string $DstRegion) Set The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value.
+ * @method boolean getDstIsBm() Obtain Whether the target region is a BM region. The default is `false`.
+ * @method void setDstIsBm(boolean $DstIsBm) Set Whether the target region is a BM region. The default is `false`.
  */
 
 /**
- *云联网（CCN）地域出带宽上限
+ *The outbound bandwidth cap of the CCN region
  */
 class CcnRegionBandwidthLimit extends AbstractModel
 {
     /**
-     * @var string 地域，例如：ap-guangzhou
+     * @var string Region, such as `ap-guangzhou`
      */
     public $Region;
 
     /**
-     * @var integer 出带宽上限，单位：Mbps
+     * @var integer The outbound bandwidth cap. Units: Mbps
      */
     public $BandwidthLimit;
 
     /**
-     * @var boolean 是否黑石地域，默认`false`。
+     * @var boolean Whether it is a BM region. The default is `false`.
      */
     public $IsBm;
 
     /**
-     * @var string 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value.
      */
     public $DstRegion;
 
     /**
-     * @var boolean 目的地域是否为黑石地域，默认`false`。
+     * @var boolean Whether the target region is a BM region. The default is `false`.
      */
     public $DstIsBm;
     /**
-     * @param string $Region 地域，例如：ap-guangzhou
-     * @param integer $BandwidthLimit 出带宽上限，单位：Mbps
-     * @param boolean $IsBm 是否黑石地域，默认`false`。
-     * @param string $DstRegion 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $DstIsBm 目的地域是否为黑石地域，默认`false`。
+     * @param string $Region Region, such as `ap-guangzhou`
+     * @param integer $BandwidthLimit The outbound bandwidth cap. Units: Mbps
+     * @param boolean $IsBm Whether it is a BM region. The default is `false`.
+     * @param string $DstRegion The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value.
+     * @param boolean $DstIsBm Whether the target region is a BM region. The default is `false`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

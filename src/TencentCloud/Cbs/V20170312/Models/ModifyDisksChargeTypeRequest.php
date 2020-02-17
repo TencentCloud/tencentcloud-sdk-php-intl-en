@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDiskIds() 获取The ID(s) of one or multiple cloud disks to be operated. The maximum number of cloud disks per request is 100.
- * @method void setDiskIds(array $DiskIds) 设置The ID(s) of one or multiple cloud disks to be operated. The maximum number of cloud disks per request is 100.
- * @method DiskChargePrepaid getDiskChargePrepaid() 获取
- * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置
+ * @method array getDiskIds() Obtain The ID(s) of one or multiple cloud disks to be operated. The maximum number of cloud disks per request is 100.
+ * @method void setDiskIds(array $DiskIds) Set The ID(s) of one or multiple cloud disks to be operated. The maximum number of cloud disks per request is 100.
+ * @method DiskChargePrepaid getDiskChargePrepaid() Obtain 
+ * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set 
  */
 
 /**
@@ -47,7 +47,7 @@ class ModifyDisksChargeTypeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

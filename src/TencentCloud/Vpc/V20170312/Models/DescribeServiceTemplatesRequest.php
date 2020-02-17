@@ -18,16 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
- * @method string getOffset() 获取偏移量，默认为0。
- * @method void setOffset(string $Offset) 设置偏移量，默认为0。
- * @method string getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method array getFilters() Obtain Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+ * @method void setFilters(array $Filters) Set Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+ * @method string getOffset() Obtain Offset. The default value is 0.
+ * @method void setOffset(string $Offset) Set Offset. The default value is 0.
+ * @method string getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
+ * @method void setLimit(string $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
  */
 
 /**
@@ -36,34 +36,34 @@ use TencentCloud\Common\AbstractModel;
 class DescribeServiceTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
+     * @var array Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
      */
     public $Filters;
 
     /**
-     * @var string 偏移量，默认为0。
+     * @var string Offset. The default value is 0.
      */
     public $Offset;
 
     /**
-     * @var string 返回数量，默认为20，最大值为100。
+     * @var string Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public $Limit;
     /**
-     * @param array $Filters 过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
-     * @param string $Offset 偏移量，默认为0。
-     * @param string $Limit 返回数量，默认为20，最大值为100。
+     * @param array $Filters Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+     * @param string $Offset Offset. The default value is 0.
+     * @param string $Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCidrBlock() 获取子网的`CIDR`。
- * @method void setCidrBlock(string $CidrBlock) 设置子网的`CIDR`。
- * @method string getSubnetName() 获取子网名称。
- * @method void setSubnetName(string $SubnetName) 设置子网名称。
- * @method string getZone() 获取可用区。形如：`ap-guangzhou-2`。
- * @method void setZone(string $Zone) 设置可用区。形如：`ap-guangzhou-2`。
- * @method string getRouteTableId() 获取指定关联路由表，形如：`rtb-3ryrwzuu`。
- * @method void setRouteTableId(string $RouteTableId) 设置指定关联路由表，形如：`rtb-3ryrwzuu`。
+ * @method string getCidrBlock() Obtain The `CIDR` of the subnet.
+ * @method void setCidrBlock(string $CidrBlock) Set The `CIDR` of the subnet.
+ * @method string getSubnetName() Obtain Subnet name.
+ * @method void setSubnetName(string $SubnetName) Set Subnet name.
+ * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-2`.
+ * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`.
+ * @method string getRouteTableId() Obtain The specified associated route table, such as `rtb-3ryrwzuu`.
+ * @method void setRouteTableId(string $RouteTableId) Set The specified associated route table, such as `rtb-3ryrwzuu`.
  */
 
 /**
- *子网对象
+ *Subnet object
  */
 class SubnetInput extends AbstractModel
 {
     /**
-     * @var string 子网的`CIDR`。
+     * @var string The `CIDR` of the subnet.
      */
     public $CidrBlock;
 
     /**
-     * @var string 子网名称。
+     * @var string Subnet name.
      */
     public $SubnetName;
 
     /**
-     * @var string 可用区。形如：`ap-guangzhou-2`。
+     * @var string The availability zone, such as `ap-guangzhou-2`.
      */
     public $Zone;
 
     /**
-     * @var string 指定关联路由表，形如：`rtb-3ryrwzuu`。
+     * @var string The specified associated route table, such as `rtb-3ryrwzuu`.
      */
     public $RouteTableId;
     /**
-     * @param string $CidrBlock 子网的`CIDR`。
-     * @param string $SubnetName 子网名称。
-     * @param string $Zone 可用区。形如：`ap-guangzhou-2`。
-     * @param string $RouteTableId 指定关联路由表，形如：`rtb-3ryrwzuu`。
+     * @param string $CidrBlock The `CIDR` of the subnet.
+     * @param string $SubnetName Subnet name.
+     * @param string $Zone The availability zone, such as `ap-guangzhou-2`.
+     * @param string $RouteTableId The specified associated route table, such as `rtb-3ryrwzuu`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

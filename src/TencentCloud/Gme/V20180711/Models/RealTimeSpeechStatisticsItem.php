@@ -18,18 +18,18 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getMainLandDau() 获取DAU in Mainland China
- * @method void setMainLandDau(integer $MainLandDau) 设置DAU in Mainland China
- * @method integer getMainLandPcu() 获取PCU in Mainland China
- * @method void setMainLandPcu(integer $MainLandPcu) 设置PCU in Mainland China
- * @method integer getMainLandDuration() 获取Total duration of use in Mainland China in minutes
- * @method void setMainLandDuration(integer $MainLandDuration) 设置Total duration of use in Mainland China in minutes
- * @method integer getOverseaDau() 获取DAU outside Mainland China
- * @method void setOverseaDau(integer $OverseaDau) 设置DAU outside Mainland China
- * @method integer getOverseaPcu() 获取PCU outside Mainland China
- * @method void setOverseaPcu(integer $OverseaPcu) 设置PCU outside Mainland China
- * @method integer getOverseaDuration() 获取Total duration of use outside Mainland China in minutes
- * @method void setOverseaDuration(integer $OverseaDuration) 设置Total duration of use outside Mainland China in minutes
+ * @method integer getMainLandDau() Obtain DAU in Mainland China
+ * @method void setMainLandDau(integer $MainLandDau) Set DAU in Mainland China
+ * @method integer getMainLandPcu() Obtain PCU in Mainland China
+ * @method void setMainLandPcu(integer $MainLandPcu) Set PCU in Mainland China
+ * @method integer getMainLandDuration() Obtain Total duration of use in Mainland China in minutes
+ * @method void setMainLandDuration(integer $MainLandDuration) Set Total duration of use in Mainland China in minutes
+ * @method integer getOverseaDau() Obtain DAU outside Mainland China
+ * @method void setOverseaDau(integer $OverseaDau) Set DAU outside Mainland China
+ * @method integer getOverseaPcu() Obtain PCU outside Mainland China
+ * @method void setOverseaPcu(integer $OverseaPcu) Set PCU outside Mainland China
+ * @method integer getOverseaDuration() Obtain Total duration of use outside Mainland China in minutes
+ * @method void setOverseaDuration(integer $OverseaDuration) Set Total duration of use outside Mainland China in minutes
  */
 
 /**
@@ -79,7 +79,7 @@ class RealTimeSpeechStatisticsItem extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

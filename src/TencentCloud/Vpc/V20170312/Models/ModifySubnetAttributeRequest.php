@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSubnetId() 获取子网实例ID。形如：subnet-pxir56ns。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID。形如：subnet-pxir56ns。
- * @method string getSubnetName() 获取子网名称，最大长度不能超过60个字节。
- * @method void setSubnetName(string $SubnetName) 设置子网名称，最大长度不能超过60个字节。
- * @method string getEnableBroadcast() 获取子网是否开启广播。
- * @method void setEnableBroadcast(string $EnableBroadcast) 设置子网是否开启广播。
+ * @method string getSubnetId() Obtain Subnet instance ID, such as `subnet-pxir56ns`.
+ * @method void setSubnetId(string $SubnetId) Set Subnet instance ID, such as `subnet-pxir56ns`.
+ * @method string getSubnetName() Obtain The subnet name. The maximum length is 60 bytes.
+ * @method void setSubnetName(string $SubnetName) Set The subnet name. The maximum length is 60 bytes.
+ * @method string getEnableBroadcast() Obtain Whether the subnet has broadcast enabled.
+ * @method void setEnableBroadcast(string $EnableBroadcast) Set Whether the subnet has broadcast enabled.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ModifySubnetAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 子网实例ID。形如：subnet-pxir56ns。
+     * @var string Subnet instance ID, such as `subnet-pxir56ns`.
      */
     public $SubnetId;
 
     /**
-     * @var string 子网名称，最大长度不能超过60个字节。
+     * @var string The subnet name. The maximum length is 60 bytes.
      */
     public $SubnetName;
 
     /**
-     * @var string 子网是否开启广播。
+     * @var string Whether the subnet has broadcast enabled.
      */
     public $EnableBroadcast;
     /**
-     * @param string $SubnetId 子网实例ID。形如：subnet-pxir56ns。
-     * @param string $SubnetName 子网名称，最大长度不能超过60个字节。
-     * @param string $EnableBroadcast 子网是否开启广播。
+     * @param string $SubnetId Subnet instance ID, such as `subnet-pxir56ns`.
+     * @param string $SubnetName The subnet name. The maximum length is 60 bytes.
+     * @param string $EnableBroadcast Whether the subnet has broadcast enabled.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

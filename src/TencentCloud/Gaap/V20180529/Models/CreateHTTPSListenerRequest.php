@@ -18,28 +18,28 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method integer getPort() 获取Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
- * @method void setPort(integer $Port) 设置Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
- * @method string getCertificateId() 获取Server certificate ID
- * @method void setCertificateId(string $CertificateId) 设置Server certificate ID
- * @method string getForwardProtocol() 获取Protocol types of the forwarding from acceleration connection to origin server: HTTP | HTTPS
- * @method void setForwardProtocol(string $ForwardProtocol) 设置Protocol types of the forwarding from acceleration connection to origin server: HTTP | HTTPS
- * @method string getProxyId() 获取Connection ID
- * @method void setProxyId(string $ProxyId) 设置Connection ID
- * @method integer getAuthType() 获取Authentication type, where:
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method integer getPort() Obtain Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
+ * @method void setPort(integer $Port) Set Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
+ * @method string getCertificateId() Obtain Server certificate ID
+ * @method void setCertificateId(string $CertificateId) Set Server certificate ID
+ * @method string getForwardProtocol() Obtain Protocol types of the forwarding from acceleration connection to origin server: HTTP | HTTPS
+ * @method void setForwardProtocol(string $ForwardProtocol) Set Protocol types of the forwarding from acceleration connection to origin server: HTTP | HTTPS
+ * @method string getProxyId() Obtain Connection ID
+ * @method void setProxyId(string $ProxyId) Set Connection ID
+ * @method integer getAuthType() Obtain Authentication type, where:
 0: one-way authentication;
 1: mutual authentication.
 The one-way authentication is used by default.
- * @method void setAuthType(integer $AuthType) 设置Authentication type, where:
+ * @method void setAuthType(integer $AuthType) Set Authentication type, where:
 0: one-way authentication;
 1: mutual authentication.
 The one-way authentication is used by default.
- * @method string getClientCertificateId() 获取Client CA certificate ID, which is required only when the mutual authentication is adopted.
- * @method void setClientCertificateId(string $ClientCertificateId) 设置Client CA certificate ID, which is required only when the mutual authentication is adopted.
- * @method array getPolyClientCertificateIds() 获取IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
- * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
+ * @method string getClientCertificateId() Obtain Client CA certificate ID, which is required only when the mutual authentication is adopted.
+ * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate ID, which is required only when the mutual authentication is adopted.
+ * @method array getPolyClientCertificateIds() Obtain IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
  */
 
 /**
@@ -107,7 +107,7 @@ The one-way authentication is used by default.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

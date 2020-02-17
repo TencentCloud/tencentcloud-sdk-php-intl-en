@@ -18,12 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDiskId() 获取ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method void setDiskId(string $DiskId) 设置ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method integer getDiskSize() 获取Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
- * @method void setDiskSize(integer $DiskSize) 设置Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
- * @method integer getProjectId() 获取ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
- * @method void setProjectId(integer $ProjectId) 设置ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+ * @method string getDiskId() Obtain ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method void setDiskId(string $DiskId) Set ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method integer getDiskSize() Obtain Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+ * @method void setDiskSize(integer $DiskSize) Set Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+ * @method integer getProjectId() Obtain ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+ * @method void setProjectId(integer $ProjectId) Set ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
  */
 
 /**
@@ -55,7 +55,7 @@ class InquiryPriceResizeDiskRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

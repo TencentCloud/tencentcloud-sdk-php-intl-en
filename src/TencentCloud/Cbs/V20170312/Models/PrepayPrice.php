@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getOriginalPrice() 获取Original price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
- * @method void setOriginalPrice(float $OriginalPrice) 设置Original price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
- * @method float getDiscountPrice() 获取Discount price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
- * @method void setDiscountPrice(float $DiscountPrice) 设置Discount price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
+ * @method float getOriginalPrice() Obtain Original price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
+ * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
+ * @method float getDiscountPrice() Obtain Discount price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
  */
 
 /**
@@ -47,7 +47,7 @@ class PrepayPrice extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

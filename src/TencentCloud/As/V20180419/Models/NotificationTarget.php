@@ -18,16 +18,16 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTargetType() 获取Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
+ * @method string getTargetType() Obtain Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
 <li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
 <li> CMQ_TOPIC: CMQ topic model.</li>
- * @method void setTargetType(string $TargetType) 设置Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
+ * @method void setTargetType(string $TargetType) Set Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
 <li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
 <li> CMQ_TOPIC: CMQ topic model.</li>
- * @method string getQueueName() 获取Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
- * @method void setQueueName(string $QueueName) 设置Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
- * @method string getTopicName() 获取Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
- * @method void setTopicName(string $TopicName) 设置Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+ * @method string getQueueName() Obtain Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+ * @method void setQueueName(string $QueueName) Set Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+ * @method string getTopicName() Obtain Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+ * @method void setTopicName(string $TopicName) Set Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
  */
 
 /**
@@ -63,7 +63,7 @@ class NotificationTarget extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

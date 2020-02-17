@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getUnitPrice() 获取按量计费后付费单价，单位：元。
- * @method void setUnitPrice(float $UnitPrice) 设置按量计费后付费单价，单位：元。
- * @method string getChargeUnit() 获取按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
- * @method void setChargeUnit(string $ChargeUnit) 设置按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
- * @method float getOriginalPrice() 获取预付费商品的原价，单位：元。
- * @method void setOriginalPrice(float $OriginalPrice) 设置预付费商品的原价，单位：元。
- * @method float getDiscountPrice() 获取预付费商品的折扣价，单位：元。
- * @method void setDiscountPrice(float $DiscountPrice) 设置预付费商品的折扣价，单位：元。
+ * @method float getUnitPrice() Obtain The pay-as-you-go billing method. Unit: CNY.
+ * @method void setUnitPrice(float $UnitPrice) Set The pay-as-you-go billing method. Unit: CNY.
+ * @method string getChargeUnit() Obtain Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
+ * @method void setChargeUnit(string $ChargeUnit) Set Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
+ * @method float getOriginalPrice() Obtain Original price of the prepaid product. Unit: CNY.
+ * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the prepaid product. Unit: CNY.
+ * @method float getDiscountPrice() Obtain Discount price of the prepaid product. Unit: CNY.
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the prepaid product. Unit: CNY.
  */
 
 /**
- *单项计费价格信息
+ *The pricing information of a single billing item
  */
 class ItemPrice extends AbstractModel
 {
     /**
-     * @var float 按量计费后付费单价，单位：元。
+     * @var float The pay-as-you-go billing method. Unit: CNY.
      */
     public $UnitPrice;
 
     /**
-     * @var string 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+     * @var string Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
      */
     public $ChargeUnit;
 
     /**
-     * @var float 预付费商品的原价，单位：元。
+     * @var float Original price of the prepaid product. Unit: CNY.
      */
     public $OriginalPrice;
 
     /**
-     * @var float 预付费商品的折扣价，单位：元。
+     * @var float Discount price of the prepaid product. Unit: CNY.
      */
     public $DiscountPrice;
     /**
-     * @param float $UnitPrice 按量计费后付费单价，单位：元。
-     * @param string $ChargeUnit 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
-     * @param float $OriginalPrice 预付费商品的原价，单位：元。
-     * @param float $DiscountPrice 预付费商品的折扣价，单位：元。
+     * @param float $UnitPrice The pay-as-you-go billing method. Unit: CNY.
+     * @param string $ChargeUnit Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
+     * @param float $OriginalPrice Original price of the prepaid product. Unit: CNY.
+     * @param float $DiscountPrice Discount price of the prepaid product. Unit: CNY.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

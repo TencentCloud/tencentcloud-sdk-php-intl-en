@@ -18,10 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPage() 获取Page number, beginning from 1
- * @method void setPage(integer $Page) 设置Page number, beginning from 1
- * @method integer getRp() 获取Number of lines per page, no greater than 200
- * @method void setRp(integer $Rp) 设置Number of lines per page, no greater than 200
+ * @method integer getPage() Obtain Page number, beginning from 1
+ * @method void setPage(integer $Page) Set Page number, beginning from 1
+ * @method integer getRp() Obtain Number of lines per page, no greater than 200
+ * @method void setRp(integer $Rp) Set Number of lines per page, no greater than 200
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeRoleListRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

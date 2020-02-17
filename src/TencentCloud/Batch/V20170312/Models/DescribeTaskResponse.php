@@ -18,24 +18,24 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取Instance ID
- * @method void setJobId(string $JobId) 设置Instance ID
- * @method string getTaskName() 获取Job name
- * @method void setTaskName(string $TaskName) 设置Job name
- * @method string getTaskState() 获取Job state
- * @method void setTaskState(string $TaskState) 设置Job state
- * @method string getCreateTime() 获取Creation time
- * @method void setCreateTime(string $CreateTime) 设置Creation time
- * @method string getEndTime() 获取End time
- * @method void setEndTime(string $EndTime) 设置End time
- * @method integer getTaskInstanceTotalCount() 获取Total number of task instances
- * @method void setTaskInstanceTotalCount(integer $TaskInstanceTotalCount) 设置Total number of task instances
- * @method array getTaskInstanceSet() 获取Task instance information
- * @method void setTaskInstanceSet(array $TaskInstanceSet) 设置Task instance information
- * @method TaskInstanceMetrics getTaskInstanceMetrics() 获取Task instance statistical metrics
- * @method void setTaskInstanceMetrics(TaskInstanceMetrics $TaskInstanceMetrics) 设置Task instance statistical metrics
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getJobId() Obtain Instance ID
+ * @method void setJobId(string $JobId) Set Instance ID
+ * @method string getTaskName() Obtain Job name
+ * @method void setTaskName(string $TaskName) Set Job name
+ * @method string getTaskState() Obtain Job state
+ * @method void setTaskState(string $TaskState) Set Job state
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getEndTime() Obtain End time
+ * @method void setEndTime(string $EndTime) Set End time
+ * @method integer getTaskInstanceTotalCount() Obtain Total number of task instances
+ * @method void setTaskInstanceTotalCount(integer $TaskInstanceTotalCount) Set Total number of task instances
+ * @method array getTaskInstanceSet() Obtain Task instance information
+ * @method void setTaskInstanceSet(array $TaskInstanceSet) Set Task instance information
+ * @method TaskInstanceMetrics getTaskInstanceMetrics() Obtain Task instance statistical metrics
+ * @method void setTaskInstanceMetrics(TaskInstanceMetrics $TaskInstanceMetrics) Set Task instance statistical metrics
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -103,7 +103,7 @@ class DescribeTaskResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

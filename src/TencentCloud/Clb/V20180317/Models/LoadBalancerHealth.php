@@ -18,15 +18,15 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getLoadBalancerName() 获取CLB instance name
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getLoadBalancerName() Obtain CLB instance name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置CLB instance name
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getListeners() 获取List of listeners
+ * @method array getListeners() Obtain List of listeners
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setListeners(array $Listeners) 设置List of listeners
+ * @method void setListeners(array $Listeners) Set List of listeners
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getScheduledActionIds() 获取Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
- * @method void setScheduledActionIds(array $ScheduledActionIds) 设置Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
- * @method array getFilters() 获取Filter.
+ * @method array getScheduledActionIds() Obtain Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
+ * @method void setScheduledActionIds(array $ScheduledActionIds) Set Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
+ * @method array getFilters() Obtain Filter.
 <li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
 <li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
- * @method void setFilters(array $Filters) 设置Filter.
+ * @method void setFilters(array $Filters) Set Filter.
 <li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
 <li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
- * @method integer getOffset() 获取Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
- * @method void setOffset(integer $Offset) 设置Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
- * @method integer getLimit() 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
- * @method void setLimit(integer $Limit) 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method integer getOffset() Obtain Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
  */
 
 /**
@@ -75,7 +75,7 @@ class DescribeScheduledActionsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

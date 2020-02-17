@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取云主机实例ID。
- * @method void setInstanceId(string $InstanceId) 设置云主机实例ID。
- * @method integer getDeviceIndex() 获取网卡在云主机实例内的序号。
- * @method void setDeviceIndex(integer $DeviceIndex) 设置网卡在云主机实例内的序号。
- * @method string getInstanceAccountId() 获取云主机所有者账户信息。
- * @method void setInstanceAccountId(string $InstanceAccountId) 设置云主机所有者账户信息。
- * @method string getAttachTime() 获取绑定时间。
- * @method void setAttachTime(string $AttachTime) 设置绑定时间。
+ * @method string getInstanceId() Obtain CVM instance ID.
+ * @method void setInstanceId(string $InstanceId) Set CVM instance ID.
+ * @method integer getDeviceIndex() Obtain The serial number of ENI in the CVM instance.
+ * @method void setDeviceIndex(integer $DeviceIndex) Set The serial number of ENI in the CVM instance.
+ * @method string getInstanceAccountId() Obtain The account information of the CVM owner.
+ * @method void setInstanceAccountId(string $InstanceAccountId) Set The account information of the CVM owner.
+ * @method string getAttachTime() Obtain Binding time
+ * @method void setAttachTime(string $AttachTime) Set Binding time
  */
 
 /**
- *弹性网卡绑定关系
+ *Binding relationship of the ENI
  */
 class NetworkInterfaceAttachment extends AbstractModel
 {
     /**
-     * @var string 云主机实例ID。
+     * @var string CVM instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer 网卡在云主机实例内的序号。
+     * @var integer The serial number of ENI in the CVM instance.
      */
     public $DeviceIndex;
 
     /**
-     * @var string 云主机所有者账户信息。
+     * @var string The account information of the CVM owner.
      */
     public $InstanceAccountId;
 
     /**
-     * @var string 绑定时间。
+     * @var string Binding time
      */
     public $AttachTime;
     /**
-     * @param string $InstanceId 云主机实例ID。
-     * @param integer $DeviceIndex 网卡在云主机实例内的序号。
-     * @param string $InstanceAccountId 云主机所有者账户信息。
-     * @param string $AttachTime 绑定时间。
+     * @param string $InstanceId CVM instance ID.
+     * @param integer $DeviceIndex The serial number of ENI in the CVM instance.
+     * @param string $InstanceAccountId The account information of the CVM owner.
+     * @param string $AttachTime Binding time
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

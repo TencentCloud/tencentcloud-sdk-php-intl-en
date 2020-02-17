@@ -18,25 +18,25 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResourceRegion() 获取The resource’s region.
+ * @method string getResourceRegion() Obtain The resource’s region.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceRegion(string $ResourceRegion) 设置The resource’s region.
+ * @method void setResourceRegion(string $ResourceRegion) Set The resource’s region.
 Note: This field may return null, indicating that no valid value is found.
- * @method string getServiceType() 获取Service type.
+ * @method string getServiceType() Obtain Service type.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setServiceType(string $ServiceType) 设置Service type.
+ * @method void setServiceType(string $ServiceType) Set Service type.
 Note: This field may return null, indicating that no valid value is found.
- * @method string getResourcePrefix() 获取Resource prefix.
+ * @method string getResourcePrefix() Obtain Resource prefix.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setResourcePrefix(string $ResourcePrefix) 设置Resource prefix.
+ * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix.
 Note: This field may return null, indicating that no valid value is found.
- * @method string getResourceId() 获取Unique resource ID.
+ * @method string getResourceId() Obtain Unique resource ID.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceId(string $ResourceId) 设置Unique resource ID.
+ * @method void setResourceId(string $ResourceId) Set Unique resource ID.
 Note: This field may return null, indicating that no valid value is found.
- * @method array getTags() 获取Resource tag.
+ * @method array getTags() Obtain Resource tag.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setTags(array $Tags) 设置Resource tag.
+ * @method void setTags(array $Tags) Set Resource tag.
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -91,7 +91,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

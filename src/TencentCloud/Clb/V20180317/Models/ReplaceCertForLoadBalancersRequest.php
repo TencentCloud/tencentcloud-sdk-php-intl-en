@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOldCertificateId() 获取ID of the certificate to be replaced, which can be a server certificate or a client certificate.
- * @method void setOldCertificateId(string $OldCertificateId) 设置ID of the certificate to be replaced, which can be a server certificate or a client certificate.
- * @method CertificateInput getCertificate() 获取Information such as the content of the new certificate
- * @method void setCertificate(CertificateInput $Certificate) 设置Information such as the content of the new certificate
+ * @method string getOldCertificateId() Obtain ID of the certificate to be replaced, which can be a server certificate or a client certificate.
+ * @method void setOldCertificateId(string $OldCertificateId) Set ID of the certificate to be replaced, which can be a server certificate or a client certificate.
+ * @method CertificateInput getCertificate() Obtain Information such as the content of the new certificate
+ * @method void setCertificate(CertificateInput $Certificate) Set Information such as the content of the new certificate
  */
 
 /**
@@ -47,7 +47,7 @@ class ReplaceCertForLoadBalancersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

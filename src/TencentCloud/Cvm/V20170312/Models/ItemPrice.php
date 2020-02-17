@@ -18,21 +18,21 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getUnitPrice() 获取Subsequent unit price (in RMB).
+ * @method float getUnitPrice() Obtain Subsequent unit price (in RMB).
 Note: This field may return null, indicating that no valid value is found.
- * @method void setUnitPrice(float $UnitPrice) 设置Subsequent unit price (in RMB).
+ * @method void setUnitPrice(float $UnitPrice) Set Subsequent unit price (in RMB).
 Note: This field may return null, indicating that no valid value is found.
- * @method string getChargeUnit() 获取Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
+ * @method string getChargeUnit() Obtain Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
 Note: This field may return null, indicating that no valid value is found.
- * @method void setChargeUnit(string $ChargeUnit) 设置Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
+ * @method void setChargeUnit(string $ChargeUnit) Set Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
 Note: This field may return null, indicating that no valid value is found.
- * @method float getOriginalPrice() 获取Original price of a prepaid instance (in RMB).
+ * @method float getOriginalPrice() Obtain Original price of a prepaid instance (in RMB).
 Note: This field may return null, indicating that no valid value is found.
- * @method void setOriginalPrice(float $OriginalPrice) 设置Original price of a prepaid instance (in RMB).
+ * @method void setOriginalPrice(float $OriginalPrice) Set Original price of a prepaid instance (in RMB).
 Note: This field may return null, indicating that no valid value is found.
- * @method float getDiscountPrice() 获取Discount price of a prepaid instance (in RMB).
+ * @method float getDiscountPrice() Obtain Discount price of a prepaid instance (in RMB).
 Note: This field may return null, indicating that no valid value is found.
- * @method void setDiscountPrice(float $DiscountPrice) 设置Discount price of a prepaid instance (in RMB).
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of a prepaid instance (in RMB).
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -79,7 +79,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

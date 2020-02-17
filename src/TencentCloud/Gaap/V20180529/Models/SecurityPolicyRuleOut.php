@@ -18,24 +18,24 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAction() 获取Policy: Allow (ACCEPT) or reject (DROP).
- * @method void setAction(string $Action) 设置Policy: Allow (ACCEPT) or reject (DROP).
- * @method string getSourceCidr() 获取Source IP or IP range of the request.
- * @method void setSourceCidr(string $SourceCidr) 设置Source IP or IP range of the request.
- * @method string getAliasName() 获取Rule alias
- * @method void setAliasName(string $AliasName) 设置Rule alias
- * @method string getDestPortRange() 获取Target port range
+ * @method string getAction() Obtain Policy: Allow (ACCEPT) or reject (DROP).
+ * @method void setAction(string $Action) Set Policy: Allow (ACCEPT) or reject (DROP).
+ * @method string getSourceCidr() Obtain Source IP or IP range of the request.
+ * @method void setSourceCidr(string $SourceCidr) Set Source IP or IP range of the request.
+ * @method string getAliasName() Obtain Rule alias
+ * @method void setAliasName(string $AliasName) Set Rule alias
+ * @method string getDestPortRange() Obtain Target port range
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDestPortRange(string $DestPortRange) 设置Target port range
+ * @method void setDestPortRange(string $DestPortRange) Set Target port range
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRuleId() 获取Rule ID
- * @method void setRuleId(string $RuleId) 设置Rule ID
- * @method string getProtocol() 获取Protocol type to be matched (TCP/UDP)
+ * @method string getRuleId() Obtain Rule ID
+ * @method void setRuleId(string $RuleId) Set Rule ID
+ * @method string getProtocol() Obtain Protocol type to be matched (TCP/UDP)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProtocol(string $Protocol) 设置Protocol type to be matched (TCP/UDP)
+ * @method void setProtocol(string $Protocol) Set Protocol type to be matched (TCP/UDP)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPolicyId() 获取
- * @method void setPolicyId(string $PolicyId) 设置
+ * @method string getPolicyId() Obtain 
+ * @method void setPolicyId(string $PolicyId) Set 
  */
 
 /**
@@ -95,7 +95,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

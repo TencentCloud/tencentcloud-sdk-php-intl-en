@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getScene() 获取Scenario type. Windows is supported
- * @method void setScene(string $Scene) 设置Scenario type. Windows is supported
- * @method string getUser() 获取The user that runs the Agent
- * @method void setUser(string $User) 设置The user that runs the Agent
- * @method string getSession() 获取The session that runs the Agent
- * @method void setSession(string $Session) 设置The session that runs the Agent
+ * @method string getScene() Obtain Scenario type. Windows is supported
+ * @method void setScene(string $Scene) Set Scenario type. Windows is supported
+ * @method string getUser() Obtain The user that runs the Agent
+ * @method void setUser(string $User) Set The user that runs the Agent
+ * @method string getSession() Obtain The session that runs the Agent
+ * @method void setSession(string $Session) Set The session that runs the Agent
  */
 
 /**
@@ -55,7 +55,7 @@ class AgentRunningMode extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

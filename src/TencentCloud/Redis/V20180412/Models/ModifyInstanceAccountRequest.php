@@ -18,20 +18,20 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getAccountName() 获取Sub-account name. If the root account is to be modified, enter `root`
- * @method void setAccountName(string $AccountName) 设置Sub-account name. If the root account is to be modified, enter `root`
- * @method string getAccountPassword() 获取Sub-account password
- * @method void setAccountPassword(string $AccountPassword) 设置Sub-account password
- * @method string getRemark() 获取Sub-account description information
- * @method void setRemark(string $Remark) 设置Sub-account description information
- * @method array getReadonlyPolicy() 获取Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
- * @method string getPrivilege() 获取Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
- * @method void setPrivilege(string $Privilege) 设置Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
- * @method boolean getNoAuth() 获取true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
- * @method void setNoAuth(boolean $NoAuth) 设置true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getAccountName() Obtain Sub-account name. If the root account is to be modified, enter `root`
+ * @method void setAccountName(string $AccountName) Set Sub-account name. If the root account is to be modified, enter `root`
+ * @method string getAccountPassword() Obtain Sub-account password
+ * @method void setAccountPassword(string $AccountPassword) Set Sub-account password
+ * @method string getRemark() Obtain Sub-account description information
+ * @method void setRemark(string $Remark) Set Sub-account description information
+ * @method array getReadonlyPolicy() Obtain Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+ * @method string getPrivilege() Obtain Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+ * @method void setPrivilege(string $Privilege) Set Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+ * @method boolean getNoAuth() Obtain true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+ * @method void setNoAuth(boolean $NoAuth) Set true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
  */
 
 /**
@@ -87,7 +87,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

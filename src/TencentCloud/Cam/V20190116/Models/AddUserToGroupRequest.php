@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInfo() 获取How sub-user UIDs are associated with the ID of the user group they are added to.
- * @method void setInfo(array $Info) 设置How sub-user UIDs are associated with the ID of the user group they are added to.
+ * @method array getInfo() Obtain How sub-user UIDs are associated with the ID of the user group they are added to.
+ * @method void setInfo(array $Info) Set How sub-user UIDs are associated with the ID of the user group they are added to.
  */
 
 /**
@@ -39,7 +39,7 @@ class AddUserToGroupRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRealServerId() 获取Origin server ID
- * @method void setRealServerId(string $RealServerId) 设置Origin server ID
- * @method string getRealServerIP() 获取Origin server IP or domain name
- * @method void setRealServerIP(string $RealServerIP) 设置Origin server IP or domain name
- * @method integer getRealServerWeight() 获取Origin server weight
- * @method void setRealServerWeight(integer $RealServerWeight) 设置Origin server weight
- * @method integer getRealServerStatus() 获取
- * @method void setRealServerStatus(integer $RealServerStatus) 设置
- * @method integer getRealServerPort() 获取Origin server port number
+ * @method string getRealServerId() Obtain Origin server ID
+ * @method void setRealServerId(string $RealServerId) Set Origin server ID
+ * @method string getRealServerIP() Obtain Origin server IP or domain name
+ * @method void setRealServerIP(string $RealServerIP) Set Origin server IP or domain name
+ * @method integer getRealServerWeight() Obtain Origin server weight
+ * @method void setRealServerWeight(integer $RealServerWeight) Set Origin server weight
+ * @method integer getRealServerStatus() Obtain 
+ * @method void setRealServerStatus(integer $RealServerStatus) Set 
+ * @method integer getRealServerPort() Obtain Origin server port number
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealServerPort(integer $RealServerPort) 设置Origin server port number
+ * @method void setRealServerPort(integer $RealServerPort) Set Origin server port number
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDownIPList() 获取If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
- * @method void setDownIPList(array $DownIPList) 设置If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
+ * @method array getDownIPList() Obtain If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
+ * @method void setDownIPList(array $DownIPList) Set If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
  */
 
 /**
@@ -83,7 +83,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

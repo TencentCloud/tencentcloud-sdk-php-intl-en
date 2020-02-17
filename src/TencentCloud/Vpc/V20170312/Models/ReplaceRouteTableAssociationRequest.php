@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSubnetId() 获取子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
- * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
+ * @method string getSubnetId() Obtain Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
+ * @method void setSubnetId(string $SubnetId) Set Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
+ * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
+ * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ReplaceRouteTableAssociationRequest extends AbstractModel
 {
     /**
-     * @var string 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+     * @var string Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
      */
     public $SubnetId;
 
     /**
-     * @var string 路由表实例ID，例如：rtb-azd4dt1c。
+     * @var string The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public $RouteTableId;
     /**
-     * @param string $SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
-     * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * @param string $SubnetId Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
+     * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

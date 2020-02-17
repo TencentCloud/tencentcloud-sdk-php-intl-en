@@ -18,16 +18,16 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getProxyDailyPrice() 获取Basic cost of connection (unit: CNY/day).
- * @method void setProxyDailyPrice(float $ProxyDailyPrice) 设置Basic cost of connection (unit: CNY/day).
- * @method array getBandwidthUnitPrice() 获取Connection bandwidth price gradient.
- * @method void setBandwidthUnitPrice(array $BandwidthUnitPrice) 设置Connection bandwidth price gradient.
- * @method float getDiscountProxyDailyPrice() 获取Discounted basic cost of connection (unit: CNY/day).
- * @method void setDiscountProxyDailyPrice(float $DiscountProxyDailyPrice) 设置Discounted basic cost of connection (unit: CNY/day).
- * @method string getCurrency() 获取Currency, which supports CNY, USD, etc.
- * @method void setCurrency(string $Currency) 设置Currency, which supports CNY, USD, etc.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method float getProxyDailyPrice() Obtain Basic cost of connection (unit: CNY/day).
+ * @method void setProxyDailyPrice(float $ProxyDailyPrice) Set Basic cost of connection (unit: CNY/day).
+ * @method array getBandwidthUnitPrice() Obtain Connection bandwidth price gradient.
+ * @method void setBandwidthUnitPrice(array $BandwidthUnitPrice) Set Connection bandwidth price gradient.
+ * @method float getDiscountProxyDailyPrice() Obtain Discounted basic cost of connection (unit: CNY/day).
+ * @method void setDiscountProxyDailyPrice(float $DiscountProxyDailyPrice) Set Discounted basic cost of connection (unit: CNY/day).
+ * @method string getCurrency() Obtain Currency, which supports CNY, USD, etc.
+ * @method void setCurrency(string $Currency) Set Currency, which supports CNY, USD, etc.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -71,7 +71,7 @@ class InquiryPriceCreateProxyResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID.
- * @method array getInstanceIds() 获取Instance ID.
- * @method void setInstanceIds(array $InstanceIds) 设置Instance ID.
- * @method boolean getProtectedFromScaleIn() 获取Whether the instance needs to be protected from scale-in.
- * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) 设置Whether the instance needs to be protected from scale-in.
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
+ * @method array getInstanceIds() Obtain Instance ID.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID.
+ * @method boolean getProtectedFromScaleIn() Obtain Whether the instance needs to be protected from scale-in.
+ * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) Set Whether the instance needs to be protected from scale-in.
  */
 
 /**
@@ -55,7 +55,7 @@ class SetInstancesProtectionRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

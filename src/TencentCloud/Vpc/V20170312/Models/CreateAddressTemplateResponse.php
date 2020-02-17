@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method AddressTemplate getAddressTemplate() 获取IP地址模板对象。
- * @method void setAddressTemplate(AddressTemplate $AddressTemplate) 设置IP地址模板对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method AddressTemplate getAddressTemplate() Obtain The template object of the IP address.
+ * @method void setAddressTemplate(AddressTemplate $AddressTemplate) Set The template object of the IP address.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAddressTemplateResponse extends AbstractModel
 {
     /**
-     * @var AddressTemplate IP地址模板对象。
+     * @var AddressTemplate The template object of the IP address.
      */
     public $AddressTemplate;
 
@@ -39,7 +39,7 @@ class CreateAddressTemplateResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param AddressTemplate $AddressTemplate IP地址模板对象。
+     * @param AddressTemplate $AddressTemplate The template object of the IP address.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateAddressTemplateResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,42 +18,42 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取CLB listener ID
- * @method void setListenerId(string $ListenerId) 设置CLB listener ID
- * @method integer getListenerPort() 获取CLB listener port
- * @method void setListenerPort(integer $ListenerPort) 设置CLB listener port
- * @method integer getInstancePort() 获取Backend forwarding port of a listener
- * @method void setInstancePort(integer $InstancePort) 设置Backend forwarding port of a listener
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method string getProtocol() 获取Listener protocol type
- * @method void setProtocol(string $Protocol) 设置Listener protocol type
- * @method integer getSessionExpire() 获取Session persistence time
- * @method void setSessionExpire(integer $SessionExpire) 设置Session persistence time
- * @method integer getHealthSwitch() 获取Whether health check is enabled. 1: enabled; 0: disabled.
- * @method void setHealthSwitch(integer $HealthSwitch) 设置Whether health check is enabled. 1: enabled; 0: disabled.
- * @method integer getTimeOut() 获取Response timeout period
- * @method void setTimeOut(integer $TimeOut) 设置Response timeout period
- * @method integer getIntervalTime() 获取Check interval
- * @method void setIntervalTime(integer $IntervalTime) 设置Check interval
- * @method integer getHealthNum() 获取Health threshold
- * @method void setHealthNum(integer $HealthNum) 设置Health threshold
- * @method integer getUnhealthNum() 获取Unhealthy threshold
- * @method void setUnhealthNum(integer $UnhealthNum) 设置Unhealthy threshold
- * @method string getHttpHash() 获取A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
- * @method void setHttpHash(string $HttpHash) 设置A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
- * @method integer getHttpCode() 获取Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
- * @method void setHttpCode(integer $HttpCode) 设置Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
- * @method string getHttpCheckPath() 获取Health check path for HTTP and HTTPS listeners of a public network classic CLB
- * @method void setHttpCheckPath(string $HttpCheckPath) 设置Health check path for HTTP and HTTPS listeners of a public network classic CLB
- * @method string getSSLMode() 获取Authentication method for an HTTPS listener of a public network classic CLB
- * @method void setSSLMode(string $SSLMode) 设置Authentication method for an HTTPS listener of a public network classic CLB
- * @method string getCertId() 获取Server certificate ID for an HTTPS listener of a public network classic CLB
- * @method void setCertId(string $CertId) 设置Server certificate ID for an HTTPS listener of a public network classic CLB
- * @method string getCertCaId() 获取Client certificate ID for an HTTPS listener of a public network classic CLB
- * @method void setCertCaId(string $CertCaId) 设置Client certificate ID for an HTTPS listener of a public network classic CLB
- * @method integer getStatus() 获取Listener status. Value range: 0 (creating), 1 (running)
- * @method void setStatus(integer $Status) 设置Listener status. Value range: 0 (creating), 1 (running)
+ * @method string getListenerId() Obtain CLB listener ID
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method integer getListenerPort() Obtain CLB listener port
+ * @method void setListenerPort(integer $ListenerPort) Set CLB listener port
+ * @method integer getInstancePort() Obtain Backend forwarding port of a listener
+ * @method void setInstancePort(integer $InstancePort) Set Backend forwarding port of a listener
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method string getProtocol() Obtain Listener protocol type
+ * @method void setProtocol(string $Protocol) Set Listener protocol type
+ * @method integer getSessionExpire() Obtain Session persistence time
+ * @method void setSessionExpire(integer $SessionExpire) Set Session persistence time
+ * @method integer getHealthSwitch() Obtain Whether health check is enabled. 1: enabled; 0: disabled.
+ * @method void setHealthSwitch(integer $HealthSwitch) Set Whether health check is enabled. 1: enabled; 0: disabled.
+ * @method integer getTimeOut() Obtain Response timeout period
+ * @method void setTimeOut(integer $TimeOut) Set Response timeout period
+ * @method integer getIntervalTime() Obtain Check interval
+ * @method void setIntervalTime(integer $IntervalTime) Set Check interval
+ * @method integer getHealthNum() Obtain Health threshold
+ * @method void setHealthNum(integer $HealthNum) Set Health threshold
+ * @method integer getUnhealthNum() Obtain Unhealthy threshold
+ * @method void setUnhealthNum(integer $UnhealthNum) Set Unhealthy threshold
+ * @method string getHttpHash() Obtain A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+ * @method void setHttpHash(string $HttpHash) Set A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+ * @method integer getHttpCode() Obtain Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+ * @method void setHttpCode(integer $HttpCode) Set Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+ * @method string getHttpCheckPath() Obtain Health check path for HTTP and HTTPS listeners of a public network classic CLB
+ * @method void setHttpCheckPath(string $HttpCheckPath) Set Health check path for HTTP and HTTPS listeners of a public network classic CLB
+ * @method string getSSLMode() Obtain Authentication method for an HTTPS listener of a public network classic CLB
+ * @method void setSSLMode(string $SSLMode) Set Authentication method for an HTTPS listener of a public network classic CLB
+ * @method string getCertId() Obtain Server certificate ID for an HTTPS listener of a public network classic CLB
+ * @method void setCertId(string $CertId) Set Server certificate ID for an HTTPS listener of a public network classic CLB
+ * @method string getCertCaId() Obtain Client certificate ID for an HTTPS listener of a public network classic CLB
+ * @method void setCertCaId(string $CertCaId) Set Client certificate ID for an HTTPS listener of a public network classic CLB
+ * @method integer getStatus() Obtain Listener status. Value range: 0 (creating), 1 (running)
+ * @method void setStatus(integer $Status) Set Listener status. Value range: 0 (creating), 1 (running)
  */
 
 /**
@@ -175,7 +175,7 @@ class ClassicalListener extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

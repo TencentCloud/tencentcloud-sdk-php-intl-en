@@ -18,32 +18,32 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取Policy ID
- * @method void setPolicyId(integer $PolicyId) 设置Policy ID
- * @method string getPolicyName() 获取Policy name
- * @method void setPolicyName(string $PolicyName) 设置Policy name
- * @method string getAddTime() 获取Time policy created
+ * @method integer getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
+ * @method string getPolicyName() Obtain Policy name
+ * @method void setPolicyName(string $PolicyName) Set Policy name
+ * @method string getAddTime() Obtain Time policy created
 Note: This field may return null, indicating that no valid value was found.
- * @method void setAddTime(string $AddTime) 设置Time policy created
+ * @method void setAddTime(string $AddTime) Set Time policy created
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getType() 获取Policy type. 1: Custom policy; 2: Preset policy
- * @method void setType(integer $Type) 设置Policy type. 1: Custom policy; 2: Preset policy
- * @method string getDescription() 获取Policy description
+ * @method integer getType() Obtain Policy type. 1: Custom policy; 2: Preset policy
+ * @method void setType(integer $Type) Set Policy type. 1: Custom policy; 2: Preset policy
+ * @method string getDescription() Obtain Policy description
 Note: This field may return null, indicating that no valid value was found.
- * @method void setDescription(string $Description) 设置Policy description
+ * @method void setDescription(string $Description) Set Policy description
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getCreateMode() 获取How the policy was created: 1: Via console; 2: Via syntax
- * @method void setCreateMode(integer $CreateMode) 设置How the policy was created: 1: Via console; 2: Via syntax
- * @method integer getAttachments() 获取Number of associated users
- * @method void setAttachments(integer $Attachments) 设置Number of associated users
- * @method string getServiceType() 获取Product associated with the policy
+ * @method integer getCreateMode() Obtain How the policy was created: 1: Via console; 2: Via syntax
+ * @method void setCreateMode(integer $CreateMode) Set How the policy was created: 1: Via console; 2: Via syntax
+ * @method integer getAttachments() Obtain Number of associated users
+ * @method void setAttachments(integer $Attachments) Set Number of associated users
+ * @method string getServiceType() Obtain Product associated with the policy
 Note: This field may return null, indicating that no valid value was found.
- * @method void setServiceType(string $ServiceType) 设置Product associated with the policy
+ * @method void setServiceType(string $ServiceType) Set Product associated with the policy
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getIsAttached() 获取
- * @method void setIsAttached(integer $IsAttached) 设置
- * @method integer getDeactived() 获取
- * @method void setDeactived(integer $Deactived) 设置
+ * @method integer getIsAttached() Obtain 
+ * @method void setIsAttached(integer $IsAttached) Set 
+ * @method integer getDeactived() Obtain 
+ * @method void setDeactived(integer $Deactived) Set 
  */
 
 /**
@@ -123,7 +123,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

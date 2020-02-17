@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method HaVip getHaVip() 获取`HAVIP`对象。
- * @method void setHaVip(HaVip $HaVip) 设置`HAVIP`对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method HaVip getHaVip() Obtain `HAVIP` object.
+ * @method void setHaVip(HaVip $HaVip) Set `HAVIP` object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateHaVipResponse extends AbstractModel
 {
     /**
-     * @var HaVip `HAVIP`对象。
+     * @var HaVip `HAVIP` object.
      */
     public $HaVip;
 
@@ -39,7 +39,7 @@ class CreateHaVipResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param HaVip $HaVip `HAVIP`对象。
+     * @param HaVip $HaVip `HAVIP` object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateHaVipResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取异步任务ID
- * @method void setTaskId(integer $TaskId) 设置异步任务ID
- * @method string getDealName() 获取计费订单号
- * @method void setDealName(string $DealName) 设置计费订单号
+ * @method integer getTaskId() Obtain The async job ID
+ * @method void setTaskId(integer $TaskId) Set The async job ID
+ * @method string getDealName() Obtain The billing order ID
+ * @method void setDealName(string $DealName) Set The billing order ID
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskResultRequest extends AbstractModel
 {
     /**
-     * @var integer 异步任务ID
+     * @var integer The async job ID
      */
     public $TaskId;
 
     /**
-     * @var string 计费订单号
+     * @var string The billing order ID
      */
     public $DealName;
     /**
-     * @param integer $TaskId 异步任务ID
-     * @param string $DealName 计费订单号
+     * @param integer $TaskId The async job ID
+     * @param string $DealName The billing order ID
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

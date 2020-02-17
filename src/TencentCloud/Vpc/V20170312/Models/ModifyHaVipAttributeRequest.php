@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getHaVipId() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
- * @method void setHaVipId(string $HaVipId) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
- * @method string getHaVipName() 获取`HAVIP`名称，可任意命名，但不得超过60个字符。
- * @method void setHaVipName(string $HaVipName) 设置`HAVIP`名称，可任意命名，但不得超过60个字符。
+ * @method string getHaVipId() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+ * @method void setHaVipId(string $HaVipId) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+ * @method string getHaVipName() Obtain `HAVIP` can be named freely, but the maximum length is 60 characters.
+ * @method void setHaVipName(string $HaVipName) Set `HAVIP` can be named freely, but the maximum length is 60 characters.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ModifyHaVipAttributeRequest extends AbstractModel
 {
     /**
-     * @var string `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * @var string The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public $HaVipId;
 
     /**
-     * @var string `HAVIP`名称，可任意命名，但不得超过60个字符。
+     * @var string `HAVIP` can be named freely, but the maximum length is 60 characters.
      */
     public $HaVipName;
     /**
-     * @param string $HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
-     * @param string $HaVipName `HAVIP`名称，可任意命名，但不得超过60个字符。
+     * @param string $HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+     * @param string $HaVipName `HAVIP` can be named freely, but the maximum length is 60 characters.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

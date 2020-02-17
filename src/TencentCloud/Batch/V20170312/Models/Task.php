@@ -18,42 +18,42 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Application getApplication() 获取Application information
- * @method void setApplication(Application $Application) 设置Application information
- * @method string getTaskName() 获取Job name, which should be unique within instance
- * @method void setTaskName(string $TaskName) 设置Job name, which should be unique within instance
- * @method integer getTaskInstanceNum() 获取Number of running task instances
- * @method void setTaskInstanceNum(integer $TaskInstanceNum) 设置Number of running task instances
- * @method AnonymousComputeEnv getComputeEnv() 获取Compute environment information. One (and only one) parameter must be specified for ComputeEnv and EnvId.
- * @method void setComputeEnv(AnonymousComputeEnv $ComputeEnv) 设置Compute environment information. One (and only one) parameter must be specified for ComputeEnv and EnvId.
- * @method string getEnvId() 获取Compute environment ID. One (and only one) parameter must be specified for ComputeEnv and EnvId.
- * @method void setEnvId(string $EnvId) 设置Compute environment ID. One (and only one) parameter must be specified for ComputeEnv and EnvId.
- * @method RedirectInfo getRedirectInfo() 获取Redirection information
- * @method void setRedirectInfo(RedirectInfo $RedirectInfo) 设置Redirection information
- * @method RedirectLocalInfo getRedirectLocalInfo() 获取Local redirection information
- * @method void setRedirectLocalInfo(RedirectLocalInfo $RedirectLocalInfo) 设置Local redirection information
- * @method array getInputMappings() 获取Input mapping
- * @method void setInputMappings(array $InputMappings) 设置Input mapping
- * @method array getOutputMappings() 获取Output mapping
- * @method void setOutputMappings(array $OutputMappings) 设置Output mapping
- * @method array getOutputMappingConfigs() 获取Output mapping configuration
- * @method void setOutputMappingConfigs(array $OutputMappingConfigs) 设置Output mapping configuration
- * @method array getEnvVars() 获取Custom environment variable
- * @method void setEnvVars(array $EnvVars) 设置Custom environment variable
- * @method array getAuthentications() 获取Authorization information
- * @method void setAuthentications(array $Authentications) 设置Authorization information
- * @method string getFailedAction() 获取The processing method after the TaskInstance fails; Value range: TERMINATE (default), INTERRUPT, FAST_INTERRUPT.
- * @method void setFailedAction(string $FailedAction) 设置The processing method after the TaskInstance fails; Value range: TERMINATE (default), INTERRUPT, FAST_INTERRUPT.
- * @method integer getMaxRetryCount() 获取The maximum number of retries after the task fails. Default value: 0
- * @method void setMaxRetryCount(integer $MaxRetryCount) 设置The maximum number of retries after the task fails. Default value: 0
- * @method integer getTimeout() 获取Timeout period in seconds after the task starts. Defaults value: 86,400
- * @method void setTimeout(integer $Timeout) 设置Timeout period in seconds after the task starts. Defaults value: 86,400
- * @method integer getMaxConcurrentNum() 获取The maximum number of concurrent tasks. There is no limit by default.
- * @method void setMaxConcurrentNum(integer $MaxConcurrentNum) 设置The maximum number of concurrent tasks. There is no limit by default.
- * @method boolean getRestartComputeNode() 获取Restarts the compute node after the task is completed. This is suitable for specifying the compute environment for task execution.
- * @method void setRestartComputeNode(boolean $RestartComputeNode) 设置Restarts the compute node after the task is completed. This is suitable for specifying the compute environment for task execution.
- * @method integer getResourceMaxRetryCount() 获取Maximum number of retry attempts after failing to create computing resources such as the CVM in the task launch process. Default value: 0.
- * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置Maximum number of retry attempts after failing to create computing resources such as the CVM in the task launch process. Default value: 0.
+ * @method Application getApplication() Obtain Application information
+ * @method void setApplication(Application $Application) Set Application information
+ * @method string getTaskName() Obtain Job name, which should be unique within instance
+ * @method void setTaskName(string $TaskName) Set Job name, which should be unique within instance
+ * @method integer getTaskInstanceNum() Obtain Number of running task instances
+ * @method void setTaskInstanceNum(integer $TaskInstanceNum) Set Number of running task instances
+ * @method AnonymousComputeEnv getComputeEnv() Obtain Compute environment information. One (and only one) parameter must be specified for ComputeEnv and EnvId.
+ * @method void setComputeEnv(AnonymousComputeEnv $ComputeEnv) Set Compute environment information. One (and only one) parameter must be specified for ComputeEnv and EnvId.
+ * @method string getEnvId() Obtain Compute environment ID. One (and only one) parameter must be specified for ComputeEnv and EnvId.
+ * @method void setEnvId(string $EnvId) Set Compute environment ID. One (and only one) parameter must be specified for ComputeEnv and EnvId.
+ * @method RedirectInfo getRedirectInfo() Obtain Redirection information
+ * @method void setRedirectInfo(RedirectInfo $RedirectInfo) Set Redirection information
+ * @method RedirectLocalInfo getRedirectLocalInfo() Obtain Local redirection information
+ * @method void setRedirectLocalInfo(RedirectLocalInfo $RedirectLocalInfo) Set Local redirection information
+ * @method array getInputMappings() Obtain Input mapping
+ * @method void setInputMappings(array $InputMappings) Set Input mapping
+ * @method array getOutputMappings() Obtain Output mapping
+ * @method void setOutputMappings(array $OutputMappings) Set Output mapping
+ * @method array getOutputMappingConfigs() Obtain Output mapping configuration
+ * @method void setOutputMappingConfigs(array $OutputMappingConfigs) Set Output mapping configuration
+ * @method array getEnvVars() Obtain Custom environment variable
+ * @method void setEnvVars(array $EnvVars) Set Custom environment variable
+ * @method array getAuthentications() Obtain Authorization information
+ * @method void setAuthentications(array $Authentications) Set Authorization information
+ * @method string getFailedAction() Obtain The processing method after the TaskInstance fails; Value range: TERMINATE (default), INTERRUPT, FAST_INTERRUPT.
+ * @method void setFailedAction(string $FailedAction) Set The processing method after the TaskInstance fails; Value range: TERMINATE (default), INTERRUPT, FAST_INTERRUPT.
+ * @method integer getMaxRetryCount() Obtain The maximum number of retries after the task fails. Default value: 0
+ * @method void setMaxRetryCount(integer $MaxRetryCount) Set The maximum number of retries after the task fails. Default value: 0
+ * @method integer getTimeout() Obtain Timeout period in seconds after the task starts. Defaults value: 86,400
+ * @method void setTimeout(integer $Timeout) Set Timeout period in seconds after the task starts. Defaults value: 86,400
+ * @method integer getMaxConcurrentNum() Obtain The maximum number of concurrent tasks. There is no limit by default.
+ * @method void setMaxConcurrentNum(integer $MaxConcurrentNum) Set The maximum number of concurrent tasks. There is no limit by default.
+ * @method boolean getRestartComputeNode() Obtain Restarts the compute node after the task is completed. This is suitable for specifying the compute environment for task execution.
+ * @method void setRestartComputeNode(boolean $RestartComputeNode) Set Restarts the compute node after the task is completed. This is suitable for specifying the compute environment for task execution.
+ * @method integer getResourceMaxRetryCount() Obtain Maximum number of retry attempts after failing to create computing resources such as the CVM in the task launch process. Default value: 0.
+ * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) Set Maximum number of retry attempts after failing to create computing resources such as the CVM in the task launch process. Default value: 0.
  */
 
 /**
@@ -175,7 +175,7 @@ class Task extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

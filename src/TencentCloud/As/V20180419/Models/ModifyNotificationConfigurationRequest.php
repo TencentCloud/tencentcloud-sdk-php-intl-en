@@ -18,24 +18,24 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingNotificationId() 获取ID of the notification to be modified.
- * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置ID of the notification to be modified.
- * @method array getNotificationTypes() 获取Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
+ * @method string getAutoScalingNotificationId() Obtain ID of the notification to be modified.
+ * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set ID of the notification to be modified.
+ * @method array getNotificationTypes() Obtain Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
 <li>SCALE_OUT_FAILED: scale-out failed</li>
 <li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
- * @method void setNotificationTypes(array $NotificationTypes) 设置Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
+ * @method void setNotificationTypes(array $NotificationTypes) Set Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
 <li>SCALE_OUT_FAILED: scale-out failed</li>
 <li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
- * @method array getNotificationUserGroupIds() 获取Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+ * @method array getNotificationUserGroupIds() Obtain Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
  */
 
 /**
@@ -79,7 +79,7 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

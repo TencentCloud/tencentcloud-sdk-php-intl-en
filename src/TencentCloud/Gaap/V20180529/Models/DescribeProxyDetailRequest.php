@@ -18,8 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProxyId() 获取Connection ID to be queried.
- * @method void setProxyId(string $ProxyId) 设置Connection ID to be queried.
+ * @method string getProxyId() Obtain Connection ID to be queried.
+ * @method void setProxyId(string $ProxyId) Set Connection ID to be queried.
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeProxyDetailRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

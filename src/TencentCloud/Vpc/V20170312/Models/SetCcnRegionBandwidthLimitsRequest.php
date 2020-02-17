@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method array getCcnRegionBandwidthLimits() 获取云联网（CCN）各地域出带宽上限。
- * @method void setCcnRegionBandwidthLimits(array $CcnRegionBandwidthLimits) 设置云联网（CCN）各地域出带宽上限。
+ * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method array getCcnRegionBandwidthLimits() Obtain The outbound bandwidth cap of each CCN region.
+ * @method void setCcnRegionBandwidthLimits(array $CcnRegionBandwidthLimits) Set The outbound bandwidth cap of each CCN region.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public $CcnId;
 
     /**
-     * @var array 云联网（CCN）各地域出带宽上限。
+     * @var array The outbound bandwidth cap of each CCN region.
      */
     public $CcnRegionBandwidthLimits;
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param array $CcnRegionBandwidthLimits 云联网（CCN）各地域出带宽上限。
+     * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param array $CcnRegionBandwidthLimits The outbound bandwidth cap of each CCN region.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

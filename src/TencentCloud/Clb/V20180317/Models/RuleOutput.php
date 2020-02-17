@@ -18,60 +18,60 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLocationId() 获取Forwarding rule ID
- * @method void setLocationId(string $LocationId) 设置Forwarding rule ID
- * @method string getDomain() 获取Domain name of the forwarding rule.
+ * @method string getLocationId() Obtain Forwarding rule ID
+ * @method void setLocationId(string $LocationId) Set Forwarding rule ID
+ * @method string getDomain() Obtain Domain name of the forwarding rule.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) 设置Domain name of the forwarding rule.
+ * @method void setDomain(string $Domain) Set Domain name of the forwarding rule.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUrl() 获取Forwarding rule path.
+ * @method string getUrl() Obtain Forwarding rule path.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) 设置Forwarding rule path.
+ * @method void setUrl(string $Url) Set Forwarding rule path.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSessionExpireTime() 获取Session persistence time
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置Session persistence time
- * @method HealthCheck getHealthCheck() 获取Health check information
+ * @method integer getSessionExpireTime() Obtain Session persistence time
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
+ * @method HealthCheck getHealthCheck() Obtain Health check information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置Health check information
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method CertificateOutput getCertificate() 获取Certificate information
+ * @method CertificateOutput getCertificate() Obtain Certificate information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertificate(CertificateOutput $Certificate) 设置Certificate information
+ * @method void setCertificate(CertificateOutput $Certificate) Set Certificate information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScheduler() 获取Request forwarding method of the rule
- * @method void setScheduler(string $Scheduler) 设置Request forwarding method of the rule
- * @method string getListenerId() 获取ID of the listener to which the forwarding rule belongs
- * @method void setListenerId(string $ListenerId) 设置ID of the listener to which the forwarding rule belongs
- * @method RewriteTarget getRewriteTarget() 获取Redirect target information of a forwarding rule
+ * @method string getScheduler() Obtain Request forwarding method of the rule
+ * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule
+ * @method string getListenerId() Obtain ID of the listener to which the forwarding rule belongs
+ * @method void setListenerId(string $ListenerId) Set ID of the listener to which the forwarding rule belongs
+ * @method RewriteTarget getRewriteTarget() Obtain Redirect target information of a forwarding rule
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRewriteTarget(RewriteTarget $RewriteTarget) 设置Redirect target information of a forwarding rule
+ * @method void setRewriteTarget(RewriteTarget $RewriteTarget) Set Redirect target information of a forwarding rule
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getHttpGzip() 获取Whether to enable gzip
- * @method void setHttpGzip(boolean $HttpGzip) 设置Whether to enable gzip
- * @method boolean getBeAutoCreated() 获取Whether the forwarding rule is automatically created
- * @method void setBeAutoCreated(boolean $BeAutoCreated) 设置Whether the forwarding rule is automatically created
- * @method boolean getDefaultServer() 获取Whether to use as the default domain name
- * @method void setDefaultServer(boolean $DefaultServer) 设置Whether to use as the default domain name
- * @method boolean getHttp2() 获取Whether to enable Http2
- * @method void setHttp2(boolean $Http2) 设置Whether to enable Http2
- * @method string getForwardType() 获取Forwarding protocol between CLB and real server
- * @method void setForwardType(string $ForwardType) 设置Forwarding protocol between CLB and real server
- * @method string getCreateTime() 获取Forwarding rule creation time
- * @method void setCreateTime(string $CreateTime) 设置Forwarding rule creation time
- * @method string getTargetType() 获取Real server type
- * @method void setTargetType(string $TargetType) 设置Real server type
- * @method BasicTargetGroupInfo getTargetGroup() 获取Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
+ * @method boolean getHttpGzip() Obtain Whether to enable gzip
+ * @method void setHttpGzip(boolean $HttpGzip) Set Whether to enable gzip
+ * @method boolean getBeAutoCreated() Obtain Whether the forwarding rule is automatically created
+ * @method void setBeAutoCreated(boolean $BeAutoCreated) Set Whether the forwarding rule is automatically created
+ * @method boolean getDefaultServer() Obtain Whether to use as the default domain name
+ * @method void setDefaultServer(boolean $DefaultServer) Set Whether to use as the default domain name
+ * @method boolean getHttp2() Obtain Whether to enable Http2
+ * @method void setHttp2(boolean $Http2) Set Whether to enable Http2
+ * @method string getForwardType() Obtain Forwarding protocol between CLB and real server
+ * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB and real server
+ * @method string getCreateTime() Obtain Forwarding rule creation time
+ * @method void setCreateTime(string $CreateTime) Set Forwarding rule creation time
+ * @method string getTargetType() Obtain Real server type
+ * @method void setTargetType(string $TargetType) Set Real server type
+ * @method BasicTargetGroupInfo getTargetGroup() Obtain Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) 设置Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
+ * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) Set Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getWafDomainId() 获取WAF instance ID
+ * @method string getWafDomainId() Obtain WAF instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWafDomainId(string $WafDomainId) 设置WAF instance ID
+ * @method void setWafDomainId(string $WafDomainId) Set WAF instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTrpcCallee() 获取
- * @method void setTrpcCallee(string $TrpcCallee) 设置
- * @method string getTrpcFunc() 获取
- * @method void setTrpcFunc(string $TrpcFunc) 设置
+ * @method string getTrpcCallee() Obtain 
+ * @method void setTrpcCallee(string $TrpcCallee) Set 
+ * @method string getTrpcFunc() Obtain 
+ * @method void setTrpcFunc(string $TrpcFunc) Set 
  */
 
 /**
@@ -219,7 +219,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

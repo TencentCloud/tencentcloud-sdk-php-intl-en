@@ -18,42 +18,42 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getZoneId() 获取ID of the AZ where the instance resides
- * @method void setZoneId(integer $ZoneId) 设置ID of the AZ where the instance resides
- * @method integer getTypeId() 获取Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
- * @method void setTypeId(integer $TypeId) 设置Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
- * @method integer getMemSize() 获取Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
- * @method void setMemSize(integer $MemSize) 设置Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
- * @method integer getGoodsNum() 获取Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
- * @method void setGoodsNum(integer $GoodsNum) 设置Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
- * @method integer getPeriod() 获取Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
- * @method void setPeriod(integer $Period) 设置Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
- * @method integer getBillingMode() 获取Billing method. 0: pay as you go
- * @method void setBillingMode(integer $BillingMode) 设置Billing method. 0: pay as you go
- * @method string getPassword() 获取Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
- * @method void setPassword(string $Password) 设置Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
- * @method string getVpcId() 获取VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
- * @method void setVpcId(string $VpcId) 设置VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
- * @method string getSubnetId() 获取In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
- * @method void setSubnetId(string $SubnetId) 设置In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
- * @method integer getProjectId() 获取Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
- * @method void setProjectId(integer $ProjectId) 设置Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
- * @method integer getAutoRenew() 获取Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
- * @method void setAutoRenew(integer $AutoRenew) 设置Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
- * @method array getSecurityGroupIdList() 获取Array of security group IDs
- * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置Array of security group IDs
- * @method integer getVPort() 获取User-defined port. If this parameter is left blank, 6379 will be used by default
- * @method void setVPort(integer $VPort) 设置User-defined port. If this parameter is left blank, 6379 will be used by default
- * @method integer getRedisShardNum() 获取Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
- * @method void setRedisShardNum(integer $RedisShardNum) 设置Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
- * @method integer getRedisReplicasNum() 获取Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
- * @method boolean getReplicasReadonly() 获取Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
- * @method void setReplicasReadonly(boolean $ReplicasReadonly) 设置Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
- * @method string getInstanceName() 获取Instance name
- * @method void setInstanceName(string $InstanceName) 设置Instance name
- * @method boolean getNoAuth() 获取Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
- * @method void setNoAuth(boolean $NoAuth) 设置Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
+ * @method integer getZoneId() Obtain ID of the AZ where the instance resides
+ * @method void setZoneId(integer $ZoneId) Set ID of the AZ where the instance resides
+ * @method integer getTypeId() Obtain Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+ * @method void setTypeId(integer $TypeId) Set Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+ * @method integer getMemSize() Obtain Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
+ * @method void setMemSize(integer $MemSize) Set Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
+ * @method integer getGoodsNum() Obtain Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
+ * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
+ * @method integer getPeriod() Obtain Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
+ * @method void setPeriod(integer $Period) Set Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
+ * @method integer getBillingMode() Obtain Billing method. 0: pay as you go
+ * @method void setBillingMode(integer $BillingMode) Set Billing method. 0: pay as you go
+ * @method string getPassword() Obtain Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
+ * @method void setPassword(string $Password) Set Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
+ * @method string getVpcId() Obtain VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
+ * @method void setVpcId(string $VpcId) Set VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
+ * @method string getSubnetId() Obtain In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
+ * @method void setSubnetId(string $SubnetId) Set In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
+ * @method integer getProjectId() Obtain Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
+ * @method void setProjectId(integer $ProjectId) Set Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
+ * @method integer getAutoRenew() Obtain Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+ * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+ * @method array getSecurityGroupIdList() Obtain Array of security group IDs
+ * @method void setSecurityGroupIdList(array $SecurityGroupIdList) Set Array of security group IDs
+ * @method integer getVPort() Obtain User-defined port. If this parameter is left blank, 6379 will be used by default
+ * @method void setVPort(integer $VPort) Set User-defined port. If this parameter is left blank, 6379 will be used by default
+ * @method integer getRedisShardNum() Obtain Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
+ * @method void setRedisShardNum(integer $RedisShardNum) Set Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
+ * @method integer getRedisReplicasNum() Obtain Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+ * @method boolean getReplicasReadonly() Obtain Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
+ * @method void setReplicasReadonly(boolean $ReplicasReadonly) Set Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
+ * @method string getInstanceName() Obtain Instance name
+ * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method boolean getNoAuth() Obtain Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
+ * @method void setNoAuth(boolean $NoAuth) Set Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
  */
 
 /**
@@ -175,7 +175,7 @@ class CreateInstancesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

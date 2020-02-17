@@ -18,23 +18,23 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method integer getPort() 获取Listener port
- * @method void setPort(integer $Port) 设置Listener port
- * @method integer getCreateTime() 获取Listener creation time; using UNIX timestamp.
- * @method void setCreateTime(integer $CreateTime) 设置Listener creation time; using UNIX timestamp.
- * @method string getProtocol() 获取Listener protocol
- * @method void setProtocol(string $Protocol) 设置Listener protocol
- * @method integer getListenerStatus() 获取Listener status:
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method integer getPort() Obtain Listener port
+ * @method void setPort(integer $Port) Set Listener port
+ * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
+ * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
+ * @method string getProtocol() Obtain Listener protocol
+ * @method void setProtocol(string $Protocol) Set Listener protocol
+ * @method integer getListenerStatus() Obtain Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: modifying configuration.
- * @method void setListenerStatus(integer $ListenerStatus) 设置Listener status:
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
 0: running;
 1: creating;
 2: terminating;
@@ -99,7 +99,7 @@ class HTTPListener extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getServiceTemplateGroupId() 获取协议端口模板集合实例ID，例如：ppmg-2klmrefu。
- * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) 设置协议端口模板集合实例ID，例如：ppmg-2klmrefu。
- * @method string getServiceTemplateGroupName() 获取协议端口模板集合名称。
- * @method void setServiceTemplateGroupName(string $ServiceTemplateGroupName) 设置协议端口模板集合名称。
- * @method array getServiceTemplateIdSet() 获取协议端口模板实例ID。
- * @method void setServiceTemplateIdSet(array $ServiceTemplateIdSet) 设置协议端口模板实例ID。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getServiceTemplateGroupId() Obtain Protocol port template group instance ID, such as `ppmg-2klmrefu`.
+ * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) Set Protocol port template group instance ID, such as `ppmg-2klmrefu`.
+ * @method string getServiceTemplateGroupName() Obtain Protocol port template group name.
+ * @method void setServiceTemplateGroupName(string $ServiceTemplateGroupName) Set Protocol port template group name.
+ * @method array getServiceTemplateIdSet() Obtain Protocol port template instance ID.
+ * @method void setServiceTemplateIdSet(array $ServiceTemplateIdSet) Set Protocol port template instance ID.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
  */
 
 /**
- *协议端口模板集合
+ *Protocol port template group
  */
 class ServiceTemplateGroup extends AbstractModel
 {
     /**
-     * @var string 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+     * @var string Protocol port template group instance ID, such as `ppmg-2klmrefu`.
      */
     public $ServiceTemplateGroupId;
 
     /**
-     * @var string 协议端口模板集合名称。
+     * @var string Protocol port template group name.
      */
     public $ServiceTemplateGroupName;
 
     /**
-     * @var array 协议端口模板实例ID。
+     * @var array Protocol port template instance ID.
      */
     public $ServiceTemplateIdSet;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
     /**
-     * @param string $ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
-     * @param string $ServiceTemplateGroupName 协议端口模板集合名称。
-     * @param array $ServiceTemplateIdSet 协议端口模板实例ID。
-     * @param string $CreatedTime 创建时间。
+     * @param string $ServiceTemplateGroupId Protocol port template group instance ID, such as `ppmg-2klmrefu`.
+     * @param string $ServiceTemplateGroupName Protocol port template group name.
+     * @param array $ServiceTemplateIdSet Protocol port template instance ID.
+     * @param string $CreatedTime Creation Time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

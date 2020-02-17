@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAccessRegion() 获取Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
- * @method void setAccessRegion(string $AccessRegion) 设置Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
- * @method string getRealServerRegion() 获取Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
- * @method void setRealServerRegion(string $RealServerRegion) 设置Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
- * @method integer getBandwidth() 获取Connection bandwidth cap. Unit: Mbps.
- * @method void setBandwidth(integer $Bandwidth) 设置Connection bandwidth cap. Unit: Mbps.
- * @method integer getConcurrent() 获取Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
- * @method void setConcurrent(integer $Concurrent) 设置Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+ * @method string getAccessRegion() Obtain Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
+ * @method void setAccessRegion(string $AccessRegion) Set Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
+ * @method string getRealServerRegion() Obtain Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
+ * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
+ * @method integer getBandwidth() Obtain Connection bandwidth cap. Unit: Mbps.
+ * @method void setBandwidth(integer $Bandwidth) Set Connection bandwidth cap. Unit: Mbps.
+ * @method integer getConcurrent() Obtain Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+ * @method void setConcurrent(integer $Concurrent) Set Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
  */
 
 /**
@@ -63,7 +63,7 @@ class CheckProxyCreateRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,117 +18,117 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpnGatewayId() 获取网关实例ID。
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置网关实例ID。
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method string getVpnGatewayName() 获取网关实例名称。
- * @method void setVpnGatewayName(string $VpnGatewayName) 设置网关实例名称。
- * @method string getType() 获取网关实例类型：'IPSEC', 'SSL'。
- * @method void setType(string $Type) 设置网关实例类型：'IPSEC', 'SSL'。
- * @method string getState() 获取网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
- * @method void setState(string $State) 设置网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
- * @method string getPublicIpAddress() 获取网关公网IP。
- * @method void setPublicIpAddress(string $PublicIpAddress) 设置网关公网IP。
- * @method string getRenewFlag() 获取网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
- * @method void setRenewFlag(string $RenewFlag) 设置网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
- * @method string getInstanceChargeType() 获取网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
- * @method integer getInternetMaxBandwidthOut() 获取网关出带宽。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置网关出带宽。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getExpiredTime() 获取预付费网关过期时间。
- * @method void setExpiredTime(string $ExpiredTime) 设置预付费网关过期时间。
- * @method boolean getIsAddressBlocked() 获取公网IP是否被封堵。
- * @method void setIsAddressBlocked(boolean $IsAddressBlocked) 设置公网IP是否被封堵。
- * @method string getNewPurchasePlan() 获取计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
- * @method void setNewPurchasePlan(string $NewPurchasePlan) 设置计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
- * @method string getRestrictState() 获取网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
- * @method void setRestrictState(string $RestrictState) 设置网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
- * @method string getZone() 获取可用区，如：ap-guangzhou-2
- * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou-2
- * @method array getVpnGatewayQuotaSet() 获取Gateway bandwidth quota information.
- * @method void setVpnGatewayQuotaSet(array $VpnGatewayQuotaSet) 设置Gateway bandwidth quota information.
+ * @method string getVpnGatewayId() Obtain Gateway instance ID.
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set Gateway instance ID.
+ * @method string getVpcId() Obtain VPC instance ID.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID.
+ * @method string getVpnGatewayName() Obtain Gateway instance name.
+ * @method void setVpnGatewayName(string $VpnGatewayName) Set Gateway instance name.
+ * @method string getType() Obtain Gateway instance type: 'IPSEC' and 'SSL'.
+ * @method void setType(string $Type) Set Gateway instance type: 'IPSEC' and 'SSL'.
+ * @method string getState() Obtain Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
+ * @method void setState(string $State) Set Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
+ * @method string getPublicIpAddress() Obtain Gateway public IP.
+ * @method void setPublicIpAddress(string $PublicIpAddress) Set Gateway public IP.
+ * @method string getRenewFlag() Obtain Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
+ * @method void setRenewFlag(string $RenewFlag) Set Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
+ * @method string getInstanceChargeType() Obtain Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid.
+ * @method integer getInternetMaxBandwidthOut() Obtain Outbound bandwidth of gateway.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Outbound bandwidth of gateway.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
+ * @method string getExpiredTime() Obtain Expiration time of the prepaid gateway.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time of the prepaid gateway.
+ * @method boolean getIsAddressBlocked() Obtain Whether the public IP is blocked.
+ * @method void setIsAddressBlocked(boolean $IsAddressBlocked) Set Whether the public IP is blocked.
+ * @method string getNewPurchasePlan() Obtain Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+ * @method void setNewPurchasePlan(string $NewPurchasePlan) Set Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+ * @method string getRestrictState() Obtain Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
+ * @method void setRestrictState(string $RestrictState) Set Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
+ * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-2`
+ * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`
+ * @method array getVpnGatewayQuotaSet() Obtain Gateway bandwidth quota information.
+ * @method void setVpnGatewayQuotaSet(array $VpnGatewayQuotaSet) Set Gateway bandwidth quota information.
  */
 
 /**
- *VPN网关对象。
+ *VPN gateway object.
  */
 class VpnGateway extends AbstractModel
 {
     /**
-     * @var string 网关实例ID。
+     * @var string Gateway instance ID.
      */
     public $VpnGatewayId;
 
     /**
-     * @var string VPC实例ID。
+     * @var string VPC instance ID.
      */
     public $VpcId;
 
     /**
-     * @var string 网关实例名称。
+     * @var string Gateway instance name.
      */
     public $VpnGatewayName;
 
     /**
-     * @var string 网关实例类型：'IPSEC', 'SSL'。
+     * @var string Gateway instance type: 'IPSEC' and 'SSL'.
      */
     public $Type;
 
     /**
-     * @var string 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * @var string Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
      */
     public $State;
 
     /**
-     * @var string 网关公网IP。
+     * @var string Gateway public IP.
      */
     public $PublicIpAddress;
 
     /**
-     * @var string 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
+     * @var string Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
      */
     public $RenewFlag;
 
     /**
-     * @var string 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * @var string Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid.
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer 网关出带宽。
+     * @var integer Outbound bandwidth of gateway.
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
 
     /**
-     * @var string 预付费网关过期时间。
+     * @var string Expiration time of the prepaid gateway.
      */
     public $ExpiredTime;
 
     /**
-     * @var boolean 公网IP是否被封堵。
+     * @var boolean Whether the public IP is blocked.
      */
     public $IsAddressBlocked;
 
     /**
-     * @var string 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
+     * @var string Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
      */
     public $NewPurchasePlan;
 
     /**
-     * @var string 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * @var string Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
      */
     public $RestrictState;
 
     /**
-     * @var string 可用区，如：ap-guangzhou-2
+     * @var string The availability zone, such as `ap-guangzhou-2`
      */
     public $Zone;
 
@@ -137,21 +137,21 @@ class VpnGateway extends AbstractModel
      */
     public $VpnGatewayQuotaSet;
     /**
-     * @param string $VpnGatewayId 网关实例ID。
-     * @param string $VpcId VPC实例ID。
-     * @param string $VpnGatewayName 网关实例名称。
-     * @param string $Type 网关实例类型：'IPSEC', 'SSL'。
-     * @param string $State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
-     * @param string $PublicIpAddress 网关公网IP。
-     * @param string $RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
-     * @param string $InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
-     * @param integer $InternetMaxBandwidthOut 网关出带宽。
-     * @param string $CreatedTime 创建时间。
-     * @param string $ExpiredTime 预付费网关过期时间。
-     * @param boolean $IsAddressBlocked 公网IP是否被封堵。
-     * @param string $NewPurchasePlan 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
-     * @param string $RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
-     * @param string $Zone 可用区，如：ap-guangzhou-2
+     * @param string $VpnGatewayId Gateway instance ID.
+     * @param string $VpcId VPC instance ID.
+     * @param string $VpnGatewayName Gateway instance name.
+     * @param string $Type Gateway instance type: 'IPSEC' and 'SSL'.
+     * @param string $State Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
+     * @param string $PublicIpAddress Gateway public IP.
+     * @param string $RenewFlag Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
+     * @param string $InstanceChargeType Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid.
+     * @param integer $InternetMaxBandwidthOut Outbound bandwidth of gateway.
+     * @param string $CreatedTime Creation Time.
+     * @param string $ExpiredTime Expiration time of the prepaid gateway.
+     * @param boolean $IsAddressBlocked Whether the public IP is blocked.
+     * @param string $NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+     * @param string $RestrictState Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
+     * @param string $Zone The availability zone, such as `ap-guangzhou-2`
      * @param array $VpnGatewayQuotaSet Gateway bandwidth quota information.
      */
     function __construct()
@@ -159,7 +159,7 @@ class VpnGateway extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

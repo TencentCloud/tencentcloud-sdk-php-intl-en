@@ -18,44 +18,44 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPlatform() 获取平台。
- * @method void setPlatform(string $Platform) 设置平台。
- * @method string getSoftwareVersion() 获取软件版本。
- * @method void setSoftwareVersion(string $SoftwareVersion) 设置软件版本。
- * @method string getVendorName() 获取供应商名称。
- * @method void setVendorName(string $VendorName) 设置供应商名称。
+ * @method string getPlatform() Obtain Platform.
+ * @method void setPlatform(string $Platform) Set Platform.
+ * @method string getSoftwareVersion() Obtain Software version.
+ * @method void setSoftwareVersion(string $SoftwareVersion) Set Software version.
+ * @method string getVendorName() Obtain Vendor name.
+ * @method void setVendorName(string $VendorName) Set Vendor name.
  */
 
 /**
- *对端网关厂商信息对象。
+ *Customer gateway vendor information object.
  */
 class CustomerGatewayVendor extends AbstractModel
 {
     /**
-     * @var string 平台。
+     * @var string Platform.
      */
     public $Platform;
 
     /**
-     * @var string 软件版本。
+     * @var string Software version.
      */
     public $SoftwareVersion;
 
     /**
-     * @var string 供应商名称。
+     * @var string Vendor name.
      */
     public $VendorName;
     /**
-     * @param string $Platform 平台。
-     * @param string $SoftwareVersion 软件版本。
-     * @param string $VendorName 供应商名称。
+     * @param string $Platform Platform.
+     * @param string $SoftwareVersion Software version.
+     * @param string $VendorName Vendor name.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

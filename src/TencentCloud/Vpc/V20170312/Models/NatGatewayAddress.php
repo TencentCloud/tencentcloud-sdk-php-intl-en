@@ -18,44 +18,44 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressId() 获取弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
- * @method void setAddressId(string $AddressId) 设置弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
- * @method string getPublicIpAddress() 获取外网IP地址，形如：`123.121.34.33`。
- * @method void setPublicIpAddress(string $PublicIpAddress) 设置外网IP地址，形如：`123.121.34.33`。
- * @method boolean getIsBlocked() 获取资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
- * @method void setIsBlocked(boolean $IsBlocked) 设置资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+ * @method string getAddressId() Obtain The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
+ * @method void setAddressId(string $AddressId) Set The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
+ * @method string getPublicIpAddress() Obtain The public IP address, such as `123.121.34.33`.
+ * @method void setPublicIpAddress(string $PublicIpAddress) Set The public IP address, such as `123.121.34.33`.
+ * @method boolean getIsBlocked() Obtain The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
+ * @method void setIsBlocked(boolean $IsBlocked) Set The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
  */
 
 /**
- *NAT网关绑定的弹性IP
+ *The EIP bound to the NAT gateway
  */
 class NatGatewayAddress extends AbstractModel
 {
     /**
-     * @var string 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
+     * @var string The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
      */
     public $AddressId;
 
     /**
-     * @var string 外网IP地址，形如：`123.121.34.33`。
+     * @var string The public IP address, such as `123.121.34.33`.
      */
     public $PublicIpAddress;
 
     /**
-     * @var boolean 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+     * @var boolean The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
      */
     public $IsBlocked;
     /**
-     * @param string $AddressId 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
-     * @param string $PublicIpAddress 外网IP地址，形如：`123.121.34.33`。
-     * @param boolean $IsBlocked 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+     * @param string $AddressId The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
+     * @param string $PublicIpAddress The public IP address, such as `123.121.34.33`.
+     * @param boolean $IsBlocked The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

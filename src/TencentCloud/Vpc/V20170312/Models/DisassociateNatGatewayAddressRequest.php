@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
- * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
- * @method array getPublicIpAddresses() 获取绑定NAT网关的弹性IP数组。
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置绑定NAT网关的弹性IP数组。
+ * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
+ * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
+ * @method array getPublicIpAddresses() Obtain The array of EIPs bound to the NAT gateway.
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The array of EIPs bound to the NAT gateway.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class DisassociateNatGatewayAddressRequest extends AbstractModel
 {
     /**
-     * @var string NAT网关的ID，形如：`nat-df45454`。
+     * @var string The ID of the NAT gateway, such as `nat-df45454`.
      */
     public $NatGatewayId;
 
     /**
-     * @var array 绑定NAT网关的弹性IP数组。
+     * @var array The array of EIPs bound to the NAT gateway.
      */
     public $PublicIpAddresses;
     /**
-     * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
-     * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组。
+     * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+     * @param array $PublicIpAddresses The array of EIPs bound to the NAT gateway.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

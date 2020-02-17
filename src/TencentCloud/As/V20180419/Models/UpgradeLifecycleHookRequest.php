@@ -18,20 +18,20 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLifecycleHookId() 获取Lifecycle hook ID
- * @method void setLifecycleHookId(string $LifecycleHookId) 设置Lifecycle hook ID
- * @method string getLifecycleHookName() 获取Lifecycle hook name
- * @method void setLifecycleHookName(string $LifecycleHookName) 设置Lifecycle hook name
- * @method string getLifecycleTransition() 获取Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
- * @method void setLifecycleTransition(string $LifecycleTransition) 设置Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
- * @method string getDefaultResult() 获取Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
- * @method void setDefaultResult(string $DefaultResult) 设置Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
- * @method integer getHeartbeatTimeout() 获取The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
- * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) 设置The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
- * @method string getNotificationMetadata() 获取Additional information sent by AS to the notification target. The default value is ''
- * @method void setNotificationMetadata(string $NotificationMetadata) 设置Additional information sent by AS to the notification target. The default value is ''
- * @method NotificationTarget getNotificationTarget() 获取Notification target
- * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置Notification target
+ * @method string getLifecycleHookId() Obtain Lifecycle hook ID
+ * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
+ * @method string getLifecycleHookName() Obtain Lifecycle hook name
+ * @method void setLifecycleHookName(string $LifecycleHookName) Set Lifecycle hook name
+ * @method string getLifecycleTransition() Obtain Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
+ * @method void setLifecycleTransition(string $LifecycleTransition) Set Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
+ * @method string getDefaultResult() Obtain Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+ * @method void setDefaultResult(string $DefaultResult) Set Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+ * @method integer getHeartbeatTimeout() Obtain The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+ * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+ * @method string getNotificationMetadata() Obtain Additional information sent by AS to the notification target. The default value is ''
+ * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information sent by AS to the notification target. The default value is ''
+ * @method NotificationTarget getNotificationTarget() Obtain Notification target
+ * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
  */
 
 /**
@@ -87,7 +87,7 @@ class UpgradeLifecycleHookRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

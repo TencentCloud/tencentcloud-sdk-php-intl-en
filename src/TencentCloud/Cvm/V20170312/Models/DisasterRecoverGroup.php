@@ -18,23 +18,23 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDisasterRecoverGroupId() 获取ID of a spread placement group.
- * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置ID of a spread placement group.
- * @method string getName() 获取Name of a spread placement group, which must be 1-60 characters long.
- * @method void setName(string $Name) 设置Name of a spread placement group, which must be 1-60 characters long.
- * @method string getType() 获取Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
- * @method void setType(string $Type) 设置Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
- * @method integer getCvmQuotaTotal() 获取The maximum number of CVMs that can be hosted in a spread placement group.
- * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) 设置The maximum number of CVMs that can be hosted in a spread placement group.
- * @method integer getCurrentNum() 获取The current number of CVMs in a spread placement group.
- * @method void setCurrentNum(integer $CurrentNum) 设置The current number of CVMs in a spread placement group.
- * @method array getInstanceIds() 获取The list of CVM IDs in a spread placement group.
+ * @method string getDisasterRecoverGroupId() Obtain ID of a spread placement group.
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set ID of a spread placement group.
+ * @method string getName() Obtain Name of a spread placement group, which must be 1-60 characters long.
+ * @method void setName(string $Name) Set Name of a spread placement group, which must be 1-60 characters long.
+ * @method string getType() Obtain Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+ * @method void setType(string $Type) Set Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+ * @method integer getCvmQuotaTotal() Obtain The maximum number of CVMs that can be hosted in a spread placement group.
+ * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) Set The maximum number of CVMs that can be hosted in a spread placement group.
+ * @method integer getCurrentNum() Obtain The current number of CVMs in a spread placement group.
+ * @method void setCurrentNum(integer $CurrentNum) Set The current number of CVMs in a spread placement group.
+ * @method array getInstanceIds() Obtain The list of CVM IDs in a spread placement group.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setInstanceIds(array $InstanceIds) 设置The list of CVM IDs in a spread placement group.
+ * @method void setInstanceIds(array $InstanceIds) Set The list of CVM IDs in a spread placement group.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getCreateTime() 获取Creation time of a spread placement group.
+ * @method string getCreateTime() Obtain Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setCreateTime(string $CreateTime) 设置Creation time of a spread placement group.
+ * @method void setCreateTime(string $CreateTime) Set Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -95,7 +95,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

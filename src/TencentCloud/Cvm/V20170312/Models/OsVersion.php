@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOsName() 获取Operating system type
- * @method void setOsName(string $OsName) 设置Operating system type
- * @method array getOsVersions() 获取Supported operating system versions
- * @method void setOsVersions(array $OsVersions) 设置Supported operating system versions
- * @method array getArchitecture() 获取Supported operating system architecture
- * @method void setArchitecture(array $Architecture) 设置Supported operating system architecture
+ * @method string getOsName() Obtain Operating system type
+ * @method void setOsName(string $OsName) Set Operating system type
+ * @method array getOsVersions() Obtain Supported operating system versions
+ * @method void setOsVersions(array $OsVersions) Set Supported operating system versions
+ * @method array getArchitecture() Obtain Supported operating system architecture
+ * @method void setArchitecture(array $Architecture) Set Supported operating system architecture
  */
 
 /**
@@ -55,7 +55,7 @@ class OsVersion extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

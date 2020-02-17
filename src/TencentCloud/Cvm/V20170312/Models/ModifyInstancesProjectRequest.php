@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
- * @method void setInstanceIds(array $InstanceIds) 设置Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
- * @method integer getProjectId() 获取Project ID. You can create a project by calling [AddProject](https://cloud.tencent.com/doc/api/403/4398). When calling [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) to query instances, the project IDs can be used to filter the results.
- * @method void setProjectId(integer $ProjectId) 设置Project ID. You can create a project by calling [AddProject](https://cloud.tencent.com/doc/api/403/4398). When calling [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) to query instances, the project IDs can be used to filter the results.
+ * @method array getInstanceIds() Obtain Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+ * @method integer getProjectId() Obtain Project ID. You can create a project by calling [AddProject](https://cloud.tencent.com/doc/api/403/4398). When calling [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) to query instances, the project IDs can be used to filter the results.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. You can create a project by calling [AddProject](https://cloud.tencent.com/doc/api/403/4398). When calling [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) to query instances, the project IDs can be used to filter the results.
  */
 
 /**
@@ -47,7 +47,7 @@ class ModifyInstancesProjectRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

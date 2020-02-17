@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getProxySet() 获取Information of connections that the statistics can be derived from
- * @method void setProxySet(array $ProxySet) 设置Information of connections that the statistics can be derived from
- * @method integer getTotalCount() 获取Quantity of connections
- * @method void setTotalCount(integer $TotalCount) 设置Quantity of connections
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getProxySet() Obtain Information of connections that the statistics can be derived from
+ * @method void setProxySet(array $ProxySet) Set Information of connections that the statistics can be derived from
+ * @method integer getTotalCount() Obtain Quantity of connections
+ * @method void setTotalCount(integer $TotalCount) Set Quantity of connections
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeProxyAndStatisticsListenersResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

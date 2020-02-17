@@ -18,84 +18,84 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddress() 获取`IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
- * @method void setAddress(string $Address) 设置`IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
- * @method boolean getPrimary() 获取是否是主`IP`。
- * @method void setPrimary(boolean $Primary) 设置是否是主`IP`。
- * @method string getAddressId() 获取`EIP`实例`ID`，形如：`eip-hxlqja90`。
- * @method void setAddressId(string $AddressId) 设置`EIP`实例`ID`，形如：`eip-hxlqja90`。
- * @method string getDescription() 获取描述信息。
- * @method void setDescription(string $Description) 设置描述信息。
- * @method boolean getIsWanIpBlocked() 获取公网IP是否被封堵。
- * @method void setIsWanIpBlocked(boolean $IsWanIpBlocked) 设置公网IP是否被封堵。
- * @method string getState() 获取`IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
- * @method void setState(string $State) 设置`IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
+ * @method string getAddress() Obtain `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
+ * @method void setAddress(string $Address) Set `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
+ * @method boolean getPrimary() Obtain Whether it is a primary `IP`.
+ * @method void setPrimary(boolean $Primary) Set Whether it is a primary `IP`.
+ * @method string getAddressId() Obtain The `ID` of the `EIP` instance, such as `eip-hxlqja90`.
+ * @method void setAddressId(string $AddressId) Set The `ID` of the `EIP` instance, such as `eip-hxlqja90`.
+ * @method string getDescription() Obtain Message description
+ * @method void setDescription(string $Description) Set Message description
+ * @method boolean getIsWanIpBlocked() Obtain Whether the public IP is blocked.
+ * @method void setIsWanIpBlocked(boolean $IsWanIpBlocked) Set Whether the public IP is blocked.
+ * @method string getState() Obtain `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li>
+ * @method void setState(string $State) Set `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li>
  */
 
 /**
- *`IPv6`地址信息。
+ *`IPv6` address information.
  */
 class Ipv6Address extends AbstractModel
 {
     /**
-     * @var string `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
+     * @var string `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
      */
     public $Address;
 
     /**
-     * @var boolean 是否是主`IP`。
+     * @var boolean Whether it is a primary `IP`.
      */
     public $Primary;
 
     /**
-     * @var string `EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * @var string The `ID` of the `EIP` instance, such as `eip-hxlqja90`.
      */
     public $AddressId;
 
     /**
-     * @var string 描述信息。
+     * @var string Message description
      */
     public $Description;
 
     /**
-     * @var boolean 公网IP是否被封堵。
+     * @var boolean Whether the public IP is blocked.
      */
     public $IsWanIpBlocked;
 
     /**
-     * @var string `IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
+     * @var string `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li>
      */
     public $State;
     /**
-     * @param string $Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
-     * @param boolean $Primary 是否是主`IP`。
-     * @param string $AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
-     * @param string $Description 描述信息。
-     * @param boolean $IsWanIpBlocked 公网IP是否被封堵。
-     * @param string $State `IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
+     * @param string $Address `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
+     * @param boolean $Primary Whether it is a primary `IP`.
+     * @param string $AddressId The `ID` of the `EIP` instance, such as `eip-hxlqja90`.
+     * @param string $Description Message description
+     * @param boolean $IsWanIpBlocked Whether the public IP is blocked.
+     * @param string $State `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li>
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

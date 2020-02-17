@@ -18,8 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The number of returned security rules.
+ * @method void setTotalCount(integer $TotalCount) Set The number of returned security rules.
+ * @method array getSecurityRuleSet() Obtain List of returned security rules.
+ * @method void setSecurityRuleSet(array $SecurityRuleSet) Set List of returned security rules.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -28,10 +32,22 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityRulesResponse extends AbstractModel
 {
     /**
+     * @var integer The number of returned security rules.
+     */
+    public $TotalCount;
+
+    /**
+     * @var array List of returned security rules.
+     */
+    public $SecurityRuleSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param integer $TotalCount The number of returned security rules.
+     * @param array $SecurityRuleSet List of returned security rules.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -39,13 +55,26 @@ class DescribeSecurityRulesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("SecurityRuleSet",$param) and $param["SecurityRuleSet"] !== null) {
+            $this->SecurityRuleSet = [];
+            foreach ($param["SecurityRuleSet"] as $key => $value){
+                $obj = new SecurityPolicyRuleOut();
+                $obj->deserialize($value);
+                array_push($this->SecurityRuleSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

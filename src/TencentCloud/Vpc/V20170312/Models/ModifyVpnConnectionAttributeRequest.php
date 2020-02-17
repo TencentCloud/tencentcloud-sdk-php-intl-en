@@ -18,18 +18,18 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpnConnectionId() 获取VPN通道实例ID。形如：vpnx-f49l6u0z。
- * @method void setVpnConnectionId(string $VpnConnectionId) 设置VPN通道实例ID。形如：vpnx-f49l6u0z。
- * @method string getVpnConnectionName() 获取VPN通道名称，可任意命名，但不得超过60个字符。
- * @method void setVpnConnectionName(string $VpnConnectionName) 设置VPN通道名称，可任意命名，但不得超过60个字符。
- * @method string getPreShareKey() 获取预共享密钥。
- * @method void setPreShareKey(string $PreShareKey) 设置预共享密钥。
- * @method array getSecurityPolicyDatabases() 获取SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
- * @method void setSecurityPolicyDatabases(array $SecurityPolicyDatabases) 设置SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
- * @method IKEOptionsSpecification getIKEOptionsSpecification() 获取IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
- * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
- * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取IPSec配置，腾讯云提供IPSec安全会话设置。
- * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSec配置，腾讯云提供IPSec安全会话设置。
+ * @method string getVpnConnectionId() Obtain The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+ * @method void setVpnConnectionId(string $VpnConnectionId) Set The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+ * @method string getVpnConnectionName() Obtain VPN tunnel can be named freely, but the maximum length is 60 characters.
+ * @method void setVpnConnectionName(string $VpnConnectionName) Set VPN tunnel can be named freely, but the maximum length is 60 characters.
+ * @method string getPreShareKey() Obtain The pre-shared key.
+ * @method void setPreShareKey(string $PreShareKey) Set The pre-shared key.
+ * @method array getSecurityPolicyDatabases() Obtain The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+ * @method void setSecurityPolicyDatabases(array $SecurityPolicyDatabases) Set The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+ * @method IKEOptionsSpecification getIKEOptionsSpecification() Obtain IKE (Internet Key Exchange) configuration. IKE comes with a self-protection mechanism. The network security protocol is configured by the user.
+ * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) Set IKE (Internet Key Exchange) configuration. IKE comes with a self-protection mechanism. The network security protocol is configured by the user.
+ * @method IPSECOptionsSpecification getIPSECOptionsSpecification() Obtain IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
+ * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
  */
 
 /**
@@ -38,48 +38,48 @@ use TencentCloud\Common\AbstractModel;
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
     /**
-     * @var string VPN通道实例ID。形如：vpnx-f49l6u0z。
+     * @var string The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
      */
     public $VpnConnectionId;
 
     /**
-     * @var string VPN通道名称，可任意命名，但不得超过60个字符。
+     * @var string VPN tunnel can be named freely, but the maximum length is 60 characters.
      */
     public $VpnConnectionName;
 
     /**
-     * @var string 预共享密钥。
+     * @var string The pre-shared key.
      */
     public $PreShareKey;
 
     /**
-     * @var array SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * @var array The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
      */
     public $SecurityPolicyDatabases;
 
     /**
-     * @var IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
+     * @var IKEOptionsSpecification IKE (Internet Key Exchange) configuration. IKE comes with a self-protection mechanism. The network security protocol is configured by the user.
      */
     public $IKEOptionsSpecification;
 
     /**
-     * @var IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置。
+     * @var IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
      */
     public $IPSECOptionsSpecification;
     /**
-     * @param string $VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
-     * @param string $VpnConnectionName VPN通道名称，可任意命名，但不得超过60个字符。
-     * @param string $PreShareKey 预共享密钥。
-     * @param array $SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
-     * @param IKEOptionsSpecification $IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
-     * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置。
+     * @param string $VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+     * @param string $VpnConnectionName VPN tunnel can be named freely, but the maximum length is 60 characters.
+     * @param string $PreShareKey The pre-shared key.
+     * @param array $SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+     * @param IKEOptionsSpecification $IKEOptionsSpecification IKE (Internet Key Exchange) configuration. IKE comes with a self-protection mechanism. The network security protocol is configured by the user.
+     * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

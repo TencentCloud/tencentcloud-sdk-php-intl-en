@@ -18,29 +18,29 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
+ * @method string getInstanceId() Obtain Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAccountName() 获取Account name (`root` for a root account)
+ * @method string getAccountName() Obtain Account name (`root` for a root account)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccountName(string $AccountName) 设置Account name (`root` for a root account)
+ * @method void setAccountName(string $AccountName) Set Account name (`root` for a root account)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRemark() 获取Account description information
+ * @method string getRemark() Obtain Account description information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) 设置Account description information
+ * @method void setRemark(string $Remark) Set Account description information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPrivilege() 获取Read/write policy. r: read-only; w: write-only; rw: read/write
+ * @method string getPrivilege() Obtain Read/write policy. r: read-only; w: write-only; rw: read/write
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrivilege(string $Privilege) 设置Read/write policy. r: read-only; w: write-only; rw: read/write
+ * @method void setPrivilege(string $Privilege) Set Read/write policy. r: read-only; w: write-only; rw: read/write
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getReadonlyPolicy() 获取Routing policy. master: master node; replication: slave node
+ * @method array getReadonlyPolicy() Obtain Routing policy. master: master node; replication: slave node
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置Routing policy. master: master node; replication: slave node
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. master: master node; replication: slave node
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() 获取Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
+ * @method integer getStatus() Obtain Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) 设置Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
+ * @method void setStatus(integer $Status) Set Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -103,7 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

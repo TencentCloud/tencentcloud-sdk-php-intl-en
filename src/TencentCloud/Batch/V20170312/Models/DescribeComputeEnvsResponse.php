@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getComputeEnvSet() 获取List of compute environments
- * @method void setComputeEnvSet(array $ComputeEnvSet) 设置List of compute environments
- * @method integer getTotalCount() 获取Number of compute environments
- * @method void setTotalCount(integer $TotalCount) 设置Number of compute environments
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getComputeEnvSet() Obtain List of compute environments
+ * @method void setComputeEnvSet(array $ComputeEnvSet) Set List of compute environments
+ * @method integer getTotalCount() Obtain Number of compute environments
+ * @method void setTotalCount(integer $TotalCount) Set Number of compute environments
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeComputeEnvsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

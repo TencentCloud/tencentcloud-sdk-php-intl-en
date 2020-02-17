@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSubnetId() 获取子网实例ID。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID。
- * @method string getRouteTableId() 获取路由表实例ID。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID。
+ * @method string getSubnetId() Obtain Subnet instance ID.
+ * @method void setSubnetId(string $SubnetId) Set Subnet instance ID.
+ * @method string getRouteTableId() Obtain Route table instance ID.
+ * @method void setRouteTableId(string $RouteTableId) Set Route table instance ID.
  */
 
 /**
- *路由表关联关系
+ *The association relationships of the route table
  */
 class RouteTableAssociation extends AbstractModel
 {
     /**
-     * @var string 子网实例ID。
+     * @var string Subnet instance ID.
      */
     public $SubnetId;
 
     /**
-     * @var string 路由表实例ID。
+     * @var string Route table instance ID.
      */
     public $RouteTableId;
     /**
-     * @param string $SubnetId 子网实例ID。
-     * @param string $RouteTableId 路由表实例ID。
+     * @param string $SubnetId Subnet instance ID.
+     * @param string $RouteTableId Route table instance ID.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

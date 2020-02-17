@@ -18,14 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getAutoBackupType() 获取Backup type. Auto backup type: 1 "scheduled rollback"
- * @method void setAutoBackupType(integer $AutoBackupType) 设置Backup type. Auto backup type: 1 "scheduled rollback"
- * @method array getWeekDays() 获取Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
- * @method void setWeekDays(array $WeekDays) 设置Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
- * @method string getTimePeriod() 获取Time period.
- * @method void setTimePeriod(string $TimePeriod) 设置Time period.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getAutoBackupType() Obtain Backup type. Auto backup type: 1 "scheduled rollback"
+ * @method void setAutoBackupType(integer $AutoBackupType) Set Backup type. Auto backup type: 1 "scheduled rollback"
+ * @method array getWeekDays() Obtain Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+ * @method void setWeekDays(array $WeekDays) Set Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+ * @method string getTimePeriod() Obtain Time period.
+ * @method void setTimePeriod(string $TimePeriod) Set Time period.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

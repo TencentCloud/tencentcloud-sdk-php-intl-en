@@ -18,20 +18,20 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRoleId() 获取Role ID
- * @method void setRoleId(string $RoleId) 设置Role ID
- * @method string getRoleName() 获取Role name
- * @method void setRoleName(string $RoleName) 设置Role name
- * @method string getPolicyDocument() 获取Role policy document
- * @method void setPolicyDocument(string $PolicyDocument) 设置Role policy document
- * @method string getDescription() 获取Role description
- * @method void setDescription(string $Description) 设置Role description
- * @method string getAddTime() 获取Time role created
- * @method void setAddTime(string $AddTime) 设置Time role created
- * @method string getUpdateTime() 获取Time role last updated
- * @method void setUpdateTime(string $UpdateTime) 设置Time role last updated
- * @method integer getConsoleLogin() 获取If login is allowed for the role
- * @method void setConsoleLogin(integer $ConsoleLogin) 设置If login is allowed for the role
+ * @method string getRoleId() Obtain Role ID
+ * @method void setRoleId(string $RoleId) Set Role ID
+ * @method string getRoleName() Obtain Role name
+ * @method void setRoleName(string $RoleName) Set Role name
+ * @method string getPolicyDocument() Obtain Role policy document
+ * @method void setPolicyDocument(string $PolicyDocument) Set Role policy document
+ * @method string getDescription() Obtain Role description
+ * @method void setDescription(string $Description) Set Role description
+ * @method string getAddTime() Obtain Time role created
+ * @method void setAddTime(string $AddTime) Set Time role created
+ * @method string getUpdateTime() Obtain Time role last updated
+ * @method void setUpdateTime(string $UpdateTime) Set Time role last updated
+ * @method integer getConsoleLogin() Obtain If login is allowed for the role
+ * @method void setConsoleLogin(integer $ConsoleLogin) Set If login is allowed for the role
  */
 
 /**
@@ -87,7 +87,7 @@ class RoleInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

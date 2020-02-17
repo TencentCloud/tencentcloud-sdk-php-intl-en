@@ -18,26 +18,26 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProxyId() 获取Connection ID
- * @method void setProxyId(string $ProxyId) 设置Connection ID
- * @method string getStatus() 获取Security policy status:
+ * @method string getProxyId() Obtain Connection ID
+ * @method void setProxyId(string $ProxyId) Set Connection ID
+ * @method string getStatus() Obtain Security policy status:
 BOUND (security policies enabled)
 UNBIND (security policies disabled)
 BINDING (enabling security policies)
 UNBINDING (disabling security policies)
- * @method void setStatus(string $Status) 设置Security policy status:
+ * @method void setStatus(string $Status) Set Security policy status:
 BOUND (security policies enabled)
 UNBIND (security policies disabled)
 BINDING (enabling security policies)
 UNBINDING (disabling security policies)
- * @method string getDefaultAction() 获取Default policy: ACCEPT or DROP.
- * @method void setDefaultAction(string $DefaultAction) 设置Default policy: ACCEPT or DROP.
- * @method string getPolicyId() 获取Policy ID
- * @method void setPolicyId(string $PolicyId) 设置Policy ID
- * @method array getRuleList() 获取List of rules
- * @method void setRuleList(array $RuleList) 设置List of rules
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getDefaultAction() Obtain Default policy: ACCEPT or DROP.
+ * @method void setDefaultAction(string $DefaultAction) Set Default policy: ACCEPT or DROP.
+ * @method string getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(string $PolicyId) Set Policy ID
+ * @method array getRuleList() Obtain List of rules
+ * @method void setRuleList(array $RuleList) Set List of rules
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -95,7 +95,7 @@ UNBINDING (disabling security policies)
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

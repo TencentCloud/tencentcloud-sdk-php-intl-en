@@ -18,24 +18,24 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLifecycleHookId() 获取Lifecycle hook ID
- * @method void setLifecycleHookId(string $LifecycleHookId) 设置Lifecycle hook ID
- * @method string getLifecycleHookName() 获取Lifecycle hook name
- * @method void setLifecycleHookName(string $LifecycleHookName) 设置Lifecycle hook name
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID
- * @method string getDefaultResult() 获取Default result of the lifecycle hook
- * @method void setDefaultResult(string $DefaultResult) 设置Default result of the lifecycle hook
- * @method integer getHeartbeatTimeout() 获取Wait timeout period of the lifecycle hook
- * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) 设置Wait timeout period of the lifecycle hook
- * @method string getLifecycleTransition() 获取Applicable scenario of the lifecycle hook
- * @method void setLifecycleTransition(string $LifecycleTransition) 设置Applicable scenario of the lifecycle hook
- * @method string getNotificationMetadata() 获取Additional information for the notification target
- * @method void setNotificationMetadata(string $NotificationMetadata) 设置Additional information for the notification target
- * @method string getCreatedTime() 获取Creation time
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time
- * @method NotificationTarget getNotificationTarget() 获取Notification target
- * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置Notification target
+ * @method string getLifecycleHookId() Obtain Lifecycle hook ID
+ * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
+ * @method string getLifecycleHookName() Obtain Lifecycle hook name
+ * @method void setLifecycleHookName(string $LifecycleHookName) Set Lifecycle hook name
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getDefaultResult() Obtain Default result of the lifecycle hook
+ * @method void setDefaultResult(string $DefaultResult) Set Default result of the lifecycle hook
+ * @method integer getHeartbeatTimeout() Obtain Wait timeout period of the lifecycle hook
+ * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set Wait timeout period of the lifecycle hook
+ * @method string getLifecycleTransition() Obtain Applicable scenario of the lifecycle hook
+ * @method void setLifecycleTransition(string $LifecycleTransition) Set Applicable scenario of the lifecycle hook
+ * @method string getNotificationMetadata() Obtain Additional information for the notification target
+ * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information for the notification target
+ * @method string getCreatedTime() Obtain Creation time
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time
+ * @method NotificationTarget getNotificationTarget() Obtain Notification target
+ * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
  */
 
 /**
@@ -103,7 +103,7 @@ class LifecycleHook extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

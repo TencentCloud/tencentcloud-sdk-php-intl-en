@@ -18,16 +18,16 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
- * @method void setTagKey(string $TagKey) 设置Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
- * @method string getTagValue() 获取Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
- * @method void setTagValue(string $TagValue) 设置Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
- * @method integer getOffset() 获取Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method void setOffset(integer $Offset) 设置Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method integer getLimit() 获取Page size. The default value is 0.
- * @method void setLimit(integer $Limit) 设置Page size. The default value is 0.
- * @method integer getCreateUin() 获取Creator `Uin`. If not specified, `Uin` is only used as the query condition.
- * @method void setCreateUin(integer $CreateUin) 设置Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+ * @method string getTagKey() Obtain Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+ * @method void setTagKey(string $TagKey) Set Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+ * @method string getTagValue() Obtain Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+ * @method void setTagValue(string $TagValue) Set Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+ * @method integer getOffset() Obtain Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+ * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+ * @method integer getLimit() Obtain Page size. The default value is 0.
+ * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
+ * @method integer getCreateUin() Obtain Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+ * @method void setCreateUin(integer $CreateUin) Set Creator `Uin`. If not specified, `Uin` is only used as the query condition.
  */
 
 /**
@@ -71,7 +71,7 @@ class DescribeTagsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

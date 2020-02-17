@@ -18,22 +18,22 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method string getNetworkInterfaceName() 获取弹性网卡名称，最大长度不能超过60个字节。
- * @method void setNetworkInterfaceName(string $NetworkInterfaceName) 设置弹性网卡名称，最大长度不能超过60个字节。
- * @method string getSubnetId() 获取弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
- * @method void setSubnetId(string $SubnetId) 设置弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
- * @method string getNetworkInterfaceDescription() 获取弹性网卡描述，可任意命名，但不得超过60个字符。
- * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述，可任意命名，但不得超过60个字符。
- * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
- * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
- * @method array getSecurityGroupIds() 获取指定绑定的安全组，例如：['sg-1dd51d']。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置指定绑定的安全组，例如：['sg-1dd51d']。
- * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
- * @method array getTags() 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
- * @method void setTags(array $Tags) 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method string getNetworkInterfaceName() Obtain The name of the ENI. The maximum length is 60 characters.
+ * @method void setNetworkInterfaceName(string $NetworkInterfaceName) Set The name of the ENI. The maximum length is 60 characters.
+ * @method string getSubnetId() Obtain The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
+ * @method void setSubnetId(string $SubnetId) Set The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
+ * @method string getNetworkInterfaceDescription() Obtain ENI description can be named freely, but the maximum length is 60 characters.
+ * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) Set ENI description can be named freely, but the maximum length is 60 characters.
+ * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+ * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+ * @method array getSecurityGroupIds() Obtain Specifies the security group to be bound with, such as ['sg-1dd51d'].
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Specifies the security group to be bound with, such as ['sg-1dd51d'].
+ * @method array getPrivateIpAddresses() Obtain The information of the specified private IPs. You can specify a maximum of 10 each time.
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 each time.
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 
 /**
@@ -42,37 +42,37 @@ use TencentCloud\Common\AbstractModel;
 class CreateNetworkInterfaceRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public $VpcId;
 
     /**
-     * @var string 弹性网卡名称，最大长度不能超过60个字节。
+     * @var string The name of the ENI. The maximum length is 60 characters.
      */
     public $NetworkInterfaceName;
 
     /**
-     * @var string 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+     * @var string The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
      */
     public $SubnetId;
 
     /**
-     * @var string 弹性网卡描述，可任意命名，但不得超过60个字符。
+     * @var string ENI description can be named freely, but the maximum length is 60 characters.
      */
     public $NetworkInterfaceDescription;
 
     /**
-     * @var integer 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * @var integer The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
      */
     public $SecondaryPrivateIpAddressCount;
 
     /**
-     * @var array 指定绑定的安全组，例如：['sg-1dd51d']。
+     * @var array Specifies the security group to be bound with, such as ['sg-1dd51d'].
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 指定的内网IP信息，单次最多指定10个。
+     * @var array The information of the specified private IPs. You can specify a maximum of 10 each time.
      */
     public $PrivateIpAddresses;
 
@@ -81,13 +81,13 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      */
     public $Tags;
     /**
-     * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
-     * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
-     * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
-     * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
-     * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
-     * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
+     * @param string $SubnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
+     * @param string $NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
+     * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+     * @param array $SecurityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
+     * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
@@ -95,7 +95,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

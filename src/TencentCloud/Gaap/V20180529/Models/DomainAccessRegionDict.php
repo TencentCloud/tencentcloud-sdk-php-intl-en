@@ -18,18 +18,18 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getNationCountryInnerList() 获取Nearest access region
- * @method void setNationCountryInnerList(array $NationCountryInnerList) 设置Nearest access region
- * @method array getProxyList() 获取Acceleration region connection list
- * @method void setProxyList(array $ProxyList) 设置Acceleration region connection list
- * @method string getRegionId() 获取Acceleration region ID
- * @method void setRegionId(string $RegionId) 设置Acceleration region ID
- * @method string getGeographicalZoneInnerCode() 获取Acceleration region internal code
- * @method void setGeographicalZoneInnerCode(string $GeographicalZoneInnerCode) 设置Acceleration region internal code
- * @method string getContinentInnerCode() 获取Internal code of the continent to which the acceleration region belongs
- * @method void setContinentInnerCode(string $ContinentInnerCode) 设置Internal code of the continent to which the acceleration region belongs
- * @method string getRegionName() 获取Acceleration region alias
- * @method void setRegionName(string $RegionName) 设置Acceleration region alias
+ * @method array getNationCountryInnerList() Obtain Nearest access region
+ * @method void setNationCountryInnerList(array $NationCountryInnerList) Set Nearest access region
+ * @method array getProxyList() Obtain Acceleration region connection list
+ * @method void setProxyList(array $ProxyList) Set Acceleration region connection list
+ * @method string getRegionId() Obtain Acceleration region ID
+ * @method void setRegionId(string $RegionId) Set Acceleration region ID
+ * @method string getGeographicalZoneInnerCode() Obtain Acceleration region internal code
+ * @method void setGeographicalZoneInnerCode(string $GeographicalZoneInnerCode) Set Acceleration region internal code
+ * @method string getContinentInnerCode() Obtain Internal code of the continent to which the acceleration region belongs
+ * @method void setContinentInnerCode(string $ContinentInnerCode) Set Internal code of the continent to which the acceleration region belongs
+ * @method string getRegionName() Obtain Acceleration region alias
+ * @method void setRegionName(string $RegionName) Set Acceleration region alias
  */
 
 /**
@@ -79,7 +79,7 @@ class DomainAccessRegionDict extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

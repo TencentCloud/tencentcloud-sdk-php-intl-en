@@ -18,14 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取Load balancer ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置Load balancer ID
- * @method string getListenerId() 获取Application load balancer listener ID
- * @method void setListenerId(string $ListenerId) 设置Application load balancer listener ID
- * @method array getTargetAttributes() 获取List of target rule attributes
- * @method void setTargetAttributes(array $TargetAttributes) 设置List of target rule attributes
- * @method string getLocationId() 获取ID of a forwarding rule. This parameter is required for layer-7 listeners.
- * @method void setLocationId(string $LocationId) 设置ID of a forwarding rule. This parameter is required for layer-7 listeners.
+ * @method string getLoadBalancerId() Obtain Load balancer ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Load balancer ID
+ * @method string getListenerId() Obtain Application load balancer listener ID
+ * @method void setListenerId(string $ListenerId) Set Application load balancer listener ID
+ * @method array getTargetAttributes() Obtain List of target rule attributes
+ * @method void setTargetAttributes(array $TargetAttributes) Set List of target rule attributes
+ * @method string getLocationId() Obtain ID of a forwarding rule. This parameter is required for layer-7 listeners.
+ * @method void setLocationId(string $LocationId) Set ID of a forwarding rule. This parameter is required for layer-7 listeners.
  */
 
 /**
@@ -63,7 +63,7 @@ class ForwardLoadBalancer extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

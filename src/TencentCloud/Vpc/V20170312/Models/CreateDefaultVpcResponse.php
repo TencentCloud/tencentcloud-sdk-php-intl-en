@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method DefaultVpcSubnet getVpc() 获取默认VPC和子网ID
- * @method void setVpc(DefaultVpcSubnet $Vpc) 设置默认VPC和子网ID
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method DefaultVpcSubnet getVpc() Obtain Default VPC and subnet IDs
+ * @method void setVpc(DefaultVpcSubnet $Vpc) Set Default VPC and subnet IDs
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDefaultVpcResponse extends AbstractModel
 {
     /**
-     * @var DefaultVpcSubnet 默认VPC和子网ID
+     * @var DefaultVpcSubnet Default VPC and subnet IDs
      */
     public $Vpc;
 
@@ -39,7 +39,7 @@ class CreateDefaultVpcResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param DefaultVpcSubnet $Vpc 默认VPC和子网ID
+     * @param DefaultVpcSubnet $Vpc Default VPC and subnet IDs
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateDefaultVpcResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,68 +18,68 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
- * @method string getSecurityGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
- * @method void setSecurityGroupName(string $SecurityGroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
- * @method string getSecurityGroupDesc() 获取安全组备注，最多100个字符。
- * @method void setSecurityGroupDesc(string $SecurityGroupDesc) 设置安全组备注，最多100个字符。
- * @method string getProjectId() 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
- * @method void setProjectId(string $ProjectId) 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
- * @method boolean getIsDefault() 获取是否是默认安全组，默认安全组不支持删除。
- * @method void setIsDefault(boolean $IsDefault) 设置是否是默认安全组，默认安全组不支持删除。
- * @method string getCreatedTime() 获取安全组创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置安全组创建时间。
+ * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-ohuuioma`.
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-ohuuioma`.
+ * @method string getSecurityGroupName() Obtain Security group can be named freely, but cannot exceed 60 characters.
+ * @method void setSecurityGroupName(string $SecurityGroupName) Set Security group can be named freely, but cannot exceed 60 characters.
+ * @method string getSecurityGroupDesc() Obtain The remarks for the security group. The maximum length is 100 characters.
+ * @method void setSecurityGroupDesc(string $SecurityGroupDesc) Set The remarks for the security group. The maximum length is 100 characters.
+ * @method string getProjectId() Obtain The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+ * @method void setProjectId(string $ProjectId) Set The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+ * @method boolean getIsDefault() Obtain Whether it is the default security group (which cannot be deleted).
+ * @method void setIsDefault(boolean $IsDefault) Set Whether it is the default security group (which cannot be deleted).
+ * @method string getCreatedTime() Obtain Security group creation time.
+ * @method void setCreatedTime(string $CreatedTime) Set Security group creation time.
  */
 
 /**
- *安全组对象
+ *Security group object
  */
 class SecurityGroup extends AbstractModel
 {
     /**
-     * @var string 安全组实例ID，例如：sg-ohuuioma。
+     * @var string The security group instance ID, such as `sg-ohuuioma`.
      */
     public $SecurityGroupId;
 
     /**
-     * @var string 安全组名称，可任意命名，但不得超过60个字符。
+     * @var string Security group can be named freely, but cannot exceed 60 characters.
      */
     public $SecurityGroupName;
 
     /**
-     * @var string 安全组备注，最多100个字符。
+     * @var string The remarks for the security group. The maximum length is 100 characters.
      */
     public $SecurityGroupDesc;
 
     /**
-     * @var string 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @var string The project id is 0 by default. You can query this in the project management page of the Qcloud console.
      */
     public $ProjectId;
 
     /**
-     * @var boolean 是否是默认安全组，默认安全组不支持删除。
+     * @var boolean Whether it is the default security group (which cannot be deleted).
      */
     public $IsDefault;
 
     /**
-     * @var string 安全组创建时间。
+     * @var string Security group creation time.
      */
     public $CreatedTime;
     /**
-     * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
-     * @param string $SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
-     * @param string $SecurityGroupDesc 安全组备注，最多100个字符。
-     * @param string $ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param boolean $IsDefault 是否是默认安全组，默认安全组不支持删除。
-     * @param string $CreatedTime 安全组创建时间。
+     * @param string $SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
+     * @param string $SecurityGroupName Security group can be named freely, but cannot exceed 60 characters.
+     * @param string $SecurityGroupDesc The remarks for the security group. The maximum length is 100 characters.
+     * @param string $ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * @param boolean $IsDefault Whether it is the default security group (which cannot be deleted).
+     * @param string $CreatedTime Security group creation time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

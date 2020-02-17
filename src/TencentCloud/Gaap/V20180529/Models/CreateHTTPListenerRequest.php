@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method integer getPort() 获取Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
- * @method void setPort(integer $Port) 设置Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
- * @method string getProxyId() 获取Connection ID
- * @method void setProxyId(string $ProxyId) 设置Connection ID
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method integer getPort() Obtain Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
+ * @method void setPort(integer $Port) Set Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
+ * @method string getProxyId() Obtain Connection ID
+ * @method void setProxyId(string $ProxyId) Set Connection ID
  */
 
 /**
@@ -55,7 +55,7 @@ class CreateHTTPListenerRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

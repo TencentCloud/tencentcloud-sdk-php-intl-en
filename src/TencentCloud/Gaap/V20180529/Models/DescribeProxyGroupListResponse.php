@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Total number of connection groups.
- * @method void setTotalCount(integer $TotalCount) 设置Total number of connection groups.
- * @method array getProxyGroupList() 获取List of connection groups.
+ * @method integer getTotalCount() Obtain Total number of connection groups.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of connection groups.
+ * @method array getProxyGroupList() Obtain List of connection groups.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyGroupList(array $ProxyGroupList) 设置List of connection groups.
+ * @method void setProxyGroupList(array $ProxyGroupList) Set List of connection groups.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -59,7 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

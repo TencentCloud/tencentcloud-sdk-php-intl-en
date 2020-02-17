@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
- * @method void setGroupName(string $GroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
- * @method string getGroupDescription() 获取安全组备注，最多100个字符。
- * @method void setGroupDescription(string $GroupDescription) 设置安全组备注，最多100个字符。
- * @method string getProjectId() 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
- * @method void setProjectId(string $ProjectId) 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
+ * @method string getGroupName() Obtain Security group can be named freely, but cannot exceed 60 characters.
+ * @method void setGroupName(string $GroupName) Set Security group can be named freely, but cannot exceed 60 characters.
+ * @method string getGroupDescription() Obtain The remarks for the security group. The maximum length is 100 characters.
+ * @method void setGroupDescription(string $GroupDescription) Set The remarks for the security group. The maximum length is 100 characters.
+ * @method string getProjectId() Obtain The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+ * @method void setProjectId(string $ProjectId) Set The project id is 0 by default. You can query this in the project management page of the Qcloud console.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class CreateSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string 安全组名称，可任意命名，但不得超过60个字符。
+     * @var string Security group can be named freely, but cannot exceed 60 characters.
      */
     public $GroupName;
 
     /**
-     * @var string 安全组备注，最多100个字符。
+     * @var string The remarks for the security group. The maximum length is 100 characters.
      */
     public $GroupDescription;
 
     /**
-     * @var string 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @var string The project id is 0 by default. You can query this in the project management page of the Qcloud console.
      */
     public $ProjectId;
     /**
-     * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。
-     * @param string $GroupDescription 安全组备注，最多100个字符。
-     * @param string $ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @param string $GroupName Security group can be named freely, but cannot exceed 60 characters.
+     * @param string $GroupDescription The remarks for the security group. The maximum length is 100 characters.
+     * @param string $ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

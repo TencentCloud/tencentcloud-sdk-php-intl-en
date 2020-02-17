@@ -18,16 +18,16 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalNum() 获取Number of entities
+ * @method integer getTotalNum() Obtain Number of entities
 Note: This field may return null, indicating that no valid value was found.
- * @method void setTotalNum(integer $TotalNum) 设置Number of entities
+ * @method void setTotalNum(integer $TotalNum) Set Number of entities
 Note: This field may return null, indicating that no valid value was found.
- * @method array getList() 获取Entity list
+ * @method array getList() Obtain Entity list
 Note: This field may return null, indicating that no valid value was found.
- * @method void setList(array $List) 设置Entity list
+ * @method void setList(array $List) Set Entity list
 Note: This field may return null, indicating that no valid value was found.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
- * @method void setVpcId(string $VpcId) 设置子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
- * @method array getIpv6SubnetCidrBlocks() 获取`IPv6` 子网段列表。
- * @method void setIpv6SubnetCidrBlocks(array $Ipv6SubnetCidrBlocks) 设置`IPv6` 子网段列表。
+ * @method string getVpcId() Obtain The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
+ * @method array getIpv6SubnetCidrBlocks() Obtain The `IPv6` subnet IP range list.
+ * @method void setIpv6SubnetCidrBlocks(array $Ipv6SubnetCidrBlocks) Set The `IPv6` subnet IP range list.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class UnassignIpv6SubnetCidrBlockRequest extends AbstractModel
 {
     /**
-     * @var string 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
+     * @var string The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
      */
     public $VpcId;
 
     /**
-     * @var array `IPv6` 子网段列表。
+     * @var array The `IPv6` subnet IP range list.
      */
     public $Ipv6SubnetCidrBlocks;
     /**
-     * @param string $VpcId 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
-     * @param array $Ipv6SubnetCidrBlocks `IPv6` 子网段列表。
+     * @param string $VpcId The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
+     * @param array $Ipv6SubnetCidrBlocks The `IPv6` subnet IP range list.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

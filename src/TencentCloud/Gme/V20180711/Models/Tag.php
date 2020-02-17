@@ -18,13 +18,13 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取Tag key
+ * @method string getTagKey() Obtain Tag key
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagKey(string $TagKey) 设置Tag key
+ * @method void setTagKey(string $TagKey) Set Tag key
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTagValue() 获取Tag value
+ * @method string getTagValue() Obtain Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagValue(string $TagValue) 设置Tag value
+ * @method void setTagValue(string $TagValue) Set Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAction() 获取Action to be executed
- * @method void setAction(string $Action) 设置Action to be executed
- * @method string getIp() 获取IP address
- * @method void setIp(string $Ip) 设置IP address
- * @method string getPort() 获取Port number
- * @method void setPort(string $Port) 设置Port number
- * @method string getProto() 获取Protocol type
- * @method void setProto(string $Proto) 设置Protocol type
+ * @method string getAction() Obtain Action to be executed
+ * @method void setAction(string $Action) Set Action to be executed
+ * @method string getIp() Obtain IP address
+ * @method void setIp(string $Ip) Set IP address
+ * @method string getPort() Obtain Port number
+ * @method void setPort(string $Port) Set Port number
+ * @method string getProto() Obtain Protocol type
+ * @method void setProto(string $Proto) Set Protocol type
  */
 
 /**
@@ -63,7 +63,7 @@ class SecurityGroupsInboundAndOutbound extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

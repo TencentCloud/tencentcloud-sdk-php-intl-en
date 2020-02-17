@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ServiceTemplateGroup getServiceTemplateGroup() 获取协议端口模板集合对象。
- * @method void setServiceTemplateGroup(ServiceTemplateGroup $ServiceTemplateGroup) 设置协议端口模板集合对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method ServiceTemplateGroup getServiceTemplateGroup() Obtain Group object of the protocol port template.
+ * @method void setServiceTemplateGroup(ServiceTemplateGroup $ServiceTemplateGroup) Set Group object of the protocol port template.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceTemplateGroupResponse extends AbstractModel
 {
     /**
-     * @var ServiceTemplateGroup 协议端口模板集合对象。
+     * @var ServiceTemplateGroup Group object of the protocol port template.
      */
     public $ServiceTemplateGroup;
 
@@ -39,7 +39,7 @@ class CreateServiceTemplateGroupResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param ServiceTemplateGroup $ServiceTemplateGroup 协议端口模板集合对象。
+     * @param ServiceTemplateGroup $ServiceTemplateGroup Group object of the protocol port template.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateServiceTemplateGroupResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

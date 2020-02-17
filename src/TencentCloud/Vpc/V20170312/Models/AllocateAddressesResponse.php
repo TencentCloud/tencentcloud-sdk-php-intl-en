@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAddressSet() 获取申请到的 EIP 的唯一 ID 列表。
- * @method void setAddressSet(array $AddressSet) 设置申请到的 EIP 的唯一 ID 列表。
- * @method string getTaskId() 获取The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
- * @method void setTaskId(string $TaskId) 设置The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getAddressSet() Obtain List of the unique IDs of the requested EIPs.
+ * @method void setAddressSet(array $AddressSet) Set List of the unique IDs of the requested EIPs.
+ * @method string getTaskId() Obtain The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+ * @method void setTaskId(string $TaskId) Set The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class AllocateAddressesResponse extends AbstractModel
 {
     /**
-     * @var array 申请到的 EIP 的唯一 ID 列表。
+     * @var array List of the unique IDs of the requested EIPs.
      */
     public $AddressSet;
 
@@ -46,7 +46,7 @@ class AllocateAddressesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $AddressSet 申请到的 EIP 的唯一 ID 列表。
+     * @param array $AddressSet List of the unique IDs of the requested EIPs.
      * @param string $TaskId The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -55,7 +55,7 @@ class AllocateAddressesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

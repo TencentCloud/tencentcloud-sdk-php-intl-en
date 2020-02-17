@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
- * @method array getIpv6Addresses() 获取指定的内网IPv6`地址信息。
- * @method void setIpv6Addresses(array $Ipv6Addresses) 设置指定的内网IPv6`地址信息。
+ * @method string getNetworkInterfaceId() Obtain The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+ * @method array getIpv6Addresses() Obtain The information of the specified private `IPv6` addresses.
+ * @method void setIpv6Addresses(array $Ipv6Addresses) Set The information of the specified private `IPv6` addresses.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ModifyIpv6AddressesAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * @var string The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var array 指定的内网IPv6`地址信息。
+     * @var array The information of the specified private `IPv6` addresses.
      */
     public $Ipv6Addresses;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
-     * @param array $Ipv6Addresses 指定的内网IPv6`地址信息。
+     * @param string $NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+     * @param array $Ipv6Addresses The information of the specified private `IPv6` addresses.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

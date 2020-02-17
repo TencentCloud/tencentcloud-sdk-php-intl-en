@@ -18,10 +18,10 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStatus() 获取Voice messaging and speech-to-text status. Valid values: open, close
- * @method void setStatus(string $Status) 设置Voice messaging and speech-to-text status. Valid values: open, close
- * @method string getLanguage() 获取Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
- * @method void setLanguage(string $Language) 设置Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+ * @method string getStatus() Obtain Voice messaging and speech-to-text status. Valid values: open, close
+ * @method void setStatus(string $Status) Set Voice messaging and speech-to-text status. Valid values: open, close
+ * @method string getLanguage() Obtain Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+ * @method void setLanguage(string $Language) Set Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
  */
 
 /**
@@ -47,7 +47,7 @@ class VoiceMessageConf extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

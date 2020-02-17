@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSnapshotId() 获取Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
- * @method void setSnapshotId(string $SnapshotId) 设置Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
- * @method string getDiskId() 获取ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method void setDiskId(string $DiskId) 设置ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method string getSnapshotId() Obtain Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+ * @method string getDiskId() Obtain ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method void setDiskId(string $DiskId) Set ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](/document/product/362/16315).
  */
 
 /**
@@ -47,7 +47,7 @@ class ApplySnapshotRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

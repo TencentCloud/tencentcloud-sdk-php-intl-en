@@ -18,8 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getKeyIds() 获取List of key IDs.
- * @method void setKeyIds(array $KeyIds) 设置List of key IDs.
+ * @method array getKeyIds() Obtain List of key IDs.
+ * @method void setKeyIds(array $KeyIds) Set List of key IDs.
  */
 
 /**
@@ -39,7 +39,7 @@ class LimitedLoginSettings extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

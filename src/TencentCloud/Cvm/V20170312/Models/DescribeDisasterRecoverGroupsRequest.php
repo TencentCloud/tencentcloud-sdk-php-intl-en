@@ -18,14 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDisasterRecoverGroupIds() 获取List of spread placement group IDs.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置List of spread placement group IDs.
- * @method string getName() 获取Name of a spread placement group. Fuzzy match is supported.
- * @method void setName(string $Name) 设置Name of a spread placement group. Fuzzy match is supported.
- * @method integer getOffset() 获取Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
- * @method void setOffset(integer $Offset) 设置Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
- * @method integer getLimit() 获取Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
- * @method void setLimit(integer $Limit) 设置Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
+ * @method array getDisasterRecoverGroupIds() Obtain List of spread placement group IDs.
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs.
+ * @method string getName() Obtain Name of a spread placement group. Fuzzy match is supported.
+ * @method void setName(string $Name) Set Name of a spread placement group. Fuzzy match is supported.
+ * @method integer getOffset() Obtain Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
+ * @method void setOffset(integer $Offset) Set Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
+ * @method integer getLimit() Obtain Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
+ * @method void setLimit(integer $Limit) Set Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeDisasterRecoverGroupsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

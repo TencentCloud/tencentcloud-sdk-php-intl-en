@@ -18,14 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSecurityGroup() 获取Security group ID, such as sg-12345678
- * @method void setSecurityGroup(string $SecurityGroup) 设置Security group ID, such as sg-12345678
- * @method string getOperationType() 获取ADD: bind a security group;
+ * @method string getSecurityGroup() Obtain Security group ID, such as sg-12345678
+ * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-12345678
+ * @method string getOperationType() Obtain ADD: bind a security group;
 DEL: unbind a security group
- * @method void setOperationType(string $OperationType) 设置ADD: bind a security group;
+ * @method void setOperationType(string $OperationType) Set ADD: bind a security group;
 DEL: unbind a security group
- * @method array getLoadBalancerIds() 获取Array of CLB instance IDs
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置Array of CLB instance IDs
+ * @method array getLoadBalancerIds() Obtain Array of CLB instance IDs
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set Array of CLB instance IDs
  */
 
 /**
@@ -59,7 +59,7 @@ DEL: unbind a security group
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

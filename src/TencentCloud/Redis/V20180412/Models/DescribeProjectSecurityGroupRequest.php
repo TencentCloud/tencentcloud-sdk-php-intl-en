@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProjectId() 获取0: default project; -1: all projects; >0: specified project
- * @method void setProjectId(integer $ProjectId) 设置0: default project; -1: all projects; >0: specified project
- * @method string getSecurityGroupId() 获取Security group ID
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置Security group ID
+ * @method integer getProjectId() Obtain 0: default project; -1: all projects; >0: specified project
+ * @method void setProjectId(integer $ProjectId) Set 0: default project; -1: all projects; >0: specified project
+ * @method string getSecurityGroupId() Obtain Security group ID
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeProjectSecurityGroupRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

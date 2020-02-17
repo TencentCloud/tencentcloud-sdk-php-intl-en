@@ -18,20 +18,20 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method array getPorts() 获取List of listener ports
- * @method void setPorts(array $Ports) 设置List of listener ports
- * @method string getScheduler() 获取Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method void setScheduler(string $Scheduler) 设置Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method string getRealServerType() 获取Origin server type of listeners, which supports IP or DOMAIN type.
- * @method void setRealServerType(string $RealServerType) 设置Origin server type of listeners, which supports IP or DOMAIN type.
- * @method string getProxyId() 获取Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method void setProxyId(string $ProxyId) 设置Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method string getGroupId() 获取Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method void setGroupId(string $GroupId) 设置Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method array getRealServerPorts() 获取List of origin server ports, which only supports the listeners of version 1.0 and connection group.
- * @method void setRealServerPorts(array $RealServerPorts) 设置List of origin server ports, which only supports the listeners of version 1.0 and connection group.
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method array getPorts() Obtain List of listener ports
+ * @method void setPorts(array $Ports) Set List of listener ports
+ * @method string getScheduler() Obtain Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method void setScheduler(string $Scheduler) Set Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method string getRealServerType() Obtain Origin server type of listeners, which supports IP or DOMAIN type.
+ * @method void setRealServerType(string $RealServerType) Set Origin server type of listeners, which supports IP or DOMAIN type.
+ * @method string getProxyId() Obtain Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method void setProxyId(string $ProxyId) Set Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method string getGroupId() Obtain Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method void setGroupId(string $GroupId) Set Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method array getRealServerPorts() Obtain List of origin server ports, which only supports the listeners of version 1.0 and connection group.
+ * @method void setRealServerPorts(array $RealServerPorts) Set List of origin server ports, which only supports the listeners of version 1.0 and connection group.
  */
 
 /**
@@ -87,7 +87,7 @@ class CreateUDPListenersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

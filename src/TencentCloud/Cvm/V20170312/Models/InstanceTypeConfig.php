@@ -18,18 +18,18 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getZone() 获取Availability zone.
- * @method void setZone(string $Zone) 设置Availability zone.
- * @method string getInstanceType() 获取Instance model.
- * @method void setInstanceType(string $InstanceType) 设置Instance model.
- * @method string getInstanceFamily() 获取Instance model family.
- * @method void setInstanceFamily(string $InstanceFamily) 设置Instance model family.
- * @method integer getGPU() 获取Number of GPU cores.
- * @method void setGPU(integer $GPU) 设置Number of GPU cores.
- * @method integer getCPU() 获取Number of CPU cores.
- * @method void setCPU(integer $CPU) 设置Number of CPU cores.
- * @method integer getMemory() 获取Memory capacity; unit: `GB`.
- * @method void setMemory(integer $Memory) 设置Memory capacity; unit: `GB`.
+ * @method string getZone() Obtain Availability zone.
+ * @method void setZone(string $Zone) Set Availability zone.
+ * @method string getInstanceType() Obtain Instance model.
+ * @method void setInstanceType(string $InstanceType) Set Instance model.
+ * @method string getInstanceFamily() Obtain Instance model family.
+ * @method void setInstanceFamily(string $InstanceFamily) Set Instance model family.
+ * @method integer getGPU() Obtain Number of GPU cores.
+ * @method void setGPU(integer $GPU) Set Number of GPU cores.
+ * @method integer getCPU() Obtain Number of CPU cores.
+ * @method void setCPU(integer $CPU) Set Number of CPU cores.
+ * @method integer getMemory() Obtain Memory capacity; unit: `GB`.
+ * @method void setMemory(integer $Memory) Set Memory capacity; unit: `GB`.
  */
 
 /**
@@ -79,7 +79,7 @@ class InstanceTypeConfig extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

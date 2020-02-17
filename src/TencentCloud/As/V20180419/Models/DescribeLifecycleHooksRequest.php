@@ -18,9 +18,9 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getLifecycleHookIds() 获取Queries by one or more lifecycle hook IDs in the format of `ash-8azjzxcl`. The maximum quantity per request is 100. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
- * @method void setLifecycleHookIds(array $LifecycleHookIds) 设置Queries by one or more lifecycle hook IDs in the format of `ash-8azjzxcl`. The maximum quantity per request is 100. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
- * @method array getFilters() 获取Filter.
+ * @method array getLifecycleHookIds() Obtain Queries by one or more lifecycle hook IDs in the format of `ash-8azjzxcl`. The maximum quantity per request is 100. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
+ * @method void setLifecycleHookIds(array $LifecycleHookIds) Set Queries by one or more lifecycle hook IDs in the format of `ash-8azjzxcl`. The maximum quantity per request is 100. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
+ * @method array getFilters() Obtain Filter.
 <li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
 <li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
@@ -29,7 +29,7 @@ Filter.
 <li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
 The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
- * @method void setFilters(array $Filters) 设置Filter.
+ * @method void setFilters(array $Filters) Set Filter.
 <li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
 <li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
@@ -38,10 +38,10 @@ Filter.
 <li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
 The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
- * @method integer getLimit() 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
- * @method void setLimit(integer $Limit) 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
- * @method integer getOffset() 获取Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
- * @method void setOffset(integer $Offset) 设置Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method integer getOffset() Obtain Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
  */
 
 /**
@@ -95,7 +95,7 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

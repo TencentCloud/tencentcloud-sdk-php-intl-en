@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method NetworkInterface getNetworkInterface() 获取弹性网卡实例。
- * @method void setNetworkInterface(NetworkInterface $NetworkInterface) 设置弹性网卡实例。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method NetworkInterface getNetworkInterface() Obtain ENI instance.
+ * @method void setNetworkInterface(NetworkInterface $NetworkInterface) Set ENI instance.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateNetworkInterfaceResponse extends AbstractModel
 {
     /**
-     * @var NetworkInterface 弹性网卡实例。
+     * @var NetworkInterface ENI instance.
      */
     public $NetworkInterface;
 
@@ -39,7 +39,7 @@ class CreateNetworkInterfaceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param NetworkInterface $NetworkInterface 弹性网卡实例。
+     * @param NetworkInterface $NetworkInterface ENI instance.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateNetworkInterfaceResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

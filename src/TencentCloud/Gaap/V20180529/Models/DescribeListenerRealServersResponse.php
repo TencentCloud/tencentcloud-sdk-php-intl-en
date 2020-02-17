@@ -18,16 +18,16 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Number of origin servers that can be bound
- * @method void setTotalCount(integer $TotalCount) 设置Number of origin servers that can be bound
- * @method array getRealServerSet() 获取An information list of origin servers
- * @method void setRealServerSet(array $RealServerSet) 设置An information list of origin servers
- * @method integer getBindRealServerTotalCount() 获取Number of bound origin servers
- * @method void setBindRealServerTotalCount(integer $BindRealServerTotalCount) 设置Number of bound origin servers
- * @method array getBindRealServerSet() 获取Information list of bound origin servers
- * @method void setBindRealServerSet(array $BindRealServerSet) 设置Information list of bound origin servers
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Number of origin servers that can be bound
+ * @method void setTotalCount(integer $TotalCount) Set Number of origin servers that can be bound
+ * @method array getRealServerSet() Obtain An information list of origin servers
+ * @method void setRealServerSet(array $RealServerSet) Set An information list of origin servers
+ * @method integer getBindRealServerTotalCount() Obtain Number of bound origin servers
+ * @method void setBindRealServerTotalCount(integer $BindRealServerTotalCount) Set Number of bound origin servers
+ * @method array getBindRealServerSet() Obtain Information list of bound origin servers
+ * @method void setBindRealServerSet(array $BindRealServerSet) Set Information list of bound origin servers
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -71,7 +71,7 @@ class DescribeListenerRealServersResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

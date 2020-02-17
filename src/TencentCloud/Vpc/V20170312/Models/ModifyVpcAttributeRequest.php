@@ -18,16 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
- * @method string getVpcName() 获取私有网络名称，可任意命名，但不得超过60个字符。
- * @method void setVpcName(string $VpcName) 设置私有网络名称，可任意命名，但不得超过60个字符。
- * @method string getEnableMulticast() 获取是否开启组播。true: 开启, false: 关闭。
- * @method void setEnableMulticast(string $EnableMulticast) 设置是否开启组播。true: 开启, false: 关闭。
- * @method array getDnsServers() 获取DNS地址，最多支持4个，第1个默认为主，其余为备
- * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个，第1个默认为主，其余为备
- * @method string getDomainName() 获取域名
- * @method void setDomainName(string $DomainName) 设置域名
+ * @method string getVpcId() Obtain Security group can be named freely, but cannot exceed 60 characters.
+ * @method void setVpcId(string $VpcId) Set Security group can be named freely, but cannot exceed 60 characters.
+ * @method string getVpcName() Obtain VPC can be named freely, but the maximum length is 60 characters.
+ * @method void setVpcName(string $VpcName) Set VPC can be named freely, but the maximum length is 60 characters.
+ * @method string getEnableMulticast() Obtain Whether multicast is enabled. `true`: Enabled. `false`: Off.
+ * @method void setEnableMulticast(string $EnableMulticast) Set Whether multicast is enabled. `true`: Enabled. `false`: Off.
+ * @method array getDnsServers() Obtain DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+ * @method void setDnsServers(array $DnsServers) Set DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+ * @method string getDomainName() Obtain Domain name
+ * @method void setDomainName(string $DomainName) Set Domain name
  */
 
 /**
@@ -36,42 +36,42 @@ use TencentCloud\Common\AbstractModel;
 class ModifyVpcAttributeRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * @var string Security group can be named freely, but cannot exceed 60 characters.
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络名称，可任意命名，但不得超过60个字符。
+     * @var string VPC can be named freely, but the maximum length is 60 characters.
      */
     public $VpcName;
 
     /**
-     * @var string 是否开启组播。true: 开启, false: 关闭。
+     * @var string Whether multicast is enabled. `true`: Enabled. `false`: Off.
      */
     public $EnableMulticast;
 
     /**
-     * @var array DNS地址，最多支持4个，第1个默认为主，其余为备
+     * @var array DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
      */
     public $DnsServers;
 
     /**
-     * @var string 域名
+     * @var string Domain name
      */
     public $DomainName;
     /**
-     * @param string $VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
-     * @param string $VpcName 私有网络名称，可任意命名，但不得超过60个字符。
-     * @param string $EnableMulticast 是否开启组播。true: 开启, false: 关闭。
-     * @param array $DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
-     * @param string $DomainName 域名
+     * @param string $VpcId Security group can be named freely, but cannot exceed 60 characters.
+     * @param string $VpcName VPC can be named freely, but the maximum length is 60 characters.
+     * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
+     * @param array $DnsServers DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+     * @param string $DomainName Domain name
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

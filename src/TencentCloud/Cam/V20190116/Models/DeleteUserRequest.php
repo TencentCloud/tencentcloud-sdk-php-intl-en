@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取Sub-user username
- * @method void setName(string $Name) 设置Sub-user username
+ * @method string getName() Obtain Sub-user username
+ * @method void setName(string $Name) Set Sub-user username
  */
 
 /**
@@ -39,7 +39,7 @@ class DeleteUserRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

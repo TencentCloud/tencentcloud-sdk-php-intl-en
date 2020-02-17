@@ -18,56 +18,56 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取关联实例ID。
- * @method void setInstanceId(string $InstanceId) 设置关联实例ID。
- * @method string getInstanceRegion() 获取关联实例ID所属大区，例如：ap-guangzhou。
- * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例ID所属大区，例如：ap-guangzhou。
- * @method string getInstanceType() 获取关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
- * @method void setInstanceType(string $InstanceType) 设置关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+ * @method string getInstanceId() Obtain The ID of the associated instance.
+ * @method void setInstanceId(string $InstanceId) Set The ID of the associated instance.
+ * @method string getInstanceRegion() Obtain The region to which the associated instance ID belongs, such as `ap-guangzhou`.
+ * @method void setInstanceRegion(string $InstanceRegion) Set The region to which the associated instance ID belongs, such as `ap-guangzhou`.
+ * @method string getInstanceType() Obtain The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+ * @method void setInstanceType(string $InstanceType) Set The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
  */
 
 /**
- *云联网（CCN）关联实例（Instance）对象。
+ *The instance object associated with a CCN.
  */
 class CcnInstance extends AbstractModel
 {
     /**
-     * @var string 关联实例ID。
+     * @var string The ID of the associated instance.
      */
     public $InstanceId;
 
     /**
-     * @var string 关联实例ID所属大区，例如：ap-guangzhou。
+     * @var string The region to which the associated instance ID belongs, such as `ap-guangzhou`.
      */
     public $InstanceRegion;
 
     /**
-     * @var string 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * @var string The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
      */
     public $InstanceType;
     /**
-     * @param string $InstanceId 关联实例ID。
-     * @param string $InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
-     * @param string $InstanceType 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * @param string $InstanceId The ID of the associated instance.
+     * @param string $InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
+     * @param string $InstanceType The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

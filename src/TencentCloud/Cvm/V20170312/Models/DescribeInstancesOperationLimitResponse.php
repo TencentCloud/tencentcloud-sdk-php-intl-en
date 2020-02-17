@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceOperationLimitSet() 获取The maximum number of times you can modify the instance configurations (degrading the configurations)
- * @method void setInstanceOperationLimitSet(array $InstanceOperationLimitSet) 设置The maximum number of times you can modify the instance configurations (degrading the configurations)
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getInstanceOperationLimitSet() Obtain The maximum number of times you can modify the instance configurations (degrading the configurations)
+ * @method void setInstanceOperationLimitSet(array $InstanceOperationLimitSet) Set The maximum number of times you can modify the instance configurations (degrading the configurations)
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeInstancesOperationLimitResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

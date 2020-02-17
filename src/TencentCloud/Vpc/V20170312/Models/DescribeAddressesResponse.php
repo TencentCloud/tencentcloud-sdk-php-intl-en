@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取符合条件的 EIP 数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的 EIP 数量。
- * @method array getAddressSet() 获取EIP 详细信息列表。
- * @method void setAddressSet(array $AddressSet) 设置EIP 详细信息列表。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Number of EIPs meeting the condition.
+ * @method void setTotalCount(integer $TotalCount) Set Number of EIPs meeting the condition.
+ * @method array getAddressSet() Obtain List of EIPs details.
+ * @method void setAddressSet(array $AddressSet) Set List of EIPs details.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAddressesResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的 EIP 数量。
+     * @var integer Number of EIPs meeting the condition.
      */
     public $TotalCount;
 
     /**
-     * @var array EIP 详细信息列表。
+     * @var array List of EIPs details.
      */
     public $AddressSet;
 
@@ -46,8 +46,8 @@ class DescribeAddressesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 符合条件的 EIP 数量。
-     * @param array $AddressSet EIP 详细信息列表。
+     * @param integer $TotalCount Number of EIPs meeting the condition.
+     * @param array $AddressSet List of EIPs details.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeAddressesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

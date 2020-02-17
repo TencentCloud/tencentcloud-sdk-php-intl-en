@@ -18,124 +18,124 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取`VPC`实例`ID`。
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。
- * @method string getSubnetId() 获取子网实例`ID`，例如：subnet-bthucmmy。
- * @method void setSubnetId(string $SubnetId) 设置子网实例`ID`，例如：subnet-bthucmmy。
- * @method string getSubnetName() 获取子网名称。
- * @method void setSubnetName(string $SubnetName) 设置子网名称。
- * @method string getCidrBlock() 获取子网的 `IPv4` `CIDR`。
- * @method void setCidrBlock(string $CidrBlock) 设置子网的 `IPv4` `CIDR`。
- * @method boolean getIsDefault() 获取是否默认子网。
- * @method void setIsDefault(boolean $IsDefault) 设置是否默认子网。
- * @method boolean getEnableBroadcast() 获取是否开启广播。
- * @method void setEnableBroadcast(boolean $EnableBroadcast) 设置是否开启广播。
- * @method string getZone() 获取可用区。
- * @method void setZone(string $Zone) 设置可用区。
- * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-l2h8d7c2。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-l2h8d7c2。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method integer getAvailableIpAddressCount() 获取可用`IP`数。
- * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用`IP`数。
- * @method string getIpv6CidrBlock() 获取子网的 `IPv6` `CIDR`。
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置子网的 `IPv6` `CIDR`。
- * @method string getNetworkAclId() 获取关联`ACL`ID
- * @method void setNetworkAclId(string $NetworkAclId) 设置关联`ACL`ID
- * @method boolean getIsRemoteVpcSnat() 获取是否为 `SNAT` 地址池子网。
- * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) 设置是否为 `SNAT` 地址池子网。
+ * @method string getVpcId() Obtain The `ID` of the `VPC` instance.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC` instance.
+ * @method string getSubnetId() Obtain Subnet instance `ID`, such as `subnet-bthucmmy`.
+ * @method void setSubnetId(string $SubnetId) Set Subnet instance `ID`, such as `subnet-bthucmmy`.
+ * @method string getSubnetName() Obtain Subnet name.
+ * @method void setSubnetName(string $SubnetName) Set Subnet name.
+ * @method string getCidrBlock() Obtain The `IPv4` `CIDR` of the subnet.
+ * @method void setCidrBlock(string $CidrBlock) Set The `IPv4` `CIDR` of the subnet.
+ * @method boolean getIsDefault() Obtain Whether it is the default subnet.
+ * @method void setIsDefault(boolean $IsDefault) Set Whether it is the default subnet.
+ * @method boolean getEnableBroadcast() Obtain Whether to enable broadcast.
+ * @method void setEnableBroadcast(boolean $EnableBroadcast) Set Whether to enable broadcast.
+ * @method string getZone() Obtain Availability Zone.
+ * @method void setZone(string $Zone) Set Availability Zone.
+ * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-l2h8d7c2`.
+ * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-l2h8d7c2`.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
+ * @method integer getAvailableIpAddressCount() Obtain The number of available `IP`s.
+ * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) Set The number of available `IP`s.
+ * @method string getIpv6CidrBlock() Obtain The `IPv6` `CIDR` of the subnet.
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The `IPv6` `CIDR` of the subnet.
+ * @method string getNetworkAclId() Obtain The associated `ACL`ID
+ * @method void setNetworkAclId(string $NetworkAclId) Set The associated `ACL`ID
+ * @method boolean getIsRemoteVpcSnat() Obtain Whether it is a `SNAT` address pool subnet.
+ * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) Set Whether it is a `SNAT` address pool subnet.
  */
 
 /**
- *子网对象
+ *Subnet object
  */
 class Subnet extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`。
+     * @var string The `ID` of the `VPC` instance.
      */
     public $VpcId;
 
     /**
-     * @var string 子网实例`ID`，例如：subnet-bthucmmy。
+     * @var string Subnet instance `ID`, such as `subnet-bthucmmy`.
      */
     public $SubnetId;
 
     /**
-     * @var string 子网名称。
+     * @var string Subnet name.
      */
     public $SubnetName;
 
     /**
-     * @var string 子网的 `IPv4` `CIDR`。
+     * @var string The `IPv4` `CIDR` of the subnet.
      */
     public $CidrBlock;
 
     /**
-     * @var boolean 是否默认子网。
+     * @var boolean Whether it is the default subnet.
      */
     public $IsDefault;
 
     /**
-     * @var boolean 是否开启广播。
+     * @var boolean Whether to enable broadcast.
      */
     public $EnableBroadcast;
 
     /**
-     * @var string 可用区。
+     * @var string Availability Zone.
      */
     public $Zone;
 
     /**
-     * @var string 路由表实例ID，例如：rtb-l2h8d7c2。
+     * @var string The route table instance ID, such as `rtb-l2h8d7c2`.
      */
     public $RouteTableId;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
 
     /**
-     * @var integer 可用`IP`数。
+     * @var integer The number of available `IP`s.
      */
     public $AvailableIpAddressCount;
 
     /**
-     * @var string 子网的 `IPv6` `CIDR`。
+     * @var string The `IPv6` `CIDR` of the subnet.
      */
     public $Ipv6CidrBlock;
 
     /**
-     * @var string 关联`ACL`ID
+     * @var string The associated `ACL`ID
      */
     public $NetworkAclId;
 
     /**
-     * @var boolean 是否为 `SNAT` 地址池子网。
+     * @var boolean Whether it is a `SNAT` address pool subnet.
      */
     public $IsRemoteVpcSnat;
     /**
-     * @param string $VpcId `VPC`实例`ID`。
-     * @param string $SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
-     * @param string $SubnetName 子网名称。
-     * @param string $CidrBlock 子网的 `IPv4` `CIDR`。
-     * @param boolean $IsDefault 是否默认子网。
-     * @param boolean $EnableBroadcast 是否开启广播。
-     * @param string $Zone 可用区。
-     * @param string $RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
-     * @param string $CreatedTime 创建时间。
-     * @param integer $AvailableIpAddressCount 可用`IP`数。
-     * @param string $Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
-     * @param string $NetworkAclId 关联`ACL`ID
-     * @param boolean $IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
+     * @param string $VpcId The `ID` of the `VPC` instance.
+     * @param string $SubnetId Subnet instance `ID`, such as `subnet-bthucmmy`.
+     * @param string $SubnetName Subnet name.
+     * @param string $CidrBlock The `IPv4` `CIDR` of the subnet.
+     * @param boolean $IsDefault Whether it is the default subnet.
+     * @param boolean $EnableBroadcast Whether to enable broadcast.
+     * @param string $Zone Availability Zone.
+     * @param string $RouteTableId The route table instance ID, such as `rtb-l2h8d7c2`.
+     * @param string $CreatedTime Creation Time.
+     * @param integer $AvailableIpAddressCount The number of available `IP`s.
+     * @param string $Ipv6CidrBlock The `IPv6` `CIDR` of the subnet.
+     * @param string $NetworkAclId The associated `ACL`ID
+     * @param boolean $IsRemoteVpcSnat Whether it is a `SNAT` address pool subnet.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

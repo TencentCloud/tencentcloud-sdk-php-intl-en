@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getListenerIds() 获取ID list of listeners to be deleted
- * @method void setListenerIds(array $ListenerIds) 设置ID list of listeners to be deleted
- * @method integer getForce() 获取Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
- * @method void setForce(integer $Force) 设置Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
- * @method string getGroupId() 获取Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
- * @method void setGroupId(string $GroupId) 设置Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
- * @method string getProxyId() 获取Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
- * @method void setProxyId(string $ProxyId) 设置Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+ * @method array getListenerIds() Obtain ID list of listeners to be deleted
+ * @method void setListenerIds(array $ListenerIds) Set ID list of listeners to be deleted
+ * @method integer getForce() Obtain Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
+ * @method void setForce(integer $Force) Set Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
+ * @method string getGroupId() Obtain Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+ * @method void setGroupId(string $GroupId) Set Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+ * @method string getProxyId() Obtain Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+ * @method void setProxyId(string $ProxyId) Set Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
  */
 
 /**
@@ -63,7 +63,7 @@ class DeleteListenersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

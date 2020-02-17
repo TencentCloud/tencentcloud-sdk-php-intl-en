@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getScene() 获取Storage type. Only COS is supported
- * @method void setScene(string $Scene) 设置Storage type. Only COS is supported
- * @method integer getWorkerNum() 获取Number of parallel workers
- * @method void setWorkerNum(integer $WorkerNum) 设置Number of parallel workers
- * @method integer getWorkerPartSize() 获取Size of a worker part, in MB.
- * @method void setWorkerPartSize(integer $WorkerPartSize) 设置Size of a worker part, in MB.
+ * @method string getScene() Obtain Storage type. Only COS is supported
+ * @method void setScene(string $Scene) Set Storage type. Only COS is supported
+ * @method integer getWorkerNum() Obtain Number of parallel workers
+ * @method void setWorkerNum(integer $WorkerNum) Set Number of parallel workers
+ * @method integer getWorkerPartSize() Obtain Size of a worker part, in MB.
+ * @method void setWorkerPartSize(integer $WorkerPartSize) Set Size of a worker part, in MB.
  */
 
 /**
@@ -55,7 +55,7 @@ class OutputMappingConfig extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

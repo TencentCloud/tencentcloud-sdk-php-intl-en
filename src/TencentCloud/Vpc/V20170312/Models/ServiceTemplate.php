@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getServiceTemplateId() 获取协议端口实例ID，例如：ppm-f5n1f8da。
- * @method void setServiceTemplateId(string $ServiceTemplateId) 设置协议端口实例ID，例如：ppm-f5n1f8da。
- * @method string getServiceTemplateName() 获取模板名称。
- * @method void setServiceTemplateName(string $ServiceTemplateName) 设置模板名称。
- * @method array getServiceSet() 获取协议端口信息。
- * @method void setServiceSet(array $ServiceSet) 设置协议端口信息。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getServiceTemplateId() Obtain Protocol port instance ID, such as `ppm-f5n1f8da`.
+ * @method void setServiceTemplateId(string $ServiceTemplateId) Set Protocol port instance ID, such as `ppm-f5n1f8da`.
+ * @method string getServiceTemplateName() Obtain Template name.
+ * @method void setServiceTemplateName(string $ServiceTemplateName) Set Template name.
+ * @method array getServiceSet() Obtain Protocol port information.
+ * @method void setServiceSet(array $ServiceSet) Set Protocol port information.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
  */
 
 /**
- *协议端口模板
+ *Protocol port template
  */
 class ServiceTemplate extends AbstractModel
 {
     /**
-     * @var string 协议端口实例ID，例如：ppm-f5n1f8da。
+     * @var string Protocol port instance ID, such as `ppm-f5n1f8da`.
      */
     public $ServiceTemplateId;
 
     /**
-     * @var string 模板名称。
+     * @var string Template name.
      */
     public $ServiceTemplateName;
 
     /**
-     * @var array 协议端口信息。
+     * @var array Protocol port information.
      */
     public $ServiceSet;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
     /**
-     * @param string $ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
-     * @param string $ServiceTemplateName 模板名称。
-     * @param array $ServiceSet 协议端口信息。
-     * @param string $CreatedTime 创建时间。
+     * @param string $ServiceTemplateId Protocol port instance ID, such as `ppm-f5n1f8da`.
+     * @param string $ServiceTemplateName Template name.
+     * @param array $ServiceSet Protocol port information.
+     * @param string $CreatedTime Creation Time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,18 +18,18 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Number of instance parameters
- * @method void setTotalCount(integer $TotalCount) 设置Number of instance parameters
- * @method array getInstanceEnumParam() 获取Instance parameter in Enum type
- * @method void setInstanceEnumParam(array $InstanceEnumParam) 设置Instance parameter in Enum type
- * @method array getInstanceIntegerParam() 获取Instance parameter in Integer type
- * @method void setInstanceIntegerParam(array $InstanceIntegerParam) 设置Instance parameter in Integer type
- * @method array getInstanceTextParam() 获取Instance parameter in Char type
- * @method void setInstanceTextParam(array $InstanceTextParam) 设置Instance parameter in Char type
- * @method array getInstanceMultiParam() 获取Instance parameter in Multi type
- * @method void setInstanceMultiParam(array $InstanceMultiParam) 设置Instance parameter in Multi type
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Number of instance parameters
+ * @method void setTotalCount(integer $TotalCount) Set Number of instance parameters
+ * @method array getInstanceEnumParam() Obtain Instance parameter in Enum type
+ * @method void setInstanceEnumParam(array $InstanceEnumParam) Set Instance parameter in Enum type
+ * @method array getInstanceIntegerParam() Obtain Instance parameter in Integer type
+ * @method void setInstanceIntegerParam(array $InstanceIntegerParam) Set Instance parameter in Integer type
+ * @method array getInstanceTextParam() Obtain Instance parameter in Char type
+ * @method void setInstanceTextParam(array $InstanceTextParam) Set Instance parameter in Char type
+ * @method array getInstanceMultiParam() Obtain Instance parameter in Multi type
+ * @method void setInstanceMultiParam(array $InstanceMultiParam) Set Instance parameter in Multi type
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -79,7 +79,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

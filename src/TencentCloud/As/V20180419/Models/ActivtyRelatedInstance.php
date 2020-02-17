@@ -18,14 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID.
- * @method void setInstanceId(string $InstanceId) 设置Instance ID.
- * @method string getInstanceStatus() 获取Status of the instance in the scaling activity. Value range:
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceStatus() Obtain Status of the instance in the scaling activity. Value range:
 <li>INIT: initializing
 <li>RUNNING: running
 <li>SUCCESSFUL: succeeded
 <li>FAILED: failed
- * @method void setInstanceStatus(string $InstanceStatus) 设置Status of the instance in the scaling activity. Value range:
+ * @method void setInstanceStatus(string $InstanceStatus) Set Status of the instance in the scaling activity. Value range:
 <li>INIT: initializing
 <li>RUNNING: running
 <li>SUCCESSFUL: succeeded
@@ -63,7 +63,7 @@ class ActivtyRelatedInstance extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

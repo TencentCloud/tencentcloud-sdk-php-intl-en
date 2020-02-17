@@ -18,16 +18,16 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOpUin() 获取Set user UIN
- * @method void setOpUin(integer $OpUin) 设置Set user UIN
- * @method LoginActionFlag getLoginFlag() 获取Login settings
- * @method void setLoginFlag(LoginActionFlag $LoginFlag) 设置Login settings
- * @method LoginActionFlag getActionFlag() 获取Sensitive operation settings
- * @method void setActionFlag(LoginActionFlag $ActionFlag) 设置Sensitive operation settings
- * @method OffsiteFlag getOffsiteFlag() 获取Remote login settings
- * @method void setOffsiteFlag(OffsiteFlag $OffsiteFlag) 设置Remote login settings
- * @method integer getNeedResetMfa() 获取If MFA requires top-up
- * @method void setNeedResetMfa(integer $NeedResetMfa) 设置If MFA requires top-up
+ * @method integer getOpUin() Obtain Set user UIN
+ * @method void setOpUin(integer $OpUin) Set Set user UIN
+ * @method LoginActionFlag getLoginFlag() Obtain Login settings
+ * @method void setLoginFlag(LoginActionFlag $LoginFlag) Set Login settings
+ * @method LoginActionFlag getActionFlag() Obtain Sensitive operation settings
+ * @method void setActionFlag(LoginActionFlag $ActionFlag) Set Sensitive operation settings
+ * @method OffsiteFlag getOffsiteFlag() Obtain Remote login settings
+ * @method void setOffsiteFlag(OffsiteFlag $OffsiteFlag) Set Remote login settings
+ * @method integer getNeedResetMfa() Obtain If MFA requires top-up
+ * @method void setNeedResetMfa(integer $NeedResetMfa) Set If MFA requires top-up
  */
 
 /**
@@ -71,7 +71,7 @@ class SetFlagRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

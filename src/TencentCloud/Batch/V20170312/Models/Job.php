@@ -18,22 +18,22 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTasks() 获取Job information
- * @method void setTasks(array $Tasks) 设置Job information
- * @method string getJobName() 获取Instance name
- * @method void setJobName(string $JobName) 设置Instance name
- * @method string getJobDescription() 获取Instance description
- * @method void setJobDescription(string $JobDescription) 设置Instance description
- * @method integer getPriority() 获取Instance priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the instance
- * @method void setPriority(integer $Priority) 设置Instance priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the instance
- * @method array getDependences() 获取Dependency information
- * @method void setDependences(array $Dependences) 设置Dependency information
- * @method array getNotifications() 获取Notification information
- * @method void setNotifications(array $Notifications) 设置Notification information
- * @method string getTaskExecutionDependOn() 获取This is the dependency of the subsequent task on the previous task if there is a dependent relationship between them. Value range: PRE_TASK_SUCCEED, PRE_TASK_AT_LEAST_PARTLY_SUCCEED, PRE_TASK_FINISHED. Default value: PRE_TASK_SUCCEED.
- * @method void setTaskExecutionDependOn(string $TaskExecutionDependOn) 设置This is the dependency of the subsequent task on the previous task if there is a dependent relationship between them. Value range: PRE_TASK_SUCCEED, PRE_TASK_AT_LEAST_PARTLY_SUCCEED, PRE_TASK_FINISHED. Default value: PRE_TASK_SUCCEED.
- * @method string getStateIfCreateCvmFailed() 获取Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
- * @method void setStateIfCreateCvmFailed(string $StateIfCreateCvmFailed) 设置Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
+ * @method array getTasks() Obtain Job information
+ * @method void setTasks(array $Tasks) Set Job information
+ * @method string getJobName() Obtain Instance name
+ * @method void setJobName(string $JobName) Set Instance name
+ * @method string getJobDescription() Obtain Instance description
+ * @method void setJobDescription(string $JobDescription) Set Instance description
+ * @method integer getPriority() Obtain Instance priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the instance
+ * @method void setPriority(integer $Priority) Set Instance priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the instance
+ * @method array getDependences() Obtain Dependency information
+ * @method void setDependences(array $Dependences) Set Dependency information
+ * @method array getNotifications() Obtain Notification information
+ * @method void setNotifications(array $Notifications) Set Notification information
+ * @method string getTaskExecutionDependOn() Obtain This is the dependency of the subsequent task on the previous task if there is a dependent relationship between them. Value range: PRE_TASK_SUCCEED, PRE_TASK_AT_LEAST_PARTLY_SUCCEED, PRE_TASK_FINISHED. Default value: PRE_TASK_SUCCEED.
+ * @method void setTaskExecutionDependOn(string $TaskExecutionDependOn) Set This is the dependency of the subsequent task on the previous task if there is a dependent relationship between them. Value range: PRE_TASK_SUCCEED, PRE_TASK_AT_LEAST_PARTLY_SUCCEED, PRE_TASK_FINISHED. Default value: PRE_TASK_SUCCEED.
+ * @method string getStateIfCreateCvmFailed() Obtain Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
+ * @method void setStateIfCreateCvmFailed(string $StateIfCreateCvmFailed) Set Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
  */
 
 /**
@@ -95,7 +95,7 @@ class Job extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

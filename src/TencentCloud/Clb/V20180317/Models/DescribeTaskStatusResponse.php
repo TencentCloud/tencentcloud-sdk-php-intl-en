@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getStatus() 获取Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
- * @method void setStatus(integer $Status) 设置Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getStatus() Obtain Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
+ * @method void setStatus(integer $Status) Set Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeTaskStatusResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

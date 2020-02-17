@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getImageId() 获取Image instance ID.
- * @method void setImageId(string $ImageId) 设置Image instance ID.
- * @method string getImageName() 获取Image name.
- * @method void setImageName(string $ImageName) 设置Image name.
+ * @method string getImageId() Obtain Image instance ID.
+ * @method void setImageId(string $ImageId) Set Image instance ID.
+ * @method string getImageName() Obtain Image name.
+ * @method void setImageName(string $ImageName) Set Image name.
  */
 
 /**
@@ -47,7 +47,7 @@ class Image extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,32 +18,32 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomain() 获取Domain name of the forwarding rule. Length: 1-80.
- * @method void setDomain(string $Domain) 设置Domain name of the forwarding rule. Length: 1-80.
- * @method string getUrl() 获取Forwarding rule path. Length: 1-200.
- * @method void setUrl(string $Url) 设置Forwarding rule path. Length: 1-200.
- * @method integer getSessionExpireTime() 获取Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
- * @method HealthCheck getHealthCheck() 获取Health check information
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置Health check information
- * @method CertificateInput getCertificate() 获取Certificate information
- * @method void setCertificate(CertificateInput $Certificate) 设置Certificate information
- * @method string getScheduler() 获取Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
+ * @method string getDomain() Obtain Domain name of the forwarding rule. Length: 1-80.
+ * @method void setDomain(string $Domain) Set Domain name of the forwarding rule. Length: 1-80.
+ * @method string getUrl() Obtain Forwarding rule path. Length: 1-200.
+ * @method void setUrl(string $Url) Set Forwarding rule path. Length: 1-200.
+ * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+ * @method HealthCheck getHealthCheck() Obtain Health check information
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information
+ * @method CertificateInput getCertificate() Obtain Certificate information
+ * @method void setCertificate(CertificateInput $Certificate) Set Certificate information
+ * @method string getScheduler() Obtain Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
- * @method void setScheduler(string $Scheduler) 设置Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
+ * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
- * @method string getForwardType() 获取Forwarding protocol between CLB and real server. Currently, HTTP is supported
- * @method void setForwardType(string $ForwardType) 设置Forwarding protocol between CLB and real server. Currently, HTTP is supported
- * @method boolean getDefaultServer() 获取Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
- * @method void setDefaultServer(boolean $DefaultServer) 设置Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
- * @method boolean getHttp2() 获取Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
- * @method void setHttp2(boolean $Http2) 设置Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
- * @method string getTargetType() 获取Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
- * @method void setTargetType(string $TargetType) 设置Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
- * @method string getTrpcCallee() 获取
- * @method void setTrpcCallee(string $TrpcCallee) 设置
- * @method string getTrpcFunc() 获取
- * @method void setTrpcFunc(string $TrpcFunc) 设置
+ * @method string getForwardType() Obtain Forwarding protocol between CLB and real server. Currently, HTTP is supported
+ * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB and real server. Currently, HTTP is supported
+ * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+ * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+ * @method boolean getHttp2() Obtain Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+ * @method void setHttp2(boolean $Http2) Set Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+ * @method string getTargetType() Obtain Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
+ * @method void setTargetType(string $TargetType) Set Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
+ * @method string getTrpcCallee() Obtain 
+ * @method void setTrpcCallee(string $TrpcCallee) Set 
+ * @method string getTrpcFunc() Obtain 
+ * @method void setTrpcFunc(string $TrpcFunc) Set 
  */
 
 /**
@@ -131,7 +131,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

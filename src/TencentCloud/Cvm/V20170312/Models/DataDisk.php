@@ -18,27 +18,27 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDiskSize() 获取The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
- * @method void setDiskSize(integer $DiskSize) 设置The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
- * @method string getDiskType() 获取The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
- * @method void setDiskType(string $DiskType) 设置The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
- * @method string getDiskId() 获取Data disk ID. Data disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
- * @method void setDiskId(string $DiskId) 设置Data disk ID. Data disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
- * @method boolean getDeleteWithInstance() 获取Whether to terminate the data disk when its CVM is terminated. Valid values:
+ * @method integer getDiskSize() Obtain The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
+ * @method void setDiskSize(integer $DiskSize) Set The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
+ * @method string getDiskType() Obtain The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
+ * @method void setDiskType(string $DiskType) Set The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
+ * @method string getDiskId() Obtain Data disk ID. Data disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
+ * @method void setDiskId(string $DiskId) Set Data disk ID. Data disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
+ * @method boolean getDeleteWithInstance() Obtain Whether to terminate the data disk when its CVM is terminated. Valid values:
 <li>TRUE: terminate the data disk when its CVM is terminated. This value only supports pay-as-you-go cloud disks billed on an hourly basis.
 <li>FALSE: retain the data disk when its CVM is terminated.<br>
 Default value: TRUE<br>
 Currently this parameter is only used in the `RunInstances` API.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置Whether to terminate the data disk when its CVM is terminated. Valid values:
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Whether to terminate the data disk when its CVM is terminated. Valid values:
 <li>TRUE: terminate the data disk when its CVM is terminated. This value only supports pay-as-you-go cloud disks billed on an hourly basis.
 <li>FALSE: retain the data disk when its CVM is terminated.<br>
 Default value: TRUE<br>
 Currently this parameter is only used in the `RunInstances` API.
 Note: This field may return null, indicating that no valid value is found.
- * @method string getSnapshotId() 获取Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
+ * @method string getSnapshotId() Obtain Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setSnapshotId(string $SnapshotId) 设置Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
+ * @method void setSnapshotId(string $SnapshotId) Set Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -95,7 +95,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

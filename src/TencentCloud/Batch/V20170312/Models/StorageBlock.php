@@ -18,17 +18,17 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getType() 获取Local HDD storage type. Value: LOCAL_PRO.
+ * @method string getType() Obtain Local HDD storage type. Value: LOCAL_PRO.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setType(string $Type) 设置Local HDD storage type. Value: LOCAL_PRO.
+ * @method void setType(string $Type) Set Local HDD storage type. Value: LOCAL_PRO.
 Note: This field may return null, indicating that no valid value is found.
- * @method integer getMinSize() 获取Minimum capacity of local HDD storage
+ * @method integer getMinSize() Obtain Minimum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
- * @method void setMinSize(integer $MinSize) 设置Minimum capacity of local HDD storage
+ * @method void setMinSize(integer $MinSize) Set Minimum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
- * @method integer getMaxSize() 获取Maximum capacity of local HDD storage
+ * @method integer getMaxSize() Obtain Maximum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
- * @method void setMaxSize(integer $MaxSize) 设置Maximum capacity of local HDD storage
+ * @method void setMaxSize(integer $MaxSize) Set Maximum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

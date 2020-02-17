@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Subnet getSubnet() 获取子网对象。
- * @method void setSubnet(Subnet $Subnet) 设置子网对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method Subnet getSubnet() Obtain Subnet object.
+ * @method void setSubnet(Subnet $Subnet) Set Subnet object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateSubnetResponse extends AbstractModel
 {
     /**
-     * @var Subnet 子网对象。
+     * @var Subnet Subnet object.
      */
     public $Subnet;
 
@@ -39,7 +39,7 @@ class CreateSubnetResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param Subnet $Subnet 子网对象。
+     * @param Subnet $Subnet Subnet object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateSubnetResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

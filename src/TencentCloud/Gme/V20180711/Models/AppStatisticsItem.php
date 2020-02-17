@@ -18,20 +18,20 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() 获取Voice chat statistics
+ * @method RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() Obtain Voice chat statistics
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem) 设置Voice chat statistics
+ * @method void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem) Set Voice chat statistics
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method VoiceMessageStatisticsItem getVoiceMessageStatisticsItem() 获取Voice messaging statistics
+ * @method VoiceMessageStatisticsItem getVoiceMessageStatisticsItem() Obtain Voice messaging statistics
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoiceMessageStatisticsItem(VoiceMessageStatisticsItem $VoiceMessageStatisticsItem) 设置Voice messaging statistics
+ * @method void setVoiceMessageStatisticsItem(VoiceMessageStatisticsItem $VoiceMessageStatisticsItem) Set Voice messaging statistics
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method VoiceFilterStatisticsItem getVoiceFilterStatisticsItem() 获取Phrase filtering statistics
+ * @method VoiceFilterStatisticsItem getVoiceFilterStatisticsItem() Obtain Phrase filtering statistics
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoiceFilterStatisticsItem(VoiceFilterStatisticsItem $VoiceFilterStatisticsItem) 设置Phrase filtering statistics
+ * @method void setVoiceFilterStatisticsItem(VoiceFilterStatisticsItem $VoiceFilterStatisticsItem) Set Phrase filtering statistics
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDate() 获取Statistical period
- * @method void setDate(string $Date) 设置Statistical period
+ * @method string getDate() Obtain Statistical period
+ * @method void setDate(string $Date) Set Statistical period
  */
 
 /**
@@ -75,7 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

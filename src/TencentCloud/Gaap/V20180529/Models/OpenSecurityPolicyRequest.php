@@ -18,8 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProxyId() 获取ID of the connections requiring enabled security policies.
- * @method void setProxyId(string $ProxyId) 设置ID of the connections requiring enabled security policies.
+ * @method string getProxyId() Obtain ID of the connections requiring enabled security policies.
+ * @method void setProxyId(string $ProxyId) Set ID of the connections requiring enabled security policies.
  */
 
 /**
@@ -39,7 +39,7 @@ class OpenSecurityPolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

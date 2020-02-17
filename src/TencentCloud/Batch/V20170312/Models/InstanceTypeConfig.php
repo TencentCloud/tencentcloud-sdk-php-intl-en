@@ -18,16 +18,16 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getMem() 获取Memory size in GB.
- * @method void setMem(integer $Mem) 设置Memory size in GB.
- * @method integer getCpu() 获取Number of CPU cores.
- * @method void setCpu(integer $Cpu) 设置Number of CPU cores.
- * @method string getInstanceType() 获取Instance model.
- * @method void setInstanceType(string $InstanceType) 设置Instance model.
- * @method string getZone() 获取Availability zone.
- * @method void setZone(string $Zone) 设置Availability zone.
- * @method string getInstanceFamily() 获取Instance model family.
- * @method void setInstanceFamily(string $InstanceFamily) 设置Instance model family.
+ * @method integer getMem() Obtain Memory size in GB.
+ * @method void setMem(integer $Mem) Set Memory size in GB.
+ * @method integer getCpu() Obtain Number of CPU cores.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores.
+ * @method string getInstanceType() Obtain Instance model.
+ * @method void setInstanceType(string $InstanceType) Set Instance model.
+ * @method string getZone() Obtain Availability zone.
+ * @method void setZone(string $Zone) Set Availability zone.
+ * @method string getInstanceFamily() Obtain Instance model family.
+ * @method void setInstanceFamily(string $InstanceFamily) Set Instance model family.
  */
 
 /**
@@ -71,7 +71,7 @@ class InstanceTypeConfig extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAttributeName() 获取属性名
- * @method void setAttributeName(string $AttributeName) 设置属性名
- * @method array getAttributeValues() 获取属性值
- * @method void setAttributeValues(array $AttributeValues) 设置属性值
+ * @method string getAttributeName() Obtain Attribute name
+ * @method void setAttributeName(string $AttributeName) Set Attribute name
+ * @method array getAttributeValues() Obtain Attribute values
+ * @method void setAttributeValues(array $AttributeValues) Set Attribute values
  */
 
 /**
- *账户属性对象
+ *Account attribute object
  */
 class AccountAttribute extends AbstractModel
 {
     /**
-     * @var string 属性名
+     * @var string Attribute name
      */
     public $AttributeName;
 
     /**
-     * @var array 属性值
+     * @var array Attribute values
      */
     public $AttributeValues;
     /**
-     * @param string $AttributeName 属性名
-     * @param array $AttributeValues 属性值
+     * @param string $AttributeName Attribute name
+     * @param array $AttributeValues Attribute values
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

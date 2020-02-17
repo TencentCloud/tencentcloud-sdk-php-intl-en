@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressId() 获取IP地址ID，例如：ipm-2uw6ujo6。
- * @method void setAddressId(string $AddressId) 设置IP地址ID，例如：ipm-2uw6ujo6。
- * @method string getAddressGroupId() 获取IP地址组ID，例如：ipmg-2uw6ujo6。
- * @method void setAddressGroupId(string $AddressGroupId) 设置IP地址组ID，例如：ipmg-2uw6ujo6。
+ * @method string getAddressId() Obtain The ID of the IP address, such as `ipm-2uw6ujo6`.
+ * @method void setAddressId(string $AddressId) Set The ID of the IP address, such as `ipm-2uw6ujo6`.
+ * @method string getAddressGroupId() Obtain The ID of the IP address group, such as `ipmg-2uw6ujo6`.
+ * @method void setAddressGroupId(string $AddressGroupId) Set The ID of the IP address group, such as `ipmg-2uw6ujo6`.
  */
 
 /**
- *IP地址模版
+ *IP address template.
  */
 class AddressTemplateSpecification extends AbstractModel
 {
     /**
-     * @var string IP地址ID，例如：ipm-2uw6ujo6。
+     * @var string The ID of the IP address, such as `ipm-2uw6ujo6`.
      */
     public $AddressId;
 
     /**
-     * @var string IP地址组ID，例如：ipmg-2uw6ujo6。
+     * @var string The ID of the IP address group, such as `ipmg-2uw6ujo6`.
      */
     public $AddressGroupId;
     /**
-     * @param string $AddressId IP地址ID，例如：ipm-2uw6ujo6。
-     * @param string $AddressGroupId IP地址组ID，例如：ipmg-2uw6ujo6。
+     * @param string $AddressId The ID of the IP address, such as `ipm-2uw6ujo6`.
+     * @param string $AddressGroupId The ID of the IP address group, such as `ipmg-2uw6ujo6`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

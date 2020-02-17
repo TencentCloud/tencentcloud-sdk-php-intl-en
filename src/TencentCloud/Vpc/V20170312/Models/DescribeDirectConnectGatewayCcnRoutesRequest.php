@@ -18,18 +18,18 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDirectConnectGatewayId() 获取专线网关ID，形如：`dcg-prpqlmg1`。
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID，形如：`dcg-prpqlmg1`。
- * @method string getCcnRouteType() 获取云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
- * @method void setCcnRouteType(string $CcnRouteType) 设置云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取返回数量。
- * @method void setLimit(integer $Limit) 设置返回数量。
+ * @method string getDirectConnectGatewayId() Obtain The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
+ * @method string getCcnRouteType() Obtain The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li>
+ * @method void setCcnRouteType(string $CcnRouteType) Set The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li>
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain The returned quantity.
+ * @method void setLimit(integer $Limit) Set The returned quantity.
  */
 
 /**
@@ -38,40 +38,40 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string 专线网关ID，形如：`dcg-prpqlmg1`。
+     * @var string The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @var string 云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
+     * @var string The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li>
      */
     public $CcnRouteType;
 
     /**
-     * @var integer 偏移量。
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量。
+     * @var integer The returned quantity.
      */
     public $Limit;
     /**
-     * @param string $DirectConnectGatewayId 专线网关ID，形如：`dcg-prpqlmg1`。
-     * @param string $CcnRouteType 云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 返回数量。
+     * @param string $DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
+     * @param string $CcnRouteType The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li>
+     * @param integer $Offset Offset.
+     * @param integer $Limit The returned quantity.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

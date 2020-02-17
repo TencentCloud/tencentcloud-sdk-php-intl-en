@@ -18,22 +18,22 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSSLMode() 获取Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
- * @method void setSSLMode(string $SSLMode) 设置Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
- * @method string getCertId() 获取ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
- * @method void setCertId(string $CertId) 设置ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
- * @method string getCertCaId() 获取ID of a client certificate. When the listener adopts mutual authentication (i.e., SSLMode = mutual), if you leave this parameter empty, you must upload the client certificate, including CertCaContent and CertCaName.
- * @method void setCertCaId(string $CertCaId) 设置ID of a client certificate. When the listener adopts mutual authentication (i.e., SSLMode = mutual), if you leave this parameter empty, you must upload the client certificate, including CertCaContent and CertCaName.
- * @method string getCertName() 获取Name of the uploaded server certificate. If there is no CertId, this parameter is required.
- * @method void setCertName(string $CertName) 设置Name of the uploaded server certificate. If there is no CertId, this parameter is required.
- * @method string getCertKey() 获取Key of the uploaded server certificate. If there is no CertId, this parameter is required.
- * @method void setCertKey(string $CertKey) 设置Key of the uploaded server certificate. If there is no CertId, this parameter is required.
- * @method string getCertContent() 获取Content of the uploaded server certificate. If there is no CertId, this parameter is required.
- * @method void setCertContent(string $CertContent) 设置Content of the uploaded server certificate. If there is no CertId, this parameter is required.
- * @method string getCertCaName() 获取Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
- * @method void setCertCaName(string $CertCaName) 设置Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
- * @method string getCertCaContent() 获取Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
- * @method void setCertCaContent(string $CertCaContent) 设置Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+ * @method string getSSLMode() Obtain Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+ * @method void setSSLMode(string $SSLMode) Set Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+ * @method string getCertId() Obtain ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+ * @method void setCertId(string $CertId) Set ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+ * @method string getCertCaId() Obtain ID of a client certificate. When the listener adopts mutual authentication (i.e., SSLMode = mutual), if you leave this parameter empty, you must upload the client certificate, including CertCaContent and CertCaName.
+ * @method void setCertCaId(string $CertCaId) Set ID of a client certificate. When the listener adopts mutual authentication (i.e., SSLMode = mutual), if you leave this parameter empty, you must upload the client certificate, including CertCaContent and CertCaName.
+ * @method string getCertName() Obtain Name of the uploaded server certificate. If there is no CertId, this parameter is required.
+ * @method void setCertName(string $CertName) Set Name of the uploaded server certificate. If there is no CertId, this parameter is required.
+ * @method string getCertKey() Obtain Key of the uploaded server certificate. If there is no CertId, this parameter is required.
+ * @method void setCertKey(string $CertKey) Set Key of the uploaded server certificate. If there is no CertId, this parameter is required.
+ * @method string getCertContent() Obtain Content of the uploaded server certificate. If there is no CertId, this parameter is required.
+ * @method void setCertContent(string $CertContent) Set Content of the uploaded server certificate. If there is no CertId, this parameter is required.
+ * @method string getCertCaName() Obtain Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+ * @method void setCertCaName(string $CertCaName) Set Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+ * @method string getCertCaContent() Obtain Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+ * @method void setCertCaContent(string $CertCaContent) Set Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
  */
 
 /**
@@ -95,7 +95,7 @@ class CertificateInput extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,84 +18,86 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomain() 获取Forwarding rule domain name.
- * @method void setDomain(string $Domain) 设置Forwarding rule domain name.
- * @method array getRuleSet() 获取Forwarding rule list of the domain name.
- * @method void setRuleSet(array $RuleSet) 设置Forwarding rule list of the domain name.
- * @method string getCertificateId() 获取Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
+ * @method string getDomain() Obtain Forwarding rule domain name.
+ * @method void setDomain(string $Domain) Set Forwarding rule domain name.
+ * @method array getRuleSet() Obtain Forwarding rule list of the domain name.
+ * @method void setRuleSet(array $RuleSet) Set Forwarding rule list of the domain name.
+ * @method string getCertificateId() Obtain Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateId(string $CertificateId) 设置Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
+ * @method void setCertificateId(string $CertificateId) Set Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCertificateAlias() 获取Server certificate name of the domain name.
+ * @method string getCertificateAlias() Obtain Server certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateAlias(string $CertificateAlias) 设置Server certificate name of the domain name.
+ * @method void setCertificateAlias(string $CertificateAlias) Set Server certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClientCertificateId() 获取Client certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
+ * @method string getClientCertificateId() Obtain Client certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClientCertificateId(string $ClientCertificateId) 设置Client certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
+ * @method void setClientCertificateId(string $ClientCertificateId) Set Client certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClientCertificateAlias() 获取Client certificate name of the domain name.
+ * @method string getClientCertificateAlias() Obtain Client certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClientCertificateAlias(string $ClientCertificateAlias) 设置Client certificate name of the domain name.
+ * @method void setClientCertificateAlias(string $ClientCertificateAlias) Set Client certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBasicAuthConfId() 获取Basic authentication configuration ID of the domain name.
+ * @method string getBasicAuthConfId() Obtain Basic authentication configuration ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBasicAuthConfId(string $BasicAuthConfId) 设置Basic authentication configuration ID of the domain name.
+ * @method void setBasicAuthConfId(string $BasicAuthConfId) Set Basic authentication configuration ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBasicAuth() 获取Basic authentication status:
+ * @method integer getBasicAuth() Obtain Basic authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBasicAuth(integer $BasicAuth) 设置Basic authentication status:
+ * @method void setBasicAuth(integer $BasicAuth) Set Basic authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBasicAuthConfAlias() 获取Basic authentication configuration name of the domain name.
+ * @method string getBasicAuthConfAlias() Obtain Basic authentication configuration name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBasicAuthConfAlias(string $BasicAuthConfAlias) 设置Basic authentication configuration name of the domain name.
+ * @method void setBasicAuthConfAlias(string $BasicAuthConfAlias) Set Basic authentication configuration name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRealServerCertificateId() 获取Origin server authentication certificate ID of the domain name.
+ * @method string getRealServerCertificateId() Obtain Origin server authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealServerCertificateId(string $RealServerCertificateId) 设置Origin server authentication certificate ID of the domain name.
+ * @method void setRealServerCertificateId(string $RealServerCertificateId) Set Origin server authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRealServerAuth() 获取Origin server authentication status:
+ * @method integer getRealServerAuth() Obtain Origin server authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealServerAuth(integer $RealServerAuth) 设置Origin server authentication status:
+ * @method void setRealServerAuth(integer $RealServerAuth) Set Origin server authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRealServerCertificateAlias() 获取Origin server authentication certificate name of the domain name.
+ * @method string getRealServerCertificateAlias() Obtain Origin server authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealServerCertificateAlias(string $RealServerCertificateAlias) 设置Origin server authentication certificate name of the domain name.
+ * @method void setRealServerCertificateAlias(string $RealServerCertificateAlias) Set Origin server authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGaapCertificateId() 获取Connection authentication certificate ID of the domain name.
+ * @method string getGaapCertificateId() Obtain Connection authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGaapCertificateId(string $GaapCertificateId) 设置Connection authentication certificate ID of the domain name.
+ * @method void setGaapCertificateId(string $GaapCertificateId) Set Connection authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getGaapAuth() 获取Connection authentication status:
+ * @method integer getGaapAuth() Obtain Connection authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGaapAuth(integer $GaapAuth) 设置Connection authentication status:
+ * @method void setGaapAuth(integer $GaapAuth) Set Connection authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGaapCertificateAlias() 获取Connection authentication certificate name of the domain name.
+ * @method string getGaapCertificateAlias() Obtain Connection authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGaapCertificateAlias(string $GaapCertificateAlias) 设置Connection authentication certificate name of the domain name.
+ * @method void setGaapCertificateAlias(string $GaapCertificateAlias) Set Connection authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRealServerCertificateDomain() 获取Origin server authentication domain name.
+ * @method string getRealServerCertificateDomain() Obtain Origin server authentication domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) 设置Origin server authentication domain name.
+ * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) Set Origin server authentication domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPolyClientCertificateAliasInfo() 获取Returns IDs and list of multiple certificates when there are multiple client certificates.
+ * @method array getPolyClientCertificateAliasInfo() Obtain Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置Returns IDs and list of multiple certificates when there are multiple client certificates.
+ * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) Set Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPolyRealServerCertificateAliasInfo() 获取
- * @method void setPolyRealServerCertificateAliasInfo(array $PolyRealServerCertificateAliasInfo) 设置
+ * @method array getPolyRealServerCertificateAliasInfo() Obtain Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPolyRealServerCertificateAliasInfo(array $PolyRealServerCertificateAliasInfo) Set Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -204,13 +206,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RealServerCertificateDomain;
 
     /**
-     * @var array Returns IDs and list of multiple certificates when there are multiple client certificates.
+     * @var array Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolyClientCertificateAliasInfo;
 
     /**
-     * @var array 
+     * @var array Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolyRealServerCertificateAliasInfo;
     /**
@@ -250,16 +253,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealServerCertificateDomain Origin server authentication domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $PolyClientCertificateAliasInfo Returns IDs and list of multiple certificates when there are multiple client certificates.
+     * @param array $PolyClientCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $PolyRealServerCertificateAliasInfo 
+     * @param array $PolyRealServerCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

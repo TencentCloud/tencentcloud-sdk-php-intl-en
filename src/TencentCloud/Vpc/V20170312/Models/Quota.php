@@ -18,44 +18,44 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getQuotaId() 获取配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
- * @method void setQuotaId(string $QuotaId) 设置配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
- * @method integer getQuotaCurrent() 获取当前数量
- * @method void setQuotaCurrent(integer $QuotaCurrent) 设置当前数量
- * @method integer getQuotaLimit() 获取配额数量
- * @method void setQuotaLimit(integer $QuotaLimit) 设置配额数量
+ * @method string getQuotaId() Obtain Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
+ * @method void setQuotaId(string $QuotaId) Set Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
+ * @method integer getQuotaCurrent() Obtain Current count
+ * @method void setQuotaCurrent(integer $QuotaCurrent) Set Current count
+ * @method integer getQuotaLimit() Obtain Quota
+ * @method void setQuotaLimit(integer $QuotaLimit) Set Quota
  */
 
 /**
- *描述配额信息
+ *Quota description information
  */
 class Quota extends AbstractModel
 {
     /**
-     * @var string 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+     * @var string Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
      */
     public $QuotaId;
 
     /**
-     * @var integer 当前数量
+     * @var integer Current count
      */
     public $QuotaCurrent;
 
     /**
-     * @var integer 配额数量
+     * @var integer Quota
      */
     public $QuotaLimit;
     /**
-     * @param string $QuotaId 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
-     * @param integer $QuotaCurrent 当前数量
-     * @param integer $QuotaLimit 配额数量
+     * @param string $QuotaId Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
+     * @param integer $QuotaCurrent Current count
+     * @param integer $QuotaLimit Quota
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMaxPrice() 获取Bidding price
- * @method void setMaxPrice(string $MaxPrice) 设置Bidding price
- * @method string getSpotInstanceType() 获取Bidding request type. Currently only "one-time" is supported.
- * @method void setSpotInstanceType(string $SpotInstanceType) 设置Bidding request type. Currently only "one-time" is supported.
+ * @method string getMaxPrice() Obtain Bidding price
+ * @method void setMaxPrice(string $MaxPrice) Set Bidding price
+ * @method string getSpotInstanceType() Obtain Bidding request type. Currently only "one-time" is supported.
+ * @method void setSpotInstanceType(string $SpotInstanceType) Set Bidding request type. Currently only "one-time" is supported.
  */
 
 /**
@@ -47,7 +47,7 @@ class SpotMarketOptions extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

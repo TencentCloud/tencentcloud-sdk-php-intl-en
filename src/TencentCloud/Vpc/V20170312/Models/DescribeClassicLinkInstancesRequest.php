@@ -18,16 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取Filter conditions.
+ * @method array getFilters() Obtain Filter conditions.
 <li>vpc-id - String - (Filter condition) The VPC instance ID.</li>
 <li>vm-ip - String - (Filter condition) The IP address of the CVM on the basic network.</li>
- * @method void setFilters(array $Filters) 设置Filter conditions.
+ * @method void setFilters(array $Filters) Set Filter conditions.
 <li>vpc-id - String - (Filter condition) The VPC instance ID.</li>
 <li>vm-ip - String - (Filter condition) The IP address of the CVM on the basic network.</li>
- * @method string getOffset() 获取偏移量
- * @method void setOffset(string $Offset) 设置偏移量
- * @method string getLimit() 获取返回数量
- * @method void setLimit(string $Limit) 设置返回数量
+ * @method string getOffset() Obtain Offset
+ * @method void setOffset(string $Offset) Set Offset
+ * @method string getLimit() Obtain The returned quantity
+ * @method void setLimit(string $Limit) Set The returned quantity
  */
 
 /**
@@ -43,27 +43,27 @@ class DescribeClassicLinkInstancesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 偏移量
+     * @var string Offset
      */
     public $Offset;
 
     /**
-     * @var string 返回数量
+     * @var string The returned quantity
      */
     public $Limit;
     /**
      * @param array $Filters Filter conditions.
 <li>vpc-id - String - (Filter condition) The VPC instance ID.</li>
 <li>vm-ip - String - (Filter condition) The IP address of the CVM on the basic network.</li>
-     * @param string $Offset 偏移量
-     * @param string $Limit 返回数量
+     * @param string $Offset Offset
+     * @param string $Limit The returned quantity
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

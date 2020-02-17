@@ -18,13 +18,13 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRuleId() 获取Forwarding rule ID
- * @method void setRuleId(string $RuleId) 设置Forwarding rule ID
- * @method array getRealServerBindSet() 获取An information list of the origin servers to bind.
+ * @method string getRuleId() Obtain Forwarding rule ID
+ * @method void setRuleId(string $RuleId) Set Forwarding rule ID
+ * @method array getRealServerBindSet() Obtain An information list of the origin servers to bind.
 If there are origin servers bound already, they will be replaced by this new origin server list.
 If this field is empty, it indicates unbinding all origin servers of this rule.
 If the origin server scheduling policy type of this rule is weighted round robin, you need to enter `RealServerWeight`, i.e., the origin server weight. If this field is left empty or for other scheduling types, the default origin server weight is 1.
- * @method void setRealServerBindSet(array $RealServerBindSet) 设置An information list of the origin servers to bind.
+ * @method void setRealServerBindSet(array $RealServerBindSet) Set An information list of the origin servers to bind.
 If there are origin servers bound already, they will be replaced by this new origin server list.
 If this field is empty, it indicates unbinding all origin servers of this rule.
 If the origin server scheduling policy type of this rule is weighted round robin, you need to enter `RealServerWeight`, i.e., the origin server weight. If this field is left empty or for other scheduling types, the default origin server weight is 1.
@@ -59,7 +59,7 @@ If the origin server scheduling policy type of this rule is weighted round robin
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getQuotaSet() 获取账户 EIP 配额信息。
- * @method void setQuotaSet(array $QuotaSet) 设置账户 EIP 配额信息。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getQuotaSet() Obtain The quota information of EIPs in an account.
+ * @method void setQuotaSet(array $QuotaSet) Set The quota information of EIPs in an account.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAddressQuotaResponse extends AbstractModel
 {
     /**
-     * @var array 账户 EIP 配额信息。
+     * @var array The quota information of EIPs in an account.
      */
     public $QuotaSet;
 
@@ -39,7 +39,7 @@ class DescribeAddressQuotaResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $QuotaSet 账户 EIP 配额信息。
+     * @param array $QuotaSet The quota information of EIPs in an account.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class DescribeAddressQuotaResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

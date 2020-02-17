@@ -18,14 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDiskIds() 获取ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method void setDiskIds(array $DiskIds) 设置ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method array getDiskChargePrepaids() 获取Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase usage period can be specified using this parameter. If this parameter is specified as CurInstanceDeadline, then it will be renewed according to the aligned CVM expiration time. If it is a batch renewal price query, then this parameter will correspond to the Disks parameter, and the element quantity needs to be kept the same.
- * @method void setDiskChargePrepaids(array $DiskChargePrepaids) 设置Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase usage period can be specified using this parameter. If this parameter is specified as CurInstanceDeadline, then it will be renewed according to the aligned CVM expiration time. If it is a batch renewal price query, then this parameter will correspond to the Disks parameter, and the element quantity needs to be kept the same.
- * @method string getNewDeadline() 获取Specify the new expiration time of the cloud disk, in such format as 2017-12-17 00:00:00. The parameters `NewDeadline` and `DiskChargePrepaids` are two options to specify the inquiry length, and you must specify at least one.
- * @method void setNewDeadline(string $NewDeadline) 设置Specify the new expiration time of the cloud disk, in such format as 2017-12-17 00:00:00. The parameters `NewDeadline` and `DiskChargePrepaids` are two options to specify the inquiry length, and you must specify at least one.
- * @method integer getProjectId() 获取ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
- * @method void setProjectId(integer $ProjectId) 设置ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+ * @method array getDiskIds() Obtain ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method void setDiskIds(array $DiskIds) Set ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method array getDiskChargePrepaids() Obtain Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase usage period can be specified using this parameter. If this parameter is specified as CurInstanceDeadline, then it will be renewed according to the aligned CVM expiration time. If it is a batch renewal price query, then this parameter will correspond to the Disks parameter, and the element quantity needs to be kept the same.
+ * @method void setDiskChargePrepaids(array $DiskChargePrepaids) Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase usage period can be specified using this parameter. If this parameter is specified as CurInstanceDeadline, then it will be renewed according to the aligned CVM expiration time. If it is a batch renewal price query, then this parameter will correspond to the Disks parameter, and the element quantity needs to be kept the same.
+ * @method string getNewDeadline() Obtain Specify the new expiration time of the cloud disk, in such format as 2017-12-17 00:00:00. The parameters `NewDeadline` and `DiskChargePrepaids` are two options to specify the inquiry length, and you must specify at least one.
+ * @method void setNewDeadline(string $NewDeadline) Set Specify the new expiration time of the cloud disk, in such format as 2017-12-17 00:00:00. The parameters `NewDeadline` and `DiskChargePrepaids` are two options to specify the inquiry length, and you must specify at least one.
+ * @method integer getProjectId() Obtain ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+ * @method void setProjectId(integer $ProjectId) Set ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
  */
 
 /**
@@ -63,7 +63,7 @@ class InquiryPriceRenewDisksRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

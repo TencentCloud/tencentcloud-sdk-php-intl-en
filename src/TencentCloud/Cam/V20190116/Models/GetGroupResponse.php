@@ -18,20 +18,20 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getGroupId() 获取User Group ID
- * @method void setGroupId(integer $GroupId) 设置User Group ID
- * @method string getGroupName() 获取User Group name
- * @method void setGroupName(string $GroupName) 设置User Group name
- * @method integer getGroupNum() 获取Number of members in the User Group
- * @method void setGroupNum(integer $GroupNum) 设置Number of members in the User Group
- * @method string getRemark() 获取User Group description
- * @method void setRemark(string $Remark) 设置User Group description
- * @method string getCreateTime() 获取Time User Group created
- * @method void setCreateTime(string $CreateTime) 设置Time User Group created
- * @method array getUserInfo() 获取User Group member information
- * @method void setUserInfo(array $UserInfo) 设置User Group member information
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getGroupId() Obtain User Group ID
+ * @method void setGroupId(integer $GroupId) Set User Group ID
+ * @method string getGroupName() Obtain User Group name
+ * @method void setGroupName(string $GroupName) Set User Group name
+ * @method integer getGroupNum() Obtain Number of members in the User Group
+ * @method void setGroupNum(integer $GroupNum) Set Number of members in the User Group
+ * @method string getRemark() Obtain User Group description
+ * @method void setRemark(string $Remark) Set User Group description
+ * @method string getCreateTime() Obtain Time User Group created
+ * @method void setCreateTime(string $CreateTime) Set Time User Group created
+ * @method array getUserInfo() Obtain User Group member information
+ * @method void setUserInfo(array $UserInfo) Set User Group member information
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -87,7 +87,7 @@ class GetGroupResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,26 +18,26 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getVpcIds() 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
- * @method void setVpcIds(array $VpcIds) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
- * @method array getFilters() 获取过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - String - （过滤条件）是否默认VPC。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - String - （过滤条件）是否默认VPC。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
- * @method string getOffset() 获取偏移量
- * @method void setOffset(string $Offset) 设置偏移量
- * @method string getLimit() 获取返回数量
- * @method void setLimit(string $Limit) 设置返回数量
+ * @method array getVpcIds() Obtain The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
+ * @method void setVpcIds(array $VpcIds) Set The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
+ * @method array getFilters() Obtain Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
+<li>vpc-name - String - (Filter condition) VPC instance name.</li>
+<li>is-default - String - (Filter condition) Indicates whether it is the default VPC.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) VPC CIDR.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+ * @method void setFilters(array $Filters) Set Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
+<li>vpc-name - String - (Filter condition) VPC instance name.</li>
+<li>is-default - String - (Filter condition) Indicates whether it is the default VPC.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) VPC CIDR.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+ * @method string getOffset() Obtain Offset
+ * @method void setOffset(string $Offset) Set Offset
+ * @method string getLimit() Obtain The returned quantity
+ * @method void setLimit(string $Limit) Set The returned quantity
  */
 
 /**
@@ -46,48 +46,48 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpcsRequest extends AbstractModel
 {
     /**
-     * @var array VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * @var array The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
      */
     public $VpcIds;
 
     /**
-     * @var array 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - String - （过滤条件）是否默认VPC。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+     * @var array Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
+<li>vpc-name - String - (Filter condition) VPC instance name.</li>
+<li>is-default - String - (Filter condition) Indicates whether it is the default VPC.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) VPC CIDR.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
      */
     public $Filters;
 
     /**
-     * @var string 偏移量
+     * @var string Offset
      */
     public $Offset;
 
     /**
-     * @var string 返回数量
+     * @var string The returned quantity
      */
     public $Limit;
     /**
-     * @param array $VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
-     * @param array $Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - String - （过滤条件）是否默认VPC。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-     * @param string $Offset 偏移量
-     * @param string $Limit 返回数量
+     * @param array $VpcIds The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
+     * @param array $Filters Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
+<li>vpc-name - String - (Filter condition) VPC instance name.</li>
+<li>is-default - String - (Filter condition) Indicates whether it is the default VPC.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) VPC CIDR.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+     * @param string $Offset Offset
+     * @param string $Limit The returned quantity
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

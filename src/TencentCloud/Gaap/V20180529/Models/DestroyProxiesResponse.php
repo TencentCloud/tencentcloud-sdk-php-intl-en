@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInvalidStatusInstanceSet() 获取ID list of connection instances that cannot be terminated.
- * @method void setInvalidStatusInstanceSet(array $InvalidStatusInstanceSet) 设置ID list of connection instances that cannot be terminated.
- * @method array getOperationFailedInstanceSet() 获取ID list of connection instances that failed to be terminated.
- * @method void setOperationFailedInstanceSet(array $OperationFailedInstanceSet) 设置ID list of connection instances that failed to be terminated.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getInvalidStatusInstanceSet() Obtain ID list of connection instances that cannot be terminated.
+ * @method void setInvalidStatusInstanceSet(array $InvalidStatusInstanceSet) Set ID list of connection instances that cannot be terminated.
+ * @method array getOperationFailedInstanceSet() Obtain ID list of connection instances that failed to be terminated.
+ * @method void setOperationFailedInstanceSet(array $OperationFailedInstanceSet) Set ID list of connection instances that failed to be terminated.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DestroyProxiesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

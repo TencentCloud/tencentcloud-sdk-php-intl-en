@@ -18,8 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPolicyId() 获取Policy ID
- * @method void setPolicyId(string $PolicyId) 设置Policy ID
+ * @method string getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(string $PolicyId) Set Policy ID
  */
 
 /**
@@ -39,7 +39,7 @@ class DeleteSecurityPolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

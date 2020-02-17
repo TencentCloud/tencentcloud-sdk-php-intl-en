@@ -18,22 +18,22 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getSubmittedCount() 获取Submitted count
- * @method void setSubmittedCount(integer $SubmittedCount) 设置Submitted count
- * @method integer getPendingCount() 获取Pending count
- * @method void setPendingCount(integer $PendingCount) 设置Pending count
- * @method integer getRunnableCount() 获取Runnable count
- * @method void setRunnableCount(integer $RunnableCount) 设置Runnable count
- * @method integer getStartingCount() 获取Starting count
- * @method void setStartingCount(integer $StartingCount) 设置Starting count
- * @method integer getRunningCount() 获取Running count
- * @method void setRunningCount(integer $RunningCount) 设置Running count
- * @method integer getSucceedCount() 获取Succeed count
- * @method void setSucceedCount(integer $SucceedCount) 设置Succeed count
- * @method integer getFailedInterruptedCount() 获取FailedInterrupted count
- * @method void setFailedInterruptedCount(integer $FailedInterruptedCount) 设置FailedInterrupted count
- * @method integer getFailedCount() 获取Failed count
- * @method void setFailedCount(integer $FailedCount) 设置Failed count
+ * @method integer getSubmittedCount() Obtain Submitted count
+ * @method void setSubmittedCount(integer $SubmittedCount) Set Submitted count
+ * @method integer getPendingCount() Obtain Pending count
+ * @method void setPendingCount(integer $PendingCount) Set Pending count
+ * @method integer getRunnableCount() Obtain Runnable count
+ * @method void setRunnableCount(integer $RunnableCount) Set Runnable count
+ * @method integer getStartingCount() Obtain Starting count
+ * @method void setStartingCount(integer $StartingCount) Set Starting count
+ * @method integer getRunningCount() Obtain Running count
+ * @method void setRunningCount(integer $RunningCount) Set Running count
+ * @method integer getSucceedCount() Obtain Succeed count
+ * @method void setSucceedCount(integer $SucceedCount) Set Succeed count
+ * @method integer getFailedInterruptedCount() Obtain FailedInterrupted count
+ * @method void setFailedInterruptedCount(integer $FailedInterruptedCount) Set FailedInterrupted count
+ * @method integer getFailedCount() Obtain Failed count
+ * @method void setFailedCount(integer $FailedCount) Set Failed count
  */
 
 /**
@@ -95,7 +95,7 @@ class TaskInstanceMetrics extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

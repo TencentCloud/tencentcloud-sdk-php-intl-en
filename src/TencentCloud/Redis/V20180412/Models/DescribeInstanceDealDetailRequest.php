@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDealIds() 获取Array of order IDs
- * @method void setDealIds(array $DealIds) 设置Array of order IDs
+ * @method array getDealIds() Obtain Array of order IDs
+ * @method void setDealIds(array $DealIds) Set Array of order IDs
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeInstanceDealDetailRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

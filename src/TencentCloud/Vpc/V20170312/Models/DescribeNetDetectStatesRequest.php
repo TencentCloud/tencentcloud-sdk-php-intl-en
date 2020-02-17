@@ -18,16 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getNetDetectIds() 获取The array of network detection instance `IDs`, such as [`netd-12345678`].
- * @method void setNetDetectIds(array $NetDetectIds) 设置The array of network detection instance `IDs`, such as [`netd-12345678`].
- * @method array getFilters() 获取Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
+ * @method array getNetDetectIds() Obtain The array of network detection instance `IDs`, such as [`netd-12345678`].
+ * @method void setNetDetectIds(array $NetDetectIds) Set The array of network detection instance `IDs`, such as [`netd-12345678`].
+ * @method array getFilters() Obtain Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
 <li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
- * @method void setFilters(array $Filters) 设置Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
+ * @method void setFilters(array $Filters) Set Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
 <li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
- * @method integer getOffset() 获取The offset. Default: 0.
- * @method void setOffset(integer $Offset) 设置The offset. Default: 0.
- * @method integer getLimit() 获取The number of returned values. Default: 20. Maximum: 100.
- * @method void setLimit(integer $Limit) 设置The number of returned values. Default: 20. Maximum: 100.
+ * @method integer getOffset() Obtain The offset. Default: 0.
+ * @method void setOffset(integer $Offset) Set The offset. Default: 0.
+ * @method integer getLimit() Obtain The number of returned values. Default: 20. Maximum: 100.
+ * @method void setLimit(integer $Limit) Set The number of returned values. Default: 20. Maximum: 100.
  */
 
 /**
@@ -67,7 +67,7 @@ class DescribeNetDetectStatesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

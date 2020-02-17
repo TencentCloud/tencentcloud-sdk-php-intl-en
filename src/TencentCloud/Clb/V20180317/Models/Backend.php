@@ -18,33 +18,33 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getType() 获取Real server type. Value range: CVM, ENI (coming soon)
- * @method void setType(string $Type) 设置Real server type. Value range: CVM, ENI (coming soon)
- * @method string getInstanceId() 获取Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
- * @method void setInstanceId(string $InstanceId) 设置Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
- * @method integer getPort() 获取Listening port of a real server
- * @method void setPort(integer $Port) 设置Listening port of a real server
- * @method integer getWeight() 获取Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
- * @method void setWeight(integer $Weight) 设置Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
- * @method array getPublicIpAddresses() 获取Public IP of a real server
+ * @method string getType() Obtain Real server type. Value range: CVM, ENI (coming soon)
+ * @method void setType(string $Type) Set Real server type. Value range: CVM, ENI (coming soon)
+ * @method string getInstanceId() Obtain Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
+ * @method void setInstanceId(string $InstanceId) Set Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
+ * @method integer getPort() Obtain Listening port of a real server
+ * @method void setPort(integer $Port) Set Listening port of a real server
+ * @method integer getWeight() Obtain Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+ * @method void setWeight(integer $Weight) Set Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+ * @method array getPublicIpAddresses() Obtain Public IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置Public IP of a real server
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPrivateIpAddresses() 获取Private IP of a real server
+ * @method array getPrivateIpAddresses() Obtain Private IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置Private IP of a real server
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() 获取Real server instance names
+ * @method string getInstanceName() Obtain Real server instance names
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) 设置Real server instance names
+ * @method void setInstanceName(string $InstanceName) Set Real server instance names
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegisteredTime() 获取Bound time of a real server
+ * @method string getRegisteredTime() Obtain Bound time of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegisteredTime(string $RegisteredTime) 设置Bound time of a real server
+ * @method void setRegisteredTime(string $RegisteredTime) Set Bound time of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEniId() 获取Unique ENI ID
+ * @method string getEniId() Obtain Unique ENI ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEniId(string $EniId) 设置Unique ENI ID
+ * @method void setEniId(string $EniId) Set Unique ENI ID
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -123,7 +123,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

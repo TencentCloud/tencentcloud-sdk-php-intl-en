@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method array getInstanceParams() 获取List of instance parameters modified
- * @method void setInstanceParams(array $InstanceParams) 设置List of instance parameters modified
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method array getInstanceParams() Obtain List of instance parameters modified
+ * @method void setInstanceParams(array $InstanceParams) Set List of instance parameters modified
  */
 
 /**
@@ -47,7 +47,7 @@ class ModifyInstanceParamsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

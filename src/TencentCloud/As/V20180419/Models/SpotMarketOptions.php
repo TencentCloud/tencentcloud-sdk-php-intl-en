@@ -18,11 +18,11 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMaxPrice() 获取Bidding price such as "1.05"
- * @method void setMaxPrice(string $MaxPrice) 设置Bidding price such as "1.05"
- * @method string getSpotInstanceType() 获取Bid request type. Currently, only "one-time" type is supported. Default value: one-time
+ * @method string getMaxPrice() Obtain Bidding price such as "1.05"
+ * @method void setMaxPrice(string $MaxPrice) Set Bidding price such as "1.05"
+ * @method string getSpotInstanceType() Obtain Bid request type. Currently, only "one-time" type is supported. Default value: one-time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpotInstanceType(string $SpotInstanceType) 设置Bid request type. Currently, only "one-time" type is supported. Default value: one-time
+ * @method void setSpotInstanceType(string $SpotInstanceType) Set Bid request type. Currently, only "one-time" type is supported. Default value: one-time
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -51,7 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

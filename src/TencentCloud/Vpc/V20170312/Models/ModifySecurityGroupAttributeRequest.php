@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSecurityGroupId() 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- * @method string getGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
- * @method void setGroupName(string $GroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
- * @method string getGroupDescription() 获取安全组备注，最多100个字符。
- * @method void setGroupDescription(string $GroupDescription) 设置安全组备注，最多100个字符。
+ * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
+ * @method string getGroupName() Obtain Security group can be named freely, but cannot exceed 60 characters.
+ * @method void setGroupName(string $GroupName) Set Security group can be named freely, but cannot exceed 60 characters.
+ * @method string getGroupDescription() Obtain The remarks for the security group. The maximum length is 100 characters.
+ * @method void setGroupDescription(string $GroupDescription) Set The remarks for the security group. The maximum length is 100 characters.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ModifySecurityGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @var string The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      */
     public $SecurityGroupId;
 
     /**
-     * @var string 安全组名称，可任意命名，但不得超过60个字符。
+     * @var string Security group can be named freely, but cannot exceed 60 characters.
      */
     public $GroupName;
 
     /**
-     * @var string 安全组备注，最多100个字符。
+     * @var string The remarks for the security group. The maximum length is 100 characters.
      */
     public $GroupDescription;
     /**
-     * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
-     * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。
-     * @param string $GroupDescription 安全组备注，最多100个字符。
+     * @param string $SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
+     * @param string $GroupName Security group can be named freely, but cannot exceed 60 characters.
+     * @param string $GroupDescription The remarks for the security group. The maximum length is 100 characters.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

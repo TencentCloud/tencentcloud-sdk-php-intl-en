@@ -18,18 +18,18 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNationCountryName() 获取Country name.
- * @method void setNationCountryName(string $NationCountryName) 设置Country name.
- * @method string getNationCountryInnerCode() 获取Country code.
- * @method void setNationCountryInnerCode(string $NationCountryInnerCode) 设置Country code.
- * @method string getGeographicalZoneName() 获取Region name.
- * @method void setGeographicalZoneName(string $GeographicalZoneName) 设置Region name.
- * @method string getGeographicalZoneInnerCode() 获取Region code.
- * @method void setGeographicalZoneInnerCode(string $GeographicalZoneInnerCode) 设置Region code.
- * @method string getContinentName() 获取Continent name.
- * @method void setContinentName(string $ContinentName) 设置Continent name.
- * @method string getContinentInnerCode() 获取Continent code.
- * @method void setContinentInnerCode(string $ContinentInnerCode) 设置Continent code.
+ * @method string getNationCountryName() Obtain Country name.
+ * @method void setNationCountryName(string $NationCountryName) Set Country name.
+ * @method string getNationCountryInnerCode() Obtain Country code.
+ * @method void setNationCountryInnerCode(string $NationCountryInnerCode) Set Country code.
+ * @method string getGeographicalZoneName() Obtain Region name.
+ * @method void setGeographicalZoneName(string $GeographicalZoneName) Set Region name.
+ * @method string getGeographicalZoneInnerCode() Obtain Region code.
+ * @method void setGeographicalZoneInnerCode(string $GeographicalZoneInnerCode) Set Region code.
+ * @method string getContinentName() Obtain Continent name.
+ * @method void setContinentName(string $ContinentName) Set Continent name.
+ * @method string getContinentInnerCode() Obtain Continent code.
+ * @method void setContinentInnerCode(string $ContinentInnerCode) Set Continent code.
  */
 
 /**
@@ -79,7 +79,7 @@ class CountryAreaMap extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

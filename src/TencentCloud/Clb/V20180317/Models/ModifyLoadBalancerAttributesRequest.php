@@ -18,14 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取Unique CLB ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置Unique CLB ID
- * @method string getLoadBalancerName() 获取CLB instance name
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置CLB instance name
- * @method TargetRegionInfo getTargetRegionInfo() 获取Region information of the real server bound to a CLB.
- * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置Region information of the real server bound to a CLB.
- * @method InternetAccessible getInternetChargeInfo() 获取Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
- * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) 设置Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+ * @method string getLoadBalancerId() Obtain Unique CLB ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique CLB ID
+ * @method string getLoadBalancerName() Obtain CLB instance name
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name
+ * @method TargetRegionInfo getTargetRegionInfo() Obtain Region information of the real server bound to a CLB.
+ * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set Region information of the real server bound to a CLB.
+ * @method InternetAccessible getInternetChargeInfo() Obtain Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+ * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) Set Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
  */
 
 /**
@@ -63,7 +63,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

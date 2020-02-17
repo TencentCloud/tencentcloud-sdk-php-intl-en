@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getCPU() 获取Number of CPU cores.
- * @method void setCPU(integer $CPU) 设置Number of CPU cores.
- * @method integer getMemory() 获取Memory size in GB.
- * @method void setMemory(integer $Memory) 设置Memory size in GB.
- * @method array getInstanceCategories() 获取Instance model category. Value range: "ALL", "GENERAL", "GENERAL_2", "GENERAL_3", "COMPUTE", "COMPUTE_2", and "COMPUTE_3". Default value: "ALL".
- * @method void setInstanceCategories(array $InstanceCategories) 设置Instance model category. Value range: "ALL", "GENERAL", "GENERAL_2", "GENERAL_3", "COMPUTE", "COMPUTE_2", and "COMPUTE_3". Default value: "ALL".
+ * @method integer getCPU() Obtain Number of CPU cores.
+ * @method void setCPU(integer $CPU) Set Number of CPU cores.
+ * @method integer getMemory() Obtain Memory size in GB.
+ * @method void setMemory(integer $Memory) Set Memory size in GB.
+ * @method array getInstanceCategories() Obtain Instance model category. Value range: "ALL", "GENERAL", "GENERAL_2", "GENERAL_3", "COMPUTE", "COMPUTE_2", and "COMPUTE_3". Default value: "ALL".
+ * @method void setInstanceCategories(array $InstanceCategories) Set Instance model category. Value range: "ALL", "GENERAL", "GENERAL_2", "GENERAL_3", "COMPUTE", "COMPUTE_2", and "COMPUTE_3". Default value: "ALL".
  */
 
 /**
@@ -55,7 +55,7 @@ class InstanceTypeOptions extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

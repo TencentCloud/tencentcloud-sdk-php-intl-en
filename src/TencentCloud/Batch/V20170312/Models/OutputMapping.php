@@ -18,10 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSourcePath() 获取Source path
- * @method void setSourcePath(string $SourcePath) 设置Source path
- * @method string getDestinationPath() 获取Destination path
- * @method void setDestinationPath(string $DestinationPath) 设置Destination path
+ * @method string getSourcePath() Obtain Source path
+ * @method void setSourcePath(string $SourcePath) Set Source path
+ * @method string getDestinationPath() Obtain Destination path
+ * @method void setDestinationPath(string $DestinationPath) Set Destination path
  */
 
 /**
@@ -47,7 +47,7 @@ class OutputMapping extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

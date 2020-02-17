@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Total quantity of listeners that matches the conditions
- * @method void setTotalCount(integer $TotalCount) 设置Total quantity of listeners that matches the conditions
- * @method array getListenerSet() 获取TCP listener list
- * @method void setListenerSet(array $ListenerSet) 设置TCP listener list
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Total quantity of listeners that matches the conditions
+ * @method void setTotalCount(integer $TotalCount) Set Total quantity of listeners that matches the conditions
+ * @method array getListenerSet() Obtain TCP listener list
+ * @method void setListenerSet(array $ListenerSet) Set TCP listener list
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeTCPListenersResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

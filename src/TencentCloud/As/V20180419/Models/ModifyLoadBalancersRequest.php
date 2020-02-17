@@ -18,16 +18,16 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID
- * @method array getLoadBalancerIds() 获取List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
- * @method array getForwardLoadBalancers() 获取List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
- * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
- * @method string getLoadBalancersCheckPolicy() 获取CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method array getLoadBalancerIds() Obtain List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+ * @method array getForwardLoadBalancers() Obtain List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+ * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+ * @method string getLoadBalancersCheckPolicy() Obtain CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
 <br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
 <br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
- * @method void setLoadBalancersCheckPolicy(string $LoadBalancersCheckPolicy) 设置CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
+ * @method void setLoadBalancersCheckPolicy(string $LoadBalancersCheckPolicy) Set CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
 <br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
 <br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
  */
@@ -71,7 +71,7 @@ class ModifyLoadBalancersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

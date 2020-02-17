@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
- * @method void setInstanceIds(array $InstanceIds) 设置Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
- * @method string getInstanceName() 获取Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
- * @method void setInstanceName(string $InstanceName) 设置Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
- * @method array getSecurityGroups() 获取ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
- * @method void setSecurityGroups(array $SecurityGroups) 设置ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+ * @method array getInstanceIds() Obtain Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+ * @method string getInstanceName() Obtain Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+ * @method void setInstanceName(string $InstanceName) Set Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+ * @method array getSecurityGroups() Obtain ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+ * @method void setSecurityGroups(array $SecurityGroups) Set ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
  */
 
 /**
@@ -55,7 +55,7 @@ class ModifyInstancesAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

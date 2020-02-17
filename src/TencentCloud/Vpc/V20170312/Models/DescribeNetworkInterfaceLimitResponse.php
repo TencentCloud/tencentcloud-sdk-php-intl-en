@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getEniQuantity() 获取ENI quota
- * @method void setEniQuantity(integer $EniQuantity) 设置ENI quota
- * @method integer getEniPrivateIpAddressQuantity() 获取The quota of IP addresses that can be allocated to each ENI.
- * @method void setEniPrivateIpAddressQuantity(integer $EniPrivateIpAddressQuantity) 设置The quota of IP addresses that can be allocated to each ENI.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getEniQuantity() Obtain ENI quota
+ * @method void setEniQuantity(integer $EniQuantity) Set ENI quota
+ * @method integer getEniPrivateIpAddressQuantity() Obtain The quota of IP addresses that can be allocated to each ENI.
+ * @method void setEniPrivateIpAddressQuantity(integer $EniPrivateIpAddressQuantity) Set The quota of IP addresses that can be allocated to each ENI.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

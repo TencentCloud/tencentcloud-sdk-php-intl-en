@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTargetGroupId() 获取Target group ID
- * @method void setTargetGroupId(string $TargetGroupId) 设置Target group ID
- * @method string getTargetGroupName() 获取Target group name
- * @method void setTargetGroupName(string $TargetGroupName) 设置Target group name
+ * @method string getTargetGroupId() Obtain Target group ID
+ * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
+ * @method string getTargetGroupName() Obtain Target group name
+ * @method void setTargetGroupName(string $TargetGroupName) Set Target group name
  */
 
 /**
@@ -47,7 +47,7 @@ class BasicTargetGroupInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

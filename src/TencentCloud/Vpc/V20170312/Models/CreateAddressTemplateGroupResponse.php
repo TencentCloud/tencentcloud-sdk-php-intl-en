@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method AddressTemplateGroup getAddressTemplateGroup() 获取IP地址模板集合对象。
- * @method void setAddressTemplateGroup(AddressTemplateGroup $AddressTemplateGroup) 设置IP地址模板集合对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method AddressTemplateGroup getAddressTemplateGroup() Obtain Group object of the IP address template.
+ * @method void setAddressTemplateGroup(AddressTemplateGroup $AddressTemplateGroup) Set Group object of the IP address template.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAddressTemplateGroupResponse extends AbstractModel
 {
     /**
-     * @var AddressTemplateGroup IP地址模板集合对象。
+     * @var AddressTemplateGroup Group object of the IP address template.
      */
     public $AddressTemplateGroup;
 
@@ -39,7 +39,7 @@ class CreateAddressTemplateGroupResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param AddressTemplateGroup $AddressTemplateGroup IP地址模板集合对象。
+     * @param AddressTemplateGroup $AddressTemplateGroup Group object of the IP address template.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateAddressTemplateGroupResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

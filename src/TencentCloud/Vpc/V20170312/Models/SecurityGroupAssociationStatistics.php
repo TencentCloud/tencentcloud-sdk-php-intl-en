@@ -18,76 +18,76 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSecurityGroupId() 获取安全组实例ID。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID。
- * @method integer getCVM() 获取云主机实例数。
- * @method void setCVM(integer $CVM) 设置云主机实例数。
- * @method integer getCDB() 获取数据库实例数。
- * @method void setCDB(integer $CDB) 设置数据库实例数。
- * @method integer getENI() 获取弹性网卡实例数。
- * @method void setENI(integer $ENI) 设置弹性网卡实例数。
- * @method integer getSG() 获取被安全组引用数。
- * @method void setSG(integer $SG) 设置被安全组引用数。
- * @method integer getCLB() 获取负载均衡实例数。
- * @method void setCLB(integer $CLB) 设置负载均衡实例数。
- * @method array getInstanceStatistics() 获取全量实例的绑定统计。
- * @method void setInstanceStatistics(array $InstanceStatistics) 设置全量实例的绑定统计。
+ * @method string getSecurityGroupId() Obtain Security group instance ID.
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group instance ID.
+ * @method integer getCVM() Obtain Number of CVM instances.
+ * @method void setCVM(integer $CVM) Set Number of CVM instances.
+ * @method integer getCDB() Obtain Number of database instances.
+ * @method void setCDB(integer $CDB) Set Number of database instances.
+ * @method integer getENI() Obtain Number of ENI instances.
+ * @method void setENI(integer $ENI) Set Number of ENI instances.
+ * @method integer getSG() Obtain Number of times a security group is referenced by other security groups
+ * @method void setSG(integer $SG) Set Number of times a security group is referenced by other security groups
+ * @method integer getCLB() Obtain Number of load balancer instances.
+ * @method void setCLB(integer $CLB) Set Number of load balancer instances.
+ * @method array getInstanceStatistics() Obtain The binding statistics for all instances.
+ * @method void setInstanceStatistics(array $InstanceStatistics) Set The binding statistics for all instances.
  */
 
 /**
- *安全组关联的实例统计
+ *Statistics on the instances associated with the security group
  */
 class SecurityGroupAssociationStatistics extends AbstractModel
 {
     /**
-     * @var string 安全组实例ID。
+     * @var string Security group instance ID.
      */
     public $SecurityGroupId;
 
     /**
-     * @var integer 云主机实例数。
+     * @var integer Number of CVM instances.
      */
     public $CVM;
 
     /**
-     * @var integer 数据库实例数。
+     * @var integer Number of database instances.
      */
     public $CDB;
 
     /**
-     * @var integer 弹性网卡实例数。
+     * @var integer Number of ENI instances.
      */
     public $ENI;
 
     /**
-     * @var integer 被安全组引用数。
+     * @var integer Number of times a security group is referenced by other security groups
      */
     public $SG;
 
     /**
-     * @var integer 负载均衡实例数。
+     * @var integer Number of load balancer instances.
      */
     public $CLB;
 
     /**
-     * @var array 全量实例的绑定统计。
+     * @var array The binding statistics for all instances.
      */
     public $InstanceStatistics;
     /**
-     * @param string $SecurityGroupId 安全组实例ID。
-     * @param integer $CVM 云主机实例数。
-     * @param integer $CDB 数据库实例数。
-     * @param integer $ENI 弹性网卡实例数。
-     * @param integer $SG 被安全组引用数。
-     * @param integer $CLB 负载均衡实例数。
-     * @param array $InstanceStatistics 全量实例的绑定统计。
+     * @param string $SecurityGroupId Security group instance ID.
+     * @param integer $CVM Number of CVM instances.
+     * @param integer $CDB Number of database instances.
+     * @param integer $ENI Number of ENI instances.
+     * @param integer $SG Number of times a security group is referenced by other security groups
+     * @param integer $CLB Number of load balancer instances.
+     * @param array $InstanceStatistics The binding statistics for all instances.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

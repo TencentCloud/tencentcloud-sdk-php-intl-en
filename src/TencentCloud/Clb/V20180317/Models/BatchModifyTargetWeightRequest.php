@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method array getModifyList() 获取List of weights to be modified in batches
- * @method void setModifyList(array $ModifyList) 设置List of weights to be modified in batches
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getModifyList() Obtain List of weights to be modified in batches
+ * @method void setModifyList(array $ModifyList) Set List of weights to be modified in batches
  */
 
 /**
@@ -47,7 +47,7 @@ class BatchModifyTargetWeightRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

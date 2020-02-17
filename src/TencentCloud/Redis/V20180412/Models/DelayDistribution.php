@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getLadder() 获取Distribution ladder
- * @method void setLadder(integer $Ladder) 设置Distribution ladder
- * @method integer getSize() 获取Size
- * @method void setSize(integer $Size) 设置Size
+ * @method integer getLadder() Obtain Distribution ladder
+ * @method void setLadder(integer $Ladder) Set Distribution ladder
+ * @method integer getSize() Obtain Size
+ * @method void setSize(integer $Size) Set Size
  */
 
 /**
@@ -47,7 +47,7 @@ class DelayDistribution extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

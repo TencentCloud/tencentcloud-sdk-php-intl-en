@@ -18,44 +18,44 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKey() 获取标签键
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置标签键
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取标签值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置标签值
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKey() Obtain Tag key
+Note: This field may return null, indicating no valid value.
+ * @method void setKey(string $Key) Set Tag key
+Note: This field may return null, indicating no valid value.
+ * @method string getValue() Obtain Tag value
+Note: This field may return null, indicating no valid value.
+ * @method void setValue(string $Value) Set Tag value
+Note: This field may return null, indicating no valid value.
  */
 
 /**
- *标签键值对
+ *Tag key-value pair
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string 标签键
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Tag key
+Note: This field may return null, indicating no valid value.
      */
     public $Key;
 
     /**
-     * @var string 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Tag value
+Note: This field may return null, indicating no valid value.
      */
     public $Value;
     /**
-     * @param string $Key 标签键
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Key Tag key
+Note: This field may return null, indicating no valid value.
+     * @param string $Value Tag value
+Note: This field may return null, indicating no valid value.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,22 +18,22 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getImageName() 获取Image name
- * @method void setImageName(string $ImageName) 设置Image name
- * @method string getInstanceId() 获取The ID of the instance used to create an image
- * @method void setInstanceId(string $InstanceId) 设置The ID of the instance used to create an image
- * @method string getImageDescription() 获取Image description
- * @method void setImageDescription(string $ImageDescription) 设置Image description
- * @method string getForcePoweroff() 获取Whether to force shut down an instance to create an image when a soft shutdown fails
- * @method void setForcePoweroff(string $ForcePoweroff) 设置Whether to force shut down an instance to create an image when a soft shutdown fails
- * @method string getSysprep() 获取Whether to enable Sysprep when creating a Windows image
- * @method void setSysprep(string $Sysprep) 设置Whether to enable Sysprep when creating a Windows image
- * @method array getDataDiskIds() 获取The ID of the data disk used to create an image
- * @method void setDataDiskIds(array $DataDiskIds) 设置The ID of the data disk used to create an image
- * @method array getSnapshotIds() 获取The ID of the snapshot used to create an image. A system disk snapshot must be included.
- * @method void setSnapshotIds(array $SnapshotIds) 设置The ID of the snapshot used to create an image. A system disk snapshot must be included.
- * @method boolean getDryRun() 获取Verifies the validity of the request without affecting the resources involved.
- * @method void setDryRun(boolean $DryRun) 设置Verifies the validity of the request without affecting the resources involved.
+ * @method string getImageName() Obtain Image name
+ * @method void setImageName(string $ImageName) Set Image name
+ * @method string getInstanceId() Obtain The ID of the instance used to create an image
+ * @method void setInstanceId(string $InstanceId) Set The ID of the instance used to create an image
+ * @method string getImageDescription() Obtain Image description
+ * @method void setImageDescription(string $ImageDescription) Set Image description
+ * @method string getForcePoweroff() Obtain Whether to force shut down an instance to create an image when a soft shutdown fails
+ * @method void setForcePoweroff(string $ForcePoweroff) Set Whether to force shut down an instance to create an image when a soft shutdown fails
+ * @method string getSysprep() Obtain Whether to enable Sysprep when creating a Windows image
+ * @method void setSysprep(string $Sysprep) Set Whether to enable Sysprep when creating a Windows image
+ * @method array getDataDiskIds() Obtain The ID of the data disk used to create an image
+ * @method void setDataDiskIds(array $DataDiskIds) Set The ID of the data disk used to create an image
+ * @method array getSnapshotIds() Obtain The ID of the snapshot used to create an image. A system disk snapshot must be included.
+ * @method void setSnapshotIds(array $SnapshotIds) Set The ID of the snapshot used to create an image. A system disk snapshot must be included.
+ * @method boolean getDryRun() Obtain Verifies the validity of the request without affecting the resources involved.
+ * @method void setDryRun(boolean $DryRun) Set Verifies the validity of the request without affecting the resources involved.
  */
 
 /**
@@ -95,7 +95,7 @@ class CreateImageRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

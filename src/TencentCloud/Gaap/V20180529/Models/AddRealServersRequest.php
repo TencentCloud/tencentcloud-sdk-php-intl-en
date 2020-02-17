@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProjectId() 获取Project ID corresponding to origin server
- * @method void setProjectId(integer $ProjectId) 设置Project ID corresponding to origin server
- * @method array getRealServerIP() 获取IP or domain name corresponding to origin server
- * @method void setRealServerIP(array $RealServerIP) 设置IP or domain name corresponding to origin server
- * @method string getRealServerName() 获取Origin server name
- * @method void setRealServerName(string $RealServerName) 设置Origin server name
- * @method array getTagSet() 获取Tag list
- * @method void setTagSet(array $TagSet) 设置Tag list
+ * @method integer getProjectId() Obtain Project ID corresponding to origin server
+ * @method void setProjectId(integer $ProjectId) Set Project ID corresponding to origin server
+ * @method array getRealServerIP() Obtain IP or domain name corresponding to origin server
+ * @method void setRealServerIP(array $RealServerIP) Set IP or domain name corresponding to origin server
+ * @method string getRealServerName() Obtain Origin server name
+ * @method void setRealServerName(string $RealServerName) Set Origin server name
+ * @method array getTagSet() Obtain Tag list
+ * @method void setTagSet(array $TagSet) Set Tag list
  */
 
 /**
@@ -63,7 +63,7 @@ class AddRealServersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

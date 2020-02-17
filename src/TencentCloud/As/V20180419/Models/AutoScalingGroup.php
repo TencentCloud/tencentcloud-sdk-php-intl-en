@@ -18,56 +18,56 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID
- * @method string getAutoScalingGroupName() 获取Auto scaling group name
- * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置Auto scaling group name
- * @method string getAutoScalingGroupStatus() 获取Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
- * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) 设置Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
- * @method string getCreatedTime() 获取Creation time in UTC format
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time in UTC format
- * @method integer getDefaultCooldown() 获取Default cooldown period in seconds
- * @method void setDefaultCooldown(integer $DefaultCooldown) 设置Default cooldown period in seconds
- * @method integer getDesiredCapacity() 获取Desired number of instances
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置Desired number of instances
- * @method string getEnabledStatus() 获取Enabled status. Value range: `ENABLED`, `DISABLED`
- * @method void setEnabledStatus(string $EnabledStatus) 设置Enabled status. Value range: `ENABLED`, `DISABLED`
- * @method array getForwardLoadBalancerSet() 获取List of application load balancers
- * @method void setForwardLoadBalancerSet(array $ForwardLoadBalancerSet) 设置List of application load balancers
- * @method integer getInstanceCount() 获取Number of instances
- * @method void setInstanceCount(integer $InstanceCount) 设置Number of instances
- * @method integer getInServiceInstanceCount() 获取Number of instances in `IN_SERVICE` status
- * @method void setInServiceInstanceCount(integer $InServiceInstanceCount) 设置Number of instances in `IN_SERVICE` status
- * @method string getLaunchConfigurationId() 获取Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置Launch configuration ID
- * @method string getLaunchConfigurationName() 获取Launch configuration name
- * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置Launch configuration name
- * @method array getLoadBalancerIdSet() 获取List of Classic load balancer IDs
- * @method void setLoadBalancerIdSet(array $LoadBalancerIdSet) 设置List of Classic load balancer IDs
- * @method integer getMaxSize() 获取Maximum number of instances
- * @method void setMaxSize(integer $MaxSize) 设置Maximum number of instances
- * @method integer getMinSize() 获取Minimum number of instances
- * @method void setMinSize(integer $MinSize) 设置Minimum number of instances
- * @method integer getProjectId() 获取Project ID
- * @method void setProjectId(integer $ProjectId) 设置Project ID
- * @method array getSubnetIdSet() 获取List of subnet IDs
- * @method void setSubnetIdSet(array $SubnetIdSet) 设置List of subnet IDs
- * @method array getTerminationPolicySet() 获取Termination policy
- * @method void setTerminationPolicySet(array $TerminationPolicySet) 设置Termination policy
- * @method string getVpcId() 获取VPC ID
- * @method void setVpcId(string $VpcId) 设置VPC ID
- * @method array getZoneSet() 获取List of availability zones
- * @method void setZoneSet(array $ZoneSet) 设置List of availability zones
- * @method string getRetryPolicy() 获取Retry policy
- * @method void setRetryPolicy(string $RetryPolicy) 设置Retry policy
- * @method string getInActivityStatus() 获取Whether the auto scaling group is performing a scaling activity. `IN_ACTIVITY` indicates yes, and `NOT_IN_ACTIVITY` indicates no.
- * @method void setInActivityStatus(string $InActivityStatus) 设置Whether the auto scaling group is performing a scaling activity. `IN_ACTIVITY` indicates yes, and `NOT_IN_ACTIVITY` indicates no.
- * @method array getTags() 获取List of auto scaling group tags
- * @method void setTags(array $Tags) 设置List of auto scaling group tags
- * @method ServiceSettings getServiceSettings() 获取Service settings
- * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置Service settings
- * @method integer getIpv6AddressCount() 获取
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getAutoScalingGroupName() Obtain Auto scaling group name
+ * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name
+ * @method string getAutoScalingGroupStatus() Obtain Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
+ * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) Set Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
+ * @method string getCreatedTime() Obtain Creation time in UTC format
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time in UTC format
+ * @method integer getDefaultCooldown() Obtain Default cooldown period in seconds
+ * @method void setDefaultCooldown(integer $DefaultCooldown) Set Default cooldown period in seconds
+ * @method integer getDesiredCapacity() Obtain Desired number of instances
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired number of instances
+ * @method string getEnabledStatus() Obtain Enabled status. Value range: `ENABLED`, `DISABLED`
+ * @method void setEnabledStatus(string $EnabledStatus) Set Enabled status. Value range: `ENABLED`, `DISABLED`
+ * @method array getForwardLoadBalancerSet() Obtain List of application load balancers
+ * @method void setForwardLoadBalancerSet(array $ForwardLoadBalancerSet) Set List of application load balancers
+ * @method integer getInstanceCount() Obtain Number of instances
+ * @method void setInstanceCount(integer $InstanceCount) Set Number of instances
+ * @method integer getInServiceInstanceCount() Obtain Number of instances in `IN_SERVICE` status
+ * @method void setInServiceInstanceCount(integer $InServiceInstanceCount) Set Number of instances in `IN_SERVICE` status
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
+ * @method string getLaunchConfigurationName() Obtain Launch configuration name
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Launch configuration name
+ * @method array getLoadBalancerIdSet() Obtain List of Classic load balancer IDs
+ * @method void setLoadBalancerIdSet(array $LoadBalancerIdSet) Set List of Classic load balancer IDs
+ * @method integer getMaxSize() Obtain Maximum number of instances
+ * @method void setMaxSize(integer $MaxSize) Set Maximum number of instances
+ * @method integer getMinSize() Obtain Minimum number of instances
+ * @method void setMinSize(integer $MinSize) Set Minimum number of instances
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method array getSubnetIdSet() Obtain List of subnet IDs
+ * @method void setSubnetIdSet(array $SubnetIdSet) Set List of subnet IDs
+ * @method array getTerminationPolicySet() Obtain Termination policy
+ * @method void setTerminationPolicySet(array $TerminationPolicySet) Set Termination policy
+ * @method string getVpcId() Obtain VPC ID
+ * @method void setVpcId(string $VpcId) Set VPC ID
+ * @method array getZoneSet() Obtain List of availability zones
+ * @method void setZoneSet(array $ZoneSet) Set List of availability zones
+ * @method string getRetryPolicy() Obtain Retry policy
+ * @method void setRetryPolicy(string $RetryPolicy) Set Retry policy
+ * @method string getInActivityStatus() Obtain Whether the auto scaling group is performing a scaling activity. `IN_ACTIVITY` indicates yes, and `NOT_IN_ACTIVITY` indicates no.
+ * @method void setInActivityStatus(string $InActivityStatus) Set Whether the auto scaling group is performing a scaling activity. `IN_ACTIVITY` indicates yes, and `NOT_IN_ACTIVITY` indicates no.
+ * @method array getTags() Obtain List of auto scaling group tags
+ * @method void setTags(array $Tags) Set List of auto scaling group tags
+ * @method ServiceSettings getServiceSettings() Obtain Service settings
+ * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings
+ * @method integer getIpv6AddressCount() Obtain 
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
  */
 
 /**
@@ -231,7 +231,7 @@ class AutoScalingGroup extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

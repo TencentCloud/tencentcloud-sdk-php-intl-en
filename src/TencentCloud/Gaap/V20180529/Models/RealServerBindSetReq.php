@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRealServerId() 获取Origin server ID
- * @method void setRealServerId(string $RealServerId) 设置Origin server ID
- * @method integer getRealServerPort() 获取Origin server port
- * @method void setRealServerPort(integer $RealServerPort) 设置Origin server port
- * @method string getRealServerIP() 获取Origin server IP
- * @method void setRealServerIP(string $RealServerIP) 设置Origin server IP
- * @method integer getRealServerWeight() 获取Origin server weight
- * @method void setRealServerWeight(integer $RealServerWeight) 设置Origin server weight
+ * @method string getRealServerId() Obtain Origin server ID
+ * @method void setRealServerId(string $RealServerId) Set Origin server ID
+ * @method integer getRealServerPort() Obtain Origin server port
+ * @method void setRealServerPort(integer $RealServerPort) Set Origin server port
+ * @method string getRealServerIP() Obtain Origin server IP
+ * @method void setRealServerIP(string $RealServerIP) Set Origin server IP
+ * @method integer getRealServerWeight() Obtain Origin server weight
+ * @method void setRealServerWeight(integer $RealServerWeight) Set Origin server weight
  */
 
 /**
@@ -63,7 +63,7 @@ class RealServerBindSetReq extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

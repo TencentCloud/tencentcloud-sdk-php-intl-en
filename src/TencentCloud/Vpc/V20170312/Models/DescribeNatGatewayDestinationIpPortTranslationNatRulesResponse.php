@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getNatGatewayDestinationIpPortTranslationNatRuleSet() 获取NAT网关端口转发规则对象数组。
- * @method void setNatGatewayDestinationIpPortTranslationNatRuleSet(array $NatGatewayDestinationIpPortTranslationNatRuleSet) 设置NAT网关端口转发规则对象数组。
- * @method integer getTotalCount() 获取符合条件的NAT网关端口转发规则对象数目。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的NAT网关端口转发规则对象数目。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getNatGatewayDestinationIpPortTranslationNatRuleSet() Obtain The object array of port forwarding rules for the NAT gateway.
+ * @method void setNatGatewayDestinationIpPortTranslationNatRuleSet(array $NatGatewayDestinationIpPortTranslationNatRuleSet) Set The object array of port forwarding rules for the NAT gateway.
+ * @method integer getTotalCount() Obtain The number of object arrays of NAT port forwarding rules meeting the conditions.
+ * @method void setTotalCount(integer $TotalCount) Set The number of object arrays of NAT port forwarding rules meeting the conditions.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends AbstractModel
 {
     /**
-     * @var array NAT网关端口转发规则对象数组。
+     * @var array The object array of port forwarding rules for the NAT gateway.
      */
     public $NatGatewayDestinationIpPortTranslationNatRuleSet;
 
     /**
-     * @var integer 符合条件的NAT网关端口转发规则对象数目。
+     * @var integer The number of object arrays of NAT port forwarding rules meeting the conditions.
      */
     public $TotalCount;
 
@@ -46,8 +46,8 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
      */
     public $RequestId;
     /**
-     * @param array $NatGatewayDestinationIpPortTranslationNatRuleSet NAT网关端口转发规则对象数组。
-     * @param integer $TotalCount 符合条件的NAT网关端口转发规则对象数目。
+     * @param array $NatGatewayDestinationIpPortTranslationNatRuleSet The object array of port forwarding rules for the NAT gateway.
+     * @param integer $TotalCount The number of object arrays of NAT port forwarding rules meeting the conditions.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,16 +18,16 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIP() 获取Private IP of the target
- * @method void setIP(string $IP) 设置Private IP of the target
- * @method integer getPort() 获取Port bound to the target
- * @method void setPort(integer $Port) 设置Port bound to the target
- * @method boolean getHealthStatus() 获取Current health status. true: healthy; false: unhealthy.
- * @method void setHealthStatus(boolean $HealthStatus) 设置Current health status. true: healthy; false: unhealthy.
- * @method string getTargetId() 获取Instance ID of the target, such as ins-12345678
- * @method void setTargetId(string $TargetId) 设置Instance ID of the target, such as ins-12345678
- * @method string getHealthStatusDetial() 获取Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
- * @method void setHealthStatusDetial(string $HealthStatusDetial) 设置Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+ * @method string getIP() Obtain Private IP of the target
+ * @method void setIP(string $IP) Set Private IP of the target
+ * @method integer getPort() Obtain Port bound to the target
+ * @method void setPort(integer $Port) Set Port bound to the target
+ * @method boolean getHealthStatus() Obtain Current health status. true: healthy; false: unhealthy.
+ * @method void setHealthStatus(boolean $HealthStatus) Set Current health status. true: healthy; false: unhealthy.
+ * @method string getTargetId() Obtain Instance ID of the target, such as ins-12345678
+ * @method void setTargetId(string $TargetId) Set Instance ID of the target, such as ins-12345678
+ * @method string getHealthStatusDetial() Obtain Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+ * @method void setHealthStatusDetial(string $HealthStatusDetial) Set Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
  */
 
 /**
@@ -71,7 +71,7 @@ class TargetHealth extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

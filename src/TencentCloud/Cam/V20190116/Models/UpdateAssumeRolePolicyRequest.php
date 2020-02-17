@@ -18,12 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPolicyDocument() 获取Policy document
- * @method void setPolicyDocument(string $PolicyDocument) 设置Policy document
- * @method string getRoleId() 获取Role ID, used to specify a role. Input either `RoleId` or `RoleName`
- * @method void setRoleId(string $RoleId) 设置Role ID, used to specify a role. Input either `RoleId` or `RoleName`
- * @method string getRoleName() 获取Role name, used to specify a role. Input either `RoleId` or `RoleName`
- * @method void setRoleName(string $RoleName) 设置Role name, used to specify a role. Input either `RoleId` or `RoleName`
+ * @method string getPolicyDocument() Obtain Policy document
+ * @method void setPolicyDocument(string $PolicyDocument) Set Policy document
+ * @method string getRoleId() Obtain Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+ * @method void setRoleId(string $RoleId) Set Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+ * @method string getRoleName() Obtain Role name, used to specify a role. Input either `RoleId` or `RoleName`
+ * @method void setRoleName(string $RoleName) Set Role name, used to specify a role. Input either `RoleId` or `RoleName`
  */
 
 /**
@@ -55,7 +55,7 @@ class UpdateAssumeRolePolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProjectId() 获取Project ID
- * @method void setProjectId(integer $ProjectId) 设置Project ID
- * @method string getCreateTime() 获取Creation time
- * @method void setCreateTime(string $CreateTime) 设置Creation time
- * @method string getSecurityGroupId() 获取Security group ID
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置Security group ID
- * @method string getSecurityGroupName() 获取Security group name
- * @method void setSecurityGroupName(string $SecurityGroupName) 设置Security group name
- * @method string getSecurityGroupRemark() 获取Security group remarks
- * @method void setSecurityGroupRemark(string $SecurityGroupRemark) 设置Security group remarks
- * @method array getInboundRule() 获取Security group inbound rule
- * @method void setInboundRule(array $InboundRule) 设置Security group inbound rule
- * @method array getOutboundRule() 获取Security group outbound rule
- * @method void setOutboundRule(array $OutboundRule) 设置Security group outbound rule
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getSecurityGroupId() Obtain Security group ID
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
+ * @method string getSecurityGroupName() Obtain Security group name
+ * @method void setSecurityGroupName(string $SecurityGroupName) Set Security group name
+ * @method string getSecurityGroupRemark() Obtain Security group remarks
+ * @method void setSecurityGroupRemark(string $SecurityGroupRemark) Set Security group remarks
+ * @method array getInboundRule() Obtain Security group inbound rule
+ * @method void setInboundRule(array $InboundRule) Set Security group inbound rule
+ * @method array getOutboundRule() Obtain Security group outbound rule
+ * @method void setOutboundRule(array $OutboundRule) Set Security group outbound rule
  */
 
 /**
@@ -87,7 +87,7 @@ class SecurityGroupDetail extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

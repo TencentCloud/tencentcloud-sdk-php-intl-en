@@ -18,16 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAccounts() 获取Account details
+ * @method array getAccounts() Obtain Account details
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccounts(array $Accounts) 设置Account details
+ * @method void setAccounts(array $Accounts) Set Account details
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() 获取Number of accounts
+ * @method integer getTotalCount() Obtain Number of accounts
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) 设置Number of accounts
+ * @method void setTotalCount(integer $TotalCount) Set Number of accounts
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

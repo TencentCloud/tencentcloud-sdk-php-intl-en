@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Price getPrice() 获取商品价格。
- * @method void setPrice(Price $Price) 设置商品价格。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method Price getPrice() Obtain Product price.
+ * @method void setPrice(Price $Price) Set Product price.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceCreateVpnGatewayResponse extends AbstractModel
 {
     /**
-     * @var Price 商品价格。
+     * @var Price Product price.
      */
     public $Price;
 
@@ -39,7 +39,7 @@ class InquiryPriceCreateVpnGatewayResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param Price $Price 商品价格。
+     * @param Price $Price Product price.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class InquiryPriceCreateVpnGatewayResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

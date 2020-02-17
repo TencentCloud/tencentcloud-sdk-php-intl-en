@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取VPC实例ID
- * @method void setVpcId(string $VpcId) 设置VPC实例ID
- * @method string getInstanceId() 获取云服务器实例唯一ID
- * @method void setInstanceId(string $InstanceId) 设置云服务器实例唯一ID
+ * @method string getVpcId() Obtain VPC instance ID
+ * @method void setVpcId(string $VpcId) Set VPC instance ID
+ * @method string getInstanceId() Obtain The unique ID of the CVM instance
+ * @method void setInstanceId(string $InstanceId) Set The unique ID of the CVM instance
  */
 
 /**
- *私有网络和基础网络互通设备
+ *Classiclink instance
  */
 class ClassicLinkInstance extends AbstractModel
 {
     /**
-     * @var string VPC实例ID
+     * @var string VPC instance ID
      */
     public $VpcId;
 
     /**
-     * @var string 云服务器实例唯一ID
+     * @var string The unique ID of the CVM instance
      */
     public $InstanceId;
     /**
-     * @param string $VpcId VPC实例ID
-     * @param string $InstanceId 云服务器实例唯一ID
+     * @param string $VpcId VPC instance ID
+     * @param string $InstanceId The unique ID of the CVM instance
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

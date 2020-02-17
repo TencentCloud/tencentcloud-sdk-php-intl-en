@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMetricName() 获取Metric name
- * @method void setMetricName(string $MetricName) 设置Metric name
- * @method array getMetricData() 获取Metric statistics
- * @method void setMetricData(array $MetricData) 设置Metric statistics
+ * @method string getMetricName() Obtain Metric name
+ * @method void setMetricName(string $MetricName) Set Metric name
+ * @method array getMetricData() Obtain Metric statistics
+ * @method void setMetricData(array $MetricData) Set Metric statistics
  */
 
 /**
@@ -47,7 +47,7 @@ class MetricStatisticsInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

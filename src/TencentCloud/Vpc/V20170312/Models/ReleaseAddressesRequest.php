@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAddressIds() 获取标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
- * @method void setAddressIds(array $AddressIds) 设置标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+ * @method array getAddressIds() Obtain The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
+ * @method void setAddressIds(array $AddressIds) Set The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class ReleaseAddressesRequest extends AbstractModel
 {
     /**
-     * @var array 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+     * @var array The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
      */
     public $AddressIds;
     /**
-     * @param array $AddressIds 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+     * @param array $AddressIds The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

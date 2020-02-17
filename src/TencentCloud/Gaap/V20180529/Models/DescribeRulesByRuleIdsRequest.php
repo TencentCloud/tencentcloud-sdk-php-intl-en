@@ -18,7 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getRuleIds() Obtain List of rule IDs. Up to 10 rules are supported.
+ * @method void setRuleIds(array $RuleIds) Set List of rule IDs. Up to 10 rules are supported.
  */
 
 /**
@@ -26,22 +27,27 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeRulesByRuleIdsRequest extends AbstractModel
 {
-
     /**
-
+     * @var array List of rule IDs. Up to 10 rules are supported.
+     */
+    public $RuleIds;
+    /**
+     * @param array $RuleIds List of rule IDs. Up to 10 rules are supported.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("RuleIds",$param) and $param["RuleIds"] !== null) {
+            $this->RuleIds = $param["RuleIds"];
+        }
     }
 }

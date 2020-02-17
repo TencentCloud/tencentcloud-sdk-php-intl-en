@@ -18,27 +18,27 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method boolean getAvailable() 获取Whether the configuration is available.
- * @method void setAvailable(boolean $Available) 设置Whether the configuration is available.
- * @method string getDiskType() 获取Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
- * @method void setDiskType(string $DiskType) 设置Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
- * @method string getDiskUsage() 获取Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method void setDiskUsage(string $DiskUsage) 设置Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method string getDiskChargeType() 获取Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
- * @method void setDiskChargeType(string $DiskChargeType) 设置Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
- * @method integer getMaxDiskSize() 获取The maximum configurable cloud disk size (in GB).
- * @method void setMaxDiskSize(integer $MaxDiskSize) 设置The maximum configurable cloud disk size (in GB).
- * @method integer getMinDiskSize() 获取The minimum configurable cloud disk size (in GB).
- * @method void setMinDiskSize(integer $MinDiskSize) 设置The minimum configurable cloud disk size (in GB).
- * @method string getZone() 获取The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
- * @method void setZone(string $Zone) 设置The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
- * @method string getDeviceClass() 获取Instance model.
+ * @method boolean getAvailable() Obtain Whether the configuration is available.
+ * @method void setAvailable(boolean $Available) Set Whether the configuration is available.
+ * @method string getDiskType() Obtain Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+ * @method void setDiskType(string $DiskType) Set Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+ * @method string getDiskUsage() Obtain Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+ * @method void setDiskUsage(string $DiskUsage) Set Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+ * @method string getDiskChargeType() Obtain Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+ * @method void setDiskChargeType(string $DiskChargeType) Set Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+ * @method integer getMaxDiskSize() Obtain The maximum configurable cloud disk size (in GB).
+ * @method void setMaxDiskSize(integer $MaxDiskSize) Set The maximum configurable cloud disk size (in GB).
+ * @method integer getMinDiskSize() Obtain The minimum configurable cloud disk size (in GB).
+ * @method void setMinDiskSize(integer $MinDiskSize) Set The minimum configurable cloud disk size (in GB).
+ * @method string getZone() Obtain The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+ * @method void setZone(string $Zone) Set The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+ * @method string getDeviceClass() Obtain Instance model.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setDeviceClass(string $DeviceClass) 设置Instance model.
+ * @method void setDeviceClass(string $DeviceClass) Set Instance model.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getInstanceFamily() 获取Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+ * @method string getInstanceFamily() Obtain Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
 Note: This field may return null, indicating that no valid value was found.
- * @method void setInstanceFamily(string $InstanceFamily) 设置Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+ * @method void setInstanceFamily(string $InstanceFamily) Set Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
 Note: This field may return null, indicating that no valid value was found.
  */
 
@@ -111,7 +111,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

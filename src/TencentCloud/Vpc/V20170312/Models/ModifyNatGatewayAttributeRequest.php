@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
- * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
- * @method string getNatGatewayName() 获取NAT网关的名称，形如：`test_nat`。
- * @method void setNatGatewayName(string $NatGatewayName) 设置NAT网关的名称，形如：`test_nat`。
- * @method integer getInternetMaxBandwidthOut() 获取NAT网关最大外网出带宽(单位:Mbps)。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置NAT网关最大外网出带宽(单位:Mbps)。
+ * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
+ * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
+ * @method string getNatGatewayName() Obtain The NAT gateway name, such as `test_nat`.
+ * @method void setNatGatewayName(string $NatGatewayName) Set The NAT gateway name, such as `test_nat`.
+ * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ModifyNatGatewayAttributeRequest extends AbstractModel
 {
     /**
-     * @var string NAT网关的ID，形如：`nat-df45454`。
+     * @var string The ID of the NAT gateway, such as `nat-df45454`.
      */
     public $NatGatewayId;
 
     /**
-     * @var string NAT网关的名称，形如：`test_nat`。
+     * @var string The NAT gateway name, such as `test_nat`.
      */
     public $NatGatewayName;
 
     /**
-     * @var integer NAT网关最大外网出带宽(单位:Mbps)。
+     * @var integer The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
      */
     public $InternetMaxBandwidthOut;
     /**
-     * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
-     * @param string $NatGatewayName NAT网关的名称，形如：`test_nat`。
-     * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
+     * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+     * @param string $NatGatewayName The NAT gateway name, such as `test_nat`.
+     * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

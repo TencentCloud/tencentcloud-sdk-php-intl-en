@@ -18,32 +18,32 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPolicyName() 获取Policy name
+ * @method string getPolicyName() Obtain Policy name
 Note: This field may return null, indicating that no valid value was found.
- * @method void setPolicyName(string $PolicyName) 设置Policy name
+ * @method void setPolicyName(string $PolicyName) Set Policy name
 Note: This field may return null, indicating that no valid value was found.
- * @method string getDescription() 获取Policy description
+ * @method string getDescription() Obtain Policy description
 Note: This field may return null, indicating that no valid value was found.
- * @method void setDescription(string $Description) 设置Policy description
+ * @method void setDescription(string $Description) Set Policy description
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getType() 获取1: Custom policy; 2: Preset policy
+ * @method integer getType() Obtain 1: Custom policy; 2: Preset policy
 Note: This field may return null, indicating that no valid value was found.
- * @method void setType(integer $Type) 设置1: Custom policy; 2: Preset policy
+ * @method void setType(integer $Type) Set 1: Custom policy; 2: Preset policy
 Note: This field may return null, indicating that no valid value was found.
- * @method string getAddTime() 获取Time created
+ * @method string getAddTime() Obtain Time created
 Note: This field may return null, indicating that no valid value was found.
- * @method void setAddTime(string $AddTime) 设置Time created
+ * @method void setAddTime(string $AddTime) Set Time created
 Note: This field may return null, indicating that no valid value was found.
- * @method string getUpdateTime() 获取Time of latest update
+ * @method string getUpdateTime() Obtain Time of latest update
 Note: This field may return null, indicating that no valid value was found.
- * @method void setUpdateTime(string $UpdateTime) 设置Time of latest update
+ * @method void setUpdateTime(string $UpdateTime) Set Time of latest update
 Note: This field may return null, indicating that no valid value was found.
- * @method string getPolicyDocument() 获取Policy document
+ * @method string getPolicyDocument() Obtain Policy document
 Note: This field may return null, indicating that no valid value was found.
- * @method void setPolicyDocument(string $PolicyDocument) 设置Policy document
+ * @method void setPolicyDocument(string $PolicyDocument) Set Policy document
 Note: This field may return null, indicating that no valid value was found.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -111,7 +111,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

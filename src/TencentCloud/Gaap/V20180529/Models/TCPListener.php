@@ -18,62 +18,62 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method integer getPort() 获取Listener port
- * @method void setPort(integer $Port) 设置Listener port
- * @method integer getRealServerPort() 获取Origin server port, which is only valid for the connections of version 1.0.
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method integer getPort() Obtain Listener port
+ * @method void setPort(integer $Port) Set Listener port
+ * @method integer getRealServerPort() Obtain Origin server port, which is only valid for the connections of version 1.0.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealServerPort(integer $RealServerPort) 设置Origin server port, which is only valid for the connections of version 1.0.
+ * @method void setRealServerPort(integer $RealServerPort) Set Origin server port, which is only valid for the connections of version 1.0.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRealServerType() 获取Type of the origin server bound to listeners
- * @method void setRealServerType(string $RealServerType) 设置Type of the origin server bound to listeners
- * @method string getProtocol() 获取Listener protocol: TCP.
- * @method void setProtocol(string $Protocol) 设置Listener protocol: TCP.
- * @method integer getListenerStatus() 获取Listener status:
+ * @method string getRealServerType() Obtain Type of the origin server bound to listeners
+ * @method void setRealServerType(string $RealServerType) Set Type of the origin server bound to listeners
+ * @method string getProtocol() Obtain Listener protocol: TCP.
+ * @method void setProtocol(string $Protocol) Set Listener protocol: TCP.
+ * @method integer getListenerStatus() Obtain Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
- * @method void setListenerStatus(integer $ListenerStatus) 设置Listener status:
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
- * @method string getScheduler() 获取Origin server access policy of listeners:
+ * @method string getScheduler() Obtain Origin server access policy of listeners:
 rr: round robin;
 wrr: weighted round robin;
 lc: least connections.
- * @method void setScheduler(string $Scheduler) 设置Origin server access policy of listeners:
+ * @method void setScheduler(string $Scheduler) Set Origin server access policy of listeners:
 rr: round robin;
 wrr: weighted round robin;
 lc: least connections.
- * @method integer getConnectTimeout() 获取Response timeout of origin server health check (unit: seconds).
- * @method void setConnectTimeout(integer $ConnectTimeout) 设置Response timeout of origin server health check (unit: seconds).
- * @method integer getDelayLoop() 获取Time interval of origin server health check (unit: seconds).
- * @method void setDelayLoop(integer $DelayLoop) 设置Time interval of origin server health check (unit: seconds).
- * @method integer getHealthCheck() 获取Whether to enable the listener health check:
+ * @method integer getConnectTimeout() Obtain Response timeout of origin server health check (unit: seconds).
+ * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds).
+ * @method integer getDelayLoop() Obtain Time interval of origin server health check (unit: seconds).
+ * @method void setDelayLoop(integer $DelayLoop) Set Time interval of origin server health check (unit: seconds).
+ * @method integer getHealthCheck() Obtain Whether to enable the listener health check:
 0: disable;
 1: enable.
- * @method void setHealthCheck(integer $HealthCheck) 设置Whether to enable the listener health check:
+ * @method void setHealthCheck(integer $HealthCheck) Set Whether to enable the listener health check:
 0: disable;
 1: enable.
- * @method integer getBindStatus() 获取Status of the origin server bound to listeners:
+ * @method integer getBindStatus() Obtain Status of the origin server bound to listeners:
 0: exception;
 1: normal.
- * @method void setBindStatus(integer $BindStatus) 设置Status of the origin server bound to listeners:
+ * @method void setBindStatus(integer $BindStatus) Set Status of the origin server bound to listeners:
 0: exception;
 1: normal.
- * @method array getRealServerSet() 获取Information of the origin server bound to listeners
+ * @method array getRealServerSet() Obtain Information of the origin server bound to listeners
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealServerSet(array $RealServerSet) 设置Information of the origin server bound to listeners
+ * @method void setRealServerSet(array $RealServerSet) Set Information of the origin server bound to listeners
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCreateTime() 获取Listener creation time; using UNIX timestamp.
- * @method void setCreateTime(integer $CreateTime) 设置Listener creation time; using UNIX timestamp.
+ * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
+ * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
  */
 
 /**
@@ -199,7 +199,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

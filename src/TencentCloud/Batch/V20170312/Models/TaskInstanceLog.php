@@ -18,31 +18,31 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskInstanceIndex() 获取Task instance
- * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置Task instance
- * @method string getStdoutLog() 获取Standard output log (Base64-encoded)
+ * @method integer getTaskInstanceIndex() Obtain Task instance
+ * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) Set Task instance
+ * @method string getStdoutLog() Obtain Standard output log (Base64-encoded)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStdoutLog(string $StdoutLog) 设置Standard output log (Base64-encoded)
+ * @method void setStdoutLog(string $StdoutLog) Set Standard output log (Base64-encoded)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStderrLog() 获取Standard error log (Base64-encoded)
+ * @method string getStderrLog() Obtain Standard error log (Base64-encoded)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStderrLog(string $StderrLog) 设置Standard error log (Base64-encoded)
+ * @method void setStderrLog(string $StderrLog) Set Standard error log (Base64-encoded)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStdoutRedirectPath() 获取Standard output redirection path
+ * @method string getStdoutRedirectPath() Obtain Standard output redirection path
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStdoutRedirectPath(string $StdoutRedirectPath) 设置Standard output redirection path
+ * @method void setStdoutRedirectPath(string $StdoutRedirectPath) Set Standard output redirection path
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStderrRedirectPath() 获取Standard error redirection path
+ * @method string getStderrRedirectPath() Obtain Standard error redirection path
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStderrRedirectPath(string $StderrRedirectPath) 设置Standard error redirection path
+ * @method void setStderrRedirectPath(string $StderrRedirectPath) Set Standard error redirection path
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStdoutRedirectFileName() 获取Standard output redirection file name
+ * @method string getStdoutRedirectFileName() Obtain Standard output redirection file name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStdoutRedirectFileName(string $StdoutRedirectFileName) 设置Standard output redirection file name
+ * @method void setStdoutRedirectFileName(string $StdoutRedirectFileName) Set Standard output redirection file name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStderrRedirectFileName() 获取Standard error redirection file name
+ * @method string getStderrRedirectFileName() Obtain Standard error redirection file name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStderrRedirectFileName(string $StderrRedirectFileName) 设置Standard error redirection file name
+ * @method void setStderrRedirectFileName(string $StderrRedirectFileName) Set Standard error redirection file name
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -111,7 +111,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResourceType() 获取Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
- * @method void setResourceType(string $ResourceType) 设置Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
- * @method array getTags() 获取List of tags
- * @method void setTags(array $Tags) 设置List of tags
+ * @method string getResourceType() Obtain Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
+ * @method void setResourceType(string $ResourceType) Set Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
+ * @method array getTags() Obtain List of tags
+ * @method void setTags(array $Tags) Set List of tags
  */
 
 /**
@@ -47,7 +47,7 @@ class TagSpecification extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

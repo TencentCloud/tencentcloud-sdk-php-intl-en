@@ -18,8 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCertificateId() 获取Certificate ID.
- * @method void setCertificateId(string $CertificateId) 设置Certificate ID.
+ * @method string getCertificateId() Obtain Certificate ID.
+ * @method void setCertificateId(string $CertificateId) Set Certificate ID.
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeCertificateDetailRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

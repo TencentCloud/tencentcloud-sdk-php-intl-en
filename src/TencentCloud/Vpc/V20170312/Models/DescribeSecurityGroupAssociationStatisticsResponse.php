@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSecurityGroupAssociationStatisticsSet() 获取安全组关联实例统计。
- * @method void setSecurityGroupAssociationStatisticsSet(array $SecurityGroupAssociationStatisticsSet) 设置安全组关联实例统计。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getSecurityGroupAssociationStatisticsSet() Obtain Statistics on the instances associated with a security group.
+ * @method void setSecurityGroupAssociationStatisticsSet(array $SecurityGroupAssociationStatisticsSet) Set Statistics on the instances associated with a security group.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel
 {
     /**
-     * @var array 安全组关联实例统计。
+     * @var array Statistics on the instances associated with a security group.
      */
     public $SecurityGroupAssociationStatisticsSet;
 
@@ -39,7 +39,7 @@ class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $SecurityGroupAssociationStatisticsSet 安全组关联实例统计。
+     * @param array $SecurityGroupAssociationStatisticsSet Statistics on the instances associated with a security group.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

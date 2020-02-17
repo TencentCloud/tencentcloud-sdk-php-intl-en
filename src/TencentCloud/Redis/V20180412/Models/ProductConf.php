@@ -18,32 +18,32 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getType() 获取Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
- * @method void setType(integer $Type) 设置Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
- * @method string getTypeName() 获取Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
- * @method void setTypeName(string $TypeName) 设置Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
- * @method integer getMinBuyNum() 获取Minimum purchasable quantity
- * @method void setMinBuyNum(integer $MinBuyNum) 设置Minimum purchasable quantity
- * @method integer getMaxBuyNum() 获取Maximum purchasable quantity
- * @method void setMaxBuyNum(integer $MaxBuyNum) 设置Maximum purchasable quantity
- * @method boolean getSaleout() 获取Whether a product is sold out
- * @method void setSaleout(boolean $Saleout) 设置Whether a product is sold out
- * @method string getEngine() 获取Product engine: Tencent Cloud CKV or Redis community edition
- * @method void setEngine(string $Engine) 设置Product engine: Tencent Cloud CKV or Redis community edition
- * @method string getVersion() 获取Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
- * @method void setVersion(string $Version) 设置Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
- * @method array getTotalSize() 获取Total capacity in GB
- * @method void setTotalSize(array $TotalSize) 设置Total capacity in GB
- * @method array getShardSize() 获取Shard size in GB
- * @method void setShardSize(array $ShardSize) 设置Shard size in GB
- * @method array getReplicaNum() 获取Number of replicas
- * @method void setReplicaNum(array $ReplicaNum) 设置Number of replicas
- * @method array getShardNum() 获取Number of shards
- * @method void setShardNum(array $ShardNum) 设置Number of shards
- * @method string getPayMode() 获取Supported billing method. 1: monthly subscription; 0: pay-as-you-go
- * @method void setPayMode(string $PayMode) 设置Supported billing method. 1: monthly subscription; 0: pay-as-you-go
- * @method boolean getEnableRepicaReadOnly() 获取Whether to support read-only replicas
- * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) 设置Whether to support read-only replicas
+ * @method integer getType() Obtain Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+ * @method void setType(integer $Type) Set Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+ * @method string getTypeName() Obtain Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+ * @method void setTypeName(string $TypeName) Set Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+ * @method integer getMinBuyNum() Obtain Minimum purchasable quantity
+ * @method void setMinBuyNum(integer $MinBuyNum) Set Minimum purchasable quantity
+ * @method integer getMaxBuyNum() Obtain Maximum purchasable quantity
+ * @method void setMaxBuyNum(integer $MaxBuyNum) Set Maximum purchasable quantity
+ * @method boolean getSaleout() Obtain Whether a product is sold out
+ * @method void setSaleout(boolean $Saleout) Set Whether a product is sold out
+ * @method string getEngine() Obtain Product engine: Tencent Cloud CKV or Redis community edition
+ * @method void setEngine(string $Engine) Set Product engine: Tencent Cloud CKV or Redis community edition
+ * @method string getVersion() Obtain Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+ * @method void setVersion(string $Version) Set Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+ * @method array getTotalSize() Obtain Total capacity in GB
+ * @method void setTotalSize(array $TotalSize) Set Total capacity in GB
+ * @method array getShardSize() Obtain Shard size in GB
+ * @method void setShardSize(array $ShardSize) Set Shard size in GB
+ * @method array getReplicaNum() Obtain Number of replicas
+ * @method void setReplicaNum(array $ReplicaNum) Set Number of replicas
+ * @method array getShardNum() Obtain Number of shards
+ * @method void setShardNum(array $ShardNum) Set Number of shards
+ * @method string getPayMode() Obtain Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+ * @method void setPayMode(string $PayMode) Set Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+ * @method boolean getEnableRepicaReadOnly() Obtain Whether to support read-only replicas
+ * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) Set Whether to support read-only replicas
  */
 
 /**
@@ -135,7 +135,7 @@ class ProductConf extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

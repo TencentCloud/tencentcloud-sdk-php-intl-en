@@ -18,19 +18,19 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDelayLoop() 获取Time interval of health check
- * @method void setDelayLoop(integer $DelayLoop) 设置Time interval of health check
- * @method integer getConnectTimeout() 获取Response timeout of health check
- * @method void setConnectTimeout(integer $ConnectTimeout) 设置Response timeout of health check
- * @method string getPath() 获取Check path of health check
- * @method void setPath(string $Path) 设置Check path of health check
- * @method string getMethod() 获取Health check method: GET/HEAD
- * @method void setMethod(string $Method) 设置Health check method: GET/HEAD
- * @method array getStatusCode() 获取Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
- * @method void setStatusCode(array $StatusCode) 设置Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
- * @method string getDomain() 获取Domain name to be performed health check
+ * @method integer getDelayLoop() Obtain Time interval of health check
+ * @method void setDelayLoop(integer $DelayLoop) Set Time interval of health check
+ * @method integer getConnectTimeout() Obtain Response timeout of health check
+ * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of health check
+ * @method string getPath() Obtain Check path of health check
+ * @method void setPath(string $Path) Set Check path of health check
+ * @method string getMethod() Obtain Health check method: GET/HEAD
+ * @method void setMethod(string $Method) Set Health check method: GET/HEAD
+ * @method array getStatusCode() Obtain Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
+ * @method void setStatusCode(array $StatusCode) Set Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
+ * @method string getDomain() Obtain Domain name to be performed health check
 You cannot modify this parameter when calling ModifyRuleAttribute API.
- * @method void setDomain(string $Domain) 设置Domain name to be performed health check
+ * @method void setDomain(string $Domain) Set Domain name to be performed health check
 You cannot modify this parameter when calling ModifyRuleAttribute API.
  */
 
@@ -83,7 +83,7 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

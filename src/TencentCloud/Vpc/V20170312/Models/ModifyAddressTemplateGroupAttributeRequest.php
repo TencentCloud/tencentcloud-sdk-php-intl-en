@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressTemplateGroupId() 获取IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
- * @method void setAddressTemplateGroupId(string $AddressTemplateGroupId) 设置IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
- * @method string getAddressTemplateGroupName() 获取IP地址模板集合名称。
- * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) 设置IP地址模板集合名称。
- * @method array getAddressTemplateIds() 获取IP地址模板实例ID， 例如：ipm-mdunqeb6。
- * @method void setAddressTemplateIds(array $AddressTemplateIds) 设置IP地址模板实例ID， 例如：ipm-mdunqeb6。
+ * @method string getAddressTemplateGroupId() Obtain IP address template group instance ID, such as `ipmg-2uw6ujo6`.
+ * @method void setAddressTemplateGroupId(string $AddressTemplateGroupId) Set IP address template group instance ID, such as `ipmg-2uw6ujo6`.
+ * @method string getAddressTemplateGroupName() Obtain IP address template group name.
+ * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) Set IP address template group name.
+ * @method array getAddressTemplateIds() Obtain IP address template instance ID, such as `ipm-mdunqeb6`.
+ * @method void setAddressTemplateIds(array $AddressTemplateIds) Set IP address template instance ID, such as `ipm-mdunqeb6`.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
+     * @var string IP address template group instance ID, such as `ipmg-2uw6ujo6`.
      */
     public $AddressTemplateGroupId;
 
     /**
-     * @var string IP地址模板集合名称。
+     * @var string IP address template group name.
      */
     public $AddressTemplateGroupName;
 
     /**
-     * @var array IP地址模板实例ID， 例如：ipm-mdunqeb6。
+     * @var array IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public $AddressTemplateIds;
     /**
-     * @param string $AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
-     * @param string $AddressTemplateGroupName IP地址模板集合名称。
-     * @param array $AddressTemplateIds IP地址模板实例ID， 例如：ipm-mdunqeb6。
+     * @param string $AddressTemplateGroupId IP address template group instance ID, such as `ipmg-2uw6ujo6`.
+     * @param string $AddressTemplateGroupName IP address template group name.
+     * @param array $AddressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

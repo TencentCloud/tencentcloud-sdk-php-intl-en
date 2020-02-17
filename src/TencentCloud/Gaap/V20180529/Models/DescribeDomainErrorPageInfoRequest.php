@@ -18,7 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getDomain() Obtain Domain name
+ * @method void setDomain(string $Domain) Set Domain name
  */
 
 /**
@@ -26,22 +29,37 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeDomainErrorPageInfoRequest extends AbstractModel
 {
+    /**
+     * @var string Listener ID
+     */
+    public $ListenerId;
 
     /**
-
+     * @var string Domain name
+     */
+    public $Domain;
+    /**
+     * @param string $ListenerId Listener ID
+     * @param string $Domain Domain name
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
+            $this->ListenerId = $param["ListenerId"];
+        }
 
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
     }
 }

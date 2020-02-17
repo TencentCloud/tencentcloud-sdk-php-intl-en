@@ -18,20 +18,20 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNatGatewayName() 获取NAT网关名称
- * @method void setNatGatewayName(string $NatGatewayName) 设置NAT网关名称
- * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method integer getInternetMaxBandwidthOut() 获取NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
- * @method integer getMaxConcurrentConnection() 获取NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
- * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) 设置NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
- * @method integer getAddressCount() 获取需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
- * @method void setAddressCount(integer $AddressCount) 设置需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
- * @method array getPublicIpAddresses() 获取绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
- * @method string getZone() 获取可用区，形如：`ap-guangzhou-1`。
- * @method void setZone(string $Zone) 设置可用区，形如：`ap-guangzhou-1`。
+ * @method string getNatGatewayName() Obtain NAT gateway name
+ * @method void setNatGatewayName(string $NatGatewayName) Set NAT gateway name
+ * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+ * @method integer getMaxConcurrentConnection() Obtain The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+ * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) Set The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+ * @method integer getAddressCount() Obtain The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+ * @method void setAddressCount(integer $AddressCount) Set The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+ * @method array getPublicIpAddresses() Obtain The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+ * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-1`.
+ * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-1`.
  */
 
 /**
@@ -40,54 +40,54 @@ use TencentCloud\Common\AbstractModel;
 class CreateNatGatewayRequest extends AbstractModel
 {
     /**
-     * @var string NAT网关名称
+     * @var string NAT gateway name
      */
     public $NatGatewayName;
 
     /**
-     * @var string VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public $VpcId;
 
     /**
-     * @var integer NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
+     * @var integer The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var integer NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
+     * @var integer The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
      */
     public $MaxConcurrentConnection;
 
     /**
-     * @var integer 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
+     * @var integer The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
      */
     public $AddressCount;
 
     /**
-     * @var array 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+     * @var array The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
      */
     public $PublicIpAddresses;
 
     /**
-     * @var string 可用区，形如：`ap-guangzhou-1`。
+     * @var string The availability zone, such as `ap-guangzhou-1`.
      */
     public $Zone;
     /**
-     * @param string $NatGatewayName NAT网关名称
-     * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
-     * @param integer $MaxConcurrentConnection NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
-     * @param integer $AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
-     * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
-     * @param string $Zone 可用区，形如：`ap-guangzhou-1`。
+     * @param string $NatGatewayName NAT gateway name
+     * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+     * @param integer $MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+     * @param integer $AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+     * @param array $PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * @param string $Zone The availability zone, such as `ap-guangzhou-1`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

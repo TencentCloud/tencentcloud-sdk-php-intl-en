@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getAccountName() 获取Sub-account name
- * @method void setAccountName(string $AccountName) 设置Sub-account name
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getAccountName() Obtain Sub-account name
+ * @method void setAccountName(string $AccountName) Set Sub-account name
  */
 
 /**
@@ -47,7 +47,7 @@ class DeleteInstanceAccountRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

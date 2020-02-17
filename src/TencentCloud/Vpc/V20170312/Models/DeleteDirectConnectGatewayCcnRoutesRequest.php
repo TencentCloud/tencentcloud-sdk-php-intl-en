@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDirectConnectGatewayId() 获取专线网关ID，形如：dcg-prpqlmg1
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID，形如：dcg-prpqlmg1
- * @method array getRouteIds() 获取路由ID。形如：ccnr-f49l6u0z。
- * @method void setRouteIds(array $RouteIds) 设置路由ID。形如：ccnr-f49l6u0z。
+ * @method string getDirectConnectGatewayId() Obtain The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+ * @method array getRouteIds() Obtain The route ID, such as `ccnr-f49l6u0z`.
+ * @method void setRouteIds(array $RouteIds) Set The route ID, such as `ccnr-f49l6u0z`.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string 专线网关ID，形如：dcg-prpqlmg1
+     * @var string The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @var array 路由ID。形如：ccnr-f49l6u0z。
+     * @var array The route ID, such as `ccnr-f49l6u0z`.
      */
     public $RouteIds;
     /**
-     * @param string $DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
-     * @param array $RouteIds 路由ID。形如：ccnr-f49l6u0z。
+     * @param string $DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+     * @param array $RouteIds The route ID, such as `ccnr-f49l6u0z`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

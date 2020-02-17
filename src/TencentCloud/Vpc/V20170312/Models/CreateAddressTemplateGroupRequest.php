@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressTemplateGroupName() 获取IP地址模版集合名称。
- * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) 设置IP地址模版集合名称。
- * @method array getAddressTemplateIds() 获取IP地址模版实例ID，例如：ipm-mdunqeb6。
- * @method void setAddressTemplateIds(array $AddressTemplateIds) 设置IP地址模版实例ID，例如：ipm-mdunqeb6。
+ * @method string getAddressTemplateGroupName() Obtain The name of the IP address template group.
+ * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) Set The name of the IP address template group.
+ * @method array getAddressTemplateIds() Obtain The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+ * @method void setAddressTemplateIds(array $AddressTemplateIds) Set The instance ID of the IP address template, such as `ipm-mdunqeb6`.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class CreateAddressTemplateGroupRequest extends AbstractModel
 {
     /**
-     * @var string IP地址模版集合名称。
+     * @var string The name of the IP address template group.
      */
     public $AddressTemplateGroupName;
 
     /**
-     * @var array IP地址模版实例ID，例如：ipm-mdunqeb6。
+     * @var array The instance ID of the IP address template, such as `ipm-mdunqeb6`.
      */
     public $AddressTemplateIds;
     /**
-     * @param string $AddressTemplateGroupName IP地址模版集合名称。
-     * @param array $AddressTemplateIds IP地址模版实例ID，例如：ipm-mdunqeb6。
+     * @param string $AddressTemplateGroupName The name of the IP address template group.
+     * @param array $AddressTemplateIds The instance ID of the IP address template, such as `ipm-mdunqeb6`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

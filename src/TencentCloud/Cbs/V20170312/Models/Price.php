@@ -18,25 +18,25 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getOriginalPrice() 获取Original price of the advanced payment for a prepaid cloud disk (in CNY).
+ * @method float getOriginalPrice() Obtain Original price of the advanced payment for a prepaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found.
- * @method void setOriginalPrice(float $OriginalPrice) 设置Original price of the advanced payment for a prepaid cloud disk (in CNY).
+ * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the advanced payment for a prepaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found.
- * @method float getDiscountPrice() 获取Discount price of the advanced payment for a prepaid cloud disk (in CNY).
+ * @method float getDiscountPrice() Obtain Discount price of the advanced payment for a prepaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found.
- * @method void setDiscountPrice(float $DiscountPrice) 设置Discount price of the advanced payment for a prepaid cloud disk (in CNY).
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the advanced payment for a prepaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found.
- * @method float getUnitPrice() 获取Original unit price of a postpaid cloud disk (in CNY).
+ * @method float getUnitPrice() Obtain Original unit price of a postpaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found.
- * @method void setUnitPrice(float $UnitPrice) 设置Original unit price of a postpaid cloud disk (in CNY).
+ * @method void setUnitPrice(float $UnitPrice) Set Original unit price of a postpaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found.
- * @method string getChargeUnit() 获取Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
+ * @method string getChargeUnit() Obtain Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setChargeUnit(string $ChargeUnit) 设置Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
+ * @method void setChargeUnit(string $ChargeUnit) Set Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
 Note: This field may return null, indicating that no valid value was found.
- * @method float getUnitPriceDiscount() 获取Postpaid cloud disk discount price. Unit: CNY.
+ * @method float getUnitPriceDiscount() Obtain Postpaid cloud disk discount price. Unit: CNY.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setUnitPriceDiscount(float $UnitPriceDiscount) 设置Postpaid cloud disk discount price. Unit: CNY.
+ * @method void setUnitPriceDiscount(float $UnitPriceDiscount) Set Postpaid cloud disk discount price. Unit: CNY.
 Note: This field may return null, indicating that no valid value was found.
  */
 
@@ -91,7 +91,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
- * @method void setName(string $Name) 设置属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
- * @method array getValues() 获取属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
- * @method void setValues(array $Values) 设置属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+ * @method string getName() Obtain The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
+ * @method void setName(string $Name) Set The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
+ * @method array getValues() Obtain The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+ * @method void setValues(array $Values) Set The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
  */
 
 /**
- *过滤器
+ *Filter
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * @var string The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
      */
     public $Name;
 
     /**
-     * @var array 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * @var array The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
      */
     public $Values;
     /**
-     * @param string $Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
-     * @param array $Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * @param string $Name The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
+     * @param array $Values The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

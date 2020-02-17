@@ -18,8 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getRealServerIds() 获取List of origin server IDs
- * @method void setRealServerIds(array $RealServerIds) 设置List of origin server IDs
+ * @method array getRealServerIds() Obtain List of origin server IDs
+ * @method void setRealServerIds(array $RealServerIds) Set List of origin server IDs
  */
 
 /**
@@ -39,7 +39,7 @@ class RemoveRealServersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

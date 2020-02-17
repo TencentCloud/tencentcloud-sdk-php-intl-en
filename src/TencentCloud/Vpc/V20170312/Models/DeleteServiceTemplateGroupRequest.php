@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getServiceTemplateGroupId() 获取协议端口模板集合实例ID，例如：ppmg-n17uxvve。
- * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) 设置协议端口模板集合实例ID，例如：ppmg-n17uxvve。
+ * @method string getServiceTemplateGroupId() Obtain The protocol port template group instance ID, such as `ppmg-n17uxvve`.
+ * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) Set The protocol port template group instance ID, such as `ppmg-n17uxvve`.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class DeleteServiceTemplateGroupRequest extends AbstractModel
 {
     /**
-     * @var string 协议端口模板集合实例ID，例如：ppmg-n17uxvve。
+     * @var string The protocol port template group instance ID, such as `ppmg-n17uxvve`.
      */
     public $ServiceTemplateGroupId;
     /**
-     * @param string $ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-n17uxvve。
+     * @param string $ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-n17uxvve`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

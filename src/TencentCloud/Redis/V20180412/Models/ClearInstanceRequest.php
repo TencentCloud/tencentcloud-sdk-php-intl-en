@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getPassword() 获取Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
- * @method void setPassword(string $Password) 设置Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getPassword() Obtain Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+ * @method void setPassword(string $Password) Set Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
  */
 
 /**
@@ -47,7 +47,7 @@ class ClearInstanceRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

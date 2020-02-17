@@ -18,43 +18,43 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getCreateTime() 获取Creation time
- * @method void setCreateTime(integer $CreateTime) 设置Creation time
- * @method integer getProjectId() 获取Project ID
- * @method void setProjectId(integer $ProjectId) 设置Project ID
- * @method integer getProxyNum() 获取Number of connections in connection group
- * @method void setProxyNum(integer $ProxyNum) 设置Number of connections in connection group
- * @method integer getStatus() 获取Connection group status:
+ * @method integer getCreateTime() Obtain Creation time
+ * @method void setCreateTime(integer $CreateTime) Set Creation time
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getProxyNum() Obtain Number of connections in connection group
+ * @method void setProxyNum(integer $ProxyNum) Set Number of connections in connection group
+ * @method integer getStatus() Obtain Connection group status:
 0: running normally;
 1: creating;
 4: terminating;
 11. Migrating.
- * @method void setStatus(integer $Status) 设置Connection group status:
+ * @method void setStatus(integer $Status) Set Connection group status:
 0: running normally;
 1: creating;
 4: terminating;
 11. Migrating.
- * @method string getOwnerUin() 获取Owner UIN
- * @method void setOwnerUin(string $OwnerUin) 设置Owner UIN
- * @method string getCreateUin() 获取Creation UIN
- * @method void setCreateUin(string $CreateUin) 设置Creation UIN
- * @method string getGroupName() 获取Connection name
- * @method void setGroupName(string $GroupName) 设置Connection name
- * @method string getDnsDefaultIp() 获取Default IP of domain name resolution for connection groups
- * @method void setDnsDefaultIp(string $DnsDefaultIp) 设置Default IP of domain name resolution for connection groups
- * @method string getDomain() 获取Connection group domain name
+ * @method string getOwnerUin() Obtain Owner UIN
+ * @method void setOwnerUin(string $OwnerUin) Set Owner UIN
+ * @method string getCreateUin() Obtain Creation UIN
+ * @method void setCreateUin(string $CreateUin) Set Creation UIN
+ * @method string getGroupName() Obtain Connection name
+ * @method void setGroupName(string $GroupName) Set Connection name
+ * @method string getDnsDefaultIp() Obtain Default IP of domain name resolution for connection groups
+ * @method void setDnsDefaultIp(string $DnsDefaultIp) Set Default IP of domain name resolution for connection groups
+ * @method string getDomain() Obtain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) 设置Connection group domain name
+ * @method void setDomain(string $Domain) Set Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RegionDetail getRealServerRegionInfo() 获取Target region
- * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) 设置Target region
- * @method boolean getIsOldGroup() 获取Whether it is an old connection group, i.e., those created before August 3, 2018.
- * @method void setIsOldGroup(boolean $IsOldGroup) 设置Whether it is an old connection group, i.e., those created before August 3, 2018.
- * @method string getGroupId() 获取Connection group ID
- * @method void setGroupId(string $GroupId) 设置Connection group ID
- * @method array getTagSet() 获取Tag list
+ * @method RegionDetail getRealServerRegionInfo() Obtain Target region
+ * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) Set Target region
+ * @method boolean getIsOldGroup() Obtain Whether it is an old connection group, i.e., those created before August 3, 2018.
+ * @method void setIsOldGroup(boolean $IsOldGroup) Set Whether it is an old connection group, i.e., those created before August 3, 2018.
+ * @method string getGroupId() Obtain Connection group ID
+ * @method void setGroupId(string $GroupId) Set Connection group ID
+ * @method array getTagSet() Obtain Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagSet(array $TagSet) 设置Tag list
+ * @method void setTagSet(array $TagSet) Set Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -159,7 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

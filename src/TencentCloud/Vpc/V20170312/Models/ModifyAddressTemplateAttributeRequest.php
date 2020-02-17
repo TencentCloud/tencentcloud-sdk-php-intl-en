@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressTemplateId() 获取IP地址模板实例ID，例如：ipm-mdunqeb6。
- * @method void setAddressTemplateId(string $AddressTemplateId) 设置IP地址模板实例ID，例如：ipm-mdunqeb6。
- * @method string getAddressTemplateName() 获取IP地址模板名称。
- * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP地址模板名称。
- * @method array getAddresses() 获取地址信息，支持 IP、CIDR、IP 范围。
- * @method void setAddresses(array $Addresses) 设置地址信息，支持 IP、CIDR、IP 范围。
+ * @method string getAddressTemplateId() Obtain IP address template instance ID, such as `ipm-mdunqeb6`.
+ * @method void setAddressTemplateId(string $AddressTemplateId) Set IP address template instance ID, such as `ipm-mdunqeb6`.
+ * @method string getAddressTemplateName() Obtain IP address template name.
+ * @method void setAddressTemplateName(string $AddressTemplateName) Set IP address template name.
+ * @method array getAddresses() Obtain Address information, including IP, CIDR and IP address range.
+ * @method void setAddresses(array $Addresses) Set Address information, including IP, CIDR and IP address range.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAddressTemplateAttributeRequest extends AbstractModel
 {
     /**
-     * @var string IP地址模板实例ID，例如：ipm-mdunqeb6。
+     * @var string IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public $AddressTemplateId;
 
     /**
-     * @var string IP地址模板名称。
+     * @var string IP address template name.
      */
     public $AddressTemplateName;
 
     /**
-     * @var array 地址信息，支持 IP、CIDR、IP 范围。
+     * @var array Address information, including IP, CIDR and IP address range.
      */
     public $Addresses;
     /**
-     * @param string $AddressTemplateId IP地址模板实例ID，例如：ipm-mdunqeb6。
-     * @param string $AddressTemplateName IP地址模板名称。
-     * @param array $Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * @param string $AddressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
+     * @param string $AddressTemplateName IP address template name.
+     * @param array $Addresses Address information, including IP, CIDR and IP address range.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

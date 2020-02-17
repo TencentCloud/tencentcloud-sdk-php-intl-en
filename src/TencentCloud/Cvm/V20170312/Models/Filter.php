@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取Filters.
- * @method void setName(string $Name) 设置Filters.
- * @method array getValues() 获取Filter values.
- * @method void setValues(array $Values) 设置Filter values.
+ * @method string getName() Obtain Filters.
+ * @method void setName(string $Name) Set Filters.
+ * @method array getValues() Obtain Filter values.
+ * @method void setValues(array $Values) Set Filter values.
  */
 
 /**
@@ -58,7 +58,7 @@ class Filter extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

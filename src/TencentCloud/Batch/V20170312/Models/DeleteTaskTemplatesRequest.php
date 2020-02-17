@@ -18,8 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTaskTemplateIds() 获取This API is used to delete task template information.
- * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置This API is used to delete task template information.
+ * @method array getTaskTemplateIds() Obtain This API is used to delete task template information.
+ * @method void setTaskTemplateIds(array $TaskTemplateIds) Set This API is used to delete task template information.
  */
 
 /**
@@ -39,7 +39,7 @@ class DeleteTaskTemplatesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

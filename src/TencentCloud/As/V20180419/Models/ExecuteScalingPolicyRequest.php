@@ -18,10 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingPolicyId() 获取Alarm-based scaling policy ID
- * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置Alarm-based scaling policy ID
- * @method boolean getHonorCooldown() 获取Whether to check if the auto scaling group is in the cooldown period. Default value: false
- * @method void setHonorCooldown(boolean $HonorCooldown) 设置Whether to check if the auto scaling group is in the cooldown period. Default value: false
+ * @method string getAutoScalingPolicyId() Obtain Alarm-based scaling policy ID
+ * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Alarm-based scaling policy ID
+ * @method boolean getHonorCooldown() Obtain Whether to check if the auto scaling group is in the cooldown period. Default value: false
+ * @method void setHonorCooldown(boolean $HonorCooldown) Set Whether to check if the auto scaling group is in the cooldown period. Default value: false
  */
 
 /**
@@ -47,7 +47,7 @@ class ExecuteScalingPolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

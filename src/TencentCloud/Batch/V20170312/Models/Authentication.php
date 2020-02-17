@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getScene() 获取Authentication scenario such as COS
- * @method void setScene(string $Scene) 设置Authentication scenario such as COS
- * @method string getSecretId() 获取SecretId
- * @method void setSecretId(string $SecretId) 设置SecretId
- * @method string getSecretKey() 获取SecretKey
- * @method void setSecretKey(string $SecretKey) 设置SecretKey
+ * @method string getScene() Obtain Authentication scenario such as COS
+ * @method void setScene(string $Scene) Set Authentication scenario such as COS
+ * @method string getSecretId() Obtain SecretId
+ * @method void setSecretId(string $SecretId) Set SecretId
+ * @method string getSecretKey() Obtain SecretKey
+ * @method void setSecretKey(string $SecretKey) Set SecretKey
  */
 
 /**
@@ -55,7 +55,7 @@ class Authentication extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

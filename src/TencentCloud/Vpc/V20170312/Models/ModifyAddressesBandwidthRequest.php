@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAddressIds() 获取The unique ID of the EIP, such as 'eip-xxxx'.
- * @method void setAddressIds(array $AddressIds) 设置The unique ID of the EIP, such as 'eip-xxxx'.
- * @method integer getInternetMaxBandwidthOut() 获取调整带宽目标值
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置调整带宽目标值
- * @method string getStartTime() 获取包月带宽起始时间
- * @method void setStartTime(string $StartTime) 设置包月带宽起始时间
- * @method string getEndTime() 获取包月带宽结束时间
- * @method void setEndTime(string $EndTime) 设置包月带宽结束时间
+ * @method array getAddressIds() Obtain The unique ID of the EIP, such as 'eip-xxxx'.
+ * @method void setAddressIds(array $AddressIds) Set The unique ID of the EIP, such as 'eip-xxxx'.
+ * @method integer getInternetMaxBandwidthOut() Obtain Target bandwidth value adjustment
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Target bandwidth value adjustment
+ * @method string getStartTime() Obtain The monthly bandwidth start time
+ * @method void setStartTime(string $StartTime) Set The monthly bandwidth start time
+ * @method string getEndTime() Obtain The monthly bandwidth end time
+ * @method void setEndTime(string $EndTime) Set The monthly bandwidth end time
  */
 
 /**
@@ -39,31 +39,31 @@ class ModifyAddressesBandwidthRequest extends AbstractModel
     public $AddressIds;
 
     /**
-     * @var integer 调整带宽目标值
+     * @var integer Target bandwidth value adjustment
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string 包月带宽起始时间
+     * @var string The monthly bandwidth start time
      */
     public $StartTime;
 
     /**
-     * @var string 包月带宽结束时间
+     * @var string The monthly bandwidth end time
      */
     public $EndTime;
     /**
      * @param array $AddressIds The unique ID of the EIP, such as 'eip-xxxx'.
-     * @param integer $InternetMaxBandwidthOut 调整带宽目标值
-     * @param string $StartTime 包月带宽起始时间
-     * @param string $EndTime 包月带宽结束时间
+     * @param integer $InternetMaxBandwidthOut Target bandwidth value adjustment
+     * @param string $StartTime The monthly bandwidth start time
+     * @param string $EndTime The monthly bandwidth end time
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

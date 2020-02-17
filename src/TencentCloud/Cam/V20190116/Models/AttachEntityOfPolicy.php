@@ -18,18 +18,18 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getId() 获取Entity ID
- * @method void setId(string $Id) 设置Entity ID
- * @method string getName() 获取Entity Name
+ * @method string getId() Obtain Entity ID
+ * @method void setId(string $Id) Set Entity ID
+ * @method string getName() Obtain Entity Name
 Note: This field may return null, indicating that no valid value was found.
- * @method void setName(string $Name) 设置Entity Name
+ * @method void setName(string $Name) Set Entity Name
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getUin() 获取Entity UIN
+ * @method integer getUin() Obtain Entity UIN
 Note: This field may return null, indicating that no valid value was found.
- * @method void setUin(integer $Uin) 设置Entity UIN
+ * @method void setUin(integer $Uin) Set Entity UIN
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getRelatedType() 获取Type of entity association. 1: Associate by users; 2: Associate by User Groups
- * @method void setRelatedType(integer $RelatedType) 设置Type of entity association. 1: Associate by users; 2: Associate by User Groups
+ * @method integer getRelatedType() Obtain Type of entity association. 1: Associate by users; 2: Associate by User Groups
+ * @method void setRelatedType(integer $RelatedType) Set Type of entity association. 1: Associate by users; 2: Associate by User Groups
  */
 
 /**
@@ -71,7 +71,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

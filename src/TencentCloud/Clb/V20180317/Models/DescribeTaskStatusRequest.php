@@ -18,8 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskId() 获取Request ID, i.e., the RequestId parameter returned by the API
- * @method void setTaskId(string $TaskId) 设置Request ID, i.e., the RequestId parameter returned by the API
+ * @method string getTaskId() Obtain Request ID, i.e., the RequestId parameter returned by the API
+ * @method void setTaskId(string $TaskId) Set Request ID, i.e., the RequestId parameter returned by the API
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeTaskStatusRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method array getInstanceIds() 获取List of real server instance IDs
- * @method void setInstanceIds(array $InstanceIds) 设置List of real server instance IDs
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getInstanceIds() Obtain List of real server instance IDs
+ * @method void setInstanceIds(array $InstanceIds) Set List of real server instance IDs
  */
 
 /**
@@ -47,7 +47,7 @@ class DeregisterTargetsFromClassicalLBRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

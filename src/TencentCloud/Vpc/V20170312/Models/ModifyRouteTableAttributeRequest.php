@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
- * @method string getRouteTableName() 获取路由表名称。
- * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
+ * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
+ * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
+ * @method string getRouteTableName() Obtain Route table name.
+ * @method void setRouteTableName(string $RouteTableName) Set Route table name.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRouteTableAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 路由表实例ID，例如：rtb-azd4dt1c。
+     * @var string The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public $RouteTableId;
 
     /**
-     * @var string 路由表名称。
+     * @var string Route table name.
      */
     public $RouteTableName;
     /**
-     * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param string $RouteTableName 路由表名称。
+     * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+     * @param string $RouteTableName Route table name.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

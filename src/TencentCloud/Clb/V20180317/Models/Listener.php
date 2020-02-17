@@ -18,55 +18,55 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取CLB listener ID
- * @method void setListenerId(string $ListenerId) 设置CLB listener ID
- * @method string getProtocol() 获取Listener protocol
- * @method void setProtocol(string $Protocol) 设置Listener protocol
- * @method integer getPort() 获取Listener port
- * @method void setPort(integer $Port) 设置Listener port
- * @method CertificateOutput getCertificate() 获取Information of certificates bound to the listener
+ * @method string getListenerId() Obtain CLB listener ID
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method string getProtocol() Obtain Listener protocol
+ * @method void setProtocol(string $Protocol) Set Listener protocol
+ * @method integer getPort() Obtain Listener port
+ * @method void setPort(integer $Port) Set Listener port
+ * @method CertificateOutput getCertificate() Obtain Information of certificates bound to the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertificate(CertificateOutput $Certificate) 设置Information of certificates bound to the listener
+ * @method void setCertificate(CertificateOutput $Certificate) Set Information of certificates bound to the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method HealthCheck getHealthCheck() 获取Health check information of the listener
+ * @method HealthCheck getHealthCheck() Obtain Health check information of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置Health check information of the listener
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScheduler() 获取Request scheduling method
+ * @method string getScheduler() Obtain Request scheduling method
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScheduler(string $Scheduler) 设置Request scheduling method
+ * @method void setScheduler(string $Scheduler) Set Request scheduling method
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSessionExpireTime() 获取Session persistence time
+ * @method integer getSessionExpireTime() Obtain Session persistence time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置Session persistence time
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSniSwitch() 获取Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
+ * @method integer getSniSwitch() Obtain Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSniSwitch(integer $SniSwitch) 设置Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
+ * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getRules() 获取All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
+ * @method array getRules() Obtain All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRules(array $Rules) 设置All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
+ * @method void setRules(array $Rules) Set All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getListenerName() 获取Listener name
+ * @method string getListenerName() Obtain Listener name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setListenerName(string $ListenerName) 设置Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() 获取Listener creation time
+ * @method string getCreateTime() Obtain Listener creation time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) 设置Listener creation time
+ * @method void setCreateTime(string $CreateTime) Set Listener creation time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndPort() 获取End port of a port range
+ * @method integer getEndPort() Obtain End port of a port range
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndPort(integer $EndPort) 设置End port of a port range
+ * @method void setEndPort(integer $EndPort) Set End port of a port range
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTargetType() 获取Real server type
+ * @method string getTargetType() Obtain Real server type
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetType(string $TargetType) 设置Real server type
+ * @method void setTargetType(string $TargetType) Set Real server type
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method BasicTargetGroupInfo getTargetGroup() 获取Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
+ * @method BasicTargetGroupInfo getTargetGroup() Obtain Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) 设置Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
+ * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) Set Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -187,7 +187,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

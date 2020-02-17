@@ -18,11 +18,11 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOperator() 获取UIN of operator.
+ * @method string getOperator() Obtain UIN of operator.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setOperator(string $Operator) 设置UIN of operator.
+ * @method void setOperator(string $Operator) Set UIN of operator.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getOperation() 获取Operation type. Value range:
+ * @method string getOperation() Obtain Operation type. Value range:
 SNAP_OPERATION_DELETE: Delete snapshot
 SNAP_OPERATION_ROLLBACK: Roll back snapshot
 SNAP_OPERATION_MODIFY: Modify snapshot attributes
@@ -30,7 +30,7 @@ SNAP_OPERATION_CREATE: Create snapshot
 SNAP_OPERATION_COPY: Cross-region replication of snapshot
 ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
 ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
- * @method void setOperation(string $Operation) 设置Operation type. Value range:
+ * @method void setOperation(string $Operation) Set Operation type. Value range:
 SNAP_OPERATION_DELETE: Delete snapshot
 SNAP_OPERATION_ROLLBACK: Roll back snapshot
 SNAP_OPERATION_MODIFY: Modify snapshot attributes
@@ -38,20 +38,20 @@ SNAP_OPERATION_CREATE: Create snapshot
 SNAP_OPERATION_COPY: Cross-region replication of snapshot
 ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
 ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
- * @method string getSnapshotId() 获取ID of snapshot being operated.
- * @method void setSnapshotId(string $SnapshotId) 设置ID of snapshot being operated.
- * @method string getOperationState() 获取Status of operation. Value range:
+ * @method string getSnapshotId() Obtain ID of snapshot being operated.
+ * @method void setSnapshotId(string $SnapshotId) Set ID of snapshot being operated.
+ * @method string getOperationState() Obtain Status of operation. Value range:
 SUCCESS: Operation successful 
 FAILED: Operation failed 
 PROCESSING: Operation in process
- * @method void setOperationState(string $OperationState) 设置Status of operation. Value range:
+ * @method void setOperationState(string $OperationState) Set Status of operation. Value range:
 SUCCESS: Operation successful 
 FAILED: Operation failed 
 PROCESSING: Operation in process
- * @method string getStartTime() 获取Start time
- * @method void setStartTime(string $StartTime) 设置Start time
- * @method string getEndTime() 获取End time
- * @method void setEndTime(string $EndTime) 设置End time
+ * @method string getStartTime() Obtain Start time
+ * @method void setStartTime(string $StartTime) Set Start time
+ * @method string getEndTime() Obtain End time
+ * @method void setEndTime(string $EndTime) Set End time
  */
 
 /**
@@ -123,7 +123,7 @@ PROCESSING: Operation in process
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

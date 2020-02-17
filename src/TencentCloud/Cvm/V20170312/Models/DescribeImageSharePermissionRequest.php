@@ -18,8 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getImageId() 获取The ID of the image to be shared
- * @method void setImageId(string $ImageId) 设置The ID of the image to be shared
+ * @method string getImageId() Obtain The ID of the image to be shared
+ * @method void setImageId(string $ImageId) Set The ID of the image to be shared
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeImageSharePermissionRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

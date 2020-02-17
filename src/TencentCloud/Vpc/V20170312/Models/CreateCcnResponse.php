@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method CCN getCcn() 获取云联网（CCN）对象。
- * @method void setCcn(CCN $Ccn) 设置云联网（CCN）对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method CCN getCcn() Obtain The CCN object.
+ * @method void setCcn(CCN $Ccn) Set The CCN object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateCcnResponse extends AbstractModel
 {
     /**
-     * @var CCN 云联网（CCN）对象。
+     * @var CCN The CCN object.
      */
     public $Ccn;
 
@@ -39,7 +39,7 @@ class CreateCcnResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param CCN $Ccn 云联网（CCN）对象。
+     * @param CCN $Ccn The CCN object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateCcnResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取Policy ID
- * @method void setPolicyId(integer $PolicyId) 设置Policy ID
- * @method string getPolicyName() 获取Policy name
- * @method void setPolicyName(string $PolicyName) 设置Policy name
- * @method string getAddTime() 获取Time of association
- * @method void setAddTime(string $AddTime) 设置Time of association
- * @method string getPolicyType() 获取Policy type. `User` indicates custom policy; `QCS` indicates preset policy
+ * @method integer getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
+ * @method string getPolicyName() Obtain Policy name
+ * @method void setPolicyName(string $PolicyName) Set Policy name
+ * @method string getAddTime() Obtain Time of association
+ * @method void setAddTime(string $AddTime) Set Time of association
+ * @method string getPolicyType() Obtain Policy type. `User` indicates custom policy; `QCS` indicates preset policy
 Note: This field may return null, indicating that no valid value was found.
- * @method void setPolicyType(string $PolicyType) 设置Policy type. `User` indicates custom policy; `QCS` indicates preset policy
+ * @method void setPolicyType(string $PolicyType) Set Policy type. `User` indicates custom policy; `QCS` indicates preset policy
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getCreateMode() 获取Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
- * @method void setCreateMode(integer $CreateMode) 设置Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
- * @method integer getDeactived() 获取
- * @method void setDeactived(integer $Deactived) 设置
+ * @method integer getCreateMode() Obtain Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
+ * @method void setCreateMode(integer $CreateMode) Set Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
+ * @method integer getDeactived() Obtain 
+ * @method void setDeactived(integer $Deactived) Set 
  */
 
 /**
@@ -83,7 +83,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

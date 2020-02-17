@@ -18,14 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getGroupId() 获取User group ID
- * @method void setGroupId(integer $GroupId) 设置User group ID
- * @method string getGroupName() 获取User Group name
- * @method void setGroupName(string $GroupName) 设置User Group name
- * @method string getCreateTime() 获取Time User Group created
- * @method void setCreateTime(string $CreateTime) 设置Time User Group created
- * @method string getRemark() 获取User Group description
- * @method void setRemark(string $Remark) 设置User Group description
+ * @method integer getGroupId() Obtain User group ID
+ * @method void setGroupId(integer $GroupId) Set User group ID
+ * @method string getGroupName() Obtain User Group name
+ * @method void setGroupName(string $GroupName) Set User Group name
+ * @method string getCreateTime() Obtain Time User Group created
+ * @method void setCreateTime(string $CreateTime) Set Time User Group created
+ * @method string getRemark() Obtain User Group description
+ * @method void setRemark(string $Remark) Set User Group description
  */
 
 /**
@@ -63,7 +63,7 @@ class GroupInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

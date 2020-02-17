@@ -18,14 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取Filter conditions. The following conditions are supported:
+ * @method array getFilters() Obtain Filter conditions. The following conditions are supported:
 <li>disk-id - Array of String - Required or not: Yes - Filter by cloud disk ID, with maximum of 10 cloud disk IDs able to be specified per request.
- * @method void setFilters(array $Filters) 设置Filter conditions. The following conditions are supported:
+ * @method void setFilters(array $Filters) Set Filter conditions. The following conditions are supported:
 <li>disk-id - Array of String - Required or not: Yes - Filter by cloud disk ID, with maximum of 10 cloud disk IDs able to be specified per request.
- * @method string getBeginTime() 获取The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
- * @method void setBeginTime(string $BeginTime) 设置The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
- * @method string getEndTime() 获取The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
- * @method void setEndTime(string $EndTime) 设置The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+ * @method string getBeginTime() Obtain The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
+ * @method void setBeginTime(string $BeginTime) Set The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
+ * @method string getEndTime() Obtain The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+ * @method void setEndTime(string $EndTime) Set The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
  */
 
 /**
@@ -59,7 +59,7 @@ class DescribeDiskOperationLogsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

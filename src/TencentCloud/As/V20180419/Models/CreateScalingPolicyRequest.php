@@ -18,20 +18,20 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID.
- * @method string getScalingPolicyName() 获取Alarm trigger policy name.
- * @method void setScalingPolicyName(string $ScalingPolicyName) 设置Alarm trigger policy name.
- * @method string getAdjustmentType() 获取The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
- * @method void setAdjustmentType(string $AdjustmentType) 设置The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
- * @method integer getAdjustmentValue() 获取The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
- * @method void setAdjustmentValue(integer $AdjustmentValue) 设置The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
- * @method MetricAlarm getMetricAlarm() 获取Alarm monitoring metric.
- * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置Alarm monitoring metric.
- * @method integer getCooldown() 获取Cooldown period in seconds. Default value: 300 seconds.
- * @method void setCooldown(integer $Cooldown) 设置Cooldown period in seconds. Default value: 300 seconds.
- * @method array getNotificationUserGroupIds() 获取Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
+ * @method string getScalingPolicyName() Obtain Alarm trigger policy name.
+ * @method void setScalingPolicyName(string $ScalingPolicyName) Set Alarm trigger policy name.
+ * @method string getAdjustmentType() Obtain The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+ * @method void setAdjustmentType(string $AdjustmentType) Set The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+ * @method integer getAdjustmentValue() Obtain The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
+ * @method void setAdjustmentValue(integer $AdjustmentValue) Set The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
+ * @method MetricAlarm getMetricAlarm() Obtain Alarm monitoring metric.
+ * @method void setMetricAlarm(MetricAlarm $MetricAlarm) Set Alarm monitoring metric.
+ * @method integer getCooldown() Obtain Cooldown period in seconds. Default value: 300 seconds.
+ * @method void setCooldown(integer $Cooldown) Set Cooldown period in seconds. Default value: 300 seconds.
+ * @method array getNotificationUserGroupIds() Obtain Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
  */
 
 /**
@@ -87,7 +87,7 @@ class CreateScalingPolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method array getSourceListenerIds() 获取Array of CLB listener IDs
- * @method void setSourceListenerIds(array $SourceListenerIds) 设置Array of CLB listener IDs
- * @method array getSourceLocationIds() 获取Array of CLB forwarding rules
- * @method void setSourceLocationIds(array $SourceLocationIds) 设置Array of CLB forwarding rules
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getSourceListenerIds() Obtain Array of CLB listener IDs
+ * @method void setSourceListenerIds(array $SourceListenerIds) Set Array of CLB listener IDs
+ * @method array getSourceLocationIds() Obtain Array of CLB forwarding rules
+ * @method void setSourceLocationIds(array $SourceLocationIds) Set Array of CLB forwarding rules
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeRewriteRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

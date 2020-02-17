@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method array getInstances() 获取关联网络实例列表
- * @method void setInstances(array $Instances) 设置关联网络实例列表
- * @method string getCcnUin() 获取CCN所属UIN（根账号），默认当前账号所属UIN
- * @method void setCcnUin(string $CcnUin) 设置CCN所属UIN（根账号），默认当前账号所属UIN
+ * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method array getInstances() Obtain List of associated network instances
+ * @method void setInstances(array $Instances) Set List of associated network instances
+ * @method string getCcnUin() Obtain The UIN (root account) of the CCN. By default, the current account belongs to the UIN
+ * @method void setCcnUin(string $CcnUin) Set The UIN (root account) of the CCN. By default, the current account belongs to the UIN
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class AttachCcnInstancesRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public $CcnId;
 
     /**
-     * @var array 关联网络实例列表
+     * @var array List of associated network instances
      */
     public $Instances;
 
     /**
-     * @var string CCN所属UIN（根账号），默认当前账号所属UIN
+     * @var string The UIN (root account) of the CCN. By default, the current account belongs to the UIN
      */
     public $CcnUin;
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param array $Instances 关联网络实例列表
-     * @param string $CcnUin CCN所属UIN（根账号），默认当前账号所属UIN
+     * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param array $Instances List of associated network instances
+     * @param string $CcnUin The UIN (root account) of the CCN. By default, the current account belongs to the UIN
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

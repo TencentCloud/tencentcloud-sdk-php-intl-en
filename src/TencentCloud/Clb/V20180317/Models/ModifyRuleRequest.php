@@ -18,24 +18,24 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getListenerId() 获取CLB listener ID
- * @method void setListenerId(string $ListenerId) 设置CLB listener ID
- * @method string getLocationId() 获取ID of the forwarding rule to be modified.
- * @method void setLocationId(string $LocationId) 设置ID of the forwarding rule to be modified.
- * @method string getUrl() 获取New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
- * @method void setUrl(string $Url) 设置New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
- * @method HealthCheck getHealthCheck() 获取Health check information
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置Health check information
- * @method string getScheduler() 获取Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getListenerId() Obtain CLB listener ID
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method string getLocationId() Obtain ID of the forwarding rule to be modified.
+ * @method void setLocationId(string $LocationId) Set ID of the forwarding rule to be modified.
+ * @method string getUrl() Obtain New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+ * @method void setUrl(string $Url) Set New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+ * @method HealthCheck getHealthCheck() Obtain Health check information
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information
+ * @method string getScheduler() Obtain Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
- * @method void setScheduler(string $Scheduler) 设置Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
+ * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
- * @method integer getSessionExpireTime() 获取Session persistence time
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置Session persistence time
- * @method string getForwardType() 获取Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
- * @method void setForwardType(string $ForwardType) 设置Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
+ * @method integer getSessionExpireTime() Obtain Session persistence time
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
+ * @method string getForwardType() Obtain Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
+ * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
  */
 
 /**
@@ -99,7 +99,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

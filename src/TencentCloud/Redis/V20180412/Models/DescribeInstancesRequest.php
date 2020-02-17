@@ -18,46 +18,46 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getLimit() 获取Instance list size. Default value: 20
- * @method void setLimit(integer $Limit) 设置Instance list size. Default value: 20
- * @method integer getOffset() 获取Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) 设置Offset, which is an integral multiple of `Limit`
- * @method string getInstanceId() 获取Instance ID, such as crs-6ubhgouj
- * @method void setInstanceId(string $InstanceId) 设置Instance ID, such as crs-6ubhgouj
- * @method string getOrderBy() 获取Enumerated values: projectId, createtime, instancename, type, curDeadline
- * @method void setOrderBy(string $OrderBy) 设置Enumerated values: projectId, createtime, instancename, type, curDeadline
- * @method integer getOrderType() 获取1: reverse; 0: sequential; reverse by default
- * @method void setOrderType(integer $OrderType) 设置1: reverse; 0: sequential; reverse by default
- * @method array getVpcIds() 获取Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
- * @method void setVpcIds(array $VpcIds) 设置Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
- * @method array getSubnetIds() 获取Array of subnet IDs such as 56854. The array subscript starts from 0
- * @method void setSubnetIds(array $SubnetIds) 设置Array of subnet IDs such as 56854. The array subscript starts from 0
- * @method array getProjectIds() 获取Array of project IDs. The array subscript starts from 0
- * @method void setProjectIds(array $ProjectIds) 设置Array of project IDs. The array subscript starts from 0
- * @method string getSearchKey() 获取ID of the instance to be searched for.
- * @method void setSearchKey(string $SearchKey) 设置ID of the instance to be searched for.
- * @method string getInstanceName() 获取Instance name
- * @method void setInstanceName(string $InstanceName) 设置Instance name
- * @method array getUniqVpcIds() 获取Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
- * @method void setUniqVpcIds(array $UniqVpcIds) 设置Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
- * @method array getUniqSubnetIds() 获取Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
- * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
- * @method array getRegionIds() 获取Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
- * @method void setRegionIds(array $RegionIds) 设置Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
- * @method array getStatus() 获取Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
- * @method void setStatus(array $Status) 设置Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
- * @method integer getTypeVersion() 获取Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
- * @method void setTypeVersion(integer $TypeVersion) 设置Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
- * @method string getEngineName() 获取Engine information: Redis-2.8, Redis-4.0, CKV
- * @method void setEngineName(string $EngineName) 设置Engine information: Redis-2.8, Redis-4.0, CKV
- * @method array getAutoRenew() 获取Renewal mode. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
- * @method void setAutoRenew(array $AutoRenew) 设置Renewal mode. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
- * @method string getBillingMode() 获取Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
- * @method void setBillingMode(string $BillingMode) 设置Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
- * @method integer getType() 获取Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
- * @method void setType(integer $Type) 设置Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
- * @method array getSearchKeys() 获取Search keywords, which can be instance ID, instance name, or complete IP
- * @method void setSearchKeys(array $SearchKeys) 设置Search keywords, which can be instance ID, instance name, or complete IP
+ * @method integer getLimit() Obtain Instance list size. Default value: 20
+ * @method void setLimit(integer $Limit) Set Instance list size. Default value: 20
+ * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
+ * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
+ * @method string getInstanceId() Obtain Instance ID, such as crs-6ubhgouj
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, such as crs-6ubhgouj
+ * @method string getOrderBy() Obtain Enumerated values: projectId, createtime, instancename, type, curDeadline
+ * @method void setOrderBy(string $OrderBy) Set Enumerated values: projectId, createtime, instancename, type, curDeadline
+ * @method integer getOrderType() Obtain 1: reverse; 0: sequential; reverse by default
+ * @method void setOrderType(integer $OrderType) Set 1: reverse; 0: sequential; reverse by default
+ * @method array getVpcIds() Obtain Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+ * @method void setVpcIds(array $VpcIds) Set Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+ * @method array getSubnetIds() Obtain Array of subnet IDs such as 56854. The array subscript starts from 0
+ * @method void setSubnetIds(array $SubnetIds) Set Array of subnet IDs such as 56854. The array subscript starts from 0
+ * @method array getProjectIds() Obtain Array of project IDs. The array subscript starts from 0
+ * @method void setProjectIds(array $ProjectIds) Set Array of project IDs. The array subscript starts from 0
+ * @method string getSearchKey() Obtain ID of the instance to be searched for.
+ * @method void setSearchKey(string $SearchKey) Set ID of the instance to be searched for.
+ * @method string getInstanceName() Obtain Instance name
+ * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method array getUniqVpcIds() Obtain Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+ * @method void setUniqVpcIds(array $UniqVpcIds) Set Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+ * @method array getUniqSubnetIds() Obtain Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) Set Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+ * @method array getRegionIds() Obtain Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+ * @method void setRegionIds(array $RegionIds) Set Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+ * @method array getStatus() Obtain Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+ * @method void setStatus(array $Status) Set Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+ * @method integer getTypeVersion() Obtain Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+ * @method void setTypeVersion(integer $TypeVersion) Set Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+ * @method string getEngineName() Obtain Engine information: Redis-2.8, Redis-4.0, CKV
+ * @method void setEngineName(string $EngineName) Set Engine information: Redis-2.8, Redis-4.0, CKV
+ * @method array getAutoRenew() Obtain Renewal mode. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+ * @method void setAutoRenew(array $AutoRenew) Set Renewal mode. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+ * @method string getBillingMode() Obtain Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+ * @method void setBillingMode(string $BillingMode) Set Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+ * @method integer getType() Obtain Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+ * @method void setType(integer $Type) Set Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+ * @method array getSearchKeys() Obtain Search keywords, which can be instance ID, instance name, or complete IP
+ * @method void setSearchKeys(array $SearchKeys) Set Search keywords, which can be instance ID, instance name, or complete IP
  */
 
 /**
@@ -191,7 +191,7 @@ class DescribeInstancesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

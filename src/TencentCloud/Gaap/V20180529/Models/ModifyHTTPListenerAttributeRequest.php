@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID to be modified
- * @method void setListenerId(string $ListenerId) 设置Listener ID to be modified
- * @method string getListenerName() 获取New listener name
- * @method void setListenerName(string $ListenerName) 设置New listener name
- * @method string getProxyId() 获取Connection ID
- * @method void setProxyId(string $ProxyId) 设置Connection ID
+ * @method string getListenerId() Obtain Listener ID to be modified
+ * @method void setListenerId(string $ListenerId) Set Listener ID to be modified
+ * @method string getListenerName() Obtain New listener name
+ * @method void setListenerName(string $ListenerName) Set New listener name
+ * @method string getProxyId() Obtain Connection ID
+ * @method void setProxyId(string $ProxyId) Set Connection ID
  */
 
 /**
@@ -55,7 +55,7 @@ class ModifyHTTPListenerAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

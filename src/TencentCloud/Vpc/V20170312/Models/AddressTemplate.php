@@ -18,52 +18,52 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAddressTemplateName() 获取IP地址模板名称。
- * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP地址模板名称。
- * @method string getAddressTemplateId() 获取IP地址模板实例唯一ID。
- * @method void setAddressTemplateId(string $AddressTemplateId) 设置IP地址模板实例唯一ID。
- * @method array getAddressSet() 获取IP地址信息。
- * @method void setAddressSet(array $AddressSet) 设置IP地址信息。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getAddressTemplateName() Obtain IP address template name.
+ * @method void setAddressTemplateName(string $AddressTemplateName) Set IP address template name.
+ * @method string getAddressTemplateId() Obtain The unique ID of the IP address template instance.
+ * @method void setAddressTemplateId(string $AddressTemplateId) Set The unique ID of the IP address template instance.
+ * @method array getAddressSet() Obtain IP address information.
+ * @method void setAddressSet(array $AddressSet) Set IP address information.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
  */
 
 /**
- *IP地址模板
+ *IP address template
  */
 class AddressTemplate extends AbstractModel
 {
     /**
-     * @var string IP地址模板名称。
+     * @var string IP address template name.
      */
     public $AddressTemplateName;
 
     /**
-     * @var string IP地址模板实例唯一ID。
+     * @var string The unique ID of the IP address template instance.
      */
     public $AddressTemplateId;
 
     /**
-     * @var array IP地址信息。
+     * @var array IP address information.
      */
     public $AddressSet;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
     /**
-     * @param string $AddressTemplateName IP地址模板名称。
-     * @param string $AddressTemplateId IP地址模板实例唯一ID。
-     * @param array $AddressSet IP地址信息。
-     * @param string $CreatedTime 创建时间。
+     * @param string $AddressTemplateName IP address template name.
+     * @param string $AddressTemplateId The unique ID of the IP address template instance.
+     * @param array $AddressSet IP address information.
+     * @param string $CreatedTime Creation Time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

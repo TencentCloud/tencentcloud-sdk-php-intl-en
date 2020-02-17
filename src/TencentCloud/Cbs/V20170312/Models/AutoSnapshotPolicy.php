@@ -18,26 +18,26 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoSnapshotPolicyId() 获取Scheduled snapshot policy ID.
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置Scheduled snapshot policy ID.
- * @method string getAutoSnapshotPolicyName() 获取Scheduled snapshot policy name.
- * @method void setAutoSnapshotPolicyName(string $AutoSnapshotPolicyName) 设置Scheduled snapshot policy name.
- * @method string getAutoSnapshotPolicyState() 获取Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
- * @method void setAutoSnapshotPolicyState(string $AutoSnapshotPolicyState) 设置Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
- * @method boolean getIsActivated() 获取Whether scheduled snapshot policy is activated.
- * @method void setIsActivated(boolean $IsActivated) 设置Whether scheduled snapshot policy is activated.
- * @method boolean getIsPermanent() 获取Whether the snapshot created by this scheduled snapshot policy is retained permanently.
- * @method void setIsPermanent(boolean $IsPermanent) 设置Whether the snapshot created by this scheduled snapshot policy is retained permanently.
- * @method integer getRetentionDays() 获取Number of days the snapshot created by this scheduled snapshot policy is retained.
- * @method void setRetentionDays(integer $RetentionDays) 设置Number of days the snapshot created by this scheduled snapshot policy is retained.
- * @method string getCreateTime() 获取The time the scheduled snapshot policy was created.
- * @method void setCreateTime(string $CreateTime) 设置The time the scheduled snapshot policy was created.
- * @method string getNextTriggerTime() 获取The time the scheduled snapshot will be triggered again.
- * @method void setNextTriggerTime(string $NextTriggerTime) 设置The time the scheduled snapshot will be triggered again.
- * @method array getPolicy() 获取The policy for executing the scheduled snapshot.
- * @method void setPolicy(array $Policy) 设置The policy for executing the scheduled snapshot.
- * @method array getDiskIdSet() 获取The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
- * @method void setDiskIdSet(array $DiskIdSet) 设置The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+ * @method string getAutoSnapshotPolicyId() Obtain Scheduled snapshot policy ID.
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Scheduled snapshot policy ID.
+ * @method string getAutoSnapshotPolicyName() Obtain Scheduled snapshot policy name.
+ * @method void setAutoSnapshotPolicyName(string $AutoSnapshotPolicyName) Set Scheduled snapshot policy name.
+ * @method string getAutoSnapshotPolicyState() Obtain Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+ * @method void setAutoSnapshotPolicyState(string $AutoSnapshotPolicyState) Set Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+ * @method boolean getIsActivated() Obtain Whether scheduled snapshot policy is activated.
+ * @method void setIsActivated(boolean $IsActivated) Set Whether scheduled snapshot policy is activated.
+ * @method boolean getIsPermanent() Obtain Whether the snapshot created by this scheduled snapshot policy is retained permanently.
+ * @method void setIsPermanent(boolean $IsPermanent) Set Whether the snapshot created by this scheduled snapshot policy is retained permanently.
+ * @method integer getRetentionDays() Obtain Number of days the snapshot created by this scheduled snapshot policy is retained.
+ * @method void setRetentionDays(integer $RetentionDays) Set Number of days the snapshot created by this scheduled snapshot policy is retained.
+ * @method string getCreateTime() Obtain The time the scheduled snapshot policy was created.
+ * @method void setCreateTime(string $CreateTime) Set The time the scheduled snapshot policy was created.
+ * @method string getNextTriggerTime() Obtain The time the scheduled snapshot will be triggered again.
+ * @method void setNextTriggerTime(string $NextTriggerTime) Set The time the scheduled snapshot will be triggered again.
+ * @method array getPolicy() Obtain The policy for executing the scheduled snapshot.
+ * @method void setPolicy(array $Policy) Set The policy for executing the scheduled snapshot.
+ * @method array getDiskIdSet() Obtain The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+ * @method void setDiskIdSet(array $DiskIdSet) Set The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
  */
 
 /**
@@ -111,7 +111,7 @@ class AutoSnapshotPolicy extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

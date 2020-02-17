@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method array getInstanceIds() 获取CVM实例ID查询。形如：ins-r8hr2upy。
- * @method void setInstanceIds(array $InstanceIds) 设置CVM实例ID查询。形如：ins-r8hr2upy。
+ * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method array getInstanceIds() Obtain Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
+ * @method void setInstanceIds(array $InstanceIds) Set Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class DetachClassicLinkVpcRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public $VpcId;
 
     /**
-     * @var array CVM实例ID查询。形如：ins-r8hr2upy。
+     * @var array Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
      */
     public $InstanceIds;
     /**
-     * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param array $InstanceIds CVM实例ID查询。形如：ins-r8hr2upy。
+     * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param array $InstanceIds Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

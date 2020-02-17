@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
+ * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class DeleteNetworkInterfaceRequest extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * @var string The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public $NetworkInterfaceId;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

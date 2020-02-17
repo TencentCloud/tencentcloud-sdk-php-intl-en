@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method string getSourceInstanceId() 获取弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
- * @method void setSourceInstanceId(string $SourceInstanceId) 设置弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
- * @method string getDestinationInstanceId() 获取待迁移的目的CVM实例ID。
- * @method void setDestinationInstanceId(string $DestinationInstanceId) 设置待迁移的目的CVM实例ID。
+ * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method string getSourceInstanceId() Obtain The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
+ * @method void setSourceInstanceId(string $SourceInstanceId) Set The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
+ * @method string getDestinationInstanceId() Obtain ID of the destination CVM instance to be migrated.
+ * @method void setDestinationInstanceId(string $DestinationInstanceId) Set ID of the destination CVM instance to be migrated.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class MigrateNetworkInterfaceRequest extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * @var string The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
+     * @var string The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
      */
     public $SourceInstanceId;
 
     /**
-     * @var string 待迁移的目的CVM实例ID。
+     * @var string ID of the destination CVM instance to be migrated.
      */
     public $DestinationInstanceId;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param string $SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
-     * @param string $DestinationInstanceId 待迁移的目的CVM实例ID。
+     * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+     * @param string $SourceInstanceId The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
+     * @param string $DestinationInstanceId ID of the destination CVM instance to be migrated.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

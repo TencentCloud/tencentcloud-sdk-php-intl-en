@@ -18,19 +18,19 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getProtocol() 获取Listener protocol
- * @method void setProtocol(string $Protocol) 设置Listener protocol
- * @method integer getPort() 获取Listener port
- * @method void setPort(integer $Port) 设置Listener port
- * @method array getRules() 获取Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getProtocol() Obtain Listener protocol
+ * @method void setProtocol(string $Protocol) Set Listener protocol
+ * @method integer getPort() Obtain Listener port
+ * @method void setPort(integer $Port) Set Listener port
+ * @method array getRules() Obtain Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRules(array $Rules) 设置Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
+ * @method void setRules(array $Rules) Set Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTargets() 获取List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
+ * @method array getTargets() Obtain List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargets(array $Targets) 设置List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
+ * @method void setTargets(array $Targets) Set List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -79,7 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

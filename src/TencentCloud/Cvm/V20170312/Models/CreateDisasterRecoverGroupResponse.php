@@ -18,20 +18,20 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDisasterRecoverGroupId() 获取List of spread placement group IDs.
- * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置List of spread placement group IDs.
- * @method string getType() 获取Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
- * @method void setType(string $Type) 设置Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
- * @method string getName() 获取Name of the spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
- * @method void setName(string $Name) 设置Name of the spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
- * @method integer getCvmQuotaTotal() 获取The maximum number of CVMs in a placement group.
- * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) 设置The maximum number of CVMs in a placement group.
- * @method integer getCurrentNum() 获取The current number of CVMs in a placement group.
- * @method void setCurrentNum(integer $CurrentNum) 设置The current number of CVMs in a placement group.
- * @method string getCreateTime() 获取Creation time of the placement group.
- * @method void setCreateTime(string $CreateTime) 设置Creation time of the placement group.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getDisasterRecoverGroupId() Obtain List of spread placement group IDs.
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set List of spread placement group IDs.
+ * @method string getType() Obtain Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+ * @method void setType(string $Type) Set Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+ * @method string getName() Obtain Name of the spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
+ * @method void setName(string $Name) Set Name of the spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
+ * @method integer getCvmQuotaTotal() Obtain The maximum number of CVMs in a placement group.
+ * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) Set The maximum number of CVMs in a placement group.
+ * @method integer getCurrentNum() Obtain The current number of CVMs in a placement group.
+ * @method void setCurrentNum(integer $CurrentNum) Set The current number of CVMs in a placement group.
+ * @method string getCreateTime() Obtain Creation time of the placement group.
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the placement group.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -87,7 +87,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

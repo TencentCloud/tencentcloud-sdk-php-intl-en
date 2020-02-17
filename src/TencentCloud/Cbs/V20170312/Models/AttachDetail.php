@@ -18,12 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method integer getAttachedDiskCount() 获取The number of instances mounted to data disk.
- * @method void setAttachedDiskCount(integer $AttachedDiskCount) 设置The number of instances mounted to data disk.
- * @method integer getMaxAttachCount() 获取The maximum number of instances that can be mounted to data disk.
- * @method void setMaxAttachCount(integer $MaxAttachCount) 设置The maximum number of instances that can be mounted to data disk.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method integer getAttachedDiskCount() Obtain The number of instances mounted to data disk.
+ * @method void setAttachedDiskCount(integer $AttachedDiskCount) Set The number of instances mounted to data disk.
+ * @method integer getMaxAttachCount() Obtain The maximum number of instances that can be mounted to data disk.
+ * @method void setMaxAttachCount(integer $MaxAttachCount) Set The maximum number of instances that can be mounted to data disk.
  */
 
 /**
@@ -55,7 +55,7 @@ class AttachDetail extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,8 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDuration() 获取Total duration of phrase filtering
- * @method void setDuration(integer $Duration) 设置Total duration of phrase filtering
+ * @method integer getDuration() Obtain Total duration of phrase filtering
+ * @method void setDuration(integer $Duration) Set Total duration of phrase filtering
  */
 
 /**
@@ -39,7 +39,7 @@ class VoiceFilterStatisticsItem extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

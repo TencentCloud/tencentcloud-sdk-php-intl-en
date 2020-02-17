@@ -18,16 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOperation() 获取Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
- * @method void setOperation(string $Operation) 设置Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getInstanceName() 获取New name of an instance
- * @method void setInstanceName(string $InstanceName) 设置New name of an instance
- * @method integer getProjectId() 获取Project ID
- * @method void setProjectId(integer $ProjectId) 设置Project ID
- * @method integer getAutoRenew() 获取Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
- * @method void setAutoRenew(integer $AutoRenew) 设置Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+ * @method string getOperation() Obtain Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+ * @method void setOperation(string $Operation) Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceName() Obtain New name of an instance
+ * @method void setInstanceName(string $InstanceName) Set New name of an instance
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getAutoRenew() Obtain Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+ * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
  */
 
 /**
@@ -71,7 +71,7 @@ class ModifyInstanceRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

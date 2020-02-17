@@ -18,17 +18,17 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method boolean getReleaseAddress() 获取Release address
+ * @method boolean getReleaseAddress() Obtain Release address
 Note: This field may return null, indicating that no valid value is found.
- * @method void setReleaseAddress(boolean $ReleaseAddress) 设置Release address
+ * @method void setReleaseAddress(boolean $ReleaseAddress) Set Release address
 Note: This field may return null, indicating that no valid value is found.
- * @method array getUnsupportNetworks() 获取Unsupported network types
+ * @method array getUnsupportNetworks() Obtain Unsupported network types
 Note: This field may return null, indicating that no valid value is found.
- * @method void setUnsupportNetworks(array $UnsupportNetworks) 设置Unsupported network types
+ * @method void setUnsupportNetworks(array $UnsupportNetworks) Set Unsupported network types
 Note: This field may return null, indicating that no valid value is found.
- * @method StorageBlock getStorageBlockAttr() 获取Attributes of local HDD storage
+ * @method StorageBlock getStorageBlockAttr() Obtain Attributes of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
- * @method void setStorageBlockAttr(StorageBlock $StorageBlockAttr) 设置Attributes of local HDD storage
+ * @method void setStorageBlockAttr(StorageBlock $StorageBlockAttr) Set Attributes of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

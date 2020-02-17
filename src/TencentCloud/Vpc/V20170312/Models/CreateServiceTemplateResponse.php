@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ServiceTemplate getServiceTemplate() 获取协议端口模板对象。
- * @method void setServiceTemplate(ServiceTemplate $ServiceTemplate) 设置协议端口模板对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method ServiceTemplate getServiceTemplate() Obtain Protocol port template object.
+ * @method void setServiceTemplate(ServiceTemplate $ServiceTemplate) Set Protocol port template object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceTemplateResponse extends AbstractModel
 {
     /**
-     * @var ServiceTemplate 协议端口模板对象。
+     * @var ServiceTemplate Protocol port template object.
      */
     public $ServiceTemplate;
 
@@ -39,7 +39,7 @@ class CreateServiceTemplateResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param ServiceTemplate $ServiceTemplate 协议端口模板对象。
+     * @param ServiceTemplate $ServiceTemplate Protocol port template object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateServiceTemplateResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

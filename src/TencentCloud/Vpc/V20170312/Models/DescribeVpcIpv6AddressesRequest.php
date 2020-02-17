@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method array getIpv6Addresses() 获取`IP`地址列表，批量查询单次请求最多支持`10`个。
- * @method void setIpv6Addresses(array $Ipv6Addresses) 设置`IP`地址列表，批量查询单次请求最多支持`10`个。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取返回数量。
- * @method void setLimit(integer $Limit) 设置返回数量。
+ * @method string getVpcId() Obtain The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+ * @method array getIpv6Addresses() Obtain The `IP` address list. Each request supports a maximum of `10` batch querying.
+ * @method void setIpv6Addresses(array $Ipv6Addresses) Set The `IP` address list. Each request supports a maximum of `10` batch querying.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain The returned quantity.
+ * @method void setLimit(integer $Limit) Set The returned quantity.
  */
 
 /**
@@ -34,36 +34,36 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpcIpv6AddressesRequest extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * @var string The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public $VpcId;
 
     /**
-     * @var array `IP`地址列表，批量查询单次请求最多支持`10`个。
+     * @var array The `IP` address list. Each request supports a maximum of `10` batch querying.
      */
     public $Ipv6Addresses;
 
     /**
-     * @var integer 偏移量。
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量。
+     * @var integer The returned quantity.
      */
     public $Limit;
     /**
-     * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param array $Ipv6Addresses `IP`地址列表，批量查询单次请求最多支持`10`个。
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 返回数量。
+     * @param string $VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+     * @param array $Ipv6Addresses The `IP` address list. Each request supports a maximum of `10` batch querying.
+     * @param integer $Offset Offset.
+     * @param integer $Limit The returned quantity.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

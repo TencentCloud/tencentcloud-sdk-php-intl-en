@@ -18,28 +18,28 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getUid() 获取Sub-user UID
- * @method void setUid(integer $Uid) 设置Sub-user UID
- * @method integer getUin() 获取Sub-user UIN
- * @method void setUin(integer $Uin) 设置Sub-user UIN
- * @method string getName() 获取Sub-user name
- * @method void setName(string $Name) 设置Sub-user name
- * @method string getPhoneNum() 获取Mobile number
- * @method void setPhoneNum(string $PhoneNum) 设置Mobile number
- * @method string getCountryCode() 获取Mobile number country/area code
- * @method void setCountryCode(string $CountryCode) 设置Mobile number country/area code
- * @method integer getPhoneFlag() 获取If mobile number has been verified
- * @method void setPhoneFlag(integer $PhoneFlag) 设置If mobile number has been verified
- * @method string getEmail() 获取Email address
- * @method void setEmail(string $Email) 设置Email address
- * @method integer getEmailFlag() 获取If email has been verified
- * @method void setEmailFlag(integer $EmailFlag) 设置If email has been verified
- * @method integer getUserType() 获取User type
- * @method void setUserType(integer $UserType) 设置User type
- * @method string getCreateTime() 获取Time policy created
- * @method void setCreateTime(string $CreateTime) 设置Time policy created
- * @method integer getIsReceiverOwner() 获取If the user is the main message recipient
- * @method void setIsReceiverOwner(integer $IsReceiverOwner) 设置If the user is the main message recipient
+ * @method integer getUid() Obtain Sub-user UID
+ * @method void setUid(integer $Uid) Set Sub-user UID
+ * @method integer getUin() Obtain Sub-user UIN
+ * @method void setUin(integer $Uin) Set Sub-user UIN
+ * @method string getName() Obtain Sub-user name
+ * @method void setName(string $Name) Set Sub-user name
+ * @method string getPhoneNum() Obtain Mobile number
+ * @method void setPhoneNum(string $PhoneNum) Set Mobile number
+ * @method string getCountryCode() Obtain Mobile number country/area code
+ * @method void setCountryCode(string $CountryCode) Set Mobile number country/area code
+ * @method integer getPhoneFlag() Obtain If mobile number has been verified
+ * @method void setPhoneFlag(integer $PhoneFlag) Set If mobile number has been verified
+ * @method string getEmail() Obtain Email address
+ * @method void setEmail(string $Email) Set Email address
+ * @method integer getEmailFlag() Obtain If email has been verified
+ * @method void setEmailFlag(integer $EmailFlag) Set If email has been verified
+ * @method integer getUserType() Obtain User type
+ * @method void setUserType(integer $UserType) Set User type
+ * @method string getCreateTime() Obtain Time policy created
+ * @method void setCreateTime(string $CreateTime) Set Time policy created
+ * @method integer getIsReceiverOwner() Obtain If the user is the main message recipient
+ * @method void setIsReceiverOwner(integer $IsReceiverOwner) Set If the user is the main message recipient
  */
 
 /**
@@ -119,7 +119,7 @@ class GroupMemberInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

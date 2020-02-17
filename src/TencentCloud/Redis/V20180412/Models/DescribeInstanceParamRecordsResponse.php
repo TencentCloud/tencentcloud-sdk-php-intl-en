@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Total number of modifications.
- * @method void setTotalCount(integer $TotalCount) 设置Total number of modifications.
- * @method array getInstanceParamHistory() 获取Information of modifications.
- * @method void setInstanceParamHistory(array $InstanceParamHistory) 设置Information of modifications.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Total number of modifications.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of modifications.
+ * @method array getInstanceParamHistory() Obtain Information of modifications.
+ * @method void setInstanceParamHistory(array $InstanceParamHistory) Set Information of modifications.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeInstanceParamRecordsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

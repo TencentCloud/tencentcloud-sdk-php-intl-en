@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDiskId() 获取ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method void setDiskId(string $DiskId) 设置ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method string getSnapshotName() 获取Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
- * @method void setSnapshotName(string $SnapshotName) 设置Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+ * @method string getDiskId() Obtain ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method void setDiskId(string $DiskId) Set ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method string getSnapshotName() Obtain Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+ * @method void setSnapshotName(string $SnapshotName) Set Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
  */
 
 /**
@@ -47,7 +47,7 @@ class CreateSnapshotRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

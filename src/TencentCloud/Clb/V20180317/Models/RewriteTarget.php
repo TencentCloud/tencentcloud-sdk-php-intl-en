@@ -18,16 +18,16 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTargetListenerId() 获取Listener ID of a redirect target
+ * @method string getTargetListenerId() Obtain Listener ID of a redirect target
 Note: This field may return null, indicating that there is no redirection.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetListenerId(string $TargetListenerId) 设置Listener ID of a redirect target
+ * @method void setTargetListenerId(string $TargetListenerId) Set Listener ID of a redirect target
 Note: This field may return null, indicating that there is no redirection.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTargetLocationId() 获取Forwarding rule ID of a redirect target
+ * @method string getTargetLocationId() Obtain Forwarding rule ID of a redirect target
 Note: This field may return null, indicating that there is no redirection.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetLocationId(string $TargetLocationId) 设置Forwarding rule ID of a redirect target
+ * @method void setTargetLocationId(string $TargetLocationId) Set Forwarding rule ID of a redirect target
 Note: This field may return null, indicating that there is no redirection.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

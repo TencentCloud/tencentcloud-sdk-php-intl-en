@@ -18,55 +18,55 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method integer getPort() 获取Listener port
- * @method void setPort(integer $Port) 设置Listener port
- * @method string getProtocol() 获取Listener protocol. The value is `HTTP`.
- * @method void setProtocol(string $Protocol) 设置Listener protocol. The value is `HTTP`.
- * @method integer getListenerStatus() 获取Listener status:
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method integer getPort() Obtain Listener port
+ * @method void setPort(integer $Port) Set Listener port
+ * @method string getProtocol() Obtain Listener protocol. The value is `HTTP`.
+ * @method void setProtocol(string $Protocol) Set Listener protocol. The value is `HTTP`.
+ * @method integer getListenerStatus() Obtain Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: modifying configuration.
- * @method void setListenerStatus(integer $ListenerStatus) 设置Listener status:
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: modifying configuration.
- * @method string getCertificateId() 获取Server SSL certificate ID of the listener
- * @method void setCertificateId(string $CertificateId) 设置Server SSL certificate ID of the listener
- * @method string getForwardProtocol() 获取Protocol used in the forwarding from connections to origin servers
- * @method void setForwardProtocol(string $ForwardProtocol) 设置Protocol used in the forwarding from connections to origin servers
- * @method integer getCreateTime() 获取Listener creation time; using UNIX timestamp.
- * @method void setCreateTime(integer $CreateTime) 设置Listener creation time; using UNIX timestamp.
- * @method string getCertificateAlias() 获取Server SSL certificate alias
+ * @method string getCertificateId() Obtain Server SSL certificate ID of the listener
+ * @method void setCertificateId(string $CertificateId) Set Server SSL certificate ID of the listener
+ * @method string getForwardProtocol() Obtain Protocol used in the forwarding from connections to origin servers
+ * @method void setForwardProtocol(string $ForwardProtocol) Set Protocol used in the forwarding from connections to origin servers
+ * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
+ * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
+ * @method string getCertificateAlias() Obtain Server SSL certificate alias
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateAlias(string $CertificateAlias) 设置Server SSL certificate alias
+ * @method void setCertificateAlias(string $CertificateAlias) Set Server SSL certificate alias
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClientCertificateId() 获取Client CA certificate ID of the listener
+ * @method string getClientCertificateId() Obtain Client CA certificate ID of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClientCertificateId(string $ClientCertificateId) 设置Client CA certificate ID of the listener
+ * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate ID of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAuthType() 获取Listener authentication method:
+ * @method integer getAuthType() Obtain Listener authentication method:
 0: one-way authentication;
 1: mutual authentication.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAuthType(integer $AuthType) 设置Listener authentication method:
+ * @method void setAuthType(integer $AuthType) Set Listener authentication method:
 0: one-way authentication;
 1: mutual authentication.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClientCertificateAlias() 获取Client CA certificate alias
+ * @method string getClientCertificateAlias() Obtain Client CA certificate alias
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClientCertificateAlias(string $ClientCertificateAlias) 设置Client CA certificate alias
+ * @method void setClientCertificateAlias(string $ClientCertificateAlias) Set Client CA certificate alias
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPolyClientCertificateAliasInfo() 获取Alias information of multiple client CA certificates.
+ * @method array getPolyClientCertificateAliasInfo() Obtain Alias information of multiple client CA certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置Alias information of multiple client CA certificates.
+ * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) Set Alias information of multiple client CA certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -183,7 +183,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

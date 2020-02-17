@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getHaVipId() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
- * @method void setHaVipId(string $HaVipId) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+ * @method string getHaVipId() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+ * @method void setHaVipId(string $HaVipId) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class DeleteHaVipRequest extends AbstractModel
 {
     /**
-     * @var string `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * @var string The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public $HaVipId;
     /**
-     * @param string $HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * @param string $HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

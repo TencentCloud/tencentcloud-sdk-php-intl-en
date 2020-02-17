@@ -18,11 +18,11 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTime() 获取Corresponding time point
- * @method void setTime(integer $Time) 设置Corresponding time point
- * @method float getData() 获取Statistics value
+ * @method integer getTime() Obtain Corresponding time point
+ * @method void setTime(integer $Time) Set Corresponding time point
+ * @method float getData() Obtain Statistics value
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setData(float $Data) 设置Statistics value
+ * @method void setData(float $Data) Set Statistics value
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -51,7 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

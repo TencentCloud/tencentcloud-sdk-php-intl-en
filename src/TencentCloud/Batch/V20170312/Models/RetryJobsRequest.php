@@ -18,8 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getJobIds() 获取List of instance IDs.
- * @method void setJobIds(array $JobIds) 设置List of instance IDs.
+ * @method array getJobIds() Obtain List of instance IDs.
+ * @method void setJobIds(array $JobIds) Set List of instance IDs.
  */
 
 /**
@@ -39,7 +39,7 @@ class RetryJobsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

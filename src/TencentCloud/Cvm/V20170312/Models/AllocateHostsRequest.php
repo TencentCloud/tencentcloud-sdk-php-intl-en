@@ -18,20 +18,20 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Placement getPlacement() 获取Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
- * @method void setPlacement(Placement $Placement) 设置Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
- * @method string getClientToken() 获取A string used to ensure the idempotency of the request.
- * @method void setClientToken(string $ClientToken) 设置A string used to ensure the idempotency of the request.
- * @method ChargePrepaid getHostChargePrepaid() 获取Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
- * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) 设置Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
- * @method string getHostChargeType() 获取The billing method of an instance. Currently only `PREPAID` is supported.
- * @method void setHostChargeType(string $HostChargeType) 设置The billing method of an instance. Currently only `PREPAID` is supported.
- * @method string getHostType() 获取CDH instance model. Default value: `HS1`.
- * @method void setHostType(string $HostType) 设置CDH instance model. Default value: `HS1`.
- * @method integer getHostCount() 获取The quantity of CDH instances you want to purchase.
- * @method void setHostCount(integer $HostCount) 设置The quantity of CDH instances you want to purchase.
- * @method array getTagSpecification() 获取Tag description. You can specify the parameter to associate a tag with an instance.
- * @method void setTagSpecification(array $TagSpecification) 设置Tag description. You can specify the parameter to associate a tag with an instance.
+ * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
+ * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
+ * @method string getClientToken() Obtain A string used to ensure the idempotency of the request.
+ * @method void setClientToken(string $ClientToken) Set A string used to ensure the idempotency of the request.
+ * @method ChargePrepaid getHostChargePrepaid() Obtain Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+ * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) Set Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+ * @method string getHostChargeType() Obtain The billing method of an instance. Currently only `PREPAID` is supported.
+ * @method void setHostChargeType(string $HostChargeType) Set The billing method of an instance. Currently only `PREPAID` is supported.
+ * @method string getHostType() Obtain CDH instance model. Default value: `HS1`.
+ * @method void setHostType(string $HostType) Set CDH instance model. Default value: `HS1`.
+ * @method integer getHostCount() Obtain The quantity of CDH instances you want to purchase.
+ * @method void setHostCount(integer $HostCount) Set The quantity of CDH instances you want to purchase.
+ * @method array getTagSpecification() Obtain Tag description. You can specify the parameter to associate a tag with an instance.
+ * @method void setTagSpecification(array $TagSpecification) Set Tag description. You can specify the parameter to associate a tag with an instance.
  */
 
 /**
@@ -87,7 +87,7 @@ class AllocateHostsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

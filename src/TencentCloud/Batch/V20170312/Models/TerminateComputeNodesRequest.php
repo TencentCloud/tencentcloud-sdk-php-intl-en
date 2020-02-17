@@ -18,10 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvId() 获取Compute environment ID
- * @method void setEnvId(string $EnvId) 设置Compute environment ID
- * @method array getComputeNodeIds() 获取List of compute node IDs
- * @method void setComputeNodeIds(array $ComputeNodeIds) 设置List of compute node IDs
+ * @method string getEnvId() Obtain Compute environment ID
+ * @method void setEnvId(string $EnvId) Set Compute environment ID
+ * @method array getComputeNodeIds() Obtain List of compute node IDs
+ * @method void setComputeNodeIds(array $ComputeNodeIds) Set List of compute node IDs
  */
 
 /**
@@ -47,7 +47,7 @@ class TerminateComputeNodesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

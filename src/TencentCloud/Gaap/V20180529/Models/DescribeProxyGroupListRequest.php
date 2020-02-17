@@ -18,26 +18,26 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOffset() 获取Offset. The default value is 0.
- * @method void setOffset(integer $Offset) 设置Offset. The default value is 0.
- * @method integer getLimit() 获取Number of returned results. The default value is 20. The maximum value is 100.
- * @method void setLimit(integer $Limit) 设置Number of returned results. The default value is 20. The maximum value is 100.
- * @method integer getProjectId() 获取Project ID. Value range:
+ * @method integer getOffset() Obtain Offset. The default value is 0.
+ * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
+ * @method integer getLimit() Obtain Number of returned results. The default value is 20. The maximum value is 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. The default value is 20. The maximum value is 100.
+ * @method integer getProjectId() Obtain Project ID. Value range:
 -1: all projects of this user
 0: default project
 Other values: specified project
- * @method void setProjectId(integer $ProjectId) 设置Project ID. Value range:
+ * @method void setProjectId(integer $ProjectId) Set Project ID. Value range:
 -1: all projects of this user
 0: default project
 Other values: specified project
- * @method array getTagSet() 获取Tag list. If this field exists, the list of the resources with the tag will be pulled.
+ * @method array getTagSet() Obtain Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
- * @method void setTagSet(array $TagSet) 设置Tag list. If this field exists, the list of the resources with the tag will be pulled.
+ * @method void setTagSet(array $TagSet) Set Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
- * @method array getFilters() 获取Filter conditions.   
+ * @method array getFilters() Obtain Filter conditions.   
 The limit on Filter.Values of each request is 5.
 RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
- * @method void setFilters(array $Filters) 设置Filter conditions.   
+ * @method void setFilters(array $Filters) Set Filter conditions.   
 The limit on Filter.Values of each request is 5.
 RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
  */
@@ -95,7 +95,7 @@ RealServerRegion - String - Required: No - Filter by origin server region; Refer
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

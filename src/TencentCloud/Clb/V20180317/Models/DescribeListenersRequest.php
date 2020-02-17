@@ -18,14 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method array getListenerIds() 获取Array of IDs of the CLB listeners to be queried
- * @method void setListenerIds(array $ListenerIds) 设置Array of IDs of the CLB listeners to be queried
- * @method string getProtocol() 获取Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
- * @method void setProtocol(string $Protocol) 设置Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
- * @method integer getPort() 获取Port of the listener to be queried
- * @method void setPort(integer $Port) 设置Port of the listener to be queried
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getListenerIds() Obtain Array of IDs of the CLB listeners to be queried
+ * @method void setListenerIds(array $ListenerIds) Set Array of IDs of the CLB listeners to be queried
+ * @method string getProtocol() Obtain Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
+ * @method void setProtocol(string $Protocol) Set Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
+ * @method integer getPort() Obtain Port of the listener to be queried
+ * @method void setPort(integer $Port) Set Port of the listener to be queried
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeListenersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

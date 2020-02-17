@@ -18,83 +18,83 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceName() 获取Instance name
- * @method void setInstanceName(string $InstanceName) 设置Instance name
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method integer getAppid() 获取User's Appid
- * @method void setAppid(integer $Appid) 设置User's Appid
- * @method integer getProjectId() 获取Project ID
- * @method void setProjectId(integer $ProjectId) 设置Project ID
- * @method integer getRegionId() 获取Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong, China; 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
- * @method void setRegionId(integer $RegionId) 设置Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong, China; 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
- * @method integer getZoneId() 获取Region ID
- * @method void setZoneId(integer $ZoneId) 设置Region ID
- * @method integer getVpcId() 获取VPC ID, such as 75101
- * @method void setVpcId(integer $VpcId) 设置VPC ID, such as 75101
- * @method integer getSubnetId() 获取VPC subnet ID, such as 46315
- * @method void setSubnetId(integer $SubnetId) 设置VPC subnet ID, such as 46315
- * @method integer getStatus() 获取Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
- * @method void setStatus(integer $Status) 设置Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
- * @method string getWanIp() 获取Instance VIP
- * @method void setWanIp(string $WanIp) 设置Instance VIP
- * @method integer getPort() 获取Port number of an instance
- * @method void setPort(integer $Port) 设置Port number of an instance
- * @method string getCreatetime() 获取Instance creation time
- * @method void setCreatetime(string $Createtime) 设置Instance creation time
- * @method float getSize() 获取Instance capacity in MB
- * @method void setSize(float $Size) 设置Instance capacity in MB
- * @method float getSizeUsed() 获取This field has been disused
- * @method void setSizeUsed(float $SizeUsed) 设置This field has been disused
- * @method integer getType() 获取Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
- * @method void setType(integer $Type) 设置Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
- * @method integer getAutoRenewFlag() 获取Whether to set the auto-renewal flag for an instance. 1: auto-renewal set; 0: auto-renewal not set
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置Whether to set the auto-renewal flag for an instance. 1: auto-renewal set; 0: auto-renewal not set
- * @method string getDeadlineTime() 获取Instance expiration time
- * @method void setDeadlineTime(string $DeadlineTime) 设置Instance expiration time
- * @method string getEngine() 获取Engine: Redis community edition, Tencent Cloud CKV
- * @method void setEngine(string $Engine) 设置Engine: Redis community edition, Tencent Cloud CKV
- * @method string getProductType() 获取Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
- * @method void setProductType(string $ProductType) 设置Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
- * @method string getUniqVpcId() 获取VPC ID, such as vpc-fk33jsf43kgv
- * @method void setUniqVpcId(string $UniqVpcId) 设置VPC ID, such as vpc-fk33jsf43kgv
- * @method string getUniqSubnetId() 获取VPC subnet ID, such as subnet-fd3j6l35mm0
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置VPC subnet ID, such as subnet-fd3j6l35mm0
- * @method integer getBillingMode() 获取Billing method. 0: pay-as-you-go; 1: monthly subscription
- * @method void setBillingMode(integer $BillingMode) 设置Billing method. 0: pay-as-you-go; 1: monthly subscription
- * @method string getInstanceTitle() 获取Description of an instance status, such as "instance running"
- * @method void setInstanceTitle(string $InstanceTitle) 设置Description of an instance status, such as "instance running"
- * @method string getOfflineTime() 获取Scheduled deactivation time
- * @method void setOfflineTime(string $OfflineTime) 设置Scheduled deactivation time
- * @method integer getSubStatus() 获取Sub-status returned for an instance in process
- * @method void setSubStatus(integer $SubStatus) 设置Sub-status returned for an instance in process
- * @method array getTags() 获取Anti-affinity tag
- * @method void setTags(array $Tags) 设置Anti-affinity tag
- * @method array getInstanceNode() 获取Instance node information
- * @method void setInstanceNode(array $InstanceNode) 设置Instance node information
- * @method integer getRedisShardSize() 获取Shard size
- * @method void setRedisShardSize(integer $RedisShardSize) 设置Shard size
- * @method integer getRedisShardNum() 获取Number of shards
- * @method void setRedisShardNum(integer $RedisShardNum) 设置Number of shards
- * @method integer getRedisReplicasNum() 获取Number of replicas
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置Number of replicas
- * @method integer getPriceId() 获取Billing ID
- * @method void setPriceId(integer $PriceId) 设置Billing ID
- * @method string getCloseTime() 获取Isolation time
- * @method void setCloseTime(string $CloseTime) 设置Isolation time
- * @method integer getSlaveReadWeight() 获取Read weight of a slave node
- * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置Read weight of a slave node
- * @method array getInstanceTags() 获取Instance tag information
+ * @method string getInstanceName() Obtain Instance name
+ * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method integer getAppid() Obtain User's Appid
+ * @method void setAppid(integer $Appid) Set User's Appid
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getRegionId() Obtain Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong, China; 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+ * @method void setRegionId(integer $RegionId) Set Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong, China; 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+ * @method integer getZoneId() Obtain Region ID
+ * @method void setZoneId(integer $ZoneId) Set Region ID
+ * @method integer getVpcId() Obtain VPC ID, such as 75101
+ * @method void setVpcId(integer $VpcId) Set VPC ID, such as 75101
+ * @method integer getSubnetId() Obtain VPC subnet ID, such as 46315
+ * @method void setSubnetId(integer $SubnetId) Set VPC subnet ID, such as 46315
+ * @method integer getStatus() Obtain Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
+ * @method void setStatus(integer $Status) Set Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
+ * @method string getWanIp() Obtain Instance VIP
+ * @method void setWanIp(string $WanIp) Set Instance VIP
+ * @method integer getPort() Obtain Port number of an instance
+ * @method void setPort(integer $Port) Set Port number of an instance
+ * @method string getCreatetime() Obtain Instance creation time
+ * @method void setCreatetime(string $Createtime) Set Instance creation time
+ * @method float getSize() Obtain Instance capacity in MB
+ * @method void setSize(float $Size) Set Instance capacity in MB
+ * @method float getSizeUsed() Obtain This field has been disused
+ * @method void setSizeUsed(float $SizeUsed) Set This field has been disused
+ * @method integer getType() Obtain Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+ * @method void setType(integer $Type) Set Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+ * @method integer getAutoRenewFlag() Obtain Whether to set the auto-renewal flag for an instance. 1: auto-renewal set; 0: auto-renewal not set
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether to set the auto-renewal flag for an instance. 1: auto-renewal set; 0: auto-renewal not set
+ * @method string getDeadlineTime() Obtain Instance expiration time
+ * @method void setDeadlineTime(string $DeadlineTime) Set Instance expiration time
+ * @method string getEngine() Obtain Engine: Redis community edition, Tencent Cloud CKV
+ * @method void setEngine(string $Engine) Set Engine: Redis community edition, Tencent Cloud CKV
+ * @method string getProductType() Obtain Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+ * @method void setProductType(string $ProductType) Set Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+ * @method string getUniqVpcId() Obtain VPC ID, such as vpc-fk33jsf43kgv
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID, such as vpc-fk33jsf43kgv
+ * @method string getUniqSubnetId() Obtain VPC subnet ID, such as subnet-fd3j6l35mm0
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set VPC subnet ID, such as subnet-fd3j6l35mm0
+ * @method integer getBillingMode() Obtain Billing method. 0: pay-as-you-go; 1: monthly subscription
+ * @method void setBillingMode(integer $BillingMode) Set Billing method. 0: pay-as-you-go; 1: monthly subscription
+ * @method string getInstanceTitle() Obtain Description of an instance status, such as "instance running"
+ * @method void setInstanceTitle(string $InstanceTitle) Set Description of an instance status, such as "instance running"
+ * @method string getOfflineTime() Obtain Scheduled deactivation time
+ * @method void setOfflineTime(string $OfflineTime) Set Scheduled deactivation time
+ * @method integer getSubStatus() Obtain Sub-status returned for an instance in process
+ * @method void setSubStatus(integer $SubStatus) Set Sub-status returned for an instance in process
+ * @method array getTags() Obtain Anti-affinity tag
+ * @method void setTags(array $Tags) Set Anti-affinity tag
+ * @method array getInstanceNode() Obtain Instance node information
+ * @method void setInstanceNode(array $InstanceNode) Set Instance node information
+ * @method integer getRedisShardSize() Obtain Shard size
+ * @method void setRedisShardSize(integer $RedisShardSize) Set Shard size
+ * @method integer getRedisShardNum() Obtain Number of shards
+ * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards
+ * @method integer getRedisReplicasNum() Obtain Number of replicas
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas
+ * @method integer getPriceId() Obtain Billing ID
+ * @method void setPriceId(integer $PriceId) Set Billing ID
+ * @method string getCloseTime() Obtain Isolation time
+ * @method void setCloseTime(string $CloseTime) Set Isolation time
+ * @method integer getSlaveReadWeight() Obtain Read weight of a slave node
+ * @method void setSlaveReadWeight(integer $SlaveReadWeight) Set Read weight of a slave node
+ * @method array getInstanceTags() Obtain Instance tag information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceTags(array $InstanceTags) 设置Instance tag information
+ * @method void setInstanceTags(array $InstanceTags) Set Instance tag information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProjectName() 获取Project name
+ * @method string getProjectName() Obtain Project name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProjectName(string $ProjectName) 设置Project name
+ * @method void setProjectName(string $ProjectName) Set Project name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getNoAuth() 获取Whether an instance is password-free. true: yes; false: no
+ * @method boolean getNoAuth() Obtain Whether an instance is password-free. true: yes; false: no
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNoAuth(boolean $NoAuth) 设置Whether an instance is password-free. true: yes; false: no
+ * @method void setNoAuth(boolean $NoAuth) Set Whether an instance is password-free. true: yes; false: no
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -331,7 +331,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,16 +18,16 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIP() 获取Private IP of a real server
- * @method void setIP(string $IP) 设置Private IP of a real server
- * @method integer getPort() 获取Real server port
- * @method void setPort(integer $Port) 设置Real server port
- * @method integer getListenerPort() 获取CLB listener port
- * @method void setListenerPort(integer $ListenerPort) 设置CLB listener port
- * @method string getProtocol() 获取Forwarding protocol
- * @method void setProtocol(string $Protocol) 设置Forwarding protocol
- * @method integer getHealthStatus() 获取Health check result. Value range: 1 (healthy), 0 (unhealthy)
- * @method void setHealthStatus(integer $HealthStatus) 设置Health check result. Value range: 1 (healthy), 0 (unhealthy)
+ * @method string getIP() Obtain Private IP of a real server
+ * @method void setIP(string $IP) Set Private IP of a real server
+ * @method integer getPort() Obtain Real server port
+ * @method void setPort(integer $Port) Set Real server port
+ * @method integer getListenerPort() Obtain CLB listener port
+ * @method void setListenerPort(integer $ListenerPort) Set CLB listener port
+ * @method string getProtocol() Obtain Forwarding protocol
+ * @method void setProtocol(string $Protocol) Set Forwarding protocol
+ * @method integer getHealthStatus() Obtain Health check result. Value range: 1 (healthy), 0 (unhealthy)
+ * @method void setHealthStatus(integer $HealthStatus) Set Health check result. Value range: 1 (healthy), 0 (unhealthy)
  */
 
 /**
@@ -71,7 +71,7 @@ class ClassicalHealth extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

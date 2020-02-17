@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+ * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
  */
 
 /**
@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityGroupPoliciesRequest extends AbstractModel
 {
     /**
-     * @var string 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @var string The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
     public $SecurityGroupId;
     /**
-     * @param string $SecurityGroupId 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @param string $SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

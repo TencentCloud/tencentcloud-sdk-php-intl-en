@@ -18,11 +18,11 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method SpotMarketOptions getSpotOptions() 获取Bidding-related options
- * @method void setSpotOptions(SpotMarketOptions $SpotOptions) 设置Bidding-related options
- * @method string getMarketType() 获取Market option type. Currently, this only supports the value "spot"
+ * @method SpotMarketOptions getSpotOptions() Obtain Bidding-related options
+ * @method void setSpotOptions(SpotMarketOptions $SpotOptions) Set Bidding-related options
+ * @method string getMarketType() Obtain Market option type. Currently, this only supports the value "spot"
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMarketType(string $MarketType) 设置Market option type. Currently, this only supports the value "spot"
+ * @method void setMarketType(string $MarketType) Set Market option type. Currently, this only supports the value "spot"
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -51,7 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
- * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
- * @method DestinationIpPortTranslationNatRule getSourceNatRule() 获取源NAT网关的端口转换规则。
- * @method void setSourceNatRule(DestinationIpPortTranslationNatRule $SourceNatRule) 设置源NAT网关的端口转换规则。
- * @method DestinationIpPortTranslationNatRule getDestinationNatRule() 获取目的NAT网关的端口转换规则。
- * @method void setDestinationNatRule(DestinationIpPortTranslationNatRule $DestinationNatRule) 设置目的NAT网关的端口转换规则。
+ * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
+ * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
+ * @method DestinationIpPortTranslationNatRule getSourceNatRule() Obtain The port forwarding rule of the source NAT gateway.
+ * @method void setSourceNatRule(DestinationIpPortTranslationNatRule $SourceNatRule) Set The port forwarding rule of the source NAT gateway.
+ * @method DestinationIpPortTranslationNatRule getDestinationNatRule() Obtain The port forwarding rule of the destination NAT gateway.
+ * @method void setDestinationNatRule(DestinationIpPortTranslationNatRule $DestinationNatRule) Set The port forwarding rule of the destination NAT gateway.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest extends AbstractModel
 {
     /**
-     * @var string NAT网关的ID，形如：`nat-df45454`。
+     * @var string The ID of the NAT gateway, such as `nat-df45454`.
      */
     public $NatGatewayId;
 
     /**
-     * @var DestinationIpPortTranslationNatRule 源NAT网关的端口转换规则。
+     * @var DestinationIpPortTranslationNatRule The port forwarding rule of the source NAT gateway.
      */
     public $SourceNatRule;
 
     /**
-     * @var DestinationIpPortTranslationNatRule 目的NAT网关的端口转换规则。
+     * @var DestinationIpPortTranslationNatRule The port forwarding rule of the destination NAT gateway.
      */
     public $DestinationNatRule;
     /**
-     * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
-     * @param DestinationIpPortTranslationNatRule $SourceNatRule 源NAT网关的端口转换规则。
-     * @param DestinationIpPortTranslationNatRule $DestinationNatRule 目的NAT网关的端口转换规则。
+     * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+     * @param DestinationIpPortTranslationNatRule $SourceNatRule The port forwarding rule of the source NAT gateway.
+     * @param DestinationIpPortTranslationNatRule $DestinationNatRule The port forwarding rule of the destination NAT gateway.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

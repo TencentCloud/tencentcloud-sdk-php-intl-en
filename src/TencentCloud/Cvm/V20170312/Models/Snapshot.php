@@ -18,16 +18,16 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSnapshotId() 获取Snapshot ID.
- * @method void setSnapshotId(string $SnapshotId) 设置Snapshot ID.
- * @method string getDiskUsage() 获取Type of the cloud disk used to create the snapshot. Valid values:
+ * @method string getSnapshotId() Obtain Snapshot ID.
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID.
+ * @method string getDiskUsage() Obtain Type of the cloud disk used to create the snapshot. Valid values:
 SYSTEM_DISK: system disk
 DATA_DISK: data disk
- * @method void setDiskUsage(string $DiskUsage) 设置Type of the cloud disk used to create the snapshot. Valid values:
+ * @method void setDiskUsage(string $DiskUsage) Set Type of the cloud disk used to create the snapshot. Valid values:
 SYSTEM_DISK: system disk
 DATA_DISK: data disk
- * @method integer getDiskSize() 获取Size of the cloud disk used to create the snapshot; unit: GB.
- * @method void setDiskSize(integer $DiskSize) 设置Size of the cloud disk used to create the snapshot; unit: GB.
+ * @method integer getDiskSize() Obtain Size of the cloud disk used to create the snapshot; unit: GB.
+ * @method void setDiskSize(integer $DiskSize) Set Size of the cloud disk used to create the snapshot; unit: GB.
  */
 
 /**
@@ -63,7 +63,7 @@ DATA_DISK: data disk
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

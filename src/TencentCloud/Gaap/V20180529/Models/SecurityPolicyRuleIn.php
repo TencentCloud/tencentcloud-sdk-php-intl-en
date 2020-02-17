@@ -18,20 +18,20 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSourceCidr() 获取Source IP or IP range of the request.
- * @method void setSourceCidr(string $SourceCidr) 设置Source IP or IP range of the request.
- * @method string getAction() 获取Policy: Allow (ACCEPT) or reject (DROP).
- * @method void setAction(string $Action) 设置Policy: Allow (ACCEPT) or reject (DROP).
- * @method string getAliasName() 获取Rule alias
- * @method void setAliasName(string $AliasName) 设置Rule alias
- * @method string getProtocol() 获取Protocol: TCP or UDP. ALL indicates all protocols.
- * @method void setProtocol(string $Protocol) 设置Protocol: TCP or UDP. ALL indicates all protocols.
- * @method string getDestPortRange() 获取Target port. Formatting examples:
+ * @method string getSourceCidr() Obtain Source IP or IP range of the request.
+ * @method void setSourceCidr(string $SourceCidr) Set Source IP or IP range of the request.
+ * @method string getAction() Obtain Policy: Allow (ACCEPT) or reject (DROP).
+ * @method void setAction(string $Action) Set Policy: Allow (ACCEPT) or reject (DROP).
+ * @method string getAliasName() Obtain Rule alias
+ * @method void setAliasName(string $AliasName) Set Rule alias
+ * @method string getProtocol() Obtain Protocol: TCP or UDP. ALL indicates all protocols.
+ * @method void setProtocol(string $Protocol) Set Protocol: TCP or UDP. ALL indicates all protocols.
+ * @method string getDestPortRange() Obtain Target port. Formatting examples:
 Single port: 80
 Multiple ports: 80, 443
 Consecutive ports: 3306-20000
 All ports: ALL
- * @method void setDestPortRange(string $DestPortRange) 设置Target port. Formatting examples:
+ * @method void setDestPortRange(string $DestPortRange) Set Target port. Formatting examples:
 Single port: 80
 Multiple ports: 80, 443
 Consecutive ports: 3306-20000
@@ -87,7 +87,7 @@ All ports: ALL
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

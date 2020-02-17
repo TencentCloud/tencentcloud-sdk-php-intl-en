@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取符合条件的对象数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的对象数。
- * @method array getRouteSet() 获取云联网路由（IDC网段）列表。
- * @method void setRouteSet(array $RouteSet) 设置云联网路由（IDC网段）列表。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The number of objects meeting the condition.
+ * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
+ * @method array getRouteSet() Obtain The CCN route (IDC IP range) list.
+ * @method void setRouteSet(array $RouteSet) Set The CCN route (IDC IP range) list.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDirectConnectGatewayCcnRoutesResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的对象数。
+     * @var integer The number of objects meeting the condition.
      */
     public $TotalCount;
 
     /**
-     * @var array 云联网路由（IDC网段）列表。
+     * @var array The CCN route (IDC IP range) list.
      */
     public $RouteSet;
 
@@ -46,8 +46,8 @@ class DescribeDirectConnectGatewayCcnRoutesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 符合条件的对象数。
-     * @param array $RouteSet 云联网路由（IDC网段）列表。
+     * @param integer $TotalCount The number of objects meeting the condition.
+     * @param array $RouteSet The CCN route (IDC IP range) list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeDirectConnectGatewayCcnRoutesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

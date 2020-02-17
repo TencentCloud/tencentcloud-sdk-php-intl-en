@@ -18,34 +18,34 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getGroupId() 获取Connection group ID
- * @method void setGroupId(string $GroupId) 设置Connection group ID
- * @method string getDomain() 获取Connection group domain name
+ * @method string getGroupId() Obtain Connection group ID
+ * @method void setGroupId(string $GroupId) Set Connection group ID
+ * @method string getDomain() Obtain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) 设置Connection group domain name
+ * @method void setDomain(string $Domain) Set Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGroupName() 获取Connection group name
+ * @method string getGroupName() Obtain Connection group name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupName(string $GroupName) 设置Connection group name
+ * @method void setGroupName(string $GroupName) Set Connection group name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProjectId() 获取Project ID
- * @method void setProjectId(integer $ProjectId) 设置Project ID
- * @method RegionDetail getRealServerRegionInfo() 获取Target region
- * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) 设置Target region
- * @method string getStatus() 获取Connection group status.
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method RegionDetail getRealServerRegionInfo() Obtain Target region
+ * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) Set Target region
+ * @method string getStatus() Obtain Connection group status.
 Where:
 0: running;
 1: creating;
 4: terminating;
 11: connection migrating.
- * @method void setStatus(string $Status) 设置Connection group status.
+ * @method void setStatus(string $Status) Set Connection group status.
 Where:
 0: running;
 1: creating;
 4: terminating;
 11: connection migrating.
- * @method array getTagSet() 获取Tag list.
- * @method void setTagSet(array $TagSet) 设置Tag list.
+ * @method array getTagSet() Obtain Tag list.
+ * @method void setTagSet(array $TagSet) Set Tag list.
  */
 
 /**
@@ -115,7 +115,7 @@ Where:
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID.
- * @method array getNotificationUserGroupIds() 获取List of user group IDs.
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置List of user group IDs.
- * @method array getNotificationTypes() 获取List of notification events.
- * @method void setNotificationTypes(array $NotificationTypes) 设置List of notification events.
- * @method string getAutoScalingNotificationId() 获取Event notification ID.
- * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置Event notification ID.
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
+ * @method array getNotificationUserGroupIds() Obtain List of user group IDs.
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set List of user group IDs.
+ * @method array getNotificationTypes() Obtain List of notification events.
+ * @method void setNotificationTypes(array $NotificationTypes) Set List of notification events.
+ * @method string getAutoScalingNotificationId() Obtain Event notification ID.
+ * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set Event notification ID.
  */
 
 /**
@@ -63,7 +63,7 @@ class AutoScalingNotification extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

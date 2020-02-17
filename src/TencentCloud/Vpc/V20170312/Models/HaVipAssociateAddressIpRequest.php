@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getHaVipId() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
- * @method void setHaVipId(string $HaVipId) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
- * @method string getAddressIp() 获取弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
- * @method void setAddressIp(string $AddressIp) 设置弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+ * @method string getHaVipId() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
+ * @method void setHaVipId(string $HaVipId) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
+ * @method string getAddressIp() Obtain The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
+ * @method void setAddressIp(string $AddressIp) Set The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class HaVipAssociateAddressIpRequest extends AbstractModel
 {
     /**
-     * @var string `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+     * @var string The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
      */
     public $HaVipId;
 
     /**
-     * @var string 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * @var string The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
      */
     public $AddressIp;
     /**
-     * @param string $HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
-     * @param string $AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * @param string $HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
+     * @param string $AddressIp The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

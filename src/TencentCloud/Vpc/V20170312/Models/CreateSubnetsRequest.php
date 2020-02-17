@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
- * @method array getSubnets() 获取子网对象列表。
- * @method void setSubnets(array $Subnets) 设置子网对象列表。
+ * @method string getVpcId() Obtain The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
+ * @method array getSubnets() Obtain The subnet object list.
+ * @method void setSubnets(array $Subnets) Set The subnet object list.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class CreateSubnetsRequest extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * @var string The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
      */
     public $VpcId;
 
     /**
-     * @var array 子网对象列表。
+     * @var array The subnet object list.
      */
     public $Subnets;
     /**
-     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
-     * @param array $Subnets 子网对象列表。
+     * @param string $VpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
+     * @param array $Subnets The subnet object list.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

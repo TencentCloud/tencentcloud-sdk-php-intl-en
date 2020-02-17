@@ -18,42 +18,44 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID.
- * @method void setListenerId(string $ListenerId) 设置Listener ID.
- * @method string getDomain() 获取The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
- * @method void setDomain(string $Domain) 设置The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
- * @method integer getBasicAuth() 获取Whether to enable the basic authentication:
+ * @method string getListenerId() Obtain Listener ID.
+ * @method void setListenerId(string $ListenerId) Set Listener ID.
+ * @method string getDomain() Obtain The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+ * @method void setDomain(string $Domain) Set The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+ * @method integer getBasicAuth() Obtain Whether to enable the basic authentication:
 0: disable basic authentication;
 1: enable basic authentication.
 The default value is 0.
- * @method void setBasicAuth(integer $BasicAuth) 设置Whether to enable the basic authentication:
+ * @method void setBasicAuth(integer $BasicAuth) Set Whether to enable the basic authentication:
 0: disable basic authentication;
 1: enable basic authentication.
 The default value is 0.
- * @method integer getGaapAuth() 获取Whether to enable the connection authentication, which is for the origin server to authenticate GAAP.
+ * @method integer getGaapAuth() Obtain Whether to enable the connection authentication, which is for the origin server to authenticate GAAP.
 0: disable;
 1: enable.
 The default value is 0.
- * @method void setGaapAuth(integer $GaapAuth) 设置Whether to enable the connection authentication, which is for the origin server to authenticate GAAP.
+ * @method void setGaapAuth(integer $GaapAuth) Set Whether to enable the connection authentication, which is for the origin server to authenticate GAAP.
 0: disable;
 1: enable.
 The default value is 0.
- * @method integer getRealServerAuth() 获取Whether to enable the origin server authentication, which is for GAAP to authenticate the server.
+ * @method integer getRealServerAuth() Obtain Whether to enable the origin server authentication, which is for GAAP to authenticate the server.
 0: disable;
 1: enable.
 The default value is 0.
- * @method void setRealServerAuth(integer $RealServerAuth) 设置Whether to enable the origin server authentication, which is for GAAP to authenticate the server.
+ * @method void setRealServerAuth(integer $RealServerAuth) Set Whether to enable the origin server authentication, which is for GAAP to authenticate the server.
 0: disable;
 1: enable.
 The default value is 0.
- * @method string getBasicAuthConfId() 获取Basic authentication configuration ID, which is obtained from the certificate management page.
- * @method void setBasicAuthConfId(string $BasicAuthConfId) 设置Basic authentication configuration ID, which is obtained from the certificate management page.
- * @method string getGaapCertificateId() 获取Connection SSL certificate ID, which is obtained from the certificate management page.
- * @method void setGaapCertificateId(string $GaapCertificateId) 设置Connection SSL certificate ID, which is obtained from the certificate management page.
- * @method string getRealServerCertificateId() 获取Origin server CA certificate ID, which is obtained from the certificate management page.
- * @method void setRealServerCertificateId(string $RealServerCertificateId) 设置Origin server CA certificate ID, which is obtained from the certificate management page.
- * @method string getRealServerCertificateDomain() 获取Domain name of the origin server certificate.
- * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) 设置Domain name of the origin server certificate.
+ * @method string getBasicAuthConfId() Obtain Basic authentication configuration ID, which is obtained from the certificate management page.
+ * @method void setBasicAuthConfId(string $BasicAuthConfId) Set Basic authentication configuration ID, which is obtained from the certificate management page.
+ * @method string getGaapCertificateId() Obtain Connection SSL certificate ID, which is obtained from the certificate management page.
+ * @method void setGaapCertificateId(string $GaapCertificateId) Set Connection SSL certificate ID, which is obtained from the certificate management page.
+ * @method string getRealServerCertificateId() Obtain CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
+ * @method void setRealServerCertificateId(string $RealServerCertificateId) Set CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
+ * @method string getRealServerCertificateDomain() Obtain Domain name of the origin server certificate.
+ * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) Set Domain name of the origin server certificate.
+ * @method array getPolyRealServerCertificateIds() Obtain CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
+ * @method void setPolyRealServerCertificateIds(array $PolyRealServerCertificateIds) Set CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
  */
 
 /**
@@ -106,7 +108,7 @@ The default value is 0.
     public $GaapCertificateId;
 
     /**
-     * @var string Origin server CA certificate ID, which is obtained from the certificate management page.
+     * @var string CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
      */
     public $RealServerCertificateId;
 
@@ -114,6 +116,11 @@ The default value is 0.
      * @var string Domain name of the origin server certificate.
      */
     public $RealServerCertificateDomain;
+
+    /**
+     * @var array CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
+     */
+    public $PolyRealServerCertificateIds;
     /**
      * @param string $ListenerId Listener ID.
      * @param string $Domain The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
@@ -131,15 +138,16 @@ The default value is 0.
 The default value is 0.
      * @param string $BasicAuthConfId Basic authentication configuration ID, which is obtained from the certificate management page.
      * @param string $GaapCertificateId Connection SSL certificate ID, which is obtained from the certificate management page.
-     * @param string $RealServerCertificateId Origin server CA certificate ID, which is obtained from the certificate management page.
+     * @param string $RealServerCertificateId CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
      * @param string $RealServerCertificateDomain Domain name of the origin server certificate.
+     * @param array $PolyRealServerCertificateIds CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
@@ -180,6 +188,10 @@ The default value is 0.
 
         if (array_key_exists("RealServerCertificateDomain",$param) and $param["RealServerCertificateDomain"] !== null) {
             $this->RealServerCertificateDomain = $param["RealServerCertificateDomain"];
+        }
+
+        if (array_key_exists("PolyRealServerCertificateIds",$param) and $param["PolyRealServerCertificateIds"] !== null) {
+            $this->PolyRealServerCertificateIds = $param["PolyRealServerCertificateIds"];
         }
     }
 }

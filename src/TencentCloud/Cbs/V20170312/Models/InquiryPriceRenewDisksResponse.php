@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method PrepayPrice getDiskPrice() 获取Describes the price of renewing the cloud disk.
- * @method void setDiskPrice(PrepayPrice $DiskPrice) 设置Describes the price of renewing the cloud disk.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method PrepayPrice getDiskPrice() Obtain Describes the price of renewing the cloud disk.
+ * @method void setDiskPrice(PrepayPrice $DiskPrice) Set Describes the price of renewing the cloud disk.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class InquiryPriceRenewDisksResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

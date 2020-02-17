@@ -18,38 +18,38 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskInstanceIndex() 获取Task instance index
- * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置Task instance index
- * @method string getTaskInstanceState() 获取Task instance state
- * @method void setTaskInstanceState(string $TaskInstanceState) 设置Task instance state
- * @method integer getExitCode() 获取Exit code after application execution is completed
+ * @method integer getTaskInstanceIndex() Obtain Task instance index
+ * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) Set Task instance index
+ * @method string getTaskInstanceState() Obtain Task instance state
+ * @method void setTaskInstanceState(string $TaskInstanceState) Set Task instance state
+ * @method integer getExitCode() Obtain Exit code after application execution is completed
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExitCode(integer $ExitCode) 设置Exit code after application execution is completed
+ * @method void setExitCode(integer $ExitCode) Set Exit code after application execution is completed
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStateReason() 获取Task instance state reason. If the task instance fails, the reason for the failure will be logged.
- * @method void setStateReason(string $StateReason) 设置Task instance state reason. If the task instance fails, the reason for the failure will be logged.
- * @method string getComputeNodeInstanceId() 获取The InstanceId of the compute node (e.g., CVM instance) where the task instance is running. This field is empty if the task instance is not running or has already been completed and will change when the task instance is retried
+ * @method string getStateReason() Obtain Task instance state reason. If the task instance fails, the reason for the failure will be logged.
+ * @method void setStateReason(string $StateReason) Set Task instance state reason. If the task instance fails, the reason for the failure will be logged.
+ * @method string getComputeNodeInstanceId() Obtain The InstanceId of the compute node (e.g., CVM instance) where the task instance is running. This field is empty if the task instance is not running or has already been completed and will change when the task instance is retried
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComputeNodeInstanceId(string $ComputeNodeInstanceId) 设置The InstanceId of the compute node (e.g., CVM instance) where the task instance is running. This field is empty if the task instance is not running or has already been completed and will change when the task instance is retried
+ * @method void setComputeNodeInstanceId(string $ComputeNodeInstanceId) Set The InstanceId of the compute node (e.g., CVM instance) where the task instance is running. This field is empty if the task instance is not running or has already been completed and will change when the task instance is retried
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() 获取Creation time
- * @method void setCreateTime(string $CreateTime) 设置Creation time
- * @method string getLaunchTime() 获取Start time
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getLaunchTime() Obtain Start time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLaunchTime(string $LaunchTime) 设置Start time
+ * @method void setLaunchTime(string $LaunchTime) Set Start time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRunningTime() 获取Running start time
+ * @method string getRunningTime() Obtain Running start time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRunningTime(string $RunningTime) 设置Running start time
+ * @method void setRunningTime(string $RunningTime) Set Running start time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() 获取End time
+ * @method string getEndTime() Obtain End time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) 设置End time
+ * @method void setEndTime(string $EndTime) Set End time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RedirectInfo getRedirectInfo() 获取Redirection information
- * @method void setRedirectInfo(RedirectInfo $RedirectInfo) 设置Redirection information
- * @method string getStateDetailedReason() 获取Task instance state reason details. If the task instance fails, the reason for the failure will be logged
- * @method void setStateDetailedReason(string $StateDetailedReason) 设置Task instance state reason details. If the task instance fails, the reason for the failure will be logged
+ * @method RedirectInfo getRedirectInfo() Obtain Redirection information
+ * @method void setRedirectInfo(RedirectInfo $RedirectInfo) Set Redirection information
+ * @method string getStateDetailedReason() Obtain Task instance state reason details. If the task instance fails, the reason for the failure will be logged
+ * @method void setStateDetailedReason(string $StateDetailedReason) Set Task instance state reason details. If the task instance fails, the reason for the failure will be logged
  */
 
 /**
@@ -139,7 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

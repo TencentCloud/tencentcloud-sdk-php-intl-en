@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method integer getReqType() 获取Request type. 1: string type; 2: all types
- * @method void setReqType(integer $ReqType) 设置Request type. 1: string type; 2: all types
- * @method string getDate() 获取Time, such as "20190219"
- * @method void setDate(string $Date) 设置Time, such as "20190219"
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method integer getReqType() Obtain Request type. 1: string type; 2: all types
+ * @method void setReqType(integer $ReqType) Set Request type. 1: string type; 2: all types
+ * @method string getDate() Obtain Time, such as "20190219"
+ * @method void setDate(string $Date) Set Time, such as "20190219"
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeInstanceMonitorBigKeyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

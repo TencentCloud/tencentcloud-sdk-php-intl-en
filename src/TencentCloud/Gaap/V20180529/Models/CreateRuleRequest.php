@@ -18,26 +18,26 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Layer-7 listener ID
- * @method void setListenerId(string $ListenerId) 设置Layer-7 listener ID
- * @method string getDomain() 获取Domain name of the forwarding rule
- * @method void setDomain(string $Domain) 设置Domain name of the forwarding rule
- * @method string getPath() 获取Path of the forwarding rule
- * @method void setPath(string $Path) 设置Path of the forwarding rule
- * @method string getRealServerType() 获取The origin server type of the forwarding rule, which supports IP and DOMAIN types.
- * @method void setRealServerType(string $RealServerType) 设置The origin server type of the forwarding rule, which supports IP and DOMAIN types.
- * @method string getScheduler() 获取Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method void setScheduler(string $Scheduler) 设置Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method integer getHealthCheck() 获取Whether the health check is enabled for rules. 1: enabled; 0: disabled.
- * @method void setHealthCheck(integer $HealthCheck) 设置Whether the health check is enabled for rules. 1: enabled; 0: disabled.
- * @method RuleCheckParams getCheckParams() 获取Parameters related to origin server health check
- * @method void setCheckParams(RuleCheckParams $CheckParams) 设置Parameters related to origin server health check
- * @method string getForwardProtocol() 获取Protocol types of the forwarding from acceleration connection to origin server, which supports HTTP or HTTPS.
+ * @method string getListenerId() Obtain Layer-7 listener ID
+ * @method void setListenerId(string $ListenerId) Set Layer-7 listener ID
+ * @method string getDomain() Obtain Domain name of the forwarding rule
+ * @method void setDomain(string $Domain) Set Domain name of the forwarding rule
+ * @method string getPath() Obtain Path of the forwarding rule
+ * @method void setPath(string $Path) Set Path of the forwarding rule
+ * @method string getRealServerType() Obtain The origin server type of the forwarding rule, which supports IP and DOMAIN types.
+ * @method void setRealServerType(string $RealServerType) Set The origin server type of the forwarding rule, which supports IP and DOMAIN types.
+ * @method string getScheduler() Obtain Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method void setScheduler(string $Scheduler) Set Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method integer getHealthCheck() Obtain Whether the health check is enabled for rules. 1: enabled; 0: disabled.
+ * @method void setHealthCheck(integer $HealthCheck) Set Whether the health check is enabled for rules. 1: enabled; 0: disabled.
+ * @method RuleCheckParams getCheckParams() Obtain Parameters related to origin server health check
+ * @method void setCheckParams(RuleCheckParams $CheckParams) Set Parameters related to origin server health check
+ * @method string getForwardProtocol() Obtain Protocol types of the forwarding from acceleration connection to origin server, which supports HTTP or HTTPS.
 If this field is not passed in, it indicates that the ForwardProtocol of the corresponding listener will be used.
- * @method void setForwardProtocol(string $ForwardProtocol) 设置Protocol types of the forwarding from acceleration connection to origin server, which supports HTTP or HTTPS.
+ * @method void setForwardProtocol(string $ForwardProtocol) Set Protocol types of the forwarding from acceleration connection to origin server, which supports HTTP or HTTPS.
 If this field is not passed in, it indicates that the ForwardProtocol of the corresponding listener will be used.
- * @method string getForwardHost() 获取Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
- * @method void setForwardHost(string $ForwardHost) 设置Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+ * @method string getForwardHost() Obtain Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+ * @method void setForwardHost(string $ForwardHost) Set Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
  */
 
 /**
@@ -107,7 +107,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

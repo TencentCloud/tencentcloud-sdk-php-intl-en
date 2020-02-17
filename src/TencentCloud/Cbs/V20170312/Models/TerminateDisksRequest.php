@@ -18,8 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDiskIds() 获取List of cloud disk IDs required to be returned.
- * @method void setDiskIds(array $DiskIds) 设置List of cloud disk IDs required to be returned.
+ * @method array getDiskIds() Obtain List of cloud disk IDs required to be returned.
+ * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs required to be returned.
  */
 
 /**
@@ -39,7 +39,7 @@ class TerminateDisksRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

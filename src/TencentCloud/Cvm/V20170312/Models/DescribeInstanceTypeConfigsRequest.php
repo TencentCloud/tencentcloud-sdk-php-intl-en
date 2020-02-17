@@ -18,11 +18,11 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取Filters.
+ * @method array getFilters() Obtain Filters.
 <li> `zone` - String - Optional - Filter results by [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo).</li>
 <li> `instance-family` - String - Optional - Filter results by instance model family, such as `S1`, `I1`, and `M1`.</li>
 Each request can have up to 10 `Filters` and 1 `Filters.Values`.
- * @method void setFilters(array $Filters) 设置Filters.
+ * @method void setFilters(array $Filters) Set Filters.
 <li> `zone` - String - Optional - Filter results by [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo).</li>
 <li> `instance-family` - String - Optional - Filter results by instance model family, such as `S1`, `I1`, and `M1`.</li>
 Each request can have up to 10 `Filters` and 1 `Filters.Values`.
@@ -51,7 +51,7 @@ Each request can have up to 10 `Filters` and 1 `Filters.Values`.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

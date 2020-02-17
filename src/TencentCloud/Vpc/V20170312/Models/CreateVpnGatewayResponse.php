@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method VpnGateway getVpnGateway() 获取VPN网关对象
- * @method void setVpnGateway(VpnGateway $VpnGateway) 设置VPN网关对象
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method VpnGateway getVpnGateway() Obtain VPN gateway object.
+ * @method void setVpnGateway(VpnGateway $VpnGateway) Set VPN gateway object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateVpnGatewayResponse extends AbstractModel
 {
     /**
-     * @var VpnGateway VPN网关对象
+     * @var VpnGateway VPN gateway object.
      */
     public $VpnGateway;
 
@@ -39,7 +39,7 @@ class CreateVpnGatewayResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param VpnGateway $VpnGateway VPN网关对象
+     * @param VpnGateway $VpnGateway VPN gateway object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateVpnGatewayResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,24 +18,24 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getHaVipIds() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
- * @method void setHaVipIds(array $HaVipIds) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
- * @method array getFilters() 获取过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
+ * @method array getHaVipIds() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+ * @method void setHaVipIds(array $HaVipIds) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+ * @method array getFilters() Obtain Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+ * @method void setFilters(array $Filters) Set Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain The returned quantity
+ * @method void setLimit(integer $Limit) Set The returned quantity
  */
 
 /**
@@ -44,46 +44,46 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHaVipsRequest extends AbstractModel
 {
     /**
-     * @var array `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * @var array The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public $HaVipIds;
 
     /**
-     * @var array 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+     * @var array Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量
+     * @var integer Offset
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer The returned quantity
      */
     public $Limit;
     /**
-     * @param array $HaVipIds `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
-     * @param array $Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
+     * @param array $HaVipIds The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+     * @param array $Filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+     * @param integer $Offset Offset
+     * @param integer $Limit The returned quantity
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

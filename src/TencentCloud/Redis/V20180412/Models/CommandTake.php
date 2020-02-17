@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCmd() 获取Command
- * @method void setCmd(string $Cmd) 设置Command
- * @method integer getTook() 获取Duration
- * @method void setTook(integer $Took) 设置Duration
+ * @method string getCmd() Obtain Command
+ * @method void setCmd(string $Cmd) Set Command
+ * @method integer getTook() Obtain Duration
+ * @method void setTook(integer $Took) Set Duration
  */
 
 /**
@@ -47,7 +47,7 @@ class CommandTake extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

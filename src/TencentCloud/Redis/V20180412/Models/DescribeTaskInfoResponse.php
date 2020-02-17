@@ -18,18 +18,18 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStatus() 获取Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
- * @method void setStatus(string $Status) 设置Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
- * @method string getStartTime() 获取Task start time
- * @method void setStartTime(string $StartTime) 设置Task start time
- * @method string getTaskType() 获取Task type
- * @method void setTaskType(string $TaskType) 设置Task type
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getTaskMessage() 获取Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
- * @method void setTaskMessage(string $TaskMessage) 设置Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getStatus() Obtain Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
+ * @method void setStatus(string $Status) Set Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
+ * @method string getStartTime() Obtain Task start time
+ * @method void setStartTime(string $StartTime) Set Task start time
+ * @method string getTaskType() Obtain Task type
+ * @method void setTaskType(string $TaskType) Set Task type
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getTaskMessage() Obtain Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+ * @method void setTaskMessage(string $TaskMessage) Set Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -79,7 +79,7 @@ class DescribeTaskInfoResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

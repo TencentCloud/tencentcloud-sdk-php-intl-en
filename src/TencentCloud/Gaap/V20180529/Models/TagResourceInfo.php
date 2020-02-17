@@ -18,16 +18,16 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResourceType() 获取Resource types:
+ * @method string getResourceType() Obtain Resource types:
 `Proxy`: connections;
 `ProxyGroup`: connection groups;
 `RealServer`: origin servers.
- * @method void setResourceType(string $ResourceType) 设置Resource types:
+ * @method void setResourceType(string $ResourceType) Set Resource types:
 `Proxy`: connections;
 `ProxyGroup`: connection groups;
 `RealServer`: origin servers.
- * @method string getResourceId() 获取Resource ID
- * @method void setResourceId(string $ResourceId) 设置Resource ID
+ * @method string getResourceId() Obtain Resource ID
+ * @method void setResourceId(string $ResourceId) Set Resource ID
  */
 
 /**
@@ -59,7 +59,7 @@ class TagResourceInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

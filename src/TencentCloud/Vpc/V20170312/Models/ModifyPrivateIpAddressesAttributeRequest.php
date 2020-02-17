@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method array getPrivateIpAddresses() 获取指定的内网IP信息。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息。
+ * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method array getPrivateIpAddresses() Obtain The specified private IP information.
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The specified private IP information.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ModifyPrivateIpAddressesAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * @var string The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var array 指定的内网IP信息。
+     * @var array The specified private IP information.
      */
     public $PrivateIpAddresses;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param array $PrivateIpAddresses 指定的内网IP信息。
+     * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+     * @param array $PrivateIpAddresses The specified private IP information.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

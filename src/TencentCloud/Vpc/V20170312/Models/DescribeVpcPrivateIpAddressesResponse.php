@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getVpcPrivateIpAddressSet() 获取内网`IP`地址信息列表。
- * @method void setVpcPrivateIpAddressSet(array $VpcPrivateIpAddressSet) 设置内网`IP`地址信息列表。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getVpcPrivateIpAddressSet() Obtain The list of private `IP` address information.
+ * @method void setVpcPrivateIpAddressSet(array $VpcPrivateIpAddressSet) Set The list of private `IP` address information.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpcPrivateIpAddressesResponse extends AbstractModel
 {
     /**
-     * @var array 内网`IP`地址信息列表。
+     * @var array The list of private `IP` address information.
      */
     public $VpcPrivateIpAddressSet;
 
@@ -39,7 +39,7 @@ class DescribeVpcPrivateIpAddressesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $VpcPrivateIpAddressSet 内网`IP`地址信息列表。
+     * @param array $VpcPrivateIpAddressSet The list of private `IP` address information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class DescribeVpcPrivateIpAddressesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

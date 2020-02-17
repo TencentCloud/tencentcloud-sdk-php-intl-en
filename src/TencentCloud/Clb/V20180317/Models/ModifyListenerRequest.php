@@ -18,24 +18,24 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getListenerId() 获取CLB listener ID
- * @method void setListenerId(string $ListenerId) 设置CLB listener ID
- * @method string getListenerName() 获取New listener name
- * @method void setListenerName(string $ListenerName) 设置New listener name
- * @method integer getSessionExpireTime() 获取Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
- * @method HealthCheck getHealthCheck() 获取Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
- * @method CertificateInput getCertificate() 获取Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
- * @method void setCertificate(CertificateInput $Certificate) 设置Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
- * @method string getScheduler() 获取Forwarding method of a listener. Value range: WRR, LEAST_CONN.
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getListenerId() Obtain CLB listener ID
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method string getListenerName() Obtain New listener name
+ * @method void setListenerName(string $ListenerName) Set New listener name
+ * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+ * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
+ * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+ * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+ * @method string getScheduler() Obtain Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
- * @method void setScheduler(string $Scheduler) 设置Forwarding method of a listener. Value range: WRR, LEAST_CONN.
+ * @method void setScheduler(string $Scheduler) Set Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
- * @method integer getSniSwitch() 获取Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
- * @method void setSniSwitch(integer $SniSwitch) 设置Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+ * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+ * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
  */
 
 /**
@@ -99,7 +99,7 @@ They represent weighted round robin and least connections, respectively. Default
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getOperationFailedListenerSet() 获取ID list of listeners failed to be deleted
- * @method void setOperationFailedListenerSet(array $OperationFailedListenerSet) 设置ID list of listeners failed to be deleted
- * @method array getOperationSucceedListenerSet() 获取ID list of listeners deleted successfully
- * @method void setOperationSucceedListenerSet(array $OperationSucceedListenerSet) 设置ID list of listeners deleted successfully
- * @method array getInvalidStatusListenerSet() 获取ID list of invalid listeners. For example: the listener does not exist, or the instance corresponding to the listener does not match.
- * @method void setInvalidStatusListenerSet(array $InvalidStatusListenerSet) 设置ID list of invalid listeners. For example: the listener does not exist, or the instance corresponding to the listener does not match.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getOperationFailedListenerSet() Obtain ID list of listeners failed to be deleted
+ * @method void setOperationFailedListenerSet(array $OperationFailedListenerSet) Set ID list of listeners failed to be deleted
+ * @method array getOperationSucceedListenerSet() Obtain ID list of listeners deleted successfully
+ * @method void setOperationSucceedListenerSet(array $OperationSucceedListenerSet) Set ID list of listeners deleted successfully
+ * @method array getInvalidStatusListenerSet() Obtain ID list of invalid listeners. For example: the listener does not exist, or the instance corresponding to the listener does not match.
+ * @method void setInvalidStatusListenerSet(array $InvalidStatusListenerSet) Set ID list of invalid listeners. For example: the listener does not exist, or the instance corresponding to the listener does not match.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -63,7 +63,7 @@ class DeleteListenersResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

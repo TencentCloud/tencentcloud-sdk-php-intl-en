@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Number of connections.
- * @method void setTotalCount(integer $TotalCount) 设置Number of connections.
- * @method array getInstanceSet() 获取Connection instance information list; It’s an old parameter, please switch to ProxySet.
- * @method void setInstanceSet(array $InstanceSet) 设置Connection instance information list; It’s an old parameter, please switch to ProxySet.
- * @method array getProxySet() 获取Connection instance information list; It’s a new parameter.
- * @method void setProxySet(array $ProxySet) 设置Connection instance information list; It’s a new parameter.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Number of connections.
+ * @method void setTotalCount(integer $TotalCount) Set Number of connections.
+ * @method array getInstanceSet() Obtain Connection instance information list; It’s an old parameter, please switch to ProxySet.
+ * @method void setInstanceSet(array $InstanceSet) Set Connection instance information list; It’s an old parameter, please switch to ProxySet.
+ * @method array getProxySet() Obtain Connection instance information list; It’s a new parameter.
+ * @method void setProxySet(array $ProxySet) Set Connection instance information list; It’s a new parameter.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeProxiesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

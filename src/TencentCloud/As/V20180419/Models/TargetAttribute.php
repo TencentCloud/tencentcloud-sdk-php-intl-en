@@ -18,10 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPort() 获取Port
- * @method void setPort(integer $Port) 设置Port
- * @method integer getWeight() 获取Weight
- * @method void setWeight(integer $Weight) 设置Weight
+ * @method integer getPort() Obtain Port
+ * @method void setPort(integer $Port) Set Port
+ * @method integer getWeight() Obtain Weight
+ * @method void setWeight(integer $Weight) Set Weight
  */
 
 /**
@@ -47,7 +47,7 @@ class TargetAttribute extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

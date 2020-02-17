@@ -18,13 +18,13 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getDomain() 获取Domain name to be deleted
- * @method void setDomain(string $Domain) 设置Domain name to be deleted
- * @method integer getForce() 获取Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getDomain() Obtain Domain name to be deleted
+ * @method void setDomain(string $Domain) Set Domain name to be deleted
+ * @method integer getForce() Obtain Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
 When not making a forced deletion, if there are rules bound to origin servers, they will not be deleted.
- * @method void setForce(integer $Force) 设置Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
+ * @method void setForce(integer $Force) Set Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
 When not making a forced deletion, if there are rules bound to origin servers, they will not be deleted.
  */
 
@@ -59,7 +59,7 @@ When not making a forced deletion, if there are rules bound to origin servers, t
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

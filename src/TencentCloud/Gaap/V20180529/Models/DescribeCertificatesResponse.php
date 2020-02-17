@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getCertificateSet() 获取Server certificate list, which includes certificate ID and certificate name.
- * @method void setCertificateSet(array $CertificateSet) 设置Server certificate list, which includes certificate ID and certificate name.
- * @method integer getTotalCount() 获取Total quantity of server certificates that match the query conditions.
- * @method void setTotalCount(integer $TotalCount) 设置Total quantity of server certificates that match the query conditions.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getCertificateSet() Obtain Server certificate list, which includes certificate ID and certificate name.
+ * @method void setCertificateSet(array $CertificateSet) Set Server certificate list, which includes certificate ID and certificate name.
+ * @method integer getTotalCount() Obtain Total quantity of server certificates that match the query conditions.
+ * @method void setTotalCount(integer $TotalCount) Set Total quantity of server certificates that match the query conditions.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeCertificatesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKey() 获取Hot key
- * @method void setKey(string $Key) 设置Hot key
- * @method string getType() 获取Type
- * @method void setType(string $Type) 设置Type
- * @method integer getCount() 获取Count
- * @method void setCount(integer $Count) 设置Count
+ * @method string getKey() Obtain Hot key
+ * @method void setKey(string $Key) Set Hot key
+ * @method string getType() Obtain Type
+ * @method void setType(string $Type) Set Type
+ * @method integer getCount() Obtain Count
+ * @method void setCount(integer $Count) Set Count
  */
 
 /**
@@ -55,7 +55,7 @@ class HotKeyInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

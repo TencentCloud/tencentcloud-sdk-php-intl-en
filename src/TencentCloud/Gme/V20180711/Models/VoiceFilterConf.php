@@ -18,8 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStatus() 获取Phrase filtering status. Valid values: open, close
- * @method void setStatus(string $Status) 设置Phrase filtering status. Valid values: open, close
+ * @method string getStatus() Obtain Phrase filtering status. Valid values: open, close
+ * @method void setStatus(string $Status) Set Phrase filtering status. Valid values: open, close
  */
 
 /**
@@ -39,7 +39,7 @@ class VoiceFilterConf extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

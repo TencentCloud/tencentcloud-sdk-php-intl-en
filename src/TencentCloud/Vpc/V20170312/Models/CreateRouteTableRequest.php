@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method string getRouteTableName() 获取路由表名称，最大长度不能超过60个字节。
- * @method void setRouteTableName(string $RouteTableName) 设置路由表名称，最大长度不能超过60个字节。
+ * @method string getVpcId() Obtain The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method void setVpcId(string $VpcId) Set The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method string getRouteTableName() Obtain The route table name. The maximum length is 60 characters.
+ * @method void setRouteTableName(string $RouteTableName) Set The route table name. The maximum length is 60 characters.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class CreateRouteTableRequest extends AbstractModel
 {
     /**
-     * @var string 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public $VpcId;
 
     /**
-     * @var string 路由表名称，最大长度不能超过60个字节。
+     * @var string The route table name. The maximum length is 60 characters.
      */
     public $RouteTableName;
     /**
-     * @param string $VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param string $RouteTableName 路由表名称，最大长度不能超过60个字节。
+     * @param string $VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param string $RouteTableName The route table name. The maximum length is 60 characters.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

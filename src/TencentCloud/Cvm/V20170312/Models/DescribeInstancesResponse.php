@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Number of instances meeting the filtering conditions.
- * @method void setTotalCount(integer $TotalCount) 设置Number of instances meeting the filtering conditions.
- * @method array getInstanceSet() 获取Detailed instance information.
- * @method void setInstanceSet(array $InstanceSet) 设置Detailed instance information.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Number of instances meeting the filtering conditions.
+ * @method void setTotalCount(integer $TotalCount) Set Number of instances meeting the filtering conditions.
+ * @method array getInstanceSet() Obtain Detailed instance information.
+ * @method void setInstanceSet(array $InstanceSet) Set Detailed instance information.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeInstancesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,32 +18,32 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取Instance ID
- * @method void setJobId(string $JobId) 设置Instance ID
- * @method string getJobName() 获取Instance name
- * @method void setJobName(string $JobName) 设置Instance name
- * @method string getZone() 获取Information of availability zone
- * @method void setZone(string $Zone) 设置Information of availability zone
- * @method integer getPriority() 获取Instance priority
- * @method void setPriority(integer $Priority) 设置Instance priority
- * @method string getJobState() 获取Instance state
- * @method void setJobState(string $JobState) 设置Instance state
- * @method string getCreateTime() 获取Creation time
- * @method void setCreateTime(string $CreateTime) 设置Creation time
- * @method string getEndTime() 获取End time
- * @method void setEndTime(string $EndTime) 设置End time
- * @method array getTaskSet() 获取Task view information
- * @method void setTaskSet(array $TaskSet) 设置Task view information
- * @method array getDependenceSet() 获取Information of the dependency among tasks
- * @method void setDependenceSet(array $DependenceSet) 设置Information of the dependency among tasks
- * @method TaskMetrics getTaskMetrics() 获取Task statistical metrics
- * @method void setTaskMetrics(TaskMetrics $TaskMetrics) 设置Task statistical metrics
- * @method TaskInstanceView getTaskInstanceMetrics() 获取Task instance statistical metrics
- * @method void setTaskInstanceMetrics(TaskInstanceView $TaskInstanceMetrics) 设置Task instance statistical metrics
- * @method string getStateReason() 获取Instance failure reason
- * @method void setStateReason(string $StateReason) 设置Instance failure reason
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getJobId() Obtain Instance ID
+ * @method void setJobId(string $JobId) Set Instance ID
+ * @method string getJobName() Obtain Instance name
+ * @method void setJobName(string $JobName) Set Instance name
+ * @method string getZone() Obtain Information of availability zone
+ * @method void setZone(string $Zone) Set Information of availability zone
+ * @method integer getPriority() Obtain Instance priority
+ * @method void setPriority(integer $Priority) Set Instance priority
+ * @method string getJobState() Obtain Instance state
+ * @method void setJobState(string $JobState) Set Instance state
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getEndTime() Obtain End time
+ * @method void setEndTime(string $EndTime) Set End time
+ * @method array getTaskSet() Obtain Task view information
+ * @method void setTaskSet(array $TaskSet) Set Task view information
+ * @method array getDependenceSet() Obtain Information of the dependency among tasks
+ * @method void setDependenceSet(array $DependenceSet) Set Information of the dependency among tasks
+ * @method TaskMetrics getTaskMetrics() Obtain Task statistical metrics
+ * @method void setTaskMetrics(TaskMetrics $TaskMetrics) Set Task statistical metrics
+ * @method TaskInstanceView getTaskInstanceMetrics() Obtain Task instance statistical metrics
+ * @method void setTaskInstanceMetrics(TaskInstanceView $TaskInstanceMetrics) Set Task instance statistical metrics
+ * @method string getStateReason() Obtain Instance failure reason
+ * @method void setStateReason(string $StateReason) Set Instance failure reason
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -135,7 +135,7 @@ class DescribeJobResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

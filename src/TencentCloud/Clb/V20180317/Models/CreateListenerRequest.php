@@ -18,26 +18,26 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method array getPorts() 获取Specifies for which ports to create listeners. Each port corresponds to a new listener
- * @method void setPorts(array $Ports) 设置Specifies for which ports to create listeners. Each port corresponds to a new listener
- * @method string getProtocol() 获取Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
- * @method void setProtocol(string $Protocol) 设置Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
- * @method array getListenerNames() 获取List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
- * @method void setListenerNames(array $ListenerNames) 设置List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
- * @method HealthCheck getHealthCheck() 获取Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
- * @method CertificateInput getCertificate() 获取Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
- * @method void setCertificate(CertificateInput $Certificate) 设置Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
- * @method integer getSessionExpireTime() 获取Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
- * @method string getScheduler() 获取Forwarding method of a listener. Value range: WRR, LEAST_CONN.
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getPorts() Obtain Specifies for which ports to create listeners. Each port corresponds to a new listener
+ * @method void setPorts(array $Ports) Set Specifies for which ports to create listeners. Each port corresponds to a new listener
+ * @method string getProtocol() Obtain Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+ * @method void setProtocol(string $Protocol) Set Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+ * @method array getListenerNames() Obtain List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
+ * @method void setListenerNames(array $ListenerNames) Set List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
+ * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+ * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+ * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+ * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+ * @method string getScheduler() Obtain Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
- * @method void setScheduler(string $Scheduler) 设置Forwarding method of a listener. Value range: WRR, LEAST_CONN.
+ * @method void setScheduler(string $Scheduler) Set Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
- * @method integer getSniSwitch() 获取Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
- * @method void setSniSwitch(integer $SniSwitch) 设置Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
+ * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
+ * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
  */
 
 /**
@@ -107,7 +107,7 @@ They represent weighted round robin and least connections, respectively. Default
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

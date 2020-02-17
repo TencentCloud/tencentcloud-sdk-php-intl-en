@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRouteTableId() 获取路由表实例ID。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID。
- * @method array getRoutes() 获取路由策略对象。
- * @method void setRoutes(array $Routes) 设置路由策略对象。
+ * @method string getRouteTableId() Obtain Route table instance ID.
+ * @method void setRouteTableId(string $RouteTableId) Set Route table instance ID.
+ * @method array getRoutes() Obtain Routing policy object.
+ * @method void setRoutes(array $Routes) Set Routing policy object.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class CreateRoutesRequest extends AbstractModel
 {
     /**
-     * @var string 路由表实例ID。
+     * @var string Route table instance ID.
      */
     public $RouteTableId;
 
     /**
-     * @var array 路由策略对象。
+     * @var array Routing policy object.
      */
     public $Routes;
     /**
-     * @param string $RouteTableId 路由表实例ID。
-     * @param array $Routes 路由策略对象。
+     * @param string $RouteTableId Route table instance ID.
+     * @param array $Routes Routing policy object.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

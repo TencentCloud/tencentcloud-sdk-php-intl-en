@@ -18,15 +18,15 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
- * @method void setVpcId(string $VpcId) 设置The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
- * @method string getCidrBlock() 获取The secondary CIDR, such as `172.16.0.0/16`.
- * @method void setCidrBlock(string $CidrBlock) 设置The secondary CIDR, such as `172.16.0.0/16`.
- * @method integer getAssistantType() 获取The secondary CIDR block type. 0: common secondary CIDR block. 1: container secondary CIDR block. Default: 0.
- * @method void setAssistantType(integer $AssistantType) 设置The secondary CIDR block type. 0: common secondary CIDR block. 1: container secondary CIDR block. Default: 0.
- * @method array getSubnetSet() 获取Subnets divided by the secondary CIDR.
+ * @method string getVpcId() Obtain The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
+ * @method void setVpcId(string $VpcId) Set The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
+ * @method string getCidrBlock() Obtain The secondary CIDR, such as `172.16.0.0/16`.
+ * @method void setCidrBlock(string $CidrBlock) Set The secondary CIDR, such as `172.16.0.0/16`.
+ * @method integer getAssistantType() Obtain The secondary CIDR block type. 0: common secondary CIDR block. 1: container secondary CIDR block. Default: 0.
+ * @method void setAssistantType(integer $AssistantType) Set The secondary CIDR block type. 0: common secondary CIDR block. 1: container secondary CIDR block. Default: 0.
+ * @method array getSubnetSet() Obtain Subnets divided by the secondary CIDR.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubnetSet(array $SubnetSet) 设置Subnets divided by the secondary CIDR.
+ * @method void setSubnetSet(array $SubnetSet) Set Subnets divided by the secondary CIDR.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerType() 获取CLB instance network type:
+ * @method string getLoadBalancerType() Obtain CLB instance network type:
 OPEN: public network; INTERNAL: private network.
- * @method void setLoadBalancerType(string $LoadBalancerType) 设置CLB instance network type:
+ * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
 OPEN: public network; INTERNAL: private network.
- * @method integer getForward() 获取CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
- * @method void setForward(integer $Forward) 设置CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
- * @method string getLoadBalancerName() 获取CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
+ * @method integer getForward() Obtain CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+ * @method void setForward(integer $Forward) Set CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+ * @method string getLoadBalancerName() Obtain CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
 Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
 Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
- * @method string getVpcId() 获取Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
- * @method void setVpcId(string $VpcId) 设置Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
- * @method string getSubnetId() 获取A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
- * @method void setSubnetId(string $SubnetId) 设置A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
- * @method integer getProjectId() 获取ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
- * @method void setProjectId(integer $ProjectId) 设置ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
- * @method string getAddressIPVersion() 获取IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
- * @method void setAddressIPVersion(string $AddressIPVersion) 设置IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
- * @method integer getNumber() 获取Number of CLBs to be created. Default value: 1.
- * @method void setNumber(integer $Number) 设置Number of CLBs to be created. Default value: 1.
- * @method string getMasterZoneId() 获取Sets the primary AZ ID for cross-AZ disaster recovery, such as 100001 or ap-guangzhou-1, which is applicable only to public network CLB.
+ * @method string getVpcId() Obtain Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
+ * @method void setVpcId(string $VpcId) Set Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
+ * @method string getSubnetId() Obtain A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+ * @method void setSubnetId(string $SubnetId) Set A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+ * @method integer getProjectId() Obtain ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+ * @method void setProjectId(integer $ProjectId) Set ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+ * @method string getAddressIPVersion() Obtain IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+ * @method void setAddressIPVersion(string $AddressIPVersion) Set IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+ * @method integer getNumber() Obtain Number of CLBs to be created. Default value: 1.
+ * @method void setNumber(integer $Number) Set Number of CLBs to be created. Default value: 1.
+ * @method string getMasterZoneId() Obtain Sets the primary AZ ID for cross-AZ disaster recovery, such as 100001 or ap-guangzhou-1, which is applicable only to public network CLB.
 Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. The list of primary AZs in a specific region can be queried through the DescribeMasterZones API.
- * @method void setMasterZoneId(string $MasterZoneId) 设置Sets the primary AZ ID for cross-AZ disaster recovery, such as 100001 or ap-guangzhou-1, which is applicable only to public network CLB.
+ * @method void setMasterZoneId(string $MasterZoneId) Set Sets the primary AZ ID for cross-AZ disaster recovery, such as 100001 or ap-guangzhou-1, which is applicable only to public network CLB.
 Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. The list of primary AZs in a specific region can be queried through the DescribeMasterZones API.
- * @method string getZoneId() 获取Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
- * @method void setZoneId(string $ZoneId) 设置Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
- * @method InternetAccessible getInternetAccessible() 获取CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
- * @method array getTags() 获取Tags a CLB instance when purchasing it
- * @method void setTags(array $Tags) 设置Tags a CLB instance when purchasing it
+ * @method string getZoneId() Obtain Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+ * @method void setZoneId(string $ZoneId) Set Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+ * @method InternetAccessible getInternetAccessible() Obtain CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+ * @method array getTags() Obtain Tags a CLB instance when purchasing it
+ * @method void setTags(array $Tags) Set Tags a CLB instance when purchasing it
  */
 
 /**
@@ -139,7 +139,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

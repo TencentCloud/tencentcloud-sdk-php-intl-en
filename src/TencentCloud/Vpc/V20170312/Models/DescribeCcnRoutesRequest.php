@@ -18,26 +18,26 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取CCN实例ID，形如：ccn-gree226l。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID，形如：ccn-gree226l。
- * @method array getRouteIds() 获取CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
- * @method void setRouteIds(array $RouteIds) 设置CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
- * @method array getFilters() 获取过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
+ * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-gree226l`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-gree226l`.
+ * @method array getRouteIds() Obtain The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+ * @method void setRouteIds(array $RouteIds) Set The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+ * @method array getFilters() Obtain Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+ * @method void setFilters(array $Filters) Set Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain The returned quantity
+ * @method void setLimit(integer $Limit) Set The returned quantity
  */
 
 /**
@@ -46,52 +46,52 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID，形如：ccn-gree226l。
+     * @var string The CCN instance ID, such as `ccn-gree226l`.
      */
     public $CcnId;
 
     /**
-     * @var array CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * @var array The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
      */
     public $RouteIds;
 
     /**
-     * @var array 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
+     * @var array Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量
+     * @var integer Offset
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer The returned quantity
      */
     public $Limit;
     /**
-     * @param string $CcnId CCN实例ID，形如：ccn-gree226l。
-     * @param array $RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
-     * @param array $Filters 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
+     * @param string $CcnId The CCN instance ID, such as `ccn-gree226l`.
+     * @param array $RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+     * @param array $Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+     * @param integer $Offset Offset
+     * @param integer $Limit The returned quantity
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

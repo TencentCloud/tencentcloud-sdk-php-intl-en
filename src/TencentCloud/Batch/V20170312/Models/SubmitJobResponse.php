@@ -18,10 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取When a job is submitted through this API, this parameter is returned and indicates the job ID. Returning the list of job IDs does not mean that the job is parsed/executed successfully. The job state can be queried using the DescribeJob API.
- * @method void setJobId(string $JobId) 设置When a job is submitted through this API, this parameter is returned and indicates the job ID. Returning the list of job IDs does not mean that the job is parsed/executed successfully. The job state can be queried using the DescribeJob API.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getJobId() Obtain When a job is submitted through this API, this parameter is returned and indicates the job ID. Returning the list of job IDs does not mean that the job is parsed/executed successfully. The job state can be queried using the DescribeJob API.
+ * @method void setJobId(string $JobId) Set When a job is submitted through this API, this parameter is returned and indicates the job ID. Returning the list of job IDs does not mean that the job is parsed/executed successfully. The job state can be queried using the DescribeJob API.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class SubmitJobResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

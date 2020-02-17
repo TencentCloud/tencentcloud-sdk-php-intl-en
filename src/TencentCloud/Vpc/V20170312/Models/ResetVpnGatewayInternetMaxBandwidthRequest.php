@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpnGatewayId() 获取VPN网关实例ID。
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- * @method integer getInternetMaxBandwidthOut() 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+ * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
+ * @method integer getInternetMaxBandwidthOut() Obtain The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel
 {
     /**
-     * @var string VPN网关实例ID。
+     * @var string The ID of the VPN gateway instance.
      */
     public $VpnGatewayId;
 
     /**
-     * @var integer 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * @var integer The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps.
      */
     public $InternetMaxBandwidthOut;
     /**
-     * @param string $VpnGatewayId VPN网关实例ID。
-     * @param integer $InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * @param string $VpnGatewayId The ID of the VPN gateway instance.
+     * @param integer $InternetMaxBandwidthOut The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

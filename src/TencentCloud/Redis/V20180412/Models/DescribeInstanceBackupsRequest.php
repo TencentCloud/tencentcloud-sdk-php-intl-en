@@ -18,18 +18,18 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
- * @method void setInstanceId(string $InstanceId) 设置ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
- * @method integer getLimit() 获取Instance list size. Default value: 20
- * @method void setLimit(integer $Limit) 设置Instance list size. Default value: 20
- * @method integer getOffset() 获取Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) 设置Offset, which is an integral multiple of `Limit`
- * @method string getBeginTime() 获取Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
- * @method void setBeginTime(string $BeginTime) 设置Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
- * @method string getEndTime() 获取End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
- * @method void setEndTime(string $EndTime) 设置End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
- * @method array getStatus() 获取1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
- * @method void setStatus(array $Status) 设置1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
+ * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+ * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+ * @method integer getLimit() Obtain Instance list size. Default value: 20
+ * @method void setLimit(integer $Limit) Set Instance list size. Default value: 20
+ * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
+ * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
+ * @method string getBeginTime() Obtain Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+ * @method void setBeginTime(string $BeginTime) Set Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+ * @method string getEndTime() Obtain End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+ * @method void setEndTime(string $EndTime) Set End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+ * @method array getStatus() Obtain 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
+ * @method void setStatus(array $Status) Set 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
  */
 
 /**
@@ -79,7 +79,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

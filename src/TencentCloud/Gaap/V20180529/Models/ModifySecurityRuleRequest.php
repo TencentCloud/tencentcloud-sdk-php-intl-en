@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRuleId() 获取Rule ID
- * @method void setRuleId(string $RuleId) 设置Rule ID
- * @method string getAliasName() 获取Rule name: up to 30 characters. The extra characters will be truncated.
- * @method void setAliasName(string $AliasName) 设置Rule name: up to 30 characters. The extra characters will be truncated.
- * @method string getPolicyId() 获取Security policy ID
- * @method void setPolicyId(string $PolicyId) 设置Security policy ID
+ * @method string getRuleId() Obtain Rule ID
+ * @method void setRuleId(string $RuleId) Set Rule ID
+ * @method string getAliasName() Obtain Rule name: up to 30 characters. The extra characters will be truncated.
+ * @method void setAliasName(string $AliasName) Set Rule name: up to 30 characters. The extra characters will be truncated.
+ * @method string getPolicyId() Obtain Security policy ID
+ * @method void setPolicyId(string $PolicyId) Set Security policy ID
  */
 
 /**
@@ -55,7 +55,7 @@ class ModifySecurityRuleRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

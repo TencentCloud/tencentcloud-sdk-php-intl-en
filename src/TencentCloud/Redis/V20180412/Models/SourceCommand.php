@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCmd() 获取Command
- * @method void setCmd(string $Cmd) 设置Command
- * @method integer getCount() 获取Number of executions
- * @method void setCount(integer $Count) 设置Number of executions
+ * @method string getCmd() Obtain Command
+ * @method void setCmd(string $Cmd) Set Command
+ * @method integer getCount() Obtain Number of executions
+ * @method void setCount(integer $Count) Set Number of executions
  */
 
 /**
@@ -47,7 +47,7 @@ class SourceCommand extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

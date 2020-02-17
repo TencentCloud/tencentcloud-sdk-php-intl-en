@@ -18,10 +18,10 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStatus() 获取Voice chat status. Valid values: open, close
- * @method void setStatus(string $Status) 设置Voice chat status. Valid values: open, close
- * @method string getQuality() 获取Voice Chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: ordinary
- * @method void setQuality(string $Quality) 设置Voice Chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: ordinary
+ * @method string getStatus() Obtain Voice chat status. Valid values: open, close
+ * @method void setStatus(string $Status) Set Voice chat status. Valid values: open, close
+ * @method string getQuality() Obtain Voice Chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: ordinary
+ * @method void setQuality(string $Quality) Set Voice Chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: ordinary
  */
 
 /**
@@ -47,7 +47,7 @@ class RealtimeSpeechConf extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,92 +18,92 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRouteId() 获取路由策略ID
- * @method void setRouteId(string $RouteId) 设置路由策略ID
- * @method string getDestinationCidrBlock() 获取目的端
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的端
- * @method string getInstanceType() 获取下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
- * @method void setInstanceType(string $InstanceType) 设置下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
- * @method string getInstanceId() 获取下一跳（关联实例）
- * @method void setInstanceId(string $InstanceId) 设置下一跳（关联实例）
- * @method string getInstanceName() 获取下一跳名称（关联实例名称）
- * @method void setInstanceName(string $InstanceName) 设置下一跳名称（关联实例名称）
- * @method string getInstanceRegion() 获取下一跳所属地域（关联实例所属地域）
- * @method void setInstanceRegion(string $InstanceRegion) 设置下一跳所属地域（关联实例所属地域）
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method boolean getEnabled() 获取路由是否启用
- * @method void setEnabled(boolean $Enabled) 设置路由是否启用
- * @method string getInstanceUin() 获取关联实例所属UIN（根账号）
- * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）
+ * @method string getRouteId() Obtain The ID of the routing policy
+ * @method void setRouteId(string $RouteId) Set The ID of the routing policy
+ * @method string getDestinationCidrBlock() Obtain Destination
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set Destination
+ * @method string getInstanceType() Obtain The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
+ * @method void setInstanceType(string $InstanceType) Set The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
+ * @method string getInstanceId() Obtain The next hop (associated instance)
+ * @method void setInstanceId(string $InstanceId) Set The next hop (associated instance)
+ * @method string getInstanceName() Obtain The name of the next hop (associated instance name)
+ * @method void setInstanceName(string $InstanceName) Set The name of the next hop (associated instance name)
+ * @method string getInstanceRegion() Obtain The region of the next hop (the region of the associated instance)
+ * @method void setInstanceRegion(string $InstanceRegion) Set The region of the next hop (the region of the associated instance)
+ * @method string getUpdateTime() Obtain Update Time
+ * @method void setUpdateTime(string $UpdateTime) Set Update Time
+ * @method boolean getEnabled() Obtain Whether the route is enabled
+ * @method void setEnabled(boolean $Enabled) Set Whether the route is enabled
+ * @method string getInstanceUin() Obtain The UIN (root account) to which the associated instance belongs
+ * @method void setInstanceUin(string $InstanceUin) Set The UIN (root account) to which the associated instance belongs
  */
 
 /**
- *CCN路由策略对象
+ *The CCN routing policy object
  */
 class CcnRoute extends AbstractModel
 {
     /**
-     * @var string 路由策略ID
+     * @var string The ID of the routing policy
      */
     public $RouteId;
 
     /**
-     * @var string 目的端
+     * @var string Destination
      */
     public $DestinationCidrBlock;
 
     /**
-     * @var string 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+     * @var string The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
      */
     public $InstanceType;
 
     /**
-     * @var string 下一跳（关联实例）
+     * @var string The next hop (associated instance)
      */
     public $InstanceId;
 
     /**
-     * @var string 下一跳名称（关联实例名称）
+     * @var string The name of the next hop (associated instance name)
      */
     public $InstanceName;
 
     /**
-     * @var string 下一跳所属地域（关联实例所属地域）
+     * @var string The region of the next hop (the region of the associated instance)
      */
     public $InstanceRegion;
 
     /**
-     * @var string 更新时间
+     * @var string Update Time
      */
     public $UpdateTime;
 
     /**
-     * @var boolean 路由是否启用
+     * @var boolean Whether the route is enabled
      */
     public $Enabled;
 
     /**
-     * @var string 关联实例所属UIN（根账号）
+     * @var string The UIN (root account) to which the associated instance belongs
      */
     public $InstanceUin;
     /**
-     * @param string $RouteId 路由策略ID
-     * @param string $DestinationCidrBlock 目的端
-     * @param string $InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
-     * @param string $InstanceId 下一跳（关联实例）
-     * @param string $InstanceName 下一跳名称（关联实例名称）
-     * @param string $InstanceRegion 下一跳所属地域（关联实例所属地域）
-     * @param string $UpdateTime 更新时间
-     * @param boolean $Enabled 路由是否启用
-     * @param string $InstanceUin 关联实例所属UIN（根账号）
+     * @param string $RouteId The ID of the routing policy
+     * @param string $DestinationCidrBlock Destination
+     * @param string $InstanceType The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
+     * @param string $InstanceId The next hop (associated instance)
+     * @param string $InstanceName The name of the next hop (associated instance name)
+     * @param string $InstanceRegion The region of the next hop (the region of the associated instance)
+     * @param string $UpdateTime Update Time
+     * @param boolean $Enabled Whether the route is enabled
+     * @param string $InstanceUin The UIN (root account) to which the associated instance belongs
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,135 +18,135 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-f1xjkw1b。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-f1xjkw1b。
- * @method string getNetworkInterfaceName() 获取弹性网卡名称。
- * @method void setNetworkInterfaceName(string $NetworkInterfaceName) 设置弹性网卡名称。
- * @method string getNetworkInterfaceDescription() 获取弹性网卡描述。
- * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述。
- * @method string getSubnetId() 获取子网实例ID。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID。
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method array getGroupSet() 获取绑定的安全组。
- * @method void setGroupSet(array $GroupSet) 设置绑定的安全组。
- * @method boolean getPrimary() 获取是否是主网卡。
- * @method void setPrimary(boolean $Primary) 设置是否是主网卡。
- * @method string getMacAddress() 获取MAC地址。
- * @method void setMacAddress(string $MacAddress) 设置MAC地址。
- * @method string getState() 获取弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
- * @method void setState(string $State) 设置弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
- * @method array getPrivateIpAddressSet() 获取内网IP信息。
- * @method void setPrivateIpAddressSet(array $PrivateIpAddressSet) 设置内网IP信息。
- * @method NetworkInterfaceAttachment getAttachment() 获取绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttachment(NetworkInterfaceAttachment $Attachment) 设置绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZone() 获取可用区。
- * @method void setZone(string $Zone) 设置可用区。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method array getIpv6AddressSet() 获取`IPv6`地址列表。
- * @method void setIpv6AddressSet(array $Ipv6AddressSet) 设置`IPv6`地址列表。
- * @method array getTagSet() 获取标签键值对。
- * @method void setTagSet(array $TagSet) 设置标签键值对。
- * @method integer getEniType() 获取The ENI type. 0: ENI. 1: EVM ENI.
- * @method void setEniType(integer $EniType) 设置The ENI type. 0: ENI. 1: EVM ENI.
+ * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-f1xjkw1b`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-f1xjkw1b`.
+ * @method string getNetworkInterfaceName() Obtain ENI Name
+ * @method void setNetworkInterfaceName(string $NetworkInterfaceName) Set ENI Name
+ * @method string getNetworkInterfaceDescription() Obtain ENI description.
+ * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) Set ENI description.
+ * @method string getSubnetId() Obtain Subnet instance ID.
+ * @method void setSubnetId(string $SubnetId) Set Subnet instance ID.
+ * @method string getVpcId() Obtain VPC instance ID.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID.
+ * @method array getGroupSet() Obtain Bound security group.
+ * @method void setGroupSet(array $GroupSet) Set Bound security group.
+ * @method boolean getPrimary() Obtain Whether it is the primary ENI.
+ * @method void setPrimary(boolean $Primary) Set Whether it is the primary ENI.
+ * @method string getMacAddress() Obtain MAC address
+ * @method void setMacAddress(string $MacAddress) Set MAC address
+ * @method string getState() Obtain ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li>
+ * @method void setState(string $State) Set ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li>
+ * @method array getPrivateIpAddressSet() Obtain Private IP information.
+ * @method void setPrivateIpAddressSet(array $PrivateIpAddressSet) Set Private IP information.
+ * @method NetworkInterfaceAttachment getAttachment() Obtain Bound CVM object.
+Note: This field may return null, indicating no valid value.
+ * @method void setAttachment(NetworkInterfaceAttachment $Attachment) Set Bound CVM object.
+Note: This field may return null, indicating no valid value.
+ * @method string getZone() Obtain Availability Zone.
+ * @method void setZone(string $Zone) Set Availability Zone.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
+ * @method array getIpv6AddressSet() Obtain The `IPv6` address list.
+ * @method void setIpv6AddressSet(array $Ipv6AddressSet) Set The `IPv6` address list.
+ * @method array getTagSet() Obtain Tag key-value pair.
+ * @method void setTagSet(array $TagSet) Set Tag key-value pair.
+ * @method integer getEniType() Obtain The ENI type. 0: ENI. 1: EVM ENI.
+ * @method void setEniType(integer $EniType) Set The ENI type. 0: ENI. 1: EVM ENI.
  */
 
 /**
- *弹性网卡
+ *ENI
  */
 class NetworkInterface extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例ID，例如：eni-f1xjkw1b。
+     * @var string The ID of the ENI instance, such as `eni-f1xjkw1b`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string 弹性网卡名称。
+     * @var string ENI Name
      */
     public $NetworkInterfaceName;
 
     /**
-     * @var string 弹性网卡描述。
+     * @var string ENI description.
      */
     public $NetworkInterfaceDescription;
 
     /**
-     * @var string 子网实例ID。
+     * @var string Subnet instance ID.
      */
     public $SubnetId;
 
     /**
-     * @var string VPC实例ID。
+     * @var string VPC instance ID.
      */
     public $VpcId;
 
     /**
-     * @var array 绑定的安全组。
+     * @var array Bound security group.
      */
     public $GroupSet;
 
     /**
-     * @var boolean 是否是主网卡。
+     * @var boolean Whether it is the primary ENI.
      */
     public $Primary;
 
     /**
-     * @var string MAC地址。
+     * @var string MAC address
      */
     public $MacAddress;
 
     /**
-     * @var string 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
+     * @var string ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li>
      */
     public $State;
 
     /**
-     * @var array 内网IP信息。
+     * @var array Private IP information.
      */
     public $PrivateIpAddressSet;
 
     /**
-     * @var NetworkInterfaceAttachment 绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var NetworkInterfaceAttachment Bound CVM object.
+Note: This field may return null, indicating no valid value.
      */
     public $Attachment;
 
     /**
-     * @var string 可用区。
+     * @var string Availability Zone.
      */
     public $Zone;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
 
     /**
-     * @var array `IPv6`地址列表。
+     * @var array The `IPv6` address list.
      */
     public $Ipv6AddressSet;
 
     /**
-     * @var array 标签键值对。
+     * @var array Tag key-value pair.
      */
     public $TagSet;
 
@@ -155,27 +155,27 @@ class NetworkInterface extends AbstractModel
      */
     public $EniType;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
-     * @param string $NetworkInterfaceName 弹性网卡名称。
-     * @param string $NetworkInterfaceDescription 弹性网卡描述。
-     * @param string $SubnetId 子网实例ID。
-     * @param string $VpcId VPC实例ID。
-     * @param array $GroupSet 绑定的安全组。
-     * @param boolean $Primary 是否是主网卡。
-     * @param string $MacAddress MAC地址。
-     * @param string $State 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
-     * @param array $PrivateIpAddressSet 内网IP信息。
-     * @param NetworkInterfaceAttachment $Attachment 绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Zone 可用区。
-     * @param string $CreatedTime 创建时间。
-     * @param array $Ipv6AddressSet `IPv6`地址列表。
-     * @param array $TagSet 标签键值对。
+     * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
+     * @param string $NetworkInterfaceName ENI Name
+     * @param string $NetworkInterfaceDescription ENI description.
+     * @param string $SubnetId Subnet instance ID.
+     * @param string $VpcId VPC instance ID.
+     * @param array $GroupSet Bound security group.
+     * @param boolean $Primary Whether it is the primary ENI.
+     * @param string $MacAddress MAC address
+     * @param string $State ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li>
+     * @param array $PrivateIpAddressSet Private IP information.
+     * @param NetworkInterfaceAttachment $Attachment Bound CVM object.
+Note: This field may return null, indicating no valid value.
+     * @param string $Zone Availability Zone.
+     * @param string $CreatedTime Creation Time.
+     * @param array $Ipv6AddressSet The `IPv6` address list.
+     * @param array $TagSet Tag key-value pair.
      * @param integer $EniType The ENI type. 0: ENI. 1: EVM ENI.
      */
     function __construct()
@@ -183,7 +183,7 @@ class NetworkInterface extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

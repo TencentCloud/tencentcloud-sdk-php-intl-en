@@ -18,20 +18,20 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Total number of origin server regions
- * @method void setTotalCount(integer $TotalCount) 设置Total number of origin server regions
- * @method array getDestRegionSet() 获取List of origin server region details
- * @method void setDestRegionSet(array $DestRegionSet) 设置List of origin server region details
- * @method array getBandwidthUnitPrice() 获取Connection bandwidth price gradient
- * @method void setBandwidthUnitPrice(array $BandwidthUnitPrice) 设置Connection bandwidth price gradient
- * @method string getCurrency() 获取Currency type of bandwidth price:
+ * @method integer getTotalCount() Obtain Total number of origin server regions
+ * @method void setTotalCount(integer $TotalCount) Set Total number of origin server regions
+ * @method array getDestRegionSet() Obtain List of origin server region details
+ * @method void setDestRegionSet(array $DestRegionSet) Set List of origin server region details
+ * @method array getBandwidthUnitPrice() Obtain Connection bandwidth price gradient
+ * @method void setBandwidthUnitPrice(array $BandwidthUnitPrice) Set Connection bandwidth price gradient
+ * @method string getCurrency() Obtain Currency type of bandwidth price:
 CNY (Chinese Yuan)
 USD (United States Dollar)
- * @method void setCurrency(string $Currency) 设置Currency type of bandwidth price:
+ * @method void setCurrency(string $Currency) Set Currency type of bandwidth price:
 CNY (Chinese Yuan)
 USD (United States Dollar)
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -79,7 +79,7 @@ USD (United States Dollar)
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

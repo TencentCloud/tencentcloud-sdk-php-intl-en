@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method string getCcnName() 获取CCN名称，最大长度不能超过60个字节。
- * @method void setCcnName(string $CcnName) 设置CCN名称，最大长度不能超过60个字节。
- * @method string getCcnDescription() 获取CCN描述信息，最大长度不能超过100个字节。
- * @method void setCcnDescription(string $CcnDescription) 设置CCN描述信息，最大长度不能超过100个字节。
+ * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method string getCcnName() Obtain The name of the CCN. The maximum length is 60 characters.
+ * @method void setCcnName(string $CcnName) Set The name of the CCN. The maximum length is 60 characters.
+ * @method string getCcnDescription() Obtain The description of the CCN. The maximum length is 100 characters.
+ * @method void setCcnDescription(string $CcnDescription) Set The description of the CCN. The maximum length is 100 characters.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ModifyCcnAttributeRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public $CcnId;
 
     /**
-     * @var string CCN名称，最大长度不能超过60个字节。
+     * @var string The name of the CCN. The maximum length is 60 characters.
      */
     public $CcnName;
 
     /**
-     * @var string CCN描述信息，最大长度不能超过100个字节。
+     * @var string The description of the CCN. The maximum length is 100 characters.
      */
     public $CcnDescription;
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param string $CcnName CCN名称，最大长度不能超过60个字节。
-     * @param string $CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param string $CcnName The name of the CCN. The maximum length is 60 characters.
+     * @param string $CcnDescription The description of the CCN. The maximum length is 100 characters.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

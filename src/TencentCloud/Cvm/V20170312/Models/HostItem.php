@@ -18,33 +18,33 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Placement getPlacement() 获取Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
- * @method void setPlacement(Placement $Placement) 设置Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
- * @method string getHostId() 获取CDH instance ID
- * @method void setHostId(string $HostId) 设置CDH instance ID
- * @method string getHostType() 获取CDH instance type
- * @method void setHostType(string $HostType) 设置CDH instance type
- * @method string getHostName() 获取CDH instance name
- * @method void setHostName(string $HostName) 设置CDH instance name
- * @method string getHostChargeType() 获取Billing method of the CDH instance
- * @method void setHostChargeType(string $HostChargeType) 设置Billing method of the CDH instance
- * @method string getRenewFlag() 获取Auto renewal flag of the CDH instance
- * @method void setRenewFlag(string $RenewFlag) 设置Auto renewal flag of the CDH instance
- * @method string getCreatedTime() 获取Creation time of the CDH instance
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time of the CDH instance
- * @method string getExpiredTime() 获取Expiration time of the CDH instance
- * @method void setExpiredTime(string $ExpiredTime) 设置Expiration time of the CDH instance
- * @method array getInstanceIds() 获取List of IDs of CVM instances created on the CDH
- * @method void setInstanceIds(array $InstanceIds) 设置List of IDs of CVM instances created on the CDH
- * @method string getHostState() 获取CDH instance state
- * @method void setHostState(string $HostState) 设置CDH instance state
- * @method string getHostIp() 获取CDH instance IP
- * @method void setHostIp(string $HostIp) 设置CDH instance IP
- * @method HostResource getHostResource() 获取Resource information of the CDH instance
- * @method void setHostResource(HostResource $HostResource) 设置Resource information of the CDH instance
- * @method string getCageId() 获取Cage ID of the CDH instance. This parameter is only valid for CDH instances in the cages of finance availability zones.
+ * @method Placement getPlacement() Obtain Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+ * @method void setPlacement(Placement $Placement) Set Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+ * @method string getHostId() Obtain CDH instance ID
+ * @method void setHostId(string $HostId) Set CDH instance ID
+ * @method string getHostType() Obtain CDH instance type
+ * @method void setHostType(string $HostType) Set CDH instance type
+ * @method string getHostName() Obtain CDH instance name
+ * @method void setHostName(string $HostName) Set CDH instance name
+ * @method string getHostChargeType() Obtain Billing method of the CDH instance
+ * @method void setHostChargeType(string $HostChargeType) Set Billing method of the CDH instance
+ * @method string getRenewFlag() Obtain Auto renewal flag of the CDH instance
+ * @method void setRenewFlag(string $RenewFlag) Set Auto renewal flag of the CDH instance
+ * @method string getCreatedTime() Obtain Creation time of the CDH instance
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time of the CDH instance
+ * @method string getExpiredTime() Obtain Expiration time of the CDH instance
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time of the CDH instance
+ * @method array getInstanceIds() Obtain List of IDs of CVM instances created on the CDH
+ * @method void setInstanceIds(array $InstanceIds) Set List of IDs of CVM instances created on the CDH
+ * @method string getHostState() Obtain CDH instance state
+ * @method void setHostState(string $HostState) Set CDH instance state
+ * @method string getHostIp() Obtain CDH instance IP
+ * @method void setHostIp(string $HostIp) Set CDH instance IP
+ * @method HostResource getHostResource() Obtain Resource information of the CDH instance
+ * @method void setHostResource(HostResource $HostResource) Set Resource information of the CDH instance
+ * @method string getCageId() Obtain Cage ID of the CDH instance. This parameter is only valid for CDH instances in the cages of finance availability zones.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setCageId(string $CageId) 设置Cage ID of the CDH instance. This parameter is only valid for CDH instances in the cages of finance availability zones.
+ * @method void setCageId(string $CageId) Set Cage ID of the CDH instance. This parameter is only valid for CDH instances in the cages of finance availability zones.
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -139,7 +139,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

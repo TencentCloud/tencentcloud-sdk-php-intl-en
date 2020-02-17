@@ -18,24 +18,24 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getUin() 获取Sub-user user ID
- * @method void setUin(integer $Uin) 设置Sub-user user ID
- * @method string getName() 获取Sub-user username
- * @method void setName(string $Name) 设置Sub-user username
- * @method integer getUid() 获取Sub-user UID
- * @method void setUid(integer $Uid) 设置Sub-user UID
- * @method string getRemark() 获取Sub-user remarks
- * @method void setRemark(string $Remark) 设置Sub-user remarks
- * @method integer getConsoleLogin() 获取If sub-user can log in to the Console
- * @method void setConsoleLogin(integer $ConsoleLogin) 设置If sub-user can log in to the Console
- * @method string getPhoneNum() 获取Mobile number
- * @method void setPhoneNum(string $PhoneNum) 设置Mobile number
- * @method string getCountryCode() 获取Country/Area code
- * @method void setCountryCode(string $CountryCode) 设置Country/Area code
- * @method string getEmail() 获取Email
- * @method void setEmail(string $Email) 设置Email
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getUin() Obtain Sub-user user ID
+ * @method void setUin(integer $Uin) Set Sub-user user ID
+ * @method string getName() Obtain Sub-user username
+ * @method void setName(string $Name) Set Sub-user username
+ * @method integer getUid() Obtain Sub-user UID
+ * @method void setUid(integer $Uid) Set Sub-user UID
+ * @method string getRemark() Obtain Sub-user remarks
+ * @method void setRemark(string $Remark) Set Sub-user remarks
+ * @method integer getConsoleLogin() Obtain If sub-user can log in to the Console
+ * @method void setConsoleLogin(integer $ConsoleLogin) Set If sub-user can log in to the Console
+ * @method string getPhoneNum() Obtain Mobile number
+ * @method void setPhoneNum(string $PhoneNum) Set Mobile number
+ * @method string getCountryCode() Obtain Country/Area code
+ * @method void setCountryCode(string $CountryCode) Set Country/Area code
+ * @method string getEmail() Obtain Email
+ * @method void setEmail(string $Email) Set Email
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -103,7 +103,7 @@ class GetUserResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

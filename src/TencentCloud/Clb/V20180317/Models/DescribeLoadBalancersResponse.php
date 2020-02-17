@@ -18,12 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
- * @method void setTotalCount(integer $TotalCount) 设置Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
- * @method array getLoadBalancerSet() 获取Array of returned CLB instances.
- * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置Array of returned CLB instances.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
+ * @method array getLoadBalancerSet() Obtain Array of returned CLB instances.
+ * @method void setLoadBalancerSet(array $LoadBalancerSet) Set Array of returned CLB instances.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeLoadBalancersResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,32 +18,32 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID
- * @method string getLaunchConfigurationId() 获取Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置Launch configuration ID
- * @method string getLaunchConfigurationName() 获取Launch configuration name
- * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置Launch configuration name
- * @method string getLifeCycleState() 获取Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
- * @method void setLifeCycleState(string $LifeCycleState) 设置Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
- * @method string getHealthStatus() 获取Health status. Value range: HEALTHY, UNHEALTHY
- * @method void setHealthStatus(string $HealthStatus) 设置Health status. Value range: HEALTHY, UNHEALTHY
- * @method boolean getProtectedFromScaleIn() 获取Whether to add scale-in protection
- * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) 设置Whether to add scale-in protection
- * @method string getZone() 获取Availability zone
- * @method void setZone(string $Zone) 设置Availability zone
- * @method string getCreationType() 获取Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
- * @method void setCreationType(string $CreationType) 设置Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
- * @method string getAddTime() 获取Instance addition time
- * @method void setAddTime(string $AddTime) 设置Instance addition time
- * @method string getInstanceType() 获取Instance type
- * @method void setInstanceType(string $InstanceType) 设置Instance type
- * @method integer getVersionNumber() 获取Version number
- * @method void setVersionNumber(integer $VersionNumber) 设置Version number
- * @method string getAutoScalingGroupName() 获取Auto scaling group name
- * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置Auto scaling group name
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
+ * @method string getLaunchConfigurationName() Obtain Launch configuration name
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Launch configuration name
+ * @method string getLifeCycleState() Obtain Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+ * @method void setLifeCycleState(string $LifeCycleState) Set Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+ * @method string getHealthStatus() Obtain Health status. Value range: HEALTHY, UNHEALTHY
+ * @method void setHealthStatus(string $HealthStatus) Set Health status. Value range: HEALTHY, UNHEALTHY
+ * @method boolean getProtectedFromScaleIn() Obtain Whether to add scale-in protection
+ * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) Set Whether to add scale-in protection
+ * @method string getZone() Obtain Availability zone
+ * @method void setZone(string $Zone) Set Availability zone
+ * @method string getCreationType() Obtain Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
+ * @method void setCreationType(string $CreationType) Set Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
+ * @method string getAddTime() Obtain Instance addition time
+ * @method void setAddTime(string $AddTime) Set Instance addition time
+ * @method string getInstanceType() Obtain Instance type
+ * @method void setInstanceType(string $InstanceType) Set Instance type
+ * @method integer getVersionNumber() Obtain Version number
+ * @method void setVersionNumber(integer $VersionNumber) Set Version number
+ * @method string getAutoScalingGroupName() Obtain Auto scaling group name
+ * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name
  */
 
 /**
@@ -135,7 +135,7 @@ class Instance extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

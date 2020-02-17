@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getIpv6SubnetCidrBlockSet() 获取分配 `IPv6` 子网段列表。
- * @method void setIpv6SubnetCidrBlockSet(array $Ipv6SubnetCidrBlockSet) 设置分配 `IPv6` 子网段列表。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getIpv6SubnetCidrBlockSet() Obtain The assigned `IPv6` subnet IP range list.
+ * @method void setIpv6SubnetCidrBlockSet(array $Ipv6SubnetCidrBlockSet) Set The assigned `IPv6` subnet IP range list.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AssignIpv6SubnetCidrBlockResponse extends AbstractModel
 {
     /**
-     * @var array 分配 `IPv6` 子网段列表。
+     * @var array The assigned `IPv6` subnet IP range list.
      */
     public $Ipv6SubnetCidrBlockSet;
 
@@ -39,7 +39,7 @@ class AssignIpv6SubnetCidrBlockResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $Ipv6SubnetCidrBlockSet 分配 `IPv6` 子网段列表。
+     * @param array $Ipv6SubnetCidrBlockSet The assigned `IPv6` subnet IP range list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class AssignIpv6SubnetCidrBlockResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

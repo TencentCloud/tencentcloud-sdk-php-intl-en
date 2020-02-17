@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCertificateId() 获取Certificate ID.
- * @method void setCertificateId(string $CertificateId) 设置Certificate ID.
- * @method string getCertificateAlias() 获取Certificate name. Up to 50 characters.
- * @method void setCertificateAlias(string $CertificateAlias) 设置Certificate name. Up to 50 characters.
+ * @method string getCertificateId() Obtain Certificate ID.
+ * @method void setCertificateId(string $CertificateId) Set Certificate ID.
+ * @method string getCertificateAlias() Obtain Certificate name. Up to 50 characters.
+ * @method void setCertificateAlias(string $CertificateAlias) Set Certificate name. Up to 50 characters.
  */
 
 /**
@@ -47,7 +47,7 @@ class ModifyCertificateAttributesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

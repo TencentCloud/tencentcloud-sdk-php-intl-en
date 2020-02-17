@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method string getIpv6CidrBlock() 获取`IPv6`网段。形如：`3402:4e00:20:1000::/56`
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置`IPv6`网段。形如：`3402:4e00:20:1000::/56`
+ * @method string getVpcId() Obtain The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+ * @method string getIpv6CidrBlock() Obtain The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class UnassignIpv6CidrBlockRequest extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * @var string The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public $VpcId;
 
     /**
-     * @var string `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * @var string The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
      */
     public $Ipv6CidrBlock;
     /**
-     * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param string $Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * @param string $VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+     * @param string $Ipv6CidrBlock The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

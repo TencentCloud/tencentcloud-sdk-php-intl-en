@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRealServerName() 获取Origin server name
- * @method void setRealServerName(string $RealServerName) 设置Origin server name
- * @method string getRealServerId() 获取Origin server ID
- * @method void setRealServerId(string $RealServerId) 设置Origin server ID
+ * @method string getRealServerName() Obtain Origin server name
+ * @method void setRealServerName(string $RealServerName) Set Origin server name
+ * @method string getRealServerId() Obtain Origin server ID
+ * @method void setRealServerId(string $RealServerId) Set Origin server ID
  */
 
 /**
@@ -47,7 +47,7 @@ class ModifyRealServerNameRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取符合条件的对象数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的对象数。
- * @method array getCcnSet() 获取CCN对象。
- * @method void setCcnSet(array $CcnSet) 设置CCN对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The number of objects meeting the condition.
+ * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
+ * @method array getCcnSet() Obtain CCN object.
+ * @method void setCcnSet(array $CcnSet) Set CCN object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCcnsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的对象数。
+     * @var integer The number of objects meeting the condition.
      */
     public $TotalCount;
 
     /**
-     * @var array CCN对象。
+     * @var array CCN object.
      */
     public $CcnSet;
 
@@ -46,8 +46,8 @@ class DescribeCcnsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 符合条件的对象数。
-     * @param array $CcnSet CCN对象。
+     * @param integer $TotalCount The number of objects meeting the condition.
+     * @param array $CcnSet CCN object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeCcnsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

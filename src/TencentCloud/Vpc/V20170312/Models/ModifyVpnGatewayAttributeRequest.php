@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpnGatewayId() 获取VPN网关实例ID。
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- * @method string getVpnGatewayName() 获取VPN网关名称，最大长度不能超过60个字节。
- * @method void setVpnGatewayName(string $VpnGatewayName) 设置VPN网关名称，最大长度不能超过60个字节。
- * @method string getInstanceChargeType() 获取VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
+ * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
+ * @method string getVpnGatewayName() Obtain The VPN gateway name. The maximum length is 60 bytes.
+ * @method void setVpnGatewayName(string $VpnGatewayName) Set The VPN gateway name. The maximum length is 60 bytes.
+ * @method string getInstanceChargeType() Obtain VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
  */
 
 /**
@@ -32,30 +32,30 @@ use TencentCloud\Common\AbstractModel;
 class ModifyVpnGatewayAttributeRequest extends AbstractModel
 {
     /**
-     * @var string VPN网关实例ID。
+     * @var string The ID of the VPN gateway instance.
      */
     public $VpnGatewayId;
 
     /**
-     * @var string VPN网关名称，最大长度不能超过60个字节。
+     * @var string The VPN gateway name. The maximum length is 60 bytes.
      */
     public $VpnGatewayName;
 
     /**
-     * @var string VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
+     * @var string VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
      */
     public $InstanceChargeType;
     /**
-     * @param string $VpnGatewayId VPN网关实例ID。
-     * @param string $VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
-     * @param string $InstanceChargeType VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
+     * @param string $VpnGatewayId The ID of the VPN gateway instance.
+     * @param string $VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
+     * @param string $InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

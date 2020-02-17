@@ -18,16 +18,16 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPhone() 获取Mobile phone
- * @method void setPhone(integer $Phone) 设置Mobile phone
- * @method integer getToken() 获取Hard token
- * @method void setToken(integer $Token) 设置Hard token
- * @method integer getStoken() 获取Soft token
- * @method void setStoken(integer $Stoken) 设置Soft token
- * @method integer getWechat() 获取WeChat
- * @method void setWechat(integer $Wechat) 设置WeChat
- * @method integer getCustom() 获取Custom
- * @method void setCustom(integer $Custom) 设置Custom
+ * @method integer getPhone() Obtain Mobile phone
+ * @method void setPhone(integer $Phone) Set Mobile phone
+ * @method integer getToken() Obtain Hard token
+ * @method void setToken(integer $Token) Set Hard token
+ * @method integer getStoken() Obtain Soft token
+ * @method void setStoken(integer $Stoken) Set Soft token
+ * @method integer getWechat() Obtain WeChat
+ * @method void setWechat(integer $Wechat) Set WeChat
+ * @method integer getCustom() Obtain Custom
+ * @method void setCustom(integer $Custom) Set Custom
  */
 
 /**
@@ -71,7 +71,7 @@ class LoginActionFlag extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

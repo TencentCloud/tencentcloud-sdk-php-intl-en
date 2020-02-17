@@ -18,12 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Number of eligible scaling activities.
- * @method void setTotalCount(integer $TotalCount) 设置Number of eligible scaling activities.
- * @method array getActivitySet() 获取Information set of eligible scaling activities.
- * @method void setActivitySet(array $ActivitySet) 设置Information set of eligible scaling activities.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Number of eligible scaling activities.
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible scaling activities.
+ * @method array getActivitySet() Obtain Information set of eligible scaling activities.
+ * @method void setActivitySet(array $ActivitySet) Set Information set of eligible scaling activities.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeAutoScalingActivitiesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

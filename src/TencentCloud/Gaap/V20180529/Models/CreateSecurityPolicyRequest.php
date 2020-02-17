@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProxyId() 获取Acceleration connection ID
- * @method void setProxyId(string $ProxyId) 设置Acceleration connection ID
- * @method string getDefaultAction() 获取Default policy: ACCEPT or DROP
- * @method void setDefaultAction(string $DefaultAction) 设置Default policy: ACCEPT or DROP
+ * @method string getProxyId() Obtain Acceleration connection ID
+ * @method void setProxyId(string $ProxyId) Set Acceleration connection ID
+ * @method string getDefaultAction() Obtain Default policy: ACCEPT or DROP
+ * @method void setDefaultAction(string $DefaultAction) Set Default policy: ACCEPT or DROP
  */
 
 /**
@@ -47,7 +47,7 @@ class CreateSecurityPolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

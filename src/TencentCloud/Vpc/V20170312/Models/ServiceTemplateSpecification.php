@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getServiceId() 获取协议端口ID，例如：ppm-f5n1f8da。
- * @method void setServiceId(string $ServiceId) 设置协议端口ID，例如：ppm-f5n1f8da。
- * @method string getServiceGroupId() 获取协议端口组ID，例如：ppmg-f5n1f8da。
- * @method void setServiceGroupId(string $ServiceGroupId) 设置协议端口组ID，例如：ppmg-f5n1f8da。
+ * @method string getServiceId() Obtain Protocol port ID, such as `ppm-f5n1f8da`.
+ * @method void setServiceId(string $ServiceId) Set Protocol port ID, such as `ppm-f5n1f8da`.
+ * @method string getServiceGroupId() Obtain Protocol port group ID, such as `ppmg-f5n1f8da`.
+ * @method void setServiceGroupId(string $ServiceGroupId) Set Protocol port group ID, such as `ppmg-f5n1f8da`.
  */
 
 /**
- *协议端口模版
+ *Protocol port template
  */
 class ServiceTemplateSpecification extends AbstractModel
 {
     /**
-     * @var string 协议端口ID，例如：ppm-f5n1f8da。
+     * @var string Protocol port ID, such as `ppm-f5n1f8da`.
      */
     public $ServiceId;
 
     /**
-     * @var string 协议端口组ID，例如：ppmg-f5n1f8da。
+     * @var string Protocol port group ID, such as `ppmg-f5n1f8da`.
      */
     public $ServiceGroupId;
     /**
-     * @param string $ServiceId 协议端口ID，例如：ppm-f5n1f8da。
-     * @param string $ServiceGroupId 协议端口组ID，例如：ppmg-f5n1f8da。
+     * @param string $ServiceId Protocol port ID, such as `ppm-f5n1f8da`.
+     * @param string $ServiceGroupId Protocol port group ID, such as `ppmg-f5n1f8da`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

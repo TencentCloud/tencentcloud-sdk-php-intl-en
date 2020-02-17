@@ -18,14 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取Policy ID
- * @method void setPolicyId(integer $PolicyId) 设置Policy ID
- * @method string getPolicyName() 获取Policy name
- * @method void setPolicyName(string $PolicyName) 设置Policy name
- * @method string getDescription() 获取Policy description
- * @method void setDescription(string $Description) 设置Policy description
- * @method string getPolicyDocument() 获取Policy document
- * @method void setPolicyDocument(string $PolicyDocument) 设置Policy document
+ * @method integer getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
+ * @method string getPolicyName() Obtain Policy name
+ * @method void setPolicyName(string $PolicyName) Set Policy name
+ * @method string getDescription() Obtain Policy description
+ * @method void setDescription(string $Description) Set Policy description
+ * @method string getPolicyDocument() Obtain Policy document
+ * @method void setPolicyDocument(string $PolicyDocument) Set Policy document
  */
 
 /**
@@ -63,7 +63,7 @@ class UpdatePolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSnapshotId() 获取Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
- * @method void setSnapshotId(string $SnapshotId) 设置Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
- * @method string getSnapshotName() 获取Name of new snapshot. Maximum length is 60 bytes.
- * @method void setSnapshotName(string $SnapshotName) 设置Name of new snapshot. Maximum length is 60 bytes.
- * @method boolean getIsPermanent() 获取The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
- * @method void setIsPermanent(boolean $IsPermanent) 设置The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+ * @method string getSnapshotId() Obtain Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+ * @method string getSnapshotName() Obtain Name of new snapshot. Maximum length is 60 bytes.
+ * @method void setSnapshotName(string $SnapshotName) Set Name of new snapshot. Maximum length is 60 bytes.
+ * @method boolean getIsPermanent() Obtain The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+ * @method void setIsPermanent(boolean $IsPermanent) Set The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
  */
 
 /**
@@ -55,7 +55,7 @@ class ModifySnapshotAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

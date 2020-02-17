@@ -18,8 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getGroupId() 获取Connection group ID of the domain name to be enabled.
- * @method void setGroupId(string $GroupId) 设置Connection group ID of the domain name to be enabled.
+ * @method string getGroupId() Obtain Connection group ID of the domain name to be enabled.
+ * @method void setGroupId(string $GroupId) Set Connection group ID of the domain name to be enabled.
  */
 
 /**
@@ -39,7 +39,7 @@ class CreateProxyGroupDomainRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

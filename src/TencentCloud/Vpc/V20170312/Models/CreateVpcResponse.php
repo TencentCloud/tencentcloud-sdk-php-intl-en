@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Vpc getVpc() 获取Vpc对象。
- * @method void setVpc(Vpc $Vpc) 设置Vpc对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method Vpc getVpc() Obtain The VPC object.
+ * @method void setVpc(Vpc $Vpc) Set The VPC object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateVpcResponse extends AbstractModel
 {
     /**
-     * @var Vpc Vpc对象。
+     * @var Vpc The VPC object.
      */
     public $Vpc;
 
@@ -39,7 +39,7 @@ class CreateVpcResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param Vpc $Vpc Vpc对象。
+     * @param Vpc $Vpc The VPC object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateVpcResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

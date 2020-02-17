@@ -18,22 +18,22 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKeyId() 获取Key pair `ID`, the unique identifier of a key pair.
- * @method void setKeyId(string $KeyId) 设置Key pair `ID`, the unique identifier of a key pair.
- * @method string getKeyName() 获取Key pair name.
- * @method void setKeyName(string $KeyName) 设置Key pair name.
- * @method integer getProjectId() 获取`ID` of the project to which a key pair belongs.
- * @method void setProjectId(integer $ProjectId) 设置`ID` of the project to which a key pair belongs.
- * @method string getDescription() 获取Key pair description.
- * @method void setDescription(string $Description) 设置Key pair description.
- * @method string getPublicKey() 获取Content of public key in a key pair.
- * @method void setPublicKey(string $PublicKey) 设置Content of public key in a key pair.
- * @method string getPrivateKey() 获取Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
- * @method void setPrivateKey(string $PrivateKey) 设置Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
- * @method array getAssociatedInstanceIds() 获取`ID` list of instances associated with a key.
- * @method void setAssociatedInstanceIds(array $AssociatedInstanceIds) 设置`ID` list of instances associated with a key.
- * @method string getCreatedTime() 获取Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method string getKeyId() Obtain Key pair `ID`, the unique identifier of a key pair.
+ * @method void setKeyId(string $KeyId) Set Key pair `ID`, the unique identifier of a key pair.
+ * @method string getKeyName() Obtain Key pair name.
+ * @method void setKeyName(string $KeyName) Set Key pair name.
+ * @method integer getProjectId() Obtain `ID` of the project to which a key pair belongs.
+ * @method void setProjectId(integer $ProjectId) Set `ID` of the project to which a key pair belongs.
+ * @method string getDescription() Obtain Key pair description.
+ * @method void setDescription(string $Description) Set Key pair description.
+ * @method string getPublicKey() Obtain Content of public key in a key pair.
+ * @method void setPublicKey(string $PublicKey) Set Content of public key in a key pair.
+ * @method string getPrivateKey() Obtain Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+ * @method void setPrivateKey(string $PrivateKey) Set Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+ * @method array getAssociatedInstanceIds() Obtain `ID` list of instances associated with a key.
+ * @method void setAssociatedInstanceIds(array $AssociatedInstanceIds) Set `ID` list of instances associated with a key.
+ * @method string getCreatedTime() Obtain Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
  */
 
 /**
@@ -95,7 +95,7 @@ class KeyPair extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

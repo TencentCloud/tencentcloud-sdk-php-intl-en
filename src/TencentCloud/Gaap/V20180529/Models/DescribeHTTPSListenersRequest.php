@@ -18,20 +18,20 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProxyId() 获取Filter condition. Connection ID.
- * @method void setProxyId(string $ProxyId) 设置Filter condition. Connection ID.
- * @method string getListenerId() 获取Filter condition. Exact query by listener IDs.
- * @method void setListenerId(string $ListenerId) 设置Filter condition. Exact query by listener IDs.
- * @method string getListenerName() 获取Filter condition. Exact query by listener names.
- * @method void setListenerName(string $ListenerName) 设置Filter condition. Exact query by listener names.
- * @method integer getPort() 获取Filter condition. Exact query by listener ports.
- * @method void setPort(integer $Port) 设置Filter condition. Exact query by listener ports.
- * @method integer getOffset() 获取Offset. The default value is 0
- * @method void setOffset(integer $Offset) 设置Offset. The default value is 0
- * @method integer getLimit() 获取Quantity limit. The default value is 20.
- * @method void setLimit(integer $Limit) 设置Quantity limit. The default value is 20.
- * @method string getSearchValue() 获取Filter condition. It supports fuzzy query by ports or listener names.
- * @method void setSearchValue(string $SearchValue) 设置Filter condition. It supports fuzzy query by ports or listener names.
+ * @method string getProxyId() Obtain Filter condition. Connection ID.
+ * @method void setProxyId(string $ProxyId) Set Filter condition. Connection ID.
+ * @method string getListenerId() Obtain Filter condition. Exact query by listener IDs.
+ * @method void setListenerId(string $ListenerId) Set Filter condition. Exact query by listener IDs.
+ * @method string getListenerName() Obtain Filter condition. Exact query by listener names.
+ * @method void setListenerName(string $ListenerName) Set Filter condition. Exact query by listener names.
+ * @method integer getPort() Obtain Filter condition. Exact query by listener ports.
+ * @method void setPort(integer $Port) Set Filter condition. Exact query by listener ports.
+ * @method integer getOffset() Obtain Offset. The default value is 0
+ * @method void setOffset(integer $Offset) Set Offset. The default value is 0
+ * @method integer getLimit() Obtain Quantity limit. The default value is 20.
+ * @method void setLimit(integer $Limit) Set Quantity limit. The default value is 20.
+ * @method string getSearchValue() Obtain Filter condition. It supports fuzzy query by ports or listener names.
+ * @method void setSearchValue(string $SearchValue) Set Filter condition. It supports fuzzy query by ports or listener names.
  */
 
 /**
@@ -87,7 +87,7 @@ class DescribeHTTPSListenersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Number of eligible launch configurations.
- * @method void setTotalCount(integer $TotalCount) 设置Number of eligible launch configurations.
- * @method array getLaunchConfigurationSet() 获取List of launch configuration details.
- * @method void setLaunchConfigurationSet(array $LaunchConfigurationSet) 设置List of launch configuration details.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Number of eligible launch configurations.
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible launch configurations.
+ * @method array getLaunchConfigurationSet() Obtain List of launch configuration details.
+ * @method void setLaunchConfigurationSet(array $LaunchConfigurationSet) Set List of launch configuration details.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeLaunchConfigurationsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

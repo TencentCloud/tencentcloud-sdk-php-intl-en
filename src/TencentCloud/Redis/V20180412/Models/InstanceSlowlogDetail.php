@@ -18,16 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDuration() 获取Slow log duration
- * @method void setDuration(integer $Duration) 设置Slow log duration
- * @method string getClient() 获取Client address
- * @method void setClient(string $Client) 设置Client address
- * @method string getCommand() 获取Command
- * @method void setCommand(string $Command) 设置Command
- * @method string getCommandLine() 获取Command line details
- * @method void setCommandLine(string $CommandLine) 设置Command line details
- * @method string getExecuteTime() 获取Execution duration
- * @method void setExecuteTime(string $ExecuteTime) 设置Execution duration
+ * @method integer getDuration() Obtain Slow log duration
+ * @method void setDuration(integer $Duration) Set Slow log duration
+ * @method string getClient() Obtain Client address
+ * @method void setClient(string $Client) Set Client address
+ * @method string getCommand() Obtain Command
+ * @method void setCommand(string $Command) Set Command
+ * @method string getCommandLine() Obtain Command line details
+ * @method void setCommandLine(string $CommandLine) Set Command line details
+ * @method string getExecuteTime() Obtain Execution duration
+ * @method void setExecuteTime(string $ExecuteTime) Set Execution duration
  */
 
 /**
@@ -71,7 +71,7 @@ class InstanceSlowlogDetail extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -1,0 +1,121 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cdn\V20180606\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getCacheType() Obtain Rule types:
+all: all files take effect
+file: specified file suffixes take effect
+directory: specified paths take effect
+path: specified absolute paths take effect
+index: home page
+ * @method void setCacheType(string $CacheType) Set Rule types:
+all: all files take effect
+file: specified file suffixes take effect
+directory: specified paths take effect
+path: specified absolute paths take effect
+index: home page
+ * @method array getCacheContents() Obtain Matching content under the corresponding types for CacheType
+For "all", enter an asterisk (*).
+For "file", enter the suffix, such as jpg, txt.
+For "directory", enter the path, such as /xxx/test/.
+For "path", enter the corresponding absolute path, such as /xxx/test.html.
+For "index", enter a backslash (/).
+ * @method void setCacheContents(array $CacheContents) Set Matching content under the corresponding types for CacheType
+For "all", enter an asterisk (*).
+For "file", enter the suffix, such as jpg, txt.
+For "directory", enter the path, such as /xxx/test/.
+For "path", enter the corresponding absolute path, such as /xxx/test.html.
+For "index", enter a backslash (/).
+ * @method integer getCacheTime() Obtain Cache expiration time settings
+Unit: second. The maximum value is 365 days.
+ * @method void setCacheTime(integer $CacheTime) Set Cache expiration time settings
+Unit: second. The maximum value is 365 days.
+ */
+
+/**
+ *Cache expiration rules configuration
+ */
+class SimpleCacheRule extends AbstractModel
+{
+    /**
+     * @var string Rule types:
+all: all files take effect
+file: specified file suffixes take effect
+directory: specified paths take effect
+path: specified absolute paths take effect
+index: home page
+     */
+    public $CacheType;
+
+    /**
+     * @var array Matching content under the corresponding types for CacheType
+For "all", enter an asterisk (*).
+For "file", enter the suffix, such as jpg, txt.
+For "directory", enter the path, such as /xxx/test/.
+For "path", enter the corresponding absolute path, such as /xxx/test.html.
+For "index", enter a backslash (/).
+     */
+    public $CacheContents;
+
+    /**
+     * @var integer Cache expiration time settings
+Unit: second. The maximum value is 365 days.
+     */
+    public $CacheTime;
+    /**
+     * @param string $CacheType Rule types:
+all: all files take effect
+file: specified file suffixes take effect
+directory: specified paths take effect
+path: specified absolute paths take effect
+index: home page
+     * @param array $CacheContents Matching content under the corresponding types for CacheType
+For "all", enter an asterisk (*).
+For "file", enter the suffix, such as jpg, txt.
+For "directory", enter the path, such as /xxx/test/.
+For "path", enter the corresponding absolute path, such as /xxx/test.html.
+For "index", enter a backslash (/).
+     * @param integer $CacheTime Cache expiration time settings
+Unit: second. The maximum value is 365 days.
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("CacheType",$param) and $param["CacheType"] !== null) {
+            $this->CacheType = $param["CacheType"];
+        }
+
+        if (array_key_exists("CacheContents",$param) and $param["CacheContents"] !== null) {
+            $this->CacheContents = $param["CacheContents"];
+        }
+
+        if (array_key_exists("CacheTime",$param) and $param["CacheTime"] !== null) {
+            $this->CacheTime = $param["CacheTime"];
+        }
+    }
+}

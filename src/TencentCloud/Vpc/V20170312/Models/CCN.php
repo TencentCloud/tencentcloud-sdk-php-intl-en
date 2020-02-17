@@ -18,67 +18,67 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取云联网唯一ID
- * @method void setCcnId(string $CcnId) 设置云联网唯一ID
- * @method string getCcnName() 获取云联网名称
- * @method void setCcnName(string $CcnName) 设置云联网名称
- * @method string getCcnDescription() 获取云联网描述信息
- * @method void setCcnDescription(string $CcnDescription) 设置云联网描述信息
- * @method integer getInstanceCount() 获取关联实例数量
- * @method void setInstanceCount(integer $InstanceCount) 设置关联实例数量
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getState() 获取实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
- * @method void setState(string $State) 设置实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
- * @method string getQosLevel() 获取实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
- * @method void setQosLevel(string $QosLevel) 设置实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
- * @method string getInstanceChargeType() 获取The billing method. POSTPAID indicates postpaid.
+ * @method string getCcnId() Obtain The unique ID of the CCN
+ * @method void setCcnId(string $CcnId) Set The unique ID of the CCN
+ * @method string getCcnName() Obtain The name of the CCN
+ * @method void setCcnName(string $CcnName) Set The name of the CCN
+ * @method string getCcnDescription() Obtain The detailed information of the CCN
+ * @method void setCcnDescription(string $CcnDescription) Set The detailed information of the CCN
+ * @method integer getInstanceCount() Obtain The number of associated instances
+ * @method void setInstanceCount(integer $InstanceCount) Set The number of associated instances
+ * @method string getCreateTime() Obtain The creation time
+ * @method void setCreateTime(string $CreateTime) Set The creation time
+ * @method string getState() Obtain The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
+ * @method void setState(string $State) Set The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
+ * @method string getQosLevel() Obtain The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+ * @method void setQosLevel(string $QosLevel) Set The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+ * @method string getInstanceChargeType() Obtain The billing method. POSTPAID indicates postpaid.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置The billing method. POSTPAID indicates postpaid.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set The billing method. POSTPAID indicates postpaid.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBandwidthLimitType() 获取限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBandwidthLimitType() Obtain The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value.
+ * @method void setBandwidthLimitType(string $BandwidthLimitType) Set The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value.
  */
 
 /**
- *云联网（CCN）对象
+ *The CCN object
  */
 class CCN extends AbstractModel
 {
     /**
-     * @var string 云联网唯一ID
+     * @var string The unique ID of the CCN
      */
     public $CcnId;
 
     /**
-     * @var string 云联网名称
+     * @var string The name of the CCN
      */
     public $CcnName;
 
     /**
-     * @var string 云联网描述信息
+     * @var string The detailed information of the CCN
      */
     public $CcnDescription;
 
     /**
-     * @var integer 关联实例数量
+     * @var integer The number of associated instances
      */
     public $InstanceCount;
 
     /**
-     * @var string 创建时间
+     * @var string The creation time
      */
     public $CreateTime;
 
     /**
-     * @var string 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+     * @var string The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
      */
     public $State;
 
     /**
-     * @var string 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * @var string The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
      */
     public $QosLevel;
 
@@ -89,29 +89,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceChargeType;
 
     /**
-     * @var string 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value.
      */
     public $BandwidthLimitType;
     /**
-     * @param string $CcnId 云联网唯一ID
-     * @param string $CcnName 云联网名称
-     * @param string $CcnDescription 云联网描述信息
-     * @param integer $InstanceCount 关联实例数量
-     * @param string $CreateTime 创建时间
-     * @param string $State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
-     * @param string $QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * @param string $CcnId The unique ID of the CCN
+     * @param string $CcnName The name of the CCN
+     * @param string $CcnDescription The detailed information of the CCN
+     * @param integer $InstanceCount The number of associated instances
+     * @param string $CreateTime The creation time
+     * @param string $State The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
+     * @param string $QosLevel The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
      * @param string $InstanceChargeType The billing method. POSTPAID indicates postpaid.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BandwidthLimitType The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

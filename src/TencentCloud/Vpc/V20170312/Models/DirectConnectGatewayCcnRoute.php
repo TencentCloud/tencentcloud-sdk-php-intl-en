@@ -18,44 +18,44 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRouteId() 获取路由ID。
- * @method void setRouteId(string $RouteId) 设置路由ID。
- * @method string getDestinationCidrBlock() 获取IDC网段。
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置IDC网段。
- * @method array getASPath() 获取`BGP`的`AS-Path`属性。
- * @method void setASPath(array $ASPath) 设置`BGP`的`AS-Path`属性。
+ * @method string getRouteId() Obtain Route ID.
+ * @method void setRouteId(string $RouteId) Set Route ID.
+ * @method string getDestinationCidrBlock() Obtain IDC IP range.
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set IDC IP range.
+ * @method array getASPath() Obtain The `AS-Path` attribute of `BGP`.
+ * @method void setASPath(array $ASPath) Set The `AS-Path` attribute of `BGP`.
  */
 
 /**
- *专线网关云联网路由（IDC网段）对象
+ *The object of the CCN route (IDC IP range) of the Direct Connect gateway
  */
 class DirectConnectGatewayCcnRoute extends AbstractModel
 {
     /**
-     * @var string 路由ID。
+     * @var string Route ID.
      */
     public $RouteId;
 
     /**
-     * @var string IDC网段。
+     * @var string IDC IP range.
      */
     public $DestinationCidrBlock;
 
     /**
-     * @var array `BGP`的`AS-Path`属性。
+     * @var array The `AS-Path` attribute of `BGP`.
      */
     public $ASPath;
     /**
-     * @param string $RouteId 路由ID。
-     * @param string $DestinationCidrBlock IDC网段。
-     * @param array $ASPath `BGP`的`AS-Path`属性。
+     * @param string $RouteId Route ID.
+     * @param string $DestinationCidrBlock IDC IP range.
+     * @param array $ASPath The `AS-Path` attribute of `BGP`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

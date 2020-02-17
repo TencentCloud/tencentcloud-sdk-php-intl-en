@@ -18,16 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcName() 获取vpc名称，最大长度不能超过60个字节。
- * @method void setVpcName(string $VpcName) 设置vpc名称，最大长度不能超过60个字节。
- * @method string getCidrBlock() 获取VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
- * @method void setCidrBlock(string $CidrBlock) 设置VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
- * @method string getEnableMulticast() 获取是否开启组播。true: 开启, false: 不开启。
- * @method void setEnableMulticast(string $EnableMulticast) 设置是否开启组播。true: 开启, false: 不开启。
- * @method array getDnsServers() 获取DNS地址，最多支持4个
- * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个
- * @method string getDomainName() 获取域名
- * @method void setDomainName(string $DomainName) 设置域名
+ * @method string getVpcName() Obtain The VPC name. The maximum length is 60 bytes.
+ * @method void setVpcName(string $VpcName) Set The VPC name. The maximum length is 60 bytes.
+ * @method string getCidrBlock() Obtain VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+ * @method void setCidrBlock(string $CidrBlock) Set VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+ * @method string getEnableMulticast() Obtain Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
+ * @method void setEnableMulticast(string $EnableMulticast) Set Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
+ * @method array getDnsServers() Obtain The DNS address. A maximum of 4 addresses is supported.
+ * @method void setDnsServers(array $DnsServers) Set The DNS address. A maximum of 4 addresses is supported.
+ * @method string getDomainName() Obtain Domain name
+ * @method void setDomainName(string $DomainName) Set Domain name
  */
 
 /**
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateVpcRequest extends AbstractModel
 {
     /**
-     * @var string vpc名称，最大长度不能超过60个字节。
+     * @var string The VPC name. The maximum length is 60 bytes.
      */
     public $VpcName;
 
@@ -46,32 +46,32 @@ class CreateVpcRequest extends AbstractModel
     public $CidrBlock;
 
     /**
-     * @var string 是否开启组播。true: 开启, false: 不开启。
+     * @var string Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
      */
     public $EnableMulticast;
 
     /**
-     * @var array DNS地址，最多支持4个
+     * @var array The DNS address. A maximum of 4 addresses is supported.
      */
     public $DnsServers;
 
     /**
-     * @var string 域名
+     * @var string Domain name
      */
     public $DomainName;
     /**
-     * @param string $VpcName vpc名称，最大长度不能超过60个字节。
+     * @param string $VpcName The VPC name. The maximum length is 60 bytes.
      * @param string $CidrBlock VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
-     * @param string $EnableMulticast 是否开启组播。true: 开启, false: 不开启。
-     * @param array $DnsServers DNS地址，最多支持4个
-     * @param string $DomainName 域名
+     * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
+     * @param array $DnsServers The DNS address. A maximum of 4 addresses is supported.
+     * @param string $DomainName Domain name
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

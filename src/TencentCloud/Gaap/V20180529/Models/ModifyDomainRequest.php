@@ -18,33 +18,33 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Layer-7 listener ID
- * @method void setListenerId(string $ListenerId) 设置Layer-7 listener ID
- * @method string getOldDomain() 获取Original domain name information
- * @method void setOldDomain(string $OldDomain) 设置Original domain name information
- * @method string getNewDomain() 获取New domain name information
- * @method void setNewDomain(string $NewDomain) 设置New domain name information
- * @method string getCertificateId() 获取Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+ * @method string getListenerId() Obtain Layer-7 listener ID
+ * @method void setListenerId(string $ListenerId) Set Layer-7 listener ID
+ * @method string getOldDomain() Obtain Original domain name information
+ * @method void setOldDomain(string $OldDomain) Set Original domain name information
+ * @method string getNewDomain() Obtain New domain name information
+ * @method void setNewDomain(string $NewDomain) Set New domain name information
+ * @method string getCertificateId() Obtain Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
- * @method void setCertificateId(string $CertificateId) 设置Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+ * @method void setCertificateId(string $CertificateId) Set Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
- * @method string getClientCertificateId() 获取Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+ * @method string getClientCertificateId() Obtain Client CA certificate ID. It’s only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.
- * @method void setClientCertificateId(string $ClientCertificateId) 设置Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+ * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate ID. It’s only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.
- * @method array getPolyClientCertificateIds() 获取Client CA certificate ID. It is only applicable to connections on version 3.0, where:
+ * @method array getPolyClientCertificateIds() Obtain Client CA certificate ID. It is only applicable to connections on version 3.0, where:
 If this field and `ClientCertificateId` are not included, the original certificate will be used;
 If this field is included, and ClientCertificateId=default, then the listener certificate will be used;
 In other cases, the certificate specified by `ClientCertificateId` or `PolyClientCertificateIds` will be used.
- * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置Client CA certificate ID. It is only applicable to connections on version 3.0, where:
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set Client CA certificate ID. It is only applicable to connections on version 3.0, where:
 If this field and `ClientCertificateId` are not included, the original certificate will be used;
 If this field is included, and ClientCertificateId=default, then the listener certificate will be used;
 In other cases, the certificate specified by `ClientCertificateId` or `PolyClientCertificateIds` will be used.
@@ -115,7 +115,7 @@ In other cases, the certificate specified by `ClientCertificateId` or `PolyClien
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

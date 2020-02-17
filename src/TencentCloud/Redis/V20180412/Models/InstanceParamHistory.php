@@ -18,16 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getParamName() 获取Parameter name
- * @method void setParamName(string $ParamName) 设置Parameter name
- * @method string getPreValue() 获取Value before modification
- * @method void setPreValue(string $PreValue) 设置Value before modification
- * @method string getNewValue() 获取Value after modification
- * @method void setNewValue(string $NewValue) 设置Value after modification
- * @method integer getStatus() 获取Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
- * @method void setStatus(integer $Status) 设置Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
- * @method string getModifyTime() 获取Modification time
- * @method void setModifyTime(string $ModifyTime) 设置Modification time
+ * @method string getParamName() Obtain Parameter name
+ * @method void setParamName(string $ParamName) Set Parameter name
+ * @method string getPreValue() Obtain Value before modification
+ * @method void setPreValue(string $PreValue) Set Value before modification
+ * @method string getNewValue() Obtain Value after modification
+ * @method void setNewValue(string $NewValue) Set Value after modification
+ * @method integer getStatus() Obtain Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+ * @method void setStatus(integer $Status) Set Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+ * @method string getModifyTime() Obtain Modification time
+ * @method void setModifyTime(string $ModifyTime) Set Modification time
  */
 
 /**
@@ -71,7 +71,7 @@ class InstanceParamHistory extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

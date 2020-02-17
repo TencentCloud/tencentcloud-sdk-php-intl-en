@@ -18,17 +18,17 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取Instance ID
- * @method void setJobId(string $JobId) 设置Instance ID
- * @method string getTaskName() 获取Task name
- * @method void setTaskName(string $TaskName) 设置Task name
- * @method integer getOffset() 获取Offset
- * @method void setOffset(integer $Offset) 设置Offset
- * @method integer getLimit() 获取Number of returned results. Default value: 100. Maximum value: 1,000.
- * @method void setLimit(integer $Limit) 设置Number of returned results. Default value: 100. Maximum value: 1,000.
- * @method array getFilters() 获取Filter as detailed below:
+ * @method string getJobId() Obtain Instance ID
+ * @method void setJobId(string $JobId) Set Instance ID
+ * @method string getTaskName() Obtain Task name
+ * @method void setTaskName(string $TaskName) Set Task name
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain Number of returned results. Default value: 100. Maximum value: 1,000.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 100. Maximum value: 1,000.
+ * @method array getFilters() Obtain Filter as detailed below:
 <li> task-instance-type - String - Required: No - (Filter) Filter by task instance state. (SUBMITTED: submitted; PENDING: pending; RUNNABLE: runnable; STARTING: starting; RUNNING: running; SUCCEED: succeeded; FAILED: failed; FAILED_INTERRUPTED: instance retained after failure).</li>
- * @method void setFilters(array $Filters) 设置Filter as detailed below:
+ * @method void setFilters(array $Filters) Set Filter as detailed below:
 <li> task-instance-type - String - Required: No - (Filter) Filter by task instance state. (SUBMITTED: submitted; PENDING: pending; RUNNABLE: runnable; STARTING: starting; RUNNING: running; SUCCEED: succeeded; FAILED: failed; FAILED_INTERRUPTED: instance retained after failure).</li>
  */
 
@@ -75,7 +75,7 @@ class DescribeTaskRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

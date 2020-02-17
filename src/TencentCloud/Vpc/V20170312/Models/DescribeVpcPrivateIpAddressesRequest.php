@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method array getPrivateIpAddresses() 获取内网`IP`地址列表，批量查询单次请求最多支持`10`个。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+ * @method string getVpcId() Obtain The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+ * @method array getPrivateIpAddresses() Obtain The private `IP` address list. Each request supports a maximum of `10` batch querying.
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The private `IP` address list. Each request supports a maximum of `10` batch querying.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpcPrivateIpAddressesRequest extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * @var string The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public $VpcId;
 
     /**
-     * @var array 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * @var array The private `IP` address list. Each request supports a maximum of `10` batch querying.
      */
     public $PrivateIpAddresses;
     /**
-     * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param array $PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * @param string $VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+     * @param array $PrivateIpAddresses The private `IP` address list. Each request supports a maximum of `10` batch querying.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

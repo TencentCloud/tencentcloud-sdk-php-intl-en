@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRegion() 获取Region of the target, such as ap-guangzhou
- * @method void setRegion(string $Region) 设置Region of the target, such as ap-guangzhou
- * @method string getVpcId() 获取Network of the target, which is in the format of vpc-abcd1234 for VPC or 0 for basic network
- * @method void setVpcId(string $VpcId) 设置Network of the target, which is in the format of vpc-abcd1234 for VPC or 0 for basic network
+ * @method string getRegion() Obtain Region of the target, such as ap-guangzhou
+ * @method void setRegion(string $Region) Set Region of the target, such as ap-guangzhou
+ * @method string getVpcId() Obtain Network of the target, which is in the format of vpc-abcd1234 for VPC or 0 for basic network
+ * @method void setVpcId(string $VpcId) Set Network of the target, which is in the format of vpc-abcd1234 for VPC or 0 for basic network
  */
 
 /**
@@ -47,7 +47,7 @@ class TargetRegionInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

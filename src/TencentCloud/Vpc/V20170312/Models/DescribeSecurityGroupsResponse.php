@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSecurityGroupSet() 获取安全组对象。
- * @method void setSecurityGroupSet(array $SecurityGroupSet) 设置安全组对象。
- * @method integer getTotalCount() 获取符合条件的实例数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getSecurityGroupSet() Obtain Security group object.
+ * @method void setSecurityGroupSet(array $SecurityGroupSet) Set Security group object.
+ * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
+ * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityGroupsResponse extends AbstractModel
 {
     /**
-     * @var array 安全组对象。
+     * @var array Security group object.
      */
     public $SecurityGroupSet;
 
     /**
-     * @var integer 符合条件的实例数量。
+     * @var integer The number of instances meeting the filter condition.
      */
     public $TotalCount;
 
@@ -46,8 +46,8 @@ class DescribeSecurityGroupsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $SecurityGroupSet 安全组对象。
-     * @param integer $TotalCount 符合条件的实例数量。
+     * @param array $SecurityGroupSet Security group object.
+     * @param integer $TotalCount The number of instances meeting the filter condition.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeSecurityGroupsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,13 +18,13 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSSLMode() 获取Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
- * @method void setSSLMode(string $SSLMode) 设置Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
- * @method string getCertId() 获取Server certificate ID.
- * @method void setCertId(string $CertId) 设置Server certificate ID.
- * @method string getCertCaId() 获取Client certificate ID.
+ * @method string getSSLMode() Obtain Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+ * @method void setSSLMode(string $SSLMode) Set Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+ * @method string getCertId() Obtain Server certificate ID.
+ * @method void setCertId(string $CertId) Set Server certificate ID.
+ * @method string getCertCaId() Obtain Client certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertCaId(string $CertCaId) 设置Client certificate ID.
+ * @method void setCertCaId(string $CertCaId) Set Client certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -59,7 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

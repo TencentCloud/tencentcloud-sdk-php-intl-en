@@ -18,22 +18,22 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getGroupId() 获取Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method void setGroupId(string $GroupId) 设置Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method string getProxyId() 获取Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method void setProxyId(string $ProxyId) 设置Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method string getListenerName() 获取Listener name
- * @method void setListenerName(string $ListenerName) 设置Listener name
- * @method string getScheduler() 获取Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method void setScheduler(string $Scheduler) 设置Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method integer getDelayLoop() 获取Time interval of origin server health check (unit: seconds). Value range: [5, 300].
- * @method void setDelayLoop(integer $DelayLoop) 设置Time interval of origin server health check (unit: seconds). Value range: [5, 300].
- * @method integer getConnectTimeout() 获取Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
- * @method void setConnectTimeout(integer $ConnectTimeout) 设置Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
- * @method integer getHealthCheck() 获取Whether to enable health check. 1: enable; 0: disable.
- * @method void setHealthCheck(integer $HealthCheck) 设置Whether to enable health check. 1: enable; 0: disable.
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getGroupId() Obtain Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method void setGroupId(string $GroupId) Set Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method string getProxyId() Obtain Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method void setProxyId(string $ProxyId) Set Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method string getScheduler() Obtain Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method void setScheduler(string $Scheduler) Set Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method integer getDelayLoop() Obtain Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+ * @method void setDelayLoop(integer $DelayLoop) Set Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+ * @method integer getConnectTimeout() Obtain Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+ * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+ * @method integer getHealthCheck() Obtain Whether to enable health check. 1: enable; 0: disable.
+ * @method void setHealthCheck(integer $HealthCheck) Set Whether to enable health check. 1: enable; 0: disable.
  */
 
 /**
@@ -95,7 +95,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

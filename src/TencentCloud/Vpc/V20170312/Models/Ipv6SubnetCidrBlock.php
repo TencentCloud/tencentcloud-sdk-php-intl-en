@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSubnetId() 获取子网实例`ID`。形如：`subnet-pxir56ns`。
- * @method void setSubnetId(string $SubnetId) 设置子网实例`ID`。形如：`subnet-pxir56ns`。
- * @method string getIpv6CidrBlock() 获取`IPv6`子网段。形如：`3402:4e00:20:1001::/64`
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置`IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+ * @method string getSubnetId() Obtain The `ID` of the subnet instance, such as `subnet-pxir56ns`.
+ * @method void setSubnetId(string $SubnetId) Set The `ID` of the subnet instance, such as `subnet-pxir56ns`.
+ * @method string getIpv6CidrBlock() Obtain The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
  */
 
 /**
- *IPv6子网段对象。
+ *IPv6 subnet IP range object.
  */
 class Ipv6SubnetCidrBlock extends AbstractModel
 {
     /**
-     * @var string 子网实例`ID`。形如：`subnet-pxir56ns`。
+     * @var string The `ID` of the subnet instance, such as `subnet-pxir56ns`.
      */
     public $SubnetId;
 
     /**
-     * @var string `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+     * @var string The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
      */
     public $Ipv6CidrBlock;
     /**
-     * @param string $SubnetId 子网实例`ID`。形如：`subnet-pxir56ns`。
-     * @param string $Ipv6CidrBlock `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+     * @param string $SubnetId The `ID` of the subnet instance, such as `subnet-pxir56ns`.
+     * @param string $Ipv6CidrBlock The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

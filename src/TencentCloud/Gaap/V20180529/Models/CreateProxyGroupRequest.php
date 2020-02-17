@@ -18,14 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProjectId() 获取Project ID of connection group
- * @method void setProjectId(integer $ProjectId) 设置Project ID of connection group
- * @method string getGroupName() 获取Alias of connection group
- * @method void setGroupName(string $GroupName) 设置Alias of connection group
- * @method string getRealServerRegion() 获取Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
- * @method void setRealServerRegion(string $RealServerRegion) 设置Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
- * @method array getTagSet() 获取Tag list
- * @method void setTagSet(array $TagSet) 设置Tag list
+ * @method integer getProjectId() Obtain Project ID of connection group
+ * @method void setProjectId(integer $ProjectId) Set Project ID of connection group
+ * @method string getGroupName() Obtain Alias of connection group
+ * @method void setGroupName(string $GroupName) Set Alias of connection group
+ * @method string getRealServerRegion() Obtain Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
+ * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
+ * @method array getTagSet() Obtain Tag list
+ * @method void setTagSet(array $TagSet) Set Tag list
  */
 
 /**
@@ -63,7 +63,7 @@ class CreateProxyGroupRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

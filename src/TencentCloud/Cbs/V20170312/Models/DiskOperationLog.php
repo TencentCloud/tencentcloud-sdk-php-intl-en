@@ -18,9 +18,9 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOperator() 获取UIN of operator.
- * @method void setOperator(string $Operator) 设置UIN of operator.
- * @method string getOperation() 获取Operation type. Value range:
+ * @method string getOperator() Obtain UIN of operator.
+ * @method void setOperator(string $Operator) Set UIN of operator.
+ * @method string getOperation() Obtain Operation type. Value range:
 CBS_OPERATION_ATTACH: Mount cloud disk
 CBS_OPERATION_DETACH: Unmount cloud disk
 CBS_OPERATION_RENEW: Renew
@@ -30,7 +30,7 @@ CBS_OPERATION_ISOLATE: Isolate
 CBS_OPERATION_MODIFY: Modify cloud disk attributes
 ASP_OPERATION_BIND: Associate scheduled snapshot policy
 ASP_OPERATION_UNBIND: Cancel associated scheduled snapshot policy
- * @method void setOperation(string $Operation) 设置Operation type. Value range:
+ * @method void setOperation(string $Operation) Set Operation type. Value range:
 CBS_OPERATION_ATTACH: Mount cloud disk
 CBS_OPERATION_DETACH: Unmount cloud disk
 CBS_OPERATION_RENEW: Renew
@@ -40,20 +40,20 @@ CBS_OPERATION_ISOLATE: Isolate
 CBS_OPERATION_MODIFY: Modify cloud disk attributes
 ASP_OPERATION_BIND: Associate scheduled snapshot policy
 ASP_OPERATION_UNBIND: Cancel associated scheduled snapshot policy
- * @method string getDiskId() 获取Cloud disk ID of operation.
- * @method void setDiskId(string $DiskId) 设置Cloud disk ID of operation.
- * @method string getOperationState() 获取Status of operation. Value range:
+ * @method string getDiskId() Obtain Cloud disk ID of operation.
+ * @method void setDiskId(string $DiskId) Set Cloud disk ID of operation.
+ * @method string getOperationState() Obtain Status of operation. Value range:
 SUCCESS: Operation successful 
 FAILED: Operation failed 
 PROCESSING: Operation in process
- * @method void setOperationState(string $OperationState) 设置Status of operation. Value range:
+ * @method void setOperationState(string $OperationState) Set Status of operation. Value range:
 SUCCESS: Operation successful 
 FAILED: Operation failed 
 PROCESSING: Operation in process
- * @method string getStartTime() 获取Start time
- * @method void setStartTime(string $StartTime) 设置Start time
- * @method string getEndTime() 获取End time
- * @method void setEndTime(string $EndTime) 设置End time
+ * @method string getStartTime() Obtain Start time
+ * @method void setStartTime(string $StartTime) Set Start time
+ * @method string getEndTime() Obtain End time
+ * @method void setEndTime(string $EndTime) Set End time
  */
 
 /**
@@ -127,7 +127,7 @@ PROCESSING: Operation in process
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

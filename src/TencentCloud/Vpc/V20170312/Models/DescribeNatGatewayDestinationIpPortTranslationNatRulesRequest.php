@@ -18,30 +18,30 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getNatGatewayIds() 获取NAT网关ID。
- * @method void setNatGatewayIds(array $NatGatewayIds) 设置NAT网关ID。
- * @method array getFilters() 获取过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
- * @method void setFilters(array $Filters) 设置过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method array getNatGatewayIds() Obtain NAT gateway ID.
+ * @method void setNatGatewayIds(array $NatGatewayIds) Set NAT gateway ID.
+ * @method array getFilters() Obtain Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li>
+ * @method void setFilters(array $Filters) Set Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li>
+ * @method integer getOffset() Obtain Offset. The default value is 0.
+ * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
+ * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
+ * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
  */
 
 /**
@@ -50,52 +50,52 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends AbstractModel
 {
     /**
-     * @var array NAT网关ID。
+     * @var array NAT gateway ID.
      */
     public $NatGatewayIds;
 
     /**
-     * @var array 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
+     * @var array Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li>
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer Offset. The default value is 0.
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public $Limit;
     /**
-     * @param array $NatGatewayIds NAT网关ID。
-     * @param array $Filters 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
-     * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param array $NatGatewayIds NAT gateway ID.
+     * @param array $Filters Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li>
+     * @param integer $Offset Offset. The default value is 0.
+     * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

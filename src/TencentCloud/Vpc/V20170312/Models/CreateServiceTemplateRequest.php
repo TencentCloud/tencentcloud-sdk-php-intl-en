@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getServiceTemplateName() 获取协议端口模板名称
- * @method void setServiceTemplateName(string $ServiceTemplateName) 设置协议端口模板名称
- * @method array getServices() 获取支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
- * @method void setServices(array $Services) 设置支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+ * @method string getServiceTemplateName() Obtain Template name of the protocol port
+ * @method void setServiceTemplateName(string $ServiceTemplateName) Set Template name of the protocol port
+ * @method array getServices() Obtain It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+ * @method void setServices(array $Services) Set It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 协议端口模板名称
+     * @var string Template name of the protocol port
      */
     public $ServiceTemplateName;
 
     /**
-     * @var array 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * @var array It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     public $Services;
     /**
-     * @param string $ServiceTemplateName 协议端口模板名称
-     * @param array $Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * @param string $ServiceTemplateName Template name of the protocol port
+     * @param array $Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

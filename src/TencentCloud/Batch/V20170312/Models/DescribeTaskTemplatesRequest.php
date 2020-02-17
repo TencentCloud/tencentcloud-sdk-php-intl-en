@@ -18,16 +18,16 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTaskTemplateIds() 获取Job template ID
- * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置Job template ID
- * @method array getFilters() 获取Filter
+ * @method array getTaskTemplateIds() Obtain Job template ID
+ * @method void setTaskTemplateIds(array $TaskTemplateIds) Set Job template ID
+ * @method array getFilters() Obtain Filter
 <li> task-template-name - String - Required: No - (Filter) Filter by task template name.</li>
- * @method void setFilters(array $Filters) 设置Filter
+ * @method void setFilters(array $Filters) Set Filter
 <li> task-template-name - String - Required: No - (Filter) Filter by task template name.</li>
- * @method integer getOffset() 获取Offset
- * @method void setOffset(integer $Offset) 设置Offset
- * @method integer getLimit() 获取Number of returned results
- * @method void setLimit(integer $Limit) 设置Number of returned results
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain Number of returned results
+ * @method void setLimit(integer $Limit) Set Number of returned results
  */
 
 /**
@@ -67,7 +67,7 @@ class DescribeTaskTemplatesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

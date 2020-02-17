@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ImageOsList getImportImageOsListSupported() 获取Supported operating system types of imported images.
- * @method void setImportImageOsListSupported(ImageOsList $ImportImageOsListSupported) 设置Supported operating system types of imported images.
- * @method array getImportImageOsVersionSet() 获取Supported operating system versions of imported images. 
- * @method void setImportImageOsVersionSet(array $ImportImageOsVersionSet) 设置Supported operating system versions of imported images. 
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method ImageOsList getImportImageOsListSupported() Obtain Supported operating system types of imported images.
+ * @method void setImportImageOsListSupported(ImageOsList $ImportImageOsListSupported) Set Supported operating system types of imported images.
+ * @method array getImportImageOsVersionSet() Obtain Supported operating system versions of imported images. 
+ * @method void setImportImageOsVersionSet(array $ImportImageOsVersionSet) Set Supported operating system versions of imported images. 
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeImportImageOsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

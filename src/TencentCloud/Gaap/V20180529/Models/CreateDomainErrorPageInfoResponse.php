@@ -18,8 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getErrorPageId() Obtain Configuration ID of a custom error response
+ * @method void setErrorPageId(string $ErrorPageId) Set Configuration ID of a custom error response
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -28,10 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class CreateDomainErrorPageInfoResponse extends AbstractModel
 {
     /**
+     * @var string Configuration ID of a custom error response
+     */
+    public $ErrorPageId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param string $ErrorPageId Configuration ID of a custom error response
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -39,13 +47,17 @@ class CreateDomainErrorPageInfoResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ErrorPageId",$param) and $param["ErrorPageId"] !== null) {
+            $this->ErrorPageId = $param["ErrorPageId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

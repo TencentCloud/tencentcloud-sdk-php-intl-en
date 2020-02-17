@@ -18,12 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTargetUin() 获取Sub-account UIN
- * @method void setTargetUin(integer $TargetUin) 设置Sub-account UIN
- * @method integer getPage() 获取Page number, which starts from 1. Default is 1
- * @method void setPage(integer $Page) 设置Page number, which starts from 1. Default is 1
- * @method integer getRp() 获取Number of entries per page; 20 by default
- * @method void setRp(integer $Rp) 设置Number of entries per page; 20 by default
+ * @method integer getTargetUin() Obtain Sub-account UIN
+ * @method void setTargetUin(integer $TargetUin) Set Sub-account UIN
+ * @method integer getPage() Obtain Page number, which starts from 1. Default is 1
+ * @method void setPage(integer $Page) Set Page number, which starts from 1. Default is 1
+ * @method integer getRp() Obtain Number of entries per page; 20 by default
+ * @method void setRp(integer $Rp) Set Number of entries per page; 20 by default
  */
 
 /**
@@ -55,7 +55,7 @@ class ListAttachedUserPoliciesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

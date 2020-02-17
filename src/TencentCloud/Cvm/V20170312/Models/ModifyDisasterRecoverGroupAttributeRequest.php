@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDisasterRecoverGroupId() 获取Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
- * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
- * @method string getName() 获取Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
- * @method void setName(string $Name) 设置Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
+ * @method string getDisasterRecoverGroupId() Obtain Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+ * @method string getName() Obtain Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
+ * @method void setName(string $Name) Set Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
  */
 
 /**
@@ -47,7 +47,7 @@ class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

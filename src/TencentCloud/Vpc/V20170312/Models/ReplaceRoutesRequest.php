@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
- * @method array getRoutes() 获取路由策略对象。需要指定路由策略ID（RouteId）。
- * @method void setRoutes(array $Routes) 设置路由策略对象。需要指定路由策略ID（RouteId）。
+ * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
+ * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
+ * @method array getRoutes() Obtain Routing policy object. The routing policy ID (RouteId) must be specified.
+ * @method void setRoutes(array $Routes) Set Routing policy object. The routing policy ID (RouteId) must be specified.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ReplaceRoutesRequest extends AbstractModel
 {
     /**
-     * @var string 路由表实例ID，例如：rtb-azd4dt1c。
+     * @var string The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public $RouteTableId;
 
     /**
-     * @var array 路由策略对象。需要指定路由策略ID（RouteId）。
+     * @var array Routing policy object. The routing policy ID (RouteId) must be specified.
      */
     public $Routes;
     /**
-     * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param array $Routes 路由策略对象。需要指定路由策略ID（RouteId）。
+     * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+     * @param array $Routes Routing policy object. The routing policy ID (RouteId) must be specified.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,13 +18,13 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method boolean getZhiTong() 获取Whether to enable VIP direct connection
+ * @method boolean getZhiTong() Obtain Whether to enable VIP direct connection
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZhiTong(boolean $ZhiTong) 设置Whether to enable VIP direct connection
+ * @method void setZhiTong(boolean $ZhiTong) Set Whether to enable VIP direct connection
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTgwGroupName() 获取TgwGroup name
+ * @method string getTgwGroupName() Obtain TgwGroup name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTgwGroupName(string $TgwGroupName) 设置TgwGroup name
+ * @method void setTgwGroupName(string $TgwGroupName) Set TgwGroup name
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

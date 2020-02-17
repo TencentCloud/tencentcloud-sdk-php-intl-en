@@ -18,8 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAutoScalingGroupIds() 获取ID list of an auto scaling group.
- * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置ID list of an auto scaling group.
+ * @method array getAutoScalingGroupIds() Obtain ID list of an auto scaling group.
+ * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set ID list of an auto scaling group.
  */
 
 /**
@@ -39,7 +39,7 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

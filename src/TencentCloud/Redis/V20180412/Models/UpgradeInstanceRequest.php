@@ -18,14 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method integer getMemSize() 获取Shard size in MB
- * @method void setMemSize(integer $MemSize) 设置Shard size in MB
- * @method integer getRedisShardNum() 获取Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
- * @method void setRedisShardNum(integer $RedisShardNum) 设置Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
- * @method integer getRedisReplicasNum() 获取Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method integer getMemSize() Obtain Shard size in MB
+ * @method void setMemSize(integer $MemSize) Set Shard size in MB
+ * @method integer getRedisShardNum() Obtain Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+ * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+ * @method integer getRedisReplicasNum() Obtain Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
  */
 
 /**
@@ -63,7 +63,7 @@ class UpgradeInstanceRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

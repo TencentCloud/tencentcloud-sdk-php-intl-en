@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSourceLocationId() 获取Source forwarding rule ID
- * @method void setSourceLocationId(string $SourceLocationId) 设置Source forwarding rule ID
- * @method string getTargetLocationId() 获取Forwarding rule ID of a redirect target
- * @method void setTargetLocationId(string $TargetLocationId) 设置Forwarding rule ID of a redirect target
+ * @method string getSourceLocationId() Obtain Source forwarding rule ID
+ * @method void setSourceLocationId(string $SourceLocationId) Set Source forwarding rule ID
+ * @method string getTargetLocationId() Obtain Forwarding rule ID of a redirect target
+ * @method void setTargetLocationId(string $TargetLocationId) Set Forwarding rule ID of a redirect target
  */
 
 /**
@@ -47,7 +47,7 @@ class RewriteLocationMap extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

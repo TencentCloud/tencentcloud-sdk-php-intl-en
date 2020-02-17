@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNatGatewayId() 获取NAT网关ID。
- * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关ID。
- * @method integer getMaxConcurrentConnection() 获取NAT网关并发连接上限，形如：1000000、3000000、10000000。
- * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) 设置NAT网关并发连接上限，形如：1000000、3000000、10000000。
+ * @method string getNatGatewayId() Obtain NAT gateway ID.
+ * @method void setNatGatewayId(string $NatGatewayId) Set NAT gateway ID.
+ * @method integer getMaxConcurrentConnection() Obtain Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
+ * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) Set Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class ResetNatGatewayConnectionRequest extends AbstractModel
 {
     /**
-     * @var string NAT网关ID。
+     * @var string NAT gateway ID.
      */
     public $NatGatewayId;
 
     /**
-     * @var integer NAT网关并发连接上限，形如：1000000、3000000、10000000。
+     * @var integer Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
      */
     public $MaxConcurrentConnection;
     /**
-     * @param string $NatGatewayId NAT网关ID。
-     * @param integer $MaxConcurrentConnection NAT网关并发连接上限，形如：1000000、3000000、10000000。
+     * @param string $NatGatewayId NAT gateway ID.
+     * @param integer $MaxConcurrentConnection Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

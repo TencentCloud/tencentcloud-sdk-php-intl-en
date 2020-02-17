@@ -18,32 +18,32 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取Node name
- * @method void setName(string $Name) 设置Node name
- * @method string getRunId() 获取ID of the runtime node of an instance
- * @method void setRunId(string $RunId) 设置ID of the runtime node of an instance
- * @method integer getRole() 获取Cluster role. 0: master; 1: slave
- * @method void setRole(integer $Role) 设置Cluster role. 0: master; 1: slave
- * @method integer getStatus() 获取Node status. 0: readwrite; 1: read; 2: backup
- * @method void setStatus(integer $Status) 设置Node status. 0: readwrite; 1: read; 2: backup
- * @method integer getConnected() 获取Service status. 0: down; 1: on
- * @method void setConnected(integer $Connected) 设置Service status. 0: down; 1: on
- * @method string getCreateTime() 获取Node creation time
- * @method void setCreateTime(string $CreateTime) 设置Node creation time
- * @method string getDownTime() 获取Node deactivation time
- * @method void setDownTime(string $DownTime) 设置Node deactivation time
- * @method string getSlots() 获取Distribution of node slots
- * @method void setSlots(string $Slots) 设置Distribution of node slots
- * @method integer getKeys() 获取Distribution of node keys
- * @method void setKeys(integer $Keys) 设置Distribution of node keys
- * @method integer getQps() 获取Node QPS
- * @method void setQps(integer $Qps) 设置Node QPS
- * @method float getQpsSlope() 获取QPS slope of a node
- * @method void setQpsSlope(float $QpsSlope) 设置QPS slope of a node
- * @method integer getStorage() 获取Node storage
- * @method void setStorage(integer $Storage) 设置Node storage
- * @method float getStorageSlope() 获取Storage slope of a node
- * @method void setStorageSlope(float $StorageSlope) 设置Storage slope of a node
+ * @method string getName() Obtain Node name
+ * @method void setName(string $Name) Set Node name
+ * @method string getRunId() Obtain ID of the runtime node of an instance
+ * @method void setRunId(string $RunId) Set ID of the runtime node of an instance
+ * @method integer getRole() Obtain Cluster role. 0: master; 1: slave
+ * @method void setRole(integer $Role) Set Cluster role. 0: master; 1: slave
+ * @method integer getStatus() Obtain Node status. 0: readwrite; 1: read; 2: backup
+ * @method void setStatus(integer $Status) Set Node status. 0: readwrite; 1: read; 2: backup
+ * @method integer getConnected() Obtain Service status. 0: down; 1: on
+ * @method void setConnected(integer $Connected) Set Service status. 0: down; 1: on
+ * @method string getCreateTime() Obtain Node creation time
+ * @method void setCreateTime(string $CreateTime) Set Node creation time
+ * @method string getDownTime() Obtain Node deactivation time
+ * @method void setDownTime(string $DownTime) Set Node deactivation time
+ * @method string getSlots() Obtain Distribution of node slots
+ * @method void setSlots(string $Slots) Set Distribution of node slots
+ * @method integer getKeys() Obtain Distribution of node keys
+ * @method void setKeys(integer $Keys) Set Distribution of node keys
+ * @method integer getQps() Obtain Node QPS
+ * @method void setQps(integer $Qps) Set Node QPS
+ * @method float getQpsSlope() Obtain QPS slope of a node
+ * @method void setQpsSlope(float $QpsSlope) Set QPS slope of a node
+ * @method integer getStorage() Obtain Node storage
+ * @method void setStorage(integer $Storage) Set Node storage
+ * @method float getStorageSlope() Obtain Storage slope of a node
+ * @method void setStorageSlope(float $StorageSlope) Set Storage slope of a node
  */
 
 /**
@@ -135,7 +135,7 @@ class InstanceClusterNode extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

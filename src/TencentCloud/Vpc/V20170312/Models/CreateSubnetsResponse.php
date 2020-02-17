@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSubnetSet() 获取新创建的子网列表。
- * @method void setSubnetSet(array $SubnetSet) 设置新创建的子网列表。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getSubnetSet() Obtain The list of newly created subnets.
+ * @method void setSubnetSet(array $SubnetSet) Set The list of newly created subnets.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateSubnetsResponse extends AbstractModel
 {
     /**
-     * @var array 新创建的子网列表。
+     * @var array The list of newly created subnets.
      */
     public $SubnetSet;
 
@@ -39,7 +39,7 @@ class CreateSubnetsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $SubnetSet 新创建的子网列表。
+     * @param array $SubnetSet The list of newly created subnets.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateSubnetsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

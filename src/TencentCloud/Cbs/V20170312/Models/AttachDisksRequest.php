@@ -18,12 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDiskIds() 获取ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
- * @method void setDiskIds(array $DiskIds) 设置ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
- * @method string getInstanceId() 获取ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
- * @method void setInstanceId(string $InstanceId) 设置ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
- * @method boolean getDeleteWithInstance() 获取Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
- * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
+ * @method array getDiskIds() Obtain ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
+ * @method void setDiskIds(array $DiskIds) Set ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
+ * @method string getInstanceId() Obtain ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
+ * @method void setInstanceId(string $InstanceId) Set ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
+ * @method boolean getDeleteWithInstance() Obtain Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
  */
 
 /**
@@ -55,7 +55,7 @@ class AttachDisksRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

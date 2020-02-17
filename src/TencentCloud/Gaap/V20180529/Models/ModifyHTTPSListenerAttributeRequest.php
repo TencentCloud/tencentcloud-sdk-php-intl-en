@@ -18,20 +18,20 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener ID
- * @method void setListenerId(string $ListenerId) 设置Listener ID
- * @method string getProxyId() 获取Connection ID. This field is required if using a single connection listener.
- * @method void setProxyId(string $ProxyId) 设置Connection ID. This field is required if using a single connection listener.
- * @method string getListenerName() 获取New listener name
- * @method void setListenerName(string $ListenerName) 设置New listener name
- * @method string getForwardProtocol() 获取Type of the protocol used in the forwarding from connections to origin servers
- * @method void setForwardProtocol(string $ForwardProtocol) 设置Type of the protocol used in the forwarding from connections to origin servers
- * @method string getCertificateId() 获取New listener server certificate ID
- * @method void setCertificateId(string $CertificateId) 设置New listener server certificate ID
- * @method string getClientCertificateId() 获取New listener client certificate ID
- * @method void setClientCertificateId(string $ClientCertificateId) 设置New listener client certificate ID
- * @method array getPolyClientCertificateIds() 获取Client certificate ID of the listener after modification, which is a new field.
- * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置Client certificate ID of the listener after modification, which is a new field.
+ * @method string getListenerId() Obtain Listener ID
+ * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getProxyId() Obtain Connection ID. This field is required if using a single connection listener.
+ * @method void setProxyId(string $ProxyId) Set Connection ID. This field is required if using a single connection listener.
+ * @method string getListenerName() Obtain New listener name
+ * @method void setListenerName(string $ListenerName) Set New listener name
+ * @method string getForwardProtocol() Obtain Type of the protocol used in the forwarding from connections to origin servers
+ * @method void setForwardProtocol(string $ForwardProtocol) Set Type of the protocol used in the forwarding from connections to origin servers
+ * @method string getCertificateId() Obtain New listener server certificate ID
+ * @method void setCertificateId(string $CertificateId) Set New listener server certificate ID
+ * @method string getClientCertificateId() Obtain New listener client certificate ID
+ * @method void setClientCertificateId(string $ClientCertificateId) Set New listener client certificate ID
+ * @method array getPolyClientCertificateIds() Obtain Client certificate ID of the listener after modification, which is a new field.
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set Client certificate ID of the listener after modification, which is a new field.
  */
 
 /**
@@ -87,7 +87,7 @@ class ModifyHTTPSListenerAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

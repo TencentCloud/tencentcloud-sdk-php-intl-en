@@ -18,12 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAccountIds() 获取List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://cloud.tencent.com/document/api/213/568). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
- * @method void setAccountIds(array $AccountIds) 设置List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://cloud.tencent.com/document/api/213/568). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
- * @method string getPermission() 获取Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
- * @method void setPermission(string $Permission) 设置Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
- * @method array getSnapshotIds() 获取The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
- * @method void setSnapshotIds(array $SnapshotIds) 设置The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
+ * @method array getAccountIds() Obtain List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://cloud.tencent.com/document/api/213/568). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+ * @method void setAccountIds(array $AccountIds) Set List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://cloud.tencent.com/document/api/213/568). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+ * @method string getPermission() Obtain Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
+ * @method void setPermission(string $Permission) Set Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
+ * @method array getSnapshotIds() Obtain The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
+ * @method void setSnapshotIds(array $SnapshotIds) Set The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
  */
 
 /**
@@ -55,7 +55,7 @@ class ModifySnapshotsSharePermissionRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

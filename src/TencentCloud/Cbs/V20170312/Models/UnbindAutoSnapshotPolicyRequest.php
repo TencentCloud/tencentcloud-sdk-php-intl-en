@@ -18,10 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDiskIds() 获取List of cloud disk IDs scheduled snapshot policy to be unbound from.
- * @method void setDiskIds(array $DiskIds) 设置List of cloud disk IDs scheduled snapshot policy to be unbound from.
- * @method string getAutoSnapshotPolicyId() 获取ID of scheduled snapshot policy to be unbound.
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置ID of scheduled snapshot policy to be unbound.
+ * @method array getDiskIds() Obtain List of cloud disk IDs scheduled snapshot policy to be unbound from.
+ * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs scheduled snapshot policy to be unbound from.
+ * @method string getAutoSnapshotPolicyId() Obtain ID of scheduled snapshot policy to be unbound.
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set ID of scheduled snapshot policy to be unbound.
  */
 
 /**
@@ -47,7 +47,7 @@ class UnbindAutoSnapshotPolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

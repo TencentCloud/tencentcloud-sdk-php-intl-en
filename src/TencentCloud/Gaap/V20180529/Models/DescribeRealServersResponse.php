@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getRealServerSet() 获取An information list of origin server
- * @method void setRealServerSet(array $RealServerSet) 设置An information list of origin server
- * @method integer getTotalCount() 获取The quantity of origin servers
- * @method void setTotalCount(integer $TotalCount) 设置The quantity of origin servers
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getRealServerSet() Obtain An information list of origin server
+ * @method void setRealServerSet(array $RealServerSet) Set An information list of origin server
+ * @method integer getTotalCount() Obtain The quantity of origin servers
+ * @method void setTotalCount(integer $TotalCount) Set The quantity of origin servers
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeRealServersResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

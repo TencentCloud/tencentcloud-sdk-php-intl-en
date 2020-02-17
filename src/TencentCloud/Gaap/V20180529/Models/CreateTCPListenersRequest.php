@@ -18,26 +18,26 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerName() 获取Listener name.
- * @method void setListenerName(string $ListenerName) 设置Listener name.
- * @method array getPorts() 获取List of listener ports.
- * @method void setPorts(array $Ports) 设置List of listener ports.
- * @method string getScheduler() 获取Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method void setScheduler(string $Scheduler) 设置Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method integer getHealthCheck() 获取Whether origin server has the health check enabled. 1: enabled; 0: disabled. UDP listeners do not support health check.
- * @method void setHealthCheck(integer $HealthCheck) 设置Whether origin server has the health check enabled. 1: enabled; 0: disabled. UDP listeners do not support health check.
- * @method string getRealServerType() 获取The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
- * @method void setRealServerType(string $RealServerType) 设置The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
- * @method string getProxyId() 获取Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method void setProxyId(string $ProxyId) 设置Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method string getGroupId() 获取Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method void setGroupId(string $GroupId) 设置Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method integer getDelayLoop() 获取Time interval of origin server health check (unit: seconds). Value range: [5, 300].
- * @method void setDelayLoop(integer $DelayLoop) 设置Time interval of origin server health check (unit: seconds). Value range: [5, 300].
- * @method integer getConnectTimeout() 获取Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
- * @method void setConnectTimeout(integer $ConnectTimeout) 设置Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
- * @method array getRealServerPorts() 获取List of origin server ports, which only supports the listeners of version 1.0 and connection group.
- * @method void setRealServerPorts(array $RealServerPorts) 设置List of origin server ports, which only supports the listeners of version 1.0 and connection group.
+ * @method string getListenerName() Obtain Listener name.
+ * @method void setListenerName(string $ListenerName) Set Listener name.
+ * @method array getPorts() Obtain List of listener ports.
+ * @method void setPorts(array $Ports) Set List of listener ports.
+ * @method string getScheduler() Obtain Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method void setScheduler(string $Scheduler) Set Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method integer getHealthCheck() Obtain Whether origin server has the health check enabled. 1: enabled; 0: disabled. UDP listeners do not support health check.
+ * @method void setHealthCheck(integer $HealthCheck) Set Whether origin server has the health check enabled. 1: enabled; 0: disabled. UDP listeners do not support health check.
+ * @method string getRealServerType() Obtain The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+ * @method void setRealServerType(string $RealServerType) Set The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+ * @method string getProxyId() Obtain Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method void setProxyId(string $ProxyId) Set Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method string getGroupId() Obtain Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method void setGroupId(string $GroupId) Set Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method integer getDelayLoop() Obtain Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+ * @method void setDelayLoop(integer $DelayLoop) Set Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+ * @method integer getConnectTimeout() Obtain Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+ * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+ * @method array getRealServerPorts() Obtain List of origin server ports, which only supports the listeners of version 1.0 and connection group.
+ * @method void setRealServerPorts(array $RealServerPorts) Set List of origin server ports, which only supports the listeners of version 1.0 and connection group.
  */
 
 /**
@@ -111,7 +111,7 @@ class CreateTCPListenersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getCertificateType() 获取Certificate type. Where:
+ * @method integer getCertificateType() Obtain Certificate type. Where:
 0: basic authentication configuration;
 1: indicates client CA certificate;
 2: server SSL certificate;
 3: origin server CA certificate;
 4: connection SSL certificate.
- * @method void setCertificateType(integer $CertificateType) 设置Certificate type. Where:
+ * @method void setCertificateType(integer $CertificateType) Set Certificate type. Where:
 0: basic authentication configuration;
 1: indicates client CA certificate;
 2: server SSL certificate;
 3: origin server CA certificate;
 4: connection SSL certificate.
- * @method string getCertificateContent() 获取Certificate content. URL encoding. Where:
+ * @method string getCertificateContent() Obtain Certificate content. URL encoding. Where:
 If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
 When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
- * @method void setCertificateContent(string $CertificateContent) 设置Certificate content. URL encoding. Where:
+ * @method void setCertificateContent(string $CertificateContent) Set Certificate content. URL encoding. Where:
 If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
 When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
- * @method string getCertificateAlias() 获取Certificate name
- * @method void setCertificateAlias(string $CertificateAlias) 设置Certificate name
- * @method string getCertificateKey() 获取Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
- * @method void setCertificateKey(string $CertificateKey) 设置Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
+ * @method string getCertificateAlias() Obtain Certificate name
+ * @method void setCertificateAlias(string $CertificateAlias) Set Certificate name
+ * @method string getCertificateKey() Obtain Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
+ * @method void setCertificateKey(string $CertificateKey) Set Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
  */
 
 /**
@@ -91,7 +91,7 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

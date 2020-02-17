@@ -18,20 +18,20 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvId() 获取Compute environment ID
- * @method void setEnvId(string $EnvId) 设置Compute environment ID
- * @method string getEnvName() 获取Compute environment name
- * @method void setEnvName(string $EnvName) 设置Compute environment name
- * @method Placement getPlacement() 获取Location information
- * @method void setPlacement(Placement $Placement) 设置Location information
- * @method string getCreateTime() 获取Creation time
- * @method void setCreateTime(string $CreateTime) 设置Creation time
- * @method ComputeNodeMetrics getComputeNodeMetrics() 获取Compute node statistical metrics
- * @method void setComputeNodeMetrics(ComputeNodeMetrics $ComputeNodeMetrics) 设置Compute node statistical metrics
- * @method string getEnvType() 获取Compute environment type
- * @method void setEnvType(string $EnvType) 设置Compute environment type
- * @method integer getDesiredComputeNodeCount() 获取Number of desired compute nodes
- * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置Number of desired compute nodes
+ * @method string getEnvId() Obtain Compute environment ID
+ * @method void setEnvId(string $EnvId) Set Compute environment ID
+ * @method string getEnvName() Obtain Compute environment name
+ * @method void setEnvName(string $EnvName) Set Compute environment name
+ * @method Placement getPlacement() Obtain Location information
+ * @method void setPlacement(Placement $Placement) Set Location information
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method ComputeNodeMetrics getComputeNodeMetrics() Obtain Compute node statistical metrics
+ * @method void setComputeNodeMetrics(ComputeNodeMetrics $ComputeNodeMetrics) Set Compute node statistical metrics
+ * @method string getEnvType() Obtain Compute environment type
+ * @method void setEnvType(string $EnvType) Set Compute environment type
+ * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
+ * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
  */
 
 /**
@@ -87,7 +87,7 @@ class ComputeEnvView extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

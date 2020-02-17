@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInternetChargeTypeConfigSet() 获取List of network billing methods.
- * @method void setInternetChargeTypeConfigSet(array $InternetChargeTypeConfigSet) 设置List of network billing methods.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getInternetChargeTypeConfigSet() Obtain List of network billing methods.
+ * @method void setInternetChargeTypeConfigSet(array $InternetChargeTypeConfigSet) Set List of network billing methods.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeInternetChargeTypeConfigsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

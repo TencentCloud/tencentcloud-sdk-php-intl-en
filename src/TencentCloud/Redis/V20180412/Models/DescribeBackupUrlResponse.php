@@ -18,12 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDownloadUrl() 获取Download address on the public network (valid for 6 hours)
- * @method void setDownloadUrl(array $DownloadUrl) 设置Download address on the public network (valid for 6 hours)
- * @method array getInnerDownloadUrl() 获取Download address on the private network (valid for 6 hours)
- * @method void setInnerDownloadUrl(array $InnerDownloadUrl) 设置Download address on the private network (valid for 6 hours)
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getDownloadUrl() Obtain Download address on the public network (valid for 6 hours)
+ * @method void setDownloadUrl(array $DownloadUrl) Set Download address on the public network (valid for 6 hours)
+ * @method array getInnerDownloadUrl() Obtain Download address on the private network (valid for 6 hours)
+ * @method void setInnerDownloadUrl(array $InnerDownloadUrl) Set Download address on the private network (valid for 6 hours)
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeBackupUrlResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

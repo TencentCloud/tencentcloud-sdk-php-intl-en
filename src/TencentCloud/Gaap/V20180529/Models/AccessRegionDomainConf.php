@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRegionId() 获取Region ID.
- * @method void setRegionId(string $RegionId) 设置Region ID.
- * @method array getNationCountryInnerList() 获取Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
- * @method void setNationCountryInnerList(array $NationCountryInnerList) 设置Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
+ * @method string getRegionId() Obtain Region ID.
+ * @method void setRegionId(string $RegionId) Set Region ID.
+ * @method array getNationCountryInnerList() Obtain Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
+ * @method void setNationCountryInnerList(array $NationCountryInnerList) Set Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
  */
 
 /**
@@ -47,7 +47,7 @@ class AccessRegionDomainConf extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

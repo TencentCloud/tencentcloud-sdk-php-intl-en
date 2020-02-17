@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Instance ID
- * @method void setInstanceId(string $InstanceId) 设置Instance ID
- * @method string getBackupId() 获取Backup ID, which can be queried through the DescribeInstanceBackups API
- * @method void setBackupId(string $BackupId) 设置Backup ID, which can be queried through the DescribeInstanceBackups API
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getBackupId() Obtain Backup ID, which can be queried through the DescribeInstanceBackups API
+ * @method void setBackupId(string $BackupId) Set Backup ID, which can be queried through the DescribeInstanceBackups API
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeBackupUrlRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

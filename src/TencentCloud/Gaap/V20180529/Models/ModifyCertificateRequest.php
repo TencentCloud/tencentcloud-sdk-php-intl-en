@@ -18,23 +18,23 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Listener instance ID
- * @method void setListenerId(string $ListenerId) 设置Listener instance ID
- * @method string getDomain() 获取Domain name whose certificate needs to be modified
- * @method void setDomain(string $Domain) 设置Domain name whose certificate needs to be modified
- * @method string getCertificateId() 获取New server certificate ID:
+ * @method string getListenerId() Obtain Listener instance ID
+ * @method void setListenerId(string $ListenerId) Set Listener instance ID
+ * @method string getDomain() Obtain Domain name whose certificate needs to be modified
+ * @method void setDomain(string $Domain) Set Domain name whose certificate needs to be modified
+ * @method string getCertificateId() Obtain New server certificate ID:
 If CertificateId=default, using the listener certificate.
- * @method void setCertificateId(string $CertificateId) 设置New server certificate ID:
+ * @method void setCertificateId(string $CertificateId) Set New server certificate ID:
 If CertificateId=default, using the listener certificate.
- * @method string getClientCertificateId() 获取New client certificate ID:
+ * @method string getClientCertificateId() Obtain New client certificate ID:
 If ClientCertificateId=default, using the listener certificate.
 This parameter is required only when the mutual authentication is adopted.
- * @method void setClientCertificateId(string $ClientCertificateId) 设置New client certificate ID:
+ * @method void setClientCertificateId(string $ClientCertificateId) Set New client certificate ID:
 If ClientCertificateId=default, using the listener certificate.
 This parameter is required only when the mutual authentication is adopted.
- * @method array getPolyClientCertificateIds() 获取List of new IDs of multiple client certificates, where:
+ * @method array getPolyClientCertificateIds() Obtain List of new IDs of multiple client certificates, where:
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
- * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置List of new IDs of multiple client certificates, where:
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set List of new IDs of multiple client certificates, where:
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
  */
 
@@ -87,7 +87,7 @@ This parameter or the `ClientCertificateId` parameter is required for mutual aut
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

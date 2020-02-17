@@ -18,12 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取The quantity of valid scheduled snapshot policies.
- * @method void setTotalCount(integer $TotalCount) 设置The quantity of valid scheduled snapshot policies.
- * @method array getAutoSnapshotPolicySet() 获取List of scheduled snapshot policies.
- * @method void setAutoSnapshotPolicySet(array $AutoSnapshotPolicySet) 设置List of scheduled snapshot policies.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain The quantity of valid scheduled snapshot policies.
+ * @method void setTotalCount(integer $TotalCount) Set The quantity of valid scheduled snapshot policies.
+ * @method array getAutoSnapshotPolicySet() Obtain List of scheduled snapshot policies.
+ * @method void setAutoSnapshotPolicySet(array $AutoSnapshotPolicySet) Set List of scheduled snapshot policies.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeAutoSnapshotPoliciesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,16 +18,16 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getListenerId() 获取CLB listener ID
- * @method void setListenerId(string $ListenerId) 设置CLB listener ID
- * @method array getLocationIds() 获取Array of IDs of the forwarding rules to be deleted
- * @method void setLocationIds(array $LocationIds) 设置Array of IDs of the forwarding rules to be deleted
- * @method string getDomain() 获取Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
- * @method void setDomain(string $Domain) 设置Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
- * @method string getUrl() 获取Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
- * @method void setUrl(string $Url) 设置Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getListenerId() Obtain CLB listener ID
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method array getLocationIds() Obtain Array of IDs of the forwarding rules to be deleted
+ * @method void setLocationIds(array $LocationIds) Set Array of IDs of the forwarding rules to be deleted
+ * @method string getDomain() Obtain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+ * @method void setDomain(string $Domain) Set Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+ * @method string getUrl() Obtain Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+ * @method void setUrl(string $Url) Set Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
  */
 
 /**
@@ -71,7 +71,7 @@ class DeleteRuleRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

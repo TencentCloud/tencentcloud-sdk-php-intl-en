@@ -18,152 +18,152 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID.
- * @method string getLoadBalancerName() 获取CLB instance name.
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置CLB instance name.
- * @method string getLoadBalancerType() 获取CLB instance network type:
+ * @method string getLoadBalancerId() Obtain CLB instance ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
+ * @method string getLoadBalancerName() Obtain CLB instance name.
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name.
+ * @method string getLoadBalancerType() Obtain CLB instance network type:
 OPEN: public network; INTERNAL: private network.
- * @method void setLoadBalancerType(string $LoadBalancerType) 设置CLB instance network type:
+ * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
 OPEN: public network; INTERNAL: private network.
- * @method integer getForward() 获取CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
- * @method void setForward(integer $Forward) 设置CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
- * @method string getDomain() 获取CLB instance domain name. This field is provided only to public network classic CLB instance.
+ * @method integer getForward() Obtain CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
+ * @method void setForward(integer $Forward) Set CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
+ * @method string getDomain() Obtain CLB instance domain name. This field is provided only to public network classic CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) 设置CLB instance domain name. This field is provided only to public network classic CLB instance.
+ * @method void setDomain(string $Domain) Set CLB instance domain name. This field is provided only to public network classic CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getLoadBalancerVips() 获取List of VIPs of a CLB instance.
+ * @method array getLoadBalancerVips() Obtain List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置List of VIPs of a CLB instance.
+ * @method void setLoadBalancerVips(array $LoadBalancerVips) Set List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() 获取CLB instance status, including:
+ * @method integer getStatus() Obtain CLB instance status, including:
 0: creating; 1: running.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) 设置CLB instance status, including:
+ * @method void setStatus(integer $Status) Set CLB instance status, including:
 0: creating; 1: running.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() 获取CLB instance creation time.
+ * @method string getCreateTime() Obtain CLB instance creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) 设置CLB instance creation time.
+ * @method void setCreateTime(string $CreateTime) Set CLB instance creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatusTime() 获取Last status change time of a CLB instance.
+ * @method string getStatusTime() Obtain Last status change time of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatusTime(string $StatusTime) 设置Last status change time of a CLB instance.
+ * @method void setStatusTime(string $StatusTime) Set Last status change time of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProjectId() 获取ID of the project to which a CLB instance belongs. 0: default project.
- * @method void setProjectId(integer $ProjectId) 设置ID of the project to which a CLB instance belongs. 0: default project.
- * @method string getVpcId() 获取VPC ID
+ * @method integer getProjectId() Obtain ID of the project to which a CLB instance belongs. 0: default project.
+ * @method void setProjectId(integer $ProjectId) Set ID of the project to which a CLB instance belongs. 0: default project.
+ * @method string getVpcId() Obtain VPC ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVpcId(string $VpcId) 设置VPC ID
+ * @method void setVpcId(string $VpcId) Set VPC ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOpenBgp() 获取Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
+ * @method integer getOpenBgp() Obtain Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOpenBgp(integer $OpenBgp) 设置Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
+ * @method void setOpenBgp(integer $OpenBgp) Set Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getSnat() 获取SNAT is enabled for all private network classic CLB created before December 2016.
+ * @method boolean getSnat() Obtain SNAT is enabled for all private network classic CLB created before December 2016.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSnat(boolean $Snat) 设置SNAT is enabled for all private network classic CLB created before December 2016.
+ * @method void setSnat(boolean $Snat) Set SNAT is enabled for all private network classic CLB created before December 2016.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsolation() 获取0: not isolated; 1: isolated.
+ * @method integer getIsolation() Obtain 0: not isolated; 1: isolated.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsolation(integer $Isolation) 设置0: not isolated; 1: isolated.
+ * @method void setIsolation(integer $Isolation) Set 0: not isolated; 1: isolated.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLog() 获取Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
+ * @method string getLog() Obtain Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLog(string $Log) 设置Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
+ * @method void setLog(string $Log) Set Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubnetId() 获取Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
+ * @method string getSubnetId() Obtain Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubnetId(string $SubnetId) 设置Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
+ * @method void setSubnetId(string $SubnetId) Set Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() 获取CLB instance tag information
+ * @method array getTags() Obtain CLB instance tag information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) 设置CLB instance tag information
+ * @method void setTags(array $Tags) Set CLB instance tag information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSecureGroups() 获取Security group of a CLB instance
+ * @method array getSecureGroups() Obtain Security group of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSecureGroups(array $SecureGroups) 设置Security group of a CLB instance
+ * @method void setSecureGroups(array $SecureGroups) Set Security group of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TargetRegionInfo getTargetRegionInfo() 获取Basic information of a backend server bound to a CLB instance
+ * @method TargetRegionInfo getTargetRegionInfo() Obtain Basic information of a backend server bound to a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置Basic information of a backend server bound to a CLB instance
+ * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set Basic information of a backend server bound to a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAnycastZone() 获取Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
+ * @method string getAnycastZone() Obtain Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAnycastZone(string $AnycastZone) 设置Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
+ * @method void setAnycastZone(string $AnycastZone) Set Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddressIPVersion() 获取IP version. Value range: ipv4, ipv6
+ * @method string getAddressIPVersion() Obtain IP version. Value range: ipv4, ipv6
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddressIPVersion(string $AddressIPVersion) 设置IP version. Value range: ipv4, ipv6
+ * @method void setAddressIPVersion(string $AddressIPVersion) Set IP version. Value range: ipv4, ipv6
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getNumericalVpcId() 获取VPC ID in a numeric form
+ * @method integer getNumericalVpcId() Obtain VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNumericalVpcId(integer $NumericalVpcId) 设置VPC ID in a numeric form
+ * @method void setNumericalVpcId(integer $NumericalVpcId) Set VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVipIsp() 获取ISP to which a CLB IP address belongs
+ * @method string getVipIsp() Obtain ISP to which a CLB IP address belongs
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVipIsp(string $VipIsp) 设置ISP to which a CLB IP address belongs
+ * @method void setVipIsp(string $VipIsp) Set ISP to which a CLB IP address belongs
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ZoneInfo getMasterZone() 获取Primary AZ
+ * @method ZoneInfo getMasterZone() Obtain Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMasterZone(ZoneInfo $MasterZone) 设置Primary AZ
+ * @method void setMasterZone(ZoneInfo $MasterZone) Set Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getBackupZoneSet() 获取Secondary AZ
+ * @method array getBackupZoneSet() Obtain Secondary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupZoneSet(array $BackupZoneSet) 设置Secondary AZ
+ * @method void setBackupZoneSet(array $BackupZoneSet) Set Secondary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsolatedTime() 获取CLB instance isolation time
+ * @method string getIsolatedTime() Obtain CLB instance isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsolatedTime(string $IsolatedTime) 设置CLB instance isolation time
+ * @method void setIsolatedTime(string $IsolatedTime) Set CLB instance isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() 获取CLB instance expiration time, which takes effect only for prepaid instances
+ * @method string getExpireTime() Obtain CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) 设置CLB instance expiration time, which takes effect only for prepaid instances
+ * @method void setExpireTime(string $ExpireTime) Set CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getChargeType() 获取CLB instance billing mode
+ * @method string getChargeType() Obtain CLB instance billing mode
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setChargeType(string $ChargeType) 设置CLB instance billing mode
+ * @method void setChargeType(string $ChargeType) Set CLB instance billing mode
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method InternetAccessible getNetworkAttributes() 获取CLB instance network attributes
+ * @method InternetAccessible getNetworkAttributes() Obtain CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNetworkAttributes(InternetAccessible $NetworkAttributes) 设置CLB instance network attributes
+ * @method void setNetworkAttributes(InternetAccessible $NetworkAttributes) Set CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method LBChargePrepaid getPrepaidAttributes() 获取Prepaid billing attributes of a CLB instance
+ * @method LBChargePrepaid getPrepaidAttributes() Obtain Prepaid billing attributes of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrepaidAttributes(LBChargePrepaid $PrepaidAttributes) 设置Prepaid billing attributes of a CLB instance
+ * @method void setPrepaidAttributes(LBChargePrepaid $PrepaidAttributes) Set Prepaid billing attributes of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLogSetId() 获取Logset ID of CLB Log Service (CLS)
+ * @method string getLogSetId() Obtain Logset ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogSetId(string $LogSetId) 设置Logset ID of CLB Log Service (CLS)
+ * @method void setLogSetId(string $LogSetId) Set Logset ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLogTopicId() 获取Log topic ID of CLB Log Service (CLS)
+ * @method string getLogTopicId() Obtain Log topic ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogTopicId(string $LogTopicId) 设置Log topic ID of CLB Log Service (CLS)
+ * @method void setLogTopicId(string $LogTopicId) Set Log topic ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddressIPv6() 获取IPv6 address of a CLB instance
+ * @method string getAddressIPv6() Obtain IPv6 address of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddressIPv6(string $AddressIPv6) 设置IPv6 address of a CLB instance
+ * @method void setAddressIPv6(string $AddressIPv6) Set IPv6 address of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExtraInfo getExtraInfo() 获取Reserved field which can be ignored generally.
+ * @method ExtraInfo getExtraInfo() Obtain Reserved field which can be ignored generally.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置Reserved field which can be ignored generally.
+ * @method void setExtraInfo(ExtraInfo $ExtraInfo) Set Reserved field which can be ignored generally.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsDDos() 获取Whether an Anti-DDoS Pro instance can be bound
+ * @method boolean getIsDDos() Obtain Whether an Anti-DDoS Pro instance can be bound
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsDDos(boolean $IsDDos) 设置Whether an Anti-DDoS Pro instance can be bound
+ * @method void setIsDDos(boolean $IsDDos) Set Whether an Anti-DDoS Pro instance can be bound
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getConfigId() 获取Custom configuration ID at the CLB instance level
+ * @method string getConfigId() Obtain Custom configuration ID at the CLB instance level
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigId(string $ConfigId) 设置Custom configuration ID at the CLB instance level
+ * @method void setConfigId(string $ConfigId) Set Custom configuration ID at the CLB instance level
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getLoadBalancerPassToTarget() 获取Whether a real server opens the traffic from a CLB instance to the internet by default
+ * @method boolean getLoadBalancerPassToTarget() Obtain Whether a real server opens the traffic from a CLB instance to the internet by default
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Whether a real server opens the traffic from a CLB instance to the internet by default
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether a real server opens the traffic from a CLB instance to the internet by default
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExclusiveCluster getExclusiveCluster() 获取
- * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置
- * @method string getIPv6Mode() 获取
- * @method void setIPv6Mode(string $IPv6Mode) 设置
+ * @method ExclusiveCluster getExclusiveCluster() Obtain 
+ * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set 
+ * @method string getIPv6Mode() Obtain 
+ * @method void setIPv6Mode(string $IPv6Mode) Set 
  */
 
 /**
@@ -479,7 +479,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStdoutLocalPath() 获取Standard output redirection local path
- * @method void setStdoutLocalPath(string $StdoutLocalPath) 设置Standard output redirection local path
- * @method string getStderrLocalPath() 获取Standard error redirection local path
- * @method void setStderrLocalPath(string $StderrLocalPath) 设置Standard error redirection local path
- * @method string getStdoutLocalFileName() 获取Standard output redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
- * @method void setStdoutLocalFileName(string $StdoutLocalFileName) 设置Standard output redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
- * @method string getStderrLocalFileName() 获取Standard error redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
- * @method void setStderrLocalFileName(string $StderrLocalFileName) 设置Standard error redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
+ * @method string getStdoutLocalPath() Obtain Standard output redirection local path
+ * @method void setStdoutLocalPath(string $StdoutLocalPath) Set Standard output redirection local path
+ * @method string getStderrLocalPath() Obtain Standard error redirection local path
+ * @method void setStderrLocalPath(string $StderrLocalPath) Set Standard error redirection local path
+ * @method string getStdoutLocalFileName() Obtain Standard output redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
+ * @method void setStdoutLocalFileName(string $StdoutLocalFileName) Set Standard output redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
+ * @method string getStderrLocalFileName() Obtain Standard error redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
+ * @method void setStderrLocalFileName(string $StderrLocalFileName) Set Standard error redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
  */
 
 /**
@@ -63,7 +63,7 @@ class RedirectLocalInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

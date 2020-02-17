@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getIpv6AddressSet() 获取`IPv6`地址列表。
- * @method void setIpv6AddressSet(array $Ipv6AddressSet) 设置`IPv6`地址列表。
- * @method integer getTotalCount() 获取`IPv6`地址总数。
- * @method void setTotalCount(integer $TotalCount) 设置`IPv6`地址总数。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getIpv6AddressSet() Obtain The `IPv6` address list.
+ * @method void setIpv6AddressSet(array $Ipv6AddressSet) Set The `IPv6` address list.
+ * @method integer getTotalCount() Obtain The total number of `IPv6` addresses.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of `IPv6` addresses.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpcIpv6AddressesResponse extends AbstractModel
 {
     /**
-     * @var array `IPv6`地址列表。
+     * @var array The `IPv6` address list.
      */
     public $Ipv6AddressSet;
 
     /**
-     * @var integer `IPv6`地址总数。
+     * @var integer The total number of `IPv6` addresses.
      */
     public $TotalCount;
 
@@ -46,8 +46,8 @@ class DescribeVpcIpv6AddressesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $Ipv6AddressSet `IPv6`地址列表。
-     * @param integer $TotalCount `IPv6`地址总数。
+     * @param array $Ipv6AddressSet The `IPv6` address list.
+     * @param integer $TotalCount The total number of `IPv6` addresses.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeVpcIpv6AddressesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

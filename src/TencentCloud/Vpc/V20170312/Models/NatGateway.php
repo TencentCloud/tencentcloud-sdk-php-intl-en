@@ -18,116 +18,116 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNatGatewayId() 获取NAT网关的ID。
- * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID。
- * @method string getNatGatewayName() 获取NAT网关的名称。
- * @method void setNatGatewayName(string $NatGatewayName) 设置NAT网关的名称。
- * @method string getCreatedTime() 获取NAT网关创建的时间。
- * @method void setCreatedTime(string $CreatedTime) 设置NAT网关创建的时间。
- * @method string getState() 获取NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
- * @method void setState(string $State) 设置NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
- * @method integer getInternetMaxBandwidthOut() 获取网关最大外网出带宽(单位:Mbps)。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置网关最大外网出带宽(单位:Mbps)。
- * @method integer getMaxConcurrentConnection() 获取网关并发连接上限。
- * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) 设置网关并发连接上限。
- * @method array getPublicIpAddressSet() 获取绑定NAT网关的公网IP对象数组。
- * @method void setPublicIpAddressSet(array $PublicIpAddressSet) 设置绑定NAT网关的公网IP对象数组。
- * @method string getNetworkState() 获取NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
- * @method void setNetworkState(string $NetworkState) 设置NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
- * @method array getDestinationIpPortTranslationNatRuleSet() 获取NAT网关的端口转发规则。
- * @method void setDestinationIpPortTranslationNatRuleSet(array $DestinationIpPortTranslationNatRuleSet) 设置NAT网关的端口转发规则。
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method string getZone() 获取NAT网关所在的可用区。
- * @method void setZone(string $Zone) 设置NAT网关所在的可用区。
+ * @method string getNatGatewayId() Obtain NAT gateway ID.
+ * @method void setNatGatewayId(string $NatGatewayId) Set NAT gateway ID.
+ * @method string getNatGatewayName() Obtain NAT gateway name.
+ * @method void setNatGatewayName(string $NatGatewayName) Set NAT gateway name.
+ * @method string getCreatedTime() Obtain NAT gateway creation time.
+ * @method void setCreatedTime(string $CreatedTime) Set NAT gateway creation time.
+ * @method string getState() Obtain The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed.
+ * @method void setState(string $State) Set The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed.
+ * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the gateway. Unit: Mbps.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the gateway. Unit: Mbps.
+ * @method integer getMaxConcurrentConnection() Obtain The concurrent connections cap of the gateway.
+ * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) Set The concurrent connections cap of the gateway.
+ * @method array getPublicIpAddressSet() Obtain The public IP object array of the bound NAT gateway.
+ * @method void setPublicIpAddressSet(array $PublicIpAddressSet) Set The public IP object array of the bound NAT gateway.
+ * @method string getNetworkState() Obtain The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+ * @method void setNetworkState(string $NetworkState) Set The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+ * @method array getDestinationIpPortTranslationNatRuleSet() Obtain The port forwarding rules of the NAT gateway.
+ * @method void setDestinationIpPortTranslationNatRuleSet(array $DestinationIpPortTranslationNatRuleSet) Set The port forwarding rules of the NAT gateway.
+ * @method string getVpcId() Obtain VPC instance ID.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID.
+ * @method string getZone() Obtain The availability zone in which the NAT gateway is located.
+ * @method void setZone(string $Zone) Set The availability zone in which the NAT gateway is located.
  */
 
 /**
- *NAT网关对象。
+ *NAT gateway object.
  */
 class NatGateway extends AbstractModel
 {
     /**
-     * @var string NAT网关的ID。
+     * @var string NAT gateway ID.
      */
     public $NatGatewayId;
 
     /**
-     * @var string NAT网关的名称。
+     * @var string NAT gateway name.
      */
     public $NatGatewayName;
 
     /**
-     * @var string NAT网关创建的时间。
+     * @var string NAT gateway creation time.
      */
     public $CreatedTime;
 
     /**
-     * @var string NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+     * @var string The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed.
      */
     public $State;
 
     /**
-     * @var integer 网关最大外网出带宽(单位:Mbps)。
+     * @var integer The maximum outbound bandwidth of the gateway. Unit: Mbps.
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var integer 网关并发连接上限。
+     * @var integer The concurrent connections cap of the gateway.
      */
     public $MaxConcurrentConnection;
 
     /**
-     * @var array 绑定NAT网关的公网IP对象数组。
+     * @var array The public IP object array of the bound NAT gateway.
      */
     public $PublicIpAddressSet;
 
     /**
-     * @var string NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
+     * @var string The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
      */
     public $NetworkState;
 
     /**
-     * @var array NAT网关的端口转发规则。
+     * @var array The port forwarding rules of the NAT gateway.
      */
     public $DestinationIpPortTranslationNatRuleSet;
 
     /**
-     * @var string VPC实例ID。
+     * @var string VPC instance ID.
      */
     public $VpcId;
 
     /**
-     * @var string NAT网关所在的可用区。
+     * @var string The availability zone in which the NAT gateway is located.
      */
     public $Zone;
     /**
-     * @param string $NatGatewayId NAT网关的ID。
-     * @param string $NatGatewayName NAT网关的名称。
-     * @param string $CreatedTime NAT网关创建的时间。
-     * @param string $State NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
-     * @param integer $InternetMaxBandwidthOut 网关最大外网出带宽(单位:Mbps)。
-     * @param integer $MaxConcurrentConnection 网关并发连接上限。
-     * @param array $PublicIpAddressSet 绑定NAT网关的公网IP对象数组。
-     * @param string $NetworkState NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
-     * @param array $DestinationIpPortTranslationNatRuleSet NAT网关的端口转发规则。
-     * @param string $VpcId VPC实例ID。
-     * @param string $Zone NAT网关所在的可用区。
+     * @param string $NatGatewayId NAT gateway ID.
+     * @param string $NatGatewayName NAT gateway name.
+     * @param string $CreatedTime NAT gateway creation time.
+     * @param string $State The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed.
+     * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the gateway. Unit: Mbps.
+     * @param integer $MaxConcurrentConnection The concurrent connections cap of the gateway.
+     * @param array $PublicIpAddressSet The public IP object array of the bound NAT gateway.
+     * @param string $NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+     * @param array $DestinationIpPortTranslationNatRuleSet The port forwarding rules of the NAT gateway.
+     * @param string $VpcId VPC instance ID.
+     * @param string $Zone The availability zone in which the NAT gateway is located.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

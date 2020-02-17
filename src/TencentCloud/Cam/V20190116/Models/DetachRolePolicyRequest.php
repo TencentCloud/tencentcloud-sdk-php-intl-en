@@ -18,12 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取Policy ID
- * @method void setPolicyId(integer $PolicyId) 设置Policy ID
- * @method string getDetachRoleId() 获取Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
- * @method void setDetachRoleId(string $DetachRoleId) 设置Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
- * @method string getDetachRoleName() 获取Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
- * @method void setDetachRoleName(string $DetachRoleName) 设置Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+ * @method integer getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
+ * @method string getDetachRoleId() Obtain Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+ * @method void setDetachRoleId(string $DetachRoleId) Set Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+ * @method string getDetachRoleName() Obtain Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+ * @method void setDetachRoleName(string $DetachRoleName) Set Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
  */
 
 /**
@@ -55,7 +55,7 @@ class DetachRolePolicyRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

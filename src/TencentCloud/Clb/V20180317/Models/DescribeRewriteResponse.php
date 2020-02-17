@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getRewriteSet() 获取Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
- * @method void setRewriteSet(array $RewriteSet) 设置Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getRewriteSet() Obtain Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+ * @method void setRewriteSet(array $RewriteSet) Set Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeRewriteResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

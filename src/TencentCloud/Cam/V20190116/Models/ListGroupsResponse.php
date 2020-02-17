@@ -18,12 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalNum() 获取Total number of User Groups
- * @method void setTotalNum(integer $TotalNum) 设置Total number of User Groups
- * @method array getGroupInfo() 获取User group information array
- * @method void setGroupInfo(array $GroupInfo) 设置User group information array
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalNum() Obtain Total number of User Groups
+ * @method void setTotalNum(integer $TotalNum) Set Total number of User Groups
+ * @method array getGroupInfo() Obtain User group information array
+ * @method void setGroupInfo(array $GroupInfo) Set User group information array
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class ListGroupsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

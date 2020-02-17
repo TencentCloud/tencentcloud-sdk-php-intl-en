@@ -18,12 +18,12 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取Tag key associated with the resource.
- * @method void setTagKey(string $TagKey) 设置Tag key associated with the resource.
- * @method string getTagValue() 获取Modified tag value.
- * @method void setTagValue(string $TagValue) 设置Modified tag value.
- * @method string getResource() 获取Resource description in six-piece format.
- * @method void setResource(string $Resource) 设置Resource description in six-piece format.
+ * @method string getTagKey() Obtain Tag key associated with the resource.
+ * @method void setTagKey(string $TagKey) Set Tag key associated with the resource.
+ * @method string getTagValue() Obtain Modified tag value.
+ * @method void setTagValue(string $TagValue) Set Modified tag value.
+ * @method string getResource() Obtain Resource description in six-piece format.
+ * @method void setResource(string $Resource) Set Resource description in six-piece format.
  */
 
 /**
@@ -55,7 +55,7 @@ class UpdateResourceTagValueRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

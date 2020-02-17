@@ -18,28 +18,28 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvName() 获取Compute environment name
- * @method void setEnvName(string $EnvName) 设置Compute environment name
- * @method integer getDesiredComputeNodeCount() 获取Number of desired compute nodes
- * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置Number of desired compute nodes
- * @method string getEnvDescription() 获取Compute environment description
- * @method void setEnvDescription(string $EnvDescription) 设置Compute environment description
- * @method string getEnvType() 获取Compute environment management type
- * @method void setEnvType(string $EnvType) 设置Compute environment management type
- * @method EnvData getEnvData() 获取Compute environment's specific parameters
- * @method void setEnvData(EnvData $EnvData) 设置Compute environment's specific parameters
- * @method array getMountDataDisks() 获取Data disk mounting option
- * @method void setMountDataDisks(array $MountDataDisks) 设置Data disk mounting option
- * @method array getAuthentications() 获取Authorization information
- * @method void setAuthentications(array $Authentications) 设置Authorization information
- * @method array getInputMappings() 获取Input mapping information
- * @method void setInputMappings(array $InputMappings) 设置Input mapping information
- * @method AgentRunningMode getAgentRunningMode() 获取Agent running mode; applicable for Windows
- * @method void setAgentRunningMode(AgentRunningMode $AgentRunningMode) 设置Agent running mode; applicable for Windows
- * @method Notification getNotifications() 获取Notification information
- * @method void setNotifications(Notification $Notifications) 设置Notification information
- * @method string getActionIfComputeNodeInactive() 获取Inactive node processing policy. Default value: RECREATE, which means that instance resources will be re-created periodically for compute nodes where instance creation fails or is abnormally returned.
- * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) 设置Inactive node processing policy. Default value: RECREATE, which means that instance resources will be re-created periodically for compute nodes where instance creation fails or is abnormally returned.
+ * @method string getEnvName() Obtain Compute environment name
+ * @method void setEnvName(string $EnvName) Set Compute environment name
+ * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
+ * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
+ * @method string getEnvDescription() Obtain Compute environment description
+ * @method void setEnvDescription(string $EnvDescription) Set Compute environment description
+ * @method string getEnvType() Obtain Compute environment management type
+ * @method void setEnvType(string $EnvType) Set Compute environment management type
+ * @method EnvData getEnvData() Obtain Compute environment's specific parameters
+ * @method void setEnvData(EnvData $EnvData) Set Compute environment's specific parameters
+ * @method array getMountDataDisks() Obtain Data disk mounting option
+ * @method void setMountDataDisks(array $MountDataDisks) Set Data disk mounting option
+ * @method array getAuthentications() Obtain Authorization information
+ * @method void setAuthentications(array $Authentications) Set Authorization information
+ * @method array getInputMappings() Obtain Input mapping information
+ * @method void setInputMappings(array $InputMappings) Set Input mapping information
+ * @method AgentRunningMode getAgentRunningMode() Obtain Agent running mode; applicable for Windows
+ * @method void setAgentRunningMode(AgentRunningMode $AgentRunningMode) Set Agent running mode; applicable for Windows
+ * @method Notification getNotifications() Obtain Notification information
+ * @method void setNotifications(Notification $Notifications) Set Notification information
+ * @method string getActionIfComputeNodeInactive() Obtain Inactive node processing policy. Default value: RECREATE, which means that instance resources will be re-created periodically for compute nodes where instance creation fails or is abnormally returned.
+ * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) Set Inactive node processing policy. Default value: RECREATE, which means that instance resources will be re-created periodically for compute nodes where instance creation fails or is abnormally returned.
  */
 
 /**
@@ -119,7 +119,7 @@ class NamedComputeEnv extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIpv6CidrBlock() 获取分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getIpv6CidrBlock() Obtain The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AssignIpv6CidrBlockResponse extends AbstractModel
 {
     /**
-     * @var string 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
+     * @var string The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
      */
     public $Ipv6CidrBlock;
 
@@ -39,7 +39,7 @@ class AssignIpv6CidrBlockResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $Ipv6CidrBlock 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
+     * @param string $Ipv6CidrBlock The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class AssignIpv6CidrBlockResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

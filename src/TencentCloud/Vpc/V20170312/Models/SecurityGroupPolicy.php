@@ -18,57 +18,57 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyIndex() 获取安全组规则索引号。
- * @method void setPolicyIndex(integer $PolicyIndex) 设置安全组规则索引号。
- * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP。
- * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP, ICMP。
- * @method string getPort() 获取端口(all, 离散port,  range)。
- * @method void setPort(string $Port) 设置端口(all, 离散port,  range)。
- * @method ServiceTemplateSpecification getServiceTemplate() 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
- * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
- * @method string getCidrBlock() 获取网段或IP(互斥)。
- * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。
- * @method string getIpv6CidrBlock() 获取The CIDR block or IPv6 (mutually exclusive).
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置The CIDR block or IPv6 (mutually exclusive).
- * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
- * @method AddressTemplateSpecification getAddressTemplate() 获取IP地址ID或者ID地址组ID。
- * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) 设置IP地址ID或者ID地址组ID。
- * @method string getAction() 获取ACCEPT 或 DROP。
- * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
- * @method string getPolicyDescription() 获取安全组规则描述。
- * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。
- * @method string getModifyTime() 获取The last modification time of the security group.
- * @method void setModifyTime(string $ModifyTime) 设置The last modification time of the security group.
+ * @method integer getPolicyIndex() Obtain Security group policy index number.
+ * @method void setPolicyIndex(integer $PolicyIndex) Set Security group policy index number.
+ * @method string getProtocol() Obtain Protocol. Values: TCP, UDP, ICMP
+ * @method void setProtocol(string $Protocol) Set Protocol. Values: TCP, UDP, ICMP
+ * @method string getPort() Obtain Port (all, discrete port, range).
+ * @method void setPort(string $Port) Set Port (all, discrete port, range).
+ * @method ServiceTemplateSpecification getServiceTemplate() Obtain Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
+ * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) Set Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
+ * @method string getCidrBlock() Obtain IP range or IP (mutually exclusive).
+ * @method void setCidrBlock(string $CidrBlock) Set IP range or IP (mutually exclusive).
+ * @method string getIpv6CidrBlock() Obtain The CIDR block or IPv6 (mutually exclusive).
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The CIDR block or IPv6 (mutually exclusive).
+ * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-ohuuioma`.
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-ohuuioma`.
+ * @method AddressTemplateSpecification getAddressTemplate() Obtain IP address ID or IP address group ID.
+ * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) Set IP address ID or IP address group ID.
+ * @method string getAction() Obtain ACCEPT or DROP.
+ * @method void setAction(string $Action) Set ACCEPT or DROP.
+ * @method string getPolicyDescription() Obtain Security group policy description.
+ * @method void setPolicyDescription(string $PolicyDescription) Set Security group policy description.
+ * @method string getModifyTime() Obtain The last modification time of the security group.
+ * @method void setModifyTime(string $ModifyTime) Set The last modification time of the security group.
  */
 
 /**
- *安全组规则对象
+ *Security group policy object
  */
 class SecurityGroupPolicy extends AbstractModel
 {
     /**
-     * @var integer 安全组规则索引号。
+     * @var integer Security group policy index number.
      */
     public $PolicyIndex;
 
     /**
-     * @var string 协议, 取值: TCP,UDP, ICMP。
+     * @var string Protocol. Values: TCP, UDP, ICMP
      */
     public $Protocol;
 
     /**
-     * @var string 端口(all, 离散port,  range)。
+     * @var string Port (all, discrete port, range).
      */
     public $Port;
 
     /**
-     * @var ServiceTemplateSpecification 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * @var ServiceTemplateSpecification Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
      */
     public $ServiceTemplate;
 
     /**
-     * @var string 网段或IP(互斥)。
+     * @var string IP range or IP (mutually exclusive).
      */
     public $CidrBlock;
 
@@ -78,22 +78,22 @@ class SecurityGroupPolicy extends AbstractModel
     public $Ipv6CidrBlock;
 
     /**
-     * @var string 安全组实例ID，例如：sg-ohuuioma。
+     * @var string The security group instance ID, such as `sg-ohuuioma`.
      */
     public $SecurityGroupId;
 
     /**
-     * @var AddressTemplateSpecification IP地址ID或者ID地址组ID。
+     * @var AddressTemplateSpecification IP address ID or IP address group ID.
      */
     public $AddressTemplate;
 
     /**
-     * @var string ACCEPT 或 DROP。
+     * @var string ACCEPT or DROP.
      */
     public $Action;
 
     /**
-     * @var string 安全组规则描述。
+     * @var string Security group policy description.
      */
     public $PolicyDescription;
 
@@ -102,16 +102,16 @@ class SecurityGroupPolicy extends AbstractModel
      */
     public $ModifyTime;
     /**
-     * @param integer $PolicyIndex 安全组规则索引号。
-     * @param string $Protocol 协议, 取值: TCP,UDP, ICMP。
-     * @param string $Port 端口(all, 离散port,  range)。
-     * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-     * @param string $CidrBlock 网段或IP(互斥)。
+     * @param integer $PolicyIndex Security group policy index number.
+     * @param string $Protocol Protocol. Values: TCP, UDP, ICMP
+     * @param string $Port Port (all, discrete port, range).
+     * @param ServiceTemplateSpecification $ServiceTemplate Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
+     * @param string $CidrBlock IP range or IP (mutually exclusive).
      * @param string $Ipv6CidrBlock The CIDR block or IPv6 (mutually exclusive).
-     * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
-     * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者ID地址组ID。
-     * @param string $Action ACCEPT 或 DROP。
-     * @param string $PolicyDescription 安全组规则描述。
+     * @param string $SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
+     * @param AddressTemplateSpecification $AddressTemplate IP address ID or IP address group ID.
+     * @param string $Action ACCEPT or DROP.
+     * @param string $PolicyDescription Security group policy description.
      * @param string $ModifyTime The last modification time of the security group.
      */
     function __construct()
@@ -119,7 +119,7 @@ class SecurityGroupPolicy extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

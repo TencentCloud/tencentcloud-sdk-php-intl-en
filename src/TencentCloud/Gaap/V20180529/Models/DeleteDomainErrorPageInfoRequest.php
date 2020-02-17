@@ -18,7 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getErrorPageId() Obtain Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+ * @method void setErrorPageId(string $ErrorPageId) Set Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
  */
 
 /**
@@ -26,22 +27,27 @@ use TencentCloud\Common\AbstractModel;
  */
 class DeleteDomainErrorPageInfoRequest extends AbstractModel
 {
-
     /**
-
+     * @var string Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+     */
+    public $ErrorPageId;
+    /**
+     * @param string $ErrorPageId Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ErrorPageId",$param) and $param["ErrorPageId"] !== null) {
+            $this->ErrorPageId = $param["ErrorPageId"];
+        }
     }
 }

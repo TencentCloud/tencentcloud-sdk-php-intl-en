@@ -18,18 +18,18 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDiskType() 获取Type of cloud hard disk. Value range: <br><li>Ordinary cloud disk: CLOUD_BASIC <br><li>Premium cloud storage: CLOUD_PREMIUM <br><li>SSD cloud disk: CLOUD_SSD.
- * @method void setDiskType(string $DiskType) 设置Type of cloud hard disk. Value range: <br><li>Ordinary cloud disk: CLOUD_BASIC <br><li>Premium cloud storage: CLOUD_PREMIUM <br><li>SSD cloud disk: CLOUD_SSD.
- * @method integer getDiskSize() 获取Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
- * @method void setDiskSize(integer $DiskSize) 设置Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
- * @method string getDiskChargeType() 获取Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
- * @method void setDiskChargeType(string $DiskChargeType) 设置Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
- * @method DiskChargePrepaid getDiskChargePrepaid() 获取Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
- * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
- * @method integer getDiskCount() 获取Quantity of cloud disks purchased. If left empty, default is 1.
- * @method void setDiskCount(integer $DiskCount) 设置Quantity of cloud disks purchased. If left empty, default is 1.
- * @method integer getProjectId() 获取ID of project the cloud disk belongs to.
- * @method void setProjectId(integer $ProjectId) 设置ID of project the cloud disk belongs to.
+ * @method string getDiskType() Obtain Type of cloud hard disk. Value range: <br><li>Ordinary cloud disk: CLOUD_BASIC <br><li>Premium cloud storage: CLOUD_PREMIUM <br><li>SSD cloud disk: CLOUD_SSD.
+ * @method void setDiskType(string $DiskType) Set Type of cloud hard disk. Value range: <br><li>Ordinary cloud disk: CLOUD_BASIC <br><li>Premium cloud storage: CLOUD_PREMIUM <br><li>SSD cloud disk: CLOUD_SSD.
+ * @method integer getDiskSize() Obtain Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+ * @method void setDiskSize(integer $DiskSize) Set Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+ * @method string getDiskChargeType() Obtain Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+ * @method void setDiskChargeType(string $DiskChargeType) Set Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+ * @method DiskChargePrepaid getDiskChargePrepaid() Obtain Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
+ * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
+ * @method integer getDiskCount() Obtain Quantity of cloud disks purchased. If left empty, default is 1.
+ * @method void setDiskCount(integer $DiskCount) Set Quantity of cloud disks purchased. If left empty, default is 1.
+ * @method integer getProjectId() Obtain ID of project the cloud disk belongs to.
+ * @method void setProjectId(integer $ProjectId) Set ID of project the cloud disk belongs to.
  */
 
 /**
@@ -79,7 +79,7 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

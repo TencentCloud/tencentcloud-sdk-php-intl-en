@@ -18,16 +18,16 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobId() 获取Instance ID
- * @method void setJobId(string $JobId) 设置Instance ID
- * @method string getTaskName() 获取Job name
- * @method void setTaskName(string $TaskName) 设置Job name
- * @method array getTaskInstanceIndexes() 获取Set of task instances
- * @method void setTaskInstanceIndexes(array $TaskInstanceIndexes) 设置Set of task instances
- * @method integer getOffset() 获取Starting task instance
- * @method void setOffset(integer $Offset) 设置Starting task instance
- * @method integer getLimit() 获取Maximum number of task instances
- * @method void setLimit(integer $Limit) 设置Maximum number of task instances
+ * @method string getJobId() Obtain Instance ID
+ * @method void setJobId(string $JobId) Set Instance ID
+ * @method string getTaskName() Obtain Job name
+ * @method void setTaskName(string $TaskName) Set Job name
+ * @method array getTaskInstanceIndexes() Obtain Set of task instances
+ * @method void setTaskInstanceIndexes(array $TaskInstanceIndexes) Set Set of task instances
+ * @method integer getOffset() Obtain Starting task instance
+ * @method void setOffset(integer $Offset) Set Starting task instance
+ * @method integer getLimit() Obtain Maximum number of task instances
+ * @method void setLimit(integer $Limit) Set Maximum number of task instances
  */
 
 /**
@@ -71,7 +71,7 @@ class DescribeTaskLogsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

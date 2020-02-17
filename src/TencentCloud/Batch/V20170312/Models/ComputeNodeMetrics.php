@@ -18,20 +18,20 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getSubmittedCount() 获取Number of compute nodes that have been submitted
- * @method void setSubmittedCount(integer $SubmittedCount) 设置Number of compute nodes that have been submitted
- * @method integer getCreatingCount() 获取Number of compute nodes that are being created
- * @method void setCreatingCount(integer $CreatingCount) 设置Number of compute nodes that are being created
- * @method integer getCreationFailedCount() 获取Number of compute nodes that failed to be created
- * @method void setCreationFailedCount(integer $CreationFailedCount) 设置Number of compute nodes that failed to be created
- * @method integer getCreatedCount() 获取Number of compute nodes that have been created
- * @method void setCreatedCount(integer $CreatedCount) 设置Number of compute nodes that have been created
- * @method integer getRunningCount() 获取Number of running compute nodes
- * @method void setRunningCount(integer $RunningCount) 设置Number of running compute nodes
- * @method integer getDeletingCount() 获取Number of compute nodes that are being terminated
- * @method void setDeletingCount(integer $DeletingCount) 设置Number of compute nodes that are being terminated
- * @method integer getAbnormalCount() 获取Number of exceptional compute nodes
- * @method void setAbnormalCount(integer $AbnormalCount) 设置Number of exceptional compute nodes
+ * @method integer getSubmittedCount() Obtain Number of compute nodes that have been submitted
+ * @method void setSubmittedCount(integer $SubmittedCount) Set Number of compute nodes that have been submitted
+ * @method integer getCreatingCount() Obtain Number of compute nodes that are being created
+ * @method void setCreatingCount(integer $CreatingCount) Set Number of compute nodes that are being created
+ * @method integer getCreationFailedCount() Obtain Number of compute nodes that failed to be created
+ * @method void setCreationFailedCount(integer $CreationFailedCount) Set Number of compute nodes that failed to be created
+ * @method integer getCreatedCount() Obtain Number of compute nodes that have been created
+ * @method void setCreatedCount(integer $CreatedCount) Set Number of compute nodes that have been created
+ * @method integer getRunningCount() Obtain Number of running compute nodes
+ * @method void setRunningCount(integer $RunningCount) Set Number of running compute nodes
+ * @method integer getDeletingCount() Obtain Number of compute nodes that are being terminated
+ * @method void setDeletingCount(integer $DeletingCount) Set Number of compute nodes that are being terminated
+ * @method integer getAbnormalCount() Obtain Number of exceptional compute nodes
+ * @method void setAbnormalCount(integer $AbnormalCount) Set Number of exceptional compute nodes
  */
 
 /**
@@ -87,7 +87,7 @@ class ComputeNodeMetrics extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

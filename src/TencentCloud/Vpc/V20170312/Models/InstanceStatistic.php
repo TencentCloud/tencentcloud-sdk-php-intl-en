@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceType() 获取实例的类型
- * @method void setInstanceType(string $InstanceType) 设置实例的类型
- * @method integer getInstanceCount() 获取实例的个数
- * @method void setInstanceCount(integer $InstanceCount) 设置实例的个数
+ * @method string getInstanceType() Obtain Type of instance
+ * @method void setInstanceType(string $InstanceType) Set Type of instance
+ * @method integer getInstanceCount() Obtain Number of instances
+ * @method void setInstanceCount(integer $InstanceCount) Set Number of instances
  */
 
 /**
- *用于描述实例的统计信息
+ *Statistics used to describe the instance
  */
 class InstanceStatistic extends AbstractModel
 {
     /**
-     * @var string 实例的类型
+     * @var string Type of instance
      */
     public $InstanceType;
 
     /**
-     * @var integer 实例的个数
+     * @var integer Number of instances
      */
     public $InstanceCount;
     /**
-     * @param string $InstanceType 实例的类型
-     * @param integer $InstanceCount 实例的个数
+     * @param string $InstanceType Type of instance
+     * @param integer $InstanceCount Number of instances
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

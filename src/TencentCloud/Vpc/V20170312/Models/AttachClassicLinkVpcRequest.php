@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取VPC实例ID
- * @method void setVpcId(string $VpcId) 设置VPC实例ID
- * @method array getInstanceIds() 获取CVM实例ID
- * @method void setInstanceIds(array $InstanceIds) 设置CVM实例ID
+ * @method string getVpcId() Obtain VPC instance ID
+ * @method void setVpcId(string $VpcId) Set VPC instance ID
+ * @method array getInstanceIds() Obtain CVM Instance ID
+ * @method void setInstanceIds(array $InstanceIds) Set CVM Instance ID
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class AttachClassicLinkVpcRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID
+     * @var string VPC instance ID
      */
     public $VpcId;
 
     /**
-     * @var array CVM实例ID
+     * @var array CVM Instance ID
      */
     public $InstanceIds;
     /**
-     * @param string $VpcId VPC实例ID
-     * @param array $InstanceIds CVM实例ID
+     * @param string $VpcId VPC instance ID
+     * @param array $InstanceIds CVM Instance ID
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

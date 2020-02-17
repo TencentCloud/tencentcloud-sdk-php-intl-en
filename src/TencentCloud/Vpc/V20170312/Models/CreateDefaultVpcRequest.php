@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getZone() 获取子网所在的可用区ID，不指定将随机选择可用区
- * @method void setZone(string $Zone) 设置子网所在的可用区ID，不指定将随机选择可用区
- * @method boolean getForce() 获取是否强制返回默认VPC
- * @method void setForce(boolean $Force) 设置是否强制返回默认VPC
+ * @method string getZone() Obtain The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+ * @method void setZone(string $Zone) Set The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+ * @method boolean getForce() Obtain Whether to forcibly return a default VPC
+ * @method void setForce(boolean $Force) Set Whether to forcibly return a default VPC
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class CreateDefaultVpcRequest extends AbstractModel
 {
     /**
-     * @var string 子网所在的可用区ID，不指定将随机选择可用区
+     * @var string The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
      */
     public $Zone;
 
     /**
-     * @var boolean 是否强制返回默认VPC
+     * @var boolean Whether to forcibly return a default VPC
      */
     public $Force;
     /**
-     * @param string $Zone 子网所在的可用区ID，不指定将随机选择可用区
-     * @param boolean $Force 是否强制返回默认VPC
+     * @param string $Zone The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+     * @param boolean $Force Whether to forcibly return a default VPC
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

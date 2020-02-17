@@ -18,12 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getListenerId() 获取Layer-7 listener ID
- * @method void setListenerId(string $ListenerId) 设置Layer-7 listener ID
- * @method string getRuleId() 获取Forwarding rule ID
- * @method void setRuleId(string $RuleId) 设置Forwarding rule ID
- * @method integer getForce() 获取Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
- * @method void setForce(integer $Force) 设置Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
+ * @method string getListenerId() Obtain Layer-7 listener ID
+ * @method void setListenerId(string $ListenerId) Set Layer-7 listener ID
+ * @method string getRuleId() Obtain Forwarding rule ID
+ * @method void setRuleId(string $RuleId) Set Forwarding rule ID
+ * @method integer getForce() Obtain Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
+ * @method void setForce(integer $Force) Set Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
  */
 
 /**
@@ -55,7 +55,7 @@ class DeleteRuleRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

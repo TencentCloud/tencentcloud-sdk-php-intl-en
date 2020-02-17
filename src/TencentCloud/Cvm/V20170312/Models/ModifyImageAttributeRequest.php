@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getImageId() 获取Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://cloud.tencent.com/document/api/213/15715) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
- * @method void setImageId(string $ImageId) 设置Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://cloud.tencent.com/document/api/213/15715) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
- * @method string getImageName() 获取New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
- * @method void setImageName(string $ImageName) 设置New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
- * @method string getImageDescription() 获取New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
- * @method void setImageDescription(string $ImageDescription) 设置New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
+ * @method string getImageId() Obtain Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://cloud.tencent.com/document/api/213/15715) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
+ * @method void setImageId(string $ImageId) Set Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://cloud.tencent.com/document/api/213/15715) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
+ * @method string getImageName() Obtain New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
+ * @method void setImageName(string $ImageName) Set New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
+ * @method string getImageDescription() Obtain New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
+ * @method void setImageDescription(string $ImageDescription) Set New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
  */
 
 /**
@@ -55,7 +55,7 @@ class ModifyImageAttributeRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

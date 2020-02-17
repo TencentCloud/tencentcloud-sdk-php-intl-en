@@ -18,10 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Real server ID
- * @method void setInstanceId(string $InstanceId) 设置Real server ID
- * @method integer getWeight() 获取Weight. Value range: [0, 100]
- * @method void setWeight(integer $Weight) 设置Weight. Value range: [0, 100]
+ * @method string getInstanceId() Obtain Real server ID
+ * @method void setInstanceId(string $InstanceId) Set Real server ID
+ * @method integer getWeight() Obtain Weight. Value range: [0, 100]
+ * @method void setWeight(integer $Weight) Set Weight. Value range: [0, 100]
  */
 
 /**
@@ -47,7 +47,7 @@ class ClassicalTargetInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

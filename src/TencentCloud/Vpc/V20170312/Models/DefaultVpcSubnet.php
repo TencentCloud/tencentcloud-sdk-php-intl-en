@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取默认VpcId
- * @method void setVpcId(string $VpcId) 设置默认VpcId
- * @method string getSubnetId() 获取默认SubnetId
- * @method void setSubnetId(string $SubnetId) 设置默认SubnetId
+ * @method string getVpcId() Obtain Default VpcId
+ * @method void setVpcId(string $VpcId) Set Default VpcId
+ * @method string getSubnetId() Obtain Default SubnetId
+ * @method void setSubnetId(string $SubnetId) Set Default SubnetId
  */
 
 /**
- *默认VPC和子网
+ *Default VPC and subnet
  */
 class DefaultVpcSubnet extends AbstractModel
 {
     /**
-     * @var string 默认VpcId
+     * @var string Default VpcId
      */
     public $VpcId;
 
     /**
-     * @var string 默认SubnetId
+     * @var string Default SubnetId
      */
     public $SubnetId;
     /**
-     * @param string $VpcId 默认VpcId
-     * @param string $SubnetId 默认SubnetId
+     * @param string $VpcId Default VpcId
+     * @param string $SubnetId Default SubnetId
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

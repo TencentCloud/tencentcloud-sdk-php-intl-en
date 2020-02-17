@@ -18,18 +18,18 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getCpuTotal() 获取Total number of CPU cores in the CDH instance
- * @method void setCpuTotal(integer $CpuTotal) 设置Total number of CPU cores in the CDH instance
- * @method integer getCpuAvailable() 获取Number of available CPU cores in the CDH instance
- * @method void setCpuAvailable(integer $CpuAvailable) 设置Number of available CPU cores in the CDH instance
- * @method float getMemTotal() 获取Total memory of the CDH instance; unit: GiB
- * @method void setMemTotal(float $MemTotal) 设置Total memory of the CDH instance; unit: GiB
- * @method float getMemAvailable() 获取Available memory of the CDH instance; unit: GiB
- * @method void setMemAvailable(float $MemAvailable) 设置Available memory of the CDH instance; unit: GiB
- * @method integer getDiskTotal() 获取Total disk size of the CDH instance; unit: GiB
- * @method void setDiskTotal(integer $DiskTotal) 设置Total disk size of the CDH instance; unit: GiB
- * @method integer getDiskAvailable() 获取Avilable disk size of the CDH instance; unit: GiB
- * @method void setDiskAvailable(integer $DiskAvailable) 设置Avilable disk size of the CDH instance; unit: GiB
+ * @method integer getCpuTotal() Obtain Total number of CPU cores in the CDH instance
+ * @method void setCpuTotal(integer $CpuTotal) Set Total number of CPU cores in the CDH instance
+ * @method integer getCpuAvailable() Obtain Number of available CPU cores in the CDH instance
+ * @method void setCpuAvailable(integer $CpuAvailable) Set Number of available CPU cores in the CDH instance
+ * @method float getMemTotal() Obtain Total memory of the CDH instance; unit: GiB
+ * @method void setMemTotal(float $MemTotal) Set Total memory of the CDH instance; unit: GiB
+ * @method float getMemAvailable() Obtain Available memory of the CDH instance; unit: GiB
+ * @method void setMemAvailable(float $MemAvailable) Set Available memory of the CDH instance; unit: GiB
+ * @method integer getDiskTotal() Obtain Total disk size of the CDH instance; unit: GiB
+ * @method void setDiskTotal(integer $DiskTotal) Set Total disk size of the CDH instance; unit: GiB
+ * @method integer getDiskAvailable() Obtain Avilable disk size of the CDH instance; unit: GiB
+ * @method void setDiskAvailable(integer $DiskAvailable) Set Avilable disk size of the CDH instance; unit: GiB
  */
 
 /**
@@ -79,7 +79,7 @@ class HostResource extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

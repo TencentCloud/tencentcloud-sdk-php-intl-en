@@ -18,60 +18,60 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPrivateIpAddress() 获取来源`IP`。
- * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置来源`IP`。
- * @method integer getInPkg() 获取入包量。
- * @method void setInPkg(integer $InPkg) 设置入包量。
- * @method integer getOutPkg() 获取出包量。
- * @method void setOutPkg(integer $OutPkg) 设置出包量。
- * @method integer getInTraffic() 获取入带宽，单位：`Byte`。
- * @method void setInTraffic(integer $InTraffic) 设置入带宽，单位：`Byte`。
- * @method integer getOutTraffic() 获取出带宽，单位：`Byte`。
- * @method void setOutTraffic(integer $OutTraffic) 设置出带宽，单位：`Byte`。
+ * @method string getPrivateIpAddress() Obtain Origin `IP`.
+ * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Origin `IP`.
+ * @method integer getInPkg() Obtain Inbound packets.
+ * @method void setInPkg(integer $InPkg) Set Inbound packets.
+ * @method integer getOutPkg() Obtain Outbound packets.
+ * @method void setOutPkg(integer $OutPkg) Set Outbound packets.
+ * @method integer getInTraffic() Obtain Inbound bandwidth, unit: `Byte`.
+ * @method void setInTraffic(integer $InTraffic) Set Inbound bandwidth, unit: `Byte`.
+ * @method integer getOutTraffic() Obtain Outbound bandwidth, unit: `Byte`.
+ * @method void setOutTraffic(integer $OutTraffic) Set Outbound bandwidth, unit: `Byte`.
  */
 
 /**
- *网关流量监控明细
+ *The gateway traffic monitoring details
  */
 class GatewayFlowMonitorDetail extends AbstractModel
 {
     /**
-     * @var string 来源`IP`。
+     * @var string Origin `IP`.
      */
     public $PrivateIpAddress;
 
     /**
-     * @var integer 入包量。
+     * @var integer Inbound packets.
      */
     public $InPkg;
 
     /**
-     * @var integer 出包量。
+     * @var integer Outbound packets.
      */
     public $OutPkg;
 
     /**
-     * @var integer 入带宽，单位：`Byte`。
+     * @var integer Inbound bandwidth, unit: `Byte`.
      */
     public $InTraffic;
 
     /**
-     * @var integer 出带宽，单位：`Byte`。
+     * @var integer Outbound bandwidth, unit: `Byte`.
      */
     public $OutTraffic;
     /**
-     * @param string $PrivateIpAddress 来源`IP`。
-     * @param integer $InPkg 入包量。
-     * @param integer $OutPkg 出包量。
-     * @param integer $InTraffic 入带宽，单位：`Byte`。
-     * @param integer $OutTraffic 出带宽，单位：`Byte`。
+     * @param string $PrivateIpAddress Origin `IP`.
+     * @param integer $InPkg Inbound packets.
+     * @param integer $OutPkg Outbound packets.
+     * @param integer $InTraffic Inbound bandwidth, unit: `Byte`.
+     * @param integer $OutTraffic Outbound bandwidth, unit: `Byte`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

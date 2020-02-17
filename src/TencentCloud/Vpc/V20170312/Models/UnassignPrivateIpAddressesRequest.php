@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
+ * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
+ * @method array getPrivateIpAddresses() Obtain The information of the specified private IPs. You can specify a maximum of 10 each time.
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 each time.
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class UnassignPrivateIpAddressesRequest extends AbstractModel
 {
     /**
-     * @var string 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * @var string The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var array 指定的内网IP信息，单次最多指定10个。
+     * @var array The information of the specified private IPs. You can specify a maximum of 10 each time.
      */
     public $PrivateIpAddresses;
     /**
-     * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+     * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

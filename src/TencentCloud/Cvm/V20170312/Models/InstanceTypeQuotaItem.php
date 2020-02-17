@@ -18,32 +18,32 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getZone() 获取Availability zone.
- * @method void setZone(string $Zone) 设置Availability zone.
- * @method string getInstanceType() 获取Instance model.
- * @method void setInstanceType(string $InstanceType) 设置Instance model.
- * @method string getInstanceChargeType() 获取Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
- * @method integer getNetworkCard() 获取ENI type. For example, 25 represents an ENI of 25 GB.
- * @method void setNetworkCard(integer $NetworkCard) 设置ENI type. For example, 25 represents an ENI of 25 GB.
- * @method Externals getExternals() 获取Additional data.
+ * @method string getZone() Obtain Availability zone.
+ * @method void setZone(string $Zone) Set Availability zone.
+ * @method string getInstanceType() Obtain Instance model.
+ * @method void setInstanceType(string $InstanceType) Set Instance model.
+ * @method string getInstanceChargeType() Obtain Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+ * @method integer getNetworkCard() Obtain ENI type. For example, 25 represents an ENI of 25 GB.
+ * @method void setNetworkCard(integer $NetworkCard) Set ENI type. For example, 25 represents an ENI of 25 GB.
+ * @method Externals getExternals() Obtain Additional data.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setExternals(Externals $Externals) 设置Additional data.
+ * @method void setExternals(Externals $Externals) Set Additional data.
 Note: This field may return null, indicating that no valid value is found.
- * @method integer getCpu() 获取Number of CPU cores of an instance model.
- * @method void setCpu(integer $Cpu) 设置Number of CPU cores of an instance model.
- * @method integer getMemory() 获取Instance memory capacity; unit: `GB`.
- * @method void setMemory(integer $Memory) 设置Instance memory capacity; unit: `GB`.
- * @method string getInstanceFamily() 获取Instance model family.
- * @method void setInstanceFamily(string $InstanceFamily) 设置Instance model family.
- * @method string getTypeName() 获取Model name.
- * @method void setTypeName(string $TypeName) 设置Model name.
- * @method array getLocalDiskTypeList() 获取List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
- * @method void setLocalDiskTypeList(array $LocalDiskTypeList) 设置List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
- * @method string getStatus() 获取Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
- * @method void setStatus(string $Status) 设置Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
- * @method ItemPrice getPrice() 获取Price of an instance model.
- * @method void setPrice(ItemPrice $Price) 设置Price of an instance model.
+ * @method integer getCpu() Obtain Number of CPU cores of an instance model.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores of an instance model.
+ * @method integer getMemory() Obtain Instance memory capacity; unit: `GB`.
+ * @method void setMemory(integer $Memory) Set Instance memory capacity; unit: `GB`.
+ * @method string getInstanceFamily() Obtain Instance model family.
+ * @method void setInstanceFamily(string $InstanceFamily) Set Instance model family.
+ * @method string getTypeName() Obtain Model name.
+ * @method void setTypeName(string $TypeName) Set Model name.
+ * @method array getLocalDiskTypeList() Obtain List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
+ * @method void setLocalDiskTypeList(array $LocalDiskTypeList) Set List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
+ * @method string getStatus() Obtain Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+ * @method void setStatus(string $Status) Set Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+ * @method ItemPrice getPrice() Obtain Price of an instance model.
+ * @method void setPrice(ItemPrice $Price) Set Price of an instance model.
  */
 
 /**
@@ -131,7 +131,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

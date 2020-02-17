@@ -18,58 +18,58 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID
- * @method string getAutoScalingGroupName() 获取Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
- * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
- * @method integer getDefaultCooldown() 获取Default cooldown period in seconds. Default value: 300
- * @method void setDefaultCooldown(integer $DefaultCooldown) 设置Default cooldown period in seconds. Default value: 300
- * @method integer getDesiredCapacity() 获取Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
- * @method string getLaunchConfigurationId() 获取Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置Launch configuration ID
- * @method integer getMaxSize() 获取Maximum number of instances. Value range: 0-2,000.
- * @method void setMaxSize(integer $MaxSize) 设置Maximum number of instances. Value range: 0-2,000.
- * @method integer getMinSize() 获取Minimum number of instances. Value range: 0-2,000.
- * @method void setMinSize(integer $MinSize) 设置Minimum number of instances. Value range: 0-2,000.
- * @method integer getProjectId() 获取Project ID
- * @method void setProjectId(integer $ProjectId) 设置Project ID
- * @method array getSubnetIds() 获取List of subnet IDs
- * @method void setSubnetIds(array $SubnetIds) 设置List of subnet IDs
- * @method array getTerminationPolicies() 获取Termination policy. Currently, the maximum length is 1. Value range: OLDEST_INSTANCE, NEWEST_INSTANCE.
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getAutoScalingGroupName() Obtain Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
+ * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
+ * @method integer getDefaultCooldown() Obtain Default cooldown period in seconds. Default value: 300
+ * @method void setDefaultCooldown(integer $DefaultCooldown) Set Default cooldown period in seconds. Default value: 300
+ * @method integer getDesiredCapacity() Obtain Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
+ * @method integer getMaxSize() Obtain Maximum number of instances. Value range: 0-2,000.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum number of instances. Value range: 0-2,000.
+ * @method integer getMinSize() Obtain Minimum number of instances. Value range: 0-2,000.
+ * @method void setMinSize(integer $MinSize) Set Minimum number of instances. Value range: 0-2,000.
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method array getSubnetIds() Obtain List of subnet IDs
+ * @method void setSubnetIds(array $SubnetIds) Set List of subnet IDs
+ * @method array getTerminationPolicies() Obtain Termination policy. Currently, the maximum length is 1. Value range: OLDEST_INSTANCE, NEWEST_INSTANCE.
 <br><li> OLDEST_INSTANCE: The oldest instance in the auto scaling group will be terminated first.
 <br><li> NEWEST_INSTANCE: The newest instance in the auto scaling group will be terminated first.
- * @method void setTerminationPolicies(array $TerminationPolicies) 设置Termination policy. Currently, the maximum length is 1. Value range: OLDEST_INSTANCE, NEWEST_INSTANCE.
+ * @method void setTerminationPolicies(array $TerminationPolicies) Set Termination policy. Currently, the maximum length is 1. Value range: OLDEST_INSTANCE, NEWEST_INSTANCE.
 <br><li> OLDEST_INSTANCE: The oldest instance in the auto scaling group will be terminated first.
 <br><li> NEWEST_INSTANCE: The newest instance in the auto scaling group will be terminated first.
- * @method string getVpcId() 获取VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
- * @method void setVpcId(string $VpcId) 设置VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
- * @method array getZones() 获取List of availability zones
- * @method void setZones(array $Zones) 设置List of availability zones
- * @method string getRetryPolicy() 获取Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
+ * @method string getVpcId() Obtain VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+ * @method void setVpcId(string $VpcId) Set VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+ * @method array getZones() Obtain List of availability zones
+ * @method void setZones(array $Zones) Set List of availability zones
+ * @method string getRetryPolicy() Obtain Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
 <br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
 <br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
 <br><li> NO_RETRY: No retry until a user call or alarm message is received again.
- * @method void setRetryPolicy(string $RetryPolicy) 设置Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
+ * @method void setRetryPolicy(string $RetryPolicy) Set Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
 <br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
 <br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
 <br><li> NO_RETRY: No retry until a user call or alarm message is received again.
- * @method string getZonesCheckPolicy() 获取Availability zone verification policy. Value range: ALL, ANY. Default value: ANY. This will work when the resource-related fields (launch configuration, availability zone, or subnet) of the auto scaling group are actually modified.
+ * @method string getZonesCheckPolicy() Obtain Availability zone verification policy. Value range: ALL, ANY. Default value: ANY. This will work when the resource-related fields (launch configuration, availability zone, or subnet) of the auto scaling group are actually modified.
 <br><li> ALL: The verification will succeed only if all availability zones (Zone) or subnets (SubnetId) are available; otherwise, an error will be reported.
 <br><li> ANY: The verification will success if any availability zone (Zone) or subnet (SubnetId) is available; otherwise, an error will be reported.
 
 Common reasons why an availability zone or subnet is unavailable include stock-out of CVM instances or CBS cloud disks in the availability zone, insufficient quota in the availability zone, or insufficient IPs in the subnet.
 If an availability zone or subnet in Zones/SubnetIds does not exist, a verification error will be reported regardless of the value of ZonesCheckPolicy.
- * @method void setZonesCheckPolicy(string $ZonesCheckPolicy) 设置Availability zone verification policy. Value range: ALL, ANY. Default value: ANY. This will work when the resource-related fields (launch configuration, availability zone, or subnet) of the auto scaling group are actually modified.
+ * @method void setZonesCheckPolicy(string $ZonesCheckPolicy) Set Availability zone verification policy. Value range: ALL, ANY. Default value: ANY. This will work when the resource-related fields (launch configuration, availability zone, or subnet) of the auto scaling group are actually modified.
 <br><li> ALL: The verification will succeed only if all availability zones (Zone) or subnets (SubnetId) are available; otherwise, an error will be reported.
 <br><li> ANY: The verification will success if any availability zone (Zone) or subnet (SubnetId) is available; otherwise, an error will be reported.
 
 Common reasons why an availability zone or subnet is unavailable include stock-out of CVM instances or CBS cloud disks in the availability zone, insufficient quota in the availability zone, or insufficient IPs in the subnet.
 If an availability zone or subnet in Zones/SubnetIds does not exist, a verification error will be reported regardless of the value of ZonesCheckPolicy.
- * @method ServiceSettings getServiceSettings() 获取Service settings such as unhealthy instance replacement.
- * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置Service settings such as unhealthy instance replacement.
- * @method integer getIpv6AddressCount() 获取
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置
+ * @method ServiceSettings getServiceSettings() Obtain Service settings such as unhealthy instance replacement.
+ * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings such as unhealthy instance replacement.
+ * @method integer getIpv6AddressCount() Obtain 
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
  */
 
 /**
@@ -199,7 +199,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

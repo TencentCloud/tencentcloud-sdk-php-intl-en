@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDiskType() 获取The system disk type. For more information about the limits on system disk types, see [Instance Types](/document/product/213/2177). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><br>Default value: CLOUD_BASIC.
- * @method void setDiskType(string $DiskType) 设置The system disk type. For more information about the limits on system disk types, see [Instance Types](/document/product/213/2177). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><br>Default value: CLOUD_BASIC.
- * @method string getDiskId() 获取System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
- * @method void setDiskId(string $DiskId) 设置System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
- * @method integer getDiskSize() 获取System disk size; unit: GB; default value: 50 GB.
- * @method void setDiskSize(integer $DiskSize) 设置System disk size; unit: GB; default value: 50 GB.
+ * @method string getDiskType() Obtain The system disk type. For more information about the limits on system disk types, see [Instance Types](/document/product/213/2177). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><br>Default value: CLOUD_BASIC.
+ * @method void setDiskType(string $DiskType) Set The system disk type. For more information about the limits on system disk types, see [Instance Types](/document/product/213/2177). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><br>Default value: CLOUD_BASIC.
+ * @method string getDiskId() Obtain System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
+ * @method void setDiskId(string $DiskId) Set System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
+ * @method integer getDiskSize() Obtain System disk size; unit: GB; default value: 50 GB.
+ * @method void setDiskSize(integer $DiskSize) Set System disk size; unit: GB; default value: 50 GB.
  */
 
 /**
@@ -55,7 +55,7 @@ class SystemDisk extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

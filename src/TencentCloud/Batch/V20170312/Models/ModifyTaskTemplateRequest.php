@@ -18,14 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskTemplateId() 获取Job template ID
- * @method void setTaskTemplateId(string $TaskTemplateId) 设置Job template ID
- * @method string getTaskTemplateName() 获取Job template name
- * @method void setTaskTemplateName(string $TaskTemplateName) 设置Job template name
- * @method string getTaskTemplateDescription() 获取Job template description
- * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置Job template description
- * @method Task getTaskTemplateInfo() 获取Job template information
- * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置Job template information
+ * @method string getTaskTemplateId() Obtain Job template ID
+ * @method void setTaskTemplateId(string $TaskTemplateId) Set Job template ID
+ * @method string getTaskTemplateName() Obtain Job template name
+ * @method void setTaskTemplateName(string $TaskTemplateName) Set Job template name
+ * @method string getTaskTemplateDescription() Obtain Job template description
+ * @method void setTaskTemplateDescription(string $TaskTemplateDescription) Set Job template description
+ * @method Task getTaskTemplateInfo() Obtain Job template information
+ * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) Set Job template information
  */
 
 /**
@@ -63,7 +63,7 @@ class ModifyTaskTemplateRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

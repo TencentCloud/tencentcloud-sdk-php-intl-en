@@ -18,20 +18,20 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getListenerId() 获取CLB listener ID
- * @method void setListenerId(string $ListenerId) 设置CLB listener ID
- * @method string getDomain() 获取Domain name, which must be under a created forwarding rule.
- * @method void setDomain(string $Domain) 设置Domain name, which must be under a created forwarding rule.
- * @method string getNewDomain() 获取New domain name
- * @method void setNewDomain(string $NewDomain) 设置New domain name
- * @method CertificateInput getCertificate() 获取Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
- * @method void setCertificate(CertificateInput $Certificate) 设置Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
- * @method boolean getHttp2() 获取Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
- * @method void setHttp2(boolean $Http2) 设置Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
- * @method boolean getDefaultServer() 获取Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
- * @method void setDefaultServer(boolean $DefaultServer) 设置Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getListenerId() Obtain CLB listener ID
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method string getDomain() Obtain Domain name, which must be under a created forwarding rule.
+ * @method void setDomain(string $Domain) Set Domain name, which must be under a created forwarding rule.
+ * @method string getNewDomain() Obtain New domain name
+ * @method void setNewDomain(string $NewDomain) Set New domain name
+ * @method CertificateInput getCertificate() Obtain Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
+ * @method void setCertificate(CertificateInput $Certificate) Set Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
+ * @method boolean getHttp2() Obtain Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+ * @method void setHttp2(boolean $Http2) Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+ * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+ * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  */
 
 /**
@@ -87,7 +87,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

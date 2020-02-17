@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取Connection ID list; It’s an old parameter, please switch to ProxyIds.
- * @method void setInstanceIds(array $InstanceIds) 设置Connection ID list; It’s an old parameter, please switch to ProxyIds.
- * @method array getProxyIds() 获取Connection ID list; It’s a new parameter.
- * @method void setProxyIds(array $ProxyIds) 设置Connection ID list; It’s a new parameter.
+ * @method array getInstanceIds() Obtain Connection ID list; It’s an old parameter, please switch to ProxyIds.
+ * @method void setInstanceIds(array $InstanceIds) Set Connection ID list; It’s an old parameter, please switch to ProxyIds.
+ * @method array getProxyIds() Obtain Connection ID list; It’s a new parameter.
+ * @method void setProxyIds(array $ProxyIds) Set Connection ID list; It’s a new parameter.
  */
 
 /**
@@ -47,7 +47,7 @@ class DescribeProxiesStatusRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

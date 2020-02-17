@@ -18,10 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取Custom key
- * @method void setName(string $Name) 设置Custom key
- * @method string getValue() 获取Custom value
- * @method void setValue(string $Value) 设置Custom value
+ * @method string getName() Obtain Custom key
+ * @method void setName(string $Name) Set Custom key
+ * @method string getValue() Obtain Custom value
+ * @method void setValue(string $Value) Set Custom value
  */
 
 /**
@@ -47,7 +47,7 @@ class EventVar extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

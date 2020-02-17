@@ -18,26 +18,26 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getScheduledActionId() 获取Scheduled task ID.
- * @method void setScheduledActionId(string $ScheduledActionId) 设置Scheduled task ID.
- * @method string getScheduledActionName() 获取Scheduled task name.
- * @method void setScheduledActionName(string $ScheduledActionName) 设置Scheduled task name.
- * @method string getAutoScalingGroupId() 获取ID of the auto scaling group where the scheduled task is located.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置ID of the auto scaling group where the scheduled task is located.
- * @method string getStartTime() 获取Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
- * @method void setStartTime(string $StartTime) 设置Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
- * @method string getRecurrence() 获取Repeating mode of the scheduled task.
- * @method void setRecurrence(string $Recurrence) 设置Repeating mode of the scheduled task.
- * @method string getEndTime() 获取End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
- * @method void setEndTime(string $EndTime) 设置End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
- * @method integer getMaxSize() 获取Maximum number of instances set by the scheduled task.
- * @method void setMaxSize(integer $MaxSize) 设置Maximum number of instances set by the scheduled task.
- * @method integer getDesiredCapacity() 获取Desired number of instances set by the scheduled task.
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置Desired number of instances set by the scheduled task.
- * @method integer getMinSize() 获取Minimum number of instances set by the scheduled task.
- * @method void setMinSize(integer $MinSize) 设置Minimum number of instances set by the scheduled task.
- * @method string getCreatedTime() 获取Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+ * @method string getScheduledActionId() Obtain Scheduled task ID.
+ * @method void setScheduledActionId(string $ScheduledActionId) Set Scheduled task ID.
+ * @method string getScheduledActionName() Obtain Scheduled task name.
+ * @method void setScheduledActionName(string $ScheduledActionName) Set Scheduled task name.
+ * @method string getAutoScalingGroupId() Obtain ID of the auto scaling group where the scheduled task is located.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set ID of the auto scaling group where the scheduled task is located.
+ * @method string getStartTime() Obtain Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+ * @method void setStartTime(string $StartTime) Set Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+ * @method string getRecurrence() Obtain Repeating mode of the scheduled task.
+ * @method void setRecurrence(string $Recurrence) Set Repeating mode of the scheduled task.
+ * @method string getEndTime() Obtain End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+ * @method void setEndTime(string $EndTime) Set End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+ * @method integer getMaxSize() Obtain Maximum number of instances set by the scheduled task.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum number of instances set by the scheduled task.
+ * @method integer getDesiredCapacity() Obtain Desired number of instances set by the scheduled task.
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired number of instances set by the scheduled task.
+ * @method integer getMinSize() Obtain Minimum number of instances set by the scheduled task.
+ * @method void setMinSize(integer $MinSize) Set Minimum number of instances set by the scheduled task.
+ * @method string getCreatedTime() Obtain Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
  */
 
 /**
@@ -111,7 +111,7 @@ class ScheduledAction extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFailListenerIdSet() 获取IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
+ * @method array getFailListenerIdSet() Obtain IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFailListenerIdSet(array $FailListenerIdSet) 设置IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
+ * @method void setFailListenerIdSet(array $FailListenerIdSet) Set IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -51,7 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

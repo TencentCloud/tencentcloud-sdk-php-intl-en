@@ -18,18 +18,18 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getGroupQuota() 获取The maximum number of placement groups that can be created.
- * @method void setGroupQuota(integer $GroupQuota) 设置The maximum number of placement groups that can be created.
- * @method integer getCurrentNum() 获取The number of placement groups that have been created by the current user.
- * @method void setCurrentNum(integer $CurrentNum) 设置The number of placement groups that have been created by the current user.
- * @method integer getCvmInHostGroupQuota() 获取Quota on instances in a physical-machine-type disaster recovery group.
- * @method void setCvmInHostGroupQuota(integer $CvmInHostGroupQuota) 设置Quota on instances in a physical-machine-type disaster recovery group.
- * @method integer getCvmInSwGroupQuota() 获取Quota on instances in a switch-type disaster recovery group.
- * @method void setCvmInSwGroupQuota(integer $CvmInSwGroupQuota) 设置Quota on instances in a switch-type disaster recovery group.
- * @method integer getCvmInRackGroupQuota() 获取Quota on instances in a rack-type disaster recovery group.
- * @method void setCvmInRackGroupQuota(integer $CvmInRackGroupQuota) 设置Quota on instances in a rack-type disaster recovery group.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getGroupQuota() Obtain The maximum number of placement groups that can be created.
+ * @method void setGroupQuota(integer $GroupQuota) Set The maximum number of placement groups that can be created.
+ * @method integer getCurrentNum() Obtain The number of placement groups that have been created by the current user.
+ * @method void setCurrentNum(integer $CurrentNum) Set The number of placement groups that have been created by the current user.
+ * @method integer getCvmInHostGroupQuota() Obtain Quota on instances in a physical-machine-type disaster recovery group.
+ * @method void setCvmInHostGroupQuota(integer $CvmInHostGroupQuota) Set Quota on instances in a physical-machine-type disaster recovery group.
+ * @method integer getCvmInSwGroupQuota() Obtain Quota on instances in a switch-type disaster recovery group.
+ * @method void setCvmInSwGroupQuota(integer $CvmInSwGroupQuota) Set Quota on instances in a switch-type disaster recovery group.
+ * @method integer getCvmInRackGroupQuota() Obtain Quota on instances in a rack-type disaster recovery group.
+ * @method void setCvmInRackGroupQuota(integer $CvmInRackGroupQuota) Set Quota on instances in a rack-type disaster recovery group.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -79,7 +79,7 @@ class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

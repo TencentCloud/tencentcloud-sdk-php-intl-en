@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDisasterRecoverGroupSet() 获取Information on spread placement groups.
- * @method void setDisasterRecoverGroupSet(array $DisasterRecoverGroupSet) 设置Information on spread placement groups.
- * @method integer getTotalCount() 获取Total number of placement groups of the user.
- * @method void setTotalCount(integer $TotalCount) 设置Total number of placement groups of the user.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getDisasterRecoverGroupSet() Obtain Information on spread placement groups.
+ * @method void setDisasterRecoverGroupSet(array $DisasterRecoverGroupSet) Set Information on spread placement groups.
+ * @method integer getTotalCount() Obtain Total number of placement groups of the user.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of placement groups of the user.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeDisasterRecoverGroupsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

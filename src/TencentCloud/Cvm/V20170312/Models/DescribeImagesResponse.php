@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getImageSet() 获取Information on an image, including its state and attributes.
- * @method void setImageSet(array $ImageSet) 设置Information on an image, including its state and attributes.
- * @method integer getTotalCount() 获取Number of images meeting the filtering conditions.
- * @method void setTotalCount(integer $TotalCount) 设置Number of images meeting the filtering conditions.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getImageSet() Obtain Information on an image, including its state and attributes.
+ * @method void setImageSet(array $ImageSet) Set Information on an image, including its state and attributes.
+ * @method integer getTotalCount() Obtain Number of images meeting the filtering conditions.
+ * @method void setTotalCount(integer $TotalCount) Set Number of images meeting the filtering conditions.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeImagesResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

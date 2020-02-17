@@ -18,14 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method string getSourceListenerId() 获取Source listener ID
- * @method void setSourceListenerId(string $SourceListenerId) 设置Source listener ID
- * @method string getTargetListenerId() 获取Target listener ID
- * @method void setTargetListenerId(string $TargetListenerId) 设置Target listener ID
- * @method array getRewriteInfos() 获取Redirection relationship between forwarding rules
- * @method void setRewriteInfos(array $RewriteInfos) 设置Redirection relationship between forwarding rules
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getSourceListenerId() Obtain Source listener ID
+ * @method void setSourceListenerId(string $SourceListenerId) Set Source listener ID
+ * @method string getTargetListenerId() Obtain Target listener ID
+ * @method void setTargetListenerId(string $TargetListenerId) Set Target listener ID
+ * @method array getRewriteInfos() Obtain Redirection relationship between forwarding rules
+ * @method void setRewriteInfos(array $RewriteInfos) Set Redirection relationship between forwarding rules
  */
 
 /**
@@ -63,7 +63,7 @@ class ManualRewriteRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

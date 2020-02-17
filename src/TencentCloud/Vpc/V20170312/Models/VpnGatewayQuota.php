@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBandwidth() 获取The bandwidth quota.
- * @method void setBandwidth(integer $Bandwidth) 设置The bandwidth quota.
- * @method string getCname() 获取The bandwidth quota name in Chinese.
- * @method void setCname(string $Cname) 设置The bandwidth quota name in Chinese.
- * @method string getName() 获取The bandwidth quota name in English.
- * @method void setName(string $Name) 设置The bandwidth quota name in English.
+ * @method integer getBandwidth() Obtain The bandwidth quota.
+ * @method void setBandwidth(integer $Bandwidth) Set The bandwidth quota.
+ * @method string getCname() Obtain The bandwidth quota name in Chinese.
+ * @method void setCname(string $Cname) Set The bandwidth quota name in Chinese.
+ * @method string getName() Obtain The bandwidth quota name in English.
+ * @method void setName(string $Name) Set The bandwidth quota name in English.
  */
 
 /**
@@ -55,7 +55,7 @@ class VpnGatewayQuota extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

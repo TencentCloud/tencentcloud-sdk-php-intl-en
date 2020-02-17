@@ -18,41 +18,41 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getImageId() 获取Image ID
- * @method void setImageId(string $ImageId) 设置Image ID
- * @method string getOsName() 获取Operating system of the image
- * @method void setOsName(string $OsName) 设置Operating system of the image
- * @method string getImageType() 获取Image type
- * @method void setImageType(string $ImageType) 设置Image type
- * @method string getCreatedTime() 获取Creation time of the image
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time of the image
- * @method string getImageName() 获取Image name
- * @method void setImageName(string $ImageName) 设置Image name
- * @method string getImageDescription() 获取Image description
- * @method void setImageDescription(string $ImageDescription) 设置Image description
- * @method integer getImageSize() 获取Image size
- * @method void setImageSize(integer $ImageSize) 设置Image size
- * @method string getArchitecture() 获取Image architecture
- * @method void setArchitecture(string $Architecture) 设置Image architecture
- * @method string getImageState() 获取Image state
- * @method void setImageState(string $ImageState) 设置Image state
- * @method string getPlatform() 获取Source platform of the image
- * @method void setPlatform(string $Platform) 设置Source platform of the image
- * @method string getImageCreator() 获取Image creator
- * @method void setImageCreator(string $ImageCreator) 设置Image creator
- * @method string getImageSource() 获取Image source
- * @method void setImageSource(string $ImageSource) 设置Image source
- * @method integer getSyncPercent() 获取Synchronization percentage
+ * @method string getImageId() Obtain Image ID
+ * @method void setImageId(string $ImageId) Set Image ID
+ * @method string getOsName() Obtain Operating system of the image
+ * @method void setOsName(string $OsName) Set Operating system of the image
+ * @method string getImageType() Obtain Image type
+ * @method void setImageType(string $ImageType) Set Image type
+ * @method string getCreatedTime() Obtain Creation time of the image
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time of the image
+ * @method string getImageName() Obtain Image name
+ * @method void setImageName(string $ImageName) Set Image name
+ * @method string getImageDescription() Obtain Image description
+ * @method void setImageDescription(string $ImageDescription) Set Image description
+ * @method integer getImageSize() Obtain Image size
+ * @method void setImageSize(integer $ImageSize) Set Image size
+ * @method string getArchitecture() Obtain Image architecture
+ * @method void setArchitecture(string $Architecture) Set Image architecture
+ * @method string getImageState() Obtain Image state
+ * @method void setImageState(string $ImageState) Set Image state
+ * @method string getPlatform() Obtain Source platform of the image
+ * @method void setPlatform(string $Platform) Set Source platform of the image
+ * @method string getImageCreator() Obtain Image creator
+ * @method void setImageCreator(string $ImageCreator) Set Image creator
+ * @method string getImageSource() Obtain Image source
+ * @method void setImageSource(string $ImageSource) Set Image source
+ * @method integer getSyncPercent() Obtain Synchronization percentage
 Note: This field may return null, indicating that no valid value is found.
- * @method void setSyncPercent(integer $SyncPercent) 设置Synchronization percentage
+ * @method void setSyncPercent(integer $SyncPercent) Set Synchronization percentage
 Note: This field may return null, indicating that no valid value is found.
- * @method boolean getIsSupportCloudinit() 获取Whether the image supports cloud-init
+ * @method boolean getIsSupportCloudinit() Obtain Whether the image supports cloud-init
 Note: This field may return null, indicating that no valid value is found.
- * @method void setIsSupportCloudinit(boolean $IsSupportCloudinit) 设置Whether the image supports cloud-init
+ * @method void setIsSupportCloudinit(boolean $IsSupportCloudinit) Set Whether the image supports cloud-init
 Note: This field may return null, indicating that no valid value is found.
- * @method array getSnapshotSet() 获取Information on the snapshots associated with the image
+ * @method array getSnapshotSet() Obtain Information on the snapshots associated with the image
 Note: This field may return null, indicating that no valid value is found.
- * @method void setSnapshotSet(array $SnapshotSet) 设置Information on the snapshots associated with the image
+ * @method void setSnapshotSet(array $SnapshotSet) Set Information on the snapshots associated with the image
 Note: This field may return null, indicating that no valid value is found.
  */
 
@@ -163,7 +163,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

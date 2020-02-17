@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取Total number of CDH instances meeting the query conditions
- * @method void setTotalCount(integer $TotalCount) 设置Total number of CDH instances meeting the query conditions
- * @method array getHostSet() 获取Information on CDH instances
- * @method void setHostSet(array $HostSet) 设置Information on CDH instances
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getTotalCount() Obtain Total number of CDH instances meeting the query conditions
+ * @method void setTotalCount(integer $TotalCount) Set Total number of CDH instances meeting the query conditions
+ * @method array getHostSet() Obtain Information on CDH instances
+ * @method void setHostSet(array $HostSet) Set Information on CDH instances
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -55,7 +55,7 @@ class DescribeHostsResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

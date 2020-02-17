@@ -18,44 +18,44 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID.
- * @method string getActivityId() 获取Scaling activity ID.
- * @method void setActivityId(string $ActivityId) 设置Scaling activity ID.
- * @method string getActivityType() 获取Scaling activity type. Value range:<br>
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
+ * @method string getActivityId() Obtain Scaling activity ID.
+ * @method void setActivityId(string $ActivityId) Set Scaling activity ID.
+ * @method string getActivityType() Obtain Scaling activity type. Value range:<br>
 <li>SCALE_OUT: scale-out <li>SCALE_IN: scale-in <li>ATTACH_INSTANCES: adding an instance <li>REMOVE_INSTANCES: terminating an instance <li>DETACH_INSTANCES: removing an instance <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminating an instance in the CVM console <li>REPLACE_UNHEALTHY_INSTANCE: replacing an unhealthy instance
- * @method void setActivityType(string $ActivityType) 设置Scaling activity type. Value range:<br>
+ * @method void setActivityType(string $ActivityType) Set Scaling activity type. Value range:<br>
 <li>SCALE_OUT: scale-out <li>SCALE_IN: scale-in <li>ATTACH_INSTANCES: adding an instance <li>REMOVE_INSTANCES: terminating an instance <li>DETACH_INSTANCES: removing an instance <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminating an instance in the CVM console <li>REPLACE_UNHEALTHY_INSTANCE: replacing an unhealthy instance
- * @method string getStatusCode() 获取Scaling activity status. Value range:<br>
+ * @method string getStatusCode() Obtain Scaling activity status. Value range:<br>
 <li>INIT: initializing
 <li>RUNNING: running
 <li>SUCCESSFUL: succeeded
 <li>PARTIALLY_SUCCESSFUL: partially succeeded
 <li>FAILED: failed
 <li>CANCELLED: canceled
- * @method void setStatusCode(string $StatusCode) 设置Scaling activity status. Value range:<br>
+ * @method void setStatusCode(string $StatusCode) Set Scaling activity status. Value range:<br>
 <li>INIT: initializing
 <li>RUNNING: running
 <li>SUCCESSFUL: succeeded
 <li>PARTIALLY_SUCCESSFUL: partially succeeded
 <li>FAILED: failed
 <li>CANCELLED: canceled
- * @method string getStatusMessage() 获取Description of the scaling activity status.
- * @method void setStatusMessage(string $StatusMessage) 设置Description of the scaling activity status.
- * @method string getCause() 获取Cause of the scaling activity.
- * @method void setCause(string $Cause) 设置Cause of the scaling activity.
- * @method string getDescription() 获取Description of the scaling activity.
- * @method void setDescription(string $Description) 设置Description of the scaling activity.
- * @method string getStartTime() 获取Start time of the scaling activity.
- * @method void setStartTime(string $StartTime) 设置Start time of the scaling activity.
- * @method string getEndTime() 获取End time of the scaling activity.
- * @method void setEndTime(string $EndTime) 设置End time of the scaling activity.
- * @method string getCreatedTime() 获取Creation time of the scaling activity.
- * @method void setCreatedTime(string $CreatedTime) 设置Creation time of the scaling activity.
- * @method array getActivityRelatedInstanceSet() 获取Information set of the instances related to the scaling activity.
- * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) 设置Information set of the instances related to the scaling activity.
- * @method string getStatusMessageSimplified() 获取Brief description of the scaling activity status.
- * @method void setStatusMessageSimplified(string $StatusMessageSimplified) 设置Brief description of the scaling activity status.
+ * @method string getStatusMessage() Obtain Description of the scaling activity status.
+ * @method void setStatusMessage(string $StatusMessage) Set Description of the scaling activity status.
+ * @method string getCause() Obtain Cause of the scaling activity.
+ * @method void setCause(string $Cause) Set Cause of the scaling activity.
+ * @method string getDescription() Obtain Description of the scaling activity.
+ * @method void setDescription(string $Description) Set Description of the scaling activity.
+ * @method string getStartTime() Obtain Start time of the scaling activity.
+ * @method void setStartTime(string $StartTime) Set Start time of the scaling activity.
+ * @method string getEndTime() Obtain End time of the scaling activity.
+ * @method void setEndTime(string $EndTime) Set End time of the scaling activity.
+ * @method string getCreatedTime() Obtain Creation time of the scaling activity.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time of the scaling activity.
+ * @method array getActivityRelatedInstanceSet() Obtain Information set of the instances related to the scaling activity.
+ * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) Set Information set of the instances related to the scaling activity.
+ * @method string getStatusMessageSimplified() Obtain Brief description of the scaling activity status.
+ * @method void setStatusMessageSimplified(string $StatusMessageSimplified) Set Brief description of the scaling activity status.
  */
 
 /**
@@ -155,7 +155,7 @@ class Activity extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

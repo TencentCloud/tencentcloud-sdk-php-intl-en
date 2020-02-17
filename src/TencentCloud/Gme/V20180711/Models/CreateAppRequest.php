@@ -18,22 +18,22 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAppName() 获取Application name
- * @method void setAppName(string $AppName) 设置Application name
- * @method integer getProjectId() 获取Tencent Cloud project ID. Default value: 0, which means that the default project is used
- * @method void setProjectId(integer $ProjectId) 设置Tencent Cloud project ID. Default value: 0, which means that the default project is used
- * @method array getEngineList() 获取List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
- * @method void setEngineList(array $EngineList) 设置List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
- * @method array getRegionList() 获取List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
- * @method void setRegionList(array $RegionList) 设置List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
- * @method RealtimeSpeechConf getRealtimeSpeechConf() 获取Configuration information of voice chat
- * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) 设置Configuration information of voice chat
- * @method VoiceMessageConf getVoiceMessageConf() 获取Configuration information of voice messaging and speech-to-text
- * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置Configuration information of voice messaging and speech-to-text
- * @method VoiceFilterConf getVoiceFilterConf() 获取Configuration information of phrase analysis
- * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置Configuration information of phrase analysis
- * @method array getTags() 获取List of tags to be added
- * @method void setTags(array $Tags) 设置List of tags to be added
+ * @method string getAppName() Obtain Application name
+ * @method void setAppName(string $AppName) Set Application name
+ * @method integer getProjectId() Obtain Tencent Cloud project ID. Default value: 0, which means that the default project is used
+ * @method void setProjectId(integer $ProjectId) Set Tencent Cloud project ID. Default value: 0, which means that the default project is used
+ * @method array getEngineList() Obtain List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
+ * @method void setEngineList(array $EngineList) Set List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
+ * @method array getRegionList() Obtain List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+ * @method void setRegionList(array $RegionList) Set List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+ * @method RealtimeSpeechConf getRealtimeSpeechConf() Obtain Configuration information of voice chat
+ * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) Set Configuration information of voice chat
+ * @method VoiceMessageConf getVoiceMessageConf() Obtain Configuration information of voice messaging and speech-to-text
+ * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) Set Configuration information of voice messaging and speech-to-text
+ * @method VoiceFilterConf getVoiceFilterConf() Obtain Configuration information of phrase analysis
+ * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) Set Configuration information of phrase analysis
+ * @method array getTags() Obtain List of tags to be added
+ * @method void setTags(array $Tags) Set List of tags to be added
  */
 
 /**
@@ -95,7 +95,7 @@ class CreateAppRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

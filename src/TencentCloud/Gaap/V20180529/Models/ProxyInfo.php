@@ -18,25 +18,25 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取Connection instance ID; It’s an old parameter, please switch to ProxyId.
+ * @method string getInstanceId() Obtain Connection instance ID; It’s an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) 设置Connection instance ID; It’s an old parameter, please switch to ProxyId.
+ * @method void setInstanceId(string $InstanceId) Set Connection instance ID; It’s an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCreateTime() 获取Creation time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
- * @method void setCreateTime(integer $CreateTime) 设置Creation time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
- * @method integer getProjectId() 获取Project ID.
- * @method void setProjectId(integer $ProjectId) 设置Project ID.
- * @method string getProxyName() 获取Connection name.
- * @method void setProxyName(string $ProxyName) 设置Connection name.
- * @method string getAccessRegion() 获取Access region.
- * @method void setAccessRegion(string $AccessRegion) 设置Access region.
- * @method string getRealServerRegion() 获取Origin server region.
- * @method void setRealServerRegion(string $RealServerRegion) 设置Origin server region.
- * @method integer getBandwidth() 获取Bandwidth. Unit: Mbps.
- * @method void setBandwidth(integer $Bandwidth) 设置Bandwidth. Unit: Mbps.
- * @method integer getConcurrent() 获取Concurrence. Unit: requests/second.
- * @method void setConcurrent(integer $Concurrent) 设置Concurrence. Unit: requests/second.
- * @method string getStatus() 获取Connection status:
+ * @method integer getCreateTime() Obtain Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+ * @method void setCreateTime(integer $CreateTime) Set Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method string getProxyName() Obtain Connection name.
+ * @method void setProxyName(string $ProxyName) Set Connection name.
+ * @method string getAccessRegion() Obtain Access region.
+ * @method void setAccessRegion(string $AccessRegion) Set Access region.
+ * @method string getRealServerRegion() Obtain Origin server region.
+ * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region.
+ * @method integer getBandwidth() Obtain Bandwidth. Unit: Mbps.
+ * @method void setBandwidth(integer $Bandwidth) Set Bandwidth. Unit: Mbps.
+ * @method integer getConcurrent() Obtain Concurrence. Unit: requests/second.
+ * @method void setConcurrent(integer $Concurrent) Set Concurrence. Unit: requests/second.
+ * @method string getStatus() Obtain Connection status:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
@@ -47,7 +47,7 @@ ADJUSTING: adjusting configuration
 ISOLATING: isolating (it’s triggered when the account is in arrears);
 ISOLATED: isolated (it’s triggered when the account is in arrears);
 UNKNOWN: unknown status.
- * @method void setStatus(string $Status) 设置Connection status:
+ * @method void setStatus(string $Status) Set Connection status:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
@@ -58,45 +58,45 @@ ADJUSTING: adjusting configuration
 ISOLATING: isolating (it’s triggered when the account is in arrears);
 ISOLATED: isolated (it’s triggered when the account is in arrears);
 UNKNOWN: unknown status.
- * @method string getDomain() 获取Accessed domain name.
- * @method void setDomain(string $Domain) 设置Accessed domain name.
- * @method string getIP() 获取Accessed IP.
- * @method void setIP(string $IP) 设置Accessed IP.
- * @method string getVersion() 获取Connection versions: 1.0, 2.0, 3.0.
- * @method void setVersion(string $Version) 设置Connection versions: 1.0, 2.0, 3.0.
- * @method string getProxyId() 获取Connection instance ID; It’s a new parameter.
+ * @method string getDomain() Obtain Accessed domain name.
+ * @method void setDomain(string $Domain) Set Accessed domain name.
+ * @method string getIP() Obtain Accessed IP.
+ * @method void setIP(string $IP) Set Accessed IP.
+ * @method string getVersion() Obtain Connection versions: 1.0, 2.0, 3.0.
+ * @method void setVersion(string $Version) Set Connection versions: 1.0, 2.0, 3.0.
+ * @method string getProxyId() Obtain Connection instance ID; It’s a new parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyId(string $ProxyId) 设置Connection instance ID; It’s a new parameter.
+ * @method void setProxyId(string $ProxyId) Set Connection instance ID; It’s a new parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScalarable() 获取1: this connection is expandable; 0: this connection is not expandable.
- * @method void setScalarable(integer $Scalarable) 设置1: this connection is expandable; 0: this connection is not expandable.
- * @method array getSupportProtocols() 获取Supported protocol types.
- * @method void setSupportProtocols(array $SupportProtocols) 设置Supported protocol types.
- * @method string getGroupId() 获取Connection group ID. This field exists if a connection belongs to a connection group.
+ * @method integer getScalarable() Obtain 1: this connection is expandable; 0: this connection is not expandable.
+ * @method void setScalarable(integer $Scalarable) Set 1: this connection is expandable; 0: this connection is not expandable.
+ * @method array getSupportProtocols() Obtain Supported protocol types.
+ * @method void setSupportProtocols(array $SupportProtocols) Set Supported protocol types.
+ * @method string getGroupId() Obtain Connection group ID. This field exists if a connection belongs to a connection group.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupId(string $GroupId) 设置Connection group ID. This field exists if a connection belongs to a connection group.
+ * @method void setGroupId(string $GroupId) Set Connection group ID. This field exists if a connection belongs to a connection group.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPolicyId() 获取Security policy ID. This field exists if security policies are configured.
+ * @method string getPolicyId() Obtain Security policy ID. This field exists if security policies are configured.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPolicyId(string $PolicyId) 设置Security policy ID. This field exists if security policies are configured.
+ * @method void setPolicyId(string $PolicyId) Set Security policy ID. This field exists if security policies are configured.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RegionDetail getAccessRegionInfo() 获取Access region details, including region ID and region name.
+ * @method RegionDetail getAccessRegionInfo() Obtain Access region details, including region ID and region name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccessRegionInfo(RegionDetail $AccessRegionInfo) 设置Access region details, including region ID and region name.
+ * @method void setAccessRegionInfo(RegionDetail $AccessRegionInfo) Set Access region details, including region ID and region name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RegionDetail getRealServerRegionInfo() 获取Origin server region details, including region ID and region name.
+ * @method RegionDetail getRealServerRegionInfo() Obtain Origin server region details, including region ID and region name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) 设置Origin server region details, including region ID and region name.
+ * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) Set Origin server region details, including region ID and region name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getForwardIP() 获取Forwarding IP of the connection
- * @method void setForwardIP(string $ForwardIP) 设置Forwarding IP of the connection
- * @method array getTagSet() 获取Tag list. This field is an empty list if no tags exist.
+ * @method string getForwardIP() Obtain Forwarding IP of the connection
+ * @method void setForwardIP(string $ForwardIP) Set Forwarding IP of the connection
+ * @method array getTagSet() Obtain Tag list. This field is an empty list if no tags exist.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagSet(array $TagSet) 设置Tag list. This field is an empty list if no tags exist.
+ * @method void setTagSet(array $TagSet) Set Tag list. This field is an empty list if no tags exist.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSupportSecurity() 获取Whether security groups are supported.
+ * @method integer getSupportSecurity() Obtain Whether security groups are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportSecurity(integer $SupportSecurity) 设置Whether security groups are supported.
+ * @method void setSupportSecurity(integer $SupportSecurity) Set Whether security groups are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -112,7 +112,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceId;
 
     /**
-     * @var integer Creation time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
+     * @var integer Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
      */
     public $CreateTime;
 
@@ -235,7 +235,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $InstanceId Connection instance ID; It’s an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CreateTime Creation time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
+     * @param integer $CreateTime Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
      * @param integer $ProjectId Project ID.
      * @param string $ProxyName Connection name.
      * @param string $AccessRegion Access region.
@@ -279,7 +279,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

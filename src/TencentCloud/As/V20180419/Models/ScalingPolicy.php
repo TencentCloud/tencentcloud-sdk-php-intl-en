@@ -18,22 +18,22 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAutoScalingGroupId() 获取Auto scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置Auto scaling group ID.
- * @method string getAutoScalingPolicyId() 获取Alarm trigger policy ID.
- * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置Alarm trigger policy ID.
- * @method string getScalingPolicyName() 获取Alarm trigger policy name.
- * @method void setScalingPolicyName(string $ScalingPolicyName) 设置Alarm trigger policy name.
- * @method string getAdjustmentType() 获取The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
- * @method void setAdjustmentType(string $AdjustmentType) 设置The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
- * @method integer getAdjustmentValue() 获取The adjusted value of desired number of instances after the alarm is triggered.
- * @method void setAdjustmentValue(integer $AdjustmentValue) 设置The adjusted value of desired number of instances after the alarm is triggered.
- * @method integer getCooldown() 获取Cooldown period.
- * @method void setCooldown(integer $Cooldown) 设置Cooldown period.
- * @method MetricAlarm getMetricAlarm() 获取Alarm monitoring metric.
- * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置Alarm monitoring metric.
- * @method array getNotificationUserGroupIds() 获取Notification group ID, which is the set of user group IDs.
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置Notification group ID, which is the set of user group IDs.
+ * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
+ * @method string getAutoScalingPolicyId() Obtain Alarm trigger policy ID.
+ * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Alarm trigger policy ID.
+ * @method string getScalingPolicyName() Obtain Alarm trigger policy name.
+ * @method void setScalingPolicyName(string $ScalingPolicyName) Set Alarm trigger policy name.
+ * @method string getAdjustmentType() Obtain The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+ * @method void setAdjustmentType(string $AdjustmentType) Set The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+ * @method integer getAdjustmentValue() Obtain The adjusted value of desired number of instances after the alarm is triggered.
+ * @method void setAdjustmentValue(integer $AdjustmentValue) Set The adjusted value of desired number of instances after the alarm is triggered.
+ * @method integer getCooldown() Obtain Cooldown period.
+ * @method void setCooldown(integer $Cooldown) Set Cooldown period.
+ * @method MetricAlarm getMetricAlarm() Obtain Alarm monitoring metric.
+ * @method void setMetricAlarm(MetricAlarm $MetricAlarm) Set Alarm monitoring metric.
+ * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs.
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs.
  */
 
 /**
@@ -95,7 +95,7 @@ class ScalingPolicy extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

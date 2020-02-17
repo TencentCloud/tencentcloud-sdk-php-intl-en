@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method VpnConnection getVpnConnection() 获取通道实例对象。
- * @method void setVpnConnection(VpnConnection $VpnConnection) 设置通道实例对象。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method VpnConnection getVpnConnection() Obtain Tunnel instance object.
+ * @method void setVpnConnection(VpnConnection $VpnConnection) Set Tunnel instance object.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateVpnConnectionResponse extends AbstractModel
 {
     /**
-     * @var VpnConnection 通道实例对象。
+     * @var VpnConnection Tunnel instance object.
      */
     public $VpnConnection;
 
@@ -39,7 +39,7 @@ class CreateVpnConnectionResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param VpnConnection $VpnConnection 通道实例对象。
+     * @param VpnConnection $VpnConnection Tunnel instance object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class CreateVpnConnectionResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

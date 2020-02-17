@@ -18,20 +18,20 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getNatGatewayIds() 获取NAT网关统一 ID，形如：`nat-123xx454`。
- * @method void setNatGatewayIds(array $NatGatewayIds) 设置NAT网关统一 ID，形如：`nat-123xx454`。
- * @method array getFilters() 获取过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method array getNatGatewayIds() Obtain The unified ID of the NAT gateways, such as `nat-123xx454`.
+ * @method void setNatGatewayIds(array $NatGatewayIds) Set The unified ID of the NAT gateways, such as `nat-123xx454`.
+ * @method array getFilters() Obtain Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+ * @method void setFilters(array $Filters) Set Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+ * @method integer getOffset() Obtain Offset. The default value is 0.
+ * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
+ * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
+ * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
  */
 
 /**
@@ -40,42 +40,42 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNatGatewaysRequest extends AbstractModel
 {
     /**
-     * @var array NAT网关统一 ID，形如：`nat-123xx454`。
+     * @var array The unified ID of the NAT gateways, such as `nat-123xx454`.
      */
     public $NatGatewayIds;
 
     /**
-     * @var array 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+     * @var array Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer Offset. The default value is 0.
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public $Limit;
     /**
-     * @param array $NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
-     * @param array $Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
-     * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param array $NatGatewayIds The unified ID of the NAT gateways, such as `nat-123xx454`.
+     * @param array $Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+     * @param integer $Offset Offset. The default value is 0.
+     * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

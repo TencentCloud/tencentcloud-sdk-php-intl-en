@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method array getInstances() 获取要解关联网络实例列表
- * @method void setInstances(array $Instances) 设置要解关联网络实例列表
+ * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
+ * @method array getInstances() Obtain The list of network instances to be unbound
+ * @method void setInstances(array $Instances) Set The list of network instances to be unbound
  */
 
 /**
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 class DetachCcnInstancesRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public $CcnId;
 
     /**
-     * @var array 要解关联网络实例列表
+     * @var array The list of network instances to be unbound
      */
     public $Instances;
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param array $Instances 要解关联网络实例列表
+     * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param array $Instances The list of network instances to be unbound
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

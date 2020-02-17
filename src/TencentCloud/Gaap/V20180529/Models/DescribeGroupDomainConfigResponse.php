@@ -18,16 +18,16 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAccessRegionList() 获取Nearest access configuration list of domain name resolution.
- * @method void setAccessRegionList(array $AccessRegionList) 设置Nearest access configuration list of domain name resolution.
- * @method string getDefaultDnsIp() 获取Default accesses Ip.
- * @method void setDefaultDnsIp(string $DefaultDnsIp) 设置Default accesses Ip.
- * @method string getGroupId() 获取Connection group ID.
- * @method void setGroupId(string $GroupId) 设置Connection group ID.
- * @method integer getAccessRegionCount() 获取Total number of configuration of access regions.
- * @method void setAccessRegionCount(integer $AccessRegionCount) 设置Total number of configuration of access regions.
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getAccessRegionList() Obtain Nearest access configuration list of domain name resolution.
+ * @method void setAccessRegionList(array $AccessRegionList) Set Nearest access configuration list of domain name resolution.
+ * @method string getDefaultDnsIp() Obtain Default accesses Ip.
+ * @method void setDefaultDnsIp(string $DefaultDnsIp) Set Default accesses Ip.
+ * @method string getGroupId() Obtain Connection group ID.
+ * @method void setGroupId(string $GroupId) Set Connection group ID.
+ * @method integer getAccessRegionCount() Obtain Total number of configuration of access regions.
+ * @method void setAccessRegionCount(integer $AccessRegionCount) Set Total number of configuration of access regions.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -71,7 +71,7 @@ class DescribeGroupDomainConfigResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

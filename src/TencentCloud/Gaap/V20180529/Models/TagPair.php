@@ -18,10 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取Tag key
- * @method void setTagKey(string $TagKey) 设置Tag key
- * @method string getTagValue() 获取Tag value
- * @method void setTagValue(string $TagValue) 设置Tag value
+ * @method string getTagKey() Obtain Tag key
+ * @method void setTagKey(string $TagKey) Set Tag key
+ * @method string getTagValue() Obtain Tag value
+ * @method void setTagValue(string $TagValue) Set Tag value
  */
 
 /**
@@ -47,7 +47,7 @@ class TagPair extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

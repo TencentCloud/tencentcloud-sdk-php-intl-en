@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取Filter.
+ * @method array getFilters() Obtain Filter.
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
 <li> instance-type - String - Required: No - (Filter) Filter by model.</li>
 <li> instance-charge-type - String - Required: No - (Filter) Filter by instance billing method. ( POSTPAID_BY_HOUR: pay-as-you-go | SPOTPAID: bidding.)  </li>
- * @method void setFilters(array $Filters) 设置Filter.
+ * @method void setFilters(array $Filters) Set Filter.
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
 <li> instance-type - String - Required: No - (Filter) Filter by model.</li>
@@ -55,7 +55,7 @@ class DescribeCvmZoneInstanceConfigInfosRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

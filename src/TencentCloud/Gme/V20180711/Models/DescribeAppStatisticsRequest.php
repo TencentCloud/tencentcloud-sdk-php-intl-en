@@ -18,14 +18,14 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取GME application ID
- * @method void setBizId(integer $BizId) 设置GME application ID
- * @method string getStartDate() 获取Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
- * @method void setStartDate(string $StartDate) 设置Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
- * @method string getEndDate() 获取Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
- * @method void setEndDate(string $EndDate) 设置Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
- * @method array getServices() 获取List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
- * @method void setServices(array $Services) 设置List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+ * @method integer getBizId() Obtain GME application ID
+ * @method void setBizId(integer $BizId) Set GME application ID
+ * @method string getStartDate() Obtain Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+ * @method void setStartDate(string $StartDate) Set Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+ * @method string getEndDate() Obtain Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+ * @method void setEndDate(string $EndDate) Set Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+ * @method array getServices() Obtain List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+ * @method void setServices(array $Services) Set List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeAppStatisticsRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

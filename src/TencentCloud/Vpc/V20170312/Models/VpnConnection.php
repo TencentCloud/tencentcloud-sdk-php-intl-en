@@ -18,140 +18,140 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpnConnectionId() 获取通道实例ID。
- * @method void setVpnConnectionId(string $VpnConnectionId) 设置通道实例ID。
- * @method string getVpnConnectionName() 获取通道名称。
- * @method void setVpnConnectionName(string $VpnConnectionName) 设置通道名称。
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method string getVpnGatewayId() 获取VPN网关实例ID。
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- * @method string getCustomerGatewayId() 获取对端网关实例ID。
- * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置对端网关实例ID。
- * @method string getPreShareKey() 获取预共享密钥。
- * @method void setPreShareKey(string $PreShareKey) 设置预共享密钥。
- * @method string getVpnProto() 获取通道传输协议。
- * @method void setVpnProto(string $VpnProto) 设置通道传输协议。
- * @method string getEncryptProto() 获取通道加密协议。
- * @method void setEncryptProto(string $EncryptProto) 设置通道加密协议。
- * @method string getRouteType() 获取路由类型。
- * @method void setRouteType(string $RouteType) 设置路由类型。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getState() 获取通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
- * @method void setState(string $State) 设置通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
- * @method string getNetStatus() 获取通道连接状态，AVAILABLE：已连接。
- * @method void setNetStatus(string $NetStatus) 设置通道连接状态，AVAILABLE：已连接。
- * @method array getSecurityPolicyDatabaseSet() 获取SPD。
- * @method void setSecurityPolicyDatabaseSet(array $SecurityPolicyDatabaseSet) 设置SPD。
- * @method IKEOptionsSpecification getIKEOptionsSpecification() 获取IKE选项。
- * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置IKE选项。
- * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取IPSEC选择。
- * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSEC选择。
+ * @method string getVpnConnectionId() Obtain Tunnel instance ID.
+ * @method void setVpnConnectionId(string $VpnConnectionId) Set Tunnel instance ID.
+ * @method string getVpnConnectionName() Obtain Tunnel name.
+ * @method void setVpnConnectionName(string $VpnConnectionName) Set Tunnel name.
+ * @method string getVpcId() Obtain VPC instance ID.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID.
+ * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
+ * @method string getCustomerGatewayId() Obtain Customer gateway instance ID.
+ * @method void setCustomerGatewayId(string $CustomerGatewayId) Set Customer gateway instance ID.
+ * @method string getPreShareKey() Obtain The pre-shared key.
+ * @method void setPreShareKey(string $PreShareKey) Set The pre-shared key.
+ * @method string getVpnProto() Obtain Tunnel transmission protocol.
+ * @method void setVpnProto(string $VpnProto) Set Tunnel transmission protocol.
+ * @method string getEncryptProto() Obtain Tunnel encryption protocol.
+ * @method void setEncryptProto(string $EncryptProto) Set Tunnel encryption protocol.
+ * @method string getRouteType() Obtain Route Type.
+ * @method void setRouteType(string $RouteType) Set Route Type.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
+ * @method string getState() Obtain Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting.
+ * @method void setState(string $State) Set Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting.
+ * @method string getNetStatus() Obtain Connection status of the tunnel. AVAILABLE: Connected.
+ * @method void setNetStatus(string $NetStatus) Set Connection status of the tunnel. AVAILABLE: Connected.
+ * @method array getSecurityPolicyDatabaseSet() Obtain SPD.
+ * @method void setSecurityPolicyDatabaseSet(array $SecurityPolicyDatabaseSet) Set SPD.
+ * @method IKEOptionsSpecification getIKEOptionsSpecification() Obtain IKE options.
+ * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) Set IKE options.
+ * @method IPSECOptionsSpecification getIPSECOptionsSpecification() Obtain IPSEC options.
+ * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSEC options.
  */
 
 /**
- *VPN通道对象。
+ *VPN tunnel object.
  */
 class VpnConnection extends AbstractModel
 {
     /**
-     * @var string 通道实例ID。
+     * @var string Tunnel instance ID.
      */
     public $VpnConnectionId;
 
     /**
-     * @var string 通道名称。
+     * @var string Tunnel name.
      */
     public $VpnConnectionName;
 
     /**
-     * @var string VPC实例ID。
+     * @var string VPC instance ID.
      */
     public $VpcId;
 
     /**
-     * @var string VPN网关实例ID。
+     * @var string The ID of the VPN gateway instance.
      */
     public $VpnGatewayId;
 
     /**
-     * @var string 对端网关实例ID。
+     * @var string Customer gateway instance ID.
      */
     public $CustomerGatewayId;
 
     /**
-     * @var string 预共享密钥。
+     * @var string The pre-shared key.
      */
     public $PreShareKey;
 
     /**
-     * @var string 通道传输协议。
+     * @var string Tunnel transmission protocol.
      */
     public $VpnProto;
 
     /**
-     * @var string 通道加密协议。
+     * @var string Tunnel encryption protocol.
      */
     public $EncryptProto;
 
     /**
-     * @var string 路由类型。
+     * @var string Route Type.
      */
     public $RouteType;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
 
     /**
-     * @var string 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+     * @var string Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting.
      */
     public $State;
 
     /**
-     * @var string 通道连接状态，AVAILABLE：已连接。
+     * @var string Connection status of the tunnel. AVAILABLE: Connected.
      */
     public $NetStatus;
 
     /**
-     * @var array SPD。
+     * @var array SPD.
      */
     public $SecurityPolicyDatabaseSet;
 
     /**
-     * @var IKEOptionsSpecification IKE选项。
+     * @var IKEOptionsSpecification IKE options.
      */
     public $IKEOptionsSpecification;
 
     /**
-     * @var IPSECOptionsSpecification IPSEC选择。
+     * @var IPSECOptionsSpecification IPSEC options.
      */
     public $IPSECOptionsSpecification;
     /**
-     * @param string $VpnConnectionId 通道实例ID。
-     * @param string $VpnConnectionName 通道名称。
-     * @param string $VpcId VPC实例ID。
-     * @param string $VpnGatewayId VPN网关实例ID。
-     * @param string $CustomerGatewayId 对端网关实例ID。
-     * @param string $PreShareKey 预共享密钥。
-     * @param string $VpnProto 通道传输协议。
-     * @param string $EncryptProto 通道加密协议。
-     * @param string $RouteType 路由类型。
-     * @param string $CreatedTime 创建时间。
-     * @param string $State 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
-     * @param string $NetStatus 通道连接状态，AVAILABLE：已连接。
-     * @param array $SecurityPolicyDatabaseSet SPD。
-     * @param IKEOptionsSpecification $IKEOptionsSpecification IKE选项。
-     * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSEC选择。
+     * @param string $VpnConnectionId Tunnel instance ID.
+     * @param string $VpnConnectionName Tunnel name.
+     * @param string $VpcId VPC instance ID.
+     * @param string $VpnGatewayId The ID of the VPN gateway instance.
+     * @param string $CustomerGatewayId Customer gateway instance ID.
+     * @param string $PreShareKey The pre-shared key.
+     * @param string $VpnProto Tunnel transmission protocol.
+     * @param string $EncryptProto Tunnel encryption protocol.
+     * @param string $RouteType Route Type.
+     * @param string $CreatedTime Creation Time.
+     * @param string $State Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting.
+     * @param string $NetStatus Connection status of the tunnel. AVAILABLE: Connected.
+     * @param array $SecurityPolicyDatabaseSet SPD.
+     * @param IKEOptionsSpecification $IKEOptionsSpecification IKE options.
+     * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSEC options.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

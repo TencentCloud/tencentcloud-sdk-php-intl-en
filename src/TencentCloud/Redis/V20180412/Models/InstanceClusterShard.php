@@ -18,24 +18,24 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getShardName() 获取Shard node name
- * @method void setShardName(string $ShardName) 设置Shard node name
- * @method string getShardId() 获取Shard node ID
- * @method void setShardId(string $ShardId) 设置Shard node ID
- * @method integer getRole() 获取Role
- * @method void setRole(integer $Role) 设置Role
- * @method integer getKeys() 获取Number of keys
- * @method void setKeys(integer $Keys) 设置Number of keys
- * @method string getSlots() 获取Slot information
- * @method void setSlots(string $Slots) 设置Slot information
- * @method integer getStorage() 获取Storage capacity
- * @method void setStorage(integer $Storage) 设置Storage capacity
- * @method float getStorageSlope() 获取Capacity slope
- * @method void setStorageSlope(float $StorageSlope) 设置Capacity slope
- * @method string getRunid() 获取ID of the runtime node of an instance
- * @method void setRunid(string $Runid) 设置ID of the runtime node of an instance
- * @method integer getConnected() 获取Service status. 0: down; 1: on
- * @method void setConnected(integer $Connected) 设置Service status. 0: down; 1: on
+ * @method string getShardName() Obtain Shard node name
+ * @method void setShardName(string $ShardName) Set Shard node name
+ * @method string getShardId() Obtain Shard node ID
+ * @method void setShardId(string $ShardId) Set Shard node ID
+ * @method integer getRole() Obtain Role
+ * @method void setRole(integer $Role) Set Role
+ * @method integer getKeys() Obtain Number of keys
+ * @method void setKeys(integer $Keys) Set Number of keys
+ * @method string getSlots() Obtain Slot information
+ * @method void setSlots(string $Slots) Set Slot information
+ * @method integer getStorage() Obtain Storage capacity
+ * @method void setStorage(integer $Storage) Set Storage capacity
+ * @method float getStorageSlope() Obtain Capacity slope
+ * @method void setStorageSlope(float $StorageSlope) Set Capacity slope
+ * @method string getRunid() Obtain ID of the runtime node of an instance
+ * @method void setRunid(string $Runid) Set ID of the runtime node of an instance
+ * @method integer getConnected() Obtain Service status. 0: down; 1: on
+ * @method void setConnected(integer $Connected) Set Service status. 0: down; 1: on
  */
 
 /**
@@ -103,7 +103,7 @@ class InstanceClusterShard extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

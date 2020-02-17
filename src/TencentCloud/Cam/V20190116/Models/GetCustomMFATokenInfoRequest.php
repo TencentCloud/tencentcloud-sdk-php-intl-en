@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMFAToken() 获取Custom multi-factor verification Token
- * @method void setMFAToken(string $MFAToken) 设置Custom multi-factor verification Token
+ * @method string getMFAToken() Obtain Custom multi-factor verification Token
+ * @method void setMFAToken(string $MFAToken) Set Custom multi-factor verification Token
  */
 
 /**
@@ -39,7 +39,7 @@ class GetCustomMFATokenInfoRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

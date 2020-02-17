@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCustomerGatewayConfiguration() 获取XML格式配置信息。
- * @method void setCustomerGatewayConfiguration(string $CustomerGatewayConfiguration) 设置XML格式配置信息。
- * @method string getRequestId() 获取The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) 设置The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getCustomerGatewayConfiguration() Obtain Configuration information in XML format.
+ * @method void setCustomerGatewayConfiguration(string $CustomerGatewayConfiguration) Set Configuration information in XML format.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 
 /**
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DownloadCustomerGatewayConfigurationResponse extends AbstractModel
 {
     /**
-     * @var string XML格式配置信息。
+     * @var string Configuration information in XML format.
      */
     public $CustomerGatewayConfiguration;
 
@@ -39,7 +39,7 @@ class DownloadCustomerGatewayConfigurationResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $CustomerGatewayConfiguration XML格式配置信息。
+     * @param string $CustomerGatewayConfiguration Configuration information in XML format.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -47,7 +47,7 @@ class DownloadCustomerGatewayConfigurationResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

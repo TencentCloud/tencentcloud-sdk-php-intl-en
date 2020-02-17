@@ -18,17 +18,17 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getZoneId() 获取Unique AZ ID in a numeric form, such as 100001
+ * @method integer getZoneId() Obtain Unique AZ ID in a numeric form, such as 100001
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneId(integer $ZoneId) 设置Unique AZ ID in a numeric form, such as 100001
+ * @method void setZoneId(integer $ZoneId) Set Unique AZ ID in a numeric form, such as 100001
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZone() 获取Unique AZ ID in a string form, such as ap-guangzhou-1
+ * @method string getZone() Obtain Unique AZ ID in a string form, such as ap-guangzhou-1
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZone(string $Zone) 设置Unique AZ ID in a string form, such as ap-guangzhou-1
+ * @method void setZone(string $Zone) Set Unique AZ ID in a string form, such as ap-guangzhou-1
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZoneName() 获取AZ name, such as Guangzhou Zone 1
+ * @method string getZoneName() Obtain AZ name, such as Guangzhou Zone 1
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneName(string $ZoneName) 设置AZ name, such as Guangzhou Zone 1
+ * @method void setZoneName(string $ZoneName) Set AZ name, such as Guangzhou Zone 1
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

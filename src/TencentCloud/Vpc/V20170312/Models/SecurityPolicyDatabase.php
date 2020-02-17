@@ -18,36 +18,36 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLocalCidrBlock() 获取本端网段
- * @method void setLocalCidrBlock(string $LocalCidrBlock) 设置本端网段
- * @method array getRemoteCidrBlock() 获取对端网段
- * @method void setRemoteCidrBlock(array $RemoteCidrBlock) 设置对端网段
+ * @method string getLocalCidrBlock() Obtain Local IP range
+ * @method void setLocalCidrBlock(string $LocalCidrBlock) Set Local IP range
+ * @method array getRemoteCidrBlock() Obtain Opposite IP range
+ * @method void setRemoteCidrBlock(array $RemoteCidrBlock) Set Opposite IP range
  */
 
 /**
- *SecurityPolicyDatabase策略
+ *SecurityPolicyDatabase policy
  */
 class SecurityPolicyDatabase extends AbstractModel
 {
     /**
-     * @var string 本端网段
+     * @var string Local IP range
      */
     public $LocalCidrBlock;
 
     /**
-     * @var array 对端网段
+     * @var array Opposite IP range
      */
     public $RemoteCidrBlock;
     /**
-     * @param string $LocalCidrBlock 本端网段
-     * @param array $RemoteCidrBlock 对端网段
+     * @param string $LocalCidrBlock Local IP range
+     * @param array $RemoteCidrBlock Opposite IP range
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

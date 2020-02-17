@@ -18,98 +18,98 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcName() 获取`VPC`名称。
- * @method void setVpcName(string $VpcName) 设置`VPC`名称。
- * @method string getVpcId() 获取`VPC`实例`ID`，例如：vpc-azd4dt1c。
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，例如：vpc-azd4dt1c。
- * @method string getCidrBlock() 获取`VPC`的`IPv4` `CIDR`。
- * @method void setCidrBlock(string $CidrBlock) 设置`VPC`的`IPv4` `CIDR`。
- * @method boolean getIsDefault() 获取是否默认`VPC`。
- * @method void setIsDefault(boolean $IsDefault) 设置是否默认`VPC`。
- * @method boolean getEnableMulticast() 获取是否开启组播。
- * @method void setEnableMulticast(boolean $EnableMulticast) 设置是否开启组播。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method array getDnsServerSet() 获取`DNS`列表。
- * @method void setDnsServerSet(array $DnsServerSet) 设置`DNS`列表。
- * @method string getDomainName() 获取`DHCP`域名选项值。
- * @method void setDomainName(string $DomainName) 设置`DHCP`域名选项值。
- * @method string getDhcpOptionsId() 获取`DHCP`选项集`ID`。
- * @method void setDhcpOptionsId(string $DhcpOptionsId) 设置`DHCP`选项集`ID`。
- * @method boolean getEnableDhcp() 获取是否开启`DHCP`。
- * @method void setEnableDhcp(boolean $EnableDhcp) 设置是否开启`DHCP`。
- * @method string getIpv6CidrBlock() 获取`VPC`的`IPv6` `CIDR`。
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置`VPC`的`IPv6` `CIDR`。
- * @method array getTagSet() 获取标签键值对
- * @method void setTagSet(array $TagSet) 设置标签键值对
- * @method array getAssistantCidrSet() 获取The secondary CIDR block.
+ * @method string getVpcName() Obtain `VPC` name.
+ * @method void setVpcName(string $VpcName) Set `VPC` name.
+ * @method string getVpcId() Obtain `VPC` instance `ID`, such as `vpc-azd4dt1c`.
+ * @method void setVpcId(string $VpcId) Set `VPC` instance `ID`, such as `vpc-azd4dt1c`.
+ * @method string getCidrBlock() Obtain The `IPv4` `CIDR` of the `VPC`.
+ * @method void setCidrBlock(string $CidrBlock) Set The `IPv4` `CIDR` of the `VPC`.
+ * @method boolean getIsDefault() Obtain Whether it is the default `VPC`.
+ * @method void setIsDefault(boolean $IsDefault) Set Whether it is the default `VPC`.
+ * @method boolean getEnableMulticast() Obtain Whether multicast is enabled.
+ * @method void setEnableMulticast(boolean $EnableMulticast) Set Whether multicast is enabled.
+ * @method string getCreatedTime() Obtain Creation Time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
+ * @method array getDnsServerSet() Obtain `DNS` list.
+ * @method void setDnsServerSet(array $DnsServerSet) Set `DNS` list.
+ * @method string getDomainName() Obtain DHCP domain name option value.
+ * @method void setDomainName(string $DomainName) Set DHCP domain name option value.
+ * @method string getDhcpOptionsId() Obtain `DHCP` option set `ID`.
+ * @method void setDhcpOptionsId(string $DhcpOptionsId) Set `DHCP` option set `ID`.
+ * @method boolean getEnableDhcp() Obtain Whether `DHCP` is enabled.
+ * @method void setEnableDhcp(boolean $EnableDhcp) Set Whether `DHCP` is enabled.
+ * @method string getIpv6CidrBlock() Obtain The `IPv6` `CIDR` of the `VPC`.
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The `IPv6` `CIDR` of the `VPC`.
+ * @method array getTagSet() Obtain Tag key-value pair
+ * @method void setTagSet(array $TagSet) Set Tag key-value pair
+ * @method array getAssistantCidrSet() Obtain The secondary CIDR block.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssistantCidrSet(array $AssistantCidrSet) 设置The secondary CIDR block.
+ * @method void setAssistantCidrSet(array $AssistantCidrSet) Set The secondary CIDR block.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *私有网络(VPC)对象。
+ *Virtual Private Cloud (VPC) object.
  */
 class Vpc extends AbstractModel
 {
     /**
-     * @var string `VPC`名称。
+     * @var string `VPC` name.
      */
     public $VpcName;
 
     /**
-     * @var string `VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * @var string `VPC` instance `ID`, such as `vpc-azd4dt1c`.
      */
     public $VpcId;
 
     /**
-     * @var string `VPC`的`IPv4` `CIDR`。
+     * @var string The `IPv4` `CIDR` of the `VPC`.
      */
     public $CidrBlock;
 
     /**
-     * @var boolean 是否默认`VPC`。
+     * @var boolean Whether it is the default `VPC`.
      */
     public $IsDefault;
 
     /**
-     * @var boolean 是否开启组播。
+     * @var boolean Whether multicast is enabled.
      */
     public $EnableMulticast;
 
     /**
-     * @var string 创建时间。
+     * @var string Creation Time.
      */
     public $CreatedTime;
 
     /**
-     * @var array `DNS`列表。
+     * @var array `DNS` list.
      */
     public $DnsServerSet;
 
     /**
-     * @var string `DHCP`域名选项值。
+     * @var string DHCP domain name option value.
      */
     public $DomainName;
 
     /**
-     * @var string `DHCP`选项集`ID`。
+     * @var string `DHCP` option set `ID`.
      */
     public $DhcpOptionsId;
 
     /**
-     * @var boolean 是否开启`DHCP`。
+     * @var boolean Whether `DHCP` is enabled.
      */
     public $EnableDhcp;
 
     /**
-     * @var string `VPC`的`IPv6` `CIDR`。
+     * @var string The `IPv6` `CIDR` of the `VPC`.
      */
     public $Ipv6CidrBlock;
 
     /**
-     * @var array 标签键值对
+     * @var array Tag key-value pair
      */
     public $TagSet;
 
@@ -119,18 +119,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public $AssistantCidrSet;
     /**
-     * @param string $VpcName `VPC`名称。
-     * @param string $VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
-     * @param string $CidrBlock `VPC`的`IPv4` `CIDR`。
-     * @param boolean $IsDefault 是否默认`VPC`。
-     * @param boolean $EnableMulticast 是否开启组播。
-     * @param string $CreatedTime 创建时间。
-     * @param array $DnsServerSet `DNS`列表。
-     * @param string $DomainName `DHCP`域名选项值。
-     * @param string $DhcpOptionsId `DHCP`选项集`ID`。
-     * @param boolean $EnableDhcp 是否开启`DHCP`。
-     * @param string $Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
-     * @param array $TagSet 标签键值对
+     * @param string $VpcName `VPC` name.
+     * @param string $VpcId `VPC` instance `ID`, such as `vpc-azd4dt1c`.
+     * @param string $CidrBlock The `IPv4` `CIDR` of the `VPC`.
+     * @param boolean $IsDefault Whether it is the default `VPC`.
+     * @param boolean $EnableMulticast Whether multicast is enabled.
+     * @param string $CreatedTime Creation Time.
+     * @param array $DnsServerSet `DNS` list.
+     * @param string $DomainName DHCP domain name option value.
+     * @param string $DhcpOptionsId `DHCP` option set `ID`.
+     * @param boolean $EnableDhcp Whether `DHCP` is enabled.
+     * @param string $Ipv6CidrBlock The `IPv6` `CIDR` of the `VPC`.
+     * @param array $TagSet Tag key-value pair
      * @param array $AssistantCidrSet The secondary CIDR block.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -139,7 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

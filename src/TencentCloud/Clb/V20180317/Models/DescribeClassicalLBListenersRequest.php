@@ -18,16 +18,16 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB instance ID
- * @method array getListenerIds() 获取List of CLB listener IDs
- * @method void setListenerIds(array $ListenerIds) 设置List of CLB listener IDs
- * @method string getProtocol() 获取CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
- * @method void setProtocol(string $Protocol) 设置CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
- * @method integer getListenerPort() 获取CLB listening port. Value range: [1-65535]
- * @method void setListenerPort(integer $ListenerPort) 设置CLB listening port. Value range: [1-65535]
- * @method integer getStatus() 获取Listener status. Value range: 0 (creating), 1 (running)
- * @method void setStatus(integer $Status) 设置Listener status. Value range: 0 (creating), 1 (running)
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getListenerIds() Obtain List of CLB listener IDs
+ * @method void setListenerIds(array $ListenerIds) Set List of CLB listener IDs
+ * @method string getProtocol() Obtain CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+ * @method void setProtocol(string $Protocol) Set CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+ * @method integer getListenerPort() Obtain CLB listening port. Value range: [1-65535]
+ * @method void setListenerPort(integer $ListenerPort) Set CLB listening port. Value range: [1-65535]
+ * @method integer getStatus() Obtain Listener status. Value range: 0 (creating), 1 (running)
+ * @method void setStatus(integer $Status) Set Listener status. Value range: 0 (creating), 1 (running)
  */
 
 /**
@@ -71,7 +71,7 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

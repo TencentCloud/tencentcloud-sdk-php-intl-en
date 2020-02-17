@@ -18,24 +18,24 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTimePoint() 获取时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
- * @method void setTimePoint(string $TimePoint) 设置时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
- * @method string getVpnId() 获取VPN网关实例ID，形如：`vpn-ltjahce6`。
- * @method void setVpnId(string $VpnId) 设置VPN网关实例ID，形如：`vpn-ltjahce6`。
- * @method string getDirectConnectGatewayId() 获取专线网关实例ID，形如：`dcg-ltjahce6`。
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关实例ID，形如：`dcg-ltjahce6`。
- * @method string getPeeringConnectionId() 获取对等连接实例ID，形如：`pcx-ltjahce6`。
- * @method void setPeeringConnectionId(string $PeeringConnectionId) 设置对等连接实例ID，形如：`pcx-ltjahce6`。
- * @method string getNatId() 获取NAT网关实例ID，形如：`nat-ltjahce6`。
- * @method void setNatId(string $NatId) 设置NAT网关实例ID，形如：`nat-ltjahce6`。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取返回数量。
- * @method void setLimit(integer $Limit) 设置返回数量。
- * @method string getOrderField() 获取排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
- * @method void setOrderField(string $OrderField) 设置排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
- * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+ * @method string getTimePoint() Obtain The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
+ * @method void setTimePoint(string $TimePoint) Set The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
+ * @method string getVpnId() Obtain The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
+ * @method void setVpnId(string $VpnId) Set The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
+ * @method string getDirectConnectGatewayId() Obtain The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
+ * @method string getPeeringConnectionId() Obtain The instance ID of the peering connection, such as `pcx-ltjahce6`.
+ * @method void setPeeringConnectionId(string $PeeringConnectionId) Set The instance ID of the peering connection, such as `pcx-ltjahce6`.
+ * @method string getNatId() Obtain The instance ID of the NAT gateway, such as `nat-ltjahce6`.
+ * @method void setNatId(string $NatId) Set The instance ID of the NAT gateway, such as `nat-ltjahce6`.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain The returned quantity.
+ * @method void setLimit(integer $Limit) Set The returned quantity.
+ * @method string getOrderField() Obtain The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
+ * @method void setOrderField(string $OrderField) Set The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
+ * @method string getOrderDirection() Obtain Order methods. Ascending: `ASC`, Descending: `DESC`.
+ * @method void setOrderDirection(string $OrderDirection) Set Order methods. Ascending: `ASC`, Descending: `DESC`.
  */
 
 /**
@@ -44,66 +44,66 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
 {
     /**
-     * @var string 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
+     * @var string The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
      */
     public $TimePoint;
 
     /**
-     * @var string VPN网关实例ID，形如：`vpn-ltjahce6`。
+     * @var string The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
      */
     public $VpnId;
 
     /**
-     * @var string 专线网关实例ID，形如：`dcg-ltjahce6`。
+     * @var string The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @var string 对等连接实例ID，形如：`pcx-ltjahce6`。
+     * @var string The instance ID of the peering connection, such as `pcx-ltjahce6`.
      */
     public $PeeringConnectionId;
 
     /**
-     * @var string NAT网关实例ID，形如：`nat-ltjahce6`。
+     * @var string The instance ID of the NAT gateway, such as `nat-ltjahce6`.
      */
     public $NatId;
 
     /**
-     * @var integer 偏移量。
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量。
+     * @var integer The returned quantity.
      */
     public $Limit;
 
     /**
-     * @var string 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
+     * @var string The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
      */
     public $OrderField;
 
     /**
-     * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @var string Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public $OrderDirection;
     /**
-     * @param string $TimePoint 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
-     * @param string $VpnId VPN网关实例ID，形如：`vpn-ltjahce6`。
-     * @param string $DirectConnectGatewayId 专线网关实例ID，形如：`dcg-ltjahce6`。
-     * @param string $PeeringConnectionId 对等连接实例ID，形如：`pcx-ltjahce6`。
-     * @param string $NatId NAT网关实例ID，形如：`nat-ltjahce6`。
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 返回数量。
-     * @param string $OrderField 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
-     * @param string $OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @param string $TimePoint The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
+     * @param string $VpnId The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
+     * @param string $DirectConnectGatewayId The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
+     * @param string $PeeringConnectionId The instance ID of the peering connection, such as `pcx-ltjahce6`.
+     * @param string $NatId The instance ID of the NAT gateway, such as `nat-ltjahce6`.
+     * @param integer $Offset Offset.
+     * @param integer $Limit The returned quantity.
+     * @param string $OrderField The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
+     * @param string $OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

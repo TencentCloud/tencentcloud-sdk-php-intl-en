@@ -18,15 +18,15 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskName() 获取Task name
- * @method void setTaskName(string $TaskName) 设置Task name
- * @method string getTaskState() 获取Task state
- * @method void setTaskState(string $TaskState) 设置Task state
- * @method string getCreateTime() 获取Create time
- * @method void setCreateTime(string $CreateTime) 设置Create time
- * @method string getEndTime() 获取End time
+ * @method string getTaskName() Obtain Task name
+ * @method void setTaskName(string $TaskName) Set Task name
+ * @method string getTaskState() Obtain Task state
+ * @method void setTaskState(string $TaskState) Set Task state
+ * @method string getCreateTime() Obtain Create time
+ * @method void setCreateTime(string $CreateTime) Set Create time
+ * @method string getEndTime() Obtain End time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) 设置End time
+ * @method void setEndTime(string $EndTime) Set End time
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 
@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
