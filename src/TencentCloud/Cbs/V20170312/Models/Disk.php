@@ -104,6 +104,8 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setSnapshotCount(integer $SnapshotCount) Set The total number of snapshots of the cloud disk.
  * @method integer getSnapshotSize() Obtain The total capacity of the snapshots of the cloud disk. Unit: MB.
  * @method void setSnapshotSize(integer $SnapshotSize) Set The total capacity of the snapshots of the cloud disk. Unit: MB.
+ * @method boolean getBackupDisk() Obtain Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+ * @method void setBackupDisk(boolean $BackupDisk) Set Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
  */
 
 /**
@@ -281,6 +283,11 @@ Note: This field may return null, indicating that no valid value was found.
      * @var integer The total capacity of the snapshots of the cloud disk. Unit: MB.
      */
     public $SnapshotSize;
+
+    /**
+     * @var boolean Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+     */
+    public $BackupDisk;
     /**
      * @param string $DiskId Cloud disk ID.
      * @param string $DiskUsage Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
@@ -325,6 +332,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @param array $InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk’s Instance IDs currently mounted to the CVM.
      * @param integer $SnapshotCount The total number of snapshots of the cloud disk.
      * @param integer $SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
+     * @param boolean $BackupDisk Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
      */
     function __construct()
     {
@@ -470,6 +478,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("SnapshotSize",$param) and $param["SnapshotSize"] !== null) {
             $this->SnapshotSize = $param["SnapshotSize"];
+        }
+
+        if (array_key_exists("BackupDisk",$param) and $param["BackupDisk"] !== null) {
+            $this->BackupDisk = $param["BackupDisk"];
         }
     }
 }
