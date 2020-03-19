@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyDocument(string $PolicyDocument) Set Policy document
  * @method string getDescription() Obtain Role description
  * @method void setDescription(string $Description) Set Role description
- * @method integer getConsoleLogin() Obtain If login is allowed
- * @method void setConsoleLogin(integer $ConsoleLogin) Set If login is allowed
+ * @method integer getConsoleLogin() Obtain Whether login is allowed. 1: yes, 0: no
+ * @method void setConsoleLogin(integer $ConsoleLogin) Set Whether login is allowed. 1: yes, 0: no
+ * @method integer getSessionDuration() Obtain 
+ * @method void setSessionDuration(integer $SessionDuration) Set 
  */
 
 /**
@@ -49,14 +51,20 @@ class CreateRoleRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer If login is allowed
+     * @var integer Whether login is allowed. 1: yes, 0: no
      */
     public $ConsoleLogin;
+
+    /**
+     * @var integer 
+     */
+    public $SessionDuration;
     /**
      * @param string $RoleName Role name
      * @param string $PolicyDocument Policy document
      * @param string $Description Role description
-     * @param integer $ConsoleLogin If login is allowed
+     * @param integer $ConsoleLogin Whether login is allowed. 1: yes, 0: no
+     * @param integer $SessionDuration 
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateRoleRequest extends AbstractModel
 
         if (array_key_exists("ConsoleLogin",$param) and $param["ConsoleLogin"] !== null) {
             $this->ConsoleLogin = $param["ConsoleLogin"];
+        }
+
+        if (array_key_exists("SessionDuration",$param) and $param["SessionDuration"] !== null) {
+            $this->SessionDuration = $param["SessionDuration"];
         }
     }
 }

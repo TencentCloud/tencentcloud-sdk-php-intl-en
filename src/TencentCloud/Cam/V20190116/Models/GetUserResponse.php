@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getUin() Obtain Sub-user user ID
- * @method void setUin(integer $Uin) Set Sub-user user ID
+ * @method integer getUin() Obtain Sub-user UIN
+ * @method void setUin(integer $Uin) Set Sub-user UIN
  * @method string getName() Obtain Sub-user username
  * @method void setName(string $Name) Set Sub-user username
  * @method integer getUid() Obtain Sub-user UID
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class GetUserResponse extends AbstractModel
 {
     /**
-     * @var integer Sub-user user ID
+     * @var integer Sub-user UIN
      */
     public $Uin;
 
@@ -88,7 +88,7 @@ class GetUserResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $Uin Sub-user user ID
+     * @param integer $Uin Sub-user UIN
      * @param string $Name Sub-user username
      * @param integer $Uid Sub-user UID
      * @param string $Remark Sub-user remarks

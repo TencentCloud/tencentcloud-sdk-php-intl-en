@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Instance password
  * @method string getRdsInstanceId() Obtain Alibaba Cloud ApsaraDB for RDS instance ID, which is applicable if the source database is an Alibaba Cloud ApsaraDB for RDS 5.6/5.7 instance
  * @method void setRdsInstanceId(string $RdsInstanceId) Set Alibaba Cloud ApsaraDB for RDS instance ID, which is applicable if the source database is an Alibaba Cloud ApsaraDB for RDS 5.6/5.7 instance
- * @method string getCvmInstanceId() Obtain Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in.
- * @method void setCvmInstanceId(string $CvmInstanceId) Set Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in.
+ * @method string getCvmInstanceId() Obtain Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in
+ * @method void setCvmInstanceId(string $CvmInstanceId) Set Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in
  * @method string getUniqDcgId() Obtain Direct Connect gateway ID in the format of dcg-0rxtqqxb
  * @method void setUniqDcgId(string $UniqDcgId) Set Direct Connect gateway ID in the format of dcg-0rxtqqxb
  * @method string getVpcId() Obtain VPC ID in the format of vpc-92jblxto
@@ -90,7 +90,7 @@ class SrcInfo extends AbstractModel
     public $RdsInstanceId;
 
     /**
-     * @var string Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in.
+     * @var string Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in
      */
     public $CvmInstanceId;
 
@@ -146,7 +146,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $User Instance username
      * @param string $Password Instance password
      * @param string $RdsInstanceId Alibaba Cloud ApsaraDB for RDS instance ID, which is applicable if the source database is an Alibaba Cloud ApsaraDB for RDS 5.6/5.7 instance
-     * @param string $CvmInstanceId Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in.
+     * @param string $CvmInstanceId Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in
      * @param string $UniqDcgId Direct Connect gateway ID in the format of dcg-0rxtqqxb
      * @param string $VpcId VPC ID in the format of vpc-92jblxto
      * @param string $SubnetId VPC Subnet ID in the format of subnet-3paxmkdz

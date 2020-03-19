@@ -78,9 +78,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) Set Cross-border optimization configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method RangeOriginPull getRangeOriginPull() Obtain Range origin-pull configuration.
+ * @method RangeOriginPull getRangeOriginPull() Obtain Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRangeOriginPull(RangeOriginPull $RangeOriginPull) Set Range origin-pull configuration.
+ * @method void setRangeOriginPull(RangeOriginPull $RangeOriginPull) Set Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method Referer getReferer() Obtain Hotlink protection configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -102,9 +102,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSeo(Seo $Seo) Set SEO configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceType() Obtain Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+ * @method string getServiceType() Obtain Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceType(string $ServiceType) Set Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+ * @method void setServiceType(string $ServiceType) Set Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method StatusCodeCache getStatusCodeCache() Obtain Status code cache configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -117,7 +117,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Specific configuration for domain names outside mainland China. UpdateDomainConfig API only supports modification of some region configurations. For compatibility with configuration of older versions, this type will list out all the configuration differences that may exist with old versions. The supported configuration list is as follows:
+ *Specific configuration for domain names outside mainland China. UpdateDomainConfig API only supports modification of some region configurations. A list of differences that may exist for older configurations will be provided for a compatibility check. The supported configuration list is as follows:
 + Authentication
 + BandwidthAlert
 + ErrorPage
@@ -218,7 +218,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OriginPullOptimization;
 
     /**
-     * @var RangeOriginPull Range origin-pull configuration.
+     * @var RangeOriginPull Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RangeOriginPull;
@@ -254,7 +254,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Seo;
 
     /**
-     * @var string Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * @var string Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceType;
@@ -301,7 +301,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param OriginPullOptimization $OriginPullOptimization Cross-border optimization configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RangeOriginPull $RangeOriginPull Range origin-pull configuration.
+     * @param RangeOriginPull $RangeOriginPull Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Referer $Referer Hotlink protection configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -313,7 +313,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Seo $Seo SEO configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceType Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * @param string $ServiceType Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param StatusCodeCache $StatusCodeCache Status code cache configuration.
 Note: this field may return null, indicating that no valid values can be obtained.

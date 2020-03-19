@@ -18,37 +18,37 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKey() Obtain Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time.
- * @method void setKey(string $Key) Set Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time.
- * @method string getSequence() Obtain asc/desc, which is desc by default.
- * @method void setSequence(string $Sequence) Set asc/desc, which is desc by default.
+ * @method string getKey() Obtain Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time.
+ * @method void setKey(string $Key) Set Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time.
+ * @method string getSequence() Obtain `asc` or `desc`. Default: `desc`.
+ * @method void setSequence(string $Sequence) Set `asc` or `desc`. Default: `desc`.
  */
 
 /**
- *Query result sorting conditions
+ *Sorting conditions for query results.
  */
 class Sort extends AbstractModel
 {
     /**
-     * @var string Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time.
+     * @var string Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time.
      */
     public $Key;
 
     /**
-     * @var string asc/desc, which is desc by default.
+     * @var string `asc` or `desc`. Default: `desc`.
      */
     public $Sequence;
     /**
-     * @param string $Key Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time.
-     * @param string $Sequence asc/desc, which is desc by default.
+     * @param string $Key Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time.
+     * @param string $Sequence `asc` or `desc`. Default: `desc`.
      */
     function __construct()
     {

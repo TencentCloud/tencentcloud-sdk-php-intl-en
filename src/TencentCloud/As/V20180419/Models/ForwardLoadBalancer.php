@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetAttributes(array $TargetAttributes) Set List of target rule attributes
  * @method string getLocationId() Obtain ID of a forwarding rule. This parameter is required for layer-7 listeners.
  * @method void setLocationId(string $LocationId) Set ID of a forwarding rule. This parameter is required for layer-7 listeners.
+ * @method string getRegion() Obtain The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
+ * @method void setRegion(string $Region) Set The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
  */
 
 /**
@@ -52,11 +54,17 @@ class ForwardLoadBalancer extends AbstractModel
      * @var string ID of a forwarding rule. This parameter is required for layer-7 listeners.
      */
     public $LocationId;
+
+    /**
+     * @var string The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
+     */
+    public $Region;
     /**
      * @param string $LoadBalancerId Load balancer ID
      * @param string $ListenerId Application load balancer listener ID
      * @param array $TargetAttributes List of target rule attributes
      * @param string $LocationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+     * @param string $Region The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class ForwardLoadBalancer extends AbstractModel
 
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
             $this->LocationId = $param["LocationId"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

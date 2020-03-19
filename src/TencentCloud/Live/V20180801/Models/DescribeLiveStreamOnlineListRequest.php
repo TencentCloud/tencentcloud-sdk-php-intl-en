@@ -18,10 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomainName() Obtain Push domain name.
- * @method void setDomainName(string $DomainName) Set Push domain name.
- * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
- * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+ * @method string getDomainName() Obtain Push domain name. If you use multiple paths, enter the `DomainName`.
+ * @method void setDomainName(string $DomainName) Set Push domain name. If you use multiple paths, enter the `DomainName`.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
  * @method integer getPageNum() Obtain Page number to get. Default value: 1.
  * @method void setPageNum(integer $PageNum) Set Page number to get. Default value: 1.
  * @method integer getPageSize() Obtain Number of entries per page. Maximum value: 100. 
@@ -40,12 +40,12 @@ Default value: 10.
 class DescribeLiveStreamOnlineListRequest extends AbstractModel
 {
     /**
-     * @var string Push domain name.
+     * @var string Push domain name. If you use multiple paths, enter the `DomainName`.
      */
     public $DomainName;
 
     /**
-     * @var string Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
      */
     public $AppName;
 
@@ -66,8 +66,8 @@ Default value: 10.
      */
     public $StreamName;
     /**
-     * @param string $DomainName Push domain name.
-     * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @param string $DomainName Push domain name. If you use multiple paths, enter the `DomainName`.
+     * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
      * @param integer $PageNum Page number to get. Default value: 1.
      * @param integer $PageSize Number of entries per page. Maximum value: 100. 
 Value: any integer between 10 and 100.

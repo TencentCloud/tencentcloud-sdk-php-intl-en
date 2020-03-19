@@ -19,17 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method integer getStatusCode() Obtain Status code
-It supports 400, 403, 404, 500.
+Supports 400, 403, 404, 500.
  * @method void setStatusCode(integer $StatusCode) Set Status code
-It supports 400, 403, 404, 500.
+Supports 400, 403, 404, 500.
  * @method integer getRedirectCode() Obtain Redirect status code settings
-It supports 301 or 302.
+Supports 301 or 302.
  * @method void setRedirectCode(integer $RedirectCode) Set Redirect status code settings
-It supports 301 or 302.
+Supports 301 or 302.
  * @method string getRedirectUrl() Obtain Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as https://www.test.com/error.html.
  * @method void setRedirectUrl(string $RedirectUrl) Set Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as https://www.test.com/error.html.
  */
 
 /**
@@ -39,28 +39,28 @@ class ErrorPageRule extends AbstractModel
 {
     /**
      * @var integer Status code
-It supports 400, 403, 404, 500.
+Supports 400, 403, 404, 500.
      */
     public $StatusCode;
 
     /**
      * @var integer Redirect status code settings
-It supports 301 or 302.
+Supports 301 or 302.
      */
     public $RedirectCode;
 
     /**
      * @var string Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as https://www.test.com/error.html.
      */
     public $RedirectUrl;
     /**
      * @param integer $StatusCode Status code
-It supports 400, 403, 404, 500.
+Supports 400, 403, 404, 500.
      * @param integer $RedirectCode Redirect status code settings
-It supports 301 or 302.
+Supports 301 or 302.
      * @param string $RedirectUrl Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as https://www.test.com/error.html.
      */
     function __construct()
     {

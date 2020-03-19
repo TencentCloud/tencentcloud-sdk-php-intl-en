@@ -22,6 +22,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Batch\V20170312\Models as Models;
 
 /**
+* @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) This API is used to add existing instances to the compute environment.
+Considerations: <br/>
+1. The instance should not be in the batch compute system.<br/>
+2. The instance status should be “running”.<br/>
+3. It supports dedicated CVMs and pay-as-you-go instances that billed on an hourly basis. Spot instances are not supported.<b/>
+
+For instances added to the compute environment, their UserData will be reset and the operating systems will be reinstalled.
 * @method Models\CreateComputeEnvResponse CreateComputeEnv(Models\CreateComputeEnvRequest $req) This API is used to create a compute environment.
 * @method Models\CreateTaskTemplateResponse CreateTaskTemplate(Models\CreateTaskTemplateRequest $req) This API is used to create a task template.
 * @method Models\DeleteComputeEnvResponse DeleteComputeEnv(Models\DeleteComputeEnvRequest $req) This API is used to delete a compute environment.
@@ -43,6 +50,7 @@ The job to be deleted must be in a completed state, and all task instances conta
 * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) This API is used to query the details of a specified task, including information of the task instances inside the task.
 * @method Models\DescribeTaskLogsResponse DescribeTaskLogs(Models\DescribeTaskLogsRequest $req) This API is used to get the standard outputs and standard error logs of multiple task instances.
 * @method Models\DescribeTaskTemplatesResponse DescribeTaskTemplates(Models\DescribeTaskTemplatesRequest $req) This API is used to query the information of task templates.
+* @method Models\DetachInstancesResponse DetachInstances(Models\DetachInstancesRequest $req) This API is used to remove instances that from compute environment. 
 * @method Models\ModifyComputeEnvResponse ModifyComputeEnv(Models\ModifyComputeEnvRequest $req) This API is used to modify the attributes of a compute environment.
 * @method Models\ModifyTaskTemplateResponse ModifyTaskTemplate(Models\ModifyTaskTemplateRequest $req) This API is used to modify a task template.
 * @method Models\RetryJobsResponse RetryJobs(Models\RetryJobsRequest $req) This API is used to retry the failing task instance in instances.

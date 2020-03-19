@@ -24,16 +24,16 @@ off: disabled
  * @method void setSwitch(string $Switch) Set IP access limit configuration switch
 on: enabled
 off: disabled
- * @method integer getQps() Obtain Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+ * @method integer getQps() Obtain Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setQps(integer $Qps) Set Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+ * @method void setQps(integer $Qps) Set Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *Access limit configuration for a single IP of a single node. It is disabled by default. 
+ *Access limit configuration for a single IP of a single node. This is disabled by default. 
  */
 class IpFreqLimit extends AbstractModel
 {
@@ -45,8 +45,8 @@ off: disabled
     public $Switch;
 
     /**
-     * @var integer Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+     * @var integer Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Qps;
@@ -54,8 +54,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Switch IP access limit configuration switch
 on: enabled
 off: disabled
-     * @param integer $Qps Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+     * @param integer $Qps Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -44,6 +44,10 @@ Note: This field may return null, indicating that no valid value is found.
  * @method void setStatus(string $Status) Set Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
  * @method ItemPrice getPrice() Obtain Price of an instance model.
  * @method void setPrice(ItemPrice $Price) Set Price of an instance model.
+ * @method string getSoldOutReason() Obtain Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSoldOutReason(string $SoldOutReason) Set Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -111,6 +115,12 @@ Note: This field may return null, indicating that no valid value is found.
      * @var ItemPrice Price of an instance model.
      */
     public $Price;
+
+    /**
+     * @var string Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SoldOutReason;
     /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
@@ -125,6 +135,8 @@ Note: This field may return null, indicating that no valid value is found.
      * @param array $LocalDiskTypeList List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
      * @param string $Status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
      * @param ItemPrice $Price Price of an instance model.
+     * @param string $SoldOutReason Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -191,6 +203,10 @@ Note: This field may return null, indicating that no valid value is found.
         if (array_key_exists("Price",$param) and $param["Price"] !== null) {
             $this->Price = new ItemPrice();
             $this->Price->deserialize($param["Price"]);
+        }
+
+        if (array_key_exists("SoldOutReason",$param) and $param["SoldOutReason"] !== null) {
+            $this->SoldOutReason = $param["SoldOutReason"];
         }
     }
 }

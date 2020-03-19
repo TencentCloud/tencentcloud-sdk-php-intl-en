@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Network billing method based on the maximum outbound bandwidth
+ *Network billing mode based on maximum outbound bandwidth
  */
 class InternetAccessible extends AbstractModel
 {

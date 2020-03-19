@@ -18,17 +18,49 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getL4Clusters() Obtain Layer-4 dedicated cluster list
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setL4Clusters(array $L4Clusters) Set Layer-4 dedicated cluster list
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getL7Clusters() Obtain Layer-7 dedicated cluster list
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setL7Clusters(array $L7Clusters) Set Layer-7 dedicated cluster list
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method ClusterItem getClassicalCluster() Obtain vpcgw cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setClassicalCluster(ClusterItem $ClassicalCluster) Set vpcgw cluster
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *独占集群
+ *Dedicated cluster
  */
 class ExclusiveCluster extends AbstractModel
 {
+    /**
+     * @var array Layer-4 dedicated cluster list
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $L4Clusters;
 
     /**
+     * @var array Layer-7 dedicated cluster list
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $L7Clusters;
 
+    /**
+     * @var ClusterItem vpcgw cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClassicalCluster;
+    /**
+     * @param array $L4Clusters Layer-4 dedicated cluster list
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $L7Clusters Layer-7 dedicated cluster list
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ClusterItem $ClassicalCluster vpcgw cluster
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -42,6 +74,27 @@ class ExclusiveCluster extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("L4Clusters",$param) and $param["L4Clusters"] !== null) {
+            $this->L4Clusters = [];
+            foreach ($param["L4Clusters"] as $key => $value){
+                $obj = new ClusterItem();
+                $obj->deserialize($value);
+                array_push($this->L4Clusters, $obj);
+            }
+        }
 
+        if (array_key_exists("L7Clusters",$param) and $param["L7Clusters"] !== null) {
+            $this->L7Clusters = [];
+            foreach ($param["L7Clusters"] as $key => $value){
+                $obj = new ClusterItem();
+                $obj->deserialize($value);
+                array_push($this->L7Clusters, $obj);
+            }
+        }
+
+        if (array_key_exists("ClassicalCluster",$param) and $param["ClassicalCluster"] !== null) {
+            $this->ClassicalCluster = new ClusterItem();
+            $this->ClassicalCluster->deserialize($param["ClassicalCluster"]);
+        }
     }
 }

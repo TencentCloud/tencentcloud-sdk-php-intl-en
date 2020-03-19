@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompression(Compression $Compression) Set Smart compression configuration
  * @method BandwidthAlert getBandwidthAlert() Obtain Bandwidth cap configuration
  * @method void setBandwidthAlert(BandwidthAlert $BandwidthAlert) Set Bandwidth cap configuration
- * @method RangeOriginPull getRangeOriginPull() Obtain Range origin-pull configuration
- * @method void setRangeOriginPull(RangeOriginPull $RangeOriginPull) Set Range origin-pull configuration
+ * @method RangeOriginPull getRangeOriginPull() Obtain Range GETs configuration
+ * @method void setRangeOriginPull(RangeOriginPull $RangeOriginPull) Set Range GETs configuration
  * @method FollowRedirect getFollowRedirect() Obtain 301/302 origin-pull follow-redirect configuration
  * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set 301/302 origin-pull follow-redirect configuration
- * @method ErrorPage getErrorPage() Obtain Error code redirect configuration (This feature is in beta test and not fully available yet.)
- * @method void setErrorPage(ErrorPage $ErrorPage) Set Error code redirect configuration (This feature is in beta test and not fully available yet.)
+ * @method ErrorPage getErrorPage() Obtain Error code redirect configuration (This feature is in beta and not generally available yet.)
+ * @method void setErrorPage(ErrorPage $ErrorPage) Set Error code redirect configuration (This feature is in beta and not generally available yet.)
  * @method RequestHeader getRequestHeader() Obtain Request header configuration
  * @method void setRequestHeader(RequestHeader $RequestHeader) Set Request header configuration
  * @method ResponseHeader getResponseHeader() Obtain Response header configuration
@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Access protocol forced redirect configuration
  * @method Referer getReferer() Obtain Referer hotlink protection configuration
  * @method void setReferer(Referer $Referer) Set Referer hotlink protection configuration
- * @method MaxAge getMaxAge() Obtain Browser cache configuration (This feature is in beta test and not fully available yet.)
- * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache configuration (This feature is in beta test and not fully available yet.)
+ * @method MaxAge getMaxAge() Obtain Browser cache configuration (This feature is in beta and not generally available yet.)
+ * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache configuration (This feature is in beta and not generally available yet.)
  * @method string getServiceType() Obtain Domain name service type
 web: static acceleration
 download: download acceleration
@@ -76,10 +76,10 @@ media: streaming media VOD acceleration
 web: static acceleration
 download: download acceleration
 media: streaming media VOD acceleration
- * @method SpecificConfig getSpecificConfig() Obtain Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China.
- * @method void setSpecificConfig(SpecificConfig $SpecificConfig) Set Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China.
+ * @method SpecificConfig getSpecificConfig() Obtain Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+ * @method void setSpecificConfig(SpecificConfig $SpecificConfig) Set Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
  * @method string getArea() Obtain Domain name acceleration region
 mainland: acceleration inside mainland China
 overseas: acceleration outside mainland China
@@ -88,6 +88,10 @@ global: global acceleration
 mainland: acceleration inside mainland China
 overseas: acceleration outside mainland China
 global: global acceleration
+ * @method OriginPullTimeout getOriginPullTimeout() Obtain Origin-pull timeout configuration
+ * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain 
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set 
  */
 
 /**
@@ -136,7 +140,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $BandwidthAlert;
 
     /**
-     * @var RangeOriginPull Range origin-pull configuration
+     * @var RangeOriginPull Range GETs configuration
      */
     public $RangeOriginPull;
 
@@ -146,7 +150,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $FollowRedirect;
 
     /**
-     * @var ErrorPage Error code redirect configuration (This feature is in beta test and not fully available yet.)
+     * @var ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
      */
     public $ErrorPage;
 
@@ -216,7 +220,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Referer;
 
     /**
-     * @var MaxAge Browser cache configuration (This feature is in beta test and not fully available yet.)
+     * @var MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
      */
     public $MaxAge;
 
@@ -229,8 +233,8 @@ media: streaming media VOD acceleration
     public $ServiceType;
 
     /**
-     * @var SpecificConfig Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China.
+     * @var SpecificConfig Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
      */
     public $SpecificConfig;
 
@@ -241,6 +245,16 @@ overseas: acceleration outside mainland China
 global: global acceleration
      */
     public $Area;
+
+    /**
+     * @var OriginPullTimeout Origin-pull timeout configuration
+     */
+    public $OriginPullTimeout;
+
+    /**
+     * @var AwsPrivateAccess 
+     */
+    public $AwsPrivateAccess;
     /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
@@ -250,9 +264,9 @@ global: global acceleration
      * @param StatusCodeCache $StatusCodeCache Status code cache configuration
      * @param Compression $Compression Smart compression configuration
      * @param BandwidthAlert $BandwidthAlert Bandwidth cap configuration
-     * @param RangeOriginPull $RangeOriginPull Range origin-pull configuration
+     * @param RangeOriginPull $RangeOriginPull Range GETs configuration
      * @param FollowRedirect $FollowRedirect 301/302 origin-pull follow-redirect configuration
-     * @param ErrorPage $ErrorPage Error code redirect configuration (This feature is in beta test and not fully available yet.)
+     * @param ErrorPage $ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
      * @param RequestHeader $RequestHeader Request header configuration
      * @param ResponseHeader $ResponseHeader Response header configuration
      * @param DownstreamCapping $DownstreamCapping Download speed configuration
@@ -266,17 +280,19 @@ global: global acceleration
      * @param Seo $Seo SEO configuration
      * @param ForceRedirect $ForceRedirect Access protocol forced redirect configuration
      * @param Referer $Referer Referer hotlink protection configuration
-     * @param MaxAge $MaxAge Browser cache configuration (This feature is in beta test and not fully available yet.)
+     * @param MaxAge $MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
      * @param string $ServiceType Domain name service type
 web: static acceleration
 download: download acceleration
 media: streaming media VOD acceleration
-     * @param SpecificConfig $SpecificConfig Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China.
+     * @param SpecificConfig $SpecificConfig Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
      * @param string $Area Domain name acceleration region
 mainland: acceleration inside mainland China
 overseas: acceleration outside mainland China
 global: global acceleration
+     * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
+     * @param AwsPrivateAccess $AwsPrivateAccess 
      */
     function __construct()
     {
@@ -424,6 +440,16 @@ global: global acceleration
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("OriginPullTimeout",$param) and $param["OriginPullTimeout"] !== null) {
+            $this->OriginPullTimeout = new OriginPullTimeout();
+            $this->OriginPullTimeout->deserialize($param["OriginPullTimeout"]);
+        }
+
+        if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
+            $this->AwsPrivateAccess = new AwsPrivateAccess();
+            $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
         }
     }
 }

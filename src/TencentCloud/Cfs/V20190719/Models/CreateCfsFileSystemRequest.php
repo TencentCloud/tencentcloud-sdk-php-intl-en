@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountIP(string $MountIP) Set Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
  * @method string getFsName() Obtain Custom file system name
  * @method void setFsName(string $FsName) Set Custom file system name
+ * @method array getResourceTags() Obtain File system tag
+ * @method void setResourceTags(array $ResourceTags) Set File system tag
  */
 
 /**
@@ -87,6 +89,11 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @var string Custom file system name
      */
     public $FsName;
+
+    /**
+     * @var array File system tag
+     */
+    public $ResourceTags;
     /**
      * @param string $Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
      * @param string $NetInterface Network type. Valid values: VPC (VPC), BASIC (basic network)
@@ -97,6 +104,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @param string $SubnetId Subnet ID. This field is required if network type is VPC.
      * @param string $MountIP Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
      * @param string $FsName Custom file system name
+     * @param array $ResourceTags File system tag
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class CreateCfsFileSystemRequest extends AbstractModel
 
         if (array_key_exists("FsName",$param) and $param["FsName"] !== null) {
             $this->FsName = $param["FsName"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

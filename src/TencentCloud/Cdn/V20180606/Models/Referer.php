@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Referer blacklist/whitelist configuration. It is disabled by default.
+ *Referer blacklist/whitelist configuration. This is disabled by default.
  */
 class Referer extends AbstractModel
 {

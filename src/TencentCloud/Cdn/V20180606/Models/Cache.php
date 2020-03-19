@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSimpleCache(SimpleCache $SimpleCache) Set Basic cache expiration time configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AdvancedCache getAdvancedCache() Obtain Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+ * @method AdvancedCache getAdvancedCache() Obtain Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAdvancedCache(AdvancedCache $AdvancedCache) Set Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+ * @method void setAdvancedCache(AdvancedCache $AdvancedCache) Set Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *Node cache expiration time configuration, including the following two types:
+ *Node cache expiration time configuration. There are two types of configuration:
 + Basic cache expiration rules configuration
 + Advanced cache expiration rules configuration
  */
@@ -42,14 +42,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SimpleCache;
 
     /**
-     * @var AdvancedCache Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+     * @var AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdvancedCache;
     /**
      * @param SimpleCache $SimpleCache Basic cache expiration time configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedCache $AdvancedCache Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+     * @param AdvancedCache $AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

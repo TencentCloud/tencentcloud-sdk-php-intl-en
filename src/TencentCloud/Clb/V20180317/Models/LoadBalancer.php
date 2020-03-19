@@ -92,10 +92,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAnycastZone(string $AnycastZone) Set Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddressIPVersion() Obtain IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddressIPVersion(string $AddressIPVersion) Set IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAddressIPVersion() Obtain IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAddressIPVersion(string $AddressIPVersion) Set IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getNumericalVpcId() Obtain VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNumericalVpcId(integer $NumericalVpcId) Set VPC ID in a numeric form
@@ -156,14 +156,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConfigId(string $ConfigId) Set Custom configuration ID at the CLB instance level
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getLoadBalancerPassToTarget() Obtain Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExclusiveCluster getExclusiveCluster() Obtain 
- * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set 
- * @method string getIPv6Mode() Obtain 
- * @method void setIPv6Mode(string $IPv6Mode) Set 
+ * @method boolean getLoadBalancerPassToTarget() Obtain Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method ExclusiveCluster getExclusiveCluster() Obtain Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getIPv6Mode() Obtain This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIPv6Mode(string $IPv6Mode) Set This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getSnatPro() Obtain Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSnatPro(boolean $SnatPro) Set Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getSnatIps() Obtain SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSnatIps(array $SnatIps) Set SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSlaType() Obtain 
+ * @method void setSlaType(string $SlaType) Set 
+ * @method boolean getIsBlock() Obtain 
+ * @method void setIsBlock(boolean $IsBlock) Set 
  */
 
 /**
@@ -289,8 +305,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AnycastZone;
 
     /**
-     * @var string IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AddressIPVersion;
 
@@ -385,20 +401,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ConfigId;
 
     /**
-     * @var boolean Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancerPassToTarget;
 
     /**
-     * @var ExclusiveCluster 
+     * @var ExclusiveCluster Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ExclusiveCluster;
 
     /**
-     * @var string 
+     * @var string This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IPv6Mode;
+
+    /**
+     * @var boolean Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SnatPro;
+
+    /**
+     * @var array SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SnatIps;
+
+    /**
+     * @var string 
+     */
+    public $SlaType;
+
+    /**
+     * @var boolean 
+     */
+    public $IsBlock;
     /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
@@ -437,8 +477,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AnycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AddressIPVersion IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AddressIPVersion IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $NumericalVpcId VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VipIsp ISP to which a CLB IP address belongs
@@ -469,10 +509,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ConfigId Custom configuration ID at the CLB instance level
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExclusiveCluster $ExclusiveCluster 
-     * @param string $IPv6Mode 
+     * @param boolean $LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ExclusiveCluster $ExclusiveCluster Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $SnatPro Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $SnatIps SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SlaType 
+     * @param boolean $IsBlock 
      */
     function __construct()
     {
@@ -656,6 +704,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IPv6Mode",$param) and $param["IPv6Mode"] !== null) {
             $this->IPv6Mode = $param["IPv6Mode"];
+        }
+
+        if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
+            $this->SnatPro = $param["SnatPro"];
+        }
+
+        if (array_key_exists("SnatIps",$param) and $param["SnatIps"] !== null) {
+            $this->SnatIps = [];
+            foreach ($param["SnatIps"] as $key => $value){
+                $obj = new SnatIp();
+                $obj->deserialize($value);
+                array_push($this->SnatIps, $obj);
+            }
+        }
+
+        if (array_key_exists("SlaType",$param) and $param["SlaType"] !== null) {
+            $this->SlaType = $param["SlaType"];
+        }
+
+        if (array_key_exists("IsBlock",$param) and $param["IsBlock"] !== null) {
+            $this->IsBlock = $param["IsBlock"];
         }
     }
 }

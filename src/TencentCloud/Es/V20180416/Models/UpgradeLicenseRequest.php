@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
  * @method array getVoucherIds() Obtain List of voucher IDs (only one voucher can be specified at a time currently)
  * @method void setVoucherIds(array $VoucherIds) Set List of voucher IDs (only one voucher can be specified at a time currently)
- * @method integer getBasicSecurityType() Obtain 
- * @method void setBasicSecurityType(integer $BasicSecurityType) Set 
- * @method boolean getForceRestart() Obtain 
- * @method void setForceRestart(boolean $ForceRestart) Set 
+ * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+ * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+ * @method boolean getForceRestart() Obtain Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+ * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
  */
 
 /**
@@ -58,12 +58,12 @@ class UpgradeLicenseRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var integer 
+     * @var integer Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public $BasicSecurityType;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
      */
     public $ForceRestart;
     /**
@@ -71,8 +71,8 @@ class UpgradeLicenseRequest extends AbstractModel
      * @param string $LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
      * @param integer $AutoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
      * @param array $VoucherIds List of voucher IDs (only one voucher can be specified at a time currently)
-     * @param integer $BasicSecurityType 
-     * @param boolean $ForceRestart 
+     * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * @param boolean $ForceRestart Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
      */
     function __construct()
     {

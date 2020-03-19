@@ -62,9 +62,63 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSubnetId(integer $SubnetId) Set Subnet ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status
+ * @method integer getStatus() Obtain Instance status code. Value range:
+<li>2: cluster running</li>
+<li>3: creating cluster.</li>
+<li>4: scaling out cluster.</li>
+<li>5: adding router node in cluster.</li>
+<li>6: installing component in cluster.</li>
+<li>7: cluster executing command.</li>
+<li>8: restarting service.</li>
+<li>9: entering maintenance.</li>
+<li>10: suspending service.</li>
+<li>11: exiting maintenance.</li>
+<li>12: exiting suspension.</li>
+<li>13: delivering configuration.</li>
+<li>14: terminating cluster.</li>
+<li>15: terminating core node.</li>
+<li>16: terminating task node.</li>
+<li>17: terminating router node.</li>
+<li>18: changing webproxy password.</li>
+<li>19: isolating cluster.</li>
+<li>20: resuming cluster.</li>
+<li>21: repossessing cluster.</li>
+<li>22: waiting for configuration adjustment.</li>
+<li>23: cluster isolated.</li>
+<li>24: removing node.</li>
+<li>33: waiting for refund.</li>
+<li>34: refunded.</li>
+<li>301: creation failed.</li>
+<li>302: scale-out failed.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status
+ * @method void setStatus(integer $Status) Set Instance status code. Value range:
+<li>2: cluster running</li>
+<li>3: creating cluster.</li>
+<li>4: scaling out cluster.</li>
+<li>5: adding router node in cluster.</li>
+<li>6: installing component in cluster.</li>
+<li>7: cluster executing command.</li>
+<li>8: restarting service.</li>
+<li>9: entering maintenance.</li>
+<li>10: suspending service.</li>
+<li>11: exiting maintenance.</li>
+<li>12: exiting suspension.</li>
+<li>13: delivering configuration.</li>
+<li>14: terminating cluster.</li>
+<li>15: terminating core node.</li>
+<li>16: terminating task node.</li>
+<li>17: terminating router node.</li>
+<li>18: changing webproxy password.</li>
+<li>19: isolating cluster.</li>
+<li>20: resuming cluster.</li>
+<li>21: repossessing cluster.</li>
+<li>22: waiting for configuration adjustment.</li>
+<li>23: cluster isolated.</li>
+<li>24: removing node.</li>
+<li>33: waiting for refund.</li>
+<li>34: refunded.</li>
+<li>301: creation failed.</li>
+<li>302: scale-out failed.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getAddTime() Obtain Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -118,8 +172,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getHiveMetaDb() Obtain 
- * @method void setHiveMetaDb(string $HiveMetaDb) Set 
+ * @method string getHiveMetaDb() Obtain Hive metadata
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setHiveMetaDb(string $HiveMetaDb) Set Hive metadata
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getServiceClass() Obtain 
+ * @method void setServiceClass(string $ServiceClass) Set 
  */
 
 /**
@@ -194,7 +252,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SubnetId;
 
     /**
-     * @var integer Status
+     * @var integer Instance status code. Value range:
+<li>2: cluster running</li>
+<li>3: creating cluster.</li>
+<li>4: scaling out cluster.</li>
+<li>5: adding router node in cluster.</li>
+<li>6: installing component in cluster.</li>
+<li>7: cluster executing command.</li>
+<li>8: restarting service.</li>
+<li>9: entering maintenance.</li>
+<li>10: suspending service.</li>
+<li>11: exiting maintenance.</li>
+<li>12: exiting suspension.</li>
+<li>13: delivering configuration.</li>
+<li>14: terminating cluster.</li>
+<li>15: terminating core node.</li>
+<li>16: terminating task node.</li>
+<li>17: terminating router node.</li>
+<li>18: changing webproxy password.</li>
+<li>19: isolating cluster.</li>
+<li>20: resuming cluster.</li>
+<li>21: repossessing cluster.</li>
+<li>22: waiting for configuration adjustment.</li>
+<li>23: cluster isolated.</li>
+<li>24: removing node.</li>
+<li>33: waiting for refund.</li>
+<li>34: refunded.</li>
+<li>301: creation failed.</li>
+<li>302: scale-out failed.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
@@ -278,9 +363,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
-     * @var string 
+     * @var string Hive metadata
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $HiveMetaDb;
+
+    /**
+     * @var string 
+     */
+    public $ServiceClass;
     /**
      * @param integer $Id ID
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -304,7 +395,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SubnetId Subnet ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status
+     * @param integer $Status Instance status code. Value range:
+<li>2: cluster running</li>
+<li>3: creating cluster.</li>
+<li>4: scaling out cluster.</li>
+<li>5: adding router node in cluster.</li>
+<li>6: installing component in cluster.</li>
+<li>7: cluster executing command.</li>
+<li>8: restarting service.</li>
+<li>9: entering maintenance.</li>
+<li>10: suspending service.</li>
+<li>11: exiting maintenance.</li>
+<li>12: exiting suspension.</li>
+<li>13: delivering configuration.</li>
+<li>14: terminating cluster.</li>
+<li>15: terminating core node.</li>
+<li>16: terminating task node.</li>
+<li>17: terminating router node.</li>
+<li>18: changing webproxy password.</li>
+<li>19: isolating cluster.</li>
+<li>20: resuming cluster.</li>
+<li>21: repossessing cluster.</li>
+<li>22: waiting for configuration adjustment.</li>
+<li>23: cluster isolated.</li>
+<li>24: removing node.</li>
+<li>33: waiting for refund.</li>
+<li>34: refunded.</li>
+<li>301: creation failed.</li>
+<li>302: scale-out failed.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AddTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -332,7 +450,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tag information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $HiveMetaDb 
+     * @param string $HiveMetaDb Hive metadata
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ServiceClass 
      */
     function __construct()
     {
@@ -454,6 +574,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HiveMetaDb",$param) and $param["HiveMetaDb"] !== null) {
             $this->HiveMetaDb = $param["HiveMetaDb"];
+        }
+
+        if (array_key_exists("ServiceClass",$param) and $param["ServiceClass"] !== null) {
+            $this->ServiceClass = $param["ServiceClass"];
         }
     }
 }

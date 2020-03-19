@@ -19,27 +19,27 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getMaxAgeType() Obtain Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
  * @method void setMaxAgeType(string $MaxAgeType) Set Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
- * @method array getMaxAgeContents() Obtain Matching content under the corresponding types for MaxAgeType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
- * @method void setMaxAgeContents(array $MaxAgeContents) Set Matching content under the corresponding types for MaxAgeType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
- * @method integer getMaxAgeTime() Obtain MaxAge time settings (in seconds)
- * @method void setMaxAgeTime(integer $MaxAgeTime) Set MaxAge time settings (in seconds)
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+ * @method array getMaxAgeContents() Obtain Content for each MaxAgeType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+ * @method void setMaxAgeContents(array $MaxAgeContents) Set Content for each MaxAgeType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+ * @method integer getMaxAgeTime() Obtain MaxAge time (in seconds)
+ * @method void setMaxAgeTime(integer $MaxAgeTime) Set MaxAge time (in seconds)
  */
 
 /**
@@ -49,38 +49,38 @@ class MaxAgeRule extends AbstractModel
 {
     /**
      * @var string Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
      */
     public $MaxAgeType;
 
     /**
-     * @var array Matching content under the corresponding types for MaxAgeType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+     * @var array Content for each MaxAgeType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
      */
     public $MaxAgeContents;
 
     /**
-     * @var integer MaxAge time settings (in seconds)
+     * @var integer MaxAge time (in seconds)
      */
     public $MaxAgeTime;
     /**
      * @param string $MaxAgeType Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-     * @param array $MaxAgeContents Matching content under the corresponding types for MaxAgeType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-     * @param integer $MaxAgeTime MaxAge time settings (in seconds)
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+     * @param array $MaxAgeContents Content for each MaxAgeType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+     * @param integer $MaxAgeTime MaxAge time (in seconds)
      */
     function __construct()
     {

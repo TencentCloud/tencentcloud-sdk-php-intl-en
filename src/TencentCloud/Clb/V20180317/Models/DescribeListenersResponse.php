@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getListeners() Obtain List of listeners
  * @method void setListeners(array $Listeners) Set List of listeners
+ * @method integer getTotalCount() Obtain Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,11 +39,19 @@ class DescribeListenersResponse extends AbstractModel
     public $Listeners;
 
     /**
+     * @var integer Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
      * @param array $Listeners List of listeners
+     * @param integer $TotalCount Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +73,10 @@ class DescribeListenersResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Listeners, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

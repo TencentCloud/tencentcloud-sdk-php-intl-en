@@ -18,10 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOffset() Obtain Offset for paged queries. Default value: 0 (the first page).
- * @method void setOffset(integer $Offset) Set Offset for paged queries. Default value: 0 (the first page).
- * @method integer getLimit() Obtain Limit on paged queries. Default value: 100. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 100. Maximum value: 1000.
+ * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0 (the first page).
+ * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0 (the first page).
+ * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100. Maximum value: 1000.
  * @method array getFilters() Obtain Query condition filter, complex type.
  * @method void setFilters(array $Filters) Set Query condition filter, complex type.
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDomainsRequest extends AbstractModel
 {
     /**
-     * @var integer Offset for paged queries. Default value: 0 (the first page).
+     * @var integer Offset for paginated queries. Default value: 0 (the first page).
      */
     public $Offset;
 
     /**
-     * @var integer Limit on paged queries. Default value: 100. Maximum value: 1000.
+     * @var integer Limit on paginated queries. Default value: 100. Maximum value: 1000.
      */
     public $Limit;
 
@@ -46,8 +46,8 @@ class DescribeDomainsRequest extends AbstractModel
      */
     public $Filters;
     /**
-     * @param integer $Offset Offset for paged queries. Default value: 0 (the first page).
-     * @param integer $Limit Limit on paged queries. Default value: 100. Maximum value: 1000.
+     * @param integer $Offset Offset for paginated queries. Default value: 0 (the first page).
+     * @param integer $Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
      * @param array $Filters Query condition filter, complex type.
      */
     function __construct()

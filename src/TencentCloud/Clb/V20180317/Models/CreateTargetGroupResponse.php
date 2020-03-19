@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getTargetGroupId() Obtain ID generated after target group creation
+ * @method void setTargetGroupId(string $TargetGroupId) Set ID generated after target group creation
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -28,10 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class CreateTargetGroupResponse extends AbstractModel
 {
     /**
+     * @var string ID generated after target group creation
+     */
+    public $TargetGroupId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param string $TargetGroupId ID generated after target group creation
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateTargetGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
+            $this->TargetGroupId = $param["TargetGroupId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

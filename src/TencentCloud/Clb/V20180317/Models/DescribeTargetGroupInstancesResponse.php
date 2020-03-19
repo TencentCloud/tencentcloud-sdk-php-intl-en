@@ -18,6 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getTotalCount() Obtain Number of results in current query
+ * @method void setTotalCount(integer $TotalCount) Set Number of results in current query
+ * @method array getTargetGroupInstanceSet() Obtain Information of the bound server
+ * @method void setTargetGroupInstanceSet(array $TargetGroupInstanceSet) Set Information of the bound server
+ * @method integer getRealCount() Obtain Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+ * @method void setRealCount(integer $RealCount) Set Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -28,10 +34,28 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTargetGroupInstancesResponse extends AbstractModel
 {
     /**
+     * @var integer Number of results in current query
+     */
+    public $TotalCount;
+
+    /**
+     * @var array Information of the bound server
+     */
+    public $TargetGroupInstanceSet;
+
+    /**
+     * @var integer Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+     */
+    public $RealCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param integer $TotalCount Number of results in current query
+     * @param array $TargetGroupInstanceSet Information of the bound server
+     * @param integer $RealCount Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +70,23 @@ class DescribeTargetGroupInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TargetGroupInstanceSet",$param) and $param["TargetGroupInstanceSet"] !== null) {
+            $this->TargetGroupInstanceSet = [];
+            foreach ($param["TargetGroupInstanceSet"] as $key => $value){
+                $obj = new TargetGroupBackend();
+                $obj->deserialize($value);
+                array_push($this->TargetGroupInstanceSet, $obj);
+            }
+        }
+
+        if (array_key_exists("RealCount",$param) and $param["RealCount"] !== null) {
+            $this->RealCount = $param["RealCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

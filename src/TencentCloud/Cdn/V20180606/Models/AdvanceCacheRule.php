@@ -19,32 +19,32 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getCacheType() Obtain Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCacheType(string $CacheType) Set Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getCacheContents() Obtain Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+ * @method array getCacheContents() Obtain Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCacheContents(array $CacheContents) Set Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+ * @method void setCacheContents(array $CacheContents) Set Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getCacheTime() Obtain Cache expiration time
 Unit: second. The maximum value is 365 days.
@@ -55,28 +55,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Rules of cache configuration advanced version
+ *Advanced cache configuration rules
  */
 class AdvanceCacheRule extends AbstractModel
 {
     /**
      * @var string Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CacheType;
 
     /**
-     * @var array Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+     * @var array Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CacheContents;
@@ -89,18 +89,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CacheTime;
     /**
      * @param string $CacheType Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $CacheContents Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+     * @param array $CacheContents Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $CacheTime Cache expiration time
 Unit: second. The maximum value is 365 days.

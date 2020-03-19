@@ -27,7 +27,7 @@ off: disabled
  */
 
 /**
- *Video dragging configuration. It is disabled by default.
+ *Video dragging configuration. This is disabled by default.
  */
 class VideoSeek extends AbstractModel
 {

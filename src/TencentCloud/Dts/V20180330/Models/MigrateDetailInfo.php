@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(string $Progress) Set Overall progress, such as:
  * @method string getCurrentStepProgress() Obtain Progress of the current step, such as:
  * @method void setCurrentStepProgress(string $CurrentStepProgress) Set Progress of the current step, such as:
- * @method integer getMasterSlaveDistance() Obtain Master/slave difference in MB
- * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) Set Master/slave difference in MB
- * @method integer getSecondsBehindMaster() Obtain Master/slave difference in seconds
- * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) Set Master/slave difference in seconds
+ * @method integer getMasterSlaveDistance() Obtain Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
+ * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) Set Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
+ * @method integer getSecondsBehindMaster() Obtain Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
+ * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) Set Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
  * @method array getStepInfo() Obtain Step information
  * @method void setStepInfo(array $StepInfo) Set Step information
  */
@@ -60,12 +60,12 @@ class MigrateDetailInfo extends AbstractModel
     public $CurrentStepProgress;
 
     /**
-     * @var integer Master/slave difference in MB
+     * @var integer Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
      */
     public $MasterSlaveDistance;
 
     /**
-     * @var integer Master/slave difference in seconds
+     * @var integer Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
      */
     public $SecondsBehindMaster;
 
@@ -78,8 +78,8 @@ class MigrateDetailInfo extends AbstractModel
      * @param integer $StepNow Current step
      * @param string $Progress Overall progress, such as:
      * @param string $CurrentStepProgress Progress of the current step, such as:
-     * @param integer $MasterSlaveDistance Master/slave difference in MB
-     * @param integer $SecondsBehindMaster Master/slave difference in seconds
+     * @param integer $MasterSlaveDistance Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
+     * @param integer $SecondsBehindMaster Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
      * @param array $StepInfo Step information
      */
     function __construct()

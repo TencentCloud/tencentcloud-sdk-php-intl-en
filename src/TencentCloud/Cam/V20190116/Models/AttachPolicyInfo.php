@@ -44,8 +44,12 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setOperateUin(string $OperateUin) Set 
  * @method integer getOperateUinType() Obtain 
  * @method void setOperateUinType(integer $OperateUinType) Set 
- * @method integer getDeactived() Obtain 
- * @method void setDeactived(integer $Deactived) Set 
+ * @method integer getDeactived() Obtain Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDeactived(integer $Deactived) Set Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDeactivedDetail() Obtain 
+ * @method void setDeactivedDetail(array $DeactivedDetail) Set 
  */
 
 /**
@@ -103,9 +107,15 @@ Note: This field may return null, indicating that no valid value was found.
     public $OperateUinType;
 
     /**
-     * @var integer 
+     * @var integer Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Deactived;
+
+    /**
+     * @var array 
+     */
+    public $DeactivedDetail;
     /**
      * @param integer $PolicyId Policy ID
      * @param string $PolicyName Policy name
@@ -120,7 +130,9 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $OperateOwnerUin 
      * @param string $OperateUin 
      * @param integer $OperateUinType 
-     * @param integer $Deactived 
+     * @param integer $Deactived Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $DeactivedDetail 
      */
     function __construct()
     {
@@ -172,6 +184,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("Deactived",$param) and $param["Deactived"] !== null) {
             $this->Deactived = $param["Deactived"];
+        }
+
+        if (array_key_exists("DeactivedDetail",$param) and $param["DeactivedDetail"] !== null) {
+            $this->DeactivedDetail = $param["DeactivedDetail"];
         }
     }
 }

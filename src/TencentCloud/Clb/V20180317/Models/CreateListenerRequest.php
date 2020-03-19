@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerNames(array $ListenerNames) Set List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
  * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
  * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
- * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
- * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+ * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
+ * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
  * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
  * @method string getScheduler() Obtain Forwarding method of a listener. Value range: WRR, LEAST_CONN.
@@ -71,7 +71,7 @@ class CreateListenerRequest extends AbstractModel
     public $HealthCheck;
 
     /**
-     * @var CertificateInput Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+     * @var CertificateInput Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
      */
     public $Certificate;
 
@@ -96,7 +96,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @param string $Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
      * @param array $ListenerNames List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
      * @param HealthCheck $HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
-     * @param CertificateInput $Certificate Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+     * @param CertificateInput $Certificate Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
      * @param string $Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.

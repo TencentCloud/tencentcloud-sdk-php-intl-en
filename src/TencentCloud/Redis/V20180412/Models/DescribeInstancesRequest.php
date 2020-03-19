@@ -54,10 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(array $AutoRenew) Set Renewal mode. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
  * @method string getBillingMode() Obtain Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
  * @method void setBillingMode(string $BillingMode) Set Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
- * @method integer getType() Obtain Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
- * @method void setType(integer $Type) Set Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+ * @method integer getType() Obtain Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+ * @method void setType(integer $Type) Set Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
  * @method array getSearchKeys() Obtain Search keywords, which can be instance ID, instance name, or complete IP
  * @method void setSearchKeys(array $SearchKeys) Set Search keywords, which can be instance ID, instance name, or complete IP
+ * @method array getTypeList() Obtain Internal parameter, which can be ignored
+ * @method void setTypeList(array $TypeList) Set Internal parameter, which can be ignored
  */
 
 /**
@@ -156,7 +158,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $BillingMode;
 
     /**
-     * @var integer Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+     * @var integer Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      */
     public $Type;
 
@@ -164,6 +166,11 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array Search keywords, which can be instance ID, instance name, or complete IP
      */
     public $SearchKeys;
+
+    /**
+     * @var array Internal parameter, which can be ignored
+     */
+    public $TypeList;
     /**
      * @param integer $Limit Instance list size. Default value: 20
      * @param integer $Offset Offset, which is an integral multiple of `Limit`
@@ -183,8 +190,9 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $EngineName Engine information: Redis-2.8, Redis-4.0, CKV
      * @param array $AutoRenew Renewal mode. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
      * @param string $BillingMode Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
-     * @param integer $Type Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+     * @param integer $Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      * @param array $SearchKeys Search keywords, which can be instance ID, instance name, or complete IP
+     * @param array $TypeList Internal parameter, which can be ignored
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("SearchKeys",$param) and $param["SearchKeys"] !== null) {
             $this->SearchKeys = $param["SearchKeys"];
+        }
+
+        if (array_key_exists("TypeList",$param) and $param["TypeList"] !== null) {
+            $this->TypeList = $param["TypeList"];
         }
     }
 }

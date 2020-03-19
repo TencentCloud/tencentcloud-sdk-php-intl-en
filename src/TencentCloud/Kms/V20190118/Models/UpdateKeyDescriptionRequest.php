@@ -18,7 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getDescription() Obtain 
+ * @method void setDescription(string $Description) Set 
+ * @method string getKeyId() Obtain ID of the CMK for which to modify the description
+ * @method void setKeyId(string $KeyId) Set ID of the CMK for which to modify the description
  */
 
 /**
@@ -26,9 +29,18 @@ use TencentCloud\Common\AbstractModel;
  */
 class UpdateKeyDescriptionRequest extends AbstractModel
 {
+    /**
+     * @var string 
+     */
+    public $Description;
 
     /**
-
+     * @var string ID of the CMK for which to modify the description
+     */
+    public $KeyId;
+    /**
+     * @param string $Description 
+     * @param string $KeyId ID of the CMK for which to modify the description
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class UpdateKeyDescriptionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
 
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
     }
 }

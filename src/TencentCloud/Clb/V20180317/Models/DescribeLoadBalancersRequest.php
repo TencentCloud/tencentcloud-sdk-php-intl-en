@@ -38,8 +38,8 @@ OPEN: public network; INTERNAL: private network.
  * @method void setBackendPrivateIps(array $BackendPrivateIps) Set Private IP of the real server bound to a CLB.
  * @method integer getOffset() Obtain Data offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Data offset. Default value: 0.
- * @method integer getLimit() Obtain Number of CLB instances to be returned. Default value: 20.
- * @method void setLimit(integer $Limit) Set Number of CLB instances to be returned. Default value: 20.
+ * @method integer getLimit() Obtain Number of returned CLB instances. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned CLB instances. Default value: 20. Maximum value: 100.
  * @method string getOrderBy() Obtain Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
  * @method void setOrderBy(string $OrderBy) Set Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
  * @method integer getOrderType() Obtain 1: reverse; 0: sequential. Default value: reverse by creation time |
@@ -112,7 +112,7 @@ OPEN: public network; INTERNAL: private network.
     public $Offset;
 
     /**
-     * @var integer Number of CLB instances to be returned. Default value: 20.
+     * @var integer Number of returned CLB instances. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -167,7 +167,7 @@ OPEN: public network; INTERNAL: private network.
      * @param array $BackendPublicIps Public IP of the real server bound to a CLB.
      * @param array $BackendPrivateIps Private IP of the real server bound to a CLB.
      * @param integer $Offset Data offset. Default value: 0.
-     * @param integer $Limit Number of CLB instances to be returned. Default value: 20.
+     * @param integer $Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
      * @param string $OrderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
      * @param integer $OrderType 1: reverse; 0: sequential. Default value: reverse by creation time |
      * @param string $SearchKey Search field which fuzzy matches name, domain name, or VIP.

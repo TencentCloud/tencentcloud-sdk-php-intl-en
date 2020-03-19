@@ -22,31 +22,31 @@ use TencentCloud\Common\AbstractModel;
 - origin: master origin server.
 - domain: domain name.
 - resourceId: domain name id.
-- status: domain name status, online, offline, or processing.
-- serviceType: service type, web, download, or media.
+- status: domain name status. Values include `online`, `offline`, or `processing`.
+- serviceType: service type. Values include `web`, `download`, or `media`.
 - projectId: project ID.
-- domainType: master origin server type, cname indicates external origin, COS indicates COS origin.
+- domainType: master origin server type, `cname` indicates external origin, `COS` indicates COS origin.
 - fullUrlCache: full-path cache, which can be on or off.
 - https: whether to configure HTTPS, which can be on, off or processing.
-- originPullProtocol: origin-pull protocol type. It supports HTTP, follow, or HTTPS.
+- originPullProtocol: origin-pull protocol type. HTTP, follow, or HTTPS are supported.
 - tagKey: tag key.
  * @method void setName(string $Name) Set Filter field name, the list supported is as follows:
 - origin: master origin server.
 - domain: domain name.
 - resourceId: domain name id.
-- status: domain name status, online, offline, or processing.
-- serviceType: service type, web, download, or media.
+- status: domain name status. Values include `online`, `offline`, or `processing`.
+- serviceType: service type. Values include `web`, `download`, or `media`.
 - projectId: project ID.
-- domainType: master origin server type, cname indicates external origin, COS indicates COS origin.
+- domainType: master origin server type, `cname` indicates external origin, `COS` indicates COS origin.
 - fullUrlCache: full-path cache, which can be on or off.
 - https: whether to configure HTTPS, which can be on, off or processing.
-- originPullProtocol: origin-pull protocol type. It supports HTTP, follow, or HTTPS.
+- originPullProtocol: origin-pull protocol type. HTTP, follow, or HTTPS are supported.
 - tagKey: tag key.
  * @method array getValue() Obtain Filter field value.
  * @method void setValue(array $Value) Set Filter field value.
- * @method boolean getFuzzy() Obtain Whether to enable fuzzy query. Only origin or domain is supported for the filter field name.
+ * @method boolean getFuzzy() Obtain Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
- * @method void setFuzzy(boolean $Fuzzy) Set Whether to enable fuzzy query. Only origin or domain is supported for the filter field name.
+ * @method void setFuzzy(boolean $Fuzzy) Set Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
  */
 
@@ -60,13 +60,13 @@ class DomainFilter extends AbstractModel
 - origin: master origin server.
 - domain: domain name.
 - resourceId: domain name id.
-- status: domain name status, online, offline, or processing.
-- serviceType: service type, web, download, or media.
+- status: domain name status. Values include `online`, `offline`, or `processing`.
+- serviceType: service type. Values include `web`, `download`, or `media`.
 - projectId: project ID.
-- domainType: master origin server type, cname indicates external origin, COS indicates COS origin.
+- domainType: master origin server type, `cname` indicates external origin, `COS` indicates COS origin.
 - fullUrlCache: full-path cache, which can be on or off.
 - https: whether to configure HTTPS, which can be on, off or processing.
-- originPullProtocol: origin-pull protocol type. It supports HTTP, follow, or HTTPS.
+- originPullProtocol: origin-pull protocol type. HTTP, follow, or HTTPS are supported.
 - tagKey: tag key.
      */
     public $Name;
@@ -77,7 +77,7 @@ class DomainFilter extends AbstractModel
     public $Value;
 
     /**
-     * @var boolean Whether to enable fuzzy query. Only origin or domain is supported for the filter field name.
+     * @var boolean Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
      */
     public $Fuzzy;
@@ -86,16 +86,16 @@ When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is 
 - origin: master origin server.
 - domain: domain name.
 - resourceId: domain name id.
-- status: domain name status, online, offline, or processing.
-- serviceType: service type, web, download, or media.
+- status: domain name status. Values include `online`, `offline`, or `processing`.
+- serviceType: service type. Values include `web`, `download`, or `media`.
 - projectId: project ID.
-- domainType: master origin server type, cname indicates external origin, COS indicates COS origin.
+- domainType: master origin server type, `cname` indicates external origin, `COS` indicates COS origin.
 - fullUrlCache: full-path cache, which can be on or off.
 - https: whether to configure HTTPS, which can be on, off or processing.
-- originPullProtocol: origin-pull protocol type. It supports HTTP, follow, or HTTPS.
+- originPullProtocol: origin-pull protocol type. HTTP, follow, or HTTPS are supported.
 - tagKey: tag key.
      * @param array $Value Filter field value.
-     * @param boolean $Fuzzy Whether to enable fuzzy query. Only origin or domain is supported for the filter field name.
+     * @param boolean $Fuzzy Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
      */
     function __construct()

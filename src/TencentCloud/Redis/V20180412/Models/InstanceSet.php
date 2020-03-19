@@ -96,6 +96,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNoAuth(boolean $NoAuth) Set Whether an instance is password-free. true: yes; false: no
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getClientLimit() Obtain Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setClientLimit(integer $ClientLimit) Set Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDtsStatus() Obtain DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDtsStatus(integer $DtsStatus) Set DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getNetLimit() Obtain Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setNetLimit(integer $NetLimit) Set Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getPasswordFree() Obtain Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setPasswordFree(integer $PasswordFree) Set Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getReadOnly() Obtain Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setReadOnly(integer $ReadOnly) Set Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getVip6() Obtain Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setVip6(string $Vip6) Set Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getRemainBandwidthDuration() Obtain 
+ * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set 
  */
 
 /**
@@ -285,6 +311,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NoAuth;
+
+    /**
+     * @var integer Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClientLimit;
+
+    /**
+     * @var integer DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DtsStatus;
+
+    /**
+     * @var integer Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $NetLimit;
+
+    /**
+     * @var integer Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $PasswordFree;
+
+    /**
+     * @var integer Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReadOnly;
+
+    /**
+     * @var string Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Vip6;
+
+    /**
+     * @var string 
+     */
+    public $RemainBandwidthDuration;
     /**
      * @param string $InstanceName Instance name
      * @param string $InstanceId Instance ID
@@ -325,6 +392,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $NoAuth Whether an instance is password-free. true: yes; false: no
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClientLimit Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DtsStatus DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $NetLimit Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $PasswordFree Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReadOnly Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Vip6 Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $RemainBandwidthDuration 
      */
     function __construct()
     {
@@ -490,6 +570,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("NoAuth",$param) and $param["NoAuth"] !== null) {
             $this->NoAuth = $param["NoAuth"];
+        }
+
+        if (array_key_exists("ClientLimit",$param) and $param["ClientLimit"] !== null) {
+            $this->ClientLimit = $param["ClientLimit"];
+        }
+
+        if (array_key_exists("DtsStatus",$param) and $param["DtsStatus"] !== null) {
+            $this->DtsStatus = $param["DtsStatus"];
+        }
+
+        if (array_key_exists("NetLimit",$param) and $param["NetLimit"] !== null) {
+            $this->NetLimit = $param["NetLimit"];
+        }
+
+        if (array_key_exists("PasswordFree",$param) and $param["PasswordFree"] !== null) {
+            $this->PasswordFree = $param["PasswordFree"];
+        }
+
+        if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
+            $this->ReadOnly = $param["ReadOnly"];
+        }
+
+        if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
+            $this->Vip6 = $param["Vip6"];
+        }
+
+        if (array_key_exists("RemainBandwidthDuration",$param) and $param["RemainBandwidthDuration"] !== null) {
+            $this->RemainBandwidthDuration = $param["RemainBandwidthDuration"];
         }
     }
 }

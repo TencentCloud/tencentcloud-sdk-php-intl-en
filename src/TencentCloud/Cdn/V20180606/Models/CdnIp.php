@@ -18,53 +18,77 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIp() Obtain IP of the node.
- * @method void setIp(string $Ip) Set IP of the node.
- * @method string getPlatform() Obtain Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
- * @method void setPlatform(string $Platform) Set Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
- * @method string getLocation() Obtain District/country where the node is located. `unknown`: the node location is unknown.
- * @method void setLocation(string $Location) Set District/country where the node is located. `unknown`: the node location is unknown.
- * @method array getHistory() Obtain Activation and deactivation history of the node.
- * @method void setHistory(array $History) Set Activation and deactivation history of the node.
- * @method string getArea() Obtain Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
- * @method void setArea(string $Area) Set Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
+ * @method string getIp() Obtain IP to be queried
+ * @method void setIp(string $Ip) Set IP to be queried
+ * @method string getPlatform() Obtain IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node
+ * @method void setPlatform(string $Platform) Set IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node
+ * @method string getLocation() Obtain Node district/country
+unknown: unknown node location
+ * @method void setLocation(string $Location) Set Node district/country
+unknown: unknown node location
+ * @method array getHistory() Obtain Node activation and deactivation history
+ * @method void setHistory(array $History) Set Node activation and deactivation history
+ * @method string getArea() Obtain Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown
+ * @method void setArea(string $Area) Set Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown
  */
 
 /**
- *CdnIp attribute details
+ *IP attribute information
  */
 class CdnIp extends AbstractModel
 {
     /**
-     * @var string IP of the node.
+     * @var string IP to be queried
      */
     public $Ip;
 
     /**
-     * @var string Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
+     * @var string IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node
      */
     public $Platform;
 
     /**
-     * @var string District/country where the node is located. `unknown`: the node location is unknown.
+     * @var string Node district/country
+unknown: unknown node location
      */
     public $Location;
 
     /**
-     * @var array Activation and deactivation history of the node.
+     * @var array Node activation and deactivation history
      */
     public $History;
 
     /**
-     * @var string Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
+     * @var string Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown
      */
     public $Area;
     /**
-     * @param string $Ip IP of the node.
-     * @param string $Platform Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
-     * @param string $Location District/country where the node is located. `unknown`: the node location is unknown.
-     * @param array $History Activation and deactivation history of the node.
-     * @param string $Area Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
+     * @param string $Ip IP to be queried
+     * @param string $Platform IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node
+     * @param string $Location Node district/country
+unknown: unknown node location
+     * @param array $History Node activation and deactivation history
+     * @param string $Area Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown
      */
     function __construct()
     {

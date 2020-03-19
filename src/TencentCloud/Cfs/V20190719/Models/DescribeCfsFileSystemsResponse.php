@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getFileSystems() Obtain File system information
  * @method void setFileSystems(array $FileSystems) Set File system information
+ * @method integer getTotalCount() Obtain Total number of file systems
+ * @method void setTotalCount(integer $TotalCount) Set Total number of file systems
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,11 +37,17 @@ class DescribeCfsFileSystemsResponse extends AbstractModel
     public $FileSystems;
 
     /**
+     * @var integer Total number of file systems
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
      * @param array $FileSystems File system information
+     * @param integer $TotalCount Total number of file systems
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +69,10 @@ class DescribeCfsFileSystemsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FileSystems, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

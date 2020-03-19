@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobName(string $JobName) Set Data migration task name
  * @method MigrateOption getMigrateOption() Obtain Migration task configuration options
  * @method void setMigrateOption(MigrateOption $MigrateOption) Set Migration task configuration options
- * @method string getSrcAccessType() Obtain Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), vpnselfbuild (self-built VPN-enabled instance), cdb (TencentDB instance)
- * @method void setSrcAccessType(string $SrcAccessType) Set Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), vpnselfbuild (self-built VPN-enabled instance), cdb (TencentDB instance)
+ * @method string getSrcAccessType() Obtain Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
+ * @method void setSrcAccessType(string $SrcAccessType) Set Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
  * @method SrcInfo getSrcInfo() Obtain Source instance information, which is correlated with the migration task type
  * @method void setSrcInfo(SrcInfo $SrcInfo) Set Source instance information, which is correlated with the migration task type
- * @method string getDstAccessType() Obtain Target instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), vpnselfbuild (self-built VPN-enabled instance), cdb (TencentDB instance). Currently, only "cdb" is supported.
- * @method void setDstAccessType(string $DstAccessType) Set Target instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), vpnselfbuild (self-built VPN-enabled instance), cdb (TencentDB instance). Currently, only "cdb" is supported.
+ * @method string getDstAccessType() Obtain Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
+ * @method void setDstAccessType(string $DstAccessType) Set Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
  * @method DstInfo getDstInfo() Obtain Target instance information. The region where the target instance is located cannot be modified.
  * @method void setDstInfo(DstInfo $DstInfo) Set Target instance information. The region where the target instance is located cannot be modified.
  * @method string getDatabaseInfo() Obtain When migrating the specified table, you need to set the information of the source database table to be migrated, which should be described in JSON string format. Below are examples.
@@ -71,7 +71,7 @@ class ModifyMigrateJobRequest extends AbstractModel
     public $MigrateOption;
 
     /**
-     * @var string Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), vpnselfbuild (self-built VPN-enabled instance), cdb (TencentDB instance)
+     * @var string Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
      */
     public $SrcAccessType;
 
@@ -81,7 +81,7 @@ class ModifyMigrateJobRequest extends AbstractModel
     public $SrcInfo;
 
     /**
-     * @var string Target instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), vpnselfbuild (self-built VPN-enabled instance), cdb (TencentDB instance). Currently, only "cdb" is supported.
+     * @var string Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
      */
     public $DstAccessType;
 
@@ -105,9 +105,9 @@ This field does not need to be set when the entire instance is to be migrated
      * @param string $JobId ID of the data migration task to be modified
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
-     * @param string $SrcAccessType Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), vpnselfbuild (self-built VPN-enabled instance), cdb (TencentDB instance)
+     * @param string $SrcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
      * @param SrcInfo $SrcInfo Source instance information, which is correlated with the migration task type
-     * @param string $DstAccessType Target instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), vpnselfbuild (self-built VPN-enabled instance), cdb (TencentDB instance). Currently, only "cdb" is supported.
+     * @param string $DstAccessType Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
      * @param DstInfo $DstInfo Target instance information. The region where the target instance is located cannot be modified.
      * @param string $DatabaseInfo When migrating the specified table, you need to set the information of the source database table to be migrated, which should be described in JSON string format. Below are examples.
 

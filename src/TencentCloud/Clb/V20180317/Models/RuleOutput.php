@@ -68,10 +68,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWafDomainId(string $WafDomainId) Set WAF instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTrpcCallee() Obtain 
- * @method void setTrpcCallee(string $TrpcCallee) Set 
- * @method string getTrpcFunc() Obtain 
- * @method void setTrpcFunc(string $TrpcFunc) Set 
+ * @method string getTrpcCallee() Obtain TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTrpcFunc() Obtain TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -177,12 +181,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WafDomainId;
 
     /**
-     * @var string 
+     * @var string TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TrpcCallee;
 
     /**
-     * @var string 
+     * @var string TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TrpcFunc;
     /**
@@ -211,8 +217,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $WafDomainId WAF instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TrpcCallee 
-     * @param string $TrpcFunc 
+     * @param string $TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

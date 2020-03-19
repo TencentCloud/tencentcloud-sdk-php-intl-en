@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getZoneId() Obtain ID of the AZ where the instance resides
- * @method void setZoneId(integer $ZoneId) Set ID of the AZ where the instance resides
- * @method integer getTypeId() Obtain Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
- * @method void setTypeId(integer $TypeId) Set Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+ * @method integer getZoneId() Obtain AZ ID of instance
+ * @method void setZoneId(integer $ZoneId) Set AZ ID of instance
+ * @method integer getTypeId() Obtain Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+ * @method void setTypeId(integer $TypeId) Set Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
  * @method integer getMemSize() Obtain Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
  * @method void setMemSize(integer $MemSize) Set Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
  * @method integer getGoodsNum() Obtain Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
  * @method array getSecurityGroupIdList() Obtain Array of security group IDs
  * @method void setSecurityGroupIdList(array $SecurityGroupIdList) Set Array of security group IDs
- * @method integer getVPort() Obtain User-defined port. If this parameter is left blank, 6379 will be used by default
- * @method void setVPort(integer $VPort) Set User-defined port. If this parameter is left blank, 6379 will be used by default
+ * @method integer getVPort() Obtain User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
+ * @method void setVPort(integer $VPort) Set User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
  * @method integer getRedisShardNum() Obtain Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
  * @method void setRedisShardNum(integer $RedisShardNum) Set Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
  * @method integer getRedisReplicasNum() Obtain Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
@@ -62,12 +62,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer ID of the AZ where the instance resides
+     * @var integer AZ ID of instance
      */
     public $ZoneId;
 
     /**
-     * @var integer Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+     * @var integer Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      */
     public $TypeId;
 
@@ -122,7 +122,7 @@ class CreateInstancesRequest extends AbstractModel
     public $SecurityGroupIdList;
 
     /**
-     * @var integer User-defined port. If this parameter is left blank, 6379 will be used by default
+     * @var integer User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
      */
     public $VPort;
 
@@ -151,8 +151,8 @@ class CreateInstancesRequest extends AbstractModel
      */
     public $NoAuth;
     /**
-     * @param integer $ZoneId ID of the AZ where the instance resides
-     * @param integer $TypeId Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+     * @param integer $ZoneId AZ ID of instance
+     * @param integer $TypeId Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      * @param integer $MemSize Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
      * @param integer $GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
      * @param integer $Period Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
@@ -163,7 +163,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $ProjectId Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
      * @param integer $AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
      * @param array $SecurityGroupIdList Array of security group IDs
-     * @param integer $VPort User-defined port. If this parameter is left blank, 6379 will be used by default
+     * @param integer $VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
      * @param integer $RedisShardNum Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
      * @param integer $RedisReplicasNum Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
      * @param boolean $ReplicasReadonly Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckOnly(boolean $CheckOnly) Set Whether to check for upgrade only. Default value: false
  * @method string getLicenseType() Obtain Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
  * @method void setLicenseType(string $LicenseType) Set Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
- * @method integer getBasicSecurityType() Obtain 
- * @method void setBasicSecurityType(integer $BasicSecurityType) Set 
+ * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+ * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  */
 
 /**
@@ -56,7 +56,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $LicenseType;
 
     /**
-     * @var integer 
+     * @var integer Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public $BasicSecurityType;
     /**
@@ -64,7 +64,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param string $EsVersion Target ES version
      * @param boolean $CheckOnly Whether to check for upgrade only. Default value: false
      * @param string $LicenseType Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
-     * @param integer $BasicSecurityType 
+     * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     function __construct()
     {

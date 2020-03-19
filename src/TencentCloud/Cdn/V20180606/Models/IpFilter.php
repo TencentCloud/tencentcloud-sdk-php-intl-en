@@ -33,17 +33,17 @@ whitelist: whitelist
 blacklist: blacklist
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getFilters() Obtain IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFilters(array $Filters) Set IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *IP blacklist/whitelist configuration. It is disabled by default.
+ *IP blacklist/whitelist configuration. This is disabled by default.
  */
 class IpFilter extends AbstractModel
 {
@@ -64,7 +64,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -78,7 +78,7 @@ whitelist: whitelist
 blacklist: blacklist
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Filters IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */

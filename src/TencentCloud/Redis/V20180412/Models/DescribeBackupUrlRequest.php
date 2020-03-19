@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getBackupId() Obtain Backup ID, which can be queried through the DescribeInstanceBackups API
- * @method void setBackupId(string $BackupId) Set Backup ID, which can be queried through the DescribeInstanceBackups API
+ * @method string getBackupId() Obtain Backup ID, which can be queried through the `DescribeInstanceBackups` API
+ * @method void setBackupId(string $BackupId) Set Backup ID, which can be queried through the `DescribeInstanceBackups` API
  */
 
 /**
@@ -35,12 +35,12 @@ class DescribeBackupUrlRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Backup ID, which can be queried through the DescribeInstanceBackups API
+     * @var string Backup ID, which can be queried through the `DescribeInstanceBackups` API
      */
     public $BackupId;
     /**
      * @param string $InstanceId Instance ID
-     * @param string $BackupId Backup ID, which can be queried through the DescribeInstanceBackups API
+     * @param string $BackupId Backup ID, which can be queried through the `DescribeInstanceBackups` API
      */
     function __construct()
     {

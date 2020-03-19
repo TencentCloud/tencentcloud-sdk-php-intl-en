@@ -33,7 +33,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Browser cache rule configuration. It is used to set the MaxAge default value and is disabled by default. (This feature is in beta test and not fully available yet.)
+ *Browser cache rule configuration. This is used to set the MaxAge default value and is disabled by default. (This feature is in beta and not generally available yet.)
  */
 class MaxAge extends AbstractModel
 {

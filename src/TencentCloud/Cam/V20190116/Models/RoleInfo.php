@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) Set Time role last updated
  * @method integer getConsoleLogin() Obtain If login is allowed for the role
  * @method void setConsoleLogin(integer $ConsoleLogin) Set If login is allowed for the role
+ * @method string getRoleType() Obtain User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRoleType(string $RoleType) Set User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getSessionDuration() Obtain 
+ * @method void setSessionDuration(integer $SessionDuration) Set 
  */
 
 /**
@@ -73,6 +79,17 @@ class RoleInfo extends AbstractModel
      * @var integer If login is allowed for the role
      */
     public $ConsoleLogin;
+
+    /**
+     * @var string User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $RoleType;
+
+    /**
+     * @var integer 
+     */
+    public $SessionDuration;
     /**
      * @param string $RoleId Role ID
      * @param string $RoleName Role name
@@ -81,6 +98,9 @@ class RoleInfo extends AbstractModel
      * @param string $AddTime Time role created
      * @param string $UpdateTime Time role last updated
      * @param integer $ConsoleLogin If login is allowed for the role
+     * @param string $RoleType User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $SessionDuration 
      */
     function __construct()
     {
@@ -120,6 +140,14 @@ class RoleInfo extends AbstractModel
 
         if (array_key_exists("ConsoleLogin",$param) and $param["ConsoleLogin"] !== null) {
             $this->ConsoleLogin = $param["ConsoleLogin"];
+        }
+
+        if (array_key_exists("RoleType",$param) and $param["RoleType"] !== null) {
+            $this->RoleType = $param["RoleType"];
+        }
+
+        if (array_key_exists("SessionDuration",$param) and $param["SessionDuration"] !== null) {
+            $this->SessionDuration = $param["SessionDuration"];
         }
     }
 }

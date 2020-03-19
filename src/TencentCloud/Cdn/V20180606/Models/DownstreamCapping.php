@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Single link downstream speed limit configuration. It is disabled by default.
+ *Single link downstream speed limit configuration. This is disabled by default.
  */
 class DownstreamCapping extends AbstractModel
 {

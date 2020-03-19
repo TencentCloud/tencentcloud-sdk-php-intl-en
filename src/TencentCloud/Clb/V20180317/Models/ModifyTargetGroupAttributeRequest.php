@@ -18,7 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getTargetGroupId() Obtain Target group ID
+ * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
+ * @method string getTargetGroupName() Obtain New name of target group
+ * @method void setTargetGroupName(string $TargetGroupName) Set New name of target group
+ * @method integer getPort() Obtain New default port of target group
+ * @method void setPort(integer $Port) Set New default port of target group
  */
 
 /**
@@ -26,9 +31,24 @@ use TencentCloud\Common\AbstractModel;
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
+    /**
+     * @var string Target group ID
+     */
+    public $TargetGroupId;
 
     /**
+     * @var string New name of target group
+     */
+    public $TargetGroupName;
 
+    /**
+     * @var integer New default port of target group
+     */
+    public $Port;
+    /**
+     * @param string $TargetGroupId Target group ID
+     * @param string $TargetGroupName New name of target group
+     * @param integer $Port New default port of target group
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
+            $this->TargetGroupId = $param["TargetGroupId"];
+        }
 
+        if (array_key_exists("TargetGroupName",$param) and $param["TargetGroupName"] !== null) {
+            $this->TargetGroupName = $param["TargetGroupName"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
     }
 }

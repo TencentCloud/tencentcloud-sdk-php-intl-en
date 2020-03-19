@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getId() Obtain ID
  * @method void setId(integer $Id) Set ID
- * @method string getRealUrl() Obtain Origin access URL for violating resources
- * @method void setRealUrl(string $RealUrl) Set Origin access URL for violating resources
- * @method string getDownloadUrl() Obtain Snapshot path, which is used in the console to show the violating content snapshot.
- * @method void setDownloadUrl(string $DownloadUrl) Set Snapshot path, which is used in the console to show the violating content snapshot.
- * @method string getUrlStatus() Obtain Current status of violating resources
+ * @method string getRealUrl() Obtain Origin access URL of the resource in violation
+ * @method void setRealUrl(string $RealUrl) Set Origin access URL of the resource in violation
+ * @method string getDownloadUrl() Obtain Snapshot path. This is used to display a snapshot of the content in violation on the console.
+ * @method void setDownloadUrl(string $DownloadUrl) Set Snapshot path. This is used to display a snapshot of the content in violation on the console.
+ * @method string getUrlStatus() Obtain Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process
- * @method void setUrlStatus(string $UrlStatus) Set Current status of violating resources
+ * @method void setUrlStatus(string $UrlStatus) Set Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process
  * @method string getCreateTime() Obtain Creation time
@@ -43,7 +43,7 @@ complain: appeal in process
  */
 
 /**
- *Details of violating URLs
+ *Details of URLs in violation
  */
 class ViolationUrl extends AbstractModel
 {
@@ -53,20 +53,20 @@ class ViolationUrl extends AbstractModel
     public $Id;
 
     /**
-     * @var string Origin access URL for violating resources
+     * @var string Origin access URL of the resource in violation
      */
     public $RealUrl;
 
     /**
-     * @var string Snapshot path, which is used in the console to show the violating content snapshot.
+     * @var string Snapshot path. This is used to display a snapshot of the content in violation on the console.
      */
     public $DownloadUrl;
 
     /**
-     * @var string Current status of violating resources
+     * @var string Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process
      */
@@ -83,12 +83,12 @@ complain: appeal in process
     public $UpdateTime;
     /**
      * @param integer $Id ID
-     * @param string $RealUrl Origin access URL for violating resources
-     * @param string $DownloadUrl Snapshot path, which is used in the console to show the violating content snapshot.
-     * @param string $UrlStatus Current status of violating resources
+     * @param string $RealUrl Origin access URL of the resource in violation
+     * @param string $DownloadUrl Snapshot path. This is used to display a snapshot of the content in violation on the console.
+     * @param string $UrlStatus Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process
      * @param string $CreateTime Creation time

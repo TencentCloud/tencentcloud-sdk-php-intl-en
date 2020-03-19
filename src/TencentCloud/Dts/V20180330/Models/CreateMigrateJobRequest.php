@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMigrateOption(MigrateOption $MigrateOption) Set Migration task configuration options
  * @method string getSrcDatabaseType() Obtain Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
  * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
- * @method string getSrcAccessType() Obtain Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
- * @method void setSrcAccessType(string $SrcAccessType) Set Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
+ * @method string getSrcAccessType() Obtain Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
+ * @method void setSrcAccessType(string $SrcAccessType) Set Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
  * @method SrcInfo getSrcInfo() Obtain Source instance information, which is correlated with the migration task type
  * @method void setSrcInfo(SrcInfo $SrcInfo) Set Source instance information, which is correlated with the migration task type
  * @method string getDstDatabaseType() Obtain Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
@@ -75,7 +75,7 @@ class CreateMigrateJobRequest extends AbstractModel
     public $SrcDatabaseType;
 
     /**
-     * @var string Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
+     * @var string Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
      */
     public $SrcAccessType;
 
@@ -115,7 +115,7 @@ Schema:s1}]
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
      * @param string $SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
-     * @param string $SrcAccessType Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
+     * @param string $SrcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
      * @param SrcInfo $SrcInfo Source instance information, which is correlated with the migration task type
      * @param string $DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
      * @param string $DstAccessType Target instance access type, which currently only supports cdb (TencentDB instance)

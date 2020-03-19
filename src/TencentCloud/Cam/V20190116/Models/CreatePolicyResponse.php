@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() Obtain Newly added policy ID
- * @method void setPolicyId(integer $PolicyId) Set Newly added policy ID
+ * @method integer getPolicyId() Obtain ID of newly added policy
+ * @method void setPolicyId(integer $PolicyId) Set ID of newly added policy
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePolicyResponse extends AbstractModel
 {
     /**
-     * @var integer Newly added policy ID
+     * @var integer ID of newly added policy
      */
     public $PolicyId;
 
@@ -39,7 +39,7 @@ class CreatePolicyResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $PolicyId Newly added policy ID
+     * @param integer $PolicyId ID of newly added policy
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

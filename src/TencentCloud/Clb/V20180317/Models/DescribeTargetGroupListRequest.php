@@ -18,7 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getTargetGroupIds() Obtain Target group ID array
+ * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group ID array
+ * @method array getFilters() Obtain Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+ * @method void setFilters(array $Filters) Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+ * @method integer getOffset() Obtain Starting display offset
+ * @method void setOffset(integer $Offset) Set Starting display offset
+ * @method integer getLimit() Obtain Limit of the number of displayed results. Default value: 20
+ * @method void setLimit(integer $Limit) Set Limit of the number of displayed results. Default value: 20
  */
 
 /**
@@ -26,9 +33,30 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeTargetGroupListRequest extends AbstractModel
 {
+    /**
+     * @var array Target group ID array
+     */
+    public $TargetGroupIds;
 
     /**
+     * @var array Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+     */
+    public $Filters;
 
+    /**
+     * @var integer Starting display offset
+     */
+    public $Offset;
+
+    /**
+     * @var integer Limit of the number of displayed results. Default value: 20
+     */
+    public $Limit;
+    /**
+     * @param array $TargetGroupIds Target group ID array
+     * @param array $Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+     * @param integer $Offset Starting display offset
+     * @param integer $Limit Limit of the number of displayed results. Default value: 20
      */
     function __construct()
     {
@@ -42,6 +70,25 @@ class DescribeTargetGroupListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TargetGroupIds",$param) and $param["TargetGroupIds"] !== null) {
+            $this->TargetGroupIds = $param["TargetGroupIds"];
+        }
 
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
     }
 }

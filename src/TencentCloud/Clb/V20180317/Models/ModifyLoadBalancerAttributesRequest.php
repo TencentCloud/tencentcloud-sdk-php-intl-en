@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name
  * @method TargetRegionInfo getTargetRegionInfo() Obtain Region information of the real server bound to a CLB.
  * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set Region information of the real server bound to a CLB.
- * @method InternetAccessible getInternetChargeInfo() Obtain Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
- * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) Set Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+ * @method InternetAccessible getInternetChargeInfo() Obtain Network billing parameter
+ * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) Set Network billing parameter
+ * @method boolean getLoadBalancerPassToTarget() Obtain Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+ * @method boolean getSnatPro() Obtain Whether to enable SnatPro
+ * @method void setSnatPro(boolean $SnatPro) Set Whether to enable SnatPro
  */
 
 /**
@@ -49,14 +53,26 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $TargetRegionInfo;
 
     /**
-     * @var InternetAccessible Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+     * @var InternetAccessible Network billing parameter
      */
     public $InternetChargeInfo;
+
+    /**
+     * @var boolean Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+     */
+    public $LoadBalancerPassToTarget;
+
+    /**
+     * @var boolean Whether to enable SnatPro
+     */
+    public $SnatPro;
     /**
      * @param string $LoadBalancerId Unique CLB ID
      * @param string $LoadBalancerName CLB instance name
      * @param TargetRegionInfo $TargetRegionInfo Region information of the real server bound to a CLB.
-     * @param InternetAccessible $InternetChargeInfo Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+     * @param InternetAccessible $InternetChargeInfo Network billing parameter
+     * @param boolean $LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+     * @param boolean $SnatPro Whether to enable SnatPro
      */
     function __construct()
     {
@@ -86,6 +102,14 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
         if (array_key_exists("InternetChargeInfo",$param) and $param["InternetChargeInfo"] !== null) {
             $this->InternetChargeInfo = new InternetAccessible();
             $this->InternetChargeInfo->deserialize($param["InternetChargeInfo"]);
+        }
+
+        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
+            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
+            $this->SnatPro = $param["SnatPro"];
         }
     }
 }

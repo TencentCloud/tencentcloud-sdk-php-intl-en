@@ -35,7 +35,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Cross-border origin-pull optimization configuration. It is disabled by default. (This feature is in beta test and not fully available yet.)
+ *Cross-border origin-pull optimization configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
  */
 class OriginPullOptimization extends AbstractModel
 {

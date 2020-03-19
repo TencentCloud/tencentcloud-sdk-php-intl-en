@@ -18,7 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getFilters() Obtain Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+ * @method void setFilters(array $Filters) Set Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+ * @method integer getLimit() Obtain Number of displayed results. Default value: 20
+ * @method void setLimit(integer $Limit) Set Number of displayed results. Default value: 20
+ * @method integer getOffset() Obtain Display offset. Default value: 0
+ * @method void setOffset(integer $Offset) Set Display offset. Default value: 0
  */
 
 /**
@@ -26,9 +31,24 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeTargetGroupInstancesRequest extends AbstractModel
 {
+    /**
+     * @var array Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     */
+    public $Filters;
 
     /**
+     * @var integer Number of displayed results. Default value: 20
+     */
+    public $Limit;
 
+    /**
+     * @var integer Display offset. Default value: 0
+     */
+    public $Offset;
+    /**
+     * @param array $Filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     * @param integer $Limit Number of displayed results. Default value: 20
+     * @param integer $Offset Display offset. Default value: 0
      */
     function __construct()
     {
@@ -42,6 +62,21 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
     }
 }

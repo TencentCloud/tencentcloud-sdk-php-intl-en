@@ -40,6 +40,18 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setSnapshotId(string $SnapshotId) Set Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
 Note: This field may return null, indicating that no valid value is found.
+ * @method boolean getEncrypt() Obtain Specifies whether the data disk is encrypted. Values: 
+<li>TRUE: encrypted
+<li>FALSE: not encrypted<br>
+Default value: FALSE<br>
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setEncrypt(boolean $Encrypt) Set Specifies whether the data disk is encrypted. Values: 
+<li>TRUE: encrypted
+<li>FALSE: not encrypted<br>
+Default value: FALSE<br>
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -77,6 +89,16 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
      */
     public $SnapshotId;
+
+    /**
+     * @var boolean Specifies whether the data disk is encrypted. Values: 
+<li>TRUE: encrypted
+<li>FALSE: not encrypted<br>
+Default value: FALSE<br>
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Encrypt;
     /**
      * @param integer $DiskSize The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
      * @param string $DiskType The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
@@ -89,6 +111,12 @@ Currently this parameter is only used in the `RunInstances` API.
 Note: This field may return null, indicating that no valid value is found.
      * @param string $SnapshotId Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
 Note: This field may return null, indicating that no valid value is found.
+     * @param boolean $Encrypt Specifies whether the data disk is encrypted. Values: 
+<li>TRUE: encrypted
+<li>FALSE: not encrypted<br>
+Default value: FALSE<br>
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -120,6 +148,10 @@ Note: This field may return null, indicating that no valid value is found.
 
         if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
             $this->SnapshotId = $param["SnapshotId"];
+        }
+
+        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
+            $this->Encrypt = $param["Encrypt"];
         }
     }
 }

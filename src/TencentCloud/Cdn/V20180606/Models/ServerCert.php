@@ -19,40 +19,40 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getCertId() Obtain Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCertId(string $CertId) Set Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getCertName() Obtain Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCertName(string $CertName) Set Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getCertificate() Obtain Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCertificate(string $Certificate) Set Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getPrivateKey() Obtain Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPrivateKey(string $PrivateKey) Set Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getExpireTime() Obtain Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getDeployTime() Obtain Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeployTime(string $DeployTime) Set Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getMessage() Obtain Certificate remarks
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -62,50 +62,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
 /**
  *HTTPS acceleration server certificate configuration:
-+ It supports deployment with certificates that are being hosted by the SSL Certificate Services
-+ It supports uploading certificates of PEM format for deployment
++ Supports deployment with certificates that are being hosted by the SSL Certificate Services
++ Supports uploading certificates of PEM format for deployment
 Note: when uploading certificates of PEM format, the Base64 encoding is required.
  */
 class ServerCert extends AbstractModel
 {
     /**
      * @var string Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CertId;
 
     /**
      * @var string Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CertName;
 
     /**
      * @var string Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Certificate;
 
     /**
      * @var string Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PrivateKey;
 
     /**
      * @var string Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ExpireTime;
 
     /**
      * @var string Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeployTime;
@@ -117,22 +117,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Message;
     /**
      * @param string $CertId Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CertName Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Certificate Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PrivateKey Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ExpireTime Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DeployTime Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Message Certificate remarks
 Note: this field may return null, indicating that no valid values can be obtained.

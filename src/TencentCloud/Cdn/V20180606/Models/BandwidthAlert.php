@@ -28,13 +28,13 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBpsThreshold(integer $BpsThreshold) Set Bandwidth cap threshold (in bps)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCounterMeasure() Obtain Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+ * @method string getCounterMeasure() Obtain Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCounterMeasure(string $CounterMeasure) Set Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+ * @method void setCounterMeasure(string $CounterMeasure) Set Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getLastTriggerTime() Obtain The last time the bandwidth cap threshold was triggered
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -43,7 +43,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Bandwidth cap configuration. It is disabled by default.
+ *Bandwidth cap configuration. This is disabled by default.
  */
 class BandwidthAlert extends AbstractModel
 {
@@ -61,9 +61,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BpsThreshold;
 
     /**
-     * @var string Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+     * @var string Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CounterMeasure;
@@ -79,9 +79,9 @@ on: enabled
 off: disabled
      * @param integer $BpsThreshold Bandwidth cap threshold (in bps)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CounterMeasure Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+     * @param string $CounterMeasure Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $LastTriggerTime The last time the bandwidth cap threshold was triggered
 Note: this field may return null, indicating that no valid values can be obtained.

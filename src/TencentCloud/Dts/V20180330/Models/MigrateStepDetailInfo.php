@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepId(string $StepId) Set Step ID
  * @method integer getStatus() Obtain Step status. Value range: 0 (default), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
  * @method void setStatus(integer $Status) Set Step status. Value range: 0 (default), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
+ * @method string getStartTime() Obtain Start time of current step in the format of `yyyy-mm-dd hh:mm:ss`. This field is meaningless if it does not exist or is empty
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setStartTime(string $StartTime) Set Start time of current step in the format of `yyyy-mm-dd hh:mm:ss`. This field is meaningless if it does not exist or is empty
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -52,11 +56,19 @@ class MigrateStepDetailInfo extends AbstractModel
      * @var integer Step status. Value range: 0 (default), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
      */
     public $Status;
+
+    /**
+     * @var string Start time of current step in the format of `yyyy-mm-dd hh:mm:ss`. This field is meaningless if it does not exist or is empty
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $StartTime;
     /**
      * @param integer $StepNo Step number
      * @param string $StepName Step name
      * @param string $StepId Step ID
      * @param integer $Status Step status. Value range: 0 (default), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
+     * @param string $StartTime Start time of current step in the format of `yyyy-mm-dd hh:mm:ss`. This field is meaningless if it does not exist or is empty
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class MigrateStepDetailInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
     }
 }

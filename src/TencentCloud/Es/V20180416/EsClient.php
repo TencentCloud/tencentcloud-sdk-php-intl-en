@@ -26,17 +26,14 @@ use TencentCloud\Es\V20180416\Models as Models;
 * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) This API is used to terminate a cluster instance. 
 * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query all eligible instances in the current region under the current account.
 * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) This API is used to restart an ES cluster instance (for operations such as system update). 
-* @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) This API is used for operations such as scaling a cluster, renaming an instance, modifying configuration, resetting password, and setting Kibana blacklist/whitelist. InstanceId is required, while ForceRestart is optional. Other parameters or parameter combinations and their meanings are as follows:
-- InstanceName: Renames an instance (only for instance identification)
-- NodeNum: Horizontally scales a cluster by adding or removing node
-- NodeType, DiskSize: Vertically scales a data node in a cluster
-- MasterNodeNum: Horizontally scales a cluster by adding or removing dedicated master nodes
-- MasterNodeType, MasterNodeDiskSize: Vertically scales a dedicated master node in a cluster
-- EsConfig: Modifies cluster configuration
-- Password: Changes the password of the default user “elastic”
-- EsAcl: Modifies the ACL
-- CosBackUp: Sets auto-backup to COS for a cluster
-Only one of the parameters or parameter combinations above can be passed in at a time, and passing fewer or more will cause the request to fail.
+* @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blacklist/whitelist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
+- InstanceName: renames an instance (only for instance identification)
+- NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding master nodes, adding cold nodes, etc.)
+- EsConfig: modifies cluster configuration
+- Password: changes the password of the default user "elastic"
+- EsAcl: modifies the ACL
+- CosBackUp: sets auto-backup to COS for a cluster
+Only one of the parameters or parameter combinations above can be passed in at a time, while passing fewer or more ones will cause the request to fail.
 * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to upgrade ES cluster version
 * @method Models\UpgradeLicenseResponse UpgradeLicense(Models\UpgradeLicenseRequest $req) This API is used to upgrade ES X-Pack.
  */

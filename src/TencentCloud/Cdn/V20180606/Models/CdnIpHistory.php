@@ -18,33 +18,45 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStatus() Obtain Node status. `online`: activated; `offline`: deactivated
- * @method void setStatus(string $Status) Set Node status. `online`: activated; `offline`: deactivated
- * @method string getDatetime() Obtain Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDatetime(string $Datetime) Set Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Operation type
+online: node is online
+offline: node is offline
+ * @method void setStatus(string $Status) Set Operation type
+online: node is online
+offline: node is offline
+ * @method string getDatetime() Obtain Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDatetime(string $Datetime) Set Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *Activation and deactivation history of a CDN IP node.
+ *CDN node activation and deactivation history
  */
 class CdnIpHistory extends AbstractModel
 {
     /**
-     * @var string Node status. `online`: activated; `offline`: deactivated
+     * @var string Operation type
+online: node is online
+offline: node is offline
      */
     public $Status;
 
     /**
-     * @var string Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Datetime;
     /**
-     * @param string $Status Node status. `online`: activated; `offline`: deactivated
-     * @param string $Datetime Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Operation type
+online: node is online
+offline: node is offline
+     * @param string $Datetime Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

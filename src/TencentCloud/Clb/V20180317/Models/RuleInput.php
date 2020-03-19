@@ -32,18 +32,18 @@ use TencentCloud\Common\AbstractModel;
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
  * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
- * @method string getForwardType() Obtain Forwarding protocol between CLB and real server. Currently, HTTP is supported
- * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB and real server. Currently, HTTP is supported
+ * @method string getForwardType() Obtain Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+ * @method void setForwardType(string $ForwardType) Set Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
  * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
- * @method boolean getHttp2() Obtain Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
- * @method void setHttp2(boolean $Http2) Set Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+ * @method boolean getHttp2() Obtain Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+ * @method void setHttp2(boolean $Http2) Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
  * @method string getTargetType() Obtain Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
  * @method void setTargetType(string $TargetType) Set Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
- * @method string getTrpcCallee() Obtain 
- * @method void setTrpcCallee(string $TrpcCallee) Set 
- * @method string getTrpcFunc() Obtain 
- * @method void setTrpcFunc(string $TrpcFunc) Set 
+ * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+ * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+ * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+ * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
  */
 
 /**
@@ -83,7 +83,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $Scheduler;
 
     /**
-     * @var string Forwarding protocol between CLB and real server. Currently, HTTP is supported
+     * @var string Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
      */
     public $ForwardType;
 
@@ -93,7 +93,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $DefaultServer;
 
     /**
-     * @var boolean Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+     * @var boolean Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      */
     public $Http2;
 
@@ -103,12 +103,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $TargetType;
 
     /**
-     * @var string 
+     * @var string TRPC callee server route, which is required when `ForwardType` is `TRPC`.
      */
     public $TrpcCallee;
 
     /**
-     * @var string 
+     * @var string TRPC calling service API, which is required when `ForwardType` is `TRPC`.
      */
     public $TrpcFunc;
     /**
@@ -119,12 +119,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param CertificateInput $Certificate Certificate information
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
-     * @param string $ForwardType Forwarding protocol between CLB and real server. Currently, HTTP is supported
+     * @param string $ForwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
      * @param boolean $DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
-     * @param boolean $Http2 Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+     * @param boolean $Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      * @param string $TargetType Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
-     * @param string $TrpcCallee 
-     * @param string $TrpcFunc 
+     * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
      */
     function __construct()
     {

@@ -22,38 +22,50 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
  * @method void setInstanceName(string $InstanceName) Set Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
- * @method integer getNodeNum() Obtain Number of nodes (2-50)
- * @method void setNodeNum(integer $NodeNum) Set Number of nodes (2-50)
+ * @method integer getNodeNum() Obtain This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
+ * @method void setNodeNum(integer $NodeNum) Set This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
  * @method string getEsConfig() Obtain Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
  * @method void setEsConfig(string $EsConfig) Set Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
  * @method string getPassword() Obtain Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
  * @method void setPassword(string $Password) Set Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
  * @method EsAcl getEsAcl() Obtain Access control list
  * @method void setEsAcl(EsAcl $EsAcl) Set Access control list
- * @method integer getDiskSize() Obtain Disk size in GB
- * @method void setDiskSize(integer $DiskSize) Set Disk size in GB
- * @method string getNodeType() Obtain Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method void setNodeType(string $NodeType) Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method integer getMasterNodeNum() Obtain Number of dedicated master nodes (only 3 and 5 are supported)
- * @method void setMasterNodeNum(integer $MasterNodeNum) Set Number of dedicated master nodes (only 3 and 5 are supported)
- * @method string getMasterNodeType() Obtain Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method void setMasterNodeType(string $MasterNodeType) Set Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method integer getMasterNodeDiskSize() Obtain Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+ * @method integer getDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB
+ * @method void setDiskSize(integer $DiskSize) Set This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB
+ * @method string getNodeType() Obtain This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+ * @method void setNodeType(string $NodeType) Set This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+ * @method integer getMasterNodeNum() Obtain This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported)
+ * @method void setMasterNodeNum(integer $MasterNodeNum) Set This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported)
+ * @method string getMasterNodeType() Obtain This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+ * @method void setMasterNodeType(string $MasterNodeType) Set This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+ * @method integer getMasterNodeDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
  * @method boolean getForceRestart() Obtain Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
  * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
  * @method CosBackup getCosBackup() Obtain Auto-backup to COS
  * @method void setCosBackup(CosBackup $CosBackup) Set Auto-backup to COS
- * @method array getNodeInfoList() Obtain 
- * @method void setNodeInfoList(array $NodeInfoList) Set 
- * @method string getPublicAccess() Obtain 
- * @method void setPublicAccess(string $PublicAccess) Set 
- * @method EsPublicAcl getEsPublicAcl() Obtain 
- * @method void setEsPublicAcl(EsPublicAcl $EsPublicAcl) Set 
- * @method string getKibanaPublicAccess() Obtain 
- * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set 
- * @method string getKibanaPrivateAccess() Obtain 
- * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set 
+ * @method array getNodeInfoList() Obtain Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+ * @method void setNodeInfoList(array $NodeInfoList) Set Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+ * @method string getPublicAccess() Obtain Public network access status
+ * @method void setPublicAccess(string $PublicAccess) Set Public network access status
+ * @method EsPublicAcl getEsPublicAcl() Obtain Public network ACL
+ * @method void setEsPublicAcl(EsPublicAcl $EsPublicAcl) Set Public network ACL
+ * @method string getKibanaPublicAccess() Obtain Public network access status of Kibana
+ * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set Public network access status of Kibana
+ * @method string getKibanaPrivateAccess() Obtain Private network access status of Kibana
+ * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set Private network access status of Kibana
  */
 
 /**
@@ -72,7 +84,8 @@ class UpdateInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Number of nodes (2-50)
+     * @var integer This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
      */
     public $NodeNum;
 
@@ -92,27 +105,32 @@ class UpdateInstanceRequest extends AbstractModel
     public $EsAcl;
 
     /**
-     * @var integer Disk size in GB
+     * @var integer This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB
      */
     public $DiskSize;
 
     /**
-     * @var string Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @var string This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      */
     public $NodeType;
 
     /**
-     * @var integer Number of dedicated master nodes (only 3 and 5 are supported)
+     * @var integer This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported)
      */
     public $MasterNodeNum;
 
     /**
-     * @var string Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @var string This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public $MasterNodeType;
 
     /**
-     * @var integer Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+     * @var integer This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
      */
     public $MasterNodeDiskSize;
 
@@ -127,48 +145,54 @@ class UpdateInstanceRequest extends AbstractModel
     public $CosBackup;
 
     /**
-     * @var array 
+     * @var array Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
      */
     public $NodeInfoList;
 
     /**
-     * @var string 
+     * @var string Public network access status
      */
     public $PublicAccess;
 
     /**
-     * @var EsPublicAcl 
+     * @var EsPublicAcl Public network ACL
      */
     public $EsPublicAcl;
 
     /**
-     * @var string 
+     * @var string Public network access status of Kibana
      */
     public $KibanaPublicAccess;
 
     /**
-     * @var string 
+     * @var string Private network access status of Kibana
      */
     public $KibanaPrivateAccess;
     /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
-     * @param integer $NodeNum Number of nodes (2-50)
+     * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
      * @param string $EsConfig Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
      * @param string $Password Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
      * @param EsAcl $EsAcl Access control list
-     * @param integer $DiskSize Disk size in GB
-     * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param integer $MasterNodeNum Number of dedicated master nodes (only 3 and 5 are supported)
-     * @param string $MasterNodeType Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-     * @param integer $MasterNodeDiskSize Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+     * @param integer $DiskSize This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB
+     * @param string $NodeType This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @param integer $MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported)
+     * @param string $MasterNodeType This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @param integer $MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
      * @param boolean $ForceRestart Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
      * @param CosBackup $CosBackup Auto-backup to COS
-     * @param array $NodeInfoList 
-     * @param string $PublicAccess 
-     * @param EsPublicAcl $EsPublicAcl 
-     * @param string $KibanaPublicAccess 
-     * @param string $KibanaPrivateAccess 
+     * @param array $NodeInfoList Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+     * @param string $PublicAccess Public network access status
+     * @param EsPublicAcl $EsPublicAcl Public network ACL
+     * @param string $KibanaPublicAccess Public network access status of Kibana
+     * @param string $KibanaPrivateAccess Private network access status of Kibana
      */
     function __construct()
     {

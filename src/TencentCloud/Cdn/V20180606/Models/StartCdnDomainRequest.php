@@ -19,9 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getDomain() Obtain Domain name
-The domain name status should be **Disabled**
+The domain name status should be `Disabled`
  * @method void setDomain(string $Domain) Set Domain name
-The domain name status should be **Disabled**
+The domain name status should be `Disabled`
  */
 
 /**
@@ -31,12 +31,12 @@ class StartCdnDomainRequest extends AbstractModel
 {
     /**
      * @var string Domain name
-The domain name status should be **Disabled**
+The domain name status should be `Disabled`
      */
     public $Domain;
     /**
      * @param string $Domain Domain name
-The domain name status should be **Disabled**
+The domain name status should be `Disabled`
      */
     function __construct()
     {

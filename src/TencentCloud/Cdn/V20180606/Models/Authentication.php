@@ -21,18 +21,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() Obtain Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null.
+When this is enabled, one mode needs to be configured. Other modes need to be set to null.
  * @method void setSwitch(string $Switch) Set Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null.
+When this is enabled, one mode needs to be configured. Other modes need to be set to null.
  * @method AuthenticationTypeA getTypeA() Obtain Timestamp hotlink protection mode A configuration
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTypeA(AuthenticationTypeA $TypeA) Set Timestamp hotlink protection mode A configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AuthenticationTypeB getTypeB() Obtain Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+ * @method AuthenticationTypeB getTypeB() Obtain Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTypeB(AuthenticationTypeB $TypeB) Set Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+ * @method void setTypeB(AuthenticationTypeB $TypeB) Set Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method AuthenticationTypeC getTypeC() Obtain Timestamp hotlink protection mode C configuration
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -53,7 +53,7 @@ class Authentication extends AbstractModel
      * @var string Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null.
+When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      */
     public $Switch;
 
@@ -64,7 +64,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TypeA;
 
     /**
-     * @var AuthenticationTypeB Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+     * @var AuthenticationTypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TypeB;
@@ -84,10 +84,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null.
+When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      * @param AuthenticationTypeA $TypeA Timestamp hotlink protection mode A configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AuthenticationTypeB $TypeB Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+     * @param AuthenticationTypeB $TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AuthenticationTypeC $TypeC Timestamp hotlink protection mode C configuration
 Note: this field may return null, indicating that no valid values can be obtained.

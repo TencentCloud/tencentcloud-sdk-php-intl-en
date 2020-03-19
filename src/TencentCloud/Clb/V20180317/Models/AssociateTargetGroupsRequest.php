@@ -18,7 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getAssociations() Obtain Association array
+ * @method void setAssociations(array $Associations) Set Association array
  */
 
 /**
@@ -26,9 +27,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class AssociateTargetGroupsRequest extends AbstractModel
 {
-
     /**
-
+     * @var array Association array
+     */
+    public $Associations;
+    /**
+     * @param array $Associations Association array
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class AssociateTargetGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Associations",$param) and $param["Associations"] !== null) {
+            $this->Associations = [];
+            foreach ($param["Associations"] as $key => $value){
+                $obj = new TargetGroupAssociation();
+                $obj->deserialize($value);
+                array_push($this->Associations, $obj);
+            }
+        }
     }
 }

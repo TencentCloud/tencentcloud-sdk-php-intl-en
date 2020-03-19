@@ -20,14 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getOperation() Obtain Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
  * @method void setOperation(string $Operation) Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain New name of an instance
- * @method void setInstanceName(string $InstanceName) Set New name of an instance
+ * @method array getInstanceIds() Obtain Instance ID
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID
+ * @method array getInstanceNames() Obtain New name of instance
+ * @method void setInstanceNames(array $InstanceNames) Set New name of instance
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getAutoRenew() Obtain Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
- * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+ * @method array getAutoRenews() Obtain Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+ * @method void setAutoRenews(array $AutoRenews) Set Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+ * @method string getInstanceId() Obtain Disused
+ * @method void setInstanceId(string $InstanceId) Set Disused
+ * @method string getInstanceName() Obtain Disused
+ * @method void setInstanceName(string $InstanceName) Set Disused
+ * @method integer getAutoRenew() Obtain Disused
+ * @method void setAutoRenew(integer $AutoRenew) Set Disused
  */
 
 /**
@@ -41,14 +47,14 @@ class ModifyInstanceRequest extends AbstractModel
     public $Operation;
 
     /**
-     * @var string Instance ID
+     * @var array Instance ID
      */
-    public $InstanceId;
+    public $InstanceIds;
 
     /**
-     * @var string New name of an instance
+     * @var array New name of instance
      */
-    public $InstanceName;
+    public $InstanceNames;
 
     /**
      * @var integer Project ID
@@ -56,15 +62,33 @@ class ModifyInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * @var array Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     */
+    public $AutoRenews;
+
+    /**
+     * @var string Disused
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Disused
+     */
+    public $InstanceName;
+
+    /**
+     * @var integer Disused
      */
     public $AutoRenew;
     /**
      * @param string $Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName New name of an instance
+     * @param array $InstanceIds Instance ID
+     * @param array $InstanceNames New name of instance
      * @param integer $ProjectId Project ID
-     * @param integer $AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * @param array $AutoRenews Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     * @param string $InstanceId Disused
+     * @param string $InstanceName Disused
+     * @param integer $AutoRenew Disused
      */
     function __construct()
     {
@@ -82,16 +106,28 @@ class ModifyInstanceRequest extends AbstractModel
             $this->Operation = $param["Operation"];
         }
 
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("InstanceNames",$param) and $param["InstanceNames"] !== null) {
+            $this->InstanceNames = $param["InstanceNames"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("AutoRenews",$param) and $param["AutoRenews"] !== null) {
+            $this->AutoRenews = $param["AutoRenews"];
+        }
+
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
-        }
-
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {

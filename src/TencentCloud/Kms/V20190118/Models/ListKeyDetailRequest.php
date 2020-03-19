@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getOffset() Obtain 
  * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method integer getLimit() Obtain This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
+ * @method void setLimit(integer $Limit) Set This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
  * @method integer getRole() Obtain 
  * @method void setRole(integer $Role) Set 
  * @method integer getOrderType() Obtain 
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKeyAlias(string $SearchKeyAlias) Set 
  * @method string getOrigin() Obtain Filters by CMK type. "TENCENT_KMS" indicates to filter CMKs whose key materials are created by KMS; "EXTERNAL" indicates to filter CMKs of `EXTERNAL` type whose key materials are imported by users; "ALL" or empty indicates to filter CMKs of both types. This value is case-sensitive.
  * @method void setOrigin(string $Origin) Set Filters by CMK type. "TENCENT_KMS" indicates to filter CMKs whose key materials are created by KMS; "EXTERNAL" indicates to filter CMKs of `EXTERNAL` type whose key materials are imported by users; "ALL" or empty indicates to filter CMKs of both types. This value is case-sensitive.
+ * @method string getKeyUsage() Obtain Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+ * @method void setKeyUsage(string $KeyUsage) Set Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
  */
 
 /**
@@ -45,7 +47,7 @@ class ListKeyDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
      */
     public $Limit;
 
@@ -73,14 +75,20 @@ class ListKeyDetailRequest extends AbstractModel
      * @var string Filters by CMK type. "TENCENT_KMS" indicates to filter CMKs whose key materials are created by KMS; "EXTERNAL" indicates to filter CMKs of `EXTERNAL` type whose key materials are imported by users; "ALL" or empty indicates to filter CMKs of both types. This value is case-sensitive.
      */
     public $Origin;
+
+    /**
+     * @var string Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+     */
+    public $KeyUsage;
     /**
      * @param integer $Offset 
-     * @param integer $Limit 
+     * @param integer $Limit This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
      * @param integer $Role 
      * @param integer $OrderType 
      * @param integer $KeyState Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only.
      * @param string $SearchKeyAlias 
      * @param string $Origin Filters by CMK type. "TENCENT_KMS" indicates to filter CMKs whose key materials are created by KMS; "EXTERNAL" indicates to filter CMKs of `EXTERNAL` type whose key materials are imported by users; "ALL" or empty indicates to filter CMKs of both types. This value is case-sensitive.
+     * @param string $KeyUsage Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ListKeyDetailRequest extends AbstractModel
 
         if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
             $this->Origin = $param["Origin"];
+        }
+
+        if (array_key_exists("KeyUsage",$param) and $param["KeyUsage"] !== null) {
+            $this->KeyUsage = $param["KeyUsage"];
         }
     }
 }

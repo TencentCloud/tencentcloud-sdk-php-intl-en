@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method array getCertSet() Obtain Certificate ID and list of CLB instances associated with it
+ * @method void setCertSet(array $CertSet) Set Certificate ID and list of CLB instances associated with it
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -28,10 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
 {
     /**
+     * @var array Certificate ID and list of CLB instances associated with it
+     */
+    public $CertSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param array $CertSet Certificate ID and list of CLB instances associated with it
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,15 @@ class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CertSet",$param) and $param["CertSet"] !== null) {
+            $this->CertSet = [];
+            foreach ($param["CertSet"] as $key => $value){
+                $obj = new CertIdRelatedWithLoadBalancers();
+                $obj->deserialize($value);
+                array_push($this->CertSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

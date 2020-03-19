@@ -74,18 +74,18 @@ Please note that if domain names are specified, this parameter will be ignored.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
  * @method void setDetail(boolean $Detail) Set The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
- * @method integer getIsp() Obtain Specifies an ISP when you query the CDN data within Mainland China. If it is left blank, all ISPs will be queried.
+ * @method integer getIsp() Obtain Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
- * @method void setIsp(integer $Isp) Set Specifies an ISP when you query the CDN data within Mainland China. If it is left blank, all ISPs will be queried.
+ * @method void setIsp(integer $Isp) Set Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
- * @method integer getDistrict() Obtain Specifies a province when you query the CDN data within Mainland China. If it is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If it is left blank, all countries/regions will be queried.
+ * @method integer getDistrict() Obtain Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
 To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
- * @method void setDistrict(integer $District) Set Specifies a province when you query the CDN data within Mainland China. If it is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If it is left blank, all countries/regions will be queried.
+ * @method void setDistrict(integer $District) Set Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
 To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
  * @method string getProtocol() Obtain Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
@@ -184,15 +184,15 @@ You can set it to true to return the details for each Domain (the statusCode met
     public $Detail;
 
     /**
-     * @var integer Specifies an ISP when you query the CDN data within Mainland China. If it is left blank, all ISPs will be queried.
+     * @var integer Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
      */
     public $Isp;
 
     /**
-     * @var integer Specifies a province when you query the CDN data within Mainland China. If it is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If it is left blank, all countries/regions will be queried.
+     * @var integer Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
 To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
      */
@@ -262,11 +262,11 @@ Please note that if domain names are specified, this parameter will be ignored.
 `day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
      * @param boolean $Detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
-     * @param integer $Isp Specifies an ISP when you query the CDN data within Mainland China. If it is left blank, all ISPs will be queried.
+     * @param integer $Isp Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
-     * @param integer $District Specifies a province when you query the CDN data within Mainland China. If it is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If it is left blank, all countries/regions will be queried.
+     * @param integer $District Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
 To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
      * @param string $Protocol Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.

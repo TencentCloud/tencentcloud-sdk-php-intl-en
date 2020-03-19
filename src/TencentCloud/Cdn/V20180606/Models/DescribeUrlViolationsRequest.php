@@ -18,10 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOffset() Obtain Offset for paged queries. Default value: 0 (the first page).
- * @method void setOffset(integer $Offset) Set Offset for paged queries. Default value: 0 (the first page).
- * @method integer getLimit() Obtain Limit on paged queries. Default value: 100.
- * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 100.
+ * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0 (the first page).
+ * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0 (the first page).
+ * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100.
+ * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100.
  * @method array getDomains() Obtain Specified domain name query
  * @method void setDomains(array $Domains) Set Specified domain name query
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUrlViolationsRequest extends AbstractModel
 {
     /**
-     * @var integer Offset for paged queries. Default value: 0 (the first page).
+     * @var integer Offset for paginated queries. Default value: 0 (the first page).
      */
     public $Offset;
 
     /**
-     * @var integer Limit on paged queries. Default value: 100.
+     * @var integer Limit on paginated queries. Default value: 100.
      */
     public $Limit;
 
@@ -46,8 +46,8 @@ class DescribeUrlViolationsRequest extends AbstractModel
      */
     public $Domains;
     /**
-     * @param integer $Offset Offset for paged queries. Default value: 0 (the first page).
-     * @param integer $Limit Limit on paged queries. Default value: 100.
+     * @param integer $Offset Offset for paginated queries. Default value: 0 (the first page).
+     * @param integer $Limit Limit on paginated queries. Default value: 100.
      * @param array $Domains Specified domain name query
      */
     function __construct()

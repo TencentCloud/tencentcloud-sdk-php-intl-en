@@ -25,7 +25,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Whether it is compatible with configurations in old versions
+ *Old configuration compatibility check
  */
 class Compatibility extends AbstractModel
 {

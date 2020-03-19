@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
  * @method string getAutoScalingGroupName() Obtain Auto scaling group name
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name
- * @method string getAutoScalingGroupStatus() Obtain Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
- * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) Set Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
+ * @method string getAutoScalingGroupStatus() Obtain Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
+ * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) Set Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
  * @method string getCreatedTime() Obtain Creation time in UTC format
  * @method void setCreatedTime(string $CreatedTime) Set Creation time in UTC format
  * @method integer getDefaultCooldown() Obtain Default cooldown period in seconds
@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings
  * @method integer getIpv6AddressCount() Obtain 
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
+ * @method string getMultiZoneSubnetPolicy() Obtain 
+ * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) Set 
  */
 
 /**
@@ -86,7 +88,7 @@ class AutoScalingGroup extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var string Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
+     * @var string Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
      */
     public $AutoScalingGroupStatus;
 
@@ -199,10 +201,15 @@ class AutoScalingGroup extends AbstractModel
      * @var integer 
      */
     public $Ipv6AddressCount;
+
+    /**
+     * @var string 
+     */
+    public $MultiZoneSubnetPolicy;
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name
-     * @param string $AutoScalingGroupStatus Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
+     * @param string $AutoScalingGroupStatus Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
      * @param string $CreatedTime Creation time in UTC format
      * @param integer $DefaultCooldown Default cooldown period in seconds
      * @param integer $DesiredCapacity Desired number of instances
@@ -225,6 +232,7 @@ class AutoScalingGroup extends AbstractModel
      * @param array $Tags List of auto scaling group tags
      * @param ServiceSettings $ServiceSettings Service settings
      * @param integer $Ipv6AddressCount 
+     * @param string $MultiZoneSubnetPolicy 
      */
     function __construct()
     {
@@ -347,6 +355,10 @@ class AutoScalingGroup extends AbstractModel
 
         if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
             $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
+        }
+
+        if (array_key_exists("MultiZoneSubnetPolicy",$param) and $param["MultiZoneSubnetPolicy"] !== null) {
+            $this->MultiZoneSubnetPolicy = $param["MultiZoneSubnetPolicy"];
         }
     }
 }

@@ -58,10 +58,10 @@ baseline/main/high. Default value: baseline.
  * @method void setHeightToOrig(integer $HeightToOrig) Set Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
  * @method integer getFpsToOrig() Obtain Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
  * @method void setFpsToOrig(integer $FpsToOrig) Set Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
- * @method integer getAiTransCode() Obtain Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
- * @method void setAiTransCode(integer $AiTransCode) Set Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
- * @method float getAdaptBitratePercent() Obtain VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+ * @method integer getAiTransCode() Obtain Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
+ * @method void setAiTransCode(integer $AiTransCode) Set Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
+ * @method float getAdaptBitratePercent() Obtain `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
  */
 
 /**
@@ -158,12 +158,12 @@ baseline/main/high. Default value: baseline.
     public $FpsToOrig;
 
     /**
-     * @var integer Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+     * @var integer Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
      */
     public $AiTransCode;
 
     /**
-     * @var float VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * @var float `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     public $AdaptBitratePercent;
     /**
@@ -187,8 +187,8 @@ baseline/main/high. Default value: baseline.
      * @param integer $BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
      * @param integer $HeightToOrig Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
      * @param integer $FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
-     * @param integer $AiTransCode Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
-     * @param float $AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * @param integer $AiTransCode Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
+     * @param float $AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     function __construct()
     {

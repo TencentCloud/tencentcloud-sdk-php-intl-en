@@ -18,366 +18,434 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResourceId() Obtain Domain name ID.
- * @method void setResourceId(string $ResourceId) Set Domain name ID.
- * @method integer getAppId() Obtain Tencent Cloud account ID.
- * @method void setAppId(integer $AppId) Set Tencent Cloud account ID.
- * @method string getDomain() Obtain Accelerated domain name.
- * @method void setDomain(string $Domain) Set Accelerated domain name.
- * @method string getCname() Obtain Domain name CNAME.
+ * @method string getResourceId() Obtain Domain name ID
+ * @method void setResourceId(string $ResourceId) Set Domain name ID
+ * @method integer getAppId() Obtain Tencent Cloud account ID
+ * @method void setAppId(integer $AppId) Set Tencent Cloud account ID
+ * @method string getDomain() Obtain Acceleration domain name
+ * @method void setDomain(string $Domain) Set Acceleration domain name
+ * @method string getCname() Obtain CNAME address of domain name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCname(string $Cname) Set Domain name CNAME.
+ * @method void setCname(string $Cname) Set CNAME address of domain name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted.
- * @method void setStatus(string $Status) Set Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted.
- * @method integer getProjectId() Obtain Project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method string getServiceType() Obtain Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
- * @method void setServiceType(string $ServiceType) Set Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
- * @method string getCreateTime() Obtain Domain name creation time.
- * @method void setCreateTime(string $CreateTime) Set Domain name creation time.
- * @method string getUpdateTime() Obtain Domain name update time.
- * @method void setUpdateTime(string $UpdateTime) Set Domain name update time.
- * @method Origin getOrigin() Obtain Origin server configuration.
- * @method void setOrigin(Origin $Origin) Set Origin server configuration.
- * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration.
+ * @method string getStatus() Obtain Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled
+ * @method void setStatus(string $Status) Set Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled
+ * @method integer getProjectId() Obtain Project ID, which can be viewed on the Tencent Cloud project management page
+ * @method void setProjectId(integer $ProjectId) Set Project ID, which can be viewed on the Tencent Cloud project management page
+ * @method string getServiceType() Obtain Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration
+ * @method void setServiceType(string $ServiceType) Set Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration
+ * @method string getCreateTime() Obtain Domain name creation time
+ * @method void setCreateTime(string $CreateTime) Set Domain name creation time
+ * @method string getUpdateTime() Obtain Last modified time of domain name
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time of domain name
+ * @method Origin getOrigin() Obtain Origin server configuration
+ * @method void setOrigin(Origin $Origin) Set Origin server configuration
+ * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpFilter(IpFilter $IpFilter) Set IP blacklist/whitelist configuration.
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method IpFreqLimit getIpFreqLimit() Obtain IP access limit configuration.
+ * @method IpFreqLimit getIpFreqLimit() Obtain IP access frequency limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpFreqLimit(IpFreqLimit $IpFreqLimit) Set IP access limit configuration.
+ * @method void setIpFreqLimit(IpFreqLimit $IpFreqLimit) Set IP access frequency limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method StatusCodeCache getStatusCodeCache() Obtain Status code cache configuration.
+ * @method StatusCodeCache getStatusCodeCache() Obtain Status code cache configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatusCodeCache(StatusCodeCache $StatusCodeCache) Set Status code cache configuration.
+ * @method void setStatusCodeCache(StatusCodeCache $StatusCodeCache) Set Status code cache configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Compression getCompression() Obtain Smart compression configuration.
+ * @method Compression getCompression() Obtain Smart compression configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCompression(Compression $Compression) Set Smart compression configuration.
+ * @method void setCompression(Compression $Compression) Set Smart compression configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method BandwidthAlert getBandwidthAlert() Obtain Bandwidth cap configuration.
+ * @method BandwidthAlert getBandwidthAlert() Obtain Bandwidth cap configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBandwidthAlert(BandwidthAlert $BandwidthAlert) Set Bandwidth cap configuration.
+ * @method void setBandwidthAlert(BandwidthAlert $BandwidthAlert) Set Bandwidth cap configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method RangeOriginPull getRangeOriginPull() Obtain Range origin-pull configuration.
+ * @method RangeOriginPull getRangeOriginPull() Obtain Range GETs configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRangeOriginPull(RangeOriginPull $RangeOriginPull) Set Range origin-pull configuration.
+ * @method void setRangeOriginPull(RangeOriginPull $RangeOriginPull) Set Range GETs configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method FollowRedirect getFollowRedirect() Obtain 301 and 302 automatic origin-pull follow-redirect configuration.
+ * @method FollowRedirect getFollowRedirect() Obtain 301/302 origin-pull follow-redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set 301 and 302 automatic origin-pull follow-redirect configuration.
+ * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set 301/302 origin-pull follow-redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method ErrorPage getErrorPage() Obtain Error code redirect configuration.
+ * @method ErrorPage getErrorPage() Obtain Custom error page configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrorPage(ErrorPage $ErrorPage) Set Error code redirect configuration.
+ * @method void setErrorPage(ErrorPage $ErrorPage) Set Custom error page configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method RequestHeader getRequestHeader() Obtain Origin-pull request header configuration.
+ * @method RequestHeader getRequestHeader() Obtain Custom request header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRequestHeader(RequestHeader $RequestHeader) Set Origin-pull request header configuration.
+ * @method void setRequestHeader(RequestHeader $RequestHeader) Set Custom request header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method ResponseHeader getResponseHeader() Obtain Origin server response header configuration.
+ * @method ResponseHeader getResponseHeader() Obtain Custom response header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setResponseHeader(ResponseHeader $ResponseHeader) Set Origin server response header configuration.
+ * @method void setResponseHeader(ResponseHeader $ResponseHeader) Set Custom response header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method DownstreamCapping getDownstreamCapping() Obtain Download speed configuration.
+ * @method DownstreamCapping getDownstreamCapping() Obtain Single-link downstream speed limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDownstreamCapping(DownstreamCapping $DownstreamCapping) Set Download speed configuration.
+ * @method void setDownstreamCapping(DownstreamCapping $DownstreamCapping) Set Single-link downstream speed limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method CacheKey getCacheKey() Obtain Node cache configuration.
+ * @method CacheKey getCacheKey() Obtain Configuration of cache with/without parameter
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCacheKey(CacheKey $CacheKey) Set Node cache configuration.
+ * @method void setCacheKey(CacheKey $CacheKey) Set Configuration of cache with/without parameter
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method ResponseHeaderCache getResponseHeaderCache() Obtain Follows origin server cache header configuration.
+ * @method ResponseHeaderCache getResponseHeaderCache() Obtain Origin server header cache configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setResponseHeaderCache(ResponseHeaderCache $ResponseHeaderCache) Set Follows origin server cache header configuration.
+ * @method void setResponseHeaderCache(ResponseHeaderCache $ResponseHeaderCache) Set Origin server header cache configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method VideoSeek getVideoSeek() Obtain Video dragging configuration.
+ * @method VideoSeek getVideoSeek() Obtain Video dragging configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVideoSeek(VideoSeek $VideoSeek) Set Video dragging configuration.
+ * @method void setVideoSeek(VideoSeek $VideoSeek) Set Video dragging configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Cache getCache() Obtain Cache rules configuration.
+ * @method Cache getCache() Obtain Node cache expiration rule configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCache(Cache $Cache) Set Cache rules configuration.
+ * @method void setCache(Cache $Cache) Set Node cache expiration rule configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method OriginPullOptimization getOriginPullOptimization() Obtain Cross-border optimization configuration.
+ * @method OriginPullOptimization getOriginPullOptimization() Obtain Cross-border linkage optimization configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) Set Cross-border optimization configuration.
+ * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) Set Cross-border linkage optimization configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Https getHttps() Obtain HTTPS configuration.
+ * @method Https getHttps() Obtain HTTPS acceleration configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHttps(Https $Https) Set HTTPS configuration.
+ * @method void setHttps(Https $Https) Set HTTPS acceleration configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Authentication getAuthentication() Obtain Timestamp hotlink protection configuration.
+ * @method Authentication getAuthentication() Obtain Timestamp hotlink protection configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAuthentication(Authentication $Authentication) Set Timestamp hotlink protection configuration.
+ * @method void setAuthentication(Authentication $Authentication) Set Timestamp hotlink protection configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Seo getSeo() Obtain SEO configuration.
+ * @method Seo getSeo() Obtain SEO configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSeo(Seo $Seo) Set SEO configuration.
+ * @method void setSeo(Seo $Seo) Set SEO configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDisable() Obtain Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly.
+ * @method string getDisable() Obtain Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDisable(string $Disable) Set Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly.
+ * @method void setDisable(string $Disable) Set Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method ForceRedirect getForceRedirect() Obtain Access protocol forced redirect configuration.
+ * @method ForceRedirect getForceRedirect() Obtain Access protocol forced redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Access protocol forced redirect configuration.
+ * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Access protocol forced redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Referer getReferer() Obtain Hotlink protection configuration.
+ * @method Referer getReferer() Obtain Referer hotlink protection configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReferer(Referer $Referer) Set Hotlink protection configuration.
+ * @method void setReferer(Referer $Referer) Set Referer hotlink protection configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method MaxAge getMaxAge() Obtain Browser cache rules configuration.
+ * @method MaxAge getMaxAge() Obtain Browser cache expiration rule configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache rules configuration.
+ * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache expiration rule configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Ipv6 getIpv6() Obtain IPv6 configuration.
+ * @method Ipv6 getIpv6() Obtain IPv6 configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpv6(Ipv6 $Ipv6) Set IPv6 configuration.
+ * @method void setIpv6(Ipv6 $Ipv6) Set IPv6 configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Compatibility getCompatibility() Obtain Whether it is compatible with configurations in old versions.
+ * @method Compatibility getCompatibility() Obtain Backwards compatibility configuration (compatibility field for internal use)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCompatibility(Compatibility $Compatibility) Set Whether it is compatible with configurations in old versions.
+ * @method void setCompatibility(Compatibility $Compatibility) Set Backwards compatibility configuration (compatibility field for internal use)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method SpecificConfig getSpecificConfig() Obtain Specific configuration by region.
+ * @method SpecificConfig getSpecificConfig() Obtain Region-specific configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSpecificConfig(SpecificConfig $SpecificConfig) Set Specific configuration by region.
+ * @method void setSpecificConfig(SpecificConfig $SpecificConfig) Set Region-specific configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getArea() Obtain Acceleration region, including mainland, overseas, and global.
+ * @method string getArea() Obtain Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setArea(string $Area) Set Acceleration region, including mainland, overseas, and global.
+ * @method void setArea(string $Area) Set Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getReadonly() Obtain Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally.
+ * @method string getReadonly() Obtain Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReadonly(string $Readonly) Set Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally.
+ * @method void setReadonly(string $Readonly) Set Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method OriginPullTimeout getOriginPullTimeout() Obtain Origin-pull timeout configuration
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain 
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set 
  */
 
 /**
- *Detailed configuration information for CDN domain names.
+ *Complete acceleration domain configuration information
  */
 class DetailDomain extends AbstractModel
 {
     /**
-     * @var string Domain name ID.
+     * @var string Domain name ID
      */
     public $ResourceId;
 
     /**
-     * @var integer Tencent Cloud account ID.
+     * @var integer Tencent Cloud account ID
      */
     public $AppId;
 
     /**
-     * @var string Accelerated domain name.
+     * @var string Acceleration domain name
      */
     public $Domain;
 
     /**
-     * @var string Domain name CNAME.
+     * @var string CNAME address of domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Cname;
 
     /**
-     * @var string Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted.
+     * @var string Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled
      */
     public $Status;
 
     /**
-     * @var integer Project ID.
+     * @var integer Project ID, which can be viewed on the Tencent Cloud project management page
      */
     public $ProjectId;
 
     /**
-     * @var string Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * @var string Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration
      */
     public $ServiceType;
 
     /**
-     * @var string Domain name creation time.
+     * @var string Domain name creation time
      */
     public $CreateTime;
 
     /**
-     * @var string Domain name update time.
+     * @var string Last modified time of domain name
      */
     public $UpdateTime;
 
     /**
-     * @var Origin Origin server configuration.
+     * @var Origin Origin server configuration
      */
     public $Origin;
 
     /**
-     * @var IpFilter IP blacklist/whitelist configuration.
+     * @var IpFilter IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IpFilter;
 
     /**
-     * @var IpFreqLimit IP access limit configuration.
+     * @var IpFreqLimit IP access frequency limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IpFreqLimit;
 
     /**
-     * @var StatusCodeCache Status code cache configuration.
+     * @var StatusCodeCache Status code cache configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StatusCodeCache;
 
     /**
-     * @var Compression Smart compression configuration.
+     * @var Compression Smart compression configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Compression;
 
     /**
-     * @var BandwidthAlert Bandwidth cap configuration.
+     * @var BandwidthAlert Bandwidth cap configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $BandwidthAlert;
 
     /**
-     * @var RangeOriginPull Range origin-pull configuration.
+     * @var RangeOriginPull Range GETs configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RangeOriginPull;
 
     /**
-     * @var FollowRedirect 301 and 302 automatic origin-pull follow-redirect configuration.
+     * @var FollowRedirect 301/302 origin-pull follow-redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FollowRedirect;
 
     /**
-     * @var ErrorPage Error code redirect configuration.
+     * @var ErrorPage Custom error page configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorPage;
 
     /**
-     * @var RequestHeader Origin-pull request header configuration.
+     * @var RequestHeader Custom request header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RequestHeader;
 
     /**
-     * @var ResponseHeader Origin server response header configuration.
+     * @var ResponseHeader Custom response header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ResponseHeader;
 
     /**
-     * @var DownstreamCapping Download speed configuration.
+     * @var DownstreamCapping Single-link downstream speed limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DownstreamCapping;
 
     /**
-     * @var CacheKey Node cache configuration.
+     * @var CacheKey Configuration of cache with/without parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CacheKey;
 
     /**
-     * @var ResponseHeaderCache Follows origin server cache header configuration.
+     * @var ResponseHeaderCache Origin server header cache configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ResponseHeaderCache;
 
     /**
-     * @var VideoSeek Video dragging configuration.
+     * @var VideoSeek Video dragging configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VideoSeek;
 
     /**
-     * @var Cache Cache rules configuration.
+     * @var Cache Node cache expiration rule configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Cache;
 
     /**
-     * @var OriginPullOptimization Cross-border optimization configuration.
+     * @var OriginPullOptimization Cross-border linkage optimization configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OriginPullOptimization;
 
     /**
-     * @var Https HTTPS configuration.
+     * @var Https HTTPS acceleration configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Https;
 
     /**
-     * @var Authentication Timestamp hotlink protection configuration.
+     * @var Authentication Timestamp hotlink protection configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Authentication;
 
     /**
-     * @var Seo SEO configuration.
+     * @var Seo SEO configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Seo;
 
     /**
-     * @var string Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly.
+     * @var string Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Disable;
 
     /**
-     * @var ForceRedirect Access protocol forced redirect configuration.
+     * @var ForceRedirect Access protocol forced redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ForceRedirect;
 
     /**
-     * @var Referer Hotlink protection configuration.
+     * @var Referer Referer hotlink protection configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Referer;
 
     /**
-     * @var MaxAge Browser cache rules configuration.
+     * @var MaxAge Browser cache expiration rule configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MaxAge;
 
     /**
-     * @var Ipv6 IPv6 configuration.
+     * @var Ipv6 IPv6 configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Ipv6;
 
     /**
-     * @var Compatibility Whether it is compatible with configurations in old versions.
+     * @var Compatibility Backwards compatibility configuration (compatibility field for internal use)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Compatibility;
 
     /**
-     * @var SpecificConfig Specific configuration by region.
+     * @var SpecificConfig Region-specific configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SpecificConfig;
 
     /**
-     * @var string Acceleration region, including mainland, overseas, and global.
+     * @var string Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Area;
 
     /**
-     * @var string Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally.
+     * @var string Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Readonly;
@@ -387,76 +455,104 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OriginPullTimeout;
+
     /**
-     * @param string $ResourceId Domain name ID.
-     * @param integer $AppId Tencent Cloud account ID.
-     * @param string $Domain Accelerated domain name.
-     * @param string $Cname Domain name CNAME.
+     * @var AwsPrivateAccess 
+     */
+    public $AwsPrivateAccess;
+    /**
+     * @param string $ResourceId Domain name ID
+     * @param integer $AppId Tencent Cloud account ID
+     * @param string $Domain Acceleration domain name
+     * @param string $Cname CNAME address of domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted.
-     * @param integer $ProjectId Project ID.
-     * @param string $ServiceType Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
-     * @param string $CreateTime Domain name creation time.
-     * @param string $UpdateTime Domain name update time.
-     * @param Origin $Origin Origin server configuration.
-     * @param IpFilter $IpFilter IP blacklist/whitelist configuration.
+     * @param string $Status Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled
+     * @param integer $ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
+     * @param string $ServiceType Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration
+     * @param string $CreateTime Domain name creation time
+     * @param string $UpdateTime Last modified time of domain name
+     * @param Origin $Origin Origin server configuration
+     * @param IpFilter $IpFilter IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IpFreqLimit $IpFreqLimit IP access limit configuration.
+     * @param IpFreqLimit $IpFreqLimit IP access frequency limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StatusCodeCache $StatusCodeCache Status code cache configuration.
+     * @param StatusCodeCache $StatusCodeCache Status code cache configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Compression $Compression Smart compression configuration.
+     * @param Compression $Compression Smart compression configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BandwidthAlert $BandwidthAlert Bandwidth cap configuration.
+     * @param BandwidthAlert $BandwidthAlert Bandwidth cap configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RangeOriginPull $RangeOriginPull Range origin-pull configuration.
+     * @param RangeOriginPull $RangeOriginPull Range GETs configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FollowRedirect $FollowRedirect 301 and 302 automatic origin-pull follow-redirect configuration.
+     * @param FollowRedirect $FollowRedirect 301/302 origin-pull follow-redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrorPage $ErrorPage Error code redirect configuration.
+     * @param ErrorPage $ErrorPage Custom error page configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RequestHeader $RequestHeader Origin-pull request header configuration.
+     * @param RequestHeader $RequestHeader Custom request header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ResponseHeader $ResponseHeader Origin server response header configuration.
+     * @param ResponseHeader $ResponseHeader Custom response header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DownstreamCapping $DownstreamCapping Download speed configuration.
+     * @param DownstreamCapping $DownstreamCapping Single-link downstream speed limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CacheKey $CacheKey Node cache configuration.
+     * @param CacheKey $CacheKey Configuration of cache with/without parameter
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ResponseHeaderCache $ResponseHeaderCache Follows origin server cache header configuration.
+     * @param ResponseHeaderCache $ResponseHeaderCache Origin server header cache configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VideoSeek $VideoSeek Video dragging configuration.
+     * @param VideoSeek $VideoSeek Video dragging configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Cache $Cache Cache rules configuration.
+     * @param Cache $Cache Node cache expiration rule configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OriginPullOptimization $OriginPullOptimization Cross-border optimization configuration.
+     * @param OriginPullOptimization $OriginPullOptimization Cross-border linkage optimization configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Https $Https HTTPS configuration.
+     * @param Https $Https HTTPS acceleration configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Authentication $Authentication Timestamp hotlink protection configuration.
+     * @param Authentication $Authentication Timestamp hotlink protection configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Seo $Seo SEO configuration.
+     * @param Seo $Seo SEO configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Disable Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly.
+     * @param string $Disable Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ForceRedirect $ForceRedirect Access protocol forced redirect configuration.
+     * @param ForceRedirect $ForceRedirect Access protocol forced redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Referer $Referer Hotlink protection configuration.
+     * @param Referer $Referer Referer hotlink protection configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxAge $MaxAge Browser cache rules configuration.
+     * @param MaxAge $MaxAge Browser cache expiration rule configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Ipv6 $Ipv6 IPv6 configuration.
+     * @param Ipv6 $Ipv6 IPv6 configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Compatibility $Compatibility Whether it is compatible with configurations in old versions.
+     * @param Compatibility $Compatibility Backwards compatibility configuration (compatibility field for internal use)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SpecificConfig $SpecificConfig Specific configuration by region.
+     * @param SpecificConfig $SpecificConfig Region-specific configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Area Acceleration region, including mainland, overseas, and global.
+     * @param string $Area Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Readonly Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally.
+     * @param string $Readonly Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AwsPrivateAccess $AwsPrivateAccess 
      */
     function __construct()
     {
@@ -651,6 +747,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("OriginPullTimeout",$param) and $param["OriginPullTimeout"] !== null) {
             $this->OriginPullTimeout = new OriginPullTimeout();
             $this->OriginPullTimeout->deserialize($param["OriginPullTimeout"]);
+        }
+
+        if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
+            $this->AwsPrivateAccess = new AwsPrivateAccess();
+            $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
         }
     }
 }

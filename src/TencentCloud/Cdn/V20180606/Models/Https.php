@@ -29,32 +29,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method string getHttp2() Obtain HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHttp2(string $Http2) Set HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getOcspStapling() Obtain OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOcspStapling(string $OcspStapling) Set OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getVerifyClient() Obtain Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVerifyClient(string $VerifyClient) Set Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method ServerCert getCertInfo() Obtain Server certificate configuration information
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -67,29 +67,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method string getSpdy() Obtain Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSpdy(string $Spdy) Set Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getSslStatus() Obtain HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSslStatus(string $SslStatus) Set HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *Domain name HTTPS acceleration configuration. It is disabled by default.
+ *Domain name HTTPS acceleration configuration. This is disabled by default.
  */
 class Https extends AbstractModel
 {
@@ -105,7 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Http2;
@@ -114,7 +114,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OcspStapling;
@@ -123,7 +123,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VerifyClient;
@@ -144,7 +144,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Spdy;
@@ -152,7 +152,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @var string HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -166,17 +166,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Http2 HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $OcspStapling OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $VerifyClient Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ServerCert $CertInfo Server certificate configuration information
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -185,11 +185,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Spdy Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SslStatus HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.

@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDealId() Obtain Transaction Id
- * @method void setDealId(string $DealId) Set Transaction Id
+ * @method string getDealId() Obtain Transaction ID
+ * @method void setDealId(string $DealId) Set Transaction ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class RenewInstanceResponse extends AbstractModel
 {
     /**
-     * @var string Transaction Id
+     * @var string Transaction ID
      */
     public $DealId;
 
@@ -39,7 +39,7 @@ class RenewInstanceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $DealId Transaction Id
+     * @param string $DealId Transaction ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

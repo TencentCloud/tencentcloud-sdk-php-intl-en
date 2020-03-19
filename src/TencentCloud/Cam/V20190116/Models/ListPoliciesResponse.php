@@ -20,20 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getTotalNum() Obtain Total number of policies
  * @method void setTotalNum(integer $TotalNum) Set Total number of policies
- * @method array getList() Obtain Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
-`policyId`: Policy ID 
-`policyName`: Policy name
-`addTime`: Time policy created
-`type`: 1 is custom policy; 2 is preset policy 
-`description`: Policy description 
-`createMode`: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax.
- * @method void setList(array $List) Set Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
-`policyId`: Policy ID 
-`policyName`: Policy name
-`addTime`: Time policy created
-`type`: 1 is custom policy; 2 is preset policy 
-`description`: Policy description 
-`createMode`: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax.
+ * @method array getList() Obtain Policy array. Each array contains fields including `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode`. 
+policyId: policy ID 
+policyName: policy name
+addTime: policy creation time
+type: 1: custom policy, 2: preset policy 
+description: policy description 
+createMode: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax
+Attachments: number of associated users
+ServiceType: the product the policy is associated with
+IsAttached: this value should not be null when querying if a marked entity has been associated with a policy. 0 indicates that no policy has been associated, and 1 indicates that a policy has been associated
+ * @method void setList(array $List) Set Policy array. Each array contains fields including `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode`. 
+policyId: policy ID 
+policyName: policy name
+addTime: policy creation time
+type: 1: custom policy, 2: preset policy 
+description: policy description 
+createMode: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax
+Attachments: number of associated users
+ServiceType: the product the policy is associated with
+IsAttached: this value should not be null when querying if a marked entity has been associated with a policy. 0 indicates that no policy has been associated, and 1 indicates that a policy has been associated
  * @method array getServiceTypeList() Obtain Reserved field
 Note: This field may return null, indicating that no valid value was found.
  * @method void setServiceTypeList(array $ServiceTypeList) Set Reserved field
@@ -53,13 +59,16 @@ class ListPoliciesResponse extends AbstractModel
     public $TotalNum;
 
     /**
-     * @var array Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
-`policyId`: Policy ID 
-`policyName`: Policy name
-`addTime`: Time policy created
-`type`: 1 is custom policy; 2 is preset policy 
-`description`: Policy description 
-`createMode`: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax.
+     * @var array Policy array. Each array contains fields including `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode`. 
+policyId: policy ID 
+policyName: policy name
+addTime: policy creation time
+type: 1: custom policy, 2: preset policy 
+description: policy description 
+createMode: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax
+Attachments: number of associated users
+ServiceType: the product the policy is associated with
+IsAttached: this value should not be null when querying if a marked entity has been associated with a policy. 0 indicates that no policy has been associated, and 1 indicates that a policy has been associated
      */
     public $List;
 
@@ -75,13 +84,16 @@ Note: This field may return null, indicating that no valid value was found.
     public $RequestId;
     /**
      * @param integer $TotalNum Total number of policies
-     * @param array $List Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
-`policyId`: Policy ID 
-`policyName`: Policy name
-`addTime`: Time policy created
-`type`: 1 is custom policy; 2 is preset policy 
-`description`: Policy description 
-`createMode`: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax.
+     * @param array $List Policy array. Each array contains fields including `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode`. 
+policyId: policy ID 
+policyName: policy name
+addTime: policy creation time
+type: 1: custom policy, 2: preset policy 
+description: policy description 
+createMode: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax
+Attachments: number of associated users
+ServiceType: the product the policy is associated with
+IsAttached: this value should not be null when querying if a marked entity has been associated with a policy. 0 indicates that no policy has been associated, and 1 indicates that a policy has been associated
      * @param array $ServiceTypeList Reserved field
 Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

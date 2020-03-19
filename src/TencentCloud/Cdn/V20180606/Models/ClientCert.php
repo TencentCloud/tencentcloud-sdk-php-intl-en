@@ -29,16 +29,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCertName(string $CertName) Set Client certificate name
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getExpireTime() Obtain Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getDeployTime() Obtain Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeployTime(string $DeployTime) Set Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
@@ -62,14 +62,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ExpireTime;
 
     /**
      * @var string Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeployTime;
@@ -80,10 +80,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $CertName Client certificate name
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ExpireTime Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DeployTime Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

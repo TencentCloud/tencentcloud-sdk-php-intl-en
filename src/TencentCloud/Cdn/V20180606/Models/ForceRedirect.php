@@ -35,15 +35,15 @@ http: forced HTTP redirect
 https: forced HTTPS redirect
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getRedirectStatusCode() Obtain Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *Access protocol forced redirect configuration. It is disabled by default.
+ *Access protocol forced redirect configuration. This is disabled by default.
  */
 class ForceRedirect extends AbstractModel
 {
@@ -65,7 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RedirectStatusCode;
@@ -79,7 +79,7 @@ http: forced HTTP redirect
 https: forced HTTPS redirect
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $RedirectStatusCode Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

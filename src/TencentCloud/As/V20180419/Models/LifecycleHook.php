@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) Set Creation time
  * @method NotificationTarget getNotificationTarget() Obtain Notification target
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
+ * @method string getLifecycleTransitionType() Obtain Applicable scenario of the lifecycle hook
+ * @method void setLifecycleTransitionType(string $LifecycleTransitionType) Set Applicable scenario of the lifecycle hook
  */
 
 /**
@@ -87,6 +89,11 @@ class LifecycleHook extends AbstractModel
      * @var NotificationTarget Notification target
      */
     public $NotificationTarget;
+
+    /**
+     * @var string Applicable scenario of the lifecycle hook
+     */
+    public $LifecycleTransitionType;
     /**
      * @param string $LifecycleHookId Lifecycle hook ID
      * @param string $LifecycleHookName Lifecycle hook name
@@ -97,6 +104,7 @@ class LifecycleHook extends AbstractModel
      * @param string $NotificationMetadata Additional information for the notification target
      * @param string $CreatedTime Creation time
      * @param NotificationTarget $NotificationTarget Notification target
+     * @param string $LifecycleTransitionType Applicable scenario of the lifecycle hook
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class LifecycleHook extends AbstractModel
         if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
             $this->NotificationTarget = new NotificationTarget();
             $this->NotificationTarget->deserialize($param["NotificationTarget"]);
+        }
+
+        if (array_key_exists("LifecycleTransitionType",$param) and $param["LifecycleTransitionType"] !== null) {
+            $this->LifecycleTransitionType = $param["LifecycleTransitionType"];
         }
     }
 }

@@ -34,6 +34,8 @@ In seconds. Value range: 0–93,312,000.
 0 represents permanent storage.
  * @method integer getEnable() Obtain Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
  * @method void setEnable(integer $Enable) Set Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
+ * @method integer getVodSubAppId() Obtain VOD subapplication ID.
+ * @method void setVodSubAppId(integer $VodSubAppId) Set VOD subapplication ID.
  */
 
 /**
@@ -60,6 +62,11 @@ In seconds. Value range: 0–93,312,000.
      * @var integer Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
      */
     public $Enable;
+
+    /**
+     * @var integer VOD subapplication ID.
+     */
+    public $VodSubAppId;
     /**
      * @param integer $RecordInterval Recording interval.
 In seconds. Default value: 1,800.
@@ -69,6 +76,7 @@ This parameter is not valid for HLS, and a file is generated from push start to 
 In seconds. Value range: 0–93,312,000.
 0 represents permanent storage.
      * @param integer $Enable Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
+     * @param integer $VodSubAppId VOD subapplication ID.
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ In seconds. Value range: 0–93,312,000.
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("VodSubAppId",$param) and $param["VodSubAppId"] !== null) {
+            $this->VodSubAppId = $param["VodSubAppId"];
         }
     }
 }

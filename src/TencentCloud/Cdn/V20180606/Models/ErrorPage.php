@@ -33,7 +33,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Status code redirect configuration. It is disabled by default. (This feature is in beta test and not fully available yet.)
+ *Status code redirect configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
  */
 class ErrorPage extends AbstractModel
 {

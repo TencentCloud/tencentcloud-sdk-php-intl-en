@@ -36,8 +36,8 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + Aggregate list of 5xx status codes and the details of status codes starting with 5 (in entries)
 * @method Models\DescribeCdnDomainLogsResponse DescribeCdnDomainLogs(Models\DescribeCdnDomainLogsRequest $req) This API is used to query the download link of an access log. You can use this API for access logs in the last 30 days either within or outside Mainland China.
 * @method Models\DescribeCdnIpResponse DescribeCdnIp(Models\DescribeCdnIpRequest $req) This API is used to query CDN IP ownership.
-* @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) This API is used to query the basic configuration information of CDN acceleration domain names (inside and outside mainland China), including the project ID, service status, business type, creation time, and update time, etc.
-* @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) This API is used to query all the configuration information of CDN acceleration domain names (inside and outside mainland China).
+* @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) This API is used to query the basic configuration information of CDN acceleration domain names (inside and outside mainland China), including the project ID, service status, service type, creation time, and update time, etc.
+* @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) This API is used to query the complete configuration information of CDN acceleration domain names (inside and outside mainland China).
 * @method Models\DescribeIpVisitResponse DescribeIpVisit(Models\DescribeIpVisitRequest $req) This API (DescribeIpVisit) is used to query the number of users who remain active for 5 minutes and the detailed number of daily active users.
 
 + Number of users who remain active for 5 minutes: Collects deduplicated statistics based on client IP addresses in the log with the 5-minute granularity.
@@ -59,11 +59,11 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) This API is used to query the submission record and progress of prefetch tasks.
 This API is in beta test and not fully available yet. Please stay tuned.
 * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
-It corresponds to the **Pornography Detection** page of the CDN Console.
+It corresponds to the **Pornography Detection** page on the CDN Console.
 * @method Models\DisableCachesResponse DisableCaches(Models\DisableCachesRequest $req) This API (DisableCaches) is used to block access to a specific URL on CDN. After a URL is blocked, error 403 will be returned for all access requests to it. (This API is during beta test and not fully available now.)
 * @method Models\EnableCachesResponse EnableCaches(Models\EnableCachesRequest $req) This API (EnableCaches) is used to unblock manually blocked URLs. After a URL is successfully unblocked, it takes about 5 to 10 minutes to take effect across the entire network. (This API is during beta test and not fully available now.)
-* @method Models\GetDisableRecordsResponse GetDisableRecords(Models\GetDisableRecordsRequest $req) This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not fully available yet.)
-* @method Models\ListTopDataResponse ListTopData(Models\ListTopDataRequest $req) This API is used to query the following sorting data by using different combinations of the Metric and Filter input parameters:
+* @method Models\GetDisableRecordsResponse GetDisableRecords(Models\GetDisableRecordsRequest $req) This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
+* @method Models\ListTopDataResponse ListTopData(Models\ListTopDataRequest $req) This API is used to list data sorted the following ways by using different combinations of the Metric and Filter input parameters:
 
 + It sorts access URLs by total traffic and total requests, and returns the top 1,000 URLs in descending order.
 + It sorts client districts by total traffic and total requests, and returns the list of districts in descending order.
@@ -71,7 +71,7 @@ It corresponds to the **Pornography Detection** page of the CDN Console.
 + It sorts domain names by total traffic, peak bandwidth, total requests, average hit rate, and 2XX/3XX/4XX/5XX status codes, and returns the list of domain names in descending order.
 + It sorts domain names by total origin-pull traffic, peak origin-pull bandwidth, total origin-pull requests, average origin-pull failure rate, and 2XX/3XX/4XX/5XX origin-pull status codes, and returns the list of domain names in descending order.
 
-Note: only querying of data within the past 90 days is supported.
+Note: only data from the last 90 days will be queried.
 * @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) This API is used to submit multiple directory purge tasks, which are carried out according to the acceleration region of the domain names.
 By default, a maximum of 100 directories can be purged per day for acceleration regions either within or outside Mainland China, and up to 20 tasks can be submitted at a time.
 * @method Models\PurgeUrlsCacheResponse PurgeUrlsCache(Models\PurgeUrlsCacheRequest $req) This API is used to submit multiple URL purge tasks, which are carried out according to the current acceleration region of the domain names in the URLs.
@@ -81,10 +81,10 @@ By default, a maximum of 1,000 URLs can be prefetched per day either within or o
 This API is in beta test and not fully available yet. Please stay tuned.
 * @method Models\StartCdnDomainResponse StartCdnDomain(Models\StartCdnDomainRequest $req) This API is used to enable the acceleration service for a disabled domain name.
 * @method Models\StopCdnDomainResponse StopCdnDomain(Models\StopCdnDomainRequest $req) This API is used to suspend the acceleration service for a domain name.
-Note: after the acceleration service has been suspended, the requests to the cache node will directly return 404. In order to avoid impact to your business, please release it before suspending the acceleration service.
-* @method Models\UpdateDomainConfigResponse UpdateDomainConfig(Models\UpdateDomainConfigRequest $req) This API is used to modify the configuration information of the CDN acceleration domain names.
-Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. Attributes that are not passed will use the default value. It is recommended that you call the querying API to obtain the configuration attributes first, and then you directly modify them and pass them to this API. Due to the special nature of the certificate, for HTTPS configuration, the certificate and key fields do not need to be passed.
-* @method Models\UpdatePayTypeResponse UpdatePayType(Models\UpdatePayTypeRequest $req) This API is used to modify the billing mode of an account. At present, the billing mode of monthly-billed accounts and sub-accounts cannot be modified.
+Note: after the acceleration service has been suspended, requests to the cache node will return a 404 error. In order to avoid impact to your business, please move the domain name to another service before suspending the acceleration service.
+* @method Models\UpdateDomainConfigResponse UpdateDomainConfig(Models\UpdateDomainConfigRequest $req) This API is used to modify the configuration of CDN acceleration domain names.
+Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. The default value will be used for attributes that are not passed. We recommend calling the querying API to obtain the configuration attributes first. You can then modify and pass the attributes to the API. The certificate and key fields do not need to be passed for HTTPS configuration.
+* @method Models\UpdatePayTypeResponse UpdatePayType(Models\UpdatePayTypeRequest $req) This API is used to modify the billing mode of an account. At present, the billing mode of accounts on a monthly billing cycle and sub-accounts cannot be modified.
  */
 
 class CdnClient extends AbstractClient

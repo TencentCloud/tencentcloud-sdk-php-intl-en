@@ -27,7 +27,7 @@ off: disabled
  */
 
 /**
- *Origin server header cache configuration. It is enabled by default and caches all the header information.
+ *Origin server header cache configuration. This is enabled by default and caches all the header information.
  */
 class ResponseHeaderCache extends AbstractModel
 {

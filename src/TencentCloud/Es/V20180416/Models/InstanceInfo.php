@@ -88,10 +88,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) Set List of tags owned by the instance
  * @method string getLicenseType() Obtain License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
  * @method void setLicenseType(string $LicenseType) Set License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
- * @method boolean getEnableHotWarmMode() Obtain Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) Set Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getEnableHotWarmMode() Obtain Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) Set Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getWarmNodeType() Obtain Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWarmNodeType(string $WarmNodeType) Set Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
@@ -337,8 +337,8 @@ class InstanceInfo extends AbstractModel
     public $LicenseType;
 
     /**
-     * @var boolean Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EnableHotWarmMode;
 
@@ -472,8 +472,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $AllowCosBackup Whether to allow auto-backup to COS
      * @param array $TagList List of tags owned by the instance
      * @param string $LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-     * @param boolean $EnableHotWarmMode Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $EnableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $WarmNodeNum Number of warm nodes

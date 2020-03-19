@@ -18,6 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getTotalCount() Obtain 
+ * @method void setTotalCount(integer $TotalCount) Set 
+ * @method array getKeyMetadatas() Obtain List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setKeyMetadatas(array $KeyMetadatas) Set List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -28,10 +34,24 @@ use TencentCloud\Common\AbstractModel;
 class ListKeyDetailResponse extends AbstractModel
 {
     /**
+     * @var integer 
+     */
+    public $TotalCount;
+
+    /**
+     * @var array List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $KeyMetadatas;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param integer $TotalCount 
+     * @param array $KeyMetadatas List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +66,19 @@ class ListKeyDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("KeyMetadatas",$param) and $param["KeyMetadatas"] !== null) {
+            $this->KeyMetadatas = [];
+            foreach ($param["KeyMetadatas"] as $key => $value){
+                $obj = new KeyMetadata();
+                $obj->deserialize($value);
+                array_push($this->KeyMetadatas, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

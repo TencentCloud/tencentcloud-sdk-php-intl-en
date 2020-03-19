@@ -18,7 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getTargetGroupName() Obtain Target group name (up to 50 characters)
+ * @method void setTargetGroupName(string $TargetGroupName) Set Target group name (up to 50 characters)
+ * @method string getVpcId() Obtain `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+ * @method void setVpcId(string $VpcId) Set `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+ * @method integer getPort() Obtain Default port of a target group, which can be used for subsequently added servers.
+ * @method void setPort(integer $Port) Set Default port of a target group, which can be used for subsequently added servers.
+ * @method array getTargetGroupInstances() Obtain Real server bound to a target group
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Real server bound to a target group
  */
 
 /**
@@ -26,9 +33,30 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
+    /**
+     * @var string Target group name (up to 50 characters)
+     */
+    public $TargetGroupName;
 
     /**
+     * @var string `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+     */
+    public $VpcId;
 
+    /**
+     * @var integer Default port of a target group, which can be used for subsequently added servers.
+     */
+    public $Port;
+
+    /**
+     * @var array Real server bound to a target group
+     */
+    public $TargetGroupInstances;
+    /**
+     * @param string $TargetGroupName Target group name (up to 50 characters)
+     * @param string $VpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+     * @param integer $Port Default port of a target group, which can be used for subsequently added servers.
+     * @param array $TargetGroupInstances Real server bound to a target group
      */
     function __construct()
     {
@@ -42,6 +70,25 @@ class CreateTargetGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TargetGroupName",$param) and $param["TargetGroupName"] !== null) {
+            $this->TargetGroupName = $param["TargetGroupName"];
+        }
 
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("TargetGroupInstances",$param) and $param["TargetGroupInstances"] !== null) {
+            $this->TargetGroupInstances = [];
+            foreach ($param["TargetGroupInstances"] as $key => $value){
+                $obj = new TargetGroupInstance();
+                $obj->deserialize($value);
+                array_push($this->TargetGroupInstances, $obj);
+            }
+        }
     }
 }

@@ -78,6 +78,14 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
  * @method void setLatestOperationState(string $LatestOperationState) Set 
  * @method string getLatestOperationRequestId() Obtain 
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set 
+ * @method string getDisasterRecoverGroupId() Obtain ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getIPv6Addresses() Obtain 
+ * @method void setIPv6Addresses(string $IPv6Addresses) Set 
+ * @method string getCamRoleName() Obtain 
+ * @method void setCamRoleName(string $CamRoleName) Set 
  */
 
 /**
@@ -226,6 +234,22 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
      * @var string 
      */
     public $LatestOperationRequestId;
+
+    /**
+     * @var string ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DisasterRecoverGroupId;
+
+    /**
+     * @var string 
+     */
+    public $IPv6Addresses;
+
+    /**
+     * @var string 
+     */
+    public $CamRoleName;
     /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
@@ -257,6 +281,10 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
      * @param string $LatestOperation 
      * @param string $LatestOperationState 
      * @param string $LatestOperationRequestId 
+     * @param string $DisasterRecoverGroupId ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $IPv6Addresses 
+     * @param string $CamRoleName 
      */
     function __construct()
     {
@@ -395,6 +423,18 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
 
         if (array_key_exists("LatestOperationRequestId",$param) and $param["LatestOperationRequestId"] !== null) {
             $this->LatestOperationRequestId = $param["LatestOperationRequestId"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupId",$param) and $param["DisasterRecoverGroupId"] !== null) {
+            $this->DisasterRecoverGroupId = $param["DisasterRecoverGroupId"];
+        }
+
+        if (array_key_exists("IPv6Addresses",$param) and $param["IPv6Addresses"] !== null) {
+            $this->IPv6Addresses = $param["IPv6Addresses"];
+        }
+
+        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
+            $this->CamRoleName = $param["CamRoleName"];
         }
     }
 }

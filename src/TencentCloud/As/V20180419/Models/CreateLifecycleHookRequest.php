@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
  * @method NotificationTarget getNotificationTarget() Obtain Notification target
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
+ * @method string getLifecycleTransitionType() Obtain The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+ * @method void setLifecycleTransitionType(string $LifecycleTransitionType) Set The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
  */
 
 /**
@@ -73,6 +75,11 @@ class CreateLifecycleHookRequest extends AbstractModel
      * @var NotificationTarget Notification target
      */
     public $NotificationTarget;
+
+    /**
+     * @var string The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+     */
+    public $LifecycleTransitionType;
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $LifecycleHookName Lifecycle hook name, which can contain Chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 bytes.
@@ -81,6 +88,7 @@ class CreateLifecycleHookRequest extends AbstractModel
      * @param integer $HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
      * @param string $NotificationMetadata Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
      * @param NotificationTarget $NotificationTarget Notification target
+     * @param string $LifecycleTransitionType The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class CreateLifecycleHookRequest extends AbstractModel
         if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
             $this->NotificationTarget = new NotificationTarget();
             $this->NotificationTarget->deserialize($param["NotificationTarget"]);
+        }
+
+        if (array_key_exists("LifecycleTransitionType",$param) and $param["LifecycleTransitionType"] !== null) {
+            $this->LifecycleTransitionType = $param["LifecycleTransitionType"];
         }
     }
 }

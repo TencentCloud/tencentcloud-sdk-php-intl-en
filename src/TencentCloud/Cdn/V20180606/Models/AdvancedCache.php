@@ -25,30 +25,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method string getIgnoreCacheControl() Obtain Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getIgnoreSetCookie() Obtain Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *Cache expiration configuration advanced version (This feature is in beta test and not fully available yet.)
-Note: this version does not support setting the home page cache rule.
+ *Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
+Note: this version does not support setting homepage cache rules.
  */
 class AdvancedCache extends AbstractModel
 {
@@ -62,8 +62,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IgnoreCacheControl;
@@ -72,7 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IgnoreSetCookie;
@@ -82,13 +82,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $IgnoreCacheControl Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IgnoreSetCookie Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

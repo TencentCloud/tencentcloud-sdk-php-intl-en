@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifyEmail(integer $NotifyEmail) Set Email notification
  * @method integer getNotifyWechat() Obtain WeChat notification
  * @method void setNotifyWechat(integer $NotifyWechat) Set WeChat notification
- * @method integer getTips() Obtain 
- * @method void setTips(integer $Tips) Set 
+ * @method integer getTips() Obtain Alert
+ * @method void setTips(integer $Tips) Set Alert
  */
 
 /**
@@ -56,7 +56,7 @@ class OffsiteFlag extends AbstractModel
     public $NotifyWechat;
 
     /**
-     * @var integer 
+     * @var integer Alert
      */
     public $Tips;
     /**
@@ -64,7 +64,7 @@ class OffsiteFlag extends AbstractModel
      * @param integer $NotifyPhone Phone notification
      * @param integer $NotifyEmail Email notification
      * @param integer $NotifyWechat WeChat notification
-     * @param integer $Tips 
+     * @param integer $Tips Alert
      */
     function __construct()
     {

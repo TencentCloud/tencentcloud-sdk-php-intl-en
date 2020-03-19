@@ -18,6 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getTotalCount() Obtain Number of displayed results
+ * @method void setTotalCount(integer $TotalCount) Set Number of displayed results
+ * @method array getTargetGroupSet() Obtain Information set of displayed target groups
+ * @method void setTargetGroupSet(array $TargetGroupSet) Set Information set of displayed target groups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -28,10 +32,22 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTargetGroupListResponse extends AbstractModel
 {
     /**
+     * @var integer Number of displayed results
+     */
+    public $TotalCount;
+
+    /**
+     * @var array Information set of displayed target groups
+     */
+    public $TargetGroupSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
+     * @param integer $TotalCount Number of displayed results
+     * @param array $TargetGroupSet Information set of displayed target groups
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeTargetGroupListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TargetGroupSet",$param) and $param["TargetGroupSet"] !== null) {
+            $this->TargetGroupSet = [];
+            foreach ($param["TargetGroupSet"] as $key => $value){
+                $obj = new TargetGroupInfo();
+                $obj->deserialize($value);
+                array_push($this->TargetGroupSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

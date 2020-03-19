@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *Custom request header configuration. It is disabled by default.
+ *Custom request header configuration. This is disabled by default.
  */
 class RequestHeader extends AbstractModel
 {

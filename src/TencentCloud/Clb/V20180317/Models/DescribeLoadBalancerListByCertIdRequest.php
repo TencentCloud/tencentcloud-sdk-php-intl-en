@@ -18,7 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getCertIds() Obtain Server or client certificate ID
+ * @method void setCertIds(array $CertIds) Set Server or client certificate ID
  */
 
 /**
@@ -26,9 +27,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
 {
-
     /**
-
+     * @var array Server or client certificate ID
+     */
+    public $CertIds;
+    /**
+     * @param array $CertIds Server or client certificate ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("CertIds",$param) and $param["CertIds"] !== null) {
+            $this->CertIds = $param["CertIds"];
+        }
     }
 }

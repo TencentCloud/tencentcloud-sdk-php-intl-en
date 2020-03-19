@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDomainName() Obtain Playback domain name.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
- * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
- * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
  * @method string getStreamName() Obtain Stream name. If only the domain name or path is bound, leave this parameter blank.
  * @method void setStreamName(string $StreamName) Set Stream name. If only the domain name or path is bound, leave this parameter blank.
  * @method integer getTemplateId() Obtain Designates an existing template ID.
@@ -39,7 +39,7 @@ class CreateLiveTranscodeRuleRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
      */
     public $AppName;
 
@@ -54,7 +54,7 @@ class CreateLiveTranscodeRuleRequest extends AbstractModel
     public $TemplateId;
     /**
      * @param string $DomainName Playback domain name.
-     * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
      * @param string $StreamName Stream name. If only the domain name or path is bound, leave this parameter blank.
      * @param integer $TemplateId Designates an existing template ID.
      */

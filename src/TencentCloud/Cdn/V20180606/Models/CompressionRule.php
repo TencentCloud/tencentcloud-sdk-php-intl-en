@@ -18,9 +18,9 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method boolean getCompress() Obtain true: must be set as true, to enable compression
+ * @method boolean getCompress() Obtain true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCompress(boolean $Compress) Set true: must be set as true, to enable compression
+ * @method void setCompress(boolean $Compress) Set true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getFileExtensions() Obtain Compress according to the file suffix type
 Such as: jpg, txt
@@ -40,11 +40,11 @@ The maximum value is 30 MB
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getAlgorithms() Obtain File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAlgorithms(array $Algorithms) Set File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
@@ -54,7 +54,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class CompressionRule extends AbstractModel
 {
     /**
-     * @var boolean true: must be set as true, to enable compression
+     * @var boolean true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Compress;
@@ -82,12 +82,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @var array File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Algorithms;
     /**
-     * @param boolean $Compress true: must be set as true, to enable compression
+     * @param boolean $Compress true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $FileExtensions Compress according to the file suffix type
 Such as: jpg, txt
@@ -99,7 +99,7 @@ The maximum value is 30 MB
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Algorithms File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

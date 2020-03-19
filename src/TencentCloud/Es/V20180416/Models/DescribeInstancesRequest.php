@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByKey(integer $OrderByKey) Set Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
  * @method integer getOrderByType() Obtain Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
  * @method void setOrderByType(integer $OrderByType) Set Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
- * @method array getTagList() Obtain 
- * @method void setTagList(array $TagList) Set 
- * @method array getIpList() Obtain 
- * @method void setIpList(array $IpList) Set 
+ * @method array getTagList() Obtain Node tag information list
+ * @method void setTagList(array $TagList) Set Node tag information list
+ * @method array getIpList() Obtain VPC VIP list
+ * @method void setIpList(array $IpList) Set VPC VIP list
  */
 
 /**
@@ -79,12 +79,12 @@ class DescribeInstancesRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @var array 
+     * @var array Node tag information list
      */
     public $TagList;
 
     /**
-     * @var array 
+     * @var array VPC VIP list
      */
     public $IpList;
     /**
@@ -95,8 +95,8 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $Limit Number of entries per page. Default value: 20
      * @param integer $OrderByKey Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
      * @param integer $OrderByType Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
-     * @param array $TagList 
-     * @param array $IpList 
+     * @param array $TagList Node tag information list
+     * @param array $IpList VPC VIP list
      */
     function __construct()
     {

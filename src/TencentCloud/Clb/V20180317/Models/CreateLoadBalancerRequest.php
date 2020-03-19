@@ -30,12 +30,12 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
 Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
  * @method string getVpcId() Obtain Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
  * @method void setVpcId(string $VpcId) Set Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
- * @method string getSubnetId() Obtain A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
- * @method void setSubnetId(string $SubnetId) Set A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+ * @method string getSubnetId() Obtain A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
+ * @method void setSubnetId(string $SubnetId) Set A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
  * @method integer getProjectId() Obtain ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
- * @method string getAddressIPVersion() Obtain IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
- * @method void setAddressIPVersion(string $AddressIPVersion) Set IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+ * @method string getAddressIPVersion() Obtain IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
+ * @method void setAddressIPVersion(string $AddressIPVersion) Set IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
  * @method integer getNumber() Obtain Number of CLBs to be created. Default value: 1.
  * @method void setNumber(integer $Number) Set Number of CLBs to be created. Default value: 1.
  * @method string getMasterZoneId() Obtain Sets the primary AZ ID for cross-AZ disaster recovery, such as 100001 or ap-guangzhou-1, which is applicable only to public network CLB.
@@ -44,8 +44,10 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
 Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. The list of primary AZs in a specific region can be queried through the DescribeMasterZones API.
  * @method string getZoneId() Obtain Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
  * @method void setZoneId(string $ZoneId) Set Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
- * @method InternetAccessible getInternetAccessible() Obtain CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+ * @method InternetAccessible getInternetAccessible() Obtain CLB network billing mode. This parameter is applicable only to public network CLB instances.
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set CLB network billing mode. This parameter is applicable only to public network CLB instances.
+ * @method string getVipIsp() Obtain This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+ * @method void setVipIsp(string $VipIsp) Set This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
  * @method array getTags() Obtain Tags a CLB instance when purchasing it
  * @method void setTags(array $Tags) Set Tags a CLB instance when purchasing it
  */
@@ -78,7 +80,7 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
     public $VpcId;
 
     /**
-     * @var string A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+     * @var string A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
      */
     public $SubnetId;
 
@@ -88,7 +90,7 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
     public $ProjectId;
 
     /**
-     * @var string IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+     * @var string IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
      */
     public $AddressIPVersion;
 
@@ -109,9 +111,14 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $ZoneId;
 
     /**
-     * @var InternetAccessible CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+     * @var InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
      */
     public $InternetAccessible;
+
+    /**
+     * @var string This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+     */
+    public $VipIsp;
 
     /**
      * @var array Tags a CLB instance when purchasing it
@@ -124,14 +131,15 @@ OPEN: public network; INTERNAL: private network.
      * @param string $LoadBalancerName CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
 Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
      * @param string $VpcId Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
-     * @param string $SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+     * @param string $SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
      * @param integer $ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
-     * @param string $AddressIPVersion IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+     * @param string $AddressIPVersion IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
      * @param integer $Number Number of CLBs to be created. Default value: 1.
      * @param string $MasterZoneId Sets the primary AZ ID for cross-AZ disaster recovery, such as 100001 or ap-guangzhou-1, which is applicable only to public network CLB.
 Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. The list of primary AZs in a specific region can be queried through the DescribeMasterZones API.
      * @param string $ZoneId Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
-     * @param InternetAccessible $InternetAccessible CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+     * @param InternetAccessible $InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
+     * @param string $VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
      * @param array $Tags Tags a CLB instance when purchasing it
      */
     function __construct()
@@ -189,6 +197,10 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
         if (array_key_exists("InternetAccessible",$param) and $param["InternetAccessible"] !== null) {
             $this->InternetAccessible = new InternetAccessible();
             $this->InternetAccessible->deserialize($param["InternetAccessible"]);
+        }
+
+        if (array_key_exists("VipIsp",$param) and $param["VipIsp"] !== null) {
+            $this->VipIsp = $param["VipIsp"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

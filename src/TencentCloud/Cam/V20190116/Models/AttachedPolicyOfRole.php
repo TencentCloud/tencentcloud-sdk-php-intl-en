@@ -30,8 +30,12 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method integer getCreateMode() Obtain Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
  * @method void setCreateMode(integer $CreateMode) Set Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
- * @method integer getDeactived() Obtain 
- * @method void setDeactived(integer $Deactived) Set 
+ * @method integer getDeactived() Obtain Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDeactived(integer $Deactived) Set Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDeactivedDetail() Obtain 
+ * @method void setDeactivedDetail(array $DeactivedDetail) Set 
  */
 
 /**
@@ -66,9 +70,15 @@ Note: This field may return null, indicating that no valid value was found.
     public $CreateMode;
 
     /**
-     * @var integer 
+     * @var integer Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Deactived;
+
+    /**
+     * @var array 
+     */
+    public $DeactivedDetail;
     /**
      * @param integer $PolicyId Policy ID
      * @param string $PolicyName Policy name
@@ -76,7 +86,9 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $PolicyType Policy type. `User` indicates custom policy; `QCS` indicates preset policy
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $CreateMode Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
-     * @param integer $Deactived 
+     * @param integer $Deactived Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $DeactivedDetail 
      */
     function __construct()
     {
@@ -112,6 +124,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("Deactived",$param) and $param["Deactived"] !== null) {
             $this->Deactived = $param["Deactived"];
+        }
+
+        if (array_key_exists("DeactivedDetail",$param) and $param["DeactivedDetail"] !== null) {
+            $this->DeactivedDetail = $param["DeactivedDetail"];
         }
     }
 }

@@ -19,12 +19,12 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getHeaderMode() Obtain HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHeaderMode(string $HeaderMode) Set HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -33,36 +33,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setHeaderName(string $HeaderName) Set HTTP header name. Up to 100 characters can be set.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getHeaderValue() Obtain HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHeaderValue(string $HeaderValue) Set HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRuleType() Obtain Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRuleType(string $RuleType) Set Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getRulePaths() Obtain Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+ * @method array getRulePaths() Obtain Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRulePaths(array $RulePaths) Set Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+ * @method void setRulePaths(array $RulePaths) Set Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 
@@ -73,7 +73,7 @@ class HttpHeaderPathRule extends AbstractModel
 {
     /**
      * @var string HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -88,54 +88,54 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $HeaderValue;
 
     /**
      * @var string Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RuleType;
 
     /**
-     * @var array Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+     * @var array Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RulePaths;
     /**
      * @param string $HeaderMode HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $HeaderName HTTP header name. Up to 100 characters can be set.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $HeaderValue HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RuleType Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $RulePaths Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+     * @param array $RulePaths Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

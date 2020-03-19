@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getZone() Obtain Availability Zone
  * @method void setZone(string $Zone) Set Availability Zone
- * @method string getEsVersion() Obtain Instance version ("5.6.4" or "6.4.3")
- * @method void setEsVersion(string $EsVersion) Set Instance version ("5.6.4" or "6.4.3")
+ * @method string getEsVersion() Obtain Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+ * @method void setEsVersion(string $EsVersion) Set Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID
@@ -30,34 +30,50 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
  * @method string getInstanceName() Obtain Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
  * @method void setInstanceName(string $InstanceName) Set Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
- * @method integer getNodeNum() Obtain Number of nodes (2-50)
- * @method void setNodeNum(integer $NodeNum) Set Number of nodes (2-50)
+ * @method integer getNodeNum() Obtain This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
+ * @method void setNodeNum(integer $NodeNum) Set This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
  * @method string getChargeType() Obtain Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
  * @method void setChargeType(string $ChargeType) Set Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
  * @method integer getChargePeriod() Obtain This parameter is not used on the global website
  * @method void setChargePeriod(integer $ChargePeriod) Set This parameter is not used on the global website
  * @method string getRenewFlag() Obtain This parameter is not used on the global website
  * @method void setRenewFlag(string $RenewFlag) Set This parameter is not used on the global website
- * @method string getNodeType() Obtain Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method void setNodeType(string $NodeType) Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method string getDiskType() Obtain Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
- * @method void setDiskType(string $DiskType) Set Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
- * @method integer getDiskSize() Obtain Node disk size in GB
- * @method void setDiskSize(integer $DiskSize) Set Node disk size in GB
+ * @method string getNodeType() Obtain This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+ * @method void setNodeType(string $NodeType) Set This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+ * @method string getDiskType() Obtain This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+ * @method void setDiskType(string $DiskType) Set This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+ * @method integer getDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB
+ * @method void setDiskSize(integer $DiskSize) Set This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB
  * @method string getTimeUnit() Obtain This parameter is not used on the global website
  * @method void setTimeUnit(string $TimeUnit) Set This parameter is not used on the global website
  * @method integer getAutoVoucher() Obtain Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
  * @method array getVoucherIds() Obtain List of voucher IDs (only one voucher can be specified at a time currently)
  * @method void setVoucherIds(array $VoucherIds) Set List of voucher IDs (only one voucher can be specified at a time currently)
- * @method boolean getEnableDedicatedMaster() Obtain Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false
- * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) Set Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false
- * @method integer getMasterNodeNum() Obtain Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true)
- * @method void setMasterNodeNum(integer $MasterNodeNum) Set Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true)
- * @method string getMasterNodeType() Obtain Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method void setMasterNodeType(string $MasterNodeType) Set Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method integer getMasterNodeDiskSize() Obtain Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+ * @method boolean getEnableDedicatedMaster() Obtain This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+ * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) Set This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+ * @method integer getMasterNodeNum() Obtain This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+ * @method void setMasterNodeNum(integer $MasterNodeNum) Set This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+ * @method string getMasterNodeType() Obtain This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+ * @method void setMasterNodeType(string $MasterNodeType) Set This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+ * @method integer getMasterNodeDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
  * @method string getClusterNameInConf() Obtain ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
  * @method void setClusterNameInConf(string $ClusterNameInConf) Set ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
  * @method integer getDeployMode() Obtain Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
@@ -66,12 +82,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiZoneInfo(array $MultiZoneInfo) Set Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
  * @method string getLicenseType() Obtain License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
  * @method void setLicenseType(string $LicenseType) Set License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
- * @method array getNodeInfoList() Obtain 
- * @method void setNodeInfoList(array $NodeInfoList) Set 
- * @method array getTagList() Obtain 
- * @method void setTagList(array $TagList) Set 
- * @method integer getBasicSecurityType() Obtain 
- * @method void setBasicSecurityType(integer $BasicSecurityType) Set 
+ * @method array getNodeInfoList() Obtain Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+ * @method void setNodeInfoList(array $NodeInfoList) Set Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+ * @method array getTagList() Obtain Node tag information list
+ * @method void setTagList(array $TagList) Set Node tag information list
+ * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+ * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  */
 
 /**
@@ -85,7 +101,7 @@ class CreateInstanceRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string Instance version ("5.6.4" or "6.4.3")
+     * @var string Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
      */
     public $EsVersion;
 
@@ -110,7 +126,8 @@ class CreateInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Number of nodes (2-50)
+     * @var integer This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
      */
     public $NodeNum;
 
@@ -130,17 +147,20 @@ class CreateInstanceRequest extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @var string This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      */
     public $NodeType;
 
     /**
-     * @var string Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+     * @var string This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
      */
     public $DiskType;
 
     /**
-     * @var integer Node disk size in GB
+     * @var integer This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB
      */
     public $DiskSize;
 
@@ -160,22 +180,26 @@ class CreateInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var boolean Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false
+     * @var boolean This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
      */
     public $EnableDedicatedMaster;
 
     /**
-     * @var integer Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true)
+     * @var integer This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
      */
     public $MasterNodeNum;
 
     /**
-     * @var string Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @var string This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public $MasterNodeType;
 
     /**
-     * @var integer Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+     * @var integer This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
      */
     public $MasterNodeDiskSize;
 
@@ -200,47 +224,55 @@ class CreateInstanceRequest extends AbstractModel
     public $LicenseType;
 
     /**
-     * @var array 
+     * @var array Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
      */
     public $NodeInfoList;
 
     /**
-     * @var array 
+     * @var array Node tag information list
      */
     public $TagList;
 
     /**
-     * @var integer 
+     * @var integer Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public $BasicSecurityType;
     /**
      * @param string $Zone Availability Zone
-     * @param string $EsVersion Instance version ("5.6.4" or "6.4.3")
+     * @param string $EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
      * @param string $Password Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
-     * @param integer $NodeNum Number of nodes (2-50)
+     * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
      * @param string $ChargeType Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
      * @param integer $ChargePeriod This parameter is not used on the global website
      * @param string $RenewFlag This parameter is not used on the global website
-     * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param string $DiskType Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
-     * @param integer $DiskSize Node disk size in GB
+     * @param string $NodeType This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @param string $DiskType This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+     * @param integer $DiskSize This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB
      * @param string $TimeUnit This parameter is not used on the global website
      * @param integer $AutoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
      * @param array $VoucherIds List of voucher IDs (only one voucher can be specified at a time currently)
-     * @param boolean $EnableDedicatedMaster Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false
-     * @param integer $MasterNodeNum Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true)
-     * @param string $MasterNodeType Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-     * @param integer $MasterNodeDiskSize Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+     * @param boolean $EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+     * @param integer $MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+     * @param string $MasterNodeType This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @param integer $MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
      * @param string $ClusterNameInConf ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
      * @param integer $DeployMode Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
      * @param array $MultiZoneInfo Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
      * @param string $LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-     * @param array $NodeInfoList 
-     * @param array $TagList 
-     * @param integer $BasicSecurityType 
+     * @param array $NodeInfoList Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+     * @param array $TagList Node tag information list
+     * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     function __construct()
     {

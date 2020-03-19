@@ -44,6 +44,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
  * @method void setVPCSettings(VPCSettings $VPCSettings) Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+ * @method string getMetaType() Obtain Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+ * @method void setMetaType(string $MetaType) Set Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+ * @method string getUnifyMetaInstanceId() Obtain EMR-MetaDB instance
+ * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set EMR-MetaDB instance
+ * @method CustomMetaInfo getMetaDBInfo() Obtain Custom MetaDB instance information
+ * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set Custom MetaDB instance information
+ * @method integer getProductId() Obtain Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li>
+ * @method void setProductId(integer $ProductId) Set Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li>
  */
 
 /**
@@ -99,6 +121,33 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
      * @var VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
      */
     public $VPCSettings;
+
+    /**
+     * @var string Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     */
+    public $MetaType;
+
+    /**
+     * @var string EMR-MetaDB instance
+     */
+    public $UnifyMetaInstanceId;
+
+    /**
+     * @var CustomMetaInfo Custom MetaDB instance information
+     */
+    public $MetaDBInfo;
+
+    /**
+     * @var integer Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li>
+     */
+    public $ProductId;
     /**
      * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
@@ -113,6 +162,17 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
      * @param array $Software List of deployed components.
      * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+     * @param string $MetaType Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     * @param string $UnifyMetaInstanceId EMR-MetaDB instance
+     * @param CustomMetaInfo $MetaDBInfo Custom MetaDB instance information
+     * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li>
      */
     function __construct()
     {
@@ -163,6 +223,23 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
         if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
             $this->VPCSettings = new VPCSettings();
             $this->VPCSettings->deserialize($param["VPCSettings"]);
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
+        }
+
+        if (array_key_exists("UnifyMetaInstanceId",$param) and $param["UnifyMetaInstanceId"] !== null) {
+            $this->UnifyMetaInstanceId = $param["UnifyMetaInstanceId"];
+        }
+
+        if (array_key_exists("MetaDBInfo",$param) and $param["MetaDBInfo"] !== null) {
+            $this->MetaDBInfo = new CustomMetaInfo();
+            $this->MetaDBInfo->deserialize($param["MetaDBInfo"]);
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

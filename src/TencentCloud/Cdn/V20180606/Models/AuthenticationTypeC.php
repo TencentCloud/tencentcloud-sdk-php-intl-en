@@ -24,18 +24,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setSecretKey(string $SecretKey) Set The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getExpireTime() Obtain Signature expiration time settings
+ * @method integer getExpireTime() Obtain Signature expiration time
 Unit: second. The maximum value is 31536000.
- * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time settings
+ * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time
 Unit: second. The maximum value is 31536000.
- * @method array getFileExtensions() Obtain File extension list settings for authentication/no authentication
+ * @method array getFileExtensions() Obtain File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
- * @method void setFileExtensions(array $FileExtensions) Set File extension list settings for authentication/no authentication
+ * @method void setFileExtensions(array $FileExtensions) Set File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
- * @method string getFilterType() Obtain whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated
- * @method void setFilterType(string $FilterType) Set whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated
+ * @method string getFilterType() Obtain whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated
+ * @method void setFilterType(string $FilterType) Set whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated
  */
 
 /**
@@ -54,32 +54,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SecretKey;
 
     /**
-     * @var integer Signature expiration time settings
+     * @var integer Signature expiration time
 Unit: second. The maximum value is 31536000.
      */
     public $ExpireTime;
 
     /**
-     * @var array File extension list settings for authentication/no authentication
+     * @var array File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
      */
     public $FileExtensions;
 
     /**
-     * @var string whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated
+     * @var string whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     public $FilterType;
     /**
      * @param string $SecretKey The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ExpireTime Signature expiration time settings
+     * @param integer $ExpireTime Signature expiration time
 Unit: second. The maximum value is 31536000.
-     * @param array $FileExtensions File extension list settings for authentication/no authentication
+     * @param array $FileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
-     * @param string $FilterType whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated
+     * @param string $FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     function __construct()
     {

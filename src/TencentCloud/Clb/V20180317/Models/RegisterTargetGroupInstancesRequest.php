@@ -18,7 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getTargetGroupId() Obtain Target group ID
+ * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
+ * @method array getTargetGroupInstances() Obtain Server instance array
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Server instance array
  */
 
 /**
@@ -26,9 +29,18 @@ use TencentCloud\Common\AbstractModel;
  */
 class RegisterTargetGroupInstancesRequest extends AbstractModel
 {
+    /**
+     * @var string Target group ID
+     */
+    public $TargetGroupId;
 
     /**
-
+     * @var array Server instance array
+     */
+    public $TargetGroupInstances;
+    /**
+     * @param string $TargetGroupId Target group ID
+     * @param array $TargetGroupInstances Server instance array
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class RegisterTargetGroupInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
+            $this->TargetGroupId = $param["TargetGroupId"];
+        }
 
+        if (array_key_exists("TargetGroupInstances",$param) and $param["TargetGroupInstances"] !== null) {
+            $this->TargetGroupInstances = [];
+            foreach ($param["TargetGroupInstances"] as $key => $value){
+                $obj = new TargetGroupInstance();
+                $obj->deserialize($value);
+                array_push($this->TargetGroupInstances, $obj);
+            }
+        }
     }
 }

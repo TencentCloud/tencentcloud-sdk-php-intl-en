@@ -18,8 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDealName() Obtain 
- * @method void setDealName(string $DealName) Set 
+ * @method string getDealName() Obtain This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDealName(string $DealName) Set This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLoadBalancerAttributesResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DealName;
 
@@ -39,7 +42,8 @@ class ModifyLoadBalancerAttributesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $DealName 
+     * @param string $DealName This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

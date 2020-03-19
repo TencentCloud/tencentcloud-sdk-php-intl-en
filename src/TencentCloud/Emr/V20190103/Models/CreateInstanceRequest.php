@@ -74,10 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSgId(string $SgId) Set Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
  * @method array getPreExecutedFileSettings() Obtain Bootstrap script settings.
  * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) Set Bootstrap script settings.
- * @method integer getAutoRenew() Obtain Auto-renewal flag. Valid values:
+ * @method integer getAutoRenew() Obtain Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
- * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. Valid values:
+ * @method void setAutoRenew(integer $AutoRenew) Set Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
  * @method string getClientToken() Obtain Client token.
@@ -98,6 +98,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Tag description list. This parameter is used to bind a tag to a resource instance.
  * @method array getDisasterRecoverGroupIds() Obtain List of spread placement group IDs. Only one can be specified currently.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
+ * @method integer getCbsEncrypt() Obtain CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+ * @method void setCbsEncrypt(integer $CbsEncrypt) Set CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+ * @method string getMetaType() Obtain Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+ * @method void setMetaType(string $MetaType) Set Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+ * @method string getUnifyMetaInstanceId() Obtain EMR-MetaDB instance
+ * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set EMR-MetaDB instance
+ * @method CustomMetaInfo getMetaDBInfo() Obtain Custom MetaDB instance information
+ * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set Custom MetaDB instance information
  */
 
 /**
@@ -190,7 +204,7 @@ class CreateInstanceRequest extends AbstractModel
     public $PreExecutedFileSettings;
 
     /**
-     * @var integer Auto-renewal flag. Valid values:
+     * @var integer Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
      */
@@ -232,6 +246,29 @@ class CreateInstanceRequest extends AbstractModel
      * @var array List of spread placement group IDs. Only one can be specified currently.
      */
     public $DisasterRecoverGroupIds;
+
+    /**
+     * @var integer CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+     */
+    public $CbsEncrypt;
+
+    /**
+     * @var string Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     */
+    public $MetaType;
+
+    /**
+     * @var string EMR-MetaDB instance
+     */
+    public $UnifyMetaInstanceId;
+
+    /**
+     * @var CustomMetaInfo Custom MetaDB instance information
+     */
+    public $MetaDBInfo;
     /**
      * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1.</li>
@@ -261,7 +298,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param COSSettings $COSSettings Parameter required for enabling COS access.
      * @param string $SgId Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
      * @param array $PreExecutedFileSettings Bootstrap script settings.
-     * @param integer $AutoRenew Auto-renewal flag. Valid values:
+     * @param integer $AutoRenew Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
      * @param string $ClientToken Client token.
@@ -273,6 +310,13 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $ExtendFsField Accesses to external file system.
      * @param array $Tags Tag description list. This parameter is used to bind a tag to a resource instance.
      * @param array $DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+     * @param integer $CbsEncrypt CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+     * @param string $MetaType Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     * @param string $UnifyMetaInstanceId EMR-MetaDB instance
+     * @param CustomMetaInfo $MetaDBInfo Custom MetaDB instance information
      */
     function __construct()
     {
@@ -387,6 +431,23 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
             $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        }
+
+        if (array_key_exists("CbsEncrypt",$param) and $param["CbsEncrypt"] !== null) {
+            $this->CbsEncrypt = $param["CbsEncrypt"];
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
+        }
+
+        if (array_key_exists("UnifyMetaInstanceId",$param) and $param["UnifyMetaInstanceId"] !== null) {
+            $this->UnifyMetaInstanceId = $param["UnifyMetaInstanceId"];
+        }
+
+        if (array_key_exists("MetaDBInfo",$param) and $param["MetaDBInfo"] !== null) {
+            $this->MetaDBInfo = new CustomMetaInfo();
+            $this->MetaDBInfo->deserialize($param["MetaDBInfo"]);
         }
     }
 }

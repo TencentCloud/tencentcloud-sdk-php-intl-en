@@ -28,10 +28,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setClientToken(string $ClientToken) Set Client token.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getFlowId() Obtain 
- * @method void setFlowId(integer $FlowId) Set 
- * @method string getBillId() Obtain 
- * @method void setBillId(string $BillId) Set 
+ * @method integer getFlowId() Obtain Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setFlowId(integer $FlowId) Set Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getBillId() Obtain Big order number.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setBillId(string $BillId) Set Big order number.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -59,12 +63,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ClientToken;
 
     /**
-     * @var integer 
+     * @var integer Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FlowId;
 
     /**
-     * @var string 
+     * @var string Big order number.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $BillId;
 
@@ -78,8 +84,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ClientToken Client token.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $FlowId 
-     * @param string $BillId 
+     * @param integer $FlowId Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $BillId Big order number.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

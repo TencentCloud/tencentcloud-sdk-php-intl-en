@@ -19,25 +19,25 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getRuleType() Obtain Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
  * @method void setRuleType(string $RuleType) Set Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
- * @method array getRulePaths() Obtain Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
- * @method void setRulePaths(array $RulePaths) Set Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+ * @method array getRulePaths() Obtain Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+ * @method void setRulePaths(array $RulePaths) Set Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
  * @method string getRefererType() Obtain Referer configuration types
 whitelist: whitelist
 blacklist: blacklist
@@ -61,19 +61,19 @@ class RefererRule extends AbstractModel
 {
     /**
      * @var string Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
      */
     public $RuleType;
 
     /**
-     * @var array Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+     * @var array Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
      */
     public $RulePaths;
 
@@ -97,15 +97,15 @@ false: do not allow empty referer
     public $AllowEmpty;
     /**
      * @param string $RuleType Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-     * @param array $RulePaths Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+     * @param array $RulePaths Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
      * @param string $RefererType Referer configuration types
 whitelist: whitelist
 blacklist: blacklist

@@ -18,7 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getAssociations() Obtain Array of rules to be unbound
+ * @method void setAssociations(array $Associations) Set Array of rules to be unbound
  */
 
 /**
@@ -26,9 +27,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class DisassociateTargetGroupsRequest extends AbstractModel
 {
-
     /**
-
+     * @var array Array of rules to be unbound
+     */
+    public $Associations;
+    /**
+     * @param array $Associations Array of rules to be unbound
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class DisassociateTargetGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Associations",$param) and $param["Associations"] !== null) {
+            $this->Associations = [];
+            foreach ($param["Associations"] as $key => $value){
+                $obj = new TargetGroupAssociation();
+                $obj->deserialize($value);
+                array_push($this->Associations, $obj);
+            }
+        }
     }
 }

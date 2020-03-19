@@ -18,7 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method array getTargetGroupIds() Obtain Target group ID array
+ * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group ID array
  */
 
 /**
@@ -26,9 +27,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class DeleteTargetGroupsRequest extends AbstractModel
 {
-
     /**
-
+     * @var array Target group ID array
+     */
+    public $TargetGroupIds;
+    /**
+     * @param array $TargetGroupIds Target group ID array
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DeleteTargetGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TargetGroupIds",$param) and $param["TargetGroupIds"] !== null) {
+            $this->TargetGroupIds = $param["TargetGroupIds"];
+        }
     }
 }

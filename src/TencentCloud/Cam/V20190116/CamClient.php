@@ -58,7 +58,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
 * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) This API is used to pull sub-users.
 * @method Models\ListUsersForGroupResponse ListUsersForGroup(Models\ListUsersForGroupRequest $req) This API is used to query the list of users associated with a user group.
 * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) This API is used to delete users from a user group.
-* @method Models\SetFlagResponse SetFlag(Models\SetFlagRequest $req) This API is used to set user login, sensitive operations and async login.
+* @method Models\SetFlagResponse SetFlag(Models\SetFlagRequest $req) This API is used to set account verification for login and sensitive operation protection.
 * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
 * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) This API is used to update a user group.
 * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) This API (UpdatePolicy) is used to update a policy.
