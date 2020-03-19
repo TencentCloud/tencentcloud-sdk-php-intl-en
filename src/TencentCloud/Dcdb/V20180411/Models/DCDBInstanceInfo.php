@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set AZ
  * @method integer getVpcId() Obtain Numeric ID of a VPC
  * @method void setVpcId(integer $VpcId) Set Numeric ID of a VPC
- * @method integer getSubnetId() Obtain Subnet数字ID
- * @method void setSubnetId(integer $SubnetId) Set Subnet数字ID
+ * @method integer getSubnetId() Obtain Subnet Digital ID
+ * @method void setSubnetId(integer $SubnetId) Set Subnet Digital ID
  * @method string getStatusDesc() Obtain Status description
  * @method void setStatusDesc(string $StatusDesc) Set Status description
  * @method integer getStatus() Obtain Status
@@ -139,7 +139,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer Subnet数字ID
+     * @var integer Subnet Digital ID
      */
     public $SubnetId;
 
@@ -301,7 +301,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Region Region
      * @param string $Zone AZ
      * @param integer $VpcId Numeric ID of a VPC
-     * @param integer $SubnetId Subnet数字ID
+     * @param integer $SubnetId Subnet Digital ID
      * @param string $StatusDesc Status description
      * @param integer $Status Status
      * @param string $Vip Private IP
