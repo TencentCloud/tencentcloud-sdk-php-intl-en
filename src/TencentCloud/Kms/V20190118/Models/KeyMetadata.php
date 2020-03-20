@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
  */
 
 /**
- *CMK属性信息
+ *CMK attribute information
  */
 class KeyMetadata extends AbstractModel
 {

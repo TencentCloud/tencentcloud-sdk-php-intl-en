@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *自定义水印规格参数。
+ *Custom watermark specifications.
  */
 class RawWatermarkParameter extends AbstractModel
 {

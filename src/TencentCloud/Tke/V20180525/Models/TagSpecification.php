@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云主机实例。
+ *List of tag descriptions. By specifying this parameter, you can bind tags to corresponding resource instances at the same time. Currently, only tags are bound to cloud host instances.
  */
 class TagSpecification extends AbstractModel
 {

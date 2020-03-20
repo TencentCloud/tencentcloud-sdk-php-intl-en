@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *智能分析结果
+ *Intelligent analysis results
  */
 class AiAnalysisResult extends AbstractModel
 {

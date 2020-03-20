@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *直播流 AI 识别结果
+ *Live stream AI recognition results
  */
 class LiveStreamAiRecognitionResultInfo extends AbstractModel
 {

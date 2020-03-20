@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *自定义转码的的规格参数。
+ *Specifications for custom transcoding.
  */
 class RawTranscodeParameter extends AbstractModel
 {

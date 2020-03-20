@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *AI 视频智能分析输入参数类型
+ *AI video intelligent analysis input parameter types
  */
 class AiAnalysisTaskInput extends AbstractModel
 {

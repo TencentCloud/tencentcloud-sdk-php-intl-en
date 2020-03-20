@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *k8s中标签，一般以数组的方式存在
+ *k8s tags, generally exist as an array
  */
 class Label extends AbstractModel
 {

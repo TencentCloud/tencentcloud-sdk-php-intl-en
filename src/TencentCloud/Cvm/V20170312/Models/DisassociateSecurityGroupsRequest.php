@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getSecurityGroupIds() Obtain ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
- * @method array getInstanceIds() Obtain ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
- * @method void setInstanceIds(array $InstanceIds) Set ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
+ * @method array getInstanceIds() Obtain ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances.
+ * @method void setInstanceIds(array $InstanceIds) Set ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances.
  */
 
 /**
@@ -35,12 +35,12 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var array ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
+     * @var array ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances.
      */
     public $InstanceIds;
     /**
      * @param array $SecurityGroupIds ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
-     * @param array $InstanceIds ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
+     * @param array $InstanceIds ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances.
      */
     function __construct()
     {

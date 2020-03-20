@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *s3源站回源鉴权。
+ *s3 source station back to source authentication.
  */
 class AwsPrivateAccess extends AbstractModel
 {

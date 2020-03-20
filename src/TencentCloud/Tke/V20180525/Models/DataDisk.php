@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *描述了k8s节点数据盘相关配置与信息。
+ *Described the configuration and information of k8s node data disk.
  */
 class DataDisk extends AbstractModel
 {

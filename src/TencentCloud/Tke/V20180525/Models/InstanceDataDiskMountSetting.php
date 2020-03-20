@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *CVM实例数据盘挂载配置
+ *CVM instance data disk mount configuration
  */
 class InstanceDataDiskMountSetting extends AbstractModel
 {
