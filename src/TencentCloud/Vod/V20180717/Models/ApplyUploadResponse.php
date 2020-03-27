@@ -18,8 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStorageBucket() Obtain Bucket, which is used as the `bucket_name` in the URL of the upload API.
- * @method void setStorageBucket(string $StorageBucket) Set Bucket, which is used as the `bucket_name` in the URL of the upload API.
+ * @method string getStorageBucket() Obtain Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
+ * @method void setStorageBucket(string $StorageBucket) Set Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
  * @method string getStorageRegion() Obtain Storage region, which is used as the `Region` in the `Host` of the upload API.
  * @method void setStorageRegion(string $StorageRegion) Set Storage region, which is used as the `Region` in the `Host` of the upload API.
  * @method string getVodSessionKey() Obtain VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
@@ -44,7 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class ApplyUploadResponse extends AbstractModel
 {
     /**
-     * @var string Bucket, which is used as the `bucket_name` in the URL of the upload API.
+     * @var string Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
      */
     public $StorageBucket;
 
@@ -80,7 +80,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public $RequestId;
     /**
-     * @param string $StorageBucket Bucket, which is used as the `bucket_name` in the URL of the upload API.
+     * @param string $StorageBucket Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
      * @param string $StorageRegion Storage region, which is used as the `Region` in the `Host` of the upload API.
      * @param string $VodSessionKey VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
      * @param string $MediaStoragePath Media storage path, which is used as the `Key` of the stored media of the upload API.

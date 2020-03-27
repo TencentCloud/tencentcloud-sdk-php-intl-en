@@ -18,18 +18,18 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMediaUrl() Obtain URL of the media to be pulled. HLS and Dash formats are not supported for pull currently.
-For the supported extensions, please see [File Types](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
- * @method void setMediaUrl(string $MediaUrl) Set URL of the media to be pulled. HLS and Dash formats are not supported for pull currently.
-For the supported extensions, please see [File Types](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+ * @method string getMediaUrl() Obtain URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
+For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+ * @method void setMediaUrl(string $MediaUrl) Set URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
+For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
  * @method string getMediaName() Obtain Media name.
  * @method void setMediaName(string $MediaName) Set Media name.
  * @method string getCoverUrl() Obtain URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
  * @method void setCoverUrl(string $CoverUrl) Set URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
  * @method string getProcedure() Obtain Subsequent task for media. For more information, please see [Specifying Task Flow After Upload](https://cloud.tencent.com/document/product/266/9759).
  * @method void setProcedure(string $Procedure) Set Subsequent task for media. For more information, please see [Specifying Task Flow After Upload](https://cloud.tencent.com/document/product/266/9759).
- * @method string getExpireTime() Obtain Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setExpireTime(string $ExpireTime) Set Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method string getExpireTime() Obtain Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method void setExpireTime(string $ExpireTime) Set Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method string getStorageRegion() Obtain Specifies upload region. This is only applicable to users that have special requirements for the upload region (currently, only Beijing, Shanghai, and Chongqing regions are supported).
  * @method void setStorageRegion(string $StorageRegion) Set Specifies upload region. This is only applicable to users that have special requirements for the upload region (currently, only Beijing, Shanghai, and Chongqing regions are supported).
  * @method integer getClassId() Obtain Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [CreateClass](https://cloud.tencent.com/document/product/266/7812) API.
@@ -50,8 +50,8 @@ For the supported extensions, please see [File Types](https://cloud.tencent.com/
 class PullUploadRequest extends AbstractModel
 {
     /**
-     * @var string URL of the media to be pulled. HLS and Dash formats are not supported for pull currently.
-For the supported extensions, please see [File Types](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+     * @var string URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
+For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
      */
     public $MediaUrl;
 
@@ -71,7 +71,7 @@ For the supported extensions, please see [File Types](https://cloud.tencent.com/
     public $Procedure;
 
     /**
-     * @var string Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $ExpireTime;
 
@@ -105,12 +105,12 @@ For the supported extensions, please see [File Types](https://cloud.tencent.com/
      */
     public $SubAppId;
     /**
-     * @param string $MediaUrl URL of the media to be pulled. HLS and Dash formats are not supported for pull currently.
-For the supported extensions, please see [File Types](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+     * @param string $MediaUrl URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
+For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
      * @param string $MediaName Media name.
      * @param string $CoverUrl URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
      * @param string $Procedure Subsequent task for media. For more information, please see [Specifying Task Flow After Upload](https://cloud.tencent.com/document/product/266/9759).
-     * @param string $ExpireTime Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param string $ExpireTime Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
      * @param string $StorageRegion Specifies upload region. This is only applicable to users that have special requirements for the upload region (currently, only Beijing, Shanghai, and Chongqing regions are supported).
      * @param integer $ClassId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [CreateClass](https://cloud.tencent.com/document/product/266/7812) API.
      * @param string $SessionContext The source context which is used to pass through the user request information. After `Procedure` is specified, the task flow status change callback will return the value of this field. It can contain up to 1,000 characters.

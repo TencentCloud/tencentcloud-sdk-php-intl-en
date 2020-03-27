@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTEHDType(string $TEHDType) Set TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
 <li>Common: Common transcoding template;</li>
 <li>TEHD: TESHD template.</li>
- * @method integer getOffset() Obtain Paged offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paged offset. Default value: 0.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -78,7 +78,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     public $TEHDType;
 
     /**
-     * @var integer Paged offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
@@ -102,7 +102,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
      * @param string $TEHDType TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
 <li>Common: Common transcoding template;</li>
 <li>TEHD: TESHD template.</li>
-     * @param integer $Offset Paged offset. Default value: 0.
+     * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */

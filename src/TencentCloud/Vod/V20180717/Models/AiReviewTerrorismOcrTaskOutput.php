@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
 <li>review.</li>
 <li>block.</li>
  * @method array getSegmentSet() Obtain List of video segments that contain OCR-detected terrorism information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain OCR-detected terrorism information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -54,7 +52,6 @@ class AiReviewTerrorismOcrTaskOutput extends AbstractModel
 
     /**
      * @var array List of video segments that contain OCR-detected terrorism information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SegmentSet;
     /**
@@ -64,7 +61,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>review.</li>
 <li>block.</li>
      * @param array $SegmentSet List of video segments that contain OCR-detected terrorism information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

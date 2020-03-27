@@ -40,18 +40,18 @@ FINISH: completed.
  * @method void setFileId(string $FileId) Set ID of published video file.
  * @method integer getSourceDefinition() Obtain ID of the transcoding template corresponding to the published video. 0 represents the source video.
  * @method void setSourceDefinition(integer $SourceDefinition) Set ID of the transcoding template corresponding to the published video. 0 represents the source video.
- * @method string getPublishResult() Obtain Status of video release in WeChat Mini Program. Valid values:
+ * @method string getPublishResult() Obtain Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
- * @method void setPublishResult(string $PublishResult) Set Status of video release in WeChat Mini Program. Valid values:
+ * @method void setPublishResult(string $PublishResult) Set Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
  */
 
 /**
- *Release in WeChat Mini Program task information
+ *Release on WeChat Mini Program task information
  */
 class WechatMiniProgramPublishTask extends AbstractModel
 {
@@ -91,7 +91,7 @@ FINISH: completed.
     public $SourceDefinition;
 
     /**
-     * @var string Status of video release in WeChat Mini Program. Valid values:
+     * @var string Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
@@ -109,7 +109,7 @@ FINISH: completed.
      * @param string $Message Error message.
      * @param string $FileId ID of published video file.
      * @param integer $SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
-     * @param string $PublishResult Status of video release in WeChat Mini Program. Valid values:
+     * @param string $PublishResult Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>

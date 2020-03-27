@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Watermark type filter. Valid values:
 <li>image: image watermark;</li>
 <li>text: text watermark.</li>
- * @method integer getOffset() Obtain Paged offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paged offset. Default value: 0.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
@@ -56,7 +56,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer Paged offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
@@ -76,7 +76,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
      * @param string $Type Watermark type filter. Valid values:
 <li>image: image watermark;</li>
 <li>text: text watermark.</li>
-     * @param integer $Offset Paged offset. Default value: 0.
+     * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>

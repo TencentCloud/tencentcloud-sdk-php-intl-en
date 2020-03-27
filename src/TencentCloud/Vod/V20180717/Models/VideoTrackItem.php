@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getSourceMedia() Obtain Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
  * @method void setSourceMedia(string $SourceMedia) Set Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
- * @method float getSourceMediaStartTime() Obtain Starting time of video segment in material file in seconds. Default value: 0.
- * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Starting time of video segment in material file in seconds. Default value: 0.
+ * @method float getSourceMediaStartTime() Obtain Start time of video segment in material file in seconds. Default value: 0.
+ * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Start time of video segment in material file in seconds. Default value: 0.
  * @method float getDuration() Obtain Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
  * @method void setDuration(float $Duration) Set Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
  * @method string getCoordinateOrigin() Obtain Video origin position. Valid values:
@@ -91,7 +91,7 @@ class VideoTrackItem extends AbstractModel
     public $SourceMedia;
 
     /**
-     * @var float Starting time of video segment in material file in seconds. Default value: 0.
+     * @var float Start time of video segment in material file in seconds. Default value: 0.
      */
     public $SourceMediaStartTime;
 
@@ -156,7 +156,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AudioOperations;
     /**
      * @param string $SourceMedia Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
-     * @param float $SourceMediaStartTime Starting time of video segment in material file in seconds. Default value: 0.
+     * @param float $SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
      * @param float $Duration Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
      * @param string $CoordinateOrigin Video origin position. Valid values:
 <li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>

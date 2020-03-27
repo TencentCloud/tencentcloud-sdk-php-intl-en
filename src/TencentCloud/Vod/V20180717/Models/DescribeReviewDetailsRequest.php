@@ -18,10 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStartTime() Obtain Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setStartTime(string $StartTime) Set Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getEndTime() Obtain End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
- * @method void setEndTime(string $EndTime) Set End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
+ * @method string getStartTime() Obtain Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method void setStartTime(string $StartTime) Set Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getEndTime() Obtain End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+ * @method void setEndTime(string $EndTime) Set End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeReviewDetailsRequest extends AbstractModel
 {
     /**
-     * @var string Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $StartTime;
 
     /**
-     * @var string End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
+     * @var string End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
      */
     public $EndTime;
 
@@ -46,8 +46,8 @@ class DescribeReviewDetailsRequest extends AbstractModel
      */
     public $SubAppId;
     /**
-     * @param string $StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
+     * @param string $StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()

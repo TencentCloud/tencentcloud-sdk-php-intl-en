@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClassIds(array $ClassIds) Set Category ID set, which matches the categories of the specified IDs and all subcategories. Array length limit: 10.
  * @method string getStartTime() Obtain Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
  * @method void setStartTime(string $StartTime) Set Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
  * @method string getEndTime() Obtain End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
  * @method void setEndTime(string $EndTime) Set End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
  * @method string getSourceType() Obtain Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
  * @method void setSourceType(string $SourceType) Set Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
  * @method string getStreamId() Obtain [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
@@ -89,14 +89,14 @@ class SearchMediaRequest extends AbstractModel
     /**
      * @var string Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
      */
     public $StartTime;
 
     /**
      * @var string End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
      */
     public $EndTime;
 
@@ -146,10 +146,10 @@ class SearchMediaRequest extends AbstractModel
      * @param array $ClassIds Category ID set, which matches the categories of the specified IDs and all subcategories. Array length limit: 10.
      * @param string $StartTime Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
      * @param string $EndTime End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
      * @param string $SourceType Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
      * @param string $StreamId [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
      * @param string $Vid Unique ID of LVB recording file.

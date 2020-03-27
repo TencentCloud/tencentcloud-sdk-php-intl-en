@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -36,7 +36,7 @@ Task types compatible with v2017:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -54,12 +54,12 @@ Task types compatible with v2017:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
- * @method string getCreateTime() Obtain Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setCreateTime(string $CreateTime) Set Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getBeginProcessTime() Obtain Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getFinishTime() Obtain End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setFinishTime(string $FinishTime) Set End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method string getCreateTime() Obtain Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method void setCreateTime(string $CreateTime) Set Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getBeginProcessTime() Obtain Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getFinishTime() Obtain End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method void setFinishTime(string $FinishTime) Set End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method ProcedureTask getProcedureTask() Obtain Video processing task information. This field has a value only when `TaskType` is `Procedure`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProcedureTask(ProcedureTask $ProcedureTask) Set Video processing task information. This field has a value only when `TaskType` is `Procedure`.
@@ -100,9 +100,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) Set Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() Obtain Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+ * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() Obtain Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) Set Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+ * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) Set Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -118,7 +118,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -140,17 +140,17 @@ Task types compatible with v2017:
     public $Status;
 
     /**
-     * @var string Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $FinishTime;
 
@@ -215,7 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CreateImageSpriteTask;
 
     /**
-     * @var WechatMiniProgramPublishTask Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+     * @var WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WechatMiniProgramPublishTask;
@@ -229,7 +229,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -243,9 +243,9 @@ Task types compatible with v2017:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
-     * @param string $CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param string $CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      * @param ProcedureTask $ProcedureTask Video processing task information. This field has a value only when `TaskType` is `Procedure`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param EditMediaTask $EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
@@ -266,7 +266,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param CreateImageSpriteTask2017 $CreateImageSpriteTask Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

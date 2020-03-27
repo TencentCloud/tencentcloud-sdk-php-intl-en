@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getDefinitions() Obtain Unique ID filter of content audit templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of content audit templates. Array length limit: 100.
- * @method integer getOffset() Obtain Paged offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paged offset. Default value: 0.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -39,7 +39,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     public $Definitions;
 
     /**
-     * @var integer Paged offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
@@ -54,7 +54,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     public $SubAppId;
     /**
      * @param array $Definitions Unique ID filter of content audit templates. Array length limit: 100.
-     * @param integer $Offset Paged offset. Default value: 0.
+     * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */

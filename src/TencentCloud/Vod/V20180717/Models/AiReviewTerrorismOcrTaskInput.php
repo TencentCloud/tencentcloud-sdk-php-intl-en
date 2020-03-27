@@ -18,17 +18,21 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method integer getDefinition() Obtain Terrorism information detection template ID.
+ * @method void setDefinition(integer $Definition) Set Terrorism information detection template ID.
  */
 
 /**
- *Content review Ocr text forensics task input parameter types
+ *Input parameter type of OCR-based terrorism information detection in text task in content audit
  */
 class AiReviewTerrorismOcrTaskInput extends AbstractModel
 {
-
     /**
-
+     * @var integer Terrorism information detection template ID.
+     */
+    public $Definition;
+    /**
+     * @param integer $Definition Terrorism information detection template ID.
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class AiReviewTerrorismOcrTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
+        }
     }
 }

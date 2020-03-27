@@ -18,10 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStartTime() Obtain Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setStartTime(string $StartTime) Set Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getEndTime() Obtain End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
- * @method void setEndTime(string $EndTime) Set End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
+ * @method string getStartTime() Obtain Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method void setStartTime(string $StartTime) Set Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getEndTime() Obtain End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+ * @method void setEndTime(string $EndTime) Set End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
  * @method string getDataType() Obtain CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
@@ -54,12 +54,12 @@ When the value of this field is 1, the total usage of all subapplications (inclu
 class DescribeCDNUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $StartTime;
 
     /**
-     * @var string End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
+     * @var string End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
      */
     public $EndTime;
 
@@ -91,8 +91,8 @@ When the value of this field is 1, the total usage of all subapplications (inclu
      */
     public $SubAppId;
     /**
-     * @param string $StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
+     * @param string $StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
      * @param string $DataType CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>

@@ -51,11 +51,11 @@ Default value: 10%.
  * @method string getHeight() Obtain Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+Default value: 10%.
  * @method void setHeight(string $Height) Set Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+Default value: 10%.
  * @method float getStartTimeOffset() Obtain Start time offset of blur in seconds. If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame.
 <li>If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the blur will appear at second n after the first video frame;</li>
@@ -114,7 +114,7 @@ Default value: 10%.
      * @var string Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+Default value: 10%.
      */
     public $Height;
 
@@ -152,7 +152,7 @@ Default value: 10%.
      * @param string $Height Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+Default value: 10%.
      * @param float $StartTimeOffset Start time offset of blur in seconds. If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame.
 <li>If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the blur will appear at second n after the first video frame;</li>

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Filter of task flow template types. Valid values:
 <li>Preset: preset task flow template;</li>
 <li>Custom: custom task flow template.</li>
- * @method integer getOffset() Obtain Paged offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paged offset. Default value: 0.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -52,7 +52,7 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer Paged offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
@@ -70,7 +70,7 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
      * @param string $Type Filter of task flow template types. Valid values:
 <li>Preset: preset task flow template;</li>
 <li>Custom: custom task flow template.</li>
-     * @param integer $Offset Paged offset. Default value: 0.
+     * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */

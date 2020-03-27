@@ -18,18 +18,18 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDefinition() Obtain Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
- * @method void setDefinition(integer $Definition) Set Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
+ * @method integer getDefinition() Obtain Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
+ * @method void setDefinition(integer $Definition) Set Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
  * @method MediaMetaData getMetaData() Obtain Video metadata.
  * @method void setMetaData(MediaMetaData $MetaData) Set Video metadata.
  * @method string getUrl() Obtain Video playback address for WeChat Mini Program audit
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set Video playback address for WeChat Mini Program audit
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getReviewResult() Obtain Status of video release in WeChat Mini Program
+ * @method string getReviewResult() Obtain Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
- * @method void setReviewResult(string $ReviewResult) Set Status of video release in WeChat Mini Program
+ * @method void setReviewResult(string $ReviewResult) Set Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
  * @method array getReviewSummary() Obtain WeChat Mini Program audit element.
@@ -44,7 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class MediaMiniProgramReviewInfoItem extends AbstractModel
 {
     /**
-     * @var integer Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
+     * @var integer Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
      */
     public $Definition;
 
@@ -60,7 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Url;
 
     /**
-     * @var string Status of video release in WeChat Mini Program
+     * @var string Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
      */
@@ -72,11 +72,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public $ReviewSummary;
     /**
-     * @param integer $Definition Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
+     * @param integer $Definition Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
      * @param MediaMetaData $MetaData Video metadata.
      * @param string $Url Video playback address for WeChat Mini Program audit
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ReviewResult Status of video release in WeChat Mini Program
+     * @param string $ReviewResult Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
      * @param array $ReviewSummary WeChat Mini Program audit element.

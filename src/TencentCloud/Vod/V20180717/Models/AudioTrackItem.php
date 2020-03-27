@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getSourceMedia() Obtain Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
  * @method void setSourceMedia(string $SourceMedia) Set Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
- * @method float getSourceMediaStartTime() Obtain Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
- * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+ * @method float getSourceMediaStartTime() Obtain Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+ * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
  * @method float getDuration() Obtain Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
  * @method void setDuration(float $Duration) Set Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
  * @method array getAudioOperations() Obtain Operation on audio segment, such as volume adjustment.
@@ -41,7 +41,7 @@ class AudioTrackItem extends AbstractModel
     public $SourceMedia;
 
     /**
-     * @var float Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+     * @var float Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
      */
     public $SourceMediaStartTime;
 
@@ -57,7 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AudioOperations;
     /**
      * @param string $SourceMedia Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
-     * @param float $SourceMediaStartTime Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+     * @param float $SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
      * @param float $Duration Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
      * @param array $AudioOperations Operation on audio segment, such as volume adjustment.
 Note: this field may return null, indicating that no valid values can be obtained.

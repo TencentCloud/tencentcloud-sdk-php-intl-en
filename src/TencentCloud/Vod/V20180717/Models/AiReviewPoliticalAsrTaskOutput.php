@@ -19,23 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getConfidence() Obtain Score of ASR-detected politically sensitive information in speech between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setConfidence(float $Confidence) Set Score of ASR-detected politically sensitive information in speech between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getSuggestion() Obtain Suggestion for ASR-detected politically sensitive information in speech. Valid values:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSuggestion(string $Suggestion) Set Suggestion for ASR-detected politically sensitive information in speech. Valid values:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getSegmentSet() Obtain List of video segments that contain ASR-detected politically sensitive information in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain ASR-detected politically sensitive information in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -45,7 +39,6 @@ class AiReviewPoliticalAsrTaskOutput extends AbstractModel
 {
     /**
      * @var float Score of ASR-detected politically sensitive information in speech between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Confidence;
 
@@ -54,25 +47,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Suggestion;
 
     /**
      * @var array List of video segments that contain ASR-detected politically sensitive information in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SegmentSet;
     /**
      * @param float $Confidence Score of ASR-detected politically sensitive information in speech between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Suggestion Suggestion for ASR-detected politically sensitive information in speech. Valid values:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $SegmentSet List of video segments that contain ASR-detected politically sensitive information in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
