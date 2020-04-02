@@ -32,6 +32,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargets(array $Targets) Set List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEndPort() Obtain Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setEndPort(integer $EndPort) Set Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -65,6 +69,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Targets;
+
+    /**
+     * @var integer Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $EndPort;
     /**
      * @param string $ListenerId Listener ID
      * @param string $Protocol Listener protocol
@@ -73,6 +83,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Targets List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EndPort Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -114,6 +126,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
             }
+        }
+
+        if (array_key_exists("EndPort",$param) and $param["EndPort"] !== null) {
+            $this->EndPort = $param["EndPort"];
         }
     }
 }

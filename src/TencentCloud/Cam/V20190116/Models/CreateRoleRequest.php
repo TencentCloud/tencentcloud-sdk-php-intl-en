@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Role description
  * @method integer getConsoleLogin() Obtain Whether login is allowed. 1: yes, 0: no
  * @method void setConsoleLogin(integer $ConsoleLogin) Set Whether login is allowed. 1: yes, 0: no
- * @method integer getSessionDuration() Obtain 
- * @method void setSessionDuration(integer $SessionDuration) Set 
+ * @method integer getSessionDuration() Obtain The maximum validity period of the temporary key for creating a role (range: 0-43200)
+ * @method void setSessionDuration(integer $SessionDuration) Set The maximum validity period of the temporary key for creating a role (range: 0-43200)
  */
 
 /**
@@ -56,7 +56,7 @@ class CreateRoleRequest extends AbstractModel
     public $ConsoleLogin;
 
     /**
-     * @var integer 
+     * @var integer The maximum validity period of the temporary key for creating a role (range: 0-43200)
      */
     public $SessionDuration;
     /**
@@ -64,7 +64,7 @@ class CreateRoleRequest extends AbstractModel
      * @param string $PolicyDocument Policy document
      * @param string $Description Role description
      * @param integer $ConsoleLogin Whether login is allowed. 1: yes, 0: no
-     * @param integer $SessionDuration 
+     * @param integer $SessionDuration The maximum validity period of the temporary key for creating a role (range: 0-43200)
      */
     function __construct()
     {

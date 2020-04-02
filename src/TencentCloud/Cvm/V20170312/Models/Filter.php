@@ -25,17 +25,16 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *> Describes key-value pair filters used for conditional queries, such as filtering results by ID, name and state.
-> * If there are multiple `Filter` parameters, the relationship among them will be logical `AND`.
-> * If there are multiple `Values` for the same `Filter`, the relationship among the `Values` for the same `Filter` will be logical `OR`.
+ *> Key-value pair filters used for conditional queries, such as filtering results by ID, name, and state.
+> * If there are multiple `Filter` parameters, they are evaluated using the logical `AND` operator.
+> * If a `Filter` contains multiple `Values`, they are evaluated using the logical `OR` operator.
 >
-> Take the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API as an example. You can use the following filters to query the instances whose availability zone (`zone`) is Guangzhou Zone 1 ***and*** billing method (`instance-charge-type`) is prepaid ***or*** pay-as-you-go:
+> Take [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) as an example. You can use the following filters to query the instances in availability zone (`zone`) Guangzhou Zone 1 ***and*** whose billing plan (`instance-charge-type`) is pay-as-you-go:
 ```
 Filters.0.Name=zone
 &Filters.0.Values.0=ap-guangzhou-1
 &Filters.1.Name=instance-charge-type
-&Filters.1.Values.0=PREPAID
-&Filters.1.Values.1=POSTPAID_BY_HOUR
+&Filters.1.Values.0=POSTPAID_BY_HOUR
 ```
  */
 class Filter extends AbstractModel

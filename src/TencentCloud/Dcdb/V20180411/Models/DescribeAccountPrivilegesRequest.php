@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbName(string $DbName) Set Database name. `\*` indicates that global permissions will be queried (i.e., `\*.\*`), in which case the `Type` and `Object ` parameters will be ignored
  * @method string getType() Obtain Type. Valid values: table; view; proc; func; \*. If `DbName` is a specific database name and `Type` is `\*`, the permissions of the database will be queried (i.e., `db.\*`), in which case the `Object` parameter will be ignored
  * @method void setType(string $Type) Set Type. Valid values: table; view; proc; func; \*. If `DbName` is a specific database name and `Type` is `\*`, the permissions of the database will be queried (i.e., `db.\*`), in which case the `Object` parameter will be ignored
- * @method string getObject() Obtain Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
- * @method void setObject(string $Object) Set Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
+ * @method string getObject() Obtain Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
+ * @method void setObject(string $Object) Set Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
  * @method string getColName() Obtain If `Type` = table and `ColName` is `\*`, the permissions of the table will be queried; if `ColName` is a specific field name, the permissions of the corresponding field will be queried
  * @method void setColName(string $ColName) Set If `Type` = table and `ColName` is `\*`, the permissions of the table will be queried; if `ColName` is a specific field name, the permissions of the corresponding field will be queried
  */
@@ -65,7 +65,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
+     * @var string Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
      */
     public $Object;
 
@@ -79,7 +79,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
      * @param string $Host Access host allowed for a user. An account is uniquely identified by username and host.
      * @param string $DbName Database name. `\*` indicates that global permissions will be queried (i.e., `\*.\*`), in which case the `Type` and `Object ` parameters will be ignored
      * @param string $Type Type. Valid values: table; view; proc; func; \*. If `DbName` is a specific database name and `Type` is `\*`, the permissions of the database will be queried (i.e., `db.\*`), in which case the `Object` parameter will be ignored
-     * @param string $Object Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
+     * @param string $Object Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
      * @param string $ColName If `Type` = table and `ColName` is `\*`, the permissions of the table will be queried; if `ColName` is a specific field name, the permissions of the corresponding field will be queried
      */
     function __construct()

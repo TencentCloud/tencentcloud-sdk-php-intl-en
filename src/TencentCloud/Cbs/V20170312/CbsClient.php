@@ -85,13 +85,10 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
 
 * Batch operations are supported. Multiple cloud disks mounted to the same CVM can be unmounted in batch. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
 * This API is an asynchronous API. When the request successfully returns results, the cloud disk is not unmounted from the CVM immediately. You can use the API [DescribeDisks](/document/product/362/16315) to query the cloud disk status. If the status changes from "ATTACHED" to "UNATTACHED", the cloud disk is unmounted.
+* @method Models\GetSnapOverviewResponse GetSnapOverview(Models\GetSnapOverviewRequest $req) This API is used to get snapshot overview information.
 * @method Models\InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(Models\InquiryPriceCreateDisksRequest $req) This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
 
 * It supports inquiring the price for the creation of multiple cloud disks. The total price for the creation is returned.
-* @method Models\InquiryPriceRenewDisksResponse InquiryPriceRenewDisks(Models\InquiryPriceRenewDisksRequest $req) This API is used to query the price of renewing one or more cloud disks.
-
-* You can query the price for renewing cloud disks together with their bound instances. To do so, you need to specify `CurInstanceDeadline` in the [DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid) parameter, In this case, the API will query the price for renewing the cloud disk to the expiration time of the bound instance.
-* You can specify different renewal lengths for multiple cloud disks in a single request. In such cases, the price returned will be the total price of renewing multiple cloud disks.
 * @method Models\InquiryPriceResizeDiskResponse InquiryPriceResizeDisk(Models\InquiryPriceResizeDiskRequest $req) This API is used to query the price for expanding cloud disks.
 * @method Models\ModifyAutoSnapshotPolicyAttributeResponse ModifyAutoSnapshotPolicyAttribute(Models\ModifyAutoSnapshotPolicyAttributeRequest $req) This API (ModifyAutoSnapshotPolicyAttribute) is used to modify the attributes of an automatic snapshot policy.
 
@@ -100,15 +97,6 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
 * @method Models\ModifyDiskAttributesResponse ModifyDiskAttributes(Models\ModifyDiskAttributesRequest $req) * Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](/document/product/362/16315).
 * "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
 * Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
-* @method Models\ModifyDisksChargeTypeResponse ModifyDisksChargeType(Models\ModifyDisksChargeTypeRequest $req) API domain name: cbs.tencentcloudapi.com.
-
-This API is used to change the billing mode of cloud disks.
-
-You can only use this API to change the billing method from `POSTPAID_BY_HOUR` to `PREPAID`.
-This API does not support non-elastic cloud disks. Please use `modifyinstanceschargetype` API to convert CVM instances and the bound non-elastic cloud disks. 
-Default API request frequency limit: 10 times/second.
-
-* @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) This API (ModifyDisksRenewFlag) is used to modify the renewal flag of the cloud disk, which supports batch modification.
 * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) This API (ModifySnapshotAttribute) is used to modify the attributes of a specified snapshot.
 
 * Currently, you can only modify snapshot name and change non-permanent snapshots into permanent snapshots.

@@ -90,8 +90,8 @@ overseas: acceleration outside mainland China
 global: global acceleration
  * @method OriginPullTimeout getOriginPullTimeout() Obtain Origin-pull timeout configuration
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
- * @method AwsPrivateAccess getAwsPrivateAccess() Obtain 
- * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set 
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Origin access authentication for S3 bucket
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Origin access authentication for S3 bucket
  */
 
 /**
@@ -252,7 +252,7 @@ global: global acceleration
     public $OriginPullTimeout;
 
     /**
-     * @var AwsPrivateAccess 
+     * @var AwsPrivateAccess Origin access authentication for S3 bucket
      */
     public $AwsPrivateAccess;
     /**
@@ -292,7 +292,7 @@ mainland: acceleration inside mainland China
 overseas: acceleration outside mainland China
 global: global acceleration
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
-     * @param AwsPrivateAccess $AwsPrivateAccess 
+     * @param AwsPrivateAccess $AwsPrivateAccess Origin access authentication for S3 bucket
      */
     function __construct()
     {

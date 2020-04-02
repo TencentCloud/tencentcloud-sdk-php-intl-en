@@ -70,6 +70,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setShardSlaveZones(array $ShardSlaveZones) Set List of slave AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getCpu() Obtain Number of CPU cores
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores
  */
 
 /**
@@ -194,6 +196,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ShardSlaveZones;
+
+    /**
+     * @var integer Number of CPU cores
+     */
+    public $Cpu;
     /**
      * @param string $InstanceId Instance ID
      * @param string $ShardSerialId Shard SQL passthrough ID, which is used to pass through SQL statements to the specified shard for execution
@@ -221,6 +228,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $ShardSlaveZones List of slave AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Cpu Number of CPU cores
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ShardSlaveZones",$param) and $param["ShardSlaveZones"] !== null) {
             $this->ShardSlaveZones = $param["ShardSlaveZones"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

@@ -176,10 +176,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSnatIps(array $SnatIps) Set SnatIp list after SnatPro load balancing is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSlaType() Obtain 
- * @method void setSlaType(string $SlaType) Set 
- * @method boolean getIsBlock() Obtain 
- * @method void setIsBlock(boolean $IsBlock) Set 
+ * @method string getSlaType() Obtain Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaType(string $SlaType) Set Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsBlock() Obtain Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIsBlock(boolean $IsBlock) Set Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getIsBlockTime() Obtain 
+ * @method void setIsBlockTime(string $IsBlockTime) Set 
  */
 
 /**
@@ -431,14 +437,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SnatIps;
 
     /**
-     * @var string 
+     * @var string Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SlaType;
 
     /**
-     * @var boolean 
+     * @var boolean Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsBlock;
+
+    /**
+     * @var string 
+     */
+    public $IsBlockTime;
     /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
@@ -519,8 +532,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $SnatIps SnatIp list after SnatPro load balancing is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SlaType 
-     * @param boolean $IsBlock 
+     * @param string $SlaType Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsBlock Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $IsBlockTime 
      */
     function __construct()
     {
@@ -725,6 +741,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsBlock",$param) and $param["IsBlock"] !== null) {
             $this->IsBlock = $param["IsBlock"];
+        }
+
+        if (array_key_exists("IsBlockTime",$param) and $param["IsBlockTime"] !== null) {
+            $this->IsBlockTime = $param["IsBlockTime"];
         }
     }
 }

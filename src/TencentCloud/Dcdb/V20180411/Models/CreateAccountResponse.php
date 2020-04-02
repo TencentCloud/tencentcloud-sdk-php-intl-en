@@ -18,8 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() Obtain Instance Id, which is passed through from the input parameters.
- * @method void setInstanceId(string $InstanceId) Set Instance Id, which is passed through from the input parameters.
+ * @method string getInstanceId() Obtain Instance ID, which is passed through from the input parameters.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which is passed through from the input parameters.
  * @method string getUserName() Obtain Username, which is passed through from the input parameters.
  * @method void setUserName(string $UserName) Set Username, which is passed through from the input parameters.
  * @method string getHost() Obtain Host allowed for access, which is passed through from the input parameters.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAccountResponse extends AbstractModel
 {
     /**
-     * @var string Instance Id, which is passed through from the input parameters.
+     * @var string Instance ID, which is passed through from the input parameters.
      */
     public $InstanceId;
 
@@ -60,7 +60,7 @@ class CreateAccountResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $InstanceId Instance Id, which is passed through from the input parameters.
+     * @param string $InstanceId Instance ID, which is passed through from the input parameters.
      * @param string $UserName Username, which is passed through from the input parameters.
      * @param string $Host Host allowed for access, which is passed through from the input parameters.
      * @param integer $ReadOnly Passed through from the input parameters.

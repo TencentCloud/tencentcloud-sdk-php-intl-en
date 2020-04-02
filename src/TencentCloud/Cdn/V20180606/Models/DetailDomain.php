@@ -200,8 +200,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AwsPrivateAccess getAwsPrivateAccess() Obtain 
- * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set 
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -457,7 +459,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OriginPullTimeout;
 
     /**
-     * @var AwsPrivateAccess 
+     * @var AwsPrivateAccess S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AwsPrivateAccess;
     /**
@@ -552,7 +555,8 @@ global: locked globally
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AwsPrivateAccess $AwsPrivateAccess 
+     * @param AwsPrivateAccess $AwsPrivateAccess S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

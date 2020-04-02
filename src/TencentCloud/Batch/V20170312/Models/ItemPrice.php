@@ -18,22 +18,46 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getUnitPrice() Obtain Subsequent unit price (in RMB).
-Note: This field may return null, indicating that no valid value is found.
- * @method void setUnitPrice(float $UnitPrice) Set Subsequent unit price (in RMB).
-Note: This field may return null, indicating that no valid value is found.
- * @method string getChargeUnit() Obtain Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: This field may return null, indicating that no valid value is found.
- * @method void setChargeUnit(string $ChargeUnit) Set Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: This field may return null, indicating that no valid value is found.
- * @method float getOriginalPrice() Obtain Original price of a prepaid instance (in RMB).
-Note: This field may return null, indicating that no valid value is found.
- * @method void setOriginalPrice(float $OriginalPrice) Set Original price of a prepaid instance (in RMB).
-Note: This field may return null, indicating that no valid value is found.
- * @method float getDiscountPrice() Obtain Discount price of a prepaid instance (in RMB).
-Note: This field may return null, indicating that no valid value is found.
- * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of a prepaid instance (in RMB).
-Note: This field may return null, indicating that no valid value is found.
+ * @method float getUnitPrice() Obtain The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setUnitPrice(float $UnitPrice) Set The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getChargeUnit() Obtain Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setChargeUnit(string $ChargeUnit) Set Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getOriginalPrice() Obtain The original price of a pay-in-advance instance, in USD.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setOriginalPrice(float $OriginalPrice) Set The original price of a pay-in-advance instance, in USD.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getDiscountPrice() Obtain Discount price of a prepaid instance, in USD.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of a prepaid instance, in USD.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method integer getDiscount() Obtain Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setDiscount(integer $Discount) Set Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getUnitPriceDiscount() Obtain The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setUnitPriceDiscount(float $UnitPriceDiscount) Set The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getUnitPriceSecondStep() Obtain Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setUnitPriceSecondStep(float $UnitPriceSecondStep) Set Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getUnitPriceDiscountSecondStep() Obtain Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setUnitPriceDiscountSecondStep(float $UnitPriceDiscountSecondStep) Set Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getUnitPriceThirdStep() Obtain Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setUnitPriceThirdStep(float $UnitPriceThirdStep) Set Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getUnitPriceDiscountThirdStep() Obtain Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setUnitPriceDiscountThirdStep(float $UnitPriceDiscountThirdStep) Set Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
  */
 
 /**
@@ -42,37 +66,85 @@ Note: This field may return null, indicating that no valid value is found.
 class ItemPrice extends AbstractModel
 {
     /**
-     * @var float Subsequent unit price (in RMB).
-Note: This field may return null, indicating that no valid value is found.
+     * @var float The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $UnitPrice;
 
     /**
-     * @var string Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $ChargeUnit;
 
     /**
-     * @var float Original price of a prepaid instance (in RMB).
-Note: This field may return null, indicating that no valid value is found.
+     * @var float The original price of a pay-in-advance instance, in USD.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $OriginalPrice;
 
     /**
-     * @var float Discount price of a prepaid instance (in RMB).
-Note: This field may return null, indicating that no valid value is found.
+     * @var float Discount price of a prepaid instance, in USD.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $DiscountPrice;
+
     /**
-     * @param float $UnitPrice Subsequent unit price (in RMB).
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $ChargeUnit Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: This field may return null, indicating that no valid value is found.
-     * @param float $OriginalPrice Original price of a prepaid instance (in RMB).
-Note: This field may return null, indicating that no valid value is found.
-     * @param float $DiscountPrice Discount price of a prepaid instance (in RMB).
-Note: This field may return null, indicating that no valid value is found.
+     * @var integer Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $Discount;
+
+    /**
+     * @var float The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $UnitPriceDiscount;
+
+    /**
+     * @var float Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $UnitPriceSecondStep;
+
+    /**
+     * @var float Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $UnitPriceDiscountSecondStep;
+
+    /**
+     * @var float Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $UnitPriceThirdStep;
+
+    /**
+     * @var float Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $UnitPriceDiscountThirdStep;
+    /**
+     * @param float $UnitPrice The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $ChargeUnit Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $OriginalPrice The original price of a pay-in-advance instance, in USD.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $DiscountPrice Discount price of a prepaid instance, in USD.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param integer $Discount Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $UnitPriceDiscount The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $UnitPriceSecondStep Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $UnitPriceDiscountSecondStep Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $UnitPriceThirdStep Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $UnitPriceDiscountThirdStep Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -100,6 +172,30 @@ Note: This field may return null, indicating that no valid value is found.
 
         if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
             $this->DiscountPrice = $param["DiscountPrice"];
+        }
+
+        if (array_key_exists("Discount",$param) and $param["Discount"] !== null) {
+            $this->Discount = $param["Discount"];
+        }
+
+        if (array_key_exists("UnitPriceDiscount",$param) and $param["UnitPriceDiscount"] !== null) {
+            $this->UnitPriceDiscount = $param["UnitPriceDiscount"];
+        }
+
+        if (array_key_exists("UnitPriceSecondStep",$param) and $param["UnitPriceSecondStep"] !== null) {
+            $this->UnitPriceSecondStep = $param["UnitPriceSecondStep"];
+        }
+
+        if (array_key_exists("UnitPriceDiscountSecondStep",$param) and $param["UnitPriceDiscountSecondStep"] !== null) {
+            $this->UnitPriceDiscountSecondStep = $param["UnitPriceDiscountSecondStep"];
+        }
+
+        if (array_key_exists("UnitPriceThirdStep",$param) and $param["UnitPriceThirdStep"] !== null) {
+            $this->UnitPriceThirdStep = $param["UnitPriceThirdStep"];
+        }
+
+        if (array_key_exists("UnitPriceDiscountThirdStep",$param) and $param["UnitPriceDiscountThirdStep"] !== null) {
+            $this->UnitPriceDiscountThirdStep = $param["UnitPriceDiscountThirdStep"];
         }
     }
 }

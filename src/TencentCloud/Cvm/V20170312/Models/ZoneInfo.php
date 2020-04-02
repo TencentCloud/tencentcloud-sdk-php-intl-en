@@ -18,8 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getZone() Obtain Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+ * @method string getZone() Obtain Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -58,8 +58,8 @@ Names of availability zones throughout the entire network:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
- * @method void setZone(string $Zone) Set Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+ * @method void setZone(string $Zone) Set Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -102,8 +102,8 @@ Names of availability zones throughout the entire network:
  * @method void setZoneName(string $ZoneName) Set Availability zone description, such as Guangzhou Zone 3.
  * @method string getZoneId() Obtain Availability zone ID
  * @method void setZoneId(string $ZoneId) Set Availability zone ID
- * @method string getZoneState() Obtain Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
- * @method void setZoneState(string $ZoneState) Set Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
+ * @method string getZoneState() Obtain Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
+ * @method void setZoneState(string $ZoneState) Set Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
  */
 
 /**
@@ -112,8 +112,8 @@ Names of availability zones throughout the entire network:
 class ZoneInfo extends AbstractModel
 {
     /**
-     * @var string Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+     * @var string Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -166,12 +166,12 @@ Names of availability zones throughout the entire network:
     public $ZoneId;
 
     /**
-     * @var string Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
+     * @var string Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
      */
     public $ZoneState;
     /**
-     * @param string $Zone Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+     * @param string $Zone Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -212,7 +212,7 @@ Names of availability zones throughout the entire network:
 <li> ap-nanjing-2 </li>
      * @param string $ZoneName Availability zone description, such as Guangzhou Zone 3.
      * @param string $ZoneId Availability zone ID
-     * @param string $ZoneState Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
+     * @param string $ZoneState Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
      */
     function __construct()
     {

@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDealName() Obtain Order name
  * @method void setDealName(string $DealName) Set Order name
+ * @method array getDealNames() Obtain Order name array
+ * @method void setDealNames(array $DealNames) Set Order name array
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,11 +37,17 @@ class CreateDBInstancesResponse extends AbstractModel
     public $DealName;
 
     /**
+     * @var array Order name array
+     */
+    public $DealNames;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
     /**
      * @param string $DealName Order name
+     * @param array $DealNames Order name array
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateDBInstancesResponse extends AbstractModel
         }
         if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
             $this->DealName = $param["DealName"];
+        }
+
+        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
+            $this->DealNames = $param["DealNames"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

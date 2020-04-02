@@ -42,6 +42,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterStatus(string $ClusterStatus) Set 
  * @method string getProperty() Obtain 
  * @method void setProperty(string $Property) Set 
+ * @method integer getClusterMaterNodeNum() Obtain Number of master nodes currently in the cluster
+ * @method void setClusterMaterNodeNum(integer $ClusterMaterNodeNum) Set Number of master nodes currently in the cluster
+ * @method string getImageId() Obtain ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setImageId(string $ImageId) Set ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getOsCustomizeType() Obtain OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setOsCustomizeType(string $OsCustomizeType) Set OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getContainerRuntime() Obtain Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setContainerRuntime(string $ContainerRuntime) Set Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getCreatedTime() Obtain Creation time
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time
+Note: this field may return null, indicating that no valid value is obtained.
  */
 
 /**
@@ -108,6 +126,35 @@ class Cluster extends AbstractModel
      * @var string 
      */
     public $Property;
+
+    /**
+     * @var integer Number of master nodes currently in the cluster
+     */
+    public $ClusterMaterNodeNum;
+
+    /**
+     * @var string ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $ImageId;
+
+    /**
+     * @var string OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $OsCustomizeType;
+
+    /**
+     * @var string Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $ContainerRuntime;
+
+    /**
+     * @var string Creation time
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $CreatedTime;
     /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
@@ -121,6 +168,15 @@ class Cluster extends AbstractModel
      * @param array $TagSpecification 
      * @param string $ClusterStatus 
      * @param string $Property 
+     * @param integer $ClusterMaterNodeNum Number of master nodes currently in the cluster
+     * @param string $ImageId ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $OsCustomizeType OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $ContainerRuntime Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $CreatedTime Creation time
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -186,6 +242,26 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("Property",$param) and $param["Property"] !== null) {
             $this->Property = $param["Property"];
+        }
+
+        if (array_key_exists("ClusterMaterNodeNum",$param) and $param["ClusterMaterNodeNum"] !== null) {
+            $this->ClusterMaterNodeNum = $param["ClusterMaterNodeNum"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
+            $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("ContainerRuntime",$param) and $param["ContainerRuntime"] !== null) {
+            $this->ContainerRuntime = $param["ContainerRuntime"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
         }
     }
 }

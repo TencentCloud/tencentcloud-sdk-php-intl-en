@@ -65,7 +65,8 @@ class ListFunctionsResponse extends AbstractModel
         if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
             $this->Functions = [];
             foreach ($param["Functions"] as $key => $value){
-                $obj = new Function();
+                $dynamicClassNameAvoidKeywordConflict = "Function";
+                $obj = new $dynamicClassNameAvoidKeywordConflict();
                 $obj->deserialize($value);
                 array_push($this->Functions, $obj);
             }

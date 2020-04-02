@@ -48,8 +48,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeactived(integer $Deactived) Set Queries if the policy has been deactivated
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getDeactivedDetail() Obtain 
- * @method void setDeactivedDetail(array $DeactivedDetail) Set 
+ * @method array getDeactivedDetail() Obtain List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDeactivedDetail(array $DeactivedDetail) Set List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -113,7 +115,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Deactived;
 
     /**
-     * @var array 
+     * @var array List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeactivedDetail;
     /**
@@ -132,7 +135,8 @@ Note: This field may return null, indicating that no valid value was found.
      * @param integer $OperateUinType 
      * @param integer $Deactived Queries if the policy has been deactivated
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $DeactivedDetail 
+     * @param array $DeactivedDetail List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

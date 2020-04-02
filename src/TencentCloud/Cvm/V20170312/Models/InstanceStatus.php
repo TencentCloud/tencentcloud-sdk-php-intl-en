@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *Describes instance states. For state types, see [here](/document/api/213/9452#INSTANCE_STATE).
+ *Describes instance states. For state types, see [here](/document/api/213/15753#InstanceStatus).
  */
 class InstanceStatus extends AbstractModel
 {

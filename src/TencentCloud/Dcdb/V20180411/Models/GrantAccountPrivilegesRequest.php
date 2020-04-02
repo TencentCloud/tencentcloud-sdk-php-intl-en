@@ -38,8 +38,8 @@ Stored procedure/function permission. Valid values: ALTER ROUTINE; EXECUTE
 Field permission. Valid values: INSERT; REFERENCES; SELECT; UPDATE
  * @method string getType() Obtain Type. Valid values: table; view; proc; func; \*. If `DbName` is a specific database name and `Type` is `\*`, the permissions of the database will be set (i.e., `db.\*`), in which case the `Object` parameter will be ignored
  * @method void setType(string $Type) Set Type. Valid values: table; view; proc; func; \*. If `DbName` is a specific database name and `Type` is `\*`, the permissions of the database will be set (i.e., `db.\*`), in which case the `Object` parameter will be ignored
- * @method string getObject() Obtain Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
- * @method void setObject(string $Object) Set Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
+ * @method string getObject() Obtain Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
+ * @method void setObject(string $Object) Set Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
  * @method string getColName() Obtain If `Type` = table and `ColName` is `\*`, the permissions will be granted to the table; if `ColName` is a specific field name, the permissions will be granted to the field
  * @method void setColName(string $ColName) Set If `Type` = table and `ColName` is `\*`, the permissions will be granted to the table; if `ColName` is a specific field name, the permissions will be granted to the field
  */
@@ -84,7 +84,7 @@ Field permission. Valid values: INSERT; REFERENCES; SELECT; UPDATE
     public $Type;
 
     /**
-     * @var string Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
+     * @var string Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
      */
     public $Object;
 
@@ -103,7 +103,7 @@ Table/view permission. Valid values: SELECT; INSERT; UPDATE; DELETE; CREATE; DRO
 Stored procedure/function permission. Valid values: ALTER ROUTINE; EXECUTE 
 Field permission. Valid values: INSERT; REFERENCES; SELECT; UPDATE
      * @param string $Type Type. Valid values: table; view; proc; func; \*. If `DbName` is a specific database name and `Type` is `\*`, the permissions of the database will be set (i.e., `db.\*`), in which case the `Object` parameter will be ignored
-     * @param string $Object Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
+     * @param string $Object Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
      * @param string $ColName If `Type` = table and `ColName` is `\*`, the permissions will be granted to the table; if `ColName` is a specific field name, the permissions will be granted to the field
      */
     function __construct()

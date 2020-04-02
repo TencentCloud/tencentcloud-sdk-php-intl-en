@@ -18,14 +18,16 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getZone() Obtain ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
- * @method void setZone(string $Zone) Set ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
+ * @method string getZone() Obtain The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
+ * @method void setZone(string $Zone) Set The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
  * @method integer getProjectId() Obtain ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
  * @method array getHostIds() Obtain ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
  * @method void setHostIds(array $HostIds) Set ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
  * @method array getHostIps() Obtain Master host IP used to create the CVM
  * @method void setHostIps(array $HostIps) Set Master host IP used to create the CVM
+ * @method string getHostId() Obtain 
+ * @method void setHostId(string $HostId) Set 
  */
 
 /**
@@ -34,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class Placement extends AbstractModel
 {
     /**
-     * @var string ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
+     * @var string The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
      */
     public $Zone;
 
@@ -52,11 +54,17 @@ class Placement extends AbstractModel
      * @var array Master host IP used to create the CVM
      */
     public $HostIps;
+
     /**
-     * @param string $Zone ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
+     * @var string 
+     */
+    public $HostId;
+    /**
+     * @param string $Zone The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
      * @param integer $ProjectId ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
      * @param array $HostIds ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
      * @param array $HostIps Master host IP used to create the CVM
+     * @param string $HostId 
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class Placement extends AbstractModel
 
         if (array_key_exists("HostIps",$param) and $param["HostIps"] !== null) {
             $this->HostIps = $param["HostIps"];
+        }
+
+        if (array_key_exists("HostId",$param) and $param["HostId"] !== null) {
+            $this->HostId = $param["HostId"];
         }
     }
 }

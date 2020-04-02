@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Physical server code
  * @method integer getPid() Obtain Billing ID
  * @method void setPid(integer $Pid) Set Billing ID
+ * @method string getUniqVpcId() Obtain Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+ * @method void setUniqVpcId(string $UniqVpcId) Set Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+ * @method string getUniqSubnetId() Obtain Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
  */
 
 /**
@@ -234,6 +238,16 @@ class DBInstance extends AbstractModel
      * @var integer Billing ID
      */
     public $Pid;
+
+    /**
+     * @var string Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+     */
+    public $UniqSubnetId;
     /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
@@ -265,6 +279,8 @@ class DBInstance extends AbstractModel
      * @param string $Version Instance version code
      * @param string $Type Physical server code
      * @param integer $Pid Billing ID
+     * @param string $UniqVpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+     * @param string $UniqSubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
      */
     function __construct()
     {
@@ -396,6 +412,14 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
         }
     }
 }

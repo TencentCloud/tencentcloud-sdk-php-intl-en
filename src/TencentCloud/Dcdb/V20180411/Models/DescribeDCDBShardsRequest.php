@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc.
- * @method array getShardInstanceIds() Obtain List of shard IDs.
- * @method void setShardInstanceIds(array $ShardInstanceIds) Set List of shard IDs.
+ * @method array getShardInstanceIds() Obtain Shard ID list.
+ * @method void setShardInstanceIds(array $ShardInstanceIds) Set Shard ID list.
  * @method integer getOffset() Obtain Offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
@@ -43,7 +43,7 @@ class DescribeDCDBShardsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array List of shard IDs.
+     * @var array Shard ID list.
      */
     public $ShardInstanceIds;
 
@@ -68,7 +68,7 @@ class DescribeDCDBShardsRequest extends AbstractModel
     public $OrderByType;
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc.
-     * @param array $ShardInstanceIds List of shard IDs.
+     * @param array $ShardInstanceIds Shard ID list.
      * @param integer $Offset Offset. Default value: 0
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      * @param string $OrderBy Sort by field. Only `createtime` is supported currently

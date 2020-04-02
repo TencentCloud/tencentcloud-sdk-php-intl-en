@@ -120,8 +120,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVip6(string $Vip6) Set Internal parameter, which can be ignored
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRemainBandwidthDuration() Obtain 
- * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set 
+ * @method string getRemainBandwidthDuration() Obtain Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -349,7 +351,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Vip6;
 
     /**
-     * @var string 
+     * @var string Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RemainBandwidthDuration;
     /**
@@ -404,7 +407,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Vip6 Internal parameter, which can be ignored
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RemainBandwidthDuration 
+     * @param string $RemainBandwidthDuration Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

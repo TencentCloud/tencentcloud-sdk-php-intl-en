@@ -30,6 +30,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setDefault(string $Default) Set Default value
  * @method ParamConstraint getConstraint() Obtain Parameter constraint
  * @method void setConstraint(ParamConstraint $Constraint) Set Parameter constraint
+ * @method boolean getHaveSetValue() Obtain Whether a value has been set. false: no, true: yes
+ * @method void setHaveSetValue(boolean $HaveSetValue) Set Whether a value has been set. false: no, true: yes
  */
 
 /**
@@ -62,6 +64,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var ParamConstraint Parameter constraint
      */
     public $Constraint;
+
+    /**
+     * @var boolean Whether a value has been set. false: no, true: yes
+     */
+    public $HaveSetValue;
     /**
      * @param string $Param Parameter name
      * @param string $Value Current parameter value
@@ -69,6 +76,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Default Default value
      * @param ParamConstraint $Constraint Parameter constraint
+     * @param boolean $HaveSetValue Whether a value has been set. false: no, true: yes
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Constraint",$param) and $param["Constraint"] !== null) {
             $this->Constraint = new ParamConstraint();
             $this->Constraint->deserialize($param["Constraint"]);
+        }
+
+        if (array_key_exists("HaveSetValue",$param) and $param["HaveSetValue"] !== null) {
+            $this->HaveSetValue = $param["HaveSetValue"];
         }
     }
 }

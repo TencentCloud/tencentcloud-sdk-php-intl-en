@@ -18,12 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDiskSize() Obtain The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
- * @method void setDiskSize(integer $DiskSize) Set The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
- * @method string getDiskType() Obtain The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
- * @method void setDiskType(string $DiskType) Set The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
- * @method string getDiskId() Obtain Data disk ID. Data disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
- * @method void setDiskId(string $DiskId) Set Data disk ID. Data disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
+ * @method integer getDiskSize() Obtain Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://cloud.tencent.com/document/product/213/4952). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+ * @method void setDiskSize(integer $DiskSize) Set Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://cloud.tencent.com/document/product/213/4952). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+ * @method string getDiskType() Obtain The type of the data disk. For more information regarding data disk types and limits, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for `ResizeInstanceDisk`.
+ * @method void setDiskType(string $DiskType) Set The type of the data disk. For more information regarding data disk types and limits, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for `ResizeInstanceDisk`.
+ * @method string getDiskId() Obtain Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
+ * @method void setDiskId(string $DiskId) Set Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
  * @method boolean getDeleteWithInstance() Obtain Whether to terminate the data disk when its CVM is terminated. Valid values:
 <li>TRUE: terminate the data disk when its CVM is terminated. This value only supports pay-as-you-go cloud disks billed on an hourly basis.
 <li>FALSE: retain the data disk when its CVM is terminated.<br>
@@ -40,18 +40,18 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setSnapshotId(string $SnapshotId) Set Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
 Note: This field may return null, indicating that no valid value is found.
- * @method boolean getEncrypt() Obtain Specifies whether the data disk is encrypted. Values: 
+ * @method boolean getEncrypt() Obtain Specifies whether the data disk is encrypted. Valid values: 
 <li>TRUE: encrypted
 <li>FALSE: not encrypted<br>
 Default value: FALSE<br>
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEncrypt(boolean $Encrypt) Set Specifies whether the data disk is encrypted. Values: 
+This parameter is only used with `RunInstances`.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setEncrypt(boolean $Encrypt) Set Specifies whether the data disk is encrypted. Valid values: 
 <li>TRUE: encrypted
 <li>FALSE: not encrypted<br>
 Default value: FALSE<br>
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is only used with `RunInstances`.
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 
 /**
@@ -60,17 +60,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class DataDisk extends AbstractModel
 {
     /**
-     * @var integer The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
+     * @var integer Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://cloud.tencent.com/document/product/213/4952). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
      */
     public $DiskSize;
 
     /**
-     * @var string The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
+     * @var string The type of the data disk. For more information regarding data disk types and limits, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for `ResizeInstanceDisk`.
      */
     public $DiskType;
 
     /**
-     * @var string Data disk ID. Data disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
+     * @var string Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
      */
     public $DiskId;
 
@@ -91,18 +91,18 @@ Note: This field may return null, indicating that no valid value is found.
     public $SnapshotId;
 
     /**
-     * @var boolean Specifies whether the data disk is encrypted. Values: 
+     * @var boolean Specifies whether the data disk is encrypted. Valid values: 
 <li>TRUE: encrypted
 <li>FALSE: not encrypted<br>
 Default value: FALSE<br>
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is only used with `RunInstances`.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Encrypt;
     /**
-     * @param integer $DiskSize The data disk size in GB. The minimum increment is 10 GB. Different types of data disks have different value ranges. For details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518). The default value is 0, indicating that no data disk is purchased. For more information, see the CVM documentation.
-     * @param string $DiskType The data disk type. For more information about the limits on different data disk types, see [Instance Specifications](/document/product/213/2177). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for the `ResizeInstanceDisk` API.
-     * @param string $DiskId Data disk ID. Data disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
+     * @param integer $DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://cloud.tencent.com/document/product/213/4952). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+     * @param string $DiskType The type of the data disk. For more information regarding data disk types and limits, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for `ResizeInstanceDisk`.
+     * @param string $DiskId Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
      * @param boolean $DeleteWithInstance Whether to terminate the data disk when its CVM is terminated. Valid values:
 <li>TRUE: terminate the data disk when its CVM is terminated. This value only supports pay-as-you-go cloud disks billed on an hourly basis.
 <li>FALSE: retain the data disk when its CVM is terminated.<br>
@@ -111,12 +111,12 @@ Currently this parameter is only used in the `RunInstances` API.
 Note: This field may return null, indicating that no valid value is found.
      * @param string $SnapshotId Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
 Note: This field may return null, indicating that no valid value is found.
-     * @param boolean $Encrypt Specifies whether the data disk is encrypted. Values: 
+     * @param boolean $Encrypt Specifies whether the data disk is encrypted. Valid values: 
 <li>TRUE: encrypted
 <li>FALSE: not encrypted<br>
 Default value: FALSE<br>
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is only used with `RunInstances`.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestrictState(string $RestrictState) Set Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getInstanceChargeType() Obtain Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+ * @method string getInstanceChargeType() Obtain Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
  * @method SystemDisk getSystemDisk() Obtain Information on the system disk of the instance
  * @method void setSystemDisk(SystemDisk $SystemDisk) Set Information on the system disk of the instance
  * @method array getDataDisks() Obtain Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
@@ -50,12 +50,14 @@ Note: This field may return null, indicating that no valid value is found.
  * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) Set Information on the VPC where the instance resides.
  * @method string getImageId() Obtain `ID` of the image used to create the instance.
  * @method void setImageId(string $ImageId) Set `ID` of the image used to create the instance.
- * @method string getRenewFlag() Obtain Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
- * @method void setRenewFlag(string $RenewFlag) Set Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+ * @method string getRenewFlag() Obtain Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances.
+ * @method void setRenewFlag(string $RenewFlag) Set Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances.
  * @method string getCreatedTime() Obtain Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method string getExpiredTime() Obtain Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method void setExpiredTime(string $ExpiredTime) Set Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method string getExpiredTime() Obtain Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
  * @method string getOsName() Obtain Operating system name.
  * @method void setOsName(string $OsName) Set Operating system name.
  * @method array getSecurityGroupIds() Obtain Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
@@ -79,13 +81,17 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
  * @method string getLatestOperationRequestId() Obtain 
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set 
  * @method string getDisasterRecoverGroupId() Obtain ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid value is obtained.
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIPv6Addresses() Obtain 
- * @method void setIPv6Addresses(string $IPv6Addresses) Set 
- * @method string getCamRoleName() Obtain 
- * @method void setCamRoleName(string $CamRoleName) Set 
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method array getIPv6Addresses() Obtain IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setIPv6Addresses(array $IPv6Addresses) Set IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getCamRoleName() Obtain CAM role name.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setCamRoleName(string $CamRoleName) Set CAM role name.
+Note: this field may return null, indicating that no valid value is obtained.
  */
 
 /**
@@ -129,7 +135,7 @@ class Instance extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+     * @var string Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
      */
     public $InstanceChargeType;
 
@@ -170,7 +176,8 @@ Note: This field may return null, indicating that no valid value is found.
     public $ImageId;
 
     /**
-     * @var string Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+     * @var string Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances.
      */
     public $RenewFlag;
 
@@ -180,7 +187,7 @@ Note: This field may return null, indicating that no valid value is found.
     public $CreatedTime;
 
     /**
-     * @var string Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     * @var string Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
      */
     public $ExpiredTime;
 
@@ -237,17 +244,19 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
 
     /**
      * @var string ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $DisasterRecoverGroupId;
 
     /**
-     * @var string 
+     * @var array IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $IPv6Addresses;
 
     /**
-     * @var string 
+     * @var string CAM role name.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $CamRoleName;
     /**
@@ -258,7 +267,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Memory Memory capacity; unit: `GB`.
      * @param string $RestrictState Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
      * @param string $InstanceName Instance name
-     * @param string $InstanceChargeType Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+     * @param string $InstanceChargeType Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
      * @param SystemDisk $SystemDisk Information on the system disk of the instance
      * @param array $DataDisks Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
      * @param array $PrivateIpAddresses List of private IPs of the instance's primary ENI.
@@ -267,9 +276,10 @@ Note: This field may return null, indicating that no valid value is found.
      * @param InternetAccessible $InternetAccessible Information on instance bandwidth.
      * @param VirtualPrivateCloud $VirtualPrivateCloud Information on the VPC where the instance resides.
      * @param string $ImageId `ID` of the image used to create the instance.
-     * @param string $RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+     * @param string $RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances.
      * @param string $CreatedTime Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
-     * @param string $ExpiredTime Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     * @param string $ExpiredTime Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
      * @param string $OsName Operating system name.
      * @param array $SecurityGroupIds Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
      * @param LoginSettings $LoginSettings Login settings of the instance. Currently only the key associated with the instance is returned.
@@ -282,9 +292,11 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
      * @param string $LatestOperationState 
      * @param string $LatestOperationRequestId 
      * @param string $DisasterRecoverGroupId ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $IPv6Addresses 
-     * @param string $CamRoleName 
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param array $IPv6Addresses IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $CamRoleName CAM role name.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {

@@ -18,17 +18,45 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getSwitch() Obtain Switch, which can be set to on or off.
+ * @method void setSwitch(string $Switch) Set Switch, which can be set to on or off.
+ * @method string getAccessKey() Obtain Access ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAccessKey(string $AccessKey) Set Access ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSecretKey() Obtain Key.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSecretKey(string $SecretKey) Set Key.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
- *s3 source station back to source authentication.
+ *Origin access authentication for S3 bucket.
  */
 class AwsPrivateAccess extends AbstractModel
 {
+    /**
+     * @var string Switch, which can be set to on or off.
+     */
+    public $Switch;
 
     /**
+     * @var string Access ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AccessKey;
 
+    /**
+     * @var string Key.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SecretKey;
+    /**
+     * @param string $Switch Switch, which can be set to on or off.
+     * @param string $AccessKey Access ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SecretKey Key.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -42,6 +70,16 @@ class AwsPrivateAccess extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
+        }
 
+        if (array_key_exists("AccessKey",$param) and $param["AccessKey"] !== null) {
+            $this->AccessKey = $param["AccessKey"];
+        }
+
+        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
+            $this->SecretKey = $param["SecretKey"];
+        }
     }
 }

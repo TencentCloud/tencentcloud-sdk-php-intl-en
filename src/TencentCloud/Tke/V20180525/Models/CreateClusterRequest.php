@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Advanced configuration information of the node
  * @method array getExistedInstancesForNode() Obtain Configuration information of an existing instance
  * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) Set Configuration information of an existing instance
- * @method array getInstanceDataDiskMountSettings() Obtain 
- * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) Set 
+ * @method array getInstanceDataDiskMountSettings() Obtain CVM type and the corresponding data disk mounting configuration information.
+ * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) Set CVM type and the corresponding data disk mounting configuration information.
  */
 
 /**
@@ -77,7 +77,7 @@ class CreateClusterRequest extends AbstractModel
     public $ExistedInstancesForNode;
 
     /**
-     * @var array 
+     * @var array CVM type and the corresponding data disk mounting configuration information.
      */
     public $InstanceDataDiskMountSettings;
     /**
@@ -88,7 +88,7 @@ class CreateClusterRequest extends AbstractModel
      * @param ClusterAdvancedSettings $ClusterAdvancedSettings Advanced configuration information of the cluster
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Advanced configuration information of the node
      * @param array $ExistedInstancesForNode Configuration information of an existing instance
-     * @param array $InstanceDataDiskMountSettings 
+     * @param array $InstanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
      */
     function __construct()
     {

@@ -18,8 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOperation() Obtain Operations on an instance.
- * @method void setOperation(string $Operation) Set Operations on an instance.
+ * @method string getOperation() Obtain Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
+ * @method void setOperation(string $Operation) Set Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getCurrentCount() Obtain Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class OperationCountLimit extends AbstractModel
 {
     /**
-     * @var string Operations on an instance.
+     * @var string Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
      */
     public $Operation;
 
@@ -53,7 +53,7 @@ class OperationCountLimit extends AbstractModel
      */
     public $LimitCount;
     /**
-     * @param string $Operation Operations on an instance.
+     * @param string $Operation Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
      * @param string $InstanceId Instance ID.
      * @param integer $CurrentCount Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
      * @param integer $LimitCount Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.

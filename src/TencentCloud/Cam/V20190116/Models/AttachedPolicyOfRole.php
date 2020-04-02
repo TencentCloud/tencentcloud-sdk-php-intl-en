@@ -30,12 +30,18 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method integer getCreateMode() Obtain Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
  * @method void setCreateMode(integer $CreateMode) Set Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
- * @method integer getDeactived() Obtain Queries if the policy has been deactivated
+ * @method integer getDeactived() Obtain Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDeactived(integer $Deactived) Set Queries if the policy has been deactivated
+ * @method void setDeactived(integer $Deactived) Set Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getDeactivedDetail() Obtain 
- * @method void setDeactivedDetail(array $DeactivedDetail) Set 
+ * @method array getDeactivedDetail() Obtain List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDeactivedDetail(array $DeactivedDetail) Set List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDescription() Obtain Policy description
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDescription(string $Description) Set Policy description
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 
 /**
@@ -70,15 +76,22 @@ Note: This field may return null, indicating that no valid value was found.
     public $CreateMode;
 
     /**
-     * @var integer Queries if the policy has been deactivated
+     * @var integer Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Deactived;
 
     /**
-     * @var array 
+     * @var array List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeactivedDetail;
+
+    /**
+     * @var string Policy description
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Description;
     /**
      * @param integer $PolicyId Policy ID
      * @param string $PolicyName Policy name
@@ -86,9 +99,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $PolicyType Policy type. `User` indicates custom policy; `QCS` indicates preset policy
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $CreateMode Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
-     * @param integer $Deactived Queries if the policy has been deactivated
+     * @param integer $Deactived Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $DeactivedDetail 
+     * @param array $DeactivedDetail List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Description Policy description
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -128,6 +144,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DeactivedDetail",$param) and $param["DeactivedDetail"] !== null) {
             $this->DeactivedDetail = $param["DeactivedDetail"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

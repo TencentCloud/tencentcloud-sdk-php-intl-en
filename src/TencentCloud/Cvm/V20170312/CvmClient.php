@@ -59,7 +59,7 @@ If you currently use a password to log in, you will no longer be able to do so a
 * You specify the image ID or set filters to query the details of certain images.
 * You can specify `Offset` and `Limit` to select a certain part of the results. By default, the information on the first 20 matching results is returned.
 * @method Models\DescribeImportImageOsResponse DescribeImportImageOs(Models\DescribeImportImageOsRequest $req) This API is used to query the list of supported operating systems of imported images.
-* @method Models\DescribeInstanceFamilyConfigsResponse DescribeInstanceFamilyConfigs(Models\DescribeInstanceFamilyConfigsRequest $req) This API is used to query the list of model families that are available for the current user and in the current region.
+* @method Models\DescribeInstanceFamilyConfigsResponse DescribeInstanceFamilyConfigs(Models\DescribeInstanceFamilyConfigsRequest $req) This API is used to query a list of model families available to the current user in the current region.
 * @method Models\DescribeInstanceTypeConfigsResponse DescribeInstanceTypeConfigs(Models\DescribeInstanceTypeConfigsRequest $req) This API is used to query the model configuration of an instance.
 
 * You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see `Filter`.

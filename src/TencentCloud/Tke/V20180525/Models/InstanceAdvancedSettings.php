@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) Set 
  * @method array getDataDisks() Obtain 
  * @method void setDataDisks(array $DataDisks) Set 
+ * @method InstanceExtraArgs getExtraArgs() Obtain Information about node custom parameters
+ * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Information about node custom parameters
  */
 
 /**
@@ -66,6 +68,11 @@ class InstanceAdvancedSettings extends AbstractModel
      * @var array 
      */
     public $DataDisks;
+
+    /**
+     * @var InstanceExtraArgs Information about node custom parameters
+     */
+    public $ExtraArgs;
     /**
      * @param string $MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
      * @param string $DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
@@ -73,6 +80,7 @@ class InstanceAdvancedSettings extends AbstractModel
      * @param integer $Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run kubectl uncordon nodename to enable this node for scheduling.
      * @param array $Labels 
      * @param array $DataDisks 
+     * @param InstanceExtraArgs $ExtraArgs Information about node custom parameters
      */
     function __construct()
     {
@@ -118,6 +126,11 @@ class InstanceAdvancedSettings extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
+        }
+
+        if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
+            $this->ExtraArgs = new InstanceExtraArgs();
+            $this->ExtraArgs->deserialize($param["ExtraArgs"]);
         }
     }
 }

@@ -18,17 +18,37 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getInstanceType() Obtain CVM instance type
+ * @method void setInstanceType(string $InstanceType) Set CVM instance type
+ * @method array getDataDisks() Obtain Data disk mounting information
+ * @method void setDataDisks(array $DataDisks) Set Data disk mounting information
+ * @method string getZone() Obtain Availability zone where the CVM instance is located
+ * @method void setZone(string $Zone) Set Availability zone where the CVM instance is located
  */
 
 /**
- *CVM instance data disk mount configuration
+ *Mounting configuration of the CVM instance data disk
  */
 class InstanceDataDiskMountSetting extends AbstractModel
 {
+    /**
+     * @var string CVM instance type
+     */
+    public $InstanceType;
 
     /**
+     * @var array Data disk mounting information
+     */
+    public $DataDisks;
 
+    /**
+     * @var string Availability zone where the CVM instance is located
+     */
+    public $Zone;
+    /**
+     * @param string $InstanceType CVM instance type
+     * @param array $DataDisks Data disk mounting information
+     * @param string $Zone Availability zone where the CVM instance is located
      */
     function __construct()
     {
@@ -42,6 +62,21 @@ class InstanceDataDiskMountSetting extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
 
+        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+            $this->DataDisks = [];
+            foreach ($param["DataDisks"] as $key => $value){
+                $obj = new DataDisk();
+                $obj->deserialize($value);
+                array_push($this->DataDisks, $obj);
+            }
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
     }
 }

@@ -18,7 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getResourceType() Obtain 
+ * @method void setResourceType(string $ResourceType) Set 
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
  */
 
 /**
@@ -26,9 +29,18 @@ use TencentCloud\Common\AbstractModel;
  */
 class TagSpecification extends AbstractModel
 {
+    /**
+     * @var string 
+     */
+    public $ResourceType;
 
     /**
-
+     * @var array 
+     */
+    public $Tags;
+    /**
+     * @param string $ResourceType 
+     * @param array $Tags 
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class TagSpecification extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
 
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getAppId() Obtain APPID
- * @method void setAppId(integer $AppId) Set APPID
+ * @method integer getAppId() Obtain AppID
+ * @method void setAppId(integer $AppId) Set AppID
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getRegion() Obtain Region
@@ -64,14 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one master and one slave; 3: one master and two slaves
  * @method integer getIsTmp() Obtain Temporary instance flag. 0: non-temporary instance
  * @method void setIsTmp(integer $IsTmp) Set Temporary instance flag. 0: non-temporary instance
- * @method string getExclusterId() Obtain Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
- * @method void setExclusterId(string $ExclusterId) Set Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
+ * @method string getExclusterId() Obtain Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
+ * @method void setExclusterId(string $ExclusterId) Set Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
  * @method string getUniqueVpcId() Obtain VPC ID in string type
  * @method void setUniqueVpcId(string $UniqueVpcId) Set VPC ID in string type
  * @method string getUniqueSubnetId() Obtain VPC subnet ID in string type
  * @method void setUniqueSubnetId(string $UniqueSubnetId) Set VPC subnet ID in string type
- * @method integer getId() Obtain Numeric ID of an instance (this field is obsolete and should not be depended on)
- * @method void setId(integer $Id) Set Numeric ID of an instance (this field is obsolete and should not be depended on)
+ * @method integer getId() Obtain Numeric ID of instance (this field is obsolete and should not be depended on)
+ * @method void setId(integer $Id) Set Numeric ID of instance (this field is obsolete and should not be depended on)
  * @method string getWanDomain() Obtain Domain name for public network access, which can be resolved by the public network
  * @method void setWanDomain(string $WanDomain) Set Domain name for public network access, which can be resolved by the public network
  * @method string getWanVip() Obtain Public IP address, which can be accessed over the public network
@@ -96,6 +96,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setWanStatus(integer $WanStatus) Set Public network access status. 0: not enabled; 1: enabled; 2: disabled; 3: enabling
  * @method integer getIsAuditSupported() Obtain Whether the instance supports audit. 1: yes; 0: no
  * @method void setIsAuditSupported(integer $IsAuditSupported) Set Whether the instance supports audit. 1: yes; 0: no
+ * @method integer getCpu() Obtain Number of CPU cores
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores
  */
 
 /**
@@ -114,7 +116,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer APPID
+     * @var integer AppID
      */
     public $AppId;
 
@@ -219,7 +221,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $IsTmp;
 
     /**
-     * @var string Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
+     * @var string Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
      */
     public $ExclusterId;
 
@@ -234,7 +236,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $UniqueSubnetId;
 
     /**
-     * @var integer Numeric ID of an instance (this field is obsolete and should not be depended on)
+     * @var integer Numeric ID of instance (this field is obsolete and should not be depended on)
      */
     public $Id;
 
@@ -293,10 +295,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer Whether the instance supports audit. 1: yes; 0: no
      */
     public $IsAuditSupported;
+
+    /**
+     * @var integer Number of CPU cores
+     */
+    public $Cpu;
     /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
-     * @param integer $AppId APPID
+     * @param integer $AppId AppID
      * @param integer $ProjectId Project ID
      * @param string $Region Region
      * @param string $Zone AZ
@@ -317,10 +324,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $ShardDetail Shard details
      * @param integer $NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
      * @param integer $IsTmp Temporary instance flag. 0: non-temporary instance
-     * @param string $ExclusterId Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
+     * @param string $ExclusterId Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
      * @param string $UniqueVpcId VPC ID in string type
      * @param string $UniqueSubnetId VPC subnet ID in string type
-     * @param integer $Id Numeric ID of an instance (this field is obsolete and should not be depended on)
+     * @param integer $Id Numeric ID of instance (this field is obsolete and should not be depended on)
      * @param string $WanDomain Domain name for public network access, which can be resolved by the public network
      * @param string $WanVip Public IP address, which can be accessed over the public network
      * @param integer $WanPort Public network port
@@ -333,6 +340,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $WanStatus Public network access status. 0: not enabled; 1: enabled; 2: disabled; 3: enabling
      * @param integer $IsAuditSupported Whether the instance supports audit. 1: yes; 0: no
+     * @param integer $Cpu Number of CPU cores
      */
     function __construct()
     {
@@ -501,6 +509,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsAuditSupported",$param) and $param["IsAuditSupported"] !== null) {
             $this->IsAuditSupported = $param["IsAuditSupported"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPU(integer $CPU) Set Number of CPU cores.
  * @method integer getMemory() Obtain Memory capacity; unit: `GB`.
  * @method void setMemory(integer $Memory) Set Memory capacity; unit: `GB`.
+ * @method integer getFPGA() Obtain Number of FPGA cores; unit: core.
+ * @method void setFPGA(integer $FPGA) Set Number of FPGA cores; unit: core.
  */
 
 /**
@@ -66,6 +68,11 @@ class InstanceTypeConfig extends AbstractModel
      * @var integer Memory capacity; unit: `GB`.
      */
     public $Memory;
+
+    /**
+     * @var integer Number of FPGA cores; unit: core.
+     */
+    public $FPGA;
     /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
@@ -73,6 +80,7 @@ class InstanceTypeConfig extends AbstractModel
      * @param integer $GPU Number of GPU cores.
      * @param integer $CPU Number of CPU cores.
      * @param integer $Memory Memory capacity; unit: `GB`.
+     * @param integer $FPGA Number of FPGA cores; unit: core.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class InstanceTypeConfig extends AbstractModel
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
             $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("FPGA",$param) and $param["FPGA"] !== null) {
+            $this->FPGA = $param["FPGA"];
         }
     }
 }

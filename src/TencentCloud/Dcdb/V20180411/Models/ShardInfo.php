@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one master and one slave; 3: one master and two slaves
  * @method integer getPid() Obtain Product type ID (this field is obsolete and should not be depended on)
  * @method void setPid(integer $Pid) Set Product type ID (this field is obsolete and should not be depended on)
+ * @method integer getCpu() Obtain Number of CPU cores
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores
  */
 
 /**
@@ -87,6 +89,11 @@ class ShardInfo extends AbstractModel
      * @var integer Product type ID (this field is obsolete and should not be depended on)
      */
     public $Pid;
+
+    /**
+     * @var integer Number of CPU cores
+     */
+    public $Cpu;
     /**
      * @param string $ShardInstanceId Shard ID
      * @param string $ShardSerialId Shard set ID
@@ -97,6 +104,7 @@ class ShardInfo extends AbstractModel
      * @param integer $ShardId Numeric ID of a shard
      * @param integer $NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
      * @param integer $Pid Product type ID (this field is obsolete and should not be depended on)
+     * @param integer $Cpu Number of CPU cores
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ShardInfo extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

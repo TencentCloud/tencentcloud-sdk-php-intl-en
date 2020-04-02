@@ -36,8 +36,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRoleType(string $RoleType) Set User role. Valid values: user, system
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSessionDuration() Obtain 
- * @method void setSessionDuration(integer $SessionDuration) Set 
+ * @method integer getSessionDuration() Obtain Valid period
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionDuration(integer $SessionDuration) Set Valid period
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDeletionTaskId() Obtain 
+ * @method void setDeletionTaskId(string $DeletionTaskId) Set 
  */
 
 /**
@@ -87,9 +91,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RoleType;
 
     /**
-     * @var integer 
+     * @var integer Valid period
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SessionDuration;
+
+    /**
+     * @var string 
+     */
+    public $DeletionTaskId;
     /**
      * @param string $RoleId Role ID
      * @param string $RoleName Role name
@@ -100,7 +110,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ConsoleLogin If login is allowed for the role
      * @param string $RoleType User role. Valid values: user, system
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $SessionDuration 
+     * @param integer $SessionDuration Valid period
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DeletionTaskId 
      */
     function __construct()
     {
@@ -148,6 +160,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SessionDuration",$param) and $param["SessionDuration"] !== null) {
             $this->SessionDuration = $param["SessionDuration"];
+        }
+
+        if (array_key_exists("DeletionTaskId",$param) and $param["DeletionTaskId"] !== null) {
+            $this->DeletionTaskId = $param["DeletionTaskId"];
         }
     }
 }

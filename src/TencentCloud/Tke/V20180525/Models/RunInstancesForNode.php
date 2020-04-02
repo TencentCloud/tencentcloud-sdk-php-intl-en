@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeRole(string $NodeRole) Set Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
  * @method array getRunInstancesPara() Obtain Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730). Pass any parameter other than common parameters. ImageId will be replaced with the image corresponding to the TKE cluster operating system.
  * @method void setRunInstancesPara(array $RunInstancesPara) Set Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730). Pass any parameter other than common parameters. ImageId will be replaced with the image corresponding to the TKE cluster operating system.
+ * @method array getInstanceAdvancedSettingsOverrides() Obtain An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
+ * @method void setInstanceAdvancedSettingsOverrides(array $InstanceAdvancedSettingsOverrides) Set An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
  */
 
 /**
@@ -38,9 +40,15 @@ class RunInstancesForNode extends AbstractModel
      * @var array Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730). Pass any parameter other than common parameters. ImageId will be replaced with the image corresponding to the TKE cluster operating system.
      */
     public $RunInstancesPara;
+
+    /**
+     * @var array An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
+     */
+    public $InstanceAdvancedSettingsOverrides;
     /**
      * @param string $NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
      * @param array $RunInstancesPara Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730). Pass any parameter other than common parameters. ImageId will be replaced with the image corresponding to the TKE cluster operating system.
+     * @param array $InstanceAdvancedSettingsOverrides An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class RunInstancesForNode extends AbstractModel
 
         if (array_key_exists("RunInstancesPara",$param) and $param["RunInstancesPara"] !== null) {
             $this->RunInstancesPara = $param["RunInstancesPara"];
+        }
+
+        if (array_key_exists("InstanceAdvancedSettingsOverrides",$param) and $param["InstanceAdvancedSettingsOverrides"] !== null) {
+            $this->InstanceAdvancedSettingsOverrides = [];
+            foreach ($param["InstanceAdvancedSettingsOverrides"] as $key => $value){
+                $obj = new InstanceAdvancedSettings();
+                $obj->deserialize($value);
+                array_push($this->InstanceAdvancedSettingsOverrides, $obj);
+            }
         }
     }
 }

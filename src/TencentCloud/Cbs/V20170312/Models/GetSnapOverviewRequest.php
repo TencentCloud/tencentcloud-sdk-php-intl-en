@@ -14,33 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getValue() Obtain 
- * @method void setValue(string $Value) Set 
+
  */
 
 /**
- *k8s tags, generally exist as an array
+ *GetSnapOverview request structure.
  */
-class Label extends AbstractModel
+class GetSnapOverviewRequest extends AbstractModel
 {
-    /**
-     * @var string 
-     */
-    public $Name;
 
     /**
-     * @var string 
-     */
-    public $Value;
-    /**
-     * @param string $Name 
-     * @param string $Value 
+
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class Label extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
-        }
     }
 }

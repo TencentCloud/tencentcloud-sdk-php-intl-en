@@ -60,9 +60,9 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setRenewFlag(string $RenewFlag) Set Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
 Note: This field may return null, indicating that no valid value was found.
- * @method boolean getDeadlineError() Obtain This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+ * @method boolean getDeadlineError() Obtain This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setDeadlineError(boolean $DeadlineError) Set This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+ * @method void setDeadlineError(boolean $DeadlineError) Set This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found.
  * @method boolean getIsReturnable() Obtain Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
 Note: This field may return null, indicating that no valid value was found.
@@ -211,7 +211,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $RenewFlag;
 
     /**
-     * @var boolean This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+     * @var boolean This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $DeadlineError;
@@ -310,7 +310,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
 Note: This field may return null, indicating that no valid value was found.
-     * @param boolean $DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+     * @param boolean $DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found.
      * @param boolean $IsReturnable Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
 Note: This field may return null, indicating that no valid value was found.

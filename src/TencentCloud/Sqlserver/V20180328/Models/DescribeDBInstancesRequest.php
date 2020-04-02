@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIdSet(array $InstanceIdSet) Set One or more instance IDs in the format of mssql-si2823jyl
  * @method integer getPayMode() Obtain Retrieves billing type. 0: pay-as-you-go
  * @method void setPayMode(integer $PayMode) Set Retrieves billing type. 0: pay-as-you-go
+ * @method string getVpcId() Obtain Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+ * @method void setVpcId(string $VpcId) Set Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+ * @method string getSubnetId() Obtain Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+ * @method void setSubnetId(string $SubnetId) Set Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
  */
 
 /**
@@ -102,6 +106,16 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var integer Retrieves billing type. 0: pay-as-you-go
      */
     public $PayMode;
+
+    /**
+     * @var string Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+     */
+    public $VpcId;
+
+    /**
+     * @var string Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+     */
+    public $SubnetId;
     /**
      * @param integer $ProjectId Project ID
      * @param integer $Status Instance status. Valid values:
@@ -121,6 +135,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $Limit Number of results per page. Value range: 1–100. Default value: 100
      * @param array $InstanceIdSet One or more instance IDs in the format of mssql-si2823jyl
      * @param integer $PayMode Retrieves billing type. 0: pay-as-you-go
+     * @param string $VpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+     * @param string $SubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

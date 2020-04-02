@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Availability zone.
  * @method string getInstanceType() Obtain Instance model.
  * @method void setInstanceType(string $InstanceType) Set Instance model.
- * @method string getInstanceChargeType() Obtain Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+ * @method string getInstanceChargeType() Obtain Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
  * @method integer getNetworkCard() Obtain ENI type. For example, 25 represents an ENI of 25 GB.
  * @method void setNetworkCard(integer $NetworkCard) Set ENI type. For example, 25 represents an ENI of 25 GB.
  * @method Externals getExternals() Obtain Additional data.
@@ -44,10 +44,10 @@ Note: This field may return null, indicating that no valid value is found.
  * @method void setStatus(string $Status) Set Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
  * @method ItemPrice getPrice() Obtain Price of an instance model.
  * @method void setPrice(ItemPrice $Price) Set Price of an instance model.
- * @method string getSoldOutReason() Obtain Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSoldOutReason(string $SoldOutReason) Set Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSoldOutReason() Obtain Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setSoldOutReason(string $SoldOutReason) Set Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained.
  */
 
 /**
@@ -66,7 +66,7 @@ class InstanceTypeQuotaItem extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+     * @var string Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
      */
     public $InstanceChargeType;
 
@@ -117,14 +117,14 @@ Note: This field may return null, indicating that no valid value is found.
     public $Price;
 
     /**
-     * @var string Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $SoldOutReason;
     /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
-     * @param string $InstanceChargeType Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+     * @param string $InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
      * @param integer $NetworkCard ENI type. For example, 25 represents an ENI of 25 GB.
      * @param Externals $Externals Additional data.
 Note: This field may return null, indicating that no valid value is found.
@@ -135,8 +135,8 @@ Note: This field may return null, indicating that no valid value is found.
      * @param array $LocalDiskTypeList List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
      * @param string $Status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
      * @param ItemPrice $Price Price of an instance model.
-     * @param string $SoldOutReason Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SoldOutReason Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {

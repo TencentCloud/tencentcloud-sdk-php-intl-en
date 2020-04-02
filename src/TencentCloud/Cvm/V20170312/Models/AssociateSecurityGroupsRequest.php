@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getSecurityGroupIds() Obtain ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
- * @method array getInstanceIds() Obtain ID(s) of the instance(s) to be associated, such as `ins-lesecurk`. You can specify multiple instances.
- * @method void setInstanceIds(array $InstanceIds) Set ID(s) of the instance(s) to be associated, such as `ins-lesecurk`. You can specify multiple instances.
+ * @method array getInstanceIds() Obtain ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
+ * @method void setInstanceIds(array $InstanceIds) Set ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
  */
 
 /**
@@ -35,12 +35,12 @@ class AssociateSecurityGroupsRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var array ID(s) of the instance(s) to be associated, such as `ins-lesecurk`. You can specify multiple instances.
+     * @var array ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
      */
     public $InstanceIds;
     /**
      * @param array $SecurityGroupIds ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
-     * @param array $InstanceIds ID(s) of the instance(s) to be associated, such as `ins-lesecurk`. You can specify multiple instances.
+     * @param array $InstanceIds ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
      */
     function __construct()
     {

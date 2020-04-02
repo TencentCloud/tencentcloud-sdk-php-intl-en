@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeRole(string $NodeRole) Set Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
  * @method ExistedInstancesPara getExistedInstancesPara() Obtain Reinstallation parameter of existing instances
  * @method void setExistedInstancesPara(ExistedInstancesPara $ExistedInstancesPara) Set Reinstallation parameter of existing instances
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettingsOverride() Obtain Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+ * @method void setInstanceAdvancedSettingsOverride(InstanceAdvancedSettings $InstanceAdvancedSettingsOverride) Set Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
  */
 
 /**
@@ -38,9 +40,15 @@ class ExistedInstancesForNode extends AbstractModel
      * @var ExistedInstancesPara Reinstallation parameter of existing instances
      */
     public $ExistedInstancesPara;
+
+    /**
+     * @var InstanceAdvancedSettings Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+     */
+    public $InstanceAdvancedSettingsOverride;
     /**
      * @param string $NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
      * @param ExistedInstancesPara $ExistedInstancesPara Reinstallation parameter of existing instances
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettingsOverride Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
      */
     function __construct()
     {
@@ -61,6 +69,11 @@ class ExistedInstancesForNode extends AbstractModel
         if (array_key_exists("ExistedInstancesPara",$param) and $param["ExistedInstancesPara"] !== null) {
             $this->ExistedInstancesPara = new ExistedInstancesPara();
             $this->ExistedInstancesPara->deserialize($param["ExistedInstancesPara"]);
+        }
+
+        if (array_key_exists("InstanceAdvancedSettingsOverride",$param) and $param["InstanceAdvancedSettingsOverride"] !== null) {
+            $this->InstanceAdvancedSettingsOverride = new InstanceAdvancedSettings();
+            $this->InstanceAdvancedSettingsOverride->deserialize($param["InstanceAdvancedSettingsOverride"]);
         }
     }
 }

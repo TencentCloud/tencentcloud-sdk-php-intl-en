@@ -18,29 +18,25 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getValue() Obtain 
- * @method void setValue(string $Value) Set 
+ * @method array getKubelet() Obtain Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setKubelet(array $Kubelet) Set Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained.
  */
 
 /**
- *k8s tags, generally exist as an array
+ *Node custom parameter
  */
-class Label extends AbstractModel
+class InstanceExtraArgs extends AbstractModel
 {
     /**
-     * @var string 
+     * @var array Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained.
      */
-    public $Name;
-
+    public $Kubelet;
     /**
-     * @var string 
-     */
-    public $Value;
-    /**
-     * @param string $Name 
-     * @param string $Value 
+     * @param array $Kubelet Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -54,12 +50,8 @@ class Label extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("Kubelet",$param) and $param["Kubelet"] !== null) {
+            $this->Kubelet = $param["Kubelet"];
         }
     }
 }
