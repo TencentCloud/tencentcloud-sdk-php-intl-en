@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterEndpointVipStatus request structure.
+ *
 
- */
-
-/**
- *DescribeClusterEndpointVipStatus request structure.
  */
 class DescribeClusterEndpointVipStatusRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeClusterEndpointVipStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServiceTemplate request structure.
+ *
  * @method string getServiceTemplateName() Obtain Template name of the protocol port
  * @method void setServiceTemplateName(string $ServiceTemplateName) Set Template name of the protocol port
  * @method array getServices() Obtain It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
  * @method void setServices(array $Services) Set It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
- */
-
-/**
- *CreateServiceTemplate request structure.
  */
 class CreateServiceTemplateRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateServiceTemplateRequest extends AbstractModel
      * @var array It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     public $Services;
+
     /**
      * @param string $ServiceTemplateName Template name of the protocol port
      * @param array $Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
@@ -46,6 +45,7 @@ class CreateServiceTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

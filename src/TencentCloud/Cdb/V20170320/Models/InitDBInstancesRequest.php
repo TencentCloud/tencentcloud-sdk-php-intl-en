@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InitDBInstances request structure.
+ *
  * @method array getInstanceIds() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method string getNewPassword() Obtain New password of the instance. Rule: It can only contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special characters (!@#$%^*()).
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParameters(array $Parameters) Set List of instance parameters. Currently, "character_set_server" and "lower_case_table_names" are supported, whose value ranges are ["utf8","latin1","gbk","utf8mb4"] and ["0","1"], respectively.
  * @method integer getVport() Obtain Instance port. Value range: [1024, 65535].
  * @method void setVport(integer $Vport) Set Instance port. Value range: [1024, 65535].
- */
-
-/**
- *InitDBInstances request structure.
  */
 class InitDBInstancesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class InitDBInstancesRequest extends AbstractModel
      * @var integer Instance port. Value range: [1024, 65535].
      */
     public $Vport;
+
     /**
      * @param array $InstanceIds Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
      * @param string $NewPassword New password of the instance. Rule: It can only contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special characters (!@#$%^*()).
@@ -62,6 +61,7 @@ class InitDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

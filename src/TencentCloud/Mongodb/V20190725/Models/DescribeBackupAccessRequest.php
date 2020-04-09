@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupAccess request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method string getBackupName() Obtain Name of the backup file for which to get the download permission
  * @method void setBackupName(string $BackupName) Set Name of the backup file for which to get the download permission
- */
-
-/**
- *DescribeBackupAccess request structure.
  */
 class DescribeBackupAccessRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBackupAccessRequest extends AbstractModel
      * @var string Name of the backup file for which to get the download permission
      */
     public $BackupName;
+
     /**
      * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      * @param string $BackupName Name of the backup file for which to get the download permission
@@ -46,6 +45,7 @@ class DescribeBackupAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

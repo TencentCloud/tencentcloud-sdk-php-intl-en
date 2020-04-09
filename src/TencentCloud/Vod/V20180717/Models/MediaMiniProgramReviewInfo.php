@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * WeChat Mini Program audit information
+ *
  * @method array getMiniProgramReviewList() Obtain Audit information list.
  * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audit information list.
- */
-
-/**
- *WeChat Mini Program audit information
  */
 class MediaMiniProgramReviewInfo extends AbstractModel
 {
@@ -31,6 +29,7 @@ class MediaMiniProgramReviewInfo extends AbstractModel
      * @var array Audit information list.
      */
     public $MiniProgramReviewList;
+
     /**
      * @param array $MiniProgramReviewList Audit information list.
      */
@@ -38,6 +37,7 @@ class MediaMiniProgramReviewInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

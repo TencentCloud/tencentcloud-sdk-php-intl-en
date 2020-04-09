@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ClearInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getPassword() Obtain Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
  * @method void setPassword(string $Password) Set Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
- */
-
-/**
- *ClearInstance request structure.
  */
 class ClearInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClearInstanceRequest extends AbstractModel
      * @var string Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
      */
     public $Password;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $Password Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
@@ -46,6 +45,7 @@ class ClearInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

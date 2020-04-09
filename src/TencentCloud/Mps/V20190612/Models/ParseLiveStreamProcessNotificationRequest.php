@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ParseLiveStreamProcessNotification request structure.
+ *
  * @method string getContent() Obtain Live stream event notification obtained from CMQ.
  * @method void setContent(string $Content) Set Live stream event notification obtained from CMQ.
- */
-
-/**
- *ParseLiveStreamProcessNotification request structure.
  */
 class ParseLiveStreamProcessNotificationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ParseLiveStreamProcessNotificationRequest extends AbstractModel
      * @var string Live stream event notification obtained from CMQ.
      */
     public $Content;
+
     /**
      * @param string $Content Live stream event notification obtained from CMQ.
      */
@@ -38,6 +37,7 @@ class ParseLiveStreamProcessNotificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

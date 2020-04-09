@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance details
+ *
  * @method integer getWanStatus() Obtain Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
  * @method void setWanStatus(integer $WanStatus) Set Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
  * @method string getZone() Obtain AZ information
@@ -112,10 +114,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Instance details
  */
 class InstanceInfo extends AbstractModel
 {
@@ -325,6 +323,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeployGroupId;
+
     /**
      * @param integer $WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      * @param string $Zone AZ information
@@ -378,6 +377,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

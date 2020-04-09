@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Set of returned ACL results
+ *
  * @method integer getTotalCount() Obtain Number of eligible data entries
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible data entries
  * @method array getAclList() Obtain ACL list
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAclList(array $AclList) Set ACL list
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Set of returned ACL results
  */
 class AclResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class AclResponse extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AclList;
+
     /**
      * @param integer $TotalCount Number of eligible data entries
      * @param array $AclList ACL list
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

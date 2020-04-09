@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Status code cache expiration time rule configuration
+ *
  * @method string getStatusCode() Obtain HTTP status code
 Supports 403 and 404 status codes
  * @method void setStatusCode(string $StatusCode) Set HTTP status code
 Supports 403 and 404 status codes
  * @method integer getCacheTime() Obtain Status code cache expiration time (in seconds)
  * @method void setCacheTime(integer $CacheTime) Set Status code cache expiration time (in seconds)
- */
-
-/**
- *Status code cache expiration time rule configuration
  */
 class StatusCodeCacheRule extends AbstractModel
 {
@@ -41,6 +39,7 @@ Supports 403 and 404 status codes
      * @var integer Status code cache expiration time (in seconds)
      */
     public $CacheTime;
+
     /**
      * @param string $StatusCode HTTP status code
 Supports 403 and 404 status codes
@@ -50,6 +49,7 @@ Supports 403 and 404 status codes
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

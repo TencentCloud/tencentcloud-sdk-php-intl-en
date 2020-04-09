@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Policy associated with the role
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
  * @method string getPolicyName() Obtain Policy name
@@ -42,10 +44,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Policy description
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Policy associated with the role
  */
 class AttachedPolicyOfRole extends AbstractModel
 {
@@ -92,6 +90,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
+
     /**
      * @param integer $PolicyId Policy ID
      * @param string $PolicyName Policy name
@@ -110,6 +109,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

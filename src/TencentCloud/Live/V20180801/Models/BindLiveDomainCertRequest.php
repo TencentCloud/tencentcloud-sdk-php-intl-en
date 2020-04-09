@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindLiveDomainCert request structure.
+ *
  * @method integer getCertId() Obtain Certificate ID, which can be obtained through the `CreateLiveCert` API.
  * @method void setCertId(integer $CertId) Set Certificate ID, which can be obtained through the `CreateLiveCert` API.
  * @method string getDomainName() Obtain Playback domain name.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
  * @method integer getStatus() Obtain Status. 0: off, 1: on.
  * @method void setStatus(integer $Status) Set Status. 0: off, 1: on.
- */
-
-/**
- *BindLiveDomainCert request structure.
  */
 class BindLiveDomainCertRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class BindLiveDomainCertRequest extends AbstractModel
      * @var integer Status. 0: off, 1: on.
      */
     public $Status;
+
     /**
      * @param integer $CertId Certificate ID, which can be obtained through the `CreateLiveCert` API.
      * @param string $DomainName Playback domain name.
@@ -54,6 +53,7 @@ class BindLiveDomainCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

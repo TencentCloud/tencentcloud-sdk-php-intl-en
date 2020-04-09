@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of text keyword recognition.
+ *
  * @method array getResultSet() Obtain Text keyword recognition result set.
  * @method void setResultSet(array $ResultSet) Set Text keyword recognition result set.
- */
-
-/**
- *Output of text keyword recognition.
  */
 class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel
      * @var array Text keyword recognition result set.
      */
     public $ResultSet;
+
     /**
      * @param array $ResultSet Text keyword recognition result set.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

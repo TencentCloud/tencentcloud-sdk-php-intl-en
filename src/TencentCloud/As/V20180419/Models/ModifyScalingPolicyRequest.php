@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyScalingPolicy request structure.
+ *
  * @method string getAutoScalingPolicyId() Obtain Alarm policy ID.
  * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Alarm policy ID.
  * @method string getScalingPolicyName() Obtain Alarm policy name.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
- */
-
-/**
- *ModifyScalingPolicy request structure.
  */
 class ModifyScalingPolicyRequest extends AbstractModel
 {
@@ -76,6 +74,7 @@ class ModifyScalingPolicyRequest extends AbstractModel
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
      */
     public $NotificationUserGroupIds;
+
     /**
      * @param string $AutoScalingPolicyId Alarm policy ID.
      * @param string $ScalingPolicyName Alarm policy name.
@@ -90,6 +89,7 @@ If you want to clear the user group, you need to pass in the specific string "NU
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tag key-value pair
+ *
  * @method string getTagKey() Obtain Tag key
  * @method void setTagKey(string $TagKey) Set Tag key
  * @method string getTagValue() Obtain Tag value
  * @method void setTagValue(string $TagValue) Set Tag value
- */
-
-/**
- *Tag key-value pair
  */
 class TagPair extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagPair extends AbstractModel
      * @var string Tag value
      */
     public $TagValue;
+
     /**
      * @param string $TagKey Tag key
      * @param string $TagValue Tag value
@@ -46,6 +45,7 @@ class TagPair extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

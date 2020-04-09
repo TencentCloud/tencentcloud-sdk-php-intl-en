@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of time point screenshot in VOD file
+ *
  * @method array getSnapshotByTimeOffsetSet() Obtain Information set of time point screenshots with a specified specification. Currently, there can be only one set of screenshots for each specification.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSnapshotByTimeOffsetSet(array $SnapshotByTimeOffsetSet) Set Information set of time point screenshots with a specified specification. Currently, there can be only one set of screenshots for each specification.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of time point screenshot in VOD file
  */
 class MediaSnapshotByTimeOffsetInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaSnapshotByTimeOffsetInfo extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SnapshotByTimeOffsetSet;
+
     /**
      * @param array $SnapshotByTimeOffsetSet Information set of time point screenshots with a specified specification. Currently, there can be only one set of screenshots for each specification.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

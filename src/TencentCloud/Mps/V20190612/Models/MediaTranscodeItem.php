@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Transcoding information
+ *
  * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of an output file.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of an output file.
  * @method string getPath() Obtain Path to an output video file.
@@ -46,10 +48,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Transcoding information
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -114,6 +112,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VideoStreamSet;
+
     /**
      * @param TaskOutputStorage $OutputStorage Target bucket of an output file.
      * @param string $Path Path to an output video file.
@@ -134,6 +133,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

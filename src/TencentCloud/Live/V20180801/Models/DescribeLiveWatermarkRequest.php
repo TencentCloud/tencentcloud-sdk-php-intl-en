@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveWatermark request structure.
+ *
  * @method integer getWatermarkId() Obtain Watermark ID.
  * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
- */
-
-/**
- *DescribeLiveWatermark request structure.
  */
 class DescribeLiveWatermarkRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLiveWatermarkRequest extends AbstractModel
      * @var integer Watermark ID.
      */
     public $WatermarkId;
+
     /**
      * @param integer $WatermarkId Watermark ID.
      */
@@ -38,6 +37,7 @@ class DescribeLiveWatermarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

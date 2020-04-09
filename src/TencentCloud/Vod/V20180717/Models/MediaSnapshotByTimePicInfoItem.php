@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Time point screenshot information
+ *
  * @method float getTimeOffset() Obtain Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTimeOffset(float $TimeOffset) Set Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set List of watermarking template IDs if the screenshots are watermarked.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Time point screenshot information
  */
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WaterMarkDefinition;
+
     /**
      * @param float $TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetworkInterfaceAttribute request structure.
+ *
  * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-pxir56ns`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-pxir56ns`.
  * @method string getNetworkInterfaceName() Obtain The name of the ENI. The maximum length is 60 characters.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) Set ENI description can be named freely, but the maximum length is 60 characters.
  * @method array getSecurityGroupIds() Obtain The specified security groups to be bound with, such as ['sg-1dd51d'].
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The specified security groups to be bound with, such as ['sg-1dd51d'].
- */
-
-/**
- *ModifyNetworkInterfaceAttribute request structure.
  */
 class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
      * @var array The specified security groups to be bound with, such as ['sg-1dd51d'].
      */
     public $SecurityGroupIds;
+
     /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-pxir56ns`.
      * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
@@ -62,6 +61,7 @@ class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

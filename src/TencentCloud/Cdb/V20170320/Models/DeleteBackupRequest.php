@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteBackup request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getBackupId() Obtain Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://cloud.tencent.com/document/api/236/15844).
  * @method void setBackupId(integer $BackupId) Set Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://cloud.tencent.com/document/api/236/15844).
- */
-
-/**
- *DeleteBackup request structure.
  */
 class DeleteBackupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteBackupRequest extends AbstractModel
      * @var integer Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://cloud.tencent.com/document/api/236/15844).
      */
     public $BackupId;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $BackupId Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://cloud.tencent.com/document/api/236/15844).
@@ -46,6 +45,7 @@ class DeleteBackupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

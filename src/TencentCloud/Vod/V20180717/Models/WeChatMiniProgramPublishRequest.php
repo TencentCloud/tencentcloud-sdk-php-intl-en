@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * WeChatMiniProgramPublish request structure.
+ *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
  * @method integer getSourceDefinition() Obtain ID of the transcoding template corresponding to the published video. 0 represents the source video.
  * @method void setSourceDefinition(integer $SourceDefinition) Set ID of the transcoding template corresponding to the published video. 0 represents the source video.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *WeChatMiniProgramPublish request structure.
  */
 class WeChatMiniProgramPublishRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class WeChatMiniProgramPublishRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $FileId Media file ID.
      * @param integer $SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
@@ -54,6 +53,7 @@ class WeChatMiniProgramPublishRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

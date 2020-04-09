@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Text watermarking template
+ *
  * @method string getFontType() Obtain Font type. Currently, two types are supported:
 <li>simkai.ttf: both Chinese and English are supported;</li>
 <li>arial.ttf: only English is supported.</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontAlpha(float $FontAlpha) Set Text transparency. Value range: (0, 1]
 <li>0: completely transparent</li>
 <li>1: completely opaque</li>
- */
-
-/**
- *Text watermarking template
  */
 class TextWatermarkTemplateInputForUpdate extends AbstractModel
 {
@@ -64,6 +62,7 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
 <li>1: completely opaque</li>
      */
     public $FontAlpha;
+
     /**
      * @param string $FontType Font type. Currently, two types are supported:
 <li>simkai.ttf: both Chinese and English are supported;</li>
@@ -78,6 +77,7 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

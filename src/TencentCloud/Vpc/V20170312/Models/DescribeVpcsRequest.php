@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcs request structure.
+ *
  * @method array getVpcIds() Obtain The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
  * @method void setVpcIds(array $VpcIds) Set The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
  * @method array getFilters() Obtain Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset
  * @method string getLimit() Obtain The returned quantity
  * @method void setLimit(string $Limit) Set The returned quantity
- */
-
-/**
- *DescribeVpcs request structure.
  */
 class DescribeVpcsRequest extends AbstractModel
 {
@@ -70,6 +68,7 @@ class DescribeVpcsRequest extends AbstractModel
      * @var string The returned quantity
      */
     public $Limit;
+
     /**
      * @param array $VpcIds The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
      * @param array $Filters Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
@@ -86,6 +85,7 @@ class DescribeVpcsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCfsFileSystems request structure.
+ *
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
- */
-
-/**
- *DescribeCfsFileSystems request structure.
  */
 class DescribeCfsFileSystemsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
      * @var string Subnet ID
      */
     public $SubnetId;
+
     /**
      * @param string $FileSystemId File system ID
      * @param string $VpcId VPC ID
@@ -54,6 +53,7 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

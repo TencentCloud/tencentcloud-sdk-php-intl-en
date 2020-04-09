@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillSummaryByRegion response structure.
+ *
  * @method integer getReady() Obtain Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
  * @method void setReady(integer $Ready) Set Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
  * @method array getSummaryOverview() Obtain Detailed cost distribution for all regions
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBillSummaryByRegion response structure.
  */
 class DescribeBillSummaryByRegionResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Ready Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
      * @param array $SummaryOverview Detailed cost distribution for all regions
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

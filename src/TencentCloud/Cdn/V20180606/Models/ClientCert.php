@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTPS client certificate configuration
+ *
  * @method string getCertificate() Obtain Client Certificate
 PEM format, requires Base64 encoding.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -40,10 +42,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setDeployTime(string $DeployTime) Set Certificate issuance time
 When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *HTTPS client certificate configuration
  */
 class ClientCert extends AbstractModel
 {
@@ -73,6 +71,7 @@ When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeployTime;
+
     /**
      * @param string $Certificate Client Certificate
 PEM format, requires Base64 encoding.
@@ -90,6 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

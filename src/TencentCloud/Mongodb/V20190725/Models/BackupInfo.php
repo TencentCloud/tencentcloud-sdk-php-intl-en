@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Backup information
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getBackupType() Obtain Backup mode. 0: automatic backup; 1: manual backup
@@ -44,10 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setStatus(integer $Status) Set Backup status. 1: backing up; 2: backed up successful
  * @method integer getBackupMethod() Obtain Backup method. 0: logical backup; 1: physical backup
  * @method void setBackupMethod(integer $BackupMethod) Set Backup method. 0: logical backup; 1: physical backup
- */
-
-/**
- *Backup information
  */
 class BackupInfo extends AbstractModel
 {
@@ -99,6 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var integer Backup method. 0: logical backup; 1: physical backup
      */
     public $BackupMethod;
+
     /**
      * @param string $InstanceId Instance ID
      * @param integer $BackupType Backup mode. 0: automatic backup; 1: manual backup
@@ -118,6 +117,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

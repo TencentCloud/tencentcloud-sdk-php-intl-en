@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Classiclink instance
+ *
  * @method string getVpcId() Obtain VPC instance ID
  * @method void setVpcId(string $VpcId) Set VPC instance ID
  * @method string getInstanceId() Obtain The unique ID of the CVM instance
  * @method void setInstanceId(string $InstanceId) Set The unique ID of the CVM instance
- */
-
-/**
- *Classiclink instance
  */
 class ClassicLinkInstance extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClassicLinkInstance extends AbstractModel
      * @var string The unique ID of the CVM instance
      */
     public $InstanceId;
+
     /**
      * @param string $VpcId VPC instance ID
      * @param string $InstanceId The unique ID of the CVM instance
@@ -46,6 +45,7 @@ class ClassicLinkInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

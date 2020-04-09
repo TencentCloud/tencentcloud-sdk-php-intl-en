@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetCustomMFATokenInfo response structure.
+ *
  * @method integer getUin() Obtain Account ID corresponding to the custom multi-factor verification Token
  * @method void setUin(integer $Uin) Set Account ID corresponding to the custom multi-factor verification Token
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetCustomMFATokenInfo response structure.
  */
 class GetCustomMFATokenInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetCustomMFATokenInfoResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Uin Account ID corresponding to the custom multi-factor verification Token
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class GetCustomMFATokenInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

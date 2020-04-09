@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ *  CPU load
+ *
  * @method array getRate() Obtain Average instance CPU utilization
  * @method void setRate(array $Rate) Set Average instance CPU utilization
  * @method array getLoad() Obtain CPU monitoring data of the instance
  * @method void setLoad(array $Load) Set CPU monitoring data of the instance
- */
-
-/**
- * CPU load
  */
 class DeviceCpuInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeviceCpuInfo extends AbstractModel
      * @var array CPU monitoring data of the instance
      */
     public $Load;
+
     /**
      * @param array $Rate Average instance CPU utilization
      * @param array $Load CPU monitoring data of the instance
@@ -46,6 +45,7 @@ class DeviceCpuInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

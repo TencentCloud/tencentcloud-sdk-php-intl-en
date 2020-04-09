@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes pricing information.
+ *
  * @method float getUnitPrice() Obtain The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setUnitPrice(float $UnitPrice) Set The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
@@ -58,10 +60,6 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setUnitPriceDiscountThirdStep(float $UnitPriceDiscountThirdStep) Set Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
 Note: this field may return null, indicating that no valid value is obtained.
- */
-
-/**
- *Describes pricing information.
  */
 class ItemPrice extends AbstractModel
 {
@@ -124,6 +122,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public $UnitPriceDiscountThirdStep;
+
     /**
      * @param float $UnitPrice The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
 Note: this field may return null, indicating that no valid value is obtained.
@@ -150,6 +149,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * This describes the number of mounted and mountable data disks of an instance.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getAttachedDiskCount() Obtain The number of instances mounted to data disk.
  * @method void setAttachedDiskCount(integer $AttachedDiskCount) Set The number of instances mounted to data disk.
  * @method integer getMaxAttachCount() Obtain The maximum number of instances that can be mounted to data disk.
  * @method void setMaxAttachCount(integer $MaxAttachCount) Set The maximum number of instances that can be mounted to data disk.
- */
-
-/**
- *This describes the number of mounted and mountable data disks of an instance.
  */
 class AttachDetail extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AttachDetail extends AbstractModel
      * @var integer The maximum number of instances that can be mounted to data disk.
      */
     public $MaxAttachCount;
+
     /**
      * @param string $InstanceId Instance ID
      * @param integer $AttachedDiskCount The number of instances mounted to data disk.
@@ -54,6 +53,7 @@ class AttachDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

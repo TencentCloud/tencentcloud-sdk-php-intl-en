@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input of video opening and ending credits recognition.
+ *
  * @method integer getDefinition() Obtain Video opening and ending credits recognition template ID.
  * @method void setDefinition(integer $Definition) Set Video opening and ending credits recognition template ID.
- */
-
-/**
- *Input of video opening and ending credits recognition.
  */
 class AiRecognitionTaskHeadTailResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskHeadTailResultInput extends AbstractModel
      * @var integer Video opening and ending credits recognition template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Video opening and ending credits recognition template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskHeadTailResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

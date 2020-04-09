@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetUser response structure.
+ *
  * @method integer getUin() Obtain Sub-user UIN
  * @method void setUin(integer $Uin) Set Sub-user UIN
  * @method string getName() Obtain Sub-user username
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmail(string $Email) Set Email
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetUser response structure.
  */
 class GetUserResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class GetUserResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Uin Sub-user UIN
      * @param string $Name Sub-user username
@@ -102,6 +101,7 @@ class GetUserResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PullUpload response structure.
+ *
  * @method string getTaskId() Obtain Video pull for upload task ID, which can be used to query the status of pull for upload task.
  * @method void setTaskId(string $TaskId) Set Video pull for upload task ID, which can be used to query the status of pull for upload task.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *PullUpload response structure.
  */
 class PullUploadResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PullUploadResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $TaskId Video pull for upload task ID, which can be used to query the status of pull for upload task.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class PullUploadResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

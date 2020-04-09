@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupAccess response structure.
+ *
  * @method string getRegion() Obtain Instance region
  * @method void setRegion(string $Region) Set Instance region
  * @method string getBucket() Obtain The bucket where a backup file is located
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFiles(array $Files) Set Storage information of a backup file
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBackupAccess response structure.
  */
 class DescribeBackupAccessResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeBackupAccessResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Region Instance region
      * @param string $Bucket The bucket where a backup file is located
@@ -62,6 +61,7 @@ class DescribeBackupAccessResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

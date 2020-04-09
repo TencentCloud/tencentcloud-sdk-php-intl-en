@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Data structure of sorted data
+ *
  * @method string getResource() Obtain Resource name, which is classified as follows based on different query conditions:
 A specific domain name: This indicates the details of this domain name
 multiDomains: This indicates the aggregate details of multiple domain names
@@ -30,10 +32,6 @@ Project ID: This displays the ID of the specifically queried project
 all: This indicates the details at the account level
  * @method array getDetailData() Obtain Detailed sorting results
  * @method void setDetailData(array $DetailData) Set Detailed sorting results
- */
-
-/**
- *Data structure of sorted data
  */
 class TopData extends AbstractModel
 {
@@ -50,6 +48,7 @@ all: This indicates the details at the account level
      * @var array Detailed sorting results
      */
     public $DetailData;
+
     /**
      * @param string $Resource Resource name, which is classified as follows based on different query conditions:
 A specific domain name: This indicates the details of this domain name
@@ -62,6 +61,7 @@ all: This indicates the details at the account level
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

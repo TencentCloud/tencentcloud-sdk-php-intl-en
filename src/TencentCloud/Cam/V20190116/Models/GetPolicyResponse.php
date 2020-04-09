@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPolicy response structure.
+ *
  * @method string getPolicyName() Obtain Policy name
 Note: This field may return null, indicating that no valid value was found.
  * @method void setPolicyName(string $PolicyName) Set Policy name
@@ -44,10 +46,6 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetPolicy response structure.
  */
 class GetPolicyResponse extends AbstractModel
 {
@@ -91,6 +89,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $PolicyName Policy name
 Note: This field may return null, indicating that no valid value was found.
@@ -110,6 +109,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

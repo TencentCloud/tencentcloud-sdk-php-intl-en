@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpc request structure.
+ *
  * @method string getVpcName() Obtain The VPC name. The maximum length is 60 bytes.
  * @method void setVpcName(string $VpcName) Set The VPC name. The maximum length is 60 bytes.
  * @method string getCidrBlock() Obtain VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
@@ -28,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsServers(array $DnsServers) Set The DNS address. A maximum of 4 addresses is supported.
  * @method string getDomainName() Obtain Domain name
  * @method void setDomainName(string $DomainName) Set Domain name
- */
-
-/**
- *CreateVpc request structure.
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateVpcRequest extends AbstractModel
 {
@@ -59,17 +59,25 @@ class CreateVpcRequest extends AbstractModel
      * @var string Domain name
      */
     public $DomainName;
+
+    /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
     /**
      * @param string $VpcName The VPC name. The maximum length is 60 bytes.
      * @param string $CidrBlock VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
      * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
      * @param array $DnsServers The DNS address. A maximum of 4 addresses is supported.
      * @param string $DomainName Domain name
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -96,6 +104,15 @@ class CreateVpcRequest extends AbstractModel
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

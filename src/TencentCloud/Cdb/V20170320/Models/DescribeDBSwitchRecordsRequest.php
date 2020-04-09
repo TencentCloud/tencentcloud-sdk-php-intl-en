@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSwitchRecords request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getOffset() Obtain Pagination offset.
  * @method void setOffset(integer $Offset) Set Pagination offset.
  * @method integer getLimit() Obtain Number of entries per page. Value range: 1-2,000. Default value: 50.
  * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: 1-2,000. Default value: 50.
- */
-
-/**
- *DescribeDBSwitchRecords request structure.
  */
 class DescribeDBSwitchRecordsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBSwitchRecordsRequest extends AbstractModel
      * @var integer Number of entries per page. Value range: 1-2,000. Default value: 50.
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $Offset Pagination offset.
@@ -54,6 +53,7 @@ class DescribeDBSwitchRecordsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

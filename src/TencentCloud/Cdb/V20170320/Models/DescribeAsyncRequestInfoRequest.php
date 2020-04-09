@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAsyncRequestInfo request structure.
+ *
  * @method string getAsyncRequestId() Obtain Async task request ID.
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID.
- */
-
-/**
- *DescribeAsyncRequestInfo request structure.
  */
 class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAsyncRequestInfoRequest extends AbstractModel
      * @var string Async task request ID.
      */
     public $AsyncRequestId;
+
     /**
      * @param string $AsyncRequestId Async task request ID.
      */
@@ -38,6 +37,7 @@ class DescribeAsyncRequestInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisassociateTargetGroups request structure.
+ *
  * @method array getAssociations() Obtain Array of rules to be unbound
  * @method void setAssociations(array $Associations) Set Array of rules to be unbound
- */
-
-/**
- *DisassociateTargetGroups request structure.
  */
 class DisassociateTargetGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisassociateTargetGroupsRequest extends AbstractModel
      * @var array Array of rules to be unbound
      */
     public $Associations;
+
     /**
      * @param array $Associations Array of rules to be unbound
      */
@@ -38,6 +37,7 @@ class DisassociateTargetGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

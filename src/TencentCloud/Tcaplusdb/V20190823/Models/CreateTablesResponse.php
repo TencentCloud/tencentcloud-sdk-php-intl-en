@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTables response structure.
+ *
  * @method integer getTotalCount() Obtain Number of tables created in batches
  * @method void setTotalCount(integer $TotalCount) Set Number of tables created in batches
  * @method array getTableResults() Obtain List of tables created in batches
  * @method void setTableResults(array $TableResults) Set List of tables created in batches
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateTables response structure.
  */
 class CreateTablesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateTablesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of tables created in batches
      * @param array $TableResults List of tables created in batches
@@ -54,6 +53,7 @@ class CreateTablesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Old configuration compatibility check
+ *
  * @method integer getCode() Obtain Compatibility flag status code.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCode(integer $Code) Set Compatibility flag status code.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Old configuration compatibility check
  */
 class Compatibility extends AbstractModel
 {
@@ -34,6 +32,7 @@ class Compatibility extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Code;
+
     /**
      * @param integer $Code Compatibility flag status code.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

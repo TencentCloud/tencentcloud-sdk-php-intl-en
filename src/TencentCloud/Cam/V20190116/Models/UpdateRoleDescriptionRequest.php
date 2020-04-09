@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateRoleDescription request structure.
+ *
  * @method string getDescription() Obtain Role description
  * @method void setDescription(string $Description) Set Role description
  * @method string getRoleId() Obtain Role ID, used to specify a role. Input either `RoleId` or `RoleName`
  * @method void setRoleId(string $RoleId) Set Role ID, used to specify a role. Input either `RoleId` or `RoleName`
  * @method string getRoleName() Obtain Role name, used to specify a role. Input either `RoleId` or `RoleName`
  * @method void setRoleName(string $RoleName) Set Role name, used to specify a role. Input either `RoleId` or `RoleName`
- */
-
-/**
- *UpdateRoleDescription request structure.
  */
 class UpdateRoleDescriptionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateRoleDescriptionRequest extends AbstractModel
      * @var string Role name, used to specify a role. Input either `RoleId` or `RoleName`
      */
     public $RoleName;
+
     /**
      * @param string $Description Role description
      * @param string $RoleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
@@ -54,6 +53,7 @@ class UpdateRoleDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNetworkInterfaceLimit response structure.
+ *
  * @method integer getEniQuantity() Obtain ENI quota
  * @method void setEniQuantity(integer $EniQuantity) Set ENI quota
- * @method integer getEniPrivateIpAddressQuantity() Obtain The quota of IP addresses that can be allocated to each ENI.
- * @method void setEniPrivateIpAddressQuantity(integer $EniPrivateIpAddressQuantity) Set The quota of IP addresses that can be allocated to each ENI.
+ * @method integer getEniPrivateIpAddressQuantity() Obtain Quota of IP addresses that can be allocated to each ENI.
+ * @method void setEniPrivateIpAddressQuantity(integer $EniPrivateIpAddressQuantity) Set Quota of IP addresses that can be allocated to each ENI.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeNetworkInterfaceLimit response structure.
  */
 class DescribeNetworkInterfaceLimitResponse extends AbstractModel
 {
@@ -37,7 +35,7 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
     public $EniQuantity;
 
     /**
-     * @var integer The quota of IP addresses that can be allocated to each ENI.
+     * @var integer Quota of IP addresses that can be allocated to each ENI.
      */
     public $EniPrivateIpAddressQuantity;
 
@@ -45,15 +43,17 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $EniQuantity ENI quota
-     * @param integer $EniPrivateIpAddressQuantity The quota of IP addresses that can be allocated to each ENI.
+     * @param integer $EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each ENI.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

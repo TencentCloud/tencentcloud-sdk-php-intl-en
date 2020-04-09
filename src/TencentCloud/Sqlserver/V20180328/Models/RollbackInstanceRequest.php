@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RollbackInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getType() Obtain Rollback type. 0: the database rolled back overwrites the original database; 1: the database rolled back is renamed and does not overwrite the original database
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) Set Database to be rolled back
  * @method string getTime() Obtain Target time point for rollback
  * @method void setTime(string $Time) Set Target time point for rollback
- */
-
-/**
- *RollbackInstance request structure.
  */
 class RollbackInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RollbackInstanceRequest extends AbstractModel
      * @var string Target time point for rollback
      */
     public $Time;
+
     /**
      * @param string $InstanceId Instance ID
      * @param integer $Type Rollback type. 0: the database rolled back overwrites the original database; 1: the database rolled back is renamed and does not overwrite the original database
@@ -62,6 +61,7 @@ class RollbackInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

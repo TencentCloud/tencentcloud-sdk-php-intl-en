@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database instance parameter
+ *
  * @method string getName() Obtain Parameter name
  * @method void setName(string $Name) Set Parameter name
  * @method string getCurrentValue() Obtain Parameter value
  * @method void setCurrentValue(string $CurrentValue) Set Parameter value
- */
-
-/**
- *Database instance parameter
  */
 class Parameter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Parameter extends AbstractModel
      * @var string Parameter value
      */
     public $CurrentValue;
+
     /**
      * @param string $Name Parameter name
      * @param string $CurrentValue Parameter value
@@ -46,6 +45,7 @@ class Parameter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

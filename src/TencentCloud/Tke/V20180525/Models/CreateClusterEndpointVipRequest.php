@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterEndpointVip request structure.
+ *
 
- */
-
-/**
- *CreateClusterEndpointVip request structure.
  */
 class CreateClusterEndpointVipRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class CreateClusterEndpointVipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Status code cache expiration configuration. 404 status codes are cached for 10 seconds by default
+ *
  * @method string getSwitch() Obtain Status code cache expiration configuration switch
 on: enabled
 off: disabled
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCacheRules(array $CacheRules) Set Status code cache expiration rules details
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Status code cache expiration configuration. 404 status codes are cached for 10 seconds by default
  */
 class StatusCodeCache extends AbstractModel
 {
@@ -50,6 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CacheRules;
+
     /**
      * @param string $Switch Status code cache expiration configuration switch
 on: enabled
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

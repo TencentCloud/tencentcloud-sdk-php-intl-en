@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of intelligently generated cover
+ *
  * @method string getCoverUrl() Obtain Address of intelligently generated cover.
  * @method void setCoverUrl(string $CoverUrl) Set Address of intelligently generated cover.
  * @method float getConfidence() Obtain Confidence of intelligently generated cover between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Confidence of intelligently generated cover between 0 and 100.
- */
-
-/**
- *Information of intelligently generated cover
  */
 class MediaAiAnalysisCoverItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaAiAnalysisCoverItem extends AbstractModel
      * @var float Confidence of intelligently generated cover between 0 and 100.
      */
     public $Confidence;
+
     /**
      * @param string $CoverUrl Address of intelligently generated cover.
      * @param float $Confidence Confidence of intelligently generated cover between 0 and 100.
@@ -46,6 +45,7 @@ class MediaAiAnalysisCoverItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

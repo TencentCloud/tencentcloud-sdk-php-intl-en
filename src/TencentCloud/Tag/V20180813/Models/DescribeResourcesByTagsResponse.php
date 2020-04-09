@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourcesByTags response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of results.
  * @method void setTotalCount(integer $TotalCount) Set Total number of results.
  * @method integer getOffset() Obtain Data offset.
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid value is found.
  * @method void setRows(array $Rows) Set Resource tag.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeResourcesByTags response structure.
  */
 class DescribeResourcesByTagsResponse extends AbstractModel
 {
@@ -62,6 +60,7 @@ Note: This field may return null, indicating that no valid value is found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of results.
      * @param integer $Offset Data offset.
@@ -74,6 +73,7 @@ Note: This field may return null, indicating that no valid value is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOrders request structure.
+ *
  * @method array getDealNames() Obtain Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
  * @method void setDealNames(array $DealNames) Set Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
- */
-
-/**
- *DescribeOrders request structure.
  */
 class DescribeOrdersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeOrdersRequest extends AbstractModel
      * @var array Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
      */
     public $DealNames;
+
     /**
      * @param array $DealNames Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
      */
@@ -38,6 +37,7 @@ class DescribeOrdersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceParams response structure.
+ *
  * @method integer getTotalCount() Obtain Number of instance parameters
  * @method void setTotalCount(integer $TotalCount) Set Number of instance parameters
  * @method array getInstanceEnumParam() Obtain Instance parameter in Enum type
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMultiParam(array $InstanceMultiParam) Set Instance parameter in Multi type
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceParams response structure.
  */
 class DescribeInstanceParamsResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of instance parameters
      * @param array $InstanceEnumParam Instance parameter in Enum type
@@ -78,6 +77,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

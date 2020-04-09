@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSecurityPolicy response structure.
+ *
  * @method string getPolicyId() Obtain Security policy ID
  * @method void setPolicyId(string $PolicyId) Set Security policy ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateSecurityPolicy response structure.
  */
 class CreateSecurityPolicyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSecurityPolicyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $PolicyId Security policy ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateSecurityPolicyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

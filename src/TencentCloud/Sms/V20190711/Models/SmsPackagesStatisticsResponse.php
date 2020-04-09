@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SmsPackagesStatistics response structure.
+ *
  * @method array getSmsPackagesStatisticsSet() Obtain Delivery statistics response packet body.
  * @method void setSmsPackagesStatisticsSet(array $SmsPackagesStatisticsSet) Set Delivery statistics response packet body.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *SmsPackagesStatistics response structure.
  */
 class SmsPackagesStatisticsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SmsPackagesStatisticsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SmsPackagesStatisticsSet Delivery statistics response packet body.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class SmsPackagesStatisticsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

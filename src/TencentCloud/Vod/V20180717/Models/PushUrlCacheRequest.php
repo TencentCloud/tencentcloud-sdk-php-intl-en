@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PushUrlCache request structure.
+ *
  * @method array getUrls() Obtain List of prefetched URLs. Up to 20 ones can be specified at a time.
  * @method void setUrls(array $Urls) Set List of prefetched URLs. Up to 20 ones can be specified at a time.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *PushUrlCache request structure.
  */
 class PushUrlCacheRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PushUrlCacheRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $Urls List of prefetched URLs. Up to 20 ones can be specified at a time.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -46,6 +45,7 @@ class PushUrlCacheRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

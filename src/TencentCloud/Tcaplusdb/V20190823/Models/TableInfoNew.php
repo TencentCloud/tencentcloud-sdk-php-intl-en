@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Table details
+ *
  * @method string getTableName() Obtain Table name
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTableName(string $TableName) Set Table name
@@ -122,10 +124,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSortRule(integer $SortRule) Set Sort order of SORTLIST-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Table details
  */
 class TableInfoNew extends AbstractModel
 {
@@ -284,6 +282,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SortRule;
+
     /**
      * @param string $TableName Table name
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -342,6 +341,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

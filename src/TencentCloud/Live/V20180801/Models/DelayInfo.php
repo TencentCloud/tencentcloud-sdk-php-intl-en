@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of the delayed playback
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
@@ -44,10 +46,6 @@ Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
  * @method void setStatus(integer $Status) Set Current status,
 -1: Expired,
 1: Effective.
- */
-
-/**
- *Information of the delayed playback
  */
 class DelayInfo extends AbstractModel
 {
@@ -91,6 +89,7 @@ Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
 1: Effective.
      */
     public $Status;
+
     /**
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
@@ -110,6 +109,7 @@ Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

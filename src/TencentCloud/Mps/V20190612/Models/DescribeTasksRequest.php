@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasks request structure.
+ *
  * @method string getStatus() Obtain Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
  * @method void setStatus(string $Status) Set Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method string getScrollToken() Obtain Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
  * @method void setScrollToken(string $ScrollToken) Set Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
- */
-
-/**
- *DescribeTasks request structure.
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTasksRequest extends AbstractModel
      * @var string Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
      */
     public $ScrollToken;
+
     /**
      * @param string $Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
@@ -54,6 +53,7 @@ class DescribeTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

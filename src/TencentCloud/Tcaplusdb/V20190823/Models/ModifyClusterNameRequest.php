@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClusterName request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster to be renamed
  * @method void setClusterId(string $ClusterId) Set ID of the cluster to be renamed
  * @method string getClusterName() Obtain Cluster name to be changed to, which can contain up to 32 letters and digits
  * @method void setClusterName(string $ClusterName) Set Cluster name to be changed to, which can contain up to 32 letters and digits
- */
-
-/**
- *ModifyClusterName request structure.
  */
 class ModifyClusterNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyClusterNameRequest extends AbstractModel
      * @var string Cluster name to be changed to, which can contain up to 32 letters and digits
      */
     public $ClusterName;
+
     /**
      * @param string $ClusterId ID of the cluster to be renamed
      * @param string $ClusterName Cluster name to be changed to, which can contain up to 32 letters and digits
@@ -46,6 +45,7 @@ class ModifyClusterNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

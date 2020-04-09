@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video pull for upload task information
+ *
  * @method string getTaskId() Obtain Pull for upload task ID.
  * @method void setTaskId(string $TaskId) Set Pull for upload task ID.
  * @method string getStatus() Obtain Task flow status. Valid values:
@@ -50,10 +52,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
- */
-
-/**
- *Video pull for upload task information
  */
 class PullUploadTask extends AbstractModel
 {
@@ -112,6 +110,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
      */
     public $SessionId;
+
     /**
      * @param string $TaskId Pull for upload task ID.
      * @param string $Status Task flow status. Valid values:
@@ -134,6 +133,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

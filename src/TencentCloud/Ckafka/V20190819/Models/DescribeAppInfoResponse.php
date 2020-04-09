@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAppInfo response structure.
+ *
  * @method AppIdResponse getResult() Obtain Returned list of eligible `AppId`
  * @method void setResult(AppIdResponse $Result) Set Returned list of eligible `AppId`
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAppInfo response structure.
  */
 class DescribeAppInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAppInfoResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param AppIdResponse $Result Returned list of eligible `AppId`
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeAppInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

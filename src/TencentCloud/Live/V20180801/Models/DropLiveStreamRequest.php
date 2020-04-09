@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DropLiveStream request structure.
+ *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method string getDomainName() Obtain Your acceleration domain name.
  * @method void setDomainName(string $DomainName) Set Your acceleration domain name.
  * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
- */
-
-/**
- *DropLiveStream request structure.
  */
 class DropLiveStreamRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DropLiveStreamRequest extends AbstractModel
      * @var string Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
      */
     public $AppName;
+
     /**
      * @param string $StreamName Stream name.
      * @param string $DomainName Your acceleration domain name.
@@ -54,6 +53,7 @@ class DropLiveStreamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

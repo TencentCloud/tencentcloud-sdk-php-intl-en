@@ -18,12 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AcceptDirectConnectTunnel request structure.
+ *
  * @method string getDirectConnectTunnelId() Obtain The connection owner accepts an application for sharing the dedicated tunnel
  * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) Set The connection owner accepts an application for sharing the dedicated tunnel
- */
-
-/**
- *AcceptDirectConnectTunnel request structure.
  */
 class AcceptDirectConnectTunnelRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AcceptDirectConnectTunnelRequest extends AbstractModel
      * @var string The connection owner accepts an application for sharing the dedicated tunnel
      */
     public $DirectConnectTunnelId;
+
     /**
      * @param string $DirectConnectTunnelId The connection owner accepts an application for sharing the dedicated tunnel
      */
@@ -38,6 +37,7 @@ class AcceptDirectConnectTunnelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

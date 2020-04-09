@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VerifyIdlFiles request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where to create a table
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where to create a table
  * @method string getTableGroupId() Obtain ID of the table group where to create a table
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistingIdlFiles(array $ExistingIdlFiles) Set List of information of uploaded IDL files. Either this parameter or `NewIdlFiles` must be present
  * @method array getNewIdlFiles() Obtain List of information of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be present
  * @method void setNewIdlFiles(array $NewIdlFiles) Set List of information of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be present
- */
-
-/**
- *VerifyIdlFiles request structure.
  */
 class VerifyIdlFilesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class VerifyIdlFilesRequest extends AbstractModel
      * @var array List of information of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be present
      */
     public $NewIdlFiles;
+
     /**
      * @param string $ClusterId ID of the cluster where to create a table
      * @param string $TableGroupId ID of the table group where to create a table
@@ -62,6 +61,7 @@ class VerifyIdlFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

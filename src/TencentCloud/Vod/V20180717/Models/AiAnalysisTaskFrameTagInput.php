@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input type of intelligent frame-specific tagging task
+ *
  * @method integer getDefinition() Obtain Intelligent frame-specific video tagging template ID.
  * @method void setDefinition(integer $Definition) Set Intelligent frame-specific video tagging template ID.
- */
-
-/**
- *Input type of intelligent frame-specific tagging task
  */
 class AiAnalysisTaskFrameTagInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskFrameTagInput extends AbstractModel
      * @var integer Intelligent frame-specific video tagging template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Intelligent frame-specific video tagging template ID.
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskFrameTagInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

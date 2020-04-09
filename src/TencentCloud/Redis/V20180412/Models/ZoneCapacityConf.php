@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Product information in the availability zone
+ *
  * @method string getZoneId() Obtain AZ ID, such as ap-guangzhou-3
  * @method void setZoneId(string $ZoneId) Set AZ ID, such as ap-guangzhou-3
  * @method string getZoneName() Obtain AZ name
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductSet(array $ProductSet) Set Information of an AZ, such as product specifications in it
  * @method integer getOldZoneId() Obtain AZ ID, such as 100003
  * @method void setOldZoneId(integer $OldZoneId) Set AZ ID, such as 100003
- */
-
-/**
- *Product information in the availability zone
  */
 class ZoneCapacityConf extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ZoneCapacityConf extends AbstractModel
      * @var integer AZ ID, such as 100003
      */
     public $OldZoneId;
+
     /**
      * @param string $ZoneId AZ ID, such as ap-guangzhou-3
      * @param string $ZoneName AZ name
@@ -86,6 +85,7 @@ class ZoneCapacityConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

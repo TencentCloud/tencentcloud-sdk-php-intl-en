@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance information
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getRegion() Obtain Region information
  * @method void setRegion(string $Region) Set Region information
- */
-
-/**
- *Instance information
  */
 class DBInstanceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBInstanceInfo extends AbstractModel
      * @var string Region information
      */
     public $Region;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $Region Region information
@@ -46,6 +45,7 @@ class DBInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

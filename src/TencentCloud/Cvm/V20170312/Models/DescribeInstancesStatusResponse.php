@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesStatus response structure.
+ *
  * @method integer getTotalCount() Obtain Number of instance states meeting the filtering conditions.
  * @method void setTotalCount(integer $TotalCount) Set Number of instance states meeting the filtering conditions.
  * @method array getInstanceStatusSet() Obtain List of [instance states](https://cloud.tencent.com/document/api/213/15728).
  * @method void setInstanceStatusSet(array $InstanceStatusSet) Set List of [instance states](https://cloud.tencent.com/document/api/213/15728).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstancesStatus response structure.
  */
 class DescribeInstancesStatusResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstancesStatusResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of instance states meeting the filtering conditions.
      * @param array $InstanceStatusSet List of [instance states](https://cloud.tencent.com/document/api/213/15728).
@@ -54,6 +53,7 @@ class DescribeInstancesStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCdnIp request structure.
+ *
  * @method array getIps() Obtain List of IPs to be queried
  * @method void setIps(array $Ips) Set List of IPs to be queried
- */
-
-/**
- *DescribeCdnIp request structure.
  */
 class DescribeCdnIpRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCdnIpRequest extends AbstractModel
      * @var array List of IPs to be queried
      */
     public $Ips;
+
     /**
      * @param array $Ips List of IPs to be queried
      */
@@ -38,6 +37,7 @@ class DescribeCdnIpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

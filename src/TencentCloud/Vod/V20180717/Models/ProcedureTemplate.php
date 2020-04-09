@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task flow template details
+ *
  * @method string getName() Obtain Task flow name.
  * @method void setName(string $Name) Set Task flow name.
  * @method string getType() Obtain Type of a task flow template. Valid values:
@@ -50,10 +52,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *Task flow template details
  */
 class ProcedureTemplate extends AbstractModel
 {
@@ -108,6 +106,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $UpdateTime;
+
     /**
      * @param string $Name Task flow name.
      * @param string $Type Type of a task flow template. Valid values:
@@ -130,6 +129,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

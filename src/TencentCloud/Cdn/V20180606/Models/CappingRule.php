@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Downstream speed limit configuration rules. Up to 100 entries can be configured.
+ *
  * @method string getRuleType() Obtain Rule types:
 `all`: effective for all files
 `file`: effective for specified file suffixes
@@ -40,10 +42,6 @@ For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
  * @method integer getKBpsThreshold() Obtain Downstream speed value settings (in KB/s)
  * @method void setKBpsThreshold(integer $KBpsThreshold) Set Downstream speed value settings (in KB/s)
- */
-
-/**
- *Downstream speed limit configuration rules. Up to 100 entries can be configured.
  */
 class CappingRule extends AbstractModel
 {
@@ -69,6 +67,7 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
      * @var integer Downstream speed value settings (in KB/s)
      */
     public $KBpsThreshold;
+
     /**
      * @param string $RuleType Rule types:
 `all`: effective for all files
@@ -86,6 +85,7 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRealServers request structure.
+ *
  * @method integer getProjectId() Obtain Queries the project ID to which the origin server belongs. -1: all projects.
  * @method void setProjectId(integer $ProjectId) Set Queries the project ID to which the origin server belongs. -1: all projects.
  * @method string getSearchValue() Obtain Origin server IP or domain name to be queried. The fuzzy match is supported.
@@ -32,10 +34,6 @@ It supports up to 5 tags. If there are two or more tags, the origin servers tagg
 It supports up to 5 tags. If there are two or more tags, the origin servers tagged any of them will be pulled.
  * @method array getFilters() Obtain Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
  * @method void setFilters(array $Filters) Set Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
- */
-
-/**
- *DescribeRealServers request structure.
  */
 class DescribeRealServersRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ It supports up to 5 tags. If there are two or more tags, the origin servers tagg
      * @var array Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
      */
     public $Filters;
+
     /**
      * @param integer $ProjectId Queries the project ID to which the origin server belongs. -1: all projects.
      * @param string $SearchValue Origin server IP or domain name to be queried. The fuzzy match is supported.
@@ -82,6 +81,7 @@ It supports up to 5 tags. If there are two or more tags, the origin servers tagg
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

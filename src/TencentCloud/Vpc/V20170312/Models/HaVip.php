@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HAVIP description information
+ *
  * @method string getHaVipId() Obtain The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
  * @method void setHaVipId(string $HaVipId) Set The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
  * @method string getHaVipName() Obtain The name of the `HAVIP`.
@@ -42,10 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`UNBIND`: Not bound</li>
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
- */
-
-/**
- *HAVIP description information
+ * @method string getBusiness() Obtain Identifier for businesses that use HAVIP.
+ * @method void setBusiness(string $Business) Set Identifier for businesses that use HAVIP.
  */
 class HaVip extends AbstractModel
 {
@@ -100,6 +100,12 @@ class HaVip extends AbstractModel
      * @var string Creation Time.
      */
     public $CreatedTime;
+
+    /**
+     * @var string Identifier for businesses that use HAVIP.
+     */
+    public $Business;
+
     /**
      * @param string $HaVipId The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
      * @param string $HaVipName The name of the `HAVIP`.
@@ -113,11 +119,13 @@ class HaVip extends AbstractModel
 <li>`AVAILABLE`: Operating</li>
 <li>`UNBIND`: Not bound</li>
      * @param string $CreatedTime Creation Time.
+     * @param string $Business Identifier for businesses that use HAVIP.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -164,6 +172,10 @@ class HaVip extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
+            $this->Business = $param["Business"];
         }
     }
 }

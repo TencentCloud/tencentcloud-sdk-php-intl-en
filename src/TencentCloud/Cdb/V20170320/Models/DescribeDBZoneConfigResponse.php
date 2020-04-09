@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBZoneConfig response structure.
+ *
  * @method integer getTotalCount() Obtain Number of configurations in purchasable regions
  * @method void setTotalCount(integer $TotalCount) Set Number of configurations in purchasable regions
  * @method array getItems() Obtain Details of configurations in purchasable regions
  * @method void setItems(array $Items) Set Details of configurations in purchasable regions
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBZoneConfig response structure.
  */
 class DescribeDBZoneConfigResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBZoneConfigResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of configurations in purchasable regions
      * @param array $Items Details of configurations in purchasable regions
@@ -54,6 +53,7 @@ class DescribeDBZoneConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

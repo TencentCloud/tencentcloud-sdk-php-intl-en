@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAlgorithms response structure.
+ *
  * @method array getSymmetricAlgorithms() Obtain Symmetric encryption algorithms supported in this region
  * @method void setSymmetricAlgorithms(array $SymmetricAlgorithms) Set Symmetric encryption algorithms supported in this region
  * @method array getAsymmetricAlgorithms() Obtain Asymmetric encryption algorithms supported in this region
  * @method void setAsymmetricAlgorithms(array $AsymmetricAlgorithms) Set Asymmetric encryption algorithms supported in this region
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListAlgorithms response structure.
  */
 class ListAlgorithmsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAlgorithmsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SymmetricAlgorithms Symmetric encryption algorithms supported in this region
      * @param array $AsymmetricAlgorithms Asymmetric encryption algorithms supported in this region
@@ -54,6 +53,7 @@ class ListAlgorithmsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

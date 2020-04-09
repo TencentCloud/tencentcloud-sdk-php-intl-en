@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModfiyInstancePassword request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getOldPassword() Obtain Old password of an instance
  * @method void setOldPassword(string $OldPassword) Set Old password of an instance
  * @method string getPassword() Obtain New password of an instance
  * @method void setPassword(string $Password) Set New password of an instance
- */
-
-/**
- *ModfiyInstancePassword request structure.
  */
 class ModfiyInstancePasswordRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModfiyInstancePasswordRequest extends AbstractModel
      * @var string New password of an instance
      */
     public $Password;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $OldPassword Old password of an instance
@@ -54,6 +53,7 @@ class ModfiyInstancePasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

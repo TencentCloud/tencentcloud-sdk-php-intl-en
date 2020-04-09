@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Status code redirect configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
+ *
  * @method string getSwitch() Obtain Status code redirect configuration switch
 on: enabled
 off: disabled
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPageRules(array $PageRules) Set Status code redirect rules configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Status code redirect configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
  */
 class ErrorPage extends AbstractModel
 {
@@ -50,6 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PageRules;
+
     /**
      * @param string $Switch Status code redirect configuration switch
 on: enabled
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

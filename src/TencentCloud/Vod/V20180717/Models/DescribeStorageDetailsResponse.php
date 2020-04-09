@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStorageDetails response structure.
+ *
  * @method array getData() Obtain Storage statistics. One data entry per minute/hour/day.
  * @method void setData(array $Data) Set Storage statistics. One data entry per minute/hour/day.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeStorageDetails response structure.
  */
 class DescribeStorageDetailsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeStorageDetailsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Data Storage statistics. One data entry per minute/hour/day.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeStorageDetailsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

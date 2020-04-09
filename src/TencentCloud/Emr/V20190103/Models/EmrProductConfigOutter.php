@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EMR product configuration
+ *
  * @method array getSoftInfo() Obtain Software information
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSoftInfo(array $SoftInfo) Set Software information
@@ -82,10 +84,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCbsEncrypt(integer $CbsEncrypt) Set Whether to enable CBS encryption
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *EMR product configuration
  */
 class EmrProductConfigOutter extends AbstractModel
 {
@@ -184,6 +182,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CbsEncrypt;
+
     /**
      * @param array $SoftInfo Software information
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -222,6 +221,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

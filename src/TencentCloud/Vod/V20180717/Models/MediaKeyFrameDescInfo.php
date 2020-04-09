@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video timestamp information
+ *
  * @method array getKeyFrameDescSet() Obtain Information array of video timestamps.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setKeyFrameDescSet(array $KeyFrameDescSet) Set Information array of video timestamps.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Video timestamp information
  */
 class MediaKeyFrameDescInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaKeyFrameDescInfo extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $KeyFrameDescSet;
+
     /**
      * @param array $KeyFrameDescSet Information array of video timestamps.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

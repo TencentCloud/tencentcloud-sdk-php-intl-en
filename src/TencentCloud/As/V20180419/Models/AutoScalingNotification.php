@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AS event notification
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method array getNotificationUserGroupIds() Obtain List of user group IDs.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTypes(array $NotificationTypes) Set List of notification events.
  * @method string getAutoScalingNotificationId() Obtain Event notification ID.
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set Event notification ID.
- */
-
-/**
- *AS event notification
  */
 class AutoScalingNotification extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AutoScalingNotification extends AbstractModel
      * @var string Event notification ID.
      */
     public $AutoScalingNotificationId;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param array $NotificationUserGroupIds List of user group IDs.
@@ -62,6 +61,7 @@ class AutoScalingNotification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

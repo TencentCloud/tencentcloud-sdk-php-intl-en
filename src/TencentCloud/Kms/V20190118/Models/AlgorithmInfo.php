@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Algorithm name and ID
+ *
  * @method string getKeyUsage() Obtain Algorithm ID
  * @method void setKeyUsage(string $KeyUsage) Set Algorithm ID
  * @method string getAlgorithm() Obtain Algorithm name
  * @method void setAlgorithm(string $Algorithm) Set Algorithm name
- */
-
-/**
- *Algorithm name and ID
  */
 class AlgorithmInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AlgorithmInfo extends AbstractModel
      * @var string Algorithm name
      */
     public $Algorithm;
+
     /**
      * @param string $KeyUsage Algorithm ID
      * @param string $Algorithm Algorithm name
@@ -46,6 +45,7 @@ class AlgorithmInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

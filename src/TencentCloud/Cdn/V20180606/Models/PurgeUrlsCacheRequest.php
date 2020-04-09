@@ -18,12 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PurgeUrlsCache request structure.
+ *
  * @method array getUrls() Obtain List of URLs. The protocol header such as "http://" or "https://" needs to be included.
  * @method void setUrls(array $Urls) Set List of URLs. The protocol header such as "http://" or "https://" needs to be included.
- */
-
-/**
- *PurgeUrlsCache request structure.
  */
 class PurgeUrlsCacheRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class PurgeUrlsCacheRequest extends AbstractModel
      * @var array List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      */
     public $Urls;
+
     /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -38,6 +37,7 @@ class PurgeUrlsCacheRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

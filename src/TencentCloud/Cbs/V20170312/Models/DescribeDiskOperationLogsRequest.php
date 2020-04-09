@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskOperationLogs request structure.
+ *
  * @method array getFilters() Obtain Filter conditions. The following conditions are supported:
 <li>disk-id - Array of String - Required or not: Yes - Filter by cloud disk ID, with maximum of 10 cloud disk IDs able to be specified per request.
  * @method void setFilters(array $Filters) Set Filter conditions. The following conditions are supported:
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
  * @method string getEndTime() Obtain The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
  * @method void setEndTime(string $EndTime) Set The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
- */
-
-/**
- *DescribeDiskOperationLogs request structure.
  */
 class DescribeDiskOperationLogsRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeDiskOperationLogsRequest extends AbstractModel
      * @var string The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
      */
     public $EndTime;
+
     /**
      * @param array $Filters Filter conditions. The following conditions are supported:
 <li>disk-id - Array of String - Required or not: Yes - Filter by cloud disk ID, with maximum of 10 cloud disk IDs able to be specified per request.
@@ -58,6 +57,7 @@ class DescribeDiskOperationLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

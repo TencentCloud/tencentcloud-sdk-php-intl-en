@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeployGroupList response structure.
+ *
  * @method integer getTotal() Obtain Number of eligible entries.
  * @method void setTotal(integer $Total) Set Number of eligible entries.
  * @method array getItems() Obtain List of returned results.
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDeployGroupList response structure.
  */
 class DescribeDeployGroupListResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Total Number of eligible entries.
      * @param array $Items List of returned results.
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

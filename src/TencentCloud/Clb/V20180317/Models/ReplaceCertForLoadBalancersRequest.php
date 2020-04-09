@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceCertForLoadBalancers request structure.
+ *
  * @method string getOldCertificateId() Obtain ID of the certificate to be replaced, which can be a server certificate or a client certificate.
  * @method void setOldCertificateId(string $OldCertificateId) Set ID of the certificate to be replaced, which can be a server certificate or a client certificate.
  * @method CertificateInput getCertificate() Obtain Information such as the content of the new certificate
  * @method void setCertificate(CertificateInput $Certificate) Set Information such as the content of the new certificate
- */
-
-/**
- *ReplaceCertForLoadBalancers request structure.
  */
 class ReplaceCertForLoadBalancersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceCertForLoadBalancersRequest extends AbstractModel
      * @var CertificateInput Information such as the content of the new certificate
      */
     public $Certificate;
+
     /**
      * @param string $OldCertificateId ID of the certificate to be replaced, which can be a server certificate or a client certificate.
      * @param CertificateInput $Certificate Information such as the content of the new certificate
@@ -46,6 +45,7 @@ class ReplaceCertForLoadBalancersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

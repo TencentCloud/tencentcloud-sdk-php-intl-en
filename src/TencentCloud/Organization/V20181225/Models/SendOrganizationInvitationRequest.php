@@ -18,16 +18,14 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SendOrganizationInvitation request structure.
+ *
  * @method integer getInviteUin() Obtain UIN of the invitee
  * @method void setInviteUin(integer $InviteUin) Set UIN of the invitee
  * @method string getName() Obtain Name
  * @method void setName(string $Name) Set Name
  * @method string getRemark() Obtain Notes
  * @method void setRemark(string $Remark) Set Notes
- */
-
-/**
- *SendOrganizationInvitation request structure.
  */
 class SendOrganizationInvitationRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SendOrganizationInvitationRequest extends AbstractModel
      * @var string Notes
      */
     public $Remark;
+
     /**
      * @param integer $InviteUin UIN of the invitee
      * @param string $Name Name
@@ -54,6 +53,7 @@ class SendOrganizationInvitationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

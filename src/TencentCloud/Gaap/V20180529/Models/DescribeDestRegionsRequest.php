@@ -18,14 +18,13 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDestRegions request structure.
+ *
 
- */
-
-/**
- *DescribeDestRegions request structure.
  */
 class DescribeDestRegionsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeDestRegionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

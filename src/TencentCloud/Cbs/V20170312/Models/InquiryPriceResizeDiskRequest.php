@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceResizeDisk request structure.
+ *
  * @method string getDiskId() Obtain ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
  * @method void setDiskId(string $DiskId) Set ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
  * @method integer getDiskSize() Obtain Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
  * @method void setDiskSize(integer $DiskSize) Set Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
  * @method integer getProjectId() Obtain ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
  * @method void setProjectId(integer $ProjectId) Set ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
- */
-
-/**
- *InquiryPriceResizeDisk request structure.
  */
 class InquiryPriceResizeDiskRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceResizeDiskRequest extends AbstractModel
      * @var integer ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
      */
     public $ProjectId;
+
     /**
      * @param string $DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
      * @param integer $DiskSize Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
@@ -54,6 +53,7 @@ class InquiryPriceResizeDiskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

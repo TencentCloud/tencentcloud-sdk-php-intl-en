@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCcn request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
- */
-
-/**
- *DeleteCcn request structure.
  */
 class DeleteCcnRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteCcnRequest extends AbstractModel
      * @var string The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public $CcnId;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
@@ -38,6 +37,7 @@ class DeleteCcnRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

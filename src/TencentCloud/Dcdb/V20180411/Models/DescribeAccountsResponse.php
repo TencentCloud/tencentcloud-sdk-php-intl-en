@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts response structure.
+ *
  * @method string getInstanceId() Obtain Instance ID, which is passed through from the input parameters.
  * @method void setInstanceId(string $InstanceId) Set Instance ID, which is passed through from the input parameters.
  * @method array getUsers() Obtain List of instance users.
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAccounts response structure.
  */
 class DescribeAccountsResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId Instance ID, which is passed through from the input parameters.
      * @param array $Users List of instance users.
@@ -58,6 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

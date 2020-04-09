@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of the blocked URLs
+ *
  * @method string getStatus() Obtain Status (disable: blocked; enable: unblocked)
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(string $Status) Set Status (disable: blocked; enable: unblocked)
@@ -34,10 +36,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Details of the blocked URLs
  */
 class UrlRecord extends AbstractModel
 {
@@ -64,6 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
+
     /**
      * @param string $Status Status (disable: blocked; enable: unblocked)
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -78,6 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

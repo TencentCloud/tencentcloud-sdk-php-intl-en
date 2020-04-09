@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskInfo request structure.
+ *
  * @method integer getTaskId() Obtain Task ID
  * @method void setTaskId(integer $TaskId) Set Task ID
- */
-
-/**
- *DescribeTaskInfo request structure.
  */
 class DescribeTaskInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTaskInfoRequest extends AbstractModel
      * @var integer Task ID
      */
     public $TaskId;
+
     /**
      * @param integer $TaskId Task ID
      */
@@ -38,6 +37,7 @@ class DescribeTaskInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

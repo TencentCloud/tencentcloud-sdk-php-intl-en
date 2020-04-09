@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetProcedureTemplate request structure.
+ *
  * @method string getName() Obtain Task flow name
  * @method void setName(string $Name) Set Task flow name
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of AI-based content recognition task.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ResetProcedureTemplate request structure.
  */
 class ResetProcedureTemplateRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ResetProcedureTemplateRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $Name Task flow name
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
@@ -78,6 +77,7 @@ class ResetProcedureTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

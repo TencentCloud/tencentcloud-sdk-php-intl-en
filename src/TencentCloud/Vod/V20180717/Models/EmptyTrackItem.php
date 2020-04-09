@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Empty track segment used as placeholder on time axis. If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.
+ *
  * @method float getDuration() Obtain Duration in seconds.
  * @method void setDuration(float $Duration) Set Duration in seconds.
- */
-
-/**
- *Empty track segment used as placeholder on time axis. If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.
  */
 class EmptyTrackItem extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EmptyTrackItem extends AbstractModel
      * @var float Duration in seconds.
      */
     public $Duration;
+
     /**
      * @param float $Duration Duration in seconds.
      */
@@ -38,6 +37,7 @@ class EmptyTrackItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

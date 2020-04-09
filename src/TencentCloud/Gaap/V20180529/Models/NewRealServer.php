@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Add new origin server information
+ *
  * @method string getRealServerId() Obtain Origin server ID
  * @method void setRealServerId(string $RealServerId) Set Origin server ID
  * @method string getRealServerIP() Obtain Origin server IP or domain name
  * @method void setRealServerIP(string $RealServerIP) Set Origin server IP or domain name
- */
-
-/**
- *Add new origin server information
  */
 class NewRealServer extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NewRealServer extends AbstractModel
      * @var string Origin server IP or domain name
      */
     public $RealServerIP;
+
     /**
      * @param string $RealServerId Origin server ID
      * @param string $RealServerIP Origin server IP or domain name
@@ -46,6 +45,7 @@ class NewRealServer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

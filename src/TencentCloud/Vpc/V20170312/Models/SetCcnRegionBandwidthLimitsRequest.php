@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetCcnRegionBandwidthLimits request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method array getCcnRegionBandwidthLimits() Obtain The outbound bandwidth cap of each CCN region.
  * @method void setCcnRegionBandwidthLimits(array $CcnRegionBandwidthLimits) Set The outbound bandwidth cap of each CCN region.
- */
-
-/**
- *SetCcnRegionBandwidthLimits request structure.
  */
 class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
      * @var array The outbound bandwidth cap of each CCN region.
      */
     public $CcnRegionBandwidthLimits;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      * @param array $CcnRegionBandwidthLimits The outbound bandwidth cap of each CCN region.
@@ -46,6 +45,7 @@ class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTaskTemplate request structure.
+ *
  * @method string getTaskTemplateName() Obtain Task template name
  * @method void setTaskTemplateName(string $TaskTemplateName) Set Task template name
  * @method Task getTaskTemplateInfo() Obtain Task template content with the same parameter requirements as the task
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) Set Task template content with the same parameter requirements as the task
  * @method string getTaskTemplateDescription() Obtain Task template description
  * @method void setTaskTemplateDescription(string $TaskTemplateDescription) Set Task template description
- */
-
-/**
- *CreateTaskTemplate request structure.
  */
 class CreateTaskTemplateRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateTaskTemplateRequest extends AbstractModel
      * @var string Task template description
      */
     public $TaskTemplateDescription;
+
     /**
      * @param string $TaskTemplateName Task template name
      * @param Task $TaskTemplateInfo Task template content with the same parameter requirements as the task
@@ -54,6 +53,7 @@ class CreateTaskTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseSecurityPolicy request structure.
+ *
  * @method string getProxyId() Obtain Connection ID
  * @method void setProxyId(string $ProxyId) Set Connection ID
- */
-
-/**
- *CloseSecurityPolicy request structure.
  */
 class CloseSecurityPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CloseSecurityPolicyRequest extends AbstractModel
      * @var string Connection ID
      */
     public $ProxyId;
+
     /**
      * @param string $ProxyId Connection ID
      */
@@ -38,6 +37,7 @@ class CloseSecurityPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

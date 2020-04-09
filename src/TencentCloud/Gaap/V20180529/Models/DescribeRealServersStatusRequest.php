@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRealServersStatus request structure.
+ *
  * @method array getRealServerIds() Obtain List of origin server IDs
  * @method void setRealServerIds(array $RealServerIds) Set List of origin server IDs
- */
-
-/**
- *DescribeRealServersStatus request structure.
  */
 class DescribeRealServersStatusRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRealServersStatusRequest extends AbstractModel
      * @var array List of origin server IDs
      */
     public $RealServerIds;
+
     /**
      * @param array $RealServerIds List of origin server IDs
      */
@@ -38,6 +37,7 @@ class DescribeRealServersStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

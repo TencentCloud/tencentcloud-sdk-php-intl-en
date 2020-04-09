@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTCPListeners response structure.
+ *
  * @method integer getTotalCount() Obtain Total quantity of listeners that matches the conditions
  * @method void setTotalCount(integer $TotalCount) Set Total quantity of listeners that matches the conditions
  * @method array getListenerSet() Obtain TCP listener list
  * @method void setListenerSet(array $ListenerSet) Set TCP listener list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTCPListeners response structure.
  */
 class DescribeTCPListenersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTCPListenersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total quantity of listeners that matches the conditions
      * @param array $ListenerSet TCP listener list
@@ -54,6 +53,7 @@ class DescribeTCPListenersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

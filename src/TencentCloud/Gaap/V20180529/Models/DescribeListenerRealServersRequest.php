@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeListenerRealServers request structure.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
- */
-
-/**
- *DescribeListenerRealServers request structure.
  */
 class DescribeListenerRealServersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeListenerRealServersRequest extends AbstractModel
      * @var string Listener ID
      */
     public $ListenerId;
+
     /**
      * @param string $ListenerId Listener ID
      */
@@ -38,6 +37,7 @@ class DescribeListenerRealServersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

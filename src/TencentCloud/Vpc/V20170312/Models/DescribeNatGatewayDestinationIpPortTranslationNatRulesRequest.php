@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatGatewayDestinationIpPortTranslationNatRules request structure.
+ *
  * @method array getNatGatewayIds() Obtain NAT gateway ID.
  * @method void setNatGatewayIds(array $NatGatewayIds) Set NAT gateway ID.
  * @method array getFilters() Obtain Filter conditions:
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
  * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
  * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
- */
-
-/**
- *DescribeNatGatewayDestinationIpPortTranslationNatRules request structure.
  */
 class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends AbstractModel
 {
@@ -76,6 +74,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends Abst
      * @var integer Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public $Limit;
+
     /**
      * @param array $NatGatewayIds NAT gateway ID.
      * @param array $Filters Filter conditions:
@@ -94,6 +93,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends Abst
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

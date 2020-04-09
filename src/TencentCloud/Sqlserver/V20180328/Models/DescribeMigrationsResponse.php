@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrations response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of query results
  * @method void setTotalCount(integer $TotalCount) Set Total number of query results
  * @method array getMigrateTaskSet() Obtain List of query results
  * @method void setMigrateTaskSet(array $MigrateTaskSet) Set List of query results
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeMigrations response structure.
  */
 class DescribeMigrationsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeMigrationsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of query results
      * @param array $MigrateTaskSet List of query results
@@ -54,6 +53,7 @@ class DescribeMigrationsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

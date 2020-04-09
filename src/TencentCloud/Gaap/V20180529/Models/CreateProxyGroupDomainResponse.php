@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProxyGroupDomain response structure.
+ *
  * @method string getGroupId() Obtain Connection group ID.
  * @method void setGroupId(string $GroupId) Set Connection group ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateProxyGroupDomain response structure.
  */
 class CreateProxyGroupDomainResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateProxyGroupDomainResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $GroupId Connection group ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateProxyGroupDomainResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

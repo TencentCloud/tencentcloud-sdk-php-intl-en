@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBBackups request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-4wdeb0zv.
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-4wdeb0zv.
  * @method integer getType() Obtain Backup mode (1: full). Currently, only full backup is supported. The value is 1.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
  * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0. Default value: 0.
  * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0. Default value: 0.
- */
-
-/**
- *DescribeDBBackups request structure.
  */
 class DescribeDBBackupsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDBBackupsRequest extends AbstractModel
      * @var integer Page number for data return in paged query. Pagination starts from 0. Default value: 0.
      */
     public $Offset;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-4wdeb0zv.
      * @param integer $Type Backup mode (1: full). Currently, only full backup is supported. The value is 1.
@@ -78,6 +77,7 @@ class DescribeDBBackupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

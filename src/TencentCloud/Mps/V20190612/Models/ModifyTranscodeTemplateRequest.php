@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTranscodeTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a transcoding template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a transcoding template.
  * @method string getContainer() Obtain Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameter.
  * @method TEHDConfigForUpdate getTEHDConfig() Obtain TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
- */
-
-/**
- *ModifyTranscodeTemplate request structure.
  */
 class ModifyTranscodeTemplateRequest extends AbstractModel
 {
@@ -99,6 +97,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
      * @var TEHDConfigForUpdate TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
      */
     public $TEHDConfig;
+
     /**
      * @param integer $Definition Unique ID of a transcoding template.
      * @param string $Container Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
@@ -118,6 +117,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

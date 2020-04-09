@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAutoScalingGroup request structure.
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
  * @method string getAutoScalingGroupName() Obtain Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
@@ -70,10 +72,6 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings such as unhealthy instance replacement.
  * @method integer getIpv6AddressCount() Obtain 
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
- */
-
-/**
- *ModifyAutoScalingGroup request structure.
  */
 class ModifyAutoScalingGroupRequest extends AbstractModel
 {
@@ -166,6 +164,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
      * @var integer 
      */
     public $Ipv6AddressCount;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
@@ -198,6 +197,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

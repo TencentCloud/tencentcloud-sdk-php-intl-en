@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSubnet request structure.
+ *
  * @method string getSubnetId() Obtain The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
  * @method void setSubnetId(string $SubnetId) Set The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
- */
-
-/**
- *DeleteSubnet request structure.
  */
 class DeleteSubnetRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSubnetRequest extends AbstractModel
      * @var string The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
      */
     public $SubnetId;
+
     /**
      * @param string $SubnetId The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
      */
@@ -38,6 +37,7 @@ class DeleteSubnetRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

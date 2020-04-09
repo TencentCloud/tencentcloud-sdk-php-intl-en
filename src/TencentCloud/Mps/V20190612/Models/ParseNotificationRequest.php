@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ParseNotification request structure.
+ *
  * @method string getContent() Obtain Event notification obtained from CMQ.
  * @method void setContent(string $Content) Set Event notification obtained from CMQ.
- */
-
-/**
- *ParseNotification request structure.
  */
 class ParseNotificationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ParseNotificationRequest extends AbstractModel
      * @var string Event notification obtained from CMQ.
      */
     public $Content;
+
     /**
      * @param string $Content Event notification obtained from CMQ.
      */
@@ -38,6 +37,7 @@ class ParseNotificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

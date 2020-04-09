@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBackup response structure.
+ *
  * @method integer getBackupId() Obtain Backup task ID
  * @method void setBackupId(integer $BackupId) Set Backup task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateBackup response structure.
  */
 class CreateBackupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateBackupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $BackupId Backup task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateBackupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

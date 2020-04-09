@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProxiesProject request structure.
+ *
  * @method integer getProjectId() Obtain The target project ID.
  * @method void setProjectId(integer $ProjectId) Set The target project ID.
  * @method array getInstanceIds() Obtain ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
@@ -28,10 +30,6 @@ For more information, please see How to Ensure Idempotence.
 For more information, please see How to Ensure Idempotence.
  * @method array getProxyIds() Obtain ID of one or multiple connections to be operated; It’s a new parameter.
  * @method void setProxyIds(array $ProxyIds) Set ID of one or multiple connections to be operated; It’s a new parameter.
- */
-
-/**
- *ModifyProxiesProject request structure.
  */
 class ModifyProxiesProjectRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ For more information, please see How to Ensure Idempotence.
      * @var array ID of one or multiple connections to be operated; It’s a new parameter.
      */
     public $ProxyIds;
+
     /**
      * @param integer $ProjectId The target project ID.
      * @param array $InstanceIds ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
@@ -66,6 +65,7 @@ For more information, please see How to Ensure Idempotence.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

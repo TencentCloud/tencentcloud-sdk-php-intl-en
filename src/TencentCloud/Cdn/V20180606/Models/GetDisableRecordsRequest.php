@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDisableRecords request structure.
+ *
  * @method string getStartTime() Obtain Starting time, such as `2018-12-12 10:24:00`
  * @method void setStartTime(string $StartTime) Set Starting time, such as `2018-12-12 10:24:00`
  * @method string getEndTime() Obtain End time, such as 2018-12-14 10:24:00
@@ -34,10 +36,6 @@ enable: The URL is enabled (unblocked) and can be normally accessed
  * @method void setOffset(integer $Offset) Set Offset for paged queries. Default value: 0 (the first page)
  * @method integer getLimit() Obtain Limit on paged queries. Default value: 20
  * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 20
- */
-
-/**
- *GetDisableRecords request structure.
  */
 class GetDisableRecordsRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
      * @var integer Limit on paged queries. Default value: 20
      */
     public $Limit;
+
     /**
      * @param string $StartTime Starting time, such as `2018-12-12 10:24:00`
      * @param string $EndTime End time, such as 2018-12-14 10:24:00
@@ -86,6 +85,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

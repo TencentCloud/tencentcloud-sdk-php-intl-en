@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSyncCheckJob request structure.
+ *
  * @method string getJobId() Obtain ID of the disaster recovery sync task to be queried
  * @method void setJobId(string $JobId) Set ID of the disaster recovery sync task to be queried
- */
-
-/**
- *DescribeSyncCheckJob request structure.
  */
 class DescribeSyncCheckJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSyncCheckJobRequest extends AbstractModel
      * @var string ID of the disaster recovery sync task to be queried
      */
     public $JobId;
+
     /**
      * @param string $JobId ID of the disaster recovery sync task to be queried
      */
@@ -38,6 +37,7 @@ class DescribeSyncCheckJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

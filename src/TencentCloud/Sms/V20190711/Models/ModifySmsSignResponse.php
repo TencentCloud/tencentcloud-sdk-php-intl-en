@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySmsSign response structure.
+ *
  * @method ModifySignStatus getModifySignStatus() Obtain Signature modification response
  * @method void setModifySignStatus(ModifySignStatus $ModifySignStatus) Set Signature modification response
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifySmsSign response structure.
  */
 class ModifySmsSignResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifySmsSignResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param ModifySignStatus $ModifySignStatus Signature modification response
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ModifySmsSignResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

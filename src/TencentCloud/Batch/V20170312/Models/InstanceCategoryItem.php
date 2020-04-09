@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of instance categories
+ *
  * @method string getInstanceCategory() Obtain Instance type name
  * @method void setInstanceCategory(string $InstanceCategory) Set Instance type name
  * @method array getInstanceFamilySet() Obtain List of instance families
  * @method void setInstanceFamilySet(array $InstanceFamilySet) Set List of instance families
- */
-
-/**
- *List of instance categories
  */
 class InstanceCategoryItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceCategoryItem extends AbstractModel
      * @var array List of instance families
      */
     public $InstanceFamilySet;
+
     /**
      * @param string $InstanceCategory Instance type name
      * @param array $InstanceFamilySet List of instance families
@@ -46,6 +45,7 @@ class InstanceCategoryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

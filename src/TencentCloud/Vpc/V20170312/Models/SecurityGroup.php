@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Security group object
+ *
  * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-ohuuioma`.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-ohuuioma`.
  * @method string getSecurityGroupName() Obtain Security group can be named freely, but cannot exceed 60 characters.
@@ -30,10 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDefault(boolean $IsDefault) Set Whether it is the default security group (which cannot be deleted).
  * @method string getCreatedTime() Obtain Security group creation time.
  * @method void setCreatedTime(string $CreatedTime) Set Security group creation time.
- */
-
-/**
- *Security group object
+ * @method array getTagSet() Obtain Tag key-value pairs.
+ * @method void setTagSet(array $TagSet) Set Tag key-value pairs.
  */
 class SecurityGroup extends AbstractModel
 {
@@ -66,6 +66,12 @@ class SecurityGroup extends AbstractModel
      * @var string Security group creation time.
      */
     public $CreatedTime;
+
+    /**
+     * @var array Tag key-value pairs.
+     */
+    public $TagSet;
+
     /**
      * @param string $SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      * @param string $SecurityGroupName Security group can be named freely, but cannot exceed 60 characters.
@@ -73,11 +79,13 @@ class SecurityGroup extends AbstractModel
      * @param string $ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
      * @param boolean $IsDefault Whether it is the default security group (which cannot be deleted).
      * @param string $CreatedTime Security group creation time.
+     * @param array $TagSet Tag key-value pairs.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -108,6 +116,15 @@ class SecurityGroup extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

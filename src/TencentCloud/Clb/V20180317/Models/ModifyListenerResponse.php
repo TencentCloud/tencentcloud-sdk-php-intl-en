@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyListener response structure.
+ *
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyListener response structure.
  */
 class ModifyListenerResponse extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ModifyListenerResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -38,6 +37,7 @@ class ModifyListenerResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

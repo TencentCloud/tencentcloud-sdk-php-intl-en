@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceRoutes request structure.
+ *
  * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
  * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
  * @method array getRoutes() Obtain Routing policy object. The routing policy ID (RouteId) must be specified.
  * @method void setRoutes(array $Routes) Set Routing policy object. The routing policy ID (RouteId) must be specified.
- */
-
-/**
- *ReplaceRoutes request structure.
  */
 class ReplaceRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceRoutesRequest extends AbstractModel
      * @var array Routing policy object. The routing policy ID (RouteId) must be specified.
      */
     public $Routes;
+
     /**
      * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      * @param array $Routes Routing policy object. The routing policy ID (RouteId) must be specified.
@@ -46,6 +45,7 @@ class ReplaceRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceMonitorHotKey response structure.
+ *
  * @method array getData() Obtain Hot key details
  * @method void setData(array $Data) Set Hot key details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceMonitorHotKey response structure.
  */
 class DescribeInstanceMonitorHotKeyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceMonitorHotKeyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Data Hot key details
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeInstanceMonitorHotKeyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

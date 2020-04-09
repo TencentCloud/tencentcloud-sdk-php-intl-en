@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Topic details
+ *
  * @method string getTopicName() Obtain Topic name
  * @method void setTopicName(string $TopicName) Set Topic name
  * @method string getTopicId() Obtain Topic ID
@@ -48,10 +50,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setConfig(Config $Config) Set Advanced configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Topic details
  */
 class TopicDetail extends AbstractModel
 {
@@ -117,6 +115,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Config;
+
     /**
      * @param string $TopicName Topic name
      * @param string $TopicId Topic ID
@@ -138,6 +137,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

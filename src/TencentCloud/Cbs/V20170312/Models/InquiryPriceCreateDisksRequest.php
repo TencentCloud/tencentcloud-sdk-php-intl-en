@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateDisks request structure.
+ *
  * @method string getDiskType() Obtain Type of cloud hard disk. Value range: <br><li>Ordinary cloud disk: CLOUD_BASIC <br><li>Premium cloud storage: CLOUD_PREMIUM <br><li>SSD cloud disk: CLOUD_SSD.
  * @method void setDiskType(string $DiskType) Set Type of cloud hard disk. Value range: <br><li>Ordinary cloud disk: CLOUD_BASIC <br><li>Premium cloud storage: CLOUD_PREMIUM <br><li>SSD cloud disk: CLOUD_SSD.
  * @method integer getDiskSize() Obtain Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskCount(integer $DiskCount) Set Quantity of cloud disks purchased. If left empty, default is 1.
  * @method integer getProjectId() Obtain ID of project the cloud disk belongs to.
  * @method void setProjectId(integer $ProjectId) Set ID of project the cloud disk belongs to.
- */
-
-/**
- *InquiryPriceCreateDisks request structure.
  */
 class InquiryPriceCreateDisksRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
      * @var integer ID of project the cloud disk belongs to.
      */
     public $ProjectId;
+
     /**
      * @param string $DiskType Type of cloud hard disk. Value range: <br><li>Ordinary cloud disk: CLOUD_BASIC <br><li>Premium cloud storage: CLOUD_PREMIUM <br><li>SSD cloud disk: CLOUD_SSD.
      * @param integer $DiskSize Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
@@ -78,6 +77,7 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

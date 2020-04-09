@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAccount request structure.
+ *
  * @method string getInstanceId() Obtain Database instance ID in the format of mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) Set Database instance ID in the format of mssql-njj2mtpl
  * @method array getUserNames() Obtain Array of instance usernames
  * @method void setUserNames(array $UserNames) Set Array of instance usernames
- */
-
-/**
- *DeleteAccount request structure.
  */
 class DeleteAccountRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteAccountRequest extends AbstractModel
      * @var array Array of instance usernames
      */
     public $UserNames;
+
     /**
      * @param string $InstanceId Database instance ID in the format of mssql-njj2mtpl
      * @param array $UserNames Array of instance usernames
@@ -46,6 +45,7 @@ class DeleteAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Table name
+ *
  * @method string getTableName() Obtain Table name
  * @method void setTableName(string $TableName) Set Table name
- */
-
-/**
- *Table name
  */
 class TableName extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TableName extends AbstractModel
      * @var string Table name
      */
     public $TableName;
+
     /**
      * @param string $TableName Table name
      */
@@ -38,6 +37,7 @@ class TableName extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

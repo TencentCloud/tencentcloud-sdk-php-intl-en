@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPassword response structure.
+ *
  * @method JgwOperateResponse getResult() Obtain Returned result
  * @method void setResult(JgwOperateResponse $Result) Set Returned result
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyPassword response structure.
  */
 class ModifyPasswordResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyPasswordResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param JgwOperateResponse $Result Returned result
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ModifyPasswordResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

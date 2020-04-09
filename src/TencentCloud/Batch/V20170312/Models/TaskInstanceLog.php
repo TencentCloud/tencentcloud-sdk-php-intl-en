@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task instance log details.
+ *
  * @method integer getTaskInstanceIndex() Obtain Task instance
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) Set Task instance
  * @method string getStdoutLog() Obtain Standard output log (Base64-encoded)
@@ -44,10 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStderrRedirectFileName(string $StderrRedirectFileName) Set Standard error redirection file name
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Task instance log details.
  */
 class TaskInstanceLog extends AbstractModel
 {
@@ -91,6 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StderrRedirectFileName;
+
     /**
      * @param integer $TaskInstanceIndex Task instance
      * @param string $StdoutLog Standard output log (Base64-encoded)
@@ -110,6 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

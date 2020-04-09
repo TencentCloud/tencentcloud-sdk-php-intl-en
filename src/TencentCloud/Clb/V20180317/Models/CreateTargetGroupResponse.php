@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTargetGroup response structure.
+ *
  * @method string getTargetGroupId() Obtain ID generated after target group creation
  * @method void setTargetGroupId(string $TargetGroupId) Set ID generated after target group creation
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateTargetGroup response structure.
  */
 class CreateTargetGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateTargetGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $TargetGroupId ID generated after target group creation
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateTargetGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

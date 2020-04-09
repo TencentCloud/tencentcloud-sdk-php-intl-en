@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance
+ *
  * @method array getTasks() Obtain Job information
  * @method void setTasks(array $Tasks) Set Job information
  * @method string getJobName() Obtain Instance name
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskExecutionDependOn(string $TaskExecutionDependOn) Set This is the dependency of the subsequent task on the previous task if there is a dependent relationship between them. Value range: PRE_TASK_SUCCEED, PRE_TASK_AT_LEAST_PARTLY_SUCCEED, PRE_TASK_FINISHED. Default value: PRE_TASK_SUCCEED.
  * @method string getStateIfCreateCvmFailed() Obtain Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
  * @method void setStateIfCreateCvmFailed(string $StateIfCreateCvmFailed) Set Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
- */
-
-/**
- *Instance
  */
 class Job extends AbstractModel
 {
@@ -80,6 +78,7 @@ class Job extends AbstractModel
      * @var string Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
      */
     public $StateIfCreateCvmFailed;
+
     /**
      * @param array $Tasks Job information
      * @param string $JobName Instance name
@@ -94,6 +93,7 @@ class Job extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

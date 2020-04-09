@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The snapshot operation log.
+ *
  * @method string getOperator() Obtain UIN of operator.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setOperator(string $Operator) Set UIN of operator.
@@ -52,10 +54,6 @@ PROCESSING: Operation in process
  * @method void setStartTime(string $StartTime) Set Start time
  * @method string getEndTime() Obtain End time
  * @method void setEndTime(string $EndTime) Set End time
- */
-
-/**
- *The snapshot operation log.
  */
 class SnapshotOperationLog extends AbstractModel
 {
@@ -99,6 +97,7 @@ PROCESSING: Operation in process
      * @var string End time
      */
     public $EndTime;
+
     /**
      * @param string $Operator UIN of operator.
 Note: This field may return null, indicating that no valid value was found.
@@ -122,6 +121,7 @@ PROCESSING: Operation in process
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

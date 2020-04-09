@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AZ information
+ *
  * @method integer getZoneId() Obtain Unique AZ ID in a numeric form, such as 100001
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneId(integer $ZoneId) Set Unique AZ ID in a numeric form, such as 100001
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneName(string $ZoneName) Set AZ name, such as Guangzhou Zone 1
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *AZ information
  */
 class ZoneInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ZoneName;
+
     /**
      * @param integer $ZoneId Unique AZ ID in a numeric form, such as 100001
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateImageSpriteTemplate request structure.
+ *
  * @method integer getWidth() Obtain Subimage width of an image sprite in px. Value range: [128, 4,096].
  * @method void setWidth(integer $Width) Set Subimage width of an image sprite in px. Value range: [128, 4,096].
  * @method integer getHeight() Obtain Subimage height of an image sprite in px. Value range: [128, 4,096].
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColumnCount(integer $ColumnCount) Set Subimage column count of an image sprite.
  * @method string getName() Obtain Name of an image sprite generating template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of an image sprite generating template. Length limit: 64 characters.
- */
-
-/**
- *CreateImageSpriteTemplate request structure.
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -85,6 +83,7 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
      * @var string Name of an image sprite generating template. Length limit: 64 characters.
      */
     public $Name;
+
     /**
      * @param integer $Width Subimage width of an image sprite in px. Value range: [128, 4,096].
      * @param integer $Height Subimage height of an image sprite in px. Value range: [128, 4,096].
@@ -102,6 +101,7 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Streaming event information.
+ *
  * @method string getAppName() Obtain Application name.
  * @method void setAppName(string $AppName) Set Application name.
  * @method string getDomainName() Obtain Push domain name.
@@ -44,10 +46,6 @@ Example: 2019-01-07T15:00:00Z.
  * @method void setClientIp(string $ClientIp) Set Host IP.
  * @method string getResolution() Obtain Resolution.
  * @method void setResolution(string $Resolution) Set Resolution.
- */
-
-/**
- *Streaming event information.
  */
 class StreamEventInfo extends AbstractModel
 {
@@ -99,6 +97,7 @@ Example: 2019-01-07T15:00:00Z.
      * @var string Resolution.
      */
     public $Resolution;
+
     /**
      * @param string $AppName Application name.
      * @param string $DomainName Push domain name.
@@ -118,6 +117,7 @@ Example: 2019-01-07T15:00:00Z.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

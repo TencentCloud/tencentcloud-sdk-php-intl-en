@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Adaptive bitrate streaming information
+ *
  * @method integer getDefinition() Obtain Adaptive bitrate streaming specification.
  * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming specification.
  * @method string getPackage() Obtain Container format. Valid values: hls, dash.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDrmType(string $DrmType) Set Encryption type.
  * @method string getUrl() Obtain Playback address.
  * @method void setUrl(string $Url) Set Playback address.
- */
-
-/**
- *Adaptive bitrate streaming information
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
      * @var string Playback address.
      */
     public $Url;
+
     /**
      * @param integer $Definition Adaptive bitrate streaming specification.
      * @param string $Package Container format. Valid values: hls, dash.
@@ -62,6 +61,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

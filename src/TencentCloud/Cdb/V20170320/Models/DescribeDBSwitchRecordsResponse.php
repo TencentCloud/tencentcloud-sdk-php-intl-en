@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSwitchRecords response structure.
+ *
  * @method integer getTotalCount() Obtain Number of instance switches.
  * @method void setTotalCount(integer $TotalCount) Set Number of instance switches.
  * @method array getItems() Obtain Details of instance switches.
  * @method void setItems(array $Items) Set Details of instance switches.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBSwitchRecords response structure.
  */
 class DescribeDBSwitchRecordsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBSwitchRecordsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of instance switches.
      * @param array $Items Details of instance switches.
@@ -54,6 +53,7 @@ class DescribeDBSwitchRecordsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

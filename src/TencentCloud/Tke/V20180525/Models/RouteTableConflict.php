@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Object of route table conflict
+ *
  * @method string getRouteTableType() Obtain Route table type.
  * @method void setRouteTableType(string $RouteTableType) Set Route table type.
  * @method string getRouteTableCidrBlock() Obtain Route table CIDR.
@@ -32,10 +34,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRouteTableId(string $RouteTableId) Set Route table ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Object of route table conflict
  */
 class RouteTableConflict extends AbstractModel
 {
@@ -61,6 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RouteTableId;
+
     /**
      * @param string $RouteTableType Route table type.
      * @param string $RouteTableCidrBlock Route table CIDR.
@@ -74,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

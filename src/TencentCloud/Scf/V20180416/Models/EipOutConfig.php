@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EipOutConfig
+ *
  * @method string getEipFixed() Obtain It specifies whether the IP is fixed. The value is `TRUE` or `FALSE`.
  * @method void setEipFixed(string $EipFixed) Set It specifies whether the IP is fixed. The value is `TRUE` or `FALSE`.
  * @method array getEips() Obtain IP list
  * @method void setEips(array $Eips) Set IP list
- */
-
-/**
- *EipOutConfig
  */
 class EipOutConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EipOutConfig extends AbstractModel
      * @var array IP list
      */
     public $Eips;
+
     /**
      * @param string $EipFixed It specifies whether the IP is fixed. The value is `TRUE` or `FALSE`.
      * @param array $Eips IP list
@@ -46,6 +45,7 @@ class EipOutConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

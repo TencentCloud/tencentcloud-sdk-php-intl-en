@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cache expiration rules configuration
+ *
  * @method string getCacheType() Obtain Rule types:
 `all`: effective for all files
 `file`: effective for specified file suffixes
@@ -47,10 +49,6 @@ Unit: second. The maximum value is 365 days.
  * @method void setCacheTime(integer $CacheTime) Set Cache expiration time settings
 Unit: second. The maximum value is 365 days.
  */
-
-/**
- *Cache expiration rules configuration
- */
 class SimpleCacheRule extends AbstractModel
 {
     /**
@@ -78,6 +76,7 @@ For `index`, enter a backslash (/).
 Unit: second. The maximum value is 365 days.
      */
     public $CacheTime;
+
     /**
      * @param string $CacheType Rule types:
 `all`: effective for all files
@@ -98,6 +97,7 @@ Unit: second. The maximum value is 365 days.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

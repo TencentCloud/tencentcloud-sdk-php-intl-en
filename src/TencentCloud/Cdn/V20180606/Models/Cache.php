@@ -18,6 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Node cache expiration time configuration. There are two types of configuration:
++ Basic cache expiration rules configuration
++ Advanced cache expiration rules configuration
+ *
  * @method SimpleCache getSimpleCache() Obtain Basic cache expiration time configuration
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSimpleCache(SimpleCache $SimpleCache) Set Basic cache expiration time configuration
@@ -26,12 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAdvancedCache(AdvancedCache $AdvancedCache) Set Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Node cache expiration time configuration. There are two types of configuration:
-+ Basic cache expiration rules configuration
-+ Advanced cache expiration rules configuration
  */
 class Cache extends AbstractModel
 {
@@ -46,6 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdvancedCache;
+
     /**
      * @param SimpleCache $SimpleCache Basic cache expiration time configuration
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -56,6 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

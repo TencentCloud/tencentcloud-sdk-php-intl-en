@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of one SlowQuery
+ *
  * @method string getUserName() Obtain Username
  * @method void setUserName(string $UserName) Set Username
  * @method integer getCalls() Obtain Number of calls
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) Set Database name
  * @method string getNormalQuery() Obtain Slow SQL statement after desensitization
  * @method void setNormalQuery(string $NormalQuery) Set Slow SQL statement after desensitization
- */
-
-/**
- *Information of one SlowQuery
  */
 class NormalQueryItem extends AbstractModel
 {
@@ -129,6 +127,7 @@ class NormalQueryItem extends AbstractModel
      * @var string Slow SQL statement after desensitization
      */
     public $NormalQuery;
+
     /**
      * @param string $UserName Username
      * @param integer $Calls Number of calls
@@ -150,6 +149,7 @@ class NormalQueryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

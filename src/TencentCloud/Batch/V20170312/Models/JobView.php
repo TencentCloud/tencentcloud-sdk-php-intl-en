@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance information
+ *
  * @method string getJobId() Obtain Instance ID
  * @method void setJobId(string $JobId) Set Instance ID
  * @method string getJobName() Obtain Instance name
@@ -38,10 +40,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method TaskMetrics getTaskMetrics() Obtain Task statistical metrics
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) Set Task statistical metrics
- */
-
-/**
- *Instance information
  */
 class JobView extends AbstractModel
 {
@@ -86,6 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var TaskMetrics Task statistical metrics
      */
     public $TaskMetrics;
+
     /**
      * @param string $JobId Instance ID
      * @param string $JobName Instance name
@@ -102,6 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceMonitorSIP response structure.
+ *
  * @method array getData() Obtain Access source information
  * @method void setData(array $Data) Set Access source information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceMonitorSIP response structure.
  */
 class DescribeInstanceMonitorSIPResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceMonitorSIPResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Data Access source information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeInstanceMonitorSIPResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

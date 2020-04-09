@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatGatewayDestinationIpPortTranslationNatRules response structure.
+ *
  * @method array getNatGatewayDestinationIpPortTranslationNatRuleSet() Obtain The object array of port forwarding rules for the NAT gateway.
  * @method void setNatGatewayDestinationIpPortTranslationNatRuleSet(array $NatGatewayDestinationIpPortTranslationNatRuleSet) Set The object array of port forwarding rules for the NAT gateway.
  * @method integer getTotalCount() Obtain The number of object arrays of NAT port forwarding rules meeting the conditions.
  * @method void setTotalCount(integer $TotalCount) Set The number of object arrays of NAT port forwarding rules meeting the conditions.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeNatGatewayDestinationIpPortTranslationNatRules response structure.
  */
 class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $NatGatewayDestinationIpPortTranslationNatRuleSet The object array of port forwarding rules for the NAT gateway.
      * @param integer $TotalCount The number of object arrays of NAT port forwarding rules meeting the conditions.
@@ -54,6 +53,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Sub-account information
+ *
  * @method string getInstanceId() Obtain Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Instance ID
@@ -42,10 +44,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Sub-account information
  */
 class Account extends AbstractModel
 {
@@ -84,6 +82,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
+
     /**
      * @param string $InstanceId Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -102,6 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

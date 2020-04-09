@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Real server health status of a classic CLB
+ *
  * @method string getIP() Obtain Private IP of a real server
  * @method void setIP(string $IP) Set Private IP of a real server
  * @method integer getPort() Obtain Real server port
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set Forwarding protocol
  * @method integer getHealthStatus() Obtain Health check result. Value range: 1 (healthy), 0 (unhealthy)
  * @method void setHealthStatus(integer $HealthStatus) Set Health check result. Value range: 1 (healthy), 0 (unhealthy)
- */
-
-/**
- *Real server health status of a classic CLB
  */
 class ClassicalHealth extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ClassicalHealth extends AbstractModel
      * @var integer Health check result. Value range: 1 (healthy), 0 (unhealthy)
      */
     public $HealthStatus;
+
     /**
      * @param string $IP Private IP of a real server
      * @param integer $Port Real server port
@@ -70,6 +69,7 @@ class ClassicalHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

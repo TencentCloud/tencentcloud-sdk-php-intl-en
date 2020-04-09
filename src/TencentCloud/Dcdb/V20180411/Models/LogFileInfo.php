@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a pulled log
+ *
  * @method integer getMtime() Obtain Last modified time of a log
  * @method void setMtime(integer $Mtime) Set Last modified time of a log
  * @method integer getLength() Obtain File length
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUri(string $Uri) Set Uniform resource identifier (URI) used during log download
  * @method string getFileName() Obtain Filename
  * @method void setFileName(string $FileName) Set Filename
- */
-
-/**
- *Information of a pulled log
  */
 class LogFileInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LogFileInfo extends AbstractModel
      * @var string Filename
      */
     public $FileName;
+
     /**
      * @param integer $Mtime Last modified time of a log
      * @param integer $Length File length
@@ -62,6 +61,7 @@ class LogFileInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

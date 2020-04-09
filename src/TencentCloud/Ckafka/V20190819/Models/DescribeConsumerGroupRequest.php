@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConsumerGroup request structure.
+ *
  * @method string getInstanceId() Obtain CKafka instance ID.
  * @method void setInstanceId(string $InstanceId) Set CKafka instance ID.
  * @method string getGroupName() Obtain Name of the group to be queried, which is optional.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned in this request
  * @method integer getOffset() Obtain Offset position
  * @method void setOffset(integer $Offset) Set Offset position
- */
-
-/**
- *DescribeConsumerGroup request structure.
  */
 class DescribeConsumerGroupRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeConsumerGroupRequest extends AbstractModel
      * @var integer Offset position
      */
     public $Offset;
+
     /**
      * @param string $InstanceId CKafka instance ID.
      * @param string $GroupName Name of the group to be queried, which is optional.
@@ -70,6 +69,7 @@ class DescribeConsumerGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

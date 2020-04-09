@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImageSpriteTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of an image sprite generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an image sprite generating template.
  * @method integer getSubAppId() Obtain ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *DeleteImageSpriteTemplate request structure.
  */
 class DeleteImageSpriteTemplateRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteImageSpriteTemplateRequest extends AbstractModel
      * @var integer ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      * @param integer $SubAppId ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -46,6 +45,7 @@ class DeleteImageSpriteTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

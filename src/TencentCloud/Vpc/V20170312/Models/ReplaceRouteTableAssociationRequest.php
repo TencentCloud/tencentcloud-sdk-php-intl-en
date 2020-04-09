@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceRouteTableAssociation request structure.
+ *
  * @method string getSubnetId() Obtain Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
  * @method void setSubnetId(string $SubnetId) Set Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
  * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
  * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
- */
-
-/**
- *ReplaceRouteTableAssociation request structure.
  */
 class ReplaceRouteTableAssociationRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceRouteTableAssociationRequest extends AbstractModel
      * @var string The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public $RouteTableId;
+
     /**
      * @param string $SubnetId Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
      * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
@@ -46,6 +45,7 @@ class ReplaceRouteTableAssociationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

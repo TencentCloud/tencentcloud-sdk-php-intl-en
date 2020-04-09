@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task details
+ *
  * @method integer getTaskId() Obtain Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskId(integer $TaskId) Set Task ID
@@ -54,10 +56,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResult(integer $Result) Set Task status
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Task details
  */
 class TaskInfoDetail extends AbstractModel
 {
@@ -114,6 +112,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Result;
+
     /**
      * @param integer $TaskId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -138,6 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

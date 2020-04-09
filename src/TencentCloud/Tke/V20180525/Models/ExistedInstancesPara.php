@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Reinstallation parameter of existing instances
+ *
  * @method array getInstanceIds() Obtain Cluster ID
  * @method void setInstanceIds(array $InstanceIds) Set Cluster ID
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Additional parameter to be set for the instance
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group to which the instance belongs. This parameter can be obtained from the sgId field in the returned values of DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
  * @method string getHostName() Obtain 
  * @method void setHostName(string $HostName) Set 
- */
-
-/**
- *Reinstallation parameter of existing instances
  */
 class ExistedInstancesPara extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ExistedInstancesPara extends AbstractModel
      * @var string 
      */
     public $HostName;
+
     /**
      * @param array $InstanceIds Cluster ID
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Additional parameter to be set for the instance
@@ -78,6 +77,7 @@ class ExistedInstancesPara extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

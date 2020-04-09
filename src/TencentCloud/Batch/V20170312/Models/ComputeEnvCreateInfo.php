@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Compute environment creation information
+ *
  * @method string getEnvId() Obtain Compute environment ID
  * @method void setEnvId(string $EnvId) Set Compute environment ID
  * @method string getEnvName() Obtain Compute environment name
@@ -50,10 +52,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
- */
-
-/**
- *Compute environment creation information
  */
 class ComputeEnvCreateInfo extends AbstractModel
 {
@@ -112,6 +110,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var integer Number of desired compute nodes
      */
     public $DesiredComputeNodeCount;
+
     /**
      * @param string $EnvId Compute environment ID
      * @param string $EnvName Compute environment name
@@ -134,6 +133,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Sub-user information
+ *
  * @method integer getUin() Obtain Sub-user user ID
  * @method void setUin(integer $Uin) Set Sub-user user ID
  * @method string getName() Obtain Sub-user username
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountryCode(string $CountryCode) Set Country/Area code
  * @method string getEmail() Obtain Email
  * @method void setEmail(string $Email) Set Email
- */
-
-/**
- *Sub-user information
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SubAccountInfo extends AbstractModel
      * @var string Email
      */
     public $Email;
+
     /**
      * @param integer $Uin Sub-user user ID
      * @param string $Name Sub-user username
@@ -94,6 +93,7 @@ class SubAccountInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

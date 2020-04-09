@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListNamespaces response structure.
+ *
  * @method array getNamespaces() Obtain Namespace details
  * @method void setNamespaces(array $Namespaces) Set Namespace details
  * @method integer getTotalCount() Obtain Number of return namespaces
  * @method void setTotalCount(integer $TotalCount) Set Number of return namespaces
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListNamespaces response structure.
  */
 class ListNamespacesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListNamespacesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Namespaces Namespace details
      * @param integer $TotalCount Number of return namespaces
@@ -54,6 +53,7 @@ class ListNamespacesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

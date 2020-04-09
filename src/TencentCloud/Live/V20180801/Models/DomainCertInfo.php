@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Domain name certificate information
+ *
  * @method integer getCertId() Obtain Certificate ID.
  * @method void setCertId(integer $CertId) Set Certificate ID.
  * @method string getCertName() Obtain Certificate name.
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Domain name that uses this certificate.
  * @method integer getStatus() Obtain Certificate status
  * @method void setStatus(integer $Status) Set Certificate status
- */
-
-/**
- *Domain name certificate information
  */
 class DomainCertInfo extends AbstractModel
 {
@@ -93,6 +91,7 @@ class DomainCertInfo extends AbstractModel
      * @var integer Certificate status
      */
     public $Status;
+
     /**
      * @param integer $CertId Certificate ID.
      * @param string $CertName Certificate name.
@@ -110,6 +109,7 @@ class DomainCertInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

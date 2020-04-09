@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPN tunnel object.
+ *
  * @method string getVpnConnectionId() Obtain Tunnel instance ID.
  * @method void setVpnConnectionId(string $VpnConnectionId) Set Tunnel instance ID.
  * @method string getVpnConnectionName() Obtain Tunnel name.
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) Set IKE options.
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() Obtain IPSEC options.
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSEC options.
- */
-
-/**
- *VPN tunnel object.
  */
 class VpnConnection extends AbstractModel
 {
@@ -129,6 +127,7 @@ class VpnConnection extends AbstractModel
      * @var IPSECOptionsSpecification IPSEC options.
      */
     public $IPSECOptionsSpecification;
+
     /**
      * @param string $VpnConnectionId Tunnel instance ID.
      * @param string $VpnConnectionName Tunnel name.
@@ -150,6 +149,7 @@ class VpnConnection extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

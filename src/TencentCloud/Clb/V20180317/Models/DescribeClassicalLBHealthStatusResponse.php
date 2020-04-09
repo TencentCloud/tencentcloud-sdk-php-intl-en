@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicalLBHealthStatus response structure.
+ *
  * @method array getHealthList() Obtain List of real server health statuses
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHealthList(array $HealthList) Set List of real server health statuses
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeClassicalLBHealthStatus response structure.
  */
 class DescribeClassicalLBHealthStatusResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $HealthList List of real server health statuses
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

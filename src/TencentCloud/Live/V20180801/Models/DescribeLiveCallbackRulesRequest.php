@@ -18,14 +18,13 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveCallbackRules request structure.
+ *
 
- */
-
-/**
- *DescribeLiveCallbackRules request structure.
  */
 class DescribeLiveCallbackRulesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeLiveCallbackRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

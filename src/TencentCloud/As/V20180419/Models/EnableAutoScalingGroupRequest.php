@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnableAutoScalingGroup request structure.
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
- */
-
-/**
- *EnableAutoScalingGroup request structure.
  */
 class EnableAutoScalingGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EnableAutoScalingGroupRequest extends AbstractModel
      * @var string Auto scaling group ID
      */
     public $AutoScalingGroupId;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      */
@@ -38,6 +37,7 @@ class EnableAutoScalingGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

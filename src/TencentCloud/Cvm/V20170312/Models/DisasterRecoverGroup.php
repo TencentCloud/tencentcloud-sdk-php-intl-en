@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information on disaster recovery groups
+ *
  * @method string getDisasterRecoverGroupId() Obtain ID of a spread placement group.
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set ID of a spread placement group.
  * @method string getName() Obtain Name of a spread placement group, which must be 1-60 characters long.
@@ -36,10 +38,6 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setCreateTime(string $CreateTime) Set Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
- */
-
-/**
- *Information on disaster recovery groups
  */
 class DisasterRecoverGroup extends AbstractModel
 {
@@ -79,6 +77,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value is found.
      */
     public $CreateTime;
+
     /**
      * @param string $DisasterRecoverGroupId ID of a spread placement group.
      * @param string $Name Name of a spread placement group, which must be 1-60 characters long.
@@ -94,6 +93,7 @@ Note: This field may return null, indicating that no valid value is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

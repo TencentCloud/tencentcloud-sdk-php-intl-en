@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GenerateDataKey response structure.
+ *
  * @method string getKeyId() Obtain 
  * @method void setKeyId(string $KeyId) Set 
  * @method string getPlaintext() Obtain 
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCiphertextBlob(string $CiphertextBlob) Set Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GenerateDataKey response structure.
  */
 class GenerateDataKeyResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GenerateDataKeyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $KeyId 
      * @param string $Plaintext 
@@ -62,6 +61,7 @@ class GenerateDataKeyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

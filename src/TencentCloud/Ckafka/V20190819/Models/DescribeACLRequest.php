@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeACL request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getResourceType() Obtain ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Quantity limit
  * @method string getSearchWord() Obtain Keyword match
  * @method void setSearchWord(string $SearchWord) Set Keyword match
- */
-
-/**
- *DescribeACL request structure.
  */
 class DescribeACLRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeACLRequest extends AbstractModel
      * @var string Keyword match
      */
     public $SearchWord;
+
     /**
      * @param string $InstanceId Instance ID
      * @param integer $ResourceType ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
@@ -78,6 +77,7 @@ class DescribeACLRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

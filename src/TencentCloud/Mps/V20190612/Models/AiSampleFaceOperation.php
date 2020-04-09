@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI-based sample management - face data operation.
+ *
  * @method string getType() Obtain Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
  * @method void setType(string $Type) Set Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
  * @method array getFaceIds() Obtain Face ID set. This field is required when `Type` is `delete`.
@@ -30,10 +32,6 @@ Note: The image must be a relatively clear full-face photo of a figure in at lea
 <li>This field is required when `Type` is `add` or `reset`;</li>
 <li>Array length limit: 5 images.</li>
 Note: The image must be a relatively clear full-face photo of a figure in at least 200 * 200 px.
- */
-
-/**
- *AI-based sample management - face data operation.
  */
 class AiSampleFaceOperation extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiSampleFaceOperation extends AbstractModel
 Note: The image must be a relatively clear full-face photo of a figure in at least 200 * 200 px.
      */
     public $FaceContents;
+
     /**
      * @param string $Type Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
      * @param array $FaceIds Face ID set. This field is required when `Type` is `delete`.
@@ -66,6 +65,7 @@ Note: The image must be a relatively clear full-face photo of a figure in at lea
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

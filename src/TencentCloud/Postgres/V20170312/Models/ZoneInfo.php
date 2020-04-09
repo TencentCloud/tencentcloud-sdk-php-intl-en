@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AZ information such as number and status
+ *
  * @method string getZone() Obtain AZ abbreviation
  * @method void setZone(string $Zone) Set AZ abbreviation
  * @method string getZoneName() Obtain AZ name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) Set AZ number
  * @method string getZoneState() Obtain Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
  * @method void setZoneState(string $ZoneState) Set Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
- */
-
-/**
- *AZ information such as number and status
  */
 class ZoneInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ZoneInfo extends AbstractModel
      * @var string Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
      */
     public $ZoneState;
+
     /**
      * @param string $Zone AZ abbreviation
      * @param string $ZoneName AZ name
@@ -62,6 +61,7 @@ class ZoneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

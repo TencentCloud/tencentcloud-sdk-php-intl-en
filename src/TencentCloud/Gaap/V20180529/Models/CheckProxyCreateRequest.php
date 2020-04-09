@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckProxyCreate request structure.
+ *
  * @method string getAccessRegion() Obtain Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
  * @method void setAccessRegion(string $AccessRegion) Set Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
  * @method string getRealServerRegion() Obtain Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) Set Connection bandwidth cap. Unit: Mbps.
  * @method integer getConcurrent() Obtain Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
  * @method void setConcurrent(integer $Concurrent) Set Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
- */
-
-/**
- *CheckProxyCreate request structure.
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CheckProxyCreateRequest extends AbstractModel
      * @var integer Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
      */
     public $Concurrent;
+
     /**
      * @param string $AccessRegion Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
      * @param string $RealServerRegion Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
@@ -62,6 +61,7 @@ class CheckProxyCreateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

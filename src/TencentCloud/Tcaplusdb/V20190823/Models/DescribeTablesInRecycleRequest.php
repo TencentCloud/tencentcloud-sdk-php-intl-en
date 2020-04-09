@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTablesInRecycle request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where the table to be queried resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where the table to be queried resides
  * @method array getTableGroupIds() Obtain List of IDs of the table groups where the table to be queried resides
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Query result offset
  * @method integer getLimit() Obtain Number of returned query results
  * @method void setLimit(integer $Limit) Set Number of returned query results
- */
-
-/**
- *DescribeTablesInRecycle request structure.
  */
 class DescribeTablesInRecycleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeTablesInRecycleRequest extends AbstractModel
      * @var integer Number of returned query results
      */
     public $Limit;
+
     /**
      * @param string $ClusterId ID of the cluster where the table to be queried resides
      * @param array $TableGroupIds List of IDs of the table groups where the table to be queried resides
@@ -70,6 +69,7 @@ class DescribeTablesInRecycleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

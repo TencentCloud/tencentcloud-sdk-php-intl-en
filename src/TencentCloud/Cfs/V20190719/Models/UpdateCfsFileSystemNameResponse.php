@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsFileSystemName response structure.
+ *
  * @method string getCreationToken() Obtain Custom file system name
  * @method void setCreationToken(string $CreationToken) Set Custom file system name
  * @method string getFileSystemId() Obtain File system ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) Set Custom file system name
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *UpdateCfsFileSystemName response structure.
  */
 class UpdateCfsFileSystemNameResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UpdateCfsFileSystemNameResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $CreationToken Custom file system name
      * @param string $FileSystemId File system ID
@@ -62,6 +61,7 @@ class UpdateCfsFileSystemNameResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

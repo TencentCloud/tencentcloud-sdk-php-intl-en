@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The CCN routing policy object
+ *
  * @method string getRouteId() Obtain The ID of the routing policy
  * @method void setRouteId(string $RouteId) Set The ID of the routing policy
  * @method string getDestinationCidrBlock() Obtain Destination
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) Set Whether the route is enabled
  * @method string getInstanceUin() Obtain The UIN (root account) to which the associated instance belongs
  * @method void setInstanceUin(string $InstanceUin) Set The UIN (root account) to which the associated instance belongs
- */
-
-/**
- *The CCN routing policy object
  */
 class CcnRoute extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CcnRoute extends AbstractModel
      * @var string The UIN (root account) to which the associated instance belongs
      */
     public $InstanceUin;
+
     /**
      * @param string $RouteId The ID of the routing policy
      * @param string $DestinationCidrBlock Destination
@@ -102,6 +101,7 @@ class CcnRoute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

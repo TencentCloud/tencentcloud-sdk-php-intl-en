@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertificateDetail request structure.
+ *
  * @method string getCertificateId() Obtain Certificate ID.
  * @method void setCertificateId(string $CertificateId) Set Certificate ID.
- */
-
-/**
- *DescribeCertificateDetail request structure.
  */
 class DescribeCertificateDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCertificateDetailRequest extends AbstractModel
      * @var string Certificate ID.
      */
     public $CertificateId;
+
     /**
      * @param string $CertificateId Certificate ID.
      */
@@ -38,6 +37,7 @@ class DescribeCertificateDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

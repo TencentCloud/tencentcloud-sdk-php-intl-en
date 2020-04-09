@@ -18,12 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterRoutes request structure.
+ *
  * @method string getRouteTableName() Obtain Route table name.
  * @method void setRouteTableName(string $RouteTableName) Set Route table name.
- */
-
-/**
- *DescribeClusterRoutes request structure.
  */
 class DescribeClusterRoutesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeClusterRoutesRequest extends AbstractModel
      * @var string Route table name.
      */
     public $RouteTableName;
+
     /**
      * @param string $RouteTableName Route table name.
      */
@@ -38,6 +37,7 @@ class DescribeClusterRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of custom audit task
+ *
  * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() Obtain Control parameter of custom figure audit.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) Set Control parameter of custom figure audit.
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) Set Control parameter of custom text audit.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Control parameter of custom audit task
  */
 class UserDefineConfigureInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OcrReviewInfo;
+
     /**
      * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo Control parameter of custom figure audit.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

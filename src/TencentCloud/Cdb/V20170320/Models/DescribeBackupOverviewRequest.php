@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupOverview request structure.
+ *
  * @method string getProduct() Obtain TencentDB product type to be queried. Currently, only `mysql` is supported.
  * @method void setProduct(string $Product) Set TencentDB product type to be queried. Currently, only `mysql` is supported.
- */
-
-/**
- *DescribeBackupOverview request structure.
  */
 class DescribeBackupOverviewRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeBackupOverviewRequest extends AbstractModel
      * @var string TencentDB product type to be queried. Currently, only `mysql` is supported.
      */
     public $Product;
+
     /**
      * @param string $Product TencentDB product type to be queried. Currently, only `mysql` is supported.
      */
@@ -38,6 +37,7 @@ class DescribeBackupOverviewRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

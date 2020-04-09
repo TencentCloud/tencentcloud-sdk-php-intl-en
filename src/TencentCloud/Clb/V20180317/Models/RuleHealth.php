@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Health check status of a forwarding rule
+ *
  * @method string getLocationId() Obtain Forwarding rule ID
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID
  * @method string getDomain() Obtain Domain name of the forwarding rule
@@ -32,10 +34,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargets(array $Targets) Set Health check status of the real server bound to this rule
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Health check status of a forwarding rule
  */
 class RuleHealth extends AbstractModel
 {
@@ -61,6 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Targets;
+
     /**
      * @param string $LocationId Forwarding rule ID
      * @param string $Domain Domain name of the forwarding rule
@@ -74,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

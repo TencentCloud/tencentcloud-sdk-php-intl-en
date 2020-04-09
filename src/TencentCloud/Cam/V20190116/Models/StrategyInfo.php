@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Policy information
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
  * @method string getPolicyName() Obtain Policy name
@@ -52,10 +54,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getIsServiceLinkedPolicy() Obtain 
  * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) Set 
- */
-
-/**
- *Policy information
  */
 class StrategyInfo extends AbstractModel
 {
@@ -123,6 +121,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer 
      */
     public $IsServiceLinkedPolicy;
+
     /**
      * @param integer $PolicyId Policy ID
      * @param string $PolicyName Policy name
@@ -146,6 +145,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

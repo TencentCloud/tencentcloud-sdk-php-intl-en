@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindAutoSnapshotPolicy request structure.
+ *
  * @method array getDiskIds() Obtain List of cloud disk IDs scheduled snapshot policy to be unbound from.
  * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs scheduled snapshot policy to be unbound from.
  * @method string getAutoSnapshotPolicyId() Obtain ID of scheduled snapshot policy to be unbound.
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set ID of scheduled snapshot policy to be unbound.
- */
-
-/**
- *UnbindAutoSnapshotPolicy request structure.
  */
 class UnbindAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnbindAutoSnapshotPolicyRequest extends AbstractModel
      * @var string ID of scheduled snapshot policy to be unbound.
      */
     public $AutoSnapshotPolicyId;
+
     /**
      * @param array $DiskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
      * @param string $AutoSnapshotPolicyId ID of scheduled snapshot policy to be unbound.
@@ -46,6 +45,7 @@ class UnbindAutoSnapshotPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

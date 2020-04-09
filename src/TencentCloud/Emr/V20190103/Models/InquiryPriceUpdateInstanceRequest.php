@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceUpdateInstance request structure.
+ *
  * @method string getTimeUnit() Obtain Time unit of scaling. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
  * @method void setTimeUnit(string $TimeUnit) Set Time unit of scaling. Valid values:
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method string getCurrency() Obtain Currency.
  * @method void setCurrency(string $Currency) Set Currency.
- */
-
-/**
- *InquiryPriceUpdateInstance request structure.
  */
 class InquiryPriceUpdateInstanceRequest extends AbstractModel
 {
@@ -75,6 +73,7 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
      * @var string Currency.
      */
     public $Currency;
+
     /**
      * @param string $TimeUnit Time unit of scaling. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
@@ -90,6 +89,7 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

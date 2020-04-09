@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Log search context
+ *
  * @method string getOffset() Obtain Offset.
  * @method void setOffset(string $Offset) Set Offset.
  * @method integer getLimit() Obtain Log record number
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyword(string $Keyword) Set Log keyword
  * @method string getType() Obtain Log type. The value is `Application` (default) or `Platform`.
  * @method void setType(string $Type) Set Log type. The value is `Application` (default) or `Platform`.
- */
-
-/**
- *Log search context
  */
 class LogSearchContext extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LogSearchContext extends AbstractModel
      * @var string Log type. The value is `Application` (default) or `Platform`.
      */
     public $Type;
+
     /**
      * @param string $Offset Offset.
      * @param integer $Limit Log record number
@@ -62,6 +61,7 @@ class LogSearchContext extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

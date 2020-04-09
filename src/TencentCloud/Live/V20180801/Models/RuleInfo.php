@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Rule information
+ *
  * @method string getCreateTime() Obtain Rule creation time.
  * @method void setCreateTime(string $CreateTime) Set Rule creation time.
  * @method string getUpdateTime() Obtain Rule update time.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) Set Push path.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- */
-
-/**
- *Rule information
  */
 class RuleInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RuleInfo extends AbstractModel
      * @var string Stream name.
      */
     public $StreamName;
+
     /**
      * @param string $CreateTime Rule creation time.
      * @param string $UpdateTime Rule update time.
@@ -78,6 +77,7 @@ class RuleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

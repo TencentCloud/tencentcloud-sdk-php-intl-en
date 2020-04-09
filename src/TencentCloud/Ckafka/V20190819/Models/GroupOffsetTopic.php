@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Consumer group topic object
+ *
  * @method string getTopic() Obtain Topic name
  * @method void setTopic(string $Topic) Set Topic name
  * @method array getPartitions() Obtain Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPartitions(array $Partitions) Set Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Consumer group topic object
  */
 class GroupOffsetTopic extends AbstractModel
 {
@@ -41,6 +39,7 @@ class GroupOffsetTopic extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Partitions;
+
     /**
      * @param string $Topic Topic name
      * @param array $Partitions Array of partitions in the topic, where each element is a JSON object
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

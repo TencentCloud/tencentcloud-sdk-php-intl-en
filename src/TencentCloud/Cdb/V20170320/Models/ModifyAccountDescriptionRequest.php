@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountDescription request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method array getAccounts() Obtain TencentDB account
  * @method void setAccounts(array $Accounts) Set TencentDB account
  * @method string getDescription() Obtain Database account remarks
  * @method void setDescription(string $Description) Set Database account remarks
- */
-
-/**
- *ModifyAccountDescription request structure.
  */
 class ModifyAccountDescriptionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
      * @var string Database account remarks
      */
     public $Description;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Accounts TencentDB account
@@ -54,6 +53,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

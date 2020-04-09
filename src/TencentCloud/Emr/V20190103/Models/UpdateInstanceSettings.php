@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Target resource specification
+ *
  * @method integer getMemory() Obtain Memory capacity in GB
  * @method void setMemory(integer $Memory) Set Memory capacity in GB
  * @method integer getCPUCores() Obtain Number of CPU cores
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) Set Machine resource ID (EMR resource identifier)
  * @method string getInstanceType() Obtain Target machine specification
  * @method void setInstanceType(string $InstanceType) Set Target machine specification
- */
-
-/**
- *Target resource specification
  */
 class UpdateInstanceSettings extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UpdateInstanceSettings extends AbstractModel
      * @var string Target machine specification
      */
     public $InstanceType;
+
     /**
      * @param integer $Memory Memory capacity in GB
      * @param integer $CPUCores Number of CPU cores
@@ -62,6 +61,7 @@ class UpdateInstanceSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

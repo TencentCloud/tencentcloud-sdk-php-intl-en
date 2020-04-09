@@ -18,6 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cache configuration basic version
+The cache expiration time for all files is 30 days by default.
+Static acceleration type domain names .php, .jsp, .asp, and .aspx are not cached by default
+Note: this version does not support setting cache expiration rules if the origin server does not return max-age
+ *
  * @method array getCacheRules() Obtain Cache expiration time rules
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCacheRules(array $CacheRules) Set Cache expiration time rules
@@ -65,13 +70,6 @@ off: disabled
 This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
  */
-
-/**
- *Cache configuration basic version
-The cache expiration time for all files is 30 days by default.
-Static acceleration type domain names .php, .jsp, .asp, and .aspx are not cached by default
-Note: this version does not support setting cache expiration rules if the origin server does not return max-age
- */
 class SimpleCache extends AbstractModel
 {
     /**
@@ -116,6 +114,7 @@ This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CompareMaxAge;
+
     /**
      * @param array $CacheRules Cache expiration time rules
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -145,6 +144,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRuleRealServers request structure.
+ *
  * @method string getRuleId() Obtain Forwarding rule ID
  * @method void setRuleId(string $RuleId) Set Forwarding rule ID
- */
-
-/**
- *DescribeRuleRealServers request structure.
  */
 class DescribeRuleRealServersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRuleRealServersRequest extends AbstractModel
      * @var string Forwarding rule ID
      */
     public $RuleId;
+
     /**
      * @param string $RuleId Forwarding rule ID
      */
@@ -38,6 +37,7 @@ class DescribeRuleRealServersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

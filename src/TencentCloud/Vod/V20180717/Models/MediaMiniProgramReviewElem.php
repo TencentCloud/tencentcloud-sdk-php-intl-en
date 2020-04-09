@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Summary metadata of WeChat Mini Program audit.
+ *
  * @method string getType() Obtain Audit type. 
 <li>Porn: porn image,</li>
 <li>Porn.Ocr: porn text,</li>
@@ -45,10 +47,6 @@ use TencentCloud\Common\AbstractModel;
  * @method float getConfidence() Obtain Confidence of audit result between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Confidence of audit result between 0 and 100.
  */
-
-/**
- *Summary metadata of WeChat Mini Program audit.
- */
 class MediaMiniProgramReviewElem extends AbstractModel
 {
     /**
@@ -75,6 +73,7 @@ class MediaMiniProgramReviewElem extends AbstractModel
      * @var float Confidence of audit result between 0 and 100.
      */
     public $Confidence;
+
     /**
      * @param string $Type Audit type. 
 <li>Porn: porn image,</li>
@@ -94,6 +93,7 @@ class MediaMiniProgramReviewElem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

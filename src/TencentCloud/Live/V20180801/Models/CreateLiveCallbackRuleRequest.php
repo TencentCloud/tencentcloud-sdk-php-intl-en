@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveCallbackRule request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
- */
-
-/**
- *CreateLiveCallbackRule request structure.
  */
 class CreateLiveCallbackRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateLiveCallbackRuleRequest extends AbstractModel
      * @var integer Template ID.
      */
     public $TemplateId;
+
     /**
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
@@ -54,6 +53,7 @@ class CreateLiveCallbackRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

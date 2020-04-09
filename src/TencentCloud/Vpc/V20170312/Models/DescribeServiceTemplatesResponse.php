@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeServiceTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
  * @method array getServiceTemplateSet() Obtain Protocol port template object.
  * @method void setServiceTemplateSet(array $ServiceTemplateSet) Set Protocol port template object.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeServiceTemplates response structure.
  */
 class DescribeServiceTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeServiceTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of instances meeting the filter condition.
      * @param array $ServiceTemplateSet Protocol port template object.
@@ -54,6 +53,7 @@ class DescribeServiceTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

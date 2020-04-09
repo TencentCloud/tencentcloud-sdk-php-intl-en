@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information list of instance shards
+ *
  * @method string getShardName() Obtain Shard node name
  * @method void setShardName(string $ShardName) Set Shard node name
  * @method string getShardId() Obtain Shard node ID
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunid(string $Runid) Set ID of the runtime node of an instance
  * @method integer getConnected() Obtain Service status. 0: down; 1: on
  * @method void setConnected(integer $Connected) Set Service status. 0: down; 1: on
- */
-
-/**
- *Information list of instance shards
  */
 class InstanceClusterShard extends AbstractModel
 {
@@ -87,6 +85,7 @@ class InstanceClusterShard extends AbstractModel
      * @var integer Service status. 0: down; 1: on
      */
     public $Connected;
+
     /**
      * @param string $ShardName Shard node name
      * @param string $ShardId Shard node ID
@@ -102,6 +101,7 @@ class InstanceClusterShard extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

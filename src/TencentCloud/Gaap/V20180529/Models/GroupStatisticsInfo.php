@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The connection groups from which the statistics can be derived, and the connection information.
+ *
  * @method string getGroupId() Obtain Connection group ID
  * @method void setGroupId(string $GroupId) Set Connection group ID
  * @method string getGroupName() Obtain Connection group name
  * @method void setGroupName(string $GroupName) Set Connection group name
  * @method array getProxySet() Obtain List of connections of a connection group
  * @method void setProxySet(array $ProxySet) Set List of connections of a connection group
- */
-
-/**
- *The connection groups from which the statistics can be derived, and the connection information.
  */
 class GroupStatisticsInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GroupStatisticsInfo extends AbstractModel
      * @var array List of connections of a connection group
      */
     public $ProxySet;
+
     /**
      * @param string $GroupId Connection group ID
      * @param string $GroupName Connection group name
@@ -54,6 +53,7 @@ class GroupStatisticsInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

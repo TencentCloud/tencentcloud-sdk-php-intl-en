@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSyncJob request structure.
+ *
  * @method string getJobId() Obtain ID of the disaster recovery sync task to be deleted
  * @method void setJobId(string $JobId) Set ID of the disaster recovery sync task to be deleted
- */
-
-/**
- *DeleteSyncJob request structure.
  */
 class DeleteSyncJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSyncJobRequest extends AbstractModel
      * @var string ID of the disaster recovery sync task to be deleted
      */
     public $JobId;
+
     /**
      * @param string $JobId ID of the disaster recovery sync task to be deleted
      */
@@ -38,6 +37,7 @@ class DeleteSyncJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

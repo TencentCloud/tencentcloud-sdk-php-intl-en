@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TencentDB parameter information.
+ *
  * @method string getParam() Obtain Parameter name
  * @method void setParam(string $Param) Set Parameter name
  * @method string getValue() Obtain Parameter value
  * @method void setValue(string $Value) Set Parameter value
- */
-
-/**
- *TencentDB parameter information.
  */
 class DBParamValue extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBParamValue extends AbstractModel
      * @var string Parameter value
      */
     public $Value;
+
     /**
      * @param string $Param Parameter name
      * @param string $Value Parameter value
@@ -46,6 +45,7 @@ class DBParamValue extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

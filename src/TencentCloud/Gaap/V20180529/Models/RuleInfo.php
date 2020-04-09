@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Forwarding rule of layer-7 listeners
+ *
  * @method string getRuleId() Obtain Rule information
  * @method void setRuleId(string $RuleId) Set Rule information
  * @method string getListenerId() Obtain Listener information
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setForwardHost(string $ForwardHost) Set The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Forwarding rule of layer-7 listeners
  */
 class RuleInfo extends AbstractModel
 {
@@ -111,6 +109,7 @@ class RuleInfo extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ForwardHost;
+
     /**
      * @param string $RuleId Rule information
      * @param string $ListenerId Listener information
@@ -130,6 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

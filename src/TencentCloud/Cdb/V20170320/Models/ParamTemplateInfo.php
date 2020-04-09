@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Parameter template information
+ *
  * @method integer getTemplateId() Obtain Parameter template ID
  * @method void setTemplateId(integer $TemplateId) Set Parameter template ID
  * @method string getName() Obtain Parameter template name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Parameter template description
  * @method string getEngineVersion() Obtain Instance engine version
  * @method void setEngineVersion(string $EngineVersion) Set Instance engine version
- */
-
-/**
- *Parameter template information
  */
 class ParamTemplateInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ParamTemplateInfo extends AbstractModel
      * @var string Instance engine version
      */
     public $EngineVersion;
+
     /**
      * @param integer $TemplateId Parameter template ID
      * @param string $Name Parameter template name
@@ -62,6 +61,7 @@ class ParamTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

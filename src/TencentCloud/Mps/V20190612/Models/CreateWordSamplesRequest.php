@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWordSamples request structure.
+ *
  * @method array getUsages() Obtain <b>Keyword use case. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
@@ -39,10 +41,6 @@ use TencentCloud\Common\AbstractModel;
  * @method array getWords() Obtain Keyword. Array length limit: 100.
  * @method void setWords(array $Words) Set Keyword. Array length limit: 100.
  */
-
-/**
- *CreateWordSamples request structure.
- */
 class CreateWordSamplesRequest extends AbstractModel
 {
     /**
@@ -62,6 +60,7 @@ class CreateWordSamplesRequest extends AbstractModel
      * @var array Keyword. Array length limit: 100.
      */
     public $Words;
+
     /**
      * @param array $Usages <b>Keyword use case. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
@@ -78,6 +77,7 @@ class CreateWordSamplesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

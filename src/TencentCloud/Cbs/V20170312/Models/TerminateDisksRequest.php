@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateDisks request structure.
+ *
  * @method array getDiskIds() Obtain List of cloud disk IDs required to be returned.
  * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs required to be returned.
- */
-
-/**
- *TerminateDisks request structure.
  */
 class TerminateDisksRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TerminateDisksRequest extends AbstractModel
      * @var array List of cloud disk IDs required to be returned.
      */
     public $DiskIds;
+
     /**
      * @param array $DiskIds List of cloud disk IDs required to be returned.
      */
@@ -38,6 +37,7 @@ class TerminateDisksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

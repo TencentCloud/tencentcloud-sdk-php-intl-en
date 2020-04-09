@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceAccount request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getLimit() Obtain Number of entries per page
  * @method void setLimit(integer $Limit) Set Number of entries per page
  * @method integer getOffset() Obtain Page offset
  * @method void setOffset(integer $Offset) Set Page offset
- */
-
-/**
- *DescribeInstanceAccount request structure.
  */
 class DescribeInstanceAccountRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceAccountRequest extends AbstractModel
      * @var integer Page offset
      */
     public $Offset;
+
     /**
      * @param string $InstanceId Instance ID
      * @param integer $Limit Number of entries per page
@@ -54,6 +53,7 @@ class DescribeInstanceAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

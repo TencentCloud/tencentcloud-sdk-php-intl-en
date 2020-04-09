@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database creation information
+ *
  * @method string getDBName() Obtain Database name
  * @method void setDBName(string $DBName) Set Database name
  * @method string getCharset() Obtain Character set. Valid values: Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, and SQL_Latin1_General_CP1_CS_AS. If this parameter is left empty, `Chinese_PRC_CI_AS` will be used by default
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccounts(array $Accounts) Set Database account permission information
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
- */
-
-/**
- *Database creation information
  */
 class DBCreateInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DBCreateInfo extends AbstractModel
      * @var string Remarks
      */
     public $Remark;
+
     /**
      * @param string $DBName Database name
      * @param string $Charset Character set. Valid values: Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, and SQL_Latin1_General_CP1_CS_AS. If this parameter is left empty, `Chinese_PRC_CI_AS` will be used by default
@@ -62,6 +61,7 @@ class DBCreateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

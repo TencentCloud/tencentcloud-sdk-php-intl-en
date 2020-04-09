@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAddressQuota response structure.
+ *
  * @method array getQuotaSet() Obtain The quota information of EIPs in an account.
  * @method void setQuotaSet(array $QuotaSet) Set The quota information of EIPs in an account.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAddressQuota response structure.
  */
 class DescribeAddressQuotaResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAddressQuotaResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $QuotaSet The quota information of EIPs in an account.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeAddressQuotaResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTargetHealth request structure.
+ *
  * @method array getLoadBalancerIds() Obtain List of IDs of CLB instances to be queried
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of IDs of CLB instances to be queried
- */
-
-/**
- *DescribeTargetHealth request structure.
  */
 class DescribeTargetHealthRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTargetHealthRequest extends AbstractModel
      * @var array List of IDs of CLB instances to be queried
      */
     public $LoadBalancerIds;
+
     /**
      * @param array $LoadBalancerIds List of IDs of CLB instances to be queried
      */
@@ -38,6 +37,7 @@ class DescribeTargetHealthRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

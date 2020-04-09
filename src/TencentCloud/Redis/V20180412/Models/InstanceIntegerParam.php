@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Descriptions of integer parameters of the instance
+ *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method string getValueType() Obtain Parameter type: Integer
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMax(string $Max) Set Maximum value of a parameter
  * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
  * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
- */
-
-/**
- *Descriptions of integer parameters of the instance
  */
 class InstanceIntegerParam extends AbstractModel
 {
@@ -87,6 +85,7 @@ class InstanceIntegerParam extends AbstractModel
      * @var integer Parameter status. 1: modifying; 2: modified
      */
     public $Status;
+
     /**
      * @param string $ParamName Parameter name
      * @param string $ValueType Parameter type: Integer
@@ -102,6 +101,7 @@ class InstanceIntegerParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

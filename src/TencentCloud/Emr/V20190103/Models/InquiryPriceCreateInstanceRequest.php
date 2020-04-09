@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateInstance request structure.
+ *
  * @method string getTimeUnit() Obtain Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
  * @method void setTimeUnit(string $TimeUnit) Set Time unit of instance purchase duration. Valid values:
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 <li>2: EMR v2.0.1.</li>
 <li>4: EMR v2.1.0.</li>
 <li>7: EMR v3.0.0.</li>
- */
-
-/**
- *InquiryPriceCreateInstance request structure.
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -148,6 +146,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 <li>7: EMR v3.0.0.</li>
      */
     public $ProductId;
+
     /**
      * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
@@ -178,6 +177,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDisks request structure.
+ *
  * @method string getDiskType() Obtain Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
  * @method void setDiskType(string $DiskType) Set Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
  * @method string getDiskChargeType() Obtain Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](/document/product/362/2413).
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Cloud disk binding tag.
  * @method boolean getShareable() Obtain The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
  * @method void setShareable(boolean $Shareable) Set The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
- */
-
-/**
- *CreateDisks request structure.
  */
 class CreateDisksRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class CreateDisksRequest extends AbstractModel
      * @var boolean The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
      */
     public $Shareable;
+
     /**
      * @param string $DiskType Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
      * @param string $DiskChargeType Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](/document/product/362/2413).
@@ -126,6 +125,7 @@ class CreateDisksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

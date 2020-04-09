@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillResourceSummary request structure.
+ *
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Quantity, maximum is 1000
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 1 = yes, 0 = no
  * @method void setNeedRecordNum(integer $NeedRecordNum) Set Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
- */
-
-/**
- *DescribeBillResourceSummary request structure.
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -62,6 +60,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 1 = yes, 0 = no
      */
     public $NeedRecordNum;
+
     /**
      * @param integer $Offset Offset
      * @param integer $Limit Quantity, maximum is 1000
@@ -74,6 +73,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFlowStatus request structure.
+ *
  * @method integer getFlowId() Obtain Flow ID
  * @method void setFlowId(integer $FlowId) Set Flow ID
- */
-
-/**
- *DescribeFlowStatus request structure.
  */
 class DescribeFlowStatusRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeFlowStatusRequest extends AbstractModel
      * @var integer Flow ID
      */
     public $FlowId;
+
     /**
      * @param integer $FlowId Flow ID
      */
@@ -38,6 +37,7 @@ class DescribeFlowStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

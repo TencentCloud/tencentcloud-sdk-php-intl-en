@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of a time point screencapturing task
+ *
  * @method integer getDefinition() Obtain ID of a time point screencapturing template.
  * @method void setDefinition(integer $Definition) Set ID of a time point screencapturing template.
  * @method array getTimeOffsetSet() Obtain List of time points of screenshots in <font color=red>seconds</font>.
@@ -36,10 +38,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set Rule of the `{number}` variable in the time point screenshot output path.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Input parameter type of a time point screencapturing task
  */
 class SnapshotByTimeOffsetTaskInput extends AbstractModel
 {
@@ -75,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectNumberFormat;
+
     /**
      * @param integer $Definition ID of a time point screencapturing template.
      * @param array $TimeOffsetSet List of time points of screenshots in <font color=red>seconds</font>.
@@ -90,6 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

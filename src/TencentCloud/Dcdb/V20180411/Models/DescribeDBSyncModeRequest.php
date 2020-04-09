@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSyncMode request structure.
+ *
  * @method string getInstanceId() Obtain ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
- */
-
-/**
- *DescribeDBSyncMode request structure.
  */
 class DescribeDBSyncModeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDBSyncModeRequest extends AbstractModel
      * @var string ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
      */
@@ -38,6 +37,7 @@ class DescribeDBSyncModeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

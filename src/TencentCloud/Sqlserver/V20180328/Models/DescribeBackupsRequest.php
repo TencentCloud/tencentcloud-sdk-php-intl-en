@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackups request structure.
+ *
  * @method string getStartTime() Obtain Start name (yyyy-MM-dd HH:mm:ss)
  * @method void setStartTime(string $StartTime) Set Start name (yyyy-MM-dd HH:mm:ss)
  * @method string getEndTime() Obtain End time (yyyy-MM-dd HH:mm:ss)
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1–100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
- */
-
-/**
- *DescribeBackups request structure.
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @var integer Page number. Default value: 0
      */
     public $Offset;
+
     /**
      * @param string $StartTime Start name (yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime End time (yyyy-MM-dd HH:mm:ss)
@@ -70,6 +69,7 @@ class DescribeBackupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

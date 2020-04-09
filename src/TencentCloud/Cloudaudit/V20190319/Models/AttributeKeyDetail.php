@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of AttributeKey value
+ *
  * @method string getLabel() Obtain Chinese label
  * @method void setLabel(string $Label) Set Chinese label
  * @method string getLabelType() Obtain Input box type
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStarter(string $Starter) Set Initial display
  * @method string getValue() Obtain AttributeKey value
  * @method void setValue(string $Value) Set AttributeKey value
- */
-
-/**
- *Details of AttributeKey value
  */
 class AttributeKeyDetail extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AttributeKeyDetail extends AbstractModel
      * @var string AttributeKey value
      */
     public $Value;
+
     /**
      * @param string $Label Chinese label
      * @param string $LabelType Input box type
@@ -70,6 +69,7 @@ class AttributeKeyDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdatePayType request structure.
+ *
  * @method string getArea() Obtain Billing region, which can be mainland or overseas.
  * @method void setArea(string $Area) Set Billing region, which can be mainland or overseas.
  * @method string getPayType() Obtain Billing mode, which can be flux or bandwidth.
  * @method void setPayType(string $PayType) Set Billing mode, which can be flux or bandwidth.
- */
-
-/**
- *UpdatePayType request structure.
  */
 class UpdatePayTypeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdatePayTypeRequest extends AbstractModel
      * @var string Billing mode, which can be flux or bandwidth.
      */
     public $PayType;
+
     /**
      * @param string $Area Billing region, which can be mainland or overseas.
      * @param string $PayType Billing mode, which can be flux or bandwidth.
@@ -46,6 +45,7 @@ class UpdatePayTypeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

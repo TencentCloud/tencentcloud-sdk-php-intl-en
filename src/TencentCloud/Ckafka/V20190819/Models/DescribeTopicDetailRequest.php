@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTopicDetail request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getSearchWord() Obtain (Filter) filter by `topicName`. Fuzzy search is supported
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
  * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
  * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
- */
-
-/**
- *DescribeTopicDetail request structure.
  */
 class DescribeTopicDetailRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTopicDetailRequest extends AbstractModel
      * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $SearchWord (Filter) filter by `topicName`. Fuzzy search is supported
@@ -62,6 +61,7 @@ class DescribeTopicDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QuitOrganization request structure.
+ *
  * @method integer getOrgId() Obtain Organization ID
  * @method void setOrgId(integer $OrgId) Set Organization ID
- */
-
-/**
- *QuitOrganization request structure.
  */
 class QuitOrganizationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class QuitOrganizationRequest extends AbstractModel
      * @var integer Organization ID
      */
     public $OrgId;
+
     /**
      * @param integer $OrgId Organization ID
      */
@@ -38,6 +37,7 @@ class QuitOrganizationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

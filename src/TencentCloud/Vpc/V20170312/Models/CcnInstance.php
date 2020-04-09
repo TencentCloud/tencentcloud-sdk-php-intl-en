@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The instance object associated with a CCN.
+ *
  * @method string getInstanceId() Obtain The ID of the associated instance.
  * @method void setInstanceId(string $InstanceId) Set The ID of the associated instance.
  * @method string getInstanceRegion() Obtain The region to which the associated instance ID belongs, such as `ap-guangzhou`.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
- */
-
-/**
- *The instance object associated with a CCN.
  */
 class CcnInstance extends AbstractModel
 {
@@ -54,6 +52,7 @@ class CcnInstance extends AbstractModel
 <li>`BMVPC`: BM VPC</li>
      */
     public $InstanceType;
+
     /**
      * @param string $InstanceId The ID of the associated instance.
      * @param string $InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
@@ -66,6 +65,7 @@ class CcnInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

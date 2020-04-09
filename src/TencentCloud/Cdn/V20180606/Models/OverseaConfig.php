@@ -18,6 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Specific configuration for domain names outside mainland China. UpdateDomainConfig API only supports modification of some region configurations. A list of differences that may exist for older configurations will be provided for a compatibility check. The supported configuration list is as follows:
++ Authentication
++ BandwidthAlert
++ ErrorPage
++ IpFilter
++ Origin
++ Referer
+ *
  * @method Authentication getAuthentication() Obtain Timestamp hotlink protection configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAuthentication(Authentication $Authentication) Set Timestamp hotlink protection configuration.
@@ -114,16 +122,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVideoSeek(VideoSeek $VideoSeek) Set Video dragging configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Specific configuration for domain names outside mainland China. UpdateDomainConfig API only supports modification of some region configurations. A list of differences that may exist for older configurations will be provided for a compatibility check. The supported configuration list is as follows:
-+ Authentication
-+ BandwidthAlert
-+ ErrorPage
-+ IpFilter
-+ Origin
-+ Referer
  */
 class OverseaConfig extends AbstractModel
 {
@@ -270,6 +268,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VideoSeek;
+
     /**
      * @param Authentication $Authentication Timestamp hotlink protection configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -324,6 +323,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

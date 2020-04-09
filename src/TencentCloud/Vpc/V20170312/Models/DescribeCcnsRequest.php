@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCcns request structure.
+ *
  * @method array getCcnIds() Obtain The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
  * @method void setCcnIds(array $CcnIds) Set The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
  * @method array getFilters() Obtain Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) Set Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
  * @method string getOrderDirection() Obtain Order methods. Ascending: `ASC`, Descending: `DESC`.
  * @method void setOrderDirection(string $OrderDirection) Set Order methods. Ascending: `ASC`, Descending: `DESC`.
- */
-
-/**
- *DescribeCcns request structure.
  */
 class DescribeCcnsRequest extends AbstractModel
 {
@@ -84,6 +82,7 @@ class DescribeCcnsRequest extends AbstractModel
      * @var string Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public $OrderDirection;
+
     /**
      * @param array $CcnIds The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
      * @param array $Filters Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
@@ -102,6 +101,7 @@ class DescribeCcnsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

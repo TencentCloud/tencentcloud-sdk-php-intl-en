@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyMigration request structure.
+ *
  * @method integer getMigrateId() Obtain Migration task ID
  * @method void setMigrateId(integer $MigrateId) Set Migration task ID
  * @method string getMigrateName() Obtain New name of migration task. If this parameter is left empty, no modification will be made
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(MigrateTarget $Target) Set Migration target. If this parameter is left empty, no modification will be made
  * @method array getMigrateDBSet() Obtain Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5). If it left empty, no modification will be made
  * @method void setMigrateDBSet(array $MigrateDBSet) Set Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5). If it left empty, no modification will be made
- */
-
-/**
- *ModifyMigration request structure.
  */
 class ModifyMigrationRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyMigrationRequest extends AbstractModel
      * @var array Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5). If it left empty, no modification will be made
      */
     public $MigrateDBSet;
+
     /**
      * @param integer $MigrateId Migration task ID
      * @param string $MigrateName New name of migration task. If this parameter is left empty, no modification will be made
@@ -86,6 +85,7 @@ class ModifyMigrationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

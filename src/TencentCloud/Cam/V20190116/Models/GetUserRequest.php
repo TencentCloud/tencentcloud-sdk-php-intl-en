@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetUser request structure.
+ *
  * @method string getName() Obtain Sub-user username
  * @method void setName(string $Name) Set Sub-user username
- */
-
-/**
- *GetUser request structure.
  */
 class GetUserRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetUserRequest extends AbstractModel
      * @var string Sub-user username
      */
     public $Name;
+
     /**
      * @param string $Name Sub-user username
      */
@@ -38,6 +37,7 @@ class GetUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

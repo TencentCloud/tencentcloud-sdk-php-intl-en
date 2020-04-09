@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The association relationships of the route table
+ *
  * @method string getSubnetId() Obtain Subnet instance ID.
  * @method void setSubnetId(string $SubnetId) Set Subnet instance ID.
  * @method string getRouteTableId() Obtain Route table instance ID.
  * @method void setRouteTableId(string $RouteTableId) Set Route table instance ID.
- */
-
-/**
- *The association relationships of the route table
  */
 class RouteTableAssociation extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RouteTableAssociation extends AbstractModel
      * @var string Route table instance ID.
      */
     public $RouteTableId;
+
     /**
      * @param string $SubnetId Subnet instance ID.
      * @param string $RouteTableId Route table instance ID.
@@ -46,6 +45,7 @@ class RouteTableAssociation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

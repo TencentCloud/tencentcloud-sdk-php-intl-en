@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Name of the table for rollback
+ *
  * @method string getTableName() Obtain Original table name before rollback
  * @method void setTableName(string $TableName) Set Original table name before rollback
  * @method string getNewTableName() Obtain New table name after rollback
  * @method void setNewTableName(string $NewTableName) Set New table name after rollback
- */
-
-/**
- *Name of the table for rollback
  */
 class RollbackTableName extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RollbackTableName extends AbstractModel
      * @var string New table name after rollback
      */
     public $NewTableName;
+
     /**
      * @param string $TableName Original table name before rollback
      * @param string $NewTableName New table name after rollback
@@ -46,6 +45,7 @@ class RollbackTableName extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

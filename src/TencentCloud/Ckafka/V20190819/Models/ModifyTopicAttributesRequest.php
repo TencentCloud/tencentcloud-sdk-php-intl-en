@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTopicAttributes request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getTopicName() Obtain Topic name.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
  * @method string getCleanUpPolicy() Obtain Message deletion policy. Valid values: delete, compact
  * @method void setCleanUpPolicy(string $CleanUpPolicy) Set Message deletion policy. Valid values: delete, compact
- */
-
-/**
- *ModifyTopicAttributes request structure.
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @var string Message deletion policy. Valid values: delete, compact
      */
     public $CleanUpPolicy;
+
     /**
      * @param string $InstanceId Instance ID.
      * @param string $TopicName Topic name.
@@ -110,6 +109,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

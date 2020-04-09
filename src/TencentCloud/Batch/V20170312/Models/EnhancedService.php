@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the configuration of enhanced services, such as Cloud Security and Cloud Monitor.
+ *
  * @method RunSecurityServiceEnabled getSecurityService() Obtain Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) Set Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
  * @method RunMonitorServiceEnabled getMonitorService() Obtain Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) Set Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
- */
-
-/**
- *Describes the configuration of enhanced services, such as Cloud Security and Cloud Monitor.
  */
 class EnhancedService extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnhancedService extends AbstractModel
      * @var RunMonitorServiceEnabled Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
      */
     public $MonitorService;
+
     /**
      * @param RunSecurityServiceEnabled $SecurityService Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
      * @param RunMonitorServiceEnabled $MonitorService Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
@@ -46,6 +45,7 @@ class EnhancedService extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

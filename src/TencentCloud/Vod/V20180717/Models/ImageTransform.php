@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Operation such as image rotation and flipping
+ *
  * @method string getType() Obtain Type. Valid values:
 <li> Rotate: image rotation.</li>
 <li> Flip: image flipping.</li>
@@ -34,10 +36,6 @@ This is valid if `Type` is `Flip`.
 <li>Horizental: horizontal flipping, i.e., horizontally mirrored.</li>
 <li>Vertical: vertical flipping, i.e., vertically mirrored.</li>
 This is valid if `Type` is `Flip`.
- */
-
-/**
- *Operation such as image rotation and flipping
  */
 class ImageTransform extends AbstractModel
 {
@@ -60,6 +58,7 @@ class ImageTransform extends AbstractModel
 This is valid if `Type` is `Flip`.
      */
     public $Flip;
+
     /**
      * @param string $Type Type. Valid values:
 <li> Rotate: image rotation.</li>
@@ -74,6 +73,7 @@ This is valid if `Type` is `Flip`.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

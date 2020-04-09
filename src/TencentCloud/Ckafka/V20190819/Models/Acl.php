@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ACL object entity
+ *
  * @method integer getResourceType() Obtain ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available,
  * @method void setResourceType(integer $ResourceType) Set ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available,
  * @method string getResourceName() Obtain Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
@@ -34,10 +36,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setOperation(integer $Operation) Set ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS, 12: IDEMPOTEN_WRITE
  * @method integer getPermissionType() Obtain Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW
  * @method void setPermissionType(integer $PermissionType) Set Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW
- */
-
-/**
- *ACL object entity
  */
 class Acl extends AbstractModel
 {
@@ -72,6 +70,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW
      */
     public $PermissionType;
+
     /**
      * @param integer $ResourceType ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available,
      * @param string $ResourceName Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
@@ -86,6 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

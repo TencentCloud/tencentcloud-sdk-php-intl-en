@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTaskTemplate request structure.
+ *
  * @method string getTaskTemplateId() Obtain Job template ID
  * @method void setTaskTemplateId(string $TaskTemplateId) Set Job template ID
  * @method string getTaskTemplateName() Obtain Job template name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateDescription(string $TaskTemplateDescription) Set Job template description
  * @method Task getTaskTemplateInfo() Obtain Job template information
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) Set Job template information
- */
-
-/**
- *ModifyTaskTemplate request structure.
  */
 class ModifyTaskTemplateRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyTaskTemplateRequest extends AbstractModel
      * @var Task Job template information
      */
     public $TaskTemplateInfo;
+
     /**
      * @param string $TaskTemplateId Job template ID
      * @param string $TaskTemplateName Job template name
@@ -62,6 +61,7 @@ class ModifyTaskTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

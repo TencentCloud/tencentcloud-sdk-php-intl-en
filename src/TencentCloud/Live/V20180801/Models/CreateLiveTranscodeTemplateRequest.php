@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveTranscodeTemplate request structure.
+ *
  * @method string getTemplateName() Obtain Template name, such as 900 900p. This can be only a combination of letters and digits.
  * @method void setTemplateName(string $TemplateName) Set Template name, such as 900 900p. This can be only a combination of letters and digits.
  * @method integer getVideoBitrate() Obtain Video bitrate. Value range: 100–8,000.
@@ -62,10 +64,6 @@ baseline/main/high. Default value: baseline.
  * @method void setAiTransCode(integer $AiTransCode) Set Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
  * @method float getAdaptBitratePercent() Obtain `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
  * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
- */
-
-/**
- *CreateLiveTranscodeTemplate request structure.
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -166,6 +164,7 @@ baseline/main/high. Default value: baseline.
      * @var float `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     public $AdaptBitratePercent;
+
     /**
      * @param string $TemplateName Template name, such as 900 900p. This can be only a combination of letters and digits.
      * @param integer $VideoBitrate Video bitrate. Value range: 100–8,000.
@@ -194,6 +193,7 @@ baseline/main/high. Default value: baseline.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

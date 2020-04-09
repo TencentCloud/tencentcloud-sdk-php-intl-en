@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetAccountPassword request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc.
  * @method string getUserName() Obtain Login username.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) Set Access host allowed for a user. An account is uniquely identified by username and host.
  * @method string getPassword() Obtain New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
  * @method void setPassword(string $Password) Set New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
- */
-
-/**
- *ResetAccountPassword request structure.
  */
 class ResetAccountPasswordRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ResetAccountPasswordRequest extends AbstractModel
      * @var string New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public $Password;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc.
      * @param string $UserName Login username.
@@ -62,6 +61,7 @@ class ResetAccountPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

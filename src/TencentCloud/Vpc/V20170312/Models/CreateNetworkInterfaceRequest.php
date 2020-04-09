@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNetworkInterface request structure.
+ *
  * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method string getNetworkInterfaceName() Obtain The name of the ENI. The maximum length is 60 characters.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 each time.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
- */
-
-/**
- *CreateNetworkInterface request structure.
  */
 class CreateNetworkInterfaceRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     public $Tags;
+
     /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
@@ -94,6 +93,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

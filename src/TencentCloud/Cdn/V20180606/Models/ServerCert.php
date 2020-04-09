@@ -18,6 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTPS acceleration server certificate configuration:
++ Supports deployment with certificates that are being hosted by the SSL Certificate Services
++ Supports uploading certificates of PEM format for deployment
+Note: when uploading certificates of PEM format, the Base64 encoding is required.
+ *
  * @method string getCertId() Obtain Server certificate ID
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -58,13 +63,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Certificate remarks
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *HTTPS acceleration server certificate configuration:
-+ Supports deployment with certificates that are being hosted by the SSL Certificate Services
-+ Supports uploading certificates of PEM format for deployment
-Note: when uploading certificates of PEM format, the Base64 encoding is required.
  */
 class ServerCert extends AbstractModel
 {
@@ -115,6 +113,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Message;
+
     /**
      * @param string $CertId Server certificate ID
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
@@ -141,6 +140,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

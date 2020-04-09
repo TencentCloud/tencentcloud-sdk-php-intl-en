@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes information related to the Cloud Security service.
+ *
  * @method boolean getEnabled() Obtain Whether to enable [Cloud Security](/document/product/296). Valid values: <br><li>TRUE: enable Cloud Security <br><li>FALSE: do not enable Cloud Security <br><br>Default value: TRUE.
  * @method void setEnabled(boolean $Enabled) Set Whether to enable [Cloud Security](/document/product/296). Valid values: <br><li>TRUE: enable Cloud Security <br><li>FALSE: do not enable Cloud Security <br><br>Default value: TRUE.
- */
-
-/**
- *Describes information related to the Cloud Security service.
  */
 class RunSecurityServiceEnabled extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RunSecurityServiceEnabled extends AbstractModel
      * @var boolean Whether to enable [Cloud Security](/document/product/296). Valid values: <br><li>TRUE: enable Cloud Security <br><li>FALSE: do not enable Cloud Security <br><br>Default value: TRUE.
      */
     public $Enabled;
+
     /**
      * @param boolean $Enabled Whether to enable [Cloud Security](/document/product/296). Valid values: <br><li>TRUE: enable Cloud Security <br><li>FALSE: do not enable Cloud Security <br><br>Default value: TRUE.
      */
@@ -38,6 +37,7 @@ class RunSecurityServiceEnabled extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

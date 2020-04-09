@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceSecurityGroups request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method array getSecurityGroupIds() Obtain List of IDs of security groups to be modified, which is an array of one or more security group IDs.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of IDs of security groups to be modified, which is an array of one or more security group IDs.
- */
-
-/**
- *ModifyDBInstanceSecurityGroups request structure.
  */
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
      * @var array List of IDs of security groups to be modified, which is an array of one or more security group IDs.
      */
     public $SecurityGroupIds;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
@@ -46,6 +45,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

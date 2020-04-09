@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateFunctionConfiguration request structure.
+ *
  * @method string getFunctionName() Obtain Name of the function to be modified
  * @method void setFunctionName(string $FunctionName) Set Name of the function to be modified
  * @method string getDescription() Obtain Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Information of a dead letter queue associated with a function
  * @method string getOnsEnable() Obtain 
  * @method void setOnsEnable(string $OnsEnable) Set 
- */
-
-/**
- *UpdateFunctionConfiguration request structure.
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -136,6 +134,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @var string 
      */
     public $OnsEnable;
+
     /**
      * @param string $FunctionName Name of the function to be modified
      * @param string $Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
@@ -158,6 +157,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Referer blacklist/whitelist configuration. This is disabled by default.
+ *
  * @method string getSwitch() Obtain Referer blacklist/whitelist configuration switch
 on: enabled
 off: disabled
@@ -28,10 +30,6 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRefererRules(array $RefererRules) Set Referer blacklist/whitelist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Referer blacklist/whitelist configuration. This is disabled by default.
  */
 class Referer extends AbstractModel
 {
@@ -47,6 +45,7 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RefererRules;
+
     /**
      * @param string $Switch Referer blacklist/whitelist configuration switch
 on: enabled
@@ -58,6 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

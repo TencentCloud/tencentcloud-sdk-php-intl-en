@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The port forwarding rules of the NAT gateway
+ *
  * @method string getIpProtocol() Obtain Network protocol. Available choices: `TCP`, `UDP`.
  * @method void setIpProtocol(string $IpProtocol) Set Network protocol. Available choices: `TCP`, `UDP`.
  * @method string getPublicIpAddress() Obtain EIP.
@@ -42,10 +44,6 @@ Note: This field may return null, indicating no valid value.
 Note: This field may return null, indicating no valid value.
  * @method void setCreatedTime(string $CreatedTime) Set The creation time of the NAT gateway forwarding rule.
 Note: This field may return null, indicating no valid value.
- */
-
-/**
- *The port forwarding rules of the NAT gateway
  */
 class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 {
@@ -96,6 +94,7 @@ Note: This field may return null, indicating no valid value.
 Note: This field may return null, indicating no valid value.
      */
     public $CreatedTime;
+
     /**
      * @param string $IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
      * @param string $PublicIpAddress EIP.
@@ -114,6 +113,7 @@ Note: This field may return null, indicating no valid value.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Transcoding template information
+ *
  * @method string getVcodec() Obtain Video encoding format:
 h264/h265.
  * @method void setVcodec(string $Vcodec) Set Video encoding format:
@@ -64,10 +66,6 @@ baseline/main/high.
  * @method void setAiTransCode(integer $AiTransCode) Set Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
  * @method float getAdaptBitratePercent() Obtain VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
  * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
- */
-
-/**
- *Transcoding template information
  */
 class TemplateInfo extends AbstractModel
 {
@@ -173,6 +171,7 @@ baseline/main/high.
      * @var float VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
      */
     public $AdaptBitratePercent;
+
     /**
      * @param string $Vcodec Video encoding format:
 h264/h265.
@@ -202,6 +201,7 @@ baseline/main/high.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

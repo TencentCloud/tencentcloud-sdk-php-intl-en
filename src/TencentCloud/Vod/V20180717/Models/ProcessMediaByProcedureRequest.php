@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ProcessMediaByProcedure request structure.
+ *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
  * @method string getProcedureName() Obtain [Task flow template](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtInfo(string $ExtInfo) Set Reserved field for special purposes.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ProcessMediaByProcedure request structure.
  */
 class ProcessMediaByProcedureRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ProcessMediaByProcedureRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $FileId Media file ID.
      * @param string $ProcedureName [Task flow template](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
@@ -94,6 +93,7 @@ class ProcessMediaByProcedureRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

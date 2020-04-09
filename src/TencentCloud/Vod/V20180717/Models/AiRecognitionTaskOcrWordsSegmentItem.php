@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Text recognition segment.
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of recognized segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of recognized segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of recognition segment in seconds.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
  * @method array getAreaCoordSet() Obtain Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
- */
-
-/**
- *Text recognition segment.
  */
 class AiRecognitionTaskOcrWordsSegmentItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AiRecognitionTaskOcrWordsSegmentItem extends AbstractModel
      * @var array Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
      */
     public $AreaCoordSet;
+
     /**
      * @param float $StartTimeOffset Start time offset of recognized segment in seconds.
      * @param float $EndTimeOffset End time offset of recognition segment in seconds.
@@ -62,6 +61,7 @@ class AiRecognitionTaskOcrWordsSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

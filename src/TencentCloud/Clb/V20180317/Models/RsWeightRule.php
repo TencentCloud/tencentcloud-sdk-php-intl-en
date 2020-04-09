@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Modifies the data type of a node weight
+ *
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
  * @method array getTargets() Obtain List of real servers for which to modify the weight
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Target rule URL. This parameter does not take effect if LocationId is specified
  * @method integer getWeight() Obtain New forwarding weight of a real server. Value range: 0-100.
  * @method void setWeight(integer $Weight) Set New forwarding weight of a real server. Value range: 0-100.
- */
-
-/**
- *Modifies the data type of a node weight
  */
 class RsWeightRule extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RsWeightRule extends AbstractModel
      * @var integer New forwarding weight of a real server. Value range: 0-100.
      */
     public $Weight;
+
     /**
      * @param string $ListenerId CLB listener ID
      * @param array $Targets List of real servers for which to modify the weight
@@ -78,6 +77,7 @@ class RsWeightRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

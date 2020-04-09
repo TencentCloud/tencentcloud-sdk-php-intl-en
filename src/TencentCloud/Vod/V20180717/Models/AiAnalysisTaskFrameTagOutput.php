@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result information of intelligent frame-specific tagging
+ *
  * @method array getSegmentSet() Obtain List of frame-specific video tags.
  * @method void setSegmentSet(array $SegmentSet) Set List of frame-specific video tags.
- */
-
-/**
- *Result information of intelligent frame-specific tagging
  */
 class AiAnalysisTaskFrameTagOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskFrameTagOutput extends AbstractModel
      * @var array List of frame-specific video tags.
      */
     public $SegmentSet;
+
     /**
      * @param array $SegmentSet List of frame-specific video tags.
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskFrameTagOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

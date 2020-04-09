@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseDBExtranetAccess response structure.
+ *
  * @method integer getFlowId() Obtain Async task ID. The task status can be queried through the `DescribeFlow` API.
  * @method void setFlowId(integer $FlowId) Set Async task ID. The task status can be queried through the `DescribeFlow` API.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CloseDBExtranetAccess response structure.
  */
 class CloseDBExtranetAccessResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CloseDBExtranetAccessResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $FlowId Async task ID. The task status can be queried through the `DescribeFlow` API.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CloseDBExtranetAccessResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

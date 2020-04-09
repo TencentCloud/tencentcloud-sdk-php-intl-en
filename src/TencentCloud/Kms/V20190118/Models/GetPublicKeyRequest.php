@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPublicKey request structure.
+ *
  * @method string getKeyId() Obtain Unique CMK ID.
  * @method void setKeyId(string $KeyId) Set Unique CMK ID.
- */
-
-/**
- *GetPublicKey request structure.
  */
 class GetPublicKeyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetPublicKeyRequest extends AbstractModel
      * @var string Unique CMK ID.
      */
     public $KeyId;
+
     /**
      * @param string $KeyId Unique CMK ID.
      */
@@ -38,6 +37,7 @@ class GetPublicKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

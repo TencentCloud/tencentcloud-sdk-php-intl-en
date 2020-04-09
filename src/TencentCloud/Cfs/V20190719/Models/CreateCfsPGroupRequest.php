@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsPGroup request structure.
+ *
  * @method string getName() Obtain Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
  * @method void setName(string $Name) Set Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
  * @method string getDescInfo() Obtain Permission group description, which can contain 1–255 characters
  * @method void setDescInfo(string $DescInfo) Set Permission group description, which can contain 1–255 characters
- */
-
-/**
- *CreateCfsPGroup request structure.
  */
 class CreateCfsPGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateCfsPGroupRequest extends AbstractModel
      * @var string Permission group description, which can contain 1–255 characters
      */
     public $DescInfo;
+
     /**
      * @param string $Name Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
      * @param string $DescInfo Permission group description, which can contain 1–255 characters
@@ -46,6 +45,7 @@ class CreateCfsPGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

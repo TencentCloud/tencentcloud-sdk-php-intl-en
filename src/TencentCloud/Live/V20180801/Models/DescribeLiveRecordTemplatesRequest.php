@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveRecordTemplates request structure.
+ *
  * @method integer getIsDelayLive() Obtain Whether it is an LCB template
  * @method void setIsDelayLive(integer $IsDelayLive) Set Whether it is an LCB template
- */
-
-/**
- *DescribeLiveRecordTemplates request structure.
  */
 class DescribeLiveRecordTemplatesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLiveRecordTemplatesRequest extends AbstractModel
      * @var integer Whether it is an LCB template
      */
     public $IsDelayLive;
+
     /**
      * @param integer $IsDelayLive Whether it is an LCB template
      */
@@ -38,6 +37,7 @@ class DescribeLiveRecordTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

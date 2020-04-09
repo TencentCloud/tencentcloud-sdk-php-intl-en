@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestartDBInstance response structure.
+ *
  * @method integer getFlowId() Obtain Async flow ID
  * @method void setFlowId(integer $FlowId) Set Async flow ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *RestartDBInstance response structure.
  */
 class RestartDBInstanceResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RestartDBInstanceResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $FlowId Async flow ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class RestartDBInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHosts request structure.
+ *
  * @method array getFilters() Obtain Filters.
 <li> `zone` - String - Optional - Filter results by availability zone.</li>
 <li> `project-id` - Integer - Optional - Filter results by project ID. You can call `DescribeProject` or log in to the console to view the list of existing projects. You can also create a new project by calling `AddProject`.</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset; default value: 0.
  * @method integer getLimit() Obtain Number of results returned; default value: 20; maximum: 100.
  * @method void setLimit(integer $Limit) Set Number of results returned; default value: 20; maximum: 100.
- */
-
-/**
- *DescribeHosts request structure.
  */
 class DescribeHostsRequest extends AbstractModel
 {
@@ -60,6 +58,7 @@ class DescribeHostsRequest extends AbstractModel
      * @var integer Number of results returned; default value: 20; maximum: 100.
      */
     public $Limit;
+
     /**
      * @param array $Filters Filters.
 <li> `zone` - String - Optional - Filter results by availability zone.</li>
@@ -74,6 +73,7 @@ class DescribeHostsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

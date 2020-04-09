@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * `DescribeGroup` response entity
+ *
  * @method string getGroup() Obtain groupId
  * @method void setGroup(string $Group) Set groupId
  * @method string getProtocol() Obtain Protocol used by the group.
  * @method void setProtocol(string $Protocol) Set Protocol used by the group.
- */
-
-/**
- *`DescribeGroup` response entity
  */
 class DescribeGroup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeGroup extends AbstractModel
      * @var string Protocol used by the group.
      */
     public $Protocol;
+
     /**
      * @param string $Group groupId
      * @param string $Protocol Protocol used by the group.
@@ -46,6 +45,7 @@ class DescribeGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

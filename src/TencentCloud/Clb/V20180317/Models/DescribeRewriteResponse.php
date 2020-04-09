@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRewrite response structure.
+ *
  * @method array getRewriteSet() Obtain Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
  * @method void setRewriteSet(array $RewriteSet) Set Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeRewrite response structure.
  */
 class DescribeRewriteResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRewriteResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeRewriteResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

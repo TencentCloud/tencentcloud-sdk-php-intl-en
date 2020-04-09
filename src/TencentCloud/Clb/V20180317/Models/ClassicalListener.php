@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Classic CLB listener information
+ *
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
  * @method integer getListenerPort() Obtain CLB listener port
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertCaId(string $CertCaId) Set Client certificate ID for an HTTPS listener of a public network classic CLB
  * @method integer getStatus() Obtain Listener status. Value range: 0 (creating), 1 (running)
  * @method void setStatus(integer $Status) Set Listener status. Value range: 0 (creating), 1 (running)
- */
-
-/**
- *Classic CLB listener information
  */
 class ClassicalListener extends AbstractModel
 {
@@ -150,6 +148,7 @@ class ClassicalListener extends AbstractModel
      * @var integer Listener status. Value range: 0 (creating), 1 (running)
      */
     public $Status;
+
     /**
      * @param string $ListenerId CLB listener ID
      * @param integer $ListenerPort CLB listener port
@@ -174,6 +173,7 @@ class ClassicalListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

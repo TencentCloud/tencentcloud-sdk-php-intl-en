@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteMountTarget request structure.
+ *
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
  * @method string getMountTargetId() Obtain Mount target ID
  * @method void setMountTargetId(string $MountTargetId) Set Mount target ID
- */
-
-/**
- *DeleteMountTarget request structure.
  */
 class DeleteMountTargetRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteMountTargetRequest extends AbstractModel
      * @var string Mount target ID
      */
     public $MountTargetId;
+
     /**
      * @param string $FileSystemId File system ID
      * @param string $MountTargetId Mount target ID
@@ -46,6 +45,7 @@ class DeleteMountTargetRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

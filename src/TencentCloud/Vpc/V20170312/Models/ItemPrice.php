@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The pricing information of a single billing item
+ *
  * @method float getUnitPrice() Obtain The pay-as-you-go billing method. Unit: CNY.
  * @method void setUnitPrice(float $UnitPrice) Set The pay-as-you-go billing method. Unit: CNY.
  * @method string getChargeUnit() Obtain Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the prepaid product. Unit: CNY.
  * @method float getDiscountPrice() Obtain Discount price of the prepaid product. Unit: CNY.
  * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the prepaid product. Unit: CNY.
- */
-
-/**
- *The pricing information of a single billing item
  */
 class ItemPrice extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ItemPrice extends AbstractModel
      * @var float Discount price of the prepaid product. Unit: CNY.
      */
     public $DiscountPrice;
+
     /**
      * @param float $UnitPrice The pay-as-you-go billing method. Unit: CNY.
      * @param string $ChargeUnit Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
@@ -62,6 +61,7 @@ class ItemPrice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

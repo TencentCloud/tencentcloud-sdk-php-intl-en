@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Virtual Private Cloud (VPC) object.
+ *
  * @method string getVpcName() Obtain `VPC` name.
  * @method void setVpcName(string $VpcName) Set `VPC` name.
  * @method string getVpcId() Obtain `VPC` instance `ID`, such as `vpc-azd4dt1c`.
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAssistantCidrSet(array $AssistantCidrSet) Set The secondary CIDR block.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Virtual Private Cloud (VPC) object.
  */
 class Vpc extends AbstractModel
 {
@@ -118,6 +116,7 @@ class Vpc extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AssistantCidrSet;
+
     /**
      * @param string $VpcName `VPC` name.
      * @param string $VpcId `VPC` instance `ID`, such as `vpc-azd4dt1c`.
@@ -138,6 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

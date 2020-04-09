@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeReviewDetails response structure.
+ *
  * @method integer getTotalCount() Obtain Number of initiated content audits.
  * @method void setTotalCount(integer $TotalCount) Set Number of initiated content audits.
  * @method integer getTotalDuration() Obtain Total content audit duration.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(array $Data) Set Data of content audit duration, which is collected once per day.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeReviewDetails response structure.
  */
 class DescribeReviewDetailsResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeReviewDetailsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of initiated content audits.
      * @param integer $TotalDuration Total content audit duration.
@@ -62,6 +61,7 @@ class DescribeReviewDetailsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

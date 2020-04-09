@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLivePushAuthKey request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method integer getEnable() Obtain Whether to enable. 0: disabled; 1: enabled.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupAuthKey(string $BackupAuthKey) Set Backup authentication key.
  * @method integer getAuthDelta() Obtain Validity period in seconds.
  * @method void setAuthDelta(integer $AuthDelta) Set Validity period in seconds.
- */
-
-/**
- *ModifyLivePushAuthKey request structure.
  */
 class ModifyLivePushAuthKeyRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
      * @var integer Validity period in seconds.
      */
     public $AuthDelta;
+
     /**
      * @param string $DomainName Push domain name.
      * @param integer $Enable Whether to enable. 0: disabled; 1: enabled.
@@ -70,6 +69,7 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

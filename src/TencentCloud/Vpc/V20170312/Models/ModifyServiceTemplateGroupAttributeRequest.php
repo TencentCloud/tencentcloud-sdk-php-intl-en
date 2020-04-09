@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyServiceTemplateGroupAttribute request structure.
+ *
  * @method string getServiceTemplateGroupId() Obtain The protocol port template group instance ID, such as `ppmg-ei8hfd9a`.
  * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) Set The protocol port template group instance ID, such as `ppmg-ei8hfd9a`.
  * @method string getServiceTemplateGroupName() Obtain Protocol port template group name.
  * @method void setServiceTemplateGroupName(string $ServiceTemplateGroupName) Set Protocol port template group name.
  * @method array getServiceTemplateIds() Obtain Instance ID of the protocol port template, such as `ppm-4dw6agho`.
  * @method void setServiceTemplateIds(array $ServiceTemplateIds) Set Instance ID of the protocol port template, such as `ppm-4dw6agho`.
- */
-
-/**
- *ModifyServiceTemplateGroupAttribute request structure.
  */
 class ModifyServiceTemplateGroupAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyServiceTemplateGroupAttributeRequest extends AbstractModel
      * @var array Instance ID of the protocol port template, such as `ppm-4dw6agho`.
      */
     public $ServiceTemplateIds;
+
     /**
      * @param string $ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-ei8hfd9a`.
      * @param string $ServiceTemplateGroupName Protocol port template group name.
@@ -54,6 +53,7 @@ class ModifyServiceTemplateGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

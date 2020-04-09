@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNotificationConfiguration request structure.
+ *
  * @method string getAutoScalingNotificationId() Obtain ID of the notification to be modified.
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set ID of the notification to be modified.
  * @method array getNotificationTypes() Obtain Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
  * @method array getNotificationUserGroupIds() Obtain Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
- */
-
-/**
- *ModifyNotificationConfiguration request structure.
  */
 class ModifyNotificationConfigurationRequest extends AbstractModel
 {
@@ -63,6 +61,7 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
      * @var array Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
      */
     public $NotificationUserGroupIds;
+
     /**
      * @param string $AutoScalingNotificationId ID of the notification to be modified.
      * @param array $NotificationTypes Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
@@ -78,6 +77,7 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

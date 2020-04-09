@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Filter conditions
+ *
  * @method string getName() Obtain Filter conditions
  * @method void setName(string $Name) Set Filter conditions
  * @method array getValues() Obtain Filter values
  * @method void setValues(array $Values) Set Filter values
- */
-
-/**
- *Filter conditions
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array Filter values
      */
     public $Values;
+
     /**
      * @param string $Name Filter conditions
      * @param array $Values Filter values
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

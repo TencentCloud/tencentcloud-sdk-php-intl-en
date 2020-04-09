@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Filter conditions for domain name query.
+ *
  * @method string getName() Obtain Filter field name, the list supported is as follows:
 - origin: master origin server.
 - domain: domain name.
@@ -49,10 +51,6 @@ When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is 
  * @method void setFuzzy(boolean $Fuzzy) Set Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
  */
-
-/**
- *Filter conditions for domain name query.
- */
 class DomainFilter extends AbstractModel
 {
     /**
@@ -81,6 +79,7 @@ class DomainFilter extends AbstractModel
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
      */
     public $Fuzzy;
+
     /**
      * @param string $Name Filter field name, the list supported is as follows:
 - origin: master origin server.
@@ -102,6 +101,7 @@ When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is 
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

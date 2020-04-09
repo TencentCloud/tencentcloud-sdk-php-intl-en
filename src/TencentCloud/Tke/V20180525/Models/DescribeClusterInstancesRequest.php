@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterInstances request structure.
+ *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method integer getOffset() Obtain Offset. Default value: 0
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs to be obtained. This parameter is empty by default, which indicates that all instances in the cluster will be pulled.
  * @method string getInstanceRole() Obtain 
  * @method void setInstanceRole(string $InstanceRole) Set 
- */
-
-/**
- *DescribeClusterInstances request structure.
  */
 class DescribeClusterInstancesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeClusterInstancesRequest extends AbstractModel
      * @var string 
      */
     public $InstanceRole;
+
     /**
      * @param string $ClusterId Cluster ID
      * @param integer $Offset Offset. Default value: 0
@@ -70,6 +69,7 @@ class DescribeClusterInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

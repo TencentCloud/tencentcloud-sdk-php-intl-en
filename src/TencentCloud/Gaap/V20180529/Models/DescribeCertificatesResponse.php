@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertificates response structure.
+ *
  * @method array getCertificateSet() Obtain Server certificate list, which includes certificate ID and certificate name.
  * @method void setCertificateSet(array $CertificateSet) Set Server certificate list, which includes certificate ID and certificate name.
  * @method integer getTotalCount() Obtain Total quantity of server certificates that match the query conditions.
  * @method void setTotalCount(integer $TotalCount) Set Total quantity of server certificates that match the query conditions.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeCertificates response structure.
  */
 class DescribeCertificatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCertificatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $CertificateSet Server certificate list, which includes certificate ID and certificate name.
      * @param integer $TotalCount Total quantity of server certificates that match the query conditions.
@@ -54,6 +53,7 @@ class DescribeCertificatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

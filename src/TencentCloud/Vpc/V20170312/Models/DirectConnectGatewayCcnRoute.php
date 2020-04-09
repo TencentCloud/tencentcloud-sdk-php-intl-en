@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The object of the CCN route (IDC IP range) of the Direct Connect gateway
+ *
  * @method string getRouteId() Obtain Route ID.
  * @method void setRouteId(string $RouteId) Set Route ID.
  * @method string getDestinationCidrBlock() Obtain IDC IP range.
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set IDC IP range.
  * @method array getASPath() Obtain The `AS-Path` attribute of `BGP`.
  * @method void setASPath(array $ASPath) Set The `AS-Path` attribute of `BGP`.
- */
-
-/**
- *The object of the CCN route (IDC IP range) of the Direct Connect gateway
  */
 class DirectConnectGatewayCcnRoute extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
      * @var array The `AS-Path` attribute of `BGP`.
      */
     public $ASPath;
+
     /**
      * @param string $RouteId Route ID.
      * @param string $DestinationCidrBlock IDC IP range.
@@ -54,6 +53,7 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

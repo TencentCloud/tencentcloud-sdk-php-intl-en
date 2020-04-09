@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceRenewInstance request structure.
+ *
  * @method integer getTimeSpan() Obtain How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
  * @method void setTimeSpan(integer $TimeSpan) Set How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
  * @method array getResourceIds() Obtain List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) Set Unit of time for instance renewal.
  * @method string getCurrency() Obtain Currency.
  * @method void setCurrency(string $Currency) Set Currency.
- */
-
-/**
- *InquiryPriceRenewInstance request structure.
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
      * @var string Currency.
      */
     public $Currency;
+
     /**
      * @param integer $TimeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
      * @param array $ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
@@ -78,6 +77,7 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

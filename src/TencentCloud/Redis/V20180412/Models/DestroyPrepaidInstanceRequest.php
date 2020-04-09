@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DestroyPrepaidInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- */
-
-/**
- *DestroyPrepaidInstance request structure.
  */
 class DestroyPrepaidInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DestroyPrepaidInstanceRequest extends AbstractModel
      * @var string Instance ID
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId Instance ID
      */
@@ -38,6 +37,7 @@ class DestroyPrepaidInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

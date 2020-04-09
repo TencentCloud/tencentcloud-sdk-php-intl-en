@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Specification information of a node type in the cluster (such as hot data node, warm data node, or dedicated master node), including node type, number of nodes, node specification, disk type, and disk size. If `Type` is not specified, it will be a hot data node by default; if the node is a master node, then the `DiskType` and `DiskSize` parameters will be ignored (as a master node has no data disks)
+ *
  * @method integer getNodeNum() Obtain Number of nodes
  * @method void setNodeNum(integer $NodeNum) Set Number of nodes
  * @method string getNodeType() Obtain Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
@@ -34,10 +36,6 @@ Default value: hotData
  * @method void setDiskType(string $DiskType) Set Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
  * @method integer getDiskSize() Obtain Node disk size in GB
  * @method void setDiskSize(integer $DiskSize) Set Node disk size in GB
- */
-
-/**
- *Specification information of a node type in the cluster (such as hot data node, warm data node, or dedicated master node), including node type, number of nodes, node specification, disk type, and disk size. If `Type` is not specified, it will be a hot data node by default; if the node is a master node, then the `DiskType` and `DiskSize` parameters will be ignored (as a master node has no data disks)
  */
 class NodeInfo extends AbstractModel
 {
@@ -68,6 +66,7 @@ Default value: hotData
      * @var integer Node disk size in GB
      */
     public $DiskSize;
+
     /**
      * @param integer $NodeNum Number of nodes
      * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
@@ -82,6 +81,7 @@ Default value: hotData
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

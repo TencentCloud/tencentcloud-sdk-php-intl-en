@@ -18,14 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Location information of the cluster instance
+ *
  * @method integer getProjectId() Obtain ID of the project to which the instance belongs. You can call the `DescribeProject` API and see the `projectId` field in the response to get the value of this parameter. If it is left empty, the default project will be used.
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which the instance belongs. You can call the `DescribeProject` API and see the `projectId` field in the response to get the value of this parameter. If it is left empty, the default project will be used.
  * @method string getZone() Obtain AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
  * @method void setZone(string $Zone) Set AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
- */
-
-/**
- *Location information of the cluster instance
  */
 class Placement extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Placement extends AbstractModel
      * @var string AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
      */
     public $Zone;
+
     /**
      * @param integer $ProjectId ID of the project to which the instance belongs. You can call the `DescribeProject` API and see the `projectId` field in the response to get the value of this parameter. If it is left empty, the default project will be used.
      * @param string $Zone AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
@@ -46,6 +45,7 @@ class Placement extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

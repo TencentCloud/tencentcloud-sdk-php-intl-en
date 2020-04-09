@@ -18,14 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAppStatus API output parameters
+ *
  * @method integer getBizId() Obtain GME application ID
  * @method void setBizId(integer $BizId) Set GME application ID
  * @method string getStatus() Obtain Application status. Valid values: open, close
  * @method void setStatus(string $Status) Set Application status. Valid values: open, close
- */
-
-/**
- *ModifyAppStatus API output parameters
  */
 class ModifyAppStatusResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAppStatusResponse extends AbstractModel
      * @var string Application status. Valid values: open, close
      */
     public $Status;
+
     /**
      * @param integer $BizId GME application ID
      * @param string $Status Application status. Valid values: open, close
@@ -46,6 +45,7 @@ class ModifyAppStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

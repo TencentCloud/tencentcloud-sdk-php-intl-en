@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Table definition file details, excluding file content
+ *
  * @method string getFileName() Obtain Filename excluding extension
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFileName(string $FileName) Set Filename excluding extension
@@ -42,10 +44,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setError(ErrorInfo $Error) Set Error message
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Table definition file details, excluding file content
  */
 class IdlFileInfoWithoutContent extends AbstractModel
 {
@@ -84,6 +82,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Error;
+
     /**
      * @param string $FileName Filename excluding extension
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -102,6 +101,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

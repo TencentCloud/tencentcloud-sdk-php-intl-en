@@ -18,27 +18,29 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Routing policy object
+ *
  * @method string getDestinationCidrBlock() Obtain Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
- * @method string getGatewayType() Obtain The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+ * @method string getGatewayType() Obtain Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network.
- * @method void setGatewayType(string $GatewayType) Set The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+ * @method void setGatewayType(string $GatewayType) Set Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network.
  * @method string getGatewayId() Obtain Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
 Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
@@ -60,10 +62,8 @@ USER: User route;
 NETD: Network probe route. When creating a network probe route, the system delivers by default. It cannot be edited or deleted;
 CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
 Users can only add and operate USER-type routes.
- */
-
-/**
- *Routing policy object
+ * @method string getRouteTableId() Obtain Route table instance ID, such as rtb-azd4dt1c.
+ * @method void setRouteTableId(string $RouteTableId) Set Route table instance ID, such as rtb-azd4dt1c.
  */
 class Route extends AbstractModel
 {
@@ -73,15 +73,15 @@ class Route extends AbstractModel
     public $DestinationCidrBlock;
 
     /**
-     * @var string The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+     * @var string Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network.
      */
     public $GatewayType;
@@ -115,17 +115,23 @@ CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
 Users can only add and operate USER-type routes.
      */
     public $RouteType;
+
+    /**
+     * @var string Route table instance ID, such as rtb-azd4dt1c.
+     */
+    public $RouteTableId;
+
     /**
      * @param string $DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
-     * @param string $GatewayType The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+     * @param string $GatewayType Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network.
      * @param string $GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
 Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
@@ -137,11 +143,13 @@ USER: User route;
 NETD: Network probe route. When creating a network probe route, the system delivers by default. It cannot be edited or deleted;
 CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
 Users can only add and operate USER-type routes.
+     * @param string $RouteTableId Route table instance ID, such as rtb-azd4dt1c.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -176,6 +184,10 @@ Users can only add and operate USER-type routes.
 
         if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
             $this->RouteType = $param["RouteType"];
+        }
+
+        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
+            $this->RouteTableId = $param["RouteTableId"];
         }
     }
 }

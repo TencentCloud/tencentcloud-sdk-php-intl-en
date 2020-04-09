@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Array of instance backups
+ *
  * @method string getStartTime() Obtain Backup start time
  * @method void setStartTime(string $StartTime) Set Backup start time
  * @method string getBackupId() Obtain Backup ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) Set Backup remarks
  * @method integer getLocked() Obtain Whether a backup is locked. 0: no; 1: yes
  * @method void setLocked(integer $Locked) Set Whether a backup is locked. 0: no; 1: yes
- */
-
-/**
- *Array of instance backups
  */
 class RedisBackupSet extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RedisBackupSet extends AbstractModel
      * @var integer Whether a backup is locked. 0: no; 1: yes
      */
     public $Locked;
+
     /**
      * @param string $StartTime Backup start time
      * @param string $BackupId Backup ID
@@ -78,6 +77,7 @@ class RedisBackupSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

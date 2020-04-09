@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBInstances response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible instances
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances
  * @method array getInstances() Obtain List of instance details
  * @method void setInstances(array $Instances) Set List of instance details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDCDBInstances response structure.
  */
 class DescribeDCDBInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDCDBInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible instances
      * @param array $Instances List of instance details
@@ -54,6 +53,7 @@ class DescribeDCDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

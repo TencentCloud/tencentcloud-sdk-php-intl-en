@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Image
+ *
  * @method string getImageId() Obtain Image instance ID.
  * @method void setImageId(string $ImageId) Set Image instance ID.
  * @method string getImageName() Obtain Image name.
  * @method void setImageName(string $ImageName) Set Image name.
- */
-
-/**
- *Image
  */
 class Image extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Image extends AbstractModel
      * @var string Image name.
      */
     public $ImageName;
+
     /**
      * @param string $ImageId Image instance ID.
      * @param string $ImageName Image name.
@@ -46,6 +45,7 @@ class Image extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

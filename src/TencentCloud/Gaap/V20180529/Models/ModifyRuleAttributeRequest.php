@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRuleAttribute request structure.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getRuleId() Obtain Forwarding rule ID
@@ -48,10 +50,6 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
  * @method void setForwardHost(string $ForwardHost) Set The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
- */
-
-/**
- *ModifyRuleAttribute request structure.
  */
 class ModifyRuleAttributeRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
      */
     public $ForwardHost;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $RuleId Forwarding rule ID
@@ -122,6 +121,7 @@ If `ForwardHost=default`, the domain name of rule will be used. For other cases,
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

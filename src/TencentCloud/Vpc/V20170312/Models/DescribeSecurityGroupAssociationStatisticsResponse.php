@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroupAssociationStatistics response structure.
+ *
  * @method array getSecurityGroupAssociationStatisticsSet() Obtain Statistics on the instances associated with a security group.
  * @method void setSecurityGroupAssociationStatisticsSet(array $SecurityGroupAssociationStatisticsSet) Set Statistics on the instances associated with a security group.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSecurityGroupAssociationStatistics response structure.
  */
 class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SecurityGroupAssociationStatisticsSet Statistics on the instances associated with a security group.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

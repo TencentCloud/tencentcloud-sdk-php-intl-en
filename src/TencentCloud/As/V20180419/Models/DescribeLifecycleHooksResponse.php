@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLifecycleHooks response structure.
+ *
  * @method array getLifecycleHookSet() Obtain Array of lifecycle hooks
  * @method void setLifecycleHookSet(array $LifecycleHookSet) Set Array of lifecycle hooks
  * @method integer getTotalCount() Obtain Total quantity
  * @method void setTotalCount(integer $TotalCount) Set Total quantity
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLifecycleHooks response structure.
  */
 class DescribeLifecycleHooksResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeLifecycleHooksResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $LifecycleHookSet Array of lifecycle hooks
      * @param integer $TotalCount Total quantity
@@ -54,6 +53,7 @@ class DescribeLifecycleHooksResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

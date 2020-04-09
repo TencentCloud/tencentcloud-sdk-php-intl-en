@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageSpriteTemplates request structure.
+ *
  * @method array getDefinitions() Obtain Unique ID filter of image sprite generating templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of image sprite generating templates. Array length limit: 100.
  * @method integer getOffset() Obtain Paged offset. Default value: 0.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Custom: custom template.</li>
  * @method integer getSubAppId() Obtain ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *DescribeImageSpriteTemplates request structure.
  */
 class DescribeImageSpriteTemplatesRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeImageSpriteTemplatesRequest extends AbstractModel
      * @var integer ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $Definitions Unique ID filter of image sprite generating templates. Array length limit: 100.
      * @param integer $Offset Paged offset. Default value: 0.
@@ -78,6 +77,7 @@ class DescribeImageSpriteTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

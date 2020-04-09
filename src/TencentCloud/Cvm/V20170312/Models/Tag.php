@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Key-value pair of a tag.
+ *
  * @method string getKey() Obtain Tag key
  * @method void setKey(string $Key) Set Tag key
  * @method string getValue() Obtain Tag value
  * @method void setValue(string $Value) Set Tag value
- */
-
-/**
- *Key-value pair of a tag.
  */
 class Tag extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Tag extends AbstractModel
      * @var string Tag value
      */
     public $Value;
+
     /**
      * @param string $Key Tag key
      * @param string $Value Tag value
@@ -46,6 +45,7 @@ class Tag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteClusterRoute request structure.
+ *
  * @method string getRouteTableName() Obtain Route table name.
  * @method void setRouteTableName(string $RouteTableName) Set Route table name.
  * @method string getGatewayIp() Obtain Next hop address.
  * @method void setGatewayIp(string $GatewayIp) Set Next hop address.
  * @method string getDestinationCidrBlock() Obtain Destination CIDR.
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set Destination CIDR.
- */
-
-/**
- *DeleteClusterRoute request structure.
  */
 class DeleteClusterRouteRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteClusterRouteRequest extends AbstractModel
      * @var string Destination CIDR.
      */
     public $DestinationCidrBlock;
+
     /**
      * @param string $RouteTableName Route table name.
      * @param string $GatewayIp Next hop address.
@@ -54,6 +53,7 @@ class DeleteClusterRouteRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

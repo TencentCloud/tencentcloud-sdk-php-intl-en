@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Full text recognition segment.
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of a recognition segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognition segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a recognition segment in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognition segment in seconds.
  * @method array getTextSet() Obtain Recognition segment result set.
  * @method void setTextSet(array $TextSet) Set Recognition segment result set.
- */
-
-/**
- *Full text recognition segment.
  */
 class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
      * @var array Recognition segment result set.
      */
     public $TextSet;
+
     /**
      * @param float $StartTimeOffset Start time offset of a recognition segment in seconds.
      * @param float $EndTimeOffset End time offset of a recognition segment in seconds.
@@ -54,6 +53,7 @@ class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

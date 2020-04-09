@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Signature modification response 
+ *
  * @method integer getSignId() Obtain Signature ID
  * @method void setSignId(integer $SignId) Set Signature ID
  * @method string getSignApplyId() Obtain Signature modification application ID
  * @method void setSignApplyId(string $SignApplyId) Set Signature modification application ID
- */
-
-/**
- *Signature modification response 
  */
 class ModifySignStatus extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifySignStatus extends AbstractModel
      * @var string Signature modification application ID
      */
     public $SignApplyId;
+
     /**
      * @param integer $SignId Signature ID
      * @param string $SignApplyId Signature modification application ID
@@ -46,6 +45,7 @@ class ModifySignStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

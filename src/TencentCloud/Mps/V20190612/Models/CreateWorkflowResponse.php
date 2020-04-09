@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWorkflow response structure.
+ *
  * @method integer getWorkflowId() Obtain Workflow ID.
  * @method void setWorkflowId(integer $WorkflowId) Set Workflow ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateWorkflow response structure.
  */
 class CreateWorkflowResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateWorkflowResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $WorkflowId Workflow ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateWorkflowResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

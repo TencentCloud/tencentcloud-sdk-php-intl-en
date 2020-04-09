@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task overview information
+ *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getTaskType() Obtain Task type. Valid values:
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been started yet, this field will be `0000-00-00T00:00:00Z`.
  * @method string getFinishTime() Obtain End time of a task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been completed yet, this field will be `0000-00-00T00:00:00Z`.
  * @method void setFinishTime(string $FinishTime) Set End time of a task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been completed yet, this field will be `0000-00-00T00:00:00Z`.
- */
-
-/**
- *Task overview information
  */
 class TaskSimpleInfo extends AbstractModel
 {
@@ -65,6 +63,7 @@ class TaskSimpleInfo extends AbstractModel
      * @var string End time of a task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been completed yet, this field will be `0000-00-00T00:00:00Z`.
      */
     public $FinishTime;
+
     /**
      * @param string $TaskId Task ID.
      * @param string $TaskType Task type. Valid values:
@@ -78,6 +77,7 @@ class TaskSimpleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

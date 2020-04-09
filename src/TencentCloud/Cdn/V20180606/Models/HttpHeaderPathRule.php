@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP header setting rules. Up to 100 entries can be set.
+ *
  * @method string getHeaderMode() Obtain HTTP header setting method
 add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
@@ -65,10 +67,6 @@ For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
-
-/**
- *HTTP header setting rules. Up to 100 entries can be set.
- */
 class HttpHeaderPathRule extends AbstractModel
 {
     /**
@@ -113,6 +111,7 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RulePaths;
+
     /**
      * @param string $HeaderMode HTTP header setting method
 add: add header. If a header exists, then there will be a duplicated header.
@@ -142,6 +141,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

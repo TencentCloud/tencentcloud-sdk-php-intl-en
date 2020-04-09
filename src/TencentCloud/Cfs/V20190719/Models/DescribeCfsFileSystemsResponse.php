@@ -18,16 +18,14 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCfsFileSystems response structure.
+ *
  * @method array getFileSystems() Obtain File system information
  * @method void setFileSystems(array $FileSystems) Set File system information
  * @method integer getTotalCount() Obtain Total number of file systems
  * @method void setTotalCount(integer $TotalCount) Set Total number of file systems
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeCfsFileSystems response structure.
  */
 class DescribeCfsFileSystemsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCfsFileSystemsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $FileSystems File system information
      * @param integer $TotalCount Total number of file systems
@@ -54,6 +53,7 @@ class DescribeCfsFileSystemsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

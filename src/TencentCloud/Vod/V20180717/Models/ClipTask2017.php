@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video clipping task information. This structure is only used for tasks initiated by the [ClipVideo](https://cloud.tencent.com/document/product/266/10156) API in v2017.
+ *
  * @method string getTaskId() Obtain Video clipping task ID.
  * @method void setTaskId(string $TaskId) Set Video clipping task ID.
  * @method string getSrcFileId() Obtain ID of source file for video clipping task.
  * @method void setSrcFileId(string $SrcFileId) Set ID of source file for video clipping task.
  * @method ClipFileInfo2017 getFileInfo() Obtain Information of file output by video clipping.
  * @method void setFileInfo(ClipFileInfo2017 $FileInfo) Set Information of file output by video clipping.
- */
-
-/**
- *Video clipping task information. This structure is only used for tasks initiated by the [ClipVideo](https://cloud.tencent.com/document/product/266/10156) API in v2017.
  */
 class ClipTask2017 extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ClipTask2017 extends AbstractModel
      * @var ClipFileInfo2017 Information of file output by video clipping.
      */
     public $FileInfo;
+
     /**
      * @param string $TaskId Video clipping task ID.
      * @param string $SrcFileId ID of source file for video clipping task.
@@ -54,6 +53,7 @@ class ClipTask2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

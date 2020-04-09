@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cloud disk configuration.
+ *
  * @method boolean getAvailable() Obtain Whether the configuration is available.
  * @method void setAvailable(boolean $Available) Set Whether the configuration is available.
  * @method string getDiskType() Obtain Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
@@ -40,10 +42,6 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setInstanceFamily(string $InstanceFamily) Set Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
 Note: This field may return null, indicating that no valid value was found.
- */
-
-/**
- *Cloud disk configuration.
  */
 class DiskConfig extends AbstractModel
 {
@@ -93,6 +91,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $InstanceFamily;
+
     /**
      * @param boolean $Available Whether the configuration is available.
      * @param string $DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
@@ -110,6 +109,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

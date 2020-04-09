@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Returned topic details entity
+ *
  * @method array getTopicList() Obtain List of returned topic details
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTopicList(array $TopicList) Set List of returned topic details
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getTotalCount() Obtain Number of all eligible topic details
  * @method void setTotalCount(integer $TotalCount) Set Number of all eligible topic details
- */
-
-/**
- *Returned topic details entity
  */
 class TopicDetailResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer Number of all eligible topic details
      */
     public $TotalCount;
+
     /**
      * @param array $TopicList List of returned topic details
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

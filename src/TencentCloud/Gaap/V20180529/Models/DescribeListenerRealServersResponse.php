@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeListenerRealServers response structure.
+ *
  * @method integer getTotalCount() Obtain Number of origin servers that can be bound
  * @method void setTotalCount(integer $TotalCount) Set Number of origin servers that can be bound
  * @method array getRealServerSet() Obtain An information list of origin servers
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindRealServerSet(array $BindRealServerSet) Set Information list of bound origin servers
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeListenerRealServers response structure.
  */
 class DescribeListenerRealServersResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeListenerRealServersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of origin servers that can be bound
      * @param array $RealServerSet An information list of origin servers
@@ -70,6 +69,7 @@ class DescribeListenerRealServersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

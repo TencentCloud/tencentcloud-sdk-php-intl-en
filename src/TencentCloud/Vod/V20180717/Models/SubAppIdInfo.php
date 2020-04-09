@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Subapplication information.
+ *
  * @method integer getSubAppId() Obtain Subapplication ID.
  * @method void setSubAppId(integer $SubAppId) Set Subapplication ID.
  * @method string getName() Obtain Subapplication name.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Subapplication status. Valid values:
 <li>On: enabled;</li>
 <li>Off: disabled.</li>
- */
-
-/**
- *Subapplication information.
  */
 class SubAppIdInfo extends AbstractModel
 {
@@ -65,6 +63,7 @@ class SubAppIdInfo extends AbstractModel
 <li>Off: disabled.</li>
      */
     public $Status;
+
     /**
      * @param integer $SubAppId Subapplication ID.
      * @param string $Name Subapplication name.
@@ -78,6 +77,7 @@ class SubAppIdInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Internal topic object of `GroupInfo`
+ *
  * @method string getTopic() Obtain Name of assigned topics
  * @method void setTopic(string $Topic) Set Name of assigned topics
  * @method array getPartitions() Obtain Information of assigned partition
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPartitions(array $Partitions) Set Information of assigned partition
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Internal topic object of `GroupInfo`
  */
 class GroupInfoTopics extends AbstractModel
 {
@@ -41,6 +39,7 @@ class GroupInfoTopics extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Partitions;
+
     /**
      * @param string $Topic Name of assigned topics
      * @param array $Partitions Information of assigned partition
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

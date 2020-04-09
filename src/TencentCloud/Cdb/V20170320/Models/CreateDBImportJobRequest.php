@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBImportJob request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method string getFileName() Obtain Filename. The file should have already been uploaded to Tencent Cloud.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Password of a TencentDB instance user account
  * @method string getDbName() Obtain Name of the target database. If this parameter is not passed in, no database is specified.
  * @method void setDbName(string $DbName) Set Name of the target database. If this parameter is not passed in, no database is specified.
- */
-
-/**
- *CreateDBImportJob request structure.
  */
 class CreateDBImportJobRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateDBImportJobRequest extends AbstractModel
      * @var string Name of the target database. If this parameter is not passed in, no database is specified.
      */
     public $DbName;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $FileName Filename. The file should have already been uploaded to Tencent Cloud.
@@ -70,6 +69,7 @@ class CreateDBImportJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

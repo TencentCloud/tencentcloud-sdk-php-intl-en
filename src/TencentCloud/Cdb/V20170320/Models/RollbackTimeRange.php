@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Time range available for rollback
+ *
  * @method string getBegin() Obtain Start time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-10-29 01:06:04
  * @method void setBegin(string $Begin) Set Start time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-10-29 01:06:04
  * @method string getEnd() Obtain End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
  * @method void setEnd(string $End) Set End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
- */
-
-/**
- *Time range available for rollback
  */
 class RollbackTimeRange extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RollbackTimeRange extends AbstractModel
      * @var string End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
      */
     public $End;
+
     /**
      * @param string $Begin Start time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-10-29 01:06:04
      * @param string $End End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
@@ -46,6 +45,7 @@ class RollbackTimeRange extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

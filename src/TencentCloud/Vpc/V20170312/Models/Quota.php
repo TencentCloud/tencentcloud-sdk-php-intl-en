@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Quota description information
+ *
  * @method string getQuotaId() Obtain Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
  * @method void setQuotaId(string $QuotaId) Set Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
  * @method integer getQuotaCurrent() Obtain Current count
  * @method void setQuotaCurrent(integer $QuotaCurrent) Set Current count
  * @method integer getQuotaLimit() Obtain Quota
  * @method void setQuotaLimit(integer $QuotaLimit) Set Quota
- */
-
-/**
- *Quota description information
  */
 class Quota extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Quota extends AbstractModel
      * @var integer Quota
      */
     public $QuotaLimit;
+
     /**
      * @param string $QuotaId Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
      * @param integer $QuotaCurrent Current count
@@ -54,6 +53,7 @@ class Quota extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

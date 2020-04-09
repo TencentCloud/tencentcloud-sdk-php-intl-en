@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveTranscodeTemplate request structure.
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getVcodec() Obtain Video encoding format:
@@ -60,10 +62,6 @@ baseline/main/high.
  * @method void setFpsToOrig(integer $FpsToOrig) Set Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
  * @method float getAdaptBitratePercent() Obtain VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
  * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
- */
-
-/**
- *ModifyLiveTranscodeTemplate request structure.
  */
 class ModifyLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -159,6 +157,7 @@ baseline/main/high.
      * @var float VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
      */
     public $AdaptBitratePercent;
+
     /**
      * @param integer $TemplateId Template ID.
      * @param string $Vcodec Video encoding format:
@@ -186,6 +185,7 @@ baseline/main/high.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

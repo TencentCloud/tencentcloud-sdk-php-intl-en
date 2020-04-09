@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateLiveWatermark request structure.
+ *
  * @method integer getWatermarkId() Obtain Watermark ID.
  * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
  * @method string getPictureUrl() Obtain Watermark image URL.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) Set Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
  * @method integer getHeight() Obtain Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
  * @method void setHeight(integer $Height) Set Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
- */
-
-/**
- *UpdateLiveWatermark request structure.
  */
 class UpdateLiveWatermarkRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class UpdateLiveWatermarkRequest extends AbstractModel
      * @var integer Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
      */
     public $Height;
+
     /**
      * @param integer $WatermarkId Watermark ID.
      * @param string $PictureUrl Watermark image URL.
@@ -86,6 +85,7 @@ class UpdateLiveWatermarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

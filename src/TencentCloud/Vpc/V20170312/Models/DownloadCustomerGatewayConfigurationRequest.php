@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadCustomerGatewayConfiguration request structure.
+ *
  * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
  * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
  * @method string getVpnConnectionId() Obtain The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerGatewayVendor(CustomerGatewayVendor $CustomerGatewayVendor) Set Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
  * @method string getInterfaceName() Obtain Name of the physical API for tunnel access device.
  * @method void setInterfaceName(string $InterfaceName) Set Name of the physical API for tunnel access device.
- */
-
-/**
- *DownloadCustomerGatewayConfiguration request structure.
  */
 class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
      * @var string Name of the physical API for tunnel access device.
      */
     public $InterfaceName;
+
     /**
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
      * @param string $VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
@@ -62,6 +61,7 @@ class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

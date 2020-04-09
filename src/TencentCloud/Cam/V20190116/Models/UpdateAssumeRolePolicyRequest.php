@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateAssumeRolePolicy request structure.
+ *
  * @method string getPolicyDocument() Obtain Policy document
  * @method void setPolicyDocument(string $PolicyDocument) Set Policy document
  * @method string getRoleId() Obtain Role ID, used to specify a role. Input either `RoleId` or `RoleName`
  * @method void setRoleId(string $RoleId) Set Role ID, used to specify a role. Input either `RoleId` or `RoleName`
  * @method string getRoleName() Obtain Role name, used to specify a role. Input either `RoleId` or `RoleName`
  * @method void setRoleName(string $RoleName) Set Role name, used to specify a role. Input either `RoleId` or `RoleName`
- */
-
-/**
- *UpdateAssumeRolePolicy request structure.
  */
 class UpdateAssumeRolePolicyRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateAssumeRolePolicyRequest extends AbstractModel
      * @var string Role name, used to specify a role. Input either `RoleId` or `RoleName`
      */
     public $RoleName;
+
     /**
      * @param string $PolicyDocument Policy document
      * @param string $RoleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
@@ -54,6 +53,7 @@ class UpdateAssumeRolePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

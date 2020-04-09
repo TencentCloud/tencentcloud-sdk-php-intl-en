@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCluster request structure.
+ *
  * @method string getIdlType() Obtain Cluster data description language type, such as `PROTO`, `TDR`, or `MIX`
  * @method void setIdlType(string $IdlType) Set Cluster data description language type, such as `PROTO`, `TDR`, or `MIX`
  * @method string getClusterName() Obtain Cluster name, which can contain up to 32 letters and digits
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set ID of the subnet instance bound to a cluster in the format of `subnet-pxir56ns`
  * @method string getPassword() Obtain Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
  * @method void setPassword(string $Password) Set Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
- */
-
-/**
- *CreateCluster request structure.
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateClusterRequest extends AbstractModel
      * @var string Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
      */
     public $Password;
+
     /**
      * @param string $IdlType Cluster data description language type, such as `PROTO`, `TDR`, or `MIX`
      * @param string $ClusterName Cluster name, which can contain up to 32 letters and digits
@@ -70,6 +69,7 @@ class CreateClusterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

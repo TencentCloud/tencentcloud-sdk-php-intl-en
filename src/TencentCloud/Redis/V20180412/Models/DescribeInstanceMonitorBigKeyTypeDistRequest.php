@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceMonitorBigKeyTypeDist request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getDate() Obtain Time, such as "20190219"
  * @method void setDate(string $Date) Set Time, such as "20190219"
- */
-
-/**
- *DescribeInstanceMonitorBigKeyTypeDist request structure.
  */
 class DescribeInstanceMonitorBigKeyTypeDistRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceMonitorBigKeyTypeDistRequest extends AbstractModel
      * @var string Time, such as "20190219"
      */
     public $Date;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $Date Time, such as "20190219"
@@ -46,6 +45,7 @@ class DescribeInstanceMonitorBigKeyTypeDistRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

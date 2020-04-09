@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a time point screenshot
+ *
  * @method float getTimeOffset() Obtain Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
  * @method void setTimeOffset(float $TimeOffset) Set Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
  * @method string getPath() Obtain Path to the screenshot.
  * @method void setPath(string $Path) Set Path to the screenshot.
  * @method array getWaterMarkDefinition() Obtain List of watermarking template IDs if the screenshots are watermarked.
  * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set List of watermarking template IDs if the screenshots are watermarked.
- */
-
-/**
- *Information of a time point screenshot
  */
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MediaSnapshotByTimePicInfoItem extends AbstractModel
      * @var array List of watermarking template IDs if the screenshots are watermarked.
      */
     public $WaterMarkDefinition;
+
     /**
      * @param float $TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
      * @param string $Path Path to the screenshot.
@@ -54,6 +53,7 @@ class MediaSnapshotByTimePicInfoItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

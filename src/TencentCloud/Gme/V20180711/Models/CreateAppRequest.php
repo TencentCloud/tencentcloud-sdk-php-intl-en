@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateApp request structure.
+ *
  * @method string getAppName() Obtain Application name
  * @method void setAppName(string $AppName) Set Application name
  * @method integer getProjectId() Obtain Tencent Cloud project ID. Default value: 0, which means that the default project is used
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) Set Configuration information of phrase analysis
  * @method array getTags() Obtain List of tags to be added
  * @method void setTags(array $Tags) Set List of tags to be added
- */
-
-/**
- *CreateApp request structure.
  */
 class CreateAppRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateAppRequest extends AbstractModel
      * @var array List of tags to be added
      */
     public $Tags;
+
     /**
      * @param string $AppName Application name
      * @param integer $ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used
@@ -94,6 +93,7 @@ class CreateAppRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

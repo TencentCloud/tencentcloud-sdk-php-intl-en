@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AllocateHosts response structure.
+ *
  * @method array getHostIdSet() Obtain The ID list of the CVM instances newly created on the CDH.
  * @method void setHostIdSet(array $HostIdSet) Set The ID list of the CVM instances newly created on the CDH.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AllocateHosts response structure.
  */
 class AllocateHostsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AllocateHostsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $HostIdSet The ID list of the CVM instances newly created on the CDH.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class AllocateHostsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

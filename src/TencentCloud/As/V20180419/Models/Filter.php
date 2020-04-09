@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * > Describes key-value pair filters used for conditional queries, such as filtering results by ID, name and state.
+> * If there are multiple `Filter` parameters, the relationship among them will be logical `AND`.
+> * If there are multiple `Values` for the same `Filter`, the relationship among the `Values` for the same `Filter` will be logical `OR`.
+ *
  * @method string getName() Obtain Field to be filtered.
  * @method void setName(string $Name) Set Field to be filtered.
  * @method array getValues() Obtain Filter value of the field.
  * @method void setValues(array $Values) Set Filter value of the field.
- */
-
-/**
- *> Describes key-value pair filters used for conditional queries, such as filtering results by ID, name and state.
-> * If there are multiple `Filter` parameters, the relationship among them will be logical `AND`.
-> * If there are multiple `Values` for the same `Filter`, the relationship among the `Values` for the same `Filter` will be logical `OR`.
  */
 class Filter extends AbstractModel
 {
@@ -40,6 +38,7 @@ class Filter extends AbstractModel
      * @var array Filter value of the field.
      */
     public $Values;
+
     /**
      * @param string $Name Field to be filtered.
      * @param array $Values Filter value of the field.
@@ -48,6 +47,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

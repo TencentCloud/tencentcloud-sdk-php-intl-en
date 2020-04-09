@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListNamespaces request structure.
+ *
  * @method integer getLimit() Obtain Return data length. The default value is `20`.
  * @method void setLimit(integer $Limit) Set Return data length. The default value is `20`.
  * @method integer getOffset() Obtain Data offset. The default value is `0`.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderby(string $Orderby) Set It specifies the sorting order of the results according to a specified field, such as `Name` and `Updatetime`.
  * @method string getOrder() Obtain It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
  * @method void setOrder(string $Order) Set It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
- */
-
-/**
- *ListNamespaces request structure.
  */
 class ListNamespacesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListNamespacesRequest extends AbstractModel
      * @var string It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
      */
     public $Order;
+
     /**
      * @param integer $Limit Return data length. The default value is `20`.
      * @param integer $Offset Data offset. The default value is `0`.
@@ -62,6 +61,7 @@ class ListNamespacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

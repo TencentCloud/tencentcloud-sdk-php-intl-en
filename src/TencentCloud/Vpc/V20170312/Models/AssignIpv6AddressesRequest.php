@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssignIpv6Addresses request structure.
+ *
  * @method string getNetworkInterfaceId() Obtain The `ID` of the ENI instance, such as `eni-m6dyj72l`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The `ID` of the ENI instance, such as `eni-m6dyj72l`.
  * @method array getIpv6Addresses() Obtain The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter.
  * @method void setIpv6Addresses(array $Ipv6Addresses) Set The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter.
  * @method integer getIpv6AddressCount() Obtain The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter.
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter.
- */
-
-/**
- *AssignIpv6Addresses request structure.
  */
 class AssignIpv6AddressesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AssignIpv6AddressesRequest extends AbstractModel
      * @var integer The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter.
      */
     public $Ipv6AddressCount;
+
     /**
      * @param string $NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      * @param array $Ipv6Addresses The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter.
@@ -54,6 +53,7 @@ class AssignIpv6AddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

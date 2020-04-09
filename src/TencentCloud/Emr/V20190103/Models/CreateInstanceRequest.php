@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstance request structure.
+ *
  * @method integer getProductId() Obtain Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1.</li>
 <li>2: EMR v2.0.1.</li>
@@ -112,10 +114,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set EMR-MetaDB instance
  * @method CustomMetaInfo getMetaDBInfo() Obtain Custom MetaDB instance information
  * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set Custom MetaDB instance information
- */
-
-/**
- *CreateInstance request structure.
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -269,6 +267,7 @@ class CreateInstanceRequest extends AbstractModel
      * @var CustomMetaInfo Custom MetaDB instance information
      */
     public $MetaDBInfo;
+
     /**
      * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1.</li>
@@ -322,6 +321,7 @@ class CreateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageSharePermission request structure.
+ *
  * @method string getImageId() Obtain The ID of the image to be shared
  * @method void setImageId(string $ImageId) Set The ID of the image to be shared
- */
-
-/**
- *DescribeImageSharePermission request structure.
  */
 class DescribeImageSharePermissionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeImageSharePermissionRequest extends AbstractModel
      * @var string The ID of the image to be shared
      */
     public $ImageId;
+
     /**
      * @param string $ImageId The ID of the image to be shared
      */
@@ -38,6 +37,7 @@ class DescribeImageSharePermissionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

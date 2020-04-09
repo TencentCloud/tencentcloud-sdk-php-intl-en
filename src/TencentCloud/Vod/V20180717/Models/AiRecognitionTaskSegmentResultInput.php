@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input of video splitting.
+ *
  * @method integer getDefinition() Obtain Video splitting template ID.
  * @method void setDefinition(integer $Definition) Set Video splitting template ID.
- */
-
-/**
- *Input of video splitting.
  */
 class AiRecognitionTaskSegmentResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskSegmentResultInput extends AbstractModel
      * @var integer Video splitting template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Video splitting template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskSegmentResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

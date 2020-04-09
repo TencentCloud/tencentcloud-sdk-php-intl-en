@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckNetDetectState response structure.
+ *
  * @method array getNetDetectIpStateSet() Obtain The array of network detection verification results.
  * @method void setNetDetectIpStateSet(array $NetDetectIpStateSet) Set The array of network detection verification results.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CheckNetDetectState response structure.
  */
 class CheckNetDetectStateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CheckNetDetectStateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $NetDetectIpStateSet The array of network detection verification results.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CheckNetDetectStateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

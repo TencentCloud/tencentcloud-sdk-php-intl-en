@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLoadBalancerAttributes request structure.
+ *
  * @method string getLoadBalancerId() Obtain Unique CLB ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique CLB ID
  * @method string getLoadBalancerName() Obtain CLB instance name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
  * @method boolean getSnatPro() Obtain Whether to enable SnatPro
  * @method void setSnatPro(boolean $SnatPro) Set Whether to enable SnatPro
- */
-
-/**
- *ModifyLoadBalancerAttributes request structure.
  */
 class ModifyLoadBalancerAttributesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
      * @var boolean Whether to enable SnatPro
      */
     public $SnatPro;
+
     /**
      * @param string $LoadBalancerId Unique CLB ID
      * @param string $LoadBalancerName CLB instance name
@@ -78,6 +77,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

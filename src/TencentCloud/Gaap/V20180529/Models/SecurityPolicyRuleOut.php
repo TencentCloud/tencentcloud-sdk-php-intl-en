@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Security policy rule (output parameter)
+ *
  * @method string getAction() Obtain Policy: Allow (ACCEPT) or reject (DROP).
  * @method void setAction(string $Action) Set Policy: Allow (ACCEPT) or reject (DROP).
  * @method string getSourceCidr() Obtain Source IP or IP range of the request.
@@ -36,10 +38,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPolicyId() Obtain 
  * @method void setPolicyId(string $PolicyId) Set 
- */
-
-/**
- *Security policy rule (output parameter)
  */
 class SecurityPolicyRuleOut extends AbstractModel
 {
@@ -79,6 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string 
      */
     public $PolicyId;
+
     /**
      * @param string $Action Policy: Allow (ACCEPT) or reject (DROP).
      * @param string $SourceCidr Source IP or IP range of the request.
@@ -94,6 +93,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

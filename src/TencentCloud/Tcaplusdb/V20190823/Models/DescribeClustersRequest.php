@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusters request structure.
+ *
  * @method array getClusterIds() Obtain List of IDs of clusters to be queried
  * @method void setClusterIds(array $ClusterIds) Set List of IDs of clusters to be queried
  * @method array getFilters() Obtain Query filter
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Query list offset
  * @method integer getLimit() Obtain Number of returned results in query list. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of returned results in query list. Default value: 20
- */
-
-/**
- *DescribeClusters request structure.
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeClustersRequest extends AbstractModel
      * @var integer Number of returned results in query list. Default value: 20
      */
     public $Limit;
+
     /**
      * @param array $ClusterIds List of IDs of clusters to be queried
      * @param array $Filters Query filter
@@ -62,6 +61,7 @@ class DescribeClustersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

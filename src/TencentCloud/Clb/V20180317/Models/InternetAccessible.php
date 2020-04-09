@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Network billing mode based on maximum outbound bandwidth
+ *
  * @method string getInternetChargeType() Obtain TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
  * @method void setInternetChargeType(string $InternetChargeType) Set TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
@@ -28,10 +30,6 @@ BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is suppor
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBandwidthpkgSubType(string $BandwidthpkgSubType) Set Bandwidth package type, such as SINGLEISP
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Network billing mode based on maximum outbound bandwidth
  */
 class InternetAccessible extends AbstractModel
 {
@@ -51,6 +49,7 @@ BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is suppor
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BandwidthpkgSubType;
+
     /**
      * @param string $InternetChargeType TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
@@ -62,6 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

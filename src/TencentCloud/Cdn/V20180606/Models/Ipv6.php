@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IPv6 activation configurations, which cannot be changed.
+ *
  * @method string getSwitch() Obtain Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSwitch(string $Switch) Set Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *IPv6 activation configurations, which cannot be changed.
  */
 class Ipv6 extends AbstractModel
 {
@@ -34,6 +32,7 @@ class Ipv6 extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Switch;
+
     /**
      * @param string $Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

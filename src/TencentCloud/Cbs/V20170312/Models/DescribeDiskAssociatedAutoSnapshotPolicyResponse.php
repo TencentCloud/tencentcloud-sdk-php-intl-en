@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskAssociatedAutoSnapshotPolicy response structure.
+ *
  * @method integer getTotalCount() Obtain The quantity of scheduled snapshots binded to cloud disk.
  * @method void setTotalCount(integer $TotalCount) Set The quantity of scheduled snapshots binded to cloud disk.
  * @method array getAutoSnapshotPolicySet() Obtain List of scheduled snapshots bound to cloud disk.
  * @method void setAutoSnapshotPolicySet(array $AutoSnapshotPolicySet) Set List of scheduled snapshots bound to cloud disk.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDiskAssociatedAutoSnapshotPolicy response structure.
  */
 class DescribeDiskAssociatedAutoSnapshotPolicyResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDiskAssociatedAutoSnapshotPolicyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The quantity of scheduled snapshots binded to cloud disk.
      * @param array $AutoSnapshotPolicySet List of scheduled snapshots bound to cloud disk.
@@ -54,6 +53,7 @@ class DescribeDiskAssociatedAutoSnapshotPolicyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

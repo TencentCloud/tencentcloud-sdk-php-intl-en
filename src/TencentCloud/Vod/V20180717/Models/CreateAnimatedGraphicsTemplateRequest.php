@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAnimatedGraphicsTemplate request structure.
+ *
  * @method integer getFps() Obtain Video frame rate in Hz. Value range: [1, 30].
  * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [1, 30].
  * @method integer getWidth() Obtain Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
@@ -62,10 +64,6 @@ Default value: open.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method integer getSubAppId() Obtain ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *CreateAnimatedGraphicsTemplate request structure.
  */
 class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -126,6 +124,7 @@ Default value: open.
      * @var integer ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param integer $Fps Video frame rate in Hz. Value range: [1, 30].
      * @param integer $Width Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
@@ -154,6 +153,7 @@ Default value: open.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

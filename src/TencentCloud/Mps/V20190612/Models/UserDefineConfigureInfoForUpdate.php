@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a custom audit task.
+ *
  * @method UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() Obtain Control parameter of custom figure audit.
  * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo) Set Control parameter of custom figure audit.
  * @method UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Control parameter of custom speech audit.
  * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo) Set Control parameter of custom speech audit.
  * @method UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of custom text audit.
  * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of custom text audit.
- */
-
-/**
- *Control parameter of a custom audit task.
  */
 class UserDefineConfigureInfoForUpdate extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UserDefineConfigureInfoForUpdate extends AbstractModel
      * @var UserDefineOcrTextReviewTemplateInfoForUpdate Control parameter of custom text audit.
      */
     public $OcrReviewInfo;
+
     /**
      * @param UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo Control parameter of custom figure audit.
      * @param UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo Control parameter of custom speech audit.
@@ -54,6 +53,7 @@ class UserDefineConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

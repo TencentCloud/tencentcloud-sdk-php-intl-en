@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClusterEndpointSP request structure.
+ *
 
- */
-
-/**
- *ModifyClusterEndpointSP request structure.
  */
 class ModifyClusterEndpointSPRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ModifyClusterEndpointSPRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicalLBHealthStatus request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
- */
-
-/**
- *DescribeClassicalLBHealthStatus request structure.
  */
 class DescribeClassicalLBHealthStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeClassicalLBHealthStatusRequest extends AbstractModel
      * @var string CLB listener ID
      */
     public $ListenerId;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
@@ -46,6 +45,7 @@ class DescribeClassicalLBHealthStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

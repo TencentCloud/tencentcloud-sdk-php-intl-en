@@ -18,16 +18,14 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddResourceTag request structure.
+ *
  * @method string getTagKey() Obtain Tag key.
  * @method void setTagKey(string $TagKey) Set Tag key.
  * @method string getTagValue() Obtain Tag value.
  * @method void setTagValue(string $TagValue) Set Tag value.
  * @method string getResource() Obtain Resource description in six-piece format.
  * @method void setResource(string $Resource) Set Resource description in six-piece format.
- */
-
-/**
- *AddResourceTag request structure.
  */
 class AddResourceTagRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AddResourceTagRequest extends AbstractModel
      * @var string Resource description in six-piece format.
      */
     public $Resource;
+
     /**
      * @param string $TagKey Tag key.
      * @param string $TagValue Tag value.
@@ -54,6 +53,7 @@ class AddResourceTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

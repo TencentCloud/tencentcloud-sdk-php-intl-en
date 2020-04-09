@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Resource type and tag key-value pair
+ *
  * @method string getKey() Obtain Tag key
  * @method void setKey(string $Key) Set Tag key
  * @method string getValue() Obtain Tag value
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceType(string $ResourceType) Set Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Resource type and tag key-value pair
  */
 class Tag extends AbstractModel
 {
@@ -48,6 +46,7 @@ class Tag extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceType;
+
     /**
      * @param string $Key Tag key
      * @param string $Value Tag value
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

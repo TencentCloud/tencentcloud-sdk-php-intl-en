@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowlogs request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-k8voqdlz
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-k8voqdlz
  * @method string getStartTime() Obtain Query start time
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1–100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
- */
-
-/**
- *DescribeSlowlogs request structure.
  */
 class DescribeSlowlogsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeSlowlogsRequest extends AbstractModel
      * @var integer Page number. Default value: 0
      */
     public $Offset;
+
     /**
      * @param string $InstanceId Instance ID in the format of mssql-k8voqdlz
      * @param string $StartTime Query start time
@@ -70,6 +69,7 @@ class DescribeSlowlogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

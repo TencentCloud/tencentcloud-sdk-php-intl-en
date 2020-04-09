@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Versioning - array of AZs
+ *
  * @method string getZone() Obtain AZ name
  * @method void setZone(string $Zone) Set AZ name
  * @method integer getZoneId() Obtain AZ ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypes(array $Types) Set Array of classes
  * @method string getZoneName() Obtain Chinese and English names of an AZ
  * @method void setZoneName(string $ZoneName) Set Chinese and English names of an AZ
- */
-
-/**
- *Versioning - array of AZs
  */
 class AvailableZone extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AvailableZone extends AbstractModel
      * @var string Chinese and English names of an AZ
      */
     public $ZoneName;
+
     /**
      * @param string $Zone AZ name
      * @param integer $ZoneId AZ ID
@@ -70,6 +69,7 @@ class AvailableZone extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

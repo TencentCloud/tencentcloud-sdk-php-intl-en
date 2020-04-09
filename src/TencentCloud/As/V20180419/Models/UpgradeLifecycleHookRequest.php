@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeLifecycleHook request structure.
+ *
  * @method string getLifecycleHookId() Obtain Lifecycle hook ID
  * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
  * @method string getLifecycleHookName() Obtain Lifecycle hook name
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
  * @method string getLifecycleTransitionType() Obtain The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) Set The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
- */
-
-/**
- *UpgradeLifecycleHook request structure.
  */
 class UpgradeLifecycleHookRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class UpgradeLifecycleHookRequest extends AbstractModel
      * @var string The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
      */
     public $LifecycleTransitionType;
+
     /**
      * @param string $LifecycleHookId Lifecycle hook ID
      * @param string $LifecycleHookName Lifecycle hook name
@@ -94,6 +93,7 @@ class UpgradeLifecycleHookRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Delay distribution details
+ *
  * @method integer getLadder() Obtain Distribution ladder
  * @method void setLadder(integer $Ladder) Set Distribution ladder
  * @method integer getSize() Obtain Size
  * @method void setSize(integer $Size) Set Size
- */
-
-/**
- *Delay distribution details
  */
 class DelayDistribution extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DelayDistribution extends AbstractModel
      * @var integer Size
      */
     public $Size;
+
     /**
      * @param integer $Ladder Distribution ladder
      * @param integer $Size Size
@@ -46,6 +45,7 @@ class DelayDistribution extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Disaster recovery sync task information
+ *
  * @method string getJobId() Obtain Disaster recovery task ID
  * @method void setJobId(string $JobId) Set Disaster recovery task ID
  * @method string getJobName() Obtain Disaster recovery task name
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time
  * @method string getEndTime() Obtain End time
  * @method void setEndTime(string $EndTime) Set End time
- */
-
-/**
- *Disaster recovery sync task information
  */
 class SyncJobInfo extends AbstractModel
 {
@@ -129,6 +127,7 @@ class SyncJobInfo extends AbstractModel
      * @var string End time
      */
     public $EndTime;
+
     /**
      * @param string $JobId Disaster recovery task ID
      * @param string $JobName Disaster recovery task name
@@ -150,6 +149,7 @@ class SyncJobInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

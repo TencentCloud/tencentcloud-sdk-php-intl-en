@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PublishVersion request structure.
+ *
  * @method string getFunctionName() Obtain Name of the released function
  * @method void setFunctionName(string $FunctionName) Set Name of the released function
  * @method string getDescription() Obtain Function description
  * @method void setDescription(string $Description) Set Function description
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
- */
-
-/**
- *PublishVersion request structure.
  */
 class PublishVersionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PublishVersionRequest extends AbstractModel
      * @var string Function namespace
      */
     public $Namespace;
+
     /**
      * @param string $FunctionName Name of the released function
      * @param string $Description Function description
@@ -54,6 +53,7 @@ class PublishVersionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

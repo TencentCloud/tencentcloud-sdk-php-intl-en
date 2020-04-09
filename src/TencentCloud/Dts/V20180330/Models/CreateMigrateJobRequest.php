@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMigrateJob request structure.
+ *
  * @method string getJobName() Obtain Data migration task name
  * @method void setJobName(string $JobName) Set Data migration task name
  * @method MigrateOption getMigrateOption() Obtain Migration task configuration options
@@ -52,10 +54,6 @@ Table:[table1,table2]},{Database:db1,Schema:s2
 Table:[table1,table2]},{Database:db2,Schema:s1
 Table:[table1,table2]},{Database:db3},{Database:db4
 Schema:s1}]
- */
-
-/**
- *CreateMigrateJob request structure.
  */
 class CreateMigrateJobRequest extends AbstractModel
 {
@@ -111,6 +109,7 @@ Table:[table1,table2]},{Database:db3},{Database:db4
 Schema:s1}]
      */
     public $DatabaseInfo;
+
     /**
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
@@ -134,6 +133,7 @@ Schema:s1}]
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

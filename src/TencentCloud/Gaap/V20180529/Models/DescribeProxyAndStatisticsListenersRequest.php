@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyAndStatisticsListeners request structure.
+ *
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- */
-
-/**
- *DescribeProxyAndStatisticsListeners request structure.
  */
 class DescribeProxyAndStatisticsListenersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProxyAndStatisticsListenersRequest extends AbstractModel
      * @var integer Project ID
      */
     public $ProjectId;
+
     /**
      * @param integer $ProjectId Project ID
      */
@@ -38,6 +37,7 @@ class DescribeProxyAndStatisticsListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

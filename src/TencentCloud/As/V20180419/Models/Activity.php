@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information on eligible scaling activities.
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method string getActivityId() Obtain Scaling activity ID.
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) Set Information set of the instances related to the scaling activity.
  * @method string getStatusMessageSimplified() Obtain Brief description of the scaling activity status.
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) Set Brief description of the scaling activity status.
- */
-
-/**
- *Information on eligible scaling activities.
  */
 class Activity extends AbstractModel
 {
@@ -129,6 +127,7 @@ class Activity extends AbstractModel
      * @var string Brief description of the scaling activity status.
      */
     public $StatusMessageSimplified;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ActivityId Scaling activity ID.
@@ -154,6 +153,7 @@ class Activity extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePayType request structure.
+ *
  * @method string getArea() Obtain Specifies a service region.
 `mainland`: queries billing methods within Mainland China;
 `overseas`: queries billing methods outside Mainland China.
@@ -26,10 +28,6 @@ Default value: `mainland`.
 `mainland`: queries billing methods within Mainland China;
 `overseas`: queries billing methods outside Mainland China.
 Default value: `mainland`.
- */
-
-/**
- *DescribePayType request structure.
  */
 class DescribePayTypeRequest extends AbstractModel
 {
@@ -40,6 +38,7 @@ class DescribePayTypeRequest extends AbstractModel
 Default value: `mainland`.
      */
     public $Area;
+
     /**
      * @param string $Area Specifies a service region.
 `mainland`: queries billing methods within Mainland China;
@@ -50,6 +49,7 @@ Default value: `mainland`.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertificates request structure.
+ *
  * @method integer getCertificateType() Obtain Certificate type. Where:
 0: basic authentication configuration;
 1: client CA certificate;
@@ -38,10 +40,6 @@ The default value is -1.
  * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
  * @method integer getLimit() Obtain Quantity limit. The default value is 20.
  * @method void setLimit(integer $Limit) Set Quantity limit. The default value is 20.
- */
-
-/**
- *DescribeCertificates request structure.
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ The default value is -1.
      * @var integer Quantity limit. The default value is 20.
      */
     public $Limit;
+
     /**
      * @param integer $CertificateType Certificate type. Where:
 0: basic authentication configuration;
@@ -82,6 +81,7 @@ The default value is -1.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

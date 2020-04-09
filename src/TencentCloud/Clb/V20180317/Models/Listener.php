@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Listener information
+ *
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
  * @method string getProtocol() Obtain Listener protocol
@@ -68,10 +70,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) Set Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Listener information
  */
 class Listener extends AbstractModel
 {
@@ -155,6 +153,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetGroup;
+
     /**
      * @param string $ListenerId CLB listener ID
      * @param string $Protocol Listener protocol
@@ -186,6 +185,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

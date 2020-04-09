@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Receipt statistics response packet
+ *
  * @method integer getCallbackCount() Obtain SMS receipts.
  * @method void setCallbackCount(integer $CallbackCount) Set SMS receipts.
  * @method integer getRequestSuccessCount() Obtain Successfully submitted SMS messages.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlackListCount(integer $BlackListCount) Set Blacklisted mobile numbers.
  * @method integer getFrequencyLimitCount() Obtain Carrier frequency limit hits.
  * @method void setFrequencyLimitCount(integer $FrequencyLimitCount) Set Carrier frequency limit hits.
- */
-
-/**
- *Receipt statistics response packet
  */
 class CallbackStatusStatistics extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CallbackStatusStatistics extends AbstractModel
      * @var integer Carrier frequency limit hits.
      */
     public $FrequencyLimitCount;
+
     /**
      * @param integer $CallbackCount SMS receipts.
      * @param integer $RequestSuccessCount Successfully submitted SMS messages.
@@ -102,6 +101,7 @@ class CallbackStatusStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

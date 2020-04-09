@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance details
+ *
  * @method string getRegion() Obtain Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
  * @method void setRegion(string $Region) Set Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
  * @method string getZone() Obtain Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) Set Instance network connection information
  * @method string getType() Obtain Machine type
  * @method void setType(string $Type) Set Machine type
- */
-
-/**
- *Instance details
  */
 class DBInstance extends AbstractModel
 {
@@ -192,6 +190,7 @@ class DBInstance extends AbstractModel
      * @var string Machine type
      */
     public $Type;
+
     /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
@@ -222,6 +221,7 @@ class DBInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

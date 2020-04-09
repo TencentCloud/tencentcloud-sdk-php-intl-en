@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Dead letter queue parameter
+ *
  * @method string getType() Obtain Dead letter queue mode
  * @method void setType(string $Type) Set Dead letter queue mode
  * @method string getName() Obtain Dead letter queue name
  * @method void setName(string $Name) Set Dead letter queue name
  * @method string getFilterType() Obtain Tag form of a dead letter queue topic mode
  * @method void setFilterType(string $FilterType) Set Tag form of a dead letter queue topic mode
- */
-
-/**
- *Dead letter queue parameter
  */
 class DeadLetterConfig extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeadLetterConfig extends AbstractModel
      * @var string Tag form of a dead letter queue topic mode
      */
     public $FilterType;
+
     /**
      * @param string $Type Dead letter queue mode
      * @param string $Name Dead letter queue name
@@ -54,6 +53,7 @@ class DeadLetterConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

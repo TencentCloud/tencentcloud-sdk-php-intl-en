@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBInstances request structure.
+ *
  * @method array getInstanceIds() Obtain Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d
  * @method void setInstanceIds(array $InstanceIds) Set Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d
  * @method string getSearchName() Obtain Search field name. Valid values: instancename (search by instance name); vip (search by private IP); all (search by instance ID, instance name, and private IP).
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFilterExcluster(boolean $IsFilterExcluster) Set Identifies whether to use the `ExclusterType` field. false: no; true: yes
  * @method array getExclusterIds() Obtain Dedicated cluster ID
  * @method void setExclusterIds(array $ExclusterIds) Set Dedicated cluster ID
- */
-
-/**
- *DescribeDCDBInstances request structure.
  */
 class DescribeDCDBInstancesRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class DescribeDCDBInstancesRequest extends AbstractModel
      * @var array Dedicated cluster ID
      */
     public $ExclusterIds;
+
     /**
      * @param array $InstanceIds Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d
      * @param string $SearchName Search field name. Valid values: instancename (search by instance name); vip (search by private IP); all (search by instance ID, instance name, and private IP).
@@ -142,6 +141,7 @@ class DescribeDCDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Status code redirect rules configuration
+ *
  * @method integer getStatusCode() Obtain Status code
 Supports 400, 403, 404, 500.
  * @method void setStatusCode(integer $StatusCode) Set Status code
@@ -30,10 +32,6 @@ Supports 301 or 302.
 Requires a full redirect path, such as https://www.test.com/error.html.
  * @method void setRedirectUrl(string $RedirectUrl) Set Redirect URL
 Requires a full redirect path, such as https://www.test.com/error.html.
- */
-
-/**
- *Status code redirect rules configuration
  */
 class ErrorPageRule extends AbstractModel
 {
@@ -54,6 +52,7 @@ Supports 301 or 302.
 Requires a full redirect path, such as https://www.test.com/error.html.
      */
     public $RedirectUrl;
+
     /**
      * @param integer $StatusCode Status code
 Supports 400, 403, 404, 500.
@@ -66,6 +65,7 @@ Requires a full redirect path, such as https://www.test.com/error.html.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

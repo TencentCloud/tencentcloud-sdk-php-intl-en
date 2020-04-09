@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetOrganization response structure.
+ *
  * @method integer getOrgId() Obtain Organization ID
  * @method void setOrgId(integer $OrgId) Set Organization ID
  * @method integer getHostUin() Obtain Creator UIN
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsEmpty(integer $IsEmpty) Set Whether the organization is empty or not 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetOrganization response structure.
  */
 class GetOrganizationResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class GetOrganizationResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $OrgId Organization ID
      * @param integer $HostUin Creator UIN
@@ -86,6 +85,7 @@ class GetOrganizationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

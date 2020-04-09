@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateFunction request structure.
+ *
  * @method string getFunctionName() Obtain Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
  * @method void setFunctionName(string $FunctionName) Set Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
  * @method Code getCode() Obtain Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayers(array $Layers) Set List of layer versions to be associate with the function. Layers will be overwritten sequentially in the order in the list.
  * @method DeadLetterConfig getDeadLetterConfig() Obtain Dead letter queue parameter
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Dead letter queue parameter
- */
-
-/**
- *CreateFunction request structure.
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -143,6 +141,7 @@ class CreateFunctionRequest extends AbstractModel
      * @var DeadLetterConfig Dead letter queue parameter
      */
     public $DeadLetterConfig;
+
     /**
      * @param string $FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      * @param Code $Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
@@ -166,6 +165,7 @@ class CreateFunctionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

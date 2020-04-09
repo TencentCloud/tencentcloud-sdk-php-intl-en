@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyIpv6AddressesAttribute request structure.
+ *
  * @method string getNetworkInterfaceId() Obtain The `ID` of the ENI instance, such as `eni-m6dyj72l`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The `ID` of the ENI instance, such as `eni-m6dyj72l`.
  * @method array getIpv6Addresses() Obtain The information of the specified private `IPv6` addresses.
  * @method void setIpv6Addresses(array $Ipv6Addresses) Set The information of the specified private `IPv6` addresses.
- */
-
-/**
- *ModifyIpv6AddressesAttribute request structure.
  */
 class ModifyIpv6AddressesAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyIpv6AddressesAttributeRequest extends AbstractModel
      * @var array The information of the specified private `IPv6` addresses.
      */
     public $Ipv6Addresses;
+
     /**
      * @param string $NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      * @param array $Ipv6Addresses The information of the specified private `IPv6` addresses.
@@ -46,6 +45,7 @@ class ModifyIpv6AddressesAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

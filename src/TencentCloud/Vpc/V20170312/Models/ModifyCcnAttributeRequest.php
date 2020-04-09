@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCcnAttribute request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method string getCcnName() Obtain The name of the CCN. The maximum length is 60 characters.
  * @method void setCcnName(string $CcnName) Set The name of the CCN. The maximum length is 60 characters.
  * @method string getCcnDescription() Obtain The description of the CCN. The maximum length is 100 characters.
  * @method void setCcnDescription(string $CcnDescription) Set The description of the CCN. The maximum length is 100 characters.
- */
-
-/**
- *ModifyCcnAttribute request structure.
  */
 class ModifyCcnAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyCcnAttributeRequest extends AbstractModel
      * @var string The description of the CCN. The maximum length is 100 characters.
      */
     public $CcnDescription;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      * @param string $CcnName The name of the CCN. The maximum length is 60 characters.
@@ -54,6 +53,7 @@ class ModifyCcnAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

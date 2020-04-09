@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HaVipDisassociateAddressIp request structure.
+ *
  * @method string getHaVipId() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be an `HAVIP` that has been bound to an `EIP`.
  * @method void setHaVipId(string $HaVipId) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be an `HAVIP` that has been bound to an `EIP`.
- */
-
-/**
- *HaVipDisassociateAddressIp request structure.
  */
 class HaVipDisassociateAddressIpRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class HaVipDisassociateAddressIpRequest extends AbstractModel
      * @var string The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be an `HAVIP` that has been bound to an `EIP`.
      */
     public $HaVipId;
+
     /**
      * @param string $HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be an `HAVIP` that has been bound to an `EIP`.
      */
@@ -38,6 +37,7 @@ class HaVipDisassociateAddressIpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

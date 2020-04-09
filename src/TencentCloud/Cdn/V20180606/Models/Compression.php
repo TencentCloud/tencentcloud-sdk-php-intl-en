@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Smart compression configuration. By default, Gzip compression is performed for files with js, html, css, xml, json, shtml, and htm suffixes, and with sizes between 256 and 2097152 bytes.
+ *
  * @method string getSwitch() Obtain Smart compression configuration switch
 on: enabled
 off: disabled
@@ -28,10 +30,6 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCompressionRules(array $CompressionRules) Set Compression rules array
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Smart compression configuration. By default, Gzip compression is performed for files with js, html, css, xml, json, shtml, and htm suffixes, and with sizes between 256 and 2097152 bytes.
  */
 class Compression extends AbstractModel
 {
@@ -47,6 +45,7 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CompressionRules;
+
     /**
      * @param string $Switch Smart compression configuration switch
 on: enabled
@@ -58,6 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

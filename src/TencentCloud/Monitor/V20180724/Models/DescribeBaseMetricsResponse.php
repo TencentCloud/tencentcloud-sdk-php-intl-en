@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBaseMetrics response structure.
+ *
  * @method array getMetricSet() Obtain Listed of queried metric descriptions
  * @method void setMetricSet(array $MetricSet) Set Listed of queried metric descriptions
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBaseMetrics response structure.
  */
 class DescribeBaseMetricsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBaseMetricsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $MetricSet Listed of queried metric descriptions
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeBaseMetricsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

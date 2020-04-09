@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the location of an instance, including its availability zone, project, host (for CDH products only), master host IP, etc.
+ *
  * @method string getZone() Obtain The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
  * @method void setZone(string $Zone) Set The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
  * @method integer getProjectId() Obtain ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIps(array $HostIps) Set Master host IP used to create the CVM
  * @method string getHostId() Obtain 
  * @method void setHostId(string $HostId) Set 
- */
-
-/**
- *Describes the location of an instance, including its availability zone, project, host (for CDH products only), master host IP, etc.
  */
 class Placement extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Placement extends AbstractModel
      * @var string 
      */
     public $HostId;
+
     /**
      * @param string $Zone The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
      * @param integer $ProjectId ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
@@ -70,6 +69,7 @@ class Placement extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRegionAndPrice response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of origin server regions
  * @method void setTotalCount(integer $TotalCount) Set Total number of origin server regions
  * @method array getDestRegionSet() Obtain List of origin server region details
@@ -32,10 +34,6 @@ CNY (Chinese Yuan)
 USD (United States Dollar)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeRegionAndPrice response structure.
  */
 class DescribeRegionAndPriceResponse extends AbstractModel
 {
@@ -65,6 +63,7 @@ USD (United States Dollar)
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of origin server regions
      * @param array $DestRegionSet List of origin server region details
@@ -78,6 +77,7 @@ USD (United States Dollar)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * WeChat Mini Program audit information unit
+ *
  * @method integer getDefinition() Obtain Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
  * @method void setDefinition(integer $Definition) Set Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
  * @method MediaMetaData getMetaData() Obtain Video metadata.
@@ -36,10 +38,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setReviewSummary(array $ReviewSummary) Set WeChat Mini Program audit element.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *WeChat Mini Program audit information unit
  */
 class MediaMiniProgramReviewInfoItem extends AbstractModel
 {
@@ -71,6 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ReviewSummary;
+
     /**
      * @param integer $Definition Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
      * @param MediaMetaData $MetaData Video metadata.
@@ -86,6 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

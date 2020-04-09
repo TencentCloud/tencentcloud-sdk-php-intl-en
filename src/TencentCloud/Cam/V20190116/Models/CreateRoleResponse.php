@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRole response structure.
+ *
  * @method string getRoleId() Obtain Role ID
 Note: This field may return null, indicating that no valid value was found.
  * @method void setRoleId(string $RoleId) Set Role ID
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateRole response structure.
  */
 class CreateRoleResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $RoleId Role ID
 Note: This field may return null, indicating that no valid value was found.
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

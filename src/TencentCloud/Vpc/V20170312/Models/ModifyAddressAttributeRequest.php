@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAddressAttribute request structure.
+ *
  * @method string getAddressId() Obtain The unique ID of the EIP, such as `eip-11112222`.
  * @method void setAddressId(string $AddressId) Set The unique ID of the EIP, such as `eip-11112222`.
  * @method string getAddressName() Obtain The EIP name after modification. The maximum length is 20 characters.
  * @method void setAddressName(string $AddressName) Set The EIP name after modification. The maximum length is 20 characters.
  * @method string getEipDirectConnection() Obtain Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
  * @method void setEipDirectConnection(string $EipDirectConnection) Set Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
- */
-
-/**
- *ModifyAddressAttribute request structure.
  */
 class ModifyAddressAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAddressAttributeRequest extends AbstractModel
      * @var string Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
      */
     public $EipDirectConnection;
+
     /**
      * @param string $AddressId The unique ID of the EIP, such as `eip-11112222`.
      * @param string $AddressName The EIP name after modification. The maximum length is 20 characters.
@@ -54,6 +53,7 @@ class ModifyAddressAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

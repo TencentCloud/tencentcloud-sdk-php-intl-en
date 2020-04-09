@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisassociateSecurityGroups request structure.
+ *
  * @method array getSecurityGroupIds() Obtain ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
  * @method array getInstanceIds() Obtain ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
  * @method void setInstanceIds(array $InstanceIds) Set ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
- */
-
-/**
- *DisassociateSecurityGroups request structure.
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
      * @var array ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
      */
     public $InstanceIds;
+
     /**
      * @param array $SecurityGroupIds ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
      * @param array $InstanceIds ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
@@ -46,6 +45,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

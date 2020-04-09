@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyWatermarkTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a watermarking template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a watermarking template.
  * @method string getName() Obtain Watermarking template name. Length limit: 64 characters.
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextTemplate(TextWatermarkTemplateInputForUpdate $TextTemplate) Set Text watermarking template. This field is valid only for text watermarking templates.
  * @method SvgWatermarkInputForUpdate getSvgTemplate() Obtain SVG watermarking template. This field is required when `Type` is `svg` and is invalid when `Type` is `image` or `text`.
  * @method void setSvgTemplate(SvgWatermarkInputForUpdate $SvgTemplate) Set SVG watermarking template. This field is required when `Type` is `svg` and is invalid when `Type` is `image` or `text`.
- */
-
-/**
- *ModifyWatermarkTemplate request structure.
  */
 class ModifyWatermarkTemplateRequest extends AbstractModel
 {
@@ -111,6 +109,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
      * @var SvgWatermarkInputForUpdate SVG watermarking template. This field is required when `Type` is `svg` and is invalid when `Type` is `image` or `text`.
      */
     public $SvgTemplate;
+
     /**
      * @param integer $Definition Unique ID of a watermarking template.
      * @param string $Name Watermarking template name. Length limit: 64 characters.
@@ -134,6 +133,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

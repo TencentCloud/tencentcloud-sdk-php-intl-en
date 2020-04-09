@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroupDomainConfig response structure.
+ *
  * @method array getAccessRegionList() Obtain Nearest access configuration list of domain name resolution.
  * @method void setAccessRegionList(array $AccessRegionList) Set Nearest access configuration list of domain name resolution.
  * @method string getDefaultDnsIp() Obtain Default accesses Ip.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessRegionCount(integer $AccessRegionCount) Set Total number of configuration of access regions.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeGroupDomainConfig response structure.
  */
 class DescribeGroupDomainConfigResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeGroupDomainConfigResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $AccessRegionList Nearest access configuration list of domain name resolution.
      * @param string $DefaultDnsIp Default accesses Ip.
@@ -70,6 +69,7 @@ class DescribeGroupDomainConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

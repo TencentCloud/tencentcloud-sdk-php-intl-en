@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddTimeWindow request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method array getMonday() Obtain Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(array $Saturday) Set Maintenance time window on Saturday
  * @method array getSunday() Obtain Maintenance time window on Sunday
  * @method void setSunday(array $Sunday) Set Maintenance time window on Sunday
- */
-
-/**
- *AddTimeWindow request structure.
  */
 class AddTimeWindowRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class AddTimeWindowRequest extends AbstractModel
      * @var array Maintenance time window on Sunday
      */
     public $Sunday;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Monday Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
@@ -94,6 +93,7 @@ class AddTimeWindowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

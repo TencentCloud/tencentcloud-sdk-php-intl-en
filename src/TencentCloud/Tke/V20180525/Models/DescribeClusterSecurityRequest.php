@@ -18,12 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterSecurity request structure.
+ *
  * @method string getClusterId() Obtain Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
  * @method void setClusterId(string $ClusterId) Set Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
- */
-
-/**
- *DescribeClusterSecurity request structure.
  */
 class DescribeClusterSecurityRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeClusterSecurityRequest extends AbstractModel
      * @var string Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
      */
     public $ClusterId;
+
     /**
      * @param string $ClusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
      */
@@ -38,6 +37,7 @@ class DescribeClusterSecurityRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

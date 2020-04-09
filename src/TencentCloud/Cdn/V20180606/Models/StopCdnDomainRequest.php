@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopCdnDomain request structure.
+ *
  * @method string getDomain() Obtain Domain name
 The domain name status should be **Enabled**
  * @method void setDomain(string $Domain) Set Domain name
 The domain name status should be **Enabled**
- */
-
-/**
- *StopCdnDomain request structure.
  */
 class StopCdnDomainRequest extends AbstractModel
 {
@@ -34,6 +32,7 @@ class StopCdnDomainRequest extends AbstractModel
 The domain name status should be **Enabled**
      */
     public $Domain;
+
     /**
      * @param string $Domain Domain name
 The domain name status should be **Enabled**
@@ -42,6 +41,7 @@ The domain name status should be **Enabled**
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

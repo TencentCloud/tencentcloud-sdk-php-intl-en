@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Compute environment attributes
+ *
  * @method array getInstanceTypes() Obtain List of CVM instance types
  * @method void setInstanceTypes(array $InstanceTypes) Set List of CVM instance types
- */
-
-/**
- *Compute environment attributes
  */
 class ComputeEnvData extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ComputeEnvData extends AbstractModel
      * @var array List of CVM instance types
      */
     public $InstanceTypes;
+
     /**
      * @param array $InstanceTypes List of CVM instance types
      */
@@ -38,6 +37,7 @@ class ComputeEnvData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

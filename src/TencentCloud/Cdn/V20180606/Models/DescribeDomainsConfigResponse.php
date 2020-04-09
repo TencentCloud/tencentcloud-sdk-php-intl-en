@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDomainsConfig response structure.
+ *
  * @method array getDomains() Obtain List of domain names
  * @method void setDomains(array $Domains) Set List of domain names
  * @method integer getTotalNumber() Obtain The number of domain names that matched the query conditions
@@ -26,10 +28,6 @@ Used for paginated queries
 Used for paginated queries
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDomainsConfig response structure.
  */
 class DescribeDomainsConfigResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Used for paginated queries
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Domains List of domain names
      * @param integer $TotalNumber The number of domain names that matched the query conditions
@@ -58,6 +57,7 @@ Used for paginated queries
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

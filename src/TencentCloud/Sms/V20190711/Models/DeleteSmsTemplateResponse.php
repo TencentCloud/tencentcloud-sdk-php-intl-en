@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSmsTemplate response structure.
+ *
  * @method DeleteTemplateStatus getDeleteTemplateStatus() Obtain Template deletion response.
  * @method void setDeleteTemplateStatus(DeleteTemplateStatus $DeleteTemplateStatus) Set Template deletion response.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DeleteSmsTemplate response structure.
  */
 class DeleteSmsTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteSmsTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param DeleteTemplateStatus $DeleteTemplateStatus Template deletion response.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DeleteSmsTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

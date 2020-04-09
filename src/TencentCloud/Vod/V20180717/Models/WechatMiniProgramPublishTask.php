@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Release on WeChat Mini Program task information
+ *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getStatus() Obtain Task status. Valid values:
@@ -48,10 +50,6 @@ FINISH: completed.
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
- */
-
-/**
- *Release on WeChat Mini Program task information
  */
 class WechatMiniProgramPublishTask extends AbstractModel
 {
@@ -97,6 +95,7 @@ FINISH: completed.
 <li>Rejected: rejected.</li>
      */
     public $PublishResult;
+
     /**
      * @param string $TaskId Task ID.
      * @param string $Status Task status. Valid values:
@@ -118,6 +117,7 @@ FINISH: completed.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

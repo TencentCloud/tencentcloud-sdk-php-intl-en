@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWorkflows response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
  * @method array getWorkflowInfoSet() Obtain Workflow information array.
  * @method void setWorkflowInfoSet(array $WorkflowInfoSet) Set Workflow information array.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeWorkflows response structure.
  */
 class DescribeWorkflowsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeWorkflowsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible entries.
      * @param array $WorkflowInfoSet Workflow information array.
@@ -54,6 +53,7 @@ class DescribeWorkflowsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

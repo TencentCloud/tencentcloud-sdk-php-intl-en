@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Nearest access configuration details of domain name resolution
+ *
  * @method array getNationCountryInnerList() Obtain Nearest access region
  * @method void setNationCountryInnerList(array $NationCountryInnerList) Set Nearest access region
  * @method array getProxyList() Obtain Acceleration region connection list
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContinentInnerCode(string $ContinentInnerCode) Set Internal code of the continent to which the acceleration region belongs
  * @method string getRegionName() Obtain Acceleration region alias
  * @method void setRegionName(string $RegionName) Set Acceleration region alias
- */
-
-/**
- *Nearest access configuration details of domain name resolution
  */
 class DomainAccessRegionDict extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DomainAccessRegionDict extends AbstractModel
      * @var string Acceleration region alias
      */
     public $RegionName;
+
     /**
      * @param array $NationCountryInnerList Nearest access region
      * @param array $ProxyList Acceleration region connection list
@@ -78,6 +77,7 @@ class DomainAccessRegionDict extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The cost of a prepaid order.
+ *
  * @method float getOriginalPrice() Obtain Original price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
  * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
  * @method float getDiscountPrice() Obtain Discount price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
  * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
- */
-
-/**
- *The cost of a prepaid order.
  */
 class PrepayPrice extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PrepayPrice extends AbstractModel
      * @var float Discount price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
      */
     public $DiscountPrice;
+
     /**
      * @param float $OriginalPrice Original price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
      * @param float $DiscountPrice Discount price of the advanced payment for a prepaid cloud disk or snapshot (in CNY).
@@ -46,6 +45,7 @@ class PrepayPrice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

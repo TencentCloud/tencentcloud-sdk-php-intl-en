@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpnGateways response structure.
+ *
  * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
  * @method array getVpnGatewaySet() Obtain The list of details of VPN gateway instances.
  * @method void setVpnGatewaySet(array $VpnGatewaySet) Set The list of details of VPN gateway instances.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeVpnGateways response structure.
  */
 class DescribeVpnGatewaysResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeVpnGatewaysResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of instances meeting the filter condition.
      * @param array $VpnGatewaySet The list of details of VPN gateway instances.
@@ -54,6 +53,7 @@ class DescribeVpnGatewaysResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

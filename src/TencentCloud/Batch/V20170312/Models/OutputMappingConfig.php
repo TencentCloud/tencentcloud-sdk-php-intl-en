@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output mapping configuration
+ *
  * @method string getScene() Obtain Storage type. Only COS is supported
  * @method void setScene(string $Scene) Set Storage type. Only COS is supported
  * @method integer getWorkerNum() Obtain Number of parallel workers
  * @method void setWorkerNum(integer $WorkerNum) Set Number of parallel workers
  * @method integer getWorkerPartSize() Obtain Size of a worker part, in MB.
  * @method void setWorkerPartSize(integer $WorkerPartSize) Set Size of a worker part, in MB.
- */
-
-/**
- *Output mapping configuration
  */
 class OutputMappingConfig extends AbstractModel
 {
@@ -45,6 +43,7 @@ class OutputMappingConfig extends AbstractModel
      * @var integer Size of a worker part, in MB.
      */
     public $WorkerPartSize;
+
     /**
      * @param string $Scene Storage type. Only COS is supported
      * @param integer $WorkerNum Number of parallel workers
@@ -54,6 +53,7 @@ class OutputMappingConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

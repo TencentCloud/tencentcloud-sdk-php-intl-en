@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Certificate information
+ *
  * @method string getSSLMode() Obtain Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
  * @method void setSSLMode(string $SSLMode) Set Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
  * @method string getCertId() Obtain ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertCaName(string $CertCaName) Set Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
  * @method string getCertCaContent() Obtain Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
  * @method void setCertCaContent(string $CertCaContent) Set Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
- */
-
-/**
- *Certificate information
  */
 class CertificateInput extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CertificateInput extends AbstractModel
      * @var string Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
      */
     public $CertCaContent;
+
     /**
      * @param string $SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
      * @param string $CertId ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
@@ -94,6 +93,7 @@ class CertificateInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

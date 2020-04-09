@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateGroup request structure.
+ *
  * @method string getGroupName() Obtain User Group name
  * @method void setGroupName(string $GroupName) Set User Group name
  * @method string getRemark() Obtain User Group description
  * @method void setRemark(string $Remark) Set User Group description
- */
-
-/**
- *CreateGroup request structure.
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateGroupRequest extends AbstractModel
      * @var string User Group description
      */
     public $Remark;
+
     /**
      * @param string $GroupName User Group name
      * @param string $Remark User Group description
@@ -46,6 +45,7 @@ class CreateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

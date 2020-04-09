@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNatGatewayDestinationIpPortTranslationNatRule request structure.
+ *
  * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
  * @method DestinationIpPortTranslationNatRule getSourceNatRule() Obtain The port forwarding rule of the source NAT gateway.
  * @method void setSourceNatRule(DestinationIpPortTranslationNatRule $SourceNatRule) Set The port forwarding rule of the source NAT gateway.
  * @method DestinationIpPortTranslationNatRule getDestinationNatRule() Obtain The port forwarding rule of the destination NAT gateway.
  * @method void setDestinationNatRule(DestinationIpPortTranslationNatRule $DestinationNatRule) Set The port forwarding rule of the destination NAT gateway.
- */
-
-/**
- *ModifyNatGatewayDestinationIpPortTranslationNatRule request structure.
  */
 class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest extends Abstrac
      * @var DestinationIpPortTranslationNatRule The port forwarding rule of the destination NAT gateway.
      */
     public $DestinationNatRule;
+
     /**
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      * @param DestinationIpPortTranslationNatRule $SourceNatRule The port forwarding rule of the source NAT gateway.
@@ -54,6 +53,7 @@ class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest extends Abstrac
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSubnets response structure.
+ *
  * @method array getSubnetSet() Obtain The list of newly created subnets.
  * @method void setSubnetSet(array $SubnetSet) Set The list of newly created subnets.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateSubnets response structure.
  */
 class CreateSubnetsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSubnetsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SubnetSet The list of newly created subnets.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateSubnetsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

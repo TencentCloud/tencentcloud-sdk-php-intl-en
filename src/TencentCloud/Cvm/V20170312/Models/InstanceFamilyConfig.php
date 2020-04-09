@@ -18,15 +18,13 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the model family of the instance.
+Examples: {'InstanceFamilyName': 'Standard S1', 'InstanceFamily': 'S1'}, {'InstanceFamilyName': 'Network-optimized N1', 'InstanceFamily': 'N1'}, {'InstanceFamilyName': 'High IO I1', 'InstanceFamily': 'I1'}, etc.
+ *
  * @method string getInstanceFamilyName() Obtain Full name of the model family.
  * @method void setInstanceFamilyName(string $InstanceFamilyName) Set Full name of the model family.
  * @method string getInstanceFamily() Obtain Acronym of the model family.
  * @method void setInstanceFamily(string $InstanceFamily) Set Acronym of the model family.
- */
-
-/**
- *Describes the model family of the instance.
-Examples: {'InstanceFamilyName': 'Standard S1', 'InstanceFamily': 'S1'}, {'InstanceFamilyName': 'Network-optimized N1', 'InstanceFamily': 'N1'}, {'InstanceFamilyName': 'High IO I1', 'InstanceFamily': 'I1'}, etc.
  */
 class InstanceFamilyConfig extends AbstractModel
 {
@@ -39,6 +37,7 @@ class InstanceFamilyConfig extends AbstractModel
      * @var string Acronym of the model family.
      */
     public $InstanceFamily;
+
     /**
      * @param string $InstanceFamilyName Full name of the model family.
      * @param string $InstanceFamily Acronym of the model family.
@@ -47,6 +46,7 @@ class InstanceFamilyConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

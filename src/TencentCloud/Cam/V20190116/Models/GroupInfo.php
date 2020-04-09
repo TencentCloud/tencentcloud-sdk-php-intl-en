@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * User Group information
+ *
  * @method integer getGroupId() Obtain User group ID
  * @method void setGroupId(integer $GroupId) Set User group ID
  * @method string getGroupName() Obtain User Group name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Time User Group created
  * @method string getRemark() Obtain User Group description
  * @method void setRemark(string $Remark) Set User Group description
- */
-
-/**
- *User Group information
  */
 class GroupInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GroupInfo extends AbstractModel
      * @var string User Group description
      */
     public $Remark;
+
     /**
      * @param integer $GroupId User group ID
      * @param string $GroupName User Group name
@@ -62,6 +61,7 @@ class GroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

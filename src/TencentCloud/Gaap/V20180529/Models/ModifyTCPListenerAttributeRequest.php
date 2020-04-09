@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTCPListenerAttribute request structure.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getGroupId() Obtain Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
  * @method integer getHealthCheck() Obtain Whether to enable health check. 1: enable; 0: disable.
  * @method void setHealthCheck(integer $HealthCheck) Set Whether to enable health check. 1: enable; 0: disable.
- */
-
-/**
- *ModifyTCPListenerAttribute request structure.
  */
 class ModifyTCPListenerAttributeRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
      * @var integer Whether to enable health check. 1: enable; 0: disable.
      */
     public $HealthCheck;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
@@ -94,6 +93,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

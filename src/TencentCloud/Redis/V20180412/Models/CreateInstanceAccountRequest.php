@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstanceAccount request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getAccountName() Obtain Sub-account name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivilege(string $Privilege) Set Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
  * @method string getRemark() Obtain Sub-account description information
  * @method void setRemark(string $Remark) Set Sub-account description information
- */
-
-/**
- *CreateInstanceAccount request structure.
  */
 class CreateInstanceAccountRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateInstanceAccountRequest extends AbstractModel
      * @var string Sub-account description information
      */
     public $Remark;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $AccountName Sub-account name
@@ -78,6 +77,7 @@ class CreateInstanceAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

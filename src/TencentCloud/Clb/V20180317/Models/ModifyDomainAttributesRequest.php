@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDomainAttributes request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(boolean $Http2) Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
  * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
- */
-
-/**
- *ModifyDomainAttributes request structure.
  */
 class ModifyDomainAttributesRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @var boolean Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
      */
     public $DefaultServer;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
@@ -86,6 +85,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

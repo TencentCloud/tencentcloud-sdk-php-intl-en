@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Watermark cycle configuration.
+ *
  * @method float getStartTime() Obtain Playback time point in seconds when a watermark appears in a video for the first time.
  * @method void setStartTime(float $StartTime) Set Playback time point in seconds when a watermark appears in a video for the first time.
  * @method float getDisplayDuration() Obtain Display duration of a watermark in a watermark cycle in seconds.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 If 0 is entered, a watermark will last for only one cycle (i.e., visible for `DisplayDuration` seconds throughout the video).
  * @method void setCycleDuration(float $CycleDuration) Set Duration of a watermark cycle in seconds.
 If 0 is entered, a watermark will last for only one cycle (i.e., visible for `DisplayDuration` seconds throughout the video).
- */
-
-/**
- *Watermark cycle configuration.
  */
 class WatermarkCycleConfigForUpdate extends AbstractModel
 {
@@ -48,6 +46,7 @@ class WatermarkCycleConfigForUpdate extends AbstractModel
 If 0 is entered, a watermark will last for only one cycle (i.e., visible for `DisplayDuration` seconds throughout the video).
      */
     public $CycleDuration;
+
     /**
      * @param float $StartTime Playback time point in seconds when a watermark appears in a video for the first time.
      * @param float $DisplayDuration Display duration of a watermark in a watermark cycle in seconds.
@@ -58,6 +57,7 @@ If 0 is entered, a watermark will last for only one cycle (i.e., visible for `Di
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

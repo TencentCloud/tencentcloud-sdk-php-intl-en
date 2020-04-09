@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySampleSnapshotTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a sampled screencapturing template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a sampled screencapturing template.
  * @method string getName() Obtain Name of a sampled screencapturing template. Length limit: 64 characters.
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) Set Image format. Valid values: jpg; png.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- */
-
-/**
- *ModifySampleSnapshotTemplate request structure.
  */
 class ModifySampleSnapshotTemplateRequest extends AbstractModel
 {
@@ -92,6 +90,7 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
      * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
+
     /**
      * @param integer $Definition Unique ID of a sampled screencapturing template.
      * @param string $Name Name of a sampled screencapturing template. Length limit: 64 characters.
@@ -110,6 +109,7 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDisasterRecoverGroups response structure.
+ *
  * @method array getDisasterRecoverGroupSet() Obtain Information on spread placement groups.
  * @method void setDisasterRecoverGroupSet(array $DisasterRecoverGroupSet) Set Information on spread placement groups.
  * @method integer getTotalCount() Obtain Total number of placement groups of the user.
  * @method void setTotalCount(integer $TotalCount) Set Total number of placement groups of the user.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDisasterRecoverGroups response structure.
  */
 class DescribeDisasterRecoverGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDisasterRecoverGroupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DisasterRecoverGroupSet Information on spread placement groups.
      * @param integer $TotalCount Total number of placement groups of the user.
@@ -54,6 +53,7 @@ class DescribeDisasterRecoverGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

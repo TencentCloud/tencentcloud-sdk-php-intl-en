@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CVM HostName settings
+ *
  * @method string getHostName() Obtain Host name of a CVM.
 <br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
 <br><li> No support for Windows instances.
@@ -37,10 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <br><li> UNIQUE. The HostName set in input parameters is the prefix of a host name. Auto Scaling and CVM expand it. The HostName of an instance in the auto scaling group is unique.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-
-/**
- *CVM HostName settings
- */
 class HostNameSettings extends AbstractModel
 {
     /**
@@ -59,6 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostNameStyle;
+
     /**
      * @param string $HostName Host name of a CVM.
 <br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
@@ -74,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

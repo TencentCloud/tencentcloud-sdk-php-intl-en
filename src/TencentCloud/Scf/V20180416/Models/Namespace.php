@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Namespace
+ *
  * @method string getModTime() Obtain Creation time of the namespace
  * @method void setModTime(string $ModTime) Set Creation time of the namespace
  * @method string getAddTime() Obtain Modification time of the namespace
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Namespace name
  * @method string getType() Obtain The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
  * @method void setType(string $Type) Set The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
- */
-
-/**
- *Namespace
  */
 class Namespace extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Namespace extends AbstractModel
      * @var string The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
      */
     public $Type;
+
     /**
      * @param string $ModTime Creation time of the namespace
      * @param string $AddTime Modification time of the namespace
@@ -70,6 +69,7 @@ class Namespace extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

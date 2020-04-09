@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance information
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionNumber(integer $VersionNumber) Set Version number
  * @method string getAutoScalingGroupName() Obtain Auto scaling group name
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name
- */
-
-/**
- *Instance information
  */
 class Instance extends AbstractModel
 {
@@ -115,6 +113,7 @@ class Instance extends AbstractModel
      * @var string Auto scaling group name
      */
     public $AutoScalingGroupName;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $AutoScalingGroupId Auto scaling group ID
@@ -134,6 +133,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

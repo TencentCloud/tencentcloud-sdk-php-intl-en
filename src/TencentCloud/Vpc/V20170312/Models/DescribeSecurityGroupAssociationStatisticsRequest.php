@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroupAssociationStatistics request structure.
+ *
  * @method array getSecurityGroupIds() Obtain The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
- */
-
-/**
- *DescribeSecurityGroupAssociationStatistics request structure.
  */
 class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel
      * @var array The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
     public $SecurityGroupIds;
+
     /**
      * @param array $SecurityGroupIds The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
@@ -38,6 +37,7 @@ class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

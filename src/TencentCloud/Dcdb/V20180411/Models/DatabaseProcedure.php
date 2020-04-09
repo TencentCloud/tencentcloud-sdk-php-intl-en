@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database stored procedure information
+ *
  * @method string getProc() Obtain Stored procedure name
  * @method void setProc(string $Proc) Set Stored procedure name
- */
-
-/**
- *Database stored procedure information
  */
 class DatabaseProcedure extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DatabaseProcedure extends AbstractModel
      * @var string Stored procedure name
      */
     public $Proc;
+
     /**
      * @param string $Proc Stored procedure name
      */
@@ -38,6 +37,7 @@ class DatabaseProcedure extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

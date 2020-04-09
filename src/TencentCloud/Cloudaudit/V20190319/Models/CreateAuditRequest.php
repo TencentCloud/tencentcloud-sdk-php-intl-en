@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Request parameter structure of CreateAudit
+ *
  * @method string getAuditName() Obtain Tracking set name, which can contain 3-128 ASCII letters (a-z; A-Z), digits (0-9), and underscores (_).
  * @method void setAuditName(string $AuditName) Set Tracking set name, which can contain 3-128 ASCII letters (a-z; A-Z), digits (0-9), and underscores (_).
  * @method string getCosBucketName() Obtain User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCreateNewQueue(integer $IsCreateNewQueue) Set Whether to create a queue. 1: yes; 0: no. This field is required if the value of IsEnableCmqNotify is 1.
  * @method string getLogFilePrefix() Obtain Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9). It can be left empty and is the account ID by default.
  * @method void setLogFilePrefix(string $LogFilePrefix) Set Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9). It can be left empty and is the account ID by default.
- */
-
-/**
- *Request parameter structure of CreateAudit
  */
 class CreateAuditRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateAuditRequest extends AbstractModel
      * @var string Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9). It can be left empty and is the account ID by default.
      */
     public $LogFilePrefix;
+
     /**
      * @param string $AuditName Tracking set name, which can contain 3-128 ASCII letters (a-z; A-Z), digits (0-9), and underscores (_).
      * @param string $CosBucketName User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
@@ -110,6 +109,7 @@ class CreateAuditRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

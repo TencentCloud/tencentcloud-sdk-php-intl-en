@@ -18,12 +18,10 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Dimension information
+ *
  * @method array getDimensions() Obtain Array of dimension names
  * @method void setDimensions(array $Dimensions) Set Array of dimension names
- */
-
-/**
- *Dimension information
  */
 class DimensionsDesc extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DimensionsDesc extends AbstractModel
      * @var array Array of dimension names
      */
     public $Dimensions;
+
     /**
      * @param array $Dimensions Array of dimension names
      */
@@ -38,6 +37,7 @@ class DimensionsDesc extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

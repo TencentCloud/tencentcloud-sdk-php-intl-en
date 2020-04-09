@@ -18,16 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSecurityGroup request structure.
+ *
  * @method string getGroupName() Obtain Security group can be named freely, but cannot exceed 60 characters.
  * @method void setGroupName(string $GroupName) Set Security group can be named freely, but cannot exceed 60 characters.
  * @method string getGroupDescription() Obtain The remarks for the security group. The maximum length is 100 characters.
  * @method void setGroupDescription(string $GroupDescription) Set The remarks for the security group. The maximum length is 100 characters.
- * @method string getProjectId() Obtain The project id is 0 by default. You can query this in the project management page of the Qcloud console.
- * @method void setProjectId(string $ProjectId) Set The project id is 0 by default. You can query this in the project management page of the Qcloud console.
- */
-
-/**
- *CreateSecurityGroup request structure.
+ * @method string getProjectId() Obtain Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
+ * @method void setProjectId(string $ProjectId) Set Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateSecurityGroupRequest extends AbstractModel
 {
@@ -42,18 +42,26 @@ class CreateSecurityGroupRequest extends AbstractModel
     public $GroupDescription;
 
     /**
-     * @var string The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * @var string Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
      */
     public $ProjectId;
+
+    /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
     /**
      * @param string $GroupName Security group can be named freely, but cannot exceed 60 characters.
      * @param string $GroupDescription The remarks for the security group. The maximum length is 100 characters.
-     * @param string $ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * @param string $ProjectId Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -72,6 +80,15 @@ class CreateSecurityGroupRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

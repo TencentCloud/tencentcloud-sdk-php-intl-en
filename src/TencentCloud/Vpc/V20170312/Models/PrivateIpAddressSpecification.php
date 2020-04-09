@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Private IP information
+ *
  * @method string getPrivateIpAddress() Obtain Private IP address.
  * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Private IP address.
  * @method boolean getPrimary() Obtain Whether it is a primary IP.
@@ -40,10 +42,6 @@ PENDING: Creating
 MIGRATING: Migrating
 DELETING: Deleting
 AVAILABLE: Available
- */
-
-/**
- *Private IP information
  */
 class PrivateIpAddressSpecification extends AbstractModel
 {
@@ -85,6 +83,7 @@ DELETING: Deleting
 AVAILABLE: Available
      */
     public $State;
+
     /**
      * @param string $PrivateIpAddress Private IP address.
      * @param boolean $Primary Whether it is a primary IP.
@@ -102,6 +101,7 @@ AVAILABLE: Available
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

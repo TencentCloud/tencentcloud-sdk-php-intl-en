@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ProcessMedia request structure.
+ *
  * @method MediaInputInfo getInputInfo() Obtain Input information of a file for video processing.
  * @method void setInputInfo(MediaInputInfo $InputInfo) Set Input information of a file for video processing.
  * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- */
-
-/**
- *ProcessMedia request structure.
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class ProcessMediaRequest extends AbstractModel
      * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      */
     public $SessionContext;
+
     /**
      * @param MediaInputInfo $InputInfo Input information of a file for video processing.
      * @param TaskOutputStorage $OutputStorage Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
@@ -118,6 +117,7 @@ class ProcessMediaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

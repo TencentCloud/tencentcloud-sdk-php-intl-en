@@ -18,12 +18,10 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Environment variable parameter of the function
+ *
  * @method array getVariables() Obtain Environment variable array
  * @method void setVariables(array $Variables) Set Environment variable array
- */
-
-/**
- *Environment variable parameter of the function
  */
 class Environment extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Environment extends AbstractModel
      * @var array Environment variable array
      */
     public $Variables;
+
     /**
      * @param array $Variables Environment variable array
      */
@@ -38,6 +37,7 @@ class Environment extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

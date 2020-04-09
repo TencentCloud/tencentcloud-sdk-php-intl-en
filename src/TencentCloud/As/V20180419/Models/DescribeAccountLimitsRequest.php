@@ -18,14 +18,13 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountLimits request structure.
+ *
 
- */
-
-/**
- *DescribeAccountLimits request structure.
  */
 class DescribeAccountLimitsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeAccountLimitsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

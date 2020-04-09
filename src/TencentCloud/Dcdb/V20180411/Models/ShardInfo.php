@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Shard information
+ *
  * @method string getShardInstanceId() Obtain Shard ID
  * @method void setShardInstanceId(string $ShardInstanceId) Set Shard ID
  * @method string getShardSerialId() Obtain Shard set ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) Set Product type ID (this field is obsolete and should not be depended on)
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
- */
-
-/**
- *Shard information
  */
 class ShardInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ShardInfo extends AbstractModel
      * @var integer Number of CPU cores
      */
     public $Cpu;
+
     /**
      * @param string $ShardInstanceId Shard ID
      * @param string $ShardSerialId Shard set ID
@@ -110,6 +109,7 @@ class ShardInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

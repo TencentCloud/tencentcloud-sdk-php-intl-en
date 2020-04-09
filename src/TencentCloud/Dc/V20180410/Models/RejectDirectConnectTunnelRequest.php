@@ -18,12 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RejectDirectConnectTunnel request structure.
+ *
  * @method string getDirectConnectTunnelId() Obtain None.
  * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) Set None.
- */
-
-/**
- *RejectDirectConnectTunnel request structure.
  */
 class RejectDirectConnectTunnelRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RejectDirectConnectTunnelRequest extends AbstractModel
      * @var string None.
      */
     public $DirectConnectTunnelId;
+
     /**
      * @param string $DirectConnectTunnelId None.
      */
@@ -38,6 +37,7 @@ class RejectDirectConnectTunnelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

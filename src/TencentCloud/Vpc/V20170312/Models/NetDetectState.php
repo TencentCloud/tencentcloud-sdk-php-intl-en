@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The network detection verification result.
+ *
  * @method string getNetDetectId() Obtain The ID of a network detection instance, such as netd-12345678.
  * @method void setNetDetectId(string $NetDetectId) Set The ID of a network detection instance, such as netd-12345678.
  * @method array getNetDetectIpStateSet() Obtain The array of network detection destination IP verification results.
  * @method void setNetDetectIpStateSet(array $NetDetectIpStateSet) Set The array of network detection destination IP verification results.
- */
-
-/**
- *The network detection verification result.
  */
 class NetDetectState extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NetDetectState extends AbstractModel
      * @var array The array of network detection destination IP verification results.
      */
     public $NetDetectIpStateSet;
+
     /**
      * @param string $NetDetectId The ID of a network detection instance, such as netd-12345678.
      * @param array $NetDetectIpStateSet The array of network detection destination IP verification results.
@@ -46,6 +45,7 @@ class NetDetectState extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

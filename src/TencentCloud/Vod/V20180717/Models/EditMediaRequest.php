@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EditMedia request structure.
+ *
  * @method string getInputType() Obtain Input video type. Valid values: File, Stream.
  * @method void setInputType(string $InputType) Set Input video type. Valid values: File, Stream.
  * @method array getFileInfos() Obtain Information of input video file, which is required if `InputType` is `File`.
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set ID used for task deduplication. If there was a request with the same ID in the last day, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *EditMedia request structure.
  */
 class EditMediaRequest extends AbstractModel
 {
@@ -100,6 +98,7 @@ class EditMediaRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $InputType Input video type. Valid values: File, Stream.
      * @param array $FileInfos Information of input video file, which is required if `InputType` is `File`.
@@ -118,6 +117,7 @@ class EditMediaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

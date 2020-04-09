@@ -18,14 +18,13 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveSnapshotRules request structure.
+ *
 
- */
-
-/**
- *DescribeLiveSnapshotRules request structure.
  */
 class DescribeLiveSnapshotRulesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeLiveSnapshotRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

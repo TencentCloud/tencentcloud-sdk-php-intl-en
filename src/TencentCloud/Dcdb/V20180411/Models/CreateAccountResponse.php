@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccount response structure.
+ *
  * @method string getInstanceId() Obtain Instance ID, which is passed through from the input parameters.
  * @method void setInstanceId(string $InstanceId) Set Instance ID, which is passed through from the input parameters.
  * @method string getUserName() Obtain Username, which is passed through from the input parameters.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadOnly(integer $ReadOnly) Set Passed through from the input parameters.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateAccount response structure.
  */
 class CreateAccountResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateAccountResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId Instance ID, which is passed through from the input parameters.
      * @param string $UserName Username, which is passed through from the input parameters.
@@ -70,6 +69,7 @@ class CreateAccountResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

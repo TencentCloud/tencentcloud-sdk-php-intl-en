@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOrders request structure.
+ *
  * @method array getDealNames() Obtain Order name set
  * @method void setDealNames(array $DealNames) Set Order name set
- */
-
-/**
- *DescribeOrders request structure.
  */
 class DescribeOrdersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeOrdersRequest extends AbstractModel
      * @var array Order name set
      */
     public $DealNames;
+
     /**
      * @param array $DealNames Order name set
      */
@@ -38,6 +37,7 @@ class DescribeOrdersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

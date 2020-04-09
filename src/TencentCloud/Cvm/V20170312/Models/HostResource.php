@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Resource information of a CDH instance
+ *
  * @method integer getCpuTotal() Obtain Total number of CPU cores in the CDH instance
  * @method void setCpuTotal(integer $CpuTotal) Set Total number of CPU cores in the CDH instance
  * @method integer getCpuAvailable() Obtain Number of available CPU cores in the CDH instance
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskTotal(integer $DiskTotal) Set Total disk size of the CDH instance; unit: GiB
  * @method integer getDiskAvailable() Obtain Avilable disk size of the CDH instance; unit: GiB
  * @method void setDiskAvailable(integer $DiskAvailable) Set Avilable disk size of the CDH instance; unit: GiB
- */
-
-/**
- *Resource information of a CDH instance
  */
 class HostResource extends AbstractModel
 {
@@ -66,6 +64,7 @@ class HostResource extends AbstractModel
      * @var integer Avilable disk size of the CDH instance; unit: GiB
      */
     public $DiskAvailable;
+
     /**
      * @param integer $CpuTotal Total number of CPU cores in the CDH instance
      * @param integer $CpuAvailable Number of available CPU cores in the CDH instance
@@ -78,6 +77,7 @@ class HostResource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

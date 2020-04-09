@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskTemplates request structure.
+ *
  * @method array getTaskTemplateIds() Obtain Job template ID
  * @method void setTaskTemplateIds(array $TaskTemplateIds) Set Job template ID
  * @method array getFilters() Obtain Filter
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Number of returned results
  * @method void setLimit(integer $Limit) Set Number of returned results
- */
-
-/**
- *DescribeTaskTemplates request structure.
  */
 class DescribeTaskTemplatesRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeTaskTemplatesRequest extends AbstractModel
      * @var integer Number of returned results
      */
     public $Limit;
+
     /**
      * @param array $TaskTemplateIds Job template ID
      * @param array $Filters Filter
@@ -66,6 +65,7 @@ class DescribeTaskTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

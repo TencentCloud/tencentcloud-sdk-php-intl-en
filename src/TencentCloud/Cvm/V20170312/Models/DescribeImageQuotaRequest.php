@@ -18,14 +18,13 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageQuota request structure.
+ *
 
- */
-
-/**
- *DescribeImageQuota request structure.
  */
 class DescribeImageQuotaRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeImageQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of custom speech audit task
+ *
  * @method string getSwitch() Obtain Switch of custom speech audit task. Valid values:
 <li>ON: enables custom speech audit task;</li>
 <li>OFF: disables custom speech audit task.</li>
@@ -32,10 +34,6 @@ There can be up to 10 tags, each with a length limit of 16 characters.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
  * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
  * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
- */
-
-/**
- *Control parameter of custom speech audit task
  */
 class UserDefineAsrTextReviewTemplateInfo extends AbstractModel
 {
@@ -61,6 +59,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
      * @var integer Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
      */
     public $ReviewConfidence;
+
     /**
      * @param string $Switch Switch of custom speech audit task. Valid values:
 <li>ON: enables custom speech audit task;</li>
@@ -74,6 +73,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBImportRecords response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible import task operation logs.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible import task operation logs.
  * @method array getItems() Obtain List of import operation records.
  * @method void setItems(array $Items) Set List of import operation records.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBImportRecords response structure.
  */
 class DescribeDBImportRecordsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBImportRecordsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible import task operation logs.
      * @param array $Items List of import operation records.
@@ -54,6 +53,7 @@ class DescribeDBImportRecordsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

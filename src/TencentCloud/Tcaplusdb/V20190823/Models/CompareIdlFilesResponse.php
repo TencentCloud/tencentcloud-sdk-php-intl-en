@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CompareIdlFiles response structure.
+ *
  * @method array getIdlFiles() Obtain Information list of all IDL files uploaded and verified in this request
  * @method void setIdlFiles(array $IdlFiles) Set Information list of all IDL files uploaded and verified in this request
  * @method integer getTotalCount() Obtain Number of tables verified to be valid in this request
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableInfos(array $TableInfos) Set Verification result parsed from the selected table after the IDL description file is read
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CompareIdlFiles response structure.
  */
 class CompareIdlFilesResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CompareIdlFilesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $IdlFiles Information list of all IDL files uploaded and verified in this request
      * @param integer $TotalCount Number of tables verified to be valid in this request
@@ -62,6 +61,7 @@ class CompareIdlFilesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

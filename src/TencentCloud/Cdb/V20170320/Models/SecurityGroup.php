@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Security group details
+ *
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getCreateTime() Obtain Creation time in the format of yyyy-mm-dd hh:mm:ss
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupName(string $SecurityGroupName) Set Security group name
  * @method string getSecurityGroupRemark() Obtain Security group remarks
  * @method void setSecurityGroupRemark(string $SecurityGroupRemark) Set Security group remarks
- */
-
-/**
- *Security group details
  */
 class SecurityGroup extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SecurityGroup extends AbstractModel
      * @var string Security group remarks
      */
     public $SecurityGroupRemark;
+
     /**
      * @param integer $ProjectId Project ID
      * @param string $CreateTime Creation time in the format of yyyy-mm-dd hh:mm:ss
@@ -86,6 +85,7 @@ class SecurityGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of an instance task
+ *
  * @method integer getCode() Obtain Error code.
  * @method void setCode(integer $Code) Set Error code.
  * @method string getMessage() Obtain Error message.
@@ -80,10 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAsyncRequestId() Obtain Async task request ID.
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID.
- */
-
-/**
- *Details of an instance task
  */
 class TaskDetail extends AbstractModel
 {
@@ -157,6 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Async task request ID.
      */
     public $AsyncRequestId;
+
     /**
      * @param integer $Code Error code.
      * @param string $Message Error message.
@@ -194,6 +193,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceCategories response structure.
+ *
  * @method array getInstanceCategorySet() Obtain List of CVM instance categories
  * @method void setInstanceCategorySet(array $InstanceCategorySet) Set List of CVM instance categories
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceCategories response structure.
  */
 class DescribeInstanceCategoriesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceCategoriesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $InstanceCategorySet List of CVM instance categories
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeInstanceCategoriesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComputeEnvCreateInfo response structure.
+ *
  * @method string getEnvId() Obtain Compute environment ID
  * @method void setEnvId(string $EnvId) Set Compute environment ID
  * @method string getEnvName() Obtain Compute environment name
@@ -42,10 +44,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeComputeEnvCreateInfo response structure.
  */
 class DescribeComputeEnvCreateInfoResponse extends AbstractModel
 {
@@ -104,6 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $EnvId Compute environment ID
      * @param string $EnvName Compute environment name
@@ -122,6 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

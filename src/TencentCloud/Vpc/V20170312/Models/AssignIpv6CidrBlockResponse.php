@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssignIpv6CidrBlock response structure.
+ *
  * @method string getIpv6CidrBlock() Obtain The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AssignIpv6CidrBlock response structure.
  */
 class AssignIpv6CidrBlockResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssignIpv6CidrBlockResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Ipv6CidrBlock The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class AssignIpv6CidrBlockResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

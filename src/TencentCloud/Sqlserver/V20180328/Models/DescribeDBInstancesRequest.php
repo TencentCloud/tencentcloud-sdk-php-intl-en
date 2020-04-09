@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances request structure.
+ *
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method integer getStatus() Obtain Instance status. Valid values:
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
  * @method string getSubnetId() Obtain Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
  * @method void setSubnetId(string $SubnetId) Set Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
- */
-
-/**
- *DescribeDBInstances request structure.
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -116,6 +114,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var string Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
      */
     public $SubnetId;
+
     /**
      * @param integer $ProjectId Project ID
      * @param integer $Status Instance status. Valid values:
@@ -142,6 +141,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

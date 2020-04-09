@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountDescription request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc.
  * @method string getUserName() Obtain Login username.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) Set Access host allowed for a user. An account is uniquely identified by username and host.
  * @method string getDescription() Obtain New account remarks, which can contain 0–256 characters.
  * @method void setDescription(string $Description) Set New account remarks, which can contain 0–256 characters.
- */
-
-/**
- *ModifyAccountDescription request structure.
  */
 class ModifyAccountDescriptionRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
      * @var string New account remarks, which can contain 0–256 characters.
      */
     public $Description;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc.
      * @param string $UserName Login username.
@@ -62,6 +61,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

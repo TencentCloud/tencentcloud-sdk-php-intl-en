@@ -18,14 +18,12 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTag request structure.
+ *
  * @method string getTagKey() Obtain The tag key to be deleted.
  * @method void setTagKey(string $TagKey) Set The tag key to be deleted.
  * @method string getTagValue() Obtain The tag value to be deleted.
  * @method void setTagValue(string $TagValue) Set The tag value to be deleted.
- */
-
-/**
- *DeleteTag request structure.
  */
 class DeleteTagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTagRequest extends AbstractModel
      * @var string The tag value to be deleted.
      */
     public $TagValue;
+
     /**
      * @param string $TagKey The tag key to be deleted.
      * @param string $TagValue The tag value to be deleted.
@@ -46,6 +45,7 @@ class DeleteTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

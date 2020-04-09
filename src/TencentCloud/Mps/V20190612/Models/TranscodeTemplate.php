@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of a transcoding template
+ *
  * @method string getDefinition() Obtain Unique ID of a transcoding template.
  * @method void setDefinition(string $Definition) Set Unique ID of a transcoding template.
  * @method string getContainer() Obtain Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.
@@ -70,10 +72,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- */
-
-/**
- *Details of a transcoding template
  */
 class TranscodeTemplate extends AbstractModel
 {
@@ -154,6 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Last modified time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $UpdateTime;
+
     /**
      * @param string $Definition Unique ID of a transcoding template.
      * @param string $Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.
@@ -186,6 +185,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

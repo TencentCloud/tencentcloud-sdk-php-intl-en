@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of the table for rollback
+ *
  * @method string getDatabase() Obtain Database name
  * @method void setDatabase(string $Database) Set Database name
  * @method array getTable() Obtain Table details
  * @method void setTable(array $Table) Set Table details
- */
-
-/**
- *Details of the table for rollback
  */
 class RollbackTables extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RollbackTables extends AbstractModel
      * @var array Table details
      */
     public $Table;
+
     /**
      * @param string $Database Database name
      * @param array $Table Table details
@@ -46,6 +45,7 @@ class RollbackTables extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

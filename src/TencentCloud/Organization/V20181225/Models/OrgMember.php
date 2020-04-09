@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information on an organization member.
+ *
  * @method integer getUin() Obtain UIN
  * @method void setUin(integer $Uin) Set UIN
  * @method string getName() Obtain Name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) Set Notes
  * @method string getJoinTime() Obtain Joining time
  * @method void setJoinTime(string $JoinTime) Set Joining time
- */
-
-/**
- *Information on an organization member.
  */
 class OrgMember extends AbstractModel
 {
@@ -52,6 +50,7 @@ class OrgMember extends AbstractModel
      * @var string Joining time
      */
     public $JoinTime;
+
     /**
      * @param integer $Uin UIN
      * @param string $Name Name
@@ -62,6 +61,7 @@ class OrgMember extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

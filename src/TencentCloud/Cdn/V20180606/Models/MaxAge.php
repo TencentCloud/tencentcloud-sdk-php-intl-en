@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Browser cache rule configuration. This is used to set the MaxAge default value and is disabled by default. (This feature is in beta and not generally available yet.)
+ *
  * @method string getSwitch() Obtain Browser cache configuration switch
 on: enabled
 off: disabled
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMaxAgeRules(array $MaxAgeRules) Set MaxAge rule
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Browser cache rule configuration. This is used to set the MaxAge default value and is disabled by default. (This feature is in beta and not generally available yet.)
  */
 class MaxAge extends AbstractModel
 {
@@ -50,6 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MaxAgeRules;
+
     /**
      * @param string $Switch Browser cache configuration switch
 on: enabled
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

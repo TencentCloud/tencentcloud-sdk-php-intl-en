@@ -18,14 +18,12 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDirectConnectTunnel response structure.
+ *
  * @method array getDirectConnectTunnelIdSet() Obtain Dedicated tunnel ID.
  * @method void setDirectConnectTunnelIdSet(array $DirectConnectTunnelIdSet) Set Dedicated tunnel ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateDirectConnectTunnel response structure.
  */
 class CreateDirectConnectTunnelResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDirectConnectTunnelResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DirectConnectTunnelIdSet Dedicated tunnel ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateDirectConnectTunnelResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

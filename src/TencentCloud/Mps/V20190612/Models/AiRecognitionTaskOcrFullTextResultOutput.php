@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of full text recognition.
+ *
  * @method array getSegmentSet() Obtain Full text recognition result set.
  * @method void setSegmentSet(array $SegmentSet) Set Full text recognition result set.
- */
-
-/**
- *Output of full text recognition.
  */
 class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
      * @var array Full text recognition result set.
      */
     public $SegmentSet;
+
     /**
      * @param array $SegmentSet Full text recognition result set.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

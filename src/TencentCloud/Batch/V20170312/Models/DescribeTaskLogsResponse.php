@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskLogs response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of task instances
  * @method void setTotalCount(integer $TotalCount) Set Total number of task instances
  * @method array getTaskInstanceLogSet() Obtain Set of task instance log details
  * @method void setTaskInstanceLogSet(array $TaskInstanceLogSet) Set Set of task instance log details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTaskLogs response structure.
  */
 class DescribeTaskLogsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTaskLogsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of task instances
      * @param array $TaskInstanceLogSet Set of task instance log details
@@ -54,6 +53,7 @@ class DescribeTaskLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

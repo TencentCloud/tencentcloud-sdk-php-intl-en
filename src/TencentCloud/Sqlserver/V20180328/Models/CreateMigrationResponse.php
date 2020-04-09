@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMigration response structure.
+ *
  * @method integer getMigrateId() Obtain Migration task ID
  * @method void setMigrateId(integer $MigrateId) Set Migration task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateMigration response structure.
  */
 class CreateMigrationResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateMigrationResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $MigrateId Migration task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateMigrationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

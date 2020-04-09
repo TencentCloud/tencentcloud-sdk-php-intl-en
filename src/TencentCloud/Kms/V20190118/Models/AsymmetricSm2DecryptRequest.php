@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AsymmetricSm2Decrypt request structure.
+ *
  * @method string getKeyId() Obtain Unique CMK ID
  * @method void setKeyId(string $KeyId) Set Unique CMK ID
  * @method string getCiphertext() Obtain Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
  * @method void setCiphertext(string $Ciphertext) Set Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
- */
-
-/**
- *AsymmetricSm2Decrypt request structure.
  */
 class AsymmetricSm2DecryptRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AsymmetricSm2DecryptRequest extends AbstractModel
      * @var string Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
      */
     public $Ciphertext;
+
     /**
      * @param string $KeyId Unique CMK ID
      * @param string $Ciphertext Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
@@ -46,6 +45,7 @@ class AsymmetricSm2DecryptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

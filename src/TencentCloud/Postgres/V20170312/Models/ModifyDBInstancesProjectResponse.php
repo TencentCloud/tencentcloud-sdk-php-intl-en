@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstancesProject response structure.
+ *
  * @method integer getCount() Obtain Number of successfully transferred instances
  * @method void setCount(integer $Count) Set Number of successfully transferred instances
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyDBInstancesProject response structure.
  */
 class ModifyDBInstancesProjectResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstancesProjectResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Count Number of successfully transferred instances
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ModifyDBInstancesProjectResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

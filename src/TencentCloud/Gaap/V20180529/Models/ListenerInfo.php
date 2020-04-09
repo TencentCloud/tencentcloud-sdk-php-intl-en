@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Used by internal APIs. It returns the information of listeners whose statistics can be queried.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getListenerName() Obtain Listener name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set Listening port
  * @method string getProtocol() Obtain Listener protocol type
  * @method void setProtocol(string $Protocol) Set Listener protocol type
- */
-
-/**
- *Used by internal APIs. It returns the information of listeners whose statistics can be queried.
  */
 class ListenerInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListenerInfo extends AbstractModel
      * @var string Listener protocol type
      */
     public $Protocol;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
@@ -62,6 +61,7 @@ class ListenerInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

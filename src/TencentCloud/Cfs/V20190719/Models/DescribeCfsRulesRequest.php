@@ -18,12 +18,10 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCfsRules request structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
- */
-
-/**
- *DescribeCfsRules request structure.
  */
 class DescribeCfsRulesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCfsRulesRequest extends AbstractModel
      * @var string Permission group ID
      */
     public $PGroupId;
+
     /**
      * @param string $PGroupId Permission group ID
      */
@@ -38,6 +37,7 @@ class DescribeCfsRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Security group details
+ *
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getCreateTime() Obtain Creation time
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInboundRule(array $InboundRule) Set Security group inbound rule
  * @method array getOutboundRule() Obtain Security group outbound rule
  * @method void setOutboundRule(array $OutboundRule) Set Security group outbound rule
- */
-
-/**
- *Security group details
  */
 class SecurityGroupDetail extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SecurityGroupDetail extends AbstractModel
      * @var array Security group outbound rule
      */
     public $OutboundRule;
+
     /**
      * @param integer $ProjectId Project ID
      * @param string $CreateTime Creation time
@@ -86,6 +85,7 @@ class SecurityGroupDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

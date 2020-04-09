@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Terrorism information
+ *
  * @method float getConfidence() Obtain Score of detected terrorism information in a video between 0 and 100.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setConfidence(float $Confidence) Set Score of detected terrorism information in a video between 0 and 100.
@@ -57,10 +59,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected terrorism information.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
-
-/**
- *Terrorism information
- */
 class AiReviewTerrorismTaskOutput extends AbstractModel
 {
     /**
@@ -97,6 +95,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Score of detected terrorism information in a video between 0 and 100.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -122,6 +121,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

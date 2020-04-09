@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ConfirmEvents request structure.
+ *
  * @method array getEventHandles() Obtain Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](/document/product/266/33433) API.
 Array length limit: 16.
  * @method void setEventHandles(array $EventHandles) Set Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](/document/product/266/33433) API.
@@ -26,10 +28,6 @@ Array length limit: 16.
  * @method void setExtInfo(string $ExtInfo) Set Reserved field for special purposes.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ConfirmEvents request structure.
  */
 class ConfirmEventsRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ Array length limit: 16.
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $EventHandles Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](/document/product/266/33433) API.
 Array length limit: 16.
@@ -58,6 +57,7 @@ Array length limit: 16.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNetworkInterface request structure.
+ *
  * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
- */
-
-/**
- *DeleteNetworkInterface request structure.
  */
 class DeleteNetworkInterfaceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNetworkInterfaceRequest extends AbstractModel
      * @var string The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public $NetworkInterfaceId;
+
     /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
@@ -38,6 +37,7 @@ class DeleteNetworkInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

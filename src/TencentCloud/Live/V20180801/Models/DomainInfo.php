@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LVB domain name information
+ *
  * @method string getName() Obtain LVB domain name
  * @method void setName(string $Name) Set LVB domain name
  * @method integer getType() Obtain Domain name type. 0: push, 1: playback
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRentExpireTime(string $RentExpireTime) Set Expiration time of leased domain name
  * @method integer getIsMiniProgramLive() Obtain 
  * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) Set 
- */
-
-/**
- *LVB domain name information
  */
 class DomainInfo extends AbstractModel
 {
@@ -114,6 +112,7 @@ class DomainInfo extends AbstractModel
      * @var integer 
      */
     public $IsMiniProgramLive;
+
     /**
      * @param string $Name LVB domain name
      * @param integer $Type Domain name type. 0: push, 1: playback
@@ -134,6 +133,7 @@ class DomainInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

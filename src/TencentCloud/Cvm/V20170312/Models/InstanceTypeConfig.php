@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the configurations of an instance model.
+ *
  * @method string getZone() Obtain Availability zone.
  * @method void setZone(string $Zone) Set Availability zone.
  * @method string getInstanceType() Obtain Instance model.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Memory capacity; unit: `GB`.
  * @method integer getFPGA() Obtain Number of FPGA cores; unit: core.
  * @method void setFPGA(integer $FPGA) Set Number of FPGA cores; unit: core.
- */
-
-/**
- *Describes the configurations of an instance model.
  */
 class InstanceTypeConfig extends AbstractModel
 {
@@ -73,6 +71,7 @@ class InstanceTypeConfig extends AbstractModel
      * @var integer Number of FPGA cores; unit: core.
      */
     public $FPGA;
+
     /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
@@ -86,6 +85,7 @@ class InstanceTypeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

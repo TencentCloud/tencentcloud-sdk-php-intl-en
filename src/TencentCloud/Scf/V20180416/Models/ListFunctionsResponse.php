@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListFunctions response structure.
+ *
  * @method array getFunctions() Obtain Function list
  * @method void setFunctions(array $Functions) Set Function list
  * @method integer getTotalCount() Obtain Total number
  * @method void setTotalCount(integer $TotalCount) Set Total number
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListFunctions response structure.
  */
 class ListFunctionsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListFunctionsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Functions Function list
      * @param integer $TotalCount Total number
@@ -54,6 +53,7 @@ class ListFunctionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -65,8 +65,7 @@ class ListFunctionsResponse extends AbstractModel
         if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
             $this->Functions = [];
             foreach ($param["Functions"] as $key => $value){
-                $dynamicClassNameAvoidKeywordConflict = "Function";
-                $obj = new $dynamicClassNameAvoidKeywordConflict();
+                $obj = new FunctionInfo();
                 $obj->deserialize($value);
                 array_push($this->Functions, $obj);
             }

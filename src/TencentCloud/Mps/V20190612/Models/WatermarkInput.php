@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Watermark parameter type of a video processing task
+ *
  * @method integer getDefinition() Obtain ID of a watermarking template.
  * @method void setDefinition(integer $Definition) Set ID of a watermarking template.
  * @method RawWatermarkParameter getRawParameter() Obtain 
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 <li>If this parameter is left empty or 0 is entered, the watermark will exist till the last video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
 <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
- */
-
-/**
- *Watermark parameter type of a video processing task
  */
 class WatermarkInput extends AbstractModel
 {
@@ -84,6 +82,7 @@ class WatermarkInput extends AbstractModel
 <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
      */
     public $EndTimeOffset;
+
     /**
      * @param integer $Definition ID of a watermarking template.
      * @param RawWatermarkParameter $RawParameter 
@@ -102,6 +101,7 @@ class WatermarkInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

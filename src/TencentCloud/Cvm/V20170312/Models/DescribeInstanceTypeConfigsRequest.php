@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceTypeConfigs request structure.
+ *
  * @method array getFilters() Obtain Filters.
 <li> `zone` - String - Optional - Filter results by [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo).</li>
 <li> `instance-family` - String - Optional - Filter results by instance model family, such as `S1`, `I1`, and `M1`.</li>
@@ -26,10 +28,6 @@ Each request can have up to 10 `Filters` and 1 `Filters.Values`.
 <li> `zone` - String - Optional - Filter results by [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo).</li>
 <li> `instance-family` - String - Optional - Filter results by instance model family, such as `S1`, `I1`, and `M1`.</li>
 Each request can have up to 10 `Filters` and 1 `Filters.Values`.
- */
-
-/**
- *DescribeInstanceTypeConfigs request structure.
  */
 class DescribeInstanceTypeConfigsRequest extends AbstractModel
 {
@@ -40,6 +38,7 @@ class DescribeInstanceTypeConfigsRequest extends AbstractModel
 Each request can have up to 10 `Filters` and 1 `Filters.Values`.
      */
     public $Filters;
+
     /**
      * @param array $Filters Filters.
 <li> `zone` - String - Optional - Filter results by [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo).</li>
@@ -50,6 +49,7 @@ Each request can have up to 10 `Filters` and 1 `Filters.Values`.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateKeyPair response structure.
+ *
  * @method KeyPair getKeyPair() Obtain Key pair information.
  * @method void setKeyPair(KeyPair $KeyPair) Set Key pair information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateKeyPair response structure.
  */
 class CreateKeyPairResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateKeyPairResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param KeyPair $KeyPair Key pair information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateKeyPairResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

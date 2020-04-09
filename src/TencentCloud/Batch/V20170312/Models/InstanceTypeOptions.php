@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance model configuration.
+ *
  * @method integer getCPU() Obtain Number of CPU cores.
  * @method void setCPU(integer $CPU) Set Number of CPU cores.
  * @method integer getMemory() Obtain Memory size in GB.
  * @method void setMemory(integer $Memory) Set Memory size in GB.
  * @method array getInstanceCategories() Obtain Instance model category. Value range: "ALL", "GENERAL", "GENERAL_2", "GENERAL_3", "COMPUTE", "COMPUTE_2", and "COMPUTE_3". Default value: "ALL".
  * @method void setInstanceCategories(array $InstanceCategories) Set Instance model category. Value range: "ALL", "GENERAL", "GENERAL_2", "GENERAL_3", "COMPUTE", "COMPUTE_2", and "COMPUTE_3". Default value: "ALL".
- */
-
-/**
- *Instance model configuration.
  */
 class InstanceTypeOptions extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InstanceTypeOptions extends AbstractModel
      * @var array Instance model category. Value range: "ALL", "GENERAL", "GENERAL_2", "GENERAL_3", "COMPUTE", "COMPUTE_2", and "COMPUTE_3". Default value: "ALL".
      */
     public $InstanceCategories;
+
     /**
      * @param integer $CPU Number of CPU cores.
      * @param integer $Memory Memory size in GB.
@@ -54,6 +53,7 @@ class InstanceTypeOptions extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

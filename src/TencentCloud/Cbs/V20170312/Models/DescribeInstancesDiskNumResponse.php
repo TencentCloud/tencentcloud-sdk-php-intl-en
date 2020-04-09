@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesDiskNum response structure.
+ *
  * @method array getAttachDetail() Obtain The quantity of mounted and mountable elastic cloud disks for each cloud virtual machine
  * @method void setAttachDetail(array $AttachDetail) Set The quantity of mounted and mountable elastic cloud disks for each cloud virtual machine
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstancesDiskNum response structure.
  */
 class DescribeInstancesDiskNumResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstancesDiskNumResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $AttachDetail The quantity of mounted and mountable elastic cloud disks for each cloud virtual machine
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeInstancesDiskNumResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

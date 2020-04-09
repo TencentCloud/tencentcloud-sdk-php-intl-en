@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAutoSnapshotPolicy request structure.
+ *
  * @method array getPolicy() Obtain The policy for executing the scheduled snapshot.
  * @method void setPolicy(array $Policy) Set The policy for executing the scheduled snapshot.
  * @method string getAutoSnapshotPolicyName() Obtain The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionDays(integer $RetentionDays) Set The number of days that a snapshot created by this scheduled snapshot policy is retained. The default value is 7. If this parameter is specified, the IsPermanent input parameter can not be TRUE, otherwise a conflict will occur.
  * @method boolean getDryRun() Obtain Whether to create an execution policy for the scheduled snapshot. TRUE: Only the time of the initial backup needs to be obtained, and no scheduled snapshot policy is actually created. FALSE: Create. The default value is FALSE.
  * @method void setDryRun(boolean $DryRun) Set Whether to create an execution policy for the scheduled snapshot. TRUE: Only the time of the initial backup needs to be obtained, and no scheduled snapshot policy is actually created. FALSE: Create. The default value is FALSE.
- */
-
-/**
- *CreateAutoSnapshotPolicy request structure.
  */
 class CreateAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
      * @var boolean Whether to create an execution policy for the scheduled snapshot. TRUE: Only the time of the initial backup needs to be obtained, and no scheduled snapshot policy is actually created. FALSE: Create. The default value is FALSE.
      */
     public $DryRun;
+
     /**
      * @param array $Policy The policy for executing the scheduled snapshot.
      * @param string $AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
@@ -78,6 +77,7 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

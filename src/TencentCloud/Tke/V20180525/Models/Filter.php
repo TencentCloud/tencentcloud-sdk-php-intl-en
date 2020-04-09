@@ -18,34 +18,44 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() Obtain Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
- * @method void setName(string $Name) Set Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
- * @method array getValues() Obtain Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
- * @method void setValues(array $Values) Set Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
- */
-
-/**
- *Filter
+ * > Key-value pair filters used for conditional queries, such as filtering results by ID, name, and state.
+> * If there are multiple `Filter` parameters, they are evaluated using the logical `AND` operator.
+> * If a `Filter` contains multiple `Values`, they are evaluated using the logical `OR` operator.
+>
+> Take [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) as an example. You can use the following filters to query the instances in availability zone (`zone`) Guangzhou Zone 1 ***and*** whose billing plan (`instance-charge-type`) is pay-as-you-go:
+```
+Filters.0.Name=zone
+&Filters.0.Values.0=ap-guangzhou-1
+&Filters.1.Name=instance-charge-type
+&Filters.1.Values.0=POSTPAID_BY_HOUR
+```
+ *
+ * @method string getName() Obtain Filters.
+ * @method void setName(string $Name) Set Filters.
+ * @method array getValues() Obtain Filter values.
+ * @method void setValues(array $Values) Set Filter values.
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
+     * @var string Filters.
      */
     public $Name;
 
     /**
-     * @var array Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
+     * @var array Filter values.
      */
     public $Values;
+
     /**
-     * @param string $Name Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
-     * @param array $Values Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
+     * @param string $Name Filters.
+     * @param array $Values Filter values.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

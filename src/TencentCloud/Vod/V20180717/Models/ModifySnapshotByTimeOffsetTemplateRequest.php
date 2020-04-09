@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySnapshotByTimeOffsetTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a specified time point screencapturing template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a specified time point screencapturing template.
  * @method string getName() Obtain Name of a time point screencapturing template. Length limit: 64 characters.
@@ -72,10 +74,6 @@ Default value: black.
 <li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
 <li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
 Default value: black.
- */
-
-/**
- *ModifySnapshotByTimeOffsetTemplate request structure.
  */
 class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
@@ -141,6 +139,7 @@ Default value: open.
 Default value: black.
      */
     public $FillType;
+
     /**
      * @param integer $Definition Unique ID of a specified time point screencapturing template.
      * @param string $Name Name of a time point screencapturing template. Length limit: 64 characters.
@@ -174,6 +173,7 @@ Default value: black.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

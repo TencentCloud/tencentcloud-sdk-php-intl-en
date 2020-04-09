@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database remarks
+ *
  * @method string getName() Obtain Database name
  * @method void setName(string $Name) Set Database name
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
- */
-
-/**
- *Database remarks
  */
 class DBRemark extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBRemark extends AbstractModel
      * @var string Remarks
      */
     public $Remark;
+
     /**
      * @param string $Name Database name
      * @param string $Remark Remarks
@@ -46,6 +45,7 @@ class DBRemark extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

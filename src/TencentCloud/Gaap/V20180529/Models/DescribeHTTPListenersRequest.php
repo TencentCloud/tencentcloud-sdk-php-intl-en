@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHTTPListeners request structure.
+ *
  * @method string getProxyId() Obtain Connection ID
  * @method void setProxyId(string $ProxyId) Set Connection ID
  * @method string getListenerId() Obtain Filter condition. Exact query by listener IDs.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Quantity limit. The default value is 20.
  * @method string getSearchValue() Obtain Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
  * @method void setSearchValue(string $SearchValue) Set Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
- */
-
-/**
- *DescribeHTTPListeners request structure.
  */
 class DescribeHTTPListenersRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeHTTPListenersRequest extends AbstractModel
      * @var string Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
      */
     public $SearchValue;
+
     /**
      * @param string $ProxyId Connection ID
      * @param string $ListenerId Filter condition. Exact query by listener IDs.
@@ -86,6 +85,7 @@ class DescribeHTTPListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

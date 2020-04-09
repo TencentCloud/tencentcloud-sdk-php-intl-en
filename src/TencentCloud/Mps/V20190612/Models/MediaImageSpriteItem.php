@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Image sprite information
+ *
  * @method integer getDefinition() Obtain Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
  * @method void setDefinition(integer $Definition) Set Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
  * @method integer getHeight() Obtain Subimage height of an image sprite.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebVttPath(string $WebVttPath) Set Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
  * @method TaskOutputStorage getStorage() Obtain Storage location of an image sprite file.
  * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of an image sprite file.
- */
-
-/**
- *Image sprite information
  */
 class MediaImageSpriteItem extends AbstractModel
 {
@@ -73,6 +71,7 @@ class MediaImageSpriteItem extends AbstractModel
      * @var TaskOutputStorage Storage location of an image sprite file.
      */
     public $Storage;
+
     /**
      * @param integer $Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      * @param integer $Height Subimage height of an image sprite.
@@ -86,6 +85,7 @@ class MediaImageSpriteItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

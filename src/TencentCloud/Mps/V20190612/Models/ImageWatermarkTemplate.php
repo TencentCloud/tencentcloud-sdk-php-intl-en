@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Image watermarking template
+ *
  * @method string getImageUrl() Obtain Watermark image address.
  * @method void setImageUrl(string $ImageUrl) Set Watermark image address.
  * @method string getWidth() Obtain Watermark width. % and px formats are supported:
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px;</li>
 `0px` means that `Height` will be proportionally scaled according to the video width.
- */
-
-/**
- *Image watermarking template
  */
 class ImageWatermarkTemplate extends AbstractModel
 {
@@ -60,6 +58,7 @@ class ImageWatermarkTemplate extends AbstractModel
 `0px` means that `Height` will be proportionally scaled according to the video width.
      */
     public $Height;
+
     /**
      * @param string $ImageUrl Watermark image address.
      * @param string $Width Watermark width. % and px formats are supported:
@@ -74,6 +73,7 @@ class ImageWatermarkTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

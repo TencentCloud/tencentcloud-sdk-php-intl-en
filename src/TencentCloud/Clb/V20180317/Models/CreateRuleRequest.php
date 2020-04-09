@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRule request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method array getRules() Obtain Information of the new forwarding rule
  * @method void setRules(array $Rules) Set Information of the new forwarding rule
- */
-
-/**
- *CreateRule request structure.
  */
 class CreateRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateRuleRequest extends AbstractModel
      * @var array Information of the new forwarding rule
      */
     public $Rules;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId Listener ID
@@ -54,6 +53,7 @@ class CreateRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

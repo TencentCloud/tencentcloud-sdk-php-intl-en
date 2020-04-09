@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Login and sensitive operation flag
+ *
  * @method integer getPhone() Obtain Mobile phone
  * @method void setPhone(integer $Phone) Set Mobile phone
  * @method integer getToken() Obtain Hard token
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWechat(integer $Wechat) Set WeChat
  * @method integer getCustom() Obtain Custom
  * @method void setCustom(integer $Custom) Set Custom
- */
-
-/**
- *Login and sensitive operation flag
  */
 class LoginActionFlag extends AbstractModel
 {
@@ -59,6 +57,7 @@ class LoginActionFlag extends AbstractModel
      * @var integer Custom
      */
     public $Custom;
+
     /**
      * @param integer $Phone Mobile phone
      * @param integer $Token Hard token
@@ -70,6 +69,7 @@ class LoginActionFlag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

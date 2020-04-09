@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBLogFiles request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow7t8lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow7t8lmc.
  * @method string getShardId() Obtain Shard ID in the format of shard-7noic7tv
  * @method void setShardId(string $ShardId) Set Shard ID in the format of shard-7noic7tv
  * @method integer getType() Obtain Requested log type. Valid values: 1 (binlog); 2 (cold backup); 3 (errlog); 4 (slowlog).
  * @method void setType(integer $Type) Set Requested log type. Valid values: 1 (binlog); 2 (cold backup); 3 (errlog); 4 (slowlog).
- */
-
-/**
- *DescribeDBLogFiles request structure.
  */
 class DescribeDBLogFilesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBLogFilesRequest extends AbstractModel
      * @var integer Requested log type. Valid values: 1 (binlog); 2 (cold backup); 3 (errlog); 4 (slowlog).
      */
     public $Type;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow7t8lmc.
      * @param string $ShardId Shard ID in the format of shard-7noic7tv
@@ -54,6 +53,7 @@ class DescribeDBLogFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Hot key details
+ *
  * @method string getKey() Obtain Hot key
  * @method void setKey(string $Key) Set Hot key
  * @method string getType() Obtain Type
  * @method void setType(string $Type) Set Type
  * @method integer getCount() Obtain Count
  * @method void setCount(integer $Count) Set Count
- */
-
-/**
- *Hot key details
  */
 class HotKeyInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class HotKeyInfo extends AbstractModel
      * @var integer Count
      */
     public $Count;
+
     /**
      * @param string $Key Hot key
      * @param string $Type Type
@@ -54,6 +53,7 @@ class HotKeyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

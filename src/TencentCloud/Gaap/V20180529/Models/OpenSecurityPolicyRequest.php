@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenSecurityPolicy request structure.
+ *
  * @method string getProxyId() Obtain ID of the connections requiring enabled security policies.
  * @method void setProxyId(string $ProxyId) Set ID of the connections requiring enabled security policies.
- */
-
-/**
- *OpenSecurityPolicy request structure.
  */
 class OpenSecurityPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OpenSecurityPolicyRequest extends AbstractModel
      * @var string ID of the connections requiring enabled security policies.
      */
     public $ProxyId;
+
     /**
      * @param string $ProxyId ID of the connections requiring enabled security policies.
      */
@@ -38,6 +37,7 @@ class OpenSecurityPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveCert response structure.
+ *
  * @method integer getCertId() Obtain Certificate ID
  * @method void setCertId(integer $CertId) Set Certificate ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateLiveCert response structure.
  */
 class CreateLiveCertResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateLiveCertResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $CertId Certificate ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateLiveCertResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Image sprite information of VOD file
+ *
  * @method array getImageSpriteSet() Obtain Information set of image sprites with specified specifications. Each element represents a set of image sprites with the same specification.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setImageSpriteSet(array $ImageSpriteSet) Set Information set of image sprites with specified specifications. Each element represents a set of image sprites with the same specification.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Image sprite information of VOD file
  */
 class MediaImageSpriteInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaImageSpriteInfo extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ImageSpriteSet;
+
     /**
      * @param array $ImageSpriteSet Information set of image sprites with specified specifications. Each element represents a set of image sprites with the same specification.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

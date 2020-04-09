@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSnapshotByTimeOffsetTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
  * @method array getSnapshotByTimeOffsetTemplateSet() Obtain List of time point screencapturing template details.
  * @method void setSnapshotByTimeOffsetTemplateSet(array $SnapshotByTimeOffsetTemplateSet) Set List of time point screencapturing template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSnapshotByTimeOffsetTemplates response structure.
  */
 class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible entries.
      * @param array $SnapshotByTimeOffsetTemplateSet List of time point screencapturing template details.
@@ -54,6 +53,7 @@ class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

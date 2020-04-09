@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tag key-value pair and resource ID.
+ *
  * @method string getTagKey() Obtain Tag key.
  * @method void setTagKey(string $TagKey) Set Tag key.
  * @method string getTagValue() Obtain Tag value.
@@ -28,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeyMd5(string $TagKeyMd5) Set Tag key MD5 value.
  * @method string getTagValueMd5() Obtain Tag value MD5 value.
  * @method void setTagValueMd5(string $TagValueMd5) Set Tag value MD5 value.
- */
-
-/**
- *Tag key-value pair and resource ID.
+ * @method string getServiceType() Obtain Resource type
+Note: this field may return null, indicating that no valid values found.
+ * @method void setServiceType(string $ServiceType) Set Resource type
+Note: this field may return null, indicating that no valid values found.
  */
 class TagResource extends AbstractModel
 {
@@ -59,17 +61,27 @@ class TagResource extends AbstractModel
      * @var string Tag value MD5 value.
      */
     public $TagValueMd5;
+
+    /**
+     * @var string Resource type
+Note: this field may return null, indicating that no valid values found.
+     */
+    public $ServiceType;
+
     /**
      * @param string $TagKey Tag key.
      * @param string $TagValue Tag value.
      * @param string $ResourceId Resource ID.
      * @param string $TagKeyMd5 Tag key MD5 value.
      * @param string $TagValueMd5 Tag value MD5 value.
+     * @param string $ServiceType Resource type
+Note: this field may return null, indicating that no valid values found.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -96,6 +108,10 @@ class TagResource extends AbstractModel
 
         if (array_key_exists("TagValueMd5",$param) and $param["TagValueMd5"] !== null) {
             $this->TagValueMd5 = $param["TagValueMd5"];
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
         }
     }
 }

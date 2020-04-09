@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountPrivileges request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method array getAccounts() Obtain Database account, including username and domain name.
@@ -38,10 +40,6 @@ Note: if this parameter is not passed in, it means to clear the permission.
 Note: if this parameter is not passed in, it means to clear the permission.
  * @method void setColumnPrivileges(array $ColumnPrivileges) Set Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
 Note: if this parameter is not passed in, it means to clear the permission.
- */
-
-/**
- *ModifyAccountPrivileges request structure.
  */
 class ModifyAccountPrivilegesRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ Note: if this parameter is not passed in, it means to clear the permission.
 Note: if this parameter is not passed in, it means to clear the permission.
      */
     public $ColumnPrivileges;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Accounts Database account, including username and domain name.
@@ -94,6 +93,7 @@ Note: if this parameter is not passed in, it means to clear the permission.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

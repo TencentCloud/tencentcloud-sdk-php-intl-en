@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of purchasable specification for an instance
+ *
  * @method integer getSpecId() Obtain Instance specification ID. The `SpecId` returned by `DescribeZones` together with the purchasable specification information returned by `DescribeProductConfig` can be used to find out what specifications can be purchased in a specified AZ
  * @method void setSpecId(integer $SpecId) Set Instance specification ID. The `SpecId` returned by `DescribeZones` together with the purchasable specification information returned by `DescribeProductConfig` can be used to find out what specifications can be purchased in a specified AZ
  * @method string getMachineType() Obtain Model ID
@@ -48,10 +50,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getPayModeStatus() Obtain Billing mode under this specification. POST: pay-as-you-go
  * @method void setPayModeStatus(string $PayModeStatus) Set Billing mode under this specification. POST: pay-as-you-go
- */
-
-/**
- *Information of purchasable specification for an instance
  */
 class SpecInfo extends AbstractModel
 {
@@ -125,6 +123,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Billing mode under this specification. POST: pay-as-you-go
      */
     public $PayModeStatus;
+
     /**
      * @param integer $SpecId Instance specification ID. The `SpecId` returned by `DescribeZones` together with the purchasable specification information returned by `DescribeProductConfig` can be used to find out what specifications can be purchased in a specified AZ
      * @param string $MachineType Model ID
@@ -146,6 +145,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

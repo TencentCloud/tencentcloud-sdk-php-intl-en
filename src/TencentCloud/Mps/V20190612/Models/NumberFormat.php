@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Rule of the `{number}` variable in the output file name.
+ *
  * @method integer getInitialValue() Obtain Start value of the `{number}` variable. Default value: 0.
  * @method void setInitialValue(integer $InitialValue) Set Start value of the `{number}` variable. Default value: 0.
  * @method integer getIncrement() Obtain Increment of the `{number}` variable. Default value: 1.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinLength(integer $MinLength) Set Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
  * @method string getPlaceHolder() Obtain Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
  * @method void setPlaceHolder(string $PlaceHolder) Set Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
- */
-
-/**
- *Rule of the `{number}` variable in the output file name.
  */
 class NumberFormat extends AbstractModel
 {
@@ -52,6 +50,7 @@ class NumberFormat extends AbstractModel
      * @var string Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
      */
     public $PlaceHolder;
+
     /**
      * @param integer $InitialValue Start value of the `{number}` variable. Default value: 0.
      * @param integer $Increment Increment of the `{number}` variable. Default value: 1.
@@ -62,6 +61,7 @@ class NumberFormat extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

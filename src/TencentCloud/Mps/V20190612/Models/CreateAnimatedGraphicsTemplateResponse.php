@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAnimatedGraphicsTemplate response structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of an animated image generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an animated image generating template.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateAnimatedGraphicsTemplate response structure.
  */
 class CreateAnimatedGraphicsTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAnimatedGraphicsTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Definition Unique ID of an animated image generating template.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateAnimatedGraphicsTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

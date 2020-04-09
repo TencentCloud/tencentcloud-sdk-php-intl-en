@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMigration request structure.
+ *
  * @method string getMigrateName() Obtain Migration task name
  * @method void setMigrateName(string $MigrateName) Set Migration task name
  * @method integer getMigrateType() Obtain Migration type (1: structure migration, 2: data migration, 3: incremental sync)
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(MigrateTarget $Target) Set Migration target
  * @method array getMigrateDBSet() Obtain Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
  * @method void setMigrateDBSet(array $MigrateDBSet) Set Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
- */
-
-/**
- *CreateMigration request structure.
  */
 class CreateMigrationRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateMigrationRequest extends AbstractModel
      * @var array Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
      */
     public $MigrateDBSet;
+
     /**
      * @param string $MigrateName Migration task name
      * @param integer $MigrateType Migration type (1: structure migration, 2: data migration, 3: incremental sync)
@@ -78,6 +77,7 @@ class CreateMigrationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

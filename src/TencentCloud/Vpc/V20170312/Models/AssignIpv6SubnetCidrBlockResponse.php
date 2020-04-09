@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssignIpv6SubnetCidrBlock response structure.
+ *
  * @method array getIpv6SubnetCidrBlockSet() Obtain The assigned `IPv6` subnet IP range list.
  * @method void setIpv6SubnetCidrBlockSet(array $Ipv6SubnetCidrBlockSet) Set The assigned `IPv6` subnet IP range list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AssignIpv6SubnetCidrBlock response structure.
  */
 class AssignIpv6SubnetCidrBlockResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssignIpv6SubnetCidrBlockResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Ipv6SubnetCidrBlockSet The assigned `IPv6` subnet IP range list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class AssignIpv6SubnetCidrBlockResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

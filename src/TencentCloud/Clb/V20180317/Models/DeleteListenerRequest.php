@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteListener request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain ID of the listener to be deleted
  * @method void setListenerId(string $ListenerId) Set ID of the listener to be deleted
- */
-
-/**
- *DeleteListener request structure.
  */
 class DeleteListenerRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteListenerRequest extends AbstractModel
      * @var string ID of the listener to be deleted
      */
     public $ListenerId;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId ID of the listener to be deleted
@@ -46,6 +45,7 @@ class DeleteListenerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

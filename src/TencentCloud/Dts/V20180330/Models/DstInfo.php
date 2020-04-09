@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Target instance information, which is correlated with the migration task type
+ *
  * @method string getInstanceId() Obtain Target instance ID, such as cdb-jd92ijd8
  * @method void setInstanceId(string $InstanceId) Set Target instance ID, such as cdb-jd92ijd8
  * @method string getRegion() Obtain Target instance region, such as ap-guangzhou
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set Target instance Vport, which has been disused and does not need to be entered
  * @method integer getReadOnly() Obtain Only valid for MySQL currently. For instance-level migration, the value range is: 1 (read-only), 0 (read/write)
  * @method void setReadOnly(integer $ReadOnly) Set Only valid for MySQL currently. For instance-level migration, the value range is: 1 (read-only), 0 (read/write)
- */
-
-/**
- *Target instance information, which is correlated with the migration task type
  */
 class DstInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DstInfo extends AbstractModel
      * @var integer Only valid for MySQL currently. For instance-level migration, the value range is: 1 (read-only), 0 (read/write)
      */
     public $ReadOnly;
+
     /**
      * @param string $InstanceId Target instance ID, such as cdb-jd92ijd8
      * @param string $Region Target instance region, such as ap-guangzhou
@@ -70,6 +69,7 @@ class DstInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

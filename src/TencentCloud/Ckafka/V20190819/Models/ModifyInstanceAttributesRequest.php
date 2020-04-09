@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceAttributes request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getMsgRetentionTime() Obtain Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
  * @method ModifyInstanceAttributesConfig getConfig() Obtain Instance configuration
  * @method void setConfig(ModifyInstanceAttributesConfig $Config) Set Instance configuration
- */
-
-/**
- *ModifyInstanceAttributes request structure.
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @var ModifyInstanceAttributesConfig Instance configuration
      */
     public $Config;
+
     /**
      * @param string $InstanceId Instance ID
      * @param integer $MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
@@ -62,6 +61,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

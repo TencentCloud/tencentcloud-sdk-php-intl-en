@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWatermarkTemplates request structure.
+ *
  * @method array getDefinitions() Obtain Unique ID filter of watermarking templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of watermarking templates. Array length limit: 100.
  * @method string getType() Obtain Watermark type filter. Valid values:
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Maximum value: 100.</li>
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *DescribeWatermarkTemplates request structure.
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
@@ -71,6 +69,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $Definitions Unique ID filter of watermarking templates. Array length limit: 100.
      * @param string $Type Watermark type filter. Valid values:
@@ -86,6 +85,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLoadBalancers request structure.
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
  * @method array getLoadBalancerIds() Obtain List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancersCheckPolicy(string $LoadBalancersCheckPolicy) Set CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
 <br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
 <br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
- */
-
-/**
- *ModifyLoadBalancers request structure.
  */
 class ModifyLoadBalancersRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class ModifyLoadBalancersRequest extends AbstractModel
 <br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
      */
     public $LoadBalancersCheckPolicy;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param array $LoadBalancerIds List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
@@ -70,6 +69,7 @@ class ModifyLoadBalancersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

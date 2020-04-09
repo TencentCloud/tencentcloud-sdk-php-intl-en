@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RegisterTargets request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
  * @method string getUrl() Obtain Target forwarding rule URL. This parameter does not take effect if LocationId is specified
  * @method void setUrl(string $Url) Set Target forwarding rule URL. This parameter does not take effect if LocationId is specified
- */
-
-/**
- *RegisterTargets request structure.
  */
 class RegisterTargetsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RegisterTargetsRequest extends AbstractModel
      * @var string Target forwarding rule URL. This parameter does not take effect if LocationId is specified
      */
     public $Url;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
@@ -78,6 +77,7 @@ class RegisterTargetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

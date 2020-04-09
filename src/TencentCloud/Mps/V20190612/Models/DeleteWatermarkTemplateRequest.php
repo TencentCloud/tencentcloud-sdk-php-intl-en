@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteWatermarkTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a watermarking template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a watermarking template.
- */
-
-/**
- *DeleteWatermarkTemplate request structure.
  */
 class DeleteWatermarkTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteWatermarkTemplateRequest extends AbstractModel
      * @var integer Unique ID of a watermarking template.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Unique ID of a watermarking template.
      */
@@ -38,6 +37,7 @@ class DeleteWatermarkTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -16,17 +16,18 @@
  */
 
 namespace TencentCloud\Es\V20180416;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Es\V20180416\Models as Models;
 
 /**
-* @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) This API is used to create an ES cluster instance with the specified specification.
-* @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) This API is used to terminate a cluster instance. 
-* @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query all eligible instances in the current region under the current account.
-* @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) This API is used to restart an ES cluster instance (for operations such as system update). 
-* @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blacklist/whitelist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
+ * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) This API is used to create an ES cluster instance with the specified specification.
+ * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) This API is used to terminate a cluster instance. 
+ * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query all eligible instances in the current region under the current account.
+ * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) This API is used to restart an ES cluster instance (for operations such as system update). 
+ * @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blacklist/whitelist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
 - InstanceName: renames an instance (only for instance identification)
 - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding master nodes, adding cold nodes, etc.)
 - EsConfig: modifies cluster configuration
@@ -34,16 +35,28 @@ use TencentCloud\Es\V20180416\Models as Models;
 - EsAcl: modifies the ACL
 - CosBackUp: sets auto-backup to COS for a cluster
 Only one of the parameters or parameter combinations above can be passed in at a time, while passing fewer or more ones will cause the request to fail.
-* @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to upgrade ES cluster version
-* @method Models\UpgradeLicenseResponse UpgradeLicense(Models\UpgradeLicenseRequest $req) This API is used to upgrade ES X-Pack.
+ * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to upgrade ES cluster version
+ * @method Models\UpgradeLicenseResponse UpgradeLicense(Models\UpgradeLicenseRequest $req) This API is used to upgrade ES X-Pack.
  */
 
 class EsClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "es.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-16";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Speech keyword recognition control parameter.
+ *
  * @method string getSwitch() Obtain Switch of speech keyword recognition task. Valid values:
 <li>ON: enables speech keyword recognition task;</li>
 <li>OFF: disables speech keyword recognition task.</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 There can be up to 10 tags, each with a length limit of 16 characters.
  * @method void setLabelSet(array $LabelSet) Set Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
 There can be up to 10 tags, each with a length limit of 16 characters.
- */
-
-/**
- *Speech keyword recognition control parameter.
  */
 class AsrWordsConfigureInfo extends AbstractModel
 {
@@ -47,6 +45,7 @@ class AsrWordsConfigureInfo extends AbstractModel
 There can be up to 10 tags, each with a length limit of 16 characters.
      */
     public $LabelSet;
+
     /**
      * @param string $Switch Switch of speech keyword recognition task. Valid values:
 <li>ON: enables speech keyword recognition task;</li>
@@ -58,6 +57,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

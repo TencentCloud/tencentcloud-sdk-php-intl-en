@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTables request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where to create a table
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where to create a table
  * @method array getIdlFiles() Obtain Table creation IDL file list selected by user
  * @method void setIdlFiles(array $IdlFiles) Set Table creation IDL file list selected by user
  * @method array getSelectedTables() Obtain Information list of tables to be created
  * @method void setSelectedTables(array $SelectedTables) Set Information list of tables to be created
- */
-
-/**
- *CreateTables request structure.
  */
 class CreateTablesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateTablesRequest extends AbstractModel
      * @var array Information list of tables to be created
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId ID of the cluster where to create a table
      * @param array $IdlFiles Table creation IDL file list selected by user
@@ -54,6 +53,7 @@ class CreateTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImportImage request structure.
+ *
  * @method string getArchitecture() Obtain OS architecture of the image to be imported, `x86_64` or `i386`.
  * @method void setArchitecture(string $Architecture) Set OS architecture of the image to be imported, `x86_64` or `i386`.
  * @method string getOsType() Obtain OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) Set Dry run to check the parameters without performing the operation
  * @method boolean getForce() Obtain Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
  * @method void setForce(boolean $Force) Set Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
- */
-
-/**
- *ImportImage request structure.
  */
 class ImportImageRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ImportImageRequest extends AbstractModel
      * @var boolean Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
      */
     public $Force;
+
     /**
      * @param string $Architecture OS architecture of the image to be imported, `x86_64` or `i386`.
      * @param string $OsType OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
@@ -94,6 +93,7 @@ class ImportImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AllocateAddresses response structure.
+ *
  * @method array getAddressSet() Obtain List of the unique IDs of the requested EIPs.
  * @method void setAddressSet(array $AddressSet) Set List of the unique IDs of the requested EIPs.
  * @method string getTaskId() Obtain The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
  * @method void setTaskId(string $TaskId) Set The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AllocateAddresses response structure.
  */
 class AllocateAddressesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AllocateAddressesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $AddressSet List of the unique IDs of the requested EIPs.
      * @param string $TaskId The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
@@ -54,6 +53,7 @@ class AllocateAddressesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

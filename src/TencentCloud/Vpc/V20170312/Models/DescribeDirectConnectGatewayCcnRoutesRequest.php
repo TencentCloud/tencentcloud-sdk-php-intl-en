@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDirectConnectGatewayCcnRoutes request structure.
+ *
  * @method string getDirectConnectGatewayId() Obtain The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
  * @method string getCcnRouteType() Obtain The route learning type of the CCN. Available values:
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset.
  * @method integer getLimit() Obtain The returned quantity.
  * @method void setLimit(integer $Limit) Set The returned quantity.
- */
-
-/**
- *DescribeDirectConnectGatewayCcnRoutes request structure.
  */
 class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
      * @var integer The returned quantity.
      */
     public $Limit;
+
     /**
      * @param string $DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
      * @param string $CcnRouteType The route learning type of the CCN. Available values:
@@ -70,6 +69,7 @@ class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

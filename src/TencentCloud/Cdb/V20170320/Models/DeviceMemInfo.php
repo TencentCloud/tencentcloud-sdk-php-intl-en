@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Memory monitoring information of the physical server where the instance is located
+ *
  * @method array getTotal() Obtain Total memory size in KB, which is the value of `total` in the `Mem:` in the `free` command
  * @method void setTotal(array $Total) Set Total memory size in KB, which is the value of `total` in the `Mem:` in the `free` command
  * @method array getUsed() Obtain Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
  * @method void setUsed(array $Used) Set Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
- */
-
-/**
- *Memory monitoring information of the physical server where the instance is located
  */
 class DeviceMemInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeviceMemInfo extends AbstractModel
      * @var array Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
      */
     public $Used;
+
     /**
      * @param array $Total Total memory size in KB, which is the value of `total` in the `Mem:` in the `free` command
      * @param array $Used Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
@@ -46,6 +45,7 @@ class DeviceMemInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

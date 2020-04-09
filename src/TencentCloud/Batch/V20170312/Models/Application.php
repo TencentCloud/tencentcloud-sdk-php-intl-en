@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Application information
+ *
  * @method string getCommand() Obtain Task execution command
  * @method void setCommand(string $Command) Set Task execution command
  * @method string getDeliveryForm() Obtain Delivery form of the application. Value range: PACKAGE, LOCAL, which refer to remotely stored software package and local compute environment, respectively.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackagePath(string $PackagePath) Set Remote storage path of the application package
  * @method Docker getDocker() Obtain Relevant configuration of the Docker used by the application. In case that the Docker configuration is used, "LOCAL" DeliveryForm means that the application software inside the Docker image is used directly and run in Docker mode; "PACKAGE" DeliveryForm means that the remote application package is run in Docker mode after being injected into the Docker image. To avoid compatibility issues with different versions of Docker, the Docker installation package and relevant dependencies are taken care of by BatchCompute. For custom images where Docker has already been installed, uninstall Docker first and then use the Docker feature.
  * @method void setDocker(Docker $Docker) Set Relevant configuration of the Docker used by the application. In case that the Docker configuration is used, "LOCAL" DeliveryForm means that the application software inside the Docker image is used directly and run in Docker mode; "PACKAGE" DeliveryForm means that the remote application package is run in Docker mode after being injected into the Docker image. To avoid compatibility issues with different versions of Docker, the Docker installation package and relevant dependencies are taken care of by BatchCompute. For custom images where Docker has already been installed, uninstall Docker first and then use the Docker feature.
- */
-
-/**
- *Application information
  */
 class Application extends AbstractModel
 {
@@ -52,6 +50,7 @@ class Application extends AbstractModel
      * @var Docker Relevant configuration of the Docker used by the application. In case that the Docker configuration is used, "LOCAL" DeliveryForm means that the application software inside the Docker image is used directly and run in Docker mode; "PACKAGE" DeliveryForm means that the remote application package is run in Docker mode after being injected into the Docker image. To avoid compatibility issues with different versions of Docker, the Docker installation package and relevant dependencies are taken care of by BatchCompute. For custom images where Docker has already been installed, uninstall Docker first and then use the Docker feature.
      */
     public $Docker;
+
     /**
      * @param string $Command Task execution command
      * @param string $DeliveryForm Delivery form of the application. Value range: PACKAGE, LOCAL, which refer to remotely stored software package and local compute environment, respectively.
@@ -62,6 +61,7 @@ class Application extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

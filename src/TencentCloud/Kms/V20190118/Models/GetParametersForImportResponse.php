@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetParametersForImport response structure.
+ *
  * @method string getKeyId() Obtain Unique ID of a CMK, which is used to specify the CMK into which to import key material.
  * @method void setKeyId(string $KeyId) Set Unique ID of a CMK, which is used to specify the CMK into which to import key material.
  * @method string getImportToken() Obtain The token required for importing key material, which is used as a parameter for `ImportKeyMaterial`.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParametersValidTo(integer $ParametersValidTo) Set Validity period of the token and public key. A token and public key can only be imported when they are valid. If they are expired, you will need to call the `GetParametersForImport` API again to get a new token and public key.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetParametersForImport response structure.
  */
 class GetParametersForImportResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class GetParametersForImportResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $KeyId Unique ID of a CMK, which is used to specify the CMK into which to import key material.
      * @param string $ImportToken The token required for importing key material, which is used as a parameter for `ImportKeyMaterial`.
@@ -70,6 +69,7 @@ class GetParametersForImportResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

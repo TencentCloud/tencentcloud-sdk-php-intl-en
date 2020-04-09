@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenDBExtranetAccess response structure.
+ *
  * @method integer getFlowId() Obtain Async task flow ID
  * @method void setFlowId(integer $FlowId) Set Async task flow ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *OpenDBExtranetAccess response structure.
  */
 class OpenDBExtranetAccessResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class OpenDBExtranetAccessResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $FlowId Async task flow ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class OpenDBExtranetAccessResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

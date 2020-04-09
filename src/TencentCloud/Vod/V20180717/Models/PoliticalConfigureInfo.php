@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of politically sensitive information detection task
+ *
  * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() Obtain Control parameter of politically sensitive information detection in video image.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) Set Control parameter of politically sensitive information detection in video image.
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of politically sensitive information detection in text.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Control parameter of politically sensitive information detection task
  */
 class PoliticalConfigureInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OcrReviewInfo;
+
     /**
      * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo Control parameter of politically sensitive information detection in video image.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

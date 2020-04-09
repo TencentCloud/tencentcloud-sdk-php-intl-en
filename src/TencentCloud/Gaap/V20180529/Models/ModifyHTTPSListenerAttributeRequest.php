@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyHTTPSListenerAttribute request structure.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getProxyId() Obtain Connection ID. This field is required if using a single connection listener.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientCertificateId(string $ClientCertificateId) Set New listener client certificate ID
  * @method array getPolyClientCertificateIds() Obtain Client certificate ID of the listener after modification, which is a new field.
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set Client certificate ID of the listener after modification, which is a new field.
- */
-
-/**
- *ModifyHTTPSListenerAttribute request structure.
  */
 class ModifyHTTPSListenerAttributeRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyHTTPSListenerAttributeRequest extends AbstractModel
      * @var array Client certificate ID of the listener after modification, which is a new field.
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $ProxyId Connection ID. This field is required if using a single connection listener.
@@ -86,6 +85,7 @@ class ModifyHTTPSListenerAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

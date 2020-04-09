@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Backup details
+ *
  * @method string getName() Obtain Backup filename
  * @method void setName(string $Name) Set Backup filename
  * @method integer getSize() Obtain Backup file size in bytes
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(string $Method) Set Backup method. Valid values: `full` (full backup), `partial` (partial backup).
  * @method string getWay() Obtain Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
  * @method void setWay(string $Way) Set Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
- */
-
-/**
- *Backup details
  */
 class BackupInfo extends AbstractModel
 {
@@ -115,6 +113,7 @@ class BackupInfo extends AbstractModel
      * @var string Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
      */
     public $Way;
+
     /**
      * @param string $Name Backup filename
      * @param integer $Size Backup file size in bytes
@@ -134,6 +133,7 @@ class BackupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

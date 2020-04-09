@@ -18,16 +18,14 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * User-created Hive-MetaDB instance information
+ *
  * @method string getMetaDataJdbcUrl() Obtain JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
  * @method void setMetaDataJdbcUrl(string $MetaDataJdbcUrl) Set JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
  * @method string getMetaDataUser() Obtain Custom MetaDB instance username
  * @method void setMetaDataUser(string $MetaDataUser) Set Custom MetaDB instance username
  * @method string getMetaDataPass() Obtain Custom MetaDB instance password
  * @method void setMetaDataPass(string $MetaDataPass) Set Custom MetaDB instance password
- */
-
-/**
- *User-created Hive-MetaDB instance information
  */
 class CustomMetaInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CustomMetaInfo extends AbstractModel
      * @var string Custom MetaDB instance password
      */
     public $MetaDataPass;
+
     /**
      * @param string $MetaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
      * @param string $MetaDataUser Custom MetaDB instance username
@@ -54,6 +53,7 @@ class CustomMetaInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

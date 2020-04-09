@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TDSQL instance information
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
@@ -98,10 +100,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setIsAuditSupported(integer $IsAuditSupported) Set Whether the instance supports audit. 1: yes; 0: no
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
- */
-
-/**
- *TDSQL instance information
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -300,6 +298,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer Number of CPU cores
      */
     public $Cpu;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
@@ -346,6 +345,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

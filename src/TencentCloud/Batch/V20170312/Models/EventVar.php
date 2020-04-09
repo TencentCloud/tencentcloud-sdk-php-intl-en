@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Custom key-value pair
+ *
  * @method string getName() Obtain Custom key
  * @method void setName(string $Name) Set Custom key
  * @method string getValue() Obtain Custom value
  * @method void setValue(string $Value) Set Custom value
- */
-
-/**
- *Custom key-value pair
  */
 class EventVar extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EventVar extends AbstractModel
      * @var string Custom value
      */
     public $Value;
+
     /**
      * @param string $Name Custom key
      * @param string $Value Custom value
@@ -46,6 +45,7 @@ class EventVar extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

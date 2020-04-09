@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBErrlogs response structure.
+ *
  * @method integer getTotalCount() Obtain Number of date entries returned for this call
  * @method void setTotalCount(integer $TotalCount) Set Number of date entries returned for this call
  * @method array getDetails() Obtain Error log list
  * @method void setDetails(array $Details) Set Error log list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBErrlogs response structure.
  */
 class DescribeDBErrlogsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBErrlogsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of date entries returned for this call
      * @param array $Details Error log list
@@ -54,6 +53,7 @@ class DescribeDBErrlogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

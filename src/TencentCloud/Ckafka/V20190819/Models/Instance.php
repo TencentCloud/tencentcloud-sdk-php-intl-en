@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance object
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIfCommunity(boolean $IfCommunity) Set Whether it is an open-source instance. true: yes, false: no
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Instance object
  */
 class Instance extends AbstractModel
 {
@@ -55,6 +53,7 @@ class Instance extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IfCommunity;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

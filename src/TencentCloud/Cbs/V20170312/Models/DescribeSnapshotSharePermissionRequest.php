@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSnapshotSharePermission request structure.
+ *
  * @method string getSnapshotId() Obtain The ID of the snapshot to be queried. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
  * @method void setSnapshotId(string $SnapshotId) Set The ID of the snapshot to be queried. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
- */
-
-/**
- *DescribeSnapshotSharePermission request structure.
  */
 class DescribeSnapshotSharePermissionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSnapshotSharePermissionRequest extends AbstractModel
      * @var string The ID of the snapshot to be queried. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
      */
     public $SnapshotId;
+
     /**
      * @param string $SnapshotId The ID of the snapshot to be queried. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
      */
@@ -38,6 +37,7 @@ class DescribeSnapshotSharePermissionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

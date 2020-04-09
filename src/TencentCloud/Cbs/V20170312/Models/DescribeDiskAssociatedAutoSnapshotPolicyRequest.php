@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskAssociatedAutoSnapshotPolicy request structure.
+ *
  * @method string getDiskId() Obtain The ID of the queried cloud disk.
  * @method void setDiskId(string $DiskId) Set The ID of the queried cloud disk.
- */
-
-/**
- *DescribeDiskAssociatedAutoSnapshotPolicy request structure.
  */
 class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
      * @var string The ID of the queried cloud disk.
      */
     public $DiskId;
+
     /**
      * @param string $DiskId The ID of the queried cloud disk.
      */
@@ -38,6 +37,7 @@ class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

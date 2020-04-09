@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAutoBackupConfig request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method array getWeekDays() Obtain Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimePeriod(string $TimePeriod) Set Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
  * @method integer getAutoBackupType() Obtain Auto backup type: 1 "scheduled rollback"
  * @method void setAutoBackupType(integer $AutoBackupType) Set Auto backup type: 1 "scheduled rollback"
- */
-
-/**
- *ModifyAutoBackupConfig request structure.
  */
 class ModifyAutoBackupConfigRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
      * @var integer Auto backup type: 1 "scheduled rollback"
      */
     public $AutoBackupType;
+
     /**
      * @param string $InstanceId Instance ID
      * @param array $WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
@@ -62,6 +61,7 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

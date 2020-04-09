@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBImportRecords request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method string getStartTime() Obtain Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-01-01 00:00:01.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Pagination parameter indicating the offset. Default value: 0.
  * @method integer getLimit() Obtain Pagination parameter indicating the number of results to be returned for a single request. Value range: 1-100. Default value: 20.
  * @method void setLimit(integer $Limit) Set Pagination parameter indicating the number of results to be returned for a single request. Value range: 1-100. Default value: 20.
- */
-
-/**
- *DescribeDBImportRecords request structure.
  */
 class DescribeDBImportRecordsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDBImportRecordsRequest extends AbstractModel
      * @var integer Pagination parameter indicating the number of results to be returned for a single request. Value range: 1-100. Default value: 20.
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $StartTime Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-01-01 00:00:01.
@@ -70,6 +69,7 @@ class DescribeDBImportRecordsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

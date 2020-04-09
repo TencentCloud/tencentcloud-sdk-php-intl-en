@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSnapshotByTimeOffsetTemplate response structure.
+ *
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DeleteSnapshotByTimeOffsetTemplate response structure.
  */
 class DeleteSnapshotByTimeOffsetTemplateResponse extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSnapshotByTimeOffsetTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -38,6 +37,7 @@ class DeleteSnapshotByTimeOffsetTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

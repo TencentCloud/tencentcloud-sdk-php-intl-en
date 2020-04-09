@@ -18,14 +18,13 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI video intelligent analysis input parameter types
+ *
 
- */
-
-/**
- *AI video intelligent analysis input parameter types
  */
 class AiAnalysisTaskInput extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class AiAnalysisTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

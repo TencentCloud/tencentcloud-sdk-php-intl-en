@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Configuration parameters of existing nodes in different roles
+ *
  * @method string getNodeRole() Obtain Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
  * @method void setNodeRole(string $NodeRole) Set Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
  * @method ExistedInstancesPara getExistedInstancesPara() Obtain Reinstallation parameter of existing instances
  * @method void setExistedInstancesPara(ExistedInstancesPara $ExistedInstancesPara) Set Reinstallation parameter of existing instances
  * @method InstanceAdvancedSettings getInstanceAdvancedSettingsOverride() Obtain Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
  * @method void setInstanceAdvancedSettingsOverride(InstanceAdvancedSettings $InstanceAdvancedSettingsOverride) Set Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
- */
-
-/**
- *Configuration parameters of existing nodes in different roles
  */
 class ExistedInstancesForNode extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ExistedInstancesForNode extends AbstractModel
      * @var InstanceAdvancedSettings Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
      */
     public $InstanceAdvancedSettingsOverride;
+
     /**
      * @param string $NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
      * @param ExistedInstancesPara $ExistedInstancesPara Reinstallation parameter of existing instances
@@ -54,6 +53,7 @@ class ExistedInstancesForNode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

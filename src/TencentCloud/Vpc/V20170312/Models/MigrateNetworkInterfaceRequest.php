@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MigrateNetworkInterface request structure.
+ *
  * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method string getSourceInstanceId() Obtain The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
  * @method void setSourceInstanceId(string $SourceInstanceId) Set The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
  * @method string getDestinationInstanceId() Obtain ID of the destination CVM instance to be migrated.
  * @method void setDestinationInstanceId(string $DestinationInstanceId) Set ID of the destination CVM instance to be migrated.
- */
-
-/**
- *MigrateNetworkInterface request structure.
  */
 class MigrateNetworkInterfaceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
      * @var string ID of the destination CVM instance to be migrated.
      */
     public $DestinationInstanceId;
+
     /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      * @param string $SourceInstanceId The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
@@ -54,6 +53,7 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

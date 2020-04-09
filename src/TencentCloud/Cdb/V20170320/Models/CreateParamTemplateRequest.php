@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateParamTemplate request structure.
+ *
  * @method string getName() Obtain Parameter template name.
  * @method void setName(string $Name) Set Parameter template name.
  * @method string getDescription() Obtain Parameter template description.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) Set Source parameter template ID.
  * @method array getParamList() Obtain List of parameters.
  * @method void setParamList(array $ParamList) Set List of parameters.
- */
-
-/**
- *CreateParamTemplate request structure.
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateParamTemplateRequest extends AbstractModel
      * @var array List of parameters.
      */
     public $ParamList;
+
     /**
      * @param string $Name Parameter template name.
      * @param string $Description Parameter template description.
@@ -70,6 +69,7 @@ class CreateParamTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

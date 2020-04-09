@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListEntitiesForPolicy request structure.
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
  * @method integer getPage() Obtain Page number, which starts from 1. Default is 1
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRp(integer $Rp) Set Number of entries per page; 20 by default
  * @method string getEntityFilter() Obtain Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
  * @method void setEntityFilter(string $EntityFilter) Set Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
- */
-
-/**
- *ListEntitiesForPolicy request structure.
  */
 class ListEntitiesForPolicyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListEntitiesForPolicyRequest extends AbstractModel
      * @var string Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
      */
     public $EntityFilter;
+
     /**
      * @param integer $PolicyId Policy ID
      * @param integer $Page Page number, which starts from 1. Default is 1
@@ -62,6 +61,7 @@ class ListEntitiesForPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Resource queried for price
+ *
  * @method string getSpec() Obtain Target specification
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSpec(string $Spec) Set Target specification
@@ -62,10 +64,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Resource queried for price
  */
 class PriceResource extends AbstractModel
 {
@@ -134,6 +132,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
+
     /**
      * @param string $Spec Target specification
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -162,6 +161,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnableLiveDomain request structure.
+ *
  * @method string getDomainName() Obtain LVB domain name to be enabled.
  * @method void setDomainName(string $DomainName) Set LVB domain name to be enabled.
- */
-
-/**
- *EnableLiveDomain request structure.
  */
 class EnableLiveDomainRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EnableLiveDomainRequest extends AbstractModel
      * @var string LVB domain name to be enabled.
      */
     public $DomainName;
+
     /**
      * @param string $DomainName LVB domain name to be enabled.
      */
@@ -38,6 +37,7 @@ class EnableLiveDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI-based sample management - tag operation.
+ *
  * @method string getType() Obtain Operation type. Valid values: add, delete, reset.
  * @method void setType(string $Type) Set Operation type. Valid values: add, delete, reset.
  * @method array getTags() Obtain Tag. Length limit: 128 characters.
  * @method void setTags(array $Tags) Set Tag. Length limit: 128 characters.
- */
-
-/**
- *AI-based sample management - tag operation.
  */
 class AiSampleTagOperation extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiSampleTagOperation extends AbstractModel
      * @var array Tag. Length limit: 128 characters.
      */
     public $Tags;
+
     /**
      * @param string $Type Operation type. Valid values: add, delete, reset.
      * @param array $Tags Tag. Length limit: 128 characters.
@@ -46,6 +45,7 @@ class AiSampleTagOperation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

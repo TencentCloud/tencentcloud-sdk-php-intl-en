@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input rule bound to COS.
+ *
  * @method string getBucket() Obtain Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
  * @method void setBucket(string $Bucket) Set Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
  * @method string getRegion() Obtain Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDir(string $Dir) Set Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
  * @method array getFormats() Obtain Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
  * @method void setFormats(array $Formats) Set Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
- */
-
-/**
- *Input rule bound to COS.
  */
 class CosFileUploadTrigger extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CosFileUploadTrigger extends AbstractModel
      * @var array Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
      */
     public $Formats;
+
     /**
      * @param string $Bucket Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
      * @param string $Region Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
@@ -62,6 +61,7 @@ class CosFileUploadTrigger extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

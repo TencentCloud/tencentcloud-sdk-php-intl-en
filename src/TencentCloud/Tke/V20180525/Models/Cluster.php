@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cluster information struct
+ *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getClusterName() Obtain Cluster name
@@ -60,10 +62,6 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time
 Note: this field may return null, indicating that no valid value is obtained.
- */
-
-/**
- *Cluster information struct
  */
 class Cluster extends AbstractModel
 {
@@ -155,6 +153,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public $CreatedTime;
+
     /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
@@ -182,6 +181,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

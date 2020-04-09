@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The CCN object
+ *
  * @method string getCcnId() Obtain The unique ID of the CCN
  * @method void setCcnId(string $CcnId) Set The unique ID of the CCN
  * @method string getCcnName() Obtain The name of the CCN
@@ -40,10 +42,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating no valid value.
  * @method void setBandwidthLimitType(string $BandwidthLimitType) Set The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
 Note: This field may return null, indicating no valid value.
- */
-
-/**
- *The CCN object
+ * @method array getTagSet() Obtain Tag key-value pairs.
+ * @method void setTagSet(array $TagSet) Set Tag key-value pairs.
  */
 class CCN extends AbstractModel
 {
@@ -93,6 +93,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating no valid value.
      */
     public $BandwidthLimitType;
+
+    /**
+     * @var array Tag key-value pairs.
+     */
+    public $TagSet;
+
     /**
      * @param string $CcnId The unique ID of the CCN
      * @param string $CcnName The name of the CCN
@@ -105,11 +111,13 @@ Note: This field may return null, indicating no valid value.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BandwidthLimitType The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
 Note: This field may return null, indicating no valid value.
+     * @param array $TagSet Tag key-value pairs.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -152,6 +160,15 @@ Note: This field may return null, indicating no valid value.
 
         if (array_key_exists("BandwidthLimitType",$param) and $param["BandwidthLimitType"] !== null) {
             $this->BandwidthLimitType = $param["BandwidthLimitType"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

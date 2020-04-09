@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNetDetects response structure.
+ *
  * @method array getNetDetectSet() Obtain The array of network detection objects that meet requirements.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNetDetectSet(array $NetDetectSet) Set The array of network detection objects that meet requirements.
@@ -28,10 +30,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeNetDetects response structure.
  */
 class DescribeNetDetectsResponse extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $NetDetectSet The array of network detection objects that meet requirements.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -62,6 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

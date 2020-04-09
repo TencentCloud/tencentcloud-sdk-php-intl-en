@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloneAccount response structure.
+ *
  * @method integer getFlowId() Obtain Async task flow ID
  * @method void setFlowId(integer $FlowId) Set Async task flow ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CloneAccount response structure.
  */
 class CloneAccountResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CloneAccountResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $FlowId Async task flow ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CloneAccountResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

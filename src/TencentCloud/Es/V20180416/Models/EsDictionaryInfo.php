@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ES IK dictionary information
+ *
  * @method array getMainDict() Obtain List of non-stop words
  * @method void setMainDict(array $MainDict) Set List of non-stop words
  * @method array getStopwords() Obtain List of stop words
  * @method void setStopwords(array $Stopwords) Set List of stop words
- */
-
-/**
- *ES IK dictionary information
  */
 class EsDictionaryInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EsDictionaryInfo extends AbstractModel
      * @var array List of stop words
      */
     public $Stopwords;
+
     /**
      * @param array $MainDict List of non-stop words
      * @param array $Stopwords List of stop words
@@ -46,6 +45,7 @@ class EsDictionaryInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

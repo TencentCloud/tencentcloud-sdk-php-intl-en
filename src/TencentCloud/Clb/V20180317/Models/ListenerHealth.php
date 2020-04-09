@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Health check information of the listener
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getListenerName() Obtain Listener name
@@ -32,10 +34,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set List of forwarding rules of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Health check information of the listener
  */
 class ListenerHealth extends AbstractModel
 {
@@ -65,6 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Rules;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
@@ -78,6 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

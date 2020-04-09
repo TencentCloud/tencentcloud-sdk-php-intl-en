@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTask response structure.
+ *
  * @method string getJobId() Obtain Instance ID
  * @method void setJobId(string $JobId) Set Instance ID
  * @method string getTaskName() Obtain Job name
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskInstanceMetrics(TaskInstanceMetrics $TaskInstanceMetrics) Set Task instance statistical metrics
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTask response structure.
  */
 class DescribeTaskResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeTaskResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $JobId Instance ID
      * @param string $TaskName Job name
@@ -102,6 +101,7 @@ class DescribeTaskResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RecoverRecycleTables response structure.
+ *
  * @method integer getTotalCount() Obtain Number of recovered tables
  * @method void setTotalCount(integer $TotalCount) Set Number of recovered tables
  * @method array getTableResults() Obtain List of information of recovered tables
  * @method void setTableResults(array $TableResults) Set List of information of recovered tables
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *RecoverRecycleTables response structure.
  */
 class RecoverRecycleTablesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RecoverRecycleTablesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of recovered tables
      * @param array $TableResults List of information of recovered tables
@@ -54,6 +53,7 @@ class RecoverRecycleTablesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

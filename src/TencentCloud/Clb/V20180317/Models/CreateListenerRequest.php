@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateListener request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getPorts() Obtain Specifies for which ports to create listeners. Each port corresponds to a new listener
@@ -38,10 +40,6 @@ They represent weighted round robin and least connections, respectively. Default
 They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
  * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
- */
-
-/**
- *CreateListener request structure.
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -90,6 +88,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @var integer Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
      */
     public $SniSwitch;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
@@ -106,6 +105,7 @@ They represent weighted round robin and least connections, respectively. Default
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

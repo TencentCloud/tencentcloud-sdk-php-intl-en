@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxiesStatus request structure.
+ *
  * @method array getInstanceIds() Obtain Connection ID list; It’s an old parameter, please switch to ProxyIds.
  * @method void setInstanceIds(array $InstanceIds) Set Connection ID list; It’s an old parameter, please switch to ProxyIds.
  * @method array getProxyIds() Obtain Connection ID list; It’s a new parameter.
  * @method void setProxyIds(array $ProxyIds) Set Connection ID list; It’s a new parameter.
- */
-
-/**
- *DescribeProxiesStatus request structure.
  */
 class DescribeProxiesStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeProxiesStatusRequest extends AbstractModel
      * @var array Connection ID list; It’s a new parameter.
      */
     public $ProxyIds;
+
     /**
      * @param array $InstanceIds Connection ID list; It’s an old parameter, please switch to ProxyIds.
      * @param array $ProxyIds Connection ID list; It’s a new parameter.
@@ -46,6 +45,7 @@ class DescribeProxiesStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

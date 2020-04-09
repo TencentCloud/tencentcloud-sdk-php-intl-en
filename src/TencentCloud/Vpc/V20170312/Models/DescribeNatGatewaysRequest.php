@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatGateways request structure.
+ *
  * @method array getNatGatewayIds() Obtain The unified ID of the NAT gateways, such as `nat-123xx454`.
  * @method void setNatGatewayIds(array $NatGatewayIds) Set The unified ID of the NAT gateways, such as `nat-123xx454`.
  * @method array getFilters() Obtain Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
  * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
  * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
- */
-
-/**
- *DescribeNatGateways request structure.
  */
 class DescribeNatGatewaysRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
      * @var integer Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public $Limit;
+
     /**
      * @param array $NatGatewayIds The unified ID of the NAT gateways, such as `nat-123xx454`.
      * @param array $Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
@@ -74,6 +73,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Description of the unit and supported statistical period of the business metric
+ *
  * @method string getNamespace() Obtain Namespace. Each Tencent Cloud product has a namespace
  * @method void setNamespace(string $Namespace) Set Namespace. Each Tencent Cloud product has a namespace
  * @method string getMetricName() Obtain Metric Name
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMeaning(MetricObjectMeaning $Meaning) Set Meaning of the statistical metric
  * @method array getDimensions() Obtain Dimension description
  * @method void setDimensions(array $Dimensions) Set Dimension description
- */
-
-/**
- *Description of the unit and supported statistical period of the business metric
  */
 class MetricSet extends AbstractModel
 {
@@ -80,6 +78,7 @@ class MetricSet extends AbstractModel
      * @var array Dimension description
      */
     public $Dimensions;
+
     /**
      * @param string $Namespace Namespace. Each Tencent Cloud product has a namespace
      * @param string $MetricName Metric Name
@@ -94,6 +93,7 @@ class MetricSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Detailed access data
+ *
  * @method string getMetric() Obtain Queries the specified metric:
 flux: traffic (in bytes)
 bandwidth: bandwidth (in bps)
@@ -45,10 +47,6 @@ Alternatively, you can specify a status code for querying.
  * @method SummarizedData getSummarizedData() Obtain Aggregate data combination
  * @method void setSummarizedData(SummarizedData $SummarizedData) Set Aggregate data combination
  */
-
-/**
- *Detailed access data
- */
 class CdnData extends AbstractModel
 {
     /**
@@ -75,6 +73,7 @@ Alternatively, you can specify a status code for querying.
      * @var SummarizedData Aggregate data combination
      */
     public $SummarizedData;
+
     /**
      * @param string $Metric Queries the specified metric:
 flux: traffic (in bytes)
@@ -94,6 +93,7 @@ Alternatively, you can specify a status code for querying.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Bill details
+ *
  * @method string getBusinessCodeName() Obtain Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
  * @method string getProductCodeName() Obtain Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1
@@ -64,10 +66,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setProductCode(string $ProductCode) Set 
  * @method string getActionType() Obtain 
  * @method void setActionType(string $ActionType) Set 
- */
-
-/**
- *Bill details
  */
 class BillDetail extends AbstractModel
 {
@@ -181,6 +179,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string 
      */
     public $ActionType;
+
     /**
      * @param string $BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
      * @param string $ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1
@@ -210,6 +209,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

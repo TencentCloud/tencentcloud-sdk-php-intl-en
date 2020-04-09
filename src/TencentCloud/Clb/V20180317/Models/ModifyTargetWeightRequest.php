@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTargetWeight request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargets(array $Targets) Set List of real servers for which to modify the weight
  * @method integer getWeight() Obtain New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
  * @method void setWeight(integer $Weight) Set New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
- */
-
-/**
- *ModifyTargetWeight request structure.
  */
 class ModifyTargetWeightRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyTargetWeightRequest extends AbstractModel
      * @var integer New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
      */
     public $Weight;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
@@ -86,6 +85,7 @@ class ModifyTargetWeightRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

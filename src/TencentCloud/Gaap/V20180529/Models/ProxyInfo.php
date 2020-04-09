@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Connection information
+ *
  * @method string getInstanceId() Obtain Connection instance ID; It’s an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Connection instance ID; It’s an old parameter, please switch to ProxyId.
@@ -98,10 +100,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSupportSecurity(integer $SupportSecurity) Set Whether security groups are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Connection information
  */
 class ProxyInfo extends AbstractModel
 {
@@ -232,6 +230,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SupportSecurity;
+
     /**
      * @param string $InstanceId Connection instance ID; It’s an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -278,6 +277,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

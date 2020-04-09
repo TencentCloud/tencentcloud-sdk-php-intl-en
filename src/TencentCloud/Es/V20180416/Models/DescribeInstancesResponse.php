@@ -18,16 +18,14 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances response structure.
+ *
  * @method integer getTotalCount() Obtain Number of returned instances
  * @method void setTotalCount(integer $TotalCount) Set Number of returned instances
  * @method array getInstanceList() Obtain List of instance details
  * @method void setInstanceList(array $InstanceList) Set List of instance details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstances response structure.
  */
 class DescribeInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of returned instances
      * @param array $InstanceList List of instance details
@@ -54,6 +53,7 @@ class DescribeInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

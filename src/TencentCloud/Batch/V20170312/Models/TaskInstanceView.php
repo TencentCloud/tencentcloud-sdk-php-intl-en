@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task instance view information
+ *
  * @method integer getTaskInstanceIndex() Obtain Task instance index
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) Set Task instance index
  * @method string getTaskInstanceState() Obtain Task instance state
@@ -50,10 +52,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRedirectInfo(RedirectInfo $RedirectInfo) Set Redirection information
  * @method string getStateDetailedReason() Obtain Task instance state reason details. If the task instance fails, the reason for the failure will be logged
  * @method void setStateDetailedReason(string $StateDetailedReason) Set Task instance state reason details. If the task instance fails, the reason for the failure will be logged
- */
-
-/**
- *Task instance view information
  */
 class TaskInstanceView extends AbstractModel
 {
@@ -116,6 +114,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Task instance state reason details. If the task instance fails, the reason for the failure will be logged
      */
     public $StateDetailedReason;
+
     /**
      * @param integer $TaskInstanceIndex Task instance index
      * @param string $TaskInstanceState Task instance state
@@ -138,6 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

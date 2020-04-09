@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidMediaDistribution request structure.
+ *
  * @method array getFileIds() Obtain List of media files. Up to 20 ones can be submitted at a time.
  * @method void setFileIds(array $FileIds) Set List of media files. Up to 20 ones can be submitted at a time.
  * @method string getOperation() Obtain forbid: forbids, recover: unblocks.
  * @method void setOperation(string $Operation) Set forbid: forbids, recover: unblocks.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ForbidMediaDistribution request structure.
  */
 class ForbidMediaDistributionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ForbidMediaDistributionRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $FileIds List of media files. Up to 20 ones can be submitted at a time.
      * @param string $Operation forbid: forbids, recover: unblocks.
@@ -54,6 +53,7 @@ class ForbidMediaDistributionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

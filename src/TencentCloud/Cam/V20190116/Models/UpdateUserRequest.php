@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateUser request structure.
+ *
  * @method string getName() Obtain Sub-user username
  * @method void setName(string $Name) Set Sub-user username
  * @method string getRemark() Obtain Sub-user remarks
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountryCode(string $CountryCode) Set Country/Area Code
  * @method string getEmail() Obtain Email
  * @method void setEmail(string $Email) Set Email
- */
-
-/**
- *UpdateUser request structure.
  */
 class UpdateUserRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class UpdateUserRequest extends AbstractModel
      * @var string Email
      */
     public $Email;
+
     /**
      * @param string $Name Sub-user username
      * @param string $Remark Sub-user remarks
@@ -94,6 +93,7 @@ class UpdateUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

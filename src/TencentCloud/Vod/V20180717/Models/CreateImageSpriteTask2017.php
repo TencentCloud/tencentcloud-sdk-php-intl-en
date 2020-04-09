@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Image sprite generating task. This structure is only used for tasks initiated by the [CreateImageSprite](https://cloud.tencent.com/document/product/266/8101) API in v2017.
+ *
  * @method string getTaskId() Obtain Image sprite generating task ID.
  * @method void setTaskId(string $TaskId) Set Image sprite generating task ID.
  * @method integer getErrCode() Obtain Error code
@@ -52,10 +54,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWebVttUrl(string $WebVttUrl) Set Address of WebVtt file for the position-time relationship among subimages in an image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Image sprite generating task. This structure is only used for tasks initiated by the [CreateImageSprite](https://cloud.tencent.com/document/product/266/8101) API in v2017.
  */
 class CreateImageSpriteTask2017 extends AbstractModel
 {
@@ -107,6 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WebVttUrl;
+
     /**
      * @param string $TaskId Image sprite generating task ID.
      * @param integer $ErrCode Error code
@@ -130,6 +129,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

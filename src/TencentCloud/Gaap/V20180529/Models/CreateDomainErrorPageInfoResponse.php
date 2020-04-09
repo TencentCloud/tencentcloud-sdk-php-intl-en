@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDomainErrorPageInfo response structure.
+ *
  * @method string getErrorPageId() Obtain Configuration ID of a custom error response
  * @method void setErrorPageId(string $ErrorPageId) Set Configuration ID of a custom error response
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateDomainErrorPageInfo response structure.
  */
 class CreateDomainErrorPageInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDomainErrorPageInfoResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $ErrorPageId Configuration ID of a custom error response
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateDomainErrorPageInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

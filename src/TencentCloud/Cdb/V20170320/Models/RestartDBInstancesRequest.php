@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestartDBInstances request structure.
+ *
  * @method array getInstanceIds() Obtain Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceIds(array $InstanceIds) Set Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- */
-
-/**
- *RestartDBInstances request structure.
  */
 class RestartDBInstancesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RestartDBInstancesRequest extends AbstractModel
      * @var array Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -38,6 +37,7 @@ class RestartDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

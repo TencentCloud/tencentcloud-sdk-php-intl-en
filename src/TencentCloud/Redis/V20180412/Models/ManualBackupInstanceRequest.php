@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ManualBackupInstance request structure.
+ *
  * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
  * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
  * @method string getRemark() Obtain Backup remarks
  * @method void setRemark(string $Remark) Set Backup remarks
- */
-
-/**
- *ManualBackupInstance request structure.
  */
 class ManualBackupInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ManualBackupInstanceRequest extends AbstractModel
      * @var string Backup remarks
      */
     public $Remark;
+
     /**
      * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
      * @param string $Remark Backup remarks
@@ -46,6 +45,7 @@ class ManualBackupInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

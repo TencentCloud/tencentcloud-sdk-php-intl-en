@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUser request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getSearchWord() Obtain Filter by name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Number of results to be returned in this request
  * @method void setLimit(integer $Limit) Set Number of results to be returned in this request
- */
-
-/**
- *DescribeUser request structure.
  */
 class DescribeUserRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeUserRequest extends AbstractModel
      * @var integer Number of results to be returned in this request
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $SearchWord Filter by name
@@ -62,6 +61,7 @@ class DescribeUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNetDetects request structure.
+ *
  * @method array getNetDetectIds() Obtain The array of network detection instance `IDs`, such as [`netd-12345678`].
  * @method void setNetDetectIds(array $NetDetectIds) Set The array of network detection instance `IDs`, such as [`netd-12345678`].
  * @method array getFilters() Obtain Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set The offset. Default: 0.
  * @method integer getLimit() Obtain The number of returned values. Default: 20. Maximum: 100.
  * @method void setLimit(integer $Limit) Set The number of returned values. Default: 20. Maximum: 100.
- */
-
-/**
- *DescribeNetDetects request structure.
  */
 class DescribeNetDetectsRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DescribeNetDetectsRequest extends AbstractModel
      * @var integer The number of returned values. Default: 20. Maximum: 100.
      */
     public $Limit;
+
     /**
      * @param array $NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
      * @param array $Filters Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
@@ -78,6 +77,7 @@ class DescribeNetDetectsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

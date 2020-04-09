@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySmsTemplate response structure.
+ *
  * @method ModifyTemplateStatus getModifyTemplateStatus() Obtain Template parameter modification response
  * @method void setModifyTemplateStatus(ModifyTemplateStatus $ModifyTemplateStatus) Set Template parameter modification response
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifySmsTemplate response structure.
  */
 class ModifySmsTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifySmsTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param ModifyTemplateStatus $ModifyTemplateStatus Template parameter modification response
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ModifySmsTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

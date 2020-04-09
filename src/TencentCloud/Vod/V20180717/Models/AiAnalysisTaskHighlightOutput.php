@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of the intelligent highlight generating result
+ *
  * @method array getHighlightSet() Obtain List of intelligently generated highlights.
  * @method void setHighlightSet(array $HighlightSet) Set List of intelligently generated highlights.
- */
-
-/**
- *Information of the intelligent highlight generating result
  */
 class AiAnalysisTaskHighlightOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskHighlightOutput extends AbstractModel
      * @var array List of intelligently generated highlights.
      */
     public $HighlightSet;
+
     /**
      * @param array $HighlightSet List of intelligently generated highlights.
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskHighlightOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

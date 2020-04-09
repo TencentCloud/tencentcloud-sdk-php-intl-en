@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Adaptive bitrate streaming parameter template
+ *
  * @method VideoTemplateInfo getVideo() Obtain Video parameter information.
  * @method void setVideo(VideoTemplateInfo $Video) Set Video parameter information.
  * @method AudioTemplateInfo getAudio() Obtain Audio parameter information.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
- */
-
-/**
- *Adaptive bitrate streaming parameter template
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -51,6 +49,7 @@ class AdaptiveStreamTemplate extends AbstractModel
 <li>1: yes.</li>
      */
     public $RemoveAudio;
+
     /**
      * @param VideoTemplateInfo $Video Video parameter information.
      * @param AudioTemplateInfo $Audio Audio parameter information.
@@ -62,6 +61,7 @@ class AdaptiveStreamTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

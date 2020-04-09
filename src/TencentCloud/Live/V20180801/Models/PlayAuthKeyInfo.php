@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Playback authentication key information
+ *
  * @method string getDomainName() Obtain Domain name.
  * @method void setDomainName(string $DomainName) Set Domain name.
  * @method integer getEnable() Obtain Whether to enable. 0: disabled; 1: enabled.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthDelta(integer $AuthDelta) Set Validity period in seconds.
  * @method string getAuthBackKey() Obtain Authentication BackKey.
  * @method void setAuthBackKey(string $AuthBackKey) Set Authentication BackKey.
- */
-
-/**
- *Playback authentication key information
  */
 class PlayAuthKeyInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class PlayAuthKeyInfo extends AbstractModel
      * @var string Authentication BackKey.
      */
     public $AuthBackKey;
+
     /**
      * @param string $DomainName Domain name.
      * @param integer $Enable Whether to enable. 0: disabled; 1: enabled.
@@ -70,6 +69,7 @@ class PlayAuthKeyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

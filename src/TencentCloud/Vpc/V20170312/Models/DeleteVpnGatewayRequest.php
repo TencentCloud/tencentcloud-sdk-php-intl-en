@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteVpnGateway request structure.
+ *
  * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
  * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
- */
-
-/**
- *DeleteVpnGateway request structure.
  */
 class DeleteVpnGatewayRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteVpnGatewayRequest extends AbstractModel
      * @var string The ID of the VPN gateway instance.
      */
     public $VpnGatewayId;
+
     /**
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
      */
@@ -38,6 +37,7 @@ class DeleteVpnGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

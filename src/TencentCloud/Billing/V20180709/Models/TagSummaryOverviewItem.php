@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details about cost distribution over different tags.
+ *
  * @method string getTagValue() Obtain Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagValue(string $TagValue) Set Tag value
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Details about cost distribution over different tags.
  */
 class TagSummaryOverviewItem extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RealTotalCostRatio;
+
     /**
      * @param string $TagValue Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

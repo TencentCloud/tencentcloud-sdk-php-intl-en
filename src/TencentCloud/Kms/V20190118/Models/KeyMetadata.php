@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CMK attribute information
+ *
  * @method string getKeyId() Obtain 
  * @method void setKeyId(string $KeyId) Set 
  * @method string getAlias() Obtain 
@@ -50,10 +52,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setValidTo(integer $ValidTo) Set It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *CMK attribute information
  */
 class KeyMetadata extends AbstractModel
 {
@@ -128,6 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ValidTo;
+
     /**
      * @param string $KeyId 
      * @param string $Alias 
@@ -150,6 +149,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

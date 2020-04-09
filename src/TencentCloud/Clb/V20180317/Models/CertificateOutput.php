@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Certificate information
+ *
  * @method string getSSLMode() Obtain Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
  * @method void setSSLMode(string $SSLMode) Set Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
  * @method string getCertId() Obtain Server certificate ID.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCertCaId(string $CertCaId) Set Client certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Certificate information
  */
 class CertificateOutput extends AbstractModel
 {
@@ -48,6 +46,7 @@ class CertificateOutput extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CertCaId;
+
     /**
      * @param string $SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
      * @param string $CertId Server certificate ID.
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

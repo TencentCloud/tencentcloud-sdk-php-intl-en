@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Association between rule and target group
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain Listener ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method string getLocationId() Obtain Forwarding rule ID
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID
- */
-
-/**
- *Association between rule and target group
  */
 class TargetGroupAssociation extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TargetGroupAssociation extends AbstractModel
      * @var string Forwarding rule ID
      */
     public $LocationId;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId Listener ID
@@ -62,6 +61,7 @@ class TargetGroupAssociation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

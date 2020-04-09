@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Fixed IP configuration for public network access
+ *
  * @method string getEipStatus() Obtain Whether it is a fixed IP. Valid values: ["ENABLE","DISABLE"]
  * @method void setEipStatus(string $EipStatus) Set Whether it is a fixed IP. Valid values: ["ENABLE","DISABLE"]
  * @method array getEipAddress() Obtain IP list
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEipAddress(array $EipAddress) Set IP list
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Fixed IP configuration for public network access
  */
 class EipConfigOut extends AbstractModel
 {
@@ -41,6 +39,7 @@ class EipConfigOut extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EipAddress;
+
     /**
      * @param string $EipStatus Whether it is a fixed IP. Valid values: ["ENABLE","DISABLE"]
      * @param array $EipAddress IP list
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

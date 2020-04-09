@@ -18,6 +18,9 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Watermark information
+
+ *
  * @method integer getWatermarkId() Obtain Watermark ID.
  * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
  * @method string getPictureUrl() Obtain Watermark image URL.
@@ -36,11 +39,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) Set Watermark width
  * @method integer getHeight() Obtain Watermark height
  * @method void setHeight(integer $Height) Set Watermark height
- */
-
-/**
- *Watermark information
-
  */
 class WatermarkInfo extends AbstractModel
 {
@@ -88,6 +86,7 @@ class WatermarkInfo extends AbstractModel
      * @var integer Watermark height
      */
     public $Height;
+
     /**
      * @param integer $WatermarkId Watermark ID.
      * @param string $PictureUrl Watermark image URL.
@@ -103,6 +102,7 @@ class WatermarkInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

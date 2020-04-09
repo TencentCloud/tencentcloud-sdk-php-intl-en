@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCcnAttachedInstances request structure.
+ *
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain The returned quantity
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) Set The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
  * @method string getOrderDirection() Obtain Order methods. Ascending: `ASC`, Descending: `DESC`.
  * @method void setOrderDirection(string $OrderDirection) Set Order methods. Ascending: `ASC`, Descending: `DESC`.
- */
-
-/**
- *DescribeCcnAttachedInstances request structure.
  */
 class DescribeCcnAttachedInstancesRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
      * @var string Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public $OrderDirection;
+
     /**
      * @param integer $Offset Offset
      * @param integer $Limit The returned quantity
@@ -94,6 +93,7 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

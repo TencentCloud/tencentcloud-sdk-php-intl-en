@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveCallbackRule request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
- */
-
-/**
- *DeleteLiveCallbackRule request structure.
  */
 class DeleteLiveCallbackRuleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteLiveCallbackRuleRequest extends AbstractModel
      * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public $AppName;
+
     /**
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
@@ -46,6 +45,7 @@ class DeleteLiveCallbackRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

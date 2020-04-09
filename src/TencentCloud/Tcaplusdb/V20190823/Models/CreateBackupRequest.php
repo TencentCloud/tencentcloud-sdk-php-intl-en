@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBackup request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where the table to be backed up resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where the table to be backed up resides
  * @method array getSelectedTables() Obtain Information list of tables to be backed up
  * @method void setSelectedTables(array $SelectedTables) Set Information list of tables to be backed up
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
- */
-
-/**
- *CreateBackup request structure.
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateBackupRequest extends AbstractModel
      * @var string Remarks
      */
     public $Remark;
+
     /**
      * @param string $ClusterId ID of the cluster where the table to be backed up resides
      * @param array $SelectedTables Information list of tables to be backed up
@@ -54,6 +53,7 @@ class CreateBackupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

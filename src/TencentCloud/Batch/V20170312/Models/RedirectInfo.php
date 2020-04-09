@@ -18,6 +18,9 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Redirection information
+
+ *
  * @method string getStdoutRedirectPath() Obtain Standard output redirection path
  * @method void setStdoutRedirectPath(string $StdoutRedirectPath) Set Standard output redirection path
  * @method string getStderrRedirectPath() Obtain Standard error redirection path
@@ -26,11 +29,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStdoutRedirectFileName(string $StdoutRedirectFileName) Set Standard output redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
  * @method string getStderrRedirectFileName() Obtain Standard error redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
  * @method void setStderrRedirectFileName(string $StderrRedirectFileName) Set Standard error redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
- */
-
-/**
- *Redirection information
-
  */
 class RedirectInfo extends AbstractModel
 {
@@ -53,6 +51,7 @@ class RedirectInfo extends AbstractModel
      * @var string Standard error redirection file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
      */
     public $StderrRedirectFileName;
+
     /**
      * @param string $StdoutRedirectPath Standard output redirection path
      * @param string $StderrRedirectPath Standard error redirection path
@@ -63,6 +62,7 @@ class RedirectInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

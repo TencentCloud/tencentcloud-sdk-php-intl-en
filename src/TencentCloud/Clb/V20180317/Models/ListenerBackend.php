@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of real servers bound to a listener
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getProtocol() Obtain Listener protocol
@@ -36,10 +38,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEndPort(integer $EndPort) Set Ending port in port range if port range is supported; 0 if port range is not supported
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Details of real servers bound to a listener
  */
 class ListenerBackend extends AbstractModel
 {
@@ -75,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EndPort;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $Protocol Listener protocol
@@ -90,6 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

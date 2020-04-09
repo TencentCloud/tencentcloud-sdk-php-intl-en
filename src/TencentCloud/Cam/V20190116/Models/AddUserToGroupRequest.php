@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddUserToGroup request structure.
+ *
  * @method array getInfo() Obtain How sub-user UIDs are associated with the ID of the user group they are added to.
  * @method void setInfo(array $Info) Set How sub-user UIDs are associated with the ID of the user group they are added to.
- */
-
-/**
- *AddUserToGroup request structure.
  */
 class AddUserToGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AddUserToGroupRequest extends AbstractModel
      * @var array How sub-user UIDs are associated with the ID of the user group they are added to.
      */
     public $Info;
+
     /**
      * @param array $Info How sub-user UIDs are associated with the ID of the user group they are added to.
      */
@@ -38,6 +37,7 @@ class AddUserToGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

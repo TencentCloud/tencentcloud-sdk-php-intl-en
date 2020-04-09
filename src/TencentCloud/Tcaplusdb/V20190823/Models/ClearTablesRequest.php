@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ClearTables request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster instance where a table resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster instance where a table resides
  * @method array getSelectedTables() Obtain List of information of tables to be cleared
  * @method void setSelectedTables(array $SelectedTables) Set List of information of tables to be cleared
- */
-
-/**
- *ClearTables request structure.
  */
 class ClearTablesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClearTablesRequest extends AbstractModel
      * @var array List of information of tables to be cleared
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId ID of the cluster instance where a table resides
      * @param array $SelectedTables List of information of tables to be cleared
@@ -46,6 +45,7 @@ class ClearTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

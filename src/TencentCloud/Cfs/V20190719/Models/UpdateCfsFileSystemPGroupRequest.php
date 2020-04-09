@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsFileSystemPGroup request structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
- */
-
-/**
- *UpdateCfsFileSystemPGroup request structure.
  */
 class UpdateCfsFileSystemPGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateCfsFileSystemPGroupRequest extends AbstractModel
      * @var string File system ID
      */
     public $FileSystemId;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param string $FileSystemId File system ID
@@ -46,6 +45,7 @@ class UpdateCfsFileSystemPGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

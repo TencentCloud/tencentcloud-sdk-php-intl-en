@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateImage request structure.
+ *
  * @method string getImageName() Obtain Image name
  * @method void setImageName(string $ImageName) Set Image name
  * @method string getInstanceId() Obtain The ID of the instance used to create an image
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotIds(array $SnapshotIds) Set The ID of the snapshot used to create an image. A system disk snapshot must be included.
  * @method boolean getDryRun() Obtain Verifies the validity of the request without affecting the resources involved.
  * @method void setDryRun(boolean $DryRun) Set Verifies the validity of the request without affecting the resources involved.
- */
-
-/**
- *CreateImage request structure.
  */
 class CreateImageRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateImageRequest extends AbstractModel
      * @var boolean Verifies the validity of the request without affecting the resources involved.
      */
     public $DryRun;
+
     /**
      * @param string $ImageName Image name
      * @param string $InstanceId The ID of the instance used to create an image
@@ -94,6 +93,7 @@ class CreateImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

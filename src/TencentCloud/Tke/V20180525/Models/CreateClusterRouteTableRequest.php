@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterRouteTable request structure.
+ *
  * @method string getRouteTableName() Obtain Route table name
  * @method void setRouteTableName(string $RouteTableName) Set Route table name
  * @method string getRouteTableCidrBlock() Obtain Route table CIDR
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC bound to the route table
  * @method integer getIgnoreClusterCidrConflict() Obtain Whether to ignore CIDR conflicts
  * @method void setIgnoreClusterCidrConflict(integer $IgnoreClusterCidrConflict) Set Whether to ignore CIDR conflicts
- */
-
-/**
- *CreateClusterRouteTable request structure.
  */
 class CreateClusterRouteTableRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateClusterRouteTableRequest extends AbstractModel
      * @var integer Whether to ignore CIDR conflicts
      */
     public $IgnoreClusterCidrConflict;
+
     /**
      * @param string $RouteTableName Route table name
      * @param string $RouteTableCidrBlock Route table CIDR
@@ -62,6 +61,7 @@ class CreateClusterRouteTableRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Intelligent analysis result
+ *
  * @method string getType() Obtain Task type. Valid values:
 <li>Classification: intelligent categorization</li>
 <li>Cover: intelligent cover generating</li>
@@ -50,10 +52,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) Set Query result of an intelligent highlight generating task in video content analysis, which is valid when task type is `Highlight`.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Intelligent analysis result
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -96,6 +94,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $HighlightTask;
+
     /**
      * @param string $Type Task type. Valid values:
 <li>Classification: intelligent categorization</li>
@@ -118,6 +117,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

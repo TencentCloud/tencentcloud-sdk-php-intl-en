@@ -18,12 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDisasterRecoverGroups request structure.
+ *
  * @method array getDisasterRecoverGroupIds() Obtain List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
- */
-
-/**
- *DeleteDisasterRecoverGroups request structure.
  */
 class DeleteDisasterRecoverGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteDisasterRecoverGroupsRequest extends AbstractModel
      * @var array List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
      */
     public $DisasterRecoverGroupIds;
+
     /**
      * @param array $DisasterRecoverGroupIds List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
      */
@@ -38,6 +37,7 @@ class DeleteDisasterRecoverGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyParamTemplate request structure.
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getName() Obtain Template name.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Template description.
  * @method array getParamList() Obtain List of parameters.
  * @method void setParamList(array $ParamList) Set List of parameters.
- */
-
-/**
- *ModifyParamTemplate request structure.
  */
 class ModifyParamTemplateRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyParamTemplateRequest extends AbstractModel
      * @var array List of parameters.
      */
     public $ParamList;
+
     /**
      * @param integer $TemplateId Template ID.
      * @param string $Name Template name.
@@ -62,6 +61,7 @@ class ModifyParamTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDelayInfoList response structure.
+ *
  * @method array getDelayInfoList() Obtain Delayed playback information list.
  * @method void setDelayInfoList(array $DelayInfoList) Set Delayed playback information list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveDelayInfoList response structure.
  */
 class DescribeLiveDelayInfoListResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLiveDelayInfoListResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DelayInfoList Delayed playback information list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeLiveDelayInfoListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

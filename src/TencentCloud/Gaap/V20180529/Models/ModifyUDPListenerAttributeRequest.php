@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyUDPListenerAttribute request structure.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getGroupId() Obtain Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) Set Listener name
  * @method string getScheduler() Obtain Origin server scheduling policy of listeners
  * @method void setScheduler(string $Scheduler) Set Origin server scheduling policy of listeners
- */
-
-/**
- *ModifyUDPListenerAttribute request structure.
  */
 class ModifyUDPListenerAttributeRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyUDPListenerAttributeRequest extends AbstractModel
      * @var string Origin server scheduling policy of listeners
      */
     public $Scheduler;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
@@ -70,6 +69,7 @@ class ModifyUDPListenerAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

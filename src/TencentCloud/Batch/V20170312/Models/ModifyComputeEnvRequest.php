@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyComputeEnv request structure.
+ *
  * @method string getEnvId() Obtain Compute environment ID
  * @method void setEnvId(string $EnvId) Set Compute environment ID
  * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvDescription(string $EnvDescription) Set Compute environment description
  * @method ComputeEnvData getEnvData() Obtain Compute environment attributes
  * @method void setEnvData(ComputeEnvData $EnvData) Set Compute environment attributes
- */
-
-/**
- *ModifyComputeEnv request structure.
  */
 class ModifyComputeEnvRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyComputeEnvRequest extends AbstractModel
      * @var ComputeEnvData Compute environment attributes
      */
     public $EnvData;
+
     /**
      * @param string $EnvId Compute environment ID
      * @param integer $DesiredComputeNodeCount Number of desired compute nodes
@@ -70,6 +69,7 @@ class ModifyComputeEnvRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

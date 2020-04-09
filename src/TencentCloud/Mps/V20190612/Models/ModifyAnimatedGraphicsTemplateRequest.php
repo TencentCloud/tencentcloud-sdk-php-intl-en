@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAnimatedGraphicsTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of an animated image generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an animated image generating template.
  * @method string getName() Obtain Name of an animated image generating template. Length limit: 64 characters.
@@ -54,10 +56,6 @@ Default value: 0.
  * @method void setQuality(float $Quality) Set Image quality. Value range: [1, 100]. Default value: 75.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- */
-
-/**
- *ModifyAnimatedGraphicsTemplate request structure.
  */
 class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -110,6 +108,7 @@ Default value: 0.
      * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
+
     /**
      * @param integer $Definition Unique ID of an animated image generating template.
      * @param string $Name Name of an animated image generating template. Length limit: 64 characters.
@@ -134,6 +133,7 @@ Default value: 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

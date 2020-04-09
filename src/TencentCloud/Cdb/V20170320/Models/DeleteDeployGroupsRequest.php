@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDeployGroups request structure.
+ *
  * @method array getDeployGroupIds() Obtain List of IDs of placement groups to be deleted.
  * @method void setDeployGroupIds(array $DeployGroupIds) Set List of IDs of placement groups to be deleted.
- */
-
-/**
- *DeleteDeployGroups request structure.
  */
 class DeleteDeployGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteDeployGroupsRequest extends AbstractModel
      * @var array List of IDs of placement groups to be deleted.
      */
     public $DeployGroupIds;
+
     /**
      * @param array $DeployGroupIds List of IDs of placement groups to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteDeployGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

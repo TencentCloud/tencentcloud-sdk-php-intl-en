@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowlogs response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of queries
  * @method void setTotalCount(integer $TotalCount) Set Total number of queries
  * @method array getSlowlogs() Obtain Information list of slow query logs
  * @method void setSlowlogs(array $Slowlogs) Set Information list of slow query logs
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSlowlogs response structure.
  */
 class DescribeSlowlogsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSlowlogsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of queries
      * @param array $Slowlogs Information list of slow query logs
@@ -54,6 +53,7 @@ class DescribeSlowlogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMapInfo response structure.
+ *
  * @method array getMapInfoList() Obtain Array of mappings.
  * @method void setMapInfoList(array $MapInfoList) Set Array of mappings.
  * @method array getServerRegionRelation() Obtain The relationship between server region ID and sub-region ID
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeMapInfo response structure.
  */
 class DescribeMapInfoResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $MapInfoList Array of mappings.
      * @param array $ServerRegionRelation The relationship between server region ID and sub-region ID
@@ -70,6 +69,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

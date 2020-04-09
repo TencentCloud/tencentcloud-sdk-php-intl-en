@@ -18,16 +18,14 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListOrganizationInvitations request structure.
+ *
  * @method integer getInvited() Obtain Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
  * @method void setInvited(integer $Invited) Set Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Limit
  * @method void setLimit(integer $Limit) Set Limit
- */
-
-/**
- *ListOrganizationInvitations request structure.
  */
 class ListOrganizationInvitationsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListOrganizationInvitationsRequest extends AbstractModel
      * @var integer Limit
      */
     public $Limit;
+
     /**
      * @param integer $Invited Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
      * @param integer $Offset Offset
@@ -54,6 +53,7 @@ class ListOrganizationInvitationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

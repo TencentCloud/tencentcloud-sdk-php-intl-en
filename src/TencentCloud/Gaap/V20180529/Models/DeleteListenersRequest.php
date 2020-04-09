@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteListeners request structure.
+ *
  * @method array getListenerIds() Obtain ID list of listeners to be deleted
  * @method void setListenerIds(array $ListenerIds) Set ID list of listeners to be deleted
  * @method integer getForce() Obtain Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) Set Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
  * @method string getProxyId() Obtain Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
  * @method void setProxyId(string $ProxyId) Set Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
- */
-
-/**
- *DeleteListeners request structure.
  */
 class DeleteListenersRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeleteListenersRequest extends AbstractModel
      * @var string Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
      */
     public $ProxyId;
+
     /**
      * @param array $ListenerIds ID list of listeners to be deleted
      * @param integer $Force Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
@@ -62,6 +61,7 @@ class DeleteListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

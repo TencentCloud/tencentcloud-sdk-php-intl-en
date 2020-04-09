@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Purchasable specification details in an AZ in a region.
+ *
  * @method string getRegion() Obtain Region abbreviation, which corresponds to the `Region` field of `RegionSet`
  * @method void setRegion(string $Region) Set Region abbreviation, which corresponds to the `Region` field of `RegionSet`
  * @method string getZone() Obtain AZ abbreviate, which corresponds to the `Zone` field of `ZoneSet`
  * @method void setZone(string $Zone) Set AZ abbreviate, which corresponds to the `Zone` field of `ZoneSet`
  * @method array getSpecItemInfoList() Obtain Specification details list
  * @method void setSpecItemInfoList(array $SpecItemInfoList) Set Specification details list
- */
-
-/**
- *Purchasable specification details in an AZ in a region.
  */
 class SpecInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SpecInfo extends AbstractModel
      * @var array Specification details list
      */
     public $SpecItemInfoList;
+
     /**
      * @param string $Region Region abbreviation, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone AZ abbreviate, which corresponds to the `Zone` field of `ZoneSet`
@@ -54,6 +53,7 @@ class SpecInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBParameters response structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow7t8lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow7t8lmc.
  * @method array getParams() Obtain Requests the current parameter values of a DB
  * @method void setParams(array $Params) Set Requests the current parameter values of a DB
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBParameters response structure.
  */
 class DescribeDBParametersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBParametersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow7t8lmc.
      * @param array $Params Requests the current parameter values of a DB
@@ -54,6 +53,7 @@ class DescribeDBParametersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

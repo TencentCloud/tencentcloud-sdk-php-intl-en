@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Big key details
+ *
  * @method integer getDB() Obtain Database
  * @method void setDB(integer $DB) Set Database
  * @method string getKey() Obtain Big key
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) Set Size
  * @method integer getUpdatetime() Obtain Data timestamp
  * @method void setUpdatetime(integer $Updatetime) Set Data timestamp
- */
-
-/**
- *Big key details
  */
 class BigKeyInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class BigKeyInfo extends AbstractModel
      * @var integer Data timestamp
      */
     public $Updatetime;
+
     /**
      * @param integer $DB Database
      * @param string $Key Big key
@@ -70,6 +69,7 @@ class BigKeyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

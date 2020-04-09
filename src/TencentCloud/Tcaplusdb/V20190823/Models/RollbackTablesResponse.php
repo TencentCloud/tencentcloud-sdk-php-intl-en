@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RollbackTables response structure.
+ *
  * @method integer getTotalCount() Obtain Number of table rollback task results
  * @method void setTotalCount(integer $TotalCount) Set Number of table rollback task results
  * @method array getTableResults() Obtain Table rollback task result list
  * @method void setTableResults(array $TableResults) Set Table rollback task result list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *RollbackTables response structure.
  */
 class RollbackTablesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RollbackTablesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of table rollback task results
      * @param array $TableResults Table rollback task result list
@@ -54,6 +53,7 @@ class RollbackTablesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Origin access authentication for S3 bucket.
+ *
  * @method string getSwitch() Obtain Switch, which can be set to on or off.
  * @method void setSwitch(string $Switch) Set Switch, which can be set to on or off.
  * @method string getAccessKey() Obtain Access ID.
@@ -28,10 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSecretKey(string $SecretKey) Set Key.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Origin access authentication for S3 bucket.
  */
 class AwsPrivateAccess extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SecretKey;
+
     /**
      * @param string $Switch Switch, which can be set to on or off.
      * @param string $AccessKey Access ID.
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

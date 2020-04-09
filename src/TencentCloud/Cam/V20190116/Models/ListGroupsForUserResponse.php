@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListGroupsForUser response structure.
+ *
  * @method integer getTotalNum() Obtain Total number of User Groups to which the sub-user has been added
  * @method void setTotalNum(integer $TotalNum) Set Total number of User Groups to which the sub-user has been added
  * @method array getGroupInfo() Obtain User Group information
  * @method void setGroupInfo(array $GroupInfo) Set User Group information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListGroupsForUser response structure.
  */
 class ListGroupsForUserResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListGroupsForUserResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalNum Total number of User Groups to which the sub-user has been added
      * @param array $GroupInfo User Group information
@@ -54,6 +53,7 @@ class ListGroupsForUserResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

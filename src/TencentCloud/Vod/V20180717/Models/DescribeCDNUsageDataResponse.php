@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCDNUsageData response structure.
+ *
  * @method integer getDataInterval() Obtain Time granularity in minutes.
  * @method void setDataInterval(integer $DataInterval) Set Time granularity in minutes.
  * @method array getData() Obtain CDN statistics.
  * @method void setData(array $Data) Set CDN statistics.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeCDNUsageData response structure.
  */
 class DescribeCDNUsageDataResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCDNUsageDataResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $DataInterval Time granularity in minutes.
      * @param array $Data CDN statistics.
@@ -54,6 +53,7 @@ class DescribeCDNUsageDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

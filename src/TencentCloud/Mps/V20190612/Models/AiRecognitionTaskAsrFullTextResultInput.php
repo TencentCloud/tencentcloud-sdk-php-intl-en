@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input for full speech recognition.
+ *
  * @method integer getDefinition() Obtain Full speech recognition template ID.
  * @method void setDefinition(integer $Definition) Set Full speech recognition template ID.
- */
-
-/**
- *Input for full speech recognition.
  */
 class AiRecognitionTaskAsrFullTextResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskAsrFullTextResultInput extends AbstractModel
      * @var integer Full speech recognition template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Full speech recognition template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskAsrFullTextResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

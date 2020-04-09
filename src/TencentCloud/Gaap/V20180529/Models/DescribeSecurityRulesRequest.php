@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityRules request structure.
+ *
  * @method array getSecurityRuleIds() Obtain List of security rule IDs. Up to 20 security rules are supported.
  * @method void setSecurityRuleIds(array $SecurityRuleIds) Set List of security rule IDs. Up to 20 security rules are supported.
- */
-
-/**
- *DescribeSecurityRules request structure.
  */
 class DescribeSecurityRulesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSecurityRulesRequest extends AbstractModel
      * @var array List of security rule IDs. Up to 20 security rules are supported.
      */
     public $SecurityRuleIds;
+
     /**
      * @param array $SecurityRuleIds List of security rule IDs. Up to 20 security rules are supported.
      */
@@ -38,6 +37,7 @@ class DescribeSecurityRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

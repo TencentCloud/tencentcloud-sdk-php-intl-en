@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRule request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
@@ -34,12 +36,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
  * @method integer getSessionExpireTime() Obtain Session persistence time
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
- * @method string getForwardType() Obtain Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
- * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
- */
-
-/**
- *ModifyRule request structure.
+ * @method string getForwardType() Obtain Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+ * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+ * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+ * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+ * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+ * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -80,9 +82,20 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $SessionExpireTime;
 
     /**
-     * @var string Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
+     * @var string Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
      */
     public $ForwardType;
+
+    /**
+     * @var string TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     */
+    public $TrpcCallee;
+
+    /**
+     * @var string TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     */
+    public $TrpcFunc;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
@@ -92,12 +105,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
      * @param integer $SessionExpireTime Session persistence time
-     * @param string $ForwardType Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
+     * @param string $ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+     * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -137,6 +153,14 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
         if (array_key_exists("ForwardType",$param) and $param["ForwardType"] !== null) {
             $this->ForwardType = $param["ForwardType"];
+        }
+
+        if (array_key_exists("TrpcCallee",$param) and $param["TrpcCallee"] !== null) {
+            $this->TrpcCallee = $param["TrpcCallee"];
+        }
+
+        if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
+            $this->TrpcFunc = $param["TrpcFunc"];
         }
     }
 }

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ManualRewrite request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getSourceListenerId() Obtain Source listener ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetListenerId(string $TargetListenerId) Set Target listener ID
  * @method array getRewriteInfos() Obtain Redirection relationship between forwarding rules
  * @method void setRewriteInfos(array $RewriteInfos) Set Redirection relationship between forwarding rules
- */
-
-/**
- *ManualRewrite request structure.
  */
 class ManualRewriteRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ManualRewriteRequest extends AbstractModel
      * @var array Redirection relationship between forwarding rules
      */
     public $RewriteInfos;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $SourceListenerId Source listener ID
@@ -62,6 +61,7 @@ class ManualRewriteRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

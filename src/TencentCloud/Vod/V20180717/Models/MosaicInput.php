@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Blur parameter type of video processing task
+ *
  * @method string getCoordinateOrigin() Obtain Origin position, which currently can only be:
 <li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the blur is in the top-left corner of the image or text.</li>
 Default value: TopLeft.
@@ -72,10 +74,6 @@ Default value: 10%.
 <li>If this parameter is left empty or 0 is entered, the blur will exist till the last video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the blur will exist till second n;</li>
 <li>If this value is smaller than 0 (e.g., -n), the blur will exist till second n before the last video frame.</li>
- */
-
-/**
- *Blur parameter type of video processing task
  */
 class MosaicInput extends AbstractModel
 {
@@ -133,6 +131,7 @@ Default value: 10%.
 <li>If this value is smaller than 0 (e.g., -n), the blur will exist till second n before the last video frame.</li>
      */
     public $EndTimeOffset;
+
     /**
      * @param string $CoordinateOrigin Origin position, which currently can only be:
 <li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the blur is in the top-left corner of the image or text.</li>
@@ -166,6 +165,7 @@ Default value: 10%.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

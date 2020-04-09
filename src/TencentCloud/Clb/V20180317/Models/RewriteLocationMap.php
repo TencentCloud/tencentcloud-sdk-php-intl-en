@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Redirection relationship between forwarding rules
+ *
  * @method string getSourceLocationId() Obtain Source forwarding rule ID
  * @method void setSourceLocationId(string $SourceLocationId) Set Source forwarding rule ID
  * @method string getTargetLocationId() Obtain Forwarding rule ID of a redirect target
  * @method void setTargetLocationId(string $TargetLocationId) Set Forwarding rule ID of a redirect target
- */
-
-/**
- *Redirection relationship between forwarding rules
  */
 class RewriteLocationMap extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RewriteLocationMap extends AbstractModel
      * @var string Forwarding rule ID of a redirect target
      */
     public $TargetLocationId;
+
     /**
      * @param string $SourceLocationId Source forwarding rule ID
      * @param string $TargetLocationId Forwarding rule ID of a redirect target
@@ -46,6 +45,7 @@ class RewriteLocationMap extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyGroupList request structure.
+ *
  * @method integer getOffset() Obtain Offset. The default value is 0.
  * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
  * @method integer getLimit() Obtain Number of returned results. The default value is 20. The maximum value is 100.
@@ -40,10 +42,6 @@ RealServerRegion - String - Required: No - Filter by origin server region; Refer
  * @method void setFilters(array $Filters) Set Filter conditions.   
 The limit on Filter.Values of each request is 5.
 RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
- */
-
-/**
- *DescribeProxyGroupList request structure.
  */
 class DescribeProxyGroupListRequest extends AbstractModel
 {
@@ -77,6 +75,7 @@ The limit on Filter.Values of each request is 5.
 RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
      */
     public $Filters;
+
     /**
      * @param integer $Offset Offset. The default value is 0.
      * @param integer $Limit Number of returned results. The default value is 20. The maximum value is 100.
@@ -94,6 +93,7 @@ RealServerRegion - String - Required: No - Filter by origin server region; Refer
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

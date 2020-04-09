@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveSnapshotRules response structure.
+ *
  * @method array getRules() Obtain Rule list.
  * @method void setRules(array $Rules) Set Rule list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveSnapshotRules response structure.
  */
 class DescribeLiveSnapshotRulesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLiveSnapshotRulesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Rules Rule list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeLiveSnapshotRulesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

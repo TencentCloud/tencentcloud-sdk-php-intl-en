@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRoGroupInfo request structure.
+ *
  * @method string getRoGroupId() Obtain RO group ID.
  * @method void setRoGroupId(string $RoGroupId) Set RO group ID.
  * @method RoGroupAttr getRoGroupInfo() Obtain RO group details.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoWeightValues(array $RoWeightValues) Set Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
  * @method integer getIsBalanceRoLoad() Obtain Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
  * @method void setIsBalanceRoLoad(integer $IsBalanceRoLoad) Set Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
- */
-
-/**
- *ModifyRoGroupInfo request structure.
  */
 class ModifyRoGroupInfoRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyRoGroupInfoRequest extends AbstractModel
      * @var integer Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
      */
     public $IsBalanceRoLoad;
+
     /**
      * @param string $RoGroupId RO group ID.
      * @param RoGroupAttr $RoGroupInfo RO group details.
@@ -62,6 +61,7 @@ class ModifyRoGroupInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

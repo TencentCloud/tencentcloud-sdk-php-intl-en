@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRule request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
  * @method string getUrl() Obtain Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
  * @method void setUrl(string $Url) Set Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
- */
-
-/**
- *DeleteRule request structure.
  */
 class DeleteRuleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DeleteRuleRequest extends AbstractModel
      * @var string Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
      */
     public $Url;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
@@ -70,6 +69,7 @@ class DeleteRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

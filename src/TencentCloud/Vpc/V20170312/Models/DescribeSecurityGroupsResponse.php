@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroups response structure.
+ *
  * @method array getSecurityGroupSet() Obtain Security group object.
  * @method void setSecurityGroupSet(array $SecurityGroupSet) Set Security group object.
  * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSecurityGroups response structure.
  */
 class DescribeSecurityGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSecurityGroupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SecurityGroupSet Security group object.
      * @param integer $TotalCount The number of instances meeting the filter condition.
@@ -54,6 +53,7 @@ class DescribeSecurityGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

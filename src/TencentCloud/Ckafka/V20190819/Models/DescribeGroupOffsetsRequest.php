@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroupOffsets request structure.
+ *
  * @method string getInstanceId() Obtain (Filter) filter by instance ID
  * @method void setInstanceId(string $InstanceId) Set (Filter) filter by instance ID
  * @method string getGroup() Obtain Kafka consumer group
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset position of this query. Default value: 0
  * @method integer getLimit() Obtain Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
  * @method void setLimit(integer $Limit) Set Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
- */
-
-/**
- *DescribeGroupOffsets request structure.
  */
 class DescribeGroupOffsetsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeGroupOffsetsRequest extends AbstractModel
      * @var integer Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
      */
     public $Limit;
+
     /**
      * @param string $InstanceId (Filter) filter by instance ID
      * @param string $Group Kafka consumer group
@@ -78,6 +77,7 @@ class DescribeGroupOffsetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

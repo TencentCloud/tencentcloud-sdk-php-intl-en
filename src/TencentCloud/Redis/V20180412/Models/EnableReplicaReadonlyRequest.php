@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnableReplicaReadonly request structure.
+ *
  * @method string getInstanceId() Obtain Serial ID of an instance
  * @method void setInstanceId(string $InstanceId) Set Serial ID of an instance
  * @method array getReadonlyPolicy() Obtain Account routing policy. If `master` or `replication` is entered, it means to route to the master or slave node; if this is left blank, it means to write into the master node and read from the slave node by default
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Account routing policy. If `master` or `replication` is entered, it means to route to the master or slave node; if this is left blank, it means to write into the master node and read from the slave node by default
- */
-
-/**
- *EnableReplicaReadonly request structure.
  */
 class EnableReplicaReadonlyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnableReplicaReadonlyRequest extends AbstractModel
      * @var array Account routing policy. If `master` or `replication` is entered, it means to route to the master or slave node; if this is left blank, it means to write into the master node and read from the slave node by default
      */
     public $ReadonlyPolicy;
+
     /**
      * @param string $InstanceId Serial ID of an instance
      * @param array $ReadonlyPolicy Account routing policy. If `master` or `replication` is entered, it means to route to the master or slave node; if this is left blank, it means to write into the master node and read from the slave node by default
@@ -46,6 +45,7 @@ class EnableReplicaReadonlyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

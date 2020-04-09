@@ -18,12 +18,10 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceAttributes request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- */
-
-/**
- *DescribeInstanceAttributes request structure.
  */
 class DescribeInstanceAttributesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstanceAttributesRequest extends AbstractModel
      * @var string Instance ID
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId Instance ID
      */
@@ -38,6 +37,7 @@ class DescribeInstanceAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Connection group details
+ *
  * @method integer getCreateTime() Obtain Creation time
  * @method void setCreateTime(integer $CreateTime) Set Creation time
  * @method integer getProjectId() Obtain Project ID
@@ -56,10 +58,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagSet(array $TagSet) Set Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Connection group details
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -133,6 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagSet;
+
     /**
      * @param integer $CreateTime Creation time
      * @param integer $ProjectId Project ID
@@ -158,6 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

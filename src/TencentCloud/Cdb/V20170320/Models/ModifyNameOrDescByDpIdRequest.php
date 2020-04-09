@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNameOrDescByDpId request structure.
+ *
  * @method string getDeployGroupId() Obtain ID of a placement group.
  * @method void setDeployGroupId(string $DeployGroupId) Set ID of a placement group.
  * @method string getDeployGroupName() Obtain Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
  * @method void setDeployGroupName(string $DeployGroupName) Set Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
  * @method string getDescription() Obtain Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
  * @method void setDescription(string $Description) Set Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
- */
-
-/**
- *ModifyNameOrDescByDpId request structure.
  */
 class ModifyNameOrDescByDpIdRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyNameOrDescByDpIdRequest extends AbstractModel
      * @var string Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
      */
     public $Description;
+
     /**
      * @param string $DeployGroupId ID of a placement group.
      * @param string $DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
@@ -54,6 +53,7 @@ class ModifyNameOrDescByDpIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

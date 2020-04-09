@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDomains request structure.
+ *
  * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0 (the first page).
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0 (the first page).
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100. Maximum value: 1000.
  * @method array getFilters() Obtain Query condition filter, complex type.
  * @method void setFilters(array $Filters) Set Query condition filter, complex type.
- */
-
-/**
- *DescribeDomains request structure.
  */
 class DescribeDomainsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDomainsRequest extends AbstractModel
      * @var array Query condition filter, complex type.
      */
     public $Filters;
+
     /**
      * @param integer $Offset Offset for paginated queries. Default value: 0 (the first page).
      * @param integer $Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
@@ -54,6 +53,7 @@ class DescribeDomainsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

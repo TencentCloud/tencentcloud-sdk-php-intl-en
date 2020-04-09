@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RecoverRecycleTables request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where a table resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where a table resides
  * @method array getSelectedTables() Obtain Information of tables to be recovered
  * @method void setSelectedTables(array $SelectedTables) Set Information of tables to be recovered
- */
-
-/**
- *RecoverRecycleTables request structure.
  */
 class RecoverRecycleTablesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RecoverRecycleTablesRequest extends AbstractModel
      * @var array Information of tables to be recovered
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId ID of the cluster where a table resides
      * @param array $SelectedTables Information of tables to be recovered
@@ -46,6 +45,7 @@ class RecoverRecycleTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLivePlayDomain request structure.
+ *
  * @method string getDomainName() Obtain Playback domain name.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
  * @method integer getPlayType() Obtain Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
  * @method void setPlayType(integer $PlayType) Set Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
- */
-
-/**
- *ModifyLivePlayDomain request structure.
  */
 class ModifyLivePlayDomainRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyLivePlayDomainRequest extends AbstractModel
      * @var integer Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
      */
     public $PlayType;
+
     /**
      * @param string $DomainName Playback domain name.
      * @param integer $PlayType Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
@@ -46,6 +45,7 @@ class ModifyLivePlayDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

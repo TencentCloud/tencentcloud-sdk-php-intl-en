@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Origin server header cache configuration. This is enabled by default and caches all the header information.
+ *
  * @method string getSwitch() Obtain Origin server header cache switch
 on: enabled
 off: disabled
  * @method void setSwitch(string $Switch) Set Origin server header cache switch
 on: enabled
 off: disabled
- */
-
-/**
- *Origin server header cache configuration. This is enabled by default and caches all the header information.
  */
 class ResponseHeaderCache extends AbstractModel
 {
@@ -37,6 +35,7 @@ on: enabled
 off: disabled
      */
     public $Switch;
+
     /**
      * @param string $Switch Origin server header cache switch
 on: enabled
@@ -46,6 +45,7 @@ off: disabled
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

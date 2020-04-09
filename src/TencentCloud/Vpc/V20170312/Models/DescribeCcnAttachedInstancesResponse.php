@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCcnAttachedInstances response structure.
+ *
  * @method integer getTotalCount() Obtain The number of objects meeting the condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
  * @method array getInstanceSet() Obtain The list of associated instances.
  * @method void setInstanceSet(array $InstanceSet) Set The list of associated instances.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeCcnAttachedInstances response structure.
  */
 class DescribeCcnAttachedInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCcnAttachedInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of objects meeting the condition.
      * @param array $InstanceSet The list of associated instances.
@@ -54,6 +53,7 @@ class DescribeCcnAttachedInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamEventList response structure.
+ *
  * @method array getEventList() Obtain List of streaming events.
  * @method void setEventList(array $EventList) Set List of streaming events.
  * @method integer getPageNum() Obtain Page number.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalPage(integer $TotalPage) Set Total number of pages.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveStreamEventList response structure.
  */
 class DescribeLiveStreamEventListResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeLiveStreamEventListResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $EventList List of streaming events.
      * @param integer $PageNum Page number.
@@ -78,6 +77,7 @@ class DescribeLiveStreamEventListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

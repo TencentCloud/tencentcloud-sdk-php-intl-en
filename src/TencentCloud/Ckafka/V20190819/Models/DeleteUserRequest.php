@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteUser request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getName() Obtain Username
  * @method void setName(string $Name) Set Username
- */
-
-/**
- *DeleteUser request structure.
  */
 class DeleteUserRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteUserRequest extends AbstractModel
      * @var string Username
      */
     public $Name;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $Name Username
@@ -46,6 +45,7 @@ class DeleteUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

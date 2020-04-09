@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Inbound and outbound rules of the security group
+ *
  * @method string getAction() Obtain Action to be executed
  * @method void setAction(string $Action) Set Action to be executed
  * @method string getIp() Obtain IP address
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(string $Port) Set Port number
  * @method string getProto() Obtain Protocol type
  * @method void setProto(string $Proto) Set Protocol type
- */
-
-/**
- *Inbound and outbound rules of the security group
  */
 class SecurityGroupsInboundAndOutbound extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SecurityGroupsInboundAndOutbound extends AbstractModel
      * @var string Protocol type
      */
     public $Proto;
+
     /**
      * @param string $Action Action to be executed
      * @param string $Ip IP address
@@ -62,6 +61,7 @@ class SecurityGroupsInboundAndOutbound extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

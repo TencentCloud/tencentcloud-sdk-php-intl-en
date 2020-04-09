@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHaVips request structure.
+ *
  * @method array getHaVipIds() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
  * @method void setHaVipIds(array $HaVipIds) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
  * @method array getFilters() Obtain Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain The returned quantity
  * @method void setLimit(integer $Limit) Set The returned quantity
- */
-
-/**
- *DescribeHaVips request structure.
  */
 class DescribeHaVipsRequest extends AbstractModel
 {
@@ -67,6 +65,7 @@ class DescribeHaVipsRequest extends AbstractModel
      * @var integer The returned quantity
      */
     public $Limit;
+
     /**
      * @param array $HaVipIds The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      * @param array $Filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
@@ -82,6 +81,7 @@ class DescribeHaVipsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

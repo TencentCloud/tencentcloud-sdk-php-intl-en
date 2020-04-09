@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Source type of migration task
+ *
  * @method string getInstanceId() Obtain Source instance ID in the format of `mssql-si2823jyl`, which is used when `MigrateType` is 1 (TencentDB for SQL Server)
  * @method void setInstanceId(string $InstanceId) Set Source instance ID in the format of `mssql-si2823jyl`, which is used when `MigrateType` is 1 (TencentDB for SQL Server)
  * @method string getCvmId() Obtain ID of source CVM instance, which is used when `MigrateType` is 2 (CVM-based self-created SQL Server database)
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(array $Url) Set Source backup address for offline migration, which is used when `MigrateType` is 4 or 5
  * @method string getUrlPassword() Obtain Source backup password for offline migration, which is used when `MigrateType` is 4 or 5
  * @method void setUrlPassword(string $UrlPassword) Set Source backup password for offline migration, which is used when `MigrateType` is 4 or 5
- */
-
-/**
- *Source type of migration task
  */
 class MigrateSource extends AbstractModel
 {
@@ -94,6 +92,7 @@ class MigrateSource extends AbstractModel
      * @var string Source backup password for offline migration, which is used when `MigrateType` is 4 or 5
      */
     public $UrlPassword;
+
     /**
      * @param string $InstanceId Source instance ID in the format of `mssql-si2823jyl`, which is used when `MigrateType` is 1 (TencentDB for SQL Server)
      * @param string $CvmId ID of source CVM instance, which is used when `MigrateType` is 2 (CVM-based self-created SQL Server database)
@@ -110,6 +109,7 @@ class MigrateSource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

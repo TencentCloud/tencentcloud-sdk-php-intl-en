@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetRoutes request structure.
+ *
  * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
  * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
  * @method string getRouteTableName() Obtain The route table name. The maximum length is 60 characters.
  * @method void setRouteTableName(string $RouteTableName) Set The route table name. The maximum length is 60 characters.
  * @method array getRoutes() Obtain Routing policy.
  * @method void setRoutes(array $Routes) Set Routing policy.
- */
-
-/**
- *ResetRoutes request structure.
  */
 class ResetRoutesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResetRoutesRequest extends AbstractModel
      * @var array Routing policy.
      */
     public $Routes;
+
     /**
      * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      * @param string $RouteTableName The route table name. The maximum length is 60 characters.
@@ -54,6 +53,7 @@ class ResetRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

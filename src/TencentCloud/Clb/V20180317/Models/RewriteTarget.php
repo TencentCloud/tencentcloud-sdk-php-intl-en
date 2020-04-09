@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Redirect target information
+ *
  * @method string getTargetListenerId() Obtain Listener ID of a redirect target
 Note: This field may return null, indicating that there is no redirection.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTargetLocationId(string $TargetLocationId) Set Forwarding rule ID of a redirect target
 Note: This field may return null, indicating that there is no redirection.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Redirect target information
  */
 class RewriteTarget extends AbstractModel
 {
@@ -50,6 +48,7 @@ Note: This field may return null, indicating that there is no redirection.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetLocationId;
+
     /**
      * @param string $TargetListenerId Listener ID of a redirect target
 Note: This field may return null, indicating that there is no redirection.
@@ -62,6 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

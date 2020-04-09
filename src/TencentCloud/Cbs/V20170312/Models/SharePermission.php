@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Snapshot sharing information set
+ *
  * @method string getCreatedTime() Obtain Snapshot sharing time
  * @method void setCreatedTime(string $CreatedTime) Set Snapshot sharing time
  * @method string getAccountId() Obtain ID of the shared account
  * @method void setAccountId(string $AccountId) Set ID of the shared account
- */
-
-/**
- *Snapshot sharing information set
  */
 class SharePermission extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SharePermission extends AbstractModel
      * @var string ID of the shared account
      */
     public $AccountId;
+
     /**
      * @param string $CreatedTime Snapshot sharing time
      * @param string $AccountId ID of the shared account
@@ -46,6 +45,7 @@ class SharePermission extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 301/302 automatic origin-pull follow-redirect configuration. It is disabled by default.
+ *
  * @method string getSwitch() Obtain Origin-pull follow-redirect switch
 on: enabled
 off: disabled
  * @method void setSwitch(string $Switch) Set Origin-pull follow-redirect switch
 on: enabled
 off: disabled
- */
-
-/**
- *301/302 automatic origin-pull follow-redirect configuration. It is disabled by default.
  */
 class FollowRedirect extends AbstractModel
 {
@@ -37,6 +35,7 @@ on: enabled
 off: disabled
      */
     public $Switch;
+
     /**
      * @param string $Switch Origin-pull follow-redirect switch
 on: enabled
@@ -46,6 +45,7 @@ off: disabled
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

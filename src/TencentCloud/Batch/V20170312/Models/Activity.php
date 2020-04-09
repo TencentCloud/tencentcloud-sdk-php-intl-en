@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Compute environment creation or termination activities
+ *
  * @method string getActivityId() Obtain Activity ID
  * @method void setActivityId(string $ActivityId) Set Activity ID
  * @method string getComputeNodeId() Obtain Compute node ID
@@ -42,10 +44,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set CVM instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Compute environment creation or termination activities
  */
 class Activity extends AbstractModel
 {
@@ -100,6 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
+
     /**
      * @param string $ActivityId Activity ID
      * @param string $ComputeNodeId Compute node ID
@@ -118,6 +117,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

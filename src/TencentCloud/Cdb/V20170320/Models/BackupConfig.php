@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Configuration information of ECDB slave database 2. This field is only applicable to ECDB instances
+ *
  * @method string getReplicationMode() Obtain Replication mode of slave database 2. Value range: async, semi-sync
  * @method void setReplicationMode(string $ReplicationMode) Set Replication mode of slave database 2. Value range: async, semi-sync
  * @method string getZone() Obtain Name of the AZ of slave database 2, such as ap-shanghai-1
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set Private IP address of slave database 2
  * @method integer getVport() Obtain Access port of slave database 2
  * @method void setVport(integer $Vport) Set Access port of slave database 2
- */
-
-/**
- *Configuration information of ECDB slave database 2. This field is only applicable to ECDB instances
  */
 class BackupConfig extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BackupConfig extends AbstractModel
      * @var integer Access port of slave database 2
      */
     public $Vport;
+
     /**
      * @param string $ReplicationMode Replication mode of slave database 2. Value range: async, semi-sync
      * @param string $Zone Name of the AZ of slave database 2, such as ap-shanghai-1
@@ -62,6 +61,7 @@ class BackupConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

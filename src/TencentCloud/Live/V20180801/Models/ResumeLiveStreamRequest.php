@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResumeLiveStream request structure.
+ *
  * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method string getDomainName() Obtain Your acceleration domain name.
  * @method void setDomainName(string $DomainName) Set Your acceleration domain name.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- */
-
-/**
- *ResumeLiveStream request structure.
  */
 class ResumeLiveStreamRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResumeLiveStreamRequest extends AbstractModel
      * @var string Stream name.
      */
     public $StreamName;
+
     /**
      * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
      * @param string $DomainName Your acceleration domain name.
@@ -54,6 +53,7 @@ class ResumeLiveStreamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

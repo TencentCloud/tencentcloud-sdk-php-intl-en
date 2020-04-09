@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Agent running mode
+ *
  * @method string getScene() Obtain Scenario type. Windows is supported
  * @method void setScene(string $Scene) Set Scenario type. Windows is supported
  * @method string getUser() Obtain The user that runs the Agent
  * @method void setUser(string $User) Set The user that runs the Agent
  * @method string getSession() Obtain The session that runs the Agent
  * @method void setSession(string $Session) Set The session that runs the Agent
- */
-
-/**
- *Agent running mode
  */
 class AgentRunningMode extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AgentRunningMode extends AbstractModel
      * @var string The session that runs the Agent
      */
     public $Session;
+
     /**
      * @param string $Scene Scenario type. Windows is supported
      * @param string $User The user that runs the Agent
@@ -54,6 +53,7 @@ class AgentRunningMode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

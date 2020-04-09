@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssignIpv6Addresses response structure.
+ *
  * @method array getIpv6AddressSet() Obtain The list of `IPv6` addresses assigned to ENIs.
  * @method void setIpv6AddressSet(array $Ipv6AddressSet) Set The list of `IPv6` addresses assigned to ENIs.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AssignIpv6Addresses response structure.
  */
 class AssignIpv6AddressesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssignIpv6AddressesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Ipv6AddressSet The list of `IPv6` addresses assigned to ENIs.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class AssignIpv6AddressesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

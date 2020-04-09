@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTCPListeners request structure.
+ *
  * @method string getListenerName() Obtain Listener name.
  * @method void setListenerName(string $ListenerName) Set Listener name.
  * @method array getPorts() Obtain List of listener ports.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
  * @method array getRealServerPorts() Obtain List of origin server ports, which only supports the listeners of version 1.0 and connection group.
  * @method void setRealServerPorts(array $RealServerPorts) Set List of origin server ports, which only supports the listeners of version 1.0 and connection group.
- */
-
-/**
- *CreateTCPListeners request structure.
  */
 class CreateTCPListenersRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateTCPListenersRequest extends AbstractModel
      * @var array List of origin server ports, which only supports the listeners of version 1.0 and connection group.
      */
     public $RealServerPorts;
+
     /**
      * @param string $ListenerName Listener name.
      * @param array $Ports List of listener ports.
@@ -110,6 +109,7 @@ class CreateTCPListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

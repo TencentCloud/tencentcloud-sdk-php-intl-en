@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTagsOfInstanceIds request structure.
+ *
  * @method array getInstanceIds() Obtain List of instances.
  * @method void setInstanceIds(array $InstanceIds) Set List of instances.
  * @method integer getOffset() Obtain Pagination offset.
  * @method void setOffset(integer $Offset) Set Pagination offset.
  * @method integer getLimit() Obtain Number of entries per page.
  * @method void setLimit(integer $Limit) Set Number of entries per page.
- */
-
-/**
- *DescribeTagsOfInstanceIds request structure.
  */
 class DescribeTagsOfInstanceIdsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTagsOfInstanceIdsRequest extends AbstractModel
      * @var integer Number of entries per page.
      */
     public $Limit;
+
     /**
      * @param array $InstanceIds List of instances.
      * @param integer $Offset Pagination offset.
@@ -54,6 +53,7 @@ class DescribeTagsOfInstanceIdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

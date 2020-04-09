@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImportKeyPair request structure.
+ *
  * @method string getKeyName() Obtain Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
  * @method void setKeyName(string $KeyName) Set Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
  * @method integer getProjectId() Obtain The ID of the [project](https://cloud.tencent.com/document/product/378/10861) to which the created key pair belongs.<br><br>You can retrieve the project ID in two ways:<br><li>Query the project ID in [Project Management](https://console.cloud.tencent.com/project).<br><li>Call [DescribeProject](https://cloud.tencent.com/document/api/378/4400) and search for `projectId` in the response.
@@ -28,10 +30,6 @@ If you want to use the default project, specify 0 for the parameter.
 If you want to use the default project, specify 0 for the parameter.
  * @method string getPublicKey() Obtain Content of the public key in the key pair in the `OpenSSH RSA` format.
  * @method void setPublicKey(string $PublicKey) Set Content of the public key in the key pair in the `OpenSSH RSA` format.
- */
-
-/**
- *ImportKeyPair request structure.
  */
 class ImportKeyPairRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ If you want to use the default project, specify 0 for the parameter.
      * @var string Content of the public key in the key pair in the `OpenSSH RSA` format.
      */
     public $PublicKey;
+
     /**
      * @param string $KeyName Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
      * @param integer $ProjectId The ID of the [project](https://cloud.tencent.com/document/product/378/10861) to which the created key pair belongs.<br><br>You can retrieve the project ID in two ways:<br><li>Query the project ID in [Project Management](https://console.cloud.tencent.com/project).<br><li>Call [DescribeProject](https://cloud.tencent.com/document/api/378/4400) and search for `projectId` in the response.
@@ -62,6 +61,7 @@ If you want to use the default project, specify 0 for the parameter.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

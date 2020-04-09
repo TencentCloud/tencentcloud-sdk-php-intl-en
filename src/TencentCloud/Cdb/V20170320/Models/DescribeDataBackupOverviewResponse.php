@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDataBackupOverview response structure.
+ *
  * @method integer getDataBackupVolume() Obtain Total capacity of data backups in bytes in the current region (including automatic backups and manual backups).
  * @method void setDataBackupVolume(integer $DataBackupVolume) Set Total capacity of data backups in bytes in the current region (including automatic backups and manual backups).
  * @method integer getDataBackupCount() Obtain Total number of data backups in the current region.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManualBackupCount(integer $ManualBackupCount) Set Total number of manual backups in the current region.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDataBackupOverview response structure.
  */
 class DescribeDataBackupOverviewResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $DataBackupVolume Total capacity of data backups in bytes in the current region (including automatic backups and manual backups).
      * @param integer $DataBackupCount Total number of data backups in the current region.
@@ -86,6 +85,7 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

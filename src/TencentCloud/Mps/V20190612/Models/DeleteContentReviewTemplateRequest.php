@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteContentReviewTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a content audit template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a content audit template.
- */
-
-/**
- *DeleteContentReviewTemplate request structure.
  */
 class DeleteContentReviewTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteContentReviewTemplateRequest extends AbstractModel
      * @var integer Unique ID of a content audit template.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Unique ID of a content audit template.
      */
@@ -38,6 +37,7 @@ class DeleteContentReviewTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

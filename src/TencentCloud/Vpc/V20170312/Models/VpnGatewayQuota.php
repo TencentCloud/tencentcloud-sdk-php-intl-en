@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPN gateway quota object
+ *
  * @method integer getBandwidth() Obtain The bandwidth quota.
  * @method void setBandwidth(integer $Bandwidth) Set The bandwidth quota.
  * @method string getCname() Obtain The bandwidth quota name in Chinese.
  * @method void setCname(string $Cname) Set The bandwidth quota name in Chinese.
  * @method string getName() Obtain The bandwidth quota name in English.
  * @method void setName(string $Name) Set The bandwidth quota name in English.
- */
-
-/**
- *VPN gateway quota object
  */
 class VpnGatewayQuota extends AbstractModel
 {
@@ -45,6 +43,7 @@ class VpnGatewayQuota extends AbstractModel
      * @var string The bandwidth quota name in English.
      */
     public $Name;
+
     /**
      * @param integer $Bandwidth The bandwidth quota.
      * @param string $Cname The bandwidth quota name in Chinese.
@@ -54,6 +53,7 @@ class VpnGatewayQuota extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

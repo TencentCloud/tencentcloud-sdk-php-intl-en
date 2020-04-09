@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskResult response structure.
+ *
  * @method integer getTaskId() Obtain Job ID
  * @method void setTaskId(integer $TaskId) Set Job ID
  * @method string getResult() Obtain The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
  * @method void setResult(string $Result) Set The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTaskResult response structure.
  */
 class DescribeTaskResultResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTaskResultResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TaskId Job ID
      * @param string $Result The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
@@ -54,6 +53,7 @@ class DescribeTaskResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

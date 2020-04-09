@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of media file composing task.
+ *
  * @method string getFileType() Obtain File type, such as mp4 and mp3.
  * @method void setFileType(string $FileType) Set File type, such as mp4 and mp3.
  * @method string getFileId() Obtain Media file ID.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Default value: 0, which means "Other".</li>
  * @method string getExpireTime() Obtain Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setExpireTime(string $ExpireTime) Set Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *Output of media file composing task.
  */
 class ComposeMediaTaskOutput extends AbstractModel
 {
@@ -69,6 +67,7 @@ class ComposeMediaTaskOutput extends AbstractModel
      * @var string Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $ExpireTime;
+
     /**
      * @param string $FileType File type, such as mp4 and mp3.
      * @param string $FileId Media file ID.
@@ -82,6 +81,7 @@ class ComposeMediaTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

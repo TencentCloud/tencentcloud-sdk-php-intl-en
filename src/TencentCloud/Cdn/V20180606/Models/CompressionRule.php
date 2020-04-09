@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Compression rules configuration. Up to 100 entries can be set.
+ *
  * @method boolean getCompress() Obtain true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCompress(boolean $Compress) Set true: must be set as true, enables compression
@@ -46,10 +48,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 gzip: specifies Gzip compression
 brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Compression rules configuration. Up to 100 entries can be set.
  */
 class CompressionRule extends AbstractModel
 {
@@ -86,6 +84,7 @@ brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Algorithms;
+
     /**
      * @param boolean $Compress true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -106,6 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

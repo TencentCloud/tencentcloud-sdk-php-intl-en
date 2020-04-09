@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCertificate request structure.
+ *
  * @method integer getCertificateType() Obtain Certificate type. Where:
 0: basic authentication configuration;
 1: indicates client CA certificate;
@@ -40,10 +42,6 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
  * @method void setCertificateAlias(string $CertificateAlias) Set Certificate name
  * @method string getCertificateKey() Obtain Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
  * @method void setCertificateKey(string $CertificateKey) Set Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
- */
-
-/**
- *CreateCertificate request structure.
  */
 class CreateCertificateRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
      * @var string Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
      */
     public $CertificateKey;
+
     /**
      * @param integer $CertificateType Certificate type. Where:
 0: basic authentication configuration;
@@ -90,6 +89,7 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

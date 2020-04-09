@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Specifications of purchasable MongoDB instances
+ *
  * @method string getSpecCode() Obtain Specification information identifier
  * @method void setSpecCode(string $SpecCode) Set Specification information identifier
  * @method integer getStatus() Obtain Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxReplicateSetNodeNum(integer $MaxReplicateSetNodeNum) Set Maximum number of slave nodes in a shard
  * @method string getMachineType() Obtain Server type. Valid values: 0 (HIO), 4 (HIO10G)
  * @method void setMachineType(string $MachineType) Set Server type. Valid values: 0 (HIO), 4 (HIO10G)
- */
-
-/**
- *Specifications of purchasable MongoDB instances
  */
 class SpecItem extends AbstractModel
 {
@@ -171,6 +169,7 @@ class SpecItem extends AbstractModel
      * @var string Server type. Valid values: 0 (HIO), 4 (HIO10G)
      */
     public $MachineType;
+
     /**
      * @param string $SpecCode Specification information identifier
      * @param integer $Status Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
@@ -198,6 +197,7 @@ class SpecItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

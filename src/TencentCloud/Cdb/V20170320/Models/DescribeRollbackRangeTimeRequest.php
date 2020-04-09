@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRollbackRangeTime request structure.
+ *
  * @method array getInstanceIds() Obtain Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
- */
-
-/**
- *DescribeRollbackRangeTime request structure.
  */
 class DescribeRollbackRangeTimeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRollbackRangeTimeRequest extends AbstractModel
      * @var array Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -38,6 +37,7 @@ class DescribeRollbackRangeTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

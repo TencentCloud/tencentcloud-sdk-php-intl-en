@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Disk monitoring data of the instance
+ *
  * @method array getIoRatioPerSec() Obtain Time percentage of IO operations per second
  * @method void setIoRatioPerSec(array $IoRatioPerSec) Set Time percentage of IO operations per second
  * @method array getIoWaitTime() Obtain Average wait time of device I/O operations * 100 in milliseconds. For example, if the value is 201, the average wait time of I/O operations is 201/100 = 2.1 milliseconds.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRead(array $Read) Set Average number of read operations completed by the disk per second * 100. For example, if the value is 2,002, the average number of read operations completed by the disk per second is 2,002/100=20.2.
  * @method array getWrite() Obtain Average number of write operations completed by the disk per second * 100. For example, if the value is 30,001, the average number of write operations completed by the disk per second is 30,001/100=300.01.
  * @method void setWrite(array $Write) Set Average number of write operations completed by the disk per second * 100. For example, if the value is 30,001, the average number of write operations completed by the disk per second is 30,001/100=300.01.
- */
-
-/**
- *Disk monitoring data of the instance
  */
 class DeviceDiskInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeviceDiskInfo extends AbstractModel
      * @var array Average number of write operations completed by the disk per second * 100. For example, if the value is 30,001, the average number of write operations completed by the disk per second is 30,001/100=300.01.
      */
     public $Write;
+
     /**
      * @param array $IoRatioPerSec Time percentage of IO operations per second
      * @param array $IoWaitTime Average wait time of device I/O operations * 100 in milliseconds. For example, if the value is 201, the average wait time of I/O operations is 201/100 = 2.1 milliseconds.
@@ -62,6 +61,7 @@ class DeviceDiskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

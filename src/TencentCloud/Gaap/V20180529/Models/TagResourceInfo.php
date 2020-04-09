@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Resource information of the tag
+ *
  * @method string getResourceType() Obtain Resource types:
 `Proxy`: connections;
 `ProxyGroup`: connection groups;
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 `RealServer`: origin servers.
  * @method string getResourceId() Obtain Resource ID
  * @method void setResourceId(string $ResourceId) Set Resource ID
- */
-
-/**
- *Resource information of the tag
  */
 class TagResourceInfo extends AbstractModel
 {
@@ -47,6 +45,7 @@ class TagResourceInfo extends AbstractModel
      * @var string Resource ID
      */
     public $ResourceId;
+
     /**
      * @param string $ResourceType Resource types:
 `Proxy`: connections;
@@ -58,6 +57,7 @@ class TagResourceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

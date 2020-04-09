@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListKeys request structure.
+ *
 
- */
-
-/**
- *ListKeys request structure.
  */
 class ListKeysRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ListKeysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Versioning - array of classes
+ *
  * @method array getProtocols() Obtain Protocol and sale details
  * @method void setProtocols(array $Protocols) Set Protocol and sale details
  * @method string getType() Obtain Storage class. Valid values: SD (standard), HP (high-performance)
  * @method void setType(string $Type) Set Storage class. Valid values: SD (standard), HP (high-performance)
- */
-
-/**
- *Versioning - array of classes
  */
 class AvailableType extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AvailableType extends AbstractModel
      * @var string Storage class. Valid values: SD (standard), HP (high-performance)
      */
     public $Type;
+
     /**
      * @param array $Protocols Protocol and sale details
      * @param string $Type Storage class. Valid values: SD (standard), HP (high-performance)
@@ -46,6 +45,7 @@ class AvailableType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

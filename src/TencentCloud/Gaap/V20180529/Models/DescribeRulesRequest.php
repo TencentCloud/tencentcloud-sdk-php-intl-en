@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRules request structure.
+ *
  * @method string getListenerId() Obtain Layer-7 listener ID.
  * @method void setListenerId(string $ListenerId) Set Layer-7 listener ID.
- */
-
-/**
- *DescribeRules request structure.
  */
 class DescribeRulesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRulesRequest extends AbstractModel
      * @var string Layer-7 listener ID.
      */
     public $ListenerId;
+
     /**
      * @param string $ListenerId Layer-7 listener ID.
      */
@@ -38,6 +37,7 @@ class DescribeRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

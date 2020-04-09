@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComputeEnvActivities response structure.
+ *
  * @method array getActivitySet() Obtain List of activities in the compute environment
  * @method void setActivitySet(array $ActivitySet) Set List of activities in the compute environment
  * @method integer getTotalCount() Obtain Number of activities
  * @method void setTotalCount(integer $TotalCount) Set Number of activities
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeComputeEnvActivities response structure.
  */
 class DescribeComputeEnvActivitiesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeComputeEnvActivitiesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $ActivitySet List of activities in the compute environment
      * @param integer $TotalCount Number of activities
@@ -54,6 +53,7 @@ class DescribeComputeEnvActivitiesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Timestamp and its corresponding value
+ *
  * @method string getTime() Obtain Statistical point in time in forward rounding mode
 Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
  * @method void setTime(string $Time) Set Statistical point in time in forward rounding mode
 Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
  * @method float getValue() Obtain Data value
  * @method void setValue(float $Value) Set Data value
- */
-
-/**
- *Timestamp and its corresponding value
  */
 class TimestampData extends AbstractModel
 {
@@ -41,6 +39,7 @@ Taking the 5-minute granularity as an example, 13:35:00 indicates that the stati
      * @var float Data value
      */
     public $Value;
+
     /**
      * @param string $Time Statistical point in time in forward rounding mode
 Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
@@ -50,6 +49,7 @@ Taking the 5-minute granularity as an example, 13:35:00 indicates that the stati
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

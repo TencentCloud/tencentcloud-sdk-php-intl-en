@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountRemark request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-j8kv137v
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-j8kv137v
  * @method array getAccounts() Obtain Information of account for which to modify remarks
  * @method void setAccounts(array $Accounts) Set Information of account for which to modify remarks
- */
-
-/**
- *ModifyAccountRemark request structure.
  */
 class ModifyAccountRemarkRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAccountRemarkRequest extends AbstractModel
      * @var array Information of account for which to modify remarks
      */
     public $Accounts;
+
     /**
      * @param string $InstanceId Instance ID in the format of mssql-j8kv137v
      * @param array $Accounts Information of account for which to modify remarks
@@ -46,6 +45,7 @@ class ModifyAccountRemarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

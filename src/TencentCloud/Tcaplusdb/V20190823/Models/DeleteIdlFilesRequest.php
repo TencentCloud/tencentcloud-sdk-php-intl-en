@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteIdlFiles request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where IDL resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where IDL resides
  * @method array getIdlFiles() Obtain List of information of IDL files to be deleted
  * @method void setIdlFiles(array $IdlFiles) Set List of information of IDL files to be deleted
- */
-
-/**
- *DeleteIdlFiles request structure.
  */
 class DeleteIdlFilesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteIdlFilesRequest extends AbstractModel
      * @var array List of information of IDL files to be deleted
      */
     public $IdlFiles;
+
     /**
      * @param string $ClusterId ID of the cluster where IDL resides
      * @param array $IdlFiles List of information of IDL files to be deleted
@@ -46,6 +45,7 @@ class DeleteIdlFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

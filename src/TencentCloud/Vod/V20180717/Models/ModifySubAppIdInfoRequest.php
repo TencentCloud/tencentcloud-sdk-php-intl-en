@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubAppIdInfo request structure.
+ *
  * @method integer getSubAppId() Obtain Subapplication ID.
  * @method void setSubAppId(integer $SubAppId) Set Subapplication ID.
  * @method string getName() Obtain Subapplication name. Length limit: 40 characters.
  * @method void setName(string $Name) Set Subapplication name. Length limit: 40 characters.
  * @method string getDescription() Obtain Subapplication overview. Length limit: 300 characters.
  * @method void setDescription(string $Description) Set Subapplication overview. Length limit: 300 characters.
- */
-
-/**
- *ModifySubAppIdInfo request structure.
  */
 class ModifySubAppIdInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySubAppIdInfoRequest extends AbstractModel
      * @var string Subapplication overview. Length limit: 300 characters.
      */
     public $Description;
+
     /**
      * @param integer $SubAppId Subapplication ID.
      * @param string $Name Subapplication name. Length limit: 40 characters.
@@ -54,6 +53,7 @@ class ModifySubAppIdInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

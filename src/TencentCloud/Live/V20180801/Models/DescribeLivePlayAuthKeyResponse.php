@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLivePlayAuthKey response structure.
+ *
  * @method PlayAuthKeyInfo getPlayAuthKeyInfo() Obtain Playback authentication key information.
  * @method void setPlayAuthKeyInfo(PlayAuthKeyInfo $PlayAuthKeyInfo) Set Playback authentication key information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLivePlayAuthKey response structure.
  */
 class DescribeLivePlayAuthKeyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLivePlayAuthKeyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param PlayAuthKeyInfo $PlayAuthKeyInfo Playback authentication key information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeLivePlayAuthKeyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

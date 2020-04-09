@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRule request structure.
+ *
  * @method string getListenerId() Obtain Layer-7 listener ID
  * @method void setListenerId(string $ListenerId) Set Layer-7 listener ID
  * @method string getDomain() Obtain Domain name of the forwarding rule
@@ -38,10 +40,6 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
 If this field is not passed in, it indicates that the ForwardProtocol of the corresponding listener will be used.
  * @method string getForwardHost() Obtain Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
  * @method void setForwardHost(string $ForwardHost) Set Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
- */
-
-/**
- *CreateRule request structure.
  */
 class CreateRuleRequest extends AbstractModel
 {
@@ -90,6 +88,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
      * @var string Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
      */
     public $ForwardHost;
+
     /**
      * @param string $ListenerId Layer-7 listener ID
      * @param string $Domain Domain name of the forwarding rule
@@ -106,6 +105,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

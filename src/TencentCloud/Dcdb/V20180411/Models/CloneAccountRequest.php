@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloneAccount request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getSrcUser() Obtain Source user account name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstHost(string $DstHost) Set Target user host
  * @method string getDstDesc() Obtain Description of a target account
  * @method void setDstDesc(string $DstDesc) Set Description of a target account
- */
-
-/**
- *CloneAccount request structure.
  */
 class CloneAccountRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CloneAccountRequest extends AbstractModel
      * @var string Description of a target account
      */
     public $DstDesc;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $SrcUser Source user account name
@@ -78,6 +77,7 @@ class CloneAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

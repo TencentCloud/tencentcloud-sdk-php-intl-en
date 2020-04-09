@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of selected table
+ *
  * @method string getTableGroupId() Obtain ID of the table group where a table resides
  * @method void setTableGroupId(string $TableGroupId) Set ID of the table group where a table resides
  * @method string getTableName() Obtain Table name
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSize(integer $FileSize) Set Key rollback file size, which is only used for rollback
  * @method string getFileContent() Obtain Key rollback file content, which is only used for rollback
  * @method void setFileContent(string $FileContent) Set Key rollback file content, which is only used for rollback
- */
-
-/**
- *Information of selected table
  */
 class SelectedTableInfoNew extends AbstractModel
 {
@@ -122,6 +120,7 @@ class SelectedTableInfoNew extends AbstractModel
      * @var string Key rollback file content, which is only used for rollback
      */
     public $FileContent;
+
     /**
      * @param string $TableGroupId ID of the table group where a table resides
      * @param string $TableName Table name
@@ -142,6 +141,7 @@ class SelectedTableInfoNew extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

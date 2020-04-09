@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubAppIds response structure.
+ *
  * @method array getSubAppIdInfoSet() Obtain Subapplication information set.
  * @method void setSubAppIdInfoSet(array $SubAppIdInfoSet) Set Subapplication information set.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSubAppIds response structure.
  */
 class DescribeSubAppIdsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSubAppIdsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SubAppIdInfoSet Subapplication information set.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeSubAppIdsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

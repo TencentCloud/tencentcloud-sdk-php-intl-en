@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Protocol port template
+ *
  * @method string getServiceId() Obtain Protocol port ID, such as `ppm-f5n1f8da`.
  * @method void setServiceId(string $ServiceId) Set Protocol port ID, such as `ppm-f5n1f8da`.
  * @method string getServiceGroupId() Obtain Protocol port group ID, such as `ppmg-f5n1f8da`.
  * @method void setServiceGroupId(string $ServiceGroupId) Set Protocol port group ID, such as `ppmg-f5n1f8da`.
- */
-
-/**
- *Protocol port template
  */
 class ServiceTemplateSpecification extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ServiceTemplateSpecification extends AbstractModel
      * @var string Protocol port group ID, such as `ppmg-f5n1f8da`.
      */
     public $ServiceGroupId;
+
     /**
      * @param string $ServiceId Protocol port ID, such as `ppm-f5n1f8da`.
      * @param string $ServiceGroupId Protocol port group ID, such as `ppmg-f5n1f8da`.
@@ -46,6 +45,7 @@ class ServiceTemplateSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

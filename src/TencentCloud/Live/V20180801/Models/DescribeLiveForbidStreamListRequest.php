@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveForbidStreamList request structure.
+ *
  * @method integer getPageNum() Obtain Page number to get. Default value: 1.
  * @method void setPageNum(integer $PageNum) Set Page number to get. Default value: 1.
  * @method integer getPageSize() Obtain Number of entries per page. Maximum value: 100. 
@@ -26,10 +28,6 @@ Default value: 10.
  * @method void setPageSize(integer $PageSize) Set Number of entries per page. Maximum value: 100. 
 Value: any integer between 1 and 100.
 Default value: 10.
- */
-
-/**
- *DescribeLiveForbidStreamList request structure.
  */
 class DescribeLiveForbidStreamListRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ Value: any integer between 1 and 100.
 Default value: 10.
      */
     public $PageSize;
+
     /**
      * @param integer $PageNum Page number to get. Default value: 1.
      * @param integer $PageSize Number of entries per page. Maximum value: 100. 
@@ -54,6 +53,7 @@ Default value: 10.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

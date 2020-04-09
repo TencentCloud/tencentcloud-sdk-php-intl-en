@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Security group policy set
+ *
  * @method string getVersion() Obtain The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
  * @method void setVersion(string $Version) Set The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
  * @method array getEgress() Obtain Outbound policy.
  * @method void setEgress(array $Egress) Set Outbound policy.
  * @method array getIngress() Obtain Inbound policy.
  * @method void setIngress(array $Ingress) Set Inbound policy.
- */
-
-/**
- *Security group policy set
  */
 class SecurityGroupPolicySet extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SecurityGroupPolicySet extends AbstractModel
      * @var array Inbound policy.
      */
     public $Ingress;
+
     /**
      * @param string $Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
      * @param array $Egress Outbound policy.
@@ -54,6 +53,7 @@ class SecurityGroupPolicySet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

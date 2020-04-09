@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssignIpv6SubnetCidrBlock request structure.
+ *
  * @method string getVpcId() Obtain The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
  * @method void setVpcId(string $VpcId) Set The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
  * @method array getIpv6SubnetCidrBlocks() Obtain The assigned `IPv6` subnet IP range list.
  * @method void setIpv6SubnetCidrBlocks(array $Ipv6SubnetCidrBlocks) Set The assigned `IPv6` subnet IP range list.
- */
-
-/**
- *AssignIpv6SubnetCidrBlock request structure.
  */
 class AssignIpv6SubnetCidrBlockRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssignIpv6SubnetCidrBlockRequest extends AbstractModel
      * @var array The assigned `IPv6` subnet IP range list.
      */
     public $Ipv6SubnetCidrBlocks;
+
     /**
      * @param string $VpcId The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
      * @param array $Ipv6SubnetCidrBlocks The assigned `IPv6` subnet IP range list.
@@ -46,6 +45,7 @@ class AssignIpv6SubnetCidrBlockRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

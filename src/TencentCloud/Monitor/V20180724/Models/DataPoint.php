@@ -18,16 +18,14 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Monitoring data point
+ *
  * @method array getDimensions() Obtain Combination of instance object dimensions
  * @method void setDimensions(array $Dimensions) Set Combination of instance object dimensions
  * @method array getTimestamps() Obtain The array of timestamps indicating at which points in time there is data. Missing timestamps have no data points (i.e., missed)
  * @method void setTimestamps(array $Timestamps) Set The array of timestamps indicating at which points in time there is data. Missing timestamps have no data points (i.e., missed)
  * @method array getValues() Obtain The array of monitoring values, which is in one-to-one correspondence to Timestamps
  * @method void setValues(array $Values) Set The array of monitoring values, which is in one-to-one correspondence to Timestamps
- */
-
-/**
- *Monitoring data point
  */
 class DataPoint extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DataPoint extends AbstractModel
      * @var array The array of monitoring values, which is in one-to-one correspondence to Timestamps
      */
     public $Values;
+
     /**
      * @param array $Dimensions Combination of instance object dimensions
      * @param array $Timestamps The array of timestamps indicating at which points in time there is data. Missing timestamps have no data points (i.e., missed)
@@ -54,6 +53,7 @@ class DataPoint extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

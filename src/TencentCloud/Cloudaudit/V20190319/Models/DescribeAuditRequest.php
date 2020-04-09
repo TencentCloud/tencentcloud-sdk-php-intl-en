@@ -18,12 +18,10 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Request parameter structure of DescribeAudit
+ *
  * @method string getAuditName() Obtain Tracking set name
  * @method void setAuditName(string $AuditName) Set Tracking set name
- */
-
-/**
- *Request parameter structure of DescribeAudit
  */
 class DescribeAuditRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAuditRequest extends AbstractModel
      * @var string Tracking set name
      */
     public $AuditName;
+
     /**
      * @param string $AuditName Tracking set name
      */
@@ -38,6 +37,7 @@ class DescribeAuditRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AttachCcnInstances request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method array getInstances() Obtain List of associated network instances
  * @method void setInstances(array $Instances) Set List of associated network instances
  * @method string getCcnUin() Obtain The UIN (root account) of the CCN. By default, the current account belongs to the UIN
  * @method void setCcnUin(string $CcnUin) Set The UIN (root account) of the CCN. By default, the current account belongs to the UIN
- */
-
-/**
- *AttachCcnInstances request structure.
  */
 class AttachCcnInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AttachCcnInstancesRequest extends AbstractModel
      * @var string The UIN (root account) of the CCN. By default, the current account belongs to the UIN
      */
     public $CcnUin;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      * @param array $Instances List of associated network instances
@@ -54,6 +53,7 @@ class AttachCcnInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

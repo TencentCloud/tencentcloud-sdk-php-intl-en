@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConsumerGroup response structure.
+ *
  * @method ConsumerGroupResponse getResult() Obtain Returned consumer group information
  * @method void setResult(ConsumerGroupResponse $Result) Set Returned consumer group information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeConsumerGroup response structure.
  */
 class DescribeConsumerGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeConsumerGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param ConsumerGroupResponse $Result Returned consumer group information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeConsumerGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

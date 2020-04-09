@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAddressTemplateGroupAttribute request structure.
+ *
  * @method string getAddressTemplateGroupId() Obtain IP address template group instance ID, such as `ipmg-2uw6ujo6`.
  * @method void setAddressTemplateGroupId(string $AddressTemplateGroupId) Set IP address template group instance ID, such as `ipmg-2uw6ujo6`.
  * @method string getAddressTemplateGroupName() Obtain IP address template group name.
  * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) Set IP address template group name.
  * @method array getAddressTemplateIds() Obtain IP address template instance ID, such as `ipm-mdunqeb6`.
  * @method void setAddressTemplateIds(array $AddressTemplateIds) Set IP address template instance ID, such as `ipm-mdunqeb6`.
- */
-
-/**
- *ModifyAddressTemplateGroupAttribute request structure.
  */
 class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel
      * @var array IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public $AddressTemplateIds;
+
     /**
      * @param string $AddressTemplateGroupId IP address template group instance ID, such as `ipmg-2uw6ujo6`.
      * @param string $AddressTemplateGroupName IP address template group name.
@@ -54,6 +53,7 @@ class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

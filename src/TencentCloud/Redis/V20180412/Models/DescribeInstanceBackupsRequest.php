@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceBackups request structure.
+ *
  * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
  * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
  * @method integer getLimit() Obtain Instance list size. Default value: 20
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
  * @method array getStatus() Obtain 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
  * @method void setStatus(array $Status) Set 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
- */
-
-/**
- *DescribeInstanceBackups request structure.
  */
 class DescribeInstanceBackupsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
      * @var array 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
      */
     public $Status;
+
     /**
      * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
      * @param integer $Limit Instance list size. Default value: 20
@@ -78,6 +77,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

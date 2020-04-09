@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Error log details
+ *
  * @method string getUserName() Obtain Username
  * @method void setUserName(string $UserName) Set Username
  * @method string getDatabase() Obtain Database name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrTime(string $ErrTime) Set Error occurrence time
  * @method string getErrMsg() Obtain Error message
  * @method void setErrMsg(string $ErrMsg) Set Error message
- */
-
-/**
- *Error log details
  */
 class ErrLogDetail extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ErrLogDetail extends AbstractModel
      * @var string Error message
      */
     public $ErrMsg;
+
     /**
      * @param string $UserName Username
      * @param string $Database Database name
@@ -62,6 +61,7 @@ class ErrLogDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

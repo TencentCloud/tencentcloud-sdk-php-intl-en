@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRegions response structure.
+ *
  * @method integer getTotalCount() Obtain Number of queried AZs
  * @method void setTotalCount(integer $TotalCount) Set Number of queried AZs
  * @method array getRegionInfos() Obtain List of AZ query results
  * @method void setRegionInfos(array $RegionInfos) Set List of AZ query results
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeRegions response structure.
  */
 class DescribeRegionsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRegionsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of queried AZs
      * @param array $RegionInfos List of AZ query results
@@ -54,6 +53,7 @@ class DescribeRegionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

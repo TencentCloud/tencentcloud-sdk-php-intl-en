@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicalLBByInstanceId request structure.
+ *
  * @method array getInstanceIds() Obtain List of real server IDs.
  * @method void setInstanceIds(array $InstanceIds) Set List of real server IDs.
- */
-
-/**
- *DescribeClassicalLBByInstanceId request structure.
  */
 class DescribeClassicalLBByInstanceIdRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeClassicalLBByInstanceIdRequest extends AbstractModel
      * @var array List of real server IDs.
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds List of real server IDs.
      */
@@ -38,6 +37,7 @@ class DescribeClassicalLBByInstanceIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

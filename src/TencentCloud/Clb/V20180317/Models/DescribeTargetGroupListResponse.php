@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTargetGroupList response structure.
+ *
  * @method integer getTotalCount() Obtain Number of displayed results
  * @method void setTotalCount(integer $TotalCount) Set Number of displayed results
  * @method array getTargetGroupSet() Obtain Information set of displayed target groups
  * @method void setTargetGroupSet(array $TargetGroupSet) Set Information set of displayed target groups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTargetGroupList response structure.
  */
 class DescribeTargetGroupListResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTargetGroupListResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of displayed results
      * @param array $TargetGroupSet Information set of displayed target groups
@@ -54,6 +53,7 @@ class DescribeTargetGroupListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

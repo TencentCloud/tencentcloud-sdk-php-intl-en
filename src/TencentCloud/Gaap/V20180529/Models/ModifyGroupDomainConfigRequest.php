@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyGroupDomainConfig request structure.
+ *
  * @method string getGroupId() Obtain Connection group ID.
  * @method void setGroupId(string $GroupId) Set Connection group ID.
  * @method string getDefaultDnsIp() Obtain Default access IP or domain name of domain name resolution
  * @method void setDefaultDnsIp(string $DefaultDnsIp) Set Default access IP or domain name of domain name resolution
  * @method array getAccessRegionList() Obtain Nearest access region configuration.
  * @method void setAccessRegionList(array $AccessRegionList) Set Nearest access region configuration.
- */
-
-/**
- *ModifyGroupDomainConfig request structure.
  */
 class ModifyGroupDomainConfigRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyGroupDomainConfigRequest extends AbstractModel
      * @var array Nearest access region configuration.
      */
     public $AccessRegionList;
+
     /**
      * @param string $GroupId Connection group ID.
      * @param string $DefaultDnsIp Default access IP or domain name of domain name resolution
@@ -54,6 +53,7 @@ class ModifyGroupDomainConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

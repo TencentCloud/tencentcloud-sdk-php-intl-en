@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDefaultVpc request structure.
+ *
  * @method string getZone() Obtain The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
  * @method void setZone(string $Zone) Set The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
  * @method boolean getForce() Obtain Whether to forcibly return a default VPC
  * @method void setForce(boolean $Force) Set Whether to forcibly return a default VPC
- */
-
-/**
- *CreateDefaultVpc request structure.
  */
 class CreateDefaultVpcRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDefaultVpcRequest extends AbstractModel
      * @var boolean Whether to forcibly return a default VPC
      */
     public $Force;
+
     /**
      * @param string $Zone The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
      * @param boolean $Force Whether to forcibly return a default VPC
@@ -46,6 +45,7 @@ class CreateDefaultVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateDBInstances request structure.
+ *
  * @method string getZone() Obtain AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API
  * @method void setZone(string $Zone) Set AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API
  * @method integer getMemory() Obtain Memory size in GB
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances purchased at a time. Value range: 1–100. Default value: 1
  * @method string getDBVersion() Obtain SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
  * @method void setDBVersion(string $DBVersion) Set SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
- */
-
-/**
- *InquiryPriceCreateDBInstances request structure.
  */
 class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
      * @var string SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
      */
     public $DBVersion;
+
     /**
      * @param string $Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API
      * @param integer $Memory Memory size in GB
@@ -86,6 +85,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

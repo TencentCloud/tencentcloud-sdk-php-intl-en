@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Suspected segment identified during OCR-based text audit in content audit
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of suspected segment in seconds.
@@ -54,10 +56,6 @@ and will be deleted after `PicUrlExpireTime`).
 and will be deleted after `PicUrlExpireTime`).
  * @method string getPicUrlExpireTime() Obtain Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *Suspected segment identified during OCR-based text audit in content audit
  */
 class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 {
@@ -110,6 +108,7 @@ and will be deleted after `PicUrlExpireTime`).
      * @var string Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $PicUrlExpireTime;
+
     /**
      * @param float $StartTimeOffset Start time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -134,6 +133,7 @@ and will be deleted after `PicUrlExpireTime`).
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

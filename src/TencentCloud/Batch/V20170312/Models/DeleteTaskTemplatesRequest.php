@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTaskTemplates request structure.
+ *
  * @method array getTaskTemplateIds() Obtain This API is used to delete task template information.
  * @method void setTaskTemplateIds(array $TaskTemplateIds) Set This API is used to delete task template information.
- */
-
-/**
- *DeleteTaskTemplates request structure.
  */
 class DeleteTaskTemplatesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTaskTemplatesRequest extends AbstractModel
      * @var array This API is used to delete task template information.
      */
     public $TaskTemplateIds;
+
     /**
      * @param array $TaskTemplateIds This API is used to delete task template information.
      */
@@ -38,6 +37,7 @@ class DeleteTaskTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

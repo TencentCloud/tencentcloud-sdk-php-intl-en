@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Basic information of VOD media file
+ *
  * @method string getName() Obtain Media filename.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Media filename.
@@ -78,10 +80,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVid(string $Vid) Set Unique ID of LVB recording file
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Basic information of VOD media file
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -174,6 +172,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Vid;
+
     /**
      * @param string $Name Media filename.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -210,6 +209,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

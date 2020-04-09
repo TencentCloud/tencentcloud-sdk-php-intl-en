@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Binlog information
+ *
  * @method string getName() Obtain Binlog backup filename
  * @method void setName(string $Name) Set Binlog backup filename
  * @method integer getSize() Obtain Backup file size in bytes
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogStartTime(string $BinlogStartTime) Set Binlog file start file
  * @method string getBinlogFinishTime() Obtain Binlog file end time
  * @method void setBinlogFinishTime(string $BinlogFinishTime) Set Binlog file end time
- */
-
-/**
- *Binlog information
  */
 class BinlogInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class BinlogInfo extends AbstractModel
      * @var string Binlog file end time
      */
     public $BinlogFinishTime;
+
     /**
      * @param string $Name Binlog backup filename
      * @param integer $Size Backup file size in bytes
@@ -94,6 +93,7 @@ class BinlogInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

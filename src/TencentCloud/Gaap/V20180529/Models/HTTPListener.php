@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP listener information
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getListenerName() Obtain Listener name
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 2: terminating;
 3: adjusting origin server;
 4: modifying configuration.
- */
-
-/**
- *HTTP listener information
  */
 class HTTPListener extends AbstractModel
 {
@@ -81,6 +79,7 @@ class HTTPListener extends AbstractModel
 4: modifying configuration.
      */
     public $ListenerStatus;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
@@ -98,6 +97,7 @@ class HTTPListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

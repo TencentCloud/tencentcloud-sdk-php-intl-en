@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Node custom parameter
+ *
  * @method array getKubelet() Obtain Kubelet custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setKubelet(array $Kubelet) Set Kubelet custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
- */
-
-/**
- *Node custom parameter
  */
 class InstanceExtraArgs extends AbstractModel
 {
@@ -34,6 +32,7 @@ class InstanceExtraArgs extends AbstractModel
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public $Kubelet;
+
     /**
      * @param array $Kubelet Kubelet custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

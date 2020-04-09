@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateAlias request structure.
+ *
 
- */
-
-/**
- *UpdateAlias request structure.
  */
 class UpdateAliasRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class UpdateAliasRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

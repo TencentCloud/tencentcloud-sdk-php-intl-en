@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunctionLogs request structure.
+ *
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method integer getOffset() Obtain Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
  * @method LogSearchContext getSearchContext() Obtain Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
  * @method void setSearchContext(LogSearchContext $SearchContext) Set Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
- */
-
-/**
- *GetFunctionLogs request structure.
  */
 class GetFunctionLogsRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class GetFunctionLogsRequest extends AbstractModel
      * @var LogSearchContext Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
      */
     public $SearchContext;
+
     /**
      * @param string $FunctionName Function name
      * @param integer $Offset Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
@@ -126,6 +125,7 @@ class GetFunctionLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

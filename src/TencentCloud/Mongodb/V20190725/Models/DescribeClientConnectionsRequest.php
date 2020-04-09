@@ -18,12 +18,10 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClientConnections request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- */
-
-/**
- *DescribeClientConnections request structure.
  */
 class DescribeClientConnectionsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeClientConnectionsRequest extends AbstractModel
      * @var string Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      */
@@ -38,6 +37,7 @@ class DescribeClientConnectionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAutoRenewFlag request structure.
+ *
  * @method array getInstanceIds() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getAutoRenew() Obtain Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled).
  * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled).
- */
-
-/**
- *ModifyAutoRenewFlag request structure.
  */
 class ModifyAutoRenewFlagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
      * @var integer Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled).
      */
     public $AutoRenew;
+
     /**
      * @param array $InstanceIds Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $AutoRenew Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled).
@@ -46,6 +45,7 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

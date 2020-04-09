@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstancesProject request structure.
+ *
  * @method array getInstanceIds() Obtain List of IDs of instances to be modified. Instance ID is in the format of dcdbt-ow728lmc.
  * @method void setInstanceIds(array $InstanceIds) Set List of IDs of instances to be modified. Instance ID is in the format of dcdbt-ow728lmc.
  * @method integer getProjectId() Obtain ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
  * @method void setProjectId(integer $ProjectId) Set ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
- */
-
-/**
- *ModifyDBInstancesProject request structure.
  */
 class ModifyDBInstancesProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstancesProjectRequest extends AbstractModel
      * @var integer ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
      */
     public $ProjectId;
+
     /**
      * @param array $InstanceIds List of IDs of instances to be modified. Instance ID is in the format of dcdbt-ow728lmc.
      * @param integer $ProjectId ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
@@ -46,6 +45,7 @@ class ModifyDBInstancesProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

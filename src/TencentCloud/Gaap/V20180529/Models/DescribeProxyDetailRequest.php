@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyDetail request structure.
+ *
  * @method string getProxyId() Obtain Connection ID to be queried.
  * @method void setProxyId(string $ProxyId) Set Connection ID to be queried.
- */
-
-/**
- *DescribeProxyDetail request structure.
  */
 class DescribeProxyDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProxyDetailRequest extends AbstractModel
      * @var string Connection ID to be queried.
      */
     public $ProxyId;
+
     /**
      * @param string $ProxyId Connection ID to be queried.
      */
@@ -38,6 +37,7 @@ class DescribeProxyDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

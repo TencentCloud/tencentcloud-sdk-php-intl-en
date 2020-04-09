@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDomainCert request structure.
+ *
  * @method string getDomainName() Obtain Playback domain name.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
- */
-
-/**
- *DescribeLiveDomainCert request structure.
  */
 class DescribeLiveDomainCertRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLiveDomainCertRequest extends AbstractModel
      * @var string Playback domain name.
      */
     public $DomainName;
+
     /**
      * @param string $DomainName Playback domain name.
      */
@@ -38,6 +37,7 @@ class DescribeLiveDomainCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

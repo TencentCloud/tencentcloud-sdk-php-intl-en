@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetDetect request structure.
+ *
  * @method string getNetDetectId() Obtain The ID of a network detection instance, such as `netd-12345678`.
  * @method void setNetDetectId(string $NetDetectId) Set The ID of a network detection instance, such as `netd-12345678`.
  * @method string getNetDetectName() Obtain The name of a network detection instance. The maximum length is 60 characters.
@@ -50,10 +52,6 @@ If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID,
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
  * @method string getNetDetectDescription() Obtain Network detection description.
  * @method void setNetDetectDescription(string $NetDetectDescription) Set Network detection description.
- */
-
-/**
- *ModifyNetDetect request structure.
  */
 class ModifyNetDetectRequest extends AbstractModel
 {
@@ -96,6 +94,7 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
      * @var string Network detection description.
      */
     public $NetDetectDescription;
+
     /**
      * @param string $NetDetectId The ID of a network detection instance, such as `netd-12345678`.
      * @param string $NetDetectName The name of a network detection instance. The maximum length is 60 characters.
@@ -118,6 +117,7 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

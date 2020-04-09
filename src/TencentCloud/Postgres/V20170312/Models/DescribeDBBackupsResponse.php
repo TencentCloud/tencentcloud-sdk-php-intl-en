@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBBackups response structure.
+ *
  * @method integer getTotalCount() Obtain Number of backup files in the returned backup list
  * @method void setTotalCount(integer $TotalCount) Set Number of backup files in the returned backup list
  * @method array getBackupList() Obtain Backup list
  * @method void setBackupList(array $BackupList) Set Backup list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBBackups response structure.
  */
 class DescribeDBBackupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBBackupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of backup files in the returned backup list
      * @param array $BackupList Backup list
@@ -54,6 +53,7 @@ class DescribeDBBackupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

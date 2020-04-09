@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyContentReviewTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a content audit template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a content audit template.
  * @method string getName() Obtain Name of a content audit template. Length limit: 64 characters.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) Set Politically sensitive information detection control parameter.
  * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain Custom content audit control parameter.
  * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set Custom content audit control parameter.
- */
-
-/**
- *ModifyContentReviewTemplate request structure.
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @var UserDefineConfigureInfoForUpdate Custom content audit control parameter.
      */
     public $UserDefineConfigure;
+
     /**
      * @param integer $Definition Unique ID of a content audit template.
      * @param string $Name Name of a content audit template. Length limit: 64 characters.
@@ -86,6 +85,7 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

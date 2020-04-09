@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Slow log details
+ *
  * @method string getName() Obtain Backup filename
  * @method void setName(string $Name) Set Backup filename
  * @method integer getSize() Obtain Backup file size in bytes
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetUrl(string $InternetUrl) Set Download address on the public network
  * @method string getType() Obtain Log type. Value range: slowlog (slow log)
  * @method void setType(string $Type) Set Log type. Value range: slowlog (slow log)
- */
-
-/**
- *Slow log details
  */
 class SlowLogInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class SlowLogInfo extends AbstractModel
      * @var string Log type. Value range: slowlog (slow log)
      */
     public $Type;
+
     /**
      * @param string $Name Backup filename
      * @param integer $Size Backup file size in bytes
@@ -78,6 +77,7 @@ class SlowLogInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

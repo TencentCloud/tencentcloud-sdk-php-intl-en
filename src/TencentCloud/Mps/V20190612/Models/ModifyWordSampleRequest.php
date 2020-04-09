@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyWordSample request structure.
+ *
  * @method string getKeyword() Obtain Keyword. Length limit: 128 characters.
  * @method void setKeyword(string $Keyword) Set Keyword. Length limit: 128 characters.
  * @method array getUsages() Obtain <b>Keyword use case. Valid values:</b>
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
  * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
- */
-
-/**
- *ModifyWordSample request structure.
  */
 class ModifyWordSampleRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ class ModifyWordSampleRequest extends AbstractModel
      * @var AiSampleTagOperation Tag operation information.
      */
     public $TagOperationInfo;
+
     /**
      * @param string $Keyword Keyword. Length limit: 128 characters.
      * @param array $Usages <b>Keyword use case. Valid values:</b>
@@ -86,6 +85,7 @@ class ModifyWordSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

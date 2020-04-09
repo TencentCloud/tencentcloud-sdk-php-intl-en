@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstanceAttribute response structure.
+ *
  * @method DBInstance getDBInstance() Obtain Instance details.
  * @method void setDBInstance(DBInstance $DBInstance) Set Instance details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBInstanceAttribute response structure.
  */
 class DescribeDBInstanceAttributeResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDBInstanceAttributeResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param DBInstance $DBInstance Instance details.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeDBInstanceAttributeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

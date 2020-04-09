@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstances response structure.
+ *
  * @method string getDealId() Obtain Transaction ID
  * @method void setDealId(string $DealId) Set Transaction ID
  * @method array getInstanceIds() Obtain Instance ID (this field is during beta test and is not displayed in some regions)
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID (this field is during beta test and is not displayed in some regions)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateInstances response structure.
  */
 class CreateInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $DealId Transaction ID
      * @param array $InstanceIds Instance ID (this field is during beta test and is not displayed in some regions)
@@ -54,6 +53,7 @@ class CreateInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

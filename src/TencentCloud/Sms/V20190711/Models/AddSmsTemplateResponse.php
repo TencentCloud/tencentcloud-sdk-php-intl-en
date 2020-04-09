@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddSmsTemplate response structure.
+ *
  * @method AddTemplateStatus getAddTemplateStatus() Obtain SMS template addition response packet body
  * @method void setAddTemplateStatus(AddTemplateStatus $AddTemplateStatus) Set SMS template addition response packet body
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AddSmsTemplate response structure.
  */
 class AddSmsTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddSmsTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param AddTemplateStatus $AddTemplateStatus SMS template addition response packet body
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class AddSmsTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

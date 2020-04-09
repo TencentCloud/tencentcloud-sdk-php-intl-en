@@ -18,12 +18,10 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSpecInfo request structure.
+ *
  * @method string getZone() Obtain AZ to be queried
  * @method void setZone(string $Zone) Set AZ to be queried
- */
-
-/**
- *DescribeSpecInfo request structure.
  */
 class DescribeSpecInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSpecInfoRequest extends AbstractModel
      * @var string AZ to be queried
      */
     public $Zone;
+
     /**
      * @param string $Zone AZ to be queried
      */
@@ -38,6 +37,7 @@ class DescribeSpecInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

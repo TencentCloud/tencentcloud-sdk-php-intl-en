@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCertificate request structure.
+ *
  * @method string getCertificateId() Obtain ID of the certificate to be deleted.
  * @method void setCertificateId(string $CertificateId) Set ID of the certificate to be deleted.
- */
-
-/**
- *DeleteCertificate request structure.
  */
 class DeleteCertificateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteCertificateRequest extends AbstractModel
      * @var string ID of the certificate to be deleted.
      */
     public $CertificateId;
+
     /**
      * @param string $CertificateId ID of the certificate to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteCertificateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNamespace request structure.
+ *
  * @method string getNamespace() Obtain Namespace name
  * @method void setNamespace(string $Namespace) Set Namespace name
- */
-
-/**
- *DeleteNamespace request structure.
  */
 class DeleteNamespaceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNamespaceRequest extends AbstractModel
      * @var string Namespace name
      */
     public $Namespace;
+
     /**
      * @param string $Namespace Namespace name
      */
@@ -38,6 +37,7 @@ class DeleteNamespaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetAttachCcnInstances request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method string getCcnUin() Obtain The UIN (root account) to which the CCN belongs.
  * @method void setCcnUin(string $CcnUin) Set The UIN (root account) to which the CCN belongs.
  * @method array getInstances() Obtain The list of network instances that re-apply for association.
  * @method void setInstances(array $Instances) Set The list of network instances that re-apply for association.
- */
-
-/**
- *ResetAttachCcnInstances request structure.
  */
 class ResetAttachCcnInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResetAttachCcnInstancesRequest extends AbstractModel
      * @var array The list of network instances that re-apply for association.
      */
     public $Instances;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      * @param string $CcnUin The UIN (root account) to which the CCN belongs.
@@ -54,6 +53,7 @@ class ResetAttachCcnInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

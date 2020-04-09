@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstanceAttribute request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- */
-
-/**
- *DescribeDBInstanceAttribute request structure.
  */
 class DescribeDBInstanceAttributeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDBInstanceAttributeRequest extends AbstractModel
      * @var string Instance ID
      */
     public $DBInstanceId;
+
     /**
      * @param string $DBInstanceId Instance ID
      */
@@ -38,6 +37,7 @@ class DescribeDBInstanceAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

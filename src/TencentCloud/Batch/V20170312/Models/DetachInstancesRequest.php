@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachInstances request structure.
+ *
  * @method string getEnvId() Obtain Compute environment ID
  * @method void setEnvId(string $EnvId) Set Compute environment ID
  * @method array getInstanceIds() Obtain Instance ID list
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
- */
-
-/**
- *DetachInstances request structure.
  */
 class DetachInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetachInstancesRequest extends AbstractModel
      * @var array Instance ID list
      */
     public $InstanceIds;
+
     /**
      * @param string $EnvId Compute environment ID
      * @param array $InstanceIds Instance ID list
@@ -46,6 +45,7 @@ class DetachInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

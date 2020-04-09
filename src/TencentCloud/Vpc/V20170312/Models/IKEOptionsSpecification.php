@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
+ *
  * @method string getPropoEncryAlgorithm() Obtain Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
  * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) Set Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
  * @method string getPropoAuthenAlgorithm() Obtain Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKESaLifetimeSeconds(integer $IKESaLifetimeSeconds) Set IKE SA lifetime (in sec). Value range: 60-604800
  * @method string getIKEVersion() Obtain IKE version
  * @method void setIKEVersion(string $IKEVersion) Set IKE version
- */
-
-/**
- *Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
  */
 class IKEOptionsSpecification extends AbstractModel
 {
@@ -108,6 +106,7 @@ class IKEOptionsSpecification extends AbstractModel
      * @var string IKE version
      */
     public $IKEVersion;
+
     /**
      * @param string $PropoEncryAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
      * @param string $PropoAuthenAlgorithm Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
@@ -126,6 +125,7 @@ class IKEOptionsSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

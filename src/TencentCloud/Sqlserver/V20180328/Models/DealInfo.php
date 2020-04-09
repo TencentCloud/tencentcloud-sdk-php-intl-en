@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Order information
+ *
  * @method string getDealName() Obtain Order name
  * @method void setDealName(string $DealName) Set Order name
  * @method integer getCount() Obtain Number of items
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) Set Account
  * @method string getInstanceChargeType() Obtain Instance billing type
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type
- */
-
-/**
- *Order information
  */
 class DealInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DealInfo extends AbstractModel
      * @var string Instance billing type
      */
     public $InstanceChargeType;
+
     /**
      * @param string $DealName Order name
      * @param integer $Count Number of items
@@ -78,6 +77,7 @@ class DealInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

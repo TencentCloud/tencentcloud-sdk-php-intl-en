@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTables request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where the table to be dropped resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where the table to be dropped resides
  * @method array getSelectedTables() Obtain List of information of tables to be dropped
  * @method void setSelectedTables(array $SelectedTables) Set List of information of tables to be dropped
- */
-
-/**
- *DeleteTables request structure.
  */
 class DeleteTablesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTablesRequest extends AbstractModel
      * @var array List of information of tables to be dropped
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId ID of the cluster where the table to be dropped resides
      * @param array $SelectedTables List of information of tables to be dropped
@@ -46,6 +45,7 @@ class DeleteTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

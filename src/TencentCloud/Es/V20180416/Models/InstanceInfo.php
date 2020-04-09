@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance details
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
@@ -154,10 +156,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSecurityType(integer $SecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Instance details
  */
 class InstanceInfo extends AbstractModel
 {
@@ -436,6 +434,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SecurityType;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
@@ -510,6 +509,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

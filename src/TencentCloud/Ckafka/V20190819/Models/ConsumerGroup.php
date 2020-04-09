@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * User group entity
+ *
  * @method string getConsumerGroupName() Obtain User group name
  * @method void setConsumerGroupName(string $ConsumerGroupName) Set User group name
  * @method array getSubscribedInfo() Obtain Subscribed message entity
  * @method void setSubscribedInfo(array $SubscribedInfo) Set Subscribed message entity
- */
-
-/**
- *User group entity
  */
 class ConsumerGroup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConsumerGroup extends AbstractModel
      * @var array Subscribed message entity
      */
     public $SubscribedInfo;
+
     /**
      * @param string $ConsumerGroupName User group name
      * @param array $SubscribedInfo Subscribed message entity
@@ -46,6 +45,7 @@ class ConsumerGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

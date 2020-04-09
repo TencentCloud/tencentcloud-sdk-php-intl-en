@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeListenerStatistics response structure.
+ *
  * @method array getStatisticsData() Obtain Connection group statistics
  * @method void setStatisticsData(array $StatisticsData) Set Connection group statistics
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeListenerStatistics response structure.
  */
 class DescribeListenerStatisticsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeListenerStatisticsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $StatisticsData Connection group statistics
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeListenerStatisticsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

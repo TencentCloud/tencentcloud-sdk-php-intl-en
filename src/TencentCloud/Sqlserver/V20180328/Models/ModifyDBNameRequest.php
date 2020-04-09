@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBName request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getOldDBName() Obtain Old database name
  * @method void setOldDBName(string $OldDBName) Set Old database name
  * @method string getNewDBName() Obtain New name of database
  * @method void setNewDBName(string $NewDBName) Set New name of database
- */
-
-/**
- *ModifyDBName request structure.
  */
 class ModifyDBNameRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyDBNameRequest extends AbstractModel
      * @var string New name of database
      */
     public $NewDBName;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $OldDBName Old database name
@@ -54,6 +53,7 @@ class ModifyDBNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

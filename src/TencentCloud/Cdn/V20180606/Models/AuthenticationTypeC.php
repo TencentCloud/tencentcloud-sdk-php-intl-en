@@ -18,6 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Timestamp hotlink protection mode C configuration
+The access URL format of timestamp hotlink protection mode C is as follows: http://DomainName/md5hash/timestamp/FileName
+Here, timestamp is a hexadecimal timestamp in Unix format;
+md5hash: MD5 (custom key + file path + timestamp)
+ *
  * @method string getSecretKey() Obtain The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -36,13 +41,6 @@ If it contains an asterisk (*), this indicates all files.
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
  * @method void setFilterType(string $FilterType) Set whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
- */
-
-/**
- *Timestamp hotlink protection mode C configuration
-The access URL format of timestamp hotlink protection mode C is as follows: http://DomainName/md5hash/timestamp/FileName
-Here, timestamp is a hexadecimal timestamp in Unix format;
-md5hash: MD5 (custom key + file path + timestamp)
  */
 class AuthenticationTypeC extends AbstractModel
 {
@@ -70,6 +68,7 @@ If it contains an asterisk (*), this indicates all files.
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     public $FilterType;
+
     /**
      * @param string $SecretKey The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
@@ -85,6 +84,7 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

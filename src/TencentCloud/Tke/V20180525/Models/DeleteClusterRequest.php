@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCluster request structure.
+ *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getInstanceDeleteMode() Obtain Policy used to delete an instance in the cluster: terminate (terminates the instance. Only available for instances on pay-as-you-go CVMs); retain (only removes it from the cluster. The instance will be retained.)
  * @method void setInstanceDeleteMode(string $InstanceDeleteMode) Set Policy used to delete an instance in the cluster: terminate (terminates the instance. Only available for instances on pay-as-you-go CVMs); retain (only removes it from the cluster. The instance will be retained.)
- */
-
-/**
- *DeleteCluster request structure.
  */
 class DeleteClusterRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteClusterRequest extends AbstractModel
      * @var string Policy used to delete an instance in the cluster: terminate (terminates the instance. Only available for instances on pay-as-you-go CVMs); retain (only removes it from the cluster. The instance will be retained.)
      */
     public $InstanceDeleteMode;
+
     /**
      * @param string $ClusterId Cluster ID
      * @param string $InstanceDeleteMode Policy used to delete an instance in the cluster: terminate (terminates the instance. Only available for instances on pay-as-you-go CVMs); retain (only removes it from the cluster. The instance will be retained.)
@@ -46,6 +45,7 @@ class DeleteClusterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

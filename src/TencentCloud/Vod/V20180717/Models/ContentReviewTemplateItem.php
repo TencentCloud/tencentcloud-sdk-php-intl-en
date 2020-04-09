@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Content audit template details
+ *
  * @method integer getDefinition() Obtain Unique ID of content audit template.
  * @method void setDefinition(integer $Definition) Set Unique ID of content audit template.
  * @method string getName() Obtain Content audit template name. Length limit: 64 characters.
@@ -62,10 +64,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *Content audit template details
  */
 class ContentReviewTemplateItem extends AbstractModel
 {
@@ -138,6 +136,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $UpdateTime;
+
     /**
      * @param integer $Definition Unique ID of content audit template.
      * @param string $Name Content audit template name. Length limit: 64 characters.
@@ -166,6 +165,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

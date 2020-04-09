@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsFileSystem request structure.
+ *
  * @method string getZone() Obtain AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
  * @method void setZone(string $Zone) Set AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
  * @method string getNetInterface() Obtain Network type. Valid values: VPC (VPC), BASIC (basic network)
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) Set Custom file system name
  * @method array getResourceTags() Obtain File system tag
  * @method void setResourceTags(array $ResourceTags) Set File system tag
- */
-
-/**
- *CreateCfsFileSystem request structure.
  */
 class CreateCfsFileSystemRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @var array File system tag
      */
     public $ResourceTags;
+
     /**
      * @param string $Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
      * @param string $NetInterface Network type. Valid values: VPC (VPC), BASIC (basic network)
@@ -110,6 +109,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

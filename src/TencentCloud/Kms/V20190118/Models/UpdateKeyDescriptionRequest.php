@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateKeyDescription request structure.
+ *
  * @method string getDescription() Obtain 
  * @method void setDescription(string $Description) Set 
  * @method string getKeyId() Obtain ID of the CMK for which to modify the description
  * @method void setKeyId(string $KeyId) Set ID of the CMK for which to modify the description
- */
-
-/**
- *UpdateKeyDescription request structure.
  */
 class UpdateKeyDescriptionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateKeyDescriptionRequest extends AbstractModel
      * @var string ID of the CMK for which to modify the description
      */
     public $KeyId;
+
     /**
      * @param string $Description 
      * @param string $KeyId ID of the CMK for which to modify the description
@@ -46,6 +45,7 @@ class UpdateKeyDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

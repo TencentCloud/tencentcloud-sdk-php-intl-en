@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance account password information
+ *
  * @method string getUserName() Obtain Username
  * @method void setUserName(string $UserName) Set Username
  * @method string getPassword() Obtain Password
  * @method void setPassword(string $Password) Set Password
- */
-
-/**
- *Instance account password information
  */
 class AccountPassword extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccountPassword extends AbstractModel
      * @var string Password
      */
     public $Password;
+
     /**
      * @param string $UserName Username
      * @param string $Password Password
@@ -46,6 +45,7 @@ class AccountPassword extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

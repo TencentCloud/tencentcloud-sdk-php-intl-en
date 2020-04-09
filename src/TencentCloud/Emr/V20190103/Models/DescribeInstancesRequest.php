@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances request structure.
+ *
  * @method string getDisplayStrategy() Obtain Cluster filtering policy. Valid values:
 <li>clusterList: queries the list of clusters except terminated ones.</li>
 <li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsc(integer $Asc) Set Sorts according to `OrderField` in ascending or descending order. Valid values:
 <li>0: descending order.</li>
 <li>1: ascending order.</li>Default value: 0.
- */
-
-/**
- *DescribeInstances request structure.
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -97,6 +95,7 @@ class DescribeInstancesRequest extends AbstractModel
 <li>1: ascending order.</li>Default value: 0.
      */
     public $Asc;
+
     /**
      * @param string $DisplayStrategy Cluster filtering policy. Valid values:
 <li>clusterList: queries the list of clusters except terminated ones.</li>
@@ -118,6 +117,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

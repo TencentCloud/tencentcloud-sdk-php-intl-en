@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance tag. This parameter is used to bind tags to newly added instances.
+ *
  * @method string getKey() Obtain Tag key
  * @method void setKey(string $Key) Set Tag key
  * @method string getValue() Obtain Tag value
  * @method void setValue(string $Value) Set Tag value
- */
-
-/**
- *Instance tag. This parameter is used to bind tags to newly added instances.
  */
 class InstanceTag extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceTag extends AbstractModel
      * @var string Tag value
      */
     public $Value;
+
     /**
      * @param string $Key Tag key
      * @param string $Value Tag value
@@ -46,6 +45,7 @@ class InstanceTag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of permission groups bound to a file system
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getName() Obtain Permission group name
  * @method void setName(string $Name) Set Permission group name
- */
-
-/**
- *Information of permission groups bound to a file system
  */
 class PGroup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PGroup extends AbstractModel
      * @var string Permission group name
      */
     public $Name;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param string $Name Permission group name
@@ -46,6 +45,7 @@ class PGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

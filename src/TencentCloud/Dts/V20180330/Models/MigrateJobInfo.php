@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Migration task details
+ *
  * @method string getJobId() Obtain Data migration task ID
  * @method void setJobId(string $JobId) Set Data migration task ID
  * @method string getJobName() Obtain Data migration task name
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
  * @method MigrateDetailInfo getDetail() Obtain Task details
  * @method void setDetail(MigrateDetailInfo $Detail) Set Task details
- */
-
-/**
- *Migration task details
  */
 class MigrateJobInfo extends AbstractModel
 {
@@ -129,6 +127,7 @@ class MigrateJobInfo extends AbstractModel
      * @var MigrateDetailInfo Task details
      */
     public $Detail;
+
     /**
      * @param string $JobId Data migration task ID
      * @param string $JobName Data migration task name
@@ -150,6 +149,7 @@ class MigrateJobInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

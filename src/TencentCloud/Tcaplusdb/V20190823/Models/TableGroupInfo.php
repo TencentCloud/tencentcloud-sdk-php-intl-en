@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Table group details
+ *
  * @method string getTableGroupId() Obtain Table group ID
  * @method void setTableGroupId(string $TableGroupId) Set Table group ID
  * @method string getTableGroupName() Obtain Table group name
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableCount(integer $TableCount) Set Number of tables in table group
  * @method integer getTotalSize() Obtain Total table storage capacity in MB in table group
  * @method void setTotalSize(integer $TotalSize) Set Total table storage capacity in MB in table group
- */
-
-/**
- *Table group details
  */
 class TableGroupInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TableGroupInfo extends AbstractModel
      * @var integer Total table storage capacity in MB in table group
      */
     public $TotalSize;
+
     /**
      * @param string $TableGroupId Table group ID
      * @param string $TableGroupName Table group name
@@ -70,6 +69,7 @@ class TableGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

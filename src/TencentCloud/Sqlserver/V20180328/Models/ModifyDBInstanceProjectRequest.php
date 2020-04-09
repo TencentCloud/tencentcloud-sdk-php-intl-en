@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceProject request structure.
+ *
  * @method array getInstanceIdSet() Obtain Array of instance IDs in the format of mssql-j8kv137v
  * @method void setInstanceIdSet(array $InstanceIdSet) Set Array of instance IDs in the format of mssql-j8kv137v
  * @method integer getProjectId() Obtain Project ID. If this parameter is 0, the default project will be used
  * @method void setProjectId(integer $ProjectId) Set Project ID. If this parameter is 0, the default project will be used
- */
-
-/**
- *ModifyDBInstanceProject request structure.
  */
 class ModifyDBInstanceProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
      * @var integer Project ID. If this parameter is 0, the default project will be used
      */
     public $ProjectId;
+
     /**
      * @param array $InstanceIdSet Array of instance IDs in the format of mssql-j8kv137v
      * @param integer $ProjectId Project ID. If this parameter is 0, the default project will be used
@@ -46,6 +45,7 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

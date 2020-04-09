@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeJobs response structure.
+ *
  * @method array getJobSet() Obtain List of instances
  * @method void setJobSet(array $JobSet) Set List of instances
  * @method integer getTotalCount() Obtain Number of eligible instances
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeJobs response structure.
  */
 class DescribeJobsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeJobsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $JobSet List of instances
      * @param integer $TotalCount Number of eligible instances
@@ -54,6 +53,7 @@ class DescribeJobsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

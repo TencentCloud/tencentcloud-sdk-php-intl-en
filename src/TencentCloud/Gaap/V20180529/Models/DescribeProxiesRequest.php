@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxies request structure.
+ *
  * @method array getInstanceIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
  * @method void setInstanceIds(array $InstanceIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
  * @method integer getOffset() Obtain Offset. The default value is 0.
@@ -48,10 +50,6 @@ When this field does not exist, all connections are pulled, including both not-g
  * @method void setIndependent(integer $Independent) Set When this field is 1, only not-grouped connections are pulled.
 When this field is 0, only grouped connections are pulled.
 When this field does not exist, all connections are pulled, including both not-grouped and grouped connections.
- */
-
-/**
- *DescribeProxies request structure.
  */
 class DescribeProxiesRequest extends AbstractModel
 {
@@ -97,6 +95,7 @@ When this field is 0, only grouped connections are pulled.
 When this field does not exist, all connections are pulled, including both not-grouped and grouped connections.
      */
     public $Independent;
+
     /**
      * @param array $InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
      * @param integer $Offset Offset. The default value is 0.
@@ -118,6 +117,7 @@ When this field does not exist, all connections are pulled, including both not-g
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

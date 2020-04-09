@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDatabaseObjects request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow7t8lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow7t8lmc.
  * @method string getDbName() Obtain Database name, which can be obtained through the `DescribeDatabases` API.
  * @method void setDbName(string $DbName) Set Database name, which can be obtained through the `DescribeDatabases` API.
- */
-
-/**
- *DescribeDatabaseObjects request structure.
  */
 class DescribeDatabaseObjectsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDatabaseObjectsRequest extends AbstractModel
      * @var string Database name, which can be obtained through the `DescribeDatabases` API.
      */
     public $DbName;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow7t8lmc.
      * @param string $DbName Database name, which can be obtained through the `DescribeDatabases` API.
@@ -46,6 +45,7 @@ class DescribeDatabaseObjectsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

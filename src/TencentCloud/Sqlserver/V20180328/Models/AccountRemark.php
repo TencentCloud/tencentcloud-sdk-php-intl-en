@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Account remarks
+ *
  * @method string getUserName() Obtain Account name
  * @method void setUserName(string $UserName) Set Account name
  * @method string getRemark() Obtain New remarks of account
  * @method void setRemark(string $Remark) Set New remarks of account
- */
-
-/**
- *Account remarks
  */
 class AccountRemark extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccountRemark extends AbstractModel
      * @var string New remarks of account
      */
     public $Remark;
+
     /**
      * @param string $UserName Account name
      * @param string $Remark New remarks of account
@@ -46,6 +45,7 @@ class AccountRemark extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

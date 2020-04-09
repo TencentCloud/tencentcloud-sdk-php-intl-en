@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Protocol port template
+ *
  * @method string getServiceTemplateId() Obtain Protocol port instance ID, such as `ppm-f5n1f8da`.
  * @method void setServiceTemplateId(string $ServiceTemplateId) Set Protocol port instance ID, such as `ppm-f5n1f8da`.
  * @method string getServiceTemplateName() Obtain Template name.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceSet(array $ServiceSet) Set Protocol port information.
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
- */
-
-/**
- *Protocol port template
  */
 class ServiceTemplate extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ServiceTemplate extends AbstractModel
      * @var string Creation Time.
      */
     public $CreatedTime;
+
     /**
      * @param string $ServiceTemplateId Protocol port instance ID, such as `ppm-f5n1f8da`.
      * @param string $ServiceTemplateName Template name.
@@ -62,6 +61,7 @@ class ServiceTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Statistics used to describe the instance
+ *
  * @method string getInstanceType() Obtain Type of instance
  * @method void setInstanceType(string $InstanceType) Set Type of instance
  * @method integer getInstanceCount() Obtain Number of instances
  * @method void setInstanceCount(integer $InstanceCount) Set Number of instances
- */
-
-/**
- *Statistics used to describe the instance
  */
 class InstanceStatistic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceStatistic extends AbstractModel
      * @var integer Number of instances
      */
     public $InstanceCount;
+
     /**
      * @param string $InstanceType Type of instance
      * @param integer $InstanceCount Number of instances
@@ -46,6 +45,7 @@ class InstanceStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

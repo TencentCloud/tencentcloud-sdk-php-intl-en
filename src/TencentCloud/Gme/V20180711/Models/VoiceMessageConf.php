@@ -18,14 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Configuration information of voice messaging and speech-to-text
+ *
  * @method string getStatus() Obtain Voice messaging and speech-to-text status. Valid values: open, close
  * @method void setStatus(string $Status) Set Voice messaging and speech-to-text status. Valid values: open, close
  * @method string getLanguage() Obtain Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
  * @method void setLanguage(string $Language) Set Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
- */
-
-/**
- *Configuration information of voice messaging and speech-to-text
  */
 class VoiceMessageConf extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VoiceMessageConf extends AbstractModel
      * @var string Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
      */
     public $Language;
+
     /**
      * @param string $Status Voice messaging and speech-to-text status. Valid values: open, close
      * @param string $Language Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
@@ -46,6 +45,7 @@ class VoiceMessageConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

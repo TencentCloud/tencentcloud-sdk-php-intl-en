@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Returned user entity
+ *
  * @method array getUsers() Obtain List of eligible users
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUsers(array $Users) Set List of eligible users
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getTotalCount() Obtain Total number of eligible users
  * @method void setTotalCount(integer $TotalCount) Set Total number of eligible users
- */
-
-/**
- *Returned user entity
  */
 class UserResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer Total number of eligible users
      */
     public $TotalCount;
+
     /**
      * @param array $Users List of eligible users
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

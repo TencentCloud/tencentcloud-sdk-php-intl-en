@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Type of an animated image generating task.
+ *
  * @method integer getDefinition() Obtain Animated image generating template ID.
  * @method void setDefinition(integer $Definition) Set Animated image generating template ID.
  * @method float getStartTimeOffset() Obtain Start time of an animated image in a video in seconds.
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOutputObjectPath() Obtain Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
  * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
- */
-
-/**
- *Type of an animated image generating task.
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
@@ -62,6 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
      */
     public $OutputObjectPath;
+
     /**
      * @param integer $Definition Animated image generating template ID.
      * @param float $StartTimeOffset Start time of an animated image in a video in seconds.
@@ -74,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Partition entity
+ *
  * @method integer getPartitionId() Obtain Partition ID
  * @method void setPartitionId(integer $PartitionId) Set Partition ID
- */
-
-/**
- *Partition entity
  */
 class Partition extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Partition extends AbstractModel
      * @var integer Partition ID
      */
     public $PartitionId;
+
     /**
      * @param integer $PartitionId Partition ID
      */
@@ -38,6 +37,7 @@ class Partition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

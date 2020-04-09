@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Range GETs configuration which is enabled by default
+ *
  * @method string getSwitch() Obtain Range GETs configuration switch
 on: enabled
 off: disabled
  * @method void setSwitch(string $Switch) Set Range GETs configuration switch
 on: enabled
 off: disabled
- */
-
-/**
- *Range GETs configuration which is enabled by default
  */
 class RangeOriginPull extends AbstractModel
 {
@@ -37,6 +35,7 @@ on: enabled
 off: disabled
      */
     public $Switch;
+
     /**
      * @param string $Switch Range GETs configuration switch
 on: enabled
@@ -46,6 +45,7 @@ off: disabled
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

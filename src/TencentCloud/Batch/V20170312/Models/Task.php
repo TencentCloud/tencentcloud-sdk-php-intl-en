@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task
+ *
  * @method Application getApplication() Obtain Application information
  * @method void setApplication(Application $Application) Set Application information
  * @method string getTaskName() Obtain Job name, which should be unique within instance
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestartComputeNode(boolean $RestartComputeNode) Set Restarts the compute node after the task is completed. This is suitable for specifying the compute environment for task execution.
  * @method integer getResourceMaxRetryCount() Obtain Maximum number of retry attempts after failing to create computing resources such as the CVM in the task launch process. Default value: 0.
  * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) Set Maximum number of retry attempts after failing to create computing resources such as the CVM in the task launch process. Default value: 0.
- */
-
-/**
- *Task
  */
 class Task extends AbstractModel
 {
@@ -150,6 +148,7 @@ class Task extends AbstractModel
      * @var integer Maximum number of retry attempts after failing to create computing resources such as the CVM in the task launch process. Default value: 0.
      */
     public $ResourceMaxRetryCount;
+
     /**
      * @param Application $Application Application information
      * @param string $TaskName Job name, which should be unique within instance
@@ -174,6 +173,7 @@ class Task extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

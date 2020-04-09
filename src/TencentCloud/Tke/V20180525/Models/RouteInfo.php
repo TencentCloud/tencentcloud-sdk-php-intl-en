@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Object of cluster route
+ *
  * @method string getRouteTableName() Obtain Route table name.
  * @method void setRouteTableName(string $RouteTableName) Set Route table name.
  * @method string getDestinationCidrBlock() Obtain Destination CIDR.
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set Destination CIDR.
  * @method string getGatewayIp() Obtain Next hop address.
  * @method void setGatewayIp(string $GatewayIp) Set Next hop address.
- */
-
-/**
- *Object of cluster route
  */
 class RouteInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RouteInfo extends AbstractModel
      * @var string Next hop address.
      */
     public $GatewayIp;
+
     /**
      * @param string $RouteTableName Route table name.
      * @param string $DestinationCidrBlock Destination CIDR.
@@ -54,6 +53,7 @@ class RouteInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestoreInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-j8kv137v
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-j8kv137v
  * @method integer getBackupId() Obtain Backup file ID, which can be obtained through the `Id` field in the returned value of the `DescribeBackups` API
  * @method void setBackupId(integer $BackupId) Set Backup file ID, which can be obtained through the `Id` field in the returned value of the `DescribeBackups` API
- */
-
-/**
- *RestoreInstance request structure.
  */
 class RestoreInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RestoreInstanceRequest extends AbstractModel
      * @var integer Backup file ID, which can be obtained through the `Id` field in the returned value of the `DescribeBackups` API
      */
     public $BackupId;
+
     /**
      * @param string $InstanceId Instance ID in the format of mssql-j8kv137v
      * @param integer $BackupId Backup file ID, which can be obtained through the `Id` field in the returned value of the `DescribeBackups` API
@@ -46,6 +45,7 @@ class RestoreInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

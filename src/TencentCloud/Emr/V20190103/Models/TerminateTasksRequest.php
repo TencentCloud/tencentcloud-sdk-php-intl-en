@@ -18,14 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateTasks request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method array getResourceIds() Obtain List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
  * @method void setResourceIds(array $ResourceIds) Set List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
- */
-
-/**
- *TerminateTasks request structure.
  */
 class TerminateTasksRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TerminateTasksRequest extends AbstractModel
      * @var array List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
      */
     public $ResourceIds;
+
     /**
      * @param string $InstanceId Instance ID.
      * @param array $ResourceIds List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
@@ -46,6 +45,7 @@ class TerminateTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

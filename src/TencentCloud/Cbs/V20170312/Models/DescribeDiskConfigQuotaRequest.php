@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskConfigQuota request structure.
+ *
  * @method string getInquiryType() Obtain Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
  * @method void setInquiryType(string $InquiryType) Set Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
  * @method array getZones() Obtain Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPU(integer $CPU) Set Instance CPU cores.
  * @method integer getMemory() Obtain Instance memory size.
  * @method void setMemory(integer $Memory) Set Instance memory size.
- */
-
-/**
- *DescribeDiskConfigQuota request structure.
  */
 class DescribeDiskConfigQuotaRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
      * @var integer Instance memory size.
      */
     public $Memory;
+
     /**
      * @param string $InquiryType Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
      * @param array $Zones Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
@@ -94,6 +93,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

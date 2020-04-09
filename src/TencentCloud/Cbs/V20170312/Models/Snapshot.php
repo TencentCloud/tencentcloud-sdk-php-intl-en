@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The details of a snapshot
+ *
  * @method string getSnapshotId() Obtain Snapshot ID.
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID.
  * @method Placement getPlacement() Obtain Location of the snapshot.
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotType(string $SnapshotType) Set Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
  * @method integer getShareReference() Obtain Number of snapshots currently shared
  * @method void setShareReference(integer $ShareReference) Set Number of snapshots currently shared
- */
-
-/**
- *The details of a snapshot
  */
 class Snapshot extends AbstractModel
 {
@@ -150,6 +148,7 @@ class Snapshot extends AbstractModel
      * @var integer Number of snapshots currently shared
      */
     public $ShareReference;
+
     /**
      * @param string $SnapshotId Snapshot ID.
      * @param Placement $Placement Location of the snapshot.
@@ -174,6 +173,7 @@ class Snapshot extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

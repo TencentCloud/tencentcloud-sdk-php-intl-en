@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDirectConnectGatewayCcnRoutes request structure.
+ *
  * @method string getDirectConnectGatewayId() Obtain The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
  * @method array getRoutes() Obtain The list of IDC IP range that must be connected
  * @method void setRoutes(array $Routes) Set The list of IDC IP range that must be connected
- */
-
-/**
- *CreateDirectConnectGatewayCcnRoutes request structure.
  */
 class CreateDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDirectConnectGatewayCcnRoutesRequest extends AbstractModel
      * @var array The list of IDC IP range that must be connected
      */
     public $Routes;
+
     /**
      * @param string $DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
      * @param array $Routes The list of IDC IP range that must be connected
@@ -46,6 +45,7 @@ class CreateDirectConnectGatewayCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

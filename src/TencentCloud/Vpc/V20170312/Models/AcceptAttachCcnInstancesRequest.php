@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AcceptAttachCcnInstances request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method array getInstances() Obtain List of associated instances.
  * @method void setInstances(array $Instances) Set List of associated instances.
- */
-
-/**
- *AcceptAttachCcnInstances request structure.
  */
 class AcceptAttachCcnInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AcceptAttachCcnInstancesRequest extends AbstractModel
      * @var array List of associated instances.
      */
     public $Instances;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      * @param array $Instances List of associated instances.
@@ -46,6 +45,7 @@ class AcceptAttachCcnInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

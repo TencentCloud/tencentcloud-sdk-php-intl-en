@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Queries active push information
+ *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method array getPublishTimeList() Obtain Push time list
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) Set Application name.
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
- */
-
-/**
- *Queries active push information
  */
 class StreamOnlineInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class StreamOnlineInfo extends AbstractModel
      * @var string Push domain name.
      */
     public $DomainName;
+
     /**
      * @param string $StreamName Stream name.
      * @param array $PublishTimeList Push time list
@@ -62,6 +61,7 @@ class StreamOnlineInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

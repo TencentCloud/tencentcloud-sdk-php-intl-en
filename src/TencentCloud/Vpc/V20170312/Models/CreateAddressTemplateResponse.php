@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAddressTemplate response structure.
+ *
  * @method AddressTemplate getAddressTemplate() Obtain The template object of the IP address.
  * @method void setAddressTemplate(AddressTemplate $AddressTemplate) Set The template object of the IP address.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateAddressTemplate response structure.
  */
 class CreateAddressTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAddressTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param AddressTemplate $AddressTemplate The template object of the IP address.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateAddressTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

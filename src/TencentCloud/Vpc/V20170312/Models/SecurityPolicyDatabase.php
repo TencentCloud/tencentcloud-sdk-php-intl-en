@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SecurityPolicyDatabase policy
+ *
  * @method string getLocalCidrBlock() Obtain Local IP range
  * @method void setLocalCidrBlock(string $LocalCidrBlock) Set Local IP range
  * @method array getRemoteCidrBlock() Obtain Opposite IP range
  * @method void setRemoteCidrBlock(array $RemoteCidrBlock) Set Opposite IP range
- */
-
-/**
- *SecurityPolicyDatabase policy
  */
 class SecurityPolicyDatabase extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SecurityPolicyDatabase extends AbstractModel
      * @var array Opposite IP range
      */
     public $RemoteCidrBlock;
+
     /**
      * @param string $LocalCidrBlock Local IP range
      * @param array $RemoteCidrBlock Opposite IP range
@@ -46,6 +45,7 @@ class SecurityPolicyDatabase extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

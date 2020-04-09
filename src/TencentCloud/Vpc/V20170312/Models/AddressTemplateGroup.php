@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP address template group
+ *
  * @method string getAddressTemplateGroupName() Obtain IP address template group name.
  * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) Set IP address template group name.
  * @method string getAddressTemplateGroupId() Obtain IP address template group instance ID, such as `ipmg-dih8xdbq`.
@@ -26,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressTemplateIdSet(array $AddressTemplateIdSet) Set IP address template ID.
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
- */
-
-/**
- *IP address template group
+ * @method array getAddressTemplateSet() Obtain IP address template instance
+ * @method void setAddressTemplateSet(array $AddressTemplateSet) Set IP address template instance
  */
 class AddressTemplateGroup extends AbstractModel
 {
@@ -52,16 +52,24 @@ class AddressTemplateGroup extends AbstractModel
      * @var string Creation Time.
      */
     public $CreatedTime;
+
+    /**
+     * @var array IP address template instance
+     */
+    public $AddressTemplateSet;
+
     /**
      * @param string $AddressTemplateGroupName IP address template group name.
      * @param string $AddressTemplateGroupId IP address template group instance ID, such as `ipmg-dih8xdbq`.
      * @param array $AddressTemplateIdSet IP address template ID.
      * @param string $CreatedTime Creation Time.
+     * @param array $AddressTemplateSet IP address template instance
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -84,6 +92,15 @@ class AddressTemplateGroup extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("AddressTemplateSet",$param) and $param["AddressTemplateSet"] !== null) {
+            $this->AddressTemplateSet = [];
+            foreach ($param["AddressTemplateSet"] as $key => $value){
+                $obj = new AddressTemplateItem();
+                $obj->deserialize($value);
+                array_push($this->AddressTemplateSet, $obj);
+            }
         }
     }
 }

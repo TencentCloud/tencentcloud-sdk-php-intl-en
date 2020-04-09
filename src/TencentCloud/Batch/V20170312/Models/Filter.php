@@ -18,14 +18,7 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() Obtain Filters.
- * @method void setName(string $Name) Set Filters.
- * @method array getValues() Obtain Filter values.
- * @method void setValues(array $Values) Set Filter values.
- */
-
-/**
- *> Key-value pair filters used for conditional queries, such as filtering results by ID, name, and state.
+ * > Key-value pair filters used for conditional queries, such as filtering results by ID, name, and state.
 > * If there are multiple `Filter` parameters, they are evaluated using the logical `AND` operator.
 > * If a `Filter` contains multiple `Values`, they are evaluated using the logical `OR` operator.
 >
@@ -36,6 +29,11 @@ Filters.0.Name=zone
 &Filters.1.Name=instance-charge-type
 &Filters.1.Values.0=POSTPAID_BY_HOUR
 ```
+ *
+ * @method string getName() Obtain Filters.
+ * @method void setName(string $Name) Set Filters.
+ * @method array getValues() Obtain Filter values.
+ * @method void setValues(array $Values) Set Filter values.
  */
 class Filter extends AbstractModel
 {
@@ -48,6 +46,7 @@ class Filter extends AbstractModel
      * @var array Filter values.
      */
     public $Values;
+
     /**
      * @param string $Name Filters.
      * @param array $Values Filter values.
@@ -56,6 +55,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Response for getting SMS signature information
+ *
  * @method integer getSignId() Obtain Signature ID
  * @method void setSignId(integer $SignId) Set Signature ID
  * @method integer getInternational() Obtain Whether it is Global SMS. Valid values:
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignName(string $SignName) Set Signature name.
  * @method integer getCreateTime() Obtain Application submission time in the format of UNIX timestamp in seconds.
  * @method void setCreateTime(integer $CreateTime) Set Application submission time in the format of UNIX timestamp in seconds.
- */
-
-/**
- *Response for getting SMS signature information
  */
 class DescribeSignListStatus extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeSignListStatus extends AbstractModel
      * @var integer Application submission time in the format of UNIX timestamp in seconds.
      */
     public $CreateTime;
+
     /**
      * @param integer $SignId Signature ID
      * @param integer $International Whether it is Global SMS. Valid values:
@@ -94,6 +93,7 @@ class DescribeSignListStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

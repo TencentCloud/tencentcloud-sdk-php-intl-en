@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDesiredCapacity request structure.
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
  * @method integer getDesiredCapacity() Obtain Desired capacity
  * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired capacity
- */
-
-/**
- *ModifyDesiredCapacity request structure.
  */
 class ModifyDesiredCapacityRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDesiredCapacityRequest extends AbstractModel
      * @var integer Desired capacity
      */
     public $DesiredCapacity;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param integer $DesiredCapacity Desired capacity
@@ -46,6 +45,7 @@ class ModifyDesiredCapacityRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

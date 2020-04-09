@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetPassword request structure.
+ *
  * @method string getInstanceId() Obtain Redis instance ID
  * @method void setInstanceId(string $InstanceId) Set Redis instance ID
  * @method string getPassword() Obtain Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
  * @method void setPassword(string $Password) Set Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
  * @method boolean getNoAuth() Obtain Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
  * @method void setNoAuth(boolean $NoAuth) Set Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
- */
-
-/**
- *ResetPassword request structure.
  */
 class ResetPasswordRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResetPasswordRequest extends AbstractModel
      * @var boolean Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
      */
     public $NoAuth;
+
     /**
      * @param string $InstanceId Redis instance ID
      * @param string $Password Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
@@ -54,6 +53,7 @@ class ResetPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

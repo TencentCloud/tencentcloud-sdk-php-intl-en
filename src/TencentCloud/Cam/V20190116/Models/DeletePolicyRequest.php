@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePolicy request structure.
+ *
  * @method array getPolicyId() Obtain Array. Array elements are policy IDs. Policies can be deleted in a batch
  * @method void setPolicyId(array $PolicyId) Set Array. Array elements are policy IDs. Policies can be deleted in a batch
- */
-
-/**
- *DeletePolicy request structure.
  */
 class DeletePolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeletePolicyRequest extends AbstractModel
      * @var array Array. Array elements are policy IDs. Policies can be deleted in a batch
      */
     public $PolicyId;
+
     /**
      * @param array $PolicyId Array. Array elements are policy IDs. Policies can be deleted in a batch
      */
@@ -38,6 +37,7 @@ class DeletePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

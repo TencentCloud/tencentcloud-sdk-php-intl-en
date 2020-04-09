@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of eligible instances. If the results are returned in multiple pages, this value will be the number of all eligible instances but not the number of instances returned according to the current values of `Limit` and `Offset`
  * @method void setTotalCount(integer $TotalCount) Set Total number of eligible instances. If the results are returned in multiple pages, this value will be the number of all eligible instances but not the number of instances returned according to the current values of `Limit` and `Offset`
  * @method array getDBInstances() Obtain Instance list
  * @method void setDBInstances(array $DBInstances) Set Instance list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBInstances response structure.
  */
 class DescribeDBInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of eligible instances. If the results are returned in multiple pages, this value will be the number of all eligible instances but not the number of instances returned according to the current values of `Limit` and `Offset`
      * @param array $DBInstances Instance list
@@ -54,6 +53,7 @@ class DescribeDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

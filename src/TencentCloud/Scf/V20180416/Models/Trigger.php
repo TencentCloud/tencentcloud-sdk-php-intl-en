@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Trigger type
+ *
  * @method string getModTime() Obtain Latest modification time of the trigger
  * @method void setModTime(string $ModTime) Set Latest modification time of the trigger
  * @method string getType() Obtain Trigger type
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) Set Enabling switch
  * @method string getCustomArgument() Obtain Custom parameter
  * @method void setCustomArgument(string $CustomArgument) Set Custom parameter
- */
-
-/**
- *Trigger type
  */
 class Trigger extends AbstractModel
 {
@@ -73,6 +71,7 @@ class Trigger extends AbstractModel
      * @var string Custom parameter
      */
     public $CustomArgument;
+
     /**
      * @param string $ModTime Latest modification time of the trigger
      * @param string $Type Trigger type
@@ -86,6 +85,7 @@ class Trigger extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

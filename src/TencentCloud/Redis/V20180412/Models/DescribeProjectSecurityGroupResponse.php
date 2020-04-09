@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProjectSecurityGroup response structure.
+ *
  * @method array getSecurityGroupDetails() Obtain Security group of a project
  * @method void setSecurityGroupDetails(array $SecurityGroupDetails) Set Security group of a project
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeProjectSecurityGroup response structure.
  */
 class DescribeProjectSecurityGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeProjectSecurityGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SecurityGroupDetails Security group of a project
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeProjectSecurityGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

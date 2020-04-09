@@ -16,27 +16,40 @@
  */
 
 namespace TencentCloud\Billing\V20180709;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Billing\V20180709\Models as Models;
 
 /**
-* @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) This API is used to query bill details.
-* @method Models\DescribeBillResourceSummaryResponse DescribeBillResourceSummary(Models\DescribeBillResourceSummaryRequest $req) This API is used to query bill resources summary. 
-* @method Models\DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayMode(Models\DescribeBillSummaryByPayModeRequest $req) Gets the bill summarized according to billing mode
-* @method Models\DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(Models\DescribeBillSummaryByProductRequest $req) Gets the bill summarized according to product
-* @method Models\DescribeBillSummaryByProjectResponse DescribeBillSummaryByProject(Models\DescribeBillSummaryByProjectRequest $req) Gets the bill summarized according to project
-* @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) Gets the bill summarized according to region
-* @method Models\DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(Models\DescribeBillSummaryByTagRequest $req) This API is used to get the cost distribution over different tags.
+ * @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) This API is used to query bill details.
+ * @method Models\DescribeBillResourceSummaryResponse DescribeBillResourceSummary(Models\DescribeBillResourceSummaryRequest $req) This API is used to query bill resources summary. 
+ * @method Models\DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayMode(Models\DescribeBillSummaryByPayModeRequest $req) Gets the bill summarized according to billing mode
+ * @method Models\DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(Models\DescribeBillSummaryByProductRequest $req) Gets the bill summarized according to product
+ * @method Models\DescribeBillSummaryByProjectResponse DescribeBillSummaryByProject(Models\DescribeBillSummaryByProjectRequest $req) Gets the bill summarized according to project
+ * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) Gets the bill summarized according to region
+ * @method Models\DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(Models\DescribeBillSummaryByTagRequest $req) This API is used to get the cost distribution over different tags.
  */
 
 class BillingClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "billing.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-07-09";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

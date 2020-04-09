@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceMonitorBigKeySizeDist response structure.
+ *
  * @method array getData() Obtain Big key size distribution details
  * @method void setData(array $Data) Set Big key size distribution details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceMonitorBigKeySizeDist response structure.
  */
 class DescribeInstanceMonitorBigKeySizeDistResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceMonitorBigKeySizeDistResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Data Big key size distribution details
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeInstanceMonitorBigKeySizeDistResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

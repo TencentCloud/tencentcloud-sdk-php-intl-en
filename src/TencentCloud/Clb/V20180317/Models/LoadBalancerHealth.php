@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CLB instance health check status
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getLoadBalancerName() Obtain CLB instance name
@@ -28,10 +30,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setListeners(array $Listeners) Set List of listeners
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *CLB instance health check status
  */
 class LoadBalancerHealth extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Listeners;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $LoadBalancerName CLB instance name
@@ -62,6 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

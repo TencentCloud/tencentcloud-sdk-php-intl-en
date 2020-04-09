@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBaseMetrics request structure.
+ *
  * @method string getNamespace() Obtain Business namespace
  * @method void setNamespace(string $Namespace) Set Business namespace
  * @method string getMetricName() Obtain Metric name
  * @method void setMetricName(string $MetricName) Set Metric name
- */
-
-/**
- *DescribeBaseMetrics request structure.
  */
 class DescribeBaseMetricsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBaseMetricsRequest extends AbstractModel
      * @var string Metric name
      */
     public $MetricName;
+
     /**
      * @param string $Namespace Business namespace
      * @param string $MetricName Metric name
@@ -46,6 +45,7 @@ class DescribeBaseMetricsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

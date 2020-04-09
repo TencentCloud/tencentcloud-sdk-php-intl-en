@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DB parameter description
+ *
  * @method string getParam() Obtain Parameter name
  * @method void setParam(string $Param) Set Parameter name
  * @method string getValue() Obtain Current parameter value
@@ -32,10 +34,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setConstraint(ParamConstraint $Constraint) Set Parameter constraint
  * @method boolean getHaveSetValue() Obtain Whether a value has been set. false: no, true: yes
  * @method void setHaveSetValue(boolean $HaveSetValue) Set Whether a value has been set. false: no, true: yes
- */
-
-/**
- *DB parameter description
  */
 class ParamDesc extends AbstractModel
 {
@@ -69,6 +67,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var boolean Whether a value has been set. false: no, true: yes
      */
     public $HaveSetValue;
+
     /**
      * @param string $Param Parameter name
      * @param string $Value Current parameter value
@@ -82,6 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

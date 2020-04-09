@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateImage response structure.
+ *
  * @method string getImageId() Obtain Image ID
 Note: This field may return null, indicating that no valid value was found.
  * @method void setImageId(string $ImageId) Set Image ID
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateImage response structure.
  */
 class CreateImageResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $ImageId Image ID
 Note: This field may return null, indicating that no valid value was found.
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

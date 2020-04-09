@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAcl request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID information
  * @method void setInstanceId(string $InstanceId) Set Instance ID information
  * @method integer getResourceType() Obtain ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) Set The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
  * @method string getPrincipal() Obtain User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
  * @method void setPrincipal(string $Principal) Set User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
- */
-
-/**
- *DeleteAcl request structure.
  */
 class DeleteAclRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DeleteAclRequest extends AbstractModel
      * @var string User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
      */
     public $Principal;
+
     /**
      * @param string $InstanceId Instance ID information
      * @param integer $ResourceType ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
@@ -86,6 +85,7 @@ class DeleteAclRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

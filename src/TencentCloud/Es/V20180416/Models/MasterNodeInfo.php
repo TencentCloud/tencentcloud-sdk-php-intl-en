@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of the dedicated master node in an instance
+ *
  * @method boolean getEnableDedicatedMaster() Obtain Whether to enable the dedicated master node
  * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) Set Whether to enable the dedicated master node
  * @method string getMasterNodeType() Obtain Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set Disk size of the dedicated master node in GB
  * @method string getMasterNodeDiskType() Obtain Disk type of the dedicated master node
  * @method void setMasterNodeDiskType(string $MasterNodeDiskType) Set Disk type of the dedicated master node
- */
-
-/**
- *Information of the dedicated master node in an instance
  */
 class MasterNodeInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class MasterNodeInfo extends AbstractModel
      * @var string Disk type of the dedicated master node
      */
     public $MasterNodeDiskType;
+
     /**
      * @param boolean $EnableDedicatedMaster Whether to enable the dedicated master node
      * @param string $MasterNodeType Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
@@ -86,6 +85,7 @@ class MasterNodeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClusterPassword request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster for which to modify the password
  * @method void setClusterId(string $ClusterId) Set ID of the cluster for which to modify the password
  * @method string getOldPassword() Obtain Old cluster password
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewPassword(string $NewPassword) Set New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
  * @method string getMode() Obtain Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
  * @method void setMode(string $Mode) Set Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
- */
-
-/**
- *ModifyClusterPassword request structure.
  */
 class ModifyClusterPasswordRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyClusterPasswordRequest extends AbstractModel
      * @var string Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
      */
     public $Mode;
+
     /**
      * @param string $ClusterId ID of the cluster for which to modify the password
      * @param string $OldPassword Old cluster password
@@ -70,6 +69,7 @@ class ModifyClusterPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

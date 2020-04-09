@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TencentDB account information
+ *
  * @method string getUserName() Obtain Username
  * @method void setUserName(string $UserName) Set Username
  * @method string getHost() Obtain Host from which a user can log in (corresponding to the `host` field for a MySQL user; a user is uniquely identified by username and host; this parameter is in IP format and ends with % for IP range; % can be entered; if this parameter is left empty, % will be used by default)
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
  * @method void setDelayThresh(integer $DelayThresh) Set If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
- */
-
-/**
- *TencentDB account information
  */
 class DBAccount extends AbstractModel
 {
@@ -76,6 +74,7 @@ class DBAccount extends AbstractModel
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      */
     public $DelayThresh;
+
     /**
      * @param string $UserName Username
      * @param string $Host Host from which a user can log in (corresponding to the `host` field for a MySQL user; a user is uniquely identified by username and host; this parameter is in IP format and ends with % for IP range; % can be entered; if this parameter is left empty, % will be used by default)
@@ -90,6 +89,7 @@ It is recommended that this parameter be set to a value greater than 10. This pa
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

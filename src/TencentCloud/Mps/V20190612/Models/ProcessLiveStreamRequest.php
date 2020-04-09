@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ProcessLiveStream request structure.
+ *
  * @method string getUrl() Obtain Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
  * @method void setUrl(string $Url) Set Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
  * @method LiveStreamTaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of a task, which is used to specify the live stream processing result.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- */
-
-/**
- *ProcessLiveStream request structure.
  */
 class ProcessLiveStreamRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ProcessLiveStreamRequest extends AbstractModel
      * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      */
     public $SessionContext;
+
     /**
      * @param string $Url Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
      * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig Event notification information of a task, which is used to specify the live stream processing result.
@@ -94,6 +93,7 @@ class ProcessLiveStreamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

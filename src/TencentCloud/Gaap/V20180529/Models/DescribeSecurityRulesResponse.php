@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityRules response structure.
+ *
  * @method integer getTotalCount() Obtain The number of returned security rules.
  * @method void setTotalCount(integer $TotalCount) Set The number of returned security rules.
  * @method array getSecurityRuleSet() Obtain List of returned security rules.
  * @method void setSecurityRuleSet(array $SecurityRuleSet) Set List of returned security rules.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSecurityRules response structure.
  */
 class DescribeSecurityRulesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSecurityRulesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of returned security rules.
      * @param array $SecurityRuleSet List of returned security rules.
@@ -54,6 +53,7 @@ class DescribeSecurityRulesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

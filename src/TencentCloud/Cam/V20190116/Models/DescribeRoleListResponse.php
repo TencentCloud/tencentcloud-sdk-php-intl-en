@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRoleList response structure.
+ *
  * @method array getList() Obtain Role details list
 Note: This field may return null, indicating that no valid value was found.
  * @method void setList(array $List) Set Role details list
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setTotalNum(integer $TotalNum) Set Total number of roles
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeRoleList response structure.
  */
 class DescribeRoleListResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $List Role details list
 Note: This field may return null, indicating that no valid value was found.
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

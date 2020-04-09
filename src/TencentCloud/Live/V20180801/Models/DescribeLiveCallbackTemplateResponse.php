@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveCallbackTemplate response structure.
+ *
  * @method CallBackTemplateInfo getTemplate() Obtain Callback template information.
  * @method void setTemplate(CallBackTemplateInfo $Template) Set Callback template information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveCallbackTemplate response structure.
  */
 class DescribeLiveCallbackTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLiveCallbackTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param CallBackTemplateInfo $Template Callback template information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeLiveCallbackTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

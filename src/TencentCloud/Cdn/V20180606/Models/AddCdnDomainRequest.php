@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddCdnDomain request structure.
+ *
  * @method string getDomain() Obtain Domain name
  * @method void setDomain(string $Domain) Set Domain name
  * @method string getServiceType() Obtain Acceleration domain name service type
@@ -94,10 +96,6 @@ global: global acceleration
 Overseas acceleration service must be enabled to use overseas acceleration and global acceleration.
  * @method OriginPullTimeout getOriginPullTimeout() Obtain Origin-pull timeout configuration
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
- */
-
-/**
- *AddCdnDomain request structure.
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -258,6 +256,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
      * @var OriginPullTimeout Origin-pull timeout configuration
      */
     public $OriginPullTimeout;
+
     /**
      * @param string $Domain Domain name
      * @param string $ServiceType Acceleration domain name service type
@@ -302,6 +301,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

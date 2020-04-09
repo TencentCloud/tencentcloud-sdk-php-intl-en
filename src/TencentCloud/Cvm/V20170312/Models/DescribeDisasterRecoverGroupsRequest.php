@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDisasterRecoverGroups request structure.
+ *
  * @method array getDisasterRecoverGroupIds() Obtain List of spread placement group IDs.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs.
  * @method string getName() Obtain Name of a spread placement group. Fuzzy match is supported.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
  * @method integer getLimit() Obtain Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
  * @method void setLimit(integer $Limit) Set Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
- */
-
-/**
- *DescribeDisasterRecoverGroups request structure.
  */
 class DescribeDisasterRecoverGroupsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDisasterRecoverGroupsRequest extends AbstractModel
      * @var integer Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
      */
     public $Limit;
+
     /**
      * @param array $DisasterRecoverGroupIds List of spread placement group IDs.
      * @param string $Name Name of a spread placement group. Fuzzy match is supported.
@@ -62,6 +61,7 @@ class DescribeDisasterRecoverGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

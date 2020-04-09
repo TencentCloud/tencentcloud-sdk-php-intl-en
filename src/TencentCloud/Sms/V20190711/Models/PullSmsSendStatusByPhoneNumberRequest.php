@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PullSmsSendStatusByPhoneNumber request structure.
+ *
  * @method integer getSendDateTime() Obtain Pull start time in seconds in the format of UNIX timestamp.
  * @method void setSendDateTime(integer $SendDateTime) Set Pull start time in seconds in the format of UNIX timestamp.
  * @method integer getOffset() Obtain Offset.
@@ -30,10 +32,6 @@ Note: this parameter is currently fixed at 0.
  * @method void setPhoneNumber(string $PhoneNumber) Set Target mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
  * @method string getSmsSdkAppid() Obtain SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
  * @method void setSmsSdkAppid(string $SmsSdkAppid) Set SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
- */
-
-/**
- *PullSmsSendStatusByPhoneNumber request structure.
  */
 class PullSmsSendStatusByPhoneNumberRequest extends AbstractModel
 {
@@ -62,6 +60,7 @@ Note: this parameter is currently fixed at 0.
      * @var string SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
      */
     public $SmsSdkAppid;
+
     /**
      * @param integer $SendDateTime Pull start time in seconds in the format of UNIX timestamp.
      * @param integer $Offset Offset.
@@ -74,6 +73,7 @@ Note: this parameter is currently fixed at 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

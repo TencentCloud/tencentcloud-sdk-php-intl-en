@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of tag descriptions. By specifying this parameter, you can bind tags to corresponding resource instances at the same time. Currently, only tags are bound to cloud host instances.
+ *
  * @method string getResourceType() Obtain 
  * @method void setResourceType(string $ResourceType) Set 
  * @method array getTags() Obtain 
  * @method void setTags(array $Tags) Set 
- */
-
-/**
- *List of tag descriptions. By specifying this parameter, you can bind tags to corresponding resource instances at the same time. Currently, only tags are bound to cloud host instances.
  */
 class TagSpecification extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagSpecification extends AbstractModel
      * @var array 
      */
     public $Tags;
+
     /**
      * @param string $ResourceType 
      * @param array $Tags 
@@ -46,6 +45,7 @@ class TagSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

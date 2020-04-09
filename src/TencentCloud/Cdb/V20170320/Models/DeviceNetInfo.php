@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Network monitoring information of the physical server where the instance is located
+ *
  * @method array getConn() Obtain Number of TCP connections
  * @method void setConn(array $Conn) Set Number of TCP connections
  * @method array getPackageIn() Obtain ENI inbound packets per second
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowIn(array $FlowIn) Set Inbound traffic in Kbps
  * @method array getFlowOut() Obtain Outbound traffic in Kbps
  * @method void setFlowOut(array $FlowOut) Set Outbound traffic in Kbps
- */
-
-/**
- *Network monitoring information of the physical server where the instance is located
  */
 class DeviceNetInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DeviceNetInfo extends AbstractModel
      * @var array Outbound traffic in Kbps
      */
     public $FlowOut;
+
     /**
      * @param array $Conn Number of TCP connections
      * @param array $PackageIn ENI inbound packets per second
@@ -70,6 +69,7 @@ class DeviceNetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

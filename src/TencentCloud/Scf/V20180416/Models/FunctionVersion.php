@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Function version information
+ *
  * @method string getVersion() Obtain Function version name
  * @method void setVersion(string $Version) Set Function version name
  * @method string getDescription() Obtain Version description
 Note: This field may return null, indicating that no valid values is found.
  * @method void setDescription(string $Description) Set Version description
 Note: This field may return null, indicating that no valid values is found.
- */
-
-/**
- *Function version information
  */
 class FunctionVersion extends AbstractModel
 {
@@ -41,6 +39,7 @@ class FunctionVersion extends AbstractModel
 Note: This field may return null, indicating that no valid values is found.
      */
     public $Description;
+
     /**
      * @param string $Version Function version name
      * @param string $Description Version description
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

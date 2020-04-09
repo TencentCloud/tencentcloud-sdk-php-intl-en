@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result of porn information detection in speech in AI-based live stream content audit
+ *
  * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment in seconds.
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a suspected segment in seconds.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>sexual_moan: Sexual moans.</li>
  * @method void setLabel(string $Label) Set Tag of the detected porn information in video. Valid values:
 <li>sexual_moan: Sexual moans.</li>
- */
-
-/**
- *Result of porn information detection in speech in AI-based live stream content audit
  */
 class LiveStreamAiReviewVoicePornResult extends AbstractModel
 {
@@ -71,6 +69,7 @@ class LiveStreamAiReviewVoicePornResult extends AbstractModel
 <li>sexual_moan: Sexual moans.</li>
      */
     public $Label;
+
     /**
      * @param float $StartPtsTime Start PTS time of a suspected segment in seconds.
      * @param float $EndPtsTime End PTS time of a suspected segment in seconds.
@@ -86,6 +85,7 @@ class LiveStreamAiReviewVoicePornResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

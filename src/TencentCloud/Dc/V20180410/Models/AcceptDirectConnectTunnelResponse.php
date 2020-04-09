@@ -18,12 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AcceptDirectConnectTunnel response structure.
+ *
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AcceptDirectConnectTunnel response structure.
  */
 class AcceptDirectConnectTunnelResponse extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AcceptDirectConnectTunnelResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -38,6 +37,7 @@ class AcceptDirectConnectTunnelResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

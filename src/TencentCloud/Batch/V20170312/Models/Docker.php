@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Docker container information
+ *
  * @method string getUser() Obtain Docker Hub username or Tencent Registry username
  * @method void setUser(string $User) Set Docker Hub username or Tencent Registry username
  * @method string getPassword() Obtain Docker Hub password or Tencent Registry password
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImage(string $Image) Set For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
  * @method string getServer() Obtain For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
  * @method void setServer(string $Server) Set For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
- */
-
-/**
- *Docker container information
  */
 class Docker extends AbstractModel
 {
@@ -52,6 +50,7 @@ class Docker extends AbstractModel
      * @var string For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
      */
     public $Server;
+
     /**
      * @param string $User Docker Hub username or Tencent Registry username
      * @param string $Password Docker Hub password or Tencent Registry password
@@ -62,6 +61,7 @@ class Docker extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

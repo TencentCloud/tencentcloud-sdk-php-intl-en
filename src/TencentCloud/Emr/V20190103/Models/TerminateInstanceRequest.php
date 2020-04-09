@@ -18,14 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method array getResourceIds() Obtain ID of terminated node. This parameter is reserved and does not need to be configured.
  * @method void setResourceIds(array $ResourceIds) Set ID of terminated node. This parameter is reserved and does not need to be configured.
- */
-
-/**
- *TerminateInstance request structure.
  */
 class TerminateInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TerminateInstanceRequest extends AbstractModel
      * @var array ID of terminated node. This parameter is reserved and does not need to be configured.
      */
     public $ResourceIds;
+
     /**
      * @param string $InstanceId Instance ID.
      * @param array $ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
@@ -46,6 +45,7 @@ class TerminateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

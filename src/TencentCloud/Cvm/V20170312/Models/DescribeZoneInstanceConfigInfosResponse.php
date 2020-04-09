@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeZoneInstanceConfigInfos response structure.
+ *
  * @method array getInstanceTypeQuotaSet() Obtain List of model configurations for the availability zone.
  * @method void setInstanceTypeQuotaSet(array $InstanceTypeQuotaSet) Set List of model configurations for the availability zone.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeZoneInstanceConfigInfos response structure.
  */
 class DescribeZoneInstanceConfigInfosResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeZoneInstanceConfigInfosResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $InstanceTypeQuotaSet List of model configurations for the availability zone.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeZoneInstanceConfigInfosResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

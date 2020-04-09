@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageSpriteTemplates request structure.
+ *
  * @method array getDefinitions() Obtain Unique ID filter of image sprite generating templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of image sprite generating templates. Array length limit: 100.
  * @method integer getOffset() Obtain Paging offset. Default value: 0.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Template type filter. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
- */
-
-/**
- *DescribeImageSpriteTemplates request structure.
  */
 class DescribeImageSpriteTemplatesRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeImageSpriteTemplatesRequest extends AbstractModel
 <li>Custom: Custom template.</li>
      */
     public $Type;
+
     /**
      * @param array $Definitions Unique ID filter of image sprite generating templates. Array length limit: 100.
      * @param integer $Offset Paging offset. Default value: 0.
@@ -70,6 +69,7 @@ class DescribeImageSpriteTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

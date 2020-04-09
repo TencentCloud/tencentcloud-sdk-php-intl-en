@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTCPListeners request structure.
+ *
  * @method string getProxyId() Obtain Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
  * @method void setProxyId(string $ProxyId) Set Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
  * @method string getListenerId() Obtain Filter condition. Exact query by listener IDs.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) Set Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
  * @method string getSearchValue() Obtain Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
  * @method void setSearchValue(string $SearchValue) Set Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
- */
-
-/**
- *DescribeTCPListeners request structure.
  */
 class DescribeTCPListenersRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeTCPListenersRequest extends AbstractModel
      * @var string Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
      */
     public $SearchValue;
+
     /**
      * @param string $ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
      * @param string $ListenerId Filter condition. Exact query by listener IDs.
@@ -94,6 +93,7 @@ class DescribeTCPListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of intelligent face recognition.
+ *
  * @method array getResultSet() Obtain Intelligent face recognition result set.
  * @method void setResultSet(array $ResultSet) Set Intelligent face recognition result set.
- */
-
-/**
- *Output of intelligent face recognition.
  */
 class AiRecognitionTaskFaceResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskFaceResultOutput extends AbstractModel
      * @var array Intelligent face recognition result set.
      */
     public $ResultSet;
+
     /**
      * @param array $ResultSet Intelligent face recognition result set.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskFaceResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

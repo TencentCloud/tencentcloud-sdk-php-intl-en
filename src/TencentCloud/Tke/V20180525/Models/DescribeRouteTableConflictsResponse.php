@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRouteTableConflicts response structure.
+ *
  * @method boolean getHasConflict() Obtain Whether there is a conflict in the route table.
  * @method void setHasConflict(boolean $HasConflict) Set Whether there is a conflict in the route table.
  * @method array getRouteTableConflictSet() Obtain Route table conflict list.
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeRouteTableConflicts response structure.
  */
 class DescribeRouteTableConflictsResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param boolean $HasConflict Whether there is a conflict in the route table.
      * @param array $RouteTableConflictSet Route table conflict list.
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

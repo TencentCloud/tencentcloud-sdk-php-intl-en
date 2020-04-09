@@ -18,14 +18,12 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListOrganizationMembers request structure.
+ *
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Limit
  * @method void setLimit(integer $Limit) Set Limit
- */
-
-/**
- *ListOrganizationMembers request structure.
  */
 class ListOrganizationMembersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ListOrganizationMembersRequest extends AbstractModel
      * @var integer Limit
      */
     public $Limit;
+
     /**
      * @param integer $Offset Offset
      * @param integer $Limit Limit
@@ -46,6 +45,7 @@ class ListOrganizationMembersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

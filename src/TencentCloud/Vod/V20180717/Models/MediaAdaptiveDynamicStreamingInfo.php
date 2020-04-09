@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Adaptive bitrate streaming information
+ *
  * @method array getAdaptiveDynamicStreamingSet() Obtain Information array of adaptive bitrate streaming.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAdaptiveDynamicStreamingSet(array $AdaptiveDynamicStreamingSet) Set Information array of adaptive bitrate streaming.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Adaptive bitrate streaming information
  */
 class MediaAdaptiveDynamicStreamingInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaAdaptiveDynamicStreamingInfo extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdaptiveDynamicStreamingSet;
+
     /**
      * @param array $AdaptiveDynamicStreamingSet Information array of adaptive bitrate streaming.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

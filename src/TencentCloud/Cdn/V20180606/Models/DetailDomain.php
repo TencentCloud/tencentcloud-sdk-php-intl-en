@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Complete acceleration domain configuration information
+ *
  * @method string getResourceId() Obtain Domain name ID
  * @method void setResourceId(string $ResourceId) Set Domain name ID
  * @method integer getAppId() Obtain Tencent Cloud account ID
@@ -204,10 +206,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set S3 bucket origin access authentication configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Complete acceleration domain configuration information
  */
 class DetailDomain extends AbstractModel
 {
@@ -463,6 +461,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AwsPrivateAccess;
+
     /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
@@ -562,6 +561,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

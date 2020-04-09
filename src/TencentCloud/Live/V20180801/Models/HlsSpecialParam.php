@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HLS-specific recording parameter
+ *
  * @method integer getFlowContinueDuration() Obtain HLS timeout period.
  * @method void setFlowContinueDuration(integer $FlowContinueDuration) Set HLS timeout period.
- */
-
-/**
- *HLS-specific recording parameter
  */
 class HlsSpecialParam extends AbstractModel
 {
@@ -31,6 +29,7 @@ class HlsSpecialParam extends AbstractModel
      * @var integer HLS timeout period.
      */
     public $FlowContinueDuration;
+
     /**
      * @param integer $FlowContinueDuration HLS timeout period.
      */
@@ -38,6 +37,7 @@ class HlsSpecialParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

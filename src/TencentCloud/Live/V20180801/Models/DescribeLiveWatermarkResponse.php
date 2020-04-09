@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveWatermark response structure.
+ *
  * @method WatermarkInfo getWatermark() Obtain Watermark information.
  * @method void setWatermark(WatermarkInfo $Watermark) Set Watermark information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveWatermark response structure.
  */
 class DescribeLiveWatermarkResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLiveWatermarkResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param WatermarkInfo $Watermark Watermark information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeLiveWatermarkResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

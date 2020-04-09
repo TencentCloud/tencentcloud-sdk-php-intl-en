@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Domain name nearest access configuration
+ *
  * @method string getRegionId() Obtain Region ID.
  * @method void setRegionId(string $RegionId) Set Region ID.
  * @method array getNationCountryInnerList() Obtain Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
  * @method void setNationCountryInnerList(array $NationCountryInnerList) Set Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
- */
-
-/**
- *Domain name nearest access configuration
  */
 class AccessRegionDomainConf extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccessRegionDomainConf extends AbstractModel
      * @var array Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
      */
     public $NationCountryInnerList;
+
     /**
      * @param string $RegionId Region ID.
      * @param array $NationCountryInnerList Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
@@ -46,6 +45,7 @@ class AccessRegionDomainConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

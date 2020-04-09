@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Custom error response configuration of a domain name
+ *
  * @method string getErrorPageId() Obtain Configuration ID of a custom error response
  * @method void setErrorPageId(string $ErrorPageId) Set Configuration ID of a custom error response
  * @method string getListenerId() Obtain Listener ID
@@ -42,10 +44,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBody(string $Body) Set Configured response body (excluding HTTP header)
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Custom error response configuration of a domain name
  */
 class DomainErrorPageInfo extends AbstractModel
 {
@@ -92,6 +90,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Body;
+
     /**
      * @param string $ErrorPageId Configuration ID of a custom error response
      * @param string $ListenerId Listener ID
@@ -110,6 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

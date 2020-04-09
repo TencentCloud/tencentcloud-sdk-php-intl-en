@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Load balancer target attribute
+ *
  * @method integer getPort() Obtain Port
  * @method void setPort(integer $Port) Set Port
  * @method integer getWeight() Obtain Weight
  * @method void setWeight(integer $Weight) Set Weight
- */
-
-/**
- *Load balancer target attribute
  */
 class TargetAttribute extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TargetAttribute extends AbstractModel
      * @var integer Weight
      */
     public $Weight;
+
     /**
      * @param integer $Port Port
      * @param integer $Weight Weight
@@ -46,6 +45,7 @@ class TargetAttribute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

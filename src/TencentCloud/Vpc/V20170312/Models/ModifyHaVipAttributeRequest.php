@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyHaVipAttribute request structure.
+ *
  * @method string getHaVipId() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
  * @method void setHaVipId(string $HaVipId) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
  * @method string getHaVipName() Obtain `HAVIP` can be named freely, but the maximum length is 60 characters.
  * @method void setHaVipName(string $HaVipName) Set `HAVIP` can be named freely, but the maximum length is 60 characters.
- */
-
-/**
- *ModifyHaVipAttribute request structure.
  */
 class ModifyHaVipAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyHaVipAttributeRequest extends AbstractModel
      * @var string `HAVIP` can be named freely, but the maximum length is 60 characters.
      */
     public $HaVipName;
+
     /**
      * @param string $HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      * @param string $HaVipName `HAVIP` can be named freely, but the maximum length is 60 characters.
@@ -46,6 +45,7 @@ class ModifyHaVipAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tag filtering array. “**AND**” relation if multiple arrays.
+ *
  * @method string getTagKey() Obtain Tag key.
  * @method void setTagKey(string $TagKey) Set Tag key.
  * @method array getTagValue() Obtain Tag value array. “**OR**” relation if multiple values.
  * @method void setTagValue(array $TagValue) Set Tag value array. “**OR**” relation if multiple values.
- */
-
-/**
- *Tag filtering array. “**AND**” relation if multiple arrays.
  */
 class TagFilter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagFilter extends AbstractModel
      * @var array Tag value array. “**OR**” relation if multiple values.
      */
     public $TagValue;
+
     /**
      * @param string $TagKey Tag key.
      * @param array $TagValue Tag value array. “**OR**” relation if multiple values.
@@ -46,6 +45,7 @@ class TagFilter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

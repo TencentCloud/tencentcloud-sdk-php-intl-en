@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMediaProcessUsageData response structure.
+ *
  * @method array getMediaProcessDataSet() Obtain Overview of video processing statistics, which displays the overview and details of queried tasks.
  * @method void setMediaProcessDataSet(array $MediaProcessDataSet) Set Overview of video processing statistics, which displays the overview and details of queried tasks.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeMediaProcessUsageData response structure.
  */
 class DescribeMediaProcessUsageDataResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeMediaProcessUsageDataResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $MediaProcessDataSet Overview of video processing statistics, which displays the overview and details of queried tasks.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeMediaProcessUsageDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

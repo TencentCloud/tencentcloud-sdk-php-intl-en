@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBErrlogs request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-5bq3wfjd
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-5bq3wfjd
  * @method string getStartTime() Obtain Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of entries returned per page. Value range: 1–100
  * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0
  * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
- */
-
-/**
- *DescribeDBErrlogs request structure.
  */
 class DescribeDBErrlogsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeDBErrlogsRequest extends AbstractModel
      * @var integer Page number for data return in paged query. Pagination starts from 0
      */
     public $Offset;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-5bq3wfjd
      * @param string $StartTime Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
@@ -86,6 +85,7 @@ class DescribeDBErrlogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

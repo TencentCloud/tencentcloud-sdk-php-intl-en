@@ -18,16 +18,14 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * A tag key-value pair and if deletion is allowed.
+ *
  * @method string getTagKey() Obtain Tag key.
  * @method void setTagKey(string $TagKey) Set Tag key.
  * @method string getTagValue() Obtain Tag value.
  * @method void setTagValue(string $TagValue) Set Tag value.
  * @method integer getCanDelete() Obtain If deletion is allowed.
  * @method void setCanDelete(integer $CanDelete) Set If deletion is allowed.
- */
-
-/**
- *A tag key-value pair and if deletion is allowed.
  */
 class TagWithDelete extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TagWithDelete extends AbstractModel
      * @var integer If deletion is allowed.
      */
     public $CanDelete;
+
     /**
      * @param string $TagKey Tag key.
      * @param string $TagValue Tag value.
@@ -54,6 +53,7 @@ class TagWithDelete extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

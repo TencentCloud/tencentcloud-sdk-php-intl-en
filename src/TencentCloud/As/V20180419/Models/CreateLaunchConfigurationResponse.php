@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLaunchConfiguration response structure.
+ *
  * @method string getLaunchConfigurationId() Obtain This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateLaunchConfiguration response structure.
  */
 class CreateLaunchConfigurationResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateLaunchConfigurationResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $LaunchConfigurationId This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateLaunchConfigurationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

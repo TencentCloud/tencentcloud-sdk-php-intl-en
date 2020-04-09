@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Query the available acceleration region information, the corresponding bandwidth options, and the concurrence based on origin servers.
+ *
  * @method string getRegionId() Obtain Region ID
  * @method void setRegionId(string $RegionId) Set Region ID
  * @method string getRegionName() Obtain Region name in Chinese or English
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConcurrentList(array $ConcurrentList) Set Value array of the available concurrence
  * @method array getBandwidthList() Obtain Value array of the available bandwidth
  * @method void setBandwidthList(array $BandwidthList) Set Value array of the available bandwidth
- */
-
-/**
- *Query the available acceleration region information, the corresponding bandwidth options, and the concurrence based on origin servers.
  */
 class AccessRegionDetial extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AccessRegionDetial extends AbstractModel
      * @var array Value array of the available bandwidth
      */
     public $BandwidthList;
+
     /**
      * @param string $RegionId Region ID
      * @param string $RegionName Region name in Chinese or English
@@ -62,6 +61,7 @@ class AccessRegionDetial extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

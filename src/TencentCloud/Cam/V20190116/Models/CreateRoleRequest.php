@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRole request structure.
+ *
  * @method string getRoleName() Obtain Role name
  * @method void setRoleName(string $RoleName) Set Role name
  * @method string getPolicyDocument() Obtain Policy document
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsoleLogin(integer $ConsoleLogin) Set Whether login is allowed. 1: yes, 0: no
  * @method integer getSessionDuration() Obtain The maximum validity period of the temporary key for creating a role (range: 0-43200)
  * @method void setSessionDuration(integer $SessionDuration) Set The maximum validity period of the temporary key for creating a role (range: 0-43200)
- */
-
-/**
- *CreateRole request structure.
  */
 class CreateRoleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateRoleRequest extends AbstractModel
      * @var integer The maximum validity period of the temporary key for creating a role (range: 0-43200)
      */
     public $SessionDuration;
+
     /**
      * @param string $RoleName Role name
      * @param string $PolicyDocument Policy document
@@ -70,6 +69,7 @@ class CreateRoleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAddressTemplate request structure.
+ *
  * @method string getAddressTemplateId() Obtain The IP address template instance ID, such as `ipm-09o5m8kc`.
  * @method void setAddressTemplateId(string $AddressTemplateId) Set The IP address template instance ID, such as `ipm-09o5m8kc`.
- */
-
-/**
- *DeleteAddressTemplate request structure.
  */
 class DeleteAddressTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAddressTemplateRequest extends AbstractModel
      * @var string The IP address template instance ID, such as `ipm-09o5m8kc`.
      */
     public $AddressTemplateId;
+
     /**
      * @param string $AddressTemplateId The IP address template instance ID, such as `ipm-09o5m8kc`.
      */
@@ -38,6 +37,7 @@ class DeleteAddressTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

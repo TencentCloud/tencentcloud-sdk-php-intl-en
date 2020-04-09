@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasks request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method string getAsyncRequestId() Obtain ID of an async task request, i.e., `AsyncRequestId` returned by relevant TencentDB operations.
@@ -74,10 +76,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Record offset. Default value: 0.
  * @method integer getLimit() Obtain Number of results to be returned for a single request. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Default value: 20. Maximum value: 100.
- */
-
-/**
- *DescribeTasks request structure.
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -140,6 +138,7 @@ class DescribeTasksRequest extends AbstractModel
      * @var integer Number of results to be returned for a single request. Default value: 20. Maximum value: 100.
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
      * @param string $AsyncRequestId ID of an async task request, i.e., `AsyncRequestId` returned by relevant TencentDB operations.
@@ -174,6 +173,7 @@ class DescribeTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

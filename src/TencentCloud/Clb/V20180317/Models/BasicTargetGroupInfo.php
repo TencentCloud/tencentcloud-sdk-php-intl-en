@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Basic information of a target group bound to a forwarding rule or a listener
+ *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method string getTargetGroupName() Obtain Target group name
  * @method void setTargetGroupName(string $TargetGroupName) Set Target group name
- */
-
-/**
- *Basic information of a target group bound to a forwarding rule or a listener
  */
 class BasicTargetGroupInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BasicTargetGroupInfo extends AbstractModel
      * @var string Target group name
      */
     public $TargetGroupName;
+
     /**
      * @param string $TargetGroupId Target group ID
      * @param string $TargetGroupName Target group name
@@ -46,6 +45,7 @@ class BasicTargetGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

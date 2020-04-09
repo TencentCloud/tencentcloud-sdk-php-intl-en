@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCdnDomainLogs request structure.
+ *
  * @method string getDomain() Obtain Specifies a domain name for the query
  * @method void setDomain(string $Domain) Set Specifies a domain name for the query
  * @method string getStartTime() Obtain Starting time, such as `2019-09-04 00:00:00`
@@ -38,10 +40,6 @@ Default value: `mainland`.
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
 `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
 Default value: `mainland`.
- */
-
-/**
- *DescribeCdnDomainLogs request structure.
  */
 class DescribeCdnDomainLogsRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeCdnDomainLogsRequest extends AbstractModel
 Default value: `mainland`.
      */
     public $Area;
+
     /**
      * @param string $Domain Specifies a domain name for the query
      * @param string $StartTime Starting time, such as `2019-09-04 00:00:00`
@@ -94,6 +93,7 @@ Default value: `mainland`.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

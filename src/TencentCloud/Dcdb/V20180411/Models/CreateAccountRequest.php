@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccount request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
  * @method string getUserName() Obtain AccountName
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
  * @method void setDelayThresh(integer $DelayThresh) Set If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
- */
-
-/**
- *CreateAccount request structure.
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -76,6 +74,7 @@ class CreateAccountRequest extends AbstractModel
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      */
     public $DelayThresh;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
      * @param string $UserName AccountName
@@ -90,6 +89,7 @@ It is recommended that this parameter be set to a value greater than 10. This pa
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

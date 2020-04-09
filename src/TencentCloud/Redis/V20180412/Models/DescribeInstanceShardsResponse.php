@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceShards response structure.
+ *
  * @method array getInstanceShards() Obtain Information list of instance shards
  * @method void setInstanceShards(array $InstanceShards) Set Information list of instance shards
  * @method integer getTotalCount() Obtain Total number of instance shard nodes
  * @method void setTotalCount(integer $TotalCount) Set Total number of instance shard nodes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceShards response structure.
  */
 class DescribeInstanceShardsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceShardsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $InstanceShards Information list of instance shards
      * @param integer $TotalCount Total number of instance shard nodes
@@ -54,6 +53,7 @@ class DescribeInstanceShardsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Client connection information, including client IP and number of connections
+ *
  * @method string getIP() Obtain Client IP of a connection
  * @method void setIP(string $IP) Set Client IP of a connection
  * @method integer getCount() Obtain Number of connections corresponding to a client IP
  * @method void setCount(integer $Count) Set Number of connections corresponding to a client IP
- */
-
-/**
- *Client connection information, including client IP and number of connections
  */
 class ClientConnection extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClientConnection extends AbstractModel
      * @var integer Number of connections corresponding to a client IP
      */
     public $Count;
+
     /**
      * @param string $IP Client IP of a connection
      * @param integer $Count Number of connections corresponding to a client IP
@@ -46,6 +45,7 @@ class ClientConnection extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

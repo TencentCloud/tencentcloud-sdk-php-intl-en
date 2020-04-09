@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyVpcAttribute request structure.
+ *
  * @method string getVpcId() Obtain Security group can be named freely, but cannot exceed 60 characters.
  * @method void setVpcId(string $VpcId) Set Security group can be named freely, but cannot exceed 60 characters.
  * @method string getVpcName() Obtain VPC can be named freely, but the maximum length is 60 characters.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsServers(array $DnsServers) Set DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
  * @method string getDomainName() Obtain Domain name
  * @method void setDomainName(string $DomainName) Set Domain name
- */
-
-/**
- *ModifyVpcAttribute request structure.
  */
 class ModifyVpcAttributeRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
      * @var string Domain name
      */
     public $DomainName;
+
     /**
      * @param string $VpcId Security group can be named freely, but cannot exceed 60 characters.
      * @param string $VpcName VPC can be named freely, but the maximum length is 60 characters.
@@ -70,6 +69,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

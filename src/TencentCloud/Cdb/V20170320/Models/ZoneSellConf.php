@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AZ sale configurations
+ *
  * @method integer getStatus() Obtain AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
  * @method void setStatus(integer $Status) Set AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
  * @method string getZoneName() Obtain AZ name
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneConf(ZoneConf $ZoneConf) Set Multi-AZ information
  * @method array getDrZone() Obtain Information of the supported disaster recovery AZ
  * @method void setDrZone(array $DrZone) Set Information of the supported disaster recovery AZ
- */
-
-/**
- *AZ sale configurations
  */
 class ZoneSellConf extends AbstractModel
 {
@@ -122,6 +120,7 @@ class ZoneSellConf extends AbstractModel
      * @var array Information of the supported disaster recovery AZ
      */
     public $DrZone;
+
     /**
      * @param integer $Status AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
      * @param string $ZoneName AZ name
@@ -142,6 +141,7 @@ class ZoneSellConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

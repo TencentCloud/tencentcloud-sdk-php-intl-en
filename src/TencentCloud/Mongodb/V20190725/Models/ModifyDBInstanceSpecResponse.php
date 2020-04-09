@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceSpec response structure.
+ *
  * @method string getDealId() Obtain Order ID
  * @method void setDealId(string $DealId) Set Order ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyDBInstanceSpec response structure.
  */
 class ModifyDBInstanceSpecResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceSpecResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $DealId Order ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ModifyDBInstanceSpecResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

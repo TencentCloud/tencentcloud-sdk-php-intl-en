@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details about a log package download link
+ *
  * @method string getStartTime() Obtain Starting time of the log package
  * @method void setStartTime(string $StartTime) Set Starting time of the log package
  * @method string getEndTime() Obtain End time of the log package
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 `overseas`: outside Mainland China
  * @method string getLogName() Obtain Log package filename
  * @method void setLogName(string $LogName) Set Log package filename
- */
-
-/**
- *Details about a log package download link
  */
 class DomainLog extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DomainLog extends AbstractModel
      * @var string Log package filename
      */
     public $LogName;
+
     /**
      * @param string $StartTime Starting time of the log package
      * @param string $EndTime End time of the log package
@@ -78,6 +77,7 @@ class DomainLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

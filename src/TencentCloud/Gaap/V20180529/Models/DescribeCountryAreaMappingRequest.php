@@ -18,14 +18,13 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCountryAreaMapping request structure.
+ *
 
- */
-
-/**
- *DescribeCountryAreaMapping request structure.
  */
 class DescribeCountryAreaMappingRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeCountryAreaMappingRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

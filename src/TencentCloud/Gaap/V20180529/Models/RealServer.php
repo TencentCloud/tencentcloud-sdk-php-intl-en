@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Query listeners or rules-related origin server information, excluding `tag` information.
+ *
  * @method string getRealServerIP() Obtain Origin server IP or domain name
  * @method void setRealServerIP(string $RealServerIP) Set Origin server IP or domain name
  * @method string getRealServerId() Obtain Origin server ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerName(string $RealServerName) Set Origin server name
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- */
-
-/**
- *Query listeners or rules-related origin server information, excluding `tag` information.
  */
 class RealServer extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RealServer extends AbstractModel
      * @var integer Project ID
      */
     public $ProjectId;
+
     /**
      * @param string $RealServerIP Origin server IP or domain name
      * @param string $RealServerId Origin server ID
@@ -62,6 +61,7 @@ class RealServer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

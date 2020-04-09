@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSubnet request structure.
+ *
  * @method string getVpcId() Obtain The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method void setVpcId(string $VpcId) Set The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method string getSubnetName() Obtain The subnet name. The maximum length is 60 bytes.
@@ -26,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCidrBlock(string $CidrBlock) Set The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
  * @method string getZone() Obtain The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
  * @method void setZone(string $Zone) Set The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
- */
-
-/**
- *CreateSubnet request structure.
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateSubnetRequest extends AbstractModel
 {
@@ -52,16 +52,24 @@ class CreateSubnetRequest extends AbstractModel
      * @var string The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
      */
     public $Zone;
+
+    /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
     /**
      * @param string $VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $SubnetName The subnet name. The maximum length is 60 bytes.
      * @param string $CidrBlock The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
      * @param string $Zone The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -84,6 +92,15 @@ class CreateSubnetRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

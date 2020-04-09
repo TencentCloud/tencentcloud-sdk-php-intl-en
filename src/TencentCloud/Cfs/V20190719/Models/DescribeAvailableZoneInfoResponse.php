@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAvailableZoneInfo response structure.
+ *
  * @method array getRegionZones() Obtain Information such as resource availability in each AZ and the supported storage classes and protocols
  * @method void setRegionZones(array $RegionZones) Set Information such as resource availability in each AZ and the supported storage classes and protocols
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAvailableZoneInfo response structure.
  */
 class DescribeAvailableZoneInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAvailableZoneInfoResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $RegionZones Information such as resource availability in each AZ and the supported storage classes and protocols
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeAvailableZoneInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Track information
+ *
  * @method string getType() Obtain Track type. Valid values:
 <ul>
 <li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTrackItems(array $TrackItems) Set List of media segments on track.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Track information
  */
 class MediaTrack extends AbstractModel
 {
@@ -56,6 +54,7 @@ class MediaTrack extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TrackItems;
+
     /**
      * @param string $Type Track type. Valid values:
 <ul>
@@ -70,6 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

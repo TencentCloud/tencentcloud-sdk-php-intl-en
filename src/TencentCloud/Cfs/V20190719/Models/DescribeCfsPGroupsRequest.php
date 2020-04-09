@@ -18,14 +18,13 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCfsPGroups request structure.
+ *
 
- */
-
-/**
- *DescribeCfsPGroups request structure.
  */
 class DescribeCfsPGroupsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeCfsPGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

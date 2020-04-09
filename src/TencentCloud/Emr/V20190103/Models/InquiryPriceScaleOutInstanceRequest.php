@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceScaleOutInstance request structure.
+ *
  * @method string getTimeUnit() Obtain Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
  * @method void setTimeUnit(string $TimeUnit) Set Time unit of scale-out. Valid values:
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrency(string $Currency) Set Currency.
  * @method integer getRouterCount() Obtain Number of router nodes added.
  * @method void setRouterCount(integer $RouterCount) Set Number of router nodes added.
- */
-
-/**
- *InquiryPriceScaleOutInstance request structure.
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
@@ -96,6 +94,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
      * @var integer Number of router nodes added.
      */
     public $RouterCount;
+
     /**
      * @param string $TimeUnit Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
@@ -114,6 +113,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

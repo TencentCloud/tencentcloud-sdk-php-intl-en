@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CMQ region information
+ *
  * @method string getCosRegion() Obtain COS region
  * @method void setCosRegion(string $CosRegion) Set COS region
  * @method string getCosRegionName() Obtain Region description
  * @method void setCosRegionName(string $CosRegionName) Set Region description
- */
-
-/**
- *CMQ region information
  */
 class CosRegionInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CosRegionInfo extends AbstractModel
      * @var string Region description
      */
     public $CosRegionName;
+
     /**
      * @param string $CosRegion COS region
      * @param string $CosRegionName Region description
@@ -46,6 +45,7 @@ class CosRegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

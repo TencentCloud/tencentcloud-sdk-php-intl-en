@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Speech keyword recognition result.
+ *
  * @method string getWord() Obtain Speech keyword.
  * @method void setWord(string $Word) Set Speech keyword.
  * @method array getSegmentSet() Obtain List of time segments that contain the speech keyword.
  * @method void setSegmentSet(array $SegmentSet) Set List of time segments that contain the speech keyword.
- */
-
-/**
- *Speech keyword recognition result.
  */
 class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
      * @var array List of time segments that contain the speech keyword.
      */
     public $SegmentSet;
+
     /**
      * @param string $Word Speech keyword.
      * @param array $SegmentSet List of time segments that contain the speech keyword.
@@ -46,6 +45,7 @@ class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

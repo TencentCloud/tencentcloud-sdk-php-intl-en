@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateContentReviewTemplate response structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a content audit template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a content audit template.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateContentReviewTemplate response structure.
  */
 class CreateContentReviewTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateContentReviewTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Definition Unique ID of a content audit template.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateContentReviewTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

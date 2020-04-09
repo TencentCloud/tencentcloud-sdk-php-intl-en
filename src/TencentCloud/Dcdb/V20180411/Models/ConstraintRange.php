@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Range of constraint type values
+ *
  * @method string getMin() Obtain Minimum value when constraint type is `section`
  * @method void setMin(string $Min) Set Minimum value when constraint type is `section`
  * @method string getMax() Obtain Maximum value when constraint type is `section`
  * @method void setMax(string $Max) Set Maximum value when constraint type is `section`
- */
-
-/**
- *Range of constraint type values
  */
 class ConstraintRange extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConstraintRange extends AbstractModel
      * @var string Maximum value when constraint type is `section`
      */
     public $Max;
+
     /**
      * @param string $Min Minimum value when constraint type is `section`
      * @param string $Max Maximum value when constraint type is `section`
@@ -46,6 +45,7 @@ class ConstraintRange extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

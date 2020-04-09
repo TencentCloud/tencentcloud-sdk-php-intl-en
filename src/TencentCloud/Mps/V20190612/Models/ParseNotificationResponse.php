@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ParseNotification response structure.
+ *
  * @method string getEventType() Obtain Supported event type. Valid values:
 <li>WorkflowTask: Video workflow processing task.</li>
  * @method void setEventType(string $EventType) Set Supported event type. Valid values:
@@ -32,10 +34,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ParseNotification response structure.
  */
 class ParseNotificationResponse extends AbstractModel
 {
@@ -65,6 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $EventType Supported event type. Valid values:
 <li>WorkflowTask: Video workflow processing task.</li>
@@ -78,6 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpnGateway response structure.
+ *
  * @method VpnGateway getVpnGateway() Obtain VPN gateway object.
  * @method void setVpnGateway(VpnGateway $VpnGateway) Set VPN gateway object.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateVpnGateway response structure.
  */
 class CreateVpnGatewayResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateVpnGatewayResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param VpnGateway $VpnGateway VPN gateway object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateVpnGatewayResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

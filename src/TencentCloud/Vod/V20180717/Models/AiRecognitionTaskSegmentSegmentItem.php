@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Split video segment.
+ *
  * @method string getFileId() Obtain File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
  * @method void setFileId(string $FileId) Set File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
  * @method string getSegmentUrl() Obtain Split video segment URL.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCovImgUrl(string $CovImgUrl) Set Split cover image URL.
  * @method string getSpecialInfo() Obtain Special field, which should be ignored.
  * @method void setSpecialInfo(string $SpecialInfo) Set Special field, which should be ignored.
- */
-
-/**
- *Split video segment.
  */
 class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
 {
@@ -73,6 +71,7 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
      * @var string Special field, which should be ignored.
      */
     public $SpecialInfo;
+
     /**
      * @param string $FileId File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
      * @param string $SegmentUrl Split video segment URL.
@@ -86,6 +85,7 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Detailed summary of purchases by billing mode
+ *
  * @method string getPayMode() Obtain Billing mode
  * @method void setPayMode(string $PayMode) Set Billing mode
  * @method string getPayModeName() Obtain Billing mode name
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Trial credit amount
  * @method string getVoucherPayAmount() Obtain Voucher amount
  * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
- */
-
-/**
- *Detailed summary of purchases by billing mode
  */
 class PayModeSummaryOverviewItem extends AbstractModel
 {
@@ -80,6 +78,7 @@ class PayModeSummaryOverviewItem extends AbstractModel
      * @var string Voucher amount
      */
     public $VoucherPayAmount;
+
     /**
      * @param string $PayMode Billing mode
      * @param string $PayModeName Billing mode name
@@ -94,6 +93,7 @@ class PayModeSummaryOverviewItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

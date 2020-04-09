@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Object of cluster route table
+ *
  * @method string getRouteTableName() Obtain Route table name.
  * @method void setRouteTableName(string $RouteTableName) Set Route table name.
  * @method string getRouteTableCidrBlock() Obtain Route table CIDR.
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) Set Route table CIDR.
  * @method string getVpcId() Obtain VPC instance ID.
  * @method void setVpcId(string $VpcId) Set VPC instance ID.
- */
-
-/**
- *Object of cluster route table
  */
 class RouteTableInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RouteTableInfo extends AbstractModel
      * @var string VPC instance ID.
      */
     public $VpcId;
+
     /**
      * @param string $RouteTableName Route table name.
      * @param string $RouteTableCidrBlock Route table CIDR.
@@ -54,6 +53,7 @@ class RouteTableInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

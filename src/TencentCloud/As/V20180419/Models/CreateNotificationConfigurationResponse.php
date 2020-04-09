@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNotificationConfiguration response structure.
+ *
  * @method string getAutoScalingNotificationId() Obtain Notification ID.
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set Notification ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateNotificationConfiguration response structure.
  */
 class CreateNotificationConfigurationResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNotificationConfigurationResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $AutoScalingNotificationId Notification ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateNotificationConfigurationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

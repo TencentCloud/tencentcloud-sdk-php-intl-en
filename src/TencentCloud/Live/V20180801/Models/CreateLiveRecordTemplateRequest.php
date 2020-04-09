@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveRecordTemplate request structure.
+ *
  * @method string getTemplateName() Obtain Template name, which is a non-empty string.
  * @method void setTemplateName(string $TemplateName) Set Template name, which is a non-empty string.
  * @method string getDescription() Obtain Message description
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set HLS-specific recording parameter.
  * @method RecordParam getMp3Param() Obtain Mp3 recording parameter, which is set when Mp3 recording is enabled.
  * @method void setMp3Param(RecordParam $Mp3Param) Set Mp3 recording parameter, which is set when Mp3 recording is enabled.
- */
-
-/**
- *CreateLiveRecordTemplate request structure.
  */
 class CreateLiveRecordTemplateRequest extends AbstractModel
 {
@@ -90,6 +88,7 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
      * @var RecordParam Mp3 recording parameter, which is set when Mp3 recording is enabled.
      */
     public $Mp3Param;
+
     /**
      * @param string $TemplateName Template name, which is a non-empty string.
      * @param string $Description Message description
@@ -106,6 +105,7 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Data disk mounting option
+ *
  * @method string getLocalPath() Obtain Mounting point. For Linux, this parameter should be a valid path. For Windows, this parameter should be a system disk letter such as "H:\\"
  * @method void setLocalPath(string $LocalPath) Set Mounting point. For Linux, this parameter should be a valid path. For Windows, this parameter should be a system disk letter such as "H:\\"
  * @method string getFileSystemType() Obtain File system type. For Linux, "EXT3" and "EXT4" are supported and the default value is "EXT3". For Windows, only "NTFS" is supported
  * @method void setFileSystemType(string $FileSystemType) Set File system type. For Linux, "EXT3" and "EXT4" are supported and the default value is "EXT3". For Windows, only "NTFS" is supported
- */
-
-/**
- *Data disk mounting option
  */
 class MountDataDisk extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MountDataDisk extends AbstractModel
      * @var string File system type. For Linux, "EXT3" and "EXT4" are supported and the default value is "EXT3". For Windows, only "NTFS" is supported
      */
     public $FileSystemType;
+
     /**
      * @param string $LocalPath Mounting point. For Linux, this parameter should be a valid path. For Windows, this parameter should be a system disk letter such as "H:\\"
      * @param string $FileSystemType File system type. For Linux, "EXT3" and "EXT4" are supported and the default value is "EXT3". For Windows, only "NTFS" is supported
@@ -46,6 +45,7 @@ class MountDataDisk extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

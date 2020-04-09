@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Recording template parameter
+ *
  * @method integer getRecordInterval() Obtain Recording interval.
 In seconds. Default value: 1,800.
 Value range: 300–7,200.
@@ -36,10 +38,6 @@ In seconds. Value range: 0–93,312,000.
  * @method void setEnable(integer $Enable) Set Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
  * @method integer getVodSubAppId() Obtain VOD subapplication ID.
  * @method void setVodSubAppId(integer $VodSubAppId) Set VOD subapplication ID.
- */
-
-/**
- *Recording template parameter
  */
 class RecordParam extends AbstractModel
 {
@@ -67,6 +65,7 @@ In seconds. Value range: 0–93,312,000.
      * @var integer VOD subapplication ID.
      */
     public $VodSubAppId;
+
     /**
      * @param integer $RecordInterval Recording interval.
 In seconds. Default value: 1,800.
@@ -82,6 +81,7 @@ In seconds. Value range: 0–93,312,000.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

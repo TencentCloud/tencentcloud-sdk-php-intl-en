@@ -18,16 +18,14 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrateJobs response structure.
+ *
  * @method integer getTotalCount() Obtain Number of tasks
  * @method void setTotalCount(integer $TotalCount) Set Number of tasks
  * @method array getJobList() Obtain Array of task details
  * @method void setJobList(array $JobList) Set Array of task details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeMigrateJobs response structure.
  */
 class DescribeMigrateJobsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeMigrateJobsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of tasks
      * @param array $JobList Array of task details
@@ -54,6 +53,7 @@ class DescribeMigrateJobsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

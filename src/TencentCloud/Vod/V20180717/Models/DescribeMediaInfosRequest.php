@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMediaInfos request structure.
+ *
  * @method array getFileIds() Obtain List of media file IDs. N starts from 0 and can be up to 19.
  * @method void setFileIds(array $FileIds) Set List of media file IDs. N starts from 0 and can be up to 19.
  * @method array getFilters() Obtain Specifies information entry that needs to be returned by all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
@@ -45,10 +47,6 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
-
-/**
- *DescribeMediaInfos request structure.
- */
 class DescribeMediaInfosRequest extends AbstractModel
 {
     /**
@@ -75,6 +73,7 @@ class DescribeMediaInfosRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $FileIds List of media file IDs. N starts from 0 and can be up to 19.
      * @param array $Filters Specifies information entry that needs to be returned by all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
@@ -94,6 +93,7 @@ class DescribeMediaInfosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

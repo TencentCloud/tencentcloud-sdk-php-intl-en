@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstances response structure.
+ *
  * @method string getDealName() Obtain Order name
  * @method void setDealName(string $DealName) Set Order name
  * @method array getDealNames() Obtain Order name array
  * @method void setDealNames(array $DealNames) Set Order name array
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateDBInstances response structure.
  */
 class CreateDBInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateDBInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $DealName Order name
      * @param array $DealNames Order name array
@@ -54,6 +53,7 @@ class CreateDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

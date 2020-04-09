@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateHTTPSListener request structure.
+ *
  * @method string getListenerName() Obtain Listener name
  * @method void setListenerName(string $ListenerName) Set Listener name
  * @method integer getPort() Obtain Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
@@ -40,10 +42,6 @@ The one-way authentication is used by default.
  * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate ID, which is required only when the mutual authentication is adopted.
  * @method array getPolyClientCertificateIds() Obtain IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
- */
-
-/**
- *CreateHTTPSListener request structure.
  */
 class CreateHTTPSListenerRequest extends AbstractModel
 {
@@ -89,6 +87,7 @@ The one-way authentication is used by default.
      * @var array IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
@@ -106,6 +105,7 @@ The one-way authentication is used by default.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

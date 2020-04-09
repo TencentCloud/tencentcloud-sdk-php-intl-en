@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of the instance for rollback
+ *
  * @method string getInstanceId() Obtain TencentDB instance ID
  * @method void setInstanceId(string $InstanceId) Set TencentDB instance ID
  * @method string getStrategy() Obtain Rollback policy. Value range: table, db, full. Default value: full. Table: expedited rollback mode, where only the selected table-level backups and binlogs are imported; for cross-table rollback, if the associated tables are not selected simultaneously, the rollback will fail; the parameter `Databases` must be empty under this mode. db: fast rollback mode, where only the selected database-level backups and binlogs are imported; for cross-database rollback, if the associated databases are not selected simultaneously, the rollback will fail. full: ordinary rollback mode, which imports all the backups and binlogs of the instance at a relatively low speed.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabases(array $Databases) Set Information of the databases to be rolled back, which means rollback at the database level
  * @method array getTables() Obtain Information of the tables to be rolled back, which means rollback at the table level
  * @method void setTables(array $Tables) Set Information of the tables to be rolled back, which means rollback at the table level
- */
-
-/**
- *Details of the instance for rollback
  */
 class RollbackInstancesInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RollbackInstancesInfo extends AbstractModel
      * @var array Information of the tables to be rolled back, which means rollback at the table level
      */
     public $Tables;
+
     /**
      * @param string $InstanceId TencentDB instance ID
      * @param string $Strategy Rollback policy. Value range: table, db, full. Default value: full. Table: expedited rollback mode, where only the selected table-level backups and binlogs are imported; for cross-table rollback, if the associated tables are not selected simultaneously, the rollback will fail; the parameter `Databases` must be empty under this mode. db: fast rollback mode, where only the selected database-level backups and binlogs are imported; for cross-database rollback, if the associated databases are not selected simultaneously, the rollback will fail. full: ordinary rollback mode, which imports all the backups and binlogs of the instance at a relatively low speed.
@@ -70,6 +69,7 @@ class RollbackInstancesInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

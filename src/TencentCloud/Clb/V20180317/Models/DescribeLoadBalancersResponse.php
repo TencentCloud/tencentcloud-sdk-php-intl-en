@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancers response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
  * @method void setTotalCount(integer $TotalCount) Set Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
  * @method array getLoadBalancerSet() Obtain Array of returned CLB instances.
  * @method void setLoadBalancerSet(array $LoadBalancerSet) Set Array of returned CLB instances.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLoadBalancers response structure.
  */
 class DescribeLoadBalancersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeLoadBalancersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
      * @param array $LoadBalancerSet Array of returned CLB instances.
@@ -54,6 +53,7 @@ class DescribeLoadBalancersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

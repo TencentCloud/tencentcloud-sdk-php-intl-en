@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information on an invitation to an organization.
+ *
  * @method integer getId() Obtain Invitation ID
  * @method void setId(integer $Id) Set Invitation ID
  * @method integer getUin() Obtain UIN of the invitee
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInviteTime(string $InviteTime) Set Time of invitation
  * @method string getExpireTime() Obtain Expiration time
  * @method void setExpireTime(string $ExpireTime) Set Expiration time
- */
-
-/**
- *Information on an invitation to an organization.
  */
 class OrgInvitation extends AbstractModel
 {
@@ -101,6 +99,7 @@ class OrgInvitation extends AbstractModel
      * @var string Expiration time
      */
     public $ExpireTime;
+
     /**
      * @param integer $Id Invitation ID
      * @param integer $Uin UIN of the invitee
@@ -118,6 +117,7 @@ class OrgInvitation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

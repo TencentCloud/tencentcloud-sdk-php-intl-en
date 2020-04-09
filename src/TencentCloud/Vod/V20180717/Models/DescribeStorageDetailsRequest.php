@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStorageDetails request structure.
+ *
  * @method string getStartTime() Obtain Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setStartTime(string $StartTime) Set Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getEndTime() Obtain End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
@@ -46,10 +48,6 @@ Default value: TotalStorage.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
- */
-
-/**
- *DescribeStorageDetails request structure.
  */
 class DescribeStorageDetailsRequest extends AbstractModel
 {
@@ -86,6 +84,7 @@ Default value: TotalStorage.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
      */
     public $SubAppId;
+
     /**
      * @param string $StartTime Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $EndTime End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
@@ -106,6 +105,7 @@ When the value of this field is 1, the total usage of all subapplications (inclu
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

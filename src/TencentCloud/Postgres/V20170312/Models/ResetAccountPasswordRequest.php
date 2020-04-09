@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetAccountPassword request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-4wdeb0zv
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-4wdeb0zv
  * @method string getUserName() Obtain Instance account name
  * @method void setUserName(string $UserName) Set Instance account name
  * @method string getPassword() Obtain New password corresponding to `UserName` account
  * @method void setPassword(string $Password) Set New password corresponding to `UserName` account
- */
-
-/**
- *ResetAccountPassword request structure.
  */
 class ResetAccountPasswordRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResetAccountPasswordRequest extends AbstractModel
      * @var string New password corresponding to `UserName` account
      */
     public $Password;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-4wdeb0zv
      * @param string $UserName Instance account name
@@ -54,6 +53,7 @@ class ResetAccountPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

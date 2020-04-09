@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateDomainConfig request structure.
+ *
  * @method string getDomain() Obtain Domain name
  * @method void setDomain(string $Domain) Set Domain name
  * @method integer getProjectId() Obtain Project ID
@@ -92,10 +94,6 @@ global: global acceleration
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
  * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Origin access authentication for S3 bucket
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Origin access authentication for S3 bucket
- */
-
-/**
- *UpdateDomainConfig request structure.
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -255,6 +253,7 @@ global: global acceleration
      * @var AwsPrivateAccess Origin access authentication for S3 bucket
      */
     public $AwsPrivateAccess;
+
     /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
@@ -298,6 +297,7 @@ global: global acceleration
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

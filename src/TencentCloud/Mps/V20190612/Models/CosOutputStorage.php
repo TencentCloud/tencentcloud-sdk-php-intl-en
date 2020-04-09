@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a COS output object generated from video processing.
+ *
  * @method string getBucket() Obtain Name of the target bucket of a video processing output file, such as `TopRankVideo-125xxx88`. If this parameter is left empty, the parameter of the upper folder will be inherited.
  * @method void setBucket(string $Bucket) Set Name of the target bucket of a video processing output file, such as `TopRankVideo-125xxx88`. If this parameter is left empty, the parameter of the upper folder will be inherited.
  * @method string getRegion() Obtain Region of the target bucket of a video processing output file, such as `ap-chongqing`. If this parameter is left empty, the parameter of the upper folder will be inherited.
  * @method void setRegion(string $Region) Set Region of the target bucket of a video processing output file, such as `ap-chongqing`. If this parameter is left empty, the parameter of the upper folder will be inherited.
- */
-
-/**
- *Information of a COS output object generated from video processing.
  */
 class CosOutputStorage extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CosOutputStorage extends AbstractModel
      * @var string Region of the target bucket of a video processing output file, such as `ap-chongqing`. If this parameter is left empty, the parameter of the upper folder will be inherited.
      */
     public $Region;
+
     /**
      * @param string $Bucket Name of the target bucket of a video processing output file, such as `TopRankVideo-125xxx88`. If this parameter is left empty, the parameter of the upper folder will be inherited.
      * @param string $Region Region of the target bucket of a video processing output file, such as `ap-chongqing`. If this parameter is left empty, the parameter of the upper folder will be inherited.
@@ -46,6 +45,7 @@ class CosOutputStorage extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

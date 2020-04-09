@@ -18,16 +18,14 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyResourceTags request structure.
+ *
  * @method string getResource() Obtain Resource description in six-piece format.
  * @method void setResource(string $Resource) Set Resource description in six-piece format.
  * @method array getReplaceTags() Obtain The tags to be added or modified. If the resource described by `Resource` is not associated with the input tag keys, an association will be added. If the tag keys are already associated, the values corresponding to the associated tag keys will be modified to the input values. This API must contain either `ReplaceTags` or `DeleteTag`. And these two parameters cannot include the same tag keys.
  * @method void setReplaceTags(array $ReplaceTags) Set The tags to be added or modified. If the resource described by `Resource` is not associated with the input tag keys, an association will be added. If the tag keys are already associated, the values corresponding to the associated tag keys will be modified to the input values. This API must contain either `ReplaceTags` or `DeleteTag`. And these two parameters cannot include the same tag keys.
  * @method array getDeleteTags() Obtain The tags to be unassociated. This API must contain either `ReplaceTags` or `DeleteTag`. And these two parameters cannot include the same tag keys.
  * @method void setDeleteTags(array $DeleteTags) Set The tags to be unassociated. This API must contain either `ReplaceTags` or `DeleteTag`. And these two parameters cannot include the same tag keys.
- */
-
-/**
- *ModifyResourceTags request structure.
  */
 class ModifyResourceTagsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyResourceTagsRequest extends AbstractModel
      * @var array The tags to be unassociated. This API must contain either `ReplaceTags` or `DeleteTag`. And these two parameters cannot include the same tag keys.
      */
     public $DeleteTags;
+
     /**
      * @param string $Resource Resource description in six-piece format.
      * @param array $ReplaceTags The tags to be added or modified. If the resource described by `Resource` is not associated with the input tag keys, an association will be added. If the tag keys are already associated, the values corresponding to the associated tag keys will be modified to the input values. This API must contain either `ReplaceTags` or `DeleteTag`. And these two parameters cannot include the same tag keys.
@@ -54,6 +53,7 @@ class ModifyResourceTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

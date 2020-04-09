@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information about resources charged in the bill
+ *
  * @method string getBusinessCodeName() Obtain Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
  * @method string getProductCodeName() Obtain Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
@@ -80,10 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setOwnerUin(string $OwnerUin) Set Resource owner UIN; “-” is returned if no value is obtained
  * @method string getOperateUin() Obtain Operator UIN; “-” is returned if no value is obtained
  * @method void setOperateUin(string $OperateUin) Set Operator UIN; “-” is returned if no value is obtained
- */
-
-/**
- *Information about resources charged in the bill
  */
 class BillResourceSummary extends AbstractModel
 {
@@ -237,6 +235,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Operator UIN; “-” is returned if no value is obtained
      */
     public $OperateUin;
+
     /**
      * @param string $BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
      * @param string $ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
@@ -274,6 +273,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video stream configuration parameter
+ *
  * @method string getCodec() Obtain Video stream encoder. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
@@ -62,10 +64,6 @@ Default value: black.
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
- */
-
-/**
- *Video stream configuration parameter
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -118,6 +116,7 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 Default value: black.
      */
     public $FillType;
+
     /**
      * @param string $Codec Video stream encoder. Valid values:
 <li>libx264: H.264</li>
@@ -146,6 +145,7 @@ Default value: black.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

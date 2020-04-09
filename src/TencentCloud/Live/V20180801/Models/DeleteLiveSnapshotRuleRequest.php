@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveSnapshotRule request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- */
-
-/**
- *DeleteLiveSnapshotRule request structure.
  */
 class DeleteLiveSnapshotRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteLiveSnapshotRuleRequest extends AbstractModel
      * @var string Stream name.
      */
     public $StreamName;
+
     /**
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
@@ -54,6 +53,7 @@ class DeleteLiveSnapshotRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

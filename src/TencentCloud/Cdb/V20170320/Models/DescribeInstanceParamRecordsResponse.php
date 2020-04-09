@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceParamRecords response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible records.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible records.
  * @method array getItems() Obtain Parameter modification records.
  * @method void setItems(array $Items) Set Parameter modification records.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceParamRecords response structure.
  */
 class DescribeInstanceParamRecordsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceParamRecordsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible records.
      * @param array $Items Parameter modification records.
@@ -54,6 +53,7 @@ class DescribeInstanceParamRecordsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

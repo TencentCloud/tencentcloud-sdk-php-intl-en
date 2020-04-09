@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance tag information
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method array getTags() Obtain Tag information
  * @method void setTags(array $Tags) Set Tag information
- */
-
-/**
- *Instance tag information
  */
 class TagsInfoOfInstance extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagsInfoOfInstance extends AbstractModel
      * @var array Tag information
      */
     public $Tags;
+
     /**
      * @param string $InstanceId Instance ID
      * @param array $Tags Tag information
@@ -46,6 +45,7 @@ class TagsInfoOfInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

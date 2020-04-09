@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCfsRule request structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getRuleId() Obtain Rule ID
  * @method void setRuleId(string $RuleId) Set Rule ID
- */
-
-/**
- *DeleteCfsRule request structure.
  */
 class DeleteCfsRuleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteCfsRuleRequest extends AbstractModel
      * @var string Rule ID
      */
     public $RuleId;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param string $RuleId Rule ID
@@ -46,6 +45,7 @@ class DeleteCfsRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

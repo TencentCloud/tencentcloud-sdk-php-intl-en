@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Parameter modification records
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getParamName() Obtain Parameter name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSucess(boolean $IsSucess) Set Whether the parameter is modified successfully
  * @method string getModifyTime() Obtain Modification time
  * @method void setModifyTime(string $ModifyTime) Set Modification time
- */
-
-/**
- *Parameter modification records
  */
 class ParamRecord extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ParamRecord extends AbstractModel
      * @var string Modification time
      */
     public $ModifyTime;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $ParamName Parameter name
@@ -78,6 +77,7 @@ class ParamRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

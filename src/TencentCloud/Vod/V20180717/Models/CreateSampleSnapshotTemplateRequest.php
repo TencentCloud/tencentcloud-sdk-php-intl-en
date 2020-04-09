@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSampleSnapshotTemplate request structure.
+ *
  * @method string getSampleType() Obtain Sampled screencapturing type. Valid values:
 <li>Percent: by percent.</li>
 <li>Time: by time interval.</li>
@@ -82,10 +84,6 @@ Default value: black.
 <li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
 <li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
 Default value: black.
- */
-
-/**
- *CreateSampleSnapshotTemplate request structure.
  */
 class CreateSampleSnapshotTemplateRequest extends AbstractModel
 {
@@ -160,6 +158,7 @@ Default value: open.
 Default value: black.
      */
     public $FillType;
+
     /**
      * @param string $SampleType Sampled screencapturing type. Valid values:
 <li>Percent: by percent.</li>
@@ -198,6 +197,7 @@ Default value: black.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

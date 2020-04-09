@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddLiveDomain request structure.
+ *
  * @method string getDomainName() Obtain Domain name.
  * @method void setDomainName(string $DomainName) Set Domain name.
  * @method integer getDomainType() Obtain Domain name type.
@@ -44,10 +46,6 @@ Default value: 0.
 0: LVB,
 1: LCB.
 Default value: 0.
- */
-
-/**
- *AddLiveDomain request structure.
  */
 class AddLiveDomainRequest extends AbstractModel
 {
@@ -79,6 +77,7 @@ Default value: 1.
 Default value: 0.
      */
     public $IsDelayLive;
+
     /**
      * @param string $DomainName Domain name.
      * @param integer $DomainType Domain name type.
@@ -98,6 +97,7 @@ Default value: 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

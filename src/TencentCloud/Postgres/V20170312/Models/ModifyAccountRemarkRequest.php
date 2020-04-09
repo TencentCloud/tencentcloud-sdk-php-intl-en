@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountRemark request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-4wdeb0zv
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-4wdeb0zv
  * @method string getUserName() Obtain Instance username
  * @method void setUserName(string $UserName) Set Instance username
  * @method string getRemark() Obtain New remarks corresponding to user `UserName`
  * @method void setRemark(string $Remark) Set New remarks corresponding to user `UserName`
- */
-
-/**
- *ModifyAccountRemark request structure.
  */
 class ModifyAccountRemarkRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAccountRemarkRequest extends AbstractModel
      * @var string New remarks corresponding to user `UserName`
      */
     public $Remark;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-4wdeb0zv
      * @param string $UserName Instance username
@@ -54,6 +53,7 @@ class ModifyAccountRemarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

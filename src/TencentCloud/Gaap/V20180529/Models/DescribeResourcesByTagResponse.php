@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourcesByTag response structure.
+ *
  * @method integer getTotalCount() Obtain Total resources
  * @method void setTotalCount(integer $TotalCount) Set Total resources
  * @method array getResourceSet() Obtain Resource list corresponding to the tag
  * @method void setResourceSet(array $ResourceSet) Set Resource list corresponding to the tag
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeResourcesByTag response structure.
  */
 class DescribeResourcesByTagResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeResourcesByTagResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total resources
      * @param array $ResourceSet Resource list corresponding to the tag
@@ -54,6 +53,7 @@ class DescribeResourcesByTagResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result type of cover generating task
+ *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
@@ -38,10 +40,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setInput(CoverBySnapshotTaskInput $Input) Set Input of cover generating task.
  * @method CoverBySnapshotTaskOutput getOutput() Obtain Output of cover generating task.
  * @method void setOutput(CoverBySnapshotTaskOutput $Output) Set Output of cover generating task.
- */
-
-/**
- *Result type of cover generating task
  */
 class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 {
@@ -74,6 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var CoverBySnapshotTaskOutput Output of cover generating task.
      */
     public $Output;
+
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param integer $ErrCode Error code. 0: success; other values: failure.
@@ -90,6 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

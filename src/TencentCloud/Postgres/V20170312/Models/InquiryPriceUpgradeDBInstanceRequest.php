@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceUpgradeDBInstance request structure.
+ *
  * @method integer getStorage() Obtain Instance disk size in GB
  * @method void setStorage(integer $Storage) Set Instance disk size in GB
  * @method integer getMemory() Obtain Instance memory size in GB
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-hez4fh0v
  * @method string getInstanceChargeType() Obtain Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
- */
-
-/**
- *InquiryPriceUpgradeDBInstance request structure.
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
      * @var string Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
      */
     public $InstanceChargeType;
+
     /**
      * @param integer $Storage Instance disk size in GB
      * @param integer $Memory Instance memory size in GB
@@ -62,6 +61,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

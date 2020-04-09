@@ -18,12 +18,10 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Template parameter addition response 
+ *
  * @method string getTemplateId() Obtain Template parameter
  * @method void setTemplateId(string $TemplateId) Set Template parameter
- */
-
-/**
- *Template parameter addition response 
  */
 class AddTemplateStatus extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AddTemplateStatus extends AbstractModel
      * @var string Template parameter
      */
     public $TemplateId;
+
     /**
      * @param string $TemplateId Template parameter
      */
@@ -38,6 +37,7 @@ class AddTemplateStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

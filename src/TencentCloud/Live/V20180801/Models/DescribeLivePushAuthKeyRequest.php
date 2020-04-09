@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLivePushAuthKey request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
- */
-
-/**
- *DescribeLivePushAuthKey request structure.
  */
 class DescribeLivePushAuthKeyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLivePushAuthKeyRequest extends AbstractModel
      * @var string Push domain name.
      */
     public $DomainName;
+
     /**
      * @param string $DomainName Push domain name.
      */
@@ -38,6 +37,7 @@ class DescribeLivePushAuthKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

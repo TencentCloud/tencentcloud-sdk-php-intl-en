@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of video stream in VOD file
+ *
  * @method integer getBitrate() Obtain Bitrate of video stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBitrate(integer $Bitrate) Set Bitrate of video stream in bps.
@@ -38,10 +40,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFps(integer $Fps) Set Frame rate in Hz.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of video stream in VOD file
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -74,6 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Fps;
+
     /**
      * @param integer $Bitrate Bitrate of video stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -90,6 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PullSmsSendStatus request structure.
+ *
  * @method integer getLimit() Obtain Maximum number of pulled entries. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Maximum number of pulled entries. Maximum value: 100.
  * @method string getSmsSdkAppid() Obtain SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
  * @method void setSmsSdkAppid(string $SmsSdkAppid) Set SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
- */
-
-/**
- *PullSmsSendStatus request structure.
  */
 class PullSmsSendStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PullSmsSendStatusRequest extends AbstractModel
      * @var string SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
      */
     public $SmsSdkAppid;
+
     /**
      * @param integer $Limit Maximum number of pulled entries. Maximum value: 100.
      * @param string $SmsSdkAppid SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
@@ -46,6 +45,7 @@ class PullSmsSendStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

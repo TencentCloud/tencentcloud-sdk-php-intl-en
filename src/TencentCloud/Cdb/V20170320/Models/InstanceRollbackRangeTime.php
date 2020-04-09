@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Time range available for instance rollback
+ *
  * @method integer getCode() Obtain Queries database error code
  * @method void setCode(integer $Code) Set Queries database error code
  * @method string getMessage() Obtain Queries database error message
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set List of instance IDs. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
  * @method array getTimes() Obtain Time range available for rollback
  * @method void setTimes(array $Times) Set Time range available for rollback
- */
-
-/**
- *Time range available for instance rollback
  */
 class InstanceRollbackRangeTime extends AbstractModel
 {
@@ -52,6 +50,7 @@ class InstanceRollbackRangeTime extends AbstractModel
      * @var array Time range available for rollback
      */
     public $Times;
+
     /**
      * @param integer $Code Queries database error code
      * @param string $Message Queries database error message
@@ -62,6 +61,7 @@ class InstanceRollbackRangeTime extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

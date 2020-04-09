@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunction request structure.
+ *
  * @method string getFunctionName() Obtain Name of the function to obtain details
  * @method void setFunctionName(string $FunctionName) Set Name of the function to obtain details
  * @method string getQualifier() Obtain Function version number
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) Set Function namespace
  * @method string getShowCode() Obtain It indicates whether to display the code. `TRUE` means displaying the code, and `FALSE` means hiding the code. The code will not be displayed for entry files exceeding 1 MB.
  * @method void setShowCode(string $ShowCode) Set It indicates whether to display the code. `TRUE` means displaying the code, and `FALSE` means hiding the code. The code will not be displayed for entry files exceeding 1 MB.
- */
-
-/**
- *GetFunction request structure.
  */
 class GetFunctionRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetFunctionRequest extends AbstractModel
      * @var string It indicates whether to display the code. `TRUE` means displaying the code, and `FALSE` means hiding the code. The code will not be displayed for entry files exceeding 1 MB.
      */
     public $ShowCode;
+
     /**
      * @param string $FunctionName Name of the function to obtain details
      * @param string $Qualifier Function version number
@@ -62,6 +61,7 @@ class GetFunctionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

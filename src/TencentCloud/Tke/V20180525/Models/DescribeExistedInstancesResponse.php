@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeExistedInstances response structure.
+ *
  * @method array getExistedInstanceSet() Obtain Array of existing instance information.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExistedInstanceSet(array $ExistedInstanceSet) Set Array of existing instance information.
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTotalCount(integer $TotalCount) Set Number of instances that match the filter condition(s).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeExistedInstances response structure.
  */
 class DescribeExistedInstancesResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $ExistedInstanceSet Array of existing instance information.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

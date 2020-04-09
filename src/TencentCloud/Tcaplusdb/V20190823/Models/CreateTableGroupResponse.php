@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTableGroup response structure.
+ *
  * @method string getTableGroupId() Obtain ID of table group successfully created
  * @method void setTableGroupId(string $TableGroupId) Set ID of table group successfully created
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateTableGroup response structure.
  */
 class CreateTableGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateTableGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $TableGroupId ID of table group successfully created
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateTableGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SendStatusStatistics request structure.
+ *
  * @method integer getStartDateTime() Obtain Start time of pull in the format of `yyyymmddhh` accurate to the hour.
  * @method void setStartDateTime(integer $StartDateTime) Set Start time of pull in the format of `yyyymmddhh` accurate to the hour.
  * @method integer getEndDataTime() Obtain End time of pull in the format of `yyyymmddhh` accurate to the hour
@@ -34,10 +36,6 @@ Note: this parameter is currently fixed at 0.
 Note: this parameter is currently fixed at 0.
  * @method void setOffset(integer $Offset) Set Offset.
 Note: this parameter is currently fixed at 0.
- */
-
-/**
- *SendStatusStatistics request structure.
  */
 class SendStatusStatisticsRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ Note: this parameter is currently fixed at 0.
 Note: this parameter is currently fixed at 0.
      */
     public $Offset;
+
     /**
      * @param integer $StartDateTime Start time of pull in the format of `yyyymmddhh` accurate to the hour.
      * @param integer $EndDataTime End time of pull in the format of `yyyymmddhh` accurate to the hour
@@ -82,6 +81,7 @@ Note: this parameter is currently fixed at 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

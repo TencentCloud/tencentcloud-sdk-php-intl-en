@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input of video editing task.
+ *
  * @method string getInputType() Obtain Input video source type. Valid values: File, Stream.
  * @method void setInputType(string $InputType) Set Input video source type. Valid values: File, Stream.
  * @method array getFileInfoSet() Obtain Information of input video file. This field has a value only when `InputType` is `File`.
@@ -28,10 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStreamInfoSet(array $StreamInfoSet) Set Input stream information. This field has a value only when `InputType` is `Stream`.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Input of video editing task.
  */
 class EditMediaTaskInput extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StreamInfoSet;
+
     /**
      * @param string $InputType Input video source type. Valid values: File, Stream.
      * @param array $FileInfoSet Information of input video file. This field has a value only when `InputType` is `File`.
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Return parameter structure of ListAudits
+ *
  * @method array getAuditSummarys() Obtain Queries the summary set of tracking sets
  * @method void setAuditSummarys(array $AuditSummarys) Set Queries the summary set of tracking sets
  * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
  * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- */
-
-/**
- *Return parameter structure of ListAudits
  */
 class ListAuditsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ListAuditsResponse extends AbstractModel
      * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
      */
     public $RequestId;
+
     /**
      * @param array $AuditSummarys Queries the summary set of tracking sets
      * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
@@ -46,6 +45,7 @@ class ListAuditsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

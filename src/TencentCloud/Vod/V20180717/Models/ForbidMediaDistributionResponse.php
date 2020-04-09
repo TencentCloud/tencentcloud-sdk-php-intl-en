@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidMediaDistribution response structure.
+ *
  * @method array getNotExistFileIdSet() Obtain List of IDs of files that do not exist.
  * @method void setNotExistFileIdSet(array $NotExistFileIdSet) Set List of IDs of files that do not exist.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ForbidMediaDistribution response structure.
  */
 class ForbidMediaDistributionResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ForbidMediaDistributionResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $NotExistFileIdSet List of IDs of files that do not exist.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ForbidMediaDistributionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateDBInstance request structure.
+ *
  * @method array getInstanceIdSet() Obtain List of instance IDs manually terminated in the format of [mssql-3l3fgqn7], which are the same as the instance IDs displayed on the TencentDB Console page
  * @method void setInstanceIdSet(array $InstanceIdSet) Set List of instance IDs manually terminated in the format of [mssql-3l3fgqn7], which are the same as the instance IDs displayed on the TencentDB Console page
- */
-
-/**
- *TerminateDBInstance request structure.
  */
 class TerminateDBInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TerminateDBInstanceRequest extends AbstractModel
      * @var array List of instance IDs manually terminated in the format of [mssql-3l3fgqn7], which are the same as the instance IDs displayed on the TencentDB Console page
      */
     public $InstanceIdSet;
+
     /**
      * @param array $InstanceIdSet List of instance IDs manually terminated in the format of [mssql-3l3fgqn7], which are the same as the instance IDs displayed on the TencentDB Console page
      */
@@ -38,6 +37,7 @@ class TerminateDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Transition information
+ *
  * @method float getDuration() Obtain Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
  * @method void setDuration(float $Duration) Set Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
  * @method array getTransitions() Obtain List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTransitions(array $Transitions) Set List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Transition information
  */
 class MediaTransitionItem extends AbstractModel
 {
@@ -41,6 +39,7 @@ class MediaTransitionItem extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Transitions;
+
     /**
      * @param float $Duration Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
      * @param array $Transitions List of transition operations. Up to one video image or audio transition operation is supported.
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

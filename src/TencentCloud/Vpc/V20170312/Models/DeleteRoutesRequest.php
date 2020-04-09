@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRoutes request structure.
+ *
  * @method string getRouteTableId() Obtain Route table instance ID.
  * @method void setRouteTableId(string $RouteTableId) Set Route table instance ID.
  * @method array getRoutes() Obtain Routing policy object.
  * @method void setRoutes(array $Routes) Set Routing policy object.
- */
-
-/**
- *DeleteRoutes request structure.
  */
 class DeleteRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteRoutesRequest extends AbstractModel
      * @var array Routing policy object.
      */
     public $Routes;
+
     /**
      * @param string $RouteTableId Route table instance ID.
      * @param array $Routes Routing policy object.
@@ -46,6 +45,7 @@ class DeleteRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result type of ASR-based politically sensitive information detection in speech task in content audit
+ *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
@@ -38,10 +40,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setInput(AiReviewPoliticalAsrTaskInput $Input) Set Input of ASR-based politically sensitive information detection in speech task in content audit.
  * @method AiReviewPoliticalAsrTaskOutput getOutput() Obtain Output of ASR-based politically sensitive information detection in speech task in content audit.
  * @method void setOutput(AiReviewPoliticalAsrTaskOutput $Output) Set Output of ASR-based politically sensitive information detection in speech task in content audit.
- */
-
-/**
- *Result type of ASR-based politically sensitive information detection in speech task in content audit
  */
 class AiReviewTaskPoliticalAsrResult extends AbstractModel
 {
@@ -74,6 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var AiReviewPoliticalAsrTaskOutput Output of ASR-based politically sensitive information detection in speech task in content audit.
      */
     public $Output;
+
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param integer $ErrCode Error code. 0: success; other values: failure.
@@ -90,6 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

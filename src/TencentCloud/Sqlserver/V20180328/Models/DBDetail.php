@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database information
+ *
  * @method string getName() Obtain Database name
  * @method void setName(string $Name) Set Database name
  * @method string getCharset() Obtain Character set
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccounts(array $Accounts) Set Database account permission information
  * @method string getInternalStatus() Obtain Internal status. ONLINE: running
  * @method void setInternalStatus(string $InternalStatus) Set Internal status. ONLINE: running
- */
-
-/**
- *Database information
  */
 class DBDetail extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DBDetail extends AbstractModel
      * @var string Internal status. ONLINE: running
      */
     public $InternalStatus;
+
     /**
      * @param string $Name Database name
      * @param string $Charset Character set
@@ -86,6 +85,7 @@ class DBDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

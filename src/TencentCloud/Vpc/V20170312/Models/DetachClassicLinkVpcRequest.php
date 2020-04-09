@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachClassicLinkVpc request structure.
+ *
  * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method array getInstanceIds() Obtain Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
  * @method void setInstanceIds(array $InstanceIds) Set Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
- */
-
-/**
- *DetachClassicLinkVpc request structure.
  */
 class DetachClassicLinkVpcRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetachClassicLinkVpcRequest extends AbstractModel
      * @var array Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
      */
     public $InstanceIds;
+
     /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param array $InstanceIds Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
@@ -46,6 +45,7 @@ class DetachClassicLinkVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

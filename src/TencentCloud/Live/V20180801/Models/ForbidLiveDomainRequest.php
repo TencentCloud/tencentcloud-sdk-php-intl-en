@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidLiveDomain request structure.
+ *
  * @method string getDomainName() Obtain LVB domain name to be disabled.
  * @method void setDomainName(string $DomainName) Set LVB domain name to be disabled.
- */
-
-/**
- *ForbidLiveDomain request structure.
  */
 class ForbidLiveDomainRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ForbidLiveDomainRequest extends AbstractModel
      * @var string LVB domain name to be disabled.
      */
     public $DomainName;
+
     /**
      * @param string $DomainName LVB domain name to be disabled.
      */
@@ -38,6 +37,7 @@ class ForbidLiveDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

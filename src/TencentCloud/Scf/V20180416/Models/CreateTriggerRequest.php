@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTrigger request structure.
+ *
  * @method string getFunctionName() Obtain Name of the function bound to the new trigger
  * @method void setFunctionName(string $FunctionName) Set Name of the function bound to the new trigger
  * @method string getTriggerName() Obtain Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualifier(string $Qualifier) Set Function version
  * @method string getEnable() Obtain Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
  * @method void setEnable(string $Enable) Set Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
- */
-
-/**
- *CreateTrigger request structure.
  */
 class CreateTriggerRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateTriggerRequest extends AbstractModel
      * @var string Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
      */
     public $Enable;
+
     /**
      * @param string $FunctionName Name of the function bound to the new trigger
      * @param string $TriggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
@@ -86,6 +85,7 @@ class CreateTriggerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

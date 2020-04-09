@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddExistedInstances response structure.
+ *
  * @method array getFailedInstanceIds() Obtain IDs of failed nodes
  * @method void setFailedInstanceIds(array $FailedInstanceIds) Set IDs of failed nodes
  * @method array getSuccInstanceIds() Obtain IDs of successful nodes
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) Set IDs of (successful or failed) nodes that timed out
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AddExistedInstances response structure.
  */
 class AddExistedInstancesResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AddExistedInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $FailedInstanceIds IDs of failed nodes
      * @param array $SuccInstanceIds IDs of successful nodes
@@ -62,6 +61,7 @@ class AddExistedInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

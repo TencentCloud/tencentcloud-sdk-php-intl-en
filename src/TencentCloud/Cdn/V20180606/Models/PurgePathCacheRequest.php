@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PurgePathCache request structure.
+ *
  * @method array getPaths() Obtain List of directories. The protocol header such as "http://" or "https://" needs to be included.
  * @method void setPaths(array $Paths) Set List of directories. The protocol header such as "http://" or "https://" needs to be included.
  * @method string getFlushType() Obtain Purge type:
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlushType(string $FlushType) Set Purge type:
 `flush`: purges updated resources
 `delete`: purges all resources
- */
-
-/**
- *PurgePathCache request structure.
  */
 class PurgePathCacheRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ class PurgePathCacheRequest extends AbstractModel
 `delete`: purges all resources
      */
     public $FlushType;
+
     /**
      * @param array $Paths List of directories. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $FlushType Purge type:
@@ -54,6 +53,7 @@ class PurgePathCacheRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

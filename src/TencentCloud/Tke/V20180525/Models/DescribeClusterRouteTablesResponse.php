@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterRouteTables response structure.
+ *
  * @method integer getTotalCount() Obtain Number of instances that match the filter condition(s).
  * @method void setTotalCount(integer $TotalCount) Set Number of instances that match the filter condition(s).
  * @method array getRouteTableSet() Obtain Object of cluster route table.
  * @method void setRouteTableSet(array $RouteTableSet) Set Object of cluster route table.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeClusterRouteTables response structure.
  */
 class DescribeClusterRouteTablesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeClusterRouteTablesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of instances that match the filter condition(s).
      * @param array $RouteTableSet Object of cluster route table.
@@ -54,6 +53,7 @@ class DescribeClusterRouteTablesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

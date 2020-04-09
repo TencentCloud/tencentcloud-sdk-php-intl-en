@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Intelligent recognition result.
+ *
  * @method string getType() Obtain Task type. Valid values:
 <li>FaceRecognition: face recognition,</li>
 <li>AsrWordsRecognition: speech keyword recognition,</li>
@@ -82,10 +84,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setObjectTask(AiRecognitionTaskObjectResult $ObjectTask) Set Object recognition result, which is valid when `Type` is
  `ObjectRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Intelligent recognition result.
  */
 class AiRecognitionResult extends AbstractModel
 {
@@ -156,6 +154,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectTask;
+
     /**
      * @param string $Type Task type. Valid values:
 <li>FaceRecognition: face recognition,</li>
@@ -194,6 +193,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

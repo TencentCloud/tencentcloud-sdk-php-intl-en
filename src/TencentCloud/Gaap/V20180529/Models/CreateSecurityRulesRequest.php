@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSecurityRules request structure.
+ *
  * @method string getPolicyId() Obtain Security policy ID
  * @method void setPolicyId(string $PolicyId) Set Security policy ID
  * @method array getRuleList() Obtain List of access rules
  * @method void setRuleList(array $RuleList) Set List of access rules
- */
-
-/**
- *CreateSecurityRules request structure.
  */
 class CreateSecurityRulesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSecurityRulesRequest extends AbstractModel
      * @var array List of access rules
      */
     public $RuleList;
+
     /**
      * @param string $PolicyId Security policy ID
      * @param array $RuleList List of access rules
@@ -46,6 +45,7 @@ class CreateSecurityRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

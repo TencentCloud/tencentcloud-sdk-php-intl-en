@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateDBInstances response structure.
+ *
  * @method integer getOriginalPrice() Obtain Price before discount. This value divided by 100 indicates the price; for example, 10010 means 100.10 USD
  * @method void setOriginalPrice(integer $OriginalPrice) Set Price before discount. This value divided by 100 indicates the price; for example, 10010 means 100.10 USD
  * @method integer getPrice() Obtain The actual price to be paid. This value divided by 100 indicates the price; for example, 10010 means 100.10 USD
  * @method void setPrice(integer $Price) Set The actual price to be paid. This value divided by 100 indicates the price; for example, 10010 means 100.10 USD
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *InquiryPriceCreateDBInstances response structure.
  */
 class InquiryPriceCreateDBInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $OriginalPrice Price before discount. This value divided by 100 indicates the price; for example, 10010 means 100.10 USD
      * @param integer $Price The actual price to be paid. This value divided by 100 indicates the price; for example, 10010 means 100.10 USD
@@ -54,6 +53,7 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

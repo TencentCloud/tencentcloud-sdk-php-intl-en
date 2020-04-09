@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a video processing task
+ *
  * @method string getTaskId() Obtain Video processing task ID.
  * @method void setTaskId(string $TaskId) Set Video processing task ID.
  * @method string getStatus() Obtain Task flow status. Valid values:
@@ -46,10 +48,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set 
  * @method array getAiRecognitionResultSet() Obtain Execution status and result of a video content recognition task.
  * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set Execution status and result of a video content recognition task.
- */
-
-/**
- *Information of a video processing task
  */
 class WorkflowTask extends AbstractModel
 {
@@ -106,6 +104,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var array Execution status and result of a video content recognition task.
      */
     public $AiRecognitionResultSet;
+
     /**
      * @param string $TaskId Video processing task ID.
      * @param string $Status Task flow status. Valid values:
@@ -126,6 +125,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

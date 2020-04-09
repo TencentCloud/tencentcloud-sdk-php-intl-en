@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSubnets request structure.
+ *
  * @method string getVpcId() Obtain The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
  * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
  * @method array getSubnets() Obtain The subnet object list.
  * @method void setSubnets(array $Subnets) Set The subnet object list.
- */
-
-/**
- *CreateSubnets request structure.
+ * @method array getTags() Obtain Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateSubnetsRequest extends AbstractModel
 {
@@ -38,14 +38,22 @@ class CreateSubnetsRequest extends AbstractModel
      * @var array The subnet object list.
      */
     public $Subnets;
+
+    /**
+     * @var array Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
     /**
      * @param string $VpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
      * @param array $Subnets The subnet object list.
+     * @param array $Tags Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -64,6 +72,15 @@ class CreateSubnetsRequest extends AbstractModel
                 $obj = new SubnetInput();
                 $obj->deserialize($value);
                 array_push($this->Subnets, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

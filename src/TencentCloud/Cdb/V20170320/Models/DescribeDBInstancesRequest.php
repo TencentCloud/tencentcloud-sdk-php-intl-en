@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances request structure.
+ *
  * @method integer getProjectId() Obtain Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
  * @method array getInstanceTypes() Obtain Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithMaster(integer $WithMaster) Set Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
  * @method array getDeployGroupIds() Obtain Placement group ID list.
  * @method void setDeployGroupIds(array $DeployGroupIds) Set Placement group ID list.
- */
-
-/**
- *DescribeDBInstances request structure.
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -206,6 +204,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var array Placement group ID list.
      */
     public $DeployGroupIds;
+
     /**
      * @param integer $ProjectId Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
@@ -238,6 +237,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

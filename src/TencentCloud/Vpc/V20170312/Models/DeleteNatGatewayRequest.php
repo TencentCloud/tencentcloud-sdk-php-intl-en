@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNatGateway request structure.
+ *
  * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
- */
-
-/**
- *DeleteNatGateway request structure.
  */
 class DeleteNatGatewayRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNatGatewayRequest extends AbstractModel
      * @var string The ID of the NAT gateway, such as `nat-df45454`.
      */
     public $NatGatewayId;
+
     /**
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
@@ -38,6 +37,7 @@ class DeleteNatGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

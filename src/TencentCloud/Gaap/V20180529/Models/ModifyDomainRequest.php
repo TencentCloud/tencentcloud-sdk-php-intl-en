@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDomain request structure.
+ *
  * @method string getListenerId() Obtain Layer-7 listener ID
  * @method void setListenerId(string $ListenerId) Set Layer-7 listener ID
  * @method string getOldDomain() Obtain Original domain name information
@@ -48,10 +50,6 @@ In other cases, the certificate specified by `ClientCertificateId` or `PolyClien
 If this field and `ClientCertificateId` are not included, the original certificate will be used;
 If this field is included, and ClientCertificateId=default, then the listener certificate will be used;
 In other cases, the certificate specified by `ClientCertificateId` or `PolyClientCertificateIds` will be used.
- */
-
-/**
- *ModifyDomain request structure.
  */
 class ModifyDomainRequest extends AbstractModel
 {
@@ -93,6 +91,7 @@ If this field is included, and ClientCertificateId=default, then the listener ce
 In other cases, the certificate specified by `ClientCertificateId` or `PolyClientCertificateIds` will be used.
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerId Layer-7 listener ID
      * @param string $OldDomain Original domain name information
@@ -114,6 +113,7 @@ In other cases, the certificate specified by `ClientCertificateId` or `PolyClien
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

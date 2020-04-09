@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupSummaries request structure.
+ *
  * @method string getProduct() Obtain TencentDB product type to be queried. Currently, only `mysql` is supported.
  * @method void setProduct(string $Product) Set TencentDB product type to be queried. Currently, only `mysql` is supported.
  * @method integer getOffset() Obtain Pagination offset.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
  * @method string getOrderDirection() Obtain Sorting order. Valid values: ASC (ascending), DESC (descending).
  * @method void setOrderDirection(string $OrderDirection) Set Sorting order. Valid values: ASC (ascending), DESC (descending).
- */
-
-/**
- *DescribeBackupSummaries request structure.
  */
 class DescribeBackupSummariesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeBackupSummariesRequest extends AbstractModel
      * @var string Sorting order. Valid values: ASC (ascending), DESC (descending).
      */
     public $OrderDirection;
+
     /**
      * @param string $Product TencentDB product type to be queried. Currently, only `mysql` is supported.
      * @param integer $Offset Pagination offset.
@@ -70,6 +69,7 @@ class DescribeBackupSummariesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

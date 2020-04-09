@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBShards request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc.
  * @method array getShardInstanceIds() Obtain Shard ID list.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set Sort by field. Only `createtime` is supported currently
  * @method string getOrderByType() Obtain Sort by type. Valid values: desc; asc
  * @method void setOrderByType(string $OrderByType) Set Sort by type. Valid values: desc; asc
- */
-
-/**
- *DescribeDCDBShards request structure.
  */
 class DescribeDCDBShardsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDCDBShardsRequest extends AbstractModel
      * @var string Sort by type. Valid values: desc; asc
      */
     public $OrderByType;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc.
      * @param array $ShardInstanceIds Shard ID list.
@@ -78,6 +77,7 @@ class DescribeDCDBShardsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

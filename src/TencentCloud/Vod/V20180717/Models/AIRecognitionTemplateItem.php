@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video content recognition template details
+ *
  * @method integer getDefinition() Obtain Unique ID of video content recognition template.
  * @method void setDefinition(integer $Definition) Set Unique ID of video content recognition template.
  * @method string getName() Obtain Video content recognition template name.
@@ -62,10 +64,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *Video content recognition template details
  */
 class AIRecognitionTemplateItem extends AbstractModel
 {
@@ -146,6 +144,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $UpdateTime;
+
     /**
      * @param integer $Definition Unique ID of video content recognition template.
      * @param string $Name Video content recognition template name.
@@ -174,6 +173,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

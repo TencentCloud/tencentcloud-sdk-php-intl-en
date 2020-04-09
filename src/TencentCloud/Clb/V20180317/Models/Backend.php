@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of a real server bound to a listener
+ *
  * @method string getType() Obtain Real server type. Value range: CVM, ENI (coming soon)
  * @method void setType(string $Type) Set Real server type. Value range: CVM, ENI (coming soon)
  * @method string getInstanceId() Obtain Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
@@ -46,10 +48,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEniId(string $EniId) Set Unique ENI ID
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Details of a real server bound to a listener
  */
 class Backend extends AbstractModel
 {
@@ -102,6 +100,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EniId;
+
     /**
      * @param string $Type Real server type. Value range: CVM, ENI (coming soon)
      * @param string $InstanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
@@ -122,6 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

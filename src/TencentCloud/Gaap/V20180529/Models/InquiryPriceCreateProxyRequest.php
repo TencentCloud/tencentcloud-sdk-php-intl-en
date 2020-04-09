@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateProxy request structure.
+ *
  * @method string getAccessRegion() Obtain Acceleration region name.
  * @method void setAccessRegion(string $AccessRegion) Set Acceleration region name.
  * @method integer getBandwidth() Obtain Connection bandwidth cap. Unit: Mbps.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region name; It’s a new parameter.
  * @method integer getConcurrent() Obtain Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
  * @method void setConcurrent(integer $Concurrent) Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
- */
-
-/**
- *InquiryPriceCreateProxy request structure.
  */
 class InquiryPriceCreateProxyRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
      * @var integer Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
      */
     public $Concurrent;
+
     /**
      * @param string $AccessRegion Acceleration region name.
      * @param integer $Bandwidth Connection bandwidth cap. Unit: Mbps.
@@ -78,6 +77,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

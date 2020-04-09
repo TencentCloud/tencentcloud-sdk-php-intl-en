@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateFunctionCode request structure.
+ *
  * @method string getHandler() Obtain Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
  * @method void setHandler(string $Handler) Set Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
  * @method string getFunctionName() Obtain Name of the function to be modified
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(Code $Code) Set Function code
  * @method string getCodeSource() Obtain Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
  * @method void setCodeSource(string $CodeSource) Set Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
- */
-
-/**
- *UpdateFunctionCode request structure.
  */
 class UpdateFunctionCodeRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
      * @var string Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
      */
     public $CodeSource;
+
     /**
      * @param string $Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
      * @param string $FunctionName Name of the function to be modified
@@ -118,6 +117,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

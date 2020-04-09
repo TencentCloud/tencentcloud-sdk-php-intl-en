@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a live stream processing task
+ *
  * @method string getTaskId() Obtain Video processing task ID.
  * @method void setTaskId(string $TaskId) Set Video processing task ID.
  * @method string getStatus() Obtain Task flow status. Valid values:
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method string getUrl() Obtain Live stream URL.
  * @method void setUrl(string $Url) Set Live stream URL.
- */
-
-/**
- *Information of a live stream processing task
  */
 class LiveStreamProcessTask extends AbstractModel
 {
@@ -65,6 +63,7 @@ class LiveStreamProcessTask extends AbstractModel
      * @var string Live stream URL.
      */
     public $Url;
+
     /**
      * @param string $TaskId Video processing task ID.
      * @param string $Status Task flow status. Valid values:
@@ -78,6 +77,7 @@ class LiveStreamProcessTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

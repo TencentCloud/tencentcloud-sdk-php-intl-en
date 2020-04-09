@@ -18,12 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImages request structure.
+ *
  * @method array getImageIds() Obtain List of the IDs of the instances to be deleted.
  * @method void setImageIds(array $ImageIds) Set List of the IDs of the instances to be deleted.
- */
-
-/**
- *DeleteImages request structure.
  */
 class DeleteImagesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteImagesRequest extends AbstractModel
      * @var array List of the IDs of the instances to be deleted.
      */
     public $ImageIds;
+
     /**
      * @param array $ImageIds List of the IDs of the instances to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteImagesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

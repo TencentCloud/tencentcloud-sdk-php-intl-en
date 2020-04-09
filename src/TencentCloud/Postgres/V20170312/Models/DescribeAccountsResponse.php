@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts response structure.
+ *
  * @method integer getTotalCount() Obtain Number of date entries returned for this API call.
  * @method void setTotalCount(integer $TotalCount) Set Number of date entries returned for this API call.
  * @method array getDetails() Obtain Account list details.
  * @method void setDetails(array $Details) Set Account list details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAccounts response structure.
  */
 class DescribeAccountsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccountsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of date entries returned for this API call.
      * @param array $Details Account list details.
@@ -54,6 +53,7 @@ class DescribeAccountsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- */
-
-/**
- *DeleteInstance request structure.
  */
 class DeleteInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteInstanceRequest extends AbstractModel
      * @var string Instance ID
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId Instance ID
      */
@@ -38,6 +37,7 @@ class DeleteInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

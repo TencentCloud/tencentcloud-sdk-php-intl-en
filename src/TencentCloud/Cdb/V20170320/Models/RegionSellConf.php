@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Sale configuration of the region
+ *
  * @method string getRegionName() Obtain Region name
  * @method void setRegionName(string $RegionName) Set Region name
  * @method string getArea() Obtain Area
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region name
  * @method array getZonesConf() Obtain Sale configuration of the AZ
  * @method void setZonesConf(array $ZonesConf) Set Sale configuration of the AZ
- */
-
-/**
- *Sale configuration of the region
  */
 class RegionSellConf extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RegionSellConf extends AbstractModel
      * @var array Sale configuration of the AZ
      */
     public $ZonesConf;
+
     /**
      * @param string $RegionName Region name
      * @param string $Area Area
@@ -70,6 +69,7 @@ class RegionSellConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

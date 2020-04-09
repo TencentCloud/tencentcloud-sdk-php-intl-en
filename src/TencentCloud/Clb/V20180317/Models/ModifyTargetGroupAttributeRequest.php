@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTargetGroupAttribute request structure.
+ *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method string getTargetGroupName() Obtain New name of target group
  * @method void setTargetGroupName(string $TargetGroupName) Set New name of target group
  * @method integer getPort() Obtain New default port of target group
  * @method void setPort(integer $Port) Set New default port of target group
- */
-
-/**
- *ModifyTargetGroupAttribute request structure.
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
      * @var integer New default port of target group
      */
     public $Port;
+
     /**
      * @param string $TargetGroupId Target group ID
      * @param string $TargetGroupName New name of target group
@@ -54,6 +53,7 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

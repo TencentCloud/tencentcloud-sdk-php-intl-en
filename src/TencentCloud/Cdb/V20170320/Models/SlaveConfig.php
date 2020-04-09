@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Configuration information of the salve database
+ *
  * @method string getReplicationMode() Obtain Replication mode of the slave database. Value range: async, semi-sync
  * @method void setReplicationMode(string $ReplicationMode) Set Replication mode of the slave database. Value range: async, semi-sync
  * @method string getZone() Obtain AZ name of the slave database, such as ap-shanghai-1
  * @method void setZone(string $Zone) Set AZ name of the slave database, such as ap-shanghai-1
- */
-
-/**
- *Configuration information of the salve database
  */
 class SlaveConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SlaveConfig extends AbstractModel
      * @var string AZ name of the slave database, such as ap-shanghai-1
      */
     public $Zone;
+
     /**
      * @param string $ReplicationMode Replication mode of the slave database. Value range: async, semi-sync
      * @param string $Zone AZ name of the slave database, such as ap-shanghai-1
@@ -46,6 +45,7 @@ class SlaveConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

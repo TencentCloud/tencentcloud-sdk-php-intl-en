@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProcedureTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
  * @method array getProcedureTemplateSet() Obtain List of task flow template details.
  * @method void setProcedureTemplateSet(array $ProcedureTemplateSet) Set List of task flow template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeProcedureTemplates response structure.
  */
 class DescribeProcedureTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeProcedureTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible entries.
      * @param array $ProcedureTemplateSet List of task flow template details.
@@ -54,6 +53,7 @@ class DescribeProcedureTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

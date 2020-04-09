@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePersonSample response structure.
+ *
  * @method AiSamplePerson getPerson() Obtain Figure information.
  * @method void setPerson(AiSamplePerson $Person) Set Figure information.
  * @method array getFailFaceInfoSet() Obtain Face information failing to be processed.
  * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Face information failing to be processed.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreatePersonSample response structure.
  */
 class CreatePersonSampleResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreatePersonSampleResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param AiSamplePerson $Person Figure information.
      * @param array $FailFaceInfoSet Face information failing to be processed.
@@ -54,6 +53,7 @@ class CreatePersonSampleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

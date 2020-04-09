@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Notification target
+ *
  * @method string getTargetType() Obtain Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
 <li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
 <li> CMQ_TOPIC: CMQ topic model.</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) Set Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
  * @method string getTopicName() Obtain Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
  * @method void setTopicName(string $TopicName) Set Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
- */
-
-/**
- *Notification target
  */
 class NotificationTarget extends AbstractModel
 {
@@ -51,6 +49,7 @@ class NotificationTarget extends AbstractModel
      * @var string Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
      */
     public $TopicName;
+
     /**
      * @param string $TargetType Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
 <li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
@@ -62,6 +61,7 @@ class NotificationTarget extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CompareIdlFiles request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where the table to be modified resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where the table to be modified resides
  * @method array getSelectedTables() Obtain List of tables to be modified
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistingIdlFiles(array $ExistingIdlFiles) Set Selected list of uploaded IDL files. Either this parameter or `NewIdlFiles` must be selected
  * @method array getNewIdlFiles() Obtain List of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be selected
  * @method void setNewIdlFiles(array $NewIdlFiles) Set List of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be selected
- */
-
-/**
- *CompareIdlFiles request structure.
  */
 class CompareIdlFilesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CompareIdlFilesRequest extends AbstractModel
      * @var array List of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be selected
      */
     public $NewIdlFiles;
+
     /**
      * @param string $ClusterId ID of the cluster where the table to be modified resides
      * @param array $SelectedTables List of tables to be modified
@@ -62,6 +61,7 @@ class CompareIdlFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

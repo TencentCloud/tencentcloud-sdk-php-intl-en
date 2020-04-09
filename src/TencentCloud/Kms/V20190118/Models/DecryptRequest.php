@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Decrypt request structure.
+ *
  * @method string getCiphertextBlob() Obtain The ciphertext data to be decrypted.
  * @method void setCiphertextBlob(string $CiphertextBlob) Set The ciphertext data to be decrypted.
  * @method string getEncryptionContext() Obtain 
  * @method void setEncryptionContext(string $EncryptionContext) Set 
- */
-
-/**
- *Decrypt request structure.
  */
 class DecryptRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DecryptRequest extends AbstractModel
      * @var string 
      */
     public $EncryptionContext;
+
     /**
      * @param string $CiphertextBlob The ciphertext data to be decrypted.
      * @param string $EncryptionContext 
@@ -46,6 +45,7 @@ class DecryptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

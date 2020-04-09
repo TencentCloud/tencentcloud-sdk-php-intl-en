@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Summarize product details by product
+ *
  * @method string getBusinessCode() Obtain Product code
 Note: This field may return null, indicating that no valid value was found.
  * @method void setBusinessCode(string $BusinessCode) Set Product code
@@ -36,10 +38,6 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
  * @method string getBillMonth() Obtain Billing month, e.g. `2019-08`
  * @method void setBillMonth(string $BillMonth) Set Billing month, e.g. `2019-08`
- */
-
-/**
- *Summarize product details by product
  */
 class BusinessSummaryOverviewItem extends AbstractModel
 {
@@ -83,6 +81,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string Billing month, e.g. `2019-08`
      */
     public $BillMonth;
+
     /**
      * @param string $BusinessCode Product code
 Note: This field may return null, indicating that no valid value was found.
@@ -98,6 +97,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

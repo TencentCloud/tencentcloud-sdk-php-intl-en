@@ -18,14 +18,13 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Live stream AI recognition results
+ *
 
- */
-
-/**
- *Live stream AI recognition results
  */
 class LiveStreamAiRecognitionResultInfo extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class LiveStreamAiRecognitionResultInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

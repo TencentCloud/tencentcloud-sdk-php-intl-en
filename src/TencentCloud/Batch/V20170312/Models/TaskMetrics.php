@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task statistical metrics
+ *
  * @method integer getSubmittedCount() Obtain Submitted count
  * @method void setSubmittedCount(integer $SubmittedCount) Set Submitted count
  * @method integer getPendingCount() Obtain Pending count
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedInterruptedCount(integer $FailedInterruptedCount) Set FailedInterrupted count
  * @method integer getFailedCount() Obtain Failed count
  * @method void setFailedCount(integer $FailedCount) Set Failed count
- */
-
-/**
- *Task statistical metrics
  */
 class TaskMetrics extends AbstractModel
 {
@@ -80,6 +78,7 @@ class TaskMetrics extends AbstractModel
      * @var integer Failed count
      */
     public $FailedCount;
+
     /**
      * @param integer $SubmittedCount Submitted count
      * @param integer $PendingCount Pending count
@@ -94,6 +93,7 @@ class TaskMetrics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

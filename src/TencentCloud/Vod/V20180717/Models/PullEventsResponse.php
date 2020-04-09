@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PullEvents response structure.
+ *
  * @method array getEventSet() Obtain List of events.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEventSet(array $EventSet) Set List of events.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *PullEvents response structure.
  */
 class PullEventsResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $EventSet List of events.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

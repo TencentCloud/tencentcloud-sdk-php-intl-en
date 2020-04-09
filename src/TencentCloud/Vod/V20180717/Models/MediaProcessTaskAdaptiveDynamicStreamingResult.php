@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result type of adaptive bitrate streaming task
+ *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) Set Input of adaptive bitrate streaming task.
  * @method AdaptiveDynamicStreamingInfoItem getOutput() Obtain Output of adaptive bitrate streaming task.
  * @method void setOutput(AdaptiveDynamicStreamingInfoItem $Output) Set Output of adaptive bitrate streaming task.
- */
-
-/**
- *Result type of adaptive bitrate streaming task
  */
 class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
 {
@@ -68,6 +66,7 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
      * @var AdaptiveDynamicStreamingInfoItem Output of adaptive bitrate streaming task.
      */
     public $Output;
+
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param integer $ErrCode Error code. 0: success; other values: failure.
@@ -82,6 +81,7 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

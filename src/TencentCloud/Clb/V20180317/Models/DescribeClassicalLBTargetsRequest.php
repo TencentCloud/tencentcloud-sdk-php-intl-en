@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicalLBTargets request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- */
-
-/**
- *DescribeClassicalLBTargets request structure.
  */
 class DescribeClassicalLBTargetsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeClassicalLBTargetsRequest extends AbstractModel
      * @var string CLB instance ID
      */
     public $LoadBalancerId;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      */
@@ -38,6 +37,7 @@ class DescribeClassicalLBTargetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

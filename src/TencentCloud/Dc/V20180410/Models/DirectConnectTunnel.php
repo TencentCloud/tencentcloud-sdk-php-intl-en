@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Dedicated tunnel information list.
+ *
  * @method string getDirectConnectTunnelId() Obtain Dedicated tunnel ID.
  * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) Set Dedicated tunnel ID.
  * @method string getDirectConnectId() Obtain Connection ID.
@@ -108,10 +110,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVpcName(string $VpcName) Set VPC name.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Dedicated tunnel information list.
  */
 class DirectConnectTunnel extends AbstractModel
 {
@@ -267,6 +265,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VpcName;
+
     /**
      * @param string $DirectConnectTunnelId Dedicated tunnel ID.
      * @param string $DirectConnectId Connection ID.
@@ -318,6 +317,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

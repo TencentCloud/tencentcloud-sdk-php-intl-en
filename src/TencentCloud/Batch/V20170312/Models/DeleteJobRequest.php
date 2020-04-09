@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteJob request structure.
+ *
  * @method string getJobId() Obtain Job ID
  * @method void setJobId(string $JobId) Set Job ID
- */
-
-/**
- *DeleteJob request structure.
  */
 class DeleteJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteJobRequest extends AbstractModel
      * @var string Job ID
      */
     public $JobId;
+
     /**
      * @param string $JobId Job ID
      */
@@ -38,6 +37,7 @@ class DeleteJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

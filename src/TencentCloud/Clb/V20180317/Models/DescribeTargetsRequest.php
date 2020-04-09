@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTargets request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getListenerIds() Obtain List of listener IDs
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set Listener protocol type
  * @method integer getPort() Obtain Listener port
  * @method void setPort(integer $Port) Set Listener port
- */
-
-/**
- *DescribeTargets request structure.
  */
 class DescribeTargetsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTargetsRequest extends AbstractModel
      * @var integer Listener port
      */
     public $Port;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $ListenerIds List of listener IDs
@@ -62,6 +61,7 @@ class DescribeTargetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

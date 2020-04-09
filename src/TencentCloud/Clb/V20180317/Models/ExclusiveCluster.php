@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Dedicated cluster
+ *
  * @method array getL4Clusters() Obtain Layer-4 dedicated cluster list
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setL4Clusters(array $L4Clusters) Set Layer-4 dedicated cluster list
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setClassicalCluster(ClusterItem $ClassicalCluster) Set vpcgw cluster
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Dedicated cluster
  */
 class ExclusiveCluster extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ClassicalCluster;
+
     /**
      * @param array $L4Clusters Layer-4 dedicated cluster list
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

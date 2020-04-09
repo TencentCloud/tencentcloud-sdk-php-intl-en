@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBXlogs request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-4wdeb0zv.
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-4wdeb0zv.
  * @method string getStartTime() Obtain Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
  * @method integer getLimit() Obtain Number of entries returned per page in paged query. Value range: 1–100.
  * @method void setLimit(integer $Limit) Set Number of entries returned per page in paged query. Value range: 1–100.
- */
-
-/**
- *DescribeDBXlogs request structure.
  */
 class DescribeDBXlogsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDBXlogsRequest extends AbstractModel
      * @var integer Number of entries returned per page in paged query. Value range: 1–100.
      */
     public $Limit;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-4wdeb0zv.
      * @param string $StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
@@ -70,6 +69,7 @@ class DescribeDBXlogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

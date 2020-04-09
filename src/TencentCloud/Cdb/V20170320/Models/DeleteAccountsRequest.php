@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAccounts request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method array getAccounts() Obtain TencentDB account.
  * @method void setAccounts(array $Accounts) Set TencentDB account.
- */
-
-/**
- *DeleteAccounts request structure.
  */
 class DeleteAccountsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteAccountsRequest extends AbstractModel
      * @var array TencentDB account.
      */
     public $Accounts;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Accounts TencentDB account.
@@ -46,6 +45,7 @@ class DeleteAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Table processing result information
+ *
  * @method string getTableInstanceId() Obtain Table instance ID in the format of `tcaplus-3be64cbb`
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTableInstanceId(string $TableInstanceId) Set Table instance ID in the format of `tcaplus-3be64cbb`
@@ -50,10 +52,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTaskIds(array $TaskIds) Set Task ID list, which is valid for the API that creates multiple tasks
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Table processing result information
  */
 class TableResultNew extends AbstractModel
 {
@@ -104,6 +102,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TaskIds;
+
     /**
      * @param string $TableInstanceId Table instance ID in the format of `tcaplus-3be64cbb`
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -126,6 +125,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

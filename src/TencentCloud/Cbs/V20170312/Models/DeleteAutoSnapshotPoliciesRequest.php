@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAutoSnapshotPolicies request structure.
+ *
  * @method array getAutoSnapshotPolicyIds() Obtain List of scheduled snapshot policy IDs to be deleted.
  * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) Set List of scheduled snapshot policy IDs to be deleted.
- */
-
-/**
- *DeleteAutoSnapshotPolicies request structure.
  */
 class DeleteAutoSnapshotPoliciesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAutoSnapshotPoliciesRequest extends AbstractModel
      * @var array List of scheduled snapshot policy IDs to be deleted.
      */
     public $AutoSnapshotPolicyIds;
+
     /**
      * @param array $AutoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteAutoSnapshotPoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

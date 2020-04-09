@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Package message statistics response packet
+ *
  * @method string getPackageCreateTime() Obtain Package creation time in standard time format, such as 2019-10-08 17:18:37.
  * @method void setPackageCreateTime(string $PackageCreateTime) Set Package creation time in standard time format, such as 2019-10-08 17:18:37.
  * @method integer getPackageCreateUnixTime() Obtain Package creation time in seconds in the format of UNIX timestamp.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageId(integer $PackageId) Set Package ID.
  * @method integer getCurrentUsage() Obtain Current usage.
  * @method void setCurrentUsage(integer $CurrentUsage) Set Current usage.
- */
-
-/**
- *Package message statistics response packet
  */
 class SmsPackagesStatistics extends AbstractModel
 {
@@ -94,6 +92,7 @@ class SmsPackagesStatistics extends AbstractModel
      * @var integer Current usage.
      */
     public $CurrentUsage;
+
     /**
      * @param string $PackageCreateTime Package creation time in standard time format, such as 2019-10-08 17:18:37.
      * @param integer $PackageCreateUnixTime Package creation time in seconds in the format of UNIX timestamp.
@@ -110,6 +109,7 @@ class SmsPackagesStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

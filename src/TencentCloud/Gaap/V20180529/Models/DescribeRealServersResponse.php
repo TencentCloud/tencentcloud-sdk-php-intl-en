@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRealServers response structure.
+ *
  * @method array getRealServerSet() Obtain An information list of origin server
  * @method void setRealServerSet(array $RealServerSet) Set An information list of origin server
  * @method integer getTotalCount() Obtain The quantity of origin servers
  * @method void setTotalCount(integer $TotalCount) Set The quantity of origin servers
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeRealServers response structure.
  */
 class DescribeRealServersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRealServersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $RealServerSet An information list of origin server
      * @param integer $TotalCount The quantity of origin servers
@@ -54,6 +53,7 @@ class DescribeRealServersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

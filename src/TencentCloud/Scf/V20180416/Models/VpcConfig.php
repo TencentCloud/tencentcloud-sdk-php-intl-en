@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC parameter configuration
+ *
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
- */
-
-/**
- *VPC parameter configuration
  */
 class VpcConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VpcConfig extends AbstractModel
      * @var string Subnet ID
      */
     public $SubnetId;
+
     /**
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
@@ -46,6 +45,7 @@ class VpcConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

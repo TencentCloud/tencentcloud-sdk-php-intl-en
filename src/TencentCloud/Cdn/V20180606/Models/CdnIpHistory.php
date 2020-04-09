@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CDN node activation and deactivation history
+ *
  * @method string getStatus() Obtain Operation type
 online: node is online
 offline: node is offline
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setDatetime(string $Datetime) Set Operation time corresponding to operation type
 If this value is null, there are no status change records
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *CDN node activation and deactivation history
  */
 class CdnIpHistory extends AbstractModel
 {
@@ -50,6 +48,7 @@ If this value is null, there are no status change records
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Datetime;
+
     /**
      * @param string $Status Operation type
 online: node is online
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

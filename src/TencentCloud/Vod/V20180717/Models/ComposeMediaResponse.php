@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ComposeMedia response structure.
+ *
  * @method string getTaskId() Obtain Media file composing task ID, which can be used to query the status of composing task (with task type being `MakeMedia`).
  * @method void setTaskId(string $TaskId) Set Media file composing task ID, which can be used to query the status of composing task (with task type being `MakeMedia`).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ComposeMedia response structure.
  */
 class ComposeMediaResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ComposeMediaResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $TaskId Media file composing task ID, which can be used to query the status of composing task (with task type being `MakeMedia`).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ComposeMediaResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

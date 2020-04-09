@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSpecInfo response structure.
+ *
  * @method array getSpecInfoList() Obtain List of purchasable instance specifications
  * @method void setSpecInfoList(array $SpecInfoList) Set List of purchasable instance specifications
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSpecInfo response structure.
  */
 class DescribeSpecInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSpecInfoResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SpecInfoList List of purchasable instance specifications
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeSpecInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

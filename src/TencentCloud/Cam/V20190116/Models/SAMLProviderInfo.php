@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SAML identity provider
+ *
  * @method string getName() Obtain SAML identity provider name
  * @method void setName(string $Name) Set SAML identity provider name
  * @method string getDescription() Obtain SAML identity provider description
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Time SAML identity provider created
  * @method string getModifyTime() Obtain Time SAML identity provider last modified
  * @method void setModifyTime(string $ModifyTime) Set Time SAML identity provider last modified
- */
-
-/**
- *SAML identity provider
  */
 class SAMLProviderInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SAMLProviderInfo extends AbstractModel
      * @var string Time SAML identity provider last modified
      */
     public $ModifyTime;
+
     /**
      * @param string $Name SAML identity provider name
      * @param string $Description SAML identity provider description
@@ -62,6 +61,7 @@ class SAMLProviderInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

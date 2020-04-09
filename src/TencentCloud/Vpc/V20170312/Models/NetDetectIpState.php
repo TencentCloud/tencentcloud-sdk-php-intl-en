@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The verification result of the network detection destination IP address.
+ *
  * @method string getDetectDestinationIp() Obtain The destination IPv4 address of network detection.
  * @method void setDetectDestinationIp(string $DetectDestinationIp) Set The destination IPv4 address of network detection.
  * @method integer getState() Obtain The detection result.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDelay(integer $Delay) Set The latency. Unit: ms.
  * @method integer getPacketLossRate() Obtain The packet loss rate.
  * @method void setPacketLossRate(integer $PacketLossRate) Set The packet loss rate.
- */
-
-/**
- *The verification result of the network detection destination IP address.
  */
 class NetDetectIpState extends AbstractModel
 {
@@ -67,6 +65,7 @@ class NetDetectIpState extends AbstractModel
      * @var integer The packet loss rate.
      */
     public $PacketLossRate;
+
     /**
      * @param string $DetectDestinationIp The destination IPv4 address of network detection.
      * @param integer $State The detection result.
@@ -82,6 +81,7 @@ class NetDetectIpState extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

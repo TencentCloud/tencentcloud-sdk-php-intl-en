@@ -18,14 +18,13 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveCerts request structure.
+ *
 
- */
-
-/**
- *DescribeLiveCerts request structure.
  */
 class DescribeLiveCertsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeLiveCertsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

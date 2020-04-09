@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTranscodeTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of transcoding template.
  * @method void setDefinition(integer $Definition) Set Unique ID of transcoding template.
  * @method string getContainer() Obtain Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set TESHD transcoding parameter.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ModifyTranscodeTemplate request structure.
  */
 class ModifyTranscodeTemplateRequest extends AbstractModel
 {
@@ -106,6 +104,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition Unique ID of transcoding template.
      * @param string $Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
@@ -126,6 +125,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

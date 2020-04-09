@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAutoSnapshotPolicyAttribute request structure.
+ *
  * @method string getAutoSnapshotPolicyId() Obtain Scheduled snapshot policy ID.
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Scheduled snapshot policy ID.
  * @method array getPolicy() Obtain The policy for executing the scheduled snapshot.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsPermanent(boolean $IsPermanent) Set Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
  * @method integer getRetentionDays() Obtain The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
  * @method void setRetentionDays(integer $RetentionDays) Set The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
- */
-
-/**
- *ModifyAutoSnapshotPolicyAttribute request structure.
  */
 class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
      * @var integer The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
      */
     public $RetentionDays;
+
     /**
      * @param string $AutoSnapshotPolicyId Scheduled snapshot policy ID.
      * @param array $Policy The policy for executing the scheduled snapshot.
@@ -78,6 +77,7 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

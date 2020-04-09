@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstance request structure.
+ *
  * @method string getOperation() Obtain Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
  * @method void setOperation(string $Operation) Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
  * @method array getInstanceIds() Obtain Instance ID
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Disused
  * @method integer getAutoRenew() Obtain Disused
  * @method void setAutoRenew(integer $AutoRenew) Set Disused
- */
-
-/**
- *ModifyInstance request structure.
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyInstanceRequest extends AbstractModel
      * @var integer Disused
      */
     public $AutoRenew;
+
     /**
      * @param string $Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
      * @param array $InstanceIds Instance ID
@@ -94,6 +93,7 @@ class ModifyInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

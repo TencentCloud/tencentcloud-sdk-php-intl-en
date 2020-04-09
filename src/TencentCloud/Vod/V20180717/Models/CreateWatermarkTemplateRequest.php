@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWatermarkTemplate request structure.
+ *
  * @method string getType() Obtain Watermarking type. Valid values:
 <li>image: image watermark;</li>
 <li>text: text watermark;</li>
@@ -66,10 +68,6 @@ Default value: 0 px.
  * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) Set SVG watermarking template. This field is required when `Type` is `svg` and is invalid when `Type` is `image` or `text`.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *CreateWatermarkTemplate request structure.
  */
 class CreateWatermarkTemplateRequest extends AbstractModel
 {
@@ -136,6 +134,7 @@ Default value: 0 px.
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $Type Watermarking type. Valid values:
 <li>image: image watermark;</li>
@@ -166,6 +165,7 @@ Default value: 0 px.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

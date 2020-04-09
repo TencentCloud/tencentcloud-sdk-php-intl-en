@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database permission change information
+ *
  * @method string getDBName() Obtain Database name
  * @method void setDBName(string $DBName) Set Database name
  * @method string getPrivilege() Obtain Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
  * @method void setPrivilege(string $Privilege) Set Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
- */
-
-/**
- *Database permission change information
  */
 class DBPrivilegeModifyInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBPrivilegeModifyInfo extends AbstractModel
      * @var string Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
      */
     public $Privilege;
+
     /**
      * @param string $DBName Database name
      * @param string $Privilege Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
@@ -46,6 +45,7 @@ class DBPrivilegeModifyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

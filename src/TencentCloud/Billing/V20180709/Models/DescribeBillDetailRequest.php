@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillDetail request structure.
+ *
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Quantity, maximum is 100
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) Set Billing mode: prePay/postPay
  * @method string getResourceId() Obtain Queries information on a specified resource
  * @method void setResourceId(string $ResourceId) Set Queries information on a specified resource
- */
-
-/**
- *DescribeBillDetail request structure.
  */
 class DescribeBillDetailRequest extends AbstractModel
 {
@@ -97,6 +95,7 @@ class DescribeBillDetailRequest extends AbstractModel
      * @var string Queries information on a specified resource
      */
     public $ResourceId;
+
     /**
      * @param integer $Offset Offset
      * @param integer $Limit Quantity, maximum is 100
@@ -114,6 +113,7 @@ class DescribeBillDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

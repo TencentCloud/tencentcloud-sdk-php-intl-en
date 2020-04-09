@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableCaches request structure.
+ *
  * @method array getUrls() Obtain List of URLs to be blocked
 Up to 100 entries can be submitted at a time and 3,000 entries per day.
  * @method void setUrls(array $Urls) Set List of URLs to be blocked
 Up to 100 entries can be submitted at a time and 3,000 entries per day.
- */
-
-/**
- *DisableCaches request structure.
  */
 class DisableCachesRequest extends AbstractModel
 {
@@ -34,6 +32,7 @@ class DisableCachesRequest extends AbstractModel
 Up to 100 entries can be submitted at a time and 3,000 entries per day.
      */
     public $Urls;
+
     /**
      * @param array $Urls List of URLs to be blocked
 Up to 100 entries can be submitted at a time and 3,000 entries per day.
@@ -42,6 +41,7 @@ Up to 100 entries can be submitted at a time and 3,000 entries per day.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

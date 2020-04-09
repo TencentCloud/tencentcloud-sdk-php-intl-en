@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLoadBalancer request structure.
+ *
  * @method string getLoadBalancerType() Obtain CLB instance network type:
 OPEN: public network; INTERNAL: private network.
  * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
@@ -50,10 +52,6 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
  * @method void setVipIsp(string $VipIsp) Set This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
  * @method array getTags() Obtain Tags a CLB instance when purchasing it
  * @method void setTags(array $Tags) Set Tags a CLB instance when purchasing it
- */
-
-/**
- *CreateLoadBalancer request structure.
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -124,6 +122,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @var array Tags a CLB instance when purchasing it
      */
     public $Tags;
+
     /**
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
@@ -146,6 +145,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

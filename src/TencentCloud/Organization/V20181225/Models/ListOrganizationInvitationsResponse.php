@@ -18,16 +18,14 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListOrganizationInvitations response structure.
+ *
  * @method array getInvitations() Obtain List of invitations
  * @method void setInvitations(array $Invitations) Set List of invitations
  * @method integer getTotalCount() Obtain Total number of results
  * @method void setTotalCount(integer $TotalCount) Set Total number of results
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListOrganizationInvitations response structure.
  */
 class ListOrganizationInvitationsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListOrganizationInvitationsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Invitations List of invitations
      * @param integer $TotalCount Total number of results
@@ -54,6 +53,7 @@ class ListOrganizationInvitationsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

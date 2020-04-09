@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cluster advanced configurations
+ *
  * @method boolean getIPVS() Obtain Whether IPVS is enabled
  * @method void setIPVS(boolean $IPVS) Set Whether IPVS is enabled
  * @method boolean getAsEnabled() Obtain Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkType(string $NetworkType) Set Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
  * @method boolean getIsNonStaticIpMode() Obtain Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) Set Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
- */
-
-/**
- *Cluster advanced configurations
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ClusterAdvancedSettings extends AbstractModel
      * @var boolean Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
      */
     public $IsNonStaticIpMode;
+
     /**
      * @param boolean $IPVS Whether IPVS is enabled
      * @param boolean $AsEnabled Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
@@ -86,6 +85,7 @@ class ClusterAdvancedSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

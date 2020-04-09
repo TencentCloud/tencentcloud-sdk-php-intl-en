@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Security group policy object
+ *
  * @method integer getPolicyIndex() Obtain Security group policy index number.
  * @method void setPolicyIndex(integer $PolicyIndex) Set Security group policy index number.
  * @method string getProtocol() Obtain Protocol. Values: TCP, UDP, ICMP
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyDescription(string $PolicyDescription) Set Security group policy description.
  * @method string getModifyTime() Obtain The last modification time of the security group.
  * @method void setModifyTime(string $ModifyTime) Set The last modification time of the security group.
- */
-
-/**
- *Security group policy object
  */
 class SecurityGroupPolicy extends AbstractModel
 {
@@ -101,6 +99,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @var string The last modification time of the security group.
      */
     public $ModifyTime;
+
     /**
      * @param integer $PolicyIndex Security group policy index number.
      * @param string $Protocol Protocol. Values: TCP, UDP, ICMP
@@ -118,6 +117,7 @@ class SecurityGroupPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

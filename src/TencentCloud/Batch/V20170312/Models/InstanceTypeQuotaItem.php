@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes instance model quota.
+ *
  * @method string getZone() Obtain Availability zone.
  * @method void setZone(string $Zone) Set Availability zone.
  * @method string getInstanceType() Obtain Instance model.
@@ -48,10 +50,6 @@ Note: This field may return null, indicating that no valid value is found.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setSoldOutReason(string $SoldOutReason) Set Details of out-of-stock items
 Note: this field may return null, indicating that no valid value is obtained.
- */
-
-/**
- *Describes instance model quota.
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -121,6 +119,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public $SoldOutReason;
+
     /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
@@ -142,6 +141,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

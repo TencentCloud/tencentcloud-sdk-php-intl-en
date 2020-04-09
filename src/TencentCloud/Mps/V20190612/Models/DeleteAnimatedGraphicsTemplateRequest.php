@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAnimatedGraphicsTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of an animated image generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an animated image generating template.
- */
-
-/**
- *DeleteAnimatedGraphicsTemplate request structure.
  */
 class DeleteAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAnimatedGraphicsTemplateRequest extends AbstractModel
      * @var integer Unique ID of an animated image generating template.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Unique ID of an animated image generating template.
      */
@@ -38,6 +37,7 @@ class DeleteAnimatedGraphicsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

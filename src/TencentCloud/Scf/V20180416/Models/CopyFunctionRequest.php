@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CopyFunction request structure.
+ *
  * @method string getFunctionName() Obtain Name of the function to be replicated
  * @method void setFunctionName(string $FunctionName) Set Name of the function to be replicated
  * @method string getNewFunctionName() Obtain Name of the new function
@@ -44,10 +46,6 @@ FALSE: Does not replicate the function configuration.
  * @method void setCopyConfiguration(boolean $CopyConfiguration) Set It specifies whether to replicate the function attributes, including environment variables, memory, timeout, function description, labels, and VPC. The default value is `TRUE`.
 TRUE: Replicates the function configuration.
 FALSE: Does not replicate the function configuration.
- */
-
-/**
- *CopyFunction request structure.
  */
 class CopyFunctionRequest extends AbstractModel
 {
@@ -95,6 +93,7 @@ TRUE: Replicates the function configuration.
 FALSE: Does not replicate the function configuration.
      */
     public $CopyConfiguration;
+
     /**
      * @param string $FunctionName Name of the function to be replicated
      * @param string $NewFunctionName Name of the new function
@@ -114,6 +113,7 @@ FALSE: Does not replicate the function configuration.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateDisks response structure.
+ *
  * @method Price getDiskPrice() Obtain Describes the price of purchasing new cloud disk.
  * @method void setDiskPrice(Price $DiskPrice) Set Describes the price of purchasing new cloud disk.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *InquiryPriceCreateDisks response structure.
  */
 class InquiryPriceCreateDisksResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InquiryPriceCreateDisksResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param Price $DiskPrice Describes the price of purchasing new cloud disk.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class InquiryPriceCreateDisksResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

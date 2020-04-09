@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Specification information
+ *
  * @method string getSpecCode() Obtain Specification ID
  * @method void setSpecCode(string $SpecCode) Set Specification ID
  * @method string getVersion() Obtain PostgreSQL kernel version number
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) Set Billing ID for this specification
  * @method string getType() Obtain Machine type
  * @method void setType(string $Type) Set Machine type
- */
-
-/**
- *Specification information
  */
 class SpecItemInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class SpecItemInfo extends AbstractModel
      * @var string Machine type
      */
     public $Type;
+
     /**
      * @param string $SpecCode Specification ID
      * @param string $Version PostgreSQL kernel version number
@@ -110,6 +109,7 @@ class SpecItemInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

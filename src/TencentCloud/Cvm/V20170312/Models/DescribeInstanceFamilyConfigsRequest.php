@@ -18,14 +18,13 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceFamilyConfigs request structure.
+ *
 
- */
-
-/**
- *DescribeInstanceFamilyConfigs request structure.
  */
 class DescribeInstanceFamilyConfigsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeInstanceFamilyConfigsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

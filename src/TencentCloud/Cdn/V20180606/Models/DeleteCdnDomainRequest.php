@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCdnDomain request structure.
+ *
  * @method string getDomain() Obtain Domain name
 The domain name status should be `Disabled`
  * @method void setDomain(string $Domain) Set Domain name
 The domain name status should be `Disabled`
- */
-
-/**
- *DeleteCdnDomain request structure.
  */
 class DeleteCdnDomainRequest extends AbstractModel
 {
@@ -34,6 +32,7 @@ class DeleteCdnDomainRequest extends AbstractModel
 The domain name status should be `Disabled`
      */
     public $Domain;
+
     /**
      * @param string $Domain Domain name
 The domain name status should be `Disabled`
@@ -42,6 +41,7 @@ The domain name status should be `Disabled`
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

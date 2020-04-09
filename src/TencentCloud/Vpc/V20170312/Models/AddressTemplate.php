@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP address template
+ *
  * @method string getAddressTemplateName() Obtain IP address template name.
  * @method void setAddressTemplateName(string $AddressTemplateName) Set IP address template name.
  * @method string getAddressTemplateId() Obtain The unique ID of the IP address template instance.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressSet(array $AddressSet) Set IP address information.
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
- */
-
-/**
- *IP address template
  */
 class AddressTemplate extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AddressTemplate extends AbstractModel
      * @var string Creation Time.
      */
     public $CreatedTime;
+
     /**
      * @param string $AddressTemplateName IP address template name.
      * @param string $AddressTemplateId The unique ID of the IP address template instance.
@@ -62,6 +61,7 @@ class AddressTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

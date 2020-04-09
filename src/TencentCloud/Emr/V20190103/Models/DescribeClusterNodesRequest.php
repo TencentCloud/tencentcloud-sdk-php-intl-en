@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterNodes request structure.
+ *
  * @method string getInstanceId() Obtain Cluster instance ID in the format of emr-xxxxxxxx
  * @method void setInstanceId(string $InstanceId) Set Cluster instance ID in the format of emr-xxxxxxxx
  * @method string getNodeFlag() Obtain Node flag. Valid values:
@@ -42,10 +44,6 @@ Note: only the above values are supported for the time being. Entering other val
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0, indicating the first page.
  * @method integer getLimit() Obtain Number of returned results per page. Default value: 100. Maximum value: 100
  * @method void setLimit(integer $Limit) Set Number of returned results per page. Default value: 100. Maximum value: 100
- */
-
-/**
- *DescribeClusterNodes request structure.
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -76,6 +74,7 @@ Note: only the above values are supported for the time being. Entering other val
      * @var integer Number of returned results per page. Default value: 100. Maximum value: 100
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Cluster instance ID in the format of emr-xxxxxxxx
      * @param string $NodeFlag Node flag. Valid values:
@@ -94,6 +93,7 @@ Note: only the above values are supported for the time being. Entering other val
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

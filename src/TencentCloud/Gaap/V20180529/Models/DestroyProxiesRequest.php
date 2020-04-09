@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DestroyProxies request structure.
+ *
  * @method integer getForce() Obtain The identifier for forced deletion
 1: this connection list is deleted forcibly regardless of whether the origin server has been bound.
 0: this connection list cannot be deleted if the origin server has been bound.
@@ -34,10 +36,6 @@ For more information, please see How to Ensure Idempotence.
 For more information, please see How to Ensure Idempotence.
  * @method array getProxyIds() Obtain List of connection instance IDs; It’s a new parameter.
  * @method void setProxyIds(array $ProxyIds) Set List of connection instance IDs; It’s a new parameter.
- */
-
-/**
- *DestroyProxies request structure.
  */
 class DestroyProxiesRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ For more information, please see How to Ensure Idempotence.
      * @var array List of connection instance IDs; It’s a new parameter.
      */
     public $ProxyIds;
+
     /**
      * @param integer $Force The identifier for forced deletion
 1: this connection list is deleted forcibly regardless of whether the origin server has been bound.
@@ -78,6 +77,7 @@ For more information, please see How to Ensure Idempotence.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

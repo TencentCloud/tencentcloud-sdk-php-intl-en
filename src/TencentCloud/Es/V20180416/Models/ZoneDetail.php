@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of AZs in multi-AZ deployment mode
+ *
  * @method string getZone() Obtain AZ
  * @method void setZone(string $Zone) Set AZ
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
- */
-
-/**
- *Details of AZs in multi-AZ deployment mode
  */
 class ZoneDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ZoneDetail extends AbstractModel
      * @var string Subnet ID
      */
     public $SubnetId;
+
     /**
      * @param string $Zone AZ
      * @param string $SubnetId Subnet ID
@@ -46,6 +45,7 @@ class ZoneDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

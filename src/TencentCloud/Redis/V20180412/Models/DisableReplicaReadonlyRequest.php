@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableReplicaReadonly request structure.
+ *
  * @method string getInstanceId() Obtain Serial ID of an instance
  * @method void setInstanceId(string $InstanceId) Set Serial ID of an instance
- */
-
-/**
- *DisableReplicaReadonly request structure.
  */
 class DisableReplicaReadonlyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisableReplicaReadonlyRequest extends AbstractModel
      * @var string Serial ID of an instance
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId Serial ID of an instance
      */
@@ -38,6 +37,7 @@ class DisableReplicaReadonlyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

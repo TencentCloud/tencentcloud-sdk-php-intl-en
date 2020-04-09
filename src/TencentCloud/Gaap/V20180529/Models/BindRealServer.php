@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Bound origin server information
+ *
  * @method string getRealServerId() Obtain Origin server ID
  * @method void setRealServerId(string $RealServerId) Set Origin server ID
  * @method string getRealServerIP() Obtain Origin server IP or domain name
@@ -32,10 +34,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDownIPList() Obtain If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
  * @method void setDownIPList(array $DownIPList) Set If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
- */
-
-/**
- *Bound origin server information
  */
 class BindRealServer extends AbstractModel
 {
@@ -69,6 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var array If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
      */
     public $DownIPList;
+
     /**
      * @param string $RealServerId Origin server ID
      * @param string $RealServerIP Origin server IP or domain name
@@ -82,6 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

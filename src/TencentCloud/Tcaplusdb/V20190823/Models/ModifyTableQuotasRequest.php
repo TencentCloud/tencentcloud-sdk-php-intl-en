@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTableQuotas request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where the table to be scaled resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where the table to be scaled resides
  * @method array getTableQuotas() Obtain List of quotas of tables selected for modification
  * @method void setTableQuotas(array $TableQuotas) Set List of quotas of tables selected for modification
- */
-
-/**
- *ModifyTableQuotas request structure.
  */
 class ModifyTableQuotasRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyTableQuotasRequest extends AbstractModel
      * @var array List of quotas of tables selected for modification
      */
     public $TableQuotas;
+
     /**
      * @param string $ClusterId ID of the cluster where the table to be scaled resides
      * @param array $TableQuotas List of quotas of tables selected for modification
@@ -46,6 +45,7 @@ class ModifyTableQuotasRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

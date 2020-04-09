@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetNatGatewayConnection request structure.
+ *
  * @method string getNatGatewayId() Obtain NAT gateway ID.
  * @method void setNatGatewayId(string $NatGatewayId) Set NAT gateway ID.
  * @method integer getMaxConcurrentConnection() Obtain Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
  * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) Set Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
- */
-
-/**
- *ResetNatGatewayConnection request structure.
  */
 class ResetNatGatewayConnectionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResetNatGatewayConnectionRequest extends AbstractModel
      * @var integer Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
      */
     public $MaxConcurrentConnection;
+
     /**
      * @param string $NatGatewayId NAT gateway ID.
      * @param integer $MaxConcurrentConnection Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
@@ -46,6 +45,7 @@ class ResetNatGatewayConnectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

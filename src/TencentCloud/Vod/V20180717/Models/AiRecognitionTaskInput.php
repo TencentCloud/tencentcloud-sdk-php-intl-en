@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of video content recognition
+ *
  * @method integer getDefinition() Obtain Intelligent video recognition template ID.
  * @method void setDefinition(integer $Definition) Set Intelligent video recognition template ID.
- */
-
-/**
- *Input parameter type of video content recognition
  */
 class AiRecognitionTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskInput extends AbstractModel
      * @var integer Intelligent video recognition template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Intelligent video recognition template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

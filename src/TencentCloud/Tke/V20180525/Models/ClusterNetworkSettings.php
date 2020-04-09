@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cluster network-related parameters
+ *
  * @method string getClusterCIDR() Obtain CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC.
  * @method void setClusterCIDR(string $ClusterCIDR) Set CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC.
  * @method boolean getIgnoreClusterCIDRConflict() Obtain Whether to ignore ClusterCIDR conflict errors. It defaults to not ignore.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set Cluster VPC ID, which is required when you create an empty cluster; otherwise, it is automatically set to be consistent with that of the nodes in the cluster
  * @method boolean getCni() Obtain Whether CNI is enabled for network plugin(s). Default value: enabled
  * @method void setCni(boolean $Cni) Set Whether CNI is enabled for network plugin(s). Default value: enabled
- */
-
-/**
- *Cluster network-related parameters
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ClusterNetworkSettings extends AbstractModel
      * @var boolean Whether CNI is enabled for network plugin(s). Default value: enabled
      */
     public $Cni;
+
     /**
      * @param string $ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC.
      * @param boolean $IgnoreClusterCIDRConflict Whether to ignore ClusterCIDR conflict errors. It defaults to not ignore.
@@ -86,6 +85,7 @@ class ClusterNetworkSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Subnet object
+ *
  * @method string getCidrBlock() Obtain The `CIDR` of the subnet.
  * @method void setCidrBlock(string $CidrBlock) Set The `CIDR` of the subnet.
  * @method string getSubnetName() Obtain Subnet name.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`.
  * @method string getRouteTableId() Obtain The specified associated route table, such as `rtb-3ryrwzuu`.
  * @method void setRouteTableId(string $RouteTableId) Set The specified associated route table, such as `rtb-3ryrwzuu`.
- */
-
-/**
- *Subnet object
  */
 class SubnetInput extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SubnetInput extends AbstractModel
      * @var string The specified associated route table, such as `rtb-3ryrwzuu`.
      */
     public $RouteTableId;
+
     /**
      * @param string $CidrBlock The `CIDR` of the subnet.
      * @param string $SubnetName Subnet name.
@@ -62,6 +61,7 @@ class SubnetInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

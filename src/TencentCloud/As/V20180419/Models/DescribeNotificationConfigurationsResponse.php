@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNotificationConfigurations response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible notifications.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible notifications.
  * @method array getAutoScalingNotificationSet() Obtain List of AS event notification details.
  * @method void setAutoScalingNotificationSet(array $AutoScalingNotificationSet) Set List of AS event notification details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeNotificationConfigurations response structure.
  */
 class DescribeNotificationConfigurationsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNotificationConfigurationsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible notifications.
      * @param array $AutoScalingNotificationSet List of AS event notification details.
@@ -54,6 +53,7 @@ class DescribeNotificationConfigurationsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeZoneInstanceConfigInfos request structure.
+ *
  * @method array getFilters() Obtain Filters.
 
 <li> `zone` - String - Optional - Filter results by availability zone.</li>
@@ -37,10 +39,6 @@ use TencentCloud\Common\AbstractModel;
 
 <li>`instance-charge-type` - String - Optional - Filter results by instance billing method. `POSTPAID_BY_HOUR`: pay-as-you-go | `CDHPAID`: you are only billed for CDH instances, not the CVMs running on the CDH instances.</li>
  */
-
-/**
- *DescribeZoneInstanceConfigInfos request structure.
- */
 class DescribeZoneInstanceConfigInfosRequest extends AbstractModel
 {
     /**
@@ -55,6 +53,7 @@ class DescribeZoneInstanceConfigInfosRequest extends AbstractModel
 <li>`instance-charge-type` - String - Optional - Filter results by instance billing method. `POSTPAID_BY_HOUR`: pay-as-you-go | `CDHPAID`: you are only billed for CDH instances, not the CVMs running on the CDH instances.</li>
      */
     public $Filters;
+
     /**
      * @param array $Filters Filters.
 
@@ -70,6 +69,7 @@ class DescribeZoneInstanceConfigInfosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetRole request structure.
+ *
  * @method string getRoleId() Obtain Role ID, used to specify role. Input either `RoleId` or `RoleName`
  * @method void setRoleId(string $RoleId) Set Role ID, used to specify role. Input either `RoleId` or `RoleName`
  * @method string getRoleName() Obtain Role name, used to specify role. Input either `RoleId` or `RoleName`
  * @method void setRoleName(string $RoleName) Set Role name, used to specify role. Input either `RoleId` or `RoleName`
- */
-
-/**
- *GetRole request structure.
  */
 class GetRoleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetRoleRequest extends AbstractModel
      * @var string Role name, used to specify role. Input either `RoleId` or `RoleName`
      */
     public $RoleName;
+
     /**
      * @param string $RoleId Role ID, used to specify role. Input either `RoleId` or `RoleName`
      * @param string $RoleName Role name, used to specify role. Input either `RoleId` or `RoleName`
@@ -46,6 +45,7 @@ class GetRoleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

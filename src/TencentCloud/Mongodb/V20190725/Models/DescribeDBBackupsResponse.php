@@ -18,16 +18,14 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBBackups response structure.
+ *
  * @method array getBackupList() Obtain Backup list
  * @method void setBackupList(array $BackupList) Set Backup list
  * @method integer getTotalCount() Obtain Total number of backups
  * @method void setTotalCount(integer $TotalCount) Set Total number of backups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBBackups response structure.
  */
 class DescribeDBBackupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBBackupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $BackupList Backup list
      * @param integer $TotalCount Total number of backups
@@ -54,6 +53,7 @@ class DescribeDBBackupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

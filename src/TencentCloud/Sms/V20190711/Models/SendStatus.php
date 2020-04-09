@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SMS sending status
+ *
  * @method string getSerialNo() Obtain Delivery serial number.
  * @method void setSerialNo(string $SerialNo) Set Delivery serial number.
  * @method string getPhoneNumber() Obtain Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) Set SMS request error code. For specific meanings, please see Error Codes.
  * @method string getMessage() Obtain SMS request error message.
  * @method void setMessage(string $Message) Set SMS request error message.
- */
-
-/**
- *SMS sending status
  */
 class SendStatus extends AbstractModel
 {
@@ -66,6 +64,7 @@ class SendStatus extends AbstractModel
      * @var string SMS request error message.
      */
     public $Message;
+
     /**
      * @param string $SerialNo Delivery serial number.
      * @param string $PhoneNumber Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
@@ -78,6 +77,7 @@ class SendStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

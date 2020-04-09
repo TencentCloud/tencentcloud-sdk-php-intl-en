@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTranscodeTemplate request structure.
+ *
  * @method string getContainer() Obtain Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
  * @method void setContainer(string $Container) Set Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
  * @method string getName() Obtain Name of a transcoding template. Length limit: 64 characters.
@@ -46,10 +48,6 @@ Default value: 0.
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
  * @method TEHDConfig getTEHDConfig() Obtain TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
- */
-
-/**
- *CreateTranscodeTemplate request structure.
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
@@ -98,6 +96,7 @@ Default value: 0.
      * @var TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
      */
     public $TEHDConfig;
+
     /**
      * @param string $Container Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      * @param string $Name Name of a transcoding template. Length limit: 64 characters.
@@ -118,6 +117,7 @@ Default value: 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

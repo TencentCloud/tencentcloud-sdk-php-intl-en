@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Statistical items of instance backup
+ *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getAutoBackupCount() Obtain Number of automatic data backups of an instance.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogBackupVolume(integer $BinlogBackupVolume) Set Capacity of log backups of an instance.
  * @method integer getBackupVolume() Obtain Total capacity of backups of an instance (including data backups and log backups).
  * @method void setBackupVolume(integer $BackupVolume) Set Total capacity of backups of an instance (including data backups and log backups).
- */
-
-/**
- *Statistical items of instance backup
  */
 class BackupSummaryItem extends AbstractModel
 {
@@ -94,6 +92,7 @@ class BackupSummaryItem extends AbstractModel
      * @var integer Total capacity of backups of an instance (including data backups and log backups).
      */
     public $BackupVolume;
+
     /**
      * @param string $InstanceId Instance ID.
      * @param integer $AutoBackupCount Number of automatic data backups of an instance.
@@ -110,6 +109,7 @@ class BackupSummaryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

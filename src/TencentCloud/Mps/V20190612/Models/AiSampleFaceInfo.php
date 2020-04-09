@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI-based sample management - face information.
+ *
  * @method string getFaceId() Obtain Face image ID.
  * @method void setFaceId(string $FaceId) Set Face image ID.
  * @method string getUrl() Obtain Face image address.
  * @method void setUrl(string $Url) Set Face image address.
- */
-
-/**
- *AI-based sample management - face information.
  */
 class AiSampleFaceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiSampleFaceInfo extends AbstractModel
      * @var string Face image address.
      */
     public $Url;
+
     /**
      * @param string $FaceId Face image ID.
      * @param string $Url Face image address.
@@ -46,6 +45,7 @@ class AiSampleFaceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

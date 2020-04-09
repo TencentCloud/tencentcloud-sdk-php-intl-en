@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Function code
+ *
  * @method string getCosBucketName() Obtain COS bucket name
  * @method void setCosBucketName(string $CosBucketName) Set COS bucket name
  * @method string getCosObjectName() Obtain COS object path
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGitCommitId(string $GitCommitId) Set Version to be pulled
  * @method string getGitUserNameSecret() Obtain Git user name after encryption. In general, this value is not required.
  * @method void setGitUserNameSecret(string $GitUserNameSecret) Set Git user name after encryption. In general, this value is not required.
- */
-
-/**
- *Function code
  */
 class Code extends AbstractModel
 {
@@ -122,6 +120,7 @@ class Code extends AbstractModel
      * @var string Git user name after encryption. In general, this value is not required.
      */
     public $GitUserNameSecret;
+
     /**
      * @param string $CosBucketName COS bucket name
      * @param string $CosObjectName COS object path
@@ -142,6 +141,7 @@ class Code extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

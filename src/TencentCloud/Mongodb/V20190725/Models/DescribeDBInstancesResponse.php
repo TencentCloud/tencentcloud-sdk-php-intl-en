@@ -18,16 +18,14 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible instances.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
  * @method array getInstanceDetails() Obtain List of instance details
  * @method void setInstanceDetails(array $InstanceDetails) Set List of instance details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBInstances response structure.
  */
 class DescribeDBInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible instances.
      * @param array $InstanceDetails List of instance details
@@ -54,6 +53,7 @@ class DescribeDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

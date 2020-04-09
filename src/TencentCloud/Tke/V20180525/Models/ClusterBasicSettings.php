@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the basic configuration information of a cluster
+ *
  * @method string getClusterOs() Obtain Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
  * @method void setClusterOs(string $ClusterOs) Set Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
  * @method string getClusterVersion() Obtain Cluster version. The default value is 1.10.5.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsCustomizeType(string $OsCustomizeType) Set 
  * @method boolean getNeedWorkSecurityGroup() Obtain 
  * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) Set 
- */
-
-/**
- *Describes the basic configuration information of a cluster
  */
 class ClusterBasicSettings extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ClusterBasicSettings extends AbstractModel
      * @var boolean 
      */
     public $NeedWorkSecurityGroup;
+
     /**
      * @param string $ClusterOs Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
      * @param string $ClusterVersion Cluster version. The default value is 1.10.5.
@@ -102,6 +101,7 @@ class ClusterBasicSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

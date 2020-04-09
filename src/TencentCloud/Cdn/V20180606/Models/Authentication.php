@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Timestamp hotlink protection configuration
+ *
  * @method string getSwitch() Obtain Hotlink protection configuration switch
 on: enabled
 off: disabled
@@ -42,10 +44,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTypeD(AuthenticationTypeD $TypeD) Set Timestamp hotlink protection mode D configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Timestamp hotlink protection configuration
  */
 class Authentication extends AbstractModel
 {
@@ -80,6 +78,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TypeD;
+
     /**
      * @param string $Switch Hotlink protection configuration switch
 on: enabled
@@ -98,6 +97,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

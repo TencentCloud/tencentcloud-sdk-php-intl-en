@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI-based sample management - keyword input information.
+ *
  * @method string getKeyword() Obtain Keyword. Length limit: 20 characters.
  * @method void setKeyword(string $Keyword) Set Keyword. Length limit: 20 characters.
  * @method array getTags() Obtain Keyword tag
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Keyword tag
 <li>Array length limit: 20 tags;</li>
 <li>Tag length limit: 128 characters.</li>
- */
-
-/**
- *AI-based sample management - keyword input information.
  */
 class AiSampleWordInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ class AiSampleWordInfo extends AbstractModel
 <li>Tag length limit: 128 characters.</li>
      */
     public $Tags;
+
     /**
      * @param string $Keyword Keyword. Length limit: 20 characters.
      * @param array $Tags Keyword tag
@@ -54,6 +53,7 @@ class AiSampleWordInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

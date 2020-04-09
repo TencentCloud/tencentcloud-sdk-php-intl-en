@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Filter
+ *
  * @method string getName() Obtain The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
  * @method void setName(string $Name) Set The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
  * @method array getValues() Obtain The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
  * @method void setValues(array $Values) Set The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
- */
-
-/**
- *Filter
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
      */
     public $Values;
+
     /**
      * @param string $Name The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
      * @param array $Values The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

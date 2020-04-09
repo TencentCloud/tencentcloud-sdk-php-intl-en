@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstanceCharset response structure.
+ *
  * @method string getCharset() Obtain Default character set of the instance, such as "latin1" and "utf8".
  * @method void setCharset(string $Charset) Set Default character set of the instance, such as "latin1" and "utf8".
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBInstanceCharset response structure.
  */
 class DescribeDBInstanceCharsetResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDBInstanceCharsetResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Charset Default character set of the instance, such as "latin1" and "utf8".
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeDBInstanceCharsetResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible accounts.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible accounts.
  * @method array getItems() Obtain Details of eligible accounts.
  * @method void setItems(array $Items) Set Details of eligible accounts.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAccounts response structure.
  */
 class DescribeAccountsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccountsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible accounts.
      * @param array $Items Details of eligible accounts.
@@ -54,6 +53,7 @@ class DescribeAccountsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

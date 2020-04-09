@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAIAnalysisTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of video content analysis template.
  * @method void setDefinition(integer $Definition) Set Unique ID of video content analysis template.
  * @method string getName() Obtain Video content analysis template name. Length limit: 64 characters.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighlightConfigure(HighlightsConfigureInfoForUpdate $HighlightConfigure) Set Control parameter of an intelligent highlight generating task.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ModifyAIAnalysisTemplate request structure.
  */
 class ModifyAIAnalysisTemplateRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition Unique ID of video content analysis template.
      * @param string $Name Video content analysis template name. Length limit: 64 characters.
@@ -102,6 +101,7 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

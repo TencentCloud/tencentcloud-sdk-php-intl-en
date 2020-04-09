@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Face recognition result segment
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of a recognition segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognition segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a recognition segment in seconds.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) Set Confidence of a recognition segment. Value range: 0–100.
  * @method array getAreaCoordSet() Obtain Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
- */
-
-/**
- *Face recognition result segment
  */
 class AiRecognitionTaskFaceSegmentItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AiRecognitionTaskFaceSegmentItem extends AbstractModel
      * @var array Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
      */
     public $AreaCoordSet;
+
     /**
      * @param float $StartTimeOffset Start time offset of a recognition segment in seconds.
      * @param float $EndTimeOffset End time offset of a recognition segment in seconds.
@@ -62,6 +61,7 @@ class AiRecognitionTaskFaceSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

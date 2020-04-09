@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySnapshotAttribute request structure.
+ *
  * @method string getSnapshotId() Obtain Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
  * @method string getSnapshotName() Obtain Name of new snapshot. Maximum length is 60 bytes.
  * @method void setSnapshotName(string $SnapshotName) Set Name of new snapshot. Maximum length is 60 bytes.
  * @method boolean getIsPermanent() Obtain The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
  * @method void setIsPermanent(boolean $IsPermanent) Set The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
- */
-
-/**
- *ModifySnapshotAttribute request structure.
  */
 class ModifySnapshotAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySnapshotAttributeRequest extends AbstractModel
      * @var boolean The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
      */
     public $IsPermanent;
+
     /**
      * @param string $SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
      * @param string $SnapshotName Name of new snapshot. Maximum length is 60 bytes.
@@ -54,6 +53,7 @@ class ModifySnapshotAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

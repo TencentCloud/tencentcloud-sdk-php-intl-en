@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveTranscodeTemplate request structure.
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
- */
-
-/**
- *DeleteLiveTranscodeTemplate request structure.
  */
 class DeleteLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLiveTranscodeTemplateRequest extends AbstractModel
      * @var integer Template ID.
      */
     public $TemplateId;
+
     /**
      * @param integer $TemplateId Template ID.
      */
@@ -38,6 +37,7 @@ class DeleteLiveTranscodeTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

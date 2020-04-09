@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of video splitting.
+ *
  * @method array getSegmentSet() Obtain List of split video segments.
  * @method void setSegmentSet(array $SegmentSet) Set List of split video segments.
- */
-
-/**
- *Output of video splitting.
  */
 class AiRecognitionTaskSegmentResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskSegmentResultOutput extends AbstractModel
      * @var array List of split video segments.
      */
     public $SegmentSet;
+
     /**
      * @param array $SegmentSet List of split video segments.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskSegmentResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

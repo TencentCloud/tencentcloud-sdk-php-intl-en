@@ -18,12 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDirectConnectTunnel request structure.
+ *
  * @method string getDirectConnectTunnelId() Obtain Dedicated tunnel ID.
  * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) Set Dedicated tunnel ID.
- */
-
-/**
- *DeleteDirectConnectTunnel request structure.
  */
 class DeleteDirectConnectTunnelRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteDirectConnectTunnelRequest extends AbstractModel
      * @var string Dedicated tunnel ID.
      */
     public $DirectConnectTunnelId;
+
     /**
      * @param string $DirectConnectTunnelId Dedicated tunnel ID.
      */
@@ -38,6 +37,7 @@ class DeleteDirectConnectTunnelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

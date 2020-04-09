@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamState response structure.
+ *
  * @method string getStreamState() Obtain Stream status,
 active: active
 inactive: Inactive
@@ -28,10 +30,6 @@ inactive: Inactive
 forbid: forbidden.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveStreamState response structure.
  */
 class DescribeLiveStreamStateResponse extends AbstractModel
 {
@@ -47,6 +45,7 @@ forbid: forbidden.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $StreamState Stream status,
 active: active
@@ -58,6 +57,7 @@ forbid: forbidden.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

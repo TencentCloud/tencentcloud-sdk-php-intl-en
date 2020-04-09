@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceUpgradeDBInstance response structure.
+ *
  * @method integer getOriginalPrice() Obtain Total cost before discount.
  * @method void setOriginalPrice(integer $OriginalPrice) Set Total cost before discount.
  * @method integer getPrice() Obtain Actual amount payable
  * @method void setPrice(integer $Price) Set Actual amount payable
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *InquiryPriceUpgradeDBInstance response structure.
  */
 class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $OriginalPrice Total cost before discount.
      * @param integer $Price Actual amount payable
@@ -54,6 +53,7 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

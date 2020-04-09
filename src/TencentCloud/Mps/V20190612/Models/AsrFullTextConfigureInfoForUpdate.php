@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a full speech recognition task.
+ *
  * @method string getSwitch() Obtain Switch of a full speech recognition task. Valid values:
 <li>ON: Enables an intelligent full speech recognition task;</li>
 <li>OFF: Disables an intelligent full speech recognition task.</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt: Generates a WebVTT subtitles file.</li>
  * @method void setSubtitleFormat(string $SubtitleFormat) Set Format of the generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid value:
 <li>vtt: Generates a WebVTT subtitles file.</li>
- */
-
-/**
- *Control parameter of a full speech recognition task.
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -47,6 +45,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>vtt: Generates a WebVTT subtitles file.</li>
      */
     public $SubtitleFormat;
+
     /**
      * @param string $Switch Switch of a full speech recognition task. Valid values:
 <li>ON: Enables an intelligent full speech recognition task;</li>
@@ -58,6 +57,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

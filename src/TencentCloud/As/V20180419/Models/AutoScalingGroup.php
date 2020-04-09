@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Auto scaling group
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
  * @method string getAutoScalingGroupName() Obtain Auto scaling group name
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
  * @method string getMultiZoneSubnetPolicy() Obtain 
  * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) Set 
- */
-
-/**
- *Auto scaling group
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -206,6 +204,7 @@ class AutoScalingGroup extends AbstractModel
      * @var string 
      */
     public $MultiZoneSubnetPolicy;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name
@@ -238,6 +237,7 @@ class AutoScalingGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

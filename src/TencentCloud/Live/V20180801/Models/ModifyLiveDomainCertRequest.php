@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveDomainCert request structure.
+ *
  * @method string getDomainName() Obtain Playback domain name.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
  * @method integer getCertId() Obtain Certificate ID.
  * @method void setCertId(integer $CertId) Set Certificate ID.
  * @method integer getStatus() Obtain Status. 0: off, 1: on.
  * @method void setStatus(integer $Status) Set Status. 0: off, 1: on.
- */
-
-/**
- *ModifyLiveDomainCert request structure.
  */
 class ModifyLiveDomainCertRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyLiveDomainCertRequest extends AbstractModel
      * @var integer Status. 0: off, 1: on.
      */
     public $Status;
+
     /**
      * @param string $DomainName Playback domain name.
      * @param integer $CertId Certificate ID.
@@ -54,6 +53,7 @@ class ModifyLiveDomainCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

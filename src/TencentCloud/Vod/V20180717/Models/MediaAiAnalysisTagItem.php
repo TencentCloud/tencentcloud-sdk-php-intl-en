@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result information of intelligent tagging
+ *
  * @method string getTag() Obtain Tag name.
  * @method void setTag(string $Tag) Set Tag name.
  * @method float getConfidence() Obtain Confidence of tag between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Confidence of tag between 0 and 100.
- */
-
-/**
- *Result information of intelligent tagging
  */
 class MediaAiAnalysisTagItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaAiAnalysisTagItem extends AbstractModel
      * @var float Confidence of tag between 0 and 100.
      */
     public $Confidence;
+
     /**
      * @param string $Tag Tag name.
      * @param float $Confidence Confidence of tag between 0 and 100.
@@ -46,6 +45,7 @@ class MediaAiAnalysisTagItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

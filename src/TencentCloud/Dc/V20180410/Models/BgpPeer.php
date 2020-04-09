@@ -18,14 +18,12 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BGP parameter, including Asn and AuthKey.
+ *
  * @method integer getAsn() Obtain User-side BGP Asn.
  * @method void setAsn(integer $Asn) Set User-side BGP Asn.
  * @method string getAuthKey() Obtain User-side BGP key.
  * @method void setAuthKey(string $AuthKey) Set User-side BGP key.
- */
-
-/**
- *BGP parameter, including Asn and AuthKey.
  */
 class BgpPeer extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BgpPeer extends AbstractModel
      * @var string User-side BGP key.
      */
     public $AuthKey;
+
     /**
      * @param integer $Asn User-side BGP Asn.
      * @param string $AuthKey User-side BGP key.
@@ -46,6 +45,7 @@ class BgpPeer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

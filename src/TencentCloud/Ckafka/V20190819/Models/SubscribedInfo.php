@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Subscribed message entity
+ *
  * @method string getTopicName() Obtain Subscribed topic name
  * @method void setTopicName(string $TopicName) Set Subscribed topic name
  * @method array getPartition() Obtain Subscribed partition
@@ -28,10 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPartitionOffset(array $PartitionOffset) Set Partition offset information
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Subscribed message entity
  */
 class SubscribedInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PartitionOffset;
+
     /**
      * @param string $TopicName Subscribed topic name
      * @param array $Partition Subscribed partition
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

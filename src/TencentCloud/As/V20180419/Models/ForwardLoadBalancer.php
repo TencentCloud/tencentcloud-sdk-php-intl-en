@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Application load balancer
+ *
  * @method string getLoadBalancerId() Obtain Load balancer ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set Load balancer ID
  * @method string getListenerId() Obtain Application load balancer listener ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationId(string $LocationId) Set ID of a forwarding rule. This parameter is required for layer-7 listeners.
  * @method string getRegion() Obtain The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
  * @method void setRegion(string $Region) Set The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
- */
-
-/**
- *Application load balancer
  */
 class ForwardLoadBalancer extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ForwardLoadBalancer extends AbstractModel
      * @var string The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
      */
     public $Region;
+
     /**
      * @param string $LoadBalancerId Load balancer ID
      * @param string $ListenerId Application load balancer listener ID
@@ -70,6 +69,7 @@ class ForwardLoadBalancer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

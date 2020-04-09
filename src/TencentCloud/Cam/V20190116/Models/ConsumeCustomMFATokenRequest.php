@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ConsumeCustomMFAToken request structure.
+ *
  * @method string getMFAToken() Obtain Custom multi-factor verification Token
  * @method void setMFAToken(string $MFAToken) Set Custom multi-factor verification Token
- */
-
-/**
- *ConsumeCustomMFAToken request structure.
  */
 class ConsumeCustomMFATokenRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ConsumeCustomMFATokenRequest extends AbstractModel
      * @var string Custom multi-factor verification Token
      */
     public $MFAToken;
+
     /**
      * @param string $MFAToken Custom multi-factor verification Token
      */
@@ -38,6 +37,7 @@ class ConsumeCustomMFATokenRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of time point screencapturing task
+ *
  * @method integer getDefinition() Obtain Time point screencapturing template ID.
  * @method void setDefinition(integer $Definition) Set Time point screencapturing template ID.
  * @method array getTimeOffsetSet() Obtain List of time points for screencapturing in <font color=red>milliseconds</font>.
@@ -28,10 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Input parameter type of time point screencapturing task
  */
 class SnapshotByTimeOffsetTaskInput extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WatermarkSet;
+
     /**
      * @param integer $Definition Time point screencapturing template ID.
      * @param array $TimeOffsetSet List of time points for screencapturing in <font color=red>milliseconds</font>.
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

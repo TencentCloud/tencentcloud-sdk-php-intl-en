@@ -18,12 +18,10 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCfsPGroup request structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
- */
-
-/**
- *DeleteCfsPGroup request structure.
  */
 class DeleteCfsPGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteCfsPGroupRequest extends AbstractModel
      * @var string Permission group ID
      */
     public $PGroupId;
+
     /**
      * @param string $PGroupId Permission group ID
      */
@@ -38,6 +37,7 @@ class DeleteCfsPGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result type of an intelligent highlight generating task
+ *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set Output of an intelligent highlight generating task.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Result type of an intelligent highlight generating task
  */
 class AiAnalysisTaskHighlightResult extends AbstractModel
 {
@@ -62,6 +60,7 @@ class AiAnalysisTaskHighlightResult extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Output;
+
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param integer $ErrCode Error code. 0: success; other values: failure.
@@ -74,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

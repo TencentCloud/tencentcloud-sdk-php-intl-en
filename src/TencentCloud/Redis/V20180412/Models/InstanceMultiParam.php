@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Description of an instance parameter in Multi type
+ *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method string getValueType() Obtain Parameter type: Multi
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnumValue(string $EnumValue) Set Parameter description
  * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
  * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
- */
-
-/**
- *Description of an instance parameter in Multi type
  */
 class InstanceMultiParam extends AbstractModel
 {
@@ -80,6 +78,7 @@ class InstanceMultiParam extends AbstractModel
      * @var integer Parameter status. 1: modifying; 2: modified
      */
     public $Status;
+
     /**
      * @param string $ParamName Parameter name
      * @param string $ValueType Parameter type: Multi
@@ -94,6 +93,7 @@ class InstanceMultiParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

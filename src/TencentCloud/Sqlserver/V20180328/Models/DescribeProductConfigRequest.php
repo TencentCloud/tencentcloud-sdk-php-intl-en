@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductConfig request structure.
+ *
  * @method string getZone() Obtain AZ ID in the format of ap-guangzhou-1
  * @method void setZone(string $Zone) Set AZ ID in the format of ap-guangzhou-1
- */
-
-/**
- *DescribeProductConfig request structure.
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProductConfigRequest extends AbstractModel
      * @var string AZ ID in the format of ap-guangzhou-1
      */
     public $Zone;
+
     /**
      * @param string $Zone AZ ID in the format of ap-guangzhou-1
      */
@@ -38,6 +37,7 @@ class DescribeProductConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

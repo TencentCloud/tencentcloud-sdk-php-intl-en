@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBShards response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible shards
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible shards
  * @method array getShards() Obtain Shard information list
  * @method void setShards(array $Shards) Set Shard information list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDCDBShards response structure.
  */
 class DescribeDCDBShardsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDCDBShardsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible shards
      * @param array $Shards Shard information list
@@ -54,6 +53,7 @@ class DescribeDCDBShardsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

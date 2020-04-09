@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProxyConfiguration request structure.
+ *
  * @method string getInstanceId() Obtain Connection instance ID; It’s an old parameter, please switch to ProxyId.
  * @method void setInstanceId(string $InstanceId) Set Connection instance ID; It’s an old parameter, please switch to ProxyId.
  * @method integer getBandwidth() Obtain Target bandwidth. Unit: Mbps.
@@ -34,10 +36,6 @@ For more information, please see How to Ensure Idempotence.
 For more information, please see How to Ensure Idempotence.
  * @method string getProxyId() Obtain Connection instance ID; It’s a new parameter.
  * @method void setProxyId(string $ProxyId) Set Connection instance ID; It’s a new parameter.
- */
-
-/**
- *ModifyProxyConfiguration request structure.
  */
 class ModifyProxyConfigurationRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ For more information, please see How to Ensure Idempotence.
      * @var string Connection instance ID; It’s a new parameter.
      */
     public $ProxyId;
+
     /**
      * @param string $InstanceId Connection instance ID; It’s an old parameter, please switch to ProxyId.
      * @param integer $Bandwidth Target bandwidth. Unit: Mbps.
@@ -82,6 +81,7 @@ For more information, please see How to Ensure Idempotence.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

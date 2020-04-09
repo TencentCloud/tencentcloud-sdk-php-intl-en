@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceDealDetail request structure.
+ *
  * @method array getDealIds() Obtain Array of order IDs
  * @method void setDealIds(array $DealIds) Set Array of order IDs
- */
-
-/**
- *DescribeInstanceDealDetail request structure.
  */
 class DescribeInstanceDealDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstanceDealDetailRequest extends AbstractModel
      * @var array Array of order IDs
      */
     public $DealIds;
+
     /**
      * @param array $DealIds Array of order IDs
      */
@@ -38,6 +37,7 @@ class DescribeInstanceDealDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

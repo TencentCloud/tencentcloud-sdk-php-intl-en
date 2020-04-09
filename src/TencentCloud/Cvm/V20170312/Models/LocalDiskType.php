@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes local disk specifications.
+ *
  * @method string getType() Obtain Type of a local disk.
  * @method void setType(string $Type) Set Type of a local disk.
  * @method string getPartitionType() Obtain Attributes of a local disk.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSize(integer $MaxSize) Set Maximum size of a local disk.
  * @method string getRequired() Obtain 
  * @method void setRequired(string $Required) Set 
- */
-
-/**
- *Describes local disk specifications.
  */
 class LocalDiskType extends AbstractModel
 {
@@ -59,6 +57,7 @@ class LocalDiskType extends AbstractModel
      * @var string 
      */
     public $Required;
+
     /**
      * @param string $Type Type of a local disk.
      * @param string $PartitionType Attributes of a local disk.
@@ -70,6 +69,7 @@ class LocalDiskType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

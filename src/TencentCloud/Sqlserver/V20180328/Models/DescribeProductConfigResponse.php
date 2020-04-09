@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductConfig response structure.
+ *
  * @method array getSpecInfoList() Obtain Specification information array
  * @method void setSpecInfoList(array $SpecInfoList) Set Specification information array
  * @method integer getTotalCount() Obtain Number of date entries returned
  * @method void setTotalCount(integer $TotalCount) Set Number of date entries returned
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeProductConfig response structure.
  */
 class DescribeProductConfigResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeProductConfigResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SpecInfoList Specification information array
      * @param integer $TotalCount Number of date entries returned
@@ -54,6 +53,7 @@ class DescribeProductConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Public network access configuration
+ *
  * @method string getPublicNetStatus() Obtain Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
  * @method void setPublicNetStatus(string $PublicNetStatus) Set Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
  * @method EipConfigOut getEipConfig() Obtain EIP configuration
  * @method void setEipConfig(EipConfigOut $EipConfig) Set EIP configuration
- */
-
-/**
- *Public network access configuration
  */
 class PublicNetConfigOut extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PublicNetConfigOut extends AbstractModel
      * @var EipConfigOut EIP configuration
      */
     public $EipConfig;
+
     /**
      * @param string $PublicNetStatus Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
      * @param EipConfigOut $EipConfig EIP configuration
@@ -46,6 +45,7 @@ class PublicNetConfigOut extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

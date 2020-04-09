@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceVncUrl response structure.
+ *
  * @method string getInstanceVncUrl() Obtain Instance VNC URL.
  * @method void setInstanceVncUrl(string $InstanceVncUrl) Set Instance VNC URL.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceVncUrl response structure.
  */
 class DescribeInstanceVncUrlResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceVncUrlResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $InstanceVncUrl Instance VNC URL.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeInstanceVncUrlResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

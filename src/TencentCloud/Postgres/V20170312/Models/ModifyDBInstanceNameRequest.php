@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceName request structure.
+ *
  * @method string getDBInstanceId() Obtain Database instance ID in the format of postgres-6fego161
  * @method void setDBInstanceId(string $DBInstanceId) Set Database instance ID in the format of postgres-6fego161
  * @method string getInstanceName() Obtain New name of database instance
  * @method void setInstanceName(string $InstanceName) Set New name of database instance
- */
-
-/**
- *ModifyDBInstanceName request structure.
  */
 class ModifyDBInstanceNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
      * @var string New name of database instance
      */
     public $InstanceName;
+
     /**
      * @param string $DBInstanceId Database instance ID in the format of postgres-6fego161
      * @param string $InstanceName New name of database instance
@@ -46,6 +45,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

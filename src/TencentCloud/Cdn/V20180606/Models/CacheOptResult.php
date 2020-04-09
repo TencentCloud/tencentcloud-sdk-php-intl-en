@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result of blocking/unblocking URLs
+ *
  * @method array getSuccessUrls() Obtain List of succeeded URLs
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSuccessUrls(array $SuccessUrls) Set List of succeeded URLs
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFailUrls(array $FailUrls) Set List of failed URLs
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Result of blocking/unblocking URLs
  */
 class CacheOptResult extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FailUrls;
+
     /**
      * @param array $SuccessUrls List of succeeded URLs
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

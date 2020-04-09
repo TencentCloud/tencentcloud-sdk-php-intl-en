@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of speech keyword recognition.
+ *
  * @method array getResultSet() Obtain Speech keyword recognition result set.
  * @method void setResultSet(array $ResultSet) Set Speech keyword recognition result set.
- */
-
-/**
- *Output of speech keyword recognition.
  */
 class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel
      * @var array Speech keyword recognition result set.
      */
     public $ResultSet;
+
     /**
      * @param array $ResultSet Speech keyword recognition result set.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

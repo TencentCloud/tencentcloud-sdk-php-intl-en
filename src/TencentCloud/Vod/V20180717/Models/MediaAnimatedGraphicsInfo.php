@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result information of animated image generating in VOD file
+ *
  * @method array getAnimatedGraphicsSet() Obtain Result information of animated image generating task
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAnimatedGraphicsSet(array $AnimatedGraphicsSet) Set Result information of animated image generating task
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Result information of animated image generating in VOD file
  */
 class MediaAnimatedGraphicsInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaAnimatedGraphicsInfo extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AnimatedGraphicsSet;
+
     /**
      * @param array $AnimatedGraphicsSet Result information of animated image generating task
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

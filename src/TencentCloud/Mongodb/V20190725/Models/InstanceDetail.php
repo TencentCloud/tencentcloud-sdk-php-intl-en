@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance details
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
@@ -94,10 +96,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStatusDesc(string $InstanceStatusDesc) Set Instance status description
  * @method string getRealInstanceId() Obtain Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
  * @method void setRealInstanceId(string $RealInstanceId) Set Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
- */
-
-/**
- *Instance details
  */
 class InstanceDetail extends AbstractModel
 {
@@ -290,6 +288,7 @@ class InstanceDetail extends AbstractModel
      * @var string Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
      */
     public $RealInstanceId;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
@@ -334,6 +333,7 @@ class InstanceDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

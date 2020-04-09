@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getOffset() Obtain Record offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Record offset. Default value: 0.
  * @method integer getLimit() Obtain Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
  * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
- */
-
-/**
- *DescribeAccounts request structure.
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccountsRequest extends AbstractModel
      * @var integer Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $Offset Record offset. Default value: 0.
@@ -54,6 +53,7 @@ class DescribeAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

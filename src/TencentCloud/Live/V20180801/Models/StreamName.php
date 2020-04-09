@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of stream names
+ *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method string getAppName() Obtain Application name.
@@ -44,10 +46,6 @@ Example: 2019-01-07T15:00:00Z.
  * @method void setClientIp(string $ClientIp) Set Host IP.
  * @method string getResolution() Obtain Resolution.
  * @method void setResolution(string $Resolution) Set Resolution.
- */
-
-/**
- *List of stream names
  */
 class StreamName extends AbstractModel
 {
@@ -99,6 +97,7 @@ Example: 2019-01-07T15:00:00Z.
      * @var string Resolution.
      */
     public $Resolution;
+
     /**
      * @param string $StreamName Stream name.
      * @param string $AppName Application name.
@@ -118,6 +117,7 @@ Example: 2019-01-07T15:00:00Z.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

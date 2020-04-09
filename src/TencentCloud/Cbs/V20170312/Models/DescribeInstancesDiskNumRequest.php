@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesDiskNum request structure.
+ *
  * @method array getInstanceIds() Obtain ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
  * @method void setInstanceIds(array $InstanceIds) Set ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
- */
-
-/**
- *DescribeInstancesDiskNum request structure.
  */
 class DescribeInstancesDiskNumRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstancesDiskNumRequest extends AbstractModel
      * @var array ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
      */
@@ -38,6 +37,7 @@ class DescribeInstancesDiskNumRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

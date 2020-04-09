@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunctionLogs response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of function logs
  * @method void setTotalCount(integer $TotalCount) Set Total number of function logs
  * @method array getData() Obtain Function log information
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchContext(LogSearchContext $SearchContext) Set Parameter on the log service page
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetFunctionLogs response structure.
  */
 class GetFunctionLogsResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetFunctionLogsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of function logs
      * @param array $Data Function log information
@@ -62,6 +61,7 @@ class GetFunctionLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

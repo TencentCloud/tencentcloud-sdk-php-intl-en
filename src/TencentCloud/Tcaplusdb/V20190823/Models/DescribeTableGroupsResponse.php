@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTableGroups response structure.
+ *
  * @method integer getTotalCount() Obtain Number of table groups
  * @method void setTotalCount(integer $TotalCount) Set Number of table groups
  * @method array getTableGroups() Obtain Table group information list
  * @method void setTableGroups(array $TableGroups) Set Table group information list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTableGroups response structure.
  */
 class DescribeTableGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTableGroupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of table groups
      * @param array $TableGroups Table group information list
@@ -54,6 +53,7 @@ class DescribeTableGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

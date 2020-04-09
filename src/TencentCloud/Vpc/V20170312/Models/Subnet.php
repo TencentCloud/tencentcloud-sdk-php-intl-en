@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Subnet object
+ *
  * @method string getVpcId() Obtain The `ID` of the `VPC` instance.
  * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC` instance.
  * @method string getSubnetId() Obtain Subnet instance `ID`, such as `subnet-bthucmmy`.
@@ -44,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkAclId(string $NetworkAclId) Set The associated `ACL`ID
  * @method boolean getIsRemoteVpcSnat() Obtain Whether it is a `SNAT` address pool subnet.
  * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) Set Whether it is a `SNAT` address pool subnet.
- */
-
-/**
- *Subnet object
+ * @method integer getTotalIpAddressCount() Obtain Total number of subnet `IP` addresses.
+ * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) Set Total number of subnet `IP` addresses.
+ * @method array getTagSet() Obtain Tag key-value pairs
+ * @method void setTagSet(array $TagSet) Set Tag key-value pairs
  */
 class Subnet extends AbstractModel
 {
@@ -115,6 +117,17 @@ class Subnet extends AbstractModel
      * @var boolean Whether it is a `SNAT` address pool subnet.
      */
     public $IsRemoteVpcSnat;
+
+    /**
+     * @var integer Total number of subnet `IP` addresses.
+     */
+    public $TotalIpAddressCount;
+
+    /**
+     * @var array Tag key-value pairs
+     */
+    public $TagSet;
+
     /**
      * @param string $VpcId The `ID` of the `VPC` instance.
      * @param string $SubnetId Subnet instance `ID`, such as `subnet-bthucmmy`.
@@ -129,11 +142,14 @@ class Subnet extends AbstractModel
      * @param string $Ipv6CidrBlock The `IPv6` `CIDR` of the subnet.
      * @param string $NetworkAclId The associated `ACL`ID
      * @param boolean $IsRemoteVpcSnat Whether it is a `SNAT` address pool subnet.
+     * @param integer $TotalIpAddressCount Total number of subnet `IP` addresses.
+     * @param array $TagSet Tag key-value pairs
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -192,6 +208,19 @@ class Subnet extends AbstractModel
 
         if (array_key_exists("IsRemoteVpcSnat",$param) and $param["IsRemoteVpcSnat"] !== null) {
             $this->IsRemoteVpcSnat = $param["IsRemoteVpcSnat"];
+        }
+
+        if (array_key_exists("TotalIpAddressCount",$param) and $param["TotalIpAddressCount"] !== null) {
+            $this->TotalIpAddressCount = $param["TotalIpAddressCount"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

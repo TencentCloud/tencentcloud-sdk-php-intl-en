@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceParam request structure.
+ *
  * @method array getInstanceIds() Obtain List of short instance IDs.
  * @method void setInstanceIds(array $InstanceIds) Set List of short instance IDs.
  * @method array getParamList() Obtain List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
  * @method void setParamList(array $ParamList) Set List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
- */
-
-/**
- *ModifyInstanceParam request structure.
  */
 class ModifyInstanceParamRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyInstanceParamRequest extends AbstractModel
      * @var array List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
      */
     public $ParamList;
+
     /**
      * @param array $InstanceIds List of short instance IDs.
      * @param array $ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
@@ -46,6 +45,7 @@ class ModifyInstanceParamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

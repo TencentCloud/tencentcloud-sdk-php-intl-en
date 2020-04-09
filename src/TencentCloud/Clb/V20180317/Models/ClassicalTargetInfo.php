@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Backend information of a classic CLB
+ *
  * @method string getInstanceId() Obtain Real server ID
  * @method void setInstanceId(string $InstanceId) Set Real server ID
  * @method integer getWeight() Obtain Weight. Value range: [0, 100]
  * @method void setWeight(integer $Weight) Set Weight. Value range: [0, 100]
- */
-
-/**
- *Backend information of a classic CLB
  */
 class ClassicalTargetInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClassicalTargetInfo extends AbstractModel
      * @var integer Weight. Value range: [0, 100]
      */
     public $Weight;
+
     /**
      * @param string $InstanceId Real server ID
      * @param integer $Weight Weight. Value range: [0, 100]
@@ -46,6 +45,7 @@ class ClassicalTargetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

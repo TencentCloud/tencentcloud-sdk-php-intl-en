@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExecuteFunction request structure.
+ *
  * @method string getFunctionName() Obtain Name of called backend API.
  * @method void setFunctionName(string $FunctionName) Set Name of called backend API.
  * @method string getFunctionArg() Obtain API parameter. For specific parameter format, negotiate with the backend before calling.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtInfo(string $ExtInfo) Set Reserved field for special purposes.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ExecuteFunction request structure.
  */
 class ExecuteFunctionRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ExecuteFunctionRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $FunctionName Name of called backend API.
      * @param string $FunctionArg API parameter. For specific parameter format, negotiate with the backend before calling.
@@ -78,6 +77,7 @@ class ExecuteFunctionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateOrganization request structure.
+ *
  * @method integer getOrgType() Obtain Organization type; currently its value is fixed as `1`
  * @method void setOrgType(integer $OrgType) Set Organization type; currently its value is fixed as `1`
- */
-
-/**
- *CreateOrganization request structure.
  */
 class CreateOrganizationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateOrganizationRequest extends AbstractModel
      * @var integer Organization type; currently its value is fixed as `1`
      */
     public $OrgType;
+
     /**
      * @param integer $OrgType Organization type; currently its value is fixed as `1`
      */
@@ -38,6 +37,7 @@ class CreateOrganizationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

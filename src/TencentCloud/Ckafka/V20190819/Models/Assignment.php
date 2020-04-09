@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Stores the information of partition assigned to this consumer
+ *
  * @method integer getVersion() Obtain Assignment version information
  * @method void setVersion(integer $Version) Set Assignment version information
  * @method array getTopics() Obtain Topic information list
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTopics(array $Topics) Set Topic information list
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Stores the information of partition assigned to this consumer
  */
 class Assignment extends AbstractModel
 {
@@ -41,6 +39,7 @@ class Assignment extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Topics;
+
     /**
      * @param integer $Version Assignment version information
      * @param array $Topics Topic information list
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

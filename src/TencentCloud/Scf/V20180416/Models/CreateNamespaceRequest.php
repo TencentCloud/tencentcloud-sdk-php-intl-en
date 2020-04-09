@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNamespace request structure.
+ *
  * @method string getNamespace() Obtain Namespace name
  * @method void setNamespace(string $Namespace) Set Namespace name
  * @method string getDescription() Obtain Namespace description
  * @method void setDescription(string $Description) Set Namespace description
- */
-
-/**
- *CreateNamespace request structure.
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNamespaceRequest extends AbstractModel
      * @var string Namespace description
      */
     public $Description;
+
     /**
      * @param string $Namespace Namespace name
      * @param string $Description Namespace description
@@ -46,6 +45,7 @@ class CreateNamespaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

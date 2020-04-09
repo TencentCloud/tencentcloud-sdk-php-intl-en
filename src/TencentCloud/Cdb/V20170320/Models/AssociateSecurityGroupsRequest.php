@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssociateSecurityGroups request structure.
+ *
  * @method string getSecurityGroupId() Obtain Security group ID.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID.
  * @method array getInstanceIds() Obtain List of instance IDs, which is an array of one or more instance IDs.
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs, which is an array of one or more instance IDs.
- */
-
-/**
- *AssociateSecurityGroups request structure.
  */
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssociateSecurityGroupsRequest extends AbstractModel
      * @var array List of instance IDs, which is an array of one or more instance IDs.
      */
     public $InstanceIds;
+
     /**
      * @param string $SecurityGroupId Security group ID.
      * @param array $InstanceIds List of instance IDs, which is an array of one or more instance IDs.
@@ -46,6 +45,7 @@ class AssociateSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Connection information list.
+ *
  * @method string getDirectConnectId() Obtain Connection ID.
  * @method void setDirectConnectId(string $DirectConnectId) Set Connection ID.
  * @method string getDirectConnectName() Obtain Connection name.
@@ -114,10 +116,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setChargeState(string $ChargeState) Set Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Connection information list.
  */
 class DirectConnect extends AbstractModel
 {
@@ -272,6 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ChargeState;
+
     /**
      * @param string $DirectConnectId Connection ID.
      * @param string $DirectConnectName Connection name.
@@ -326,6 +325,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PullUpload request structure.
+ *
  * @method string getMediaUrl() Obtain URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
 For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
  * @method void setMediaUrl(string $MediaUrl) Set URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
@@ -42,10 +44,6 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
  * @method void setExtInfo(string $ExtInfo) Set Reserved field for special purposes.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *PullUpload request structure.
  */
 class PullUploadRequest extends AbstractModel
 {
@@ -104,6 +102,7 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $MediaUrl URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
 For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
@@ -122,6 +121,7 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

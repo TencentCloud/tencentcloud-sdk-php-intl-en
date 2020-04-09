@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The instance object associated with a CCN
+ *
  * @method string getCcnId() Obtain The ID of a CCN instance.
  * @method void setCcnId(string $CcnId) Set The ID of a CCN instance.
  * @method string getInstanceType() Obtain The type of associated instances:
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttachedTime(string $AttachedTime) Set Association Time.
  * @method string getCcnUin() Obtain The UIN (root account) to which the CCN belongs.
  * @method void setCcnUin(string $CcnUin) Set The UIN (root account) to which the CCN belongs.
- */
-
-/**
- *The instance object associated with a CCN
  */
 class CcnAttachedInstance extends AbstractModel
 {
@@ -130,6 +128,7 @@ class CcnAttachedInstance extends AbstractModel
      * @var string The UIN (root account) to which the CCN belongs.
      */
     public $CcnUin;
+
     /**
      * @param string $CcnId The ID of a CCN instance.
      * @param string $InstanceType The type of associated instances:
@@ -158,6 +157,7 @@ class CcnAttachedInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

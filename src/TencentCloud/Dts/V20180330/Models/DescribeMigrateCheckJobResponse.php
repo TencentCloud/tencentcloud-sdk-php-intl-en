@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrateCheckJob response structure.
+ *
  * @method string getStatus() Obtain Check task status: unavailable, starting, running, finished
  * @method void setStatus(string $Status) Set Check task status: unavailable, starting, running, finished
  * @method integer getErrorCode() Obtain Task error code
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckFlag(integer $CheckFlag) Set Whether the check succeeds. 0: no; 1: yes; 3: not checked
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeMigrateCheckJob response structure.
  */
 class DescribeMigrateCheckJobResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeMigrateCheckJobResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Status Check task status: unavailable, starting, running, finished
      * @param integer $ErrorCode Task error code
@@ -78,6 +77,7 @@ class DescribeMigrateCheckJobResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

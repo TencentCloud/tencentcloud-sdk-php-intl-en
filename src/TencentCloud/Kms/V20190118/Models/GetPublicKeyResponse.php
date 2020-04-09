@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPublicKey response structure.
+ *
  * @method string getKeyId() Obtain Unique CMK ID.
  * @method void setKeyId(string $KeyId) Set Unique CMK ID.
  * @method string getPublicKey() Obtain Base64-encoded public key content.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicKeyPem(string $PublicKeyPem) Set Public key content in PEM format.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetPublicKey response structure.
  */
 class GetPublicKeyResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetPublicKeyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $KeyId Unique CMK ID.
      * @param string $PublicKey Base64-encoded public key content.
@@ -62,6 +61,7 @@ class GetPublicKeyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

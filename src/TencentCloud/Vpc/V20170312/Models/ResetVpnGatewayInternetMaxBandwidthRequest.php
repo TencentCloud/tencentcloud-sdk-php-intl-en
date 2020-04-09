@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetVpnGatewayInternetMaxBandwidth request structure.
+ *
  * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
  * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
  * @method integer getInternetMaxBandwidthOut() Obtain The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps.
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps.
- */
-
-/**
- *ResetVpnGatewayInternetMaxBandwidth request structure.
  */
 class ResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel
      * @var integer The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps.
      */
     public $InternetMaxBandwidthOut;
+
     /**
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
      * @param integer $InternetMaxBandwidthOut The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps.
@@ -46,6 +45,7 @@ class ResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

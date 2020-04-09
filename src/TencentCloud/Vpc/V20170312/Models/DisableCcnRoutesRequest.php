@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableCcnRoutes request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method array getRouteIds() Obtain The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
  * @method void setRouteIds(array $RouteIds) Set The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
- */
-
-/**
- *DisableCcnRoutes request structure.
  */
 class DisableCcnRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisableCcnRoutesRequest extends AbstractModel
      * @var array The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
      */
     public $RouteIds;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      * @param array $RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
@@ -46,6 +45,7 @@ class DisableCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

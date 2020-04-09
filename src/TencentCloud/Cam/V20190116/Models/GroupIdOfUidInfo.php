@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information on the association between a sub-user and a User Group
+ *
  * @method integer getUid() Obtain Sub-user UID
  * @method void setUid(integer $Uid) Set Sub-user UID
  * @method integer getGroupId() Obtain User Group ID
  * @method void setGroupId(integer $GroupId) Set User Group ID
- */
-
-/**
- *Information on the association between a sub-user and a User Group
  */
 class GroupIdOfUidInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GroupIdOfUidInfo extends AbstractModel
      * @var integer User Group ID
      */
     public $GroupId;
+
     /**
      * @param integer $Uid Sub-user UID
      * @param integer $GroupId User Group ID
@@ -46,6 +45,7 @@ class GroupIdOfUidInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

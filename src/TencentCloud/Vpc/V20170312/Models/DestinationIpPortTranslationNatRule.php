@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The port forwarding rules of the NAT gateway
+ *
  * @method string getIpProtocol() Obtain Network protocol. Available choices: `TCP`, `UDP`.
  * @method void setIpProtocol(string $IpProtocol) Set Network protocol. Available choices: `TCP`, `UDP`.
  * @method string getPublicIpAddress() Obtain EIP.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivatePort(integer $PrivatePort) Set Private network port.
  * @method string getDescription() Obtain NAT gateway forwarding rule description.
  * @method void setDescription(string $Description) Set NAT gateway forwarding rule description.
- */
-
-/**
- *The port forwarding rules of the NAT gateway
  */
 class DestinationIpPortTranslationNatRule extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DestinationIpPortTranslationNatRule extends AbstractModel
      * @var string NAT gateway forwarding rule description.
      */
     public $Description;
+
     /**
      * @param string $IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
      * @param string $PublicIpAddress EIP.
@@ -78,6 +77,7 @@ class DestinationIpPortTranslationNatRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

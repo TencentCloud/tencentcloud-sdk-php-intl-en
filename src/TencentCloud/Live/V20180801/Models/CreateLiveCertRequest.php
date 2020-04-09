@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveCert request structure.
+ *
  * @method integer getCertType() Obtain Certificate type. 0: user-added certificate, 1: Tencent Cloud-hosted certificate.
 Note: if the certificate type is 0, `HttpsCrt` and `HttpsKey` are required;
 If the certificate type is 1, the certificate corresponding to `CloudCertId` will be used first. If `CloudCertId` is empty, `HttpsCrt` and `HttpsKey` will be used.
@@ -34,10 +36,6 @@ If the certificate type is 1, the certificate corresponding to `CloudCertId` wil
  * @method void setDescription(string $Description) Set Description.
  * @method string getCloudCertId() Obtain Tencent Cloud-hosted certificate ID.
  * @method void setCloudCertId(string $CloudCertId) Set Tencent Cloud-hosted certificate ID.
- */
-
-/**
- *CreateLiveCert request structure.
  */
 class CreateLiveCertRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ If the certificate type is 1, the certificate corresponding to `CloudCertId` wil
      * @var string Tencent Cloud-hosted certificate ID.
      */
     public $CloudCertId;
+
     /**
      * @param integer $CertType Certificate type. 0: user-added certificate, 1: Tencent Cloud-hosted certificate.
 Note: if the certificate type is 0, `HttpsCrt` and `HttpsKey` are required;
@@ -86,6 +85,7 @@ If the certificate type is 1, the certificate corresponding to `CloudCertId` wil
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

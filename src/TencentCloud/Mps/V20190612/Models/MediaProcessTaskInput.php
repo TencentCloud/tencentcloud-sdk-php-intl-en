@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Type of a video processing task
+ *
  * @method array getTranscodeTaskSet() Obtain List of transcoding tasks.
  * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set List of transcoding tasks.
  * @method array getAnimatedGraphicTaskSet() Obtain List of animated image generating tasks.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set List of sampled screencapturing tasks.
  * @method array getImageSpriteTaskSet() Obtain List of image sprite generating tasks.
  * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set List of image sprite generating tasks.
- */
-
-/**
- *Type of a video processing task
  */
 class MediaProcessTaskInput extends AbstractModel
 {
@@ -59,6 +57,7 @@ class MediaProcessTaskInput extends AbstractModel
      * @var array List of image sprite generating tasks.
      */
     public $ImageSpriteTaskSet;
+
     /**
      * @param array $TranscodeTaskSet List of transcoding tasks.
      * @param array $AnimatedGraphicTaskSet List of animated image generating tasks.
@@ -70,6 +69,7 @@ class MediaProcessTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

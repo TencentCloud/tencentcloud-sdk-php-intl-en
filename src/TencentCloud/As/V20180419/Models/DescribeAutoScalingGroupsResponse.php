@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoScalingGroups response structure.
+ *
  * @method array getAutoScalingGroupSet() Obtain List of auto scaling group details.
  * @method void setAutoScalingGroupSet(array $AutoScalingGroupSet) Set List of auto scaling group details.
  * @method integer getTotalCount() Obtain Number of eligible auto scaling groups.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible auto scaling groups.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAutoScalingGroups response structure.
  */
 class DescribeAutoScalingGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAutoScalingGroupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $AutoScalingGroupSet List of auto scaling group details.
      * @param integer $TotalCount Number of eligible auto scaling groups.
@@ -54,6 +53,7 @@ class DescribeAutoScalingGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

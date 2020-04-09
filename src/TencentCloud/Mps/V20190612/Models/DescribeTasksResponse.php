@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasks response structure.
+ *
  * @method array getTaskSet() Obtain Task overview list.
  * @method void setTaskSet(array $TaskSet) Set Task overview list.
  * @method string getScrollToken() Obtain Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.
  * @method void setScrollToken(string $ScrollToken) Set Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTasks response structure.
  */
 class DescribeTasksResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTasksResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $TaskSet Task overview list.
      * @param string $ScrollToken Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.
@@ -54,6 +53,7 @@ class DescribeTasksResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

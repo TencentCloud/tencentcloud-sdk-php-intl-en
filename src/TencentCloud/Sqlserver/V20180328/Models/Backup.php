@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Backup file details
+ *
  * @method string getFileName() Obtain Filename
  * @method void setFileName(string $FileName) Set Filename
  * @method integer getSize() Obtain File size in KB
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) Set Backup policy (0: instance backup, 1: multi-database backup)
  * @method integer getBackupWay() Obtain Backup mode. 0: scheduled, 1: manual
  * @method void setBackupWay(integer $BackupWay) Set Backup mode. 0: scheduled, 1: manual
- */
-
-/**
- *Backup file details
  */
 class Backup extends AbstractModel
 {
@@ -101,6 +99,7 @@ class Backup extends AbstractModel
      * @var integer Backup mode. 0: scheduled, 1: manual
      */
     public $BackupWay;
+
     /**
      * @param string $FileName Filename
      * @param integer $Size File size in KB
@@ -118,6 +117,7 @@ class Backup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

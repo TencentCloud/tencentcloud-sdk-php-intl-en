@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Security group inbound rule
+ *
  * @method string getAction() Obtain Policy, which can be ACCEPT or DROP
  * @method void setAction(string $Action) Set Policy, which can be ACCEPT or DROP
  * @method string getCidrIp() Obtain Source IP or IP range, such as 192.168.0.0/16
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpProtocol(string $IpProtocol) Set Network protocol. UDP and TCP are supported.
  * @method string getDir() Obtain The direction of the rule, which is INPUT for inbound rules
  * @method void setDir(string $Dir) Set The direction of the rule, which is INPUT for inbound rules
- */
-
-/**
- *Security group inbound rule
  */
 class Inbound extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Inbound extends AbstractModel
      * @var string The direction of the rule, which is INPUT for inbound rules
      */
     public $Dir;
+
     /**
      * @param string $Action Policy, which can be ACCEPT or DROP
      * @param string $CidrIp Source IP or IP range, such as 192.168.0.0/16
@@ -70,6 +69,7 @@ class Inbound extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

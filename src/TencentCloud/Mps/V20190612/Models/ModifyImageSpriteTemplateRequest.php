@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyImageSpriteTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of an image sprite generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an image sprite generating template.
  * @method string getName() Obtain Name of an image sprite generating template. Length limit: 64 characters.
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowCount(integer $RowCount) Set Subimage row count of an image sprite.
  * @method integer getColumnCount() Obtain Subimage column count of an image sprite.
  * @method void setColumnCount(integer $ColumnCount) Set Subimage column count of an image sprite.
- */
-
-/**
- *ModifyImageSpriteTemplate request structure.
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
@@ -92,6 +90,7 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
      * @var integer Subimage column count of an image sprite.
      */
     public $ColumnCount;
+
     /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
@@ -110,6 +109,7 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyScheduledAction request structure.
+ *
  * @method string getScheduledActionId() Obtain ID of the scheduled task to be edited
  * @method void setScheduledActionId(string $ScheduledActionId) Set ID of the scheduled task to be edited
  * @method string getScheduledActionName() Obtain Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
  * @method string getRecurrence() Obtain Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
  * @method void setRecurrence(string $Recurrence) Set Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
- */
-
-/**
- *ModifyScheduledAction request structure.
  */
 class ModifyScheduledActionRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyScheduledActionRequest extends AbstractModel
      * @var string Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
      */
     public $Recurrence;
+
     /**
      * @param string $ScheduledActionId ID of the scheduled task to be edited
      * @param string $ScheduledActionName Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
@@ -94,6 +93,7 @@ class ModifyScheduledActionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

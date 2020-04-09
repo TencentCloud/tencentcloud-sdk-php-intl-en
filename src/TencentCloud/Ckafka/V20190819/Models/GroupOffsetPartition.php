@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Group offset partition object
+ *
  * @method integer getPartition() Obtain Topic `partitionId`
  * @method void setPartition(integer $Partition) Set Topic `partitionId`
  * @method integer getOffset() Obtain Offset position submitted by consumer
@@ -32,10 +34,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setLogEndOffset(integer $LogEndOffset) Set Latest offset of current partition
  * @method integer getLag() Obtain Number of unconsumed messages
  * @method void setLag(integer $Lag) Set Number of unconsumed messages
- */
-
-/**
- *Group offset partition object
  */
 class GroupOffsetPartition extends AbstractModel
 {
@@ -69,6 +67,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer Number of unconsumed messages
      */
     public $Lag;
+
     /**
      * @param integer $Partition Topic `partitionId`
      * @param integer $Offset Offset position submitted by consumer
@@ -82,6 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

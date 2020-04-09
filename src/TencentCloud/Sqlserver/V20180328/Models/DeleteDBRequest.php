@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDB request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-rljoi3bf
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-rljoi3bf
  * @method array getNames() Obtain Array of database names
  * @method void setNames(array $Names) Set Array of database names
- */
-
-/**
- *DeleteDB request structure.
  */
 class DeleteDBRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteDBRequest extends AbstractModel
      * @var array Array of database names
      */
     public $Names;
+
     /**
      * @param string $InstanceId Instance ID in the format of mssql-rljoi3bf
      * @param array $Names Array of database names
@@ -46,6 +45,7 @@ class DeleteDBRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cluster instance information
+ *
  * @method integer getId() Obtain ID
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setId(integer $Id) Set ID
@@ -178,10 +180,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getServiceClass() Obtain 
  * @method void setServiceClass(string $ServiceClass) Set 
- */
-
-/**
- *Cluster instance information
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -372,6 +370,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string 
      */
     public $ServiceClass;
+
     /**
      * @param integer $Id ID
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -458,6 +457,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

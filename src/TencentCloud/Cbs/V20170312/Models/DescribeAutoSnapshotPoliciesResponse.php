@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoSnapshotPolicies response structure.
+ *
  * @method integer getTotalCount() Obtain The quantity of valid scheduled snapshot policies.
  * @method void setTotalCount(integer $TotalCount) Set The quantity of valid scheduled snapshot policies.
  * @method array getAutoSnapshotPolicySet() Obtain List of scheduled snapshot policies.
  * @method void setAutoSnapshotPolicySet(array $AutoSnapshotPolicySet) Set List of scheduled snapshot policies.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAutoSnapshotPolicies response structure.
  */
 class DescribeAutoSnapshotPoliciesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAutoSnapshotPoliciesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The quantity of valid scheduled snapshot policies.
      * @param array $AutoSnapshotPolicySet List of scheduled snapshot policies.
@@ -54,6 +53,7 @@ class DescribeAutoSnapshotPoliciesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

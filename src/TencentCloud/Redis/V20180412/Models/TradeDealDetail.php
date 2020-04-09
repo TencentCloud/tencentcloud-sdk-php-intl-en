@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Order deal information
+ *
  * @method string getDealId() Obtain Order ID, which is used when a TencentCloud API is called
  * @method void setDealId(string $DealId) Set Order ID, which is used when a TencentCloud API is called
  * @method string getDealName() Obtain Long order ID, which is used when an order issue is submitted for assistance
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrice(integer $Price) Set Actual total price of an order in 0.01 CNY
  * @method array getInstanceIds() Obtain Instance ID
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID
- */
-
-/**
- *Order deal information
  */
 class TradeDealDetail extends AbstractModel
 {
@@ -108,6 +106,7 @@ class TradeDealDetail extends AbstractModel
      * @var array Instance ID
      */
     public $InstanceIds;
+
     /**
      * @param string $DealId Order ID, which is used when a TencentCloud API is called
      * @param string $DealName Long order ID, which is used when an order issue is submitted for assistance
@@ -126,6 +125,7 @@ class TradeDealDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

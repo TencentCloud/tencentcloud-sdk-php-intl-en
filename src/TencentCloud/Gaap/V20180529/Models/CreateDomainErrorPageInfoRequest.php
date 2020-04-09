@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDomainErrorPageInfo request structure.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getDomain() Obtain Domain name
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClearHeaders(array $ClearHeaders) Set Response header to be deleted
  * @method array getSetHeaders() Obtain Response header to be set
  * @method void setSetHeaders(array $SetHeaders) Set Response header to be set
- */
-
-/**
- *CreateDomainErrorPageInfo request structure.
  */
 class CreateDomainErrorPageInfoRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateDomainErrorPageInfoRequest extends AbstractModel
      * @var array Response header to be set
      */
     public $SetHeaders;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $Domain Domain name
@@ -86,6 +85,7 @@ class CreateDomainErrorPageInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

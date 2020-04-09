@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcPrivateIpAddresses request structure.
+ *
  * @method string getVpcId() Obtain The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
  * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
  * @method array getPrivateIpAddresses() Obtain The private `IP` address list. Each request supports a maximum of `10` batch querying.
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The private `IP` address list. Each request supports a maximum of `10` batch querying.
- */
-
-/**
- *DescribeVpcPrivateIpAddresses request structure.
  */
 class DescribeVpcPrivateIpAddressesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeVpcPrivateIpAddressesRequest extends AbstractModel
      * @var array The private `IP` address list. Each request supports a maximum of `10` batch querying.
      */
     public $PrivateIpAddresses;
+
     /**
      * @param string $VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      * @param array $PrivateIpAddresses The private `IP` address list. Each request supports a maximum of `10` batch querying.
@@ -46,6 +45,7 @@ class DescribeVpcPrivateIpAddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

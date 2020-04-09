@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VOD video file editing information
+ *
  * @method string getFileId() Obtain Video ID.
  * @method void setFileId(string $FileId) Set Video ID.
  * @method float getStartTimeOffset() Obtain Start time offset of video clipping in seconds.
@@ -28,10 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of video clipping in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *VOD video file editing information
  */
 class EditMediaFileInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EndTimeOffset;
+
     /**
      * @param string $FileId Video ID.
      * @param float $StartTimeOffset Start time offset of video clipping in seconds.
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

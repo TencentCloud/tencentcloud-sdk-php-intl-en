@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetSnapOverview response structure.
+ *
  * @method float getTotalSize() Obtain The total snapshot size of the user
  * @method void setTotalSize(float $TotalSize) Set The total snapshot size of the user
  * @method float getRealTradeSize() Obtain The total billed snapshot size of the user
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalNums(integer $TotalNums) Set Total number of snapshots
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetSnapOverview response structure.
  */
 class GetSnapOverviewResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class GetSnapOverviewResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param float $TotalSize The total snapshot size of the user
      * @param float $RealTradeSize The total billed snapshot size of the user
@@ -70,6 +69,7 @@ class GetSnapOverviewResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

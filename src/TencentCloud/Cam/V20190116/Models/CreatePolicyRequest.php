@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePolicy request structure.
+ *
  * @method string getPolicyName() Obtain Policy name
  * @method void setPolicyName(string $PolicyName) Set Policy name
  * @method string getPolicyDocument() Obtain Policy document, such as `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the resources that the role is authorized to access. For more information on this parameter, please see the `RoleInfo` output parameter of the [GetRole](https://cloud.tencent.com/document/product/598/36221) API
  * @method void setPolicyDocument(string $PolicyDocument) Set Policy document, such as `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the resources that the role is authorized to access. For more information on this parameter, please see the `RoleInfo` output parameter of the [GetRole](https://cloud.tencent.com/document/product/598/36221) API
  * @method string getDescription() Obtain Policy description
  * @method void setDescription(string $Description) Set Policy description
- */
-
-/**
- *CreatePolicy request structure.
  */
 class CreatePolicyRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreatePolicyRequest extends AbstractModel
      * @var string Policy description
      */
     public $Description;
+
     /**
      * @param string $PolicyName Policy name
      * @param string $PolicyDocument Policy document, such as `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the resources that the role is authorized to access. For more information on this parameter, please see the `RoleInfo` output parameter of the [GetRole](https://cloud.tencent.com/document/product/598/36221) API
@@ -54,6 +53,7 @@ class CreatePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

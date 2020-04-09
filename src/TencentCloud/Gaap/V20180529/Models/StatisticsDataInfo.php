@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Statistics information
+ *
  * @method integer getTime() Obtain Corresponding time point
  * @method void setTime(integer $Time) Set Corresponding time point
  * @method float getData() Obtain Statistics value
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setData(float $Data) Set Statistics value
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Statistics information
  */
 class StatisticsDataInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class StatisticsDataInfo extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Data;
+
     /**
      * @param integer $Time Corresponding time point
      * @param float $Data Statistics value
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstances request structure.
+ *
  * @method string getZone() Obtain Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
  * @method void setZone(string $Zone) Set Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
  * @method integer getMemory() Obtain Instance memory size in GB
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBVersion(string $DBVersion) Set SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). The version purchasable varies by region and can be queried by calling the `DescribeProductConfig` API. If this parameter is left empty, 2008R2 will be used by default.
  * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
- */
-
-/**
- *CreateDBInstances request structure.
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @var integer Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
      */
     public $AutoRenewFlag;
+
     /**
      * @param string $Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
      * @param integer $Memory Instance memory size in GB
@@ -134,6 +133,7 @@ class CreateDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

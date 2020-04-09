@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Versioning - array of regions
+ *
  * @method string getRegion() Obtain Region name, such as "ap-beijing"
  * @method void setRegion(string $Region) Set Region name, such as "ap-beijing"
  * @method string getRegionName() Obtain Region name, such as "bj"
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZones(array $Zones) Set Array of AZs
  * @method string getRegionCnName() Obtain Region name, such as "Guangzhou"
  * @method void setRegionCnName(string $RegionCnName) Set Region name, such as "Guangzhou"
- */
-
-/**
- *Versioning - array of regions
  */
 class AvailableRegion extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AvailableRegion extends AbstractModel
      * @var string Region name, such as "Guangzhou"
      */
     public $RegionCnName;
+
     /**
      * @param string $Region Region name, such as "ap-beijing"
      * @param string $RegionName Region name, such as "bj"
@@ -70,6 +69,7 @@ class AvailableRegion extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Multi-cloud disk parameters
+ *
  * @method integer getCount() Obtain Number of cloud disks in this type
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCount(integer $Count) Set Number of cloud disks in this type
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVolume(integer $Volume) Set Cloud disk size
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Multi-cloud disk parameters
  */
 class MultiDiskMC extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Volume;
+
     /**
      * @param integer $Count Number of cloud disks in this type
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

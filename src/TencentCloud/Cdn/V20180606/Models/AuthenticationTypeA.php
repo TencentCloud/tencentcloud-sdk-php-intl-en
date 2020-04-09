@@ -18,6 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Timestamp hotlink protection mode A configuration
+The access URL format of timestamp hotlink protection mode A is as follows: http://DomainName/Filename?sign=timestamp-rand-uid-md5hash
+Here, timestamp is a decimal timestamp in Unix format;
+rand is a random string composed of 0-100 characters, including digits, upper and lower-case letters.
+uid is 0;
+md5hash: MD5 (file path-timestamp-rand-uid-custom key)
+
+ *
  * @method string getSecretKey() Obtain The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -40,16 +48,6 @@ If it contains an asterisk (*), this indicates all files.
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
  * @method void setFilterType(string $FilterType) Set whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
- */
-
-/**
- *Timestamp hotlink protection mode A configuration
-The access URL format of timestamp hotlink protection mode A is as follows: http://DomainName/Filename?sign=timestamp-rand-uid-md5hash
-Here, timestamp is a decimal timestamp in Unix format;
-rand is a random string composed of 0-100 characters, including digits, upper and lower-case letters.
-uid is 0;
-md5hash: MD5 (file path-timestamp-rand-uid-custom key)
-
  */
 class AuthenticationTypeA extends AbstractModel
 {
@@ -83,6 +81,7 @@ If it contains an asterisk (*), this indicates all files.
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     public $FilterType;
+
     /**
      * @param string $SecretKey The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
@@ -100,6 +99,7 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

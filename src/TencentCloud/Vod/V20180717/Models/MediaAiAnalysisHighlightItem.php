@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of an intelligently generated highlight
+ *
  * @method string getHighlightUrl() Obtain Address of an intelligently generated highlight.
  * @method void setHighlightUrl(string $HighlightUrl) Set Address of an intelligently generated highlight.
  * @method string getCovImgUrl() Obtain Address of an intelligently generated highlight cover.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(float $Duration) Set Duration of an intelligently generated highlight.
  * @method array getSegmentSet() Obtain List of intelligently generated highlight subsegments, which together form a highlight.
  * @method void setSegmentSet(array $SegmentSet) Set List of intelligently generated highlight subsegments, which together form a highlight.
- */
-
-/**
- *Information of an intelligently generated highlight
  */
 class MediaAiAnalysisHighlightItem extends AbstractModel
 {
@@ -59,6 +57,7 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
      * @var array List of intelligently generated highlight subsegments, which together form a highlight.
      */
     public $SegmentSet;
+
     /**
      * @param string $HighlightUrl Address of an intelligently generated highlight.
      * @param string $CovImgUrl Address of an intelligently generated highlight cover.
@@ -70,6 +69,7 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

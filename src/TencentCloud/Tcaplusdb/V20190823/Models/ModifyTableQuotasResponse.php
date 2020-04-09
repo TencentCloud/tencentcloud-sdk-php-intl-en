@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTableQuotas response structure.
+ *
  * @method integer getTotalCount() Obtain Number of scaled tables
  * @method void setTotalCount(integer $TotalCount) Set Number of scaled tables
  * @method array getTableResults() Obtain List of table scaling results
  * @method void setTableResults(array $TableResults) Set List of table scaling results
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyTableQuotas response structure.
  */
 class ModifyTableQuotasResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyTableQuotasResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of scaled tables
      * @param array $TableResults List of table scaling results
@@ -54,6 +53,7 @@ class ModifyTableQuotasResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

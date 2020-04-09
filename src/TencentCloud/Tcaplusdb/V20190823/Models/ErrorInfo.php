@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the details of errors that may occur during the processing of each instance (application, region, or table).
+ *
  * @method string getCode() Obtain Error code
  * @method void setCode(string $Code) Set Error code
  * @method string getMessage() Obtain Error message
  * @method void setMessage(string $Message) Set Error message
- */
-
-/**
- *Describes the details of errors that may occur during the processing of each instance (application, region, or table).
  */
 class ErrorInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ErrorInfo extends AbstractModel
      * @var string Error message
      */
     public $Message;
+
     /**
      * @param string $Code Error code
      * @param string $Message Error message
@@ -46,6 +45,7 @@ class ErrorInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

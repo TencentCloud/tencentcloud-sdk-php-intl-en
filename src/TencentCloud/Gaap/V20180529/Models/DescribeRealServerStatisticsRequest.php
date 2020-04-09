@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRealServerStatistics request structure.
+ *
  * @method string getRealServerId() Obtain Origin server ID
  * @method void setRealServerId(string $RealServerId) Set Origin server ID
  * @method string getListenerId() Obtain Listener ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithinTime(integer $WithinTime) Set Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
  * @method string getRuleId() Obtain Rule ID
  * @method void setRuleId(string $RuleId) Set Rule ID
- */
-
-/**
- *DescribeRealServerStatistics request structure.
  */
 class DescribeRealServerStatisticsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeRealServerStatisticsRequest extends AbstractModel
      * @var string Rule ID
      */
     public $RuleId;
+
     /**
      * @param string $RealServerId Origin server ID
      * @param string $ListenerId Listener ID
@@ -62,6 +61,7 @@ class DescribeRealServerStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

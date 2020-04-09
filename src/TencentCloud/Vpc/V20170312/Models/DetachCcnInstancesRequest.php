@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachCcnInstances request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method array getInstances() Obtain The list of network instances to be unbound
  * @method void setInstances(array $Instances) Set The list of network instances to be unbound
- */
-
-/**
- *DetachCcnInstances request structure.
  */
 class DetachCcnInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetachCcnInstancesRequest extends AbstractModel
      * @var array The list of network instances to be unbound
      */
     public $Instances;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      * @param array $Instances The list of network instances to be unbound
@@ -46,6 +45,7 @@ class DetachCcnInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

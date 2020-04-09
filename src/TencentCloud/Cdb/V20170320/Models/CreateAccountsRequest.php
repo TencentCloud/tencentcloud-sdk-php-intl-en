@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccounts request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method array getAccounts() Obtain TencentDB account.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Password of the new account
  * @method string getDescription() Obtain Remarks
  * @method void setDescription(string $Description) Set Remarks
- */
-
-/**
- *CreateAccounts request structure.
  */
 class CreateAccountsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateAccountsRequest extends AbstractModel
      * @var string Remarks
      */
     public $Description;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Accounts TencentDB account.
@@ -62,6 +61,7 @@ class CreateAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

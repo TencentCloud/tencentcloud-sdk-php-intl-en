@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result information of porn information detection
+ *
  * @method float getConfidence() Obtain Score of detected porn information in video between 0 and 100.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setConfidence(float $Confidence) Set Score of detected porn information in video between 0 and 100.
@@ -48,10 +50,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected porn information.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Result information of porn information detection
  */
 class AiReviewPornTaskOutput extends AbstractModel
 {
@@ -85,6 +83,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Score of detected porn information in video between 0 and 100.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -106,6 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

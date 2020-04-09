@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Returned result value of operation
+ *
  * @method string getReturnCode() Obtain Returned code. 0: normal, other values: error
  * @method void setReturnCode(string $ReturnCode) Set Returned code. 0: normal, other values: error
  * @method string getReturnMessage() Obtain Success message
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setData(OperateResponseData $Data) Set Data returned by an operation, which may contain `flowId`, etc.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Returned result value of operation
  */
 class JgwOperateResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class JgwOperateResponse extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Data;
+
     /**
      * @param string $ReturnCode Returned code. 0: normal, other values: error
      * @param string $ReturnMessage Success message
@@ -58,6 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

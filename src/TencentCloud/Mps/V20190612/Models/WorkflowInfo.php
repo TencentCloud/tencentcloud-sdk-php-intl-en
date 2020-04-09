@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Workflow information details.
+ *
  * @method integer getWorkflowId() Obtain Workflow ID.
  * @method void setWorkflowId(integer $WorkflowId) Set Workflow ID.
  * @method string getWorkflowName() Obtain Workflow name.
@@ -60,10 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of a workflow in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time of a workflow in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of a workflow in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- */
-
-/**
- *Workflow information details.
  */
 class WorkflowInfo extends AbstractModel
 {
@@ -143,6 +141,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Last modified time of a workflow in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $UpdateTime;
+
     /**
      * @param integer $WorkflowId Workflow ID.
      * @param string $WorkflowName Workflow name.
@@ -170,6 +169,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancerListByCertId request structure.
+ *
  * @method array getCertIds() Obtain Server or client certificate ID
  * @method void setCertIds(array $CertIds) Set Server or client certificate ID
- */
-
-/**
- *DescribeLoadBalancerListByCertId request structure.
  */
 class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
      * @var array Server or client certificate ID
      */
     public $CertIds;
+
     /**
      * @param array $CertIds Server or client certificate ID
      */
@@ -38,6 +37,7 @@ class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

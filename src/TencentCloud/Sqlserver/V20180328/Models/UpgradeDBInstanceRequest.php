@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeDBInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-j8kv137v
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-j8kv137v
  * @method integer getMemory() Obtain Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
  * @method array getVoucherIds() Obtain Voucher ID (currently, only one voucher can be used per order)
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID (currently, only one voucher can be used per order)
- */
-
-/**
- *UpgradeDBInstance request structure.
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @var array Voucher ID (currently, only one voucher can be used per order)
      */
     public $VoucherIds;
+
     /**
      * @param string $InstanceId Instance ID in the format of mssql-j8kv137v
      * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
@@ -70,6 +69,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

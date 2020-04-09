@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of terrorism information detection task
+ *
  * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Control parameter of terrorism information detection in video image task.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Control parameter of terrorism information detection in video image task.
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of terrorism information detection in text task.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Control parameter of terrorism information detection task
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OcrReviewInfo;
+
     /**
      * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Control parameter of terrorism information detection in video image task.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

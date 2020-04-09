@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ASR-detected porn information in text
+ *
  * @method float getConfidence() Obtain Score of the ASR-detected porn information in text from 0 to 100.
  * @method void setConfidence(float $Confidence) Set Score of the ASR-detected porn information in text from 0 to 100.
  * @method string getSuggestion() Obtain Suggestion for the ASR-detected porn information in text. Valid values:
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>block.</li>
  * @method array getSegmentSet() Obtain List of video segments that contain the ASR-detected porn information in text.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the ASR-detected porn information in text.
- */
-
-/**
- *ASR-detected porn information in text
  */
 class AiReviewPornAsrTaskOutput extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiReviewPornAsrTaskOutput extends AbstractModel
      * @var array List of video segments that contain the ASR-detected porn information in text.
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Score of the ASR-detected porn information in text from 0 to 100.
      * @param string $Suggestion Suggestion for the ASR-detected porn information in text. Valid values:
@@ -66,6 +65,7 @@ class AiReviewPornAsrTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

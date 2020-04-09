@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a video processing output object.
+ *
  * @method string getType() Obtain Storage location type of a video processing output object. Only COS is supported currently.
  * @method void setType(string $Type) Set Storage location type of a video processing output object. Only COS is supported currently.
  * @method CosOutputStorage getCosOutputStorage() Obtain This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) Set This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of a video processing output object.
  */
 class TaskOutputStorage extends AbstractModel
 {
@@ -41,6 +39,7 @@ class TaskOutputStorage extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CosOutputStorage;
+
     /**
      * @param string $Type Storage location type of a video processing output object. Only COS is supported currently.
      * @param CosOutputStorage $CosOutputStorage This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

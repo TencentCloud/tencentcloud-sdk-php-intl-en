@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnassignIpv6Addresses request structure.
+ *
  * @method string getNetworkInterfaceId() Obtain The `ID` of the ENI instance, such as `eni-m6dyj72l`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The `ID` of the ENI instance, such as `eni-m6dyj72l`.
  * @method array getIpv6Addresses() Obtain The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
  * @method void setIpv6Addresses(array $Ipv6Addresses) Set The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
- */
-
-/**
- *UnassignIpv6Addresses request structure.
  */
 class UnassignIpv6AddressesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnassignIpv6AddressesRequest extends AbstractModel
      * @var array The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
      */
     public $Ipv6Addresses;
+
     /**
      * @param string $NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      * @param array $Ipv6Addresses The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
@@ -46,6 +45,7 @@ class UnassignIpv6AddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

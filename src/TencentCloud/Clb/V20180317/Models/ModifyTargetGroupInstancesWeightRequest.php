@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTargetGroupInstancesWeight request structure.
+ *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method array getTargetGroupInstances() Obtain Array of servers for which to modify weight
  * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Array of servers for which to modify weight
- */
-
-/**
- *ModifyTargetGroupInstancesWeight request structure.
  */
 class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
      * @var array Array of servers for which to modify weight
      */
     public $TargetGroupInstances;
+
     /**
      * @param string $TargetGroupId Target group ID
      * @param array $TargetGroupInstances Array of servers for which to modify weight
@@ -46,6 +45,7 @@ class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video stream configuration parameter
+ *
  * @method string getCodec() Obtain Video stream encoder. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
@@ -85,10 +87,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Default value: black.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
-
-/**
- *Video stream configuration parameter
- */
 class VideoTemplateInfo extends AbstractModel
 {
     /**
@@ -151,6 +149,7 @@ Default value: black.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FillType;
+
     /**
      * @param string $Codec Video stream encoder. Valid values:
 <li>libx264: H.264</li>
@@ -190,6 +189,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a video processing input object.
+ *
  * @method string getType() Obtain Video processing object type. Only COS is supported currently.
  * @method void setType(string $Type) Set Video processing object type. Only COS is supported currently.
  * @method CosInputInfo getCosInputInfo() Obtain This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) Set This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
- */
-
-/**
- *Information of a video processing input object.
  */
 class MediaInputInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaInputInfo extends AbstractModel
      * @var CosInputInfo This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
      */
     public $CosInputInfo;
+
     /**
      * @param string $Type Video processing object type. Only COS is supported currently.
      * @param CosInputInfo $CosInputInfo This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
@@ -46,6 +45,7 @@ class MediaInputInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

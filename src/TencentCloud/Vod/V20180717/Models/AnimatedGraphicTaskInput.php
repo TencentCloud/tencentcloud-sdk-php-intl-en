@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Animated image generating task type
+ *
  * @method integer getDefinition() Obtain Animated image generating template ID
  * @method void setDefinition(integer $Definition) Set Animated image generating template ID
  * @method float getStartTimeOffset() Obtain Start time of animated image in video in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time of animated image in video in seconds.
  * @method float getEndTimeOffset() Obtain End time of animated image in video in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time of animated image in video in seconds.
- */
-
-/**
- *Animated image generating task type
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AnimatedGraphicTaskInput extends AbstractModel
      * @var float End time of animated image in video in seconds.
      */
     public $EndTimeOffset;
+
     /**
      * @param integer $Definition Animated image generating template ID
      * @param float $StartTimeOffset Start time of animated image in video in seconds.
@@ -54,6 +53,7 @@ class AnimatedGraphicTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Table definition file details, including file content
+ *
  * @method string getFileName() Obtain Filename excluding extension
  * @method void setFileName(string $FileName) Set Filename excluding extension
  * @method string getFileType() Obtain Data interface description language (IDL) type
@@ -34,10 +36,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFileContent(string $FileContent) Set File content, which is meaningful for files to be uploaded in this request
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Table definition file details, including file content
  */
 class IdlFileInfo extends AbstractModel
 {
@@ -72,6 +70,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FileContent;
+
     /**
      * @param string $FileName Filename excluding extension
      * @param string $FileType Data interface description language (IDL) type
@@ -86,6 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ApplyUpload response structure.
+ *
  * @method string getStorageBucket() Obtain Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
  * @method void setStorageBucket(string $StorageBucket) Set Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
  * @method string getStorageRegion() Obtain Storage region, which is used as the `Region` in the `Host` of the upload API.
@@ -36,10 +38,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setTempCertificate(TempCertificate $TempCertificate) Set Temporary credential, which is used for authentication of the upload API.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ApplyUpload response structure.
  */
 class ApplyUploadResponse extends AbstractModel
 {
@@ -79,6 +77,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $StorageBucket Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
      * @param string $StorageRegion Storage region, which is used as the `Region` in the `Host` of the upload API.
@@ -94,6 +93,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

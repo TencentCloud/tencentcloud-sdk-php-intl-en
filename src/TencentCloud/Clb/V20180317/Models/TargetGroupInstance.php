@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Target group instance
+ *
  * @method string getBindIP() Obtain Private IP of target group instance
  * @method void setBindIP(string $BindIP) Set Private IP of target group instance
  * @method integer getPort() Obtain Port of target group instance
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) Set Weight of target group instance
  * @method integer getNewPort() Obtain New port of target group instance
  * @method void setNewPort(integer $NewPort) Set New port of target group instance
- */
-
-/**
- *Target group instance
  */
 class TargetGroupInstance extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TargetGroupInstance extends AbstractModel
      * @var integer New port of target group instance
      */
     public $NewPort;
+
     /**
      * @param string $BindIP Private IP of target group instance
      * @param integer $Port Port of target group instance
@@ -62,6 +61,7 @@ class TargetGroupInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

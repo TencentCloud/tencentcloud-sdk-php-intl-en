@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Rule associated with target group
+ *
  * @method string getLoadBalancerId() Obtain ID of associated CLB instance
  * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of associated CLB instance
  * @method string getListenerId() Obtain ID of associated listener
@@ -42,10 +44,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name
  * @method string getListenerName() Obtain Listener name
  * @method void setListenerName(string $ListenerName) Set Listener name
- */
-
-/**
- *Rule associated with target group
  */
 class AssociationItem extends AbstractModel
 {
@@ -96,6 +94,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Listener name
      */
     public $ListenerName;
+
     /**
      * @param string $LoadBalancerId ID of associated CLB instance
      * @param string $ListenerId ID of associated listener
@@ -114,6 +113,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

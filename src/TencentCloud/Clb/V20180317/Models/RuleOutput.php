@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP/HTTPS listener forwarding rule (output)
+ *
  * @method string getLocationId() Obtain Forwarding rule ID
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID
  * @method string getDomain() Obtain Domain name of the forwarding rule.
@@ -76,10 +78,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *HTTP/HTTPS listener forwarding rule (output)
  */
 class RuleOutput extends AbstractModel
 {
@@ -191,6 +189,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TrpcFunc;
+
     /**
      * @param string $LocationId Forwarding rule ID
      * @param string $Domain Domain name of the forwarding rule.
@@ -226,6 +225,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

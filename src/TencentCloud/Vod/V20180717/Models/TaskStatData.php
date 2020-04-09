@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video processing task statistics.
+ *
  * @method string getTaskType() Obtain Task type
 <li>Transcode: transcoding</li>
 <li>Snapshot: screencapturing</li>
@@ -99,10 +101,6 @@ Transcoding specification:
 <li>Edit.H265.2K: H.265 2K video editing</li>
 <li>Edit.H265.4K: H.265 4K video editing</li>
  */
-
-/**
- *Video processing task statistics.
- */
 class TaskStatData extends AbstractModel
 {
     /**
@@ -156,6 +154,7 @@ Transcoding specification:
 <li>Edit.H265.4K: H.265 4K video editing</li>
      */
     public $Details;
+
     /**
      * @param string $TaskType Task type
 <li>Transcode: transcoding</li>
@@ -202,6 +201,7 @@ Transcoding specification:
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

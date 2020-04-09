@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Import task records
+ *
  * @method integer getStatus() Obtain Status value
  * @method void setStatus(integer $Status) Set Status value
  * @method integer getCode() Obtain Status value
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbName(string $DbName) Set Name of the table to be imported
  * @method string getAsyncRequestId() Obtain Async task request ID
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID
- */
-
-/**
- *Import task records
  */
 class ImportRecord extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ImportRecord extends AbstractModel
      * @var string Async task request ID
      */
     public $AsyncRequestId;
+
     /**
      * @param integer $Status Status value
      * @param integer $Code Status value
@@ -134,6 +133,7 @@ class ImportRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

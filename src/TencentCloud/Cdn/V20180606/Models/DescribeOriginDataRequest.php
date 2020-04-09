@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOriginData request structure.
+ *
  * @method string getStartTime() Obtain Query start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
 The gap between the start time and end time should be less than or equal to 90 days.
@@ -80,10 +82,6 @@ You can set it to true to return the details for each Domain (the statusCode met
  * @method void setArea(string $Area) Set Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
 `mainland`: specifies to query CDN data within Mainland China;
 `overseas`: specifies to query CDN data outside Mainland China.
- */
-
-/**
- *DescribeOriginData request structure.
  */
 class DescribeOriginDataRequest extends AbstractModel
 {
@@ -149,6 +147,7 @@ You can set it to true to return the details for each Domain (the statusCode met
 `overseas`: specifies to query CDN data outside Mainland China.
      */
     public $Area;
+
     /**
      * @param string $StartTime Query start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
@@ -186,6 +185,7 @@ You can set it to true to return the details for each Domain (the statusCode met
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

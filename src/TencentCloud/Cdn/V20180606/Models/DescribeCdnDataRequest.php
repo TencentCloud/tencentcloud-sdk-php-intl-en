@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCdnData request structure.
+ *
  * @method string getStartTime() Obtain Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
 The gap between the start time and end time should be less than or equal to 90 days.
@@ -120,10 +122,6 @@ If the IP protocol to be queried is specified, the district and ISP cannot be sp
  * @method void setAreaType(string $AreaType) Set Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
 `server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
 `client`: specifies to query data on the client region where the request devices are located.
- */
-
-/**
- *DescribeCdnData request structure.
  */
 class DescribeCdnDataRequest extends AbstractModel
 {
@@ -233,6 +231,7 @@ If the IP protocol to be queried is specified, the district and ISP cannot be sp
 `client`: specifies to query data on the client region where the request devices are located.
      */
     public $AreaType;
+
     /**
      * @param string $StartTime Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
@@ -290,6 +289,7 @@ If the IP protocol to be queried is specified, the district and ISP cannot be sp
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

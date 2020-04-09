@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Connection group details list
+ *
  * @method string getGroupId() Obtain Connection group ID
  * @method void setGroupId(string $GroupId) Set Connection group ID
  * @method string getDomain() Obtain Connection group domain name
@@ -46,10 +48,6 @@ Where:
 11: connection migrating.
  * @method array getTagSet() Obtain Tag list.
  * @method void setTagSet(array $TagSet) Set Tag list.
- */
-
-/**
- *Connection group details list
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ Where:
      * @var array Tag list.
      */
     public $TagSet;
+
     /**
      * @param string $GroupId Connection group ID
      * @param string $Domain Connection group domain name
@@ -114,6 +113,7 @@ Where:
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Authentication information
+ *
  * @method string getScene() Obtain Authentication scenario such as COS
  * @method void setScene(string $Scene) Set Authentication scenario such as COS
  * @method string getSecretId() Obtain SecretId
  * @method void setSecretId(string $SecretId) Set SecretId
  * @method string getSecretKey() Obtain SecretKey
  * @method void setSecretKey(string $SecretKey) Set SecretKey
- */
-
-/**
- *Authentication information
  */
 class Authentication extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Authentication extends AbstractModel
      * @var string SecretKey
      */
     public $SecretKey;
+
     /**
      * @param string $Scene Authentication scenario such as COS
      * @param string $SecretId SecretId
@@ -54,6 +53,7 @@ class Authentication extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

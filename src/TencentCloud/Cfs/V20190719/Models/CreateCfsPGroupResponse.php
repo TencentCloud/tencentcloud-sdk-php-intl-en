@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsPGroup response structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getName() Obtain Permission group name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCDate(string $CDate) Set Permission group creation time
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateCfsPGroup response structure.
  */
 class CreateCfsPGroupResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateCfsPGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param string $Name Permission group name
@@ -78,6 +77,7 @@ class CreateCfsPGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

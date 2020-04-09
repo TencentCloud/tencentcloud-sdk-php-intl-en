@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedRolePolicies request structure.
+ *
  * @method integer getPage() Obtain Page number, beginning from 1
  * @method void setPage(integer $Page) Set Page number, beginning from 1
  * @method integer getRp() Obtain Number of lines per page, no more than 200
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleName(string $RoleName) Set Role name, used to specify a role. Input either `RoleId` or `RoleName`
  * @method string getPolicyType() Obtain Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
  * @method void setPolicyType(string $PolicyType) Set Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
- */
-
-/**
- *ListAttachedRolePolicies request structure.
  */
 class ListAttachedRolePoliciesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
      * @var string Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
      */
     public $PolicyType;
+
     /**
      * @param integer $Page Page number, beginning from 1
      * @param integer $Rp Number of lines per page, no more than 200
@@ -70,6 +69,7 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

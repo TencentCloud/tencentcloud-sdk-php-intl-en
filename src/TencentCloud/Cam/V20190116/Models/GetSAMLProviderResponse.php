@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetSAMLProvider response structure.
+ *
  * @method string getName() Obtain SAML identity provider name
  * @method void setName(string $Name) Set SAML identity provider name
  * @method string getDescription() Obtain SAML identity provider description
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSAMLMetadata(string $SAMLMetadata) Set SAML identity provider metadata document
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetSAMLProvider response structure.
  */
 class GetSAMLProviderResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class GetSAMLProviderResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Name SAML identity provider name
      * @param string $Description SAML identity provider description
@@ -78,6 +77,7 @@ class GetSAMLProviderResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

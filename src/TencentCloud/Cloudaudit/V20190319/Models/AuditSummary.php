@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tracking set overview
+ *
  * @method string getAuditName() Obtain Tracking set name
  * @method void setAuditName(string $AuditName) Set Tracking set name
  * @method integer getAuditStatus() Obtain Tracking set status. Value range: 1 (enabled), 0 (disabled)
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBucketName(string $CosBucketName) Set COS bucket name
  * @method string getLogFilePrefix() Obtain Log prefix
  * @method void setLogFilePrefix(string $LogFilePrefix) Set Log prefix
- */
-
-/**
- *Tracking set overview
  */
 class AuditSummary extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AuditSummary extends AbstractModel
      * @var string Log prefix
      */
     public $LogFilePrefix;
+
     /**
      * @param string $AuditName Tracking set name
      * @param integer $AuditStatus Tracking set status. Value range: 1 (enabled), 0 (disabled)
@@ -62,6 +61,7 @@ class AuditSummary extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Returned result of consumer group offset
+ *
  * @method integer getTotalCount() Obtain Total number of eligible results
  * @method void setTotalCount(integer $TotalCount) Set Total number of eligible results
  * @method array getTopicList() Obtain Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTopicList(array $TopicList) Set Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Returned result of consumer group offset
  */
 class GroupOffsetResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class GroupOffsetResponse extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TopicList;
+
     /**
      * @param integer $TotalCount Total number of eligible results
      * @param array $TopicList Array of partitions in the topic, where each element is a JSON object
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

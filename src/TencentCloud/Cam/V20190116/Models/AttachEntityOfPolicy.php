@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The entity associated with the policy
+ *
  * @method string getId() Obtain Entity ID
  * @method void setId(string $Id) Set Entity ID
  * @method string getName() Obtain Entity Name
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method integer getRelatedType() Obtain Type of entity association. 1: Associate by users; 2: Associate by User Groups
  * @method void setRelatedType(integer $RelatedType) Set Type of entity association. 1: Associate by users; 2: Associate by User Groups
- */
-
-/**
- *The entity associated with the policy
  */
 class AttachEntityOfPolicy extends AbstractModel
 {
@@ -58,6 +56,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var integer Type of entity association. 1: Associate by users; 2: Associate by User Groups
      */
     public $RelatedType;
+
     /**
      * @param string $Id Entity ID
      * @param string $Name Entity Name
@@ -70,6 +69,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

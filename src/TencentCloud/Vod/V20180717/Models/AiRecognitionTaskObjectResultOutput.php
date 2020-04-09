@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of intelligent object recognition.
+ *
  * @method array getResultSet() Obtain Result set of intelligent object recognition.
  * @method void setResultSet(array $ResultSet) Set Result set of intelligent object recognition.
- */
-
-/**
- *Output of intelligent object recognition.
  */
 class AiRecognitionTaskObjectResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskObjectResultOutput extends AbstractModel
      * @var array Result set of intelligent object recognition.
      */
     public $ResultSet;
+
     /**
      * @param array $ResultSet Result set of intelligent object recognition.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskObjectResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

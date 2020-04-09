@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Association between a region ID and sub-region IDs.
+ *
  * @method integer getRegionId() Obtain Region ID
  * @method void setRegionId(integer $RegionId) Set Region ID
  * @method array getSubRegionIdList() Obtain List of sub-region IDs
  * @method void setSubRegionIdList(array $SubRegionIdList) Set List of sub-region IDs
- */
-
-/**
- *Association between a region ID and sub-region IDs.
  */
 class RegionMapRelation extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RegionMapRelation extends AbstractModel
      * @var array List of sub-region IDs
      */
     public $SubRegionIdList;
+
     /**
      * @param integer $RegionId Region ID
      * @param array $SubRegionIdList List of sub-region IDs
@@ -46,6 +45,7 @@ class RegionMapRelation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskTemplates response structure.
+ *
  * @method array getTaskTemplateSet() Obtain List of job templates
  * @method void setTaskTemplateSet(array $TaskTemplateSet) Set List of job templates
  * @method integer getTotalCount() Obtain Number of job templates
  * @method void setTotalCount(integer $TotalCount) Set Number of job templates
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTaskTemplates response structure.
  */
 class DescribeTaskTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTaskTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $TaskTemplateSet List of job templates
      * @param integer $TotalCount Number of job templates
@@ -54,6 +53,7 @@ class DescribeTaskTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

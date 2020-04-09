@@ -18,6 +18,15 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Complex origin server configurations. The following configurations are supported:
++ Origin server specified as a single domain name
++ Origin server specified as multiple IPs. Supported port range: 1-65535; Supported weight range: 1-100. Format: IP:Port:Weight.
++ Origin-pull domain name configuration
++ Cloud Object Storage (COS) specified as origin server
++ Hot backup origin server specified as a single domain name
++ Hot backup origin server specified as multiple IPs. Supported port range: 1-65535. At present, weight configuration is not supported.
++ Hot backup origin server origin-pull domain name configuration
+ *
  * @method array getOrigins() Obtain Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -93,17 +102,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setBackupServerName(string $BackupServerName) Set Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
-
-/**
- *Complex origin server configurations. The following configurations are supported:
-+ Origin server specified as a single domain name
-+ Origin server specified as multiple IPs. Supported port range: 1-65535; Supported weight range: 1-100. Format: IP:Port:Weight.
-+ Origin-pull domain name configuration
-+ Cloud Object Storage (COS) specified as origin server
-+ Hot backup origin server specified as a single domain name
-+ Hot backup origin server specified as multiple IPs. Supported port range: 1-65535. At present, weight configuration is not supported.
-+ Hot backup origin server origin-pull domain name configuration
- */
 class Origin extends AbstractModel
 {
     /**
@@ -174,6 +172,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $BackupServerName;
+
     /**
      * @param array $Origins Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
@@ -217,6 +216,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

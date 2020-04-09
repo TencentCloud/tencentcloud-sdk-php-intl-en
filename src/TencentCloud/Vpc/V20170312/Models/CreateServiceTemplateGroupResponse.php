@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServiceTemplateGroup response structure.
+ *
  * @method ServiceTemplateGroup getServiceTemplateGroup() Obtain Group object of the protocol port template.
  * @method void setServiceTemplateGroup(ServiceTemplateGroup $ServiceTemplateGroup) Set Group object of the protocol port template.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateServiceTemplateGroup response structure.
  */
 class CreateServiceTemplateGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateServiceTemplateGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param ServiceTemplateGroup $ServiceTemplateGroup Group object of the protocol port template.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateServiceTemplateGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the health information of a target
+ *
  * @method string getIP() Obtain Private IP of the target
  * @method void setIP(string $IP) Set Private IP of the target
  * @method integer getPort() Obtain Port bound to the target
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetId(string $TargetId) Set Instance ID of the target, such as ins-12345678
  * @method string getHealthStatusDetial() Obtain Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
  * @method void setHealthStatusDetial(string $HealthStatusDetial) Set Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
- */
-
-/**
- *Describes the health information of a target
  */
 class TargetHealth extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TargetHealth extends AbstractModel
      * @var string Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
      */
     public $HealthStatusDetial;
+
     /**
      * @param string $IP Private IP of the target
      * @param integer $Port Port bound to the target
@@ -70,6 +69,7 @@ class TargetHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

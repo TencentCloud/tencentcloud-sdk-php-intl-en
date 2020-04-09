@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSyncJob request structure.
+ *
  * @method string getJobName() Obtain Disaster recovery sync task name
  * @method void setJobName(string $JobName) Set Disaster recovery sync task name
  * @method SyncOption getSyncOption() Obtain Configuration options of a disaster recovery sync task
@@ -40,10 +42,6 @@ For databases with a database-table structure:
  * @method void setDatabaseInfo(string $DatabaseInfo) Set Information of the source table to be synced, which is described in JSON string format.
 For databases with a database-table structure:
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
- */
-
-/**
- *CreateSyncJob request structure.
  */
 class CreateSyncJobRequest extends AbstractModel
 {
@@ -93,6 +91,7 @@ For databases with a database-table structure:
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
      */
     public $DatabaseInfo;
+
     /**
      * @param string $JobName Disaster recovery sync task name
      * @param SyncOption $SyncOption Configuration options of a disaster recovery sync task
@@ -110,6 +109,7 @@ For databases with a database-table structure:
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

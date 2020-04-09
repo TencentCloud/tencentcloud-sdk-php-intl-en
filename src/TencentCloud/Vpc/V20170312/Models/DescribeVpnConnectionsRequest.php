@@ -18,28 +18,26 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpnConnections request structure.
+ *
  * @method array getVpnConnectionIds() Obtain The instance ID of the VPN tunnel, such as `vpnx-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
  * @method void setVpnConnectionIds(array $VpnConnectionIds) Set The instance ID of the VPN tunnel, such as `vpnx-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
- * @method array getFilters() Obtain The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
- * @method void setFilters(array $Filters) Set The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+ * @method array getFilters() Obtain Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+ * @method void setFilters(array $Filters) Set Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li>
  * @method integer getOffset() Obtain The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
  * @method void setOffset(integer $Offset) Set The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
  * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
  * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
- */
-
-/**
- *DescribeVpnConnections request structure.
  */
 class DescribeVpnConnectionsRequest extends AbstractModel
 {
@@ -49,12 +47,12 @@ class DescribeVpnConnectionsRequest extends AbstractModel
     public $VpnConnectionIds;
 
     /**
-     * @var array The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+     * @var array Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li>
      */
     public $Filters;
 
@@ -67,14 +65,15 @@ class DescribeVpnConnectionsRequest extends AbstractModel
      * @var integer Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public $Limit;
+
     /**
      * @param array $VpnConnectionIds The instance ID of the VPN tunnel, such as `vpnx-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-     * @param array $Filters The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+     * @param array $Filters Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li>
      * @param integer $Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
      * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
@@ -82,6 +81,7 @@ class DescribeVpnConnectionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

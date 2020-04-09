@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Access command
+ *
  * @method string getCmd() Obtain Command
  * @method void setCmd(string $Cmd) Set Command
  * @method integer getCount() Obtain Number of executions
  * @method void setCount(integer $Count) Set Number of executions
- */
-
-/**
- *Access command
  */
 class SourceCommand extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SourceCommand extends AbstractModel
      * @var integer Number of executions
      */
     public $Count;
+
     /**
      * @param string $Cmd Command
      * @param integer $Count Number of executions
@@ -46,6 +45,7 @@ class SourceCommand extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

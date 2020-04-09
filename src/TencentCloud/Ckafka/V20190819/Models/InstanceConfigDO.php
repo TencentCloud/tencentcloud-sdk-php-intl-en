@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance configuration entity
+ *
  * @method boolean getAutoCreateTopicsEnable() Obtain Whether to create topics automatically
  * @method void setAutoCreateTopicsEnable(boolean $AutoCreateTopicsEnable) Set Whether to create topics automatically
  * @method integer getDefaultNumPartitions() Obtain Number of partitions
  * @method void setDefaultNumPartitions(integer $DefaultNumPartitions) Set Number of partitions
  * @method integer getDefaultReplicationFactor() Obtain Default replication factor
  * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) Set Default replication factor
- */
-
-/**
- *Instance configuration entity
  */
 class InstanceConfigDO extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InstanceConfigDO extends AbstractModel
      * @var integer Default replication factor
      */
     public $DefaultReplicationFactor;
+
     /**
      * @param boolean $AutoCreateTopicsEnable Whether to create topics automatically
      * @param integer $DefaultNumPartitions Number of partitions
@@ -54,6 +53,7 @@ class InstanceConfigDO extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

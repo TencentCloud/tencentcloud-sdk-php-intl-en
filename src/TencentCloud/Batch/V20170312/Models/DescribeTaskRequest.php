@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTask request structure.
+ *
  * @method string getJobId() Obtain Instance ID
  * @method void setJobId(string $JobId) Set Instance ID
  * @method string getTaskName() Obtain Task name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li> task-instance-type - String - Required: No - (Filter) Filter by task instance state. (SUBMITTED: submitted; PENDING: pending; RUNNABLE: runnable; STARTING: starting; RUNNING: running; SUCCEED: succeeded; FAILED: failed; FAILED_INTERRUPTED: instance retained after failure).</li>
  * @method void setFilters(array $Filters) Set Filter as detailed below:
 <li> task-instance-type - String - Required: No - (Filter) Filter by task instance state. (SUBMITTED: submitted; PENDING: pending; RUNNABLE: runnable; STARTING: starting; RUNNING: running; SUCCEED: succeeded; FAILED: failed; FAILED_INTERRUPTED: instance retained after failure).</li>
- */
-
-/**
- *DescribeTask request structure.
  */
 class DescribeTaskRequest extends AbstractModel
 {
@@ -62,6 +60,7 @@ class DescribeTaskRequest extends AbstractModel
 <li> task-instance-type - String - Required: No - (Filter) Filter by task instance state. (SUBMITTED: submitted; PENDING: pending; RUNNABLE: runnable; STARTING: starting; RUNNING: running; SUCCEED: succeeded; FAILED: failed; FAILED_INTERRUPTED: instance retained after failure).</li>
      */
     public $Filters;
+
     /**
      * @param string $JobId Instance ID
      * @param string $TaskName Task name
@@ -74,6 +73,7 @@ class DescribeTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

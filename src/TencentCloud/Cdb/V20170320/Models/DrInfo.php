@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Disaster recovery instance information
+ *
  * @method integer getStatus() Obtain Disaster recovery instance status
  * @method void setStatus(integer $Status) Set Disaster recovery instance status
  * @method string getZone() Obtain AZ information
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method integer getInstanceType() Obtain Instance type
  * @method void setInstanceType(integer $InstanceType) Set Instance type
- */
-
-/**
- *Disaster recovery instance information
  */
 class DrInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DrInfo extends AbstractModel
      * @var integer Instance type
      */
     public $InstanceType;
+
     /**
      * @param integer $Status Disaster recovery instance status
      * @param string $Zone AZ information
@@ -86,6 +85,7 @@ class DrInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

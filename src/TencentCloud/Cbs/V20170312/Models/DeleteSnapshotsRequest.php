@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSnapshots request structure.
+ *
  * @method array getSnapshotIds() Obtain List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
  * @method void setSnapshotIds(array $SnapshotIds) Set List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
- */
-
-/**
- *DeleteSnapshots request structure.
  */
 class DeleteSnapshotsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSnapshotsRequest extends AbstractModel
      * @var array List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
      */
     public $SnapshotIds;
+
     /**
      * @param array $SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
      */
@@ -38,6 +37,7 @@ class DeleteSnapshotsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

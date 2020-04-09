@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Politically sensitive information
+ *
  * @method float getConfidence() Obtain Score of the detected politically sensitive information in video from 0 to 100.
  * @method void setConfidence(float $Confidence) Set Score of the detected politically sensitive information in video from 0 to 100.
  * @method string getSuggestion() Obtain Suggestion for the detected politically sensitive information. Valid values:
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>violation_photo: Violating photo.</li>
  * @method array getSegmentSet() Obtain List of video segments that contain the detected politically sensitive information.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected politically sensitive information.
- */
-
-/**
- *Politically sensitive information
  */
 class AiReviewPoliticalTaskOutput extends AbstractModel
 {
@@ -67,6 +65,7 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
      * @var array List of video segments that contain the detected politically sensitive information.
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Score of the detected politically sensitive information in video from 0 to 100.
      * @param string $Suggestion Suggestion for the detected politically sensitive information. Valid values:
@@ -82,6 +81,7 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

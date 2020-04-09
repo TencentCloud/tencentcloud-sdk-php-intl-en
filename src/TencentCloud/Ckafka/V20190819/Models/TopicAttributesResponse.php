@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Returned topic attributes result entity
+ *
  * @method string getTopicId() Obtain Topic ID
  * @method void setTopicId(string $TopicId) Set Topic ID
  * @method integer getCreateTime() Obtain Creation time
@@ -36,10 +38,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setConfig(Config $Config) Set Topic configuration array
  * @method array getPartitions() Obtain Partition details
  * @method void setPartitions(array $Partitions) Set Partition details
- */
-
-/**
- *Returned topic attributes result entity
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -83,6 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var array Partition details
      */
     public $Partitions;
+
     /**
      * @param string $TopicId Topic ID
      * @param integer $CreateTime Creation time
@@ -98,6 +97,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

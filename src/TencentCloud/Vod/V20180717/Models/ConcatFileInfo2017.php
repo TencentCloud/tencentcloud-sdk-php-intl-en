@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of source file for video splicing (v2017)
+ *
  * @method integer getErrCode() Obtain Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
@@ -42,10 +44,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFileType(string $FileType) Set Format of source file for video splicing.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of source file for video splicing (v2017)
  */
 class ConcatFileInfo2017 extends AbstractModel
 {
@@ -80,6 +78,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FileType;
+
     /**
      * @param integer $ErrCode Error code
 <li>0: success;</li>
@@ -98,6 +97,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

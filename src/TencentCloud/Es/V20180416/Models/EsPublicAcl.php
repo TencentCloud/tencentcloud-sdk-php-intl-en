@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Public network ACL information of ES
+ *
  * @method array getBlackIpList() Obtain Access blacklist
  * @method void setBlackIpList(array $BlackIpList) Set Access blacklist
  * @method array getWhiteIpList() Obtain Access whitelist
  * @method void setWhiteIpList(array $WhiteIpList) Set Access whitelist
- */
-
-/**
- *Public network ACL information of ES
  */
 class EsPublicAcl extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EsPublicAcl extends AbstractModel
      * @var array Access whitelist
      */
     public $WhiteIpList;
+
     /**
      * @param array $BlackIpList Access blacklist
      * @param array $WhiteIpList Access whitelist
@@ -46,6 +45,7 @@ class EsPublicAcl extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

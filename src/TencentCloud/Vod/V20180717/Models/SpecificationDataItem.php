@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Statistics of task with specified specification.
+ *
  * @method string getSpecification() Obtain Task specification.
  * @method void setSpecification(string $Specification) Set Task specification.
  * @method array getData() Obtain Statistics.
  * @method void setData(array $Data) Set Statistics.
- */
-
-/**
- *Statistics of task with specified specification.
  */
 class SpecificationDataItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SpecificationDataItem extends AbstractModel
      * @var array Statistics.
      */
     public $Data;
+
     /**
      * @param string $Specification Task specification.
      * @param array $Data Statistics.
@@ -46,6 +45,7 @@ class SpecificationDataItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

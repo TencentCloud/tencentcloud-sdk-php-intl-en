@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SimpleHlsClip response structure.
+ *
  * @method string getUrl() Obtain Address of clipped video.
  * @method void setUrl(string $Url) Set Address of clipped video.
  * @method MediaMetaData getMetaData() Obtain Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
  * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *SimpleHlsClip response structure.
  */
 class SimpleHlsClipResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SimpleHlsClipResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Url Address of clipped video.
      * @param MediaMetaData $MetaData Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
@@ -54,6 +53,7 @@ class SimpleHlsClipResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

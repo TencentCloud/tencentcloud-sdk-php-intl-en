@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcPrivateIpAddresses response structure.
+ *
  * @method array getVpcPrivateIpAddressSet() Obtain The list of private `IP` address information.
  * @method void setVpcPrivateIpAddressSet(array $VpcPrivateIpAddressSet) Set The list of private `IP` address information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeVpcPrivateIpAddresses response structure.
  */
 class DescribeVpcPrivateIpAddressesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeVpcPrivateIpAddressesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $VpcPrivateIpAddressSet The list of private `IP` address information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeVpcPrivateIpAddressesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

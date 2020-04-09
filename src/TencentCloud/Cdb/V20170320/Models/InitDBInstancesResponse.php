@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InitDBInstances response structure.
+ *
  * @method array getAsyncRequestIds() Obtain Array of async task request IDs, which can be used to query the execution results of async tasks.
  * @method void setAsyncRequestIds(array $AsyncRequestIds) Set Array of async task request IDs, which can be used to query the execution results of async tasks.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *InitDBInstances response structure.
  */
 class InitDBInstancesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InitDBInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $AsyncRequestIds Array of async task request IDs, which can be used to query the execution results of async tasks.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class InitDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

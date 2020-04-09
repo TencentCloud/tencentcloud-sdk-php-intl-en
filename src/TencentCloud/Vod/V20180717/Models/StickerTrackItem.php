@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of sticker on sticker track.
+ *
  * @method string getSourceMedia() Obtain Source of media file for sticker material, which can be an ID of a VOD file or URL of another file.
  * @method void setSourceMedia(string $SourceMedia) Set Source of media file for sticker material, which can be an ID of a VOD file or URL of another file.
  * @method float getDuration() Obtain Sticker duration in seconds.
@@ -72,10 +74,6 @@ Default value: 0 px.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setImageOperations(array $ImageOperations) Set Operation on sticker such as image rotation.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of sticker on sticker track.
  */
 class StickerTrackItem extends AbstractModel
 {
@@ -141,6 +139,7 @@ Default value: 0 px.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ImageOperations;
+
     /**
      * @param string $SourceMedia Source of media file for sticker material, which can be an ID of a VOD file or URL of another file.
      * @param float $Duration Sticker duration in seconds.
@@ -174,6 +173,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

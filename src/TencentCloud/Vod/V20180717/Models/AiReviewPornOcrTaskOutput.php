@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OCR-detected porn information in text
+ *
  * @method float getConfidence() Obtain Score of OCR-detected porn information in text between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Score of OCR-detected porn information in text between 0 and 100.
  * @method string getSuggestion() Obtain Suggestion for OCR-detected porn information in text. Valid values:
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>block.</li>
  * @method array getSegmentSet() Obtain List of video segments that contain the OCR-detected porn information in text.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the OCR-detected porn information in text.
- */
-
-/**
- *OCR-detected porn information in text
  */
 class AiReviewPornOcrTaskOutput extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiReviewPornOcrTaskOutput extends AbstractModel
      * @var array List of video segments that contain the OCR-detected porn information in text.
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Score of OCR-detected porn information in text between 0 and 100.
      * @param string $Suggestion Suggestion for OCR-detected porn information in text. Valid values:
@@ -66,6 +65,7 @@ class AiReviewPornOcrTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a full text recognition task
+ *
  * @method string getSwitch() Obtain Switch of a full text recognition task. Valid values:
 <li>ON: Enables an intelligent full text recognition task;</li>
 <li>OFF: Disables an intelligent full text recognition task.</li>
  * @method void setSwitch(string $Switch) Set Switch of a full text recognition task. Valid values:
 <li>ON: Enables an intelligent full text recognition task;</li>
 <li>OFF: Disables an intelligent full text recognition task.</li>
- */
-
-/**
- *Control parameter of a full text recognition task
  */
 class OcrFullTextConfigureInfo extends AbstractModel
 {
@@ -37,6 +35,7 @@ class OcrFullTextConfigureInfo extends AbstractModel
 <li>OFF: Disables an intelligent full text recognition task.</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch Switch of a full text recognition task. Valid values:
 <li>ON: Enables an intelligent full text recognition task;</li>
@@ -46,6 +45,7 @@ class OcrFullTextConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

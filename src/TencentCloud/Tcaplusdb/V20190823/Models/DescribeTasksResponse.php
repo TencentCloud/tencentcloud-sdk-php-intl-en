@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasks response structure.
+ *
  * @method integer getTotalCount() Obtain Number of tasks
  * @method void setTotalCount(integer $TotalCount) Set Number of tasks
  * @method array getTaskInfos() Obtain List of details of queried tasks
  * @method void setTaskInfos(array $TaskInfos) Set List of details of queried tasks
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTasks response structure.
  */
 class DescribeTasksResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTasksResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of tasks
      * @param array $TaskInfos List of details of queried tasks
@@ -54,6 +53,7 @@ class DescribeTasksResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

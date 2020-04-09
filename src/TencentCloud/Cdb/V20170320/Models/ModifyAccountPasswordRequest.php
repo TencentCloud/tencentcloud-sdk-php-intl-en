@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountPassword request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method string getNewPassword() Obtain New password of the database account. It can only contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special characters (_+-&=!@#$%^*()).
  * @method void setNewPassword(string $NewPassword) Set New password of the database account. It can only contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special characters (_+-&=!@#$%^*()).
  * @method array getAccounts() Obtain TencentDB account
  * @method void setAccounts(array $Accounts) Set TencentDB account
- */
-
-/**
- *ModifyAccountPassword request structure.
  */
 class ModifyAccountPasswordRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAccountPasswordRequest extends AbstractModel
      * @var array TencentDB account
      */
     public $Accounts;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $NewPassword New password of the database account. It can only contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special characters (_+-&=!@#$%^*()).
@@ -54,6 +53,7 @@ class ModifyAccountPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

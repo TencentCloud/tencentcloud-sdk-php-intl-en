@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts response structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method array getAccounts() Obtain Account information list
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) Set Total number
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAccounts response structure.
  */
 class DescribeAccountsResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeAccountsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId Instance ID
      * @param array $Accounts Account information list
@@ -62,6 +61,7 @@ class DescribeAccountsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

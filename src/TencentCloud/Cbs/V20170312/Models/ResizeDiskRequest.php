@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResizeDisk request structure.
+ *
  * @method string getDiskId() Obtain ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
  * @method void setDiskId(string $DiskId) Set ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
  * @method integer getDiskSize() Obtain Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
  * @method void setDiskSize(integer $DiskSize) Set Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
- */
-
-/**
- *ResizeDisk request structure.
  */
 class ResizeDiskRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResizeDiskRequest extends AbstractModel
      * @var integer Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
      */
     public $DiskSize;
+
     /**
      * @param string $DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
      * @param integer $DiskSize Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
@@ -46,6 +45,7 @@ class ResizeDiskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

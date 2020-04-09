@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of the real server bound to a forwarding rule under an HTTP/HTTPS listener
+ *
  * @method string getLocationId() Obtain Forwarding rule ID
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID
  * @method string getDomain() Obtain Domain name of the forwarding rule
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargets(array $Targets) Set Real server information
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of the real server bound to a forwarding rule under an HTTP/HTTPS listener
  */
 class RuleTargets extends AbstractModel
 {
@@ -55,6 +53,7 @@ class RuleTargets extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Targets;
+
     /**
      * @param string $LocationId Forwarding rule ID
      * @param string $Domain Domain name of the forwarding rule
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

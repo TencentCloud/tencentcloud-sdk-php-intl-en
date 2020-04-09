@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Redirect target, i.e., the real server bound to a CLB
+ *
  * @method integer getPort() Obtain Listening port of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPort(integer $Port) Set Listening port of a real server
@@ -38,10 +40,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEniIp(string $EniIp) Set This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Redirect target, i.e., the real server bound to a CLB
  */
 class Target extends AbstractModel
 {
@@ -74,6 +72,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EniIp;
+
     /**
      * @param integer $Port Listening port of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -90,6 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

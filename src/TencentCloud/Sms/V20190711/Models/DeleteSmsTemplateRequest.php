@@ -18,12 +18,10 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSmsTemplate request structure.
+ *
  * @method integer getTemplateId() Obtain ID of template to be deleted.
  * @method void setTemplateId(integer $TemplateId) Set ID of template to be deleted.
- */
-
-/**
- *DeleteSmsTemplate request structure.
  */
 class DeleteSmsTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSmsTemplateRequest extends AbstractModel
      * @var integer ID of template to be deleted.
      */
     public $TemplateId;
+
     /**
      * @param integer $TemplateId ID of template to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteSmsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

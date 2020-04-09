@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * `IPv6` address information.
+ *
  * @method string getAddress() Obtain `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
  * @method void setAddress(string $Address) Set `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
  * @method boolean getPrimary() Obtain Whether it is a primary `IP`.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 <li>`MIGRATING`: Migrating</li>
 <li>`DELETING`: Deleting</li>
 <li>`AVAILABLE`: Available</li>
- */
-
-/**
- *`IPv6` address information.
  */
 class Ipv6Address extends AbstractModel
 {
@@ -78,6 +76,7 @@ class Ipv6Address extends AbstractModel
 <li>`AVAILABLE`: Available</li>
      */
     public $State;
+
     /**
      * @param string $Address `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
      * @param boolean $Primary Whether it is a primary `IP`.
@@ -94,6 +93,7 @@ class Ipv6Address extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The outbound bandwidth cap of the CCN region
+ *
  * @method string getRegion() Obtain Region, such as `ap-guangzhou`
  * @method void setRegion(string $Region) Set Region, such as `ap-guangzhou`
  * @method integer getBandwidthLimit() Obtain The outbound bandwidth cap. Units: Mbps
@@ -30,10 +32,6 @@ Note: This field may return null, indicating no valid value.
 Note: This field may return null, indicating no valid value.
  * @method boolean getDstIsBm() Obtain Whether the target region is a BM region. The default is `false`.
  * @method void setDstIsBm(boolean $DstIsBm) Set Whether the target region is a BM region. The default is `false`.
- */
-
-/**
- *The outbound bandwidth cap of the CCN region
  */
 class CcnRegionBandwidthLimit extends AbstractModel
 {
@@ -62,6 +60,7 @@ Note: This field may return null, indicating no valid value.
      * @var boolean Whether the target region is a BM region. The default is `false`.
      */
     public $DstIsBm;
+
     /**
      * @param string $Region Region, such as `ap-guangzhou`
      * @param integer $BandwidthLimit The outbound bandwidth cap. Units: Mbps
@@ -74,6 +73,7 @@ Note: This field may return null, indicating no valid value.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

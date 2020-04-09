@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTableMemos request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster instance where a table resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster instance where a table resides
  * @method array getTableMemos() Obtain List of details of selected tables
  * @method void setTableMemos(array $TableMemos) Set List of details of selected tables
- */
-
-/**
- *ModifyTableMemos request structure.
  */
 class ModifyTableMemosRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyTableMemosRequest extends AbstractModel
      * @var array List of details of selected tables
      */
     public $TableMemos;
+
     /**
      * @param string $ClusterId ID of the cluster instance where a table resides
      * @param array $TableMemos List of details of selected tables
@@ -46,6 +45,7 @@ class ModifyTableMemosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

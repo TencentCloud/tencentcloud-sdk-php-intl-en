@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteServiceTemplateGroup request structure.
+ *
  * @method string getServiceTemplateGroupId() Obtain The protocol port template group instance ID, such as `ppmg-n17uxvve`.
  * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) Set The protocol port template group instance ID, such as `ppmg-n17uxvve`.
- */
-
-/**
- *DeleteServiceTemplateGroup request structure.
  */
 class DeleteServiceTemplateGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteServiceTemplateGroupRequest extends AbstractModel
      * @var string The protocol port template group instance ID, such as `ppmg-n17uxvve`.
      */
     public $ServiceTemplateGroupId;
+
     /**
      * @param string $ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-n17uxvve`.
      */
@@ -38,6 +37,7 @@ class DeleteServiceTemplateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

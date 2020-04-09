@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGatewayFlowMonitorDetail request structure.
+ *
  * @method string getTimePoint() Obtain The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
  * @method void setTimePoint(string $TimePoint) Set The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
  * @method string getVpnId() Obtain The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) Set The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
  * @method string getOrderDirection() Obtain Order methods. Ascending: `ASC`, Descending: `DESC`.
  * @method void setOrderDirection(string $OrderDirection) Set Order methods. Ascending: `ASC`, Descending: `DESC`.
- */
-
-/**
- *DescribeGatewayFlowMonitorDetail request structure.
  */
 class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
      * @var string Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public $OrderDirection;
+
     /**
      * @param string $TimePoint The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
      * @param string $VpnId The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
@@ -102,6 +101,7 @@ class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

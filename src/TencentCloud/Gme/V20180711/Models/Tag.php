@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tag list
+ *
  * @method string getTagKey() Obtain Tag key
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagKey(string $TagKey) Set Tag key
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagValue(string $TagValue) Set Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Tag list
  */
 class Tag extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagValue;
+
     /**
      * @param string $TagKey Tag key
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

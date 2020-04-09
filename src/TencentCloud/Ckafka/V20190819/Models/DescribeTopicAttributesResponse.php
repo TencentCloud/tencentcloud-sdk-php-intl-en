@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTopicAttributes response structure.
+ *
  * @method TopicAttributesResponse getResult() Obtain Returned result object
  * @method void setResult(TopicAttributesResponse $Result) Set Returned result object
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTopicAttributes response structure.
  */
 class DescribeTopicAttributesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTopicAttributesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param TopicAttributesResponse $Result Returned result object
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeTopicAttributesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

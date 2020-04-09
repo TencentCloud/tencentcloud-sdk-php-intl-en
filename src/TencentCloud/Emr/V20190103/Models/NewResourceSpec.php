@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Resource description
+ *
  * @method Resource getMasterResourceSpec() Obtain Describes master node resource
  * @method void setMasterResourceSpec(Resource $MasterResourceSpec) Set Describes master node resource
  * @method Resource getCoreResourceSpec() Obtain Describes core node resource
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommonResourceSpec(Resource $CommonResourceSpec) Set Describes common node resource
  * @method integer getCommonCount() Obtain Number of common nodes
  * @method void setCommonCount(integer $CommonCount) Set Number of common nodes
- */
-
-/**
- *Resource description
  */
 class NewResourceSpec extends AbstractModel
 {
@@ -80,6 +78,7 @@ class NewResourceSpec extends AbstractModel
      * @var integer Number of common nodes
      */
     public $CommonCount;
+
     /**
      * @param Resource $MasterResourceSpec Describes master node resource
      * @param Resource $CoreResourceSpec Describes core node resource
@@ -94,6 +93,7 @@ class NewResourceSpec extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

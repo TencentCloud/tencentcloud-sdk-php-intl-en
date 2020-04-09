@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpnConnection request structure.
+ *
  * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) Set Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() Obtain IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
- */
-
-/**
- *CreateVpnConnection request structure.
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateVpnConnectionRequest extends AbstractModel
      * @var IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
      */
     public $IPSECOptionsSpecification;
+
     /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
@@ -94,6 +93,7 @@ class CreateVpnConnectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

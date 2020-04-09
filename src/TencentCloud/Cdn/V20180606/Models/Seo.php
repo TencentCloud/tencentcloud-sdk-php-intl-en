@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SEO configuration. This is disabled by default.
+ *
  * @method string getSwitch() Obtain SEO configuration switch
 on: enabled
 off: disabled
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 on: enabled
 off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *SEO configuration. This is disabled by default.
  */
 class Seo extends AbstractModel
 {
@@ -40,6 +38,7 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Switch;
+
     /**
      * @param string $Switch SEO configuration switch
 on: enabled
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

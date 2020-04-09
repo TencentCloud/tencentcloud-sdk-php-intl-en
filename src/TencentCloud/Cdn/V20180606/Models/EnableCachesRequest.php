@@ -18,12 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnableCaches request structure.
+ *
  * @method array getUrls() Obtain List of unblocked URLs
  * @method void setUrls(array $Urls) Set List of unblocked URLs
- */
-
-/**
- *EnableCaches request structure.
  */
 class EnableCachesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EnableCachesRequest extends AbstractModel
      * @var array List of unblocked URLs
      */
     public $Urls;
+
     /**
      * @param array $Urls List of unblocked URLs
      */
@@ -38,6 +37,7 @@ class EnableCachesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

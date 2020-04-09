@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of terrorism information detection in video image task
+ *
  * @method string getSwitch() Obtain Switch of terrorism information detection in video image task. Valid values:
 <li>ON: enables terrorism information detection in video image task;</li>
 <li>OFF: disables terrorism information detection in video image task.</li>
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0–100.
  * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0–100.
  * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0–100.
- */
-
-/**
- *Control parameter of terrorism information detection in video image task
  */
 class TerrorismImgReviewTemplateInfo extends AbstractModel
 {
@@ -82,6 +80,7 @@ class TerrorismImgReviewTemplateInfo extends AbstractModel
      * @var integer Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0–100.
      */
     public $ReviewConfidence;
+
     /**
      * @param string $Switch Switch of terrorism information detection in video image task. Valid values:
 <li>ON: enables terrorism information detection in video image task;</li>
@@ -102,6 +101,7 @@ class TerrorismImgReviewTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

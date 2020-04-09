@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListGroups request structure.
+ *
  * @method integer getPage() Obtain Page number; default is 1
  * @method void setPage(integer $Page) Set Page number; default is 1
  * @method integer getRp() Obtain Number of entries per page; default is 20
  * @method void setRp(integer $Rp) Set Number of entries per page; default is 20
  * @method string getKeyword() Obtain Filter by User Group name
  * @method void setKeyword(string $Keyword) Set Filter by User Group name
- */
-
-/**
- *ListGroups request structure.
  */
 class ListGroupsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListGroupsRequest extends AbstractModel
      * @var string Filter by User Group name
      */
     public $Keyword;
+
     /**
      * @param integer $Page Page number; default is 1
      * @param integer $Rp Number of entries per page; default is 20
@@ -54,6 +53,7 @@ class ListGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

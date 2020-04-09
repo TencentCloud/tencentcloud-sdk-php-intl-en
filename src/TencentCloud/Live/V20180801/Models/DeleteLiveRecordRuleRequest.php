@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveRecordRule request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
 Domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  * @method void setDomainName(string $DomainName) Set Push domain name.
@@ -30,10 +32,6 @@ Domain name+AppName+StreamName uniquely identifies a single transcoding rule. If
 Domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  * @method void setStreamName(string $StreamName) Set Stream name.
 Domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
- */
-
-/**
- *DeleteLiveRecordRule request structure.
  */
 class DeleteLiveRecordRuleRequest extends AbstractModel
 {
@@ -54,6 +52,7 @@ Domain name+AppName+StreamName uniquely identifies a single transcoding rule. If
 Domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public $StreamName;
+
     /**
      * @param string $DomainName Push domain name.
 Domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
@@ -66,6 +65,7 @@ Domain name+AppName+StreamName uniquely identifies a single transcoding rule. If
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

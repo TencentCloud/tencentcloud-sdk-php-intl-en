@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * One-metric statistics
+ *
  * @method string getMetricName() Obtain Metric name
  * @method void setMetricName(string $MetricName) Set Metric name
  * @method array getMetricData() Obtain Metric statistics
  * @method void setMetricData(array $MetricData) Set Metric statistics
- */
-
-/**
- *One-metric statistics
  */
 class MetricStatisticsInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MetricStatisticsInfo extends AbstractModel
      * @var array Metric statistics
      */
     public $MetricData;
+
     /**
      * @param string $MetricName Metric name
      * @param array $MetricData Metric statistics
@@ -46,6 +45,7 @@ class MetricStatisticsInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

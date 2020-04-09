@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCdnData response structure.
+ *
  * @method string getInterval() Obtain Time granularity of the returned data. Specify one of the following during querying:
 min: 1 minute
 5min: 5 minutes
@@ -32,10 +34,6 @@ day: 1 day
  * @method void setData(array $Data) Set Returned data details of the specified conditional query
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeCdnData response structure.
  */
 class DescribeCdnDataResponse extends AbstractModel
 {
@@ -57,6 +55,7 @@ day: 1 day
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Interval Time granularity of the returned data. Specify one of the following during querying:
 min: 1 minute
@@ -70,6 +69,7 @@ day: 1 day
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

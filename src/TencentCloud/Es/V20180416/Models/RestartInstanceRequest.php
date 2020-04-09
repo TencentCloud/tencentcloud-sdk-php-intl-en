@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestartInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method boolean getForceRestart() Obtain Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
  * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
- */
-
-/**
- *RestartInstance request structure.
  */
 class RestartInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RestartInstanceRequest extends AbstractModel
      * @var boolean Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
      */
     public $ForceRestart;
+
     /**
      * @param string $InstanceId Instance ID
      * @param boolean $ForceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
@@ -46,6 +45,7 @@ class RestartInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

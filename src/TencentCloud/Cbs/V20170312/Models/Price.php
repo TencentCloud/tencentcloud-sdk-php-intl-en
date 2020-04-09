@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the prepaid or postpaid price for the cloud disk.
+ *
  * @method float getOriginalPrice() Obtain Original price of the advanced payment for a prepaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found.
  * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the advanced payment for a prepaid cloud disk (in CNY).
@@ -38,10 +40,6 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setUnitPriceDiscount(float $UnitPriceDiscount) Set Postpaid cloud disk discount price. Unit: CNY.
 Note: This field may return null, indicating that no valid value was found.
- */
-
-/**
- *Describes the prepaid or postpaid price for the cloud disk.
  */
 class Price extends AbstractModel
 {
@@ -74,6 +72,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $UnitPriceDiscount;
+
     /**
      * @param float $OriginalPrice Original price of the advanced payment for a prepaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found.
@@ -90,6 +89,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,9 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Health check information.
+Note: Custom check parameters are currently supported only in certain beta test regions.
+ *
  * @method integer getHealthSwitch() Obtain Whether to enable health check. 1: enable; 0: disable.
  * @method void setHealthSwitch(integer $HealthSwitch) Set Whether to enable health check. 1: enable; 0: disable.
  * @method integer getTimeOut() Obtain Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
@@ -78,11 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpVersion(string $HttpVersion) Set Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Health check information.
-Note: Custom check parameters are currently supported only in certain beta test regions.
  */
 class HealthCheck extends AbstractModel
 {
@@ -175,6 +173,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpVersion;
+
     /**
      * @param integer $HealthSwitch Whether to enable health check. 1: enable; 0: disable.
      * @param integer $TimeOut Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
@@ -211,6 +210,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

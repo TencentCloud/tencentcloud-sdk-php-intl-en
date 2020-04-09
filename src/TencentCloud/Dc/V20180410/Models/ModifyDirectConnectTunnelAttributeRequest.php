@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDirectConnectTunnelAttribute request structure.
+ *
  * @method string getDirectConnectTunnelId() Obtain Dedicated tunnel ID.
  * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) Set Dedicated tunnel ID.
  * @method string getDirectConnectTunnelName() Obtain Dedicated tunnel name.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerAddress(string $CustomerAddress) Set User-side IP address.
  * @method integer getBandwidth() Obtain Bandwidth value of a dedicated tunnel in Mbps.
  * @method void setBandwidth(integer $Bandwidth) Set Bandwidth value of a dedicated tunnel in Mbps.
- */
-
-/**
- *ModifyDirectConnectTunnelAttribute request structure.
  */
 class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
      * @var integer Bandwidth value of a dedicated tunnel in Mbps.
      */
     public $Bandwidth;
+
     /**
      * @param string $DirectConnectTunnelId Dedicated tunnel ID.
      * @param string $DirectConnectTunnelName Dedicated tunnel name.
@@ -86,6 +85,7 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProjectSecurityGroup request structure.
+ *
  * @method integer getProjectId() Obtain 0: default project; -1: all projects; >0: specified project
  * @method void setProjectId(integer $ProjectId) Set 0: default project; -1: all projects; >0: specified project
  * @method string getSecurityGroupId() Obtain Security group ID
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
- */
-
-/**
- *DescribeProjectSecurityGroup request structure.
  */
 class DescribeProjectSecurityGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeProjectSecurityGroupRequest extends AbstractModel
      * @var string Security group ID
      */
     public $SecurityGroupId;
+
     /**
      * @param integer $ProjectId 0: default project; -1: all projects; >0: specified project
      * @param string $SecurityGroupId Security group ID
@@ -46,6 +45,7 @@ class DescribeProjectSecurityGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

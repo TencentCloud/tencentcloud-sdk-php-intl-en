@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP address template.
+ *
  * @method string getAddressId() Obtain The ID of the IP address, such as `ipm-2uw6ujo6`.
  * @method void setAddressId(string $AddressId) Set The ID of the IP address, such as `ipm-2uw6ujo6`.
  * @method string getAddressGroupId() Obtain The ID of the IP address group, such as `ipmg-2uw6ujo6`.
  * @method void setAddressGroupId(string $AddressGroupId) Set The ID of the IP address group, such as `ipmg-2uw6ujo6`.
- */
-
-/**
- *IP address template.
  */
 class AddressTemplateSpecification extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddressTemplateSpecification extends AbstractModel
      * @var string The ID of the IP address group, such as `ipmg-2uw6ujo6`.
      */
     public $AddressGroupId;
+
     /**
      * @param string $AddressId The ID of the IP address, such as `ipm-2uw6ujo6`.
      * @param string $AddressGroupId The ID of the IP address group, such as `ipmg-2uw6ujo6`.
@@ -46,6 +45,7 @@ class AddressTemplateSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

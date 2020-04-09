@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Account information
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-lnp6j617
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-lnp6j617
  * @method string getUserName() Obtain Account
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Account creation time
  * @method string getUpdateTime() Obtain Account last modified time
  * @method void setUpdateTime(string $UpdateTime) Set Account last modified time
- */
-
-/**
- *Account information
  */
 class AccountInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class AccountInfo extends AbstractModel
      * @var string Account last modified time
      */
     public $UpdateTime;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-lnp6j617
      * @param string $UserName Account
@@ -78,6 +77,7 @@ class AccountInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

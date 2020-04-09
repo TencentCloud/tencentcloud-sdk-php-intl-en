@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedRolePolicies response structure.
+ *
  * @method array getList() Obtain List of policies associated with the role
  * @method void setList(array $List) Set List of policies associated with the role
  * @method integer getTotalNum() Obtain Total number of policies associated with the role
  * @method void setTotalNum(integer $TotalNum) Set Total number of policies associated with the role
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListAttachedRolePolicies response structure.
  */
 class ListAttachedRolePoliciesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAttachedRolePoliciesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $List List of policies associated with the role
      * @param integer $TotalNum Total number of policies associated with the role
@@ -54,6 +53,7 @@ class ListAttachedRolePoliciesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance node type
+ *
  * @method string getName() Obtain Node name
  * @method void setName(string $Name) Set Node name
  * @method string getRunId() Obtain ID of the runtime node of an instance
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) Set Node storage
  * @method float getStorageSlope() Obtain Storage slope of a node
  * @method void setStorageSlope(float $StorageSlope) Set Storage slope of a node
- */
-
-/**
- *Instance node type
  */
 class InstanceClusterNode extends AbstractModel
 {
@@ -115,6 +113,7 @@ class InstanceClusterNode extends AbstractModel
      * @var float Storage slope of a node
      */
     public $StorageSlope;
+
     /**
      * @param string $Name Node name
      * @param string $RunId ID of the runtime node of an instance
@@ -134,6 +133,7 @@ class InstanceClusterNode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

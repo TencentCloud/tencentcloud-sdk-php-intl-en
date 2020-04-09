@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Customer gateway vendor information object.
+ *
  * @method string getPlatform() Obtain Platform.
  * @method void setPlatform(string $Platform) Set Platform.
  * @method string getSoftwareVersion() Obtain Software version.
  * @method void setSoftwareVersion(string $SoftwareVersion) Set Software version.
  * @method string getVendorName() Obtain Vendor name.
  * @method void setVendorName(string $VendorName) Set Vendor name.
- */
-
-/**
- *Customer gateway vendor information object.
  */
 class CustomerGatewayVendor extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CustomerGatewayVendor extends AbstractModel
      * @var string Vendor name.
      */
     public $VendorName;
+
     /**
      * @param string $Platform Platform.
      * @param string $SoftwareVersion Software version.
@@ -54,6 +53,7 @@ class CustomerGatewayVendor extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeployGroupList request structure.
+ *
  * @method string getDeployGroupId() Obtain ID of a placement group.
  * @method void setDeployGroupId(string $DeployGroupId) Set ID of a placement group.
  * @method string getDeployGroupName() Obtain Name of a placement group.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- */
-
-/**
- *DescribeDeployGroupList request structure.
  */
 class DescribeDeployGroupListRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDeployGroupListRequest extends AbstractModel
      * @var integer Offset. Default value: 0.
      */
     public $Offset;
+
     /**
      * @param string $DeployGroupId ID of a placement group.
      * @param string $DeployGroupName Name of a placement group.
@@ -62,6 +61,7 @@ class DescribeDeployGroupListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

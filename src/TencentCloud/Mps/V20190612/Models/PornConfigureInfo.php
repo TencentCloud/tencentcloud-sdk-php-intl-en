@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a porn information detection task
+ *
  * @method PornImgReviewTemplateInfo getImgReviewInfo() Obtain Control parameter of porn information detection in image.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) Set Control parameter of porn information detection in image.
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of porn information detection in text.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Control parameter of a porn information detection task
  */
 class PornConfigureInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OcrReviewInfo;
+
     /**
      * @param PornImgReviewTemplateInfo $ImgReviewInfo Control parameter of porn information detection in image.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

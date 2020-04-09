@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6fego161
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6fego161
  * @method integer getLimit() Obtain Number of entries returned per page. Default value: 20. Value range: 1–100.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
  * @method string getOrderByType() Obtain Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
  * @method void setOrderByType(string $OrderByType) Set Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
- */
-
-/**
- *DescribeAccounts request structure.
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeAccountsRequest extends AbstractModel
      * @var string Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
      */
     public $OrderByType;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-6fego161
      * @param integer $Limit Number of entries returned per page. Default value: 20. Value range: 1–100.
@@ -70,6 +69,7 @@ class DescribeAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database account permission change information
+ *
  * @method string getUserName() Obtain Database username
  * @method void setUserName(string $UserName) Set Database username
  * @method array getDBPrivileges() Obtain Account permission change information
  * @method void setDBPrivileges(array $DBPrivileges) Set Account permission change information
- */
-
-/**
- *Database account permission change information
  */
 class AccountPrivilegeModifyInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccountPrivilegeModifyInfo extends AbstractModel
      * @var array Account permission change information
      */
     public $DBPrivileges;
+
     /**
      * @param string $UserName Database username
      * @param array $DBPrivileges Account permission change information
@@ -46,6 +45,7 @@ class AccountPrivilegeModifyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOriginData response structure.
+ *
  * @method string getInterval() Obtain Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
  * @method void setInterval(string $Interval) Set Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
  * @method array getData() Obtain Origin-pull data details of each resource.
  * @method void setData(array $Data) Set Origin-pull data details of each resource.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeOriginData response structure.
  */
 class DescribeOriginDataResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeOriginDataResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Interval Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
      * @param array $Data Origin-pull data details of each resource.
@@ -54,6 +53,7 @@ class DescribeOriginDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

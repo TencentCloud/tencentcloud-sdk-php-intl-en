@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageQuota response structure.
+ *
  * @method integer getImageNumQuota() Obtain The image quota of an account
  * @method void setImageNumQuota(integer $ImageNumQuota) Set The image quota of an account
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeImageQuota response structure.
  */
 class DescribeImageQuotaResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeImageQuotaResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $ImageNumQuota The image quota of an account
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeImageQuotaResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

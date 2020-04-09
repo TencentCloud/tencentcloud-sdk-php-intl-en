@@ -18,16 +18,14 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCfsPGroup response structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method integer getAppId() Obtain User ID
  * @method void setAppId(integer $AppId) Set User ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DeleteCfsPGroup response structure.
  */
 class DeleteCfsPGroupResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteCfsPGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param integer $AppId User ID
@@ -54,6 +53,7 @@ class DeleteCfsPGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

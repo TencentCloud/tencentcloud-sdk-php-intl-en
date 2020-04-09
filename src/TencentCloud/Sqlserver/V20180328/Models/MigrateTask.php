@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Migration task type
+ *
  * @method integer getMigrateId() Obtain Migration task ID
  * @method void setMigrateId(integer $MigrateId) Set Migration task ID
  * @method string getMigrateName() Obtain Migration task name
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(integer $Progress) Set Migration task progress in %
  * @method MigrateDetail getMigrateDetail() Obtain Migration task progress details
  * @method void setMigrateDetail(MigrateDetail $MigrateDetail) Set Migration task progress details
- */
-
-/**
- *Migration task type
  */
 class MigrateTask extends AbstractModel
 {
@@ -115,6 +113,7 @@ class MigrateTask extends AbstractModel
      * @var MigrateDetail Migration task progress details
      */
     public $MigrateDetail;
+
     /**
      * @param integer $MigrateId Migration task ID
      * @param string $MigrateName Migration task name
@@ -134,6 +133,7 @@ class MigrateTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

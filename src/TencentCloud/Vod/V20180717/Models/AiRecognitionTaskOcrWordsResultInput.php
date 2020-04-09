@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input of text keyword recognition.
+ *
  * @method integer getDefinition() Obtain Text keyword recognition template ID.
  * @method void setDefinition(integer $Definition) Set Text keyword recognition template ID.
- */
-
-/**
- *Input of text keyword recognition.
  */
 class AiRecognitionTaskOcrWordsResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskOcrWordsResultInput extends AbstractModel
      * @var integer Text keyword recognition template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Text keyword recognition template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskOcrWordsResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

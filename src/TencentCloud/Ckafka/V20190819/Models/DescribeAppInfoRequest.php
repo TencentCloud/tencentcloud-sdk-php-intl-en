@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAppInfo request structure.
+ *
  * @method integer getOffset() Obtain Offset position
  * @method void setOffset(integer $Offset) Set Offset position
  * @method integer getLimit() Obtain Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
  * @method void setLimit(integer $Limit) Set Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
- */
-
-/**
- *DescribeAppInfo request structure.
  */
 class DescribeAppInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAppInfoRequest extends AbstractModel
      * @var integer Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
      */
     public $Limit;
+
     /**
      * @param integer $Offset Offset position
      * @param integer $Limit Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
@@ -46,6 +45,7 @@ class DescribeAppInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

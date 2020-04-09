@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video dragging configuration. This is disabled by default.
+ *
  * @method string getSwitch() Obtain Video dragging switch
 on: enabled
 off: disabled
  * @method void setSwitch(string $Switch) Set Video dragging switch
 on: enabled
 off: disabled
- */
-
-/**
- *Video dragging configuration. This is disabled by default.
  */
 class VideoSeek extends AbstractModel
 {
@@ -37,6 +35,7 @@ on: enabled
 off: disabled
      */
     public $Switch;
+
     /**
      * @param string $Switch Video dragging switch
 on: enabled
@@ -46,6 +45,7 @@ off: disabled
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Described the configuration and information of k8s node data disk.
+ *
  * @method string getDiskType() Obtain 
  * @method void setDiskType(string $DiskType) Set 
  * @method string getFileSystem() Obtain File system (ext3/ext4/xfs)
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) Set Whether to automatically format and mount the disk
  * @method string getMountTarget() Obtain 
  * @method void setMountTarget(string $MountTarget) Set 
- */
-
-/**
- *Described the configuration and information of k8s node data disk.
  */
 class DataDisk extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DataDisk extends AbstractModel
      * @var string 
      */
     public $MountTarget;
+
     /**
      * @param string $DiskType 
      * @param string $FileSystem File system (ext3/ext4/xfs)
@@ -70,6 +69,7 @@ class DataDisk extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

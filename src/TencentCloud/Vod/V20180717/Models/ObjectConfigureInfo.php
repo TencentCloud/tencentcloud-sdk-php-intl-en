@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of object recognition task
+ *
  * @method string getSwitch() Obtain Switch of object recognition task. Valid values:
 <li>ON: enables intelligent object recognition task;</li>
 <li>OFF: disables intelligent object recognition task.</li>
@@ -34,10 +36,6 @@ Default value: All, i.e., both default and custom object libraries will be used.
 <li>UserDefine: custom object library.</li>
 <li>All: both default and custom object libraries will be used.</li>
 Default value: All, i.e., both default and custom object libraries will be used.
- */
-
-/**
- *Control parameter of object recognition task
  */
 class ObjectConfigureInfo extends AbstractModel
 {
@@ -56,6 +54,7 @@ class ObjectConfigureInfo extends AbstractModel
 Default value: All, i.e., both default and custom object libraries will be used.
      */
     public $ObjectLibrary;
+
     /**
      * @param string $Switch Switch of object recognition task. Valid values:
 <li>ON: enables intelligent object recognition task;</li>
@@ -70,6 +69,7 @@ Default value: All, i.e., both default and custom object libraries will be used.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

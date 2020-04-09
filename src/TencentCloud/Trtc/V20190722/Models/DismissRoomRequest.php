@@ -18,14 +18,12 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DismissRoom request structure.
+ *
  * @method integer getSdkAppId() Obtain `SDKAppId` of TRTC.
  * @method void setSdkAppId(integer $SdkAppId) Set `SDKAppId` of TRTC.
  * @method integer getRoomId() Obtain Room number.
  * @method void setRoomId(integer $RoomId) Set Room number.
- */
-
-/**
- *DismissRoom request structure.
  */
 class DismissRoomRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DismissRoomRequest extends AbstractModel
      * @var integer Room number.
      */
     public $RoomId;
+
     /**
      * @param integer $SdkAppId `SDKAppId` of TRTC.
      * @param integer $RoomId Room number.
@@ -46,6 +45,7 @@ class DismissRoomRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstance request structure.
+ *
  * @method string getZone() Obtain Availability Zone
  * @method void setZone(string $Zone) Set Availability Zone
  * @method string getEsVersion() Obtain Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
@@ -88,10 +90,6 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
  * @method void setTagList(array $TagList) Set Node tag information list
  * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
- */
-
-/**
- *CreateInstance request structure.
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -237,6 +235,7 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
      * @var integer Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public $BasicSecurityType;
+
     /**
      * @param string $Zone Availability Zone
      * @param string $EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
@@ -278,6 +277,7 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

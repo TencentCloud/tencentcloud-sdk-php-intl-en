@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The returned value of the added origin server information
+ *
  * @method string getRealServerIP() Obtain Origin server IP or domain name
  * @method void setRealServerIP(string $RealServerIP) Set Origin server IP or domain name
  * @method string getRealServerId() Obtain Origin server ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagSet(array $TagSet) Set Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *The returned value of the added origin server information
  */
 class BindRealServerInfo extends AbstractModel
 {
@@ -62,6 +60,7 @@ class BindRealServerInfo extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagSet;
+
     /**
      * @param string $RealServerIP Origin server IP or domain name
      * @param string $RealServerId Origin server ID
@@ -74,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

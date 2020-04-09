@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result of AI-based live stream audit
+ *
  * @method string getType() Obtain Content audit type. Valid values:
 <li>ImagePorn: Porn information detection in image</li>
 <li>ImageTerrorism: Terrorism information detection in image</li>
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImagePoliticalResultSet(array $ImagePoliticalResultSet) Set Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
  * @method array getVoicePornResultSet() Obtain Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
  * @method void setVoicePornResultSet(array $VoicePornResultSet) Set Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
- */
-
-/**
- *Result of AI-based live stream audit
  */
 class LiveStreamAiReviewResultItem extends AbstractModel
 {
@@ -71,6 +69,7 @@ class LiveStreamAiReviewResultItem extends AbstractModel
      * @var array Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
      */
     public $VoicePornResultSet;
+
     /**
      * @param string $Type Content audit type. Valid values:
 <li>ImagePorn: Porn information detection in image</li>
@@ -86,6 +85,7 @@ class LiveStreamAiReviewResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

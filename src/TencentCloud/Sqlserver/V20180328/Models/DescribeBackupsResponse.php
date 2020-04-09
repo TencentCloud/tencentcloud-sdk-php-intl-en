@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackups response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of backups
  * @method void setTotalCount(integer $TotalCount) Set Total number of backups
  * @method array getBackups() Obtain Backup list details
  * @method void setBackups(array $Backups) Set Backup list details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBackups response structure.
  */
 class DescribeBackupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBackupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of backups
      * @param array $Backups Backup list details
@@ -54,6 +53,7 @@ class DescribeBackupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssociateSecurityGroups request structure.
+ *
  * @method array getSecurityGroupIds() Obtain ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
  * @method array getInstanceIds() Obtain ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
  * @method void setInstanceIds(array $InstanceIds) Set ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
- */
-
-/**
- *AssociateSecurityGroups request structure.
  */
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssociateSecurityGroupsRequest extends AbstractModel
      * @var array ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
      */
     public $InstanceIds;
+
     /**
      * @param array $SecurityGroupIds ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
      * @param array $InstanceIds ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
@@ -46,6 +45,7 @@ class AssociateSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnassignPrivateIpAddresses request structure.
+ *
  * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method array getPrivateIpAddresses() Obtain The information of the specified private IPs. You can specify a maximum of 10 each time.
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 each time.
- */
-
-/**
- *UnassignPrivateIpAddresses request structure.
  */
 class UnassignPrivateIpAddressesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
      * @var array The information of the specified private IPs. You can specify a maximum of 10 each time.
      */
     public $PrivateIpAddresses;
+
     /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
@@ -46,6 +45,7 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

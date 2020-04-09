@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTagValues request structure.
+ *
  * @method array getTagKeys() Obtain Tag key list.
  * @method void setTagKeys(array $TagKeys) Set Tag key list.
  * @method integer getCreateUin() Obtain Creator `Uin`. If not specified, `Uin` is only used as the query condition.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
  * @method integer getLimit() Obtain Page size. The default value is 0.
  * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
- */
-
-/**
- *DescribeTagValues request structure.
  */
 class DescribeTagValuesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTagValuesRequest extends AbstractModel
      * @var integer Page size. The default value is 0.
      */
     public $Limit;
+
     /**
      * @param array $TagKeys Tag key list.
      * @param integer $CreateUin Creator `Uin`. If not specified, `Uin` is only used as the query condition.
@@ -62,6 +61,7 @@ class DescribeTagValuesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

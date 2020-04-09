@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeScheduledActions response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible scheduled tasks.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible scheduled tasks.
  * @method array getScheduledActionSet() Obtain List of scheduled task details.
  * @method void setScheduledActionSet(array $ScheduledActionSet) Set List of scheduled task details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeScheduledActions response structure.
  */
 class DescribeScheduledActionsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeScheduledActionsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible scheduled tasks.
      * @param array $ScheduledActionSet List of scheduled task details.
@@ -54,6 +53,7 @@ class DescribeScheduledActionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

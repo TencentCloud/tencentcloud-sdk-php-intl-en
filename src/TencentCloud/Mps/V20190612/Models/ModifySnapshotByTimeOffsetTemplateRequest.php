@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySnapshotByTimeOffsetTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a time point screencapturing template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a time point screencapturing template.
  * @method string getName() Obtain Name of a time point screencapturing template. Length limit: 64 characters.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) Set Image format. Valid values: jpg, png.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- */
-
-/**
- *ModifySnapshotByTimeOffsetTemplate request structure.
  */
 class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
      * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
+
     /**
      * @param integer $Definition Unique ID of a time point screencapturing template.
      * @param string $Name Name of a time point screencapturing template. Length limit: 64 characters.
@@ -78,6 +77,7 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

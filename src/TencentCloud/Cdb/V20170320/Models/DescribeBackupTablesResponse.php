@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupTables response structure.
+ *
  * @method integer getTotalCount() Obtain Number of the returned data entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of the returned data entries.
  * @method array getItems() Obtain Array of eligible tables.
  * @method void setItems(array $Items) Set Array of eligible tables.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBackupTables response structure.
  */
 class DescribeBackupTablesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBackupTablesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of the returned data entries.
      * @param array $Items Array of eligible tables.
@@ -54,6 +53,7 @@ class DescribeBackupTablesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

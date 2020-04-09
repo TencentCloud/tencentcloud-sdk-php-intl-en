@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Protocol port template group
+ *
  * @method string getServiceTemplateGroupId() Obtain Protocol port template group instance ID, such as `ppmg-2klmrefu`.
  * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) Set Protocol port template group instance ID, such as `ppmg-2klmrefu`.
  * @method string getServiceTemplateGroupName() Obtain Protocol port template group name.
@@ -26,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceTemplateIdSet(array $ServiceTemplateIdSet) Set Protocol port template instance ID.
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
- */
-
-/**
- *Protocol port template group
+ * @method array getServiceTemplateSet() Obtain Protocol port template instance information.
+ * @method void setServiceTemplateSet(array $ServiceTemplateSet) Set Protocol port template instance information.
  */
 class ServiceTemplateGroup extends AbstractModel
 {
@@ -52,16 +52,24 @@ class ServiceTemplateGroup extends AbstractModel
      * @var string Creation Time.
      */
     public $CreatedTime;
+
+    /**
+     * @var array Protocol port template instance information.
+     */
+    public $ServiceTemplateSet;
+
     /**
      * @param string $ServiceTemplateGroupId Protocol port template group instance ID, such as `ppmg-2klmrefu`.
      * @param string $ServiceTemplateGroupName Protocol port template group name.
      * @param array $ServiceTemplateIdSet Protocol port template instance ID.
      * @param string $CreatedTime Creation Time.
+     * @param array $ServiceTemplateSet Protocol port template instance information.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -84,6 +92,15 @@ class ServiceTemplateGroup extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("ServiceTemplateSet",$param) and $param["ServiceTemplateSet"] !== null) {
+            $this->ServiceTemplateSet = [];
+            foreach ($param["ServiceTemplateSet"] as $key => $value){
+                $obj = new ServiceTemplate();
+                $obj->deserialize($value);
+                array_push($this->ServiceTemplateSet, $obj);
+            }
         }
     }
 }

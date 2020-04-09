@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Recording template information
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getTemplateName() Obtain Template name.
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set Custom HLS recording parameter.
  * @method RecordParam getMp3Param() Obtain Mp3 recording parameter.
  * @method void setMp3Param(RecordParam $Mp3Param) Set Mp3 recording parameter.
- */
-
-/**
- *Recording template information
  */
 class RecordTemplateInfo extends AbstractModel
 {
@@ -97,6 +95,7 @@ class RecordTemplateInfo extends AbstractModel
      * @var RecordParam Mp3 recording parameter.
      */
     public $Mp3Param;
+
     /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
@@ -114,6 +113,7 @@ class RecordTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSmsSign request structure.
+ *
  * @method integer getSignId() Obtain ID of signature to be deleted.
  * @method void setSignId(integer $SignId) Set ID of signature to be deleted.
- */
-
-/**
- *DeleteSmsSign request structure.
  */
 class DeleteSmsSignRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSmsSignRequest extends AbstractModel
      * @var integer ID of signature to be deleted.
      */
     public $SignId;
+
     /**
      * @param integer $SignId ID of signature to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteSmsSignRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

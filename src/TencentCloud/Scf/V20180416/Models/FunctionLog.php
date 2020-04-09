@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Log information
+ *
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getRetMsg() Obtain Return value after the function is executed
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLevel(string $Level) Set Log level
  * @method string getSource() Obtain Log source
  * @method void setSource(string $Source) Set Log source
- */
-
-/**
- *Log information
  */
 class FunctionLog extends AbstractModel
 {
@@ -108,6 +106,7 @@ class FunctionLog extends AbstractModel
      * @var string Log source
      */
     public $Source;
+
     /**
      * @param string $FunctionName Function name
      * @param string $RetMsg Return value after the function is executed
@@ -126,6 +125,7 @@ class FunctionLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

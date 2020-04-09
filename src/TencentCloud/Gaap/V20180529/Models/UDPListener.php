@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UDP listener information
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getListenerName() Obtain Listener name
@@ -52,10 +54,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRealServerSet(array $RealServerSet) Set Information of the origin server bound to listeners
  * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
  * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
- */
-
-/**
- *UDP listener information
  */
 class UDPListener extends AbstractModel
 {
@@ -119,6 +117,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var integer Listener creation time; using UNIX timestamp.
      */
     public $CreateTime;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
@@ -142,6 +141,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

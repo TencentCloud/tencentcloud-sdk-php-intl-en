@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TESHD parameter configuration.
+ *
  * @method string getType() Obtain TESHD type. Valid values:
 <li>TEHD-100: TESHD-100.</li>
 If this parameter is left blank, no modification will be made.
@@ -26,10 +28,6 @@ If this parameter is left blank, no modification will be made.
 If this parameter is left blank, no modification will be made.
  * @method integer getMaxVideoBitrate() Obtain Maximum bitrate. If this parameter is left empty, no modification will be made.
  * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum bitrate. If this parameter is left empty, no modification will be made.
- */
-
-/**
- *TESHD parameter configuration.
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
@@ -44,6 +42,7 @@ If this parameter is left blank, no modification will be made.
      * @var integer Maximum bitrate. If this parameter is left empty, no modification will be made.
      */
     public $MaxVideoBitrate;
+
     /**
      * @param string $Type TESHD type. Valid values:
 <li>TEHD-100: TESHD-100.</li>
@@ -54,6 +53,7 @@ If this parameter is left blank, no modification will be made.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

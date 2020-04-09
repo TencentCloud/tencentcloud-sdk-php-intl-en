@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcs response structure.
+ *
  * @method integer getTotalCount() Obtain The number of objects meeting the condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
  * @method array getVpcSet() Obtain The VPC object.
  * @method void setVpcSet(array $VpcSet) Set The VPC object.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeVpcs response structure.
  */
 class DescribeVpcsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeVpcsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of objects meeting the condition.
      * @param array $VpcSet The VPC object.
@@ -54,6 +53,7 @@ class DescribeVpcsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

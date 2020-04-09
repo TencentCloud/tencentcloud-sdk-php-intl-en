@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances request structure.
+ *
  * @method string getZone() Obtain AZ of the cluster instance. If this is not passed in, all AZs are used by default
  * @method void setZone(string $Zone) Set AZ of the cluster instance. If this is not passed in, all AZs are used by default
  * @method array getInstanceIds() Obtain List of cluster instance IDs
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) Set Node tag information list
  * @method array getIpList() Obtain VPC VIP list
  * @method void setIpList(array $IpList) Set VPC VIP list
- */
-
-/**
- *DescribeInstances request structure.
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array VPC VIP list
      */
     public $IpList;
+
     /**
      * @param string $Zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
      * @param array $InstanceIds List of cluster instance IDs
@@ -102,6 +101,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

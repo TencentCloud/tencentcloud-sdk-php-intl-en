@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComputeEnv request structure.
+ *
  * @method string getEnvId() Obtain Compute environment ID
  * @method void setEnvId(string $EnvId) Set Compute environment ID
- */
-
-/**
- *DescribeComputeEnv request structure.
  */
 class DescribeComputeEnvRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeComputeEnvRequest extends AbstractModel
      * @var string Compute environment ID
      */
     public $EnvId;
+
     /**
      * @param string $EnvId Compute environment ID
      */
@@ -38,6 +37,7 @@ class DescribeComputeEnvRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

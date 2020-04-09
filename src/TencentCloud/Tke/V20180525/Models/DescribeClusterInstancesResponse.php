@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterInstances response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of instances in the cluster
  * @method void setTotalCount(integer $TotalCount) Set Total number of instances in the cluster
  * @method array getInstanceSet() Obtain List of instances in the cluster
  * @method void setInstanceSet(array $InstanceSet) Set List of instances in the cluster
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeClusterInstances response structure.
  */
 class DescribeClusterInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeClusterInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of instances in the cluster
      * @param array $InstanceSet List of instances in the cluster
@@ -54,6 +53,7 @@ class DescribeClusterInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

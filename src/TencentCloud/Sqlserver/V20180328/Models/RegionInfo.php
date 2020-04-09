@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Region information
+ *
  * @method string getRegion() Obtain Region ID in the format of ap-guangzhou
  * @method void setRegion(string $Region) Set Region ID in the format of ap-guangzhou
  * @method string getRegionName() Obtain Region name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) Set Numeric ID of region
  * @method string getRegionState() Obtain Current purchasability of this region. UNAVAILABLE: not purchasable, AVAILABLE: purchasable
  * @method void setRegionState(string $RegionState) Set Current purchasability of this region. UNAVAILABLE: not purchasable, AVAILABLE: purchasable
- */
-
-/**
- *Region information
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RegionInfo extends AbstractModel
      * @var string Current purchasability of this region. UNAVAILABLE: not purchasable, AVAILABLE: purchasable
      */
     public $RegionState;
+
     /**
      * @param string $Region Region ID in the format of ap-guangzhou
      * @param string $RegionName Region name
@@ -62,6 +61,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

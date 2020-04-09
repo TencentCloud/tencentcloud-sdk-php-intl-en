@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the maximum number of times you can perform an operation on a single instance.
+ *
  * @method string getOperation() Obtain Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
  * @method void setOperation(string $Operation) Set Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
  * @method string getInstanceId() Obtain Instance ID.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentCount(integer $CurrentCount) Set Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
  * @method integer getLimitCount() Obtain Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
  * @method void setLimitCount(integer $LimitCount) Set Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
- */
-
-/**
- *Describes the maximum number of times you can perform an operation on a single instance.
  */
 class OperationCountLimit extends AbstractModel
 {
@@ -52,6 +50,7 @@ class OperationCountLimit extends AbstractModel
      * @var integer Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
      */
     public $LimitCount;
+
     /**
      * @param string $Operation Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
      * @param string $InstanceId Instance ID.
@@ -62,6 +61,7 @@ class OperationCountLimit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

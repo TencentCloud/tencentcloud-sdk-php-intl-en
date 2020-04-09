@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Consumer information
+ *
  * @method string getMemberId() Obtain Unique ID generated for consumer in consumer group by coordinator
  * @method void setMemberId(string $MemberId) Set Unique ID generated for consumer in consumer group by coordinator
  * @method string getClientId() Obtain `client.id` information by the client consumer SDK
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientHost(string $ClientHost) Set Generally stores client IP address
  * @method Assignment getAssignment() Obtain Stores the information of partition assigned to this consumer
  * @method void setAssignment(Assignment $Assignment) Set Stores the information of partition assigned to this consumer
- */
-
-/**
- *Consumer information
  */
 class GroupInfoMember extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GroupInfoMember extends AbstractModel
      * @var Assignment Stores the information of partition assigned to this consumer
      */
     public $Assignment;
+
     /**
      * @param string $MemberId Unique ID generated for consumer in consumer group by coordinator
      * @param string $ClientId `client.id` information by the client consumer SDK
@@ -62,6 +61,7 @@ class GroupInfoMember extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

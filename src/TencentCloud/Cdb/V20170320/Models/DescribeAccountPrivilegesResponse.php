@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountPrivileges response structure.
+ *
  * @method array getGlobalPrivileges() Obtain Array of global permissions.
  * @method void setGlobalPrivileges(array $GlobalPrivileges) Set Array of global permissions.
  * @method array getDatabasePrivileges() Obtain Array of database permissions.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColumnPrivileges(array $ColumnPrivileges) Set Array of column permissions in the table.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAccountPrivileges response structure.
  */
 class DescribeAccountPrivilegesResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeAccountPrivilegesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $GlobalPrivileges Array of global permissions.
      * @param array $DatabasePrivileges Array of database permissions.
@@ -70,6 +69,7 @@ class DescribeAccountPrivilegesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySecurityRule request structure.
+ *
  * @method string getRuleId() Obtain Rule ID
  * @method void setRuleId(string $RuleId) Set Rule ID
  * @method string getAliasName() Obtain Rule name: up to 30 characters. The extra characters will be truncated.
  * @method void setAliasName(string $AliasName) Set Rule name: up to 30 characters. The extra characters will be truncated.
  * @method string getPolicyId() Obtain Security policy ID
  * @method void setPolicyId(string $PolicyId) Set Security policy ID
- */
-
-/**
- *ModifySecurityRule request structure.
  */
 class ModifySecurityRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySecurityRuleRequest extends AbstractModel
      * @var string Security policy ID
      */
     public $PolicyId;
+
     /**
      * @param string $RuleId Rule ID
      * @param string $AliasName Rule name: up to 30 characters. The extra characters will be truncated.
@@ -54,6 +53,7 @@ class ModifySecurityRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLoadBalancer response structure.
+ *
  * @method array getLoadBalancerIds() Obtain Array of unique CLB instance IDs.
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set Array of unique CLB instance IDs.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateLoadBalancer response structure.
  */
 class CreateLoadBalancerResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateLoadBalancerResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $LoadBalancerIds Array of unique CLB instance IDs.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateLoadBalancerResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

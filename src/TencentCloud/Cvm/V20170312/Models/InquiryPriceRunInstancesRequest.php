@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceRunInstances request structure.
+ *
  * @method Placement getPlacement() Obtain Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
  * @method void setPlacement(Placement $Placement) Set Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
  * @method string getImageId() Obtain [Image](/document/product/213/4940) ID in the format of `img-xxx`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For IDs of `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the information; for IDs of `marketplace images`, go to [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>Call [DescribeImages](https://cloud.tencent.com/document/api/213/15715) and look for `ImageId` in the response.</li>
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSpecification(array $TagSpecification) Set The tag description list. This parameter is used to bind a tag to a resource instance. A tag can only be bound to CVM instances.
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain The market options of the instance.
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set The market options of the instance.
- */
-
-/**
- *InquiryPriceRunInstances request structure.
  */
 class InquiryPriceRunInstancesRequest extends AbstractModel
 {
@@ -150,6 +148,7 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
      * @var InstanceMarketOptionsRequest The market options of the instance.
      */
     public $InstanceMarketOptions;
+
     /**
      * @param Placement $Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
      * @param string $ImageId [Image](/document/product/213/4940) ID in the format of `img-xxx`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For IDs of `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the information; for IDs of `marketplace images`, go to [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>Call [DescribeImages](https://cloud.tencent.com/document/api/213/15715) and look for `ImageId` in the response.</li>
@@ -174,6 +173,7 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

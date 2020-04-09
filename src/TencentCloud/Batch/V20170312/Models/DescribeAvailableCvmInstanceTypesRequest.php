@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAvailableCvmInstanceTypes request structure.
+ *
  * @method array getFilters() Obtain Filter.
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
  * @method void setFilters(array $Filters) Set Filter.
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
- */
-
-/**
- *DescribeAvailableCvmInstanceTypes request structure.
  */
 class DescribeAvailableCvmInstanceTypesRequest extends AbstractModel
 {
@@ -37,6 +35,7 @@ class DescribeAvailableCvmInstanceTypesRequest extends AbstractModel
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
      */
     public $Filters;
+
     /**
      * @param array $Filters Filter.
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
@@ -46,6 +45,7 @@ class DescribeAvailableCvmInstanceTypesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

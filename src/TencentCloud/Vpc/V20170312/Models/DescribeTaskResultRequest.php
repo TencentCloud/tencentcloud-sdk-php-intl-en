@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskResult request structure.
+ *
  * @method integer getTaskId() Obtain The async job ID
  * @method void setTaskId(integer $TaskId) Set The async job ID
  * @method string getDealName() Obtain The billing order ID
  * @method void setDealName(string $DealName) Set The billing order ID
- */
-
-/**
- *DescribeTaskResult request structure.
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTaskResultRequest extends AbstractModel
      * @var string The billing order ID
      */
     public $DealName;
+
     /**
      * @param integer $TaskId The async job ID
      * @param string $DealName The billing order ID
@@ -46,6 +45,7 @@ class DescribeTaskResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

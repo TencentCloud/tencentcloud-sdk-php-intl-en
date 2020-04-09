@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstanceHour request structure.
+ *
  * @method integer getMemory() Obtain Instance memory size in GB
  * @method void setMemory(integer $Memory) Set Instance memory size in GB
  * @method integer getVolume() Obtain Instance disk size in GB
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID. If this parameter is not set, the default project will be used
  * @method array getTags() Obtain Instance tag information
  * @method void setTags(array $Tags) Set Instance tag information
- */
-
-/**
- *CreateDBInstanceHour request structure.
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @var array Instance tag information
      */
     public $Tags;
+
     /**
      * @param integer $Memory Instance memory size in GB
      * @param integer $Volume Instance disk size in GB
@@ -142,6 +141,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

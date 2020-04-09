@@ -18,16 +18,14 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsPGroup request structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getName() Obtain Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
  * @method void setName(string $Name) Set Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
  * @method string getDescInfo() Obtain Permission group description, which can contain 1–255 characters
  * @method void setDescInfo(string $DescInfo) Set Permission group description, which can contain 1–255 characters
- */
-
-/**
- *UpdateCfsPGroup request structure.
  */
 class UpdateCfsPGroupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateCfsPGroupRequest extends AbstractModel
      * @var string Permission group description, which can contain 1–255 characters
      */
     public $DescInfo;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param string $Name Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
@@ -54,6 +53,7 @@ class UpdateCfsPGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

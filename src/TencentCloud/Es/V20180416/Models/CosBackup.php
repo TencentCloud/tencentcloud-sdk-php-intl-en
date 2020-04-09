@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Auto-backup to COS for ES
+ *
  * @method boolean getIsAutoBackup() Obtain Whether to enable auto-backup to COS
  * @method void setIsAutoBackup(boolean $IsAutoBackup) Set Whether to enable auto-backup to COS
  * @method string getBackupTime() Obtain Auto-backup time (accurate down to the hour), such as "22:00"
  * @method void setBackupTime(string $BackupTime) Set Auto-backup time (accurate down to the hour), such as "22:00"
- */
-
-/**
- *Auto-backup to COS for ES
  */
 class CosBackup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CosBackup extends AbstractModel
      * @var string Auto-backup time (accurate down to the hour), such as "22:00"
      */
     public $BackupTime;
+
     /**
      * @param boolean $IsAutoBackup Whether to enable auto-backup to COS
      * @param string $BackupTime Auto-backup time (accurate down to the hour), such as "22:00"
@@ -46,6 +45,7 @@ class CosBackup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * This describes the conditions of enhancement services for the instance and their settings, such as the Agent of Cloud Security or Cloud Monitor.
+ *
  * @method RunSecurityServiceEnabled getSecurityService() Obtain Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) Set Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
  * @method RunMonitorServiceEnabled getMonitorService() Obtain Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) Set Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
- */
-
-/**
- *This describes the conditions of enhancement services for the instance and their settings, such as the Agent of Cloud Security or Cloud Monitor.
  */
 class EnhancedService extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnhancedService extends AbstractModel
      * @var RunMonitorServiceEnabled Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
      */
     public $MonitorService;
+
     /**
      * @param RunSecurityServiceEnabled $SecurityService Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
      * @param RunMonitorServiceEnabled $MonitorService Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
@@ -46,6 +45,7 @@ class EnhancedService extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

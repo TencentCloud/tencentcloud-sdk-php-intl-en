@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyGroupDetails response structure.
+ *
  * @method ProxyGroupDetail getProxyGroupDetail() Obtain Connection group details
  * @method void setProxyGroupDetail(ProxyGroupDetail $ProxyGroupDetail) Set Connection group details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeProxyGroupDetails response structure.
  */
 class DescribeProxyGroupDetailsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeProxyGroupDetailsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param ProxyGroupDetail $ProxyGroupDetail Connection group details
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeProxyGroupDetailsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

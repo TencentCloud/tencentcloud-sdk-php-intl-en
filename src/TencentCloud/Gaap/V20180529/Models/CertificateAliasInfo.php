@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Certificate alias information.
+ *
  * @method string getCertificateId() Obtain Certificate ID.
  * @method void setCertificateId(string $CertificateId) Set Certificate ID.
  * @method string getCertificateAlias() Obtain Certificate alias.
  * @method void setCertificateAlias(string $CertificateAlias) Set Certificate alias.
- */
-
-/**
- *Certificate alias information.
  */
 class CertificateAliasInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CertificateAliasInfo extends AbstractModel
      * @var string Certificate alias.
      */
     public $CertificateAlias;
+
     /**
      * @param string $CertificateId Certificate ID.
      * @param string $CertificateAlias Certificate alias.
@@ -46,6 +45,7 @@ class CertificateAliasInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of output audio stream
+ *
  * @method string getCodec() Obtain Audio stream encoder. Valid values:
 <li>libfdk_aac: suitable for mp4 files.</li>
 Default value: libfdk_aac.
@@ -47,10 +49,6 @@ Default value: 2.
 <li>2: dual</li>
 Default value: 2.
  */
-
-/**
- *Information of output audio stream
- */
 class OutputAudioStream extends AbstractModel
 {
     /**
@@ -78,6 +76,7 @@ Default value: 16,000.
 Default value: 2.
      */
     public $AudioChannel;
+
     /**
      * @param string $Codec Audio stream encoder. Valid values:
 <li>libfdk_aac: suitable for mp4 files.</li>
@@ -98,6 +97,7 @@ Default value: 2.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

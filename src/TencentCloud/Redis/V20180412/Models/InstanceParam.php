@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance parameter
+ *
  * @method string getKey() Obtain Sets a parameter name
  * @method void setKey(string $Key) Set Sets a parameter name
  * @method string getValue() Obtain Sets a parameter value
  * @method void setValue(string $Value) Set Sets a parameter value
- */
-
-/**
- *Instance parameter
  */
 class InstanceParam extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceParam extends AbstractModel
      * @var string Sets a parameter value
      */
     public $Value;
+
     /**
      * @param string $Key Sets a parameter name
      * @param string $Value Sets a parameter value
@@ -46,6 +45,7 @@ class InstanceParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

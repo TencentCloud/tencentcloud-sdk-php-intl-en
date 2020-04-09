@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CompleteLifecycleAction request structure.
+ *
  * @method string getLifecycleHookId() Obtain Lifecycle hook ID
  * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
  * @method string getLifecycleActionResult() Obtain Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
  * @method string getLifecycleActionToken() Obtain Either "InstanceId" or "LifecycleActionToken" must be specified
  * @method void setLifecycleActionToken(string $LifecycleActionToken) Set Either "InstanceId" or "LifecycleActionToken" must be specified
- */
-
-/**
- *CompleteLifecycleAction request structure.
  */
 class CompleteLifecycleActionRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CompleteLifecycleActionRequest extends AbstractModel
      * @var string Either "InstanceId" or "LifecycleActionToken" must be specified
      */
     public $LifecycleActionToken;
+
     /**
      * @param string $LifecycleHookId Lifecycle hook ID
      * @param string $LifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
@@ -62,6 +61,7 @@ class CompleteLifecycleActionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

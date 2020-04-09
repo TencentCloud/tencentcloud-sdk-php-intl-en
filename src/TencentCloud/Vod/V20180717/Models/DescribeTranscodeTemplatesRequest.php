@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTranscodeTemplates request structure.
+ *
  * @method array getDefinitions() Obtain Unique ID filter of transcoding templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of transcoding templates. Array length limit: 100.
  * @method string getType() Obtain Template type filter. Valid values:
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *DescribeTranscodeTemplates request structure.
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -91,6 +89,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $Definitions Unique ID filter of transcoding templates. Array length limit: 100.
      * @param string $Type Template type filter. Valid values:
@@ -110,6 +109,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

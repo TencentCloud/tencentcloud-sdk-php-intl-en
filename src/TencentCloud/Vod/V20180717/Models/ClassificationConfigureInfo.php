@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of intelligent categorization task
+ *
  * @method string getSwitch() Obtain Switch of intelligent categorization task. Valid values:
 <li>ON: enables intelligent categorization task;</li>
 <li>OFF: disables intelligent categorization task.</li>
  * @method void setSwitch(string $Switch) Set Switch of intelligent categorization task. Valid values:
 <li>ON: enables intelligent categorization task;</li>
 <li>OFF: disables intelligent categorization task.</li>
- */
-
-/**
- *Control parameter of intelligent categorization task
  */
 class ClassificationConfigureInfo extends AbstractModel
 {
@@ -37,6 +35,7 @@ class ClassificationConfigureInfo extends AbstractModel
 <li>OFF: disables intelligent categorization task.</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch Switch of intelligent categorization task. Valid values:
 <li>ON: enables intelligent categorization task;</li>
@@ -46,6 +45,7 @@ class ClassificationConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

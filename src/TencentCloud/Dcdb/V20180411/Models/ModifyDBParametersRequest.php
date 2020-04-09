@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBParameters request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc.
  * @method array getParams() Obtain List of parameters. Every element is a combination of `Param` and `Value`.
  * @method void setParams(array $Params) Set List of parameters. Every element is a combination of `Param` and `Value`.
- */
-
-/**
- *ModifyDBParameters request structure.
  */
 class ModifyDBParametersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBParametersRequest extends AbstractModel
      * @var array List of parameters. Every element is a combination of `Param` and `Value`.
      */
     public $Params;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc.
      * @param array $Params List of parameters. Every element is a combination of `Param` and `Value`.
@@ -46,6 +45,7 @@ class ModifyDBParametersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

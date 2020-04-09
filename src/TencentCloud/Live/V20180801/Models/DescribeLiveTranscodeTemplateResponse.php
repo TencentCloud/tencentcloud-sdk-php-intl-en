@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveTranscodeTemplate response structure.
+ *
  * @method TemplateInfo getTemplate() Obtain Template information.
  * @method void setTemplate(TemplateInfo $Template) Set Template information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveTranscodeTemplate response structure.
  */
 class DescribeLiveTranscodeTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLiveTranscodeTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param TemplateInfo $Template Template information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeLiveTranscodeTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

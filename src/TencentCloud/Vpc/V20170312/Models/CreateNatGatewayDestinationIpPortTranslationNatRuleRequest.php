@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNatGatewayDestinationIpPortTranslationNatRule request structure.
+ *
  * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
  * @method array getDestinationIpPortTranslationNatRules() Obtain The port forwarding rules of the NAT gateway.
  * @method void setDestinationIpPortTranslationNatRules(array $DestinationIpPortTranslationNatRules) Set The port forwarding rules of the NAT gateway.
- */
-
-/**
- *CreateNatGatewayDestinationIpPortTranslationNatRule request structure.
  */
 class CreateNatGatewayDestinationIpPortTranslationNatRuleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNatGatewayDestinationIpPortTranslationNatRuleRequest extends Abstrac
      * @var array The port forwarding rules of the NAT gateway.
      */
     public $DestinationIpPortTranslationNatRules;
+
     /**
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      * @param array $DestinationIpPortTranslationNatRules The port forwarding rules of the NAT gateway.
@@ -46,6 +45,7 @@ class CreateNatGatewayDestinationIpPortTranslationNatRuleRequest extends Abstrac
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

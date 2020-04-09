@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Resource details
+ *
  * @method string getSpec() Obtain Specification
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSpec(string $Spec) Set Specification
@@ -54,10 +56,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceType(string $InstanceType) Set Specification
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Resource details
  */
 class OutterResource extends AbstractModel
 {
@@ -114,6 +112,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceType;
+
     /**
      * @param string $Spec Specification
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -138,6 +137,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

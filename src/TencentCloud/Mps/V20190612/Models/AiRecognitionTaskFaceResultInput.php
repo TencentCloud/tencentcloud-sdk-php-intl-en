@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Face recognition input.
+ *
  * @method integer getDefinition() Obtain Face recognition template ID.
  * @method void setDefinition(integer $Definition) Set Face recognition template ID.
- */
-
-/**
- *Face recognition input.
  */
 class AiRecognitionTaskFaceResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskFaceResultInput extends AbstractModel
      * @var integer Face recognition template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Face recognition template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskFaceResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

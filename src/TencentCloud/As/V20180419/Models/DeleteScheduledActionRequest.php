@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteScheduledAction request structure.
+ *
  * @method string getScheduledActionId() Obtain ID of the scheduled task to be deleted.
  * @method void setScheduledActionId(string $ScheduledActionId) Set ID of the scheduled task to be deleted.
- */
-
-/**
- *DeleteScheduledAction request structure.
  */
 class DeleteScheduledActionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteScheduledActionRequest extends AbstractModel
      * @var string ID of the scheduled task to be deleted.
      */
     public $ScheduledActionId;
+
     /**
      * @param string $ScheduledActionId ID of the scheduled task to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteScheduledActionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

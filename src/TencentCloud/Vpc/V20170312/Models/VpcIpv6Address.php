@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC private IPv6 object.
+ *
  * @method string getIpv6Address() Obtain `VPC` private `IPv6` address
  * @method void setIpv6Address(string $Ipv6Address) Set `VPC` private `IPv6` address
  * @method string getCidrBlock() Obtain The `IPv6` `CIDR` belonging to the subnet.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpv6AddressType(string $Ipv6AddressType) Set `IPv6` type.
  * @method string getCreatedTime() Obtain `IPv6` application time.
  * @method void setCreatedTime(string $CreatedTime) Set `IPv6` application time.
- */
-
-/**
- *VPC private IPv6 object.
  */
 class VpcIpv6Address extends AbstractModel
 {
@@ -52,6 +50,7 @@ class VpcIpv6Address extends AbstractModel
      * @var string `IPv6` application time.
      */
     public $CreatedTime;
+
     /**
      * @param string $Ipv6Address `VPC` private `IPv6` address
      * @param string $CidrBlock The `IPv6` `CIDR` belonging to the subnet.
@@ -62,6 +61,7 @@ class VpcIpv6Address extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

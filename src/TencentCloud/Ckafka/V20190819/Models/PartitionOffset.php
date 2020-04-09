@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Partition and offset
+ *
  * @method string getPartition() Obtain Partition, such as "0" or "1"
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPartition(string $Partition) Set Partition, such as "0" or "1"
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOffset(integer $Offset) Set Offset, such as 100
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Partition and offset
  */
 class PartitionOffset extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Offset;
+
     /**
      * @param string $Partition Partition, such as "0" or "1"
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

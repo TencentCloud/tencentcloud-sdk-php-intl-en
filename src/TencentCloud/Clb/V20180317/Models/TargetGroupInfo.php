@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Target group information
+ *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method string getVpcId() Obtain `vpcid` of target group
@@ -36,10 +38,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAssociatedRule(array $AssociatedRule) Set Array of associated rules
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Target group information
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -79,6 +77,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AssociatedRule;
+
     /**
      * @param string $TargetGroupId Target group ID
      * @param string $VpcId `vpcid` of target group
@@ -94,6 +93,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

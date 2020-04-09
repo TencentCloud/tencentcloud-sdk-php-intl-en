@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes K8s cluster configuration and related information.
+ *
  * @method string getMountTarget() Obtain Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
  * @method void setMountTarget(string $MountTarget) Set Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
  * @method string getDockerGraphPath() Obtain Specified value of dockerd --graph. Default value: /var/lib/docker
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDisks(array $DataDisks) Set 
  * @method InstanceExtraArgs getExtraArgs() Obtain Information about node custom parameters
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Information about node custom parameters
- */
-
-/**
- *Describes K8s cluster configuration and related information.
  */
 class InstanceAdvancedSettings extends AbstractModel
 {
@@ -73,6 +71,7 @@ class InstanceAdvancedSettings extends AbstractModel
      * @var InstanceExtraArgs Information about node custom parameters
      */
     public $ExtraArgs;
+
     /**
      * @param string $MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
      * @param string $DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
@@ -86,6 +85,7 @@ class InstanceAdvancedSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

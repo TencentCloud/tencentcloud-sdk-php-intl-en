@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a politically sensitive information detection task.
+ *
  * @method PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Control parameter of politically sensitive information detection in image.
  * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Control parameter of politically sensitive information detection in image.
  * @method PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Control parameter of politically sensitive information detection in speech.
  * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Control parameter of politically sensitive information detection in speech.
  * @method PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of politically sensitive information detection in text.
  * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of politically sensitive information detection in text.
- */
-
-/**
- *Control parameter of a politically sensitive information detection task.
  */
 class PoliticalConfigureInfoForUpdate extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PoliticalConfigureInfoForUpdate extends AbstractModel
      * @var PoliticalOcrReviewTemplateInfoForUpdate Control parameter of politically sensitive information detection in text.
      */
     public $OcrReviewInfo;
+
     /**
      * @param PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo Control parameter of politically sensitive information detection in image.
      * @param PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo Control parameter of politically sensitive information detection in speech.
@@ -54,6 +53,7 @@ class PoliticalConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

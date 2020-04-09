@@ -18,14 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAppStatus request structure.
+ *
  * @method integer getBizId() Obtain Application ID, which is generated and returned by the backend after application creation
  * @method void setBizId(integer $BizId) Set Application ID, which is generated and returned by the backend after application creation
  * @method string getStatus() Obtain Application status. Valid values: open, close
  * @method void setStatus(string $Status) Set Application status. Valid values: open, close
- */
-
-/**
- *ModifyAppStatus request structure.
  */
 class ModifyAppStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAppStatusRequest extends AbstractModel
      * @var string Application status. Valid values: open, close
      */
     public $Status;
+
     /**
      * @param integer $BizId Application ID, which is generated and returned by the backend after application creation
      * @param string $Status Application status. Valid values: open, close
@@ -46,6 +45,7 @@ class ModifyAppStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

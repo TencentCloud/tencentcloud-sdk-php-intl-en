@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveCert request structure.
+ *
  * @method string getCertId() Obtain Certificate ID.
  * @method void setCertId(string $CertId) Set Certificate ID.
  * @method integer getCertType() Obtain Certificate type. 0: user-added certificate, 1: Tencent Cloud-hosted certificate.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttpsKey(string $HttpsKey) Set Private key.
  * @method string getDescription() Obtain Description.
  * @method void setDescription(string $Description) Set Description.
- */
-
-/**
- *ModifyLiveCert request structure.
  */
 class ModifyLiveCertRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifyLiveCertRequest extends AbstractModel
      * @var string Description.
      */
     public $Description;
+
     /**
      * @param string $CertId Certificate ID.
      * @param integer $CertType Certificate type. 0: user-added certificate, 1: Tencent Cloud-hosted certificate.
@@ -78,6 +77,7 @@ class ModifyLiveCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

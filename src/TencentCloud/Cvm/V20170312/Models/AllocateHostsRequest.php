@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AllocateHosts request structure.
+ *
  * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
  * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
  * @method string getClientToken() Obtain A string used to ensure the idempotency of the request.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostCount(integer $HostCount) Set The quantity of CDH instances you want to purchase.
  * @method array getTagSpecification() Obtain Tag description. You can specify the parameter to associate a tag with an instance.
  * @method void setTagSpecification(array $TagSpecification) Set Tag description. You can specify the parameter to associate a tag with an instance.
- */
-
-/**
- *AllocateHosts request structure.
  */
 class AllocateHostsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class AllocateHostsRequest extends AbstractModel
      * @var array Tag description. You can specify the parameter to associate a tag with an instance.
      */
     public $TagSpecification;
+
     /**
      * @param Placement $Placement Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
      * @param string $ClientToken A string used to ensure the idempotency of the request.
@@ -86,6 +85,7 @@ class AllocateHostsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

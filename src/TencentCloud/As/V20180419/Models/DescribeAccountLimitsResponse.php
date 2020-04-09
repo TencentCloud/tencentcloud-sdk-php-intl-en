@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountLimits response structure.
+ *
  * @method integer getMaxNumberOfLaunchConfigurations() Obtain Maximum number of launch configurations allowed for creation by the user account
  * @method void setMaxNumberOfLaunchConfigurations(integer $MaxNumberOfLaunchConfigurations) Set Maximum number of launch configurations allowed for creation by the user account
  * @method integer getNumberOfLaunchConfigurations() Obtain Current number of launch configurations under the user account
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumberOfAutoScalingGroups(integer $NumberOfAutoScalingGroups) Set Current number of auto scaling groups under the user account
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAccountLimits response structure.
  */
 class DescribeAccountLimitsResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeAccountLimitsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $MaxNumberOfLaunchConfigurations Maximum number of launch configurations allowed for creation by the user account
      * @param integer $NumberOfLaunchConfigurations Current number of launch configurations under the user account
@@ -70,6 +69,7 @@ class DescribeAccountLimitsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReEncrypt request structure.
+ *
 
- */
-
-/**
- *ReEncrypt request structure.
  */
 class ReEncryptRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ReEncryptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

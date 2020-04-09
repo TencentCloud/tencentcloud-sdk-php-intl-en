@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Compute node
+ *
  * @method string getComputeNodeId() Obtain Compute node ID
  * @method void setComputeNodeId(string $ComputeNodeId) Set Compute node ID
  * @method string getComputeNodeInstanceId() Obtain Compute node instance ID. In a CVM scenario, this parameter is the CVM InstanceId
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private IP of the instance
  * @method array getPublicIpAddresses() Obtain Public IP of the instance
  * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public IP of the instance
- */
-
-/**
- *Compute node
  */
 class ComputeNode extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ComputeNode extends AbstractModel
      * @var array Public IP of the instance
      */
     public $PublicIpAddresses;
+
     /**
      * @param string $ComputeNodeId Compute node ID
      * @param string $ComputeNodeInstanceId Compute node instance ID. In a CVM scenario, this parameter is the CVM InstanceId
@@ -110,6 +109,7 @@ class ComputeNode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

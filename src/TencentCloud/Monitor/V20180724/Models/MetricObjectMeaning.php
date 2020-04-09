@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Meaning of metric data
+ *
  * @method string getEn() Obtain Meaning of the metric in English
  * @method void setEn(string $En) Set Meaning of the metric in English
  * @method string getZh() Obtain Meaning of the metric in Chinese
  * @method void setZh(string $Zh) Set Meaning of the metric in Chinese
- */
-
-/**
- *Meaning of metric data
  */
 class MetricObjectMeaning extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MetricObjectMeaning extends AbstractModel
      * @var string Meaning of the metric in Chinese
      */
     public $Zh;
+
     /**
      * @param string $En Meaning of the metric in English
      * @param string $Zh Meaning of the metric in Chinese
@@ -46,6 +45,7 @@ class MetricObjectMeaning extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details about a CDH instance
+ *
  * @method Placement getPlacement() Obtain Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
  * @method void setPlacement(Placement $Placement) Set Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
  * @method string getHostId() Obtain CDH instance ID
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value is found.
  * @method void setCageId(string $CageId) Set Cage ID of the CDH instance. This parameter is only valid for CDH instances in the cages of finance availability zones.
 Note: This field may return null, indicating that no valid value is found.
- */
-
-/**
- *Details about a CDH instance
  */
 class HostItem extends AbstractModel
 {
@@ -118,6 +116,7 @@ class HostItem extends AbstractModel
 Note: This field may return null, indicating that no valid value is found.
      */
     public $CageId;
+
     /**
      * @param Placement $Placement Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
      * @param string $HostId CDH instance ID
@@ -138,6 +137,7 @@ Note: This field may return null, indicating that no valid value is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

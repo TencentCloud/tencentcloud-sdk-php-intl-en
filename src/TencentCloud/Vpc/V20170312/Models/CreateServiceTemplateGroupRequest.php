@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServiceTemplateGroup request structure.
+ *
  * @method string getServiceTemplateGroupName() Obtain Group name of the protocol port template.
  * @method void setServiceTemplateGroupName(string $ServiceTemplateGroupName) Set Group name of the protocol port template.
  * @method array getServiceTemplateIds() Obtain Instance ID of the protocol port template, such as `ppm-4dw6agho`.
  * @method void setServiceTemplateIds(array $ServiceTemplateIds) Set Instance ID of the protocol port template, such as `ppm-4dw6agho`.
- */
-
-/**
- *CreateServiceTemplateGroup request structure.
  */
 class CreateServiceTemplateGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateServiceTemplateGroupRequest extends AbstractModel
      * @var array Instance ID of the protocol port template, such as `ppm-4dw6agho`.
      */
     public $ServiceTemplateIds;
+
     /**
      * @param string $ServiceTemplateGroupName Group name of the protocol port template.
      * @param array $ServiceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
@@ -46,6 +45,7 @@ class CreateServiceTemplateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

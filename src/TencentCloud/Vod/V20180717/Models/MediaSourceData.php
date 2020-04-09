@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Source file information
+ *
  * @method string getSourceType() Obtain Source category of media file:
 <li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
 <li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
@@ -34,10 +36,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSourceContext(string $SourceContext) Set Field passed through when a file is created.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Source file information
  */
 class MediaSourceData extends AbstractModel
 {
@@ -56,6 +54,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SourceContext;
+
     /**
      * @param string $SourceType Source category of media file:
 <li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
@@ -70,6 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

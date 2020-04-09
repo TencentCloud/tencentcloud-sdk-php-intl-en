@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePayType response structure.
+ *
  * @method string getPayType() Obtain Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
@@ -58,10 +60,6 @@ max: billed by the peak bandwidth (daily settlement)
 `bandwidth`: bill-by-bandwidth
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribePayType response structure.
  */
 class DescribePayTypeResponse extends AbstractModel
 {
@@ -108,6 +106,7 @@ max: billed by the peak bandwidth (daily settlement)
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $PayType Billing modes:
 `flux`: bill-by-traffic
@@ -134,6 +133,7 @@ max: billed by the peak bandwidth (daily settlement)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

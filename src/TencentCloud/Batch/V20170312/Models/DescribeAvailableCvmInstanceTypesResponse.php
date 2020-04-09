@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAvailableCvmInstanceTypes response structure.
+ *
  * @method array getInstanceTypeConfigSet() Obtain Array of model configurations
  * @method void setInstanceTypeConfigSet(array $InstanceTypeConfigSet) Set Array of model configurations
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAvailableCvmInstanceTypes response structure.
  */
 class DescribeAvailableCvmInstanceTypesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAvailableCvmInstanceTypesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $InstanceTypeConfigSet Array of model configurations
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeAvailableCvmInstanceTypesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

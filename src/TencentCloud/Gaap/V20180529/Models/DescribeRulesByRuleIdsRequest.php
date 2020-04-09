@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRulesByRuleIds request structure.
+ *
  * @method array getRuleIds() Obtain List of rule IDs. Up to 10 rules are supported.
  * @method void setRuleIds(array $RuleIds) Set List of rule IDs. Up to 10 rules are supported.
- */
-
-/**
- *DescribeRulesByRuleIds request structure.
  */
 class DescribeRulesByRuleIdsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRulesByRuleIdsRequest extends AbstractModel
      * @var array List of rule IDs. Up to 10 rules are supported.
      */
     public $RuleIds;
+
     /**
      * @param array $RuleIds List of rule IDs. Up to 10 rules are supported.
      */
@@ -38,6 +37,7 @@ class DescribeRulesByRuleIdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Sampled screenshot information
+ *
  * @method integer getDefinition() Obtain Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDefinition(integer $Definition) Set Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
@@ -46,10 +48,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set List of watermarking template IDs if the screenshots are watermarked.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Sampled screenshot information
  */
 class MediaSampleSnapshotItem extends AbstractModel
 {
@@ -86,6 +84,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WaterMarkDefinition;
+
     /**
      * @param integer $Definition Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -106,6 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

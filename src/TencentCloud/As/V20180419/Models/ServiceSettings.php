@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Service settings
+ *
  * @method boolean getReplaceMonitorUnhealthy() Obtain Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
  * @method void setReplaceMonitorUnhealthy(boolean $ReplaceMonitorUnhealthy) Set Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
- */
-
-/**
- *Service settings
  */
 class ServiceSettings extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ServiceSettings extends AbstractModel
      * @var boolean Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      */
     public $ReplaceMonitorUnhealthy;
+
     /**
      * @param boolean $ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      */
@@ -38,6 +37,7 @@ class ServiceSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

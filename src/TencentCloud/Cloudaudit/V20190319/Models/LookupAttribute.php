@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Search criteria
+ *
  * @method string getAttributeKey() Obtain AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
  * @method void setAttributeKey(string $AttributeKey) Set AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
  * @method string getAttributeValue() Obtain AttributeValue
  * @method void setAttributeValue(string $AttributeValue) Set AttributeValue
- */
-
-/**
- *Search criteria
  */
 class LookupAttribute extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LookupAttribute extends AbstractModel
      * @var string AttributeValue
      */
     public $AttributeValue;
+
     /**
      * @param string $AttributeKey AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
      * @param string $AttributeValue AttributeValue
@@ -46,6 +45,7 @@ class LookupAttribute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

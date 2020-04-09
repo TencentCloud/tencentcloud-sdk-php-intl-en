@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveCallbackTemplate request structure.
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
- */
-
-/**
- *DeleteLiveCallbackTemplate request structure.
  */
 class DeleteLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLiveCallbackTemplateRequest extends AbstractModel
      * @var integer Template ID.
      */
     public $TemplateId;
+
     /**
      * @param integer $TemplateId Template ID.
      */
@@ -38,6 +37,7 @@ class DeleteLiveCallbackTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

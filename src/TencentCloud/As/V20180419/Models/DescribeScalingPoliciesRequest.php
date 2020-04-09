@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeScalingPolicies request structure.
+ *
  * @method array getAutoScalingPolicyIds() Obtain Queries by one or more alarm policy IDs in the format of asp-i9vkg894. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingPolicyIds` and `Filters` at the same time.
  * @method void setAutoScalingPolicyIds(array $AutoScalingPolicyIds) Set Queries by one or more alarm policy IDs in the format of asp-i9vkg894. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingPolicyIds` and `Filters` at the same time.
  * @method array getFilters() Obtain Filter.
@@ -34,10 +36,6 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
  * @method integer getOffset() Obtain Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
- */
-
-/**
- *DescribeScalingPolicies request structure.
  */
 class DescribeScalingPoliciesRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
      * @var integer Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
      */
     public $Offset;
+
     /**
      * @param array $AutoScalingPolicyIds Queries by one or more alarm policy IDs in the format of asp-i9vkg894. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingPolicyIds` and `Filters` at the same time.
      * @param array $Filters Filter.
@@ -78,6 +77,7 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

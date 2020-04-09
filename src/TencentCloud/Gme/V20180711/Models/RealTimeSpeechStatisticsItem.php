@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Voice chat usage statistics
+ *
  * @method integer getMainLandDau() Obtain DAU in Mainland China
  * @method void setMainLandDau(integer $MainLandDau) Set DAU in Mainland China
  * @method integer getMainLandPcu() Obtain PCU in Mainland China
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOverseaPcu(integer $OverseaPcu) Set PCU outside Mainland China
  * @method integer getOverseaDuration() Obtain Total duration of use outside Mainland China in minutes
  * @method void setOverseaDuration(integer $OverseaDuration) Set Total duration of use outside Mainland China in minutes
- */
-
-/**
- *Voice chat usage statistics
  */
 class RealTimeSpeechStatisticsItem extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RealTimeSpeechStatisticsItem extends AbstractModel
      * @var integer Total duration of use outside Mainland China in minutes
      */
     public $OverseaDuration;
+
     /**
      * @param integer $MainLandDau DAU in Mainland China
      * @param integer $MainLandPcu PCU in Mainland China
@@ -78,6 +77,7 @@ class RealTimeSpeechStatisticsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

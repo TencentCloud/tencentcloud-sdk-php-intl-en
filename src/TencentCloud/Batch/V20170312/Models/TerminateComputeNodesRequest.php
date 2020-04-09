@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateComputeNodes request structure.
+ *
  * @method string getEnvId() Obtain Compute environment ID
  * @method void setEnvId(string $EnvId) Set Compute environment ID
  * @method array getComputeNodeIds() Obtain List of compute node IDs
  * @method void setComputeNodeIds(array $ComputeNodeIds) Set List of compute node IDs
- */
-
-/**
- *TerminateComputeNodes request structure.
  */
 class TerminateComputeNodesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TerminateComputeNodesRequest extends AbstractModel
      * @var array List of compute node IDs
      */
     public $ComputeNodeIds;
+
     /**
      * @param string $EnvId Compute environment ID
      * @param array $ComputeNodeIds List of compute node IDs
@@ -46,6 +45,7 @@ class TerminateComputeNodesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

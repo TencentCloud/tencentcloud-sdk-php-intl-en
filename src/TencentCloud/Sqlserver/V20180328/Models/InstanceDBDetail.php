@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance database information
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method array getDBDetails() Obtain Database information list
  * @method void setDBDetails(array $DBDetails) Set Database information list
- */
-
-/**
- *Instance database information
  */
 class InstanceDBDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceDBDetail extends AbstractModel
      * @var array Database information list
      */
     public $DBDetails;
+
     /**
      * @param string $InstanceId Instance ID
      * @param array $DBDetails Database information list
@@ -46,6 +45,7 @@ class InstanceDBDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

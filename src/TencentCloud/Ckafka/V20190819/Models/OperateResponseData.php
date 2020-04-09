@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Data structure returned by operation
+ *
  * @method integer getFlowId() Obtain FlowId
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFlowId(integer $FlowId) Set FlowId
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Data structure returned by operation
  */
 class OperateResponseData extends AbstractModel
 {
@@ -34,6 +32,7 @@ class OperateResponseData extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FlowId;
+
     /**
      * @param integer $FlowId FlowId
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

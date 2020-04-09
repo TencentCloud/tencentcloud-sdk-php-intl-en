@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterRouteTables request structure.
+ *
 
- */
-
-/**
- *DescribeClusterRouteTables request structure.
  */
 class DescribeClusterRouteTablesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeClusterRouteTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

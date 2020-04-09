@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Batch binding type
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method integer getPort() Obtain Binding port
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) Set Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
  * @method string getLocationId() Obtain Layer-7 rule ID
  * @method void setLocationId(string $LocationId) Set Layer-7 rule ID
- */
-
-/**
- *Batch binding type
  */
 class BatchTarget extends AbstractModel
 {
@@ -66,6 +64,7 @@ class BatchTarget extends AbstractModel
      * @var string Layer-7 rule ID
      */
     public $LocationId;
+
     /**
      * @param string $ListenerId Listener ID
      * @param integer $Port Binding port
@@ -78,6 +77,7 @@ class BatchTarget extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

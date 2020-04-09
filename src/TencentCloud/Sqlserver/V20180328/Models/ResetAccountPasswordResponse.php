@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetAccountPassword response structure.
+ *
  * @method integer getFlowId() Obtain ID of async task flow for account password change
  * @method void setFlowId(integer $FlowId) Set ID of async task flow for account password change
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ResetAccountPassword response structure.
  */
 class ResetAccountPasswordResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResetAccountPasswordResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $FlowId ID of async task flow for account password change
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ResetAccountPasswordResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

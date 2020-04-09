@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Configuration object for modifying instance attributes
+ *
  * @method boolean getAutoCreateTopicEnable() Obtain Automatic creation. true: enabled, false: not enabled
  * @method void setAutoCreateTopicEnable(boolean $AutoCreateTopicEnable) Set Automatic creation. true: enabled, false: not enabled
  * @method integer getDefaultNumPartitions() Obtain Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
  * @method void setDefaultNumPartitions(integer $DefaultNumPartitions) Set Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
  * @method integer getDefaultReplicationFactor() Obtain If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
  * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) Set If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
- */
-
-/**
- *Configuration object for modifying instance attributes
  */
 class ModifyInstanceAttributesConfig extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyInstanceAttributesConfig extends AbstractModel
      * @var integer If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
      */
     public $DefaultReplicationFactor;
+
     /**
      * @param boolean $AutoCreateTopicEnable Automatic creation. true: enabled, false: not enabled
      * @param integer $DefaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
@@ -54,6 +53,7 @@ class ModifyInstanceAttributesConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

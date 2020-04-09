@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamPublishedList request structure.
+ *
  * @method string getDomainName() Obtain Your push domain name.
  * @method void setDomainName(string $DomainName) Set Your push domain name.
  * @method string getEndTime() Obtain End time.
@@ -50,10 +52,6 @@ Value range: any integer between 1 and 100.
 Default value: 10.
  * @method string getStreamName() Obtain Stream name, which supports fuzzy match.
  * @method void setStreamName(string $StreamName) Set Stream name, which supports fuzzy match.
- */
-
-/**
- *DescribeLiveStreamPublishedList request structure.
  */
 class DescribeLiveStreamPublishedListRequest extends AbstractModel
 {
@@ -100,6 +98,7 @@ Default value: 10.
      * @var string Stream name, which supports fuzzy match.
      */
     public $StreamName;
+
     /**
      * @param string $DomainName Your push domain name.
      * @param string $EndTime End time.
@@ -122,6 +121,7 @@ Default value: 10.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

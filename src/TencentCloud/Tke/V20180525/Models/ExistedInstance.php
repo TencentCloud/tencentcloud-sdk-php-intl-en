@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of existing instances
+ *
  * @method boolean getUsable() Obtain Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUsable(boolean $Usable) Set Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
@@ -74,10 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceType(string $InstanceType) Set Instance model.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of existing instances
  */
 class ExistedInstance extends AbstractModel
 {
@@ -160,6 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceType;
+
     /**
      * @param boolean $Usable Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -194,6 +193,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

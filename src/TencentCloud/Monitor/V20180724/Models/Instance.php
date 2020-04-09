@@ -18,12 +18,10 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Array of instance dimension combinations
+ *
  * @method array getDimensions() Obtain Combination of instance dimensions
  * @method void setDimensions(array $Dimensions) Set Combination of instance dimensions
- */
-
-/**
- *Array of instance dimension combinations
  */
 class Instance extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Instance extends AbstractModel
      * @var array Combination of instance dimensions
      */
     public $Dimensions;
+
     /**
      * @param array $Dimensions Combination of instance dimensions
      */
@@ -38,6 +37,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

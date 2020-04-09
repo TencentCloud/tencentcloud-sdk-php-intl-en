@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetSAMLProvider request structure.
+ *
  * @method string getName() Obtain SAML identity provider name
  * @method void setName(string $Name) Set SAML identity provider name
- */
-
-/**
- *GetSAMLProvider request structure.
  */
 class GetSAMLProviderRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetSAMLProviderRequest extends AbstractModel
      * @var string SAML identity provider name
      */
     public $Name;
+
     /**
      * @param string $Name SAML identity provider name
      */
@@ -38,6 +37,7 @@ class GetSAMLProviderRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

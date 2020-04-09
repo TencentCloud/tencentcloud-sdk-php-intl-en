@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedUserPolicies request structure.
+ *
  * @method integer getTargetUin() Obtain Sub-account UIN
  * @method void setTargetUin(integer $TargetUin) Set Sub-account UIN
  * @method integer getPage() Obtain Page number, which starts from 1. Default is 1
  * @method void setPage(integer $Page) Set Page number, which starts from 1. Default is 1
  * @method integer getRp() Obtain Number of entries per page; 20 by default
  * @method void setRp(integer $Rp) Set Number of entries per page; 20 by default
- */
-
-/**
- *ListAttachedUserPolicies request structure.
  */
 class ListAttachedUserPoliciesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAttachedUserPoliciesRequest extends AbstractModel
      * @var integer Number of entries per page; 20 by default
      */
     public $Rp;
+
     /**
      * @param integer $TargetUin Sub-account UIN
      * @param integer $Page Page number, which starts from 1. Default is 1
@@ -54,6 +53,7 @@ class ListAttachedUserPoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

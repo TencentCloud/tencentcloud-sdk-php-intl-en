@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceParams request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method array getInstanceParams() Obtain List of instance parameters modified
  * @method void setInstanceParams(array $InstanceParams) Set List of instance parameters modified
- */
-
-/**
- *ModifyInstanceParams request structure.
  */
 class ModifyInstanceParamsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyInstanceParamsRequest extends AbstractModel
      * @var array List of instance parameters modified
      */
     public $InstanceParams;
+
     /**
      * @param string $InstanceId Instance ID
      * @param array $InstanceParams List of instance parameters modified
@@ -46,6 +45,7 @@ class ModifyInstanceParamsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

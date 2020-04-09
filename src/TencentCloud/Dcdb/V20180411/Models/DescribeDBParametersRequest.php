@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBParameters request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow7t8lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow7t8lmc.
- */
-
-/**
- *DescribeDBParameters request structure.
  */
 class DescribeDBParametersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDBParametersRequest extends AbstractModel
      * @var string Instance ID in the format of dcdbt-ow7t8lmc.
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow7t8lmc.
      */
@@ -38,6 +37,7 @@ class DescribeDBParametersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

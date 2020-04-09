@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI-based sample management - keyword output information.
+ *
  * @method string getKeyword() Obtain Keyword.
  * @method void setKeyword(string $Keyword) Set Keyword.
  * @method array getTagSet() Obtain Keyword tag.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- */
-
-/**
- *AI-based sample management - keyword output information.
  */
 class AiSampleWord extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AiSampleWord extends AbstractModel
      * @var string Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $UpdateTime;
+
     /**
      * @param string $Keyword Keyword.
      * @param array $TagSet Keyword tag.
@@ -70,6 +69,7 @@ class AiSampleWord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

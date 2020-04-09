@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubnets request structure.
+ *
  * @method array getSubnetIds() Obtain Queries the ID of the subnet instance, such as `subnet-pxir56ns`. Each request can have a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
  * @method void setSubnetIds(array $SubnetIds) Set Queries the ID of the subnet instance, such as `subnet-pxir56ns`. Each request can have a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
  * @method array getFilters() Obtain Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset
  * @method string getLimit() Obtain The returned quantity
  * @method void setLimit(string $Limit) Set The returned quantity
- */
-
-/**
- *DescribeSubnets request structure.
  */
 class DescribeSubnetsRequest extends AbstractModel
 {
@@ -79,6 +77,7 @@ class DescribeSubnetsRequest extends AbstractModel
      * @var string The returned quantity
      */
     public $Limit;
+
     /**
      * @param array $SubnetIds Queries the ID of the subnet instance, such as `subnet-pxir56ns`. Each request can have a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
      * @param array $Filters Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
@@ -98,6 +97,7 @@ class DescribeSubnetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

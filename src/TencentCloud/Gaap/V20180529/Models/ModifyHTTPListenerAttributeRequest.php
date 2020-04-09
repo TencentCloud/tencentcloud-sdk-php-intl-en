@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyHTTPListenerAttribute request structure.
+ *
  * @method string getListenerId() Obtain Listener ID to be modified
  * @method void setListenerId(string $ListenerId) Set Listener ID to be modified
  * @method string getListenerName() Obtain New listener name
  * @method void setListenerName(string $ListenerName) Set New listener name
  * @method string getProxyId() Obtain Connection ID
  * @method void setProxyId(string $ProxyId) Set Connection ID
- */
-
-/**
- *ModifyHTTPListenerAttribute request structure.
  */
 class ModifyHTTPListenerAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyHTTPListenerAttributeRequest extends AbstractModel
      * @var string Connection ID
      */
     public $ProxyId;
+
     /**
      * @param string $ListenerId Listener ID to be modified
      * @param string $ListenerName New listener name
@@ -54,6 +53,7 @@ class ModifyHTTPListenerAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

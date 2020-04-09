@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cluster master custom parameter
+ *
  * @method array getKubeAPIServer() Obtain kube-apiserver custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setKubeAPIServer(array $KubeAPIServer) Set kube-apiserver custom parameter
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setKubeScheduler(array $KubeScheduler) Set kube-scheduler custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
- */
-
-/**
- *Cluster master custom parameter
  */
 class ClusterExtraArgs extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public $KubeScheduler;
+
     /**
      * @param array $KubeAPIServer kube-apiserver custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

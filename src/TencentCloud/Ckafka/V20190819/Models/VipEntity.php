@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Virtual IP entity
+ *
  * @method string getVip() Obtain Virtual IP
  * @method void setVip(string $Vip) Set Virtual IP
  * @method string getVport() Obtain Virtual port
  * @method void setVport(string $Vport) Set Virtual port
- */
-
-/**
- *Virtual IP entity
  */
 class VipEntity extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VipEntity extends AbstractModel
      * @var string Virtual port
      */
     public $Vport;
+
     /**
      * @param string $Vip Virtual IP
      * @param string $Vport Virtual port
@@ -46,6 +45,7 @@ class VipEntity extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

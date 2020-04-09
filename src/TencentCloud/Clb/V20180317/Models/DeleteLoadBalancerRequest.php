@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLoadBalancer request structure.
+ *
  * @method array getLoadBalancerIds() Obtain Array of IDs of the CLB instances to be deleted. Array length limit: 20
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set Array of IDs of the CLB instances to be deleted. Array length limit: 20
- */
-
-/**
- *DeleteLoadBalancer request structure.
  */
 class DeleteLoadBalancerRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLoadBalancerRequest extends AbstractModel
      * @var array Array of IDs of the CLB instances to be deleted. Array length limit: 20
      */
     public $LoadBalancerIds;
+
     /**
      * @param array $LoadBalancerIds Array of IDs of the CLB instances to be deleted. Array length limit: 20
      */
@@ -38,6 +37,7 @@ class DeleteLoadBalancerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

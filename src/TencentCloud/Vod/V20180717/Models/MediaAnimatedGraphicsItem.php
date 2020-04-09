@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result information of animated image generating task
+ *
  * @method string getUrl() Obtain Address of generated animated image.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set Address of generated animated image.
@@ -58,10 +60,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of animated image in video in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Result information of animated image generating task
  */
 class MediaAnimatedGraphicsItem extends AbstractModel
 {
@@ -124,6 +122,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EndTimeOffset;
+
     /**
      * @param string $Url Address of generated animated image.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -150,6 +149,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

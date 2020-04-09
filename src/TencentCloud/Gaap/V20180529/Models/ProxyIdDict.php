@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Connection ID
+ *
  * @method string getProxyId() Obtain Connection ID
  * @method void setProxyId(string $ProxyId) Set Connection ID
- */
-
-/**
- *Connection ID
  */
 class ProxyIdDict extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ProxyIdDict extends AbstractModel
      * @var string Connection ID
      */
     public $ProxyId;
+
     /**
      * @param string $ProxyId Connection ID
      */
@@ -38,6 +37,7 @@ class ProxyIdDict extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

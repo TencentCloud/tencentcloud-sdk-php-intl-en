@@ -18,16 +18,14 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Sampling parameter for spot check
+ *
  * @method integer getSelectRowsPerTable() Obtain Data content check parameter, which refers to the proportion of the rows selected for data comparison in all the rows of the table. Value: an integer between 1 and 100.
  * @method void setSelectRowsPerTable(integer $SelectRowsPerTable) Set Data content check parameter, which refers to the proportion of the rows selected for data comparison in all the rows of the table. Value: an integer between 1 and 100.
  * @method integer getTablesSelectAll() Obtain Data content check parameter, which refers to the proportion of the tables selected for data detection in all the tables. Value: an integer between 1 and 100.
  * @method void setTablesSelectAll(integer $TablesSelectAll) Set Data content check parameter, which refers to the proportion of the tables selected for data detection in all the tables. Value: an integer between 1 and 100.
  * @method integer getTablesSelectCount() Obtain Data quantity check parameter, which checks whether the numbers of rows are identical. It refers to the proportion of the tables selected for quantity check in all the tables. Value: an integer between 1 and 100.
  * @method void setTablesSelectCount(integer $TablesSelectCount) Set Data quantity check parameter, which checks whether the numbers of rows are identical. It refers to the proportion of the tables selected for quantity check in all the tables. Value: an integer between 1 and 100.
- */
-
-/**
- *Sampling parameter for spot check
  */
 class ConsistencyParams extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ConsistencyParams extends AbstractModel
      * @var integer Data quantity check parameter, which checks whether the numbers of rows are identical. It refers to the proportion of the tables selected for quantity check in all the tables. Value: an integer between 1 and 100.
      */
     public $TablesSelectCount;
+
     /**
      * @param integer $SelectRowsPerTable Data content check parameter, which refers to the proportion of the rows selected for data comparison in all the rows of the table. Value: an integer between 1 and 100.
      * @param integer $TablesSelectAll Data content check parameter, which refers to the proportion of the tables selected for data detection in all the tables. Value: an integer between 1 and 100.
@@ -54,6 +53,7 @@ class ConsistencyParams extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

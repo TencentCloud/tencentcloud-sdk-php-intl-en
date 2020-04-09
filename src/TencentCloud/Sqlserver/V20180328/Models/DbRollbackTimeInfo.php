@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of time range available for database rollback
+ *
  * @method string getDBName() Obtain Database name
  * @method void setDBName(string $DBName) Set Database name
  * @method string getStartTime() Obtain Start time of time range available for rollback
  * @method void setStartTime(string $StartTime) Set Start time of time range available for rollback
  * @method string getEndTime() Obtain End time of time range available for rollback
  * @method void setEndTime(string $EndTime) Set End time of time range available for rollback
- */
-
-/**
- *Information of time range available for database rollback
  */
 class DbRollbackTimeInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DbRollbackTimeInfo extends AbstractModel
      * @var string End time of time range available for rollback
      */
     public $EndTime;
+
     /**
      * @param string $DBName Database name
      * @param string $StartTime Start time of time range available for rollback
@@ -54,6 +53,7 @@ class DbRollbackTimeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

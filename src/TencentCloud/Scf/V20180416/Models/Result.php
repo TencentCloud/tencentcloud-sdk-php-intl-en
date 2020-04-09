@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Response of the executed function
+ *
  * @method string getLog() Obtain It indicates the log output during the function execution. Null is returned for asynchronous invocations.
  * @method void setLog(string $Log) Set It indicates the log output during the function execution. Null is returned for asynchronous invocations.
  * @method string getRetMsg() Obtain It indicates the response from the executed function. Null is returned for asynchronous invocations.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionRequestId(string $FunctionRequestId) Set ID of the executed function
  * @method integer getInvokeResult() Obtain `0` indicates successful execution. Null is returned for asynchronous invocations.
  * @method void setInvokeResult(integer $InvokeResult) Set `0` indicates successful execution. Null is returned for asynchronous invocations.
- */
-
-/**
- *Response of the executed function
  */
 class Result extends AbstractModel
 {
@@ -80,6 +78,7 @@ class Result extends AbstractModel
      * @var integer `0` indicates successful execution. Null is returned for asynchronous invocations.
      */
     public $InvokeResult;
+
     /**
      * @param string $Log It indicates the log output during the function execution. Null is returned for asynchronous invocations.
      * @param string $RetMsg It indicates the response from the executed function. Null is returned for asynchronous invocations.
@@ -94,6 +93,7 @@ class Result extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

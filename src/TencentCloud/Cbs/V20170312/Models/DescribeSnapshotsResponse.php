@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSnapshots response structure.
+ *
  * @method integer getTotalCount() Obtain Number of snapshots.
  * @method void setTotalCount(integer $TotalCount) Set Number of snapshots.
  * @method array getSnapshotSet() Obtain List of snapshot details.
  * @method void setSnapshotSet(array $SnapshotSet) Set List of snapshot details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSnapshots response structure.
  */
 class DescribeSnapshotsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSnapshotsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of snapshots.
      * @param array $SnapshotSet List of snapshot details.
@@ -54,6 +53,7 @@ class DescribeSnapshotsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

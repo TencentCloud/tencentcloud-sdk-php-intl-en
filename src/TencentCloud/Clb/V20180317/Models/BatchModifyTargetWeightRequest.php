@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BatchModifyTargetWeight request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getModifyList() Obtain List of weights to be modified in batches
  * @method void setModifyList(array $ModifyList) Set List of weights to be modified in batches
- */
-
-/**
- *BatchModifyTargetWeight request structure.
  */
 class BatchModifyTargetWeightRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BatchModifyTargetWeightRequest extends AbstractModel
      * @var array List of weights to be modified in batches
      */
     public $ModifyList;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $ModifyList List of weights to be modified in batches
@@ -46,6 +45,7 @@ class BatchModifyTargetWeightRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAnimatedGraphicsTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
  * @method array getAnimatedGraphicsTemplateSet() Obtain List of animated image generating template details.
  * @method void setAnimatedGraphicsTemplateSet(array $AnimatedGraphicsTemplateSet) Set List of animated image generating template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAnimatedGraphicsTemplates response structure.
  */
 class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible entries.
      * @param array $AnimatedGraphicsTemplateSet List of animated image generating template details.
@@ -54,6 +53,7 @@ class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountPrivileges request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow7t8lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow7t8lmc.
  * @method string getUserName() Obtain Login username.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObject(string $Object) Set Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
  * @method string getColName() Obtain If `Type` = table and `ColName` is `\*`, the permissions of the table will be queried; if `ColName` is a specific field name, the permissions of the corresponding field will be queried
  * @method void setColName(string $ColName) Set If `Type` = table and `ColName` is `\*`, the permissions of the table will be queried; if `ColName` is a specific field name, the permissions of the corresponding field will be queried
- */
-
-/**
- *DescribeAccountPrivileges request structure.
  */
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
      * @var string If `Type` = table and `ColName` is `\*`, the permissions of the table will be queried; if `ColName` is a specific field name, the permissions of the corresponding field will be queried
      */
     public $ColName;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow7t8lmc.
      * @param string $UserName Login username.
@@ -86,6 +85,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

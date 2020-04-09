@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MigratePrivateIpAddress request structure.
+ *
  * @method string getSourceNetworkInterfaceId() Obtain ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
  * @method void setSourceNetworkInterfaceId(string $SourceNetworkInterfaceId) Set ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
  * @method string getDestinationNetworkInterfaceId() Obtain ID of the destination ENI instance to be migrated.
  * @method void setDestinationNetworkInterfaceId(string $DestinationNetworkInterfaceId) Set ID of the destination ENI instance to be migrated.
  * @method string getPrivateIpAddress() Obtain The private IP to be migrated, such as 10.0.0.6.
  * @method void setPrivateIpAddress(string $PrivateIpAddress) Set The private IP to be migrated, such as 10.0.0.6.
- */
-
-/**
- *MigratePrivateIpAddress request structure.
  */
 class MigratePrivateIpAddressRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MigratePrivateIpAddressRequest extends AbstractModel
      * @var string The private IP to be migrated, such as 10.0.0.6.
      */
     public $PrivateIpAddress;
+
     /**
      * @param string $SourceNetworkInterfaceId ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
      * @param string $DestinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
@@ -54,6 +53,7 @@ class MigratePrivateIpAddressRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

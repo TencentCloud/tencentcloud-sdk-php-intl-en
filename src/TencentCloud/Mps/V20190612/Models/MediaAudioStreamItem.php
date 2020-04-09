@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of the audio stream in a VOD file
+ *
  * @method integer getBitrate() Obtain Bitrate of an audio stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBitrate(integer $Bitrate) Set Bitrate of an audio stream in bps.
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCodec(string $Codec) Set Audio stream codec, such as aac.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of the audio stream in a VOD file
  */
 class MediaAudioStreamItem extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Codec;
+
     /**
      * @param integer $Bitrate Bitrate of an audio stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

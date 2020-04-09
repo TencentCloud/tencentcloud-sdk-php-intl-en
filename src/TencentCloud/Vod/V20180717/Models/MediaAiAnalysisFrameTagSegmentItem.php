@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of frame-specific tag segments
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of frame-specific tag.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of frame-specific tag.
  * @method float getEndTimeOffset() Obtain End time offset of frame-specific tag.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of frame-specific tag.
  * @method array getTagSet() Obtain List of tags in time period.
  * @method void setTagSet(array $TagSet) Set List of tags in time period.
- */
-
-/**
- *List of frame-specific tag segments
  */
 class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
      * @var array List of tags in time period.
      */
     public $TagSet;
+
     /**
      * @param float $StartTimeOffset Start time offset of frame-specific tag.
      * @param float $EndTimeOffset End time offset of frame-specific tag.
@@ -54,6 +53,7 @@ class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

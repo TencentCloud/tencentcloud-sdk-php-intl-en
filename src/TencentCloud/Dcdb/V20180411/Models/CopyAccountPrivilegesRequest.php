@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CopyAccountPrivileges request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc.
  * @method string getSrcUserName() Obtain Source username
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcReadOnly(string $SrcReadOnly) Set `ReadOnly` attribute of a source account
  * @method string getDstReadOnly() Obtain `ReadOnly` attribute of a target account
  * @method void setDstReadOnly(string $DstReadOnly) Set `ReadOnly` attribute of a target account
- */
-
-/**
- *CopyAccountPrivileges request structure.
  */
 class CopyAccountPrivilegesRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CopyAccountPrivilegesRequest extends AbstractModel
      * @var string `ReadOnly` attribute of a target account
      */
     public $DstReadOnly;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc.
      * @param string $SrcUserName Source username
@@ -86,6 +85,7 @@ class CopyAccountPrivilegesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

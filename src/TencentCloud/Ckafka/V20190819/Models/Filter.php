@@ -18,19 +18,17 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() Obtain Field to be filtered.
- * @method void setName(string $Name) Set Field to be filtered.
- * @method array getValues() Obtain Filter value of field.
- * @method void setValues(array $Values) Set Filter value of field.
- */
-
-/**
- *Query filter
+ * Query filter
 >Key-value pair filters for conditional filtering queries, such as filter ID, name, and status
 > * If there are multiple `Filter`, the relationship among them is logical `AND`.
 > * If there are multiple `Values` in the same `Filter`, the relationship among them is logical `OR`.
 >
 
+ *
+ * @method string getName() Obtain Field to be filtered.
+ * @method void setName(string $Name) Set Field to be filtered.
+ * @method array getValues() Obtain Filter value of field.
+ * @method void setValues(array $Values) Set Filter value of field.
  */
 class Filter extends AbstractModel
 {
@@ -43,6 +41,7 @@ class Filter extends AbstractModel
      * @var array Filter value of field.
      */
     public $Values;
+
     /**
      * @param string $Name Field to be filtered.
      * @param array $Values Filter value of field.
@@ -51,6 +50,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

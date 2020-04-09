@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VOD file information
+ *
  * @method MediaBasicInfo getBasicInfo() Obtain Basic information, such as video name, category, playback address, and cover image.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBasicInfo(MediaBasicInfo $BasicInfo) Set Basic information, such as video name, category, playback address, and cover image.
@@ -60,10 +62,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getFileId() Obtain Unique ID of media file.
  * @method void setFileId(string $FileId) Set Unique ID of media file.
- */
-
-/**
- *VOD file information
  */
 class MediaInfo extends AbstractModel
 {
@@ -131,6 +129,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Unique ID of media file.
      */
     public $FileId;
+
     /**
      * @param MediaBasicInfo $BasicInfo Basic information, such as video name, category, playback address, and cover image.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -158,6 +157,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

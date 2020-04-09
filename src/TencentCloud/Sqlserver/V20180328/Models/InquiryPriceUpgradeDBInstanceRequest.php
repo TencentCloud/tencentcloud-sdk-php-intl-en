@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceUpgradeDBInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-njj2mtpl
  * @method integer getMemory() Obtain Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
  * @method void setMemory(integer $Memory) Set Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
  * @method integer getStorage() Obtain Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
  * @method void setStorage(integer $Storage) Set Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
- */
-
-/**
- *InquiryPriceUpgradeDBInstance request structure.
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
      * @var integer Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
      */
     public $Storage;
+
     /**
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
      * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
@@ -54,6 +53,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

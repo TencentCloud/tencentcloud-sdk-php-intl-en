@@ -18,14 +18,12 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Used for conditional filtering queries.
+ *
  * @method string getName() Obtain Fields to be filtered.
  * @method void setName(string $Name) Set Fields to be filtered.
  * @method array getValues() Obtain Filter values of the field.
  * @method void setValues(array $Values) Set Filter values of the field.
- */
-
-/**
- *Used for conditional filtering queries.
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array Filter values of the field.
      */
     public $Values;
+
     /**
      * @param string $Name Fields to be filtered.
      * @param array $Values Filter values of the field.
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

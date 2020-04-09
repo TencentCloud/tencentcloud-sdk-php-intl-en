@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMapInfo request structure.
+ *
  * @method string getName() Obtain Query type:
 `isp`: queries ISP codes
 `district`: queries codes of provinces (Mainland China) or countries/regions (outside Mainland China)
  * @method void setName(string $Name) Set Query type:
 `isp`: queries ISP codes
 `district`: queries codes of provinces (Mainland China) or countries/regions (outside Mainland China)
- */
-
-/**
- *DescribeMapInfo request structure.
  */
 class DescribeMapInfoRequest extends AbstractModel
 {
@@ -37,6 +35,7 @@ class DescribeMapInfoRequest extends AbstractModel
 `district`: queries codes of provinces (Mainland China) or countries/regions (outside Mainland China)
      */
     public $Name;
+
     /**
      * @param string $Name Query type:
 `isp`: queries ISP codes
@@ -46,6 +45,7 @@ class DescribeMapInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

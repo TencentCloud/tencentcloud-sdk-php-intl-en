@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProcedureTemplates request structure.
+ *
  * @method array getNames() Obtain Name filter of task flow template. Array length limit: 100.
  * @method void setNames(array $Names) Set Name filter of task flow template. Array length limit: 100.
  * @method string getType() Obtain Filter of task flow template types. Valid values:
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *DescribeProcedureTemplates request structure.
  */
 class DescribeProcedureTemplatesRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $Names Name filter of task flow template. Array length limit: 100.
      * @param string $Type Filter of task flow template types. Valid values:
@@ -78,6 +77,7 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

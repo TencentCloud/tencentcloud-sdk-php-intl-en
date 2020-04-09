@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database table information
+ *
  * @method string getTable() Obtain Table name
  * @method void setTable(string $Table) Set Table name
- */
-
-/**
- *Database table information
  */
 class DatabaseTable extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DatabaseTable extends AbstractModel
      * @var string Table name
      */
     public $Table;
+
     /**
      * @param string $Table Table name
      */
@@ -38,6 +37,7 @@ class DatabaseTable extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

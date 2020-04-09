@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListFunctions request structure.
+ *
  * @method string getOrder() Obtain It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
  * @method void setOrder(string $Order) Set It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
  * @method string getOrderby() Obtain It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`, and `FunctionName`.
@@ -40,10 +42,6 @@ The maximum number of `Filters` for each request is 10, and that of `Filter.Valu
 - tag:tag-key - String - Required: No - Filtering criteria based on tag-key - value pairs. Replace `tag-key` with a specific tag-key.
 
 The maximum number of `Filters` for each request is 10, and that of `Filter.Values` is 5.
- */
-
-/**
- *ListFunctions request structure.
  */
 class ListFunctionsRequest extends AbstractModel
 {
@@ -89,6 +87,7 @@ class ListFunctionsRequest extends AbstractModel
 The maximum number of `Filters` for each request is 10, and that of `Filter.Values` is 5.
      */
     public $Filters;
+
     /**
      * @param string $Order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
      * @param string $Orderby It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`, and `FunctionName`.
@@ -106,6 +105,7 @@ The maximum number of `Filters` for each request is 10, and that of `Filter.Valu
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

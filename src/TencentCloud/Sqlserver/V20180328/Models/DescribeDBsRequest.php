@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBs request structure.
+ *
  * @method array getInstanceIdSet() Obtain Instance ID
  * @method void setInstanceIdSet(array $InstanceIdSet) Set Instance ID
  * @method integer getLimit() Obtain Number of results per page. Value range: 1–100. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1–100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
- */
-
-/**
- *DescribeDBs request structure.
  */
 class DescribeDBsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBsRequest extends AbstractModel
      * @var integer Page number. Default value: 0
      */
     public $Offset;
+
     /**
      * @param array $InstanceIdSet Instance ID
      * @param integer $Limit Number of results per page. Value range: 1–100. Default value: 20
@@ -54,6 +53,7 @@ class DescribeDBsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input for speech keyword recognition.
+ *
  * @method integer getDefinition() Obtain Speech keyword recognition template ID.
  * @method void setDefinition(integer $Definition) Set Speech keyword recognition template ID.
- */
-
-/**
- *Input for speech keyword recognition.
  */
 class AiRecognitionTaskAsrWordsResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskAsrWordsResultInput extends AbstractModel
      * @var integer Speech keyword recognition template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Speech keyword recognition template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskAsrWordsResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Used by internal APIs. It returns connections from which the statistics can be derived, and the listener information.
+ *
  * @method string getProxyId() Obtain Connection ID
  * @method void setProxyId(string $ProxyId) Set Connection ID
  * @method string getProxyName() Obtain Connection name
  * @method void setProxyName(string $ProxyName) Set Connection name
  * @method array getListenerList() Obtain Listener list
  * @method void setListenerList(array $ListenerList) Set Listener list
- */
-
-/**
- *Used by internal APIs. It returns connections from which the statistics can be derived, and the listener information.
  */
 class ProxySimpleInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ProxySimpleInfo extends AbstractModel
      * @var array Listener list
      */
     public $ListenerList;
+
     /**
      * @param string $ProxyId Connection ID
      * @param string $ProxyName Connection name
@@ -54,6 +53,7 @@ class ProxySimpleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a porn information detection in speech task
+ *
  * @method string getSwitch() Obtain Switch of a porn information detection in speech task. Valid values:
 <li>ON: Enables a porn information detection in speech task;</li>
 <li>OFF: Disables a porn information detection in speech task.</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
  * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
  * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
- */
-
-/**
- *Control parameter of a porn information detection in speech task
  */
 class PornAsrReviewTemplateInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ class PornAsrReviewTemplateInfo extends AbstractModel
      * @var integer Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
      */
     public $ReviewConfidence;
+
     /**
      * @param string $Switch Switch of a porn information detection in speech task. Valid values:
 <li>ON: Enables a porn information detection in speech task;</li>
@@ -62,6 +61,7 @@ class PornAsrReviewTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

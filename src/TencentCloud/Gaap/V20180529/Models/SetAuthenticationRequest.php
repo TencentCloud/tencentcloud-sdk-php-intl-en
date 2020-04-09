@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetAuthentication request structure.
+ *
  * @method string getListenerId() Obtain Listener ID.
  * @method void setListenerId(string $ListenerId) Set Listener ID.
  * @method string getDomain() Obtain The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
@@ -56,10 +58,6 @@ The default value is 0.
  * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) Set Domain name of the origin server certificate.
  * @method array getPolyRealServerCertificateIds() Obtain CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
  * @method void setPolyRealServerCertificateIds(array $PolyRealServerCertificateIds) Set CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
- */
-
-/**
- *SetAuthentication request structure.
  */
 class SetAuthenticationRequest extends AbstractModel
 {
@@ -121,6 +119,7 @@ The default value is 0.
      * @var array CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
      */
     public $PolyRealServerCertificateIds;
+
     /**
      * @param string $ListenerId Listener ID.
      * @param string $Domain The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
@@ -146,6 +145,7 @@ The default value is 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

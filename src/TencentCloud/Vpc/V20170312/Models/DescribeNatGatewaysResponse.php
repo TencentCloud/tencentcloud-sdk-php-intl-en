@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatGateways response structure.
+ *
  * @method array getNatGatewaySet() Obtain NAT gateway object array.
  * @method void setNatGatewaySet(array $NatGatewaySet) Set NAT gateway object array.
  * @method integer getTotalCount() Obtain The number of NAT gateway object sets meeting the conditions.
  * @method void setTotalCount(integer $TotalCount) Set The number of NAT gateway object sets meeting the conditions.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeNatGateways response structure.
  */
 class DescribeNatGatewaysResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNatGatewaysResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $NatGatewaySet NAT gateway object array.
      * @param integer $TotalCount The number of NAT gateway object sets meeting the conditions.
@@ -54,6 +53,7 @@ class DescribeNatGatewaysResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

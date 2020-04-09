@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Temporary credential
+ *
  * @method string getSecretId() Obtain Temporary security certificate ID.
  * @method void setSecretId(string $SecretId) Set Temporary security certificate ID.
  * @method string getSecretKey() Obtain Temporary security certificate `Key`.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToken(string $Token) Set Token value.
  * @method integer getExpiredTime() Obtain Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
  * @method void setExpiredTime(integer $ExpiredTime) Set Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
- */
-
-/**
- *Temporary credential
  */
 class TempCertificate extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TempCertificate extends AbstractModel
      * @var integer Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
      */
     public $ExpiredTime;
+
     /**
      * @param string $SecretId Temporary security certificate ID.
      * @param string $SecretKey Temporary security certificate `Key`.
@@ -62,6 +61,7 @@ class TempCertificate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

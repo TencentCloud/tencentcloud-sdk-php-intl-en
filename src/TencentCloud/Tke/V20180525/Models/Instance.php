@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cluster’s instance information
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceRole() Obtain Node role: MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER
@@ -36,10 +38,6 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method string getCreatedTime() Obtain Creation time
  * @method void setCreatedTime(string $CreatedTime) Set Creation time
- */
-
-/**
- *Cluster’s instance information
  */
 class Instance extends AbstractModel
 {
@@ -79,6 +77,7 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @var string Creation time
      */
     public $CreatedTime;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceRole Node role: MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER
@@ -94,6 +93,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Purchasable configuration details
+ *
  * @method string getDevice() Obtain Device type
  * @method void setDevice(string $Device) Set Device type
  * @method string getType() Obtain Purchasable specification description
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfo(string $Info) Set Application scenario description
  * @method integer getStatus() Obtain Status value
  * @method void setStatus(integer $Status) Set Status value
- */
-
-/**
- *Purchasable configuration details
  */
 class SellConfig extends AbstractModel
 {
@@ -115,6 +113,7 @@ class SellConfig extends AbstractModel
      * @var integer Status value
      */
     public $Status;
+
     /**
      * @param string $Device Device type
      * @param string $Type Purchasable specification description
@@ -134,6 +133,7 @@ class SellConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckNetDetectState request structure.
+ *
  * @method array getDetectDestinationIp() Obtain The array of detection destination IPv4 addresses, which contains at most two IP addresses.
  * @method void setDetectDestinationIp(array $DetectDestinationIp) Set The array of detection destination IPv4 addresses, which contains at most two IP addresses.
  * @method string getNextHopType() Obtain The type of the next hop. Currently supported types are:
@@ -52,10 +54,6 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
  * @method void setSubnetId(string $SubnetId) Set The ID of a subnet instance, such as subnet-12345678.
  * @method string getNetDetectName() Obtain The name of a network detection instance. The maximum length is 60 characters.
  * @method void setNetDetectName(string $NetDetectName) Set The name of a network detection instance. The maximum length is 60 characters.
- */
-
-/**
- *CheckNetDetectState request structure.
  */
 class CheckNetDetectStateRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
      * @var string The name of a network detection instance. The maximum length is 60 characters.
      */
     public $NetDetectName;
+
     /**
      * @param array $DetectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
      * @param string $NextHopType The type of the next hop. Currently supported types are:
@@ -126,6 +125,7 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

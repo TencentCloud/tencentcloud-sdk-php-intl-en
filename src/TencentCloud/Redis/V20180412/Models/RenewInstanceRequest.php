@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RenewInstance request structure.
+ *
  * @method integer getPeriod() Obtain Length of purchase in months
  * @method void setPeriod(integer $Period) Set Length of purchase in months
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- */
-
-/**
- *RenewInstance request structure.
  */
 class RenewInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RenewInstanceRequest extends AbstractModel
      * @var string Instance ID
      */
     public $InstanceId;
+
     /**
      * @param integer $Period Length of purchase in months
      * @param string $InstanceId Instance ID
@@ -46,6 +45,7 @@ class RenewInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

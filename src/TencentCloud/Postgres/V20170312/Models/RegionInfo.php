@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Region information such as number and status
+ *
  * @method string getRegion() Obtain Region abbreviation
  * @method void setRegion(string $Region) Set Region abbreviation
  * @method string getRegionName() Obtain Region name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) Set Region number
  * @method string getRegionState() Obtain Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
  * @method void setRegionState(string $RegionState) Set Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
- */
-
-/**
- *Region information such as number and status
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RegionInfo extends AbstractModel
      * @var string Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
      */
     public $RegionState;
+
     /**
      * @param string $Region Region abbreviation
      * @param string $RegionName Region name
@@ -62,6 +61,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

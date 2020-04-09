@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterEndpointStatus request structure.
+ *
 
- */
-
-/**
- *DescribeClusterEndpointStatus request structure.
  */
 class DescribeClusterEndpointStatusRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeClusterEndpointStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

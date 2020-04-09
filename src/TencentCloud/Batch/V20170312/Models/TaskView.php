@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task view information
+ *
  * @method string getTaskName() Obtain Task name
  * @method void setTaskName(string $TaskName) Set Task name
  * @method string getTaskState() Obtain Task state
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEndTime(string $EndTime) Set End time
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Task view information
  */
 class TaskView extends AbstractModel
 {
@@ -55,6 +53,7 @@ class TaskView extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
+
     /**
      * @param string $TaskName Task name
      * @param string $TaskState Task state
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

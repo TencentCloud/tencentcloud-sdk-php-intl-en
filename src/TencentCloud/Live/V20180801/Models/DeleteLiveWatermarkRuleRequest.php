@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveWatermarkRule request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path.
  * @method void setAppName(string $AppName) Set Push path.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- */
-
-/**
- *DeleteLiveWatermarkRule request structure.
  */
 class DeleteLiveWatermarkRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteLiveWatermarkRuleRequest extends AbstractModel
      * @var string Stream name.
      */
     public $StreamName;
+
     /**
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path.
@@ -54,6 +53,7 @@ class DeleteLiveWatermarkRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

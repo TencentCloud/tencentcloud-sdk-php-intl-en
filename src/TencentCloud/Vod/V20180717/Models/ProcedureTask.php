@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video processing task information
+ *
  * @method string getTaskId() Obtain Video processing task ID.
  * @method void setTaskId(string $TaskId) Set Video processing task ID.
  * @method string getStatus() Obtain Task flow status. Valid values:
@@ -96,10 +98,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Video processing task information
  */
 class ProcedureTask extends AbstractModel
 {
@@ -205,6 +203,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SessionId;
+
     /**
      * @param string $TaskId Video processing task ID.
      * @param string $Status Task flow status. Valid values:
@@ -250,6 +249,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

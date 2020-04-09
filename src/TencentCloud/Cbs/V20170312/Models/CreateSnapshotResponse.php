@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSnapshot response structure.
+ *
  * @method string getSnapshotId() Obtain ID of the new snapshot.
  * @method void setSnapshotId(string $SnapshotId) Set ID of the new snapshot.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateSnapshot response structure.
  */
 class CreateSnapshotResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSnapshotResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $SnapshotId ID of the new snapshot.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateSnapshotResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

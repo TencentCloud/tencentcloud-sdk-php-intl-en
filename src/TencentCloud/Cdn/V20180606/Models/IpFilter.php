@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP blacklist/whitelist configuration. This is disabled by default.
+ *
  * @method string getSwitch() Obtain IP blacklist/whitelist configuration switch
 on: enabled
 off: disabled
@@ -40,10 +42,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *IP blacklist/whitelist configuration. This is disabled by default.
  */
 class IpFilter extends AbstractModel
 {
@@ -69,6 +67,7 @@ Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Filters;
+
     /**
      * @param string $Switch IP blacklist/whitelist configuration switch
 on: enabled
@@ -86,6 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

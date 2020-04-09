@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Parameter constraint
+ *
  * @method string getType() Obtain Constraint type, such as enum and section
  * @method void setType(string $Type) Set Constraint type, such as enum and section
  * @method string getEnum() Obtain List of valid values when constraint type is `enum`
@@ -28,10 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getString() Obtain List of valid values when constraint type is `string`
  * @method void setString(string $String) Set List of valid values when constraint type is `string`
- */
-
-/**
- *Parameter constraint
  */
 class ParamConstraint extends AbstractModel
 {
@@ -55,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string List of valid values when constraint type is `string`
      */
     public $String;
+
     /**
      * @param string $Type Constraint type, such as enum and section
      * @param string $Enum List of valid values when constraint type is `enum`
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

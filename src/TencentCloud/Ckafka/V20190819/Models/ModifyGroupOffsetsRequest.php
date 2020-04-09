@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyGroupOffsets request structure.
+ *
  * @method string getInstanceId() Obtain Kafka instance ID
  * @method void setInstanceId(string $InstanceId) Set Kafka instance ID
  * @method string getGroup() Obtain Kafka consumer group
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShiftTimestamp(integer $ShiftTimestamp) Set Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
  * @method integer getOffset() Obtain Position of the offset that needs to be reset. When `strategy` is 2, this field is required
  * @method void setOffset(integer $Offset) Set Position of the offset that needs to be reset. When `strategy` is 2, this field is required
- */
-
-/**
- *ModifyGroupOffsets request structure.
  */
 class ModifyGroupOffsetsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyGroupOffsetsRequest extends AbstractModel
      * @var integer Position of the offset that needs to be reset. When `strategy` is 2, this field is required
      */
     public $Offset;
+
     /**
      * @param string $InstanceId Kafka instance ID
      * @param string $Group Kafka consumer group
@@ -86,6 +85,7 @@ class ModifyGroupOffsetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

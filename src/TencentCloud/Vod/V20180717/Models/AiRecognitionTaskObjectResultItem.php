@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Single-object recognition result.
+ *
  * @method string getName() Obtain Name of recognized object.
  * @method void setName(string $Name) Set Name of recognized object.
  * @method array getSegmentSet() Obtain List of segments that contain an object.
  * @method void setSegmentSet(array $SegmentSet) Set List of segments that contain an object.
- */
-
-/**
- *Single-object recognition result.
  */
 class AiRecognitionTaskObjectResultItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
      * @var array List of segments that contain an object.
      */
     public $SegmentSet;
+
     /**
      * @param string $Name Name of recognized object.
      * @param array $SegmentSet List of segments that contain an object.
@@ -46,6 +45,7 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

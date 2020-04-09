@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcIpv6Addresses response structure.
+ *
  * @method array getIpv6AddressSet() Obtain The `IPv6` address list.
  * @method void setIpv6AddressSet(array $Ipv6AddressSet) Set The `IPv6` address list.
  * @method integer getTotalCount() Obtain The total number of `IPv6` addresses.
  * @method void setTotalCount(integer $TotalCount) Set The total number of `IPv6` addresses.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeVpcIpv6Addresses response structure.
  */
 class DescribeVpcIpv6AddressesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeVpcIpv6AddressesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Ipv6AddressSet The `IPv6` address list.
      * @param integer $TotalCount The total number of `IPv6` addresses.
@@ -54,6 +53,7 @@ class DescribeVpcIpv6AddressesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Segment information of media track
+ *
  * @method string getType() Obtain Segment type. Valid values:
 <li>Video: video segment.</li>
 <li>Audio: audio segment.</li>
@@ -52,10 +54,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setEmptyItem(EmptyTrackItem $EmptyItem) Set Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
 <li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Segment information of media track
  */
 class MediaTrackItem extends AbstractModel
 {
@@ -99,6 +97,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EmptyItem;
+
     /**
      * @param string $Type Segment type. Valid values:
 <li>Video: video segment.</li>
@@ -122,6 +121,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

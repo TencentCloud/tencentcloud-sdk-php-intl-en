@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of cover generating task
+ *
  * @method integer getDefinition() Obtain Time point screencapturing template ID.
  * @method void setDefinition(integer $Definition) Set Time point screencapturing template ID.
  * @method string getPositionType() Obtain Screencapturing mode. Valid values:
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Input parameter type of cover generating task
  */
 class CoverBySnapshotTaskInput extends AbstractModel
 {
@@ -67,6 +65,7 @@ class CoverBySnapshotTaskInput extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WatermarkSet;
+
     /**
      * @param integer $Definition Time point screencapturing template ID.
      * @param string $PositionType Screencapturing mode. Valid values:
@@ -82,6 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

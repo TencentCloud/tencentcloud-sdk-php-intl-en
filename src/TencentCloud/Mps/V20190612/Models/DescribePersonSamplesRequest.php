@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersonSamples request structure.
+ *
  * @method string getType() Obtain Pulled figure type. Valid values:
 <li>UserDefine: Custom figure library;</li>
 <li>Default: Default figure library.</li>
@@ -40,10 +42,6 @@ Note: The default figure library can be pulled only through "figure name" or "fi
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 100. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 100. Maximum value: 100.
- */
-
-/**
- *DescribePersonSamples request structure.
  */
 class DescribePersonSamplesRequest extends AbstractModel
 {
@@ -81,6 +79,7 @@ Note: The default figure library can be pulled only through "figure name" or "fi
      * @var integer Number of returned entries. Default value: 100. Maximum value: 100.
      */
     public $Limit;
+
     /**
      * @param string $Type Pulled figure type. Valid values:
 <li>UserDefine: Custom figure library;</li>
@@ -98,6 +97,7 @@ Note: The default figure library can be pulled only through "figure name" or "fi
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

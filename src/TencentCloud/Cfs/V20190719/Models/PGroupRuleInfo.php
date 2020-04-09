@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of permission group rules
+ *
  * @method string getRuleId() Obtain Rule ID
  * @method void setRuleId(string $RuleId) Set Rule ID
  * @method string getAuthClientIp() Obtain Client IP allowed for access
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserPermission(string $UserPermission) Set User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
  * @method integer getPriority() Obtain Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
  * @method void setPriority(integer $Priority) Set Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
- */
-
-/**
- *List of permission group rules
  */
 class PGroupRuleInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class PGroupRuleInfo extends AbstractModel
      * @var integer Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
      */
     public $Priority;
+
     /**
      * @param string $RuleId Rule ID
      * @param string $AuthClientIp Client IP allowed for access
@@ -70,6 +69,7 @@ class PGroupRuleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

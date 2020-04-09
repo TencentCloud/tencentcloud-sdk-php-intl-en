@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Slave server information
+ *
  * @method integer getVport() Obtain Port number
  * @method void setVport(integer $Vport) Set Port number
  * @method string getRegion() Obtain Region information
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set Virtual IP information
  * @method string getZone() Obtain AZ information
  * @method void setZone(string $Zone) Set AZ information
- */
-
-/**
- *Slave server information
  */
 class SlaveInstanceInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SlaveInstanceInfo extends AbstractModel
      * @var string AZ information
      */
     public $Zone;
+
     /**
      * @param integer $Vport Port number
      * @param string $Region Region information
@@ -62,6 +61,7 @@ class SlaveInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

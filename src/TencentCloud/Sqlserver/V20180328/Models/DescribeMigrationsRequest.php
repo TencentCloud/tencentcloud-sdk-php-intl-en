@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrations request structure.
+ *
  * @method array getStatusSet() Obtain Status set. As long as a migration task is in a status therein, it will be listed
  * @method void setStatusSet(array $StatusSet) Set Status set. As long as a migration task is in a status therein, it will be listed
  * @method string getMigrateName() Obtain Migration task name (fuzzy match)
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set The query results are sorted by keyword. Valid values: name, createTime, startTime, endTime, status
  * @method string getOrderByType() Obtain Sorting order. Valid values: desc, asc
  * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: desc, asc
- */
-
-/**
- *DescribeMigrations request structure.
  */
 class DescribeMigrationsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeMigrationsRequest extends AbstractModel
      * @var string Sorting order. Valid values: desc, asc
      */
     public $OrderByType;
+
     /**
      * @param array $StatusSet Status set. As long as a migration task is in a status therein, it will be listed
      * @param string $MigrateName Migration task name (fuzzy match)
@@ -78,6 +77,7 @@ class DescribeMigrationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

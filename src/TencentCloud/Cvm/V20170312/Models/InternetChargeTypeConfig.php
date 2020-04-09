@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes network billing.
+ *
  * @method string getInternetChargeType() Obtain Network billing method.
  * @method void setInternetChargeType(string $InternetChargeType) Set Network billing method.
  * @method string getDescription() Obtain Description of the network billing method.
  * @method void setDescription(string $Description) Set Description of the network billing method.
- */
-
-/**
- *Describes network billing.
  */
 class InternetChargeTypeConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InternetChargeTypeConfig extends AbstractModel
      * @var string Description of the network billing method.
      */
     public $Description;
+
     /**
      * @param string $InternetChargeType Network billing method.
      * @param string $Description Description of the network billing method.
@@ -46,6 +45,7 @@ class InternetChargeTypeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

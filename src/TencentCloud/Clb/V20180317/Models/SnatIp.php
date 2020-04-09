@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * `SnatIp` information structure
+ *
  * @method string getSubnetId() Obtain Unique VPC subnet ID, such as `subnet-12345678`.
  * @method void setSubnetId(string $SubnetId) Set Unique VPC subnet ID, such as `subnet-12345678`.
  * @method string getIp() Obtain IP address, such as 192.168.0.1
  * @method void setIp(string $Ip) Set IP address, such as 192.168.0.1
- */
-
-/**
- *`SnatIp` information structure
  */
 class SnatIp extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SnatIp extends AbstractModel
      * @var string IP address, such as 192.168.0.1
      */
     public $Ip;
+
     /**
      * @param string $SubnetId Unique VPC subnet ID, such as `subnet-12345678`.
      * @param string $Ip IP address, such as 192.168.0.1
@@ -46,6 +45,7 @@ class SnatIp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

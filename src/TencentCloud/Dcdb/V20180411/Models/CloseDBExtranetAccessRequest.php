@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseDBExtranetAccess request structure.
+ *
  * @method string getInstanceId() Obtain ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
  * @method void setInstanceId(string $InstanceId) Set ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
- */
-
-/**
- *CloseDBExtranetAccess request structure.
  */
 class CloseDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CloseDBExtranetAccessRequest extends AbstractModel
      * @var string ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
      */
@@ -38,6 +37,7 @@ class CloseDBExtranetAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

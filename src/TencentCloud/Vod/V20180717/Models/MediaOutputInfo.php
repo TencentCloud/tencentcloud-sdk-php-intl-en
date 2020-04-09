@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information parameter of file output by video processing
+ *
  * @method string getRegion() Obtain Region of the bucket where an output file is stored, such as ap-guangzhou.
  * @method void setRegion(string $Region) Set Region of the bucket where an output file is stored, such as ap-guangzhou.
  * @method string getBucket() Obtain Bucket of output file.
  * @method void setBucket(string $Bucket) Set Bucket of output file.
  * @method string getDir() Obtain Path to output file, which must end in "/".
  * @method void setDir(string $Dir) Set Path to output file, which must end in "/".
- */
-
-/**
- *Information parameter of file output by video processing
  */
 class MediaOutputInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MediaOutputInfo extends AbstractModel
      * @var string Path to output file, which must end in "/".
      */
     public $Dir;
+
     /**
      * @param string $Region Region of the bucket where an output file is stored, such as ap-guangzhou.
      * @param string $Bucket Bucket of output file.
@@ -54,6 +53,7 @@ class MediaOutputInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

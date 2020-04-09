@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisassociateNatGatewayAddress request structure.
+ *
  * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
  * @method array getPublicIpAddresses() Obtain The array of EIPs bound to the NAT gateway.
  * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The array of EIPs bound to the NAT gateway.
- */
-
-/**
- *DisassociateNatGatewayAddress request structure.
  */
 class DisassociateNatGatewayAddressRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisassociateNatGatewayAddressRequest extends AbstractModel
      * @var array The array of EIPs bound to the NAT gateway.
      */
     public $PublicIpAddresses;
+
     /**
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      * @param array $PublicIpAddresses The array of EIPs bound to the NAT gateway.
@@ -46,6 +45,7 @@ class DisassociateNatGatewayAddressRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

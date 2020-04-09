@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * History of instance parameter modifications
+ *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method string getPreValue() Obtain Value before modification
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
  * @method string getModifyTime() Obtain Modification time
  * @method void setModifyTime(string $ModifyTime) Set Modification time
- */
-
-/**
- *History of instance parameter modifications
  */
 class InstanceParamHistory extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InstanceParamHistory extends AbstractModel
      * @var string Modification time
      */
     public $ModifyTime;
+
     /**
      * @param string $ParamName Parameter name
      * @param string $PreValue Value before modification
@@ -70,6 +69,7 @@ class InstanceParamHistory extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

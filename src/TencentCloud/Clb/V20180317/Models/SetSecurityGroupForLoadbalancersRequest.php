@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetSecurityGroupForLoadbalancers request structure.
+ *
  * @method string getSecurityGroup() Obtain Security group ID, such as sg-12345678
  * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-12345678
  * @method string getOperationType() Obtain ADD: bind a security group;
@@ -26,10 +28,6 @@ DEL: unbind a security group
 DEL: unbind a security group
  * @method array getLoadBalancerIds() Obtain Array of CLB instance IDs
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set Array of CLB instance IDs
- */
-
-/**
- *SetSecurityGroupForLoadbalancers request structure.
  */
 class SetSecurityGroupForLoadbalancersRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ DEL: unbind a security group
      * @var array Array of CLB instance IDs
      */
     public $LoadBalancerIds;
+
     /**
      * @param string $SecurityGroup Security group ID, such as sg-12345678
      * @param string $OperationType ADD: bind a security group;
@@ -58,6 +57,7 @@ DEL: unbind a security group
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

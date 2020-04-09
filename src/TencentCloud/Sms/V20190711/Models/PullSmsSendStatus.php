@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SMS delivery status details
+ *
  * @method string getUserReceiveTime() Obtain Actual time of SMS receipt by user.
  * @method void setUserReceiveTime(string $UserReceiveTime) Set Actual time of SMS receipt by user.
  * @method integer getUserReceiveUnixTime() Obtain Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReportStatus(string $ReportStatus) Set Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
  * @method string getDescription() Obtain Description of SMS receipt by user.
  * @method void setDescription(string $Description) Set Description of SMS receipt by user.
- */
-
-/**
- *SMS delivery status details
  */
 class PullSmsSendStatus extends AbstractModel
 {
@@ -80,6 +78,7 @@ class PullSmsSendStatus extends AbstractModel
      * @var string Description of SMS receipt by user.
      */
     public $Description;
+
     /**
      * @param string $UserReceiveTime Actual time of SMS receipt by user.
      * @param integer $UserReceiveUnixTime Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
@@ -94,6 +93,7 @@ class PullSmsSendStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

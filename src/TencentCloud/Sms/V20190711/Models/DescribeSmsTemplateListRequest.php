@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmsTemplateList request structure.
+ *
  * @method array getTemplateIdSet() Obtain Template ID array.
  * @method void setTemplateIdSet(array $TemplateIdSet) Set Template ID array.
  * @method integer getInternational() Obtain Whether it is Global SMS:
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternational(integer $International) Set Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
- */
-
-/**
- *DescribeSmsTemplateList request structure.
  */
 class DescribeSmsTemplateListRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
 1: Global SMS.
      */
     public $International;
+
     /**
      * @param array $TemplateIdSet Template ID array.
      * @param integer $International Whether it is Global SMS:
@@ -54,6 +53,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

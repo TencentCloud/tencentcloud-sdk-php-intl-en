@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result information of intelligent frame-specific tagging
+ *
  * @method string getTag() Obtain Frame-specific tag name.
  * @method void setTag(string $Tag) Set Frame-specific tag name.
  * @method float getConfidence() Obtain Confidence of intelligently generated frame-specific tag between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Confidence of intelligently generated frame-specific tag between 0 and 100.
- */
-
-/**
- *Result information of intelligent frame-specific tagging
  */
 class MediaAiAnalysisFrameTagItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
      * @var float Confidence of intelligently generated frame-specific tag between 0 and 100.
      */
     public $Confidence;
+
     /**
      * @param string $Tag Frame-specific tag name.
      * @param float $Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
@@ -46,6 +45,7 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

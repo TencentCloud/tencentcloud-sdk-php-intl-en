@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSyncJobs request structure.
+ *
  * @method string getJobId() Obtain Disaster recovery sync task ID
  * @method void setJobId(string $JobId) Set Disaster recovery sync task ID
  * @method string getJobName() Obtain Disaster recovery sync task name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0
  * @method integer getLimit() Obtain Number of the returned instances. Value range: [1, 100]. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of the returned instances. Value range: [1, 100]. Default value: 20
- */
-
-/**
- *DescribeSyncJobs request structure.
  */
 class DescribeSyncJobsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeSyncJobsRequest extends AbstractModel
      * @var integer Number of the returned instances. Value range: [1, 100]. Default value: 20
      */
     public $Limit;
+
     /**
      * @param string $JobId Disaster recovery sync task ID
      * @param string $JobName Disaster recovery sync task name
@@ -78,6 +77,7 @@ class DescribeSyncJobsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

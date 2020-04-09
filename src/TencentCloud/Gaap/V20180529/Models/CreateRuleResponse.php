@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRule response structure.
+ *
  * @method string getRuleId() Obtain The ID of the successfully created forwarding rule
  * @method void setRuleId(string $RuleId) Set The ID of the successfully created forwarding rule
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateRule response structure.
  */
 class CreateRuleResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateRuleResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $RuleId The ID of the successfully created forwarding rule
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateRuleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Master instance information
+ *
  * @method string getRegion() Obtain Region information
  * @method void setRegion(string $Region) Set Region information
  * @method integer getRegionId() Obtain Region ID
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExClusterId(string $ExClusterId) Set Dedicated cluster ID
  * @method string getExClusterName() Obtain Dedicated cluster name
  * @method void setExClusterName(string $ExClusterName) Set Dedicated cluster name
- */
-
-/**
- *Master instance information
  */
 class MasterInfo extends AbstractModel
 {
@@ -150,6 +148,7 @@ class MasterInfo extends AbstractModel
      * @var string Dedicated cluster name
      */
     public $ExClusterName;
+
     /**
      * @param string $Region Region information
      * @param integer $RegionId Region ID
@@ -174,6 +173,7 @@ class MasterInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

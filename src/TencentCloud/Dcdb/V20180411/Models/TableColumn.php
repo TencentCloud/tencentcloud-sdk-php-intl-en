@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database column information
+ *
  * @method string getCol() Obtain Column name
  * @method void setCol(string $Col) Set Column name
  * @method string getType() Obtain Column type
  * @method void setType(string $Type) Set Column type
- */
-
-/**
- *Database column information
  */
 class TableColumn extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TableColumn extends AbstractModel
      * @var string Column type
      */
     public $Type;
+
     /**
      * @param string $Col Column name
      * @param string $Type Column type
@@ -46,6 +45,7 @@ class TableColumn extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

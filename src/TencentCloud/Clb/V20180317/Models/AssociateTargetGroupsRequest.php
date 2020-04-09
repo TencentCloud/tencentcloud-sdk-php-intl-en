@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssociateTargetGroups request structure.
+ *
  * @method array getAssociations() Obtain Association array
  * @method void setAssociations(array $Associations) Set Association array
- */
-
-/**
- *AssociateTargetGroups request structure.
  */
 class AssociateTargetGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AssociateTargetGroupsRequest extends AbstractModel
      * @var array Association array
      */
     public $Associations;
+
     /**
      * @param array $Associations Association array
      */
@@ -38,6 +37,7 @@ class AssociateTargetGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

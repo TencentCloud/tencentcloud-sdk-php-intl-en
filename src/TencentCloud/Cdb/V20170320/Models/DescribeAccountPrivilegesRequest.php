@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountPrivileges request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method string getUser() Obtain Database user account.
  * @method void setUser(string $User) Set Database user account.
  * @method string getHost() Obtain Database account domain name.
  * @method void setHost(string $Host) Set Database account domain name.
- */
-
-/**
- *DescribeAccountPrivileges request structure.
  */
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
      * @var string Database account domain name.
      */
     public $Host;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $User Database user account.
@@ -54,6 +53,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

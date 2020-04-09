@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateImageSpriteTemplate request structure.
+ *
  * @method string getSampleType() Obtain Sampling type. Valid values:
 <li>Percent: by percent.</li>
 <li>Time: by time interval.</li>
@@ -78,10 +80,6 @@ Default value: black.
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
- */
-
-/**
- *CreateImageSpriteTemplate request structure.
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -154,6 +152,7 @@ Default value: open.
 Default value: black.
      */
     public $FillType;
+
     /**
      * @param string $SampleType Sampling type. Valid values:
 <li>Percent: by percent.</li>
@@ -190,6 +189,7 @@ Default value: black.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

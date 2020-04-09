@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamOnlineList request structure.
+ *
  * @method string getDomainName() Obtain Push domain name. If you use multiple paths, enter the `DomainName`.
  * @method void setDomainName(string $DomainName) Set Push domain name. If you use multiple paths, enter the `DomainName`.
  * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
@@ -32,10 +34,6 @@ Value: any integer between 10 and 100.
 Default value: 10.
  * @method string getStreamName() Obtain Stream name, which is used for exact query.
  * @method void setStreamName(string $StreamName) Set Stream name, which is used for exact query.
- */
-
-/**
- *DescribeLiveStreamOnlineList request structure.
  */
 class DescribeLiveStreamOnlineListRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ Default value: 10.
      * @var string Stream name, which is used for exact query.
      */
     public $StreamName;
+
     /**
      * @param string $DomainName Push domain name. If you use multiple paths, enter the `DomainName`.
      * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
@@ -78,6 +77,7 @@ Default value: 10.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

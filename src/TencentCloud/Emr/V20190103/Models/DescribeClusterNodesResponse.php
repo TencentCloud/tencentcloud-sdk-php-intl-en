@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterNodes response structure.
+ *
  * @method integer getTotalCnt() Obtain Total number of queried nodes
  * @method void setTotalCnt(integer $TotalCnt) Set Total number of queried nodes
  * @method array getNodeList() Obtain List of node details
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeClusterNodes response structure.
  */
 class DescribeClusterNodesResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCnt Total number of queried nodes
      * @param array $NodeList List of node details
@@ -70,6 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

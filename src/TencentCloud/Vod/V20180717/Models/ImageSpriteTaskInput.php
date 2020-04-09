@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of image sprite generating task
+ *
  * @method integer getDefinition() Obtain Image sprite generating template ID.
  * @method void setDefinition(integer $Definition) Set Image sprite generating template ID.
- */
-
-/**
- *Input parameter type of image sprite generating task
  */
 class ImageSpriteTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ImageSpriteTaskInput extends AbstractModel
      * @var integer Image sprite generating template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Image sprite generating template ID.
      */
@@ -38,6 +37,7 @@ class ImageSpriteTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

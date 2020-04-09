@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveTranscodeRule request structure.
+ *
  * @method string getDomainName() Obtain Playback domain name.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
  * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) Set Stream name. If only the domain name or path is bound, leave this parameter blank.
  * @method integer getTemplateId() Obtain Designates an existing template ID.
  * @method void setTemplateId(integer $TemplateId) Set Designates an existing template ID.
- */
-
-/**
- *CreateLiveTranscodeRule request structure.
  */
 class CreateLiveTranscodeRuleRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateLiveTranscodeRuleRequest extends AbstractModel
      * @var integer Designates an existing template ID.
      */
     public $TemplateId;
+
     /**
      * @param string $DomainName Playback domain name.
      * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
@@ -62,6 +61,7 @@ class CreateLiveTranscodeRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

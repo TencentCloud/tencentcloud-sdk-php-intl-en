@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskStatus request structure.
+ *
  * @method string getTaskId() Obtain Request ID, i.e., the RequestId parameter returned by the API
  * @method void setTaskId(string $TaskId) Set Request ID, i.e., the RequestId parameter returned by the API
- */
-
-/**
- *DescribeTaskStatus request structure.
  */
 class DescribeTaskStatusRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTaskStatusRequest extends AbstractModel
      * @var string Request ID, i.e., the RequestId parameter returned by the API
      */
     public $TaskId;
+
     /**
      * @param string $TaskId Request ID, i.e., the RequestId parameter returned by the API
      */
@@ -38,6 +37,7 @@ class DescribeTaskStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

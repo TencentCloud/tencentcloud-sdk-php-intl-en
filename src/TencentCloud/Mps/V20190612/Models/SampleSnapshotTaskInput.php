@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of a sampled screencapturing task.
+ *
  * @method integer getDefinition() Obtain Sampled screencapturing template ID.
  * @method void setDefinition(integer $Definition) Set Sampled screencapturing template ID.
  * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
@@ -34,10 +36,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set Rule of the `{number}` variable in the sampled screenshot output path.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Input parameter type of a sampled screencapturing task.
  */
 class SampleSnapshotTaskInput extends AbstractModel
 {
@@ -68,6 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectNumberFormat;
+
     /**
      * @param integer $Definition Sampled screencapturing template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
@@ -82,6 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

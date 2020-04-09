@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWorkflows request structure.
+ *
  * @method array getWorkflowIds() Obtain Workflow ID filter. Array length limit: 100.
  * @method void setWorkflowIds(array $WorkflowIds) Set Workflow ID filter. Array length limit: 100.
  * @method string getStatus() Obtain Workflow status. Valid values:
@@ -32,10 +34,6 @@ If this parameter is left empty, the workflow status will not be distinguished.
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
- */
-
-/**
- *DescribeWorkflows request structure.
  */
 class DescribeWorkflowsRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ If this parameter is left empty, the workflow status will not be distinguished.
      * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
+
     /**
      * @param array $WorkflowIds Workflow ID filter. Array length limit: 100.
      * @param string $Status Workflow status. Valid values:
@@ -74,6 +73,7 @@ If this parameter is left empty, the workflow status will not be distinguished.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

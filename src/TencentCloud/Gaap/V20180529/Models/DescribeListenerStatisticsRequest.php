@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeListenerStatistics request structure.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getStartTime() Obtain Start time
@@ -34,10 +36,6 @@ Time range: > 7 days, supported minimum granularity: 86,400 seconds;
 Time range: ≤ 1 day, supported minimum granularity: 300 seconds;
 Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
 Time range: > 7 days, supported minimum granularity: 86,400 seconds;
- */
-
-/**
- *DescribeListenerStatistics request structure.
  */
 class DescribeListenerStatisticsRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
 Time range: > 7 days, supported minimum granularity: 86,400 seconds;
      */
     public $Granularity;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $StartTime Start time
@@ -82,6 +81,7 @@ Time range: > 7 days, supported minimum granularity: 86,400 seconds;
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

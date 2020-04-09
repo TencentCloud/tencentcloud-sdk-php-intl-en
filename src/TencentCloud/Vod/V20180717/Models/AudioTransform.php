@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Audio operation
+ *
  * @method string getType() Obtain Audio operation type. Valid values:
 <li>Volume: volume adjustment.</li>
  * @method void setType(string $Type) Set Audio operation type. Valid values:
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVolumeParam(AudioVolumeParam $VolumeParam) Set Volume adjustment parameter, which is valid if `Type` is `Volume`.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Audio operation
  */
 class AudioTransform extends AbstractModel
 {
@@ -44,6 +42,7 @@ class AudioTransform extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VolumeParam;
+
     /**
      * @param string $Type Audio operation type. Valid values:
 <li>Volume: volume adjustment.</li>
@@ -54,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

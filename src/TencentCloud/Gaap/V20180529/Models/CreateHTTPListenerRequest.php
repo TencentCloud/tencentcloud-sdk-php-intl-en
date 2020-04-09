@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateHTTPListener request structure.
+ *
  * @method string getListenerName() Obtain Listener name
  * @method void setListenerName(string $ListenerName) Set Listener name
  * @method integer getPort() Obtain Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
  * @method void setPort(integer $Port) Set Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
  * @method string getProxyId() Obtain Connection ID
  * @method void setProxyId(string $ProxyId) Set Connection ID
- */
-
-/**
- *CreateHTTPListener request structure.
  */
 class CreateHTTPListenerRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateHTTPListenerRequest extends AbstractModel
      * @var string Connection ID
      */
     public $ProxyId;
+
     /**
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
@@ -54,6 +53,7 @@ class CreateHTTPListenerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

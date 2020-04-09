@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of an instance shard
+ *
  * @method float getUsedVolume() Obtain Used shard capacity
  * @method void setUsedVolume(float $UsedVolume) Set Used shard capacity
  * @method string getReplicaSetId() Obtain Shard ID
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecondaryNum(integer $SecondaryNum) Set Number of slave nodes of a shard
  * @method string getRealReplicaSetId() Obtain Shard physical ID
  * @method void setRealReplicaSetId(string $RealReplicaSetId) Set Shard physical ID
- */
-
-/**
- *Details of an instance shard
  */
 class ShardInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ShardInfo extends AbstractModel
      * @var string Shard physical ID
      */
     public $RealReplicaSetId;
+
     /**
      * @param float $UsedVolume Used shard capacity
      * @param string $ReplicaSetId Shard ID
@@ -94,6 +93,7 @@ class ShardInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

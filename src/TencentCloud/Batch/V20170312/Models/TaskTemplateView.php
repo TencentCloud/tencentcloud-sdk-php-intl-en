@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task template information
+ *
  * @method string getTaskTemplateId() Obtain Task template ID
  * @method void setTaskTemplateId(string $TaskTemplateId) Set Task template ID
  * @method string getTaskTemplateName() Obtain Task template name
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) Set Task template information
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
- */
-
-/**
- *Task template information
  */
 class TaskTemplateView extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TaskTemplateView extends AbstractModel
      * @var string Creation time
      */
     public $CreateTime;
+
     /**
      * @param string $TaskTemplateId Task template ID
      * @param string $TaskTemplateName Task template name
@@ -70,6 +69,7 @@ class TaskTemplateView extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

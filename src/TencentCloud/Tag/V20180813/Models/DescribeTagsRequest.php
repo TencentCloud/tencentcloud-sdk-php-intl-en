@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTags request structure.
+ *
  * @method string getTagKey() Obtain Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
  * @method void setTagKey(string $TagKey) Set Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
  * @method string getTagValue() Obtain Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
  * @method integer getCreateUin() Obtain Creator `Uin`. If not specified, `Uin` is only used as the query condition.
  * @method void setCreateUin(integer $CreateUin) Set Creator `Uin`. If not specified, `Uin` is only used as the query condition.
- */
-
-/**
- *DescribeTags request structure.
  */
 class DescribeTagsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeTagsRequest extends AbstractModel
      * @var integer Creator `Uin`. If not specified, `Uin` is only used as the query condition.
      */
     public $CreateUin;
+
     /**
      * @param string $TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
      * @param string $TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
@@ -70,6 +69,7 @@ class DescribeTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

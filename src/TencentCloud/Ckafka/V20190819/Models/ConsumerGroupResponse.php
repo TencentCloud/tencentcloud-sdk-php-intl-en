@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Returned consumer group result entity
+ *
  * @method integer getTotalCount() Obtain Number of eligible consumer groups
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible consumer groups
  * @method array getTopicList() Obtain Topic list
@@ -48,10 +50,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setGroupListForMonitor(array $GroupListForMonitor) Set List of monitored groups
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Returned consumer group result entity
  */
 class ConsumerGroupResponse extends AbstractModel
 {
@@ -101,6 +99,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $GroupListForMonitor;
+
     /**
      * @param integer $TotalCount Number of eligible consumer groups
      * @param array $TopicList Topic list
@@ -122,6 +121,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of steps in migration
+ *
  * @method integer getStepNo() Obtain Step number
  * @method void setStepNo(integer $StepNo) Set Step number
  * @method string getStepName() Obtain Step name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStartTime(string $StartTime) Set Start time of current step in the format of `yyyy-mm-dd hh:mm:ss`. This field is meaningless if it does not exist or is empty
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information of steps in migration
  */
 class MigrateStepDetailInfo extends AbstractModel
 {
@@ -62,6 +60,7 @@ class MigrateStepDetailInfo extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
+
     /**
      * @param integer $StepNo Step number
      * @param string $StepName Step name
@@ -74,6 +73,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamState request structure.
+ *
  * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method string getDomainName() Obtain Your push domain name.
  * @method void setDomainName(string $DomainName) Set Your push domain name.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- */
-
-/**
- *DescribeLiveStreamState request structure.
  */
 class DescribeLiveStreamStateRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeLiveStreamStateRequest extends AbstractModel
      * @var string Stream name.
      */
     public $StreamName;
+
     /**
      * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
      * @param string $DomainName Your push domain name.
@@ -54,6 +53,7 @@ class DescribeLiveStreamStateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

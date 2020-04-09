@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyServiceTemplateAttribute request structure.
+ *
  * @method string getServiceTemplateId() Obtain Protocol port template instance ID, such as `ppm-529nwwj8`.
  * @method void setServiceTemplateId(string $ServiceTemplateId) Set Protocol port template instance ID, such as `ppm-529nwwj8`.
  * @method string getServiceTemplateName() Obtain Protocol port template name.
  * @method void setServiceTemplateName(string $ServiceTemplateName) Set Protocol port template name.
  * @method array getServices() Obtain It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
  * @method void setServices(array $Services) Set It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
- */
-
-/**
- *ModifyServiceTemplateAttribute request structure.
  */
 class ModifyServiceTemplateAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyServiceTemplateAttributeRequest extends AbstractModel
      * @var array It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     public $Services;
+
     /**
      * @param string $ServiceTemplateId Protocol port template instance ID, such as `ppm-529nwwj8`.
      * @param string $ServiceTemplateName Protocol port template name.
@@ -54,6 +53,7 @@ class ModifyServiceTemplateAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

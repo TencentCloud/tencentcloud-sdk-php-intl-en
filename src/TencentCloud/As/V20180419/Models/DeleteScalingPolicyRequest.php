@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteScalingPolicy request structure.
+ *
  * @method string getAutoScalingPolicyId() Obtain ID of the alarm policy to be deleted.
  * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set ID of the alarm policy to be deleted.
- */
-
-/**
- *DeleteScalingPolicy request structure.
  */
 class DeleteScalingPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteScalingPolicyRequest extends AbstractModel
      * @var string ID of the alarm policy to be deleted.
      */
     public $AutoScalingPolicyId;
+
     /**
      * @param string $AutoScalingPolicyId ID of the alarm policy to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteScalingPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

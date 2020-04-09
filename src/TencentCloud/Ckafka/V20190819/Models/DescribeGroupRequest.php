@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroup request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getSearchWord() Obtain Search keyword
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Maximum number of results to be returned
  * @method void setLimit(integer $Limit) Set Maximum number of results to be returned
- */
-
-/**
- *DescribeGroup request structure.
  */
 class DescribeGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeGroupRequest extends AbstractModel
      * @var integer Maximum number of results to be returned
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $SearchWord Search keyword
@@ -62,6 +61,7 @@ class DescribeGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

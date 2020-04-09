@@ -18,14 +18,12 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance information of disaster recovery sync, which records the information of the master instance or disaster recovery instance
+ *
  * @method string getRegion() Obtain Region name, such as ap-guangzhou
  * @method void setRegion(string $Region) Set Region name, such as ap-guangzhou
  * @method string getInstanceId() Obtain Short instance ID
  * @method void setInstanceId(string $InstanceId) Set Short instance ID
- */
-
-/**
- *Instance information of disaster recovery sync, which records the information of the master instance or disaster recovery instance
  */
 class SyncInstanceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SyncInstanceInfo extends AbstractModel
      * @var string Short instance ID
      */
     public $InstanceId;
+
     /**
      * @param string $Region Region name, such as ap-guangzhou
      * @param string $InstanceId Short instance ID
@@ -46,6 +45,7 @@ class SyncInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

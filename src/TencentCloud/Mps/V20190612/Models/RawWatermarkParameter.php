@@ -18,14 +18,13 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Custom watermark specifications.
+ *
 
- */
-
-/**
- *Custom watermark specifications.
  */
 class RawWatermarkParameter extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class RawWatermarkParameter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

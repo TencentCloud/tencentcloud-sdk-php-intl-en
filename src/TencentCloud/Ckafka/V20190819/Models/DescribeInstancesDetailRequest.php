@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesDetail request structure.
+ *
  * @method string getInstanceId() Obtain (Filter) filter by instance ID
  * @method void setInstanceId(string $InstanceId) Set (Filter) filter by instance ID
  * @method string getSearchWord() Obtain (Filter) filter by instance name. Fuzzy search is supported
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) Set Tag key match.
  * @method array getFilters() Obtain Filter
  * @method void setFilters(array $Filters) Set Filter
- */
-
-/**
- *DescribeInstancesDetail request structure.
  */
 class DescribeInstancesDetailRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
      * @var array Filter
      */
     public $Filters;
+
     /**
      * @param string $InstanceId (Filter) filter by instance ID
      * @param string $SearchWord (Filter) filter by instance name. Fuzzy search is supported
@@ -86,6 +85,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

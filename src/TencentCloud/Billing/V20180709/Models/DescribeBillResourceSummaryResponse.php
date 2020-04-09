@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillResourceSummary response structure.
+ *
  * @method array getResourceSummarySet() Obtain Resource summary list
  * @method void setResourceSummarySet(array $ResourceSummarySet) Set Resource summary list
  * @method integer getTotal() Obtain Total number of resource summary lists
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBillResourceSummary response structure.
  */
 class DescribeBillResourceSummaryResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $ResourceSummarySet Resource summary list
      * @param integer $Total Total number of resource summary lists
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

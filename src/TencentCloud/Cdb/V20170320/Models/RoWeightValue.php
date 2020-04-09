@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RO instance weight value
+ *
  * @method string getInstanceId() Obtain RO instance ID.
  * @method void setInstanceId(string $InstanceId) Set RO instance ID.
  * @method integer getWeight() Obtain Weight value. Value range: [0, 100].
  * @method void setWeight(integer $Weight) Set Weight value. Value range: [0, 100].
- */
-
-/**
- *RO instance weight value
  */
 class RoWeightValue extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RoWeightValue extends AbstractModel
      * @var integer Weight value. Value range: [0, 100].
      */
     public $Weight;
+
     /**
      * @param string $InstanceId RO instance ID.
      * @param integer $Weight Weight value. Value range: [0, 100].
@@ -46,6 +45,7 @@ class RoWeightValue extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a porn information detection task.
+ *
  * @method PornImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Control parameter of porn information detection in image.
  * @method void setImgReviewInfo(PornImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Control parameter of porn information detection in image.
  * @method PornAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Control parameter of porn information detection in speech.
  * @method void setAsrReviewInfo(PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Control parameter of porn information detection in speech.
  * @method PornOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of porn information detection in text.
  * @method void setOcrReviewInfo(PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of porn information detection in text.
- */
-
-/**
- *Control parameter of a porn information detection task.
  */
 class PornConfigureInfoForUpdate extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PornConfigureInfoForUpdate extends AbstractModel
      * @var PornOcrReviewTemplateInfoForUpdate Control parameter of porn information detection in text.
      */
     public $OcrReviewInfo;
+
     /**
      * @param PornImgReviewTemplateInfoForUpdate $ImgReviewInfo Control parameter of porn information detection in image.
      * @param PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo Control parameter of porn information detection in speech.
@@ -54,6 +53,7 @@ class PornConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

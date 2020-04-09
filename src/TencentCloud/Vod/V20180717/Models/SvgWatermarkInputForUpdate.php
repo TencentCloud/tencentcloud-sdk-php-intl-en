@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter of SVG watermarking template
+ *
  * @method string getWidth() Obtain Watermark width, which supports six formats of px, %, W%, H%, S%, and L%:
 <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px; if `0px` is entered
  and `Height` is not `0px`, the watermark width will be proportionally scaled based on the source SVG image; if `0px` is entered for both `Width` and `Height`, the watermark width will be the width of the source SVG image;</li>
@@ -67,10 +69,6 @@ Within the braces ({}) is a major cycle composed of four watermarks, namely, A, 
 Watermarks A, B, C, and D are displayed periodically for 5 seconds and hidden for 15 seconds each in a fixed order.
 This configuration item is used to describe the cycle configuration of a single watermark.
  */
-
-/**
- *Input parameter of SVG watermarking template
- */
 class SvgWatermarkInputForUpdate extends AbstractModel
 {
     /**
@@ -108,6 +106,7 @@ Watermarks A, B, C, and D are displayed periodically for 5 seconds and hidden fo
 This configuration item is used to describe the cycle configuration of a single watermark.
      */
     public $CycleConfig;
+
     /**
      * @param string $Width Watermark width, which supports six formats of px, %, W%, H%, S%, and L%:
 <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px; if `0px` is entered
@@ -138,6 +137,7 @@ This configuration item is used to describe the cycle configuration of a single 
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

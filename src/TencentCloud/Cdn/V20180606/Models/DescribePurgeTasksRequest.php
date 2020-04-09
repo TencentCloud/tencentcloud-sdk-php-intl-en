@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePurgeTasks request structure.
+ *
  * @method string getPurgeType() Obtain Specifies a purge type:
 `url`: URL purge record
 `path`: Directory purge record
@@ -54,10 +56,6 @@ You must specify either a task ID or a starting time for your query.
 `mainland`: within Mainland China
 `overseas`: outside Mainland China
 `global`: global
- */
-
-/**
- *DescribePurgeTasks request structure.
  */
 class DescribePurgeTasksRequest extends AbstractModel
 {
@@ -114,6 +112,7 @@ You must specify either a task ID or a starting time for your query.
 `global`: global
      */
     public $Area;
+
     /**
      * @param string $PurgeType Specifies a purge type:
 `url`: URL purge record
@@ -138,6 +137,7 @@ You must specify either a task ID or a starting time for your query.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

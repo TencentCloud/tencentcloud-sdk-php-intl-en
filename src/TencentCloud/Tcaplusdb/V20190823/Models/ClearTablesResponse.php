@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ClearTables response structure.
+ *
  * @method integer getTotalCount() Obtain Number of cleared tables
  * @method void setTotalCount(integer $TotalCount) Set Number of cleared tables
  * @method array getTableResults() Obtain List of table clearing results
  * @method void setTableResults(array $TableResults) Set List of table clearing results
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ClearTables response structure.
  */
 class ClearTablesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ClearTablesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of cleared tables
      * @param array $TableResults List of table clearing results
@@ -54,6 +53,7 @@ class ClearTablesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

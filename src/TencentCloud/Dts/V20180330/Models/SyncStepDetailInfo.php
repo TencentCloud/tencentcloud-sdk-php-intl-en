@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Sync task progress
+ *
  * @method integer getStepNo() Obtain Step number
  * @method void setStepNo(integer $StepNo) Set Step number
  * @method string getStepName() Obtain Step name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCanStop(integer $CanStop) Set Whether it can be stopped
  * @method integer getStepId() Obtain Step ID
  * @method void setStepId(integer $StepId) Set Step ID
- */
-
-/**
- *Sync task progress
  */
 class SyncStepDetailInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SyncStepDetailInfo extends AbstractModel
      * @var integer Step ID
      */
     public $StepId;
+
     /**
      * @param integer $StepNo Step number
      * @param string $StepName Step name
@@ -62,6 +61,7 @@ class SyncStepDetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

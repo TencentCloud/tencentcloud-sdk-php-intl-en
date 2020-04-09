@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Supported operating systems are divided into two categories, Windows and Linux.
+ *
  * @method array getWindows() Obtain Supported Windows OS
 Note: This field may return null, indicating that no valid value is found.
  * @method void setWindows(array $Windows) Set Supported Windows OS
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setLinux(array $Linux) Set Supported Linux OS
 Note: This field may return null, indicating that no valid value is found.
- */
-
-/**
- *Supported operating systems are divided into two categories, Windows and Linux.
  */
 class ImageOsList extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
      */
     public $Linux;
+
     /**
      * @param array $Windows Supported Windows OS
 Note: This field may return null, indicating that no valid value is found.
@@ -54,6 +53,7 @@ Note: This field may return null, indicating that no valid value is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

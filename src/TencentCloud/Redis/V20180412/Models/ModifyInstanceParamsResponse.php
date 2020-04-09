@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceParams response structure.
+ *
  * @method boolean getChanged() Obtain Whether a modification is successfully made.
  * @method void setChanged(boolean $Changed) Set Whether a modification is successfully made.
  * @method integer getTaskId() Obtain Task ID
  * @method void setTaskId(integer $TaskId) Set Task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyInstanceParams response structure.
  */
 class ModifyInstanceParamsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyInstanceParamsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param boolean $Changed Whether a modification is successfully made.
      * @param integer $TaskId Task ID
@@ -54,6 +53,7 @@ class ModifyInstanceParamsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRegions response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of regions returned
  * @method void setTotalCount(integer $TotalCount) Set Total number of regions returned
  * @method array getRegionSet() Obtain Region information array
  * @method void setRegionSet(array $RegionSet) Set Region information array
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeRegions response structure.
  */
 class DescribeRegionsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRegionsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of regions returned
      * @param array $RegionSet Region information array
@@ -54,6 +53,7 @@ class DescribeRegionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

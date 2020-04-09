@@ -18,14 +18,13 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveTranscodeTemplates request structure.
+ *
 
- */
-
-/**
- *DescribeLiveTranscodeTemplates request structure.
  */
 class DescribeLiveTranscodeTemplatesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeLiveTranscodeTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

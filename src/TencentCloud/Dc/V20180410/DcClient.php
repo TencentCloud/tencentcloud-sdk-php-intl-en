@@ -16,27 +16,40 @@
  */
 
 namespace TencentCloud\Dc\V20180410;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Dc\V20180410\Models as Models;
 
 /**
-* @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) This API is used to accept an application for a dedicated tunnel.
-* @method Models\CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(Models\CreateDirectConnectTunnelRequest $req) This API is used to create a dedicated tunnel.
-* @method Models\DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(Models\DeleteDirectConnectTunnelRequest $req) This API is used to delete a dedicated tunnel.
-* @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) This API is used to query the list of dedicated tunnels.
-* @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) This API is used to query the list of connections.
-* @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) This API is used to modify the dedicated tunnel attributes.
-* @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) This API is used to reject an application for a dedicated tunnel.
+ * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) This API is used to accept an application for a dedicated tunnel.
+ * @method Models\CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(Models\CreateDirectConnectTunnelRequest $req) This API is used to create a dedicated tunnel.
+ * @method Models\DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(Models\DeleteDirectConnectTunnelRequest $req) This API is used to delete a dedicated tunnel.
+ * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) This API is used to query the list of dedicated tunnels.
+ * @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) This API is used to query the list of connections.
+ * @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) This API is used to modify the dedicated tunnel attributes.
+ * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) This API is used to reject an application for a dedicated tunnel.
  */
 
 class DcClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "dc.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-10";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

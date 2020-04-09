@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The EIP bound to the NAT gateway
+ *
  * @method string getAddressId() Obtain The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
  * @method void setAddressId(string $AddressId) Set The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
  * @method string getPublicIpAddress() Obtain The public IP address, such as `123.121.34.33`.
  * @method void setPublicIpAddress(string $PublicIpAddress) Set The public IP address, such as `123.121.34.33`.
  * @method boolean getIsBlocked() Obtain The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
  * @method void setIsBlocked(boolean $IsBlocked) Set The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
- */
-
-/**
- *The EIP bound to the NAT gateway
  */
 class NatGatewayAddress extends AbstractModel
 {
@@ -45,6 +43,7 @@ class NatGatewayAddress extends AbstractModel
      * @var boolean The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
      */
     public $IsBlocked;
+
     /**
      * @param string $AddressId The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
      * @param string $PublicIpAddress The public IP address, such as `123.121.34.33`.
@@ -54,6 +53,7 @@ class NatGatewayAddress extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCcnRoutes request structure.
+ *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-gree226l`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-gree226l`.
  * @method array getRouteIds() Obtain The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain The returned quantity
  * @method void setLimit(integer $Limit) Set The returned quantity
- */
-
-/**
- *DescribeCcnRoutes request structure.
  */
 class DescribeCcnRoutesRequest extends AbstractModel
 {
@@ -74,6 +72,7 @@ class DescribeCcnRoutesRequest extends AbstractModel
      * @var integer The returned quantity
      */
     public $Limit;
+
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-gree226l`.
      * @param array $RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
@@ -90,6 +89,7 @@ class DescribeCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

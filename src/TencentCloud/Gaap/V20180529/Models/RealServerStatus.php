@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Query the binding status of origin servers. BindStatus: 0 (not bound), 1(bound to rules or listeners).
+ *
  * @method string getRealServerId() Obtain Origin server ID.
  * @method void setRealServerId(string $RealServerId) Set Origin server ID.
  * @method integer getBindStatus() Obtain 0: not bound; 1: bound to rules or listeners.
  * @method void setBindStatus(integer $BindStatus) Set 0: not bound; 1: bound to rules or listeners.
  * @method string getProxyId() Obtain ID of the connection bound to this origin server. This string is empty if they are not bound.
  * @method void setProxyId(string $ProxyId) Set ID of the connection bound to this origin server. This string is empty if they are not bound.
- */
-
-/**
- *Query the binding status of origin servers. BindStatus: 0 (not bound), 1(bound to rules or listeners).
  */
 class RealServerStatus extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RealServerStatus extends AbstractModel
      * @var string ID of the connection bound to this origin server. This string is empty if they are not bound.
      */
     public $ProxyId;
+
     /**
      * @param string $RealServerId Origin server ID.
      * @param integer $BindStatus 0: not bound; 1: bound to rules or listeners.
@@ -54,6 +53,7 @@ class RealServerStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

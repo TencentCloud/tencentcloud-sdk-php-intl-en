@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Placement group information
+ *
  * @method string getDeployGroupId() Obtain ID of a placement group.
  * @method void setDeployGroupId(string $DeployGroupId) Set ID of a placement group.
  * @method string getDeployGroupName() Obtain Name of a placement group.
@@ -40,10 +42,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDevClass(string $DevClass) Set Physical model attribute of placement group.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Placement group information
  */
 class DeployGroupInfo extends AbstractModel
 {
@@ -89,6 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DevClass;
+
     /**
      * @param string $DeployGroupId ID of a placement group.
      * @param string $DeployGroupName Name of a placement group.
@@ -106,6 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

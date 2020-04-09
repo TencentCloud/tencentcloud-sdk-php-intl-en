@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBackup request structure.
+ *
  * @method integer getStrategy() Obtain Backup policy (0: instance backup, 1: multi-database backup)
  * @method void setStrategy(integer $Strategy) Set Backup policy (0: instance backup, 1: multi-database backup)
  * @method array getDBNames() Obtain List of names of databases to be backed up (required only for multi-database backup)
  * @method void setDBNames(array $DBNames) Set List of names of databases to be backed up (required only for multi-database backup)
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-i1z41iwd
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-i1z41iwd
- */
-
-/**
- *CreateBackup request structure.
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateBackupRequest extends AbstractModel
      * @var string Instance ID in the format of mssql-i1z41iwd
      */
     public $InstanceId;
+
     /**
      * @param integer $Strategy Backup policy (0: instance backup, 1: multi-database backup)
      * @param array $DBNames List of names of databases to be backed up (required only for multi-database backup)
@@ -54,6 +53,7 @@ class CreateBackupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

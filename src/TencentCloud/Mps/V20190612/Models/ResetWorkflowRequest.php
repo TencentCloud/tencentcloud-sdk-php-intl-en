@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetWorkflow request structure.
+ *
  * @method integer getWorkflowId() Obtain Workflow ID.
  * @method void setWorkflowId(integer $WorkflowId) Set Workflow ID.
  * @method string getWorkflowName() Obtain Workflow name of up to 128 characters, which must be unique for the same user.
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskPriority(integer $TaskPriority) Set Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
- */
-
-/**
- *ResetWorkflow request structure.
  */
 class ResetWorkflowRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class ResetWorkflowRequest extends AbstractModel
      * @var TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
      */
     public $TaskNotifyConfig;
+
     /**
      * @param integer $WorkflowId Workflow ID.
      * @param string $WorkflowName Workflow name of up to 128 characters, which must be unique for the same user.
@@ -118,6 +117,7 @@ class ResetWorkflowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

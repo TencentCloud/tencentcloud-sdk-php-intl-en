@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetServiceStatus request structure.
+ *
 
- */
-
-/**
- *GetServiceStatus request structure.
  */
 class GetServiceStatusRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetServiceStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

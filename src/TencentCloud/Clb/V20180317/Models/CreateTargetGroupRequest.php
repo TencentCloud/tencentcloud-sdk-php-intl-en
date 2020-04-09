@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTargetGroup request structure.
+ *
  * @method string getTargetGroupName() Obtain Target group name (up to 50 characters)
  * @method void setTargetGroupName(string $TargetGroupName) Set Target group name (up to 50 characters)
  * @method string getVpcId() Obtain `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set Default port of a target group, which can be used for subsequently added servers.
  * @method array getTargetGroupInstances() Obtain Real server bound to a target group
  * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Real server bound to a target group
- */
-
-/**
- *CreateTargetGroup request structure.
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateTargetGroupRequest extends AbstractModel
      * @var array Real server bound to a target group
      */
     public $TargetGroupInstances;
+
     /**
      * @param string $TargetGroupName Target group name (up to 50 characters)
      * @param string $VpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
@@ -62,6 +61,7 @@ class CreateTargetGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes information on an instance
+ *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getImageId() Obtain Image ID.
  * @method void setImageId(string $ImageId) Set Image ID.
  * @method LoginSettings getLoginSettings() Obtain Instance login settings.
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings.
- */
-
-/**
- *Describes information on an instance
  */
 class Instance extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Instance extends AbstractModel
      * @var LoginSettings Instance login settings.
      */
     public $LoginSettings;
+
     /**
      * @param string $InstanceId Instance ID.
      * @param string $ImageId Image ID.
@@ -54,6 +53,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

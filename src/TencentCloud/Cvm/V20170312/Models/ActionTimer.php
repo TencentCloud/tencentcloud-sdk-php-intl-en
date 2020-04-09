@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Scheduled tasks.
+ *
  * @method Externals getExternals() Obtain Additional data
  * @method void setExternals(Externals $Externals) Set Additional data
  * @method string getTimerAction() Obtain Timer name. Currently `TerminateInstances` is the only supported value.
  * @method void setTimerAction(string $TimerAction) Set Timer name. Currently `TerminateInstances` is the only supported value.
  * @method string getActionTime() Obtain Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
  * @method void setActionTime(string $ActionTime) Set Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
- */
-
-/**
- *Scheduled tasks.
  */
 class ActionTimer extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ActionTimer extends AbstractModel
      * @var string Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
      */
     public $ActionTime;
+
     /**
      * @param Externals $Externals Additional data
      * @param string $TimerAction Timer name. Currently `TerminateInstances` is the only supported value.
@@ -54,6 +53,7 @@ class ActionTimer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

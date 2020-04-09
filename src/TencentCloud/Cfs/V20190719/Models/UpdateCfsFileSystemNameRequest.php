@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsFileSystemName request structure.
+ *
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
  * @method string getFsName() Obtain Custom file system name
  * @method void setFsName(string $FsName) Set Custom file system name
- */
-
-/**
- *UpdateCfsFileSystemName request structure.
  */
 class UpdateCfsFileSystemNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateCfsFileSystemNameRequest extends AbstractModel
      * @var string Custom file system name
      */
     public $FsName;
+
     /**
      * @param string $FileSystemId File system ID
      * @param string $FsName Custom file system name
@@ -46,6 +45,7 @@ class UpdateCfsFileSystemNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

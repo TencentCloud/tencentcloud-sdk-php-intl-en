@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDomains request structure.
+ *
  * @method integer getDomainStatus() Obtain Filter by domain name status. 0: disabled, 1: enabled.
  * @method void setDomainStatus(integer $DomainStatus) Set Filter by domain name status. 0: disabled, 1: enabled.
  * @method integer getDomainType() Obtain Filter by domain name type. 0: push. 1: playback
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDelayLive(integer $IsDelayLive) Set 0: LVB, 1: LCB. Default value: 0.
  * @method string getDomainPrefix() Obtain Domain name prefix.
  * @method void setDomainPrefix(string $DomainPrefix) Set Domain name prefix.
- */
-
-/**
- *DescribeLiveDomains request structure.
  */
 class DescribeLiveDomainsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeLiveDomainsRequest extends AbstractModel
      * @var string Domain name prefix.
      */
     public $DomainPrefix;
+
     /**
      * @param integer $DomainStatus Filter by domain name status. 0: disabled, 1: enabled.
      * @param integer $DomainType Filter by domain name type. 0: push. 1: playback
@@ -78,6 +77,7 @@ class DescribeLiveDomainsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

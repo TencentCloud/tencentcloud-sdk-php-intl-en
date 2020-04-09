@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Domain name HTTPS acceleration configuration. This is disabled by default.
+ *
  * @method string getSwitch() Obtain HTTPS configuration switch
 on: enabled
 off: disabled
@@ -87,10 +89,6 @@ deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
  */
-
-/**
- *Domain name HTTPS acceleration configuration. This is disabled by default.
- */
 class Https extends AbstractModel
 {
     /**
@@ -158,6 +156,7 @@ failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SslStatus;
+
     /**
      * @param string $Switch HTTPS configuration switch
 on: enabled
@@ -198,6 +197,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

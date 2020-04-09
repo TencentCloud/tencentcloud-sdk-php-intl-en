@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BatchRegisterTargets response structure.
+ *
  * @method array getFailListenerIdSet() Obtain IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFailListenerIdSet(array $FailListenerIdSet) Set IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *BatchRegisterTargets response structure.
  */
 class BatchRegisterTargetsResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $FailListenerIdSet IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

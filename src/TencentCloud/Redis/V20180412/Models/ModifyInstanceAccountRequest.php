@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceAccount request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getAccountName() Obtain Sub-account name. If the root account is to be modified, enter `root`
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivilege(string $Privilege) Set Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
  * @method boolean getNoAuth() Obtain true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
  * @method void setNoAuth(boolean $NoAuth) Set true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
- */
-
-/**
- *ModifyInstanceAccount request structure.
  */
 class ModifyInstanceAccountRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
      * @var boolean true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
      */
     public $NoAuth;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $AccountName Sub-account name. If the root account is to be modified, enter `root`
@@ -86,6 +85,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

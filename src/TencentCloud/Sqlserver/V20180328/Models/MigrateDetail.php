@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Migration progress details
+ *
  * @method string getStepName() Obtain Name of current step
  * @method void setStepName(string $StepName) Set Name of current step
  * @method integer getProgress() Obtain Progress of current step in %
  * @method void setProgress(integer $Progress) Set Progress of current step in %
- */
-
-/**
- *Migration progress details
  */
 class MigrateDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MigrateDetail extends AbstractModel
      * @var integer Progress of current step in %
      */
     public $Progress;
+
     /**
      * @param string $StepName Name of current step
      * @param integer $Progress Progress of current step in %
@@ -46,6 +45,7 @@ class MigrateDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of databases to be migrated
+ *
  * @method string getDBName() Obtain Name of migrated database
  * @method void setDBName(string $DBName) Set Name of migrated database
- */
-
-/**
- *List of databases to be migrated
  */
 class MigrateDB extends AbstractModel
 {
@@ -31,6 +29,7 @@ class MigrateDB extends AbstractModel
      * @var string Name of migrated database
      */
     public $DBName;
+
     /**
      * @param string $DBName Name of migrated database
      */
@@ -38,6 +37,7 @@ class MigrateDB extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

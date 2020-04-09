@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output parameters
+ *
  * @method string getInstanceName() Obtain Database instance
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceName(string $InstanceName) Set Database instance
@@ -78,10 +80,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRegionId(integer $RegionId) Set RegionId
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Output parameters
  */
 class CdbInfo extends AbstractModel
 {
@@ -174,6 +172,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RegionId;
+
     /**
      * @param string $InstanceName Database instance
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -210,6 +209,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

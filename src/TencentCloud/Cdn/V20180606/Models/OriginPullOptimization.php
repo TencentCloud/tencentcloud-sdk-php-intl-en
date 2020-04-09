@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cross-border origin-pull optimization configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
+ *
  * @method string getSwitch() Obtain Cross-border origin-pull optimization configuration switch
 on: enabled
 off: disabled
@@ -32,10 +34,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Cross-border origin-pull optimization configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
  */
 class OriginPullOptimization extends AbstractModel
 {
@@ -53,6 +51,7 @@ CNToOV: origin-pull from inside mainland China to outside mainland China
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OptimizationType;
+
     /**
      * @param string $Switch Cross-border origin-pull optimization configuration switch
 on: enabled
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

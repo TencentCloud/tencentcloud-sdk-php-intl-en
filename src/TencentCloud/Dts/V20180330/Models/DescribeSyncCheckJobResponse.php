@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSyncCheckJob response structure.
+ *
  * @method string getStatus() Obtain Task check status: starting, running, finished
  * @method void setStatus(string $Status) Set Task check status: starting, running, finished
  * @method integer getErrorCode() Obtain Code of the task check result
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckFlag(integer $CheckFlag) Set Check flag. 0: checking; 1: successfully checked
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSyncCheckJob response structure.
  */
 class DescribeSyncCheckJobResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeSyncCheckJobResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Status Task check status: starting, running, finished
      * @param integer $ErrorCode Code of the task check result
@@ -78,6 +77,7 @@ class DescribeSyncCheckJobResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

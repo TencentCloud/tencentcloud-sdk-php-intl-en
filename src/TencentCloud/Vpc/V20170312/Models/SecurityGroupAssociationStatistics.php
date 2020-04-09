@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Statistics on the instances associated with the security group
+ *
  * @method string getSecurityGroupId() Obtain Security group instance ID.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group instance ID.
  * @method integer getCVM() Obtain Number of CVM instances.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCLB(integer $CLB) Set Number of load balancer instances.
  * @method array getInstanceStatistics() Obtain The binding statistics for all instances.
  * @method void setInstanceStatistics(array $InstanceStatistics) Set The binding statistics for all instances.
- */
-
-/**
- *Statistics on the instances associated with the security group
  */
 class SecurityGroupAssociationStatistics extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
      * @var array The binding statistics for all instances.
      */
     public $InstanceStatistics;
+
     /**
      * @param string $SecurityGroupId Security group instance ID.
      * @param integer $CVM Number of CVM instances.
@@ -86,6 +85,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

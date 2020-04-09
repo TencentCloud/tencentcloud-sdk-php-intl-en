@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetOrganizationMember response structure.
+ *
  * @method integer getUin() Obtain Organization member UIN
  * @method void setUin(integer $Uin) Set Organization member UIN
  * @method string getName() Obtain Organization member name
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentNodeId(integer $ParentNodeId) Set Parent organizational unit ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetOrganizationMember response structure.
  */
 class GetOrganizationMemberResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class GetOrganizationMemberResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Uin Organization member UIN
      * @param string $Name Organization member name
@@ -94,6 +93,7 @@ class GetOrganizationMemberResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

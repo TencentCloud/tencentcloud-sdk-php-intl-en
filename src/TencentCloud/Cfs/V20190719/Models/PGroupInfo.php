@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Array of permission groups
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getName() Obtain Permission group name
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCDate(string $CDate) Set Creation time
  * @method integer getBindCfsNum() Obtain The number of bound file system
  * @method void setBindCfsNum(integer $BindCfsNum) Set The number of bound file system
- */
-
-/**
- *Array of permission groups
  */
 class PGroupInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class PGroupInfo extends AbstractModel
      * @var integer The number of bound file system
      */
     public $BindCfsNum;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param string $Name Permission group name
@@ -70,6 +69,7 @@ class PGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstanceConfig response structure.
+ *
  * @method integer getProtectMode() Obtain Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
  * @method void setProtectMode(integer $ProtectMode) Set Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
  * @method integer getDeployMode() Obtain Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupConfig(BackupConfig $BackupConfig) Set Configuration information of slave database 2 of a strong sync instance.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBInstanceConfig response structure.
  */
 class DescribeDBInstanceConfigResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $ProtectMode Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
      * @param integer $DeployMode Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
@@ -78,6 +77,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

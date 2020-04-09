@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceVipVport request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method string getDstIp() Obtain Destination IP. Either this parameter or `DstPort` must be passed in.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set Unified VPC ID
  * @method string getUniqSubnetId() Obtain Unified subnet ID.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Unified subnet ID.
- */
-
-/**
- *ModifyDBInstanceVipVport request structure.
  */
 class ModifyDBInstanceVipVportRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
      * @var string Unified subnet ID.
      */
     public $UniqSubnetId;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
      * @param string $DstIp Destination IP. Either this parameter or `DstPort` must be passed in.
@@ -70,6 +69,7 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

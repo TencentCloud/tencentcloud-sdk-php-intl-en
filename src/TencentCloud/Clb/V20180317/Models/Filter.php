@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Filter
+ *
  * @method string getName() Obtain Filter name
  * @method void setName(string $Name) Set Filter name
  * @method array getValues() Obtain Filter value array
  * @method void setValues(array $Values) Set Filter value array
- */
-
-/**
- *Filter
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array Filter value array
      */
     public $Values;
+
     /**
      * @param string $Name Filter name
      * @param array $Values Filter value array
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

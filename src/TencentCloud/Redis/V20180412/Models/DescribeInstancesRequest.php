@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances request structure.
+ *
  * @method integer getLimit() Obtain Instance list size. Default value: 20
  * @method void setLimit(integer $Limit) Set Instance list size. Default value: 20
  * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKeys(array $SearchKeys) Set Search keywords, which can be instance ID, instance name, or complete IP
  * @method array getTypeList() Obtain Internal parameter, which can be ignored
  * @method void setTypeList(array $TypeList) Set Internal parameter, which can be ignored
- */
-
-/**
- *DescribeInstances request structure.
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -171,6 +169,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array Internal parameter, which can be ignored
      */
     public $TypeList;
+
     /**
      * @param integer $Limit Instance list size. Default value: 20
      * @param integer $Offset Offset, which is an integral multiple of `Limit`
@@ -198,6 +197,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

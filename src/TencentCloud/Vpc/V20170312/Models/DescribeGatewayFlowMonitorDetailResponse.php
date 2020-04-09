@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGatewayFlowMonitorDetail response structure.
+ *
  * @method integer getTotalCount() Obtain The number of objects meeting the condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
  * @method array getGatewayFlowMonitorDetailSet() Obtain The gateway traffic monitoring details.
  * @method void setGatewayFlowMonitorDetailSet(array $GatewayFlowMonitorDetailSet) Set The gateway traffic monitoring details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeGatewayFlowMonitorDetail response structure.
  */
 class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of objects meeting the condition.
      * @param array $GatewayFlowMonitorDetailSet The gateway traffic monitoring details.
@@ -54,6 +53,7 @@ class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

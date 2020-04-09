@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestoreInstance request structure.
+ *
  * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
  * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
  * @method string getBackupId() Obtain Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
  * @method void setBackupId(string $BackupId) Set Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
  * @method string getPassword() Obtain Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
  * @method void setPassword(string $Password) Set Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
- */
-
-/**
- *RestoreInstance request structure.
  */
 class RestoreInstanceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RestoreInstanceRequest extends AbstractModel
      * @var string Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
      */
     public $Password;
+
     /**
      * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
      * @param string $BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
@@ -54,6 +53,7 @@ class RestoreInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySmsSign request structure.
+ *
  * @method integer getSignId() Obtain ID of signature to be modified.
  * @method void setSignId(integer $SignId) Set ID of signature to be modified.
  * @method string getSignName() Obtain Signature name.
@@ -78,10 +80,6 @@ You should Base64-encode the image first, remove the prefix `data:image/jpeg;bas
 Note: this field will take effect only when `UsedMethod` is 1 (for others).
  * @method string getRemark() Obtain Signature application remarks.
  * @method void setRemark(string $Remark) Set Signature application remarks.
- */
-
-/**
- *ModifySmsSign request structure.
  */
 class ModifySmsSignRequest extends AbstractModel
 {
@@ -150,6 +148,7 @@ Note: this field will take effect only when `UsedMethod` is 1 (for others).
      * @var string Signature application remarks.
      */
     public $Remark;
+
     /**
      * @param integer $SignId ID of signature to be modified.
      * @param string $SignName Signature name.
@@ -186,6 +185,7 @@ Note: this field will take effect only when `UsedMethod` is 1 (for others).
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

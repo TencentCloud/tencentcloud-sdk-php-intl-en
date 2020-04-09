@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSnapshotOperationLogs response structure.
+ *
  * @method array getSnapshotOperationLogSet() Obtain List of snapshot operation logs.
  * @method void setSnapshotOperationLogSet(array $SnapshotOperationLogSet) Set List of snapshot operation logs.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSnapshotOperationLogs response structure.
  */
 class DescribeSnapshotOperationLogsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSnapshotOperationLogsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SnapshotOperationLogSet List of snapshot operation logs.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeSnapshotOperationLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

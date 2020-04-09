@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Specifies a layer version
+ *
  * @method string getLayerName() Obtain Layer name
  * @method void setLayerName(string $LayerName) Set Layer name
  * @method integer getLayerVersion() Obtain Version number
  * @method void setLayerVersion(integer $LayerVersion) Set Version number
- */
-
-/**
- *Specifies a layer version
  */
 class LayerVersionSimple extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LayerVersionSimple extends AbstractModel
      * @var integer Version number
      */
     public $LayerVersion;
+
     /**
      * @param string $LayerName Layer name
      * @param integer $LayerVersion Version number
@@ -46,6 +45,7 @@ class LayerVersionSimple extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

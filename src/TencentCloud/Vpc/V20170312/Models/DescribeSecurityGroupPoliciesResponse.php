@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroupPolicies response structure.
+ *
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() Obtain Security group policy set.
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) Set Security group policy set.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSecurityGroupPolicies response structure.
  */
 class DescribeSecurityGroupPoliciesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSecurityGroupPoliciesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet Security group policy set.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeSecurityGroupPoliciesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveSnapshotTemplate request structure.
+ *
  * @method string getTemplateName() Obtain Template name, which is a non-empty string.
 Maximum length: 255 bytes.
  * @method void setTemplateName(string $TemplateName) Set Template name, which is a non-empty string.
@@ -42,10 +44,6 @@ Value range: 5–600s.
  * @method void setHeight(integer $Height) Set Screenshot height. Default value: 0 (original height).
  * @method integer getPornFlag() Obtain Whether to enable porn detection. 0: no, 1: yes. Default value: 0
  * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. 0: no, 1: yes. Default value: 0
- */
-
-/**
- *CreateLiveSnapshotTemplate request structure.
  */
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -96,6 +94,7 @@ Value range: 5–600s.
      * @var integer Whether to enable porn detection. 0: no, 1: yes. Default value: 0
      */
     public $PornFlag;
+
     /**
      * @param string $TemplateName Template name, which is a non-empty string.
 Maximum length: 255 bytes.
@@ -114,6 +113,7 @@ Value range: 5–600s.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

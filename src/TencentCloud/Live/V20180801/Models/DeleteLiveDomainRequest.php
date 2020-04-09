@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveDomain request structure.
+ *
  * @method string getDomainName() Obtain Domain name to be deleted.
  * @method void setDomainName(string $DomainName) Set Domain name to be deleted.
  * @method integer getDomainType() Obtain Type. 0: push, 1: playback.
  * @method void setDomainType(integer $DomainType) Set Type. 0: push, 1: playback.
- */
-
-/**
- *DeleteLiveDomain request structure.
  */
 class DeleteLiveDomainRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteLiveDomainRequest extends AbstractModel
      * @var integer Type. 0: push, 1: playback.
      */
     public $DomainType;
+
     /**
      * @param string $DomainName Domain name to be deleted.
      * @param integer $DomainType Type. 0: push, 1: playback.
@@ -46,6 +45,7 @@ class DeleteLiveDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

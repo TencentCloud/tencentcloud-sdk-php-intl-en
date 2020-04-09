@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AutoRewrite request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain HTTPS:443 listener ID
  * @method void setListenerId(string $ListenerId) Set HTTPS:443 listener ID
  * @method array getDomains() Obtain Domain name to be redirected under an HTTPS:443 listener
  * @method void setDomains(array $Domains) Set Domain name to be redirected under an HTTPS:443 listener
- */
-
-/**
- *AutoRewrite request structure.
  */
 class AutoRewriteRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AutoRewriteRequest extends AbstractModel
      * @var array Domain name to be redirected under an HTTPS:443 listener
      */
     public $Domains;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId HTTPS:443 listener ID
@@ -54,6 +53,7 @@ class AutoRewriteRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

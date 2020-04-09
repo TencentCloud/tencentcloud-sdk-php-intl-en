@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Intelligent recognition result.
+ *
  * @method string getType() Obtain Task type. Valid values:
 <li>FaceRecognition: Face recognition,</li>
 <li>AsrWordsRecognition: Speech keyword recognition,</li>
@@ -64,10 +66,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) Set Full text recognition result, which is valid when `Type` is
  `OcrFullTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Intelligent recognition result.
  */
 class AiRecognitionResult extends AbstractModel
 {
@@ -117,6 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OcrFullTextTask;
+
     /**
      * @param string $Type Task type. Valid values:
 <li>FaceRecognition: Face recognition,</li>
@@ -146,6 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

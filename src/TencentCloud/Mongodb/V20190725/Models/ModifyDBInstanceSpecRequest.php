@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceSpec request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method integer getMemory() Obtain Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) Set Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
  * @method integer getOplogSize() Obtain Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
  * @method void setOplogSize(integer $OplogSize) Set Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
- */
-
-/**
- *ModifyDBInstanceSpec request structure.
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
      * @var integer Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
      */
     public $OplogSize;
+
     /**
      * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      * @param integer $Memory Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
@@ -62,6 +61,7 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

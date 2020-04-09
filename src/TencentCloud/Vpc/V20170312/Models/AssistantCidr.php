@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information about the secondary CIDR of the VPC.
+ *
  * @method string getVpcId() Obtain The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
  * @method void setVpcId(string $VpcId) Set The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
  * @method string getCidrBlock() Obtain The secondary CIDR, such as `172.16.0.0/16`.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubnetSet(array $SubnetSet) Set Subnets divided by the secondary CIDR.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Information about the secondary CIDR of the VPC.
  */
 class AssistantCidr extends AbstractModel
 {
@@ -55,6 +53,7 @@ class AssistantCidr extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubnetSet;
+
     /**
      * @param string $VpcId The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
      * @param string $CidrBlock The secondary CIDR, such as `172.16.0.0/16`.
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

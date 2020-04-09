@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySyncJob request structure.
+ *
  * @method string getJobId() Obtain ID of the disaster recovery sync task to be modified
  * @method void setJobId(string $JobId) Set ID of the disaster recovery sync task to be modified
  * @method string getJobName() Obtain Name of the disaster recovery sync task
@@ -30,10 +32,6 @@ For databases with a database-table structure:
  * @method void setDatabaseInfo(string $DatabaseInfo) Set When syncing the specified table, you need to set the information of the source table to be synced, which should be described in JSON string format. Below are examples.
 For databases with a database-table structure:
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
- */
-
-/**
- *ModifySyncJob request structure.
  */
 class ModifySyncJobRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ For databases with a database-table structure:
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
      */
     public $DatabaseInfo;
+
     /**
      * @param string $JobId ID of the disaster recovery sync task to be modified
      * @param string $JobName Name of the disaster recovery sync task
@@ -70,6 +69,7 @@ For databases with a database-table structure:
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

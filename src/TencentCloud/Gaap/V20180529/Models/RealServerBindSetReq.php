@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RealServerBindSetReq
+ *
  * @method string getRealServerId() Obtain Origin server ID
  * @method void setRealServerId(string $RealServerId) Set Origin server ID
  * @method integer getRealServerPort() Obtain Origin server port
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerIP(string $RealServerIP) Set Origin server IP
  * @method integer getRealServerWeight() Obtain Origin server weight
  * @method void setRealServerWeight(integer $RealServerWeight) Set Origin server weight
- */
-
-/**
- *RealServerBindSetReq
  */
 class RealServerBindSetReq extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RealServerBindSetReq extends AbstractModel
      * @var integer Origin server weight
      */
     public $RealServerWeight;
+
     /**
      * @param string $RealServerId Origin server ID
      * @param integer $RealServerPort Origin server port
@@ -62,6 +61,7 @@ class RealServerBindSetReq extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamOnlineList response structure.
+ *
  * @method integer getTotalNum() Obtain Total number of eligible ones.
  * @method void setTotalNum(integer $TotalNum) Set Total number of eligible ones.
  * @method integer getTotalPage() Obtain Total number of pages.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOnlineInfo(array $OnlineInfo) Set Active push information list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveStreamOnlineList response structure.
  */
 class DescribeLiveStreamOnlineListResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeLiveStreamOnlineListResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalNum Total number of eligible ones.
      * @param integer $TotalPage Total number of pages.
@@ -78,6 +77,7 @@ class DescribeLiveStreamOnlineListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

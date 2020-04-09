@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ApplySnapshot request structure.
+ *
  * @method string getSnapshotId() Obtain Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
  * @method string getDiskId() Obtain ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](/document/product/362/16315).
  * @method void setDiskId(string $DiskId) Set ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](/document/product/362/16315).
- */
-
-/**
- *ApplySnapshot request structure.
  */
 class ApplySnapshotRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ApplySnapshotRequest extends AbstractModel
      * @var string ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](/document/product/362/16315).
      */
     public $DiskId;
+
     /**
      * @param string $SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
      * @param string $DiskId ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](/document/product/362/16315).
@@ -46,6 +45,7 @@ class ApplySnapshotRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

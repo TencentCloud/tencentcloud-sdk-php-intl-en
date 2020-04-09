@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesOperationLimit response structure.
+ *
  * @method array getInstanceOperationLimitSet() Obtain The maximum number of times you can modify the instance configurations (degrading the configurations)
  * @method void setInstanceOperationLimitSet(array $InstanceOperationLimitSet) Set The maximum number of times you can modify the instance configurations (degrading the configurations)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstancesOperationLimit response structure.
  */
 class DescribeInstancesOperationLimitResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstancesOperationLimitResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $InstanceOperationLimitSet The maximum number of times you can modify the instance configurations (degrading the configurations)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeInstancesOperationLimitResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

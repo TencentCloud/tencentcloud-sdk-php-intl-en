@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GenerateDataKey request structure.
+ *
  * @method string getKeyId() Obtain 
  * @method void setKeyId(string $KeyId) Set 
  * @method string getKeySpec() Obtain Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumberOfBytes(integer $NumberOfBytes) Set Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
  * @method string getEncryptionContext() Obtain 
  * @method void setEncryptionContext(string $EncryptionContext) Set 
- */
-
-/**
- *GenerateDataKey request structure.
  */
 class GenerateDataKeyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GenerateDataKeyRequest extends AbstractModel
      * @var string 
      */
     public $EncryptionContext;
+
     /**
      * @param string $KeyId 
      * @param string $KeySpec Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
@@ -62,6 +61,7 @@ class GenerateDataKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

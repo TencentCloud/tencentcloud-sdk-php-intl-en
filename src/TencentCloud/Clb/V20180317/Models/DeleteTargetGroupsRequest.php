@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTargetGroups request structure.
+ *
  * @method array getTargetGroupIds() Obtain Target group ID array
  * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group ID array
- */
-
-/**
- *DeleteTargetGroups request structure.
  */
 class DeleteTargetGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTargetGroupsRequest extends AbstractModel
      * @var array Target group ID array
      */
     public $TargetGroupIds;
+
     /**
      * @param array $TargetGroupIds Target group ID array
      */
@@ -38,6 +37,7 @@ class DeleteTargetGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

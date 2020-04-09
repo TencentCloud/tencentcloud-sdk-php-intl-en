@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskInfo response structure.
+ *
  * @method string getStatus() Obtain Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
  * @method void setStatus(string $Status) Set Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
  * @method string getStartTime() Obtain Task start time
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskMessage(string $TaskMessage) Set Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTaskInfo response structure.
  */
 class DescribeTaskInfoResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeTaskInfoResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Status Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
      * @param string $StartTime Task start time
@@ -78,6 +77,7 @@ class DescribeTaskInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

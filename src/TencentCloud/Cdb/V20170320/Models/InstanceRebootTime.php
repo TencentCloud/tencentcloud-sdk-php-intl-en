@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Estimated time of instance restart
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getTimeInSeconds() Obtain Estimated restart time
  * @method void setTimeInSeconds(integer $TimeInSeconds) Set Estimated restart time
- */
-
-/**
- *Estimated time of instance restart
  */
 class InstanceRebootTime extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceRebootTime extends AbstractModel
      * @var integer Estimated restart time
      */
     public $TimeInSeconds;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $TimeInSeconds Estimated restart time
@@ -46,6 +45,7 @@ class InstanceRebootTime extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

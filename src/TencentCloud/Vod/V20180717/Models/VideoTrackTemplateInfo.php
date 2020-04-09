@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a transcoding to adaptive bitrate streaming video track template.
+ *
  * @method integer getDefinition() Obtain Unique ID of a video track template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a video track template.
  * @method string getCodec() Obtain Encoder. Valid values:
@@ -90,10 +92,6 @@ Default value: black.
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *Information of a transcoding to adaptive bitrate streaming video track template.
  */
 class VideoTrackTemplateInfo extends AbstractModel
 {
@@ -184,6 +182,7 @@ Default value: black.
      * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $UpdateTime;
+
     /**
      * @param integer $Definition Unique ID of a video track template.
      * @param string $Codec Encoder. Valid values:
@@ -226,6 +225,7 @@ Default value: black.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

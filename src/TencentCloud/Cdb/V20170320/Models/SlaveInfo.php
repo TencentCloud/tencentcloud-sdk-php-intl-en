@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Slave server information
+ *
  * @method SlaveInstanceInfo getFirst() Obtain Information of slave server 1
  * @method void setFirst(SlaveInstanceInfo $First) Set Information of slave server 1
  * @method SlaveInstanceInfo getSecond() Obtain Information of slave server 2
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSecond(SlaveInstanceInfo $Second) Set Information of slave server 2
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Slave server information
  */
 class SlaveInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class SlaveInfo extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Second;
+
     /**
      * @param SlaveInstanceInfo $First Information of slave server 1
      * @param SlaveInstanceInfo $Second Information of slave server 2
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetKeyRotationStatus request structure.
+ *
 
- */
-
-/**
- *GetKeyRotationStatus request structure.
  */
 class GetKeyRotationStatusRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetKeyRotationStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

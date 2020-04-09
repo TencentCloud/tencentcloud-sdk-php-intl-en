@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunction response structure.
+ *
  * @method string getModTime() Obtain Latest modification time of the function
  * @method void setModTime(string $ModTime) Set Latest modification time of the function
  * @method string getCodeInfo() Obtain Function code
@@ -92,10 +94,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setOnsEnable(string $OnsEnable) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetFunction response structure.
  */
 class GetFunctionResponse extends AbstractModel
 {
@@ -279,6 +277,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $ModTime Latest modification time of the function
      * @param string $CodeInfo Function code
@@ -322,6 +321,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

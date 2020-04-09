@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancerListByCertId response structure.
+ *
  * @method array getCertSet() Obtain Certificate ID and list of CLB instances associated with it
  * @method void setCertSet(array $CertSet) Set Certificate ID and list of CLB instances associated with it
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLoadBalancerListByCertId response structure.
  */
 class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $CertSet Certificate ID and list of CLB instances associated with it
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

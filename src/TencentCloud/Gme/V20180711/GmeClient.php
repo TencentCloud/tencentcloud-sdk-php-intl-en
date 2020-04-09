@@ -16,23 +16,36 @@
  */
 
 namespace TencentCloud\Gme\V20180711;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Gme\V20180711\Models as Models;
 
 /**
-* @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) This API is used to create a GME application.
-* @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) This API is used to get the usage statistics of a GME application, including those of voice chat, voice messaging and speech-to-text, phrase analysis, etc. The maximum query period is the past 30 days.
-* @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) This API is used to change the status of an application's master switch.
+ * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) This API is used to create a GME application.
+ * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) This API is used to get the usage statistics of a GME application, including those of voice chat, voice messaging and speech-to-text, phrase analysis, etc. The maximum query period is the past 30 days.
+ * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) This API is used to change the status of an application's master switch.
  */
 
 class GmeClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "gme.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-07-11";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

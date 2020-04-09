@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsRule request structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getRuleId() Obtain Rule ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserPermission(string $UserPermission) Set User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
  * @method integer getPriority() Obtain Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
  * @method void setPriority(integer $Priority) Set Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
- */
-
-/**
- *UpdateCfsRule request structure.
  */
 class UpdateCfsRuleRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class UpdateCfsRuleRequest extends AbstractModel
      * @var integer Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
      */
     public $Priority;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param string $RuleId Rule ID
@@ -78,6 +77,7 @@ class UpdateCfsRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

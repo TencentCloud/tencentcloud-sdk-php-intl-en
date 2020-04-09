@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Basic information of a file system
+ *
  * @method string getCreationTime() Obtain Creation time
  * @method void setCreationTime(string $CreationTime) Set Creation time
  * @method string getCreationToken() Obtain Custom name
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsKeyId(string $KmsKeyId) Set Key used for encryption, which can be the key ID or ARN
  * @method integer getAppId() Obtain Application ID
  * @method void setAppId(integer $AppId) Set Application ID
- */
-
-/**
- *Basic information of a file system
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -143,6 +141,7 @@ class FileSystemInfo extends AbstractModel
      * @var integer Application ID
      */
     public $AppId;
+
     /**
      * @param string $CreationTime Creation time
      * @param string $CreationToken Custom name
@@ -166,6 +165,7 @@ class FileSystemInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

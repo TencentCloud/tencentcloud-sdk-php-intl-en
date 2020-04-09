@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database permission
+ *
  * @method array getPrivileges() Obtain Permission information
  * @method void setPrivileges(array $Privileges) Set Permission information
  * @method string getDatabase() Obtain Database name
  * @method void setDatabase(string $Database) Set Database name
- */
-
-/**
- *Database permission
  */
 class DatabasePrivilege extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DatabasePrivilege extends AbstractModel
      * @var string Database name
      */
     public $Database;
+
     /**
      * @param array $Privileges Permission information
      * @param string $Database Database name
@@ -46,6 +45,7 @@ class DatabasePrivilege extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

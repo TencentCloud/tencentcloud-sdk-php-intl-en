@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateKeyPair request structure.
+ *
  * @method string getKeyName() Obtain Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
  * @method void setKeyName(string $KeyName) Set Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
  * @method integer getProjectId() Obtain The ID of the project to which the new key pair belongs.
@@ -28,10 +30,6 @@ You can query the project IDs in two ways:
 You can query the project IDs in two ways:
 <li>Query the project IDs in the project list.
 <li>Call `DescribeProject` and look for `projectId` in the response.
- */
-
-/**
- *CreateKeyPair request structure.
  */
 class CreateKeyPairRequest extends AbstractModel
 {
@@ -47,6 +45,7 @@ You can query the project IDs in two ways:
 <li>Call `DescribeProject` and look for `projectId` in the response.
      */
     public $ProjectId;
+
     /**
      * @param string $KeyName Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
      * @param integer $ProjectId The ID of the project to which the new key pair belongs.
@@ -58,6 +57,7 @@ You can query the project IDs in two ways:
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

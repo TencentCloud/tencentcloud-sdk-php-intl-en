@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddSmsSign request structure.
+ *
  * @method string getSignName() Obtain Signature name.
  * @method void setSignName(string $SignName) Set Signature name.
  * @method integer getSignType() Obtain Signature type. Each of these types is followed by their `DocumentType` (identity document type) option:
@@ -76,10 +78,6 @@ You should Base64-encode the image first, remove the prefix `data:image/jpeg;bas
 Note: this field will take effect only when `UsedMethod` is 1 (for others).
  * @method string getRemark() Obtain Signature application remarks.
  * @method void setRemark(string $Remark) Set Signature application remarks.
- */
-
-/**
- *AddSmsSign request structure.
  */
 class AddSmsSignRequest extends AbstractModel
 {
@@ -143,6 +141,7 @@ Note: this field will take effect only when `UsedMethod` is 1 (for others).
      * @var string Signature application remarks.
      */
     public $Remark;
+
     /**
      * @param string $SignName Signature name.
      * @param integer $SignType Signature type. Each of these types is followed by their `DocumentType` (identity document type) option:
@@ -178,6 +177,7 @@ Note: this field will take effect only when `UsedMethod` is 1 (for others).
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDomain request structure.
+ *
  * @method string getListenerId() Obtain Listener ID.
  * @method void setListenerId(string $ListenerId) Set Listener ID.
  * @method string getDomain() Obtain Domain name to be created. Each listener supports up to 100 domain names.
@@ -32,10 +34,6 @@ This field is required only when the mutual authentication method is adopted.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
- */
-
-/**
- *CreateDomain request structure.
  */
 class CreateDomainRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ This field is required only when the mutual authentication method is adopted.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerId Listener ID.
      * @param string $Domain Domain name to be created. Each listener supports up to 100 domain names.
@@ -78,6 +77,7 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

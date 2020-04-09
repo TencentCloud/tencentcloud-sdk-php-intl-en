@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BatchRegisterTargets request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getTargets() Obtain Binding target
  * @method void setTargets(array $Targets) Set Binding target
- */
-
-/**
- *BatchRegisterTargets request structure.
  */
 class BatchRegisterTargetsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BatchRegisterTargetsRequest extends AbstractModel
      * @var array Binding target
      */
     public $Targets;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $Targets Binding target
@@ -46,6 +45,7 @@ class BatchRegisterTargetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Mount target information
+ *
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
  * @method string getMountTargetId() Obtain Mount target ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
  * @method string getSubnetName() Obtain Subnet name
  * @method void setSubnetName(string $SubnetName) Set Subnet name
- */
-
-/**
- *Mount target information
  */
 class MountInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class MountInfo extends AbstractModel
      * @var string Subnet name
      */
     public $SubnetName;
+
     /**
      * @param string $FileSystemId File system ID
      * @param string $MountTargetId Mount target ID
@@ -110,6 +109,7 @@ class MountInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a TDSQL shard.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getShardSerialId() Obtain Shard SQL passthrough ID, which is used to pass through SQL statements to the specified shard for execution
@@ -72,10 +74,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
- */
-
-/**
- *Information of a TDSQL shard.
  */
 class DCDBShardInfo extends AbstractModel
 {
@@ -201,6 +199,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer Number of CPU cores
      */
     public $Cpu;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $ShardSerialId Shard SQL passthrough ID, which is used to pass through SQL statements to the specified shard for execution
@@ -234,6 +233,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

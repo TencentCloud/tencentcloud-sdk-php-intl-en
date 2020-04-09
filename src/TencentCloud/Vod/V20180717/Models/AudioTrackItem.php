@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Audio segment information of audio track.
+ *
  * @method string getSourceMedia() Obtain Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
  * @method void setSourceMedia(string $SourceMedia) Set Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
  * @method float getSourceMediaStartTime() Obtain Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAudioOperations(array $AudioOperations) Set Operation on audio segment, such as volume adjustment.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Audio segment information of audio track.
  */
 class AudioTrackItem extends AbstractModel
 {
@@ -55,6 +53,7 @@ class AudioTrackItem extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AudioOperations;
+
     /**
      * @param string $SourceMedia Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
      * @param float $SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
@@ -66,6 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

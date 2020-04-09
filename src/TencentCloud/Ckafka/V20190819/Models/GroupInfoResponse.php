@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * `GroupInfo` response data entity
+ *
  * @method string getErrorCode() Obtain Error code. 0: success
  * @method void setErrorCode(string $ErrorCode) Set Error code. 0: success
  * @method string getState() Obtain Group status description (common valid values: Empty, Stable, Dead):
@@ -40,10 +42,6 @@ Stable: each consumer in the consumer group has joined and is in stable state
  * @method void setMembers(array $Members) Set This array contains information only if `state` is `Stable` and `protocol_type` is `consumer`
  * @method string getGroup() Obtain Kafka consumer group
  * @method void setGroup(string $Group) Set Kafka consumer group
- */
-
-/**
- *`GroupInfo` response data entity
  */
 class GroupInfoResponse extends AbstractModel
 {
@@ -81,6 +79,7 @@ Stable: each consumer in the consumer group has joined and is in stable state
      * @var string Kafka consumer group
      */
     public $Group;
+
     /**
      * @param string $ErrorCode Error code. 0: success
      * @param string $State Group status description (common valid values: Empty, Stable, Dead):
@@ -98,6 +97,7 @@ Stable: each consumer in the consumer group has joined and is in stable state
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

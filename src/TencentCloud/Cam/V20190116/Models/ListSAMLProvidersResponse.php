@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListSAMLProviders response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of SAML identity providers
  * @method void setTotalCount(integer $TotalCount) Set Total number of SAML identity providers
  * @method array getSAMLProviderSet() Obtain List of SAML identity providers
  * @method void setSAMLProviderSet(array $SAMLProviderSet) Set List of SAML identity providers
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListSAMLProviders response structure.
  */
 class ListSAMLProvidersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListSAMLProvidersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of SAML identity providers
      * @param array $SAMLProviderSet List of SAML identity providers
@@ -54,6 +53,7 @@ class ListSAMLProvidersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

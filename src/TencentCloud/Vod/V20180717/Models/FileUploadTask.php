@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * File upload task information
+ *
  * @method string getFileId() Obtain Unique file ID.
  * @method void setFileId(string $FileId) Set Unique file ID.
  * @method MediaBasicInfo getMediaBasicInfo() Obtain Basic information of media file generated after upload is completed.
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMetaData(MediaMetaData $MetaData) Set Metadata, such as size, duration, video stream information, audio stream information, etc.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *File upload task information
  */
 class FileUploadTask extends AbstractModel
 {
@@ -58,6 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MetaData;
+
     /**
      * @param string $FileId Unique file ID.
      * @param MediaBasicInfo $MediaBasicInfo Basic information of media file generated after upload is completed.
@@ -70,6 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

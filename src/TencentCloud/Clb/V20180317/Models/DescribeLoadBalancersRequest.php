@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancers request structure.
+ *
  * @method array getLoadBalancerIds() Obtain CLB instance ID.
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID.
  * @method string getLoadBalancerType() Obtain CLB instance network type:
@@ -58,10 +60,10 @@ Basic network does not support queries by VpcId.
  * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-m1cc9123
  * @method string getMasterZone() Obtain Master AZ, such as "100001" (Guangzhou Zone 1)
  * @method void setMasterZone(string $MasterZone) Set Master AZ, such as "100001" (Guangzhou Zone 1)
- */
-
-/**
- *DescribeLoadBalancers request structure.
+ * @method array getFilters() Obtain Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+ * @method void setFilters(array $Filters) Set Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
  */
 class DescribeLoadBalancersRequest extends AbstractModel
 {
@@ -156,6 +158,13 @@ Basic network does not support queries by VpcId.
      * @var string Master AZ, such as "100001" (Guangzhou Zone 1)
      */
     public $MasterZone;
+
+    /**
+     * @var array Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+     */
+    public $Filters;
+
     /**
      * @param array $LoadBalancerIds CLB instance ID.
      * @param string $LoadBalancerType CLB instance network type:
@@ -177,11 +186,14 @@ OPEN: public network; INTERNAL: private network.
 Basic network does not support queries by VpcId.
      * @param string $SecurityGroup Security group ID, such as sg-m1cc9123
      * @param string $MasterZone Master AZ, such as "100001" (Guangzhou Zone 1)
+     * @param array $Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -260,6 +272,15 @@ Basic network does not support queries by VpcId.
 
         if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
             $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Query result type of task
+ *
  * @method string getType() Obtain Task type. Valid values:
 <li>Transcode: transcoding</li>
 <li>AnimatedGraphics: animated image generating</li>
@@ -62,10 +64,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set Query result of adaptive bitrate streaming, which is valid if task type is `AdaptiveDynamicStreaming`.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Query result type of task
  */
 class MediaProcessTaskResult extends AbstractModel
 {
@@ -122,6 +120,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdaptiveDynamicStreamingTask;
+
     /**
      * @param string $Type Task type. Valid values:
 <li>Transcode: transcoding</li>
@@ -150,6 +149,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAIAnalysisTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of video content analysis template.
  * @method void setDefinition(integer $Definition) Set Unique ID of video content analysis template.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *DeleteAIAnalysisTemplate request structure.
  */
 class DeleteAIAnalysisTemplateRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteAIAnalysisTemplateRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition Unique ID of video content analysis template.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -46,6 +45,7 @@ class DeleteAIAnalysisTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

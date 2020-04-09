@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AsymmetricRsaDecrypt response structure.
+ *
  * @method string getKeyId() Obtain Unique CMK ID
  * @method void setKeyId(string $KeyId) Set Unique CMK ID
  * @method string getPlaintext() Obtain Base64-encoded plaintext after decryption
  * @method void setPlaintext(string $Plaintext) Set Base64-encoded plaintext after decryption
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *AsymmetricRsaDecrypt response structure.
  */
 class AsymmetricRsaDecryptResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AsymmetricRsaDecryptResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $KeyId Unique CMK ID
      * @param string $Plaintext Base64-encoded plaintext after decryption
@@ -54,6 +53,7 @@ class AsymmetricRsaDecryptResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

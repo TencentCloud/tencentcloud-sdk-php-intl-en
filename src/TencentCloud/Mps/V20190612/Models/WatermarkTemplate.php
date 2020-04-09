@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of a watermarking template
+ *
  * @method integer getDefinition() Obtain Unique ID of a watermarking template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a watermarking template.
  * @method string getType() Obtain Watermark type. Valid values:
@@ -68,10 +70,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>topRight: The origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
 <li>bottomLeft: The origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
 <li>bottomRight: The origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
- */
-
-/**
- *Details of a watermarking template
  */
 class WatermarkTemplate extends AbstractModel
 {
@@ -147,6 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>bottomRight: The origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
      */
     public $CoordinateOrigin;
+
     /**
      * @param integer $Definition Unique ID of a watermarking template.
      * @param string $Type Watermark type. Valid values:
@@ -178,6 +177,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

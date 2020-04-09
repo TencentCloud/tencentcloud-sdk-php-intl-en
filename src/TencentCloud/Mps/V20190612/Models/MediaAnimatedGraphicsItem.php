@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result information of an animated image generating task
+ *
  * @method TaskOutputStorage getStorage() Obtain Storage location of a generated animated image file.
  * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of a generated animated image file.
  * @method string getPath() Obtain Path to a generated animated image file.
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of an animated image in the video in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of an animated image in the video in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of an animated image in the video in seconds.
- */
-
-/**
- *Result information of an animated image generating task
  */
 class MediaAnimatedGraphicsItem extends AbstractModel
 {
@@ -101,6 +99,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
      * @var float End time offset of an animated image in the video in seconds.
      */
     public $EndTimeOffset;
+
     /**
      * @param TaskOutputStorage $Storage Storage location of a generated animated image file.
      * @param string $Path Path to a generated animated image file.
@@ -118,6 +117,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

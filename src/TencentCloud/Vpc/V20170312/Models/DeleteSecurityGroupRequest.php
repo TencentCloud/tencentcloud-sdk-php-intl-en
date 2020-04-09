@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSecurityGroup request structure.
+ *
  * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
- */
-
-/**
- *DeleteSecurityGroup request structure.
  */
 class DeleteSecurityGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSecurityGroupRequest extends AbstractModel
      * @var string The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      */
     public $SecurityGroupId;
+
     /**
      * @param string $SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      */
@@ -38,6 +37,7 @@ class DeleteSecurityGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTableGroupName request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where a table group resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where a table group resides
  * @method string getTableGroupId() Obtain ID of the table group to be renamed
  * @method void setTableGroupId(string $TableGroupId) Set ID of the table group to be renamed
  * @method string getTableGroupName() Obtain New table group name, which can contain letters and symbols
  * @method void setTableGroupName(string $TableGroupName) Set New table group name, which can contain letters and symbols
- */
-
-/**
- *ModifyTableGroupName request structure.
  */
 class ModifyTableGroupNameRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyTableGroupNameRequest extends AbstractModel
      * @var string New table group name, which can contain letters and symbols
      */
     public $TableGroupName;
+
     /**
      * @param string $ClusterId ID of the cluster where a table group resides
      * @param string $TableGroupId ID of the table group to be renamed
@@ -54,6 +53,7 @@ class ModifyTableGroupNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

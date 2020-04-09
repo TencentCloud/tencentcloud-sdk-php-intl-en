@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Event notification configuration of a task.
+ *
  * @method string getCmqModel() Obtain CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
  * @method void setCmqModel(string $CmqModel) Set CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
  * @method string getCmqRegion() Obtain CMQ region, such as `sh` and `bj`.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) Set This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
  * @method string getTopicName() Obtain This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
  * @method void setTopicName(string $TopicName) Set This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
- */
-
-/**
- *Event notification configuration of a task.
  */
 class LiveStreamTaskNotifyConfig extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
      * @var string This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
      */
     public $TopicName;
+
     /**
      * @param string $CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
      * @param string $CmqRegion CMQ region, such as `sh` and `bj`.
@@ -62,6 +61,7 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

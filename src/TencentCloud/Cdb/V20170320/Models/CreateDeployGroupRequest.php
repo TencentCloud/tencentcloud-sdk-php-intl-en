@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDeployGroup request structure.
+ *
  * @method string getDeployGroupName() Obtain Name of a placement group, which can contain up to 60 characters.
  * @method void setDeployGroupName(string $DeployGroupName) Set Name of a placement group, which can contain up to 60 characters.
  * @method string getDescription() Obtain Description of a placement group, which can contain up to 200 characters.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAffinity(array $Affinity) Set Affinity policy of placement group. Currently, the value of this parameter can only be 1. Policy 1 indicates the upper limit of instances on one physical machine.
  * @method integer getLimitNum() Obtain Upper limit of instances on one physical machine as defined in affinity policy 1 of placement group.
  * @method void setLimitNum(integer $LimitNum) Set Upper limit of instances on one physical machine as defined in affinity policy 1 of placement group.
- */
-
-/**
- *CreateDeployGroup request structure.
  */
 class CreateDeployGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateDeployGroupRequest extends AbstractModel
      * @var integer Upper limit of instances on one physical machine as defined in affinity policy 1 of placement group.
      */
     public $LimitNum;
+
     /**
      * @param string $DeployGroupName Name of a placement group, which can contain up to 60 characters.
      * @param string $Description Description of a placement group, which can contain up to 200 characters.
@@ -62,6 +61,7 @@ class CreateDeployGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

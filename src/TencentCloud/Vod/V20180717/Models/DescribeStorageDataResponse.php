@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStorageData response structure.
+ *
  * @method integer getMediaCount() Obtain Total number of current media files.
  * @method void setMediaCount(integer $MediaCount) Set Total number of current media files.
  * @method integer getTotalStorage() Obtain Total current storage capacity in bytes.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStandardStorage(integer $StandardStorage) Set Current Standard storage capacity in bytes.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeStorageData response structure.
  */
 class DescribeStorageDataResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeStorageDataResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $MediaCount Total number of current media files.
      * @param integer $TotalStorage Total current storage capacity in bytes.
@@ -70,6 +69,7 @@ class DescribeStorageDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

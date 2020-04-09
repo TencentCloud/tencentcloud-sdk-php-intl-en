@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database Xlog information
+ *
  * @method integer getId() Obtain Unique backup file ID
  * @method void setId(integer $Id) Set Unique backup file ID
  * @method string getStartTime() Obtain File generation start time
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalAddr(string $InternalAddr) Set Download address on private network
  * @method string getExternalAddr() Obtain Download address on public network
  * @method void setExternalAddr(string $ExternalAddr) Set Download address on public network
- */
-
-/**
- *Database Xlog information
  */
 class Xlog extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Xlog extends AbstractModel
      * @var string Download address on public network
      */
     public $ExternalAddr;
+
     /**
      * @param integer $Id Unique backup file ID
      * @param string $StartTime File generation start time
@@ -70,6 +69,7 @@ class Xlog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

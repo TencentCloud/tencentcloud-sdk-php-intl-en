@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProxyGroup request structure.
+ *
  * @method integer getProjectId() Obtain Project ID of connection group
  * @method void setProjectId(integer $ProjectId) Set Project ID of connection group
  * @method string getGroupName() Obtain Alias of connection group
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
  * @method array getTagSet() Obtain Tag list
  * @method void setTagSet(array $TagSet) Set Tag list
- */
-
-/**
- *CreateProxyGroup request structure.
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateProxyGroupRequest extends AbstractModel
      * @var array Tag list
      */
     public $TagSet;
+
     /**
      * @param integer $ProjectId Project ID of connection group
      * @param string $GroupName Alias of connection group
@@ -62,6 +61,7 @@ class CreateProxyGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

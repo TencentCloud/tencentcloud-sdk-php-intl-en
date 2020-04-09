@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of OCR-based politically sensitive information detection in text task in content audit
+ *
  * @method integer getDefinition() Obtain Politically sensitive information detection template ID.
  * @method void setDefinition(integer $Definition) Set Politically sensitive information detection template ID.
- */
-
-/**
- *Input parameter type of OCR-based politically sensitive information detection in text task in content audit
  */
 class AiReviewPoliticalOcrTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiReviewPoliticalOcrTaskInput extends AbstractModel
      * @var integer Politically sensitive information detection template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Politically sensitive information detection template ID.
      */
@@ -38,6 +37,7 @@ class AiReviewPoliticalOcrTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

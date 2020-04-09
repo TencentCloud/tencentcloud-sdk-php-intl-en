@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDatabases request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getOffset() Obtain Offset. Minimum value: 0.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
  * @method string getDatabaseRegexp() Obtain Regular expression for matching database names, which complies with the rules at MySQL's official website
  * @method void setDatabaseRegexp(string $DatabaseRegexp) Set Regular expression for matching database names, which complies with the rules at MySQL's official website
- */
-
-/**
- *DescribeDatabases request structure.
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDatabasesRequest extends AbstractModel
      * @var string Regular expression for matching database names, which complies with the rules at MySQL's official website
      */
     public $DatabaseRegexp;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $Offset Offset. Minimum value: 0.
@@ -62,6 +61,7 @@ class DescribeDatabasesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

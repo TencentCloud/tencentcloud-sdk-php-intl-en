@@ -18,6 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Timestamp hotlink protection mode D configuration
+The access URL format of timestamp hotlink protection mode D is as follows: http://DomainName/FileName?sign=md5hash&t=timestamp
+Here, timestamp is a decimal or hexadecimal timestamp in Unix format;
+md5hash: MD5 (custom key + file path + timestamp)
+ *
  * @method string getSecretKey() Obtain The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -50,13 +55,6 @@ hex: hexadecimal
  * @method void setTimeFormat(string $TimeFormat) Set Timestamp settings
 dec: decimal
 hex: hexadecimal
- */
-
-/**
- *Timestamp hotlink protection mode D configuration
-The access URL format of timestamp hotlink protection mode D is as follows: http://DomainName/FileName?sign=md5hash&t=timestamp
-Here, timestamp is a decimal or hexadecimal timestamp in Unix format;
-md5hash: MD5 (custom key + file path + timestamp)
  */
 class AuthenticationTypeD extends AbstractModel
 {
@@ -103,6 +101,7 @@ dec: decimal
 hex: hexadecimal
      */
     public $TimeFormat;
+
     /**
      * @param string $SecretKey The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
@@ -125,6 +124,7 @@ hex: hexadecimal
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

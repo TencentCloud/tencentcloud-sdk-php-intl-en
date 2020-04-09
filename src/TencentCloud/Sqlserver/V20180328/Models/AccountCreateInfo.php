@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Account creation information
+ *
  * @method string getUserName() Obtain Instance username
  * @method void setUserName(string $UserName) Set Instance username
  * @method string getPassword() Obtain Instance password
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) Set Account remarks
  * @method boolean getIsAdmin() Obtain Whether it is an admin account. Default value: no
  * @method void setIsAdmin(boolean $IsAdmin) Set Whether it is an admin account. Default value: no
- */
-
-/**
- *Account creation information
  */
 class AccountCreateInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AccountCreateInfo extends AbstractModel
      * @var boolean Whether it is an admin account. Default value: no
      */
     public $IsAdmin;
+
     /**
      * @param string $UserName Instance username
      * @param string $Password Instance password
@@ -70,6 +69,7 @@ class AccountCreateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

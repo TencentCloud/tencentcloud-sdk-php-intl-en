@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicLinkInstances request structure.
+ *
  * @method array getFilters() Obtain Filter conditions.
 <li>vpc-id - String - (Filter condition) The VPC instance ID.</li>
 <li>vm-ip - String - (Filter condition) The IP address of the CVM on the basic network.</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset
  * @method string getLimit() Obtain The returned quantity
  * @method void setLimit(string $Limit) Set The returned quantity
- */
-
-/**
- *DescribeClassicLinkInstances request structure.
  */
 class DescribeClassicLinkInstancesRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeClassicLinkInstancesRequest extends AbstractModel
      * @var string The returned quantity
      */
     public $Limit;
+
     /**
      * @param array $Filters Filter conditions.
 <li>vpc-id - String - (Filter condition) The VPC instance ID.</li>
@@ -62,6 +61,7 @@ class DescribeClassicLinkInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

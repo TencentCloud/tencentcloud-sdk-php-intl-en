@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeKeyPairs response structure.
+ *
  * @method integer getTotalCount() Obtain Number of key pairs meeting the filtering conditions.
  * @method void setTotalCount(integer $TotalCount) Set Number of key pairs meeting the filtering conditions.
  * @method array getKeyPairSet() Obtain Detailed information on key pairs.
  * @method void setKeyPairSet(array $KeyPairSet) Set Detailed information on key pairs.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeKeyPairs response structure.
  */
 class DescribeKeyPairsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeKeyPairsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of key pairs meeting the filtering conditions.
      * @param array $KeyPairSet Detailed information on key pairs.
@@ -54,6 +53,7 @@ class DescribeKeyPairsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

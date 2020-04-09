@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAIAnalysisTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
  * @method array getAIAnalysisTemplateSet() Obtain List of video content analysis template details.
  * @method void setAIAnalysisTemplateSet(array $AIAnalysisTemplateSet) Set List of video content analysis template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAIAnalysisTemplates response structure.
  */
 class DescribeAIAnalysisTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAIAnalysisTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible entries.
      * @param array $AIAnalysisTemplateSet List of video content analysis template details.
@@ -54,6 +53,7 @@ class DescribeAIAnalysisTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

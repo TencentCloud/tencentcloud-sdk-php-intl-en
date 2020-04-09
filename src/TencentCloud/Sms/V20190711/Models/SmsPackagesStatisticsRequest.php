@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SmsPackagesStatistics request structure.
+ *
  * @method string getSmsSdkAppid() Obtain SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
  * @method void setSmsSdkAppid(string $SmsSdkAppid) Set SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
  * @method integer getLimit() Obtain Upper limit (number of packages to be pulled).
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this parameter is currently fixed at 0.
  * @method void setOffset(integer $Offset) Set Offset.
 Note: this parameter is currently fixed at 0.
- */
-
-/**
- *SmsPackagesStatistics request structure.
  */
 class SmsPackagesStatisticsRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class SmsPackagesStatisticsRequest extends AbstractModel
 Note: this parameter is currently fixed at 0.
      */
     public $Offset;
+
     /**
      * @param string $SmsSdkAppid SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
      * @param integer $Limit Upper limit (number of packages to be pulled).
@@ -58,6 +57,7 @@ Note: this parameter is currently fixed at 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

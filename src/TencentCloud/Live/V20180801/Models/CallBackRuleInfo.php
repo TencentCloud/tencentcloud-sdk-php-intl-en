@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Rule information
+ *
  * @method string getCreateTime() Obtain Rule creation time.
  * @method void setCreateTime(string $CreateTime) Set Rule creation time.
  * @method string getUpdateTime() Obtain Rule update time.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path.
  * @method void setAppName(string $AppName) Set Push path.
- */
-
-/**
- *Rule information
  */
 class CallBackRuleInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CallBackRuleInfo extends AbstractModel
      * @var string Push path.
      */
     public $AppName;
+
     /**
      * @param string $CreateTime Rule creation time.
      * @param string $UpdateTime Rule update time.
@@ -70,6 +69,7 @@ class CallBackRuleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RegisterTargetGroupInstances request structure.
+ *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method array getTargetGroupInstances() Obtain Server instance array
  * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Server instance array
- */
-
-/**
- *RegisterTargetGroupInstances request structure.
  */
 class RegisterTargetGroupInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RegisterTargetGroupInstancesRequest extends AbstractModel
      * @var array Server instance array
      */
     public $TargetGroupInstances;
+
     /**
      * @param string $TargetGroupId Target group ID
      * @param array $TargetGroupInstances Server instance array
@@ -46,6 +45,7 @@ class RegisterTargetGroupInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

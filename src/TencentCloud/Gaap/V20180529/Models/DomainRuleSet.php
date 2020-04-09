@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Forwarding rule information of Layer-7 listeners classified by domain name
+ *
  * @method string getDomain() Obtain Forwarding rule domain name.
  * @method void setDomain(string $Domain) Set Forwarding rule domain name.
  * @method array getRuleSet() Obtain Forwarding rule list of the domain name.
@@ -98,10 +100,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolyRealServerCertificateAliasInfo(array $PolyRealServerCertificateAliasInfo) Set Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Forwarding rule information of Layer-7 listeners classified by domain name
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -216,6 +214,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolyRealServerCertificateAliasInfo;
+
     /**
      * @param string $Domain Forwarding rule domain name.
      * @param array $RuleSet Forwarding rule list of the domain name.
@@ -262,6 +261,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

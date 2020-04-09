@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of intelligent frame-specific tagging task
+ *
  * @method string getSwitch() Obtain Switch of intelligent frame-specific tagging task. Valid values:
 <li>ON: enables intelligent frame-specific tagging task;</li>
 <li>OFF: disables intelligent frame-specific tagging task.</li>
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 <li>OFF: disables intelligent frame-specific tagging task.</li>
  * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. Minimum value: 0.5 seconds.
  * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. Minimum value: 0.5 seconds.
- */
-
-/**
- *Control parameter of intelligent frame-specific tagging task
  */
 class FrameTagConfigureInfoForUpdate extends AbstractModel
 {
@@ -44,6 +42,7 @@ class FrameTagConfigureInfoForUpdate extends AbstractModel
      * @var float Frame capturing interval in seconds. Minimum value: 0.5 seconds.
      */
     public $ScreenshotInterval;
+
     /**
      * @param string $Switch Switch of intelligent frame-specific tagging task. Valid values:
 <li>ON: enables intelligent frame-specific tagging task;</li>
@@ -54,6 +53,7 @@ class FrameTagConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

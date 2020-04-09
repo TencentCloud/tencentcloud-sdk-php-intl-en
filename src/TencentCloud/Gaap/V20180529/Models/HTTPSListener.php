@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTPS listener information
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getListenerName() Obtain Listener name
@@ -68,10 +70,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) Set Alias information of multiple client CA certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *HTTPS listener information
  */
 class HTTPSListener extends AbstractModel
 {
@@ -151,6 +149,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolyClientCertificateAliasInfo;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
@@ -182,6 +181,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAnimatedGraphicsTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of an animated image generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an animated image generating template.
  * @method string getName() Obtain Name of an animated image generating template. Length limit: 64 characters.
@@ -64,10 +66,6 @@ Default value: open.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method integer getSubAppId() Obtain ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ModifyAnimatedGraphicsTemplate request structure.
  */
 class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -133,6 +131,7 @@ Default value: open.
      * @var integer ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition Unique ID of an animated image generating template.
      * @param string $Name Name of an animated image generating template. Length limit: 64 characters.
@@ -162,6 +161,7 @@ Default value: open.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

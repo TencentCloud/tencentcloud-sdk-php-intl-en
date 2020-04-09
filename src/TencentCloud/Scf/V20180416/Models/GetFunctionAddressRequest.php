@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunctionAddress request structure.
+ *
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getQualifier() Obtain Function version
  * @method void setQualifier(string $Qualifier) Set Function version
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
- */
-
-/**
- *GetFunctionAddress request structure.
  */
 class GetFunctionAddressRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetFunctionAddressRequest extends AbstractModel
      * @var string Function namespace
      */
     public $Namespace;
+
     /**
      * @param string $FunctionName Function name
      * @param string $Qualifier Function version
@@ -54,6 +53,7 @@ class GetFunctionAddressRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

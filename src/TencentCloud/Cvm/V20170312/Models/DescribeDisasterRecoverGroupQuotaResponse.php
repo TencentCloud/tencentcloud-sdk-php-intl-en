@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDisasterRecoverGroupQuota response structure.
+ *
  * @method integer getGroupQuota() Obtain The maximum number of placement groups that can be created.
  * @method void setGroupQuota(integer $GroupQuota) Set The maximum number of placement groups that can be created.
  * @method integer getCurrentNum() Obtain The number of placement groups that have been created by the current user.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCvmInRackGroupQuota(integer $CvmInRackGroupQuota) Set Quota on instances in a rack-type disaster recovery group.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDisasterRecoverGroupQuota response structure.
  */
 class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $GroupQuota The maximum number of placement groups that can be created.
      * @param integer $CurrentNum The number of placement groups that have been created by the current user.
@@ -78,6 +77,7 @@ class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

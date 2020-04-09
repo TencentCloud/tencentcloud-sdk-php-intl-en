@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Database permission information of account
+ *
  * @method string getDBName() Obtain Database name
  * @method void setDBName(string $DBName) Set Database name
  * @method string getPrivilege() Obtain Database permissions. ReadWrite: read/write, ReadOnly: read-only
  * @method void setPrivilege(string $Privilege) Set Database permissions. ReadWrite: read/write, ReadOnly: read-only
- */
-
-/**
- *Database permission information of account
  */
 class DBPrivilege extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBPrivilege extends AbstractModel
      * @var string Database permissions. ReadWrite: read/write, ReadOnly: read-only
      */
     public $Privilege;
+
     /**
      * @param string $DBName Database name
      * @param string $Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
@@ -46,6 +45,7 @@ class DBPrivilege extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

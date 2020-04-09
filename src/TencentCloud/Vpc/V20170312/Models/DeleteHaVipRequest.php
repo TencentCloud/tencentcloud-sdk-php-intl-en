@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteHaVip request structure.
+ *
  * @method string getHaVipId() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
  * @method void setHaVipId(string $HaVipId) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
- */
-
-/**
- *DeleteHaVip request structure.
  */
 class DeleteHaVipRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteHaVipRequest extends AbstractModel
      * @var string The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public $HaVipId;
+
     /**
      * @param string $HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
@@ -38,6 +37,7 @@ class DeleteHaVipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

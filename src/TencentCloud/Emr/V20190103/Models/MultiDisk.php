@@ -18,16 +18,14 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Multi-cloud disk parameters
+ *
  * @method string getDiskType() Obtain Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
  * @method void setDiskType(string $DiskType) Set Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
  * @method integer getVolume() Obtain Cloud disk size
  * @method void setVolume(integer $Volume) Set Cloud disk size
  * @method integer getCount() Obtain Number of cloud disks of this type
  * @method void setCount(integer $Count) Set Number of cloud disks of this type
- */
-
-/**
- *Multi-cloud disk parameters
  */
 class MultiDisk extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MultiDisk extends AbstractModel
      * @var integer Number of cloud disks of this type
      */
     public $Count;
+
     /**
      * @param string $DiskType Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
      * @param integer $Volume Cloud disk size
@@ -54,6 +53,7 @@ class MultiDisk extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveWatermarkRule request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method integer getTemplateId() Obtain Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
  * @method void setTemplateId(integer $TemplateId) Set Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
- */
-
-/**
- *CreateLiveWatermarkRule request structure.
  */
 class CreateLiveWatermarkRuleRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateLiveWatermarkRuleRequest extends AbstractModel
      * @var integer Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
      */
     public $TemplateId;
+
     /**
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
@@ -62,6 +61,7 @@ class CreateLiveWatermarkRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstancesProject request structure.
+ *
  * @method array getDBInstanceIdSet() Obtain TencentDB for PostgreSQL instance ID array
  * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set TencentDB for PostgreSQL instance ID array
  * @method string getProjectId() Obtain New project ID of TencentDB for PostgreSQL instance
  * @method void setProjectId(string $ProjectId) Set New project ID of TencentDB for PostgreSQL instance
- */
-
-/**
- *ModifyDBInstancesProject request structure.
  */
 class ModifyDBInstancesProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstancesProjectRequest extends AbstractModel
      * @var string New project ID of TencentDB for PostgreSQL instance
      */
     public $ProjectId;
+
     /**
      * @param array $DBInstanceIdSet TencentDB for PostgreSQL instance ID array
      * @param string $ProjectId New project ID of TencentDB for PostgreSQL instance
@@ -46,6 +45,7 @@ class ModifyDBInstancesProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

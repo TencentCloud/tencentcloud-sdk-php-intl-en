@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CancelKeyDeletion request structure.
+ *
 
- */
-
-/**
- *CancelKeyDeletion request structure.
  */
 class CancelKeyDeletionRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class CancelKeyDeletionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

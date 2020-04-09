@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskStatus response structure.
+ *
  * @method integer getStatus() Obtain Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
  * @method void setStatus(integer $Status) Set Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTaskStatus response structure.
  */
 class DescribeTaskStatusResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTaskStatusResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Status Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeTaskStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

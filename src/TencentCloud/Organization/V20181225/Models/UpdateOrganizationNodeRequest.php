@@ -18,16 +18,14 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateOrganizationNode request structure.
+ *
  * @method integer getNodeId() Obtain Organizational unit ID
  * @method void setNodeId(integer $NodeId) Set Organizational unit ID
  * @method string getName() Obtain Name
  * @method void setName(string $Name) Set Name
  * @method integer getParentNodeId() Obtain Parent organizational unit ID
  * @method void setParentNodeId(integer $ParentNodeId) Set Parent organizational unit ID
- */
-
-/**
- *UpdateOrganizationNode request structure.
  */
 class UpdateOrganizationNodeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateOrganizationNodeRequest extends AbstractModel
      * @var integer Parent organizational unit ID
      */
     public $ParentNodeId;
+
     /**
      * @param integer $NodeId Organizational unit ID
      * @param string $Name Name
@@ -54,6 +53,7 @@ class UpdateOrganizationNodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

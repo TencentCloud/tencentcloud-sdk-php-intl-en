@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCcn request structure.
+ *
  * @method string getCcnName() Obtain The name of the CCN. The maximum length is 60 characters.
  * @method void setCcnName(string $CcnName) Set The name of the CCN. The maximum length is 60 characters.
  * @method string getCcnDescription() Obtain The description of the CCN. The maximum length is 100 characters.
@@ -28,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargeType(string $InstanceChargeType) Set The billing method. POSTPAID: postpaid by traffic. Default: POSTPAID.
  * @method string getBandwidthLimitType() Obtain The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
  * @method void setBandwidthLimitType(string $BandwidthLimitType) Set The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
- */
-
-/**
- *CreateCcn request structure.
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateCcnRequest extends AbstractModel
 {
@@ -59,17 +59,25 @@ class CreateCcnRequest extends AbstractModel
      * @var string The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
      */
     public $BandwidthLimitType;
+
+    /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
     /**
      * @param string $CcnName The name of the CCN. The maximum length is 60 characters.
      * @param string $CcnDescription The description of the CCN. The maximum length is 100 characters.
      * @param string $QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
      * @param string $InstanceChargeType The billing method. POSTPAID: postpaid by traffic. Default: POSTPAID.
      * @param string $BandwidthLimitType The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -96,6 +104,15 @@ class CreateCcnRequest extends AbstractModel
 
         if (array_key_exists("BandwidthLimitType",$param) and $param["BandwidthLimitType"] !== null) {
             $this->BandwidthLimitType = $param["BandwidthLimitType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

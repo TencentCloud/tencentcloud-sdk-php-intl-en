@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstances request structure.
+ *
  * @method integer getZoneId() Obtain AZ ID of instance
  * @method void setZoneId(integer $ZoneId) Set AZ ID of instance
  * @method integer getTypeId() Obtain Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method boolean getNoAuth() Obtain Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
  * @method void setNoAuth(boolean $NoAuth) Set Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
- */
-
-/**
- *CreateInstances request structure.
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -150,6 +148,7 @@ class CreateInstancesRequest extends AbstractModel
      * @var boolean Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
      */
     public $NoAuth;
+
     /**
      * @param integer $ZoneId AZ ID of instance
      * @param integer $TypeId Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
@@ -174,6 +173,7 @@ class CreateInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

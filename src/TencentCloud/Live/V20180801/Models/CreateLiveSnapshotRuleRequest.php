@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveSnapshotRule request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method integer getTemplateId() Obtain Template ID.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 Note: if this parameter is a non-empty string, the rule will take effect only for the particular stream.
  * @method void setStreamName(string $StreamName) Set Stream name.
 Note: if this parameter is a non-empty string, the rule will take effect only for the particular stream.
- */
-
-/**
- *CreateLiveSnapshotRule request structure.
  */
 class CreateLiveSnapshotRuleRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class CreateLiveSnapshotRuleRequest extends AbstractModel
 Note: if this parameter is a non-empty string, the rule will take effect only for the particular stream.
      */
     public $StreamName;
+
     /**
      * @param string $DomainName Push domain name.
      * @param integer $TemplateId Template ID.
@@ -66,6 +65,7 @@ Note: if this parameter is a non-empty string, the rule will take effect only fo
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSmsSign response structure.
+ *
  * @method DeleteSignStatus getDeleteSignStatus() Obtain Signature deletion response.
  * @method void setDeleteSignStatus(DeleteSignStatus $DeleteSignStatus) Set Signature deletion response.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DeleteSmsSign response structure.
  */
 class DeleteSmsSignResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteSmsSignResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param DeleteSignStatus $DeleteSignStatus Signature deletion response.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DeleteSmsSignResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPN gateway object.
+ *
  * @method string getVpnGatewayId() Obtain Gateway instance ID.
  * @method void setVpnGatewayId(string $VpnGatewayId) Set Gateway instance ID.
  * @method string getVpcId() Obtain VPC instance ID.
  * @method void setVpcId(string $VpcId) Set VPC instance ID.
  * @method string getVpnGatewayName() Obtain Gateway instance name.
  * @method void setVpnGatewayName(string $VpnGatewayName) Set Gateway instance name.
- * @method string getType() Obtain Gateway instance type: 'IPSEC' and 'SSL'.
- * @method void setType(string $Type) Set Gateway instance type: 'IPSEC' and 'SSL'.
+ * @method string getType() Obtain Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
+ * @method void setType(string $Type) Set Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
  * @method string getState() Obtain Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
  * @method void setState(string $State) Set Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
  * @method string getPublicIpAddress() Obtain Gateway public IP.
@@ -50,10 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`
  * @method array getVpnGatewayQuotaSet() Obtain Gateway bandwidth quota information.
  * @method void setVpnGatewayQuotaSet(array $VpnGatewayQuotaSet) Set Gateway bandwidth quota information.
- */
-
-/**
- *VPN gateway object.
+ * @method string getVersion() Obtain Gateway instance version.
+ * @method void setVersion(string $Version) Set Gateway instance version.
+ * @method string getNetworkInstanceId() Obtain CCN instance ID when the value of Type is CCN.
+ * @method void setNetworkInstanceId(string $NetworkInstanceId) Set CCN instance ID when the value of Type is CCN.
  */
 class VpnGateway extends AbstractModel
 {
@@ -73,7 +75,7 @@ class VpnGateway extends AbstractModel
     public $VpnGatewayName;
 
     /**
-     * @var string Gateway instance type: 'IPSEC' and 'SSL'.
+     * @var string Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
      */
     public $Type;
 
@@ -136,11 +138,22 @@ class VpnGateway extends AbstractModel
      * @var array Gateway bandwidth quota information.
      */
     public $VpnGatewayQuotaSet;
+
+    /**
+     * @var string Gateway instance version.
+     */
+    public $Version;
+
+    /**
+     * @var string CCN instance ID when the value of Type is CCN.
+     */
+    public $NetworkInstanceId;
+
     /**
      * @param string $VpnGatewayId Gateway instance ID.
      * @param string $VpcId VPC instance ID.
      * @param string $VpnGatewayName Gateway instance name.
-     * @param string $Type Gateway instance type: 'IPSEC' and 'SSL'.
+     * @param string $Type Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
      * @param string $State Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
      * @param string $PublicIpAddress Gateway public IP.
      * @param string $RenewFlag Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
@@ -153,11 +166,14 @@ class VpnGateway extends AbstractModel
      * @param string $RestrictState Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
      * @param string $Zone The availability zone, such as `ap-guangzhou-2`
      * @param array $VpnGatewayQuotaSet Gateway bandwidth quota information.
+     * @param string $Version Gateway instance version.
+     * @param string $NetworkInstanceId CCN instance ID when the value of Type is CCN.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -233,6 +249,14 @@ class VpnGateway extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VpnGatewayQuotaSet, $obj);
             }
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("NetworkInstanceId",$param) and $param["NetworkInstanceId"] !== null) {
+            $this->NetworkInstanceId = $param["NetworkInstanceId"];
         }
     }
 }

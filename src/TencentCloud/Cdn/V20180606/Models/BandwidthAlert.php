@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Bandwidth cap configuration. This is disabled by default.
+ *
  * @method string getSwitch() Obtain Bandwidth cap configuration switch
 on: enabled
 off: disabled
@@ -40,10 +42,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLastTriggerTime(string $LastTriggerTime) Set The last time the bandwidth cap threshold was triggered
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Bandwidth cap configuration. This is disabled by default.
  */
 class BandwidthAlert extends AbstractModel
 {
@@ -73,6 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $LastTriggerTime;
+
     /**
      * @param string $Switch Bandwidth cap configuration switch
 on: enabled
@@ -90,6 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

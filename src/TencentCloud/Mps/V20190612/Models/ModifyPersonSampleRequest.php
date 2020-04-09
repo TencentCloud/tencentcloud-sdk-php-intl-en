@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonSample request structure.
+ *
  * @method string getPersonId() Obtain Figure ID.
  * @method void setPersonId(string $PersonId) Set Figure ID.
  * @method string getName() Obtain Name. Length limit: 128 characters.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Face operation information.
  * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
- */
-
-/**
- *ModifyPersonSample request structure.
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
@@ -75,6 +73,7 @@ class ModifyPersonSampleRequest extends AbstractModel
      * @var AiSampleTagOperation Tag operation information.
      */
     public $TagOperationInfo;
+
     /**
      * @param string $PersonId Figure ID.
      * @param string $Name Name. Length limit: 128 characters.
@@ -90,6 +89,7 @@ class ModifyPersonSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

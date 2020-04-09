@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Screencapturing template information
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getTemplateName() Obtain Template name.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosRegion(string $CosRegion) Set COS region.
  * @method string getDescription() Obtain Template description
  * @method void setDescription(string $Description) Set Template description
- */
-
-/**
- *Screencapturing template information
  */
 class SnapshotTemplateInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class SnapshotTemplateInfo extends AbstractModel
      * @var string Template description
      */
     public $Description;
+
     /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
@@ -110,6 +109,7 @@ class SnapshotTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

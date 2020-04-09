@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getMemSize() Obtain Shard size in MB
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
  * @method integer getRedisReplicasNum() Obtain Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
- */
-
-/**
- *UpgradeInstance request structure.
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @var integer Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
      */
     public $RedisReplicasNum;
+
     /**
      * @param string $InstanceId Instance ID
      * @param integer $MemSize Shard size in MB
@@ -62,6 +61,7 @@ class UpgradeInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

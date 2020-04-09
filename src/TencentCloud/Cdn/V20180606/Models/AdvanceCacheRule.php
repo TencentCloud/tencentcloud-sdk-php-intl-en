@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Advanced cache configuration rules
+ *
  * @method string getCacheType() Obtain Rule types:
 `all`: effective for all files
 `file`: effective for specified file suffixes
@@ -53,10 +55,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Unit: second. The maximum value is 365 days.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
-
-/**
- *Advanced cache configuration rules
- */
 class AdvanceCacheRule extends AbstractModel
 {
     /**
@@ -87,6 +85,7 @@ Unit: second. The maximum value is 365 days.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CacheTime;
+
     /**
      * @param string $CacheType Rule types:
 `all`: effective for all files
@@ -110,6 +109,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

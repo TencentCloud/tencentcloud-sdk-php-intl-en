@@ -18,14 +18,13 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceCategories request structure.
+ *
 
- */
-
-/**
- *DescribeInstanceCategories request structure.
  */
 class DescribeInstanceCategoriesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeInstanceCategoriesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

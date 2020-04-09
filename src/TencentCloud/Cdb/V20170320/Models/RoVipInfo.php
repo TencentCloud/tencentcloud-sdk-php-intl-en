@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VIP information of the read-only instance
+ *
  * @method integer getRoVipStatus() Obtain VIP status of the read-only instance
  * @method void setRoVipStatus(integer $RoVipStatus) Set VIP status of the read-only instance
  * @method integer getRoSubnetId() Obtain VPC subnet of the read-only instance
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoVport(integer $RoVport) Set VIP port number of the read-only instance
  * @method string getRoVip() Obtain VIP of the read-only instance
  * @method void setRoVip(string $RoVip) Set VIP of the read-only instance
- */
-
-/**
- *VIP information of the read-only instance
  */
 class RoVipInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RoVipInfo extends AbstractModel
      * @var string VIP of the read-only instance
      */
     public $RoVip;
+
     /**
      * @param integer $RoVipStatus VIP status of the read-only instance
      * @param integer $RoSubnetId VPC subnet of the read-only instance
@@ -70,6 +69,7 @@ class RoVipInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

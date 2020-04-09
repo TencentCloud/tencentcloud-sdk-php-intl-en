@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InitDCDBInstances response structure.
+ *
  * @method array getFlowIds() Obtain Async task ID. The task status can be queried through the `DescribeFlow` API.
  * @method void setFlowIds(array $FlowIds) Set Async task ID. The task status can be queried through the `DescribeFlow` API.
  * @method array getInstanceIds() Obtain Passed through from the input parameters.
  * @method void setInstanceIds(array $InstanceIds) Set Passed through from the input parameters.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *InitDCDBInstances response structure.
  */
 class InitDCDBInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InitDCDBInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $FlowIds Async task ID. The task status can be queried through the `DescribeFlow` API.
      * @param array $InstanceIds Passed through from the input parameters.
@@ -54,6 +53,7 @@ class InitDCDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListEntitiesForPolicy response structure.
+ *
  * @method integer getTotalNum() Obtain Number of entities
 Note: This field may return null, indicating that no valid value was found.
  * @method void setTotalNum(integer $TotalNum) Set Number of entities
@@ -28,10 +30,6 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListEntitiesForPolicy response structure.
  */
 class ListEntitiesForPolicyResponse extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalNum Number of entities
 Note: This field may return null, indicating that no valid value was found.
@@ -62,6 +61,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

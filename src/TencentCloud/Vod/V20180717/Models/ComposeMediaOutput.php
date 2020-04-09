@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of output media file.
+ *
  * @method string getFileName() Obtain Filename of up to 64 characters.
  * @method void setFileName(string $FileName) Set Filename of up to 64 characters.
  * @method string getDescription() Obtain Description, which can contain up to 128 characters.
@@ -54,10 +56,6 @@ Default value: 0.
 <li>0: retain</li>
 <li>1: remove</li>
 Default value: 0.
- */
-
-/**
- *Information of output media file.
  */
 class ComposeMediaOutput extends AbstractModel
 {
@@ -114,6 +112,7 @@ Default value: 0.
 Default value: 0.
      */
     public $RemoveAudio;
+
     /**
      * @param string $FileName Filename of up to 64 characters.
      * @param string $Description Description, which can contain up to 128 characters.
@@ -138,6 +137,7 @@ Default value: 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

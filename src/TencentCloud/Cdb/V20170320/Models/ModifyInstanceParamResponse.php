@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceParam response structure.
+ *
  * @method string getAsyncRequestId() Obtain Async task ID, which can be used to query task progress.
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID, which can be used to query task progress.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyInstanceParam response structure.
  */
 class ModifyInstanceParamResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyInstanceParamResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $AsyncRequestId Async task ID, which can be used to query task progress.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ModifyInstanceParamResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

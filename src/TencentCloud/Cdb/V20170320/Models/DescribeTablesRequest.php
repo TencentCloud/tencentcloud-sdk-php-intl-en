@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTables request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method string getDatabase() Obtain Database name.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
  * @method string getTableRegexp() Obtain Regular expression for matching table names, which complies with the rules at MySQL's official website
  * @method void setTableRegexp(string $TableRegexp) Set Regular expression for matching table names, which complies with the rules at MySQL's official website
- */
-
-/**
- *DescribeTables request structure.
  */
 class DescribeTablesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeTablesRequest extends AbstractModel
      * @var string Regular expression for matching table names, which complies with the rules at MySQL's official website
      */
     public $TableRegexp;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $Database Database name.
@@ -70,6 +69,7 @@ class DescribeTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

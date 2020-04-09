@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * This describes the information on the Cloud Security service
+ *
  * @method boolean getEnabled() Obtain Whether to enable the [Cloud Security](https://cloud.tencent.com/document/product/296) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnabled(boolean $Enabled) Set Whether to enable the [Cloud Security](https://cloud.tencent.com/document/product/296) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *This describes the information on the Cloud Security service
  */
 class RunSecurityServiceEnabled extends AbstractModel
 {
@@ -34,6 +32,7 @@ class RunSecurityServiceEnabled extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Enabled;
+
     /**
      * @param boolean $Enabled Whether to enable the [Cloud Security](https://cloud.tencent.com/document/product/296) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -42,6 +41,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

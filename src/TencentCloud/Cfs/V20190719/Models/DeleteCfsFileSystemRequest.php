@@ -18,12 +18,10 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCfsFileSystem request structure.
+ *
  * @method string getFileSystemId() Obtain File system ID. Note: please call the `DeleteMountTarget` API to delete the mount target first before deleting a file system; otherwise, the delete operation will fail.
  * @method void setFileSystemId(string $FileSystemId) Set File system ID. Note: please call the `DeleteMountTarget` API to delete the mount target first before deleting a file system; otherwise, the delete operation will fail.
- */
-
-/**
- *DeleteCfsFileSystem request structure.
  */
 class DeleteCfsFileSystemRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteCfsFileSystemRequest extends AbstractModel
      * @var string File system ID. Note: please call the `DeleteMountTarget` API to delete the mount target first before deleting a file system; otherwise, the delete operation will fail.
      */
     public $FileSystemId;
+
     /**
      * @param string $FileSystemId File system ID. Note: please call the `DeleteMountTarget` API to delete the mount target first before deleting a file system; otherwise, the delete operation will fail.
      */
@@ -38,6 +37,7 @@ class DeleteCfsFileSystemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

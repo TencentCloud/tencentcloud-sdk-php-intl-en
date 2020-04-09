@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRule response structure.
+ *
  * @method array getLocationIds() Obtain Array of unique IDs of created forwarding rules
  * @method void setLocationIds(array $LocationIds) Set Array of unique IDs of created forwarding rules
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateRule response structure.
  */
 class CreateRuleResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateRuleResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $LocationIds Array of unique IDs of created forwarding rules
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateRuleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

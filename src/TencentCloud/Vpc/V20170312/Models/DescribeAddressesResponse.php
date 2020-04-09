@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAddresses response structure.
+ *
  * @method integer getTotalCount() Obtain Number of EIPs meeting the condition.
  * @method void setTotalCount(integer $TotalCount) Set Number of EIPs meeting the condition.
  * @method array getAddressSet() Obtain List of EIPs details.
  * @method void setAddressSet(array $AddressSet) Set List of EIPs details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAddresses response structure.
  */
 class DescribeAddressesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAddressesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of EIPs meeting the condition.
      * @param array $AddressSet List of EIPs details.
@@ -54,6 +53,7 @@ class DescribeAddressesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

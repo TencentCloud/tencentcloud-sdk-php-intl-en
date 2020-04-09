@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Certificate ID and list of CLB instances associated with it
+ *
  * @method string getCertId() Obtain Certificate ID
  * @method void setCertId(string $CertId) Set Certificate ID
  * @method array getLoadBalancers() Obtain List of CLB instances associated with certificate
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLoadBalancers(array $LoadBalancers) Set List of CLB instances associated with certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Certificate ID and list of CLB instances associated with it
  */
 class CertIdRelatedWithLoadBalancers extends AbstractModel
 {
@@ -41,6 +39,7 @@ class CertIdRelatedWithLoadBalancers extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancers;
+
     /**
      * @param string $CertId Certificate ID
      * @param array $LoadBalancers List of CLB instances associated with certificate
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

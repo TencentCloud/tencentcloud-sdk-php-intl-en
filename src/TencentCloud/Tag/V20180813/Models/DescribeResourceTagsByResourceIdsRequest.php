@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourceTagsByResourceIds request structure.
+ *
  * @method string getServiceType() Obtain Service type.
  * @method void setServiceType(string $ServiceType) Set Service type.
  * @method string getResourcePrefix() Obtain Resource prefix.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
  * @method integer getLimit() Obtain Page size. The default value is 0.
  * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
- */
-
-/**
- *DescribeResourceTagsByResourceIds request structure.
  */
 class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
      * @var integer Page size. The default value is 0.
      */
     public $Limit;
+
     /**
      * @param string $ServiceType Service type.
      * @param string $ResourcePrefix Resource prefix.
@@ -78,6 +77,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

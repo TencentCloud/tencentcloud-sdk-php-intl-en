@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AttachInstances request structure.
+ *
  * @method string getEnvId() Obtain Compute environment ID
  * @method void setEnvId(string $EnvId) Set Compute environment ID
  * @method array getInstances() Obtain List of instances that added to the compute environment
  * @method void setInstances(array $Instances) Set List of instances that added to the compute environment
- */
-
-/**
- *AttachInstances request structure.
  */
 class AttachInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AttachInstancesRequest extends AbstractModel
      * @var array List of instances that added to the compute environment
      */
     public $Instances;
+
     /**
      * @param string $EnvId Compute environment ID
      * @param array $Instances List of instances that added to the compute environment
@@ -46,6 +45,7 @@ class AttachInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

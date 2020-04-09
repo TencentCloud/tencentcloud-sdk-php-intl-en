@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySmsTemplate request structure.
+ *
  * @method integer getTemplateId() Obtain ID of template to be modified.
  * @method void setTemplateId(integer $TemplateId) Set ID of template to be modified.
  * @method string getTemplateName() Obtain New template name.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 1: Global SMS.
  * @method string getRemark() Obtain Template remarks, such as reason for application and use case.
  * @method void setRemark(string $Remark) Set Template remarks, such as reason for application and use case.
- */
-
-/**
- *ModifySmsTemplate request structure.
  */
 class ModifySmsTemplateRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ class ModifySmsTemplateRequest extends AbstractModel
      * @var string Template remarks, such as reason for application and use case.
      */
     public $Remark;
+
     /**
      * @param integer $TemplateId ID of template to be modified.
      * @param string $TemplateName New template name.
@@ -86,6 +85,7 @@ class ModifySmsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

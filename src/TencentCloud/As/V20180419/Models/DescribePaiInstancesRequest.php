@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePaiInstances request structure.
+ *
  * @method array getInstanceIds() Obtain Queries by PAI instance ID.
  * @method void setInstanceIds(array $InstanceIds) Set Queries by PAI instance ID.
  * @method array getFilters() Obtain Filter.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- */
-
-/**
- *DescribePaiInstances request structure.
  */
 class DescribePaiInstancesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribePaiInstancesRequest extends AbstractModel
      * @var integer Offset. Default value: 0.
      */
     public $Offset;
+
     /**
      * @param array $InstanceIds Queries by PAI instance ID.
      * @param array $Filters Filter.
@@ -62,6 +61,7 @@ class DescribePaiInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

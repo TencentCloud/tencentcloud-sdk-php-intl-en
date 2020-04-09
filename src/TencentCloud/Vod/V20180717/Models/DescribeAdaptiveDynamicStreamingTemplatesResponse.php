@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAdaptiveDynamicStreamingTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
  * @method array getAdaptiveDynamicStreamingTemplateSet() Obtain List of transcoding to adaptive bitrate streaming template details.
  * @method void setAdaptiveDynamicStreamingTemplateSet(array $AdaptiveDynamicStreamingTemplateSet) Set List of transcoding to adaptive bitrate streaming template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAdaptiveDynamicStreamingTemplates response structure.
  */
 class DescribeAdaptiveDynamicStreamingTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAdaptiveDynamicStreamingTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible entries.
      * @param array $AdaptiveDynamicStreamingTemplateSet List of transcoding to adaptive bitrate streaming template details.
@@ -54,6 +53,7 @@ class DescribeAdaptiveDynamicStreamingTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

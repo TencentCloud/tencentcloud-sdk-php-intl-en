@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Advanced configuration object
+ *
  * @method integer getRetention() Obtain Message retention period
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRetention(integer $Retention) Set Message retention period
@@ -48,10 +50,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Maximum number of message bytes
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Advanced configuration object
  */
 class Config extends AbstractModel
 {
@@ -97,6 +95,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MaxMessageBytes;
+
     /**
      * @param integer $Retention Message retention period
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -118,6 +117,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

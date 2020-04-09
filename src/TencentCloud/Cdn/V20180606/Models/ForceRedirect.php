@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Access protocol forced redirect configuration. This is disabled by default.
+ *
  * @method string getSwitch() Obtain Access forced redirect configuration switch
 on: enabled
 off: disabled
@@ -40,10 +42,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirect 
 Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Access protocol forced redirect configuration. This is disabled by default.
  */
 class ForceRedirect extends AbstractModel
 {
@@ -69,6 +67,7 @@ Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RedirectStatusCode;
+
     /**
      * @param string $Switch Access forced redirect configuration switch
 on: enabled
@@ -86,6 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

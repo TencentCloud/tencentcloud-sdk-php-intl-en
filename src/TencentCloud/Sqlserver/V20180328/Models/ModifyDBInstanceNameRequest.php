@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceName request structure.
+ *
  * @method string getInstanceId() Obtain Database instance ID in the format of mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) Set Database instance ID in the format of mssql-njj2mtpl
  * @method string getInstanceName() Obtain New name of database instance
  * @method void setInstanceName(string $InstanceName) Set New name of database instance
- */
-
-/**
- *ModifyDBInstanceName request structure.
  */
 class ModifyDBInstanceNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
      * @var string New name of database instance
      */
     public $InstanceName;
+
     /**
      * @param string $InstanceId Database instance ID in the format of mssql-njj2mtpl
      * @param string $InstanceName New name of database instance
@@ -46,6 +45,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

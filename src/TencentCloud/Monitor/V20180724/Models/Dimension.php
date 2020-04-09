@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Combination of instance object dimensions
+ *
  * @method string getName() Obtain Instance dimension name
  * @method void setName(string $Name) Set Instance dimension name
  * @method string getValue() Obtain Instance dimension value
  * @method void setValue(string $Value) Set Instance dimension value
- */
-
-/**
- *Combination of instance object dimensions
  */
 class Dimension extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Dimension extends AbstractModel
      * @var string Instance dimension value
      */
     public $Value;
+
     /**
      * @param string $Name Instance dimension name
      * @param string $Value Instance dimension value
@@ -46,6 +45,7 @@ class Dimension extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

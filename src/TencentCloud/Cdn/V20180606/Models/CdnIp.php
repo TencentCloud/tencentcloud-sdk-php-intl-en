@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP attribute information
+ *
  * @method string getIp() Obtain IP to be queried
  * @method void setIp(string $Ip) Set IP to be queried
  * @method string getPlatform() Obtain IP ownership:
@@ -40,10 +42,6 @@ unknown: service region unknown
 mainland: cache node in Mainland China
 overseas: cache node outside Mainland China
 unknown: service region unknown
- */
-
-/**
- *IP attribute information
  */
 class CdnIp extends AbstractModel
 {
@@ -77,6 +75,7 @@ overseas: cache node outside Mainland China
 unknown: service region unknown
      */
     public $Area;
+
     /**
      * @param string $Ip IP to be queried
      * @param string $Platform IP ownership:
@@ -94,6 +93,7 @@ unknown: service region unknown
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

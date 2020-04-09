@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoScalingActivities request structure.
+ *
  * @method array getActivityIds() Obtain Queries by one or more scaling activity IDs in the format of `asa-5l2ejpfo`. The maximum quantity per request is 100. This parameter does not support specifying both `ActivityIds` and `Filters` at the same time.
  * @method void setActivityIds(array $ActivityIds) Set Queries by one or more scaling activity IDs in the format of `asa-5l2ejpfo`. The maximum quantity per request is 100. This parameter does not support specifying both `ActivityIds` and `Filters` at the same time.
  * @method array getFilters() Obtain Filter.
@@ -40,10 +42,6 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
  * @method void setStartTime(string $StartTime) Set The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
  * @method string getEndTime() Obtain The latest end time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
  * @method void setEndTime(string $EndTime) Set The latest end time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
- */
-
-/**
- *DescribeAutoScalingActivities request structure.
  */
 class DescribeAutoScalingActivitiesRequest extends AbstractModel
 {
@@ -81,6 +79,7 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
      * @var string The latest end time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
      */
     public $EndTime;
+
     /**
      * @param array $ActivityIds Queries by one or more scaling activity IDs in the format of `asa-5l2ejpfo`. The maximum quantity per request is 100. This parameter does not support specifying both `ActivityIds` and `Filters` at the same time.
      * @param array $Filters Filter.
@@ -98,6 +97,7 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

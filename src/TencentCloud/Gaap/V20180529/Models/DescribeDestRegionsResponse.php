@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDestRegions response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of origin server regions
  * @method void setTotalCount(integer $TotalCount) Set Total number of origin server regions
  * @method array getDestRegionSet() Obtain List of origin server region details
  * @method void setDestRegionSet(array $DestRegionSet) Set List of origin server region details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDestRegions response structure.
  */
 class DescribeDestRegionsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDestRegionsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of origin server regions
      * @param array $DestRegionSet List of origin server region details
@@ -54,6 +53,7 @@ class DescribeDestRegionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

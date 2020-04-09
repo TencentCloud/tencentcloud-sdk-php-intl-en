@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CLB information
+ *
  * @method string getInstanceId() Obtain Real server ID
  * @method void setInstanceId(string $InstanceId) Set Real server ID
  * @method array getLoadBalancerIds() Obtain List of CLB instance IDs
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of CLB instance IDs
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *CLB information
  */
 class ClassicalLoadBalancerInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class ClassicalLoadBalancerInfo extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancerIds;
+
     /**
      * @param string $InstanceId Real server ID
      * @param array $LoadBalancerIds List of CLB instance IDs
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

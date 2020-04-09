@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI-based intelligent analysis template details
+ *
  * @method integer getDefinition() Obtain Unique ID of intelligent analysis template.
  * @method void setDefinition(integer $Definition) Set Unique ID of intelligent analysis template.
  * @method string getName() Obtain Intelligent analysis template name.
@@ -46,10 +48,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *AI-based intelligent analysis template details
  */
 class AIAnalysisTemplateItem extends AbstractModel
 {
@@ -106,6 +104,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $UpdateTime;
+
     /**
      * @param integer $Definition Unique ID of intelligent analysis template.
      * @param string $Name Intelligent analysis template name.
@@ -126,6 +125,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

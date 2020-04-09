@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageSharePermission response structure.
+ *
  * @method array getSharePermissionSet() Obtain Information on image sharing.
  * @method void setSharePermissionSet(array $SharePermissionSet) Set Information on image sharing.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeImageSharePermission response structure.
  */
 class DescribeImageSharePermissionResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeImageSharePermissionResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SharePermissionSet Information on image sharing.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeImageSharePermissionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

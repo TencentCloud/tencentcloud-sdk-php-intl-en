@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOrders response structure.
+ *
  * @method integer getTotalCount() Obtain Number of orders
  * @method void setTotalCount(integer $TotalCount) Set Number of orders
  * @method array getDeals() Obtain Order array
  * @method void setDeals(array $Deals) Set Order array
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeOrders response structure.
  */
 class DescribeOrdersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeOrdersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of orders
      * @param array $Deals Order array
@@ -54,6 +53,7 @@ class DescribeOrdersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

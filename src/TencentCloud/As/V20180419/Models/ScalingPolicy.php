@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Alarm trigger policy.
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method string getAutoScalingPolicyId() Obtain Alarm trigger policy ID.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) Set Alarm monitoring metric.
  * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs.
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs.
- */
-
-/**
- *Alarm trigger policy.
  */
 class ScalingPolicy extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ScalingPolicy extends AbstractModel
      * @var array Notification group ID, which is the set of user group IDs.
      */
     public $NotificationUserGroupIds;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $AutoScalingPolicyId Alarm trigger policy ID.
@@ -94,6 +93,7 @@ class ScalingPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

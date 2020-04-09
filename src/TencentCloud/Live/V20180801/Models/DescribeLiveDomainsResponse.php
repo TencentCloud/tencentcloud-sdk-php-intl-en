@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDomains response structure.
+ *
  * @method integer getAllCount() Obtain Total number of results.
  * @method void setAllCount(integer $AllCount) Set Total number of results.
  * @method array getDomainList() Obtain List of domain name details.
  * @method void setDomainList(array $DomainList) Set List of domain name details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveDomains response structure.
  */
 class DescribeLiveDomainsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeLiveDomainsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $AllCount Total number of results.
      * @param array $DomainList List of domain name details.
@@ -54,6 +53,7 @@ class DescribeLiveDomainsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

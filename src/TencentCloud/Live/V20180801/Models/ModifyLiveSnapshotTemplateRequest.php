@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveSnapshotTemplate request structure.
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getTemplateName() Obtain Template name.
@@ -44,10 +46,6 @@ Value range: 5–600s.
  * @method void setCosBucket(string $CosBucket) Set COS bucket name.
  * @method string getCosRegion() Obtain COS region.
  * @method void setCosRegion(string $CosRegion) Set COS region.
- */
-
-/**
- *ModifyLiveSnapshotTemplate request structure.
  */
 class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ Value range: 5–600s.
      * @var string COS region.
      */
     public $CosRegion;
+
     /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
@@ -122,6 +121,7 @@ Value range: 5–600s.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

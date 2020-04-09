@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteWordSamples request structure.
+ *
  * @method array getKeywords() Obtain Keyword. Array length limit: 100 words.
  * @method void setKeywords(array $Keywords) Set Keyword. Array length limit: 100 words.
- */
-
-/**
- *DeleteWordSamples request structure.
  */
 class DeleteWordSamplesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteWordSamplesRequest extends AbstractModel
      * @var array Keyword. Array length limit: 100 words.
      */
     public $Keywords;
+
     /**
      * @param array $Keywords Keyword. Array length limit: 100 words.
      */
@@ -38,6 +37,7 @@ class DeleteWordSamplesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

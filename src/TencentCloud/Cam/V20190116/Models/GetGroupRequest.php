@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetGroup request structure.
+ *
  * @method integer getGroupId() Obtain User Group ID
  * @method void setGroupId(integer $GroupId) Set User Group ID
- */
-
-/**
- *GetGroup request structure.
  */
 class GetGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetGroupRequest extends AbstractModel
      * @var integer User Group ID
      */
     public $GroupId;
+
     /**
      * @param integer $GroupId User Group ID
      */
@@ -38,6 +37,7 @@ class GetGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

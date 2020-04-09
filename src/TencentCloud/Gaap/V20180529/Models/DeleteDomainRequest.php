@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDomain request structure.
+ *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getDomain() Obtain Domain name to be deleted
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 When not making a forced deletion, if there are rules bound to origin servers, they will not be deleted.
  * @method void setForce(integer $Force) Set Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
 When not making a forced deletion, if there are rules bound to origin servers, they will not be deleted.
- */
-
-/**
- *DeleteDomain request structure.
  */
 class DeleteDomainRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DeleteDomainRequest extends AbstractModel
 When not making a forced deletion, if there are rules bound to origin servers, they will not be deleted.
      */
     public $Force;
+
     /**
      * @param string $ListenerId Listener ID
      * @param string $Domain Domain name to be deleted
@@ -58,6 +57,7 @@ When not making a forced deletion, if there are rules bound to origin servers, t
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

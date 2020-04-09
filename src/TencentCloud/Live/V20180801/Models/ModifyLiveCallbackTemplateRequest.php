@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveCallbackTemplate request structure.
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getTemplateName() Obtain Template name.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) Set Porn detection callback URL.
  * @method string getCallbackKey() Obtain Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
  * @method void setCallbackKey(string $CallbackKey) Set Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
- */
-
-/**
- *ModifyLiveCallbackTemplate request structure.
  */
 class ModifyLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @var string Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
      */
     public $CallbackKey;
+
     /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
@@ -102,6 +101,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

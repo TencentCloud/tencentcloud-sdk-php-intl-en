@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNetDetect request structure.
+ *
  * @method string getNetDetectId() Obtain The `ID` of a network detection instance, such as `netd-12345678`.
  * @method void setNetDetectId(string $NetDetectId) Set The `ID` of a network detection instance, such as `netd-12345678`.
- */
-
-/**
- *DeleteNetDetect request structure.
  */
 class DeleteNetDetectRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNetDetectRequest extends AbstractModel
      * @var string The `ID` of a network detection instance, such as `netd-12345678`.
      */
     public $NetDetectId;
+
     /**
      * @param string $NetDetectId The `ID` of a network detection instance, such as `netd-12345678`.
      */
@@ -38,6 +37,7 @@ class DeleteNetDetectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

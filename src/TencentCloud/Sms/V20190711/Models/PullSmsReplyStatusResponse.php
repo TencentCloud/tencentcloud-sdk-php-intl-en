@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PullSmsReplyStatus response structure.
+ *
  * @method array getPullSmsReplyStatusSet() Obtain Reply status response set.
  * @method void setPullSmsReplyStatusSet(array $PullSmsReplyStatusSet) Set Reply status response set.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *PullSmsReplyStatus response structure.
  */
 class PullSmsReplyStatusResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PullSmsReplyStatusResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $PullSmsReplyStatusSet Reply status response set.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class PullSmsReplyStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

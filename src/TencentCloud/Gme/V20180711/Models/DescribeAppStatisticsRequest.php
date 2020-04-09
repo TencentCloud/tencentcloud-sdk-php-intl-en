@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAppStatistics request structure.
+ *
  * @method integer getBizId() Obtain GME application ID
  * @method void setBizId(integer $BizId) Set GME application ID
  * @method string getStartDate() Obtain Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDate(string $EndDate) Set Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
  * @method array getServices() Obtain List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
  * @method void setServices(array $Services) Set List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
- */
-
-/**
- *DescribeAppStatistics request structure.
  */
 class DescribeAppStatisticsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeAppStatisticsRequest extends AbstractModel
      * @var array List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
      */
     public $Services;
+
     /**
      * @param integer $BizId GME application ID
      * @param string $StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
@@ -62,6 +61,7 @@ class DescribeAppStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

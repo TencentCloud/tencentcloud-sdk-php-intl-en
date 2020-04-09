@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeZones response structure.
+ *
  * @method integer getTotalCount() Obtain Number of AZs returned
  * @method void setTotalCount(integer $TotalCount) Set Number of AZs returned
  * @method array getZoneSet() Obtain Array of AZs
  * @method void setZoneSet(array $ZoneSet) Set Array of AZs
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeZones response structure.
  */
 class DescribeZonesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeZonesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of AZs returned
      * @param array $ZoneSet Array of AZs
@@ -54,6 +53,7 @@ class DescribeZonesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

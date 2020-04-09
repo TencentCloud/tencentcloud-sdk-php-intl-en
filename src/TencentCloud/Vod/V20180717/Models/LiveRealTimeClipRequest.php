@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LiveRealTimeClip request structure.
+ *
  * @method string getStreamId() Obtain [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
  * @method void setStreamId(string $StreamId) Set [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
  * @method string getStartTime() Obtain Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtInfo(string $ExtInfo) Set Reserved field. Do not enter a value for it.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *LiveRealTimeClip request structure.
  */
 class LiveRealTimeClipRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class LiveRealTimeClipRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $StreamId [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
      * @param string $StartTime Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
@@ -110,6 +109,7 @@ class LiveRealTimeClipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

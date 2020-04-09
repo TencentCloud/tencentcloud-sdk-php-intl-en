@@ -18,16 +18,14 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateOrganizationMember request structure.
+ *
  * @method integer getMemberUin() Obtain Member UIN
  * @method void setMemberUin(integer $MemberUin) Set Member UIN
  * @method string getName() Obtain Name
  * @method void setName(string $Name) Set Name
  * @method string getRemark() Obtain Notes
  * @method void setRemark(string $Remark) Set Notes
- */
-
-/**
- *UpdateOrganizationMember request structure.
  */
 class UpdateOrganizationMemberRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateOrganizationMemberRequest extends AbstractModel
      * @var string Notes
      */
     public $Remark;
+
     /**
      * @param integer $MemberUin Member UIN
      * @param string $Name Name
@@ -54,6 +53,7 @@ class UpdateOrganizationMemberRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

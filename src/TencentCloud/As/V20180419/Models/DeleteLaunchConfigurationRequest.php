@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLaunchConfiguration request structure.
+ *
  * @method string getLaunchConfigurationId() Obtain ID of the launch configuration to be deleted.
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set ID of the launch configuration to be deleted.
- */
-
-/**
- *DeleteLaunchConfiguration request structure.
  */
 class DeleteLaunchConfigurationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLaunchConfigurationRequest extends AbstractModel
      * @var string ID of the launch configuration to be deleted.
      */
     public $LaunchConfigurationId;
+
     /**
      * @param string $LaunchConfigurationId ID of the launch configuration to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteLaunchConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

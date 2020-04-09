@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Key-value pair filters for conditional filtering queries.
+ *
  * @method string getName() Obtain Name of filter key.
  * @method void setName(string $Name) Set Name of filter key.
  * @method array getValues() Obtain One or more filter values.
  * @method void setValues(array $Values) Set One or more filter values.
- */
-
-/**
- *Key-value pair filters for conditional filtering queries.
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array One or more filter values.
      */
     public $Values;
+
     /**
      * @param string $Name Name of filter key.
      * @param array $Values One or more filter values.
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

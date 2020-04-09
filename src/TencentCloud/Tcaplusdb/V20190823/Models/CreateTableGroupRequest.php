@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTableGroup request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where a table group resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where a table group resides
  * @method string getTableGroupName() Obtain Table group name, which can contain up to 32 letters and digits
  * @method void setTableGroupName(string $TableGroupName) Set Table group name, which can contain up to 32 letters and digits
  * @method string getTableGroupId() Obtain Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
  * @method void setTableGroupId(string $TableGroupId) Set Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
- */
-
-/**
- *CreateTableGroup request structure.
  */
 class CreateTableGroupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateTableGroupRequest extends AbstractModel
      * @var string Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
      */
     public $TableGroupId;
+
     /**
      * @param string $ClusterId ID of the cluster where a table group resides
      * @param string $TableGroupName Table group name, which can contain up to 32 letters and digits
@@ -54,6 +53,7 @@ class CreateTableGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Template parameter modification response 
+ *
  * @method integer getTemplateId() Obtain Template parameter
  * @method void setTemplateId(integer $TemplateId) Set Template parameter
- */
-
-/**
- *Template parameter modification response 
  */
 class ModifyTemplateStatus extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ModifyTemplateStatus extends AbstractModel
      * @var integer Template parameter
      */
     public $TemplateId;
+
     /**
      * @param integer $TemplateId Template parameter
      */
@@ -38,6 +37,7 @@ class ModifyTemplateStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

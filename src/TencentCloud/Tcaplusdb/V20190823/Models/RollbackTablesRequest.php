@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RollbackTables request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where the table to be rolled back resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where the table to be rolled back resides
  * @method array getSelectedTables() Obtain List of tables to be rolled back
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackTime(string $RollbackTime) Set Time to roll back to
  * @method string getMode() Obtain Rollback mode. `KEYS` is supported
  * @method void setMode(string $Mode) Set Rollback mode. `KEYS` is supported
- */
-
-/**
- *RollbackTables request structure.
  */
 class RollbackTablesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RollbackTablesRequest extends AbstractModel
      * @var string Rollback mode. `KEYS` is supported
      */
     public $Mode;
+
     /**
      * @param string $ClusterId ID of the cluster where the table to be rolled back resides
      * @param array $SelectedTables List of tables to be rolled back
@@ -62,6 +61,7 @@ class RollbackTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

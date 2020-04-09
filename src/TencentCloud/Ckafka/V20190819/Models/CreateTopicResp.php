@@ -18,12 +18,10 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Return for topic creation
+ *
  * @method string getTopicId() Obtain Topic ID
  * @method void setTopicId(string $TopicId) Set Topic ID
- */
-
-/**
- *Return for topic creation
  */
 class CreateTopicResp extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateTopicResp extends AbstractModel
      * @var string Topic ID
      */
     public $TopicId;
+
     /**
      * @param string $TopicId Topic ID
      */
@@ -38,6 +37,7 @@ class CreateTopicResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

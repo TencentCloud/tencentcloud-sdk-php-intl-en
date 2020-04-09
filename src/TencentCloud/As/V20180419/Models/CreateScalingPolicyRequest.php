@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateScalingPolicy request structure.
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method string getScalingPolicyName() Obtain Alarm trigger policy name.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCooldown(integer $Cooldown) Set Cooldown period in seconds. Default value: 300 seconds.
  * @method array getNotificationUserGroupIds() Obtain Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
- */
-
-/**
- *CreateScalingPolicy request structure.
  */
 class CreateScalingPolicyRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateScalingPolicyRequest extends AbstractModel
      * @var array Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
      */
     public $NotificationUserGroupIds;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ScalingPolicyName Alarm trigger policy name.
@@ -86,6 +85,7 @@ class CreateScalingPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeJobSubmitInfo response structure.
+ *
  * @method string getJobId() Obtain Instance ID
  * @method void setJobId(string $JobId) Set Instance ID
  * @method string getJobName() Obtain Instance name
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDependences(array $Dependences) Set Dependency information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeJobSubmitInfo response structure.
  */
 class DescribeJobSubmitInfoResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $JobId Instance ID
      * @param string $JobName Instance name
@@ -86,6 +85,7 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

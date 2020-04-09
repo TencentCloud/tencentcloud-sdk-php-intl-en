@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Dependency
+ *
  * @method string getStartTask() Obtain Dependency start task name |
  * @method void setStartTask(string $StartTask) Set Dependency start task name |
  * @method string getEndTask() Obtain Dependency end task name |
  * @method void setEndTask(string $EndTask) Set Dependency end task name |
- */
-
-/**
- *Dependency
  */
 class Dependence extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Dependence extends AbstractModel
      * @var string Dependency end task name |
      */
     public $EndTask;
+
     /**
      * @param string $StartTask Dependency start task name |
      * @param string $EndTask Dependency end task name |
@@ -46,6 +45,7 @@ class Dependence extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

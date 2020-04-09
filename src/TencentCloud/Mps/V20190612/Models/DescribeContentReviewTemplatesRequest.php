@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContentReviewTemplates request structure.
+ *
  * @method array getDefinitions() Obtain Unique ID filter of content audit templates. Array length limit: 50.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of content audit templates. Array length limit: 50.
  * @method integer getOffset() Obtain Paging offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 50.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 50.
- */
-
-/**
- *DescribeContentReviewTemplates request structure.
  */
 class DescribeContentReviewTemplatesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
      * @var integer Number of returned entries. Default value: 10. Maximum value: 50.
      */
     public $Limit;
+
     /**
      * @param array $Definitions Unique ID filter of content audit templates. Array length limit: 50.
      * @param integer $Offset Paging offset. Default value: 0.
@@ -54,6 +53,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

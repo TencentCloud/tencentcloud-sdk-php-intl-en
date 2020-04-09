@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnassignIpv6CidrBlock request structure.
+ *
  * @method string getVpcId() Obtain The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
  * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
  * @method string getIpv6CidrBlock() Obtain The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
- */
-
-/**
- *UnassignIpv6CidrBlock request structure.
  */
 class UnassignIpv6CidrBlockRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnassignIpv6CidrBlockRequest extends AbstractModel
      * @var string The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
      */
     public $Ipv6CidrBlock;
+
     /**
      * @param string $VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      * @param string $Ipv6CidrBlock The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
@@ -46,6 +45,7 @@ class UnassignIpv6CidrBlockRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

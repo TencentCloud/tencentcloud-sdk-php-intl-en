@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * `AppId` query result
+ *
  * @method integer getTotalCount() Obtain Number of eligible `AppId`
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible `AppId`
  * @method array getAppIdList() Obtain List of eligible `AppId`
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAppIdList(array $AppIdList) Set List of eligible `AppId`
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *`AppId` query result
  */
 class AppIdResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class AppIdResponse extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AppIdList;
+
     /**
      * @param integer $TotalCount Number of eligible `AppId`
      * @param array $AppIdList List of eligible `AppId`
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

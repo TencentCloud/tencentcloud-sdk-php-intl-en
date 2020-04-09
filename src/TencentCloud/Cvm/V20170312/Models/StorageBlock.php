@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information on local HDD storage.
+ *
  * @method string getType() Obtain Local HDD storage type. Value: LOCAL_PRO.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setType(string $Type) Set Local HDD storage type. Value: LOCAL_PRO.
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setMaxSize(integer $MaxSize) Set Maximum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
- */
-
-/**
- *Information on local HDD storage.
  */
 class StorageBlock extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
      */
     public $MaxSize;
+
     /**
      * @param string $Type Local HDD storage type. Value: LOCAL_PRO.
 Note: This field may return null, indicating that no valid value is found.
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid value is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

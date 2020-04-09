@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of forbidden streams
+ *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method string getCreateTime() Obtain Creation time.
  * @method void setCreateTime(string $CreateTime) Set Creation time.
  * @method string getExpireTime() Obtain Forbidding expiration time.
  * @method void setExpireTime(string $ExpireTime) Set Forbidding expiration time.
- */
-
-/**
- *List of forbidden streams
  */
 class ForbidStreamInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ForbidStreamInfo extends AbstractModel
      * @var string Forbidding expiration time.
      */
     public $ExpireTime;
+
     /**
      * @param string $StreamName Stream name.
      * @param string $CreateTime Creation time.
@@ -54,6 +53,7 @@ class ForbidStreamInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

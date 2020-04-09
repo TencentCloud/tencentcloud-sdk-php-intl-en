@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Binding relationship of the ENI
+ *
  * @method string getInstanceId() Obtain CVM instance ID.
  * @method void setInstanceId(string $InstanceId) Set CVM instance ID.
  * @method integer getDeviceIndex() Obtain The serial number of ENI in the CVM instance.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceAccountId(string $InstanceAccountId) Set The account information of the CVM owner.
  * @method string getAttachTime() Obtain Binding time
  * @method void setAttachTime(string $AttachTime) Set Binding time
- */
-
-/**
- *Binding relationship of the ENI
  */
 class NetworkInterfaceAttachment extends AbstractModel
 {
@@ -52,6 +50,7 @@ class NetworkInterfaceAttachment extends AbstractModel
      * @var string Binding time
      */
     public $AttachTime;
+
     /**
      * @param string $InstanceId CVM instance ID.
      * @param integer $DeviceIndex The serial number of ENI in the CVM instance.
@@ -62,6 +61,7 @@ class NetworkInterfaceAttachment extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

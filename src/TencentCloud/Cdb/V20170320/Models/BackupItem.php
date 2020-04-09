@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * When creating a backup, you need to specify the information of the table to be backed up.
+ *
  * @method string getDb() Obtain Name of the database to be backed up
  * @method void setDb(string $Db) Set Name of the database to be backed up
  * @method string getTable() Obtain Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
  * @method void setTable(string $Table) Set Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
- */
-
-/**
- *When creating a backup, you need to specify the information of the table to be backed up.
  */
 class BackupItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BackupItem extends AbstractModel
      * @var string Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
      */
     public $Table;
+
     /**
      * @param string $Db Name of the database to be backed up
      * @param string $Table Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
@@ -46,6 +45,7 @@ class BackupItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

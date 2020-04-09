@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterEndpoint request structure.
+ *
 
- */
-
-/**
- *CreateClusterEndpoint request structure.
  */
 class CreateClusterEndpointRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class CreateClusterEndpointRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

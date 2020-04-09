@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCdnDomainLogs response structure.
+ *
  * @method array getDomainLogs() Obtain Download link of the log package
  * @method void setDomainLogs(array $DomainLogs) Set Download link of the log package
  * @method integer getTotalCount() Obtain Total number of entries obtained
  * @method void setTotalCount(integer $TotalCount) Set Total number of entries obtained
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeCdnDomainLogs response structure.
  */
 class DescribeCdnDomainLogsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCdnDomainLogsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DomainLogs Download link of the log package
      * @param integer $TotalCount Total number of entries obtained
@@ -54,6 +53,7 @@ class DescribeCdnDomainLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

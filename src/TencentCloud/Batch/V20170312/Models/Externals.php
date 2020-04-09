@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Additional data
+ *
  * @method boolean getReleaseAddress() Obtain Release address
 Note: This field may return null, indicating that no valid value is found.
  * @method void setReleaseAddress(boolean $ReleaseAddress) Set Release address
@@ -30,10 +32,6 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setStorageBlockAttr(StorageBlock $StorageBlockAttr) Set Attributes of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
- */
-
-/**
- *Additional data
  */
 class Externals extends AbstractModel
 {
@@ -54,6 +52,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
      */
     public $StorageBlockAttr;
+
     /**
      * @param boolean $ReleaseAddress Release address
 Note: This field may return null, indicating that no valid value is found.
@@ -66,6 +65,7 @@ Note: This field may return null, indicating that no valid value is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

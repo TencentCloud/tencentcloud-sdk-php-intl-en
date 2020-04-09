@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Monthly subscription configuration of a CLB instance
+ *
  * @method string getRenewFlag() Obtain Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRenewFlag(string $RenewFlag) Set Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPeriod(integer $Period) Set Cycle, indicating the number of months (reserved field)
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Monthly subscription configuration of a CLB instance
  */
 class LBChargePrepaid extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Period;
+
     /**
      * @param string $RenewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

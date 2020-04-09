@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Application usage statistics
+ *
  * @method RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() Obtain Voice chat statistics
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem) Set Voice chat statistics
@@ -32,10 +34,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDate() Obtain Statistical period
  * @method void setDate(string $Date) Set Statistical period
- */
-
-/**
- *Application usage statistics
  */
 class AppStatisticsItem extends AbstractModel
 {
@@ -61,6 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Statistical period
      */
     public $Date;
+
     /**
      * @param RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem Voice chat statistics
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -74,6 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

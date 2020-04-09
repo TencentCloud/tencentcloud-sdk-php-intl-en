@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTopic request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getTopicName() Obtain Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in ms, which is optional. The current minimum value is 60,000 ms
  * @method integer getSegmentMs() Obtain Segment rolling duration in ms. The current minimum value is 3,600,000 ms
  * @method void setSegmentMs(integer $SegmentMs) Set Segment rolling duration in ms. The current minimum value is 3,600,000 ms
- */
-
-/**
- *CreateTopic request structure.
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class CreateTopicRequest extends AbstractModel
      * @var integer Segment rolling duration in ms. The current minimum value is 3,600,000 ms
      */
     public $SegmentMs;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $TopicName Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
@@ -126,6 +125,7 @@ class CreateTopicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

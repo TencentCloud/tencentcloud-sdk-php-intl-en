@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSlowlogs response structure.
+ *
  * @method integer getTotalCount() Obtain Number of date entries returned this time
  * @method void setTotalCount(integer $TotalCount) Set Number of date entries returned this time
  * @method SlowlogDetail getDetail() Obtain Slow query log details
  * @method void setDetail(SlowlogDetail $Detail) Set Slow query log details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBSlowlogs response structure.
  */
 class DescribeDBSlowlogsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBSlowlogsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of date entries returned this time
      * @param SlowlogDetail $Detail Slow query log details
@@ -54,6 +53,7 @@ class DescribeDBSlowlogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

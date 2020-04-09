@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IPv6 subnet IP range object.
+ *
  * @method string getSubnetId() Obtain The `ID` of the subnet instance, such as `subnet-pxir56ns`.
  * @method void setSubnetId(string $SubnetId) Set The `ID` of the subnet instance, such as `subnet-pxir56ns`.
  * @method string getIpv6CidrBlock() Obtain The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
- */
-
-/**
- *IPv6 subnet IP range object.
  */
 class Ipv6SubnetCidrBlock extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Ipv6SubnetCidrBlock extends AbstractModel
      * @var string The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
      */
     public $Ipv6CidrBlock;
+
     /**
      * @param string $SubnetId The `ID` of the subnet instance, such as `subnet-pxir56ns`.
      * @param string $Ipv6CidrBlock The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
@@ -46,6 +45,7 @@ class Ipv6SubnetCidrBlock extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

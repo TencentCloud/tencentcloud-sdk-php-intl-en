@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWorkflow request structure.
+ *
  * @method string getWorkflowName() Obtain Workflow name of up to 128 characters, which must be unique for the same user.
  * @method void setWorkflowName(string $WorkflowName) Set Workflow name of up to 128 characters, which must be unique for the same user.
  * @method WorkflowTrigger getTrigger() Obtain Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification configuration for a task. If this parameter is left empty, no event notifications will be obtained.
  * @method integer getTaskPriority() Obtain Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
  * @method void setTaskPriority(integer $TaskPriority) Set Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
- */
-
-/**
- *CreateWorkflow request structure.
  */
 class CreateWorkflowRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateWorkflowRequest extends AbstractModel
      * @var integer Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
      */
     public $TaskPriority;
+
     /**
      * @param string $WorkflowName Workflow name of up to 128 characters, which must be unique for the same user.
      * @param WorkflowTrigger $Trigger Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
@@ -110,6 +109,7 @@ class CreateWorkflowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

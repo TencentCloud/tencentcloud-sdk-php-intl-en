@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Route table object
+ *
  * @method string getVpcId() Obtain VPC instance ID.
  * @method void setVpcId(string $VpcId) Set VPC instance ID.
  * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
@@ -32,10 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMain(boolean $Main) Set Whether it is the default route table.
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
- */
-
-/**
- *Route table object
+ * @method array getTagSet() Obtain Tag key-value pairs.
+ * @method void setTagSet(array $TagSet) Set Tag key-value pairs.
  */
 class RouteTable extends AbstractModel
 {
@@ -73,6 +73,12 @@ class RouteTable extends AbstractModel
      * @var string Creation Time.
      */
     public $CreatedTime;
+
+    /**
+     * @var array Tag key-value pairs.
+     */
+    public $TagSet;
+
     /**
      * @param string $VpcId VPC instance ID.
      * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
@@ -81,11 +87,13 @@ class RouteTable extends AbstractModel
      * @param array $RouteSet Route table policy set.
      * @param boolean $Main Whether it is the default route table.
      * @param string $CreatedTime Creation Time.
+     * @param array $TagSet Tag key-value pairs.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -130,6 +138,15 @@ class RouteTable extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

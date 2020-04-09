@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Referer blacklist/whitelist configuration rules, which is effective for specific resources.
+ *
  * @method string getRuleType() Obtain Rule types:
 `all`: effective for all files
 `file`: effective for specified file suffixes
@@ -52,10 +54,6 @@ false: do not allow empty referer
  * @method void setAllowEmpty(boolean $AllowEmpty) Set Whether to allow empty referer
 true: allow empty referer
 false: do not allow empty referer
- */
-
-/**
- *Referer blacklist/whitelist configuration rules, which is effective for specific resources.
  */
 class RefererRule extends AbstractModel
 {
@@ -95,6 +93,7 @@ true: allow empty referer
 false: do not allow empty referer
      */
     public $AllowEmpty;
+
     /**
      * @param string $RuleType Rule types:
 `all`: effective for all files
@@ -118,6 +117,7 @@ false: do not allow empty referer
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

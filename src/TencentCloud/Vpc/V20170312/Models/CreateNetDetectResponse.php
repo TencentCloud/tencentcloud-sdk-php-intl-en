@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNetDetect response structure.
+ *
  * @method NetDetect getNetDetect() Obtain The network detection (NetDetect) object.
  * @method void setNetDetect(NetDetect $NetDetect) Set The network detection (NetDetect) object.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateNetDetect response structure.
  */
 class CreateNetDetectResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNetDetectResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param NetDetect $NetDetect The network detection (NetDetect) object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateNetDetectResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

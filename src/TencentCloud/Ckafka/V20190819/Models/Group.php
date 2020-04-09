@@ -18,12 +18,10 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Group entity
+ *
  * @method string getGroupName() Obtain Group name
  * @method void setGroupName(string $GroupName) Set Group name
- */
-
-/**
- *Group entity
  */
 class Group extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Group extends AbstractModel
      * @var string Group name
      */
     public $GroupName;
+
     /**
      * @param string $GroupName Group name
      */
@@ -38,6 +37,7 @@ class Group extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

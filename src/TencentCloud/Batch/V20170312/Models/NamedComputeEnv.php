@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Compute environment
+ *
  * @method string getEnvName() Obtain Compute environment name
  * @method void setEnvName(string $EnvName) Set Compute environment name
  * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) Set Inactive node processing policy. Default value: RECREATE, which means that instance resources will be re-created periodically for compute nodes where instance creation fails or is abnormally returned.
  * @method integer getResourceMaxRetryCount() Obtain When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
  * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) Set When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
- */
-
-/**
- *Compute environment
  */
 class NamedComputeEnv extends AbstractModel
 {
@@ -108,6 +106,7 @@ class NamedComputeEnv extends AbstractModel
      * @var integer When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
      */
     public $ResourceMaxRetryCount;
+
     /**
      * @param string $EnvName Compute environment name
      * @param integer $DesiredComputeNodeCount Number of desired compute nodes
@@ -126,6 +125,7 @@ class NamedComputeEnv extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

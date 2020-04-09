@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSecurityGroup response structure.
+ *
  * @method SecurityGroup getSecurityGroup() Obtain Security group object.
  * @method void setSecurityGroup(SecurityGroup $SecurityGroup) Set Security group object.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateSecurityGroup response structure.
  */
 class CreateSecurityGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSecurityGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param SecurityGroup $SecurityGroup Security group object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateSecurityGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

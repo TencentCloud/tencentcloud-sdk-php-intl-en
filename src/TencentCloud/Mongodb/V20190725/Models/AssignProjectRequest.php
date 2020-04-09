@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssignProject request structure.
+ *
  * @method array getInstanceIds() Obtain List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- */
-
-/**
- *AssignProject request structure.
  */
 class AssignProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssignProjectRequest extends AbstractModel
      * @var integer Project ID
      */
     public $ProjectId;
+
     /**
      * @param array $InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      * @param integer $ProjectId Project ID
@@ -46,6 +45,7 @@ class AssignProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

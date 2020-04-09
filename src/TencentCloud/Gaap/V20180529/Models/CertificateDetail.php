@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Certificate details, including the certificate ID, name, type, content, and key content.
+ *
  * @method string getCertificateId() Obtain Certificate ID.
  * @method void setCertificateId(string $CertificateId) Set Certificate ID.
  * @method integer getCertificateType() Obtain Certificate type.
@@ -52,10 +54,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubjectCN(string $SubjectCN) Set Common name of the certificate subject.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Certificate details, including the certificate ID, name, type, content, and key content.
  */
 class CertificateDetail extends AbstractModel
 {
@@ -115,6 +113,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubjectCN;
+
     /**
      * @param string $CertificateId Certificate ID.
      * @param integer $CertificateType Certificate type.
@@ -138,6 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

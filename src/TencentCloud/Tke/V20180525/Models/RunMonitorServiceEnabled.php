@@ -18,12 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes information related to the Cloud Monitor service.
+ *
  * @method boolean getEnabled() Obtain Whether to enable [Cloud Monitor](/document/product/248). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
  * @method void setEnabled(boolean $Enabled) Set Whether to enable [Cloud Monitor](/document/product/248). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
- */
-
-/**
- *Describes information related to the Cloud Monitor service.
  */
 class RunMonitorServiceEnabled extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RunMonitorServiceEnabled extends AbstractModel
      * @var boolean Whether to enable [Cloud Monitor](/document/product/248). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
      */
     public $Enabled;
+
     /**
      * @param boolean $Enabled Whether to enable [Cloud Monitor](/document/product/248). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
      */
@@ -38,6 +37,7 @@ class RunMonitorServiceEnabled extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

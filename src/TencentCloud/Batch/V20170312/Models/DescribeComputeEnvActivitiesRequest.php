@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComputeEnvActivities request structure.
+ *
  * @method string getEnvId() Obtain Compute environment ID
  * @method void setEnvId(string $EnvId) Set Compute environment ID
  * @method integer getOffset() Obtain Offset
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li> compute-node-id - String - Required: No - (Filter) Filter by compute node ID.</li>
  * @method void setFilters(Filter $Filters) Set Filter
 <li> compute-node-id - String - Required: No - (Filter) Filter by compute node ID.</li>
- */
-
-/**
- *DescribeComputeEnvActivities request structure.
  */
 class DescribeComputeEnvActivitiesRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
 <li> compute-node-id - String - Required: No - (Filter) Filter by compute node ID.</li>
      */
     public $Filters;
+
     /**
      * @param string $EnvId Compute environment ID
      * @param integer $Offset Offset
@@ -66,6 +65,7 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

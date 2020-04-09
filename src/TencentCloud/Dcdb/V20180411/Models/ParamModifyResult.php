@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Parameter modification result
+ *
  * @method string getParam() Obtain Renames a parameter
  * @method void setParam(string $Param) Set Renames a parameter
  * @method integer getCode() Obtain Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value
  * @method void setCode(integer $Code) Set Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value
- */
-
-/**
- *Parameter modification result
  */
 class ParamModifyResult extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ParamModifyResult extends AbstractModel
      * @var integer Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value
      */
     public $Code;
+
     /**
      * @param string $Param Renames a parameter
      * @param integer $Code Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value
@@ -46,6 +45,7 @@ class ParamModifyResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

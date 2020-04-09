@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes key pair information.
+ *
  * @method string getKeyId() Obtain Key pair `ID`, the unique identifier of a key pair.
  * @method void setKeyId(string $KeyId) Set Key pair `ID`, the unique identifier of a key pair.
  * @method string getKeyName() Obtain Key pair name.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssociatedInstanceIds(array $AssociatedInstanceIds) Set `ID` list of instances associated with a key.
  * @method string getCreatedTime() Obtain Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- */
-
-/**
- *Describes key pair information.
  */
 class KeyPair extends AbstractModel
 {
@@ -80,6 +78,7 @@ class KeyPair extends AbstractModel
      * @var string Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
      */
     public $CreatedTime;
+
     /**
      * @param string $KeyId Key pair `ID`, the unique identifier of a key pair.
      * @param string $KeyName Key pair name.
@@ -94,6 +93,7 @@ class KeyPair extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

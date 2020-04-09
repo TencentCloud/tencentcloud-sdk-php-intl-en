@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitJob response structure.
+ *
  * @method string getJobId() Obtain When a job is submitted through this API, this parameter is returned and indicates the job ID. Returning the list of job IDs does not mean that the job is parsed/executed successfully. The job state can be queried using the DescribeJob API.
  * @method void setJobId(string $JobId) Set When a job is submitted through this API, this parameter is returned and indicates the job ID. Returning the list of job IDs does not mean that the job is parsed/executed successfully. The job state can be queried using the DescribeJob API.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *SubmitJob response structure.
  */
 class SubmitJobResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SubmitJobResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $JobId When a job is submitted through this API, this parameter is returned and indicates the job ID. Returning the list of job IDs does not mean that the job is parsed/executed successfully. The job state can be queried using the DescribeJob API.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class SubmitJobResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableKeyRotation request structure.
+ *
 
- */
-
-/**
- *DisableKeyRotation request structure.
  */
 class DisableKeyRotationRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DisableKeyRotationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

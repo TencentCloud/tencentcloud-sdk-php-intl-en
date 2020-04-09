@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Full speech recognition result.
+ *
  * @method array getSegmentSet() Obtain List of full speech recognition segments.
  * @method void setSegmentSet(array $SegmentSet) Set List of full speech recognition segments.
  * @method string getSubtitleUrl() Obtain Subtitles file URL.
  * @method void setSubtitleUrl(string $SubtitleUrl) Set Subtitles file URL.
- */
-
-/**
- *Full speech recognition result.
  */
 class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
      * @var string Subtitles file URL.
      */
     public $SubtitleUrl;
+
     /**
      * @param array $SegmentSet List of full speech recognition segments.
      * @param string $SubtitleUrl Subtitles file URL.
@@ -46,6 +45,7 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

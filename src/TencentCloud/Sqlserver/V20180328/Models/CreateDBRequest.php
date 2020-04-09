@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDB request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method array getDBs() Obtain Database creation information
  * @method void setDBs(array $DBs) Set Database creation information
- */
-
-/**
- *CreateDB request structure.
  */
 class CreateDBRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDBRequest extends AbstractModel
      * @var array Database creation information
      */
     public $DBs;
+
     /**
      * @param string $InstanceId Instance ID
      * @param array $DBs Database creation information
@@ -46,6 +45,7 @@ class CreateDBRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

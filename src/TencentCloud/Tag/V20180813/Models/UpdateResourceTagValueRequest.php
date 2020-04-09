@@ -18,16 +18,14 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateResourceTagValue request structure.
+ *
  * @method string getTagKey() Obtain Tag key associated with the resource.
  * @method void setTagKey(string $TagKey) Set Tag key associated with the resource.
  * @method string getTagValue() Obtain Modified tag value.
  * @method void setTagValue(string $TagValue) Set Modified tag value.
  * @method string getResource() Obtain Resource description in six-piece format.
  * @method void setResource(string $Resource) Set Resource description in six-piece format.
- */
-
-/**
- *UpdateResourceTagValue request structure.
  */
 class UpdateResourceTagValueRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateResourceTagValueRequest extends AbstractModel
      * @var string Resource description in six-piece format.
      */
     public $Resource;
+
     /**
      * @param string $TagKey Tag key associated with the resource.
      * @param string $TagValue Modified tag value.
@@ -54,6 +53,7 @@ class UpdateResourceTagValueRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

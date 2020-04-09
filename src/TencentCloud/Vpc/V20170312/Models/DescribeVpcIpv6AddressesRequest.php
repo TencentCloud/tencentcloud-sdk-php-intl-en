@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcIpv6Addresses request structure.
+ *
  * @method string getVpcId() Obtain The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
  * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
  * @method array getIpv6Addresses() Obtain The `IP` address list. Each request supports a maximum of `10` batch querying.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset.
  * @method integer getLimit() Obtain The returned quantity.
  * @method void setLimit(integer $Limit) Set The returned quantity.
- */
-
-/**
- *DescribeVpcIpv6Addresses request structure.
  */
 class DescribeVpcIpv6AddressesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeVpcIpv6AddressesRequest extends AbstractModel
      * @var integer The returned quantity.
      */
     public $Limit;
+
     /**
      * @param string $VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      * @param array $Ipv6Addresses The `IP` address list. Each request supports a maximum of `10` batch querying.
@@ -62,6 +61,7 @@ class DescribeVpcIpv6AddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

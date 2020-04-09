@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes information on an instance
+ *
  * @method Placement getPlacement() Obtain Location of the instance
  * @method void setPlacement(Placement $Placement) Set Location of the instance
  * @method string getInstanceId() Obtain Instance `ID`
@@ -92,10 +94,6 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setCamRoleName(string $CamRoleName) Set CAM role name.
 Note: this field may return null, indicating that no valid value is obtained.
- */
-
-/**
- *Describes information on an instance
  */
 class Instance extends AbstractModel
 {
@@ -259,6 +257,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public $CamRoleName;
+
     /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
@@ -302,6 +301,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

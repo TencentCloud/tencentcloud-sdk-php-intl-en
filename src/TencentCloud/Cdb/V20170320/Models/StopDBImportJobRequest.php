@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopDBImportJob request structure.
+ *
  * @method string getAsyncRequestId() Obtain Async task request ID.
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID.
- */
-
-/**
- *StopDBImportJob request structure.
  */
 class StopDBImportJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StopDBImportJobRequest extends AbstractModel
      * @var string Async task request ID.
      */
     public $AsyncRequestId;
+
     /**
      * @param string $AsyncRequestId Async task request ID.
      */
@@ -38,6 +37,7 @@ class StopDBImportJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

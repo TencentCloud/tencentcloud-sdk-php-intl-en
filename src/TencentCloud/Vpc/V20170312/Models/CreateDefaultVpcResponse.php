@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDefaultVpc response structure.
+ *
  * @method DefaultVpcSubnet getVpc() Obtain Default VPC and subnet IDs
  * @method void setVpc(DefaultVpcSubnet $Vpc) Set Default VPC and subnet IDs
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateDefaultVpc response structure.
  */
 class CreateDefaultVpcResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDefaultVpcResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param DefaultVpcSubnet $Vpc Default VPC and subnet IDs
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateDefaultVpcResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

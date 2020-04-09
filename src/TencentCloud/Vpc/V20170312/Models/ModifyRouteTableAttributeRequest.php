@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRouteTableAttribute request structure.
+ *
  * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
  * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
  * @method string getRouteTableName() Obtain Route table name.
  * @method void setRouteTableName(string $RouteTableName) Set Route table name.
- */
-
-/**
- *ModifyRouteTableAttribute request structure.
  */
 class ModifyRouteTableAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyRouteTableAttributeRequest extends AbstractModel
      * @var string Route table name.
      */
     public $RouteTableName;
+
     /**
      * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      * @param string $RouteTableName Route table name.
@@ -46,6 +45,7 @@ class ModifyRouteTableAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ScheduleKeyDeletion request structure.
+ *
 
- */
-
-/**
- *ScheduleKeyDeletion request structure.
  */
 class ScheduleKeyDeletionRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ScheduleKeyDeletionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

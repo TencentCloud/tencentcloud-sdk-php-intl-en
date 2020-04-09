@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetGroup response structure.
+ *
  * @method integer getGroupId() Obtain User Group ID
  * @method void setGroupId(integer $GroupId) Set User Group ID
  * @method string getGroupName() Obtain User Group name
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserInfo(array $UserInfo) Set User Group member information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetGroup response structure.
  */
 class GetGroupResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class GetGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $GroupId User Group ID
      * @param string $GroupName User Group name
@@ -86,6 +85,7 @@ class GetGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListPolicies request structure.
+ *
  * @method integer getRp() Obtain Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
  * @method void setRp(integer $Rp) Set Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
  * @method integer getPage() Obtain Page number. Starts from 1 and cannot be greater than 200. Default is 1
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScope(string $Scope) Set Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
  * @method string getKeyword() Obtain Filter by policy name
  * @method void setKeyword(string $Keyword) Set Filter by policy name
- */
-
-/**
- *ListPolicies request structure.
  */
 class ListPoliciesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListPoliciesRequest extends AbstractModel
      * @var string Filter by policy name
      */
     public $Keyword;
+
     /**
      * @param integer $Rp Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
      * @param integer $Page Page number. Starts from 1 and cannot be greater than 200. Default is 1
@@ -62,6 +61,7 @@ class ListPoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Signature deletion response
+ *
  * @method string getDeleteStatus() Obtain Deletion status information.
  * @method void setDeleteStatus(string $DeleteStatus) Set Deletion status information.
  * @method integer getDeleteTime() Obtain Deletion time in seconds in the format of UNIX timestamp.
  * @method void setDeleteTime(integer $DeleteTime) Set Deletion time in seconds in the format of UNIX timestamp.
- */
-
-/**
- *Signature deletion response
  */
 class DeleteSignStatus extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteSignStatus extends AbstractModel
      * @var integer Deletion time in seconds in the format of UNIX timestamp.
      */
     public $DeleteTime;
+
     /**
      * @param string $DeleteStatus Deletion status information.
      * @param integer $DeleteTime Deletion time in seconds in the format of UNIX timestamp.
@@ -46,6 +45,7 @@ class DeleteSignStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

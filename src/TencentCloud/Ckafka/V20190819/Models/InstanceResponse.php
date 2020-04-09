@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Aggregated returned result of instance status
+ *
  * @method array getInstanceList() Obtain List of eligible instances
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceList(array $InstanceList) Set List of eligible instances
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTotalCount(integer $TotalCount) Set Total number of eligible results
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Aggregated returned result of instance status
  */
 class InstanceResponse extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
+
     /**
      * @param array $InstanceList List of eligible instances
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

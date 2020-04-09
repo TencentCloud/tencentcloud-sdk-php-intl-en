@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Event notification configuration of a task.
+ *
  * @method string getCmqModel() Obtain CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
  * @method void setCmqModel(string $CmqModel) Set CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
  * @method string getCmqRegion() Obtain CMQ region, such as `sh` and `bj`.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) Set This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
  * @method string getNotifyMode() Obtain Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
  * @method void setNotifyMode(string $NotifyMode) Set Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
- */
-
-/**
- *Event notification configuration of a task.
  */
 class TaskNotifyConfig extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TaskNotifyConfig extends AbstractModel
      * @var string Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
      */
     public $NotifyMode;
+
     /**
      * @param string $CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
      * @param string $CmqRegion CMQ region, such as `sh` and `bj`.
@@ -70,6 +69,7 @@ class TaskNotifyConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

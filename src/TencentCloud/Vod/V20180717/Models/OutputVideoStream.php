@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of output video stream
+ *
  * @method string getCodec() Obtain Video stream encoder. Valid values:
 <li>libx264: H.264</li>
 Default value: libx264.
@@ -28,10 +30,6 @@ Default value: libx264.
 Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
  * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0, 60].
 Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
- */
-
-/**
- *Information of output video stream
  */
 class OutputVideoStream extends AbstractModel
 {
@@ -47,6 +45,7 @@ Default value: libx264.
 Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
      */
     public $Fps;
+
     /**
      * @param string $Codec Video stream encoder. Valid values:
 <li>libx264: H.264</li>
@@ -58,6 +57,7 @@ Default value: 0, which means that the value is the same as the video frame rate
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

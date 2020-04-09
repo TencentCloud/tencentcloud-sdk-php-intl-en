@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of instance details
+ *
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getInstanceId() Obtain Instance ID
@@ -124,10 +126,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set Internal parameter, which can be ignored
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *List of instance details
  */
 class InstanceSet extends AbstractModel
 {
@@ -355,6 +353,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RemainBandwidthDuration;
+
     /**
      * @param string $InstanceName Instance name
      * @param string $InstanceId Instance ID
@@ -414,6 +413,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

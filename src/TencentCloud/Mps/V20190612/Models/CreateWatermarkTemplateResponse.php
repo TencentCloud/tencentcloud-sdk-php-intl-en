@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWatermarkTemplate response structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a watermarking template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a watermarking template.
  * @method string getImageUrl() Obtain Watermark image address. This field is valid only when `Type` is `image`.
  * @method void setImageUrl(string $ImageUrl) Set Watermark image address. This field is valid only when `Type` is `image`.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateWatermarkTemplate response structure.
  */
 class CreateWatermarkTemplateResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateWatermarkTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Definition Unique ID of a watermarking template.
      * @param string $ImageUrl Watermark image address. This field is valid only when `Type` is `image`.
@@ -54,6 +53,7 @@ class CreateWatermarkTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

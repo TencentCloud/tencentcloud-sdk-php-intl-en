@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The network detection object.
+ *
  * @method string getVpcId() Obtain The ID of a VPC instance, such as `vpc-12345678`.
  * @method void setVpcId(string $VpcId) Set The ID of a VPC instance, such as `vpc-12345678`.
  * @method string getVpcName() Obtain The name of a VPC instance.
@@ -34,25 +36,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetectDestinationIp(array $DetectDestinationIp) Set The array of detection destination IPv4 addresses, which contains at most two IP addresses.
  * @method array getDetectSourceIp() Obtain The array of detection source IPv4 addresses automatically allocated by the system. The length is 2.
  * @method void setDetectSourceIp(array $DetectSourceIp) Set The array of detection source IPv4 addresses automatically allocated by the system. The length is 2.
- * @method string getNextHopType() Obtain The type of the next hop. Currently supported types are:
+ * @method string getNextHopType() Obtain Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
- * @method void setNextHopType(string $NextHopType) Set The type of the next hop. Currently supported types are:
+ * @method void setNextHopType(string $NextHopType) Set Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
- * @method string getNextHopDestination() Obtain The next-hop destination gateway. The value is related to NextHopType.
+ * @method string getNextHopDestination() Obtain Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
- * @method void setNextHopDestination(string $NextHopDestination) Set The next-hop destination gateway. The value is related to NextHopType.
+ * @method void setNextHopDestination(string $NextHopDestination) Set Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
@@ -70,10 +72,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set The creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *The network detection object.
  */
 class NetDetect extends AbstractModel
 {
@@ -118,7 +116,7 @@ class NetDetect extends AbstractModel
     public $DetectSourceIp;
 
     /**
-     * @var string The type of the next hop. Currently supported types are:
+     * @var string Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
@@ -128,7 +126,7 @@ NORMAL_CVM: normal CVM.
     public $NextHopType;
 
     /**
-     * @var string The next-hop destination gateway. The value is related to NextHopType.
+     * @var string Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
@@ -154,6 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
+
     /**
      * @param string $VpcId The ID of a VPC instance, such as `vpc-12345678`.
      * @param string $VpcName The name of a VPC instance.
@@ -163,13 +162,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $NetDetectName The name of a network detection instance. The maximum length is 60 characters.
      * @param array $DetectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
      * @param array $DetectSourceIp The array of detection source IPv4 addresses automatically allocated by the system. The length is 2.
-     * @param string $NextHopType The type of the next hop. Currently supported types are:
+     * @param string $NextHopType Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
-     * @param string $NextHopDestination The next-hop destination gateway. The value is related to NextHopType.
+     * @param string $NextHopDestination Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
@@ -186,6 +185,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

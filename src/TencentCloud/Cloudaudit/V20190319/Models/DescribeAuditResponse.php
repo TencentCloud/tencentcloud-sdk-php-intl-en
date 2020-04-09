@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Return parameter structure of DescribeAudit
+ *
  * @method string getAuditName() Obtain Tracking set name.
  * @method void setAuditName(string $AuditName) Set Tracking set name.
  * @method integer getAuditStatus() Obtain Tracking set status. Value range: 1 (enabled), 0 (disabled).
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadWriteAttribute(integer $ReadWriteAttribute) Set Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write)
  * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
  * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- */
-
-/**
- *Return parameter structure of DescribeAudit
  */
 class DescribeAuditResponse extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeAuditResponse extends AbstractModel
      * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
      */
     public $RequestId;
+
     /**
      * @param string $AuditName Tracking set name.
      * @param integer $AuditStatus Tracking set status. Value range: 1 (enabled), 0 (disabled).
@@ -110,6 +109,7 @@ class DescribeAuditResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

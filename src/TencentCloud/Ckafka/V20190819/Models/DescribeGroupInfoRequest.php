@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroupInfo request structure.
+ *
  * @method string getInstanceId() Obtain (Filter) filter by instance ID.
  * @method void setInstanceId(string $InstanceId) Set (Filter) filter by instance ID.
  * @method array getGroupList() Obtain Kafka consumer group (`Consumer-group`), which is an array in the format of `GroupList.0=xxx&GroupList.1=yyy`.
  * @method void setGroupList(array $GroupList) Set Kafka consumer group (`Consumer-group`), which is an array in the format of `GroupList.0=xxx&GroupList.1=yyy`.
- */
-
-/**
- *DescribeGroupInfo request structure.
  */
 class DescribeGroupInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeGroupInfoRequest extends AbstractModel
      * @var array Kafka consumer group (`Consumer-group`), which is an array in the format of `GroupList.0=xxx&GroupList.1=yyy`.
      */
     public $GroupList;
+
     /**
      * @param string $InstanceId (Filter) filter by instance ID.
      * @param array $GroupList Kafka consumer group (`Consumer-group`), which is an array in the format of `GroupList.0=xxx&GroupList.1=yyy`.
@@ -46,6 +45,7 @@ class DescribeGroupInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

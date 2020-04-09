@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyWatermarkTemplate response structure.
+ *
  * @method string getImageUrl() Obtain Image watermark address. This field is valid only when `ImageTemplate.ImageContent` is non-empty.
  * @method void setImageUrl(string $ImageUrl) Set Image watermark address. This field is valid only when `ImageTemplate.ImageContent` is non-empty.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyWatermarkTemplate response structure.
  */
 class ModifyWatermarkTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyWatermarkTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $ImageUrl Image watermark address. This field is valid only when `ImageTemplate.ImageContent` is non-empty.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ModifyWatermarkTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

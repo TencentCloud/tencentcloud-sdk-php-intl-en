@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Resource tag.
+ *
  * @method string getResourceRegion() Obtain The resource’s region.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setResourceRegion(string $ResourceRegion) Set The resource’s region.
@@ -38,10 +40,6 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setTags(array $Tags) Set Resource tag.
 Note: This field may return null, indicating that no valid value is found.
- */
-
-/**
- *Resource tag.
  */
 class ResourceTag extends AbstractModel
 {
@@ -74,6 +72,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
      */
     public $Tags;
+
     /**
      * @param string $ResourceRegion The resource’s region.
 Note: This field may return null, indicating that no valid value is found.
@@ -90,6 +89,7 @@ Note: This field may return null, indicating that no valid value is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

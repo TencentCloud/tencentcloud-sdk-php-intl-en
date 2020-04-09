@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Suspected politically sensitive segment identified during content audit
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
  * @method string getPicUrlExpireTime() Obtain Expiration time of a suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of a suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- */
-
-/**
- *Suspected politically sensitive segment identified during content audit
  */
 class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 {
@@ -99,6 +97,7 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
      * @var string Expiration time of a suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $PicUrlExpireTime;
+
     /**
      * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
      * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
@@ -118,6 +117,7 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

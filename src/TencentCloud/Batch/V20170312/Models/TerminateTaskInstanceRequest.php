@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateTaskInstance request structure.
+ *
  * @method string getJobId() Obtain Instance ID
  * @method void setJobId(string $JobId) Set Instance ID
  * @method string getTaskName() Obtain Task name
  * @method void setTaskName(string $TaskName) Set Task name
  * @method integer getTaskInstanceIndex() Obtain Task instance index
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) Set Task instance index
- */
-
-/**
- *TerminateTaskInstance request structure.
  */
 class TerminateTaskInstanceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TerminateTaskInstanceRequest extends AbstractModel
      * @var integer Task instance index
      */
     public $TaskInstanceIndex;
+
     /**
      * @param string $JobId Instance ID
      * @param string $TaskName Task name
@@ -54,6 +53,7 @@ class TerminateTaskInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

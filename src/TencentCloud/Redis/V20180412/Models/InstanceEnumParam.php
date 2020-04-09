@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Descriptions of enumeration parameters of the instance
+ *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method string getValueType() Obtain Parameter type: Enum
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnumValue(array $EnumValue) Set Value range of a parameter
  * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
  * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
- */
-
-/**
- *Descriptions of enumeration parameters of the instance
  */
 class InstanceEnumParam extends AbstractModel
 {
@@ -80,6 +78,7 @@ class InstanceEnumParam extends AbstractModel
      * @var integer Parameter status. 1: modifying; 2: modified
      */
     public $Status;
+
     /**
      * @param string $ParamName Parameter name
      * @param string $ValueType Parameter type: Enum
@@ -94,6 +93,7 @@ class InstanceEnumParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

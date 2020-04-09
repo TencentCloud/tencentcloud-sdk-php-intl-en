@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance parameter details
+ *
  * @method string getName() Obtain Parameter name
  * @method void setName(string $Name) Set Parameter name
  * @method string getParamType() Obtain Parameter type
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMin(integer $Min) Set Minimum value of the parameter
  * @method array getEnumValue() Obtain Enumerated values of the parameter. It is null if the parameter is non-enumerated
  * @method void setEnumValue(array $EnumValue) Set Enumerated values of the parameter. It is null if the parameter is non-enumerated
- */
-
-/**
- *Instance parameter details
  */
 class ParameterDetail extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ParameterDetail extends AbstractModel
      * @var array Enumerated values of the parameter. It is null if the parameter is non-enumerated
      */
     public $EnumValue;
+
     /**
      * @param string $Name Parameter name
      * @param string $ParamType Parameter type
@@ -102,6 +101,7 @@ class ParameterDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

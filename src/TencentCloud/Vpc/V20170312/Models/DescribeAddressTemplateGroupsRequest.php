@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAddressTemplateGroups request structure.
+ *
  * @method array getFilters() Obtain Filter conditions.
 <li>address-template-group-name - String - (Filter condition) IP address template group name.</li>
 <li>address-template-group-id - String - (Filter condition) IP address template group instance ID, such as `ipmg-mdunqeb6`.</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset. The default value is 0.
  * @method string getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
  * @method void setLimit(string $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
- */
-
-/**
- *DescribeAddressTemplateGroups request structure.
  */
 class DescribeAddressTemplateGroupsRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeAddressTemplateGroupsRequest extends AbstractModel
      * @var string Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public $Limit;
+
     /**
      * @param array $Filters Filter conditions.
 <li>address-template-group-name - String - (Filter condition) IP address template group name.</li>
@@ -62,6 +61,7 @@ class DescribeAddressTemplateGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

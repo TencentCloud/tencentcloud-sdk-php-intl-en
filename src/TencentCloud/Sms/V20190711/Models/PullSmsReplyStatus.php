@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SMS reply status
+ *
  * @method string getExtendCode() Obtain SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://cloud.tencent.com/document/product/382/3773).
  * @method void setExtendCode(string $ExtendCode) Set SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://cloud.tencent.com/document/product/382/3773).
  * @method string getNationCode() Obtain Country (or region) code.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplyTime(string $ReplyTime) Set Reply time (e.g., 2019-10-08 17:18:37).
  * @method integer getReplyUnixTime() Obtain Reply time in seconds in the format of UNIX timestamp.
  * @method void setReplyUnixTime(integer $ReplyUnixTime) Set Reply time in seconds in the format of UNIX timestamp.
- */
-
-/**
- *SMS reply status
  */
 class PullSmsReplyStatus extends AbstractModel
 {
@@ -73,6 +71,7 @@ class PullSmsReplyStatus extends AbstractModel
      * @var integer Reply time in seconds in the format of UNIX timestamp.
      */
     public $ReplyUnixTime;
+
     /**
      * @param string $ExtendCode SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://cloud.tencent.com/document/product/382/3773).
      * @param string $NationCode Country (or region) code.
@@ -86,6 +85,7 @@ class PullSmsReplyStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

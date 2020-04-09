@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Compute node statistical metrics
+ *
  * @method integer getSubmittedCount() Obtain Number of compute nodes that have been submitted
  * @method void setSubmittedCount(integer $SubmittedCount) Set Number of compute nodes that have been submitted
  * @method integer getCreatingCount() Obtain Number of compute nodes that are being created
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeletingCount(integer $DeletingCount) Set Number of compute nodes that are being terminated
  * @method integer getAbnormalCount() Obtain Number of exceptional compute nodes
  * @method void setAbnormalCount(integer $AbnormalCount) Set Number of exceptional compute nodes
- */
-
-/**
- *Compute node statistical metrics
  */
 class ComputeNodeMetrics extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ComputeNodeMetrics extends AbstractModel
      * @var integer Number of exceptional compute nodes
      */
     public $AbnormalCount;
+
     /**
      * @param integer $SubmittedCount Number of compute nodes that have been submitted
      * @param integer $CreatingCount Number of compute nodes that are being created
@@ -86,6 +85,7 @@ class ComputeNodeMetrics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

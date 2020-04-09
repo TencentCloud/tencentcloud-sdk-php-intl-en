@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ScaleOutInstance request structure.
+ *
  * @method string getTimeUnit() Obtain Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
  * @method array getTags() Obtain List of tags bound to added nodes.
  * @method void setTags(array $Tags) Set List of tags bound to added nodes.
- */
-
-/**
- *ScaleOutInstance request structure.
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -137,6 +135,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @var array List of tags bound to added nodes.
      */
     public $Tags;
+
     /**
      * @param string $TimeUnit Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
@@ -162,6 +161,7 @@ class ScaleOutInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

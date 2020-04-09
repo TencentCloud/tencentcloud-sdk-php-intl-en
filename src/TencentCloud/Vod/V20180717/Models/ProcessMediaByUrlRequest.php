@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ProcessMediaByUrl request structure.
+ *
  * @method MediaInputInfo getInputInfo() Obtain Information of input video, including video's URL, name, and custom ID.
  * @method void setInputInfo(MediaInputInfo $InputInfo) Set Information of input video, including video's URL, name, and custom ID.
  * @method MediaOutputInfo getOutputInfo() Obtain Information of COS path to output file.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ProcessMediaByUrl request structure.
  */
 class ProcessMediaByUrlRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param MediaInputInfo $InputInfo Information of input video, including video's URL, name, and custom ID.
      * @param MediaOutputInfo $OutputInfo Information of COS path to output file.
@@ -110,6 +109,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

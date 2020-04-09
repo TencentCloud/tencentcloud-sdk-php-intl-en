@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateProxy response structure.
+ *
  * @method float getProxyDailyPrice() Obtain Basic cost of connection (unit: CNY/day).
  * @method void setProxyDailyPrice(float $ProxyDailyPrice) Set Basic cost of connection (unit: CNY/day).
  * @method array getBandwidthUnitPrice() Obtain Connection bandwidth price gradient.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrency(string $Currency) Set Currency, which supports CNY, USD, etc.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *InquiryPriceCreateProxy response structure.
  */
 class InquiryPriceCreateProxyResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InquiryPriceCreateProxyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param float $ProxyDailyPrice Basic cost of connection (unit: CNY/day).
      * @param array $BandwidthUnitPrice Connection bandwidth price gradient.
@@ -70,6 +69,7 @@ class InquiryPriceCreateProxyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

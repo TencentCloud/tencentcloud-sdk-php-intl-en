@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveRecord response structure.
+ *
  * @method integer getTaskId() Obtain Task ID, which uniquely identifies the recording task globally.
  * @method void setTaskId(integer $TaskId) Set Task ID, which uniquely identifies the recording task globally.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateLiveRecord response structure.
  */
 class CreateLiveRecordResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateLiveRecordResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TaskId Task ID, which uniquely identifies the recording task globally.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateLiveRecordResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

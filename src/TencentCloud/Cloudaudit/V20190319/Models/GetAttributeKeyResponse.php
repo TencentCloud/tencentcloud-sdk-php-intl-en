@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Return parameter structure of GetAttributeKey
+ *
  * @method array getAttributeKeyDetails() Obtain AttributeKey value range
  * @method void setAttributeKeyDetails(array $AttributeKeyDetails) Set AttributeKey value range
  * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
  * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- */
-
-/**
- *Return parameter structure of GetAttributeKey
  */
 class GetAttributeKeyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetAttributeKeyResponse extends AbstractModel
      * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
      */
     public $RequestId;
+
     /**
      * @param array $AttributeKeyDetails AttributeKey value range
      * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
@@ -46,6 +45,7 @@ class GetAttributeKeyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

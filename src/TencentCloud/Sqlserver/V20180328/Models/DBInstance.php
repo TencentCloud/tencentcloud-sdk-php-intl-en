@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance details
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getName() Obtain Instance name
@@ -82,10 +84,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
  * @method string getUniqSubnetId() Obtain Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
- */
-
-/**
- *Instance details
  */
 class DBInstance extends AbstractModel
 {
@@ -248,6 +246,7 @@ class DBInstance extends AbstractModel
      * @var string Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
      */
     public $UniqSubnetId;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
@@ -286,6 +285,7 @@ class DBInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

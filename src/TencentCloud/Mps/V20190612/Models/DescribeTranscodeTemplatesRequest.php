@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTranscodeTemplates request structure.
+ *
  * @method array getDefinitions() Obtain Unique ID filter of transcoding templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of transcoding templates. Array length limit: 100.
  * @method string getType() Obtain Template type filter. Valid values:
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
- */
-
-/**
- *DescribeTranscodeTemplates request structure.
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -84,6 +82,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
      * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
+
     /**
      * @param array $Definitions Unique ID filter of transcoding templates. Array length limit: 100.
      * @param string $Type Template type filter. Valid values:
@@ -102,6 +101,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

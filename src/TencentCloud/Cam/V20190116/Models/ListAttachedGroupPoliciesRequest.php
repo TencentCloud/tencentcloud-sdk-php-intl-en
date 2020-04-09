@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedGroupPolicies request structure.
+ *
  * @method integer getTargetGroupId() Obtain User group ID
  * @method void setTargetGroupId(integer $TargetGroupId) Set User group ID
  * @method integer getPage() Obtain Page number, which starts from 1. Default is 1
  * @method void setPage(integer $Page) Set Page number, which starts from 1. Default is 1
  * @method integer getRp() Obtain Number of entries per page; 20 by default
  * @method void setRp(integer $Rp) Set Number of entries per page; 20 by default
- */
-
-/**
- *ListAttachedGroupPolicies request structure.
  */
 class ListAttachedGroupPoliciesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAttachedGroupPoliciesRequest extends AbstractModel
      * @var integer Number of entries per page; 20 by default
      */
     public $Rp;
+
     /**
      * @param integer $TargetGroupId User group ID
      * @param integer $Page Page number, which starts from 1. Default is 1
@@ -54,6 +53,7 @@ class ListAttachedGroupPoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

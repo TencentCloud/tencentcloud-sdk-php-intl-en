@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PushUrlsCache response structure.
+ *
  * @method string getTaskId() Obtain ID of the submitted task
  * @method void setTaskId(string $TaskId) Set ID of the submitted task
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *PushUrlsCache response structure.
  */
 class PushUrlsCacheResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PushUrlsCacheResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $TaskId ID of the submitted task
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class PushUrlsCacheResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

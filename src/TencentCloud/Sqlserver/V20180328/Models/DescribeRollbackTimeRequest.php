@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRollbackTime request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method array getDBs() Obtain List of databases to be queried
  * @method void setDBs(array $DBs) Set List of databases to be queried
- */
-
-/**
- *DescribeRollbackTime request structure.
  */
 class DescribeRollbackTimeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRollbackTimeRequest extends AbstractModel
      * @var array List of databases to be queried
      */
     public $DBs;
+
     /**
      * @param string $InstanceId Instance ID
      * @param array $DBs List of databases to be queried
@@ -46,6 +45,7 @@ class DescribeRollbackTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAutoSnapshotPolicy response structure.
+ *
  * @method string getAutoSnapshotPolicyId() Obtain The ID of the newly created scheduled snapshot policy.
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set The ID of the newly created scheduled snapshot policy.
  * @method string getNextTriggerTime() Obtain The time that initial backup will start.
  * @method void setNextTriggerTime(string $NextTriggerTime) Set The time that initial backup will start.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateAutoSnapshotPolicy response structure.
  */
 class CreateAutoSnapshotPolicyResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateAutoSnapshotPolicyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $AutoSnapshotPolicyId The ID of the newly created scheduled snapshot policy.
      * @param string $NextTriggerTime The time that initial backup will start.
@@ -54,6 +53,7 @@ class CreateAutoSnapshotPolicyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

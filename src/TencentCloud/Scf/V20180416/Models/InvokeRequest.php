@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Invoke request structure.
+ *
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getInvocationType() Obtain The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogType(string $LogType) Set If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
  * @method string getNamespace() Obtain Namespace
  * @method void setNamespace(string $Namespace) Set Namespace
- */
-
-/**
- *Invoke request structure.
  */
 class InvokeRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InvokeRequest extends AbstractModel
      * @var string Namespace
      */
     public $Namespace;
+
     /**
      * @param string $FunctionName Function name
      * @param string $InvocationType The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
@@ -78,6 +77,7 @@ class InvokeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

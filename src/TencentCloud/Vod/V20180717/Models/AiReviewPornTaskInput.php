@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of porn information detection task in content audit
+ *
  * @method integer getDefinition() Obtain Porn information detection template ID.
  * @method void setDefinition(integer $Definition) Set Porn information detection template ID.
- */
-
-/**
- *Input parameter type of porn information detection task in content audit
  */
 class AiReviewPornTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiReviewPornTaskInput extends AbstractModel
      * @var integer Porn information detection template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Porn information detection template ID.
      */
@@ -38,6 +37,7 @@ class AiReviewPornTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

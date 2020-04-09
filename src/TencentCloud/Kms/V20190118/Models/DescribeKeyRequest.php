@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeKey request structure.
+ *
  * @method string getKeyId() Obtain Globally unique CMK ID
  * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
- */
-
-/**
- *DescribeKey request structure.
  */
 class DescribeKeyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeKeyRequest extends AbstractModel
      * @var string Globally unique CMK ID
      */
     public $KeyId;
+
     /**
      * @param string $KeyId Globally unique CMK ID
      */
@@ -38,6 +37,7 @@ class DescribeKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

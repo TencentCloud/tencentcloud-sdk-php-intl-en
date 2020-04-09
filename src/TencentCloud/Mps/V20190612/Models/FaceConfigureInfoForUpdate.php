@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a face recognition task
+ *
  * @method string getSwitch() Obtain Switch of a face recognition task. Valid values:
 <li>ON: Enables an intelligent face recognition task;</li>
 <li>OFF: Disables an intelligent face recognition task.</li>
@@ -46,10 +48,6 @@ There can be up to 10 tags, each with a length limit of 16 characters.
 <li>Default: Default figure library;</li>
 <li>UserDefine: Custom figure library.</li>
 <li>All: Both default and custom figure libraries will be used.</li>
- */
-
-/**
- *Control parameter of a face recognition task
  */
 class FaceConfigureInfoForUpdate extends AbstractModel
 {
@@ -86,6 +84,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
 <li>All: Both default and custom figure libraries will be used.</li>
      */
     public $FaceLibrary;
+
     /**
      * @param string $Switch Switch of a face recognition task. Valid values:
 <li>ON: Enables an intelligent face recognition task;</li>
@@ -106,6 +105,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

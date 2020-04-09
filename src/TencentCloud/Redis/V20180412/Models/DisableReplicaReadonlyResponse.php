@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableReplicaReadonly response structure.
+ *
  * @method string getStatus() Obtain ERROR: failure; OK: success
  * @method void setStatus(string $Status) Set ERROR: failure; OK: success
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DisableReplicaReadonly response structure.
  */
 class DisableReplicaReadonlyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisableReplicaReadonlyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Status ERROR: failure; OK: success
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DisableReplicaReadonlyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

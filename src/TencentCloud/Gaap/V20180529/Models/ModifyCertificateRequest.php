@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCertificate request structure.
+ *
  * @method string getListenerId() Obtain Listener instance ID
  * @method void setListenerId(string $ListenerId) Set Listener instance ID
  * @method string getDomain() Obtain Domain name whose certificate needs to be modified
@@ -36,10 +38,6 @@ This parameter is required only when the mutual authentication is adopted.
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set List of new IDs of multiple client certificates, where:
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
- */
-
-/**
- *ModifyCertificate request structure.
  */
 class ModifyCertificateRequest extends AbstractModel
 {
@@ -71,6 +69,7 @@ This parameter is required only when the mutual authentication is adopted.
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerId Listener instance ID
      * @param string $Domain Domain name whose certificate needs to be modified
@@ -86,6 +85,7 @@ This parameter or the `ClientCertificateId` parameter is required for mutual aut
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

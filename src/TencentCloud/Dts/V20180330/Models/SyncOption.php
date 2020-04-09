@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Configuration options of a disaster recovery sync task
+ *
  * @method integer getSyncObject() Obtain Sync object. 1: entire instance; 2: specified table
  * @method void setSyncObject(integer $SyncObject) Set Sync object. 1: entire instance; 2: specified table
  * @method integer getRunMode() Obtain Sync start configuration. 1: start immediately
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncType(integer $SyncType) Set Sync mode. 3: full + incremental sync
  * @method integer getConsistencyType() Obtain Data consistency check. 1: no configuration required
  * @method void setConsistencyType(integer $ConsistencyType) Set Data consistency check. 1: no configuration required
- */
-
-/**
- *Configuration options of a disaster recovery sync task
  */
 class SyncOption extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SyncOption extends AbstractModel
      * @var integer Data consistency check. 1: no configuration required
      */
     public $ConsistencyType;
+
     /**
      * @param integer $SyncObject Sync object. 1: entire instance; 2: specified table
      * @param integer $RunMode Sync start configuration. 1: start immediately
@@ -62,6 +61,7 @@ class SyncOption extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

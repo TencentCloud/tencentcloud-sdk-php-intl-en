@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Resource details
+ *
  * @method string getSpec() Obtain Node specification description
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSpec(string $Spec) Set Node specification description
@@ -66,10 +68,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDiskNum(integer $DiskNum) Set Number of disks
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Resource details
  */
 class Resource extends AbstractModel
 {
@@ -144,6 +142,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DiskNum;
+
     /**
      * @param string $Spec Node specification description
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -174,6 +173,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

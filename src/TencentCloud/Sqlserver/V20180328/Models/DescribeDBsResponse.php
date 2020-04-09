@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBs response structure.
+ *
  * @method integer getTotalCount() Obtain Number of databases
  * @method void setTotalCount(integer $TotalCount) Set Number of databases
  * @method array getDBInstances() Obtain List of instance databases
  * @method void setDBInstances(array $DBInstances) Set List of instance databases
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBs response structure.
  */
 class DescribeDBsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of databases
      * @param array $DBInstances List of instance databases
@@ -54,6 +53,7 @@ class DescribeDBsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

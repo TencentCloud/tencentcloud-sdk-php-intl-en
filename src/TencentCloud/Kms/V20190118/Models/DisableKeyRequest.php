@@ -18,14 +18,13 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableKey request structure.
+ *
 
- */
-
-/**
- *DisableKey request structure.
  */
 class DisableKeyRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DisableKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

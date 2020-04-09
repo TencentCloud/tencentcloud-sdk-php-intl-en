@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes image sharing information.
+ *
  * @method string getCreatedTime() Obtain Time when an image was shared.
  * @method void setCreatedTime(string $CreatedTime) Set Time when an image was shared.
  * @method string getAccountId() Obtain ID of the account with which the image is shared.
  * @method void setAccountId(string $AccountId) Set ID of the account with which the image is shared.
- */
-
-/**
- *Describes image sharing information.
  */
 class SharePermission extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SharePermission extends AbstractModel
      * @var string ID of the account with which the image is shared.
      */
     public $AccountId;
+
     /**
      * @param string $CreatedTime Time when an image was shared.
      * @param string $AccountId ID of the account with which the image is shared.
@@ -46,6 +45,7 @@ class SharePermission extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

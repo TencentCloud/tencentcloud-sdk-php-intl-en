@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Security policy rule (input parameter)
+ *
  * @method string getSourceCidr() Obtain Source IP or IP range of the request.
  * @method void setSourceCidr(string $SourceCidr) Set Source IP or IP range of the request.
  * @method string getAction() Obtain Policy: Allow (ACCEPT) or reject (DROP).
@@ -36,10 +38,6 @@ Single port: 80
 Multiple ports: 80, 443
 Consecutive ports: 3306-20000
 All ports: ALL
- */
-
-/**
- *Security policy rule (input parameter)
  */
 class SecurityPolicyRuleIn extends AbstractModel
 {
@@ -71,6 +69,7 @@ Consecutive ports: 3306-20000
 All ports: ALL
      */
     public $DestPortRange;
+
     /**
      * @param string $SourceCidr Source IP or IP range of the request.
      * @param string $Action Policy: Allow (ACCEPT) or reject (DROP).
@@ -86,6 +85,7 @@ All ports: ALL
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

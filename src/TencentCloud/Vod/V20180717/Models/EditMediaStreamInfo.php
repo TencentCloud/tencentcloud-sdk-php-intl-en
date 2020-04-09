@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video stream editing information
+ *
  * @method string getStreamId() Obtain ID of recorded stream
  * @method void setStreamId(string $StreamId) Set ID of recorded stream
  * @method string getStartTime() Obtain Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
@@ -28,10 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEndTime(string $EndTime) Set End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Video stream editing information
  */
 class EditMediaStreamInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
+
     /**
      * @param string $StreamId ID of recorded stream
      * @param string $StartTime Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

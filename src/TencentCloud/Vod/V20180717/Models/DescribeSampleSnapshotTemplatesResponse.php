@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSampleSnapshotTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
  * @method array getSampleSnapshotTemplateSet() Obtain List of sampled screencapturing template details.
  * @method void setSampleSnapshotTemplateSet(array $SampleSnapshotTemplateSet) Set List of sampled screencapturing template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSampleSnapshotTemplates response structure.
  */
 class DescribeSampleSnapshotTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSampleSnapshotTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible entries.
      * @param array $SampleSnapshotTemplateSet List of sampled screencapturing template details.
@@ -54,6 +53,7 @@ class DescribeSampleSnapshotTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

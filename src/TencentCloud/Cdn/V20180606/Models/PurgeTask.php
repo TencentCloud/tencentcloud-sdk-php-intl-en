@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Purge task details.
+ *
  * @method string getTaskId() Obtain Purge task ID
  * @method void setTaskId(string $TaskId) Set Purge task ID
  * @method string getUrl() Obtain Purged URL
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 `delete`: purges all resources
  * @method string getCreateTime() Obtain Purge task submission time
  * @method void setCreateTime(string $CreateTime) Set Purge task submission time
- */
-
-/**
- *Purge task details.
  */
 class PurgeTask extends AbstractModel
 {
@@ -87,6 +85,7 @@ class PurgeTask extends AbstractModel
      * @var string Purge task submission time
      */
     public $CreateTime;
+
     /**
      * @param string $TaskId Purge task ID
      * @param string $Url Purged URL
@@ -106,6 +105,7 @@ class PurgeTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

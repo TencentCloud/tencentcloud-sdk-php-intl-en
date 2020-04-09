@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAddressTemplateGroups response structure.
+ *
  * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
  * @method array getAddressTemplateGroupSet() Obtain IP address template.
  * @method void setAddressTemplateGroupSet(array $AddressTemplateGroupSet) Set IP address template.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAddressTemplateGroups response structure.
  */
 class DescribeAddressTemplateGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAddressTemplateGroupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of instances meeting the filter condition.
      * @param array $AddressTemplateGroupSet IP address template.
@@ -54,6 +53,7 @@ class DescribeAddressTemplateGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

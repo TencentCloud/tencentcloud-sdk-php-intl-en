@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output mapping
+ *
  * @method string getSourcePath() Obtain Source path
  * @method void setSourcePath(string $SourcePath) Set Source path
  * @method string getDestinationPath() Obtain Destination path
  * @method void setDestinationPath(string $DestinationPath) Set Destination path
- */
-
-/**
- *Output mapping
  */
 class OutputMapping extends AbstractModel
 {
@@ -38,6 +36,7 @@ class OutputMapping extends AbstractModel
      * @var string Destination path
      */
     public $DestinationPath;
+
     /**
      * @param string $SourcePath Source path
      * @param string $DestinationPath Destination path
@@ -46,6 +45,7 @@ class OutputMapping extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

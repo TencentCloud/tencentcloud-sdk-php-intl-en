@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteClusterAsGroups request structure.
+ *
 
- */
-
-/**
- *DeleteClusterAsGroups request structure.
  */
 class DeleteClusterAsGroupsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DeleteClusterAsGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

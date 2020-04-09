@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceMonitorInfo response structure.
+ *
  * @method DeviceCpuInfo getCpu() Obtain CPU monitoring data of the instance
  * @method void setCpu(DeviceCpuInfo $Cpu) Set CPU monitoring data of the instance
  * @method DeviceMemInfo getMem() Obtain Memory monitoring data of the instance
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisk(DeviceDiskInfo $Disk) Set Disk monitoring data of the instance
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDeviceMonitorInfo response structure.
  */
 class DescribeDeviceMonitorInfoResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDeviceMonitorInfoResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param DeviceCpuInfo $Cpu CPU monitoring data of the instance
      * @param DeviceMemInfo $Mem Memory monitoring data of the instance
@@ -70,6 +69,7 @@ class DescribeDeviceMonitorInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

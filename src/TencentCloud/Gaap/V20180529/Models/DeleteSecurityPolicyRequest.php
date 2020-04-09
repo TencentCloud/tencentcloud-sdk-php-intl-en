@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSecurityPolicy request structure.
+ *
  * @method string getPolicyId() Obtain Policy ID
  * @method void setPolicyId(string $PolicyId) Set Policy ID
- */
-
-/**
- *DeleteSecurityPolicy request structure.
  */
 class DeleteSecurityPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSecurityPolicyRequest extends AbstractModel
      * @var string Policy ID
      */
     public $PolicyId;
+
     /**
      * @param string $PolicyId Policy ID
      */
@@ -38,6 +37,7 @@ class DeleteSecurityPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

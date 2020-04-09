@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter of SVG watermarking template
+ *
  * @method string getWidth() Obtain Watermark width, which supports six formats of px, %, W%, H%, S%, and L%:
 <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px; if `0px` is entered
  and `Height` is not `0px`, the watermark width will be proportionally scaled based on the source SVG image; if `0px` is entered for both `Width` and `Height`, the watermark width will be the width of the source SVG image;</li>
@@ -55,10 +57,6 @@ Default value: 0 px.
 <li>If the string ends in %, the meaning is the same as `H%`.</li>
 Default value: 0 px.
  */
-
-/**
- *Input parameter of SVG watermarking template
- */
 class SvgWatermarkInput extends AbstractModel
 {
     /**
@@ -86,6 +84,7 @@ Default value: 10W%.
 Default value: 0 px.
      */
     public $Height;
+
     /**
      * @param string $Width Watermark width, which supports six formats of px, %, W%, H%, S%, and L%:
 <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px; if `0px` is entered
@@ -110,6 +109,7 @@ Default value: 0 px.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProxyGroupDomain request structure.
+ *
  * @method string getGroupId() Obtain Connection group ID of the domain name to be enabled.
  * @method void setGroupId(string $GroupId) Set Connection group ID of the domain name to be enabled.
- */
-
-/**
- *CreateProxyGroupDomain request structure.
  */
 class CreateProxyGroupDomainRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateProxyGroupDomainRequest extends AbstractModel
      * @var string Connection group ID of the domain name to be enabled.
      */
     public $GroupId;
+
     /**
      * @param string $GroupId Connection group ID of the domain name to be enabled.
      */
@@ -38,6 +37,7 @@ class CreateProxyGroupDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

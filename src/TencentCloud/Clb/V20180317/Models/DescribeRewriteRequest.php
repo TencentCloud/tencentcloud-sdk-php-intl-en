@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRewrite request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getSourceListenerIds() Obtain Array of CLB listener IDs
  * @method void setSourceListenerIds(array $SourceListenerIds) Set Array of CLB listener IDs
  * @method array getSourceLocationIds() Obtain Array of CLB forwarding rules
  * @method void setSourceLocationIds(array $SourceLocationIds) Set Array of CLB forwarding rules
- */
-
-/**
- *DescribeRewrite request structure.
  */
 class DescribeRewriteRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRewriteRequest extends AbstractModel
      * @var array Array of CLB forwarding rules
      */
     public $SourceLocationIds;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $SourceListenerIds Array of CLB listener IDs
@@ -54,6 +53,7 @@ class DescribeRewriteRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

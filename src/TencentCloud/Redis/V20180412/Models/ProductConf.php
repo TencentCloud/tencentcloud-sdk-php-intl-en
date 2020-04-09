@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Product information
+ *
  * @method integer getType() Obtain Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
  * @method void setType(integer $Type) Set Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
  * @method string getTypeName() Obtain Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) Set Supported billing method. 1: monthly subscription; 0: pay-as-you-go
  * @method boolean getEnableRepicaReadOnly() Obtain Whether to support read-only replicas
  * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) Set Whether to support read-only replicas
- */
-
-/**
- *Product information
  */
 class ProductConf extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ProductConf extends AbstractModel
      * @var boolean Whether to support read-only replicas
      */
     public $EnableRepicaReadOnly;
+
     /**
      * @param integer $Type Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
      * @param string $TypeName Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
@@ -134,6 +133,7 @@ class ProductConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information on an organizational unit.
+ *
  * @method integer getNodeId() Obtain Organizational unit ID
  * @method void setNodeId(integer $NodeId) Set Organizational unit ID
  * @method string getName() Obtain Name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentNodeId(integer $ParentNodeId) Set Parent organizational unit ID
  * @method integer getMemberCount() Obtain Number of members
  * @method void setMemberCount(integer $MemberCount) Set Number of members
- */
-
-/**
- *Information on an organizational unit.
  */
 class OrgNode extends AbstractModel
 {
@@ -52,6 +50,7 @@ class OrgNode extends AbstractModel
      * @var integer Number of members
      */
     public $MemberCount;
+
     /**
      * @param integer $NodeId Organizational unit ID
      * @param string $Name Name
@@ -62,6 +61,7 @@ class OrgNode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

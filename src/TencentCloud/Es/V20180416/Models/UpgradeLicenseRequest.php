@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeLicense request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getLicenseType() Obtain License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  * @method boolean getForceRestart() Obtain Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
  * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
- */
-
-/**
- *UpgradeLicense request structure.
  */
 class UpgradeLicenseRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class UpgradeLicenseRequest extends AbstractModel
      * @var boolean Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
      */
     public $ForceRestart;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
@@ -78,6 +77,7 @@ class UpgradeLicenseRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

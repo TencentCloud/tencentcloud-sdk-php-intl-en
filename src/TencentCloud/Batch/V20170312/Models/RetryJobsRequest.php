@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RetryJobs request structure.
+ *
  * @method array getJobIds() Obtain List of instance IDs.
  * @method void setJobIds(array $JobIds) Set List of instance IDs.
- */
-
-/**
- *RetryJobs request structure.
  */
 class RetryJobsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RetryJobsRequest extends AbstractModel
      * @var array List of instance IDs.
      */
     public $JobIds;
+
     /**
      * @param array $JobIds List of instance IDs.
      */
@@ -38,6 +37,7 @@ class RetryJobsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

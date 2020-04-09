@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Text keyword recognition control parameter.
+ *
  * @method string getSwitch() Obtain Switch of a text keyword recognition task. Valid values:
 <li>ON: Enables a text keyword recognition task;</li>
 <li>OFF: Disables a text keyword recognition task.</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 There can be up to 10 tags, each with a length limit of 16 characters.
  * @method void setLabelSet(array $LabelSet) Set Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
 There can be up to 10 tags, each with a length limit of 16 characters.
- */
-
-/**
- *Text keyword recognition control parameter.
  */
 class OcrWordsConfigureInfo extends AbstractModel
 {
@@ -47,6 +45,7 @@ class OcrWordsConfigureInfo extends AbstractModel
 There can be up to 10 tags, each with a length limit of 16 characters.
      */
     public $LabelSet;
+
     /**
      * @param string $Switch Switch of a text keyword recognition task. Valid values:
 <li>ON: Enables a text keyword recognition task;</li>
@@ -58,6 +57,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

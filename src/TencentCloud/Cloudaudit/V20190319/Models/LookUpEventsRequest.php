@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Request parameter structure of LookUpEvents
+ *
  * @method integer getEndTime() Obtain End time
  * @method void setEndTime(integer $EndTime) Set End time
  * @method integer getStartTime() Obtain Start time
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxResults(integer $MaxResults) Set Maximum number of logs that can be returned
  * @method string getNextToken() Obtain Credential for viewing more logs
  * @method void setNextToken(string $NextToken) Set Credential for viewing more logs
- */
-
-/**
- *Request parameter structure of LookUpEvents
  */
 class LookUpEventsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class LookUpEventsRequest extends AbstractModel
      * @var string Credential for viewing more logs
      */
     public $NextToken;
+
     /**
      * @param integer $EndTime End time
      * @param integer $StartTime Start time
@@ -70,6 +69,7 @@ class LookUpEventsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Screencapturing output information (v2017)
+ *
  * @method integer getErrCode() Obtain Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
@@ -34,10 +36,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set Address of output screenshot file.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Screencapturing output information (v2017)
  */
 class SnapshotByTimeOffset2017 extends AbstractModel
 {
@@ -60,6 +58,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Url;
+
     /**
      * @param integer $ErrCode Error code
 <li>0: success;</li>
@@ -74,6 +73,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

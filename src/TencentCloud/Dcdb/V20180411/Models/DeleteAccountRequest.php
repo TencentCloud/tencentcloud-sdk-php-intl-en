@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAccount request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
  * @method string getUserName() Obtain Username
  * @method void setUserName(string $UserName) Set Username
  * @method string getHost() Obtain Access host allowed for a user
  * @method void setHost(string $Host) Set Access host allowed for a user
- */
-
-/**
- *DeleteAccount request structure.
  */
 class DeleteAccountRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteAccountRequest extends AbstractModel
      * @var string Access host allowed for a user
      */
     public $Host;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
      * @param string $UserName Username
@@ -54,6 +53,7 @@ class DeleteAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

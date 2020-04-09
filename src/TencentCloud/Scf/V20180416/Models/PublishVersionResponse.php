@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PublishVersion response structure.
+ *
  * @method string getFunctionVersion() Obtain Function version
  * @method void setFunctionVersion(string $FunctionVersion) Set Function version
  * @method integer getCodeSize() Obtain Code size
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) Set Function namespace
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *PublishVersion response structure.
  */
 class PublishVersionResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class PublishVersionResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $FunctionVersion Function version
      * @param integer $CodeSize Code size
@@ -102,6 +101,7 @@ class PublishVersionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

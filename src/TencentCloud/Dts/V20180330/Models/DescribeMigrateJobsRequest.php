@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrateJobs request structure.
+ *
  * @method string getJobId() Obtain Data migration task ID
  * @method void setJobId(string $JobId) Set Data migration task ID
  * @method string getJobName() Obtain Data migration task name
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0
  * @method integer getLimit() Obtain Number of the returned instances. Value range: [1, 100]. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of the returned instances. Value range: [1, 100]. Default value: 20
- */
-
-/**
- *DescribeMigrateJobs request structure.
  */
 class DescribeMigrateJobsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeMigrateJobsRequest extends AbstractModel
      * @var integer Number of the returned instances. Value range: [1, 100]. Default value: 20
      */
     public $Limit;
+
     /**
      * @param string $JobId Data migration task ID
      * @param string $JobName Data migration task name
@@ -78,6 +77,7 @@ class DescribeMigrateJobsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

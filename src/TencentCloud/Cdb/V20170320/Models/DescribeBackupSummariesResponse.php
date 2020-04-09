@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupSummaries response structure.
+ *
  * @method array getItems() Obtain Statistical items of instance backup.
  * @method void setItems(array $Items) Set Statistical items of instance backup.
  * @method integer getTotalCount() Obtain Total number of instance backups.
  * @method void setTotalCount(integer $TotalCount) Set Total number of instance backups.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBackupSummaries response structure.
  */
 class DescribeBackupSummariesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBackupSummariesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Items Statistical items of instance backup.
      * @param integer $TotalCount Total number of instance backups.
@@ -54,6 +53,7 @@ class DescribeBackupSummariesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input type of object recognition task.
+ *
  * @method integer getDefinition() Obtain Object recognition template ID.
  * @method void setDefinition(integer $Definition) Set Object recognition template ID.
- */
-
-/**
- *Input type of object recognition task.
  */
 class AiRecognitionTaskObjectResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskObjectResultInput extends AbstractModel
      * @var integer Object recognition template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Object recognition template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskObjectResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

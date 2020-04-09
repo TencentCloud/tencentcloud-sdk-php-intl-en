@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of adaptive bitrate streaming
+ *
  * @method integer getDefinition() Obtain Adaptive bitrate streaming template ID.
  * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming template ID.
  * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Input parameter type of adaptive bitrate streaming
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -41,6 +39,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WatermarkSet;
+
     /**
      * @param integer $Definition Adaptive bitrate streaming template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
@@ -50,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

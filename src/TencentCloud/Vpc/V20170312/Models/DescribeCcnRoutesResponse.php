@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCcnRoutes response structure.
+ *
  * @method integer getTotalCount() Obtain The number of objects meeting the condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
  * @method array getRouteSet() Obtain The CCN routing policy object.
  * @method void setRouteSet(array $RouteSet) Set The CCN routing policy object.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeCcnRoutes response structure.
  */
 class DescribeCcnRoutesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCcnRoutesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of objects meeting the condition.
      * @param array $RouteSet The CCN routing policy object.
@@ -54,6 +53,7 @@ class DescribeCcnRoutesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

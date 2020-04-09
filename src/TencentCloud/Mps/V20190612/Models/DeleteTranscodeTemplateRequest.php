@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTranscodeTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a transcoding template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a transcoding template.
- */
-
-/**
- *DeleteTranscodeTemplate request structure.
  */
 class DeleteTranscodeTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTranscodeTemplateRequest extends AbstractModel
      * @var integer Unique ID of a transcoding template.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Unique ID of a transcoding template.
      */
@@ -38,6 +37,7 @@ class DeleteTranscodeTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

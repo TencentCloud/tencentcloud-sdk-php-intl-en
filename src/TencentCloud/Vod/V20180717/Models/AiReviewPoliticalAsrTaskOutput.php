@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ASR-detected politically sensitive information in speech
+ *
  * @method float getConfidence() Obtain Score of ASR-detected politically sensitive information in speech between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Score of ASR-detected politically sensitive information in speech between 0 and 100.
  * @method string getSuggestion() Obtain Suggestion for ASR-detected politically sensitive information in speech. Valid values:
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>block.</li>
  * @method array getSegmentSet() Obtain List of video segments that contain ASR-detected politically sensitive information in speech.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain ASR-detected politically sensitive information in speech.
- */
-
-/**
- *ASR-detected politically sensitive information in speech
  */
 class AiReviewPoliticalAsrTaskOutput extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiReviewPoliticalAsrTaskOutput extends AbstractModel
      * @var array List of video segments that contain ASR-detected politically sensitive information in speech.
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Score of ASR-detected politically sensitive information in speech between 0 and 100.
      * @param string $Suggestion Suggestion for ASR-detected politically sensitive information in speech. Valid values:
@@ -66,6 +65,7 @@ class AiReviewPoliticalAsrTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

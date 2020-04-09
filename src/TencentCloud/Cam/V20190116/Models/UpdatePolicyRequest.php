@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdatePolicy request structure.
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
  * @method string getPolicyName() Obtain Policy name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Policy description
  * @method string getPolicyDocument() Obtain Policy document, such as `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the resources that the role is authorized to access. For more information on this parameter, please see the `RoleInfo` output parameter of the [GetRole](https://cloud.tencent.com/document/product/598/36221) API
  * @method void setPolicyDocument(string $PolicyDocument) Set Policy document, such as `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the resources that the role is authorized to access. For more information on this parameter, please see the `RoleInfo` output parameter of the [GetRole](https://cloud.tencent.com/document/product/598/36221) API
- */
-
-/**
- *UpdatePolicy request structure.
  */
 class UpdatePolicyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UpdatePolicyRequest extends AbstractModel
      * @var string Policy document, such as `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the resources that the role is authorized to access. For more information on this parameter, please see the `RoleInfo` output parameter of the [GetRole](https://cloud.tencent.com/document/product/598/36221) API
      */
     public $PolicyDocument;
+
     /**
      * @param integer $PolicyId Policy ID
      * @param string $PolicyName Policy name
@@ -62,6 +61,7 @@ class UpdatePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

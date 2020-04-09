@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Data structure of sorted data
+ *
  * @method string getName() Obtain Datatype name
  * @method void setName(string $Name) Set Datatype name
  * @method float getValue() Obtain Data value
  * @method void setValue(float $Value) Set Data value
- */
-
-/**
- *Data structure of sorted data
  */
 class TopDetailData extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TopDetailData extends AbstractModel
      * @var float Data value
      */
     public $Value;
+
     /**
      * @param string $Name Datatype name
      * @param float $Value Data value
@@ -46,6 +45,7 @@ class TopDetailData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

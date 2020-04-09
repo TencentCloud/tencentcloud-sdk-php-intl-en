@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindAutoSnapshotPolicy request structure.
+ *
  * @method string getAutoSnapshotPolicyId() Obtain ID of scheduled snapshot policy to be bound.
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set ID of scheduled snapshot policy to be bound.
  * @method array getDiskIds() Obtain List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
  * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
- */
-
-/**
- *BindAutoSnapshotPolicy request structure.
  */
 class BindAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BindAutoSnapshotPolicyRequest extends AbstractModel
      * @var array List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
      */
     public $DiskIds;
+
     /**
      * @param string $AutoSnapshotPolicyId ID of scheduled snapshot policy to be bound.
      * @param array $DiskIds List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
@@ -46,6 +45,7 @@ class BindAutoSnapshotPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

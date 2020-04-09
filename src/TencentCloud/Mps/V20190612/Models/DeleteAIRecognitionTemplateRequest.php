@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAIRecognitionTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a video content recognition template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a video content recognition template.
- */
-
-/**
- *DeleteAIRecognitionTemplate request structure.
  */
 class DeleteAIRecognitionTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAIRecognitionTemplateRequest extends AbstractModel
      * @var integer Unique ID of a video content recognition template.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Unique ID of a video content recognition template.
      */
@@ -38,6 +37,7 @@ class DeleteAIRecognitionTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

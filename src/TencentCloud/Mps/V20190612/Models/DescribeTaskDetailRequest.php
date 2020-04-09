@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskDetail request structure.
+ *
  * @method string getTaskId() Obtain Video processing task ID.
  * @method void setTaskId(string $TaskId) Set Video processing task ID.
- */
-
-/**
- *DescribeTaskDetail request structure.
  */
 class DescribeTaskDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTaskDetailRequest extends AbstractModel
      * @var string Video processing task ID.
      */
     public $TaskId;
+
     /**
      * @param string $TaskId Video processing task ID.
      */
@@ -38,6 +37,7 @@ class DescribeTaskDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

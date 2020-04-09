@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsFileSystem response structure.
+ *
  * @method string getCreationTime() Obtain File system creation time
  * @method void setCreationTime(string $CreationTime) Set File system creation time
  * @method string getCreationToken() Obtain Custom file system name
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncrypted(boolean $Encrypted) Set Whether a file system is encrypted
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateCfsFileSystem response structure.
  */
 class CreateCfsFileSystemResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CreateCfsFileSystemResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $CreationTime File system creation time
      * @param string $CreationToken Custom file system name
@@ -102,6 +101,7 @@ class CreateCfsFileSystemResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

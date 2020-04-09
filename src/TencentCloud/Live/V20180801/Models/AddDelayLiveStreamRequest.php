@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddDelayLiveStream request structure.
+ *
  * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method string getDomainName() Obtain Push domain name.
@@ -34,10 +36,6 @@ Notes:
 Notes:
 1. The configuration will expire after 7 days by default and can last up to 7 days.
 2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- */
-
-/**
- *AddDelayLiveStream request structure.
  */
 class AddDelayLiveStreamRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ Notes:
 2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $ExpireTime;
+
     /**
      * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
      * @param string $DomainName Push domain name.
@@ -82,6 +81,7 @@ Notes:
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

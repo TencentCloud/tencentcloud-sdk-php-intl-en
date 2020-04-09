@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Audio gain adjustment parameter
+ *
  * @method integer getMute() Obtain Whether to mute. Valid values: 0, 1.
 <li>0: not muted.</li>
 <li>1: muted.</li>
@@ -37,10 +39,6 @@ Default value: 0.
 <li>0 and 1: no change.</li>
 Default value: 0.
  */
-
-/**
- *Audio gain adjustment parameter
- */
 class AudioVolumeParam extends AbstractModel
 {
     /**
@@ -59,6 +57,7 @@ Default value: 0.
 Default value: 0.
      */
     public $Gain;
+
     /**
      * @param integer $Mute Whether to mute. Valid values: 0, 1.
 <li>0: not muted.</li>
@@ -74,6 +73,7 @@ Default value: 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

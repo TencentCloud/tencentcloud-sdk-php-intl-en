@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Environment variable
+ *
  * @method string getName() Obtain Environment variable name
  * @method void setName(string $Name) Set Environment variable name
  * @method string getValue() Obtain Environment variable value
  * @method void setValue(string $Value) Set Environment variable value
- */
-
-/**
- *Environment variable
  */
 class EnvVar extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnvVar extends AbstractModel
      * @var string Environment variable value
      */
     public $Value;
+
     /**
      * @param string $Name Environment variable name
      * @param string $Value Environment variable value
@@ -46,6 +45,7 @@ class EnvVar extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

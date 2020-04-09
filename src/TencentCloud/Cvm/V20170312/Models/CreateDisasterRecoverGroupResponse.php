@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDisasterRecoverGroup response structure.
+ *
  * @method string getDisasterRecoverGroupId() Obtain List of spread placement group IDs.
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set List of spread placement group IDs.
  * @method string getType() Obtain Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time of the placement group.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateDisasterRecoverGroup response structure.
  */
 class CreateDisasterRecoverGroupResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $DisasterRecoverGroupId List of spread placement group IDs.
      * @param string $Type Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
@@ -86,6 +85,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

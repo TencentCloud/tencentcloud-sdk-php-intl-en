@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Table information parsed from IDL table description file
+ *
  * @method string getTableIdlType() Obtain Table description language type. Valid values: PROTO, TDR
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTableIdlType(string $TableIdlType) Set Table description language type. Valid values: PROTO, TDR
@@ -90,10 +92,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSortRule(integer $SortRule) Set Sort order of SORTLIST-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Table information parsed from IDL table description file
  */
 class ParsedTableInfoNew extends AbstractModel
 {
@@ -204,6 +202,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SortRule;
+
     /**
      * @param string $TableIdlType Table description language type. Valid values: PROTO, TDR
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -246,6 +245,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

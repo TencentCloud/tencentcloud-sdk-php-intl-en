@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AsymmetricRsaDecrypt request structure.
+ *
  * @method string getKeyId() Obtain Unique CMK ID
  * @method void setKeyId(string $KeyId) Set Unique CMK ID
  * @method string getCiphertext() Obtain Base64-encoded ciphertext encrypted with `PublicKey`
  * @method void setCiphertext(string $Ciphertext) Set Base64-encoded ciphertext encrypted with `PublicKey`
  * @method string getAlgorithm() Obtain Corresponding algorithm when a public key is used for encryption. Valid values: RSAES_PKCS1_V1_5, RSAES_OAEP_SHA_1, RSAES_OAEP_SHA_256
  * @method void setAlgorithm(string $Algorithm) Set Corresponding algorithm when a public key is used for encryption. Valid values: RSAES_PKCS1_V1_5, RSAES_OAEP_SHA_1, RSAES_OAEP_SHA_256
- */
-
-/**
- *AsymmetricRsaDecrypt request structure.
  */
 class AsymmetricRsaDecryptRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AsymmetricRsaDecryptRequest extends AbstractModel
      * @var string Corresponding algorithm when a public key is used for encryption. Valid values: RSAES_PKCS1_V1_5, RSAES_OAEP_SHA_1, RSAES_OAEP_SHA_256
      */
     public $Algorithm;
+
     /**
      * @param string $KeyId Unique CMK ID
      * @param string $Ciphertext Base64-encoded ciphertext encrypted with `PublicKey`
@@ -54,6 +53,7 @@ class AsymmetricRsaDecryptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Node hardware information
+ *
  * @method integer getAppId() Obtain User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAppId(integer $AppId) Set User `APPID`
@@ -160,10 +162,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getAutoFlag() Obtain 
  * @method void setAutoFlag(integer $AutoFlag) Set 
- */
-
-/**
- *Node hardware information
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -381,6 +379,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer 
      */
     public $AutoFlag;
+
     /**
      * @param integer $AppId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -458,6 +457,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

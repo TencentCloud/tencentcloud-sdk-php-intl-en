@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySecurityGroupAttribute request structure.
+ *
  * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
  * @method string getGroupName() Obtain Security group can be named freely, but cannot exceed 60 characters.
  * @method void setGroupName(string $GroupName) Set Security group can be named freely, but cannot exceed 60 characters.
  * @method string getGroupDescription() Obtain The remarks for the security group. The maximum length is 100 characters.
  * @method void setGroupDescription(string $GroupDescription) Set The remarks for the security group. The maximum length is 100 characters.
- */
-
-/**
- *ModifySecurityGroupAttribute request structure.
  */
 class ModifySecurityGroupAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySecurityGroupAttributeRequest extends AbstractModel
      * @var string The remarks for the security group. The maximum length is 100 characters.
      */
     public $GroupDescription;
+
     /**
      * @param string $SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      * @param string $GroupName Security group can be named freely, but cannot exceed 60 characters.
@@ -54,6 +53,7 @@ class ModifySecurityGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

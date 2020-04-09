@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeregisterTargets request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID in the format of lb-12345678
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID in the format of lb-12345678
  * @method string getListenerId() Obtain Listener ID in the format of lbl-12345678
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set Target rule domain name. This parameter does not take effect if LocationId is specified
  * @method string getUrl() Obtain Target rule URL. This parameter does not take effect if LocationId is specified
  * @method void setUrl(string $Url) Set Target rule URL. This parameter does not take effect if LocationId is specified
- */
-
-/**
- *DeregisterTargets request structure.
  */
 class DeregisterTargetsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DeregisterTargetsRequest extends AbstractModel
      * @var string Target rule URL. This parameter does not take effect if LocationId is specified
      */
     public $Url;
+
     /**
      * @param string $LoadBalancerId CLB instance ID in the format of lb-12345678
      * @param string $ListenerId Listener ID in the format of lbl-12345678
@@ -78,6 +77,7 @@ class DeregisterTargetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

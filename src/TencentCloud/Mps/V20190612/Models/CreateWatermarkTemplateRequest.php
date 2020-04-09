@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWatermarkTemplate request structure.
+ *
  * @method string getType() Obtain Watermarking type. Valid values:
 <li>image: Image watermark;</li>
 <li>text: Text watermark;</li>
@@ -64,10 +66,6 @@ Default value: 0 px.
  * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) Set Text watermarking template. This field is required and valid only when `Type` is `text`.
  * @method SvgWatermarkInput getSvgTemplate() Obtain SVG watermarking template. This field is required and valid only when `Type` is `svg`.
  * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) Set SVG watermarking template. This field is required and valid only when `Type` is `svg`.
- */
-
-/**
- *CreateWatermarkTemplate request structure.
  */
 class CreateWatermarkTemplateRequest extends AbstractModel
 {
@@ -129,6 +127,7 @@ Default value: 0 px.
      * @var SvgWatermarkInput SVG watermarking template. This field is required and valid only when `Type` is `svg`.
      */
     public $SvgTemplate;
+
     /**
      * @param string $Type Watermarking type. Valid values:
 <li>image: Image watermark;</li>
@@ -158,6 +157,7 @@ Default value: 0 px.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

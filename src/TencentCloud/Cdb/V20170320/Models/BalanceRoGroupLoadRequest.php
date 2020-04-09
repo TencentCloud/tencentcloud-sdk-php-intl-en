@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BalanceRoGroupLoad request structure.
+ *
  * @method string getRoGroupId() Obtain RO group ID in the format of `cdbrg-c1nl9rpv`.
  * @method void setRoGroupId(string $RoGroupId) Set RO group ID in the format of `cdbrg-c1nl9rpv`.
- */
-
-/**
- *BalanceRoGroupLoad request structure.
  */
 class BalanceRoGroupLoadRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class BalanceRoGroupLoadRequest extends AbstractModel
      * @var string RO group ID in the format of `cdbrg-c1nl9rpv`.
      */
     public $RoGroupId;
+
     /**
      * @param string $RoGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
      */
@@ -38,6 +37,7 @@ class BalanceRoGroupLoadRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

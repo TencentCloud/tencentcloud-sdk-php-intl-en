@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The gateway traffic monitoring details
+ *
  * @method string getPrivateIpAddress() Obtain Origin `IP`.
  * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Origin `IP`.
  * @method integer getInPkg() Obtain Inbound packets.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInTraffic(integer $InTraffic) Set Inbound bandwidth, unit: `Byte`.
  * @method integer getOutTraffic() Obtain Outbound bandwidth, unit: `Byte`.
  * @method void setOutTraffic(integer $OutTraffic) Set Outbound bandwidth, unit: `Byte`.
- */
-
-/**
- *The gateway traffic monitoring details
  */
 class GatewayFlowMonitorDetail extends AbstractModel
 {
@@ -59,6 +57,7 @@ class GatewayFlowMonitorDetail extends AbstractModel
      * @var integer Outbound bandwidth, unit: `Byte`.
      */
     public $OutTraffic;
+
     /**
      * @param string $PrivateIpAddress Origin `IP`.
      * @param integer $InPkg Inbound packets.
@@ -70,6 +69,7 @@ class GatewayFlowMonitorDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

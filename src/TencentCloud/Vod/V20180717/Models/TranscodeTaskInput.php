@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of transcoding task
+ *
  * @method integer getDefinition() Obtain Video transcoding template ID.
  * @method void setDefinition(integer $Definition) Set Video transcoding template ID.
  * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
  * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
- */
-
-/**
- *Input parameter type of transcoding task
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var array List of blurs. Up to 10 ones can be supported.
      */
     public $MosaicSet;
+
     /**
      * @param integer $Definition Video transcoding template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
@@ -58,6 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

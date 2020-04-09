@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceShards request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method boolean getFilterSlave() Obtain Whether to filter out the slave node information
  * @method void setFilterSlave(boolean $FilterSlave) Set Whether to filter out the slave node information
- */
-
-/**
- *DescribeInstanceShards request structure.
  */
 class DescribeInstanceShardsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceShardsRequest extends AbstractModel
      * @var boolean Whether to filter out the slave node information
      */
     public $FilterSlave;
+
     /**
      * @param string $InstanceId Instance ID
      * @param boolean $FilterSlave Whether to filter out the slave node information
@@ -46,6 +45,7 @@ class DescribeInstanceShardsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Aggregate values of details; each metric has different aggregation methods based on its characteristics
+ *
  * @method string getName() Obtain Aggregation method, which can be:
 sum: aggregate summation
 max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
@@ -28,10 +30,6 @@ max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on
 avg: average value
  * @method float getValue() Obtain Aggregate data value
  * @method void setValue(float $Value) Set Aggregate data value
- */
-
-/**
- *Aggregate values of details; each metric has different aggregation methods based on its characteristics
  */
 class SummarizedData extends AbstractModel
 {
@@ -47,6 +45,7 @@ avg: average value
      * @var float Aggregate data value
      */
     public $Value;
+
     /**
      * @param string $Name Aggregation method, which can be:
 sum: aggregate summation
@@ -58,6 +57,7 @@ avg: average value
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

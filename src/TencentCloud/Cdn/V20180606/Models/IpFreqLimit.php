@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Access limit configuration for a single IP of a single node. This is disabled by default. 
+ *
  * @method string getSwitch() Obtain IP access limit configuration switch
 on: enabled
 off: disabled
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setQps(integer $Qps) Set Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Access limit configuration for a single IP of a single node. This is disabled by default. 
  */
 class IpFreqLimit extends AbstractModel
 {
@@ -50,6 +48,7 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Qps;
+
     /**
      * @param string $Switch IP access limit configuration switch
 on: enabled
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

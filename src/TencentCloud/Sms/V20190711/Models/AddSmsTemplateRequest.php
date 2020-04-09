@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddSmsTemplate request structure.
+ *
  * @method string getTemplateName() Obtain Template name.
  * @method void setTemplateName(string $TemplateName) Set Template name.
  * @method string getTemplateContent() Obtain Template content.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 1: Global SMS.
  * @method string getRemark() Obtain Template remarks, such as reason for application and use case.
  * @method void setRemark(string $Remark) Set Template remarks, such as reason for application and use case.
- */
-
-/**
- *AddSmsTemplate request structure.
  */
 class AddSmsTemplateRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class AddSmsTemplateRequest extends AbstractModel
      * @var string Template remarks, such as reason for application and use case.
      */
     public $Remark;
+
     /**
      * @param string $TemplateName Template name.
      * @param string $TemplateContent Template content.
@@ -78,6 +77,7 @@ class AddSmsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

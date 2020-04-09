@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenDBExtranetAccess request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-hez4fh0v
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-hez4fh0v
- */
-
-/**
- *OpenDBExtranetAccess request structure.
  */
 class OpenDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OpenDBExtranetAccessRequest extends AbstractModel
      * @var string Instance ID in the format of postgres-hez4fh0v
      */
     public $DBInstanceId;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-hez4fh0v
      */
@@ -38,6 +37,7 @@ class OpenDBExtranetAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

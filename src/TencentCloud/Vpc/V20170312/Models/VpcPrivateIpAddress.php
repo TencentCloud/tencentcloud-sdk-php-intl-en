@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC private IP object.
+ *
  * @method string getPrivateIpAddress() Obtain `VPC` private `IP`.
  * @method void setPrivateIpAddress(string $PrivateIpAddress) Set `VPC` private `IP`.
  * @method string getCidrBlock() Obtain The `CIDR` belonging to the subnet.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddressType(string $PrivateIpAddressType) Set Private `IP` type.
  * @method string getCreatedTime() Obtain `IP` application time.
  * @method void setCreatedTime(string $CreatedTime) Set `IP` application time.
- */
-
-/**
- *VPC private IP object.
  */
 class VpcPrivateIpAddress extends AbstractModel
 {
@@ -52,6 +50,7 @@ class VpcPrivateIpAddress extends AbstractModel
      * @var string `IP` application time.
      */
     public $CreatedTime;
+
     /**
      * @param string $PrivateIpAddress `VPC` private `IP`.
      * @param string $CidrBlock The `CIDR` belonging to the subnet.
@@ -62,6 +61,7 @@ class VpcPrivateIpAddress extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

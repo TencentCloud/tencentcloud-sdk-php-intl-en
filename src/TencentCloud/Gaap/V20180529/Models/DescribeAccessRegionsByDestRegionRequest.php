@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessRegionsByDestRegion request structure.
+ *
  * @method string getDestRegion() Obtain Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
  * @method void setDestRegion(string $DestRegion) Set Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
- */
-
-/**
- *DescribeAccessRegionsByDestRegion request structure.
  */
 class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
      * @var string Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
      */
     public $DestRegion;
+
     /**
      * @param string $DestRegion Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
      */
@@ -38,6 +37,7 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

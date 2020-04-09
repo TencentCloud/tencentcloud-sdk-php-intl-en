@@ -18,14 +18,13 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Intelligent analysis results
+ *
 
- */
-
-/**
- *Intelligent analysis results
  */
 class AiAnalysisResult extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class AiAnalysisResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

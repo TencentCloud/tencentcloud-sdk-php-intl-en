@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Region details
+ *
  * @method string getRegionId() Obtain Region ID
  * @method void setRegionId(string $RegionId) Set Region ID
  * @method string getRegionName() Obtain Region name in Chinese or English
  * @method void setRegionName(string $RegionName) Set Region name in Chinese or English
- */
-
-/**
- *Region details
  */
 class RegionDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RegionDetail extends AbstractModel
      * @var string Region name in Chinese or English
      */
     public $RegionName;
+
     /**
      * @param string $RegionId Region ID
      * @param string $RegionName Region name in Chinese or English
@@ -46,6 +45,7 @@ class RegionDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

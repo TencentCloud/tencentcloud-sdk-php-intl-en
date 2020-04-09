@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Name of a database
+ *
  * @method string getDatabaseName() Obtain Name of a database
  * @method void setDatabaseName(string $DatabaseName) Set Name of a database
- */
-
-/**
- *Name of a database
  */
 class DatabaseName extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DatabaseName extends AbstractModel
      * @var string Name of a database
      */
     public $DatabaseName;
+
     /**
      * @param string $DatabaseName Name of a database
      */
@@ -38,6 +37,7 @@ class DatabaseName extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

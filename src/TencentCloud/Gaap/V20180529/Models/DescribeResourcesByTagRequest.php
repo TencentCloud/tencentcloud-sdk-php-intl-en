@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourcesByTag request structure.
+ *
  * @method string getTagKey() Obtain Tag key.
  * @method void setTagKey(string $TagKey) Set Tag key.
  * @method string getTagValue() Obtain Tag value.
@@ -32,10 +34,6 @@ Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
 If this field is not specified, all resources with the tag will be queried.
- */
-
-/**
- *DescribeResourcesByTag request structure.
  */
 class DescribeResourcesByTagRequest extends AbstractModel
 {
@@ -57,6 +55,7 @@ RealServer (origin server).
 If this field is not specified, all resources with the tag will be queried.
      */
     public $ResourceType;
+
     /**
      * @param string $TagKey Tag key.
      * @param string $TagValue Tag value.
@@ -70,6 +69,7 @@ If this field is not specified, all resources with the tag will be queried.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Basic domain configuration information, including CNAME, status, service type, acceleration region, creation time, last modified time, and origin server configuration.
+ *
  * @method string getResourceId() Obtain Domain name ID
  * @method void setResourceId(string $ResourceId) Set Domain name ID
  * @method integer getAppId() Obtain Tencent Cloud account ID
@@ -88,10 +90,6 @@ normal: not locked
 mainland: locked in Mainland China
 overseas: locked outside Mainland China
 global: locked globally
- */
-
-/**
- *Basic domain configuration information, including CNAME, status, service type, acceleration region, creation time, last modified time, and origin server configuration.
  */
 class BriefDomain extends AbstractModel
 {
@@ -181,6 +179,7 @@ overseas: locked outside Mainland China
 global: locked globally
      */
     public $Readonly;
+
     /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
@@ -222,6 +221,7 @@ global: locked globally
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

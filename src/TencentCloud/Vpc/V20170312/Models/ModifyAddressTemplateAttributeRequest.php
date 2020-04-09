@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAddressTemplateAttribute request structure.
+ *
  * @method string getAddressTemplateId() Obtain IP address template instance ID, such as `ipm-mdunqeb6`.
  * @method void setAddressTemplateId(string $AddressTemplateId) Set IP address template instance ID, such as `ipm-mdunqeb6`.
  * @method string getAddressTemplateName() Obtain IP address template name.
  * @method void setAddressTemplateName(string $AddressTemplateName) Set IP address template name.
  * @method array getAddresses() Obtain Address information, including IP, CIDR and IP address range.
  * @method void setAddresses(array $Addresses) Set Address information, including IP, CIDR and IP address range.
- */
-
-/**
- *ModifyAddressTemplateAttribute request structure.
  */
 class ModifyAddressTemplateAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
      * @var array Address information, including IP, CIDR and IP address range.
      */
     public $Addresses;
+
     /**
      * @param string $AddressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
      * @param string $AddressTemplateName IP address template name.
@@ -54,6 +53,7 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

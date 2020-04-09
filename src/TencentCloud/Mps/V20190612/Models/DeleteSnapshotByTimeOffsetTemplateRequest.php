@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSnapshotByTimeOffsetTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a time point screencapturing template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a time point screencapturing template.
- */
-
-/**
- *DeleteSnapshotByTimeOffsetTemplate request structure.
  */
 class DeleteSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSnapshotByTimeOffsetTemplateRequest extends AbstractModel
      * @var integer Unique ID of a time point screencapturing template.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Unique ID of a time point screencapturing template.
      */
@@ -38,6 +37,7 @@ class DeleteSnapshotByTimeOffsetTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

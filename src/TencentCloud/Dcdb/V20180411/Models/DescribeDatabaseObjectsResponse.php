@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDatabaseObjects response structure.
+ *
  * @method string getInstanceId() Obtain Passed through from the input parameters.
  * @method void setInstanceId(string $InstanceId) Set Passed through from the input parameters.
  * @method string getDbName() Obtain Database name.
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFuncs(array $Funcs) Set List of functions.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDatabaseObjects response structure.
  */
 class DescribeDatabaseObjectsResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeDatabaseObjectsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId Passed through from the input parameters.
      * @param string $DbName Database name.
@@ -86,6 +85,7 @@ class DescribeDatabaseObjectsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

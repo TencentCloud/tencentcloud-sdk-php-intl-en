@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Full speech recognition segment.
+ *
  * @method float getConfidence() Obtain Confidence of a recognition segment. Value range: 0–100.
  * @method void setConfidence(float $Confidence) Set Confidence of a recognition segment. Value range: 0–100.
  * @method float getStartTimeOffset() Obtain Start time offset of a recognition segment in seconds.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognition segment in seconds.
  * @method string getText() Obtain Recognized text.
  * @method void setText(string $Text) Set Recognized text.
- */
-
-/**
- *Full speech recognition segment.
  */
 class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
      * @var string Recognized text.
      */
     public $Text;
+
     /**
      * @param float $Confidence Confidence of a recognition segment. Value range: 0–100.
      * @param float $StartTimeOffset Start time offset of a recognition segment in seconds.
@@ -62,6 +61,7 @@ class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

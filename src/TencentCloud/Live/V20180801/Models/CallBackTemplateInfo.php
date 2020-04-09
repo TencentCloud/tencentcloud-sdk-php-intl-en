@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Callback template information
+ *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getTemplateName() Obtain Template name.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) Set Porn detection callback URL.
  * @method string getCallbackKey() Obtain Callback authentication key.
  * @method void setCallbackKey(string $CallbackKey) Set Callback authentication key.
- */
-
-/**
- *Callback template information
  */
 class CallBackTemplateInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CallBackTemplateInfo extends AbstractModel
      * @var string Callback authentication key.
      */
     public $CallbackKey;
+
     /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
@@ -110,6 +109,7 @@ class CallBackTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

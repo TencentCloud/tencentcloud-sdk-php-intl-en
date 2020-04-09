@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of intelligent tagging task
+ *
  * @method string getSwitch() Obtain Switch of intelligent tagging task. Valid values:
 <li>ON: enables intelligent tagging task;</li>
 <li>OFF: disables intelligent tagging task.</li>
  * @method void setSwitch(string $Switch) Set Switch of intelligent tagging task. Valid values:
 <li>ON: enables intelligent tagging task;</li>
 <li>OFF: disables intelligent tagging task.</li>
- */
-
-/**
- *Control parameter of intelligent tagging task
  */
 class TagConfigureInfoForUpdate extends AbstractModel
 {
@@ -37,6 +35,7 @@ class TagConfigureInfoForUpdate extends AbstractModel
 <li>OFF: disables intelligent tagging task.</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch Switch of intelligent tagging task. Valid values:
 <li>ON: enables intelligent tagging task;</li>
@@ -46,6 +45,7 @@ class TagConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

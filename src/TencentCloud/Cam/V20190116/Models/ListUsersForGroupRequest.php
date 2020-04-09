@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListUsersForGroup request structure.
+ *
  * @method integer getGroupId() Obtain User group ID
  * @method void setGroupId(integer $GroupId) Set User group ID
  * @method integer getPage() Obtain Page number; default is 1
  * @method void setPage(integer $Page) Set Page number; default is 1
  * @method integer getRp() Obtain Number of entries per page; default is 20
  * @method void setRp(integer $Rp) Set Number of entries per page; default is 20
- */
-
-/**
- *ListUsersForGroup request structure.
  */
 class ListUsersForGroupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListUsersForGroupRequest extends AbstractModel
      * @var integer Number of entries per page; default is 20
      */
     public $Rp;
+
     /**
      * @param integer $GroupId User group ID
      * @param integer $Page Page number; default is 1
@@ -54,6 +53,7 @@ class ListUsersForGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

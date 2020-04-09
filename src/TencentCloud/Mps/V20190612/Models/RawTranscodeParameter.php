@@ -18,14 +18,13 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Specifications for custom transcoding.
+ *
 
- */
-
-/**
- *Specifications for custom transcoding.
  */
 class RawTranscodeParameter extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class RawTranscodeParameter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

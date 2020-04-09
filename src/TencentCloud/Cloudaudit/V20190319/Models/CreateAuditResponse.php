@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Return parameter structure of CreateAudit
+ *
  * @method integer getIsSuccess() Obtain Whether creation is successful.
  * @method void setIsSuccess(integer $IsSuccess) Set Whether creation is successful.
  * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
  * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- */
-
-/**
- *Return parameter structure of CreateAudit
  */
 class CreateAuditResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAuditResponse extends AbstractModel
      * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
      */
     public $RequestId;
+
     /**
      * @param integer $IsSuccess Whether creation is successful.
      * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
@@ -46,6 +45,7 @@ class CreateAuditResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

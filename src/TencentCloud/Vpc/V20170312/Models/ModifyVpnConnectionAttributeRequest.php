@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyVpnConnectionAttribute request structure.
+ *
  * @method string getVpnConnectionId() Obtain The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
  * @method void setVpnConnectionId(string $VpnConnectionId) Set The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
  * @method string getVpnConnectionName() Obtain VPN tunnel can be named freely, but the maximum length is 60 characters.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) Set IKE (Internet Key Exchange) configuration. IKE comes with a self-protection mechanism. The network security protocol is configured by the user.
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() Obtain IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
- */
-
-/**
- *ModifyVpnConnectionAttribute request structure.
  */
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
      * @var IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
      */
     public $IPSECOptionsSpecification;
+
     /**
      * @param string $VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
      * @param string $VpnConnectionName VPN tunnel can be named freely, but the maximum length is 60 characters.
@@ -78,6 +77,7 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

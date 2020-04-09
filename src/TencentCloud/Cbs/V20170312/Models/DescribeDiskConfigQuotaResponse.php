@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskConfigQuota response structure.
+ *
  * @method array getDiskConfigSet() Obtain List of cloud disk configurations.
  * @method void setDiskConfigSet(array $DiskConfigSet) Set List of cloud disk configurations.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDiskConfigQuota response structure.
  */
 class DescribeDiskConfigQuotaResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDiskConfigQuotaResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DiskConfigSet List of cloud disk configurations.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeDiskConfigQuotaResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

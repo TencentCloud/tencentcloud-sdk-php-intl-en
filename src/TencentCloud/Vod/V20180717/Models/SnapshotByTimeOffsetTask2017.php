@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Time point screencapturing task information. This structure is only used for tasks initiated by the [CreateSnapshotByTimeOffset](https://cloud.tencent.com/document/product/266/8102) API in v2017.
+ *
  * @method string getTaskId() Obtain Screencapturing task ID.
  * @method void setTaskId(string $TaskId) Set Screencapturing task ID.
  * @method string getFileId() Obtain Screenshot file ID.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
  * @method array getSnapshotInfoSet() Obtain Result information of screencapturing.
  * @method void setSnapshotInfoSet(array $SnapshotInfoSet) Set Result information of screencapturing.
- */
-
-/**
- *Time point screencapturing task information. This structure is only used for tasks initiated by the [CreateSnapshotByTimeOffset](https://cloud.tencent.com/document/product/266/8102) API in v2017.
  */
 class SnapshotByTimeOffsetTask2017 extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SnapshotByTimeOffsetTask2017 extends AbstractModel
      * @var array Result information of screencapturing.
      */
     public $SnapshotInfoSet;
+
     /**
      * @param string $TaskId Screencapturing task ID.
      * @param string $FileId Screenshot file ID.
@@ -62,6 +61,7 @@ class SnapshotByTimeOffsetTask2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AllocateAddresses request structure.
+ *
  * @method integer getAddressCount() Obtain The number of EIPs. Default: 1.
  * @method void setAddressCount(integer $AddressCount) Set The number of EIPs. Default: 1.
  * @method string getInternetServiceProvider() Obtain The EIP line type. Default: BGP.
@@ -52,20 +54,22 @@ use TencentCloud\Common\AbstractModel;
 <ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
  * @method void setAddressType(string $AddressType) Set The EIP type. Default: EIP.
 <ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
- * @method string getAnycastZone() Obtain The Anycast publishing region.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>ANYCAST_ZONE_GLOBAL: the global publishing region (the global AIA whitelist must be activated additionally.) </li><li>ANYCAST_ZONE_OVERSEAS: the publishing regions outside Mainland China </li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
- * @method void setAnycastZone(string $AnycastZone) Set The Anycast publishing region.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>ANYCAST_ZONE_GLOBAL: the global publishing region (the global AIA whitelist must be activated additionally.) </li><li>ANYCAST_ZONE_OVERSEAS: the publishing regions outside Mainland China </li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
- * @method boolean getApplicableForCLB() Obtain Whether the Anycast EIP can be bound to Cloud Load Balancer (CLB) instances.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
-<li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HA virtual IP addresses.</li></ul>Default: FALSE.</li></ul>
- * @method void setApplicableForCLB(boolean $ApplicableForCLB) Set Whether the Anycast EIP can be bound to Cloud Load Balancer (CLB) instances.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
-<li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HA virtual IP addresses.</li></ul>Default: FALSE.</li></ul>
- */
-
-/**
- *AllocateAddresses request structure.
+ * @method string getAnycastZone() Obtain Anycast publishing region
+<ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
+ * @method void setAnycastZone(string $AnycastZone) Set Anycast publishing region
+<ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
+ * @method boolean getApplicableForCLB() Obtain <b>**[Disused]**</b>
+Whether the Anycast EIP can be bound to CLB instances.
+<ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
+<li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
+ * @method void setApplicableForCLB(boolean $ApplicableForCLB) Set <b>**[Disused]**</b>
+Whether the Anycast EIP can be bound to CLB instances.
+<ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
+<li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
+ * @method string getBandwidthPackageId() Obtain 
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set 
  */
 class AllocateAddressesRequest extends AbstractModel
 {
@@ -107,17 +111,29 @@ class AllocateAddressesRequest extends AbstractModel
     public $AddressType;
 
     /**
-     * @var string The Anycast publishing region.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>ANYCAST_ZONE_GLOBAL: the global publishing region (the global AIA whitelist must be activated additionally.) </li><li>ANYCAST_ZONE_OVERSEAS: the publishing regions outside Mainland China </li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
+     * @var string Anycast publishing region
+<ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
      */
     public $AnycastZone;
 
     /**
-     * @var boolean Whether the Anycast EIP can be bound to Cloud Load Balancer (CLB) instances.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
-<li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HA virtual IP addresses.</li></ul>Default: FALSE.</li></ul>
+     * @var boolean <b>**[Disused]**</b>
+Whether the Anycast EIP can be bound to CLB instances.
+<ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
+<li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
      */
     public $ApplicableForCLB;
+
+    /**
+     * @var array 
+     */
+    public $Tags;
+
+    /**
+     * @var string 
+     */
+    public $BandwidthPackageId;
+
     /**
      * @param integer $AddressCount The number of EIPs. Default: 1.
      * @param string $InternetServiceProvider The EIP line type. Default: BGP.
@@ -136,16 +152,20 @@ class AllocateAddressesRequest extends AbstractModel
 <li>For a user who has not activated bandwidth billing by IP whitelist, InternetMaxBandwidthOut is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
      * @param string $AddressType The EIP type. Default: EIP.
 <ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
-     * @param string $AnycastZone The Anycast publishing region.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>ANYCAST_ZONE_GLOBAL: the global publishing region (the global AIA whitelist must be activated additionally.) </li><li>ANYCAST_ZONE_OVERSEAS: the publishing regions outside Mainland China </li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
-     * @param boolean $ApplicableForCLB Whether the Anycast EIP can be bound to Cloud Load Balancer (CLB) instances.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
-<li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HA virtual IP addresses.</li></ul>Default: FALSE.</li></ul>
+     * @param string $AnycastZone Anycast publishing region
+<ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
+     * @param boolean $ApplicableForCLB <b>**[Disused]**</b>
+Whether the Anycast EIP can be bound to CLB instances.
+<ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
+<li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
+     * @param array $Tags 
+     * @param string $BandwidthPackageId 
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -180,6 +200,19 @@ class AllocateAddressesRequest extends AbstractModel
 
         if (array_key_exists("ApplicableForCLB",$param) and $param["ApplicableForCLB"] !== null) {
             $this->ApplicableForCLB = $param["ApplicableForCLB"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
+            $this->BandwidthPackageId = $param["BandwidthPackageId"];
         }
     }
 }

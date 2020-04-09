@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Watermark parameter type of video processing task
+ *
  * @method integer getDefinition() Obtain Watermarking template ID.
  * @method void setDefinition(integer $Definition) Set Watermarking template ID.
  * @method string getTextContent() Obtain Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
@@ -44,10 +46,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
 <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
- */
-
-/**
- *Watermark parameter type of video processing task
  */
 class WatermarkInput extends AbstractModel
 {
@@ -83,6 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
      */
     public $EndTimeOffset;
+
     /**
      * @param integer $Definition Watermarking template ID.
      * @param string $TextContent Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
@@ -102,6 +101,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Query result type of a task
+ *
  * @method string getType() Obtain Task type. Valid values:
 <li>Transcode: Transcoding</li>
 <li>AnimatedGraphics: Animated image generating</li>
@@ -54,10 +56,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set Query result of an image sprite generating task, which is valid when task type is `ImageSprite`.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Query result type of a task
  */
 class MediaProcessTaskResult extends AbstractModel
 {
@@ -102,6 +100,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageSpriteTask;
+
     /**
      * @param string $Type Task type. Valid values:
 <li>Transcode: Transcoding</li>
@@ -126,6 +125,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

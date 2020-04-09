@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyMigrateJob request structure.
+ *
  * @method string getJobId() Obtain ID of the data migration task to be modified
  * @method void setJobId(string $JobId) Set ID of the data migration task to be modified
  * @method string getJobName() Obtain Data migration task name
@@ -48,10 +50,6 @@ For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 This field does not need to be set when the entire instance is to be migrated
- */
-
-/**
- *ModifyMigrateJob request structure.
  */
 class ModifyMigrateJobRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ For databases with a database-schema-table structure:
 This field does not need to be set when the entire instance is to be migrated
      */
     public $DatabaseInfo;
+
     /**
      * @param string $JobId ID of the data migration task to be modified
      * @param string $JobName Data migration task name
@@ -122,6 +121,7 @@ This field does not need to be set when the entire instance is to be migrated
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

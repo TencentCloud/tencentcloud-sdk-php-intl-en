@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachRolePolicy request structure.
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
  * @method string getDetachRoleId() Obtain Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
  * @method void setDetachRoleId(string $DetachRoleId) Set Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
  * @method string getDetachRoleName() Obtain Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
  * @method void setDetachRoleName(string $DetachRoleName) Set Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
- */
-
-/**
- *DetachRolePolicy request structure.
  */
 class DetachRolePolicyRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DetachRolePolicyRequest extends AbstractModel
      * @var string Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
      */
     public $DetachRoleName;
+
     /**
      * @param integer $PolicyId Policy ID
      * @param string $DetachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
@@ -54,6 +53,7 @@ class DetachRolePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

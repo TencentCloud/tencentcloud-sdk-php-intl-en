@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSnapshotSharePermission response structure.
+ *
  * @method array getSharePermissionSet() Obtain The set of snapshot sharing information
  * @method void setSharePermissionSet(array $SharePermissionSet) Set The set of snapshot sharing information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSnapshotSharePermission response structure.
  */
 class DescribeSnapshotSharePermissionResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSnapshotSharePermissionResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $SharePermissionSet The set of snapshot sharing information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeSnapshotSharePermissionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

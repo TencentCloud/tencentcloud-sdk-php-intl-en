@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceBackups response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of backups
  * @method void setTotalCount(integer $TotalCount) Set Total number of backups
  * @method array getBackupSet() Obtain Array of instance backups
  * @method void setBackupSet(array $BackupSet) Set Array of instance backups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceBackups response structure.
  */
 class DescribeInstanceBackupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceBackupsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of backups
      * @param array $BackupSet Array of instance backups
@@ -54,6 +53,7 @@ class DescribeInstanceBackupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

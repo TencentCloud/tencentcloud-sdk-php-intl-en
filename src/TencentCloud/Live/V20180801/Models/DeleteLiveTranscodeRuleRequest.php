@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveTranscodeRule request structure.
+ *
  * @method string getDomainName() Obtain Push domain name.
 For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  * @method void setDomainName(string $DomainName) Set Push domain name.
@@ -34,10 +36,6 @@ Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcodi
 Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
 Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
- */
-
-/**
- *DeleteLiveTranscodeRule request structure.
  */
 class DeleteLiveTranscodeRuleRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcodi
 Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public $TemplateId;
+
     /**
      * @param string $DomainName Push domain name.
 For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
@@ -78,6 +77,7 @@ Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcodi
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

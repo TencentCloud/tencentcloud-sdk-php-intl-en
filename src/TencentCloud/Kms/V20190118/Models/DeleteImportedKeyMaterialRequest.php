@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImportedKeyMaterial request structure.
+ *
  * @method string getKeyId() Obtain Specifies the EXTERNAL CMK for which to delete the key material.
  * @method void setKeyId(string $KeyId) Set Specifies the EXTERNAL CMK for which to delete the key material.
- */
-
-/**
- *DeleteImportedKeyMaterial request structure.
  */
 class DeleteImportedKeyMaterialRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteImportedKeyMaterialRequest extends AbstractModel
      * @var string Specifies the EXTERNAL CMK for which to delete the key material.
      */
     public $KeyId;
+
     /**
      * @param string $KeyId Specifies the EXTERNAL CMK for which to delete the key material.
      */
@@ -38,6 +37,7 @@ class DeleteImportedKeyMaterialRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

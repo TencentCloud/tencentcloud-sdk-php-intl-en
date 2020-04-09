@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Transition operation
+ *
  * @method string getType() Obtain Transition type. Valid values:
 <ul>
 <li>Video image transition operation, which is used for transition with video image between two video segments:
@@ -113,10 +115,6 @@ use TencentCloud\Common\AbstractModel;
 </li>
 </ul>
  */
-
-/**
- *Transition operation
- */
 class TransitionOpertion extends AbstractModel
 {
     /**
@@ -169,6 +167,7 @@ class TransitionOpertion extends AbstractModel
 </ul>
      */
     public $Type;
+
     /**
      * @param string $Type Transition type. Valid values:
 <ul>
@@ -222,6 +221,7 @@ class TransitionOpertion extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

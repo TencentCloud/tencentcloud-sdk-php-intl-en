@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpnGateway request structure.
+ *
  * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method string getVpnGatewayName() Obtain The VPN gateway name. The maximum length is 60 bytes.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
  * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-2`.
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`.
- */
-
-/**
- *CreateVpnGateway request structure.
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateVpnGatewayRequest extends AbstractModel
      * @var string The availability zone, such as `ap-guangzhou-2`.
      */
     public $Zone;
+
     /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
@@ -78,6 +77,7 @@ class CreateVpnGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

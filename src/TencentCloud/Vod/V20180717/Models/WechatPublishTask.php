@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Release on WeChat task information
+ *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getStatus() Obtain Task status. Valid values:
@@ -72,10 +74,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWechatUrl(string $WechatUrl) Set WeChat address.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Release on WeChat task information
  */
 class WechatPublishTask extends AbstractModel
 {
@@ -145,6 +143,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WechatUrl;
+
     /**
      * @param string $TaskId Task ID.
      * @param string $Status Task status. Valid values:
@@ -178,6 +177,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

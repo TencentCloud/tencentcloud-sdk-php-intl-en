@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddRealServers request structure.
+ *
  * @method integer getProjectId() Obtain Project ID corresponding to origin server
  * @method void setProjectId(integer $ProjectId) Set Project ID corresponding to origin server
  * @method array getRealServerIP() Obtain IP or domain name corresponding to origin server
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerName(string $RealServerName) Set Origin server name
  * @method array getTagSet() Obtain Tag list
  * @method void setTagSet(array $TagSet) Set Tag list
- */
-
-/**
- *AddRealServers request structure.
  */
 class AddRealServersRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AddRealServersRequest extends AbstractModel
      * @var array Tag list
      */
     public $TagSet;
+
     /**
      * @param integer $ProjectId Project ID corresponding to origin server
      * @param array $RealServerIP IP or domain name corresponding to origin server
@@ -62,6 +61,7 @@ class AddRealServersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

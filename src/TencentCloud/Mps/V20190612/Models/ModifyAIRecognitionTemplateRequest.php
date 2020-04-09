@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAIRecognitionTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of a video content recognition template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a video content recognition template.
  * @method string getName() Obtain Name of a video content recognition template. Length limit: 64 characters.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfoForUpdate $AsrFullTextConfigure) Set Full speech recognition control parameter.
  * @method AsrWordsConfigureInfoForUpdate getAsrWordsConfigure() Obtain Speech keyword recognition control parameter.
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfoForUpdate $AsrWordsConfigure) Set Speech keyword recognition control parameter.
- */
-
-/**
- *ModifyAIRecognitionTemplate request structure.
  */
 class ModifyAIRecognitionTemplateRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyAIRecognitionTemplateRequest extends AbstractModel
      * @var AsrWordsConfigureInfoForUpdate Speech keyword recognition control parameter.
      */
     public $AsrWordsConfigure;
+
     /**
      * @param integer $Definition Unique ID of a video content recognition template.
      * @param string $Name Name of a video content recognition template. Length limit: 64 characters.
@@ -94,6 +93,7 @@ class ModifyAIRecognitionTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

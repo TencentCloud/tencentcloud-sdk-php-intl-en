@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseDBExtranetAccess request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6r233v55
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6r233v55
- */
-
-/**
- *CloseDBExtranetAccess request structure.
  */
 class CloseDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CloseDBExtranetAccessRequest extends AbstractModel
      * @var string Instance ID in the format of postgres-6r233v55
      */
     public $DBInstanceId;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-6r233v55
      */
@@ -38,6 +37,7 @@ class CloseDBExtranetAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

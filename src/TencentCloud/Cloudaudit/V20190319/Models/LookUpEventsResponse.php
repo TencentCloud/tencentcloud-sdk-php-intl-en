@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Return parameter structure of LookUpEvents
+ *
  * @method array getEvents() Obtain Logset
  * @method void setEvents(array $Events) Set Logset
  * @method boolean getListOver() Obtain Whether the logset ends
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextToken(string $NextToken) Set Credential for viewing more logs
  * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
  * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- */
-
-/**
- *Return parameter structure of LookUpEvents
  */
 class LookUpEventsResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LookUpEventsResponse extends AbstractModel
      * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
      */
     public $RequestId;
+
     /**
      * @param array $Events Logset
      * @param boolean $ListOver Whether the logset ends
@@ -62,6 +61,7 @@ class LookUpEventsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Migration task configuration options
+ *
  * @method integer getRunMode() Obtain Task operation mode. Value range: 1 (immediate execution), 2 (scheduled execution)
  * @method void setRunMode(integer $RunMode) Set Task operation mode. Value range: 1 (immediate execution), 2 (scheduled execution)
  * @method string getExpectTime() Obtain Expected execution time in the format of yyyy-mm-dd hh:mm:ss. If runMode=2, this field is required
@@ -64,10 +66,6 @@ The following parameters can be defined for MongoDB:
 MySQL currently does not support configuring additional parameters.
  * @method ConsistencyParams getConsistencyParams() Obtain Only used for "spot data consistency check". It is required if ConsistencyType is spot check
  * @method void setConsistencyParams(ConsistencyParams $ConsistencyParams) Set Only used for "spot data consistency check". It is required if ConsistencyType is spot check
- */
-
-/**
- *Migration task configuration options
  */
 class MigrateOption extends AbstractModel
 {
@@ -125,6 +123,7 @@ MySQL currently does not support configuring additional parameters.
      * @var ConsistencyParams Only used for "spot data consistency check". It is required if ConsistencyType is spot check
      */
     public $ConsistencyParams;
+
     /**
      * @param integer $RunMode Task operation mode. Value range: 1 (immediate execution), 2 (scheduled execution)
      * @param string $ExpectTime Expected execution time in the format of yyyy-mm-dd hh:mm:ss. If runMode=2, this field is required
@@ -154,6 +153,7 @@ MySQL currently does not support configuring additional parameters.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

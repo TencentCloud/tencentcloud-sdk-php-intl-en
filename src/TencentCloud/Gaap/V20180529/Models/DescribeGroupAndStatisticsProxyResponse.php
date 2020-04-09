@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroupAndStatisticsProxy response structure.
+ *
  * @method array getGroupSet() Obtain Information of connection groups that the statistics can be derived from
  * @method void setGroupSet(array $GroupSet) Set Information of connection groups that the statistics can be derived from
  * @method integer getTotalCount() Obtain Connection group quantity
  * @method void setTotalCount(integer $TotalCount) Set Connection group quantity
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeGroupAndStatisticsProxy response structure.
  */
 class DescribeGroupAndStatisticsProxyResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeGroupAndStatisticsProxyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $GroupSet Information of connection groups that the statistics can be derived from
      * @param integer $TotalCount Connection group quantity
@@ -54,6 +53,7 @@ class DescribeGroupAndStatisticsProxyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

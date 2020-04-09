@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySnapshotsSharePermission request structure.
+ *
  * @method array getAccountIds() Obtain List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://cloud.tencent.com/document/api/213/568). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
  * @method void setAccountIds(array $AccountIds) Set List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://cloud.tencent.com/document/api/213/568). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
  * @method string getPermission() Obtain Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
  * @method void setPermission(string $Permission) Set Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
  * @method array getSnapshotIds() Obtain The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
  * @method void setSnapshotIds(array $SnapshotIds) Set The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
- */
-
-/**
- *ModifySnapshotsSharePermission request structure.
  */
 class ModifySnapshotsSharePermissionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySnapshotsSharePermissionRequest extends AbstractModel
      * @var array The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647).
      */
     public $SnapshotIds;
+
     /**
      * @param array $AccountIds List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://cloud.tencent.com/document/api/213/568). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
      * @param string $Permission Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
@@ -54,6 +53,7 @@ class ModifySnapshotsSharePermissionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

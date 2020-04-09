@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTargetGroupInstances request structure.
+ *
  * @method array getFilters() Obtain Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
  * @method void setFilters(array $Filters) Set Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
  * @method integer getLimit() Obtain Number of displayed results. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of displayed results. Default value: 20
  * @method integer getOffset() Obtain Display offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Display offset. Default value: 0
- */
-
-/**
- *DescribeTargetGroupInstances request structure.
  */
 class DescribeTargetGroupInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
      * @var integer Display offset. Default value: 0
      */
     public $Offset;
+
     /**
      * @param array $Filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
      * @param integer $Limit Number of displayed results. Default value: 20
@@ -54,6 +53,7 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Suspected porn/terrorism segment identified in content audit
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set This field has been disused. Please use `PicUrlExpireTime`.
  * @method string getPicUrlExpireTime() Obtain Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *Suspected porn/terrorism segment identified in content audit
  */
 class MediaContentReviewSegmentItem extends AbstractModel
 {
@@ -92,6 +90,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
      * @var string Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $PicUrlExpireTime;
+
     /**
      * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
      * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
@@ -110,6 +109,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

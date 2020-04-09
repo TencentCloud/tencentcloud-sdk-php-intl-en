@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Command duration
+ *
  * @method string getCmd() Obtain Command
  * @method void setCmd(string $Cmd) Set Command
  * @method integer getTook() Obtain Duration
  * @method void setTook(integer $Took) Set Duration
- */
-
-/**
- *Command duration
  */
 class CommandTake extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CommandTake extends AbstractModel
      * @var integer Duration
      */
     public $Took;
+
     /**
      * @param string $Cmd Command
      * @param integer $Took Duration
@@ -46,6 +45,7 @@ class CommandTake extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyWatermarkTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of watermarking template.
  * @method void setDefinition(integer $Definition) Set Unique ID of watermarking template.
  * @method string getName() Obtain Watermarking template name. Length limit: 64 characters.
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSvgTemplate(SvgWatermarkInputForUpdate $SvgTemplate) Set SVG watermarking template. This field is only valid for SVG watermarking templates.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *ModifyWatermarkTemplate request structure.
  */
 class ModifyWatermarkTemplateRequest extends AbstractModel
 {
@@ -118,6 +116,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition Unique ID of watermarking template.
      * @param string $Name Watermarking template name. Length limit: 64 characters.
@@ -142,6 +141,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

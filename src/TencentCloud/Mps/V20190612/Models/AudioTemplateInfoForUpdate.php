@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Audio stream configuration parameter
+ *
  * @method string getCodec() Obtain Audio stream codec.
 When the outer `Container` parameter is `mp3`, the valid value is:
 <li>libmp3lame.</li>
@@ -71,10 +73,6 @@ In Hz.
 <li>2: Dual</li>
 <li>6: Stereo</li>
  */
-
-/**
- *Audio stream configuration parameter
- */
 class AudioTemplateInfoForUpdate extends AbstractModel
 {
     /**
@@ -118,6 +116,7 @@ In Hz.
 <li>6: Stereo</li>
      */
     public $AudioChannel;
+
     /**
      * @param string $Codec Audio stream codec.
 When the outer `Container` parameter is `mp3`, the valid value is:
@@ -150,6 +149,7 @@ In Hz.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

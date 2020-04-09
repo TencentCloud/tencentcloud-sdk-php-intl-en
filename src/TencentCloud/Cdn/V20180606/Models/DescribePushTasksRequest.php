@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePushTasks request structure.
+ *
  * @method string getStartTime() Obtain Starting time, such as `2018-08-08 00:00:00`
  * @method void setStartTime(string $StartTime) Set Starting time, such as `2018-08-08 00:00:00`
  * @method string getEndTime() Obtain End time, such as `2018-08-08 23:59:59`
@@ -48,10 +50,6 @@ You must specify either a task ID or a starting time.
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
- */
-
-/**
- *DescribePushTasks request structure.
  */
 class DescribePushTasksRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ You must specify either a task ID or a starting time.
 `process`: prefetch in progress
      */
     public $Status;
+
     /**
      * @param string $StartTime Starting time, such as `2018-08-08 00:00:00`
      * @param string $EndTime End time, such as `2018-08-08 23:59:59`
@@ -122,6 +121,7 @@ You must specify either a task ID or a starting time.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

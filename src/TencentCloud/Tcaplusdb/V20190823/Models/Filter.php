@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Filter
+ *
  * @method string getName() Obtain Filter field name
  * @method void setName(string $Name) Set Filter field name
  * @method string getValue() Obtain Filter field value
  * @method void setValue(string $Value) Set Filter field value
- */
-
-/**
- *Filter
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var string Filter field value
      */
     public $Value;
+
     /**
      * @param string $Name Filter field name
      * @param string $Value Filter field value
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

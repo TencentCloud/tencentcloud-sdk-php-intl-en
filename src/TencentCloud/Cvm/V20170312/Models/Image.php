@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details about an image, including its state and attributes.
+ *
  * @method string getImageId() Obtain Image ID
  * @method void setImageId(string $ImageId) Set Image ID
  * @method string getOsName() Obtain Operating system of the image
@@ -54,10 +56,6 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setSnapshotSet(array $SnapshotSet) Set Information on the snapshots associated with the image
 Note: This field may return null, indicating that no valid value is found.
- */
-
-/**
- *Details about an image, including its state and attributes.
  */
 class Image extends AbstractModel
 {
@@ -138,6 +136,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
      */
     public $SnapshotSet;
+
     /**
      * @param string $ImageId Image ID
      * @param string $OsName Operating system of the image
@@ -162,6 +161,7 @@ Note: This field may return null, indicating that no valid value is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

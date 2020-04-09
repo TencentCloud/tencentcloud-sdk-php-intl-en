@@ -18,14 +18,13 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountAttributes request structure.
+ *
 
- */
-
-/**
- *DescribeAccountAttributes request structure.
  */
 class DescribeAccountAttributesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeAccountAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

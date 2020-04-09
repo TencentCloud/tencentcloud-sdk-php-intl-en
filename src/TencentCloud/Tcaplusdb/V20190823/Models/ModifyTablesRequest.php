@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTables request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where the table to be modified resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where the table to be modified resides
  * @method array getIdlFiles() Obtain Selected table modification IDL files
  * @method void setIdlFiles(array $IdlFiles) Set Selected table modification IDL files
  * @method array getSelectedTables() Obtain List of tables to be modified
  * @method void setSelectedTables(array $SelectedTables) Set List of tables to be modified
- */
-
-/**
- *ModifyTables request structure.
  */
 class ModifyTablesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyTablesRequest extends AbstractModel
      * @var array List of tables to be modified
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId ID of the cluster where the table to be modified resides
      * @param array $IdlFiles Selected table modification IDL files
@@ -54,6 +53,7 @@ class ModifyTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

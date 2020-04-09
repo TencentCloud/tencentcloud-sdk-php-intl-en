@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * This describes the detailed information of the scheduled snapshot policy.
+ *
  * @method string getAutoSnapshotPolicyId() Obtain Scheduled snapshot policy ID.
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Scheduled snapshot policy ID.
  * @method string getAutoSnapshotPolicyName() Obtain Scheduled snapshot policy name.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicy(array $Policy) Set The policy for executing the scheduled snapshot.
  * @method array getDiskIdSet() Obtain The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
  * @method void setDiskIdSet(array $DiskIdSet) Set The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
- */
-
-/**
- *This describes the detailed information of the scheduled snapshot policy.
  */
 class AutoSnapshotPolicy extends AbstractModel
 {
@@ -94,6 +92,7 @@ class AutoSnapshotPolicy extends AbstractModel
      * @var array The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
      */
     public $DiskIdSet;
+
     /**
      * @param string $AutoSnapshotPolicyId Scheduled snapshot policy ID.
      * @param string $AutoSnapshotPolicyName Scheduled snapshot policy name.
@@ -110,6 +109,7 @@ class AutoSnapshotPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

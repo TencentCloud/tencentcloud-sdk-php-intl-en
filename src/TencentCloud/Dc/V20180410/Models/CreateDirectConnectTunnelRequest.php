@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDirectConnectTunnel request structure.
+ *
  * @method string getDirectConnectId() Obtain Direct Connect ID, such as `dc-kd7d06of`.
  * @method void setDirectConnectId(string $DirectConnectId) Set Direct Connect ID, such as `dc-kd7d06of`.
  * @method string getDirectConnectTunnelName() Obtain Dedicated tunnel name.
@@ -64,10 +66,6 @@ Default value: Non-zero.
  * @method void setTencentAddress(string $TencentAddress) Set TencentAddress: Tencent-side IP address.
  * @method string getCustomerAddress() Obtain CustomerAddress: User-side IP address.
  * @method void setCustomerAddress(string $CustomerAddress) Set CustomerAddress: User-side IP address.
- */
-
-/**
- *CreateDirectConnectTunnel request structure.
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -149,6 +147,7 @@ Default value: Non-zero.
      * @var string CustomerAddress: User-side IP address.
      */
     public $CustomerAddress;
+
     /**
      * @param string $DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      * @param string $DirectConnectTunnelName Dedicated tunnel name.
@@ -178,6 +177,7 @@ Default value: Non-zero.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

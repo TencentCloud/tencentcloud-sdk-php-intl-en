@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAddressTemplates request structure.
+ *
  * @method array getFilters() Obtain Filter conditions.
 <li>address-template-name - String - (Filter condition) IP address template name.</li>
 <li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset. The default value is 0.
  * @method string getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
  * @method void setLimit(string $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
- */
-
-/**
- *DescribeAddressTemplates request structure.
  */
 class DescribeAddressTemplatesRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeAddressTemplatesRequest extends AbstractModel
      * @var string Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public $Limit;
+
     /**
      * @param array $Filters Filter conditions.
 <li>address-template-name - String - (Filter condition) IP address template name.</li>
@@ -62,6 +61,7 @@ class DescribeAddressTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

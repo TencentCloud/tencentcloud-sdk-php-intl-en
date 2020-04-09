@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Real server bound to a target group
+ *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method string getType() Obtain Real server type. Valid values: CVM, ENI (coming soon)
@@ -48,10 +50,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEniId(string $EniId) Set Unique ENI ID
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Real server bound to a target group
  */
 class TargetGroupBackend extends AbstractModel
 {
@@ -109,6 +107,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EniId;
+
     /**
      * @param string $TargetGroupId Target group ID
      * @param string $Type Real server type. Valid values: CVM, ENI (coming soon)
@@ -130,6 +129,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

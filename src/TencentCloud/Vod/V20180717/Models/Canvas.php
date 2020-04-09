@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Canvas information. When a video is composed, if the source material (video or image) cannot fill the output video window, the background will be drawn with the set canvas.
+ *
  * @method string getColor() Obtain Background color. Valid values:
 <li>Black: black background</li>
 <li>White: white background</li>
@@ -34,10 +36,6 @@ Default value: 0, which means that the value is the same as the video width of t
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
  * @method void setHeight(integer $Height) Set Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
- */
-
-/**
- *Canvas information. When a video is composed, if the source material (video or image) cannot fill the output video window, the background will be drawn with the set canvas.
  */
 class Canvas extends AbstractModel
 {
@@ -60,6 +58,7 @@ Default value: 0, which means that the value is the same as the video width of t
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
      */
     public $Height;
+
     /**
      * @param string $Color Background color. Valid values:
 <li>Black: black background</li>
@@ -74,6 +73,7 @@ Default value: 0, which means that the value is the same as the video height of 
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

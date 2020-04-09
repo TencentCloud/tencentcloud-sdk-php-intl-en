@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTagsOfInstanceIds response structure.
+ *
  * @method integer getOffset() Obtain Pagination offset.
  * @method void setOffset(integer $Offset) Set Pagination offset.
  * @method integer getLimit() Obtain Number of entries per page.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRows(array $Rows) Set Instance tag information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTagsOfInstanceIds response structure.
  */
 class DescribeTagsOfInstanceIdsResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTagsOfInstanceIdsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Offset Pagination offset.
      * @param integer $Limit Number of entries per page.
@@ -62,6 +61,7 @@ class DescribeTagsOfInstanceIdsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProxyGroupAttribute request structure.
+ *
  * @method string getGroupId() Obtain ID of the connection group to be modified.
  * @method void setGroupId(string $GroupId) Set ID of the connection group to be modified.
  * @method string getGroupName() Obtain New connection group name. Up to 30 characters. The extra characters will be truncated.
  * @method void setGroupName(string $GroupName) Set New connection group name. Up to 30 characters. The extra characters will be truncated.
- */
-
-/**
- *ModifyProxyGroupAttribute request structure.
  */
 class ModifyProxyGroupAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
      * @var string New connection group name. Up to 30 characters. The extra characters will be truncated.
      */
     public $GroupName;
+
     /**
      * @param string $GroupId ID of the connection group to be modified.
      * @param string $GroupName New connection group name. Up to 30 characters. The extra characters will be truncated.
@@ -46,6 +45,7 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

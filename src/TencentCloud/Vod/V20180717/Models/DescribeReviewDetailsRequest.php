@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeReviewDetails request structure.
+ *
  * @method string getStartTime() Obtain Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setStartTime(string $StartTime) Set Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method string getEndTime() Obtain End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
  * @method void setEndTime(string $EndTime) Set End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *DescribeReviewDetails request structure.
  */
 class DescribeReviewDetailsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeReviewDetailsRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      * @param string $EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
@@ -54,6 +53,7 @@ class DescribeReviewDetailsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

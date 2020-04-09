@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the accessibility of an instance in the public network, including its network billing method, maximum bandwidth, etc.
+ *
  * @method string getInternetChargeType() Obtain Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
  * @method void setInternetChargeType(string $InternetChargeType) Set Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
  * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://cloud.tencent.com/document/product/213/12523).
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAssigned(boolean $PublicIpAssigned) Set Whether to assign a public IP. Valid values: <br><li>TRUE: Assign a public IP <br><li>FALSE: Do not assign a public IP <br><br>If the public network bandwidth is greater than 0 Mbps, you can choose whether to assign a public IP; by default a public IP will be assigned. If the public network bandwidth is 0 Mbps, you will not be able to assign a public IP.
  * @method string getBandwidthPackageId() Obtain Bandwidth package ID. To obatin the IDs, you can call [`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209) and look for the `BandwidthPackageId` fields in the response.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID. To obatin the IDs, you can call [`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209) and look for the `BandwidthPackageId` fields in the response.
- */
-
-/**
- *Describes the accessibility of an instance in the public network, including its network billing method, maximum bandwidth, etc.
  */
 class InternetAccessible extends AbstractModel
 {
@@ -52,6 +50,7 @@ class InternetAccessible extends AbstractModel
      * @var string Bandwidth package ID. To obatin the IDs, you can call [`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209) and look for the `BandwidthPackageId` fields in the response.
      */
     public $BandwidthPackageId;
+
     /**
      * @param string $InternetChargeType Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
      * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://cloud.tencent.com/document/product/213/12523).
@@ -62,6 +61,7 @@ class InternetAccessible extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

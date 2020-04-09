@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PurgePathCache response structure.
+ *
  * @method string getTaskId() Obtain Purge task ID. Directories submitted in one request share a task ID.
  * @method void setTaskId(string $TaskId) Set Purge task ID. Directories submitted in one request share a task ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *PurgePathCache response structure.
  */
 class PurgePathCacheResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PurgePathCacheResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $TaskId Purge task ID. Directories submitted in one request share a task ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class PurgePathCacheResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

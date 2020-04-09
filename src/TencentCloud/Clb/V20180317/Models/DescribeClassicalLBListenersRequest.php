@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicalLBListeners request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getListenerIds() Obtain List of CLB listener IDs
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerPort(integer $ListenerPort) Set CLB listening port. Value range: [1-65535]
  * @method integer getStatus() Obtain Listener status. Value range: 0 (creating), 1 (running)
  * @method void setStatus(integer $Status) Set Listener status. Value range: 0 (creating), 1 (running)
- */
-
-/**
- *DescribeClassicalLBListeners request structure.
  */
 class DescribeClassicalLBListenersRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
      * @var integer Listener status. Value range: 0 (creating), 1 (running)
      */
     public $Status;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $ListenerIds List of CLB listener IDs
@@ -70,6 +69,7 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

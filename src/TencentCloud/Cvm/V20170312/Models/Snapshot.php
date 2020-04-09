@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes information on the snapshot associated with an image.
+ *
  * @method string getSnapshotId() Obtain Snapshot ID.
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID.
  * @method string getDiskUsage() Obtain Type of the cloud disk used to create the snapshot. Valid values:
@@ -28,10 +30,6 @@ SYSTEM_DISK: system disk
 DATA_DISK: data disk
  * @method integer getDiskSize() Obtain Size of the cloud disk used to create the snapshot; unit: GB.
  * @method void setDiskSize(integer $DiskSize) Set Size of the cloud disk used to create the snapshot; unit: GB.
- */
-
-/**
- *Describes information on the snapshot associated with an image.
  */
 class Snapshot extends AbstractModel
 {
@@ -51,6 +49,7 @@ DATA_DISK: data disk
      * @var integer Size of the cloud disk used to create the snapshot; unit: GB.
      */
     public $DiskSize;
+
     /**
      * @param string $SnapshotId Snapshot ID.
      * @param string $DiskUsage Type of the cloud disk used to create the snapshot. Valid values:
@@ -62,6 +61,7 @@ DATA_DISK: data disk
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

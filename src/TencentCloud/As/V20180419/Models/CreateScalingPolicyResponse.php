@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateScalingPolicy response structure.
+ *
  * @method string getAutoScalingPolicyId() Obtain Alarm trigger policy ID.
  * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Alarm trigger policy ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateScalingPolicy response structure.
  */
 class CreateScalingPolicyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateScalingPolicyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $AutoScalingPolicyId Alarm trigger policy ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateScalingPolicyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

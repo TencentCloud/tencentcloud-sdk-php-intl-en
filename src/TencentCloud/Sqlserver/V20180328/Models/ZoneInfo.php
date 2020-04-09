@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AZ information
+ *
  * @method string getZone() Obtain AZ ID in the format of ap-guangzhou-1 (i.e., Guangzhou Zone 1)
  * @method void setZone(string $Zone) Set AZ ID in the format of ap-guangzhou-1 (i.e., Guangzhou Zone 1)
  * @method string getZoneName() Obtain AZ name
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpecId(integer $SpecId) Set ID of specification purchasable in this AZ, which, together with the returned value of the `DescribeProductConfig` API, can be used to find out the specifications currently purchasable in the AZ
  * @method string getVersion() Obtain Information of database versions purchasable under the current AZ and specification. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise)
  * @method void setVersion(string $Version) Set Information of database versions purchasable under the current AZ and specification. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise)
- */
-
-/**
- *AZ information
  */
 class ZoneInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ZoneInfo extends AbstractModel
      * @var string Information of database versions purchasable under the current AZ and specification. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise)
      */
     public $Version;
+
     /**
      * @param string $Zone AZ ID in the format of ap-guangzhou-1 (i.e., Guangzhou Zone 1)
      * @param string $ZoneName AZ name
@@ -70,6 +69,7 @@ class ZoneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CancelOrganizationInvitation request structure.
+ *
  * @method integer getId() Obtain Invitation ID
  * @method void setId(integer $Id) Set Invitation ID
- */
-
-/**
- *CancelOrganizationInvitation request structure.
  */
 class CancelOrganizationInvitationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CancelOrganizationInvitationRequest extends AbstractModel
      * @var integer Invitation ID
      */
     public $Id;
+
     /**
      * @param integer $Id Invitation ID
      */
@@ -38,6 +37,7 @@ class CancelOrganizationInvitationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

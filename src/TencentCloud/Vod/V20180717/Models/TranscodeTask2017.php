@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video transcoding task information. This structure is only used for tasks initiated by the [ConvertVodFile](https://cloud.tencent.com/document/product/266/7822) API in v2017.
+ *
  * @method string getTaskId() Obtain Transcoding task ID.
  * @method void setTaskId(string $TaskId) Set Transcoding task ID.
  * @method integer getErrCode() Obtain Error code
@@ -52,10 +54,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPlayInfoSet(array $PlayInfoSet) Set Playback information generated after video transcoding.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Video transcoding task information. This structure is only used for tasks initiated by the [ConvertVodFile](https://cloud.tencent.com/document/product/266/7822) API in v2017.
  */
 class TranscodeTask2017 extends AbstractModel
 {
@@ -107,6 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PlayInfoSet;
+
     /**
      * @param string $TaskId Transcoding task ID.
      * @param integer $ErrCode Error code
@@ -130,6 +129,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

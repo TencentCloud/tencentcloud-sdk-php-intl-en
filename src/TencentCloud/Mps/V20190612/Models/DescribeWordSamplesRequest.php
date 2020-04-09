@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWordSamples request structure.
+ *
  * @method array getUsages() Obtain <b>Keyword use case filter. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
@@ -44,10 +46,6 @@ Multiple elements can be selected, and the relationship between them is "or", i.
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 100. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 100. Maximum value: 100.
- */
-
-/**
- *DescribeWordSamples request structure.
  */
 class DescribeWordSamplesRequest extends AbstractModel
 {
@@ -83,6 +81,7 @@ Multiple elements can be selected, and the relationship between them is "or", i.
      * @var integer Number of returned entries. Default value: 100. Maximum value: 100.
      */
     public $Limit;
+
     /**
      * @param array $Usages <b>Keyword use case filter. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
@@ -102,6 +101,7 @@ Multiple elements can be selected, and the relationship between them is "or", i.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

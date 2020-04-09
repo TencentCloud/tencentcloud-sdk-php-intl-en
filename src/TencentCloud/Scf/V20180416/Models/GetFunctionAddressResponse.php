@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunctionAddress response structure.
+ *
  * @method string getUrl() Obtain Cos address of the function
  * @method void setUrl(string $Url) Set Cos address of the function
  * @method string getCodeSha256() Obtain SHA256 code of the function
  * @method void setCodeSha256(string $CodeSha256) Set SHA256 code of the function
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *GetFunctionAddress response structure.
  */
 class GetFunctionAddressResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetFunctionAddressResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $Url Cos address of the function
      * @param string $CodeSha256 SHA256 code of the function
@@ -54,6 +53,7 @@ class GetFunctionAddressResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

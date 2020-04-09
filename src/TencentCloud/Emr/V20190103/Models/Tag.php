@@ -18,14 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tag
+ *
  * @method string getTagKey() Obtain Tag key
  * @method void setTagKey(string $TagKey) Set Tag key
  * @method string getTagValue() Obtain Tag value
  * @method void setTagValue(string $TagValue) Set Tag value
- */
-
-/**
- *Tag
  */
 class Tag extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Tag extends AbstractModel
      * @var string Tag value
      */
     public $TagValue;
+
     /**
      * @param string $TagKey Tag key
      * @param string $TagValue Tag value
@@ -46,6 +45,7 @@ class Tag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Lifecycle hook
+ *
  * @method string getLifecycleHookId() Obtain Lifecycle hook ID
  * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
  * @method string getLifecycleHookName() Obtain Lifecycle hook name
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
  * @method string getLifecycleTransitionType() Obtain Applicable scenario of the lifecycle hook
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) Set Applicable scenario of the lifecycle hook
- */
-
-/**
- *Lifecycle hook
  */
 class LifecycleHook extends AbstractModel
 {
@@ -94,6 +92,7 @@ class LifecycleHook extends AbstractModel
      * @var string Applicable scenario of the lifecycle hook
      */
     public $LifecycleTransitionType;
+
     /**
      * @param string $LifecycleHookId Lifecycle hook ID
      * @param string $LifecycleHookName Lifecycle hook name
@@ -110,6 +109,7 @@ class LifecycleHook extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

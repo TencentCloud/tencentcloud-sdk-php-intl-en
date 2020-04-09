@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowLog request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getBeginTime() Obtain Start time
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of entries per page
  * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
  * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
- */
-
-/**
- *DescribeSlowLog request structure.
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeSlowLogRequest extends AbstractModel
      * @var integer Offset, which is an integral multiple of `Limit`
      */
     public $Offset;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $BeginTime Start time
@@ -78,6 +77,7 @@ class DescribeSlowLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

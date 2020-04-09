@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeregisterTargetGroupInstances request structure.
+ *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method array getTargetGroupInstances() Obtain Information of server to be unbound
  * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Information of server to be unbound
- */
-
-/**
- *DeregisterTargetGroupInstances request structure.
  */
 class DeregisterTargetGroupInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeregisterTargetGroupInstancesRequest extends AbstractModel
      * @var array Information of server to be unbound
      */
     public $TargetGroupInstances;
+
     /**
      * @param string $TargetGroupId Target group ID
      * @param array $TargetGroupInstances Information of server to be unbound
@@ -46,6 +45,7 @@ class DeregisterTargetGroupInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

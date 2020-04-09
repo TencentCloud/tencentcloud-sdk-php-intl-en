@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Reserved field which can be ignored generally.
+ *
  * @method boolean getZhiTong() Obtain Whether to enable VIP direct connection
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZhiTong(boolean $ZhiTong) Set Whether to enable VIP direct connection
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTgwGroupName(string $TgwGroupName) Set TgwGroup name
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Reserved field which can be ignored generally.
  */
 class ExtraInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TgwGroupName;
+
     /**
      * @param boolean $ZhiTong Whether to enable VIP direct connection
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

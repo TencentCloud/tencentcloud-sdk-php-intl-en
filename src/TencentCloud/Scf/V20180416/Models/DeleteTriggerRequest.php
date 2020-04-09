@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTrigger request structure.
+ *
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getTriggerName() Obtain Name of the trigger to be deleted
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerDesc(string $TriggerDesc) Set This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
  * @method string getQualifier() Obtain Function version information
  * @method void setQualifier(string $Qualifier) Set Function version information
- */
-
-/**
- *DeleteTrigger request structure.
  */
 class DeleteTriggerRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DeleteTriggerRequest extends AbstractModel
      * @var string Function version information
      */
     public $Qualifier;
+
     /**
      * @param string $FunctionName Function name
      * @param string $TriggerName Name of the trigger to be deleted
@@ -78,6 +77,7 @@ class DeleteTriggerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

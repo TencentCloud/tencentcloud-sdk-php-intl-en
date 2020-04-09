@@ -18,14 +18,13 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCfsServiceStatus request structure.
+ *
 
- */
-
-/**
- *DescribeCfsServiceStatus request structure.
  */
 class DescribeCfsServiceStatusRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeCfsServiceStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

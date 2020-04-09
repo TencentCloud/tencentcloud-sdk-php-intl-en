@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CLB instance information
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID.
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
  * @method string getLoadBalancerName() Obtain CLB instance name.
@@ -184,12 +186,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsBlock(boolean $IsBlock) Set Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIsBlockTime() Obtain 
- * @method void setIsBlockTime(string $IsBlockTime) Set 
- */
-
-/**
- *CLB instance information
+ * @method string getIsBlockTime() Obtain Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIsBlockTime(string $IsBlockTime) Set Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -449,9 +449,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IsBlock;
 
     /**
-     * @var string 
+     * @var string Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsBlockTime;
+
     /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
@@ -536,12 +538,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsBlock Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $IsBlockTime 
+     * @param string $IsBlockTime Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Real server information of a classic CLB
+ *
  * @method string getType() Obtain Real server type. Value range: CVM, ENI (coming soon)
  * @method void setType(string $Type) Set Real server type. Value range: CVM, ENI (coming soon)
  * @method string getInstanceId() Obtain Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
@@ -42,10 +44,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRunFlag(integer $RunFlag) Set Real server status
 1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Real server information of a classic CLB
  */
 class ClassicalTarget extends AbstractModel
 {
@@ -88,6 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RunFlag;
+
     /**
      * @param string $Type Real server type. Value range: CVM, ENI (coming soon)
      * @param string $InstanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
@@ -106,6 +105,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

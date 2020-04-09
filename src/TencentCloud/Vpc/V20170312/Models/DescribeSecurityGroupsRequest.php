@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroups request structure.
+ *
  * @method array getSecurityGroupIds() Obtain The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
  * @method array getFilters() Obtain Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset.
  * @method string getLimit() Obtain The returned quantity.
  * @method void setLimit(string $Limit) Set The returned quantity.
- */
-
-/**
- *DescribeSecurityGroups request structure.
  */
 class DescribeSecurityGroupsRequest extends AbstractModel
 {
@@ -67,6 +65,7 @@ class DescribeSecurityGroupsRequest extends AbstractModel
      * @var string The returned quantity.
      */
     public $Limit;
+
     /**
      * @param array $SecurityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
      * @param array $Filters Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
@@ -82,6 +81,7 @@ class DescribeSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAddressesBandwidth request structure.
+ *
  * @method array getAddressIds() Obtain The unique ID of the EIP, such as 'eip-xxxx'.
  * @method void setAddressIds(array $AddressIds) Set The unique ID of the EIP, such as 'eip-xxxx'.
  * @method integer getInternetMaxBandwidthOut() Obtain Target bandwidth value adjustment
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The monthly bandwidth start time
  * @method string getEndTime() Obtain The monthly bandwidth end time
  * @method void setEndTime(string $EndTime) Set The monthly bandwidth end time
- */
-
-/**
- *ModifyAddressesBandwidth request structure.
  */
 class ModifyAddressesBandwidthRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyAddressesBandwidthRequest extends AbstractModel
      * @var string The monthly bandwidth end time
      */
     public $EndTime;
+
     /**
      * @param array $AddressIds The unique ID of the EIP, such as 'eip-xxxx'.
      * @param integer $InternetMaxBandwidthOut Target bandwidth value adjustment
@@ -62,6 +61,7 @@ class ModifyAddressesBandwidthRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

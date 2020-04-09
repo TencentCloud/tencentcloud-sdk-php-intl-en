@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TencentDB instance switch records
+ *
  * @method string getSwitchTime() Obtain Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
  * @method void setSwitchTime(string $SwitchTime) Set Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
  * @method string getSwitchType() Obtain Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
  * @method void setSwitchType(string $SwitchType) Set Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
- */
-
-/**
- *TencentDB instance switch records
  */
 class DBSwitchInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBSwitchInfo extends AbstractModel
      * @var string Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
      */
     public $SwitchType;
+
     /**
      * @param string $SwitchTime Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
      * @param string $SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
@@ -46,6 +45,7 @@ class DBSwitchInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

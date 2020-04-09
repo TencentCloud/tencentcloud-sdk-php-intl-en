@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImportKeyMaterial request structure.
+ *
  * @method string getEncryptedKeyMaterial() Obtain Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
  * @method void setEncryptedKeyMaterial(string $EncryptedKeyMaterial) Set Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
  * @method string getImportToken() Obtain Import token obtained by calling `GetParametersForImport`.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) Set Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
  * @method integer getValidTo() Obtain Unix timestamp of the key material’s expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
  * @method void setValidTo(integer $ValidTo) Set Unix timestamp of the key material’s expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
- */
-
-/**
- *ImportKeyMaterial request structure.
  */
 class ImportKeyMaterialRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ImportKeyMaterialRequest extends AbstractModel
      * @var integer Unix timestamp of the key material’s expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
      */
     public $ValidTo;
+
     /**
      * @param string $EncryptedKeyMaterial Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
      * @param string $ImportToken Import token obtained by calling `GetParametersForImport`.
@@ -62,6 +61,7 @@ class ImportKeyMaterialRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Local redirection information
+ *
  * @method string getStdoutLocalPath() Obtain Standard output redirection local path
  * @method void setStdoutLocalPath(string $StdoutLocalPath) Set Standard output redirection local path
  * @method string getStderrLocalPath() Obtain Standard error redirection local path
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStdoutLocalFileName(string $StdoutLocalFileName) Set Standard output redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
  * @method string getStderrLocalFileName() Obtain Standard error redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
  * @method void setStderrLocalFileName(string $StderrLocalFileName) Set Standard error redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
- */
-
-/**
- *Local redirection information
  */
 class RedirectLocalInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RedirectLocalInfo extends AbstractModel
      * @var string Standard error redirection local file name, which supports three placeholders: ${BATCH_JOB_ID}, ${BATCH_TASK_NAME}, and ${BATCH_TASK_INSTANCE_INDEX}
      */
     public $StderrLocalFileName;
+
     /**
      * @param string $StdoutLocalPath Standard output redirection local path
      * @param string $StderrLocalPath Standard error redirection local path
@@ -62,6 +61,7 @@ class RedirectLocalInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

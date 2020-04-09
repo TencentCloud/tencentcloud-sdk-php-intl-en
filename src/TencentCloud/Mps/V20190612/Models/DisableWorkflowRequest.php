@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableWorkflow request structure.
+ *
  * @method integer getWorkflowId() Obtain Workflow ID.
  * @method void setWorkflowId(integer $WorkflowId) Set Workflow ID.
- */
-
-/**
- *DisableWorkflow request structure.
  */
 class DisableWorkflowRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisableWorkflowRequest extends AbstractModel
      * @var integer Workflow ID.
      */
     public $WorkflowId;
+
     /**
      * @param integer $WorkflowId Workflow ID.
      */
@@ -38,6 +37,7 @@ class DisableWorkflowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

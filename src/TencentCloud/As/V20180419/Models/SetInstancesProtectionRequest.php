@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetInstancesProtection request structure.
+ *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method array getInstanceIds() Obtain Instance ID.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID.
  * @method boolean getProtectedFromScaleIn() Obtain Whether the instance needs to be protected from scale-in.
  * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) Set Whether the instance needs to be protected from scale-in.
- */
-
-/**
- *SetInstancesProtection request structure.
  */
 class SetInstancesProtectionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SetInstancesProtectionRequest extends AbstractModel
      * @var boolean Whether the instance needs to be protected from scale-in.
      */
     public $ProtectedFromScaleIn;
+
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param array $InstanceIds Instance ID.
@@ -54,6 +53,7 @@ class SetInstancesProtectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

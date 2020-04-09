@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Connection status information
+ *
  * @method string getInstanceId() Obtain Connection instance ID.
  * @method void setInstanceId(string $InstanceId) Set Connection instance ID.
  * @method string getStatus() Obtain Connection status.
@@ -45,10 +47,6 @@ ISOLATING: isolating;
 ISOLATED: isolated;
 UNKNOWN: unknown status.
  */
-
-/**
- *Connection status information
- */
 class ProxyStatus extends AbstractModel
 {
     /**
@@ -71,6 +69,7 @@ ISOLATED: isolated;
 UNKNOWN: unknown status.
      */
     public $Status;
+
     /**
      * @param string $InstanceId Connection instance ID.
      * @param string $Status Connection status.
@@ -90,6 +89,7 @@ UNKNOWN: unknown status.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

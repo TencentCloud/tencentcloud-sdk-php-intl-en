@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSyncMode response structure.
+ *
  * @method integer getSyncMode() Obtain Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
  * @method void setSyncMode(integer $SyncMode) Set Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
  * @method integer getIsModifying() Obtain Whether a modification is in progress. 1: yes; 0: no.
  * @method void setIsModifying(integer $IsModifying) Set Whether a modification is in progress. 1: yes; 0: no.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBSyncMode response structure.
  */
 class DescribeDBSyncModeResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBSyncModeResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $SyncMode Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
      * @param integer $IsModifying Whether a modification is in progress. 1: yes; 0: no.
@@ -54,6 +53,7 @@ class DescribeDBSyncModeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

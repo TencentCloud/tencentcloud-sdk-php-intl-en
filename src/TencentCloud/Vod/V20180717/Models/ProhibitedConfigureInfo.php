@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of prohibited information detection task
+ *
  * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain Control parameter of prohibited information detection in speech.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set Control parameter of prohibited information detection in speech.
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of prohibited information detection in text.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Control parameter of prohibited information detection task
  */
 class ProhibitedConfigureInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OcrReviewInfo;
+
     /**
      * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo Control parameter of prohibited information detection in speech.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskLogs request structure.
+ *
  * @method string getJobId() Obtain Instance ID
  * @method void setJobId(string $JobId) Set Instance ID
  * @method string getTaskName() Obtain Job name
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Starting task instance
  * @method integer getLimit() Obtain Maximum number of task instances
  * @method void setLimit(integer $Limit) Set Maximum number of task instances
- */
-
-/**
- *DescribeTaskLogs request structure.
  */
 class DescribeTaskLogsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeTaskLogsRequest extends AbstractModel
      * @var integer Maximum number of task instances
      */
     public $Limit;
+
     /**
      * @param string $JobId Instance ID
      * @param string $TaskName Job name
@@ -70,6 +69,7 @@ class DescribeTaskLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

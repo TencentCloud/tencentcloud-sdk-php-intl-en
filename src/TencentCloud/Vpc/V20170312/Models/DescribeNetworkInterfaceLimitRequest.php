@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNetworkInterfaceLimit request structure.
+ *
  * @method string getInstanceId() Obtain The ID of the CVM instance to be queried.
  * @method void setInstanceId(string $InstanceId) Set The ID of the CVM instance to be queried.
- */
-
-/**
- *DescribeNetworkInterfaceLimit request structure.
  */
 class DescribeNetworkInterfaceLimitRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeNetworkInterfaceLimitRequest extends AbstractModel
      * @var string The ID of the CVM instance to be queried.
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId The ID of the CVM instance to be queried.
      */
@@ -38,6 +37,7 @@ class DescribeNetworkInterfaceLimitRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

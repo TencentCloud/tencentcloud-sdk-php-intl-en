@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
@@ -66,10 +68,6 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
  * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set Public network access status of Kibana
  * @method string getKibanaPrivateAccess() Obtain Private network access status of Kibana
  * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set Private network access status of Kibana
- */
-
-/**
- *UpdateInstance request structure.
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -168,6 +166,7 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
      * @var string Private network access status of Kibana
      */
     public $KibanaPrivateAccess;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
@@ -198,6 +197,7 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

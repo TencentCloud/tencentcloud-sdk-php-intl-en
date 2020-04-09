@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpnGateways request structure.
+ *
  * @method array getVpnGatewayIds() Obtain The VPN gateway instance ID, such as `vpngw-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
  * @method void setVpnGatewayIds(array $VpnGatewayIds) Set The VPN gateway instance ID, such as `vpngw-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
  * @method array getFilters() Obtain Filter condition. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain The number of request objects.
  * @method void setLimit(integer $Limit) Set The number of request objects.
- */
-
-/**
- *DescribeVpnGateways request structure.
  */
 class DescribeVpnGatewaysRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeVpnGatewaysRequest extends AbstractModel
      * @var integer The number of request objects.
      */
     public $Limit;
+
     /**
      * @param array $VpnGatewayIds The VPN gateway instance ID, such as `vpngw-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
      * @param array $Filters Filter condition. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
@@ -90,6 +89,7 @@ class DescribeVpnGatewaysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

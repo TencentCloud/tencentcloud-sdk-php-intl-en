@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskList response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of tasks
  * @method void setTotalCount(integer $TotalCount) Set Total number of tasks
  * @method array getTasks() Obtain Task details
  * @method void setTasks(array $Tasks) Set Task details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTaskList response structure.
  */
 class DescribeTaskListResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTaskListResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of tasks
      * @param array $Tasks Task details
@@ -54,6 +53,7 @@ class DescribeTaskListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

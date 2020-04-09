@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information on availability zones.
+ *
  * @method string getZone() Obtain Availability zone name, such as ap-guangzhou-3.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
@@ -105,10 +107,6 @@ The following is a list of all availability zones:
  * @method string getZoneState() Obtain Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
  * @method void setZoneState(string $ZoneState) Set Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
  */
-
-/**
- *Information on availability zones.
- */
 class ZoneInfo extends AbstractModel
 {
     /**
@@ -169,6 +167,7 @@ The following is a list of all availability zones:
      * @var string Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
      */
     public $ZoneState;
+
     /**
      * @param string $Zone Availability zone name, such as ap-guangzhou-3.
 The following is a list of all availability zones:
@@ -218,6 +217,7 @@ The following is a list of all availability zones:
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

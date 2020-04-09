@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * This describes the information of a scheduled task.
+ *
  * @method string getScheduledActionId() Obtain Scheduled task ID.
  * @method void setScheduledActionId(string $ScheduledActionId) Set Scheduled task ID.
  * @method string getScheduledActionName() Obtain Scheduled task name.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinSize(integer $MinSize) Set Minimum number of instances set by the scheduled task.
  * @method string getCreatedTime() Obtain Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
- */
-
-/**
- *This describes the information of a scheduled task.
  */
 class ScheduledAction extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ScheduledAction extends AbstractModel
      * @var string Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
      */
     public $CreatedTime;
+
     /**
      * @param string $ScheduledActionId Scheduled task ID.
      * @param string $ScheduledActionName Scheduled task name.
@@ -110,6 +109,7 @@ class ScheduledAction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

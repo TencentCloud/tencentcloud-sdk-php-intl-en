@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * NAT gateway object.
+ *
  * @method string getNatGatewayId() Obtain NAT gateway ID.
  * @method void setNatGatewayId(string $NatGatewayId) Set NAT gateway ID.
  * @method string getNatGatewayName() Obtain NAT gateway name.
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC instance ID.
  * @method string getZone() Obtain The availability zone in which the NAT gateway is located.
  * @method void setZone(string $Zone) Set The availability zone in which the NAT gateway is located.
- */
-
-/**
- *NAT gateway object.
  */
 class NatGateway extends AbstractModel
 {
@@ -107,6 +105,7 @@ class NatGateway extends AbstractModel
      * @var string The availability zone in which the NAT gateway is located.
      */
     public $Zone;
+
     /**
      * @param string $NatGatewayId NAT gateway ID.
      * @param string $NatGatewayName NAT gateway name.
@@ -126,6 +125,7 @@ class NatGateway extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

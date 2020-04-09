@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input of media file composing task.
+ *
  * @method array getTracks() Obtain List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
  * @method void setTracks(array $Tracks) Set List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
  * @method Canvas getCanvas() Obtain Canvas used for composing video file.
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method ComposeMediaOutput getOutput() Obtain Information of output media file.
  * @method void setOutput(ComposeMediaOutput $Output) Set Information of output media file.
- */
-
-/**
- *Input of media file composing task.
  */
 class ComposeMediaTaskInput extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var ComposeMediaOutput Information of output media file.
      */
     public $Output;
+
     /**
      * @param array $Tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
      * @param Canvas $Canvas Canvas used for composing video file.
@@ -58,6 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

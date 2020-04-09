@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes information on VPC, including subnets, IP addresses, etc.
+ *
  * @method string getVpcId() Obtain 
  * @method void setVpcId(string $VpcId) Set 
  * @method string getSubnetId() Obtain VPC subnet ID in the format `subnet-xxx`. To obtain valid subnet IDs, you can log in to the [console](https://console.cloud.tencent.com/vpc/subnet?rid=1) or call [DescribeSubnets](/document/api/215/15784) and look for the `unSubnetId` fields in the response. If you specify `DEFAULT` for both `SubnetId` and `VpcId` when creating an instance, the default VPC will be used.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Array of VPC subnet IPs. You can use this parameter when creating instances or modifying VPC attributes of instances. Currently you can specify multiple IPs in one subnet only when creating multiple instances at the same time.
  * @method integer getIpv6AddressCount() Obtain 
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
- */
-
-/**
- *Describes information on VPC, including subnets, IP addresses, etc.
  */
 class VirtualPrivateCloud extends AbstractModel
 {
@@ -59,6 +57,7 @@ class VirtualPrivateCloud extends AbstractModel
      * @var integer 
      */
     public $Ipv6AddressCount;
+
     /**
      * @param string $VpcId 
      * @param string $SubnetId VPC subnet ID in the format `subnet-xxx`. To obtain valid subnet IDs, you can log in to the [console](https://console.cloud.tencent.com/vpc/subnet?rid=1) or call [DescribeSubnets](/document/api/215/15784) and look for the `unSubnetId` fields in the response. If you specify `DEFAULT` for both `SubnetId` and `VpcId` when creating an instance, the default VPC will be used.
@@ -70,6 +69,7 @@ class VirtualPrivateCloud extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

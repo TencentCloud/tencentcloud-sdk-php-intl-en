@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Intelligent categorization result
+ *
  * @method string getClassification() Obtain Name of intelligently generated category.
  * @method void setClassification(string $Classification) Set Name of intelligently generated category.
  * @method float getConfidence() Obtain Confidence of intelligently generated category between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Confidence of intelligently generated category between 0 and 100.
- */
-
-/**
- *Intelligent categorization result
  */
 class MediaAiAnalysisClassificationItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaAiAnalysisClassificationItem extends AbstractModel
      * @var float Confidence of intelligently generated category between 0 and 100.
      */
     public $Confidence;
+
     /**
      * @param string $Classification Name of intelligently generated category.
      * @param float $Confidence Confidence of intelligently generated category between 0 and 100.
@@ -46,6 +45,7 @@ class MediaAiAnalysisClassificationItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

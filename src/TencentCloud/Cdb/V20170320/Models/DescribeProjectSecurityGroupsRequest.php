@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProjectSecurityGroups request structure.
+ *
  * @method integer getProjectId() Obtain Project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID.
- */
-
-/**
- *DescribeProjectSecurityGroups request structure.
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
      * @var integer Project ID.
      */
     public $ProjectId;
+
     /**
      * @param integer $ProjectId Project ID.
      */
@@ -38,6 +37,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

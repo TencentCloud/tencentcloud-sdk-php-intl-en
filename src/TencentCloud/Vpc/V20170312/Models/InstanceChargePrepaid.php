@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Prepaid (monthly subscription) billing object.
+ *
  * @method integer getPeriod() Obtain Purchased usage period (in month). Value range: [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36].
  * @method void setPeriod(integer $Period) Set Purchased usage period (in month). Value range: [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36].
  * @method string getRenewFlag() Obtain Auto-renewal ID. Value range: NOTIFY_AND_AUTO_RENEW: notify expiry and renew automatically, NOTIFY_AND_MANUAL_RENEW: notify expiry but do not renew automatically. The default is NOTIFY_AND_MANUAL_RENEW
  * @method void setRenewFlag(string $RenewFlag) Set Auto-renewal ID. Value range: NOTIFY_AND_AUTO_RENEW: notify expiry and renew automatically, NOTIFY_AND_MANUAL_RENEW: notify expiry but do not renew automatically. The default is NOTIFY_AND_MANUAL_RENEW
- */
-
-/**
- *Prepaid (monthly subscription) billing object.
  */
 class InstanceChargePrepaid extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceChargePrepaid extends AbstractModel
      * @var string Auto-renewal ID. Value range: NOTIFY_AND_AUTO_RENEW: notify expiry and renew automatically, NOTIFY_AND_MANUAL_RENEW: notify expiry but do not renew automatically. The default is NOTIFY_AND_MANUAL_RENEW
      */
     public $RenewFlag;
+
     /**
      * @param integer $Period Purchased usage period (in month). Value range: [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36].
      * @param string $RenewFlag Auto-renewal ID. Value range: NOTIFY_AND_AUTO_RENEW: notify expiry and renew automatically, NOTIFY_AND_MANUAL_RENEW: notify expiry but do not renew automatically. The default is NOTIFY_AND_MANUAL_RENEW
@@ -46,6 +45,7 @@ class InstanceChargePrepaid extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

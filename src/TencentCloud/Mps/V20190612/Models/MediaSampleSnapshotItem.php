@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of a sampled screenshot
+ *
  * @method integer getDefinition() Obtain Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
  * @method void setDefinition(integer $Definition) Set Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
  * @method string getSampleType() Obtain Sample type. Valid values:
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImagePathSet(array $ImagePathSet) Set List of paths to generated screenshots.
  * @method array getWaterMarkDefinition() Obtain List of watermarking template IDs if the screenshots are watermarked.
  * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set List of watermarking template IDs if the screenshots are watermarked.
- */
-
-/**
- *Information of a sampled screenshot
  */
 class MediaSampleSnapshotItem extends AbstractModel
 {
@@ -78,6 +76,7 @@ class MediaSampleSnapshotItem extends AbstractModel
      * @var array List of watermarking template IDs if the screenshots are watermarked.
      */
     public $WaterMarkDefinition;
+
     /**
      * @param integer $Definition Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      * @param string $SampleType Sample type. Valid values:
@@ -94,6 +93,7 @@ class MediaSampleSnapshotItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

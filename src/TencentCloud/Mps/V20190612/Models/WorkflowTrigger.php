@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input rule. If an uploaded video hits the rule, the workflow will be triggered.
+ *
  * @method string getType() Obtain Trigger type. Only `CosFileUpload` is supported currently.
  * @method void setType(string $Type) Set Trigger type. Only `CosFileUpload` is supported currently.
  * @method CosFileUploadTrigger getCosFileUploadTrigger() Obtain This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCosFileUploadTrigger(CosFileUploadTrigger $CosFileUploadTrigger) Set This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Input rule. If an uploaded video hits the rule, the workflow will be triggered.
  */
 class WorkflowTrigger extends AbstractModel
 {
@@ -41,6 +39,7 @@ class WorkflowTrigger extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CosFileUploadTrigger;
+
     /**
      * @param string $Type Trigger type. Only `CosFileUpload` is supported currently.
      * @param CosFileUploadTrigger $CosFileUploadTrigger This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
@@ -50,6 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

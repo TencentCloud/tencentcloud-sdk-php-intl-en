@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskOperationLogs response structure.
+ *
  * @method array getDiskOperationLogSet() Obtain List of cloud disk operation logs.
  * @method void setDiskOperationLogSet(array $DiskOperationLogSet) Set List of cloud disk operation logs.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDiskOperationLogs response structure.
  */
 class DescribeDiskOperationLogsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDiskOperationLogsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DiskOperationLogSet List of cloud disk operation logs.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeDiskOperationLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

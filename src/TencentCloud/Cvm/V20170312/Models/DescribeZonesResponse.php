@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeZones response structure.
+ *
  * @method integer getTotalCount() Obtain Number of availability zones.
  * @method void setTotalCount(integer $TotalCount) Set Number of availability zones.
  * @method array getZoneSet() Obtain List of availability zones.
  * @method void setZoneSet(array $ZoneSet) Set List of availability zones.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeZones response structure.
  */
 class DescribeZonesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeZonesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of availability zones.
      * @param array $ZoneSet List of availability zones.
@@ -54,6 +53,7 @@ class DescribeZonesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

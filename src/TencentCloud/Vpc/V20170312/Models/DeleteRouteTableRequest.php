@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRouteTable request structure.
+ *
  * @method string getRouteTableId() Obtain The route table instance ID, such as `rtb-azd4dt1c`.
  * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-azd4dt1c`.
- */
-
-/**
- *DeleteRouteTable request structure.
  */
 class DeleteRouteTableRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteRouteTableRequest extends AbstractModel
      * @var string The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public $RouteTableId;
+
     /**
      * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
@@ -38,6 +37,7 @@ class DeleteRouteTableRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

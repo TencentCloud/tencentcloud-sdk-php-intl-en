@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetworkConfig response structure.
+ *
  * @method boolean getStatus() Obtain Execution status: true or false
  * @method void setStatus(boolean $Status) Set Execution status: true or false
  * @method string getSubnetId() Obtain Subnet ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set VIP address
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyNetworkConfig response structure.
  */
 class ModifyNetworkConfigResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyNetworkConfigResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param boolean $Status Execution status: true or false
      * @param string $SubnetId Subnet ID
@@ -70,6 +69,7 @@ class ModifyNetworkConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

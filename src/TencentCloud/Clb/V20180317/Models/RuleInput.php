@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP/HTTPS forwarding rule (input)
+ *
  * @method string getDomain() Obtain Domain name of the forwarding rule. Length: 1-80.
  * @method void setDomain(string $Domain) Set Domain name of the forwarding rule. Length: 1-80.
  * @method string getUrl() Obtain Forwarding rule path. Length: 1-200.
@@ -44,10 +46,6 @@ They represent weighted round robin, least connections, and IP hash, respectivel
  * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
  * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is `TRPC`.
  * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
- */
-
-/**
- *HTTP/HTTPS forwarding rule (input)
  */
 class RuleInput extends AbstractModel
 {
@@ -111,6 +109,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @var string TRPC calling service API, which is required when `ForwardType` is `TRPC`.
      */
     public $TrpcFunc;
+
     /**
      * @param string $Domain Domain name of the forwarding rule. Length: 1-80.
      * @param string $Url Forwarding rule path. Length: 1-200.
@@ -130,6 +129,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

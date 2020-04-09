@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterSecurity response structure.
+ *
  * @method string getUserName() Obtain Cluster’s account name
  * @method void setUserName(string $UserName) Set Cluster’s account name
  * @method string getPassword() Obtain Cluster’s password
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityPolicy(array $SecurityPolicy) Set Cluster’s access policy group
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeClusterSecurity response structure.
  */
 class DescribeClusterSecurityResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeClusterSecurityResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $UserName Cluster’s account name
      * @param string $Password Cluster’s password
@@ -94,6 +93,7 @@ class DescribeClusterSecurityResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

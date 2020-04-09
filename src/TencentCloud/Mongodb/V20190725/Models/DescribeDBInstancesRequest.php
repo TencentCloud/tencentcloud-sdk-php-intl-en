@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances request structure.
+ *
  * @method array getInstanceIds() Obtain List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method integer getInstanceType() Obtain Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectIds(array $ProjectIds) Set Project ID
  * @method string getSearchKey() Obtain Search keyword, which can be instance ID, instance name, or complete IP
  * @method void setSearchKey(string $SearchKey) Set Search keyword, which can be instance ID, instance name, or complete IP
- */
-
-/**
- *DescribeDBInstances request structure.
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var string Search keyword, which can be instance ID, instance name, or complete IP
      */
     public $SearchKey;
+
     /**
      * @param array $InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      * @param integer $InstanceType Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
@@ -134,6 +133,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

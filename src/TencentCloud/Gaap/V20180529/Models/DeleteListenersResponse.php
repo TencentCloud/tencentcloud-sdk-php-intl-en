@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteListeners response structure.
+ *
  * @method array getOperationFailedListenerSet() Obtain ID list of listeners failed to be deleted
  * @method void setOperationFailedListenerSet(array $OperationFailedListenerSet) Set ID list of listeners failed to be deleted
  * @method array getOperationSucceedListenerSet() Obtain ID list of listeners deleted successfully
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvalidStatusListenerSet(array $InvalidStatusListenerSet) Set ID list of invalid listeners. For example: the listener does not exist, or the instance corresponding to the listener does not match.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DeleteListeners response structure.
  */
 class DeleteListenersResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeleteListenersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $OperationFailedListenerSet ID list of listeners failed to be deleted
      * @param array $OperationSucceedListenerSet ID list of listeners deleted successfully
@@ -62,6 +61,7 @@ class DeleteListenersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

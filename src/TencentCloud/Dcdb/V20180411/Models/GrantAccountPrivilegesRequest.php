@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GrantAccountPrivileges request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of dcdbt-ow728lmc.
  * @method string getUserName() Obtain Login username.
@@ -42,10 +44,6 @@ Field permission. Valid values: INSERT; REFERENCES; SELECT; UPDATE
  * @method void setObject(string $Object) Set Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
  * @method string getColName() Obtain If `Type` = table and `ColName` is `\*`, the permissions will be granted to the table; if `ColName` is a specific field name, the permissions will be granted to the field
  * @method void setColName(string $ColName) Set If `Type` = table and `ColName` is `\*`, the permissions will be granted to the table; if `ColName` is a specific field name, the permissions will be granted to the field
- */
-
-/**
- *GrantAccountPrivileges request structure.
  */
 class GrantAccountPrivilegesRequest extends AbstractModel
 {
@@ -92,6 +90,7 @@ Field permission. Valid values: INSERT; REFERENCES; SELECT; UPDATE
      * @var string If `Type` = table and `ColName` is `\*`, the permissions will be granted to the table; if `ColName` is a specific field name, the permissions will be granted to the field
      */
     public $ColName;
+
     /**
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc.
      * @param string $UserName Login username.
@@ -110,6 +109,7 @@ Field permission. Valid values: INSERT; REFERENCES; SELECT; UPDATE
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

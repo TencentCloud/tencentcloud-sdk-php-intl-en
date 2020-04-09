@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceTypeConfigs response structure.
+ *
  * @method array getInstanceTypeConfigSet() Obtain List of instance model families
  * @method void setInstanceTypeConfigSet(array $InstanceTypeConfigSet) Set List of instance model families
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstanceTypeConfigs response structure.
  */
 class DescribeInstanceTypeConfigsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceTypeConfigsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $InstanceTypeConfigSet List of instance model families
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeInstanceTypeConfigsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

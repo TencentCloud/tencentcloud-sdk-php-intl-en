@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cache key configuration (filter parameter configuration)
+ *
  * @method string getFullUrlCache() Obtain Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter)
  * @method void setFullUrlCache(string $FullUrlCache) Set Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter)
- */
-
-/**
- *Cache key configuration (filter parameter configuration)
  */
 class CacheKey extends AbstractModel
 {
@@ -37,6 +35,7 @@ on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter)
      */
     public $FullUrlCache;
+
     /**
      * @param string $FullUrlCache Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
@@ -46,6 +45,7 @@ off: disable full-path cache (i.e., enable parameter filter)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachNetworkInterface request structure.
+ *
  * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method string getInstanceId() Obtain The ID of the CVM instance, such as `ins-r8hr2upy`.
  * @method void setInstanceId(string $InstanceId) Set The ID of the CVM instance, such as `ins-r8hr2upy`.
- */
-
-/**
- *DetachNetworkInterface request structure.
  */
 class DetachNetworkInterfaceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetachNetworkInterfaceRequest extends AbstractModel
      * @var string The ID of the CVM instance, such as `ins-r8hr2upy`.
      */
     public $InstanceId;
+
     /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      * @param string $InstanceId The ID of the CVM instance, such as `ins-r8hr2upy`.
@@ -46,6 +45,7 @@ class DetachNetworkInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

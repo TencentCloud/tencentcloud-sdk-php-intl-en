@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceMonitorHotKey request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getSpanType() Obtain Time span. 1: real time; 2: past 30 minutes; 3: past 6 hours; 4: past 24 hours
  * @method void setSpanType(integer $SpanType) Set Time span. 1: real time; 2: past 30 minutes; 3: past 6 hours; 4: past 24 hours
- */
-
-/**
- *DescribeInstanceMonitorHotKey request structure.
  */
 class DescribeInstanceMonitorHotKeyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceMonitorHotKeyRequest extends AbstractModel
      * @var integer Time span. 1: real time; 2: past 30 minutes; 3: past 6 hours; 4: past 24 hours
      */
     public $SpanType;
+
     /**
      * @param string $InstanceId Instance ID
      * @param integer $SpanType Time span. 1: real time; 2: past 30 minutes; 3: past 6 hours; 4: past 24 hours
@@ -46,6 +45,7 @@ class DescribeInstanceMonitorHotKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

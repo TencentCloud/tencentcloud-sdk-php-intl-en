@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveRecord request structure.
+ *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method integer getTaskId() Obtain Task ID, which uniquely identifies the recording task globally.
  * @method void setTaskId(integer $TaskId) Set Task ID, which uniquely identifies the recording task globally.
- */
-
-/**
- *DeleteLiveRecord request structure.
  */
 class DeleteLiveRecordRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteLiveRecordRequest extends AbstractModel
      * @var integer Task ID, which uniquely identifies the recording task globally.
      */
     public $TaskId;
+
     /**
      * @param string $StreamName Stream name.
      * @param integer $TaskId Task ID, which uniquely identifies the recording task globally.
@@ -46,6 +45,7 @@ class DeleteLiveRecordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteProxyGroup request structure.
+ *
  * @method string getGroupId() Obtain ID of the connection group to be deleted.
  * @method void setGroupId(string $GroupId) Set ID of the connection group to be deleted.
- */
-
-/**
- *DeleteProxyGroup request structure.
  */
 class DeleteProxyGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteProxyGroupRequest extends AbstractModel
      * @var string ID of the connection group to be deleted.
      */
     public $GroupId;
+
     /**
      * @param string $GroupId ID of the connection group to be deleted.
      */
@@ -38,6 +37,7 @@ class DeleteProxyGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

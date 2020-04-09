@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyImageSpriteTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of an image sprite generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an image sprite generating template.
  * @method string getName() Obtain Name of an image sprite generating template. Length limit: 64 characters.
@@ -60,10 +62,6 @@ Default value: black.
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
- */
-
-/**
- *ModifyImageSpriteTemplate request structure.
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
@@ -131,6 +129,7 @@ Default value: open.
 Default value: black.
      */
     public $FillType;
+
     /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
@@ -158,6 +157,7 @@ Default value: black.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

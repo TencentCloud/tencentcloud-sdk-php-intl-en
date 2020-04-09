@@ -18,14 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Bill tag information.
+ *
  * @method string getTagKey() Obtain Cost allocation tag key
  * @method void setTagKey(string $TagKey) Set Cost allocation tag key
  * @method string getTagValue() Obtain Tag value
  * @method void setTagValue(string $TagValue) Set Tag value
- */
-
-/**
- *Bill tag information.
  */
 class BillTagInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BillTagInfo extends AbstractModel
      * @var string Tag value
      */
     public $TagValue;
+
     /**
      * @param string $TagKey Cost allocation tag key
      * @param string $TagValue Tag value
@@ -46,6 +45,7 @@ class BillTagInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

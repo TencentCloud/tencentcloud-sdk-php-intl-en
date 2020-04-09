@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input for full text recognition.
+ *
  * @method integer getDefinition() Obtain Full text recognition template ID.
  * @method void setDefinition(integer $Definition) Set Full text recognition template ID.
- */
-
-/**
- *Input for full text recognition.
  */
 class AiRecognitionTaskOcrFullTextResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskOcrFullTextResultInput extends AbstractModel
      * @var integer Full text recognition template ID.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Full text recognition template ID.
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskOcrFullTextResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

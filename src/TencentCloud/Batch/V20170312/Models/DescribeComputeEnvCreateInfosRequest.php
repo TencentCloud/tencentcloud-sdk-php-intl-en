@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComputeEnvCreateInfos request structure.
+ *
  * @method array getEnvIds() Obtain Compute environment ID
  * @method void setEnvIds(array $EnvIds) Set Compute environment ID
  * @method array getFilters() Obtain Filter
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Number of returned results
  * @method void setLimit(integer $Limit) Set Number of returned results
- */
-
-/**
- *DescribeComputeEnvCreateInfos request structure.
  */
 class DescribeComputeEnvCreateInfosRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ class DescribeComputeEnvCreateInfosRequest extends AbstractModel
      * @var integer Number of returned results
      */
     public $Limit;
+
     /**
      * @param array $EnvIds Compute environment ID
      * @param array $Filters Filter
@@ -74,6 +73,7 @@ class DescribeComputeEnvCreateInfosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

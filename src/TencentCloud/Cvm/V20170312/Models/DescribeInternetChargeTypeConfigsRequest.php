@@ -18,14 +18,13 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInternetChargeTypeConfigs request structure.
+ *
 
- */
-
-/**
- *DescribeInternetChargeTypeConfigs request structure.
  */
 class DescribeInternetChargeTypeConfigsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeInternetChargeTypeConfigsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

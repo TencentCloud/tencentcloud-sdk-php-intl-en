@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTopicIpWhiteList response structure.
+ *
  * @method JgwOperateResponse getResult() Obtain Result of deleting topic IP whitelist
  * @method void setResult(JgwOperateResponse $Result) Set Result of deleting topic IP whitelist
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DeleteTopicIpWhiteList response structure.
  */
 class DeleteTopicIpWhiteListResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTopicIpWhiteListResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param JgwOperateResponse $Result Result of deleting topic IP whitelist
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DeleteTopicIpWhiteListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

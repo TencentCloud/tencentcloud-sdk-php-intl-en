@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIpVisit request structure.
+ *
  * @method string getStartTime() Obtain Query start time, such as 2018-09-04 10:40:10; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the first returned entry will be 2018-09-04 10:40:00.
  * @method void setStartTime(string $StartTime) Set Query start time, such as 2018-09-04 10:40:10; the returned result is later than or equal to the specified time.
@@ -38,10 +40,6 @@ day: 1 day. If the query period is longer than 24 hours, `day` will be used by d
  * @method void setInterval(string $Interval) Set Time granularity, which can be:
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
- */
-
-/**
- *DescribeIpVisit request structure.
  */
 class DescribeIpVisitRequest extends AbstractModel
 {
@@ -74,6 +72,7 @@ Please note that if domain names are specified, this parameter will be ignored.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
      */
     public $Interval;
+
     /**
      * @param string $StartTime Query start time, such as 2018-09-04 10:40:10; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the first returned entry will be 2018-09-04 10:40:00.
@@ -90,6 +89,7 @@ day: 1 day. If the query period is longer than 24 hours, `day` will be used by d
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

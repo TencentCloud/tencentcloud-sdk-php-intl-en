@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AttachGroupPolicy request structure.
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
  * @method integer getAttachGroupId() Obtain User Group ID
  * @method void setAttachGroupId(integer $AttachGroupId) Set User Group ID
- */
-
-/**
- *AttachGroupPolicy request structure.
  */
 class AttachGroupPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AttachGroupPolicyRequest extends AbstractModel
      * @var integer User Group ID
      */
     public $AttachGroupId;
+
     /**
      * @param integer $PolicyId Policy ID
      * @param integer $AttachGroupId User Group ID
@@ -46,6 +45,7 @@ class AttachGroupPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

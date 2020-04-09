@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRouteTableConflicts request structure.
+ *
  * @method string getRouteTableCidrBlock() Obtain Route table CIDR
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) Set Route table CIDR
  * @method string getVpcId() Obtain VPC bound to the route table
  * @method void setVpcId(string $VpcId) Set VPC bound to the route table
- */
-
-/**
- *DescribeRouteTableConflicts request structure.
  */
 class DescribeRouteTableConflictsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRouteTableConflictsRequest extends AbstractModel
      * @var string VPC bound to the route table
      */
     public $VpcId;
+
     /**
      * @param string $RouteTableCidrBlock Route table CIDR
      * @param string $VpcId VPC bound to the route table
@@ -46,6 +45,7 @@ class DescribeRouteTableConflictsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

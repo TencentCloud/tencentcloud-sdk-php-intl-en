@@ -18,16 +18,14 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of the IK plugin dictionary
+ *
  * @method string getKey() Obtain Dictionary key value
  * @method void setKey(string $Key) Set Dictionary key value
  * @method string getName() Obtain Dictionary name
  * @method void setName(string $Name) Set Dictionary name
  * @method integer getSize() Obtain Dictionary size in B
  * @method void setSize(integer $Size) Set Dictionary size in B
- */
-
-/**
- *Information of the IK plugin dictionary
  */
 class DictInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DictInfo extends AbstractModel
      * @var integer Dictionary size in B
      */
     public $Size;
+
     /**
      * @param string $Key Dictionary key value
      * @param string $Name Dictionary name
@@ -54,6 +53,7 @@ class DictInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

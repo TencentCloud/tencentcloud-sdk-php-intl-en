@@ -18,14 +18,12 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteResourceTag request structure.
+ *
  * @method string getTagKey() Obtain Tag key.
  * @method void setTagKey(string $TagKey) Set Tag key.
  * @method string getResource() Obtain Resource description in six-piece format.
  * @method void setResource(string $Resource) Set Resource description in six-piece format.
- */
-
-/**
- *DeleteResourceTag request structure.
  */
 class DeleteResourceTagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteResourceTagRequest extends AbstractModel
      * @var string Resource description in six-piece format.
      */
     public $Resource;
+
     /**
      * @param string $TagKey Tag key.
      * @param string $Resource Resource description in six-piece format.
@@ -46,6 +45,7 @@ class DeleteResourceTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

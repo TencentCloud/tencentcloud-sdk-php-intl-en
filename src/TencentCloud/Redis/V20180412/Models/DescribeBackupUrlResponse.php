@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupUrl response structure.
+ *
  * @method array getDownloadUrl() Obtain Download address on the public network (valid for 6 hours)
  * @method void setDownloadUrl(array $DownloadUrl) Set Download address on the public network (valid for 6 hours)
  * @method array getInnerDownloadUrl() Obtain Download address on the private network (valid for 6 hours)
  * @method void setInnerDownloadUrl(array $InnerDownloadUrl) Set Download address on the private network (valid for 6 hours)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBackupUrl response structure.
  */
 class DescribeBackupUrlResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBackupUrlResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DownloadUrl Download address on the public network (valid for 6 hours)
      * @param array $InnerDownloadUrl Download address on the private network (valid for 6 hours)
@@ -54,6 +53,7 @@ class DescribeBackupUrlResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

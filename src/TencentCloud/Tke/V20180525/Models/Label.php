@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * k8s tags, generally exist as an array
+ *
  * @method string getName() Obtain 
  * @method void setName(string $Name) Set 
  * @method string getValue() Obtain 
  * @method void setValue(string $Value) Set 
- */
-
-/**
- *k8s tags, generally exist as an array
  */
 class Label extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Label extends AbstractModel
      * @var string 
      */
     public $Value;
+
     /**
      * @param string $Name 
      * @param string $Value 
@@ -46,6 +45,7 @@ class Label extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

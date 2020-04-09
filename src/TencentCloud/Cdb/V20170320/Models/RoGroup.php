@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Read-only group parameter
+ *
  * @method string getRoGroupMode() Obtain Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
  * @method void setRoGroupMode(string $RoGroupMode) Set Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
  * @method string getRoGroupId() Obtain Read-only group ID.
@@ -56,10 +58,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRoGroupZone(string $RoGroupZone) Set Read-only group AZ.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Read-only group parameter
  */
 class RoGroup extends AbstractModel
 {
@@ -141,6 +139,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RoGroupZone;
+
     /**
      * @param string $RoGroupMode Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
      * @param string $RoGroupId Read-only group ID.
@@ -166,6 +165,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

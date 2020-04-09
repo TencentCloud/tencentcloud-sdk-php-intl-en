@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAnimatedGraphicsTemplate request structure.
+ *
  * @method integer getWidth() Obtain Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
@@ -52,10 +54,6 @@ Default value: 0.
  * @method void setName(string $Name) Set Name of an animated image generating template. Length limit: 64 characters.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- */
-
-/**
- *CreateAnimatedGraphicsTemplate request structure.
  */
 class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ Default value: 0.
      * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
+
     /**
      * @param integer $Width Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
@@ -126,6 +125,7 @@ Default value: 0.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceResetInstancesType response structure.
+ *
  * @method Price getPrice() Obtain Price of the instance using the specified model
  * @method void setPrice(Price $Price) Set Price of the instance using the specified model
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *InquiryPriceResetInstancesType response structure.
  */
 class InquiryPriceResetInstancesTypeResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InquiryPriceResetInstancesTypeResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param Price $Price Price of the instance using the specified model
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class InquiryPriceResetInstancesTypeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

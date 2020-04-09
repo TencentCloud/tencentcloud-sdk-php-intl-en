@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Metadata of a VOD media file
+ *
  * @method integer getSize() Obtain Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSize(integer $Size) Set Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
@@ -62,10 +64,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAudioDuration(float $AudioDuration) Set Audio duration in seconds.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Metadata of a VOD media file
  */
 class MediaMetaData extends AbstractModel
 {
@@ -134,6 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AudioDuration;
+
     /**
      * @param integer $Size Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -162,6 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

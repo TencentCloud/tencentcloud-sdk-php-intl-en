@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteClusterEndpointVip request structure.
+ *
 
- */
-
-/**
- *DeleteClusterEndpointVip request structure.
  */
 class DeleteClusterEndpointVipRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DeleteClusterEndpointVipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

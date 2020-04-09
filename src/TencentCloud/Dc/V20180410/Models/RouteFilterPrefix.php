@@ -18,12 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * User-side IP range.
+ *
  * @method string getCidr() Obtain User-side IP range.
  * @method void setCidr(string $Cidr) Set User-side IP range.
- */
-
-/**
- *User-side IP range.
  */
 class RouteFilterPrefix extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RouteFilterPrefix extends AbstractModel
      * @var string User-side IP range.
      */
     public $Cidr;
+
     /**
      * @param string $Cidr User-side IP range.
      */
@@ -38,6 +37,7 @@ class RouteFilterPrefix extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

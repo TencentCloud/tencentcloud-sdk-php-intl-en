@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Describes the specific migration process
+ *
  * @method integer getStepAll() Obtain Total number of steps
  * @method void setStepAll(integer $StepAll) Set Total number of steps
  * @method integer getStepNow() Obtain Current step
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) Set Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
  * @method array getStepInfo() Obtain Step information
  * @method void setStepInfo(array $StepInfo) Set Step information
- */
-
-/**
- *Describes the specific migration process
  */
 class MigrateDetailInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class MigrateDetailInfo extends AbstractModel
      * @var array Step information
      */
     public $StepInfo;
+
     /**
      * @param integer $StepAll Total number of steps
      * @param integer $StepNow Current step
@@ -86,6 +85,7 @@ class MigrateDetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

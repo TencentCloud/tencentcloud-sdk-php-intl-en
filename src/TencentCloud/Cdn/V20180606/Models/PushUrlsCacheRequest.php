@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PushUrlsCache request structure.
+ *
  * @method array getUrls() Obtain List of URLs. The protocol header such as "http://" or "https://" needs to be included.
  * @method void setUrls(array $Urls) Set List of URLs. The protocol header such as "http://" or "https://" needs to be included.
  * @method string getUserAgent() Obtain Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
@@ -34,10 +36,6 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
 `overseas`: prefetches resources to nodes outside Mainland China
 `global`: prefetches resources to global nodes
 Default value: `mainland`. You can prefetch a URL to nodes in a region provided that CDN service has been enabled for the domain name in the URL in the region.
- */
-
-/**
- *PushUrlsCache request structure.
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -60,6 +58,7 @@ Default value: `TencentCdn`
 Default value: `mainland`. You can prefetch a URL to nodes in a region provided that CDN service has been enabled for the domain name in the URL in the region.
      */
     public $Area;
+
     /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $UserAgent Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
@@ -74,6 +73,7 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

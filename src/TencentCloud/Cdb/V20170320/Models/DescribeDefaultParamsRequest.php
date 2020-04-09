@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDefaultParams request structure.
+ *
  * @method string getEngineVersion() Obtain MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
  * @method void setEngineVersion(string $EngineVersion) Set MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
- */
-
-/**
- *DescribeDefaultParams request structure.
  */
 class DescribeDefaultParamsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDefaultParamsRequest extends AbstractModel
      * @var string MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
      */
     public $EngineVersion;
+
     /**
      * @param string $EngineVersion MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
      */
@@ -38,6 +37,7 @@ class DescribeDefaultParamsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

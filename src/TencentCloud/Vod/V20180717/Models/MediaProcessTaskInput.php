@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video processing task type
+ *
  * @method array getTranscodeTaskSet() Obtain List of transcoding tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set List of transcoding tasks.
@@ -46,10 +48,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) Set List of adaptive bitrate streaming tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Video processing task type
  */
 class MediaProcessTaskInput extends AbstractModel
 {
@@ -94,6 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdaptiveDynamicStreamingTaskSet;
+
     /**
      * @param array $TranscodeTaskSet List of transcoding tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -114,6 +113,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Compute environment information
+ *
  * @method string getInstanceType() Obtain CVM instance type, which cannot be present together with InstanceTypes or InstanceTypeOptions at the same time.
  * @method void setInstanceType(string $InstanceType) Set CVM instance type, which cannot be present together with InstanceTypes or InstanceTypeOptions at the same time.
  * @method string getImageId() Obtain CVM image ID
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZones(array $Zones) Set List of availability zones (creation of CVM instances across availability zones is supported), which cannot be specified together with VirtualPrivateCloud or VirtualPrivateClouds at the same time.
  * @method array getVirtualPrivateClouds() Obtain List of VPCs (creation of CVM instances across VPCs is supported), which cannot be specified together with VirtualPrivateCloud or Zones at the same time.
  * @method void setVirtualPrivateClouds(array $VirtualPrivateClouds) Set List of VPCs (creation of CVM instances across VPCs is supported), which cannot be specified together with VirtualPrivateCloud or Zones at the same time.
- */
-
-/**
- *Compute environment information
  */
 class EnvData extends AbstractModel
 {
@@ -136,6 +134,7 @@ class EnvData extends AbstractModel
      * @var array List of VPCs (creation of CVM instances across VPCs is supported), which cannot be specified together with VirtualPrivateCloud or Zones at the same time.
      */
     public $VirtualPrivateClouds;
+
     /**
      * @param string $InstanceType CVM instance type, which cannot be present together with InstanceTypes or InstanceTypeOptions at the same time.
      * @param string $ImageId CVM image ID
@@ -158,6 +157,7 @@ class EnvData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamEventList request structure.
+ *
  * @method string getStartTime() Obtain Start time. 
 In UTC format, such as 2018-12-29T19:00:00Z.
 This supports querying the history of 60 days.
@@ -74,10 +76,6 @@ Note: This parameter takes effect when StreamName is used.
  * @method void setIsAsc(integer $IsAsc) Set Whether to display in ascending order by end time. Descending order by default.
 0: Descending.
 1: Ascending.
- */
-
-/**
- *DescribeLiveStreamEventList request structure.
  */
 class DescribeLiveStreamEventListRequest extends AbstractModel
 {
@@ -148,6 +146,7 @@ Note: This parameter takes effect when StreamName is used.
 1: Ascending.
      */
     public $IsAsc;
+
     /**
      * @param string $StartTime Start time. 
 In UTC format, such as 2018-12-29T19:00:00Z.
@@ -182,6 +181,7 @@ Note: This parameter takes effect when StreamName is used.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

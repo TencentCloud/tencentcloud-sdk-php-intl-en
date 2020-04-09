@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetMonitorData request structure.
+ *
  * @method string getNamespace() Obtain Namespace. Each Tencent Cloud product has a namespace
  * @method void setNamespace(string $Namespace) Set Namespace. Each Tencent Cloud product has a namespace
  * @method string getMetricName() Obtain Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time such as 2018-09-22T19:51:23+08:00
  * @method string getEndTime() Obtain End time. Uses the current time by default and cannot be earlier than StartTime
  * @method void setEndTime(string $EndTime) Set End time. Uses the current time by default and cannot be earlier than StartTime
- */
-
-/**
- *GetMonitorData request structure.
  */
 class GetMonitorDataRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class GetMonitorDataRequest extends AbstractModel
      * @var string End time. Uses the current time by default and cannot be earlier than StartTime
      */
     public $EndTime;
+
     /**
      * @param string $Namespace Namespace. Each Tencent Cloud product has a namespace
      * @param string $MetricName Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
@@ -78,6 +77,7 @@ class GetMonitorDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

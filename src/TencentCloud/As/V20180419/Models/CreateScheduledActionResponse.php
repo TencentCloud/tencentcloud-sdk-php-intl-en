@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateScheduledAction response structure.
+ *
  * @method string getScheduledActionId() Obtain Scheduled task ID
  * @method void setScheduledActionId(string $ScheduledActionId) Set Scheduled task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateScheduledAction response structure.
  */
 class CreateScheduledActionResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateScheduledActionResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $ScheduledActionId Scheduled task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateScheduledActionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

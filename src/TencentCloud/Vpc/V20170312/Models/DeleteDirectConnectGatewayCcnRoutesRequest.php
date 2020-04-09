@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDirectConnectGatewayCcnRoutes request structure.
+ *
  * @method string getDirectConnectGatewayId() Obtain The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
  * @method array getRouteIds() Obtain The route ID, such as `ccnr-f49l6u0z`.
  * @method void setRouteIds(array $RouteIds) Set The route ID, such as `ccnr-f49l6u0z`.
- */
-
-/**
- *DeleteDirectConnectGatewayCcnRoutes request structure.
  */
 class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel
      * @var array The route ID, such as `ccnr-f49l6u0z`.
      */
     public $RouteIds;
+
     /**
      * @param string $DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
      * @param array $RouteIds The route ID, such as `ccnr-f49l6u0z`.
@@ -46,6 +45,7 @@ class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

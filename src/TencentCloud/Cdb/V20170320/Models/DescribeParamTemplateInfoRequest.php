@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeParamTemplateInfo request structure.
+ *
  * @method integer getTemplateId() Obtain Parameter template ID.
  * @method void setTemplateId(integer $TemplateId) Set Parameter template ID.
- */
-
-/**
- *DescribeParamTemplateInfo request structure.
  */
 class DescribeParamTemplateInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeParamTemplateInfoRequest extends AbstractModel
      * @var integer Parameter template ID.
      */
     public $TemplateId;
+
     /**
      * @param integer $TemplateId Parameter template ID.
      */
@@ -38,6 +37,7 @@ class DescribeParamTemplateInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

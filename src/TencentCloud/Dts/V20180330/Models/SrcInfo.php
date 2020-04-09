@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Source instance information
+ *
  * @method string getAccessKey() Obtain Alibaba Cloud AccessKey, which is applicable if the source database is an Alibaba Cloud ApsaraDB for RDS 5.6 instance
  * @method void setAccessKey(string $AccessKey) Set Alibaba Cloud AccessKey, which is applicable if the source database is an Alibaba Cloud ApsaraDB for RDS 5.6 instance
  * @method string getIp() Obtain Instance IP address
@@ -52,10 +54,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getEngineVersion() Obtain Database version. This parameter is valid only when the instance is an RDS instance. Value: 5.6 or 5.7. Default value: 5.6
  * @method void setEngineVersion(string $EngineVersion) Set Database version. This parameter is valid only when the instance is an RDS instance. Value: 5.6 or 5.7. Default value: 5.6
- */
-
-/**
- *Source instance information
  */
 class SrcInfo extends AbstractModel
 {
@@ -139,6 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Database version. This parameter is valid only when the instance is an RDS instance. Value: 5.6 or 5.7. Default value: 5.6
      */
     public $EngineVersion;
+
     /**
      * @param string $AccessKey Alibaba Cloud AccessKey, which is applicable if the source database is an Alibaba Cloud ApsaraDB for RDS 5.6 instance
      * @param string $Ip Instance IP address
@@ -162,6 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

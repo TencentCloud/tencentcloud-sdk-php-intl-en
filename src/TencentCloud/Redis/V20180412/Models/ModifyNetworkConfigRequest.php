@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetworkConfig request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getOperation() Obtain Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
  * @method string getSubnetId() Obtain Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
  * @method void setSubnetId(string $SubnetId) Set Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
- */
-
-/**
- *ModifyNetworkConfig request structure.
  */
 class ModifyNetworkConfigRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyNetworkConfigRequest extends AbstractModel
      * @var string Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
      */
     public $SubnetId;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $Operation Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
@@ -70,6 +69,7 @@ class ModifyNetworkConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

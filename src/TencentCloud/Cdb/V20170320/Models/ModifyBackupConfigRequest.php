@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyBackupConfig request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getExpireDays() Obtain Backup file retention period in days. Value range: 7-732.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogExpireDays(integer $BinlogExpireDays) Set Binlog retention period in days. Value range: 7-732. It cannot be greater than the retention period of backup files.
  * @method CommonTimeWindow getBackupTimeWindow() Obtain Backup time window; for example, to set up backup between 10:00 and 14:00 on every Tuesday and Sunday, you should set this parameter as follows: {"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"} (Note: You can set up backup on different days, but the backup time windows need to be the same. If this field is set, the `StartTime` field will be ignored)
  * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) Set Backup time window; for example, to set up backup between 10:00 and 14:00 on every Tuesday and Sunday, you should set this parameter as follows: {"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"} (Note: You can set up backup on different days, but the backup time windows need to be the same. If this field is set, the `StartTime` field will be ignored)
- */
-
-/**
- *ModifyBackupConfig request structure.
  */
 class ModifyBackupConfigRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifyBackupConfigRequest extends AbstractModel
      * @var CommonTimeWindow Backup time window; for example, to set up backup between 10:00 and 14:00 on every Tuesday and Sunday, you should set this parameter as follows: {"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"} (Note: You can set up backup on different days, but the backup time windows need to be the same. If this field is set, the `StartTime` field will be ignored)
      */
     public $BackupTimeWindow;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $ExpireDays Backup file retention period in days. Value range: 7-732.
@@ -78,6 +77,7 @@ class ModifyBackupConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetParametersForImport request structure.
+ *
  * @method string getKeyId() Obtain Unique ID of a CMK. The CMK for which to get the key parameters must be of the `EXTERNAL` type, i.e., Type = 2 when the CMK is created by the `CreateKey` API.
  * @method void setKeyId(string $KeyId) Set Unique ID of a CMK. The CMK for which to get the key parameters must be of the `EXTERNAL` type, i.e., Type = 2 when the CMK is created by the `CreateKey` API.
  * @method string getWrappingAlgorithm() Obtain Specifies the algorithm for key material encryption. Currently, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256` are supported.
  * @method void setWrappingAlgorithm(string $WrappingAlgorithm) Set Specifies the algorithm for key material encryption. Currently, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256` are supported.
  * @method string getWrappingKeySpec() Obtain Specifies the type of wrapping key. Currently, only `RSA_2048` is supported.
  * @method void setWrappingKeySpec(string $WrappingKeySpec) Set Specifies the type of wrapping key. Currently, only `RSA_2048` is supported.
- */
-
-/**
- *GetParametersForImport request structure.
  */
 class GetParametersForImportRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetParametersForImportRequest extends AbstractModel
      * @var string Specifies the type of wrapping key. Currently, only `RSA_2048` is supported.
      */
     public $WrappingKeySpec;
+
     /**
      * @param string $KeyId Unique ID of a CMK. The CMK for which to get the key parameters must be of the `EXTERNAL` type, i.e., Type = 2 when the CMK is created by the `CreateKey` API.
      * @param string $WrappingAlgorithm Specifies the algorithm for key material encryption. Currently, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256` are supported.
@@ -54,6 +53,7 @@ class GetParametersForImportRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

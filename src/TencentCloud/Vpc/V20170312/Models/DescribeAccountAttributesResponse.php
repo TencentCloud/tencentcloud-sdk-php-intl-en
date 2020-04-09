@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountAttributes response structure.
+ *
  * @method array getAccountAttributeSet() Obtain User account attribute object
  * @method void setAccountAttributeSet(array $AccountAttributeSet) Set User account attribute object
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAccountAttributes response structure.
  */
 class DescribeAccountAttributesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAccountAttributesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $AccountAttributeSet User account attribute object
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeAccountAttributesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckProxyCreate response structure.
+ *
  * @method integer getCheckFlag() Obtain Queries whether a connection with the specified configuration can be created. 1: yes; 0: no.
  * @method void setCheckFlag(integer $CheckFlag) Set Queries whether a connection with the specified configuration can be created. 1: yes; 0: no.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CheckProxyCreate response structure.
  */
 class CheckProxyCreateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CheckProxyCreateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $CheckFlag Queries whether a connection with the specified configuration can be created. 1: yes; 0: no.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CheckProxyCreateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

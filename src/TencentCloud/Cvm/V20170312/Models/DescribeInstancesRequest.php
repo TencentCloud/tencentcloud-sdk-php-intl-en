@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances request structure.
+ *
  * @method array getInstanceIds() Obtain Instance ID(s) in the format of `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688). The maximum number of instances in each request is 100. You cannot specify `InstanceIds` and `Filters` at the same time.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID(s) in the format of `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688). The maximum number of instances in each request is 100. You cannot specify `InstanceIds` and `Filters` at the same time.
  * @method array getFilters() Obtain Filters.
@@ -57,10 +59,6 @@ Each request can have up to 10 `Filters` and 5 `Filters.Values`. You cannot spec
  * @method integer getLimit() Obtain Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
  * @method void setLimit(integer $Limit) Set Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
  */
-
-/**
- *DescribeInstances request structure.
- */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
@@ -97,6 +95,7 @@ Each request can have up to 10 `Filters` and 5 `Filters.Values`. You cannot spec
      * @var integer Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
      */
     public $Limit;
+
     /**
      * @param array $InstanceIds Instance ID(s) in the format of `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688). The maximum number of instances in each request is 100. You cannot specify `InstanceIds` and `Filters` at the same time.
      * @param array $Filters Filters.
@@ -122,6 +121,7 @@ Each request can have up to 10 `Filters` and 5 `Filters.Values`. You cannot spec
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

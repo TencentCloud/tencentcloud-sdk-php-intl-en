@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePaiInstances response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible PAI instances
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible PAI instances
  * @method array getPaiInstanceSet() Obtain PAI instance details
  * @method void setPaiInstanceSet(array $PaiInstanceSet) Set PAI instance details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribePaiInstances response structure.
  */
 class DescribePaiInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePaiInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible PAI instances
      * @param array $PaiInstanceSet PAI instance details
@@ -54,6 +53,7 @@ class DescribePaiInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

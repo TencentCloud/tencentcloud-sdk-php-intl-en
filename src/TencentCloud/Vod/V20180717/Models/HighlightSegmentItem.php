@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * List of intelligently generated highlights.
+ *
  * @method float getConfidence() Obtain Confidence.
  * @method void setConfidence(float $Confidence) Set Confidence.
  * @method float getStartTimeOffset() Obtain Start time offset of a segment.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a segment.
  * @method float getEndTimeOffset() Obtain End time offset of a segment.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a segment.
- */
-
-/**
- *List of intelligently generated highlights.
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class HighlightSegmentItem extends AbstractModel
      * @var float End time offset of a segment.
      */
     public $EndTimeOffset;
+
     /**
      * @param float $Confidence Confidence.
      * @param float $StartTimeOffset Start time offset of a segment.
@@ -54,6 +53,7 @@ class HighlightSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

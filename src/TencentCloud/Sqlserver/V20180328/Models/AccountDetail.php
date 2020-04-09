@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Account details
+ *
  * @method string getName() Obtain Account name
  * @method void setName(string $Name) Set Account name
  * @method string getRemark() Obtain Account remarks
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalStatus(string $InternalStatus) Set Internal account status, which should be `enable` normally
  * @method array getDbs() Obtain Information of read and write permissions of this account on relevant databases
  * @method void setDbs(array $Dbs) Set Information of read and write permissions of this account on relevant databases
- */
-
-/**
- *Account details
  */
 class AccountDetail extends AbstractModel
 {
@@ -80,6 +78,7 @@ class AccountDetail extends AbstractModel
      * @var array Information of read and write permissions of this account on relevant databases
      */
     public $Dbs;
+
     /**
      * @param string $Name Account name
      * @param string $Remark Account remarks
@@ -94,6 +93,7 @@ class AccountDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

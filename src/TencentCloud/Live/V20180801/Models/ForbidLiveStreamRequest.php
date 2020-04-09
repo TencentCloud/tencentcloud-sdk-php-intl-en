@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidLiveStream request structure.
+ *
  * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
  * @method string getDomainName() Obtain Your push domain name.
@@ -38,10 +40,6 @@ Length limit: 2,048 bytes.
  * @method void setReason(string $Reason) Set Reason for forbidding.
 Note: Be sure to enter the reason for forbidding to avoid any faulty operations.
 Length limit: 2,048 bytes.
- */
-
-/**
- *ForbidLiveStream request structure.
  */
 class ForbidLiveStreamRequest extends AbstractModel
 {
@@ -74,6 +72,7 @@ Note: Be sure to enter the reason for forbidding to avoid any faulty operations.
 Length limit: 2,048 bytes.
      */
     public $Reason;
+
     /**
      * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
      * @param string $DomainName Your push domain name.
@@ -90,6 +89,7 @@ Length limit: 2,048 bytes.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

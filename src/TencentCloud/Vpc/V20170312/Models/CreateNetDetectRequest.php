@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNetDetect request structure.
+ *
  * @method string getVpcId() Obtain The `ID` of a `VPC` instance, such as `vpc-12345678`.
  * @method void setVpcId(string $VpcId) Set The `ID` of a `VPC` instance, such as `vpc-12345678`.
  * @method string getSubnetId() Obtain The ID of a subnet instance, such as subnet-12345678.
@@ -52,10 +54,6 @@ If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID,
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
  * @method string getNetDetectDescription() Obtain Network detection description.
  * @method void setNetDetectDescription(string $NetDetectDescription) Set Network detection description.
- */
-
-/**
- *CreateNetDetect request structure.
  */
 class CreateNetDetectRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
      * @var string Network detection description.
      */
     public $NetDetectDescription;
+
     /**
      * @param string $VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
      * @param string $SubnetId The ID of a subnet instance, such as subnet-12345678.
@@ -126,6 +125,7 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

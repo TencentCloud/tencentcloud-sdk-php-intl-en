@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAddressTemplate request structure.
+ *
  * @method string getAddressTemplateName() Obtain The name of the IP address template
  * @method void setAddressTemplateName(string $AddressTemplateName) Set The name of the IP address template
  * @method array getAddresses() Obtain Address information, including IP, CIDR and IP address range.
  * @method void setAddresses(array $Addresses) Set Address information, including IP, CIDR and IP address range.
- */
-
-/**
- *CreateAddressTemplate request structure.
  */
 class CreateAddressTemplateRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAddressTemplateRequest extends AbstractModel
      * @var array Address information, including IP, CIDR and IP address range.
      */
     public $Addresses;
+
     /**
      * @param string $AddressTemplateName The name of the IP address template
      * @param array $Addresses Address information, including IP, CIDR and IP address range.
@@ -46,6 +45,7 @@ class CreateAddressTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProxiesAttribute request structure.
+ *
  * @method array getInstanceIds() Obtain ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
  * @method void setInstanceIds(array $InstanceIds) Set ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
  * @method string getProxyName() Obtain Connection name. Up to 30 characters.
@@ -28,10 +30,6 @@ For more information, please see How to Ensure Idempotence.
 For more information, please see How to Ensure Idempotence.
  * @method array getProxyIds() Obtain ID of one or multiple connections to be operated; It’s a new parameter.
  * @method void setProxyIds(array $ProxyIds) Set ID of one or multiple connections to be operated; It’s a new parameter.
- */
-
-/**
- *ModifyProxiesAttribute request structure.
  */
 class ModifyProxiesAttributeRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ For more information, please see How to Ensure Idempotence.
      * @var array ID of one or multiple connections to be operated; It’s a new parameter.
      */
     public $ProxyIds;
+
     /**
      * @param array $InstanceIds ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
      * @param string $ProxyName Connection name. Up to 30 characters.
@@ -66,6 +65,7 @@ For more information, please see How to Ensure Idempotence.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

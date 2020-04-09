@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Country/region code mapping (name and code)
+ *
  * @method string getNationCountryName() Obtain Country name.
  * @method void setNationCountryName(string $NationCountryName) Set Country name.
  * @method string getNationCountryInnerCode() Obtain Country code.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContinentName(string $ContinentName) Set Continent name.
  * @method string getContinentInnerCode() Obtain Continent code.
  * @method void setContinentInnerCode(string $ContinentInnerCode) Set Continent code.
- */
-
-/**
- *Country/region code mapping (name and code)
  */
 class CountryAreaMap extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CountryAreaMap extends AbstractModel
      * @var string Continent code.
      */
     public $ContinentInnerCode;
+
     /**
      * @param string $NationCountryName Country name.
      * @param string $NationCountryInnerCode Country code.
@@ -78,6 +77,7 @@ class CountryAreaMap extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

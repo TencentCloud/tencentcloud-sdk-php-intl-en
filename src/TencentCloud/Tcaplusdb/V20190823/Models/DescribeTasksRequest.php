@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasks request structure.
+ *
  * @method array getClusterIds() Obtain List of IDs of clusters where the tasks to be queried reside
  * @method void setClusterIds(array $ClusterIds) Set List of IDs of clusters where the tasks to be queried reside
  * @method array getTaskIds() Obtain List of IDs of tasks to be queried
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Query list offset
  * @method integer getLimit() Obtain Number of returned results in query list
  * @method void setLimit(integer $Limit) Set Number of returned results in query list
- */
-
-/**
- *DescribeTasks request structure.
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeTasksRequest extends AbstractModel
      * @var integer Number of returned results in query list
      */
     public $Limit;
+
     /**
      * @param array $ClusterIds List of IDs of clusters where the tasks to be queried reside
      * @param array $TaskIds List of IDs of tasks to be queried
@@ -70,6 +69,7 @@ class DescribeTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

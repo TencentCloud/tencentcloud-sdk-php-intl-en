@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDirectConnectTunnels request structure.
+ *
  * @method array getFilters() Obtain Filter conditions:
 This parameter does not support specifying `DirectConnectTunnelIds` and `Filters` at the same time.
 <li> direct-connect-tunnel-name: Dedicated tunnel name.</li>
@@ -34,10 +36,6 @@ This parameter does not support specifying `DirectConnectTunnelIds` and `Filters
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
- */
-
-/**
- *DescribeDirectConnectTunnels request structure.
  */
 class DescribeDirectConnectTunnelsRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ This parameter does not support specifying `DirectConnectTunnelIds` and `Filters
      * @var integer Number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
+
     /**
      * @param array $Filters Filter conditions:
 This parameter does not support specifying `DirectConnectTunnelIds` and `Filters` at the same time.
@@ -78,6 +77,7 @@ This parameter does not support specifying `DirectConnectTunnelIds` and `Filters
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

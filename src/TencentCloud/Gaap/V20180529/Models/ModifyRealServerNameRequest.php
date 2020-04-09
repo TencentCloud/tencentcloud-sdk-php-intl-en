@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRealServerName request structure.
+ *
  * @method string getRealServerName() Obtain Origin server name
  * @method void setRealServerName(string $RealServerName) Set Origin server name
  * @method string getRealServerId() Obtain Origin server ID
  * @method void setRealServerId(string $RealServerId) Set Origin server ID
- */
-
-/**
- *ModifyRealServerName request structure.
  */
 class ModifyRealServerNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyRealServerNameRequest extends AbstractModel
      * @var string Origin server ID
      */
     public $RealServerId;
+
     /**
      * @param string $RealServerName Origin server name
      * @param string $RealServerId Origin server ID
@@ -46,6 +45,7 @@ class ModifyRealServerNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

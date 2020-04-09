@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BatchDeregisterTargets response structure.
+ *
  * @method array getFailListenerIdSet() Obtain IDs of the listeners failed to unbind
  * @method void setFailListenerIdSet(array $FailListenerIdSet) Set IDs of the listeners failed to unbind
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *BatchDeregisterTargets response structure.
  */
 class BatchDeregisterTargetsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BatchDeregisterTargetsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $FailListenerIdSet IDs of the listeners failed to unbind
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class BatchDeregisterTargetsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

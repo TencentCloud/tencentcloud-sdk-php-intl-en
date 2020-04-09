@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Content audit result
+ *
  * @method string getType() Obtain Task type. Valid values:
 <li>Porn: porn information detection in image</li>
 <li>Terrorism: terrorism information detection in image</li>
@@ -80,10 +82,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask) Set Query result of OCR-based prohibited information detection in text task in video content audit, which is valid when task type is `Prohibited.Ocr`.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Content audit result
  */
 class AiContentReviewResult extends AbstractModel
 {
@@ -161,6 +159,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProhibitedOcrTask;
+
     /**
      * @param string $Type Task type. Valid values:
 <li>Porn: porn information detection in image</li>
@@ -198,6 +197,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeListeners request structure.
+ *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getListenerIds() Obtain Array of IDs of the CLB listeners to be queried
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
  * @method integer getPort() Obtain Port of the listener to be queried
  * @method void setPort(integer $Port) Set Port of the listener to be queried
- */
-
-/**
- *DescribeListeners request structure.
  */
 class DescribeListenersRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeListenersRequest extends AbstractModel
      * @var integer Port of the listener to be queried
      */
     public $Port;
+
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $ListenerIds Array of IDs of the CLB listeners to be queried
@@ -62,6 +61,7 @@ class DescribeListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

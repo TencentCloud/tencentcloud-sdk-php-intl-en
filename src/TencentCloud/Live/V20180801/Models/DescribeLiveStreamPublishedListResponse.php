@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamPublishedList response structure.
+ *
  * @method array getPublishInfo() Obtain Push record information.
  * @method void setPublishInfo(array $PublishInfo) Set Push record information.
  * @method integer getPageNum() Obtain Page number.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalPage(integer $TotalPage) Set Total number of pages.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeLiveStreamPublishedList response structure.
  */
 class DescribeLiveStreamPublishedListResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeLiveStreamPublishedListResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $PublishInfo Push record information.
      * @param integer $PageNum Page number.
@@ -78,6 +77,7 @@ class DescribeLiveStreamPublishedListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

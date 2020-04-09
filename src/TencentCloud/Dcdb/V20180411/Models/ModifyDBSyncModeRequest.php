@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBSyncMode request structure.
+ *
  * @method string getInstanceId() Obtain ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
  * @method void setInstanceId(string $InstanceId) Set ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
  * @method integer getSyncMode() Obtain Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
  * @method void setSyncMode(integer $SyncMode) Set Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
- */
-
-/**
- *ModifyDBSyncMode request structure.
  */
 class ModifyDBSyncModeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBSyncModeRequest extends AbstractModel
      * @var integer Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
      */
     public $SyncMode;
+
     /**
      * @param string $InstanceId ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
      * @param integer $SyncMode Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
@@ -46,6 +45,7 @@ class ModifyDBSyncModeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

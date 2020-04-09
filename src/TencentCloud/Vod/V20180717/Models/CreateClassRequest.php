@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClass request structure.
+ *
  * @method integer getParentId() Obtain Parent category ID. For a first-level category, enter `-1`.
  * @method void setParentId(integer $ParentId) Set Parent category ID. For a first-level category, enter `-1`.
  * @method string getClassName() Obtain Category name. Length limit: 1–64 characters.
  * @method void setClassName(string $ClassName) Set Category name. Length limit: 1–64 characters.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *CreateClass request structure.
  */
 class CreateClassRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateClassRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param integer $ParentId Parent category ID. For a first-level category, enter `-1`.
      * @param string $ClassName Category name. Length limit: 1–64 characters.
@@ -54,6 +53,7 @@ class CreateClassRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

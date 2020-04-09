@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveRecord request structure.
+ *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
@@ -72,10 +74,6 @@ storage_time: Recording file duration in seconds
 eg. record_interval=3600&storage_time=2592000
 Note: The parameter needs url encode.
 In both scheduled and real-time video recording modes, this parameter is valid.
- */
-
-/**
- *CreateLiveRecord request structure.
  */
 class CreateLiveRecordRequest extends AbstractModel
 {
@@ -145,6 +143,7 @@ Note: The parameter needs url encode.
 In both scheduled and real-time video recording modes, this parameter is valid.
      */
     public $StreamParam;
+
     /**
      * @param string $StreamName Stream name.
      * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
@@ -178,6 +177,7 @@ In both scheduled and real-time video recording modes, this parameter is valid.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

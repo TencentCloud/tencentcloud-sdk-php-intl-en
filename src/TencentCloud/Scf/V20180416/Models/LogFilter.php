@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Log filtering criteria, which is for distinguishing between logs of successful and failed execution
+ *
  * @method string getRetCode() Obtain Values of `filter.RetCode` include:
 not0, indicating that only logs of failed execution will be returned.
 is0, indicating that only logs of successful execution will be returned.
@@ -33,10 +35,6 @@ ResourceLimitExceeded, indicating that logs of function invocations during which
 UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
 Blank, indicating that all logs will be returned.
  */
-
-/**
- *Log filtering criteria, which is for distinguishing between logs of successful and failed execution
- */
 class LogFilter extends AbstractModel
 {
     /**
@@ -49,6 +47,7 @@ UserCodeException, indicating that logs of function invocations during which a u
 Blank, indicating that all logs will be returned.
      */
     public $RetCode;
+
     /**
      * @param string $RetCode Values of `filter.RetCode` include:
 not0, indicating that only logs of failed execution will be returned.
@@ -62,6 +61,7 @@ Blank, indicating that all logs will be returned.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

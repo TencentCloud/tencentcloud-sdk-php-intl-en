@@ -16,24 +16,37 @@
  */
 
 namespace TencentCloud\Monitor\V20180724;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Monitor\V20180724\Models as Models;
 
 /**
-* @method Models\DescribeBaseMetricsResponse DescribeBaseMetrics(Models\DescribeBaseMetricsRequest $req) This API is used to get the details of basic metrics.
-* @method Models\GetMonitorDataResponse GetMonitorData(Models\GetMonitorDataRequest $req) This API is used to get the monitoring data of a Tencent Cloud product by passing in the product's namespace, object dimension description, and monitoring metric.
+ * @method Models\DescribeBaseMetricsResponse DescribeBaseMetrics(Models\DescribeBaseMetricsRequest $req) This API is used to get the details of basic metrics.
+ * @method Models\GetMonitorDataResponse GetMonitorData(Models\GetMonitorDataRequest $req) This API is used to get the monitoring data of a Tencent Cloud product by passing in the product's namespace, object dimension description, and monitoring metric.
 API call rate limit: 20 calls/sec, 1,200 calls/min.
 If you need to call a lot of metrics and objects, there may be cases where the call fails due to the rate limit. It is recommended to spread the call requests as much as possible over time.
  */
 
 class MonitorClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "monitor.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-07-24";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

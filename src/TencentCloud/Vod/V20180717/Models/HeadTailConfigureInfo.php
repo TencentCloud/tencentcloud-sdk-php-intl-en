@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of video opening and ending credits recognition task.
+ *
  * @method string getSwitch() Obtain Switch of video opening and ending credits recognition task. Valid values:
 <li>ON: enables video opening and ending credits recognition task;</li>
 <li>OFF: disables video opening and ending credits recognition task.</li>
  * @method void setSwitch(string $Switch) Set Switch of video opening and ending credits recognition task. Valid values:
 <li>ON: enables video opening and ending credits recognition task;</li>
 <li>OFF: disables video opening and ending credits recognition task.</li>
- */
-
-/**
- *Control parameter of video opening and ending credits recognition task.
  */
 class HeadTailConfigureInfo extends AbstractModel
 {
@@ -37,6 +35,7 @@ class HeadTailConfigureInfo extends AbstractModel
 <li>OFF: disables video opening and ending credits recognition task.</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch Switch of video opening and ending credits recognition task. Valid values:
 <li>ON: enables video opening and ending credits recognition task;</li>
@@ -46,6 +45,7 @@ class HeadTailConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of a time point screencapturing template.
+ *
  * @method integer getDefinition() Obtain Unique ID of a time point screencapturing template.
  * @method void setDefinition(integer $Definition) Set Unique ID of a time point screencapturing template.
  * @method string getType() Obtain Template type. Valid values:
@@ -80,10 +82,6 @@ Default value: black.
 <li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
 <li>gauss: Fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
 Default value: black.
- */
-
-/**
- *Details of a time point screencapturing template.
  */
 class SnapshotByTimeOffsetTemplate extends AbstractModel
 {
@@ -161,6 +159,7 @@ Default value: open.
 Default value: black.
      */
     public $FillType;
+
     /**
      * @param integer $Definition Unique ID of a time point screencapturing template.
      * @param string $Type Template type. Valid values:
@@ -198,6 +197,7 @@ Default value: black.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of an animated image generating template.
+ *
  * @method integer getDefinition() Obtain Unique ID of an animated image generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an animated image generating template.
  * @method string getType() Obtain Template type. Valid values:
@@ -72,10 +74,6 @@ Default value: open.
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- */
-
-/**
- *Details of an animated image generating template.
  */
 class AnimatedGraphicsTemplate extends AbstractModel
 {
@@ -153,6 +151,7 @@ Default value: open.
      * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public $UpdateTime;
+
     /**
      * @param integer $Definition Unique ID of an animated image generating template.
      * @param string $Type Template type. Valid values:
@@ -186,6 +185,7 @@ Default value: open.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

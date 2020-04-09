@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSnapshotByTimeOffsetTemplate request structure.
+ *
  * @method integer getWidth() Obtain Image width in px. Value range: [128, 4,096].
  * @method void setWidth(integer $Width) Set Image width in px. Value range: [128, 4,096].
  * @method integer getHeight() Obtain Image height in px. Value range: [128, 4,096].
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) Set Image format. Valid values: jpg; png. Default value: jpg.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- */
-
-/**
- *CreateSnapshotByTimeOffsetTemplate request structure.
  */
 class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
      * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
+
     /**
      * @param integer $Width Image width in px. Value range: [128, 4,096].
      * @param integer $Height Image height in px. Value range: [128, 4,096].
@@ -70,6 +69,7 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

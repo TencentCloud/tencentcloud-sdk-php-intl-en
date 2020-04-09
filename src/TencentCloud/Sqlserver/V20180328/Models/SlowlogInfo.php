@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Slow query log file information
+ *
  * @method integer getId() Obtain Unique ID of slow query log file
  * @method void setId(integer $Id) Set Unique ID of slow query log file
  * @method string getStartTime() Obtain File generation start time
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Status (1: success, 2: failure)
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Slow query log file information
  */
 class SlowlogInfo extends AbstractModel
 {
@@ -83,6 +81,7 @@ class SlowlogInfo extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
+
     /**
      * @param integer $Id Unique ID of slow query log file
      * @param string $StartTime File generation start time
@@ -98,6 +97,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

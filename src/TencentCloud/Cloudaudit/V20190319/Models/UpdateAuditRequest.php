@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Request parameter structure of UpdateAudit
+ *
  * @method string getAuditName() Obtain Tracking set name
  * @method void setAuditName(string $AuditName) Set Tracking set name
  * @method string getCmqQueueName() Obtain Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of IsEnableCmqNotify is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogFilePrefix(string $LogFilePrefix) Set Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
  * @method integer getReadWriteAttribute() Obtain Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write).
  * @method void setReadWriteAttribute(integer $ReadWriteAttribute) Set Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write).
- */
-
-/**
- *Request parameter structure of UpdateAudit
  */
 class UpdateAuditRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class UpdateAuditRequest extends AbstractModel
      * @var integer Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write).
      */
     public $ReadWriteAttribute;
+
     /**
      * @param string $AuditName Tracking set name
      * @param string $CmqQueueName Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of IsEnableCmqNotify is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
@@ -110,6 +109,7 @@ class UpdateAuditRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

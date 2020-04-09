@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceSecurityGroupPolicy request structure.
+ *
  * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() Obtain Security group policy set object.
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) Set Security group policy set object.
- */
-
-/**
- *ReplaceSecurityGroupPolicy request structure.
  */
 class ReplaceSecurityGroupPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
      * @var SecurityGroupPolicySet Security group policy set object.
      */
     public $SecurityGroupPolicySet;
+
     /**
      * @param string $SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet Security group policy set object.
@@ -46,6 +45,7 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Transcoding information
+ *
  * @method string getUrl() Obtain Address of output video file.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set Address of output video file.
@@ -62,10 +64,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Transcoding information
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -134,6 +132,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VideoStreamSet;
+
     /**
      * @param string $Url Address of output video file.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -162,6 +161,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

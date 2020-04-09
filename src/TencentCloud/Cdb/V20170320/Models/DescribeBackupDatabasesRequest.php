@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupDatabases request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method string getStartTime() Obtain Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-07-12 10:29:20.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Pagination offset.
  * @method integer getLimit() Obtain Number of entries per page. Value range: 1-2,000.
  * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: 1-2,000.
- */
-
-/**
- *DescribeBackupDatabases request structure.
  */
 class DescribeBackupDatabasesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeBackupDatabasesRequest extends AbstractModel
      * @var integer Number of entries per page. Value range: 1-2,000.
      */
     public $Limit;
+
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $StartTime Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-07-12 10:29:20.
@@ -70,6 +69,7 @@ class DescribeBackupDatabasesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

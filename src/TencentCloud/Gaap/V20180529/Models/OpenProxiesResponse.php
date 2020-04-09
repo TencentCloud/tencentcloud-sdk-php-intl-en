@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenProxies response structure.
+ *
  * @method array getInvalidStatusInstanceSet() Obtain The connection instance ID list cannot be enabled if it’s not disabled.
  * @method void setInvalidStatusInstanceSet(array $InvalidStatusInstanceSet) Set The connection instance ID list cannot be enabled if it’s not disabled.
  * @method array getOperationFailedInstanceSet() Obtain ID list of connection instances failed to be enabled.
  * @method void setOperationFailedInstanceSet(array $OperationFailedInstanceSet) Set ID list of connection instances failed to be enabled.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *OpenProxies response structure.
  */
 class OpenProxiesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class OpenProxiesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it’s not disabled.
      * @param array $OperationFailedInstanceSet ID list of connection instances failed to be enabled.
@@ -54,6 +53,7 @@ class OpenProxiesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

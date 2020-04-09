@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Prefetch task details.
+ *
  * @method string getTaskId() Obtain Prefetch task ID
  * @method void setTaskId(string $TaskId) Set Prefetch task ID
  * @method string getUrl() Obtain Prefetched URL
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Prefetch task update time
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Prefetch task details.
  */
 class PushTask extends AbstractModel
 {
@@ -94,6 +92,7 @@ class PushTask extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
+
     /**
      * @param string $TaskId Prefetch task ID
      * @param string $Url Prefetched URL
@@ -114,6 +113,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

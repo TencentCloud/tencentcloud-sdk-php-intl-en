@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDirectConnectGatewayCcnRoutes response structure.
+ *
  * @method integer getTotalCount() Obtain The number of objects meeting the condition.
  * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
  * @method array getRouteSet() Obtain The CCN route (IDC IP range) list.
  * @method void setRouteSet(array $RouteSet) Set The CCN route (IDC IP range) list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDirectConnectGatewayCcnRoutes response structure.
  */
 class DescribeDirectConnectGatewayCcnRoutesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDirectConnectGatewayCcnRoutesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of objects meeting the condition.
      * @param array $RouteSet The CCN route (IDC IP range) list.
@@ -54,6 +53,7 @@ class DescribeDirectConnectGatewayCcnRoutesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

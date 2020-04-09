@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Mapping between a name and an ID
+ *
  * @method integer getId() Obtain Object ID
  * @method void setId(integer $Id) Set Object ID
  * @method string getName() Obtain Object name
  * @method void setName(string $Name) Set Object name
- */
-
-/**
- *Mapping between a name and an ID
  */
 class MapInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MapInfo extends AbstractModel
      * @var string Object name
      */
     public $Name;
+
     /**
      * @param integer $Id Object ID
      * @param string $Name Object name
@@ -46,6 +45,7 @@ class MapInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

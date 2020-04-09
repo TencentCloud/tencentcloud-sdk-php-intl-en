@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyGroupDetails request structure.
+ *
  * @method string getGroupId() Obtain Connection group ID.
  * @method void setGroupId(string $GroupId) Set Connection group ID.
- */
-
-/**
- *DescribeProxyGroupDetails request structure.
  */
 class DescribeProxyGroupDetailsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProxyGroupDetailsRequest extends AbstractModel
      * @var string Connection group ID.
      */
     public $GroupId;
+
     /**
      * @param string $GroupId Connection group ID.
      */
@@ -38,6 +37,7 @@ class DescribeProxyGroupDetailsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

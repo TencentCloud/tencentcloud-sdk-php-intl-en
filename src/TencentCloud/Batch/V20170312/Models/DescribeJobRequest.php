@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeJob request structure.
+ *
  * @method string getJobId() Obtain Instance ID
  * @method void setJobId(string $JobId) Set Instance ID
- */
-
-/**
- *DescribeJob request structure.
  */
 class DescribeJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeJobRequest extends AbstractModel
      * @var string Instance ID
      */
     public $JobId;
+
     /**
      * @param string $JobId Instance ID
      */
@@ -38,6 +37,7 @@ class DescribeJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

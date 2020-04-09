@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Associated policy
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
  * @method string getPolicyName() Obtain Policy name
@@ -52,10 +54,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeactivedDetail(array $DeactivedDetail) Set List of deprecated products
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Associated policy
  */
 class AttachPolicyInfo extends AbstractModel
 {
@@ -119,6 +117,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeactivedDetail;
+
     /**
      * @param integer $PolicyId Policy ID
      * @param string $PolicyName Policy name
@@ -142,6 +141,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

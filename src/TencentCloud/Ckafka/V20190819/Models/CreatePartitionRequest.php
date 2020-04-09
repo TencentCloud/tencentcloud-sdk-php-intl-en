@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePartition request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getTopicName() Obtain Topic name
  * @method void setTopicName(string $TopicName) Set Topic name
  * @method integer getPartitionNum() Obtain Number of topic partitions
  * @method void setPartitionNum(integer $PartitionNum) Set Number of topic partitions
- */
-
-/**
- *CreatePartition request structure.
  */
 class CreatePartitionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreatePartitionRequest extends AbstractModel
      * @var integer Number of topic partitions
      */
     public $PartitionNum;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $TopicName Topic name
@@ -54,6 +53,7 @@ class CreatePartitionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

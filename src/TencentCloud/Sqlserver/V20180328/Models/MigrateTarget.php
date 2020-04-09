@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Target type of migration task
+ *
  * @method string getInstanceId() Obtain ID of target instance in the format of mssql-si2823jyl
  * @method void setInstanceId(string $InstanceId) Set ID of target instance in the format of mssql-si2823jyl
  * @method string getUserName() Obtain Username of migration target instance
  * @method void setUserName(string $UserName) Set Username of migration target instance
  * @method string getPassword() Obtain Password of migration target instance
  * @method void setPassword(string $Password) Set Password of migration target instance
- */
-
-/**
- *Target type of migration task
  */
 class MigrateTarget extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MigrateTarget extends AbstractModel
      * @var string Password of migration target instance
      */
     public $Password;
+
     /**
      * @param string $InstanceId ID of target instance in the format of mssql-si2823jyl
      * @param string $UserName Username of migration target instance
@@ -54,6 +53,7 @@ class MigrateTarget extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

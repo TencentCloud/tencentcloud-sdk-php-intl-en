@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTableGroups request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where a table group resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where a table group resides
  * @method array getTableGroupIds() Obtain Table group ID list
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Query list offset
  * @method integer getLimit() Obtain Number of returned results in query list
  * @method void setLimit(integer $Limit) Set Number of returned results in query list
- */
-
-/**
- *DescribeTableGroups request structure.
  */
 class DescribeTableGroupsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeTableGroupsRequest extends AbstractModel
      * @var integer Number of returned results in query list
      */
     public $Limit;
+
     /**
      * @param string $ClusterId ID of the cluster where a table group resides
      * @param array $TableGroupIds Table group ID list
@@ -70,6 +69,7 @@ class DescribeTableGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

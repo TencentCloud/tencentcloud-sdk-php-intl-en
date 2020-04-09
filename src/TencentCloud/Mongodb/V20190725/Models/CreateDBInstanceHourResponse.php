@@ -18,16 +18,14 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstanceHour response structure.
+ *
  * @method string getDealId() Obtain Order ID
  * @method void setDealId(string $DealId) Set Order ID
  * @method array getInstanceIds() Obtain List of IDs of created instances
  * @method void setInstanceIds(array $InstanceIds) Set List of IDs of created instances
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateDBInstanceHour response structure.
  */
 class CreateDBInstanceHourResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $DealId Order ID
      * @param array $InstanceIds List of IDs of created instances
@@ -54,6 +53,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

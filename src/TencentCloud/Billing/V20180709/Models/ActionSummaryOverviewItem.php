@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Detailed summary of costs by transaction type
+ *
  * @method string getActionType() Obtain Transaction type
  * @method void setActionType(string $ActionType) Set Transaction type
  * @method string getActionTypeName() Obtain Transaction type name
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
  * @method string getBillMonth() Obtain Billing month, e.g. `2019-08`
  * @method void setBillMonth(string $BillMonth) Set Billing month, e.g. `2019-08`
- */
-
-/**
- *Detailed summary of costs by transaction type
  */
 class ActionSummaryOverviewItem extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ActionSummaryOverviewItem extends AbstractModel
      * @var string Billing month, e.g. `2019-08`
      */
     public $BillMonth;
+
     /**
      * @param string $ActionType Transaction type
      * @param string $ActionTypeName Transaction type name
@@ -94,6 +93,7 @@ class ActionSummaryOverviewItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

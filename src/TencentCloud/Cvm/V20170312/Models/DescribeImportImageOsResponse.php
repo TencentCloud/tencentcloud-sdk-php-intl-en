@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImportImageOs response structure.
+ *
  * @method ImageOsList getImportImageOsListSupported() Obtain Supported operating system types of imported images.
  * @method void setImportImageOsListSupported(ImageOsList $ImportImageOsListSupported) Set Supported operating system types of imported images.
  * @method array getImportImageOsVersionSet() Obtain Supported operating system versions of imported images. 
  * @method void setImportImageOsVersionSet(array $ImportImageOsVersionSet) Set Supported operating system versions of imported images. 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeImportImageOs response structure.
  */
 class DescribeImportImageOsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeImportImageOsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param ImageOsList $ImportImageOsListSupported Supported operating system types of imported images.
      * @param array $ImportImageOsVersionSet Supported operating system versions of imported images. 
@@ -54,6 +53,7 @@ class DescribeImportImageOsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

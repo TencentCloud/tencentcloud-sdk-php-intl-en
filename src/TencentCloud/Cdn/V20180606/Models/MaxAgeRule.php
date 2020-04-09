@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MaxAge rules configuration
+ *
  * @method string getMaxAgeType() Obtain Rule types:
 `all`: effective for all files
 `file`: effective for specified file suffixes
@@ -40,10 +42,6 @@ For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
  * @method integer getMaxAgeTime() Obtain MaxAge time (in seconds)
  * @method void setMaxAgeTime(integer $MaxAgeTime) Set MaxAge time (in seconds)
- */
-
-/**
- *MaxAge rules configuration
  */
 class MaxAgeRule extends AbstractModel
 {
@@ -69,6 +67,7 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
      * @var integer MaxAge time (in seconds)
      */
     public $MaxAgeTime;
+
     /**
      * @param string $MaxAgeType Rule types:
 `all`: effective for all files
@@ -86,6 +85,7 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

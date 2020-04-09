@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of video opening and ending credits recognition.
+ *
  * @method float getHeadConfidence() Obtain Confidence of recognized opening credits. Value range: 0–100.
  * @method void setHeadConfidence(float $HeadConfidence) Set Confidence of recognized opening credits. Value range: 0–100.
  * @method float getHeadTimeOffset() Obtain End time point of video opening credits in seconds.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTailConfidence(float $TailConfidence) Set Confidence of recognized closing credits. Value range: 0–100.
  * @method float getTailTimeOffset() Obtain Start time point of video closing credits in seconds.
  * @method void setTailTimeOffset(float $TailTimeOffset) Set Start time point of video closing credits in seconds.
- */
-
-/**
- *Output of video opening and ending credits recognition.
  */
 class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
      * @var float Start time point of video closing credits in seconds.
      */
     public $TailTimeOffset;
+
     /**
      * @param float $HeadConfidence Confidence of recognized opening credits. Value range: 0–100.
      * @param float $HeadTimeOffset End time point of video opening credits in seconds.
@@ -62,6 +61,7 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

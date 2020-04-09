@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeParamTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain Number of parameter templates of the user.
  * @method void setTotalCount(integer $TotalCount) Set Number of parameter templates of the user.
  * @method array getItems() Obtain Parameter template details.
  * @method void setItems(array $Items) Set Parameter template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeParamTemplates response structure.
  */
 class DescribeParamTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeParamTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of parameter templates of the user.
      * @param array $Items Parameter template details.
@@ -54,6 +53,7 @@ class DescribeParamTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

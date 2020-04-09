@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateListener response structure.
+ *
  * @method array getListenerIds() Obtain Array of unique IDs of the created listeners
  * @method void setListenerIds(array $ListenerIds) Set Array of unique IDs of the created listeners
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateListener response structure.
  */
 class CreateListenerResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateListenerResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $ListenerIds Array of unique IDs of the created listeners
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateListenerResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

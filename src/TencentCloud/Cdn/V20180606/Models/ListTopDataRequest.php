@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListTopData request structure.
+ *
  * @method string getStartTime() Obtain Query start date. Example: 2018-09-09.
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
 Data generated at or after 00:00:00 on the start date will be returned.
@@ -103,10 +105,6 @@ If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `re
 `server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
 `client`: specifies to query data on the client region where the request devices are located; if `Metric` is `Host`, supported filters are `flux`, `request`, and `bandwidth`.
  */
-
-/**
- *ListTopData request structure.
- */
 class ListTopDataRequest extends AbstractModel
 {
     /**
@@ -190,6 +188,7 @@ If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `re
 `client`: specifies to query data on the client region where the request devices are located; if `Metric` is `Host`, supported filters are `flux`, `request`, and `bandwidth`.
      */
     public $AreaType;
+
     /**
      * @param string $StartTime Query start date. Example: 2018-09-09.
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
@@ -238,6 +237,7 @@ If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `re
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

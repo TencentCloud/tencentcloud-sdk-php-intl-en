@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePaiInstance request structure.
+ *
  * @method string getDomainName() Obtain PAI instance domain name.
  * @method void setDomainName(string $DomainName) Set PAI instance domain name.
  * @method InternetAccessible getInternetAccessible() Obtain Information of the public network bandwidth configuration.
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Relevant parameter settings for the prepaid mode (i.e., monthly subscription). This parameter can specify the purchased usage period, whether to set automatic renewal, and other attributes of the instance purchased on a prepaid basis. If the billing method of the specified instance is prepaid, this parameter is required.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). This parameter can specify the purchased usage period, whether to set automatic renewal, and other attributes of the instance purchased on a prepaid basis. If the billing method of the specified instance is prepaid, this parameter is required.
- */
-
-/**
- *CreatePaiInstance request structure.
  */
 class CreatePaiInstanceRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class CreatePaiInstanceRequest extends AbstractModel
      * @var InstanceChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). This parameter can specify the purchased usage period, whether to set automatic renewal, and other attributes of the instance purchased on a prepaid basis. If the billing method of the specified instance is prepaid, this parameter is required.
      */
     public $InstanceChargePrepaid;
+
     /**
      * @param string $DomainName PAI instance domain name.
      * @param InternetAccessible $InternetAccessible Information of the public network bandwidth configuration.
@@ -118,6 +117,7 @@ class CreatePaiInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

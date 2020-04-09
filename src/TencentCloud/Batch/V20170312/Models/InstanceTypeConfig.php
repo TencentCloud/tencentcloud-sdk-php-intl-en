@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of InstanceTypeConfig available to BatchCompute
+ *
  * @method integer getMem() Obtain Memory size in GB.
  * @method void setMem(integer $Mem) Set Memory size in GB.
  * @method integer getCpu() Obtain Number of CPU cores.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Availability zone.
  * @method string getInstanceFamily() Obtain Instance model family.
  * @method void setInstanceFamily(string $InstanceFamily) Set Instance model family.
- */
-
-/**
- *Information of InstanceTypeConfig available to BatchCompute
  */
 class InstanceTypeConfig extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InstanceTypeConfig extends AbstractModel
      * @var string Instance model family.
      */
     public $InstanceFamily;
+
     /**
      * @param integer $Mem Memory size in GB.
      * @param integer $Cpu Number of CPU cores.
@@ -70,6 +69,7 @@ class InstanceTypeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

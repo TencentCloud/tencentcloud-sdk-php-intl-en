@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Role details
+ *
  * @method string getRoleId() Obtain Role ID
  * @method void setRoleId(string $RoleId) Set Role ID
  * @method string getRoleName() Obtain Role name
@@ -42,10 +44,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getDeletionTaskId() Obtain 
  * @method void setDeletionTaskId(string $DeletionTaskId) Set 
- */
-
-/**
- *Role details
  */
 class RoleInfo extends AbstractModel
 {
@@ -100,6 +98,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string 
      */
     public $DeletionTaskId;
+
     /**
      * @param string $RoleId Role ID
      * @param string $RoleName Role name
@@ -118,6 +117,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

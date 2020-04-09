@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTranscodeTemplates response structure.
+ *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
  * @method array getTranscodeTemplateSet() Obtain List of transcoding template details.
  * @method void setTranscodeTemplateSet(array $TranscodeTemplateSet) Set List of transcoding template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTranscodeTemplates response structure.
  */
 class DescribeTranscodeTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTranscodeTemplatesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Number of eligible entries.
      * @param array $TranscodeTemplateSet List of transcoding template details.
@@ -54,6 +53,7 @@ class DescribeTranscodeTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTargetGroups request structure.
+ *
  * @method array getTargetGroupIds() Obtain Target group ID, which is exclusive of `Filters`.
  * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group ID, which is exclusive of `Filters`.
  * @method integer getLimit() Obtain Limit of the number of displayed results. Default value: 20
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Starting display offset
  * @method array getFilters() Obtain Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
  * @method void setFilters(array $Filters) Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
- */
-
-/**
- *DescribeTargetGroups request structure.
  */
 class DescribeTargetGroupsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
      * @var array Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
      */
     public $Filters;
+
     /**
      * @param array $TargetGroupIds Target group ID, which is exclusive of `Filters`.
      * @param integer $Limit Limit of the number of displayed results. Default value: 20
@@ -62,6 +61,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

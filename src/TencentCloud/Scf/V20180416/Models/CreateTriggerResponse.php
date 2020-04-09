@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTrigger response structure.
+ *
  * @method Trigger getTriggerInfo() Obtain Trigger information
  * @method void setTriggerInfo(Trigger $TriggerInfo) Set Trigger information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateTrigger response structure.
  */
 class CreateTriggerResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateTriggerResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param Trigger $TriggerInfo Trigger information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateTriggerResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

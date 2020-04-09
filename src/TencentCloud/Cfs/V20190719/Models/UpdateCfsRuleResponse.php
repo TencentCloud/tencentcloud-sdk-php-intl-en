@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsRule response structure.
+ *
  * @method string getPGroupId() Obtain Permission group ID
  * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getRuleId() Obtain Rule ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(integer $Priority) Set Priority
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *UpdateCfsRule response structure.
  */
 class UpdateCfsRuleResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class UpdateCfsRuleResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $PGroupId Permission group ID
      * @param string $RuleId Rule ID
@@ -86,6 +85,7 @@ class UpdateCfsRuleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

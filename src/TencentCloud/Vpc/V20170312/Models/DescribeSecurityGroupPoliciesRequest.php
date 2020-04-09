@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroupPolicies request structure.
+ *
  * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
- */
-
-/**
- *DescribeSecurityGroupPolicies request structure.
  */
 class DescribeSecurityGroupPoliciesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSecurityGroupPoliciesRequest extends AbstractModel
      * @var string The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
     public $SecurityGroupId;
+
     /**
      * @param string $SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
@@ -38,6 +37,7 @@ class DescribeSecurityGroupPoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

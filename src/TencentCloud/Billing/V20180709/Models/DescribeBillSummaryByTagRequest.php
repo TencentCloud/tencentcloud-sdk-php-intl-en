@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillSummaryByTag request structure.
+ *
  * @method string getPayerUin() Obtain Payer UIN
  * @method void setPayerUin(string $PayerUin) Set Payer UIN
  * @method string getBeginTime() Obtain Currently the period to be queried must start from a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-01 00:00:00.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set Currently the period to be queried must end at a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-30 23:59:59.
  * @method string getTagKey() Obtain Cost allocation tag key
  * @method void setTagKey(string $TagKey) Set Cost allocation tag key
- */
-
-/**
- *DescribeBillSummaryByTag request structure.
  */
 class DescribeBillSummaryByTagRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
      * @var string Cost allocation tag key
      */
     public $TagKey;
+
     /**
      * @param string $PayerUin Payer UIN
      * @param string $BeginTime Currently the period to be queried must start from a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-01 00:00:00.
@@ -62,6 +61,7 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

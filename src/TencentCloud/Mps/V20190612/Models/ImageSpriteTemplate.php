@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Details of an image sprite generating template
+ *
  * @method integer getDefinition() Obtain Unique ID of an image sprite generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an image sprite generating template.
  * @method string getType() Obtain Template type. Valid values:
@@ -54,10 +56,6 @@ Default value: black.
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
- */
-
-/**
- *Details of an image sprite generating template
  */
 class ImageSpriteTemplate extends AbstractModel
 {
@@ -130,6 +128,7 @@ class ImageSpriteTemplate extends AbstractModel
 Default value: black.
      */
     public $FillType;
+
     /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      * @param string $Type Template type. Valid values:
@@ -154,6 +153,7 @@ Default value: black.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

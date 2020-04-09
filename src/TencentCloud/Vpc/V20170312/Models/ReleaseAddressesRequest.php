@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReleaseAddresses request structure.
+ *
  * @method array getAddressIds() Obtain The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
  * @method void setAddressIds(array $AddressIds) Set The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
- */
-
-/**
- *ReleaseAddresses request structure.
  */
 class ReleaseAddressesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ReleaseAddressesRequest extends AbstractModel
      * @var array The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
      */
     public $AddressIds;
+
     /**
      * @param array $AddressIds The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
      */
@@ -38,6 +37,7 @@ class ReleaseAddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

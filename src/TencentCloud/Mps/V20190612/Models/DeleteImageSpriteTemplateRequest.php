@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImageSpriteTemplate request structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of an image sprite generating template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an image sprite generating template.
- */
-
-/**
- *DeleteImageSpriteTemplate request structure.
  */
 class DeleteImageSpriteTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteImageSpriteTemplateRequest extends AbstractModel
      * @var integer Unique ID of an image sprite generating template.
      */
     public $Definition;
+
     /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      */
@@ -38,6 +37,7 @@ class DeleteImageSpriteTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

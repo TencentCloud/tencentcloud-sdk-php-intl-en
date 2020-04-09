@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTimeWindow response structure.
+ *
  * @method array getMonday() Obtain List of maintenance time windows on Monday.
  * @method void setMonday(array $Monday) Set List of maintenance time windows on Monday.
  * @method array getTuesday() Obtain List of maintenance time windows on Tuesday.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSunday(array $Sunday) Set List of maintenance time windows on Sunday.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTimeWindow response structure.
  */
 class DescribeTimeWindowResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeTimeWindowResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Monday List of maintenance time windows on Monday.
      * @param array $Tuesday List of maintenance time windows on Tuesday.
@@ -94,6 +93,7 @@ class DescribeTimeWindowResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

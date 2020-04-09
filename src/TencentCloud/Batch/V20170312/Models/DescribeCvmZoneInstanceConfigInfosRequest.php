@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCvmZoneInstanceConfigInfos request structure.
+ *
  * @method array getFilters() Obtain Filter.
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
@@ -29,10 +31,6 @@ use TencentCloud\Common\AbstractModel;
 <li> instance-type - String - Required: No - (Filter) Filter by model.</li>
 <li> instance-charge-type - String - Required: No - (Filter) Filter by instance billing method. ( POSTPAID_BY_HOUR: pay-as-you-go | SPOTPAID: bidding.)  </li>
  */
-
-/**
- *DescribeCvmZoneInstanceConfigInfos request structure.
- */
 class DescribeCvmZoneInstanceConfigInfosRequest extends AbstractModel
 {
     /**
@@ -43,6 +41,7 @@ class DescribeCvmZoneInstanceConfigInfosRequest extends AbstractModel
 <li> instance-charge-type - String - Required: No - (Filter) Filter by instance billing method. ( POSTPAID_BY_HOUR: pay-as-you-go | SPOTPAID: bidding.)  </li>
      */
     public $Filters;
+
     /**
      * @param array $Filters Filter.
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
@@ -54,6 +53,7 @@ class DescribeCvmZoneInstanceConfigInfosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

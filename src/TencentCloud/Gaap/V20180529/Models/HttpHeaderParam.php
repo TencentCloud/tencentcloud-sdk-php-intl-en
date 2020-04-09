@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Parameter describing an HTTP packet header
+ *
  * @method string getHeaderName() Obtain HTTP header name
  * @method void setHeaderName(string $HeaderName) Set HTTP header name
  * @method string getHeaderValue() Obtain HTTP header value
  * @method void setHeaderValue(string $HeaderValue) Set HTTP header value
- */
-
-/**
- *Parameter describing an HTTP packet header
  */
 class HttpHeaderParam extends AbstractModel
 {
@@ -38,6 +36,7 @@ class HttpHeaderParam extends AbstractModel
      * @var string HTTP header value
      */
     public $HeaderValue;
+
     /**
      * @param string $HeaderName HTTP header name
      * @param string $HeaderValue HTTP header value
@@ -46,6 +45,7 @@ class HttpHeaderParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

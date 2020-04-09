@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Statistical method during the period
+ *
  * @method string getPeriod() Obtain Period
  * @method void setPeriod(string $Period) Set Period
  * @method array getStatType() Obtain Statistical method
  * @method void setStatType(array $StatType) Set Statistical method
- */
-
-/**
- *Statistical method during the period
  */
 class PeriodsSt extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PeriodsSt extends AbstractModel
      * @var array Statistical method
      */
     public $StatType;
+
     /**
      * @param string $Period Period
      * @param array $StatType Statistical method
@@ -46,6 +45,7 @@ class PeriodsSt extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

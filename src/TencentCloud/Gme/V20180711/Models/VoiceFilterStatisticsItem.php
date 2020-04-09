@@ -18,12 +18,10 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Phrase filtering usage statistics
+ *
  * @method integer getDuration() Obtain Total duration of phrase filtering
  * @method void setDuration(integer $Duration) Set Total duration of phrase filtering
- */
-
-/**
- *Phrase filtering usage statistics
  */
 class VoiceFilterStatisticsItem extends AbstractModel
 {
@@ -31,6 +29,7 @@ class VoiceFilterStatisticsItem extends AbstractModel
      * @var integer Total duration of phrase filtering
      */
     public $Duration;
+
     /**
      * @param integer $Duration Total duration of phrase filtering
      */
@@ -38,6 +37,7 @@ class VoiceFilterStatisticsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

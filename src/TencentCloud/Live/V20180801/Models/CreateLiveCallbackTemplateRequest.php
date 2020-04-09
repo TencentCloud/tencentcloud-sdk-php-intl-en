@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveCallbackTemplate request structure.
+ *
  * @method string getTemplateName() Obtain Template name, which is a non-empty string.
 Maximum length: 255 bytes.
  * @method void setTemplateName(string $TemplateName) Set Template name, which is a non-empty string.
@@ -48,10 +50,6 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 Protocol-related document: [Event Message Notification](/document/product/267/32741).
  * @method string getCallbackKey() Obtain Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
  * @method void setCallbackKey(string $CallbackKey) Set Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
- */
-
-/**
- *CreateLiveCallbackTemplate request structure.
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
      * @var string Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
      */
     public $CallbackKey;
+
     /**
      * @param string $TemplateName Template name, which is a non-empty string.
 Maximum length: 255 bytes.
@@ -122,6 +121,7 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

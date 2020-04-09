@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyGroupStatistics request structure.
+ *
  * @method string getGroupId() Obtain Connection group ID
  * @method void setGroupId(string $GroupId) Set Connection group ID
  * @method string getStartTime() Obtain Start time
@@ -34,10 +36,6 @@ Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
 Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
 Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
- */
-
-/**
- *DescribeProxyGroupStatistics request structure.
  */
 class DescribeProxyGroupStatisticsRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
      */
     public $Granularity;
+
     /**
      * @param string $GroupId Connection group ID
      * @param string $StartTime Start time
@@ -82,6 +81,7 @@ Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

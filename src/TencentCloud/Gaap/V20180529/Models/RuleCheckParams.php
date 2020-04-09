@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Health check parameters of the layer-7 listeners’ forwarding rules
+ *
  * @method integer getDelayLoop() Obtain Time interval of health check
  * @method void setDelayLoop(integer $DelayLoop) Set Time interval of health check
  * @method integer getConnectTimeout() Obtain Response timeout of health check
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 You cannot modify this parameter when calling ModifyRuleAttribute API.
  * @method void setDomain(string $Domain) Set Domain name to be performed health check
 You cannot modify this parameter when calling ModifyRuleAttribute API.
- */
-
-/**
- *Health check parameters of the layer-7 listeners’ forwarding rules
  */
 class RuleCheckParams extends AbstractModel
 {
@@ -69,6 +67,7 @@ class RuleCheckParams extends AbstractModel
 You cannot modify this parameter when calling ModifyRuleAttribute API.
      */
     public $Domain;
+
     /**
      * @param integer $DelayLoop Time interval of health check
      * @param integer $ConnectTimeout Response timeout of health check
@@ -82,6 +81,7 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

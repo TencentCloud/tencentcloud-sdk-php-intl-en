@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTableGroup request structure.
+ *
  * @method string getClusterId() Obtain ID of the cluster where a table group resides
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where a table group resides
  * @method string getTableGroupId() Obtain Table group ID
  * @method void setTableGroupId(string $TableGroupId) Set Table group ID
- */
-
-/**
- *DeleteTableGroup request structure.
  */
 class DeleteTableGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTableGroupRequest extends AbstractModel
      * @var string Table group ID
      */
     public $TableGroupId;
+
     /**
      * @param string $ClusterId ID of the cluster where a table group resides
      * @param string $TableGroupId Table group ID
@@ -46,6 +45,7 @@ class DeleteTableGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

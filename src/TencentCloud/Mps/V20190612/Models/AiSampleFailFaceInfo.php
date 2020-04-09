@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI-based sample management - face information failing to be processed.
+ *
  * @method integer getIndex() Obtain Corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
  * @method void setIndex(integer $Index) Set Corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
  * @method integer getErrCode() Obtain Error code. Valid values:
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Other values: Failed.</li>
  * @method string getMessage() Obtain Error description.
  * @method void setMessage(string $Message) Set Error description.
- */
-
-/**
- *AI-based sample management - face information failing to be processed.
  */
 class AiSampleFailFaceInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ class AiSampleFailFaceInfo extends AbstractModel
      * @var string Error description.
      */
     public $Message;
+
     /**
      * @param integer $Index Corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
      * @param integer $ErrCode Error code. Valid values:
@@ -62,6 +61,7 @@ class AiSampleFailFaceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

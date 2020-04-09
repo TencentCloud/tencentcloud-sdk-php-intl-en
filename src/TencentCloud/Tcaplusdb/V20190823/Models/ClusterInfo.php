@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cluster details
+ *
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
  * @method string getClusterId() Obtain Cluster ID
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOldPasswordExpireTime(string $OldPasswordExpireTime) Set If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Cluster details
  */
 class ClusterInfo extends AbstractModel
 {
@@ -125,6 +123,7 @@ class ClusterInfo extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OldPasswordExpireTime;
+
     /**
      * @param string $ClusterName Cluster name
      * @param string $ClusterId Cluster ID
@@ -146,6 +145,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

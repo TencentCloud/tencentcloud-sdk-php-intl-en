@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusters request structure.
+ *
  * @method array getClusterIds() Obtain Cluster ID list (When it is empty,
 all clusters under the account will be obtained)
  * @method void setClusterIds(array $ClusterIds) Set Cluster ID list (When it is empty,
@@ -28,10 +30,6 @@ all clusters under the account will be obtained)
  * @method void setLimit(integer $Limit) Set Maximum number of output entries. Default value: 20
  * @method array getFilters() Obtain Filter condition. Currently, only filtering by a single ClusterName is supported
  * @method void setFilters(array $Filters) Set Filter condition. Currently, only filtering by a single ClusterName is supported
- */
-
-/**
- *DescribeClusters request structure.
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ all clusters under the account will be obtained)
      * @var array Filter condition. Currently, only filtering by a single ClusterName is supported
      */
     public $Filters;
+
     /**
      * @param array $ClusterIds Cluster ID list (When it is empty,
 all clusters under the account will be obtained)
@@ -66,6 +65,7 @@ all clusters under the account will be obtained)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

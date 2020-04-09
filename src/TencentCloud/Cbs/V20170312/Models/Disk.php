@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * The details of a cloud disk
+ *
  * @method string getDiskId() Obtain Cloud disk ID.
  * @method void setDiskId(string $DiskId) Set Cloud disk ID.
  * @method string getDiskUsage() Obtain Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
@@ -106,10 +108,6 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setSnapshotSize(integer $SnapshotSize) Set The total capacity of the snapshots of the cloud disk. Unit: MB.
  * @method boolean getBackupDisk() Obtain Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
  * @method void setBackupDisk(boolean $BackupDisk) Set Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
- */
-
-/**
- *The details of a cloud disk
  */
 class Disk extends AbstractModel
 {
@@ -288,6 +286,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @var boolean Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
      */
     public $BackupDisk;
+
     /**
      * @param string $DiskId Cloud disk ID.
      * @param string $DiskUsage Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
@@ -338,6 +337,7 @@ Note: This field may return null, indicating that no valid value was found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

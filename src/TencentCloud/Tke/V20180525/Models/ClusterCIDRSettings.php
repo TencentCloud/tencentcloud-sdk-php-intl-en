@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Container networking parameters for the cluster
+ *
  * @method string getClusterCIDR() Obtain CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
  * @method void setClusterCIDR(string $ClusterCIDR) Set CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
  * @method boolean getIgnoreClusterCIDRConflict() Obtain Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEniSubnetIds(array $EniSubnetIds) Set Subnet ID of the ENI in VPC-CNI network mode
  * @method integer getClaimExpiredSeconds() Obtain Repossession time of ENI IP addresses in VPC-CNI network mode, whose range is [300,15768000)
  * @method void setClaimExpiredSeconds(integer $ClaimExpiredSeconds) Set Repossession time of ENI IP addresses in VPC-CNI network mode, whose range is [300,15768000)
- */
-
-/**
- *Container networking parameters for the cluster
  */
 class ClusterCIDRSettings extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ClusterCIDRSettings extends AbstractModel
      * @var integer Repossession time of ENI IP addresses in VPC-CNI network mode, whose range is [300,15768000)
      */
     public $ClaimExpiredSeconds;
+
     /**
      * @param string $ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
      * @param boolean $IgnoreClusterCIDRConflict Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
@@ -86,6 +85,7 @@ class ClusterCIDRSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

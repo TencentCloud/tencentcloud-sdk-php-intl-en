@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Suspected segment identified during ASR-based text audit during content audit
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>block.</li>
  * @method array getKeywordSet() Obtain List of suspected keywords.
  * @method void setKeywordSet(array $KeywordSet) Set List of suspected keywords.
- */
-
-/**
- *Suspected segment identified during ASR-based text audit during content audit
  */
 class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 {
@@ -68,6 +66,7 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
      * @var array List of suspected keywords.
      */
     public $KeywordSet;
+
     /**
      * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
      * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
@@ -82,6 +81,7 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

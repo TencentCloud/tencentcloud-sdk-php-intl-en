@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoScalingGroupLastActivities request structure.
+ *
  * @method array getAutoScalingGroupIds() Obtain ID list of an auto scaling group.
  * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set ID list of an auto scaling group.
- */
-
-/**
- *DescribeAutoScalingGroupLastActivities request structure.
  */
 class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
      * @var array ID list of an auto scaling group.
      */
     public $AutoScalingGroupIds;
+
     /**
      * @param array $AutoScalingGroupIds ID list of an auto scaling group.
      */
@@ -38,6 +37,7 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

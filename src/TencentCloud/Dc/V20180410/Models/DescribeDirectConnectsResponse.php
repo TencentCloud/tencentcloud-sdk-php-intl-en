@@ -18,16 +18,14 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDirectConnects response structure.
+ *
  * @method array getDirectConnectSet() Obtain List of connections.
  * @method void setDirectConnectSet(array $DirectConnectSet) Set List of connections.
  * @method integer getTotalCount() Obtain Number of eligible connection lists.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible connection lists.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDirectConnects response structure.
  */
 class DescribeDirectConnectsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDirectConnectsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DirectConnectSet List of connections.
      * @param integer $TotalCount Number of eligible connection lists.
@@ -54,6 +53,7 @@ class DescribeDirectConnectsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

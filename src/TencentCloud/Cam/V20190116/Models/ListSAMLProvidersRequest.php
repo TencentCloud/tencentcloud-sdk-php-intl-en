@@ -18,14 +18,13 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListSAMLProviders request structure.
+ *
 
- */
-
-/**
- *ListSAMLProviders request structure.
  */
 class ListSAMLProvidersRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ListSAMLProvidersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

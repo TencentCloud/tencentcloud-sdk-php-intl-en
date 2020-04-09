@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoScalingInstances response structure.
+ *
  * @method array getAutoScalingInstanceSet() Obtain List of instance details.
  * @method void setAutoScalingInstanceSet(array $AutoScalingInstanceSet) Set List of instance details.
  * @method integer getTotalCount() Obtain Number of eligible instances.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAutoScalingInstances response structure.
  */
 class DescribeAutoScalingInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAutoScalingInstancesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $AutoScalingInstanceSet List of instance details.
      * @param integer $TotalCount Number of eligible instances.
@@ -54,6 +53,7 @@ class DescribeAutoScalingInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

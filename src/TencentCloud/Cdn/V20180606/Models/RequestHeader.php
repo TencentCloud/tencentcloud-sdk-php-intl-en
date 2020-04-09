@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Custom request header configuration. This is disabled by default.
+ *
  * @method string getSwitch() Obtain Custom request header configuration switch
 on: enabled
 off: disabled
@@ -28,10 +30,6 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHeaderRules(array $HeaderRules) Set Custom request header configuration rules
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Custom request header configuration. This is disabled by default.
  */
 class RequestHeader extends AbstractModel
 {
@@ -47,6 +45,7 @@ off: disabled
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $HeaderRules;
+
     /**
      * @param string $Switch Custom request header configuration switch
 on: enabled
@@ -58,6 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

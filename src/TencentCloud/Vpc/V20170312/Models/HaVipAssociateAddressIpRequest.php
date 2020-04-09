@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HaVipAssociateAddressIp request structure.
+ *
  * @method string getHaVipId() Obtain The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
  * @method void setHaVipId(string $HaVipId) Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
  * @method string getAddressIp() Obtain The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
  * @method void setAddressIp(string $AddressIp) Set The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
- */
-
-/**
- *HaVipAssociateAddressIp request structure.
  */
 class HaVipAssociateAddressIpRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class HaVipAssociateAddressIpRequest extends AbstractModel
      * @var string The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
      */
     public $AddressIp;
+
     /**
      * @param string $HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
      * @param string $AddressIp The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
@@ -46,6 +45,7 @@ class HaVipAssociateAddressIpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

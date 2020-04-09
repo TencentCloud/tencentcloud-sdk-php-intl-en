@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result of terrorism information detection in image in AI-based live stream content audit
+ *
  * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment in seconds.
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a suspected segment in seconds.
@@ -56,10 +58,6 @@ and will be deleted after `PicUrlExpireTime`).
 and will be deleted after `PicUrlExpireTime`).
  * @method string getPicUrlExpireTime() Obtain Expiration time of a suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of a suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- */
-
-/**
- *Result of terrorism information detection in image in AI-based live stream content audit
  */
 class LiveStreamAiReviewImageTerrorismResult extends AbstractModel
 {
@@ -109,6 +107,7 @@ and will be deleted after `PicUrlExpireTime`).
      * @var string Expiration time of a suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $PicUrlExpireTime;
+
     /**
      * @param float $StartPtsTime Start PTS time of a suspected segment in seconds.
      * @param float $EndPtsTime End PTS time of a suspected segment in seconds.
@@ -134,6 +133,7 @@ and will be deleted after `PicUrlExpireTime`).
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

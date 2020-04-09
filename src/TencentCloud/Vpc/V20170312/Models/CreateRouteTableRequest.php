@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRouteTable request structure.
+ *
  * @method string getVpcId() Obtain The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method void setVpcId(string $VpcId) Set The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
  * @method string getRouteTableName() Obtain The route table name. The maximum length is 60 characters.
  * @method void setRouteTableName(string $RouteTableName) Set The route table name. The maximum length is 60 characters.
- */
-
-/**
- *CreateRouteTable request structure.
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateRouteTableRequest extends AbstractModel
 {
@@ -38,14 +38,22 @@ class CreateRouteTableRequest extends AbstractModel
      * @var string The route table name. The maximum length is 60 characters.
      */
     public $RouteTableName;
+
+    /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
     /**
      * @param string $VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $RouteTableName The route table name. The maximum length is 60 characters.
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -60,6 +68,15 @@ class CreateRouteTableRequest extends AbstractModel
 
         if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
             $this->RouteTableName = $param["RouteTableName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

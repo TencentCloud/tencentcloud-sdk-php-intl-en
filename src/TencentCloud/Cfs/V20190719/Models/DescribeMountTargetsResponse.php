@@ -18,16 +18,14 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMountTargets response structure.
+ *
  * @method array getMountTargets() Obtain Mount target details
  * @method void setMountTargets(array $MountTargets) Set Mount target details
  * @method integer getNumberOfMountTargets() Obtain The number of mount targets
  * @method void setNumberOfMountTargets(integer $NumberOfMountTargets) Set The number of mount targets
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeMountTargets response structure.
  */
 class DescribeMountTargetsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeMountTargetsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $MountTargets Mount target details
      * @param integer $NumberOfMountTargets The number of mount targets
@@ -54,6 +53,7 @@ class DescribeMountTargetsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListVersionByFunction response structure.
+ *
  * @method array getFunctionVersion() Obtain Function version
  * @method void setFunctionVersion(array $FunctionVersion) Set Function version
  * @method array getVersions() Obtain Function version list
@@ -26,10 +28,6 @@ Note: This field may return null, indicating that no valid values is found.
 Note: This field may return null, indicating that no valid values is found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListVersionByFunction response structure.
  */
 class ListVersionByFunctionResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ Note: This field may return null, indicating that no valid values is found.
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $FunctionVersion Function version
      * @param array $Versions Function version list
@@ -58,6 +57,7 @@ Note: This field may return null, indicating that no valid values is found.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

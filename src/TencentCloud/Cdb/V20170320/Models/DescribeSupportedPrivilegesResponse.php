@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSupportedPrivileges response structure.
+ *
  * @method array getGlobalSupportedPrivileges() Obtain Global permissions supported by the instance
  * @method void setGlobalSupportedPrivileges(array $GlobalSupportedPrivileges) Set Global permissions supported by the instance
  * @method array getDatabaseSupportedPrivileges() Obtain Database permissions supported by the instance.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColumnSupportedPrivileges(array $ColumnSupportedPrivileges) Set Column permissions supported by the instance.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSupportedPrivileges response structure.
  */
 class DescribeSupportedPrivilegesResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeSupportedPrivilegesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $GlobalSupportedPrivileges Global permissions supported by the instance
      * @param array $DatabaseSupportedPrivileges Database permissions supported by the instance.
@@ -70,6 +69,7 @@ class DescribeSupportedPrivilegesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

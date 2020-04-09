@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Returned result of instance details
+ *
  * @method integer getTotalCount() Obtain Total number of eligible instances
  * @method void setTotalCount(integer $TotalCount) Set Total number of eligible instances
  * @method array getInstanceList() Obtain List of eligible instance details
  * @method void setInstanceList(array $InstanceList) Set List of eligible instance details
- */
-
-/**
- *Returned result of instance details
  */
 class InstanceDetailResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceDetailResponse extends AbstractModel
      * @var array List of eligible instance details
      */
     public $InstanceList;
+
     /**
      * @param integer $TotalCount Total number of eligible instances
      * @param array $InstanceList List of eligible instance details
@@ -46,6 +45,7 @@ class InstanceDetailResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountPrivileges response structure.
+ *
  * @method string getAsyncRequestId() Obtain Async task request ID, which can be used to query the execution result of an async task.
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID, which can be used to query the execution result of an async task.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ModifyAccountPrivileges response structure.
  */
 class ModifyAccountPrivilegesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAccountPrivilegesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class ModifyAccountPrivilegesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

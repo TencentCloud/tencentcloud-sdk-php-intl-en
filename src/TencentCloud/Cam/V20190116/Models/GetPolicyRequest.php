@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPolicy request structure.
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
- */
-
-/**
- *GetPolicy request structure.
  */
 class GetPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetPolicyRequest extends AbstractModel
      * @var integer Policy ID
      */
     public $PolicyId;
+
     /**
      * @param integer $PolicyId Policy ID
      */
@@ -38,6 +37,7 @@ class GetPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

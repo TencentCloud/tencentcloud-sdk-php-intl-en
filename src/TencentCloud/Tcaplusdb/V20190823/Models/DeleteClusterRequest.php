@@ -18,12 +18,10 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCluster request structure.
+ *
  * @method string getClusterId() Obtain ID of cluster to be deleted
  * @method void setClusterId(string $ClusterId) Set ID of cluster to be deleted
- */
-
-/**
- *DeleteCluster request structure.
  */
 class DeleteClusterRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteClusterRequest extends AbstractModel
      * @var string ID of cluster to be deleted
      */
     public $ClusterId;
+
     /**
      * @param string $ClusterId ID of cluster to be deleted
      */
@@ -38,6 +37,7 @@ class DeleteClusterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

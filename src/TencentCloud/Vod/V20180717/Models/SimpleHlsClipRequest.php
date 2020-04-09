@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SimpleHlsClip request structure.
+ *
  * @method string getUrl() Obtain URL of the HLS video in VOD that needs to be clipped.
  * @method void setUrl(string $Url) Set URL of the HLS video in VOD that needs to be clipped.
  * @method float getStartTimeOffset() Obtain Start offset time of clipping in seconds. Default value: 0, which means to clip from the beginning of the video. A negative number indicates how many seconds from the end of the video clipping will start at. For example, -10 means that clipping will start at the 10th second from the end.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End offset time of clipping in seconds. Default value: 0, which means to clip till the end of the video. A negative number indicates how many seconds from the end of the video clipping will end. For example, -10 means that clipping will end at the 10th second from the end.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *SimpleHlsClip request structure.
  */
 class SimpleHlsClipRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SimpleHlsClipRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param string $Url URL of the HLS video in VOD that needs to be clipped.
      * @param float $StartTimeOffset Start offset time of clipping in seconds. Default value: 0, which means to clip from the beginning of the video. A negative number indicates how many seconds from the end of the video clipping will start at. For example, -10 means that clipping will start at the 10th second from the end.
@@ -62,6 +61,7 @@ class SimpleHlsClipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClientConnections response structure.
+ *
  * @method array getClients() Obtain Client connection information, including client IP and number of connections
  * @method void setClients(array $Clients) Set Client connection information, including client IP and number of connections
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeClientConnections response structure.
  */
 class DescribeClientConnectionsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeClientConnectionsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $Clients Client connection information, including client IP and number of connections
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeClientConnectionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

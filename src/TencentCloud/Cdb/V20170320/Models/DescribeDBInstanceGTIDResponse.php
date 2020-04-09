@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstanceGTID response structure.
+ *
  * @method integer getIsGTIDOpen() Obtain GTID enablement flag. Value range: 0 (not enabled), 1 (enabled).
  * @method void setIsGTIDOpen(integer $IsGTIDOpen) Set GTID enablement flag. Value range: 0 (not enabled), 1 (enabled).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeDBInstanceGTID response structure.
  */
 class DescribeDBInstanceGTIDResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDBInstanceGTIDResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $IsGTIDOpen GTID enablement flag. Value range: 0 (not enabled), 1 (enabled).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeDBInstanceGTIDResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

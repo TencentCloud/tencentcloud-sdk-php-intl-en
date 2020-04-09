@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessRegionsByDestRegion response structure.
+ *
  * @method integer getTotalCount() Obtain The number of available acceleration regions
  * @method void setTotalCount(integer $TotalCount) Set The number of available acceleration regions
  * @method array getAccessRegionSet() Obtain List of available acceleration region information
  * @method void setAccessRegionSet(array $AccessRegionSet) Set List of available acceleration region information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeAccessRegionsByDestRegion response structure.
  */
 class DescribeAccessRegionsByDestRegionResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccessRegionsByDestRegionResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of available acceleration regions
      * @param array $AccessRegionSet List of available acceleration region information
@@ -54,6 +53,7 @@ class DescribeAccessRegionsByDestRegionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

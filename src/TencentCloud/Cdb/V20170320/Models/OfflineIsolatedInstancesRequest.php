@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OfflineIsolatedInstances request structure.
+ *
  * @method array getInstanceIds() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- */
-
-/**
- *OfflineIsolatedInstances request structure.
  */
 class OfflineIsolatedInstancesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OfflineIsolatedInstancesRequest extends AbstractModel
      * @var array Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -38,6 +37,7 @@ class OfflineIsolatedInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

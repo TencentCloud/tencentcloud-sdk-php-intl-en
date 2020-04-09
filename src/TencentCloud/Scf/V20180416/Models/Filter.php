@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Key-value pair filters for conditional filtering queries, such as filtering ID, name, and status.
+If more than one filter exists, the logical relationship between these filters is `AND`.
+If multiple values exist in one filter, the logical relationship between these values under the same filter is `OR`.
+ *
  * @method string getName() Obtain Fields to be filtered
  * @method void setName(string $Name) Set Fields to be filtered
  * @method array getValues() Obtain Filter values of the field
  * @method void setValues(array $Values) Set Filter values of the field
- */
-
-/**
- *Key-value pair filters for conditional filtering queries, such as filtering ID, name, and status.
-If more than one filter exists, the logical relationship between these filters is `AND`.
-If multiple values exist in one filter, the logical relationship between these values under the same filter is `OR`.
  */
 class Filter extends AbstractModel
 {
@@ -40,6 +38,7 @@ class Filter extends AbstractModel
      * @var array Filter values of the field
      */
     public $Values;
+
     /**
      * @param string $Name Fields to be filtered
      * @param array $Values Filter values of the field
@@ -48,6 +47,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

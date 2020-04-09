@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Encrypt response structure.
+ *
  * @method string getCiphertextBlob() Obtain Base64-encoded encrypted ciphertext
  * @method void setCiphertextBlob(string $CiphertextBlob) Set Base64-encoded encrypted ciphertext
  * @method string getKeyId() Obtain 
  * @method void setKeyId(string $KeyId) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *Encrypt response structure.
  */
 class EncryptResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class EncryptResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $CiphertextBlob Base64-encoded encrypted ciphertext
      * @param string $KeyId 
@@ -54,6 +53,7 @@ class EncryptResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

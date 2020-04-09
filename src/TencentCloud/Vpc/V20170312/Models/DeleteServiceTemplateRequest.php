@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteServiceTemplate request structure.
+ *
  * @method string getServiceTemplateId() Obtain Protocol port template instance ID, such as `ppm-e6dy460g`.
  * @method void setServiceTemplateId(string $ServiceTemplateId) Set Protocol port template instance ID, such as `ppm-e6dy460g`.
- */
-
-/**
- *DeleteServiceTemplate request structure.
  */
 class DeleteServiceTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteServiceTemplateRequest extends AbstractModel
      * @var string Protocol port template instance ID, such as `ppm-e6dy460g`.
      */
     public $ServiceTemplateId;
+
     /**
      * @param string $ServiceTemplateId Protocol port template instance ID, such as `ppm-e6dy460g`.
      */
@@ -38,6 +37,7 @@ class DeleteServiceTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

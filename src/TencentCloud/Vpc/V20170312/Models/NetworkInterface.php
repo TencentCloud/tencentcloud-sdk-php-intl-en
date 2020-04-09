@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ENI
+ *
  * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-f1xjkw1b`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-f1xjkw1b`.
  * @method string getNetworkInterfaceName() Obtain ENI Name
@@ -62,10 +64,6 @@ Note: This field may return null, indicating no valid value.
  * @method void setTagSet(array $TagSet) Set Tag key-value pair.
  * @method integer getEniType() Obtain The ENI type. 0: ENI. 1: EVM ENI.
  * @method void setEniType(integer $EniType) Set The ENI type. 0: ENI. 1: EVM ENI.
- */
-
-/**
- *ENI
  */
 class NetworkInterface extends AbstractModel
 {
@@ -154,6 +152,7 @@ Note: This field may return null, indicating no valid value.
      * @var integer The ENI type. 0: ENI. 1: EVM ENI.
      */
     public $EniType;
+
     /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      * @param string $NetworkInterfaceName ENI Name
@@ -182,6 +181,7 @@ Note: This field may return null, indicating no valid value.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

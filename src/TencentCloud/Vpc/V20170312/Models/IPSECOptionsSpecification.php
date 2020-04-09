@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
+ *
  * @method string getEncryptAlgorithm() Obtain Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
  * @method void setEncryptAlgorithm(string $EncryptAlgorithm) Set Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
  * @method string getIntegrityAlgorith() Obtain Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPfsDhGroup(string $PfsDhGroup) Set PFS. Available value: 'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', and 'DH-GROUP24'. Default is NULL.
  * @method integer getIPSECSaLifetimeTraffic() Obtain IPsec SA lifetime (in KB). Value range: 2560-604800
  * @method void setIPSECSaLifetimeTraffic(integer $IPSECSaLifetimeTraffic) Set IPsec SA lifetime (in KB). Value range: 2560-604800
- */
-
-/**
- *IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
  */
 class IPSECOptionsSpecification extends AbstractModel
 {
@@ -59,6 +57,7 @@ class IPSECOptionsSpecification extends AbstractModel
      * @var integer IPsec SA lifetime (in KB). Value range: 2560-604800
      */
     public $IPSECSaLifetimeTraffic;
+
     /**
      * @param string $EncryptAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
      * @param string $IntegrityAlgorith Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
@@ -70,6 +69,7 @@ class IPSECOptionsSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

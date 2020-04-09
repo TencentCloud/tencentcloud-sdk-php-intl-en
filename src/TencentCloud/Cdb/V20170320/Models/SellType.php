@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Purchasable instance type
+ *
  * @method string getTypeName() Obtain Name of the purchasable instance
  * @method void setTypeName(string $TypeName) Set Name of the purchasable instance
  * @method array getEngineVersion() Obtain Kernel version number
  * @method void setEngineVersion(array $EngineVersion) Set Kernel version number
  * @method array getConfigs() Obtain Configuration details of a purchasable specification
  * @method void setConfigs(array $Configs) Set Configuration details of a purchasable specification
- */
-
-/**
- *Purchasable instance type
  */
 class SellType extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SellType extends AbstractModel
      * @var array Configuration details of a purchasable specification
      */
     public $Configs;
+
     /**
      * @param string $TypeName Name of the purchasable instance
      * @param array $EngineVersion Kernel version number
@@ -54,6 +53,7 @@ class SellType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

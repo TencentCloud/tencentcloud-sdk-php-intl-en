@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeInstance request structure.
+ *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getEsVersion() Obtain Target ES version
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseType(string $LicenseType) Set Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
  * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
- */
-
-/**
- *UpgradeInstance request structure.
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @var integer Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public $BasicSecurityType;
+
     /**
      * @param string $InstanceId Instance ID
      * @param string $EsVersion Target ES version
@@ -70,6 +69,7 @@ class UpgradeInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

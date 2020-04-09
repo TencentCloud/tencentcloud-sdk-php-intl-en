@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubnetAttribute request structure.
+ *
  * @method string getSubnetId() Obtain Subnet instance ID, such as `subnet-pxir56ns`.
  * @method void setSubnetId(string $SubnetId) Set Subnet instance ID, such as `subnet-pxir56ns`.
  * @method string getSubnetName() Obtain The subnet name. The maximum length is 60 bytes.
  * @method void setSubnetName(string $SubnetName) Set The subnet name. The maximum length is 60 bytes.
  * @method string getEnableBroadcast() Obtain Whether the subnet has broadcast enabled.
  * @method void setEnableBroadcast(string $EnableBroadcast) Set Whether the subnet has broadcast enabled.
- */
-
-/**
- *ModifySubnetAttribute request structure.
  */
 class ModifySubnetAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySubnetAttributeRequest extends AbstractModel
      * @var string Whether the subnet has broadcast enabled.
      */
     public $EnableBroadcast;
+
     /**
      * @param string $SubnetId Subnet instance ID, such as `subnet-pxir56ns`.
      * @param string $SubnetName The subnet name. The maximum length is 60 bytes.
@@ -54,6 +53,7 @@ class ModifySubnetAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

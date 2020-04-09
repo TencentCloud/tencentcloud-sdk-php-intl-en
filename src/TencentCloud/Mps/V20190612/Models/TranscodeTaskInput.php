@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input parameter type of a transcoding task
+ *
  * @method integer getDefinition() Obtain ID of a video transcoding template.
  * @method void setDefinition(integer $Definition) Set ID of a video transcoding template.
  * @method RawTranscodeParameter getRawParameter() Obtain 
@@ -38,10 +40,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set Rule of the `{number}` variable in the output path after transcoding.
 Note: This field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Input parameter type of a transcoding task
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -82,6 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectNumberFormat;
+
     /**
      * @param integer $Definition ID of a video transcoding template.
      * @param RawTranscodeParameter $RawParameter 
@@ -98,6 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

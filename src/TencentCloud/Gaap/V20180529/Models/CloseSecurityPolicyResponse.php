@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseSecurityPolicy response structure.
+ *
  * @method string getTaskId() Obtain Async Process ID. Using DescribeAsyncTaskStatus to query process and status.
  * @method void setTaskId(string $TaskId) Set Async Process ID. Using DescribeAsyncTaskStatus to query process and status.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CloseSecurityPolicy response structure.
  */
 class CloseSecurityPolicyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CloseSecurityPolicyResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $TaskId Async Process ID. Using DescribeAsyncTaskStatus to query process and status.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CloseSecurityPolicyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

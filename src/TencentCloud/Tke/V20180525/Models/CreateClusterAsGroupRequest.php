@@ -18,14 +18,13 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterAsGroup request structure.
+ *
 
- */
-
-/**
- *CreateClusterAsGroup request structure.
  */
 class CreateClusterAsGroupRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class CreateClusterAsGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

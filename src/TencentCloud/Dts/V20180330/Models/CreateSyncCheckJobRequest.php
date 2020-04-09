@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSyncCheckJob request structure.
+ *
  * @method string getJobId() Obtain Disaster recovery sync task ID
  * @method void setJobId(string $JobId) Set Disaster recovery sync task ID
- */
-
-/**
- *CreateSyncCheckJob request structure.
  */
 class CreateSyncCheckJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateSyncCheckJobRequest extends AbstractModel
      * @var string Disaster recovery sync task ID
      */
     public $JobId;
+
     /**
      * @param string $JobId Disaster recovery sync task ID
      */
@@ -38,6 +37,7 @@ class CreateSyncCheckJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

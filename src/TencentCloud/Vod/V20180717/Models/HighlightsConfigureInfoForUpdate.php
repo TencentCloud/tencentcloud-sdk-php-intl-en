@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of an intelligent highlight generating task
+ *
  * @method string getSwitch() Obtain Switch of an intelligent highlight generating task. Valid values:
 <li>ON: enable an intelligent highlight generating task;</li>
 <li>OFF: disable an intelligent highlight generating task.</li>
  * @method void setSwitch(string $Switch) Set Switch of an intelligent highlight generating task. Valid values:
 <li>ON: enable an intelligent highlight generating task;</li>
 <li>OFF: disable an intelligent highlight generating task.</li>
- */
-
-/**
- *Control parameter of an intelligent highlight generating task
  */
 class HighlightsConfigureInfoForUpdate extends AbstractModel
 {
@@ -37,6 +35,7 @@ class HighlightsConfigureInfoForUpdate extends AbstractModel
 <li>OFF: disable an intelligent highlight generating task.</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch Switch of an intelligent highlight generating task. Valid values:
 <li>ON: enable an intelligent highlight generating task;</li>
@@ -46,6 +45,7 @@ class HighlightsConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

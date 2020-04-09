@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information set of eligible launch configurations.
+ *
  * @method integer getProjectId() Obtain Project ID of the instance.
  * @method void setProjectId(integer $ProjectId) Set Project ID of the instance.
  * @method string getLaunchConfigurationId() Obtain Launch configuration ID.
@@ -74,10 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) Set Value of InstanceTypesCheckPolicy upon the last operation.
  * @method HostNameSettings getHostNameSettings() Obtain CVM HostName settings.
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM HostName settings.
- */
-
-/**
- *Information set of eligible launch configurations.
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -204,6 +202,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var HostNameSettings CVM HostName settings.
      */
     public $HostNameSettings;
+
     /**
      * @param integer $ProjectId Project ID of the instance.
      * @param string $LaunchConfigurationId Launch configuration ID.
@@ -238,6 +237,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

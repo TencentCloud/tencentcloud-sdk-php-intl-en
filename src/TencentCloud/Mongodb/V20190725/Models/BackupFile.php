@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Storage information of a backup file
+ *
  * @method string getReplicateSetId() Obtain ID of the replica set/shard to which a backup file belongs
  * @method void setReplicateSetId(string $ReplicateSetId) Set ID of the replica set/shard to which a backup file belongs
  * @method string getFile() Obtain Path to a backup file
  * @method void setFile(string $File) Set Path to a backup file
- */
-
-/**
- *Storage information of a backup file
  */
 class BackupFile extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BackupFile extends AbstractModel
      * @var string Path to a backup file
      */
     public $File;
+
     /**
      * @param string $ReplicateSetId ID of the replica set/shard to which a backup file belongs
      * @param string $File Path to a backup file
@@ -46,6 +45,7 @@ class BackupFile extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

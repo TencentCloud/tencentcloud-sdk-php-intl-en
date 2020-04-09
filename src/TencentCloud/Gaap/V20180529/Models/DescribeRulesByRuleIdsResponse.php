@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRulesByRuleIds response structure.
+ *
  * @method integer getTotalCount() Obtain The number of returned rules.
  * @method void setTotalCount(integer $TotalCount) Set The number of returned rules.
  * @method array getRuleSet() Obtain List of returned rules.
  * @method void setRuleSet(array $RuleSet) Set List of returned rules.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeRulesByRuleIds response structure.
  */
 class DescribeRulesByRuleIdsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRulesByRuleIdsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount The number of returned rules.
      * @param array $RuleSet List of returned rules.
@@ -54,6 +53,7 @@ class DescribeRulesByRuleIdsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

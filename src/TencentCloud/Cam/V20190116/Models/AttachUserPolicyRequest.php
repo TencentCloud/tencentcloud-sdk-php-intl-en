@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AttachUserPolicy request structure.
+ *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
  * @method integer getAttachUin() Obtain Sub-account UIN
  * @method void setAttachUin(integer $AttachUin) Set Sub-account UIN
- */
-
-/**
- *AttachUserPolicy request structure.
  */
 class AttachUserPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AttachUserPolicyRequest extends AbstractModel
      * @var integer Sub-account UIN
      */
     public $AttachUin;
+
     /**
      * @param integer $PolicyId Policy ID
      * @param integer $AttachUin Sub-account UIN
@@ -46,6 +45,7 @@ class AttachUserPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

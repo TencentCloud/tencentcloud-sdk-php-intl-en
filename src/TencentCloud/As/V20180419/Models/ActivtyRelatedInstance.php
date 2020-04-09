@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information of the instances related to the current scaling activity.
+ *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getInstanceStatus() Obtain Status of the instance in the scaling activity. Value range:
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>RUNNING: running
 <li>SUCCESSFUL: succeeded
 <li>FAILED: failed
- */
-
-/**
- *Information of the instances related to the current scaling activity.
  */
 class ActivtyRelatedInstance extends AbstractModel
 {
@@ -50,6 +48,7 @@ class ActivtyRelatedInstance extends AbstractModel
 <li>FAILED: failed
      */
     public $InstanceStatus;
+
     /**
      * @param string $InstanceId Instance ID.
      * @param string $InstanceStatus Status of the instance in the scaling activity. Value range:
@@ -62,6 +61,7 @@ class ActivtyRelatedInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

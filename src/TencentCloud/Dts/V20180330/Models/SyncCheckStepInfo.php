@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Check steps for a disaster recovery task
+ *
  * @method integer getStepNo() Obtain Step number
  * @method void setStepNo(integer $StepNo) Set Step number
  * @method string getStepName() Obtain Step name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepCode(integer $StepCode) Set Code of the step execution result
  * @method string getStepMessage() Obtain Message about the step execution result
  * @method void setStepMessage(string $StepMessage) Set Message about the step execution result
- */
-
-/**
- *Check steps for a disaster recovery task
  */
 class SyncCheckStepInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SyncCheckStepInfo extends AbstractModel
      * @var string Message about the step execution result
      */
     public $StepMessage;
+
     /**
      * @param integer $StepNo Step number
      * @param string $StepName Step name
@@ -62,6 +61,7 @@ class SyncCheckStepInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

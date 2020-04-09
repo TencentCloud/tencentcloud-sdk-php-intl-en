@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Response for getting SMS template information
+ *
  * @method integer getTemplateId() Obtain Template ID
  * @method void setTemplateId(integer $TemplateId) Set Template ID
  * @method integer getInternational() Obtain Whether it is Global SMS. Valid values:
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateName(string $TemplateName) Set Template name.
  * @method integer getCreateTime() Obtain Application submission time in the format of UNIX timestamp in seconds.
  * @method void setCreateTime(integer $CreateTime) Set Application submission time in the format of UNIX timestamp in seconds.
- */
-
-/**
- *Response for getting SMS template information
  */
 class DescribeTemplateListStatus extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeTemplateListStatus extends AbstractModel
      * @var integer Application submission time in the format of UNIX timestamp in seconds.
      */
     public $CreateTime;
+
     /**
      * @param integer $TemplateId Template ID
      * @param integer $International Whether it is Global SMS. Valid values:
@@ -94,6 +93,7 @@ class DescribeTemplateListStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSlowlogs request structure.
+ *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-lnp6j617
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-lnp6j617
  * @method string getStartTime() Obtain Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of entries returned per page. Value range: 1–100. Default value: 20.
  * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0
  * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
- */
-
-/**
- *DescribeDBSlowlogs request structure.
  */
 class DescribeDBSlowlogsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeDBSlowlogsRequest extends AbstractModel
      * @var integer Page number for data return in paged query. Pagination starts from 0
      */
     public $Offset;
+
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-lnp6j617
      * @param string $StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
@@ -94,6 +93,7 @@ class DescribeDBSlowlogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

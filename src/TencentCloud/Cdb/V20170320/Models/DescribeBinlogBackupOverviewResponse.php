@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBinlogBackupOverview response structure.
+ *
  * @method integer getBinlogBackupVolume() Obtain Total capacity of log backups in bytes.
  * @method void setBinlogBackupVolume(integer $BinlogBackupVolume) Set Total capacity of log backups in bytes.
  * @method integer getBinlogBackupCount() Obtain Total number of log backups.
  * @method void setBinlogBackupCount(integer $BinlogBackupCount) Set Total number of log backups.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeBinlogBackupOverview response structure.
  */
 class DescribeBinlogBackupOverviewResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $BinlogBackupVolume Total capacity of log backups in bytes.
      * @param integer $BinlogBackupCount Total number of log backups.
@@ -54,6 +53,7 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Suspected segment identified during ASR-based speech audit in content audit
+ *
  * @method float getStartTimeOffset() Obtain Start time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of suspected segment in seconds.
@@ -44,10 +46,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setKeywordSet(array $KeywordSet) Set List of suspected keywords.
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Suspected segment identified during ASR-based speech audit in content audit
  */
 class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 {
@@ -83,6 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $KeywordSet;
+
     /**
      * @param float $StartTimeOffset Start time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -102,6 +101,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

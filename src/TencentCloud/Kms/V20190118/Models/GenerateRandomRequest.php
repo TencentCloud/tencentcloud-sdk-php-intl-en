@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GenerateRandom request structure.
+ *
  * @method integer getNumberOfBytes() Obtain Length of the random number. Minimum value: 1. Maximum value: 1024
  * @method void setNumberOfBytes(integer $NumberOfBytes) Set Length of the random number. Minimum value: 1. Maximum value: 1024
- */
-
-/**
- *GenerateRandom request structure.
  */
 class GenerateRandomRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GenerateRandomRequest extends AbstractModel
      * @var integer Length of the random number. Minimum value: 1. Maximum value: 1024
      */
     public $NumberOfBytes;
+
     /**
      * @param integer $NumberOfBytes Length of the random number. Minimum value: 1. Maximum value: 1024
      */
@@ -38,6 +37,7 @@ class GenerateRandomRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

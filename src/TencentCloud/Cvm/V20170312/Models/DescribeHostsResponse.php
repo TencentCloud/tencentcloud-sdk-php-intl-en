@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHosts response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of CDH instances meeting the query conditions
  * @method void setTotalCount(integer $TotalCount) Set Total number of CDH instances meeting the query conditions
  * @method array getHostSet() Obtain Information on CDH instances
  * @method void setHostSet(array $HostSet) Set Information on CDH instances
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeHosts response structure.
  */
 class DescribeHostsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeHostsResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of CDH instances meeting the query conditions
      * @param array $HostSet Information on CDH instances
@@ -54,6 +53,7 @@ class DescribeHostsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

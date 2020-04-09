@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceSecurityGroup request structure.
+ *
  * @method array getInstanceIds() Obtain Instance list
  * @method void setInstanceIds(array $InstanceIds) Set Instance list
- */
-
-/**
- *DescribeInstanceSecurityGroup request structure.
  */
 class DescribeInstanceSecurityGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstanceSecurityGroupRequest extends AbstractModel
      * @var array Instance list
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds Instance list
      */
@@ -38,6 +37,7 @@ class DescribeInstanceSecurityGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

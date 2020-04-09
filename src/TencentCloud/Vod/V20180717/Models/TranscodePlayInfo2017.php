@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Video transcoding playback information (v2017)
+ *
  * @method string getUrl() Obtain Playback address.
  * @method void setUrl(string $Url) Set Playback address.
  * @method integer getDefinition() Obtain Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeight(integer $Height) Set Maximum value of the height of a video stream in px.
  * @method integer getWidth() Obtain Maximum value of the width of a video stream in px.
  * @method void setWidth(integer $Width) Set Maximum value of the width of a video stream in px.
- */
-
-/**
- *Video transcoding playback information (v2017)
  */
 class TranscodePlayInfo2017 extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TranscodePlayInfo2017 extends AbstractModel
      * @var integer Maximum value of the width of a video stream in px.
      */
     public $Width;
+
     /**
      * @param string $Url Playback address.
      * @param integer $Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
@@ -70,6 +69,7 @@ class TranscodePlayInfo2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

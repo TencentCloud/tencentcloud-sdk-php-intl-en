@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Control parameter of a terrorism information detection task.
+ *
  * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Control parameter of a terrorism information detection in image task.
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Control parameter of a terrorism information detection in image task.
- */
-
-/**
- *Control parameter of a terrorism information detection task.
  */
 class TerrorismConfigureInfoForUpdate extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
      * @var TerrorismImgReviewTemplateInfoForUpdate Control parameter of a terrorism information detection in image task.
      */
     public $ImgReviewInfo;
+
     /**
      * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo Control parameter of a terrorism information detection in image task.
      */
@@ -38,6 +37,7 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

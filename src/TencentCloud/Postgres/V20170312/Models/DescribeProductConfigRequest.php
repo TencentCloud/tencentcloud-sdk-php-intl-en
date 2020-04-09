@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductConfig request structure.
+ *
  * @method string getZone() Obtain AZ name
  * @method void setZone(string $Zone) Set AZ name
- */
-
-/**
- *DescribeProductConfig request structure.
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProductConfigRequest extends AbstractModel
      * @var string AZ name
      */
     public $Zone;
+
     /**
      * @param string $Zone AZ name
      */
@@ -38,6 +37,7 @@ class DescribeProductConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

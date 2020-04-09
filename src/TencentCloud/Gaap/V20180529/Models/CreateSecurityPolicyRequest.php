@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSecurityPolicy request structure.
+ *
  * @method string getProxyId() Obtain Acceleration connection ID
  * @method void setProxyId(string $ProxyId) Set Acceleration connection ID
  * @method string getDefaultAction() Obtain Default policy: ACCEPT or DROP
  * @method void setDefaultAction(string $DefaultAction) Set Default policy: ACCEPT or DROP
- */
-
-/**
- *CreateSecurityPolicy request structure.
  */
 class CreateSecurityPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSecurityPolicyRequest extends AbstractModel
      * @var string Default policy: ACCEPT or DROP
      */
     public $DefaultAction;
+
     /**
      * @param string $ProxyId Acceleration connection ID
      * @param string $DefaultAction Default policy: ACCEPT or DROP
@@ -46,6 +45,7 @@ class CreateSecurityPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

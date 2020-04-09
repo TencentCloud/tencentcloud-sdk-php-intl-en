@@ -18,16 +18,14 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Instance specification information
+ *
  * @method string getRegion() Obtain Region information
  * @method void setRegion(string $Region) Set Region information
  * @method string getZone() Obtain AZ information
  * @method void setZone(string $Zone) Set AZ information
  * @method array getSpecItems() Obtain Purchasable specification information
  * @method void setSpecItems(array $SpecItems) Set Purchasable specification information
- */
-
-/**
- *Instance specification information
  */
 class SpecificationInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SpecificationInfo extends AbstractModel
      * @var array Purchasable specification information
      */
     public $SpecItems;
+
     /**
      * @param string $Region Region information
      * @param string $Zone AZ information
@@ -54,6 +53,7 @@ class SpecificationInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

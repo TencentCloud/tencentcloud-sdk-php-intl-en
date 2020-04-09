@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAIAnalysisTemplate response structure.
+ *
  * @method integer getDefinition() Obtain Unique ID of video content analysis template.
  * @method void setDefinition(integer $Definition) Set Unique ID of video content analysis template.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *CreateAIAnalysisTemplate response structure.
  */
 class CreateAIAnalysisTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAIAnalysisTemplateResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $Definition Unique ID of video content analysis template.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class CreateAIAnalysisTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Pre-execution script configuration
+ *
  * @method string getPath() Obtain COS path to script, which has been disused
  * @method void setPath(string $Path) Set COS path to script, which has been disused
  * @method array getArgs() Obtain Execution script parameter
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosSecretKey(string $CosSecretKey) Set COS `SecretKey`
  * @method string getAppId() Obtain COS `appid`, which has been disused
  * @method void setAppId(string $AppId) Set COS `appid`, which has been disused
- */
-
-/**
- *Pre-execution script configuration
  */
 class PreExecuteFileSettings extends AbstractModel
 {
@@ -108,6 +106,7 @@ class PreExecuteFileSettings extends AbstractModel
      * @var string COS `appid`, which has been disused
      */
     public $AppId;
+
     /**
      * @param string $Path COS path to script, which has been disused
      * @param array $Args Execution script parameter
@@ -126,6 +125,7 @@ class PreExecuteFileSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

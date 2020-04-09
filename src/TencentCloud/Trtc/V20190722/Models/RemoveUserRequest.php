@@ -18,16 +18,14 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RemoveUser request structure.
+ *
  * @method integer getSdkAppId() Obtain `SDKAppId` of TRTC.
  * @method void setSdkAppId(integer $SdkAppId) Set `SDKAppId` of TRTC.
  * @method integer getRoomId() Obtain Room number.
  * @method void setRoomId(integer $RoomId) Set Room number.
  * @method array getUserIds() Obtain List of up to 10 users to be removed.
  * @method void setUserIds(array $UserIds) Set List of up to 10 users to be removed.
- */
-
-/**
- *RemoveUser request structure.
  */
 class RemoveUserRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RemoveUserRequest extends AbstractModel
      * @var array List of up to 10 users to be removed.
      */
     public $UserIds;
+
     /**
      * @param integer $SdkAppId `SDKAppId` of TRTC.
      * @param integer $RoomId Room number.
@@ -54,6 +53,7 @@ class RemoveUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

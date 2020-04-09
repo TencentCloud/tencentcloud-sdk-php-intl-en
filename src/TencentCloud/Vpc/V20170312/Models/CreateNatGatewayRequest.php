@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNatGateway request structure.
+ *
  * @method string getNatGatewayName() Obtain NAT gateway name
  * @method void setNatGatewayName(string $NatGatewayName) Set NAT gateway name
  * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
@@ -32,10 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
  * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-1`.
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-1`.
- */
-
-/**
- *CreateNatGateway request structure.
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -73,6 +73,12 @@ class CreateNatGatewayRequest extends AbstractModel
      * @var string The availability zone, such as `ap-guangzhou-1`.
      */
     public $Zone;
+
+    /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
     /**
      * @param string $NatGatewayName NAT gateway name
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
@@ -81,11 +87,13 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param integer $AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
      * @param array $PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
      * @param string $Zone The availability zone, such as `ap-guangzhou-1`.
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
@@ -120,6 +128,15 @@ class CreateNatGatewayRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Dedicated cluster information
+ *
  * @method string getClusterId() Obtain Unique cluster ID
  * @method void setClusterId(string $ClusterId) Set Unique cluster ID
  * @method string getClusterName() Obtain Cluster name
@@ -28,10 +30,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setZone(string $Zone) Set Cluster AZ, such as ap-guangzhou-1
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Dedicated cluster information
  */
 class ClusterItem extends AbstractModel
 {
@@ -51,6 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Zone;
+
     /**
      * @param string $ClusterId Unique cluster ID
      * @param string $ClusterName Cluster name
@@ -62,6 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

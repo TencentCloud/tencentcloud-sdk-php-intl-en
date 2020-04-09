@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceProject request structure.
+ *
  * @method array getInstanceIds() Obtain Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method void setInstanceIds(array $InstanceIds) Set Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method integer getNewProjectId() Obtain Project ID.
  * @method void setNewProjectId(integer $NewProjectId) Set Project ID.
- */
-
-/**
- *ModifyDBInstanceProject request structure.
  */
 class ModifyDBInstanceProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
      * @var integer Project ID.
      */
     public $NewProjectId;
+
     /**
      * @param array $InstanceIds Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
      * @param integer $NewProjectId Project ID.
@@ -46,6 +45,7 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

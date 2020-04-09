@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedGroupPolicies response structure.
+ *
  * @method integer getTotalNum() Obtain Total number of policies
  * @method void setTotalNum(integer $TotalNum) Set Total number of policies
  * @method array getList() Obtain Policy list
  * @method void setList(array $List) Set Policy list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *ListAttachedGroupPolicies response structure.
  */
 class ListAttachedGroupPoliciesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAttachedGroupPoliciesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalNum Total number of policies
      * @param array $List Policy list
@@ -54,6 +53,7 @@ class ListAttachedGroupPoliciesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

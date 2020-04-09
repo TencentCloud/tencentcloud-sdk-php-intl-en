@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWatermarkTemplates request structure.
+ *
  * @method array getDefinitions() Obtain Unique ID filter of watermarking templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of watermarking templates. Array length limit: 100.
  * @method string getType() Obtain Watermark type filter. Valid values:
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
- */
-
-/**
- *DescribeWatermarkTemplates request structure.
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
 <li>Maximum value: 100.</li>
      */
     public $Limit;
+
     /**
      * @param array $Definitions Unique ID filter of watermarking templates. Array length limit: 100.
      * @param string $Type Watermark type filter. Valid values:
@@ -78,6 +77,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

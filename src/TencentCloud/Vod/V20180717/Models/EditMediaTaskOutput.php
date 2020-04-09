@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Output of video editing task
+ *
  * @method string getFileType() Obtain File type, such as mp4 and flv.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFileType(string $FileType) Set File type, such as mp4 and flv.
@@ -44,10 +46,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setExpireTime(string $ExpireTime) Set Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *Output of video editing task
  */
 class EditMediaTaskOutput extends AbstractModel
 {
@@ -87,6 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ExpireTime;
+
     /**
      * @param string $FileType File type, such as mp4 and flv.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -106,6 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmsSignList response structure.
+ *
  * @method array getDescribeSignListStatusSet() Obtain Response for getting signature information
  * @method void setDescribeSignListStatusSet(array $DescribeSignListStatusSet) Set Response for getting signature information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSmsSignList response structure.
  */
 class DescribeSmsSignListResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSmsSignListResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param array $DescribeSignListStatusSet Response for getting signature information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,6 +45,7 @@ class DescribeSmsSignListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

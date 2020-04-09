@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Terrorism information
+ *
  * @method float getConfidence() Obtain Score of the detected terrorism information in a video from 0 to 100.
  * @method void setConfidence(float $Confidence) Set Score of the detected terrorism information in a video from 0 to 100.
  * @method string getSuggestion() Obtain Suggestion for the detected terrorism information. Valid values:
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 <li>terrorists: Terrorists.</li>
  * @method array getSegmentSet() Obtain List of video segments that contain the detected terrorism information.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected terrorism information.
- */
-
-/**
- *Terrorism information
  */
 class AiReviewTerrorismTaskOutput extends AbstractModel
 {
@@ -85,6 +83,7 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
      * @var array List of video segments that contain the detected terrorism information.
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Score of the detected terrorism information in a video from 0 to 100.
      * @param string $Suggestion Suggestion for the detected terrorism information. Valid values:
@@ -106,6 +105,7 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTagValues response structure.
+ *
  * @method integer getTotalCount() Obtain Total number of results.
  * @method void setTotalCount(integer $TotalCount) Set Total number of results.
  * @method integer getOffset() Obtain Data offset.
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Tag list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeTagValues response structure.
  */
 class DescribeTagValuesResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeTagValuesResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Total number of results.
      * @param integer $Offset Data offset.
@@ -70,6 +69,7 @@ class DescribeTagValuesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

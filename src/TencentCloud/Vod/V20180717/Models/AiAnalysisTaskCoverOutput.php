@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Result information of intelligent cover generating
+ *
  * @method array getCoverSet() Obtain List of intelligently generated covers.
  * @method void setCoverSet(array $CoverSet) Set List of intelligently generated covers.
- */
-
-/**
- *Result information of intelligent cover generating
  */
 class AiAnalysisTaskCoverOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskCoverOutput extends AbstractModel
      * @var array List of intelligently generated covers.
      */
     public $CoverSet;
+
     /**
      * @param array $CoverSet List of intelligently generated covers.
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskCoverOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartBatchRollback request structure.
+ *
  * @method array getInstances() Obtain Details of the instance for rollback
  * @method void setInstances(array $Instances) Set Details of the instance for rollback
- */
-
-/**
- *StartBatchRollback request structure.
  */
 class StartBatchRollbackRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StartBatchRollbackRequest extends AbstractModel
      * @var array Details of the instance for rollback
      */
     public $Instances;
+
     /**
      * @param array $Instances Details of the instance for rollback
      */
@@ -38,6 +37,7 @@ class StartBatchRollbackRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

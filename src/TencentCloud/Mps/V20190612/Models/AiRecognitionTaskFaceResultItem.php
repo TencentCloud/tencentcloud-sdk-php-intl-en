@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Face recognition result
+ *
  * @method string getId() Obtain Unique ID of a figure.
  * @method void setId(string $Id) Set Unique ID of a figure.
  * @method string getType() Obtain Figure library type, indicating to which figure library the recognized figure belongs:
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Name of a figure.
  * @method array getSegmentSet() Obtain Result set of segments that contain a figure.
  * @method void setSegmentSet(array $SegmentSet) Set Result set of segments that contain a figure.
- */
-
-/**
- *Face recognition result
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
@@ -58,6 +56,7 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
      * @var array Result set of segments that contain a figure.
      */
     public $SegmentSet;
+
     /**
      * @param string $Id Unique ID of a figure.
      * @param string $Type Figure library type, indicating to which figure library the recognized figure belongs:
@@ -70,6 +69,7 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

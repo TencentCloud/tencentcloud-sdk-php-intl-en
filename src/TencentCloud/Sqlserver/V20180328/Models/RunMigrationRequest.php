@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RunMigration request structure.
+ *
  * @method integer getMigrateId() Obtain Migration task ID
  * @method void setMigrateId(integer $MigrateId) Set Migration task ID
- */
-
-/**
- *RunMigration request structure.
  */
 class RunMigrationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RunMigrationRequest extends AbstractModel
      * @var integer Migration task ID
      */
     public $MigrateId;
+
     /**
      * @param integer $MigrateId Migration task ID
      */
@@ -38,6 +37,7 @@ class RunMigrationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

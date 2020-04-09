@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHTTPSListeners response structure.
+ *
  * @method integer getTotalCount() Obtain Quantity of listeners
  * @method void setTotalCount(integer $TotalCount) Set Quantity of listeners
  * @method array getListenerSet() Obtain HTTPS listener list
  * @method void setListenerSet(array $ListenerSet) Set HTTPS listener list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeHTTPSListeners response structure.
  */
 class DescribeHTTPSListenersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeHTTPSListenersResponse extends AbstractModel
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount Quantity of listeners
      * @param array $ListenerSet HTTPS listener list
@@ -54,6 +53,7 @@ class DescribeHTTPSListenersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

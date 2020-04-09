@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RO instance details
+ *
  * @method string getMasterInstanceId() Obtain Master instance ID corresponding to the RO group
  * @method void setMasterInstanceId(string $MasterInstanceId) Set Master instance ID corresponding to the RO group
  * @method string getRoStatus() Obtain RO instance status in the RO group. Value range: online, offline
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadlineTime(string $DeadlineTime) Set RO instance expiration time in the format of yyyy-mm-dd hh:mm:ss. If it is a pay-as-you-go instance, the value of this field is 0000-00-00 00:00:00
  * @method integer getPayType() Obtain RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
  * @method void setPayType(integer $PayType) Set RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
- */
-
-/**
- *RO instance details
  */
 class RoInstanceInfo extends AbstractModel
 {
@@ -185,6 +183,7 @@ class RoInstanceInfo extends AbstractModel
      * @var integer RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
      */
     public $PayType;
+
     /**
      * @param string $MasterInstanceId Master instance ID corresponding to the RO group
      * @param string $RoStatus RO instance status in the RO group. Value range: online, offline
@@ -214,6 +213,7 @@ class RoInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

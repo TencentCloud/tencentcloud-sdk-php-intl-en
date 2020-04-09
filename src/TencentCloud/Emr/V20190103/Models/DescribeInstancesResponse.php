@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances response structure.
+ *
  * @method integer getTotalCnt() Obtain Number of eligible instances.
  * @method void setTotalCnt(integer $TotalCnt) Set Number of eligible instances.
  * @method array getClusterList() Obtain List of EMR instance details.
@@ -30,10 +32,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeInstances response structure.
  */
 class DescribeInstancesResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCnt Number of eligible instances.
      * @param array $ClusterList List of EMR instance details.
@@ -70,6 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

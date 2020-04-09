@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Input mapping
+ *
  * @method string getSourcePath() Obtain Source path
  * @method void setSourcePath(string $SourcePath) Set Source path
  * @method string getDestinationPath() Obtain Destination path
  * @method void setDestinationPath(string $DestinationPath) Set Destination path
  * @method string getMountOptionParameter() Obtain Mounting configuration item parameter
  * @method void setMountOptionParameter(string $MountOptionParameter) Set Mounting configuration item parameter
- */
-
-/**
- *Input mapping
  */
 class InputMapping extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InputMapping extends AbstractModel
      * @var string Mounting configuration item parameter
      */
     public $MountOptionParameter;
+
     /**
      * @param string $SourcePath Source path
      * @param string $DestinationPath Destination path
@@ -54,6 +53,7 @@ class InputMapping extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

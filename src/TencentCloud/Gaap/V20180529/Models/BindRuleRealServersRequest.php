@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindRuleRealServers request structure.
+ *
  * @method string getRuleId() Obtain Forwarding rule ID
  * @method void setRuleId(string $RuleId) Set Forwarding rule ID
  * @method array getRealServerBindSet() Obtain An information list of the origin servers to bind.
@@ -28,10 +30,6 @@ If the origin server scheduling policy type of this rule is weighted round robin
 If there are origin servers bound already, they will be replaced by this new origin server list.
 If this field is empty, it indicates unbinding all origin servers of this rule.
 If the origin server scheduling policy type of this rule is weighted round robin, you need to enter `RealServerWeight`, i.e., the origin server weight. If this field is left empty or for other scheduling types, the default origin server weight is 1.
- */
-
-/**
- *BindRuleRealServers request structure.
  */
 class BindRuleRealServersRequest extends AbstractModel
 {
@@ -47,6 +45,7 @@ If this field is empty, it indicates unbinding all origin servers of this rule.
 If the origin server scheduling policy type of this rule is weighted round robin, you need to enter `RealServerWeight`, i.e., the origin server weight. If this field is left empty or for other scheduling types, the default origin server weight is 1.
      */
     public $RealServerBindSet;
+
     /**
      * @param string $RuleId Forwarding rule ID
      * @param array $RealServerBindSet An information list of the origin servers to bind.
@@ -58,6 +57,7 @@ If the origin server scheduling policy type of this rule is weighted round robin
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

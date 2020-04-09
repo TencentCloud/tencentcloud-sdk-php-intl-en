@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourcesByTags request structure.
+ *
  * @method array getTagFilters() Obtain Tag filtering arrays.
  * @method void setTagFilters(array $TagFilters) Set Tag filtering arrays.
  * @method integer getCreateUin() Obtain Tag creator uin.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceRegion(string $ResourceRegion) Set The resource’s region.
  * @method string getServiceType() Obtain Service type.
  * @method void setServiceType(string $ServiceType) Set Service type.
- */
-
-/**
- *DescribeResourcesByTags request structure.
  */
 class DescribeResourcesByTagsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeResourcesByTagsRequest extends AbstractModel
      * @var string Service type.
      */
     public $ServiceType;
+
     /**
      * @param array $TagFilters Tag filtering arrays.
      * @param integer $CreateUin Tag creator uin.
@@ -94,6 +93,7 @@ class DescribeResourcesByTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

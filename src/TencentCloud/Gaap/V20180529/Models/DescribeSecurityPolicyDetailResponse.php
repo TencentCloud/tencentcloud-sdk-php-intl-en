@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityPolicyDetail response structure.
+ *
  * @method string getProxyId() Obtain Connection ID
  * @method void setProxyId(string $ProxyId) Set Connection ID
  * @method string getStatus() Obtain Security policy status:
@@ -38,10 +40,6 @@ UNBINDING (disabling security policies)
  * @method void setRuleList(array $RuleList) Set List of rules
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- */
-
-/**
- *DescribeSecurityPolicyDetail response structure.
  */
 class DescribeSecurityPolicyDetailResponse extends AbstractModel
 {
@@ -78,6 +76,7 @@ UNBINDING (disabling security policies)
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
+
     /**
      * @param string $ProxyId Connection ID
      * @param string $Status Security policy status:
@@ -94,6 +93,7 @@ UNBINDING (disabling security policies)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

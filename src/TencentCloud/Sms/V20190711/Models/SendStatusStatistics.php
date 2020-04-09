@@ -18,16 +18,14 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Delivery statistics response packet
+ *
  * @method integer getFeeCount() Obtain Billable SMS message quantity; for example, in 100 successfully submitted SMS messages, if 20 are long messages (over 80 characters) and split into two messages each, then the billable quantity will be 80 * 1 + 20 * 2 = 120.
  * @method void setFeeCount(integer $FeeCount) Set Billable SMS message quantity; for example, in 100 successfully submitted SMS messages, if 20 are long messages (over 80 characters) and split into two messages each, then the billable quantity will be 80 * 1 + 20 * 2 = 120.
  * @method integer getRequestCount() Obtain Submitted SMS messages.
  * @method void setRequestCount(integer $RequestCount) Set Submitted SMS messages.
  * @method integer getRequestSuccessCount() Obtain Successfully submitted SMS messages.
  * @method void setRequestSuccessCount(integer $RequestSuccessCount) Set Successfully submitted SMS messages.
- */
-
-/**
- *Delivery statistics response packet
  */
 class SendStatusStatistics extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SendStatusStatistics extends AbstractModel
      * @var integer Successfully submitted SMS messages.
      */
     public $RequestSuccessCount;
+
     /**
      * @param integer $FeeCount Billable SMS message quantity; for example, in 100 successfully submitted SMS messages, if 20 are long messages (over 80 characters) and split into two messages each, then the billable quantity will be 80 * 1 + 20 * 2 = 120.
      * @param integer $RequestCount Submitted SMS messages.
@@ -54,6 +53,7 @@ class SendStatusStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

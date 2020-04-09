@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Layer version information
+ *
  * @method array getCompatibleRuntimes() Obtain Runtime applicable to a version
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCompatibleRuntimes(array $CompatibleRuntimes) Set Runtime applicable to a version
@@ -44,10 +46,6 @@ unavailable
 publishing
 available
 unavailable
- */
-
-/**
- *Layer version information
  */
 class LayerVersionInfo extends AbstractModel
 {
@@ -91,6 +89,7 @@ available
 unavailable
      */
     public $Status;
+
     /**
      * @param array $CompatibleRuntimes Runtime applicable to a version
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -110,6 +109,7 @@ unavailable
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

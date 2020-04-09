@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Supported operating system types.
+ *
  * @method string getOsName() Obtain Operating system type
  * @method void setOsName(string $OsName) Set Operating system type
  * @method array getOsVersions() Obtain Supported operating system versions
  * @method void setOsVersions(array $OsVersions) Set Supported operating system versions
  * @method array getArchitecture() Obtain Supported operating system architecture
  * @method void setArchitecture(array $Architecture) Set Supported operating system architecture
- */
-
-/**
- *Supported operating system types.
  */
 class OsVersion extends AbstractModel
 {
@@ -45,6 +43,7 @@ class OsVersion extends AbstractModel
      * @var array Supported operating system architecture
      */
     public $Architecture;
+
     /**
      * @param string $OsName Operating system type
      * @param array $OsVersions Supported operating system versions
@@ -54,6 +53,7 @@ class OsVersion extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

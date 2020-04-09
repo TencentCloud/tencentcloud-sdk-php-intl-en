@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountPrivilege request structure.
+ *
  * @method string getInstanceId() Obtain Database instance ID in the format of mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) Set Database instance ID in the format of mssql-njj2mtpl
  * @method array getAccounts() Obtain Account permission change information
  * @method void setAccounts(array $Accounts) Set Account permission change information
- */
-
-/**
- *ModifyAccountPrivilege request structure.
  */
 class ModifyAccountPrivilegeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAccountPrivilegeRequest extends AbstractModel
      * @var array Account permission change information
      */
     public $Accounts;
+
     /**
      * @param string $InstanceId Database instance ID in the format of mssql-njj2mtpl
      * @param array $Accounts Account permission change information
@@ -46,6 +45,7 @@ class ModifyAccountPrivilegeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

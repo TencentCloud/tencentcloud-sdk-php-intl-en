@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNatGatewayAttribute request structure.
+ *
  * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
  * @method string getNatGatewayName() Obtain The NAT gateway name, such as `test_nat`.
  * @method void setNatGatewayName(string $NatGatewayName) Set The NAT gateway name, such as `test_nat`.
  * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
- */
-
-/**
- *ModifyNatGatewayAttribute request structure.
  */
 class ModifyNatGatewayAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
      * @var integer The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
      */
     public $InternetMaxBandwidthOut;
+
     /**
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      * @param string $NatGatewayName The NAT gateway name, such as `test_nat`.
@@ -54,6 +53,7 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

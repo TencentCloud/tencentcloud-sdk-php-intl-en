@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCluster request structure.
+ *
  * @method ClusterCIDRSettings getClusterCIDRSettings() Obtain Container networking configuration information for the cluster
  * @method void setClusterCIDRSettings(ClusterCIDRSettings $ClusterCIDRSettings) Set Container networking configuration information for the cluster
  * @method string getClusterType() Obtain Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) Set Configuration information of an existing instance
  * @method array getInstanceDataDiskMountSettings() Obtain CVM type and the corresponding data disk mounting configuration information.
  * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) Set CVM type and the corresponding data disk mounting configuration information.
- */
-
-/**
- *CreateCluster request structure.
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateClusterRequest extends AbstractModel
      * @var array CVM type and the corresponding data disk mounting configuration information.
      */
     public $InstanceDataDiskMountSettings;
+
     /**
      * @param ClusterCIDRSettings $ClusterCIDRSettings Container networking configuration information for the cluster
      * @param string $ClusterType Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
@@ -94,6 +93,7 @@ class CreateClusterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

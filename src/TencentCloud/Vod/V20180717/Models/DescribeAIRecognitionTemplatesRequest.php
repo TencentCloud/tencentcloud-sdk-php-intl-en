@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAIRecognitionTemplates request structure.
+ *
  * @method array getDefinitions() Obtain Unique ID filter of video content recognition templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of video content recognition templates. Array length limit: 100.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- */
-
-/**
- *DescribeAIRecognitionTemplates request structure.
  */
 class DescribeAIRecognitionTemplatesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
     /**
      * @param array $Definitions Unique ID filter of video content recognition templates. Array length limit: 100.
      * @param integer $Offset Pagination offset. Default value: 0.
@@ -62,6 +61,7 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

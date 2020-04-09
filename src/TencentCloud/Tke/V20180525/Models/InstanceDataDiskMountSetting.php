@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Mounting configuration of the CVM instance data disk
+ *
  * @method string getInstanceType() Obtain CVM instance type
  * @method void setInstanceType(string $InstanceType) Set CVM instance type
  * @method array getDataDisks() Obtain Data disk mounting information
  * @method void setDataDisks(array $DataDisks) Set Data disk mounting information
  * @method string getZone() Obtain Availability zone where the CVM instance is located
  * @method void setZone(string $Zone) Set Availability zone where the CVM instance is located
- */
-
-/**
- *Mounting configuration of the CVM instance data disk
  */
 class InstanceDataDiskMountSetting extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InstanceDataDiskMountSetting extends AbstractModel
      * @var string Availability zone where the CVM instance is located
      */
     public $Zone;
+
     /**
      * @param string $InstanceType CVM instance type
      * @param array $DataDisks Data disk mounting information
@@ -54,6 +53,7 @@ class InstanceDataDiskMountSetting extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

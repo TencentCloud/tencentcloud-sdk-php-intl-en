@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * User Group user information
+ *
  * @method integer getUid() Obtain Sub-user UID
  * @method void setUid(integer $Uid) Set Sub-user UID
  * @method integer getUin() Obtain Sub-user UIN
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Time policy created
  * @method integer getIsReceiverOwner() Obtain If the user is the main message recipient
  * @method void setIsReceiverOwner(integer $IsReceiverOwner) Set If the user is the main message recipient
- */
-
-/**
- *User Group user information
  */
 class GroupMemberInfo extends AbstractModel
 {
@@ -101,6 +99,7 @@ class GroupMemberInfo extends AbstractModel
      * @var integer If the user is the main message recipient
      */
     public $IsReceiverOwner;
+
     /**
      * @param integer $Uid Sub-user UID
      * @param integer $Uin Sub-user UIN
@@ -118,6 +117,7 @@ class GroupMemberInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

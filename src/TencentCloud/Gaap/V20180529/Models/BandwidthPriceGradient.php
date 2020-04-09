@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Bandwidth price gradient
+ *
  * @method array getBandwidthRange() Obtain Bandwidth range.
  * @method void setBandwidthRange(array $BandwidthRange) Set Bandwidth range.
  * @method float getBandwidthUnitPrice() Obtain Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
  * @method void setBandwidthUnitPrice(float $BandwidthUnitPrice) Set Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
- */
-
-/**
- *Bandwidth price gradient
  */
 class BandwidthPriceGradient extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BandwidthPriceGradient extends AbstractModel
      * @var float Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
      */
     public $BandwidthUnitPrice;
+
     /**
      * @param array $BandwidthRange Bandwidth range.
      * @param float $BandwidthUnitPrice Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
@@ -46,6 +45,7 @@ class BandwidthPriceGradient extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

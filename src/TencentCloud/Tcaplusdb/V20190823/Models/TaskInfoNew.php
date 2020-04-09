@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Task details
+ *
  * @method string getTaskId() Obtain Task ID
  * @method void setTaskId(string $TaskId) Set Task ID
  * @method string getTaskType() Obtain Task type
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(string $Operator) Set Operator
  * @method string getContent() Obtain Task details
  * @method void setContent(string $Content) Set Task details
- */
-
-/**
- *Task details
  */
 class TaskInfoNew extends AbstractModel
 {
@@ -94,6 +92,7 @@ class TaskInfoNew extends AbstractModel
      * @var string Task details
      */
     public $Content;
+
     /**
      * @param string $TaskId Task ID
      * @param string $TaskType Task type
@@ -110,6 +109,7 @@ class TaskInfoNew extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

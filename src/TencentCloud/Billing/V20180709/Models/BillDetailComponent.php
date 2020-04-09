@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Information about components charged in the bill
+ *
  * @method string getComponentCodeName() Obtain Component type: type of a resource component, e.g. memory, disk, etc.
  * @method void setComponentCodeName(string $ComponentCodeName) Set Component type: type of a resource component, e.g. memory, disk, etc.
  * @method string getItemCodeName() Obtain Component name: name of a resource component, e.g. TencentDB for MySQL-memory
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponentCode(string $ComponentCode) Set 
  * @method string getContractPrice() Obtain 
  * @method void setContractPrice(string $ContractPrice) Set 
- */
-
-/**
- *Information about components charged in the bill
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -157,6 +155,7 @@ class BillDetailComponent extends AbstractModel
      * @var string 
      */
     public $ContractPrice;
+
     /**
      * @param string $ComponentCodeName Component type: type of a resource component, e.g. memory, disk, etc.
      * @param string $ItemCodeName Component name: name of a resource component, e.g. TencentDB for MySQL-memory
@@ -182,6 +181,7 @@ class BillDetailComponent extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

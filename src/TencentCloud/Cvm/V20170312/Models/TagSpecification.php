@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Description of tags associated with resource instances during instance creation.
+ *
  * @method string getResourceType() Obtain Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
  * @method void setResourceType(string $ResourceType) Set Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
  * @method array getTags() Obtain List of tags
  * @method void setTags(array $Tags) Set List of tags
- */
-
-/**
- *Description of tags associated with resource instances during instance creation.
  */
 class TagSpecification extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagSpecification extends AbstractModel
      * @var array List of tags
      */
     public $Tags;
+
     /**
      * @param string $ResourceType Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
      * @param array $Tags List of tags
@@ -46,6 +45,7 @@ class TagSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

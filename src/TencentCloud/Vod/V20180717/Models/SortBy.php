@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Sort by criterion
+ *
  * @method string getField() Obtain Sort by field
  * @method void setField(string $Field) Set Sort by field
  * @method string getOrder() Obtain Sorting order. Valid values: Asc (ascending), Desc (descending)
  * @method void setOrder(string $Order) Set Sorting order. Valid values: Asc (ascending), Desc (descending)
- */
-
-/**
- *Sort by criterion
  */
 class SortBy extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SortBy extends AbstractModel
      * @var string Sorting order. Valid values: Asc (ascending), Desc (descending)
      */
     public $Order;
+
     /**
      * @param string $Field Sort by field
      * @param string $Order Sorting order. Valid values: Asc (ascending), Desc (descending)
@@ -46,6 +45,7 @@ class SortBy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

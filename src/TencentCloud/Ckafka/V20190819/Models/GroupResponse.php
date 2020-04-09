@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * `DescribeGroup` response
+ *
  * @method integer getTotalCount() Obtain Count
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTotalCount(integer $TotalCount) Set Count
@@ -26,10 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setGroupList(array $GroupList) Set GroupList
 Note: this field may return null, indicating that no valid values can be obtained.
- */
-
-/**
- *`DescribeGroup` response
  */
 class GroupResponse extends AbstractModel
 {
@@ -44,6 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $GroupList;
+
     /**
      * @param integer $TotalCount Count
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -54,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

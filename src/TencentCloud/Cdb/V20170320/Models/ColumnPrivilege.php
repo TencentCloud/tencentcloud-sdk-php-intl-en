@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Column permission information
+ *
  * @method string getDatabase() Obtain Database name
  * @method void setDatabase(string $Database) Set Database name
  * @method string getTable() Obtain Table name
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColumn(string $Column) Set Column name
  * @method array getPrivileges() Obtain Permission information
  * @method void setPrivileges(array $Privileges) Set Permission information
- */
-
-/**
- *Column permission information
  */
 class ColumnPrivilege extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ColumnPrivilege extends AbstractModel
      * @var array Permission information
      */
     public $Privileges;
+
     /**
      * @param string $Database Database name
      * @param string $Table Table name
@@ -62,6 +61,7 @@ class ColumnPrivilege extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

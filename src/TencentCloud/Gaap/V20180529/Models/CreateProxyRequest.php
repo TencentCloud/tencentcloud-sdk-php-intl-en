@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProxy request structure.
+ *
  * @method integer getProjectId() Obtain Project ID of connection.
  * @method void setProjectId(integer $ProjectId) Set Project ID of connection.
  * @method string getProxyName() Obtain Connection name.
@@ -42,10 +44,6 @@ For more information, please see How to Ensure Idempotence.
 The connection is to be replicated if this parameter is set.
  * @method void setClonedProxyId(string $ClonedProxyId) Set ID of the replicated connection. Only a running connection can be replicated.
 The connection is to be replicated if this parameter is set.
- */
-
-/**
- *CreateProxy request structure.
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -100,6 +98,7 @@ For more information, please see How to Ensure Idempotence.
 The connection is to be replicated if this parameter is set.
      */
     public $ClonedProxyId;
+
     /**
      * @param integer $ProjectId Project ID of connection.
      * @param string $ProxyName Connection name.
@@ -118,6 +117,7 @@ The connection is to be replicated if this parameter is set.
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */
