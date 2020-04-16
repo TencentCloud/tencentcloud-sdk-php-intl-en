@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values is found.
  * @method void setDescription(string $Description) Set Version description
 Note: This field may return null, indicating that no valid values is found.
+ * @method string getAddTime() Obtain The creation time
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setAddTime(string $AddTime) Set The creation time
+Note: This field may return null, indicating that no valid value was found.
+ * @method string getModTime() Obtain Update time
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setModTime(string $ModTime) Set Update time
+Note: This field may return null, indicating that no valid value was found.
  */
 class FunctionVersion extends AbstractModel
 {
@@ -41,9 +49,25 @@ Note: This field may return null, indicating that no valid values is found.
     public $Description;
 
     /**
+     * @var string The creation time
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $AddTime;
+
+    /**
+     * @var string Update time
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $ModTime;
+
+    /**
      * @param string $Version Function version name
      * @param string $Description Version description
 Note: This field may return null, indicating that no valid values is found.
+     * @param string $AddTime The creation time
+Note: This field may return null, indicating that no valid value was found.
+     * @param string $ModTime Update time
+Note: This field may return null, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -64,6 +88,14 @@ Note: This field may return null, indicating that no valid values is found.
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
+            $this->AddTime = $param["AddTime"];
+        }
+
+        if (array_key_exists("ModTime",$param) and $param["ModTime"] !== null) {
+            $this->ModTime = $param["ModTime"];
         }
     }
 }

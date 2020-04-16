@@ -52,8 +52,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeactivedDetail(array $DeactivedDetail) Set List of deprecated products
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getIsServiceLinkedPolicy() Obtain 
- * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) Set 
+ * @method integer getIsServiceLinkedPolicy() Obtain The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) Set The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class StrategyInfo extends AbstractModel
 {
@@ -118,7 +120,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DeactivedDetail;
 
     /**
-     * @var integer 
+     * @var integer The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsServiceLinkedPolicy;
 
@@ -139,7 +142,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $DeactivedDetail List of deprecated products
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsServiceLinkedPolicy 
+     * @param integer $IsServiceLinkedPolicy The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

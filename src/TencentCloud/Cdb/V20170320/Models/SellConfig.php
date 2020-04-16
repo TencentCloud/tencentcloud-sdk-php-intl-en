@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfo(string $Info) Set Application scenario description
  * @method integer getStatus() Obtain Status value
  * @method void setStatus(integer $Status) Set Status value
+ * @method integer getTag() Obtain Tag value
+ * @method void setTag(integer $Tag) Set Tag value
  */
 class SellConfig extends AbstractModel
 {
@@ -115,6 +117,11 @@ class SellConfig extends AbstractModel
     public $Status;
 
     /**
+     * @var integer Tag value
+     */
+    public $Tag;
+
+    /**
      * @param string $Device Device type
      * @param string $Type Purchasable specification description
      * @param string $CdbType Instance type
@@ -128,6 +135,7 @@ class SellConfig extends AbstractModel
      * @param integer $Iops IOs per second
      * @param string $Info Application scenario description
      * @param integer $Status Status value
+     * @param integer $Tag Tag value
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class SellConfig extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

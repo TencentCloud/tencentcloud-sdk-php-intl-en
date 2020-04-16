@@ -34,16 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) Set Time role last updated
  * @method integer getConsoleLogin() Obtain If login is allowed for the role
  * @method void setConsoleLogin(integer $ConsoleLogin) Set If login is allowed for the role
- * @method string getRoleType() Obtain User role. Valid values: user, system
+ * @method string getRoleType() Obtain User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRoleType(string $RoleType) Set User role. Valid values: user, system
+ * @method void setRoleType(string $RoleType) Set User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getSessionDuration() Obtain Valid period
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSessionDuration(integer $SessionDuration) Set Valid period
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDeletionTaskId() Obtain 
- * @method void setDeletionTaskId(string $DeletionTaskId) Set 
+ * @method string getDeletionTaskId() Obtain Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDeletionTaskId(string $DeletionTaskId) Set Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class RoleInfo extends AbstractModel
 {
@@ -83,7 +85,7 @@ class RoleInfo extends AbstractModel
     public $ConsoleLogin;
 
     /**
-     * @var string User role. Valid values: user, system
+     * @var string User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RoleType;
@@ -95,7 +97,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SessionDuration;
 
     /**
-     * @var string 
+     * @var string Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeletionTaskId;
 
@@ -107,11 +110,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $AddTime Time role created
      * @param string $UpdateTime Time role last updated
      * @param integer $ConsoleLogin If login is allowed for the role
-     * @param string $RoleType User role. Valid values: user, system
+     * @param string $RoleType User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SessionDuration Valid period
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DeletionTaskId 
+     * @param string $DeletionTaskId Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

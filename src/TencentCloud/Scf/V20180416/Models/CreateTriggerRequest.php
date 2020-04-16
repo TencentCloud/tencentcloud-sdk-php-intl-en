@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerName(string $TriggerName) Set Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
  * @method string getType() Obtain Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
  * @method void setType(string $Type) Set Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
- * @method string getTriggerDesc() Obtain Parameter corresponding to the trigger. For a timer trigger, it should be a Linux cron expression; for a COS trigger, it should be a JSON string ({"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}}), where `event` is the triggered COS event, `Prefix` in the `filter` is the corresponding file prefix filter, and `Suffix` is the corresponding suffix filter, and the `filter` can be left blank if not needed; for other triggers, please see the description of the specific trigger.
- * @method void setTriggerDesc(string $TriggerDesc) Set Parameter corresponding to the trigger. For a timer trigger, it should be a Linux cron expression; for a COS trigger, it should be a JSON string ({"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}}), where `event` is the triggered COS event, `Prefix` in the `filter` is the corresponding file prefix filter, and `Suffix` is the corresponding suffix filter, and the `filter` can be left blank if not needed; for other triggers, please see the description of the specific trigger.
+ * @method string getTriggerDesc() Obtain For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
+ * @method void setTriggerDesc(string $TriggerDesc) Set For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
  * @method string getQualifier() Obtain Function version
@@ -53,7 +53,7 @@ class CreateTriggerRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string Parameter corresponding to the trigger. For a timer trigger, it should be a Linux cron expression; for a COS trigger, it should be a JSON string ({"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}}), where `event` is the triggered COS event, `Prefix` in the `filter` is the corresponding file prefix filter, and `Suffix` is the corresponding suffix filter, and the `filter` can be left blank if not needed; for other triggers, please see the description of the specific trigger.
+     * @var string For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
      */
     public $TriggerDesc;
 
@@ -76,7 +76,7 @@ class CreateTriggerRequest extends AbstractModel
      * @param string $FunctionName Name of the function bound to the new trigger
      * @param string $TriggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
      * @param string $Type Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
-     * @param string $TriggerDesc Parameter corresponding to the trigger. For a timer trigger, it should be a Linux cron expression; for a COS trigger, it should be a JSON string ({"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}}), where `event` is the triggered COS event, `Prefix` in the `filter` is the corresponding file prefix filter, and `Suffix` is the corresponding suffix filter, and the `filter` can be left blank if not needed; for other triggers, please see the description of the specific trigger.
+     * @param string $TriggerDesc For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
      * @param string $Namespace Function namespace
      * @param string $Qualifier Function version
      * @param string $Enable Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.

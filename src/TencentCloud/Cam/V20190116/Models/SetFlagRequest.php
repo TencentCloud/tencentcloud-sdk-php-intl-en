@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionFlag(LoginActionFlag $ActionFlag) Set Sensitive operation settings
  * @method OffsiteFlag getOffsiteFlag() Obtain Remote login settings
  * @method void setOffsiteFlag(OffsiteFlag $OffsiteFlag) Set Remote login settings
- * @method integer getNeedResetMfa() Obtain If MFA requires top-up
- * @method void setNeedResetMfa(integer $NeedResetMfa) Set If MFA requires top-up
+ * @method integer getNeedResetMfa() Obtain Whether or not to reset MFA
+ * @method void setNeedResetMfa(integer $NeedResetMfa) Set Whether or not to reset MFA
  */
 class SetFlagRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class SetFlagRequest extends AbstractModel
     public $OffsiteFlag;
 
     /**
-     * @var integer If MFA requires top-up
+     * @var integer Whether or not to reset MFA
      */
     public $NeedResetMfa;
 
@@ -63,7 +63,7 @@ class SetFlagRequest extends AbstractModel
      * @param LoginActionFlag $LoginFlag Login settings
      * @param LoginActionFlag $ActionFlag Sensitive operation settings
      * @param OffsiteFlag $OffsiteFlag Remote login settings
-     * @param integer $NeedResetMfa If MFA requires top-up
+     * @param integer $NeedResetMfa Whether or not to reset MFA
      */
     function __construct()
     {

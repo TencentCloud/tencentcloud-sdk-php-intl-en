@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Voice chat status. Valid values: open, close
  * @method void setStatus(string $Status) Set Voice chat status. Valid values: open, close
- * @method string getQuality() Obtain Voice Chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: ordinary
- * @method void setQuality(string $Quality) Set Voice Chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: ordinary
+ * @method string getQuality() Obtain Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
+ * @method void setQuality(string $Quality) Set Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
  */
 class RealtimeSpeechConf extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RealtimeSpeechConf extends AbstractModel
     public $Status;
 
     /**
-     * @var string Voice Chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: ordinary
+     * @var string Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
      */
     public $Quality;
 
     /**
      * @param string $Status Voice chat status. Valid values: open, close
-     * @param string $Quality Voice Chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: ordinary
+     * @param string $Quality Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
      */
     function __construct()
     {

@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublish(string $Publish) Set It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
  * @method string getL5Enable() Obtain Whether to enable L5 access. TRUE: enable; FALSE: not enable
  * @method void setL5Enable(string $L5Enable) Set Whether to enable L5 access. TRUE: enable; FALSE: not enable
- * @method array getLayers() Obtain List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
- * @method void setLayers(array $Layers) Set List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
+ * @method array getLayers() Obtain List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
+ * @method void setLayers(array $Layers) Set List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
  * @method DeadLetterConfig getDeadLetterConfig() Obtain Information of a dead letter queue associated with a function
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Information of a dead letter queue associated with a function
- * @method string getOnsEnable() Obtain 
- * @method void setOnsEnable(string $OnsEnable) Set 
+ * @method string getOnsEnable() Obtain Whether to enable Ons access. TRUE: enable; FALSE: not enable
+ * @method void setOnsEnable(string $OnsEnable) Set Whether to enable Ons access. TRUE: enable; FALSE: not enable
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -121,7 +121,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $L5Enable;
 
     /**
-     * @var array List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
+     * @var array List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
      */
     public $Layers;
 
@@ -131,7 +131,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $DeadLetterConfig;
 
     /**
-     * @var string 
+     * @var string Whether to enable Ons access. TRUE: enable; FALSE: not enable
      */
     public $OnsEnable;
 
@@ -149,9 +149,9 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $ClsTopicId CLS Topic ID to which logs are shipped
      * @param string $Publish It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
      * @param string $L5Enable Whether to enable L5 access. TRUE: enable; FALSE: not enable
-     * @param array $Layers List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
+     * @param array $Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
      * @param DeadLetterConfig $DeadLetterConfig Information of a dead letter queue associated with a function
-     * @param string $OnsEnable 
+     * @param string $OnsEnable Whether to enable Ons access. TRUE: enable; FALSE: not enable
      */
     function __construct()
     {

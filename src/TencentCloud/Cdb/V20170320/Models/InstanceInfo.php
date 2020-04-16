@@ -114,6 +114,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getZoneId() Obtain AZ ID
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setZoneId(integer $ZoneId) Set AZ ID
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -325,6 +329,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DeployGroupId;
 
     /**
+     * @var integer AZ ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ZoneId;
+
+    /**
      * @param integer $WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      * @param string $Zone AZ information
      * @param integer $InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
@@ -371,6 +381,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $DeviceClass Physical machine model
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DeployGroupId Placement group ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ZoneId AZ ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -557,6 +569,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
             $this->DeployGroupId = $param["DeployGroupId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

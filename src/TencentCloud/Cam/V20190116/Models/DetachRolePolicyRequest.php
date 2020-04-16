@@ -20,17 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachRolePolicy request structure.
  *
- * @method integer getPolicyId() Obtain Policy ID
- * @method void setPolicyId(integer $PolicyId) Set Policy ID
+ * @method integer getPolicyId() Obtain Policy ID. Either `PolicyId` or `PolicyName` must be entered
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID. Either `PolicyId` or `PolicyName` must be entered
  * @method string getDetachRoleId() Obtain Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
  * @method void setDetachRoleId(string $DetachRoleId) Set Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
  * @method string getDetachRoleName() Obtain Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
  * @method void setDetachRoleName(string $DetachRoleName) Set Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+ * @method string getPolicyName() Obtain Policy name. Either `PolicyId` or `PolicyName` must be entered
+ * @method void setPolicyName(string $PolicyName) Set Policy name. Either `PolicyId` or `PolicyName` must be entered
  */
 class DetachRolePolicyRequest extends AbstractModel
 {
     /**
-     * @var integer Policy ID
+     * @var integer Policy ID. Either `PolicyId` or `PolicyName` must be entered
      */
     public $PolicyId;
 
@@ -45,9 +47,15 @@ class DetachRolePolicyRequest extends AbstractModel
     public $DetachRoleName;
 
     /**
-     * @param integer $PolicyId Policy ID
+     * @var string Policy name. Either `PolicyId` or `PolicyName` must be entered
+     */
+    public $PolicyName;
+
+    /**
+     * @param integer $PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
      * @param string $DetachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
      * @param string $DetachRoleName Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+     * @param string $PolicyName Policy name. Either `PolicyId` or `PolicyName` must be entered
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DetachRolePolicyRequest extends AbstractModel
 
         if (array_key_exists("DetachRoleName",$param) and $param["DetachRoleName"] !== null) {
             $this->DetachRoleName = $param["DetachRoleName"];
+        }
+
+        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
+            $this->PolicyName = $param["PolicyName"];
         }
     }
 }

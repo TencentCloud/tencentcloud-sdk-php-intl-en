@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRp(integer $Rp) Set Number of entries per page; default is 20
  * @method integer getPage() Obtain Page number; default is 1
  * @method void setPage(integer $Page) Set Page number; default is 1
+ * @method integer getSubUin() Obtain Sub-account UIN
+ * @method void setSubUin(integer $SubUin) Set Sub-account UIN
  */
 class ListGroupsForUserRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ListGroupsForUserRequest extends AbstractModel
     public $Page;
 
     /**
+     * @var integer Sub-account UIN
+     */
+    public $SubUin;
+
+    /**
      * @param integer $Uid Sub-user UID
      * @param integer $Rp Number of entries per page; default is 20
      * @param integer $Page Page number; default is 1
+     * @param integer $SubUin Sub-account UIN
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListGroupsForUserRequest extends AbstractModel
 
         if (array_key_exists("Page",$param) and $param["Page"] !== null) {
             $this->Page = $param["Page"];
+        }
+
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
         }
     }
 }

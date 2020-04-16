@@ -46,8 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRentTag(integer $RentTag) Set Whether it is a leased domain name
  * @method string getRentExpireTime() Obtain Expiration time of leased domain name
  * @method void setRentExpireTime(string $RentExpireTime) Set Expiration time of leased domain name
- * @method integer getIsMiniProgramLive() Obtain 
- * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) Set 
+ * @method integer getIsMiniProgramLive() Obtain 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) Set 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DomainInfo extends AbstractModel
 {
@@ -109,7 +113,9 @@ class DomainInfo extends AbstractModel
     public $RentExpireTime;
 
     /**
-     * @var integer 
+     * @var integer 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsMiniProgramLive;
 
@@ -127,7 +133,9 @@ class DomainInfo extends AbstractModel
      * @param string $CurrentCName Information of currently used CNAME record
      * @param integer $RentTag Whether it is a leased domain name
      * @param string $RentExpireTime Expiration time of leased domain name
-     * @param integer $IsMiniProgramLive 
+     * @param integer $IsMiniProgramLive 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

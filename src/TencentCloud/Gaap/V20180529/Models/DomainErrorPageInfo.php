@@ -44,6 +44,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBody(string $Body) Set Configured response body (excluding HTTP header)
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setStatus(integer $Status) Set Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class DomainErrorPageInfo extends AbstractModel
 {
@@ -92,6 +96,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Body;
 
     /**
+     * @var integer Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $Status;
+
+    /**
      * @param string $ErrorPageId Configuration ID of a custom error response
      * @param string $ListenerId Listener ID
      * @param string $Domain Domain name
@@ -104,6 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Body Configured response body (excluding HTTP header)
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -153,6 +165,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Body",$param) and $param["Body"] !== null) {
             $this->Body = $param["Body"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

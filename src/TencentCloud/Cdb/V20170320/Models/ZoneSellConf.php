@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneConf(ZoneConf $ZoneConf) Set Multi-AZ information
  * @method array getDrZone() Obtain Information of the supported disaster recovery AZ
  * @method void setDrZone(array $DrZone) Set Information of the supported disaster recovery AZ
+ * @method boolean getIsSupportRemoteRo() Obtain Whether cross-AZ read-only access is supported
+ * @method void setIsSupportRemoteRo(boolean $IsSupportRemoteRo) Set Whether cross-AZ read-only access is supported
+ * @method array getRemoteRoZone() Obtain Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRemoteRoZone(array $RemoteRoZone) Set Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ZoneSellConf extends AbstractModel
 {
@@ -122,6 +128,17 @@ class ZoneSellConf extends AbstractModel
     public $DrZone;
 
     /**
+     * @var boolean Whether cross-AZ read-only access is supported
+     */
+    public $IsSupportRemoteRo;
+
+    /**
+     * @var array Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $RemoteRoZone;
+
+    /**
      * @param integer $Status AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
      * @param string $ZoneName AZ name
      * @param boolean $IsCustom Whether it is a custom instance type
@@ -136,6 +153,9 @@ class ZoneSellConf extends AbstractModel
      * @param array $SellType Array of purchasable instance types
      * @param ZoneConf $ZoneConf Multi-AZ information
      * @param array $DrZone Information of the supported disaster recovery AZ
+     * @param boolean $IsSupportRemoteRo Whether cross-AZ read-only access is supported
+     * @param array $RemoteRoZone Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -210,6 +230,14 @@ class ZoneSellConf extends AbstractModel
 
         if (array_key_exists("DrZone",$param) and $param["DrZone"] !== null) {
             $this->DrZone = $param["DrZone"];
+        }
+
+        if (array_key_exists("IsSupportRemoteRo",$param) and $param["IsSupportRemoteRo"] !== null) {
+            $this->IsSupportRemoteRo = $param["IsSupportRemoteRo"];
+        }
+
+        if (array_key_exists("RemoteRoZone",$param) and $param["RemoteRoZone"] !== null) {
+            $this->RemoteRoZone = $param["RemoteRoZone"];
         }
     }
 }

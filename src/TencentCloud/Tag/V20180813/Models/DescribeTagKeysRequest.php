@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
  * @method integer getLimit() Obtain Page size. The default value is 0.
  * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
+ * @method integer getShowProject() Obtain Whether to show project
+ * @method void setShowProject(integer $ShowProject) Set Whether to show project
  */
 class DescribeTagKeysRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeTagKeysRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer Whether to show project
+     */
+    public $ShowProject;
+
+    /**
      * @param integer $CreateUin Creator `Uin`. If not specified, `Uin` is only used as the query condition.
      * @param integer $Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
      * @param integer $Limit Page size. The default value is 0.
+     * @param integer $ShowProject Whether to show project
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeTagKeysRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ShowProject",$param) and $param["ShowProject"] !== null) {
+            $this->ShowProject = $param["ShowProject"];
         }
     }
 }

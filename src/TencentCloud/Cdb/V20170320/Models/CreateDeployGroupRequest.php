@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAffinity(array $Affinity) Set Affinity policy of placement group. Currently, the value of this parameter can only be 1. Policy 1 indicates the upper limit of instances on one physical machine.
  * @method integer getLimitNum() Obtain Upper limit of instances on one physical machine as defined in affinity policy 1 of placement group.
  * @method void setLimitNum(integer $LimitNum) Set Upper limit of instances on one physical machine as defined in affinity policy 1 of placement group.
+ * @method array getDevClass() Obtain Model attribute of placement group. Valid values: SH12+SH02, TS85.
+ * @method void setDevClass(array $DevClass) Set Model attribute of placement group. Valid values: SH12+SH02, TS85.
  */
 class CreateDeployGroupRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateDeployGroupRequest extends AbstractModel
     public $LimitNum;
 
     /**
+     * @var array Model attribute of placement group. Valid values: SH12+SH02, TS85.
+     */
+    public $DevClass;
+
+    /**
      * @param string $DeployGroupName Name of a placement group, which can contain up to 60 characters.
      * @param string $Description Description of a placement group, which can contain up to 200 characters.
      * @param array $Affinity Affinity policy of placement group. Currently, the value of this parameter can only be 1. Policy 1 indicates the upper limit of instances on one physical machine.
      * @param integer $LimitNum Upper limit of instances on one physical machine as defined in affinity policy 1 of placement group.
+     * @param array $DevClass Model attribute of placement group. Valid values: SH12+SH02, TS85.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateDeployGroupRequest extends AbstractModel
 
         if (array_key_exists("LimitNum",$param) and $param["LimitNum"] !== null) {
             $this->LimitNum = $param["LimitNum"];
+        }
+
+        if (array_key_exists("DevClass",$param) and $param["DevClass"] !== null) {
+            $this->DevClass = $param["DevClass"];
         }
     }
 }

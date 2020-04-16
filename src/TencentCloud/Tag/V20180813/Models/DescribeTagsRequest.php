@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
  * @method integer getCreateUin() Obtain Creator `Uin`. If not specified, `Uin` is only used as the query condition.
  * @method void setCreateUin(integer $CreateUin) Set Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+ * @method array getTagKeys() Obtain Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+ * @method void setTagKeys(array $TagKeys) Set Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+ * @method integer getShowProject() Obtain Whether to show project tag
+ * @method void setShowProject(integer $ShowProject) Set Whether to show project tag
  */
 class DescribeTagsRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeTagsRequest extends AbstractModel
     public $CreateUin;
 
     /**
+     * @var array Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+     */
+    public $TagKeys;
+
+    /**
+     * @var integer Whether to show project tag
+     */
+    public $ShowProject;
+
+    /**
      * @param string $TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
      * @param string $TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
      * @param integer $Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
      * @param integer $Limit Page size. The default value is 0.
      * @param integer $CreateUin Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+     * @param array $TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+     * @param integer $ShowProject Whether to show project tag
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DescribeTagsRequest extends AbstractModel
 
         if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
             $this->CreateUin = $param["CreateUin"];
+        }
+
+        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
+            $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("ShowProject",$param) and $param["ShowProject"] !== null) {
+            $this->ShowProject = $param["ShowProject"];
         }
     }
 }

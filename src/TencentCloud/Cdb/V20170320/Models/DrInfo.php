@@ -28,8 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getRegion() Obtain Region information
  * @method void setRegion(string $Region) Set Region information
- * @method integer getSyncStatus() Obtain Instance synchronization status
- * @method void setSyncStatus(integer $SyncStatus) Set Instance synchronization status
+ * @method integer getSyncStatus() Obtain Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync;
+ * @method void setSyncStatus(integer $SyncStatus) Set Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync;
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method integer getInstanceType() Obtain Instance type
@@ -58,7 +68,12 @@ class DrInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var integer Instance synchronization status
+     * @var integer Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync;
      */
     public $SyncStatus;
 
@@ -77,7 +92,12 @@ class DrInfo extends AbstractModel
      * @param string $Zone AZ information
      * @param string $InstanceId Instance ID
      * @param string $Region Region information
-     * @param integer $SyncStatus Instance synchronization status
+     * @param integer $SyncStatus Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync;
      * @param string $InstanceName Instance name
      * @param integer $InstanceType Instance type
      */

@@ -38,14 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setLayerVersion(integer $LayerVersion) Set Version number
  * @method string getLayerName() Obtain Layer name
  * @method void setLayerName(string $LayerName) Set Layer name
- * @method string getStatus() Obtain Current status of a layer. Valid values:
-publishing
-available
-unavailable
- * @method void setStatus(string $Status) Set Current status of a layer. Valid values:
-publishing
-available
-unavailable
+ * @method string getStatus() Obtain The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted
+ * @method void setStatus(string $Status) Set The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted
  */
 class LayerVersionInfo extends AbstractModel
 {
@@ -83,10 +85,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LayerName;
 
     /**
-     * @var string Current status of a layer. Valid values:
-publishing
-available
-unavailable
+     * @var string The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted
      */
     public $Status;
 
@@ -100,10 +103,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $LayerVersion Version number
      * @param string $LayerName Layer name
-     * @param string $Status Current status of a layer. Valid values:
-publishing
-available
-unavailable
+     * @param string $Status The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted
      */
     function __construct()
     {

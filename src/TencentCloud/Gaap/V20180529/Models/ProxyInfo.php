@@ -100,6 +100,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSupportSecurity(integer $SupportSecurity) Set Whether security groups are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getBillingType() Obtain Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setBillingType(integer $BillingType) Set Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class ProxyInfo extends AbstractModel
 {
@@ -232,6 +236,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SupportSecurity;
 
     /**
+     * @var integer Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $BillingType;
+
+    /**
      * @param string $InstanceId Connection instance ID; It’s an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
@@ -272,6 +282,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SupportSecurity Whether security groups are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $BillingType Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -379,6 +391,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SupportSecurity",$param) and $param["SupportSecurity"] !== null) {
             $this->SupportSecurity = $param["SupportSecurity"];
+        }
+
+        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
+            $this->BillingType = $param["BillingType"];
         }
     }
 }

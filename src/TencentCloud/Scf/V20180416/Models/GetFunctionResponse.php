@@ -90,8 +90,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPublicNetConfig(PublicNetConfigOut $PublicNetConfig) Set Public network access configuration
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOnsEnable() Obtain 
- * @method void setOnsEnable(string $OnsEnable) Set 
+ * @method string getOnsEnable() Obtain Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setOnsEnable(string $OnsEnable) Set Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -269,7 +271,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PublicNetConfig;
 
     /**
-     * @var string 
+     * @var string Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found.
      */
     public $OnsEnable;
 
@@ -314,7 +317,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $AddTime Function creation time
      * @param PublicNetConfigOut $PublicNetConfig Public network access configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OnsEnable 
+     * @param string $OnsEnable Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

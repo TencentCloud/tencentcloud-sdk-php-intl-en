@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAppName() Obtain Application name
  * @method void setAppName(string $AppName) Set Application name
- * @method integer getProjectId() Obtain Tencent Cloud project ID. Default value: 0, which means that the default project is used
- * @method void setProjectId(integer $ProjectId) Set Tencent Cloud project ID. Default value: 0, which means that the default project is used
- * @method array getEngineList() Obtain List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
- * @method void setEngineList(array $EngineList) Set List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
- * @method array getRegionList() Obtain List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
- * @method void setRegionList(array $RegionList) Set List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+ * @method integer getProjectId() Obtain Tencent Cloud project ID. Default value: 0, which means the default project
+ * @method void setProjectId(integer $ProjectId) Set Tencent Cloud project ID. Default value: 0, which means the default project
+ * @method array getEngineList() Obtain List of engines to be supported. All values are selected by default.
+ * @method void setEngineList(array $EngineList) Set List of engines to be supported. All values are selected by default.
+ * @method array getRegionList() Obtain Service region list. All values are selected by default.
+ * @method void setRegionList(array $RegionList) Set Service region list. All values are selected by default.
  * @method RealtimeSpeechConf getRealtimeSpeechConf() Obtain Configuration information of voice chat
  * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) Set Configuration information of voice chat
  * @method VoiceMessageConf getVoiceMessageConf() Obtain Configuration information of voice messaging and speech-to-text
@@ -45,17 +45,17 @@ class CreateAppRequest extends AbstractModel
     public $AppName;
 
     /**
-     * @var integer Tencent Cloud project ID. Default value: 0, which means that the default project is used
+     * @var integer Tencent Cloud project ID. Default value: 0, which means the default project
      */
     public $ProjectId;
 
     /**
-     * @var array List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
+     * @var array List of engines to be supported. All values are selected by default.
      */
     public $EngineList;
 
     /**
-     * @var array List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+     * @var array Service region list. All values are selected by default.
      */
     public $RegionList;
 
@@ -81,9 +81,9 @@ class CreateAppRequest extends AbstractModel
 
     /**
      * @param string $AppName Application name
-     * @param integer $ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used
-     * @param array $EngineList List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
-     * @param array $RegionList List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+     * @param integer $ProjectId Tencent Cloud project ID. Default value: 0, which means the default project
+     * @param array $EngineList List of engines to be supported. All values are selected by default.
+     * @param array $RegionList Service region list. All values are selected by default.
      * @param RealtimeSpeechConf $RealtimeSpeechConf Configuration information of voice chat
      * @param VoiceMessageConf $VoiceMessageConf Configuration information of voice messaging and speech-to-text
      * @param VoiceFilterConf $VoiceFilterConf Configuration information of phrase analysis
