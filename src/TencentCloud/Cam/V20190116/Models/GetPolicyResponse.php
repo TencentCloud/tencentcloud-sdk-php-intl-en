@@ -44,6 +44,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setPolicyDocument(string $PolicyDocument) Set Policy document
 Note: This field may return null, indicating that no valid value was found.
+ * @method string getPresetAlias() Obtain Remarks
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setPresetAlias(string $PresetAlias) Set Remarks
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsServiceLinkedRolePolicy() Obtain Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIsServiceLinkedRolePolicy(integer $IsServiceLinkedRolePolicy) Set Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -86,6 +94,18 @@ Note: This field may return null, indicating that no valid value was found.
     public $PolicyDocument;
 
     /**
+     * @var string Remarks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $PresetAlias;
+
+    /**
+     * @var integer Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsServiceLinkedRolePolicy;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -103,6 +123,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $PolicyDocument Policy document
 Note: This field may return null, indicating that no valid value was found.
+     * @param string $PresetAlias Remarks
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsServiceLinkedRolePolicy Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -140,6 +164,14 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("PolicyDocument",$param) and $param["PolicyDocument"] !== null) {
             $this->PolicyDocument = $param["PolicyDocument"];
+        }
+
+        if (array_key_exists("PresetAlias",$param) and $param["PresetAlias"] !== null) {
+            $this->PresetAlias = $param["PresetAlias"];
+        }
+
+        if (array_key_exists("IsServiceLinkedRolePolicy",$param) and $param["IsServiceLinkedRolePolicy"] !== null) {
+            $this->IsServiceLinkedRolePolicy = $param["IsServiceLinkedRolePolicy"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

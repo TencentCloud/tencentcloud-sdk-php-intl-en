@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Record offset. Default value: 0.
  * @method integer getLimit() Obtain Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
  * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
+ * @method string getAccountRegexp() Obtain Regular expression for matching account names, which complies with the rules at MySQL official website.
+ * @method void setAccountRegexp(string $AccountRegexp) Set Regular expression for matching account names, which complies with the rules at MySQL official website.
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeAccountsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string Regular expression for matching account names, which complies with the rules at MySQL official website.
+     */
+    public $AccountRegexp;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $Offset Record offset. Default value: 0.
      * @param integer $Limit Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
+     * @param string $AccountRegexp Regular expression for matching account names, which complies with the rules at MySQL official website.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeAccountsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("AccountRegexp",$param) and $param["AccountRegexp"] !== null) {
+            $this->AccountRegexp = $param["AccountRegexp"];
         }
     }
 }

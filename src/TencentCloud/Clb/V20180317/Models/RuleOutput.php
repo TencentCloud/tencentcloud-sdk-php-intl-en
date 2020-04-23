@@ -78,6 +78,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getQuicStatus() Obtain QUIC status
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setQuicStatus(string $QuicStatus) Set QUIC status
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class RuleOutput extends AbstractModel
 {
@@ -191,6 +195,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TrpcFunc;
 
     /**
+     * @var string QUIC status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $QuicStatus;
+
+    /**
      * @param string $LocationId Forwarding rule ID
      * @param string $Domain Domain name of the forwarding rule.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -219,6 +229,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $QuicStatus QUIC status
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -316,6 +328,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
             $this->TrpcFunc = $param["TrpcFunc"];
+        }
+
+        if (array_key_exists("QuicStatus",$param) and $param["QuicStatus"] !== null) {
+            $this->QuicStatus = $param["QuicStatus"];
         }
     }
 }

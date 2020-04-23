@@ -46,6 +46,8 @@ They represent weighted round robin, least connections, and IP hash, respectivel
  * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
  * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is `TRPC`.
  * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+ * @method boolean getQuic() Obtain Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+ * @method void setQuic(boolean $Quic) Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
  */
 class RuleInput extends AbstractModel
 {
@@ -111,6 +113,11 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $TrpcFunc;
 
     /**
+     * @var boolean Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+     */
+    public $Quic;
+
+    /**
      * @param string $Domain Domain name of the forwarding rule. Length: 1-80.
      * @param string $Url Forwarding rule path. Length: 1-200.
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
@@ -124,6 +131,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param string $TargetType Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
      * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
      * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * @param boolean $Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
         if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
             $this->TrpcFunc = $param["TrpcFunc"];
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = $param["Quic"];
         }
     }
 }

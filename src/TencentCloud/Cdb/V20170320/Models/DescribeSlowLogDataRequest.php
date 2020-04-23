@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start timestamp.
  * @method integer getEndTime() Obtain End timestamp.
  * @method void setEndTime(integer $EndTime) Set End timestamp.
- * @method array getUserHosts() Obtain Client Host list.
- * @method void setUserHosts(array $UserHosts) Set Client Host list.
+ * @method array getUserHosts() Obtain Client `Host` list.
+ * @method void setUserHosts(array $UserHosts) Set Client `Host` list.
  * @method array getUserNames() Obtain Client username list.
  * @method void setUserNames(array $UserNames) Set Client username list.
  * @method array getDataBases() Obtain Accessed database list.
@@ -59,7 +59,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Client Host list.
+     * @var array Client `Host` list.
      */
     public $UserHosts;
 
@@ -97,7 +97,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
      * @param string $InstanceId Instance ID.
      * @param integer $StartTime Start timestamp.
      * @param integer $EndTime End timestamp.
-     * @param array $UserHosts Client Host list.
+     * @param array $UserHosts Client `Host` list.
      * @param array $UserNames Client username list.
      * @param array $DataBases Accessed database list.
      * @param string $SortBy Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.

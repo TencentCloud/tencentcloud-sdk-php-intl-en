@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set Unified VPC ID
  * @method string getUniqSubnetId() Obtain Unified subnet ID.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Unified subnet ID.
+ * @method integer getReleaseDuration() Obtain Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+ * @method void setReleaseDuration(integer $ReleaseDuration) Set Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
  */
 class ModifyDBInstanceVipVportRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
     public $UniqSubnetId;
 
     /**
+     * @var integer Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+     */
+    public $ReleaseDuration;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
      * @param string $DstIp Destination IP. Either this parameter or `DstPort` must be passed in.
      * @param integer $DstPort Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
      * @param string $UniqVpcId Unified VPC ID
      * @param string $UniqSubnetId Unified subnet ID.
+     * @param integer $ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
 
         if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
             $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("ReleaseDuration",$param) and $param["ReleaseDuration"] !== null) {
+            $this->ReleaseDuration = $param["ReleaseDuration"];
         }
     }
 }

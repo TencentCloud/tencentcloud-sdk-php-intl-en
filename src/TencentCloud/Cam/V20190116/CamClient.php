@@ -51,6 +51,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
  * @method Models\ListAttachedRolePoliciesResponse ListAttachedRolePolicies(Models\ListAttachedRolePoliciesRequest $req) This API (ListAttachedRolePolicies) is used to obtain the list of the policies associated with a role.
  * @method Models\ListAttachedUserPoliciesResponse ListAttachedUserPolicies(Models\ListAttachedUserPoliciesRequest $req) This API (ListAttachedUserPolicies) is used to query the list of policies associated with a sub-account.
+ * @method Models\ListCollaboratorsResponse ListCollaborators(Models\ListCollaboratorsRequest $req) This API is used to get the collaborator list.
  * @method Models\ListEntitiesForPolicyResponse ListEntitiesForPolicy(Models\ListEntitiesForPolicyRequest $req) This API (ListEntitiesForPolicy) is used to query the list of entities associated with a policy.
  * @method Models\ListGroupsResponse ListGroups(Models\ListGroupsRequest $req) This API is used to query the list of user groups.
  * @method Models\ListGroupsForUserResponse ListGroupsForUser(Models\ListGroupsForUserRequest $req) This API is used to list user groups associated with a user.
@@ -59,9 +60,9 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) This API is used to pull sub-users.
  * @method Models\ListUsersForGroupResponse ListUsersForGroup(Models\ListUsersForGroupRequest $req) This API is used to query the list of users associated with a user group.
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) This API is used to delete users from a user group.
- * @method Models\SetFlagResponse SetFlag(Models\SetFlagRequest $req) This API is used to set account verification for login and sensitive operation protection.
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) This API is used to update a user group.
+ * @method Models\UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(Models\UpdateRoleConsoleLoginRequest $req) This API is used to modify a role’s login permissions.
  * @method Models\UpdateRoleDescriptionResponse UpdateRoleDescription(Models\UpdateRoleDescriptionRequest $req) This API (UpdateRoleDescription) is used to modify the description of a role.
  * @method Models\UpdateSAMLProviderResponse UpdateSAMLProvider(Models\UpdateSAMLProviderRequest $req) This API is used to update SAML identity provider information.
  * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) This API is used to update a sub-user.

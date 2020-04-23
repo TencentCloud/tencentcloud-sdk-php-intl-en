@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Minimum value: 0.
  * @method integer getLimit() Obtain Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
  * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
- * @method string getDatabaseRegexp() Obtain Regular expression for matching database names, which complies with the rules at MySQL's official website
- * @method void setDatabaseRegexp(string $DatabaseRegexp) Set Regular expression for matching database names, which complies with the rules at MySQL's official website
+ * @method string getDatabaseRegexp() Obtain Regular expression for matching database names.
+ * @method void setDatabaseRegexp(string $DatabaseRegexp) Set Regular expression for matching database names.
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDatabasesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Regular expression for matching database names, which complies with the rules at MySQL's official website
+     * @var string Regular expression for matching database names.
      */
     public $DatabaseRegexp;
 
@@ -55,7 +55,7 @@ class DescribeDatabasesRequest extends AbstractModel
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $Offset Offset. Minimum value: 0.
      * @param integer $Limit Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
-     * @param string $DatabaseRegexp Regular expression for matching database names, which complies with the rules at MySQL's official website
+     * @param string $DatabaseRegexp Regular expression for matching database names.
      */
     function __construct()
     {

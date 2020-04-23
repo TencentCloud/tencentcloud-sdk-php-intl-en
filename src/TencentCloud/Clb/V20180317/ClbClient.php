@@ -98,6 +98,7 @@ This is an async API. After it is returned successfully, you can call the Descri
 This API supports replacing server certificates and client certificates.
 The new certificate to be used can be specified by passing in the certificate ID. If no certificate ID is specified, relevant information such as certificate content must be passed in to create a new certificate and bind it to the CLB.
 Note: This API can only be called in the Guangzhou region; for other regions, an error will occur due to domain name resolution problems.
+ * @method Models\SetLoadBalancerClsLogResponse SetLoadBalancerClsLog(Models\SetLoadBalancerClsLogRequest $req) This API is used to add, delete, and update the CLS topic of a CLB instance.
  * @method Models\SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroups(Models\SetLoadBalancerSecurityGroupsRequest $req) This API (SetLoadBalancerSecurityGroups) is used to bind/unbind security groups for a public network CLB instance. You can use the DescribeLoadBalancers API to query the security groups bound to a CLB instance. This API uses `set` semantics.
 During a binding operation, the input parameters need to be all security groups to be bound to the CLB instance (including those already bound ones and new ones).
 During an unbinding operation, the input parameters need to be all the security groups still bound to the CLB instance after the unbinding operation. To unbind all security groups, you can leave this parameter empty or pass in an empty array. Note: Private network CLB do not support binding security groups.

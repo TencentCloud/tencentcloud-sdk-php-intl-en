@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceVipVport response structure.
  *
- * @method string getAsyncRequestId() Obtain Async task ID.
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID.
+ * @method string getAsyncRequestId() Obtain Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ModifyDBInstanceVipVportResponse extends AbstractModel
 {
     /**
-     * @var string Async task ID.
+     * @var string Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AsyncRequestId;
 
@@ -38,7 +41,8 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async task ID.
+     * @param string $AsyncRequestId Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
