@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddDelayLiveStream request structure.
  *
- * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
- * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getStreamName() Obtain Stream name.
@@ -40,7 +40,7 @@ Notes:
 class AddDelayLiveStreamRequest extends AbstractModel
 {
     /**
-     * @var string Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public $AppName;
 
@@ -68,7 +68,7 @@ Notes:
     public $ExpireTime;
 
     /**
-     * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      * @param string $DomainName Push domain name.
      * @param string $StreamName Stream name.
      * @param integer $DelayTime Delay time in seconds, up to 600s.

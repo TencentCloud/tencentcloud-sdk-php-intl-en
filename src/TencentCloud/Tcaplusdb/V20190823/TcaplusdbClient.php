@@ -32,7 +32,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) This API is used to delete a TcaplusDB cluster, which will succeed only after all resources (including table groups and tables) in the cluster are released.
  * @method Models\DeleteIdlFilesResponse DeleteIdlFiles(Models\DeleteIdlFilesRequest $req) This API is used to delete a target IDL file by specifying the cluster ID and information of the file to be deleted. If the file is associated with a table, deletion will fail.
  * @method Models\DeleteTableGroupResponse DeleteTableGroup(Models\DeleteTableGroupRequest $req) This API is used to delete a table group.
- * @method Models\DeleteTablesResponse DeleteTables(Models\DeleteTablesRequest $req) This API is used to drop a table based on the specified table information.
+ * @method Models\DeleteTablesResponse DeleteTables(Models\DeleteTablesRequest $req) This API is used to drop a specified table. Calling this API for the first time means to move the table to the recycle bin, while calling it again means to drop the table completely from the recycle bin.
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) This API is used to query the TcaplusDB cluster list, including cluster details.
  * @method Models\DescribeIdlFileInfosResponse DescribeIdlFileInfos(Models\DescribeIdlFileInfosRequest $req) This API is used to query table description file details.
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) This API is used to query the list of regions supported by the TcaplusDB service.

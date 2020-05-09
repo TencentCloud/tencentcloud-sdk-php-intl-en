@@ -30,18 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlvParam(RecordParam $FlvParam) Set FLV recording parameter.
  * @method RecordParam getHlsParam() Obtain HLS recording parameter.
  * @method void setHlsParam(RecordParam $HlsParam) Set HLS recording parameter.
- * @method RecordParam getMp4Param() Obtain Mp4 recording parameter.
- * @method void setMp4Param(RecordParam $Mp4Param) Set Mp4 recording parameter.
+ * @method RecordParam getMp4Param() Obtain MP4 recording parameter.
+ * @method void setMp4Param(RecordParam $Mp4Param) Set MP4 recording parameter.
  * @method RecordParam getAacParam() Obtain AAC recording parameter.
  * @method void setAacParam(RecordParam $AacParam) Set AAC recording parameter.
  * @method integer getIsDelayLive() Obtain 0: LVB,
 1: LCB.
  * @method void setIsDelayLive(integer $IsDelayLive) Set 0: LVB,
 1: LCB.
- * @method HlsSpecialParam getHlsSpecialParam() Obtain Custom HLS recording parameter.
- * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set Custom HLS recording parameter.
- * @method RecordParam getMp3Param() Obtain Mp3 recording parameter.
- * @method void setMp3Param(RecordParam $Mp3Param) Set Mp3 recording parameter.
+ * @method HlsSpecialParam getHlsSpecialParam() Obtain Custom HLS recording parameter
+ * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set Custom HLS recording parameter
+ * @method RecordParam getMp3Param() Obtain MP3 recording parameter.
+ * @method void setMp3Param(RecordParam $Mp3Param) Set MP3 recording parameter.
  */
 class RecordTemplateInfo extends AbstractModel
 {
@@ -71,7 +71,7 @@ class RecordTemplateInfo extends AbstractModel
     public $HlsParam;
 
     /**
-     * @var RecordParam Mp4 recording parameter.
+     * @var RecordParam MP4 recording parameter.
      */
     public $Mp4Param;
 
@@ -87,12 +87,12 @@ class RecordTemplateInfo extends AbstractModel
     public $IsDelayLive;
 
     /**
-     * @var HlsSpecialParam Custom HLS recording parameter.
+     * @var HlsSpecialParam Custom HLS recording parameter
      */
     public $HlsSpecialParam;
 
     /**
-     * @var RecordParam Mp3 recording parameter.
+     * @var RecordParam MP3 recording parameter.
      */
     public $Mp3Param;
 
@@ -102,12 +102,12 @@ class RecordTemplateInfo extends AbstractModel
      * @param string $Description Message description
      * @param RecordParam $FlvParam FLV recording parameter.
      * @param RecordParam $HlsParam HLS recording parameter.
-     * @param RecordParam $Mp4Param Mp4 recording parameter.
+     * @param RecordParam $Mp4Param MP4 recording parameter.
      * @param RecordParam $AacParam AAC recording parameter.
      * @param integer $IsDelayLive 0: LVB,
 1: LCB.
-     * @param HlsSpecialParam $HlsSpecialParam Custom HLS recording parameter.
-     * @param RecordParam $Mp3Param Mp3 recording parameter.
+     * @param HlsSpecialParam $HlsSpecialParam Custom HLS recording parameter
+     * @param RecordParam $Mp3Param MP3 recording parameter.
      */
     function __construct()
     {

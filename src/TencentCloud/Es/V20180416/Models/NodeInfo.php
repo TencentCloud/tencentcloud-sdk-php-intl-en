@@ -36,6 +36,12 @@ Default value: hotData
  * @method void setDiskType(string $DiskType) Set Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
  * @method integer getDiskSize() Obtain Node disk size in GB
  * @method void setDiskSize(integer $DiskSize) Set Node disk size in GB
+ * @method LocalDiskInfo getLocalDiskInfo() Obtain Local disk information
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setLocalDiskInfo(LocalDiskInfo $LocalDiskInfo) Set Local disk information
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskCount() Obtain Number of node disks
+ * @method void setDiskCount(integer $DiskCount) Set Number of node disks
  */
 class NodeInfo extends AbstractModel
 {
@@ -68,6 +74,17 @@ Default value: hotData
     public $DiskSize;
 
     /**
+     * @var LocalDiskInfo Local disk information
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $LocalDiskInfo;
+
+    /**
+     * @var integer Number of node disks
+     */
+    public $DiskCount;
+
+    /**
      * @param integer $NodeNum Number of nodes
      * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      * @param string $Type Node type <li>hotData: hot data node</li>
@@ -76,6 +93,9 @@ Default value: hotData
 Default value: hotData
      * @param string $DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
      * @param integer $DiskSize Node disk size in GB
+     * @param LocalDiskInfo $LocalDiskInfo Local disk information
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskCount Number of node disks
      */
     function __construct()
     {
@@ -108,6 +128,15 @@ Default value: hotData
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("LocalDiskInfo",$param) and $param["LocalDiskInfo"] !== null) {
+            $this->LocalDiskInfo = new LocalDiskInfo();
+            $this->LocalDiskInfo->deserialize($param["LocalDiskInfo"]);
+        }
+
+        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
+            $this->DiskCount = $param["DiskCount"];
         }
     }
 }

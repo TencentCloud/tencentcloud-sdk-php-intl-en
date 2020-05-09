@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPictureUrl(string $PictureUrl) Set Watermark image URL.
  * @method string getWatermarkName() Obtain Watermark name.
  * @method void setWatermarkName(string $WatermarkName) Set Watermark name.
- * @method integer getXPosition() Obtain Display position: X-axis offset.
- * @method void setXPosition(integer $XPosition) Set Display position: X-axis offset.
- * @method integer getYPosition() Obtain Display position: Y-axis offset.
- * @method void setYPosition(integer $YPosition) Set Display position: Y-axis offset.
- * @method integer getWidth() Obtain Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
- * @method void setWidth(integer $Width) Set Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
- * @method integer getHeight() Obtain Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
- * @method void setHeight(integer $Height) Set Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+ * @method integer getXPosition() Obtain Display position: X-axis offset. Default value: 0.
+ * @method void setXPosition(integer $XPosition) Set Display position: X-axis offset. Default value: 0.
+ * @method integer getYPosition() Obtain Display position: Y-axis offset. Default value: 0.
+ * @method void setYPosition(integer $YPosition) Set Display position: Y-axis offset. Default value: 0.
+ * @method integer getWidth() Obtain Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
+ * @method void setWidth(integer $Width) Set Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
+ * @method integer getHeight() Obtain Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+ * @method void setHeight(integer $Height) Set Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
  */
 class AddLiveWatermarkRequest extends AbstractModel
 {
@@ -46,32 +46,32 @@ class AddLiveWatermarkRequest extends AbstractModel
     public $WatermarkName;
 
     /**
-     * @var integer Display position: X-axis offset.
+     * @var integer Display position: X-axis offset. Default value: 0.
      */
     public $XPosition;
 
     /**
-     * @var integer Display position: Y-axis offset.
+     * @var integer Display position: Y-axis offset. Default value: 0.
      */
     public $YPosition;
 
     /**
-     * @var integer Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+     * @var integer Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
      */
     public $Width;
 
     /**
-     * @var integer Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+     * @var integer Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
      */
     public $Height;
 
     /**
      * @param string $PictureUrl Watermark image URL.
      * @param string $WatermarkName Watermark name.
-     * @param integer $XPosition Display position: X-axis offset.
-     * @param integer $YPosition Display position: Y-axis offset.
-     * @param integer $Width Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
-     * @param integer $Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+     * @param integer $XPosition Display position: X-axis offset. Default value: 0.
+     * @param integer $YPosition Display position: Y-axis offset. Default value: 0.
+     * @param integer $Width Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
+     * @param integer $Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
      */
     function __construct()
     {

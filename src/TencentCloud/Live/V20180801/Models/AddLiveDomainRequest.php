@@ -46,6 +46,14 @@ Default value: 0.
 0: LVB,
 1: LCB.
 Default value: 0.
+ * @method integer getIsMiniProgramLive() Obtain Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
+Default value: 0.
+ * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) Set Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
+Default value: 0.
  */
 class AddLiveDomainRequest extends AbstractModel
 {
@@ -79,6 +87,14 @@ Default value: 0.
     public $IsDelayLive;
 
     /**
+     * @var integer Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
+Default value: 0.
+     */
+    public $IsMiniProgramLive;
+
+    /**
      * @param string $DomainName Domain name.
      * @param integer $DomainType Domain name type.
 0: push domain name.
@@ -91,6 +107,10 @@ Default value: 1.
      * @param integer $IsDelayLive Whether it is LCB:
 0: LVB,
 1: LCB.
+Default value: 0.
+     * @param integer $IsMiniProgramLive Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
 Default value: 0.
      */
     function __construct()
@@ -120,6 +140,10 @@ Default value: 0.
 
         if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
             $this->IsDelayLive = $param["IsDelayLive"];
+        }
+
+        if (array_key_exists("IsMiniProgramLive",$param) and $param["IsMiniProgramLive"] !== null) {
+            $this->IsMiniProgramLive = $param["IsMiniProgramLive"];
         }
     }
 }

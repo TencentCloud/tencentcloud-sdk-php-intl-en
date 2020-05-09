@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values is found.
  * @method void setVersions(array $Versions) Set Function version list
 Note: This field may return null, indicating that no valid values is found.
+ * @method integer getTotalCount() Obtain Total number of function versions
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of function versions
+Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -43,6 +47,12 @@ Note: This field may return null, indicating that no valid values is found.
     public $Versions;
 
     /**
+     * @var integer Total number of function versions
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -51,6 +61,8 @@ Note: This field may return null, indicating that no valid values is found.
      * @param array $FunctionVersion Function version
      * @param array $Versions Function version list
 Note: This field may return null, indicating that no valid values is found.
+     * @param integer $TotalCount Total number of function versions
+Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -77,6 +89,10 @@ Note: This field may return null, indicating that no valid values is found.
                 $obj->deserialize($value);
                 array_push($this->Versions, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

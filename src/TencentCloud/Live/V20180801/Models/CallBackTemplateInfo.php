@@ -18,7 +18,7 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Callback template information
+ * Callback template information.
  *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Description.
  * @method string getStreamBeginNotifyUrl() Obtain Stream starting callback URL.
  * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) Set Stream starting callback URL.
- * @method string getStreamEndNotifyUrl() Obtain Stream ending callback URL.
- * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) Set Stream ending callback URL.
+ * @method string getStreamEndNotifyUrl() Obtain Interruption callback URL.
+ * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) Set Interruption callback URL.
  * @method string getStreamMixNotifyUrl() Obtain Stream mixing callback URL.
  * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) Set Stream mixing callback URL.
  * @method string getRecordNotifyUrl() Obtain Recording callback URL.
@@ -64,7 +64,7 @@ class CallBackTemplateInfo extends AbstractModel
     public $StreamBeginNotifyUrl;
 
     /**
-     * @var string Stream ending callback URL.
+     * @var string Interruption callback URL.
      */
     public $StreamEndNotifyUrl;
 
@@ -98,7 +98,7 @@ class CallBackTemplateInfo extends AbstractModel
      * @param string $TemplateName Template name.
      * @param string $Description Description.
      * @param string $StreamBeginNotifyUrl Stream starting callback URL.
-     * @param string $StreamEndNotifyUrl Stream ending callback URL.
+     * @param string $StreamEndNotifyUrl Interruption callback URL.
      * @param string $StreamMixNotifyUrl Stream mixing callback URL.
      * @param string $RecordNotifyUrl Recording callback URL.
      * @param string $SnapshotNotifyUrl Screencapturing callback URL.

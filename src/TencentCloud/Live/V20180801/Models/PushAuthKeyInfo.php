@@ -18,7 +18,7 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Push authentication key information
+ * Push authentication key information.
  *
  * @method string getDomainName() Obtain Domain name.
  * @method void setDomainName(string $DomainName) Set Domain name.
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) Set Whether to enable. 0: disabled; 1: enabled.
  * @method string getMasterAuthKey() Obtain Master authentication key.
  * @method void setMasterAuthKey(string $MasterAuthKey) Set Master authentication key.
- * @method string getBackupAuthKey() Obtain Backup authentication key.
- * @method void setBackupAuthKey(string $BackupAuthKey) Set Backup authentication key.
+ * @method string getBackupAuthKey() Obtain Standby authentication key.
+ * @method void setBackupAuthKey(string $BackupAuthKey) Set Standby authentication key.
  * @method integer getAuthDelta() Obtain Validity period in seconds.
  * @method void setAuthDelta(integer $AuthDelta) Set Validity period in seconds.
  */
@@ -49,7 +49,7 @@ class PushAuthKeyInfo extends AbstractModel
     public $MasterAuthKey;
 
     /**
-     * @var string Backup authentication key.
+     * @var string Standby authentication key.
      */
     public $BackupAuthKey;
 
@@ -62,7 +62,7 @@ class PushAuthKeyInfo extends AbstractModel
      * @param string $DomainName Domain name.
      * @param integer $Enable Whether to enable. 0: disabled; 1: enabled.
      * @param string $MasterAuthKey Master authentication key.
-     * @param string $BackupAuthKey Backup authentication key.
+     * @param string $BackupAuthKey Standby authentication key.
      * @param integer $AuthDelta Validity period in seconds.
      */
     function __construct()

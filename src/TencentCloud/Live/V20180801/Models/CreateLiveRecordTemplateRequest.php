@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveRecordTemplate request structure.
  *
- * @method string getTemplateName() Obtain Template name, which is a non-empty string.
- * @method void setTemplateName(string $TemplateName) Set Template name, which is a non-empty string.
+ * @method string getTemplateName() Obtain Template name. Only letters, digits, underscores, and hyphens can be contained.
+ * @method void setTemplateName(string $TemplateName) Set Template name. Only letters, digits, underscores, and hyphens can be contained.
  * @method string getDescription() Obtain Message description
  * @method void setDescription(string $Description) Set Message description
  * @method RecordParam getFlvParam() Obtain FLV recording parameter, which is set when FLV recording is enabled.
@@ -32,9 +32,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMp4Param(RecordParam $Mp4Param) Set Mp4 recording parameter, which is set when Mp4 recording is enabled.
  * @method RecordParam getAacParam() Obtain AAC recording parameter, which is set when AAC recording is enabled.
  * @method void setAacParam(RecordParam $AacParam) Set AAC recording parameter, which is set when AAC recording is enabled.
- * @method integer getIsDelayLive() Obtain 0: LVB,
+ * @method integer getIsDelayLive() Obtain LVB type. Default value: 0.
+0: LVB.
 1: LCB.
- * @method void setIsDelayLive(integer $IsDelayLive) Set 0: LVB,
+ * @method void setIsDelayLive(integer $IsDelayLive) Set LVB type. Default value: 0.
+0: LVB.
 1: LCB.
  * @method HlsSpecialParam getHlsSpecialParam() Obtain HLS-specific recording parameter.
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set HLS-specific recording parameter.
@@ -44,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Template name, which is a non-empty string.
+     * @var string Template name. Only letters, digits, underscores, and hyphens can be contained.
      */
     public $TemplateName;
 
@@ -74,7 +76,8 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $AacParam;
 
     /**
-     * @var integer 0: LVB,
+     * @var integer LVB type. Default value: 0.
+0: LVB.
 1: LCB.
      */
     public $IsDelayLive;
@@ -90,13 +93,14 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $Mp3Param;
 
     /**
-     * @param string $TemplateName Template name, which is a non-empty string.
+     * @param string $TemplateName Template name. Only letters, digits, underscores, and hyphens can be contained.
      * @param string $Description Message description
      * @param RecordParam $FlvParam FLV recording parameter, which is set when FLV recording is enabled.
      * @param RecordParam $HlsParam HLS recording parameter, which is set when HLS recording is enabled.
      * @param RecordParam $Mp4Param Mp4 recording parameter, which is set when Mp4 recording is enabled.
      * @param RecordParam $AacParam AAC recording parameter, which is set when AAC recording is enabled.
-     * @param integer $IsDelayLive 0: LVB,
+     * @param integer $IsDelayLive LVB type. Default value: 0.
+0: LVB.
 1: LCB.
      * @param HlsSpecialParam $HlsSpecialParam HLS-specific recording parameter.
      * @param RecordParam $Mp3Param Mp3 recording parameter, which is set when Mp3 recording is enabled.

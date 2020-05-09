@@ -20,20 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveSnapshotTemplate request structure.
  *
- * @method string getTemplateName() Obtain Template name, which is a non-empty string.
+ * @method string getTemplateName() Obtain Template name.
 Maximum length: 255 bytes.
- * @method void setTemplateName(string $TemplateName) Set Template name, which is a non-empty string.
+Only letters, digits, underscores, and hyphens can be contained.
+ * @method void setTemplateName(string $TemplateName) Set Template name.
 Maximum length: 255 bytes.
- * @method integer getCosAppId() Obtain COS `AppId`.
- * @method void setCosAppId(integer $CosAppId) Set COS `AppId`.
+Only letters, digits, underscores, and hyphens can be contained.
+ * @method integer getCosAppId() Obtain COS application ID.
+ * @method void setCosAppId(integer $CosAppId) Set COS application ID.
  * @method string getCosBucket() Obtain COS bucket name.
  * @method void setCosBucket(string $CosBucket) Set COS bucket name.
  * @method string getCosRegion() Obtain COS region.
  * @method void setCosRegion(string $CosRegion) Set COS region.
  * @method string getDescription() Obtain Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
  * @method void setDescription(string $Description) Set Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
  * @method integer getSnapshotInterval() Obtain Screencapturing interval in seconds. Default value: 10s.
 Value range: 5–600s.
  * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval in seconds. Default value: 10s.
@@ -44,17 +48,22 @@ Value range: 5–600s.
  * @method void setHeight(integer $Height) Set Screenshot height. Default value: 0 (original height).
  * @method integer getPornFlag() Obtain Whether to enable porn detection. 0: no, 1: yes. Default value: 0
  * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. 0: no, 1: yes. Default value: 0
+ * @method string getCosPrefix() Obtain COS bucket folder prefix.
+ * @method void setCosPrefix(string $CosPrefix) Set COS bucket folder prefix.
+ * @method string getCosFileName() Obtain COS filename.
+ * @method void setCosFileName(string $CosFileName) Set COS filename.
  */
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Template name, which is a non-empty string.
+     * @var string Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public $TemplateName;
 
     /**
-     * @var integer COS `AppId`.
+     * @var integer COS application ID.
      */
     public $CosAppId;
 
@@ -71,6 +80,7 @@ Maximum length: 255 bytes.
     /**
      * @var string Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public $Description;
 
@@ -96,18 +106,32 @@ Value range: 5–600s.
     public $PornFlag;
 
     /**
-     * @param string $TemplateName Template name, which is a non-empty string.
+     * @var string COS bucket folder prefix.
+     */
+    public $CosPrefix;
+
+    /**
+     * @var string COS filename.
+     */
+    public $CosFileName;
+
+    /**
+     * @param string $TemplateName Template name.
 Maximum length: 255 bytes.
-     * @param integer $CosAppId COS `AppId`.
+Only letters, digits, underscores, and hyphens can be contained.
+     * @param integer $CosAppId COS application ID.
      * @param string $CosBucket COS bucket name.
      * @param string $CosRegion COS region.
      * @param string $Description Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      * @param integer $SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
 Value range: 5–600s.
      * @param integer $Width Screenshot width. Default value: 0 (original width).
      * @param integer $Height Screenshot height. Default value: 0 (original height).
      * @param integer $PornFlag Whether to enable porn detection. 0: no, 1: yes. Default value: 0
+     * @param string $CosPrefix COS bucket folder prefix.
+     * @param string $CosFileName COS filename.
      */
     function __construct()
     {
@@ -156,6 +180,14 @@ Value range: 5–600s.
 
         if (array_key_exists("PornFlag",$param) and $param["PornFlag"] !== null) {
             $this->PornFlag = $param["PornFlag"];
+        }
+
+        if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {
+            $this->CosPrefix = $param["CosPrefix"];
+        }
+
+        if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
+            $this->CosFileName = $param["CosFileName"];
         }
     }
 }

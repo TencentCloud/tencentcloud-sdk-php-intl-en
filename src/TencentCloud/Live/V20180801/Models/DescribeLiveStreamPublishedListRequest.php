@@ -36,8 +36,8 @@ This supports querying data in the past 60 days.
  * @method void setStartTime(string $StartTime) Set Start time. 
 In UTC format, such as 2016-06-29T19:00:00Z.
 This supports querying data in the past 60 days.
- * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
- * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
  * @method integer getPageNum() Obtain Page number to get.
 Default value: 1.
  * @method void setPageNum(integer $PageNum) Set Page number to get.
@@ -76,7 +76,7 @@ This supports querying data in the past 60 days.
     public $StartTime;
 
     /**
-     * @var string Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
+     * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
      */
     public $AppName;
 
@@ -108,7 +108,7 @@ Note: The difference between EndTime and StartTime cannot be greater than 30 day
      * @param string $StartTime Start time. 
 In UTC format, such as 2016-06-29T19:00:00Z.
 This supports querying data in the past 60 days.
-     * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
+     * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
      * @param integer $PageNum Page number to get.
 Default value: 1.
      * @param integer $PageSize Number of entries per page.

@@ -18,7 +18,7 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Certificate information
+ * Certificate information.
  *
  * @method integer getCertId() Obtain Certificate ID.
  * @method void setCertId(integer $CertId) Set Certificate ID.
@@ -30,11 +30,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time in UTC format.
  * @method string getHttpsCrt() Obtain Certificate content.
  * @method void setHttpsCrt(string $HttpsCrt) Set Certificate content.
- * @method integer getCertType() Obtain Certificate type.
-0: Tencent Cloud-hosted certificate
+ * @method integer getCertType() Obtain Certificate type:
+0: Tencent Cloud-hosted certificate.
 1: user-added certificate.
- * @method void setCertType(integer $CertType) Set Certificate type.
-0: Tencent Cloud-hosted certificate
+ * @method void setCertType(integer $CertType) Set Certificate type:
+0: Tencent Cloud-hosted certificate.
 1: user-added certificate.
  * @method string getCertExpireTime() Obtain Certificate expiration time in UTC format.
  * @method void setCertExpireTime(string $CertExpireTime) Set Certificate expiration time in UTC format.
@@ -69,8 +69,8 @@ class CertInfo extends AbstractModel
     public $HttpsCrt;
 
     /**
-     * @var integer Certificate type.
-0: Tencent Cloud-hosted certificate
+     * @var integer Certificate type:
+0: Tencent Cloud-hosted certificate.
 1: user-added certificate.
      */
     public $CertType;
@@ -91,8 +91,8 @@ class CertInfo extends AbstractModel
      * @param string $Description Description.
      * @param string $CreateTime Creation time in UTC format.
      * @param string $HttpsCrt Certificate content.
-     * @param integer $CertType Certificate type.
-0: Tencent Cloud-hosted certificate
+     * @param integer $CertType Certificate type:
+0: Tencent Cloud-hosted certificate.
 1: user-added certificate.
      * @param string $CertExpireTime Certificate expiration time in UTC format.
      * @param array $DomainList List of domain names that use this certificate.

@@ -18,7 +18,7 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule information
+ * Rule information.
  *
  * @method string getCreateTime() Obtain Rule creation time.
  * @method void setCreateTime(string $CreateTime) Set Rule creation time.

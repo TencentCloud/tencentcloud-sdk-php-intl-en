@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogType(string $LogType) Set If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
  * @method string getNamespace() Obtain Namespace
  * @method void setNamespace(string $Namespace) Set Namespace
+ * @method string getRoutingKey() Obtain Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+ * @method void setRoutingKey(string $RoutingKey) Set Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
  */
 class InvokeRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class InvokeRequest extends AbstractModel
     public $Namespace;
 
     /**
+     * @var string Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+     */
+    public $RoutingKey;
+
+    /**
      * @param string $FunctionName Function name
      * @param string $InvocationType The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
      * @param string $Qualifier Version number of the triggered function
      * @param string $ClientContext Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
      * @param string $LogType If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
      * @param string $Namespace Namespace
+     * @param string $RoutingKey Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class InvokeRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("RoutingKey",$param) and $param["RoutingKey"] !== null) {
+            $this->RoutingKey = $param["RoutingKey"];
         }
     }
 }

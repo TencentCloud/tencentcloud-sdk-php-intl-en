@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DeleteLiveWatermark request structure.
  *
  * @method integer getWatermarkId() Obtain Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
  * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
  */
 class DeleteLiveWatermarkRequest extends AbstractModel
 {
     /**
      * @var integer Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
      */
     public $WatermarkId;
 
     /**
      * @param integer $WatermarkId Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
      */
     function __construct()
     {

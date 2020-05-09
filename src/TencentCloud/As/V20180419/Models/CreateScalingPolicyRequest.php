@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) Set Alarm monitoring metric.
  * @method integer getCooldown() Obtain Cooldown period in seconds. Default value: 300 seconds.
  * @method void setCooldown(integer $Cooldown) Set Cooldown period in seconds. Default value: 300 seconds.
- * @method array getNotificationUserGroupIds() Obtain Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+ * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
  */
 class CreateScalingPolicyRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class CreateScalingPolicyRequest extends AbstractModel
     public $Cooldown;
 
     /**
-     * @var array Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+     * @var array Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
      */
     public $NotificationUserGroupIds;
 
@@ -79,7 +79,7 @@ class CreateScalingPolicyRequest extends AbstractModel
      * @param integer $AdjustmentValue The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
      * @param MetricAlarm $MetricAlarm Alarm monitoring metric.
      * @param integer $Cooldown Cooldown period in seconds. Default value: 300 seconds.
-     * @param array $NotificationUserGroupIds Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+     * @param array $NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
      */
     function __construct()
     {

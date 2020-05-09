@@ -20,102 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveCallbackTemplate request structure.
  *
- * @method string getTemplateName() Obtain Template name, which is a non-empty string.
+ * @method string getTemplateName() Obtain Template name.
 Maximum length: 255 bytes.
- * @method void setTemplateName(string $TemplateName) Set Template name, which is a non-empty string.
+Only letters, digits, underscores, and hyphens can be contained.
+ * @method void setTemplateName(string $TemplateName) Set Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
  * @method string getDescription() Obtain Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
  * @method void setDescription(string $Description) Set Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
  * @method string getStreamBeginNotifyUrl() Obtain Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
  * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) Set Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
- * @method string getStreamEndNotifyUrl() Obtain Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
- * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) Set Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
+ * @method string getStreamEndNotifyUrl() Obtain Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744).
+ * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) Set Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744).
  * @method string getRecordNotifyUrl() Obtain Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
  * @method void setRecordNotifyUrl(string $RecordNotifyUrl) Set Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
  * @method string getSnapshotNotifyUrl() Obtain Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
  * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) Set Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
  * @method string getPornCensorshipNotifyUrl() Obtain Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](/document/product/267/32741).
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) Set Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741).
- * @method string getCallbackKey() Obtain Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
- * @method void setCallbackKey(string $CallbackKey) Set Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
+Protocol document: [Event Message Notification](/document/product/267/32741).
+ * @method string getCallbackKey() Obtain Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
+ * @method void setCallbackKey(string $CallbackKey) Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Template name, which is a non-empty string.
+     * @var string Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public $TemplateName;
 
     /**
      * @var string Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public $Description;
 
     /**
      * @var string Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public $StreamBeginNotifyUrl;
 
     /**
-     * @var string Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+     * @var string Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public $StreamEndNotifyUrl;
 
     /**
      * @var string Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public $RecordNotifyUrl;
 
     /**
      * @var string Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public $SnapshotNotifyUrl;
 
     /**
      * @var string Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](/document/product/267/32741).
      */
     public $PornCensorshipNotifyUrl;
 
     /**
-     * @var string Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
+     * @var string Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
      */
     public $CallbackKey;
 
     /**
-     * @param string $TemplateName Template name, which is a non-empty string.
+     * @param string $TemplateName Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      * @param string $Description Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      * @param string $StreamBeginNotifyUrl Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
-     * @param string $StreamEndNotifyUrl Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
+     * @param string $StreamEndNotifyUrl Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744).
      * @param string $RecordNotifyUrl Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      * @param string $SnapshotNotifyUrl Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      * @param string $PornCensorshipNotifyUrl Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741).
-     * @param string $CallbackKey Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
+Protocol document: [Event Message Notification](/document/product/267/32741).
+     * @param string $CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
      */
     function __construct()
     {

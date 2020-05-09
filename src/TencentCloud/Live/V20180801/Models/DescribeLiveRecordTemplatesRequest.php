@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveRecordTemplates request structure.
  *
- * @method integer getIsDelayLive() Obtain Whether it is an LCB template
- * @method void setIsDelayLive(integer $IsDelayLive) Set Whether it is an LCB template
+ * @method integer getIsDelayLive() Obtain Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB.
+ * @method void setIsDelayLive(integer $IsDelayLive) Set Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB.
  */
 class DescribeLiveRecordTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer Whether it is an LCB template
+     * @var integer Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB.
      */
     public $IsDelayLive;
 
     /**
-     * @param integer $IsDelayLive Whether it is an LCB template
+     * @param integer $IsDelayLive Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB.
      */
     function __construct()
     {

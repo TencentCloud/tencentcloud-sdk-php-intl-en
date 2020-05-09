@@ -30,26 +30,32 @@ h264/h265.
 aac/mp3.
  * @method void setAcodec(string $Acodec) Set Audio encoding format:
 aac/mp3.
- * @method integer getAudioBitrate() Obtain Audio bitrate. Value range: 0–500. Default value: 0.
- * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. Value range: 0–500. Default value: 0.
+ * @method integer getAudioBitrate() Obtain Audio bitrate. Default value: 0.
+Value range: 0–500.
+ * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. Default value: 0.
+Value range: 0–500.
  * @method string getDescription() Obtain Template description.
  * @method void setDescription(string $Description) Set Template description.
- * @method integer getVideoBitrate() Obtain Video bitrate. Value range: 100–8,000
- * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: 100–8,000
- * @method integer getWidth() Obtain Width. Value range: 0–3,000
- * @method void setWidth(integer $Width) Set Width. Value range: 0–3,000
+ * @method integer getVideoBitrate() Obtain Video bitrate. Value range: 100–8000 Kbps.
+Note: the bitrate value must be a multiple of 100.
+ * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: 100–8000 Kbps.
+Note: the bitrate value must be a multiple of 100.
+ * @method integer getWidth() Obtain Width. Value range: 0-3000.
+ * @method void setWidth(integer $Width) Set Width. Value range: 0-3000.
  * @method integer getNeedVideo() Obtain Whether to keep the video. 0: no; 1: yes. Default value: 1.
  * @method void setNeedVideo(integer $NeedVideo) Set Whether to keep the video. 0: no; 1: yes. Default value: 1.
  * @method integer getNeedAudio() Obtain Whether to keep the audio. 0: no; 1: yes. Default value: 1.
  * @method void setNeedAudio(integer $NeedAudio) Set Whether to keep the audio. 0: no; 1: yes. Default value: 1.
- * @method integer getHeight() Obtain Height. Value range: 0–3,000
- * @method void setHeight(integer $Height) Set Height. Value range: 0–3,000
- * @method integer getFps() Obtain Frame rate. Value range: 0–200
- * @method void setFps(integer $Fps) Set Frame rate. Value range: 0–200
- * @method integer getGop() Obtain Keyframe interval in seconds. Value range: 0–50
- * @method void setGop(integer $Gop) Set Keyframe interval in seconds. Value range: 0–50
- * @method integer getRotate() Obtain Rotation angle. Valid values: 0, 90, 180, 270
- * @method void setRotate(integer $Rotate) Set Rotation angle. Valid values: 0, 90, 180, 270
+ * @method integer getHeight() Obtain Height. Value range: 0-3000.
+ * @method void setHeight(integer $Height) Set Height. Value range: 0-3000.
+ * @method integer getFps() Obtain Frame rate. Value range: 0–200.
+ * @method void setFps(integer $Fps) Set Frame rate. Value range: 0–200.
+ * @method integer getGop() Obtain Keyframe interval in seconds. Value range: 0–50.
+ * @method void setGop(integer $Gop) Set Keyframe interval in seconds. Value range: 0–50.
+ * @method integer getRotate() Obtain Rotation angle.
+0, 90, 180, 270.
+ * @method void setRotate(integer $Rotate) Set Rotation angle.
+0, 90, 180, 270.
  * @method string getProfile() Obtain Encoding quality:
 baseline/main/high.
  * @method void setProfile(string $Profile) Set Encoding quality:
@@ -60,8 +66,8 @@ baseline/main/high.
  * @method void setHeightToOrig(integer $HeightToOrig) Set Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
  * @method integer getFpsToOrig() Obtain Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
  * @method void setFpsToOrig(integer $FpsToOrig) Set Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
- * @method float getAdaptBitratePercent() Obtain VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+ * @method float getAdaptBitratePercent() Obtain `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
  */
 class ModifyLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -83,7 +89,8 @@ aac/mp3.
     public $Acodec;
 
     /**
-     * @var integer Audio bitrate. Value range: 0–500. Default value: 0.
+     * @var integer Audio bitrate. Default value: 0.
+Value range: 0–500.
      */
     public $AudioBitrate;
 
@@ -93,12 +100,13 @@ aac/mp3.
     public $Description;
 
     /**
-     * @var integer Video bitrate. Value range: 100–8,000
+     * @var integer Video bitrate. Value range: 100–8000 Kbps.
+Note: the bitrate value must be a multiple of 100.
      */
     public $VideoBitrate;
 
     /**
-     * @var integer Width. Value range: 0–3,000
+     * @var integer Width. Value range: 0-3000.
      */
     public $Width;
 
@@ -113,22 +121,23 @@ aac/mp3.
     public $NeedAudio;
 
     /**
-     * @var integer Height. Value range: 0–3,000
+     * @var integer Height. Value range: 0-3000.
      */
     public $Height;
 
     /**
-     * @var integer Frame rate. Value range: 0–200
+     * @var integer Frame rate. Value range: 0–200.
      */
     public $Fps;
 
     /**
-     * @var integer Keyframe interval in seconds. Value range: 0–50
+     * @var integer Keyframe interval in seconds. Value range: 0–50.
      */
     public $Gop;
 
     /**
-     * @var integer Rotation angle. Valid values: 0, 90, 180, 270
+     * @var integer Rotation angle.
+0, 90, 180, 270.
      */
     public $Rotate;
 
@@ -154,7 +163,7 @@ baseline/main/high.
     public $FpsToOrig;
 
     /**
-     * @var float VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * @var float `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     public $AdaptBitratePercent;
 
@@ -164,22 +173,25 @@ baseline/main/high.
 h264/h265.
      * @param string $Acodec Audio encoding format:
 aac/mp3.
-     * @param integer $AudioBitrate Audio bitrate. Value range: 0–500. Default value: 0.
+     * @param integer $AudioBitrate Audio bitrate. Default value: 0.
+Value range: 0–500.
      * @param string $Description Template description.
-     * @param integer $VideoBitrate Video bitrate. Value range: 100–8,000
-     * @param integer $Width Width. Value range: 0–3,000
+     * @param integer $VideoBitrate Video bitrate. Value range: 100–8000 Kbps.
+Note: the bitrate value must be a multiple of 100.
+     * @param integer $Width Width. Value range: 0-3000.
      * @param integer $NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
      * @param integer $NeedAudio Whether to keep the audio. 0: no; 1: yes. Default value: 1.
-     * @param integer $Height Height. Value range: 0–3,000
-     * @param integer $Fps Frame rate. Value range: 0–200
-     * @param integer $Gop Keyframe interval in seconds. Value range: 0–50
-     * @param integer $Rotate Rotation angle. Valid values: 0, 90, 180, 270
+     * @param integer $Height Height. Value range: 0-3000.
+     * @param integer $Fps Frame rate. Value range: 0–200.
+     * @param integer $Gop Keyframe interval in seconds. Value range: 0–50.
+     * @param integer $Rotate Rotation angle.
+0, 90, 180, 270.
      * @param string $Profile Encoding quality:
 baseline/main/high.
      * @param integer $BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
      * @param integer $HeightToOrig Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
      * @param integer $FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
-     * @param float $AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * @param float $AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     function __construct()
     {

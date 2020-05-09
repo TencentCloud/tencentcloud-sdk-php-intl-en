@@ -18,36 +18,36 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Dedicated tunnel information list.
+ * Dedicated tunnel information list
  *
- * @method string getDirectConnectTunnelId() Obtain Dedicated tunnel ID.
- * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) Set Dedicated tunnel ID.
+ * @method string getDirectConnectTunnelId() Obtain Dedicated tunnel ID
+ * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) Set Dedicated tunnel ID
  * @method string getDirectConnectId() Obtain Connection ID.
  * @method void setDirectConnectId(string $DirectConnectId) Set Connection ID.
- * @method string getState() Obtain Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected.
- * @method void setState(string $State) Set Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected.
+ * @method string getState() Obtain Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected
+ * @method void setState(string $State) Set Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected
  * @method string getDirectConnectOwnerAccount() Obtain Connection owner, i.e., developer account ID.
  * @method void setDirectConnectOwnerAccount(string $DirectConnectOwnerAccount) Set Connection owner, i.e., developer account ID.
- * @method string getOwnerAccount() Obtain Dedicated tunnel owner, i.e., developer account ID.
- * @method void setOwnerAccount(string $OwnerAccount) Set Dedicated tunnel owner, i.e., developer account ID.
+ * @method string getOwnerAccount() Obtain Dedicated tunnel owner, i.e., developer account ID
+ * @method void setOwnerAccount(string $OwnerAccount) Set Dedicated tunnel owner, i.e., developer account ID
  * @method string getNetworkType() Obtain Network type. Valid values: VPC, BMVPC, CCN.
  VPC: Virtual Private Cloud; BMVPC: BM VPC; CCN: Cloud Connect Network.
  * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: VPC, BMVPC, CCN.
@@ -64,20 +64,20 @@ REJECTED: Rejected.
  * @method void setBgpPeer(BgpPeer $BgpPeer) Set User-side BGP, including Asn and AuthKey.
  * @method array getRouteFilterPrefixes() Obtain User-side IP range.
  * @method void setRouteFilterPrefixes(array $RouteFilterPrefixes) Set User-side IP range.
- * @method integer getVlan() Obtain VLAN of a dedicated tunnel.
- * @method void setVlan(integer $Vlan) Set VLAN of a dedicated tunnel.
+ * @method integer getVlan() Obtain Dedicated tunnel `Vlan`
+ * @method void setVlan(integer $Vlan) Set Dedicated tunnel `Vlan`
  * @method string getTencentAddress() Obtain TencentAddress: Tencent-side IP address.
  * @method void setTencentAddress(string $TencentAddress) Set TencentAddress: Tencent-side IP address.
  * @method string getCustomerAddress() Obtain CustomerAddress: User-side IP address.
  * @method void setCustomerAddress(string $CustomerAddress) Set CustomerAddress: User-side IP address.
- * @method string getDirectConnectTunnelName() Obtain Dedicated tunnel name.
- * @method void setDirectConnectTunnelName(string $DirectConnectTunnelName) Set Dedicated tunnel name.
- * @method string getCreatedTime() Obtain Creation time of a dedicated tunnel.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time of a dedicated tunnel.
- * @method integer getBandwidth() Obtain Bandwidth value of a dedicated tunnel.
- * @method void setBandwidth(integer $Bandwidth) Set Bandwidth value of a dedicated tunnel.
- * @method array getTagSet() Obtain Tag value of a dedicated tunnel.
- * @method void setTagSet(array $TagSet) Set Tag value of a dedicated tunnel.
+ * @method string getDirectConnectTunnelName() Obtain Dedicated tunnel name
+ * @method void setDirectConnectTunnelName(string $DirectConnectTunnelName) Set Dedicated tunnel name
+ * @method string getCreatedTime() Obtain Dedicated tunnel creation time
+ * @method void setCreatedTime(string $CreatedTime) Set Dedicated tunnel creation time
+ * @method integer getBandwidth() Obtain Dedicated tunnel bandwidth value
+ * @method void setBandwidth(integer $Bandwidth) Set Dedicated tunnel bandwidth value
+ * @method array getTagSet() Obtain Dedicated tunnel tag value
+ * @method void setTagSet(array $TagSet) Set Dedicated tunnel tag value
  * @method string getNetDetectId() Obtain Associated custom network probe ID
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNetDetectId(string $NetDetectId) Set Associated custom network probe ID
@@ -98,9 +98,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBfdEnable(integer $BfdEnable) Set Whether to enable BFD
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAccessPointType() Obtain Access point type of a dedicated tunnel.
+ * @method string getAccessPointType() Obtain Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAccessPointType(string $AccessPointType) Set Access point type of a dedicated tunnel.
+ * @method void setAccessPointType(string $AccessPointType) Set Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getDirectConnectGatewayName() Obtain Direct connect gateway name.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -110,11 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVpcName(string $VpcName) Set VPC name.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTencentBackupAddress() Obtain TencentBackupAddress, i.e., Tencent-side standby IP address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTencentBackupAddress(string $TencentBackupAddress) Set TencentBackupAddress, i.e., Tencent-side standby IP address
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DirectConnectTunnel extends AbstractModel
 {
     /**
-     * @var string Dedicated tunnel ID.
+     * @var string Dedicated tunnel ID
      */
     public $DirectConnectTunnelId;
 
@@ -124,16 +128,16 @@ class DirectConnectTunnel extends AbstractModel
     public $DirectConnectId;
 
     /**
-     * @var string Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected.
+     * @var string Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected
      */
     public $State;
 
@@ -143,7 +147,7 @@ REJECTED: Rejected.
     public $DirectConnectOwnerAccount;
 
     /**
-     * @var string Dedicated tunnel owner, i.e., developer account ID.
+     * @var string Dedicated tunnel owner, i.e., developer account ID
      */
     public $OwnerAccount;
 
@@ -184,7 +188,7 @@ REJECTED: Rejected.
     public $RouteFilterPrefixes;
 
     /**
-     * @var integer VLAN of a dedicated tunnel.
+     * @var integer Dedicated tunnel `Vlan`
      */
     public $Vlan;
 
@@ -199,22 +203,22 @@ REJECTED: Rejected.
     public $CustomerAddress;
 
     /**
-     * @var string Dedicated tunnel name.
+     * @var string Dedicated tunnel name
      */
     public $DirectConnectTunnelName;
 
     /**
-     * @var string Creation time of a dedicated tunnel.
+     * @var string Dedicated tunnel creation time
      */
     public $CreatedTime;
 
     /**
-     * @var integer Bandwidth value of a dedicated tunnel.
+     * @var integer Dedicated tunnel bandwidth value
      */
     public $Bandwidth;
 
     /**
-     * @var array Tag value of a dedicated tunnel.
+     * @var array Dedicated tunnel tag value
      */
     public $TagSet;
 
@@ -249,7 +253,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BfdEnable;
 
     /**
-     * @var string Access point type of a dedicated tunnel.
+     * @var string Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AccessPointType;
@@ -267,20 +271,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $VpcName;
 
     /**
-     * @param string $DirectConnectTunnelId Dedicated tunnel ID.
+     * @var string TencentBackupAddress, i.e., Tencent-side standby IP address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $TencentBackupAddress;
+
+    /**
+     * @param string $DirectConnectTunnelId Dedicated tunnel ID
      * @param string $DirectConnectId Connection ID.
-     * @param string $State Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected.
+     * @param string $State Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected
      * @param string $DirectConnectOwnerAccount Connection owner, i.e., developer account ID.
-     * @param string $OwnerAccount Dedicated tunnel owner, i.e., developer account ID.
+     * @param string $OwnerAccount Dedicated tunnel owner, i.e., developer account ID
      * @param string $NetworkType Network type. Valid values: VPC, BMVPC, CCN.
  VPC: Virtual Private Cloud; BMVPC: BM VPC; CCN: Cloud Connect Network.
      * @param string $NetworkRegion Network of the VPC region, such as `ap-guangzhou`.
@@ -289,13 +299,13 @@ REJECTED: Rejected.
      * @param string $RouteType BGP: BGP routing; STATIC: Static routing. Default value: BGP routing.
      * @param BgpPeer $BgpPeer User-side BGP, including Asn and AuthKey.
      * @param array $RouteFilterPrefixes User-side IP range.
-     * @param integer $Vlan VLAN of a dedicated tunnel.
+     * @param integer $Vlan Dedicated tunnel `Vlan`
      * @param string $TencentAddress TencentAddress: Tencent-side IP address.
      * @param string $CustomerAddress CustomerAddress: User-side IP address.
-     * @param string $DirectConnectTunnelName Dedicated tunnel name.
-     * @param string $CreatedTime Creation time of a dedicated tunnel.
-     * @param integer $Bandwidth Bandwidth value of a dedicated tunnel.
-     * @param array $TagSet Tag value of a dedicated tunnel.
+     * @param string $DirectConnectTunnelName Dedicated tunnel name
+     * @param string $CreatedTime Dedicated tunnel creation time
+     * @param integer $Bandwidth Dedicated tunnel bandwidth value
+     * @param array $TagSet Dedicated tunnel tag value
      * @param string $NetDetectId Associated custom network probe ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $EnableBGPCommunity BGP community switch
@@ -306,11 +316,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $BfdEnable Whether to enable BFD
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AccessPointType Access point type of a dedicated tunnel.
+     * @param string $AccessPointType Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DirectConnectGatewayName Direct connect gateway name.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $VpcName VPC name.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -443,6 +455,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
             $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
+            $this->TencentBackupAddress = $param["TencentBackupAddress"];
         }
     }
 }

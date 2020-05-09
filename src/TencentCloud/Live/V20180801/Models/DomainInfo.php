@@ -20,121 +20,157 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LVB domain name information
  *
- * @method string getName() Obtain LVB domain name
- * @method void setName(string $Name) Set LVB domain name
- * @method integer getType() Obtain Domain name type. 0: push, 1: playback
- * @method void setType(integer $Type) Set Domain name type. 0: push, 1: playback
- * @method integer getStatus() Obtain Domain name status. 0: disabled, 1: enabled.
- * @method void setStatus(integer $Status) Set Domain name status. 0: disabled, 1: enabled.
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method integer getBCName() Obtain Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
- * @method void setBCName(integer $BCName) Set Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
- * @method string getTargetDomain() Obtain Domain name corresponding to the CNAME record
- * @method void setTargetDomain(string $TargetDomain) Set Domain name corresponding to the CNAME record
+ * @method string getName() Obtain LVB domain name.
+ * @method void setName(string $Name) Set LVB domain name.
+ * @method integer getType() Obtain Domain name type:
+0: push.
+1: playback.
+ * @method void setType(integer $Type) Set Domain name type:
+0: push.
+1: playback.
+ * @method integer getStatus() Obtain Domain name status:
+0: deactivated.
+1: activated.
+ * @method void setStatus(integer $Status) Set Domain name status:
+0: deactivated.
+1: activated.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method integer getBCName() Obtain Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes.
+ * @method void setBCName(integer $BCName) Set Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes.
+ * @method string getTargetDomain() Obtain Domain name corresponding to CNAME record.
+ * @method void setTargetDomain(string $TargetDomain) Set Domain name corresponding to CNAME record.
  * @method integer getPlayType() Obtain Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China.
+1: in Mainland China.
+2: global.
+3: outside Mainland China.
  * @method void setPlayType(integer $PlayType) Set Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China.
- * @method integer getIsDelayLive() Obtain 0: LVB,
+1: in Mainland China.
+2: global.
+3: outside Mainland China.
+ * @method integer getIsDelayLive() Obtain Whether it is LCB:
+0: LVB.
 1: LCB.
- * @method void setIsDelayLive(integer $IsDelayLive) Set 0: LVB,
+ * @method void setIsDelayLive(integer $IsDelayLive) Set Whether it is LCB:
+0: LVB.
 1: LCB.
- * @method string getCurrentCName() Obtain Information of currently used CNAME record
- * @method void setCurrentCName(string $CurrentCName) Set Information of currently used CNAME record
- * @method integer getRentTag() Obtain Whether it is a leased domain name
- * @method void setRentTag(integer $RentTag) Set Whether it is a leased domain name
- * @method string getRentExpireTime() Obtain Expiration time of leased domain name
- * @method void setRentExpireTime(string $RentExpireTime) Set Expiration time of leased domain name
- * @method integer getIsMiniProgramLive() Obtain 0: LVB,
-1: LVB on WeChat Mini Program.
+ * @method string getCurrentCName() Obtain Information of currently used CNAME record.
+ * @method void setCurrentCName(string $CurrentCName) Set Information of currently used CNAME record.
+ * @method integer getRentTag() Obtain Disused parameter, which can be ignored.
+ * @method void setRentTag(integer $RentTag) Set Disused parameter, which can be ignored.
+ * @method string getRentExpireTime() Obtain Disused parameter, which can be ignored.
+ * @method void setRentExpireTime(string $RentExpireTime) Set Disused parameter, which can be ignored.
+ * @method integer getIsMiniProgramLive() Obtain 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) Set 0: LVB,
-1: LVB on WeChat Mini Program.
+ * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) Set 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DomainInfo extends AbstractModel
 {
     /**
-     * @var string LVB domain name
+     * @var string LVB domain name.
      */
     public $Name;
 
     /**
-     * @var integer Domain name type. 0: push, 1: playback
+     * @var integer Domain name type:
+0: push.
+1: playback.
      */
     public $Type;
 
     /**
-     * @var integer Domain name status. 0: disabled, 1: enabled.
+     * @var integer Domain name status:
+0: deactivated.
+1: activated.
      */
     public $Status;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var integer Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
+     * @var integer Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes.
      */
     public $BCName;
 
     /**
-     * @var string Domain name corresponding to the CNAME record
+     * @var string Domain name corresponding to CNAME record.
      */
     public $TargetDomain;
 
     /**
      * @var integer Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China.
+1: in Mainland China.
+2: global.
+3: outside Mainland China.
      */
     public $PlayType;
 
     /**
-     * @var integer 0: LVB,
+     * @var integer Whether it is LCB:
+0: LVB.
 1: LCB.
      */
     public $IsDelayLive;
 
     /**
-     * @var string Information of currently used CNAME record
+     * @var string Information of currently used CNAME record.
      */
     public $CurrentCName;
 
     /**
-     * @var integer Whether it is a leased domain name
+     * @var integer Disused parameter, which can be ignored.
      */
     public $RentTag;
 
     /**
-     * @var string Expiration time of leased domain name
+     * @var string Disused parameter, which can be ignored.
      */
     public $RentExpireTime;
 
     /**
-     * @var integer 0: LVB,
-1: LVB on WeChat Mini Program.
+     * @var integer 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsMiniProgramLive;
 
     /**
-     * @param string $Name LVB domain name
-     * @param integer $Type Domain name type. 0: push, 1: playback
-     * @param integer $Status Domain name status. 0: disabled, 1: enabled.
-     * @param string $CreateTime Creation time
-     * @param integer $BCName Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
-     * @param string $TargetDomain Domain name corresponding to the CNAME record
+     * @param string $Name LVB domain name.
+     * @param integer $Type Domain name type:
+0: push.
+1: playback.
+     * @param integer $Status Domain name status:
+0: deactivated.
+1: activated.
+     * @param string $CreateTime Creation time.
+     * @param integer $BCName Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes.
+     * @param string $TargetDomain Domain name corresponding to CNAME record.
      * @param integer $PlayType Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China.
-     * @param integer $IsDelayLive 0: LVB,
+1: in Mainland China.
+2: global.
+3: outside Mainland China.
+     * @param integer $IsDelayLive Whether it is LCB:
+0: LVB.
 1: LCB.
-     * @param string $CurrentCName Information of currently used CNAME record
-     * @param integer $RentTag Whether it is a leased domain name
-     * @param string $RentExpireTime Expiration time of leased domain name
-     * @param integer $IsMiniProgramLive 0: LVB,
-1: LVB on WeChat Mini Program.
+     * @param string $CurrentCName Information of currently used CNAME record.
+     * @param integer $RentTag Disused parameter, which can be ignored.
+     * @param string $RentExpireTime Disused parameter, which can be ignored.
+     * @param integer $IsMiniProgramLive 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

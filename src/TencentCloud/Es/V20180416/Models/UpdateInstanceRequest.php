@@ -68,6 +68,8 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
  * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set Public network access status of Kibana
  * @method string getKibanaPrivateAccess() Obtain Private network access status of Kibana
  * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set Private network access status of Kibana
+ * @method integer getBasicSecurityType() Obtain Enables or disables user authentication for ES Basic Edition v6.8 and above
+ * @method void setBasicSecurityType(integer $BasicSecurityType) Set Enables or disables user authentication for ES Basic Edition v6.8 and above
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -168,6 +170,11 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
     public $KibanaPrivateAccess;
 
     /**
+     * @var integer Enables or disables user authentication for ES Basic Edition v6.8 and above
+     */
+    public $BasicSecurityType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
      * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
@@ -192,6 +199,7 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
      * @param EsPublicAcl $EsPublicAcl Public network ACL
      * @param string $KibanaPublicAccess Public network access status of Kibana
      * @param string $KibanaPrivateAccess Private network access status of Kibana
+     * @param integer $BasicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
      */
     function __construct()
     {
@@ -284,6 +292,10 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
 
         if (array_key_exists("KibanaPrivateAccess",$param) and $param["KibanaPrivateAccess"] !== null) {
             $this->KibanaPrivateAccess = $param["KibanaPrivateAccess"];
+        }
+
+        if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
+            $this->BasicSecurityType = $param["BasicSecurityType"];
         }
     }
 }

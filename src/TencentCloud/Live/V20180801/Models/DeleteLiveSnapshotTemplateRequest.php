@@ -21,17 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * DeleteLiveSnapshotTemplate request structure.
  *
  * @method integer getTemplateId() Obtain Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
  */
 class DeleteLiveSnapshotTemplateRequest extends AbstractModel
 {
     /**
      * @var integer Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
      */
     public $TemplateId;
 
     /**
      * @param integer $TemplateId Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
      */
     function __construct()
     {

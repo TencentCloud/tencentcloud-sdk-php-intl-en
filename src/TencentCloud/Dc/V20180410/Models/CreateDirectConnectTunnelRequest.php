@@ -66,6 +66,8 @@ Default value: Non-zero.
  * @method void setTencentAddress(string $TencentAddress) Set TencentAddress: Tencent-side IP address.
  * @method string getCustomerAddress() Obtain CustomerAddress: User-side IP address.
  * @method void setCustomerAddress(string $CustomerAddress) Set CustomerAddress: User-side IP address.
+ * @method string getTencentBackupAddress() Obtain TencentBackupAddress, i.e., Tencent-side standby IP address
+ * @method void setTencentBackupAddress(string $TencentBackupAddress) Set TencentBackupAddress, i.e., Tencent-side standby IP address
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -149,6 +151,11 @@ Default value: Non-zero.
     public $CustomerAddress;
 
     /**
+     * @var string TencentBackupAddress, i.e., Tencent-side standby IP address
+     */
+    public $TencentBackupAddress;
+
+    /**
      * @param string $DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      * @param string $DirectConnectTunnelName Dedicated tunnel name.
      * @param string $DirectConnectOwnerAccount Connection owner, who is the current customer by default.
@@ -172,6 +179,7 @@ Default value: BGP routing.
 Default value: Non-zero.
      * @param string $TencentAddress TencentAddress: Tencent-side IP address.
      * @param string $CustomerAddress CustomerAddress: User-side IP address.
+     * @param string $TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
      */
     function __construct()
     {
@@ -246,6 +254,10 @@ Default value: Non-zero.
 
         if (array_key_exists("CustomerAddress",$param) and $param["CustomerAddress"] !== null) {
             $this->CustomerAddress = $param["CustomerAddress"];
+        }
+
+        if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
+            $this->TencentBackupAddress = $param["TencentBackupAddress"];
         }
     }
 }

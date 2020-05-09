@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
  * @method MigrateDetailInfo getDetail() Obtain Task details
  * @method void setDetail(MigrateDetailInfo $Detail) Set Task details
+ * @method array getErrorInfo() Obtain Prompt message for task error, which is not null or empty when an error occurs with the task
+ * @method void setErrorInfo(array $ErrorInfo) Set Prompt message for task error, which is not null or empty when an error occurs with the task
  */
 class MigrateJobInfo extends AbstractModel
 {
@@ -129,6 +131,11 @@ class MigrateJobInfo extends AbstractModel
     public $Detail;
 
     /**
+     * @var array Prompt message for task error, which is not null or empty when an error occurs with the task
+     */
+    public $ErrorInfo;
+
+    /**
      * @param string $JobId Data migration task ID
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
@@ -144,6 +151,7 @@ class MigrateJobInfo extends AbstractModel
      * @param string $EndTime Task end time
      * @param integer $Status Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
      * @param MigrateDetailInfo $Detail Task details
+     * @param array $ErrorInfo Prompt message for task error, which is not null or empty when an error occurs with the task
      */
     function __construct()
     {
@@ -220,6 +228,15 @@ class MigrateJobInfo extends AbstractModel
         if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
             $this->Detail = new MigrateDetailInfo();
             $this->Detail->deserialize($param["Detail"]);
+        }
+
+        if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
+            $this->ErrorInfo = [];
+            foreach ($param["ErrorInfo"] as $key => $value){
+                $obj = new ErrorInfo();
+                $obj->deserialize($value);
+                array_push($this->ErrorInfo, $obj);
+            }
         }
     }
 }

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSignId() Obtain Signature ID
  * @method void setSignId(integer $SignId) Set Signature ID
- * @method integer getInternational() Obtain Whether it is Global SMS. Valid values:
+ * @method integer getInternational() Obtain Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS
- * @method void setInternational(integer $International) Set Whether it is Global SMS. Valid values:
+1: Global SMS.
+ * @method void setInternational(integer $International) Set Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS
+1: Global SMS.
  * @method integer getStatusCode() Obtain Signature application status. Valid values:
 0: approved.
 -1: rejected or failed.
@@ -49,9 +49,9 @@ class DescribeSignListStatus extends AbstractModel
     public $SignId;
 
     /**
-     * @var integer Whether it is Global SMS. Valid values:
+     * @var integer Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS
+1: Global SMS.
      */
     public $International;
 
@@ -79,9 +79,9 @@ class DescribeSignListStatus extends AbstractModel
 
     /**
      * @param integer $SignId Signature ID
-     * @param integer $International Whether it is Global SMS. Valid values:
+     * @param integer $International Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS
+1: Global SMS.
      * @param integer $StatusCode Signature application status. Valid values:
 0: approved.
 -1: rejected or failed.

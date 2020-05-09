@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
- * @method string getAppName() Obtain Push path.
- * @method void setAppName(string $AppName) Set Push path.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
  */
@@ -35,7 +35,7 @@ class DeleteLiveWatermarkRuleRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string Push path.
+     * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public $AppName;
 
@@ -46,7 +46,7 @@ class DeleteLiveWatermarkRuleRequest extends AbstractModel
 
     /**
      * @param string $DomainName Push domain name.
-     * @param string $AppName Push path.
+     * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      * @param string $StreamName Stream name.
      */
     function __construct()

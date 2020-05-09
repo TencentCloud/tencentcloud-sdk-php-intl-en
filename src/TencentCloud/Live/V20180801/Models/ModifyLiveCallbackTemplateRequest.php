@@ -28,16 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Description.
  * @method string getStreamBeginNotifyUrl() Obtain Stream starting callback URL.
  * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) Set Stream starting callback URL.
- * @method string getStreamEndNotifyUrl() Obtain Stream ending callback URL.
- * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) Set Stream ending callback URL.
+ * @method string getStreamEndNotifyUrl() Obtain Interruption callback URL.
+ * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) Set Interruption callback URL.
  * @method string getRecordNotifyUrl() Obtain Recording callback URL.
  * @method void setRecordNotifyUrl(string $RecordNotifyUrl) Set Recording callback URL.
  * @method string getSnapshotNotifyUrl() Obtain Screencapturing callback URL.
  * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) Set Screencapturing callback URL.
  * @method string getPornCensorshipNotifyUrl() Obtain Porn detection callback URL.
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) Set Porn detection callback URL.
- * @method string getCallbackKey() Obtain Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
- * @method void setCallbackKey(string $CallbackKey) Set Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
+ * @method string getCallbackKey() Obtain Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
+ * @method void setCallbackKey(string $CallbackKey) Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
  */
 class ModifyLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -62,7 +64,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     public $StreamBeginNotifyUrl;
 
     /**
-     * @var string Stream ending callback URL.
+     * @var string Interruption callback URL.
      */
     public $StreamEndNotifyUrl;
 
@@ -82,7 +84,8 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     public $PornCensorshipNotifyUrl;
 
     /**
-     * @var string Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
+     * @var string Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
      */
     public $CallbackKey;
 
@@ -91,11 +94,12 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @param string $TemplateName Template name.
      * @param string $Description Description.
      * @param string $StreamBeginNotifyUrl Stream starting callback URL.
-     * @param string $StreamEndNotifyUrl Stream ending callback URL.
+     * @param string $StreamEndNotifyUrl Interruption callback URL.
      * @param string $RecordNotifyUrl Recording callback URL.
      * @param string $SnapshotNotifyUrl Screencapturing callback URL.
      * @param string $PornCensorshipNotifyUrl Porn detection callback URL.
-     * @param string $CallbackKey Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
+     * @param string $CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
      */
     function __construct()
     {

@@ -18,34 +18,32 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Transcoding template information
+ * Transcoding template information.
  *
  * @method string getVcodec() Obtain Video encoding format:
 h264/h265.
  * @method void setVcodec(string $Vcodec) Set Video encoding format:
 h264/h265.
- * @method integer getVideoBitrate() Obtain Video bitrate in Kbps. Value range: 100–8,000
- * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate in Kbps. Value range: 100–8,000
- * @method string getAcodec() Obtain Audio encoding format: AAC/MP3
-aac/mp3.
- * @method void setAcodec(string $Acodec) Set Audio encoding format: AAC/MP3
-aac/mp3.
- * @method integer getAudioBitrate() Obtain Audio bitrate. Value range: 0–500
- * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. Value range: 0–500
- * @method integer getWidth() Obtain Width. Value range: 0–3,000
- * @method void setWidth(integer $Width) Set Width. Value range: 0–3,000
- * @method integer getHeight() Obtain Height. Value range: 0–3,000
- * @method void setHeight(integer $Height) Set Height. Value range: 0–3,000
- * @method integer getFps() Obtain Frame rate. Value range: 0–200
- * @method void setFps(integer $Fps) Set Frame rate. Value range: 0–200
- * @method integer getGop() Obtain Keyframe interval in seconds. Value range: 1–50
- * @method void setGop(integer $Gop) Set Keyframe interval in seconds. Value range: 1–50
- * @method integer getRotate() Obtain Rotation angle. Valid values: 0, 90, 180, 270
- * @method void setRotate(integer $Rotate) Set Rotation angle. Valid values: 0, 90, 180, 270
- * @method string getProfile() Obtain Encoding quality:
-baseline/main/high.
- * @method void setProfile(string $Profile) Set Encoding quality:
-baseline/main/high.
+ * @method integer getVideoBitrate() Obtain Video bitrate. Value range: 100–8000 Kbps.
+ * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: 100–8000 Kbps.
+ * @method string getAcodec() Obtain Audio codec. Valid values: aac, mp3.
+ * @method void setAcodec(string $Acodec) Set Audio codec. Valid values: aac, mp3.
+ * @method integer getAudioBitrate() Obtain Audio bitrate. Value range: 0–500 Kbps.
+ * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. Value range: 0–500 Kbps.
+ * @method integer getWidth() Obtain Width. Value range: 0–3000.
+ * @method void setWidth(integer $Width) Set Width. Value range: 0–3000.
+ * @method integer getHeight() Obtain Height. Value range: 0–3000.
+ * @method void setHeight(integer $Height) Set Height. Value range: 0–3000.
+ * @method integer getFps() Obtain Frame rate. Value range: 0–200 FPS.
+ * @method void setFps(integer $Fps) Set Frame rate. Value range: 0–200 FPS.
+ * @method integer getGop() Obtain Keyframe interval. Value range: 1–50s.
+ * @method void setGop(integer $Gop) Set Keyframe interval. Value range: 1–50s.
+ * @method integer getRotate() Obtain Rotation angle. Valid values: 0, 90, 180, 270.
+ * @method void setRotate(integer $Rotate) Set Rotation angle. Valid values: 0, 90, 180, 270.
+ * @method string getProfile() Obtain Encoding quality. Valid values:
+baseline, main, high.
+ * @method void setProfile(string $Profile) Set Encoding quality. Valid values:
+baseline, main, high.
  * @method integer getBitrateToOrig() Obtain Whether to not exceed the original bitrate. 0: no; 1: yes.
  * @method void setBitrateToOrig(integer $BitrateToOrig) Set Whether to not exceed the original bitrate. 0: no; 1: yes.
  * @method integer getHeightToOrig() Obtain Whether to not exceed the original height. 0: no; 1: yes.
@@ -58,14 +56,14 @@ baseline/main/high.
  * @method void setNeedAudio(integer $NeedAudio) Set Whether to keep the audio. 0: no; 1: yes.
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
- * @method string getTemplateName() Obtain Template name
- * @method void setTemplateName(string $TemplateName) Set Template name
- * @method string getDescription() Obtain Template description
- * @method void setDescription(string $Description) Set Template description
- * @method integer getAiTransCode() Obtain Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
- * @method void setAiTransCode(integer $AiTransCode) Set Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
- * @method float getAdaptBitratePercent() Obtain VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+ * @method string getTemplateName() Obtain Template name.
+ * @method void setTemplateName(string $TemplateName) Set Template name.
+ * @method string getDescription() Obtain Template description.
+ * @method void setDescription(string $Description) Set Template description.
+ * @method integer getAiTransCode() Obtain Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
+ * @method void setAiTransCode(integer $AiTransCode) Set Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
+ * @method float getAdaptBitratePercent() Obtain `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
  */
 class TemplateInfo extends AbstractModel
 {
@@ -76,49 +74,48 @@ h264/h265.
     public $Vcodec;
 
     /**
-     * @var integer Video bitrate in Kbps. Value range: 100–8,000
+     * @var integer Video bitrate. Value range: 100–8000 Kbps.
      */
     public $VideoBitrate;
 
     /**
-     * @var string Audio encoding format: AAC/MP3
-aac/mp3.
+     * @var string Audio codec. Valid values: aac, mp3.
      */
     public $Acodec;
 
     /**
-     * @var integer Audio bitrate. Value range: 0–500
+     * @var integer Audio bitrate. Value range: 0–500 Kbps.
      */
     public $AudioBitrate;
 
     /**
-     * @var integer Width. Value range: 0–3,000
+     * @var integer Width. Value range: 0–3000.
      */
     public $Width;
 
     /**
-     * @var integer Height. Value range: 0–3,000
+     * @var integer Height. Value range: 0–3000.
      */
     public $Height;
 
     /**
-     * @var integer Frame rate. Value range: 0–200
+     * @var integer Frame rate. Value range: 0–200 FPS.
      */
     public $Fps;
 
     /**
-     * @var integer Keyframe interval in seconds. Value range: 1–50
+     * @var integer Keyframe interval. Value range: 1–50s.
      */
     public $Gop;
 
     /**
-     * @var integer Rotation angle. Valid values: 0, 90, 180, 270
+     * @var integer Rotation angle. Valid values: 0, 90, 180, 270.
      */
     public $Rotate;
 
     /**
-     * @var string Encoding quality:
-baseline/main/high.
+     * @var string Encoding quality. Valid values:
+baseline, main, high.
      */
     public $Profile;
 
@@ -153,49 +150,48 @@ baseline/main/high.
     public $TemplateId;
 
     /**
-     * @var string Template name
+     * @var string Template name.
      */
     public $TemplateName;
 
     /**
-     * @var string Template description
+     * @var string Template description.
      */
     public $Description;
 
     /**
-     * @var integer Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+     * @var integer Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
      */
     public $AiTransCode;
 
     /**
-     * @var float VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * @var float `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     public $AdaptBitratePercent;
 
     /**
      * @param string $Vcodec Video encoding format:
 h264/h265.
-     * @param integer $VideoBitrate Video bitrate in Kbps. Value range: 100–8,000
-     * @param string $Acodec Audio encoding format: AAC/MP3
-aac/mp3.
-     * @param integer $AudioBitrate Audio bitrate. Value range: 0–500
-     * @param integer $Width Width. Value range: 0–3,000
-     * @param integer $Height Height. Value range: 0–3,000
-     * @param integer $Fps Frame rate. Value range: 0–200
-     * @param integer $Gop Keyframe interval in seconds. Value range: 1–50
-     * @param integer $Rotate Rotation angle. Valid values: 0, 90, 180, 270
-     * @param string $Profile Encoding quality:
-baseline/main/high.
+     * @param integer $VideoBitrate Video bitrate. Value range: 100–8000 Kbps.
+     * @param string $Acodec Audio codec. Valid values: aac, mp3.
+     * @param integer $AudioBitrate Audio bitrate. Value range: 0–500 Kbps.
+     * @param integer $Width Width. Value range: 0–3000.
+     * @param integer $Height Height. Value range: 0–3000.
+     * @param integer $Fps Frame rate. Value range: 0–200 FPS.
+     * @param integer $Gop Keyframe interval. Value range: 1–50s.
+     * @param integer $Rotate Rotation angle. Valid values: 0, 90, 180, 270.
+     * @param string $Profile Encoding quality. Valid values:
+baseline, main, high.
      * @param integer $BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes.
      * @param integer $HeightToOrig Whether to not exceed the original height. 0: no; 1: yes.
      * @param integer $FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes.
      * @param integer $NeedVideo Whether to keep the video. 0: no; 1: yes.
      * @param integer $NeedAudio Whether to keep the audio. 0: no; 1: yes.
      * @param integer $TemplateId Template ID.
-     * @param string $TemplateName Template name
-     * @param string $Description Template description
-     * @param integer $AiTransCode Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
-     * @param float $AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * @param string $TemplateName Template name.
+     * @param string $Description Template description.
+     * @param integer $AiTransCode Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
+     * @param float $AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     function __construct()
     {

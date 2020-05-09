@@ -18,8 +18,7 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Watermark information
-
+ * Watermark information.
  *
  * @method integer getWatermarkId() Obtain Watermark ID.
  * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
@@ -35,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Current status. 0: not used. 1: in use.
  * @method string getCreateTime() Obtain Creation time.
  * @method void setCreateTime(string $CreateTime) Set Creation time.
- * @method integer getWidth() Obtain Watermark width
- * @method void setWidth(integer $Width) Set Watermark width
- * @method integer getHeight() Obtain Watermark height
- * @method void setHeight(integer $Height) Set Watermark height
+ * @method integer getWidth() Obtain Watermark width.
+ * @method void setWidth(integer $Width) Set Watermark width.
+ * @method integer getHeight() Obtain Watermark height.
+ * @method void setHeight(integer $Height) Set Watermark height.
  */
 class WatermarkInfo extends AbstractModel
 {
@@ -78,12 +77,12 @@ class WatermarkInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer Watermark width
+     * @var integer Watermark width.
      */
     public $Width;
 
     /**
-     * @var integer Watermark height
+     * @var integer Watermark height.
      */
     public $Height;
 
@@ -95,8 +94,8 @@ class WatermarkInfo extends AbstractModel
      * @param string $WatermarkName Watermark name.
      * @param integer $Status Current status. 0: not used. 1: in use.
      * @param string $CreateTime Creation time.
-     * @param integer $Width Watermark width
-     * @param integer $Height Watermark height
+     * @param integer $Width Watermark width.
+     * @param integer $Height Watermark height.
      */
     function __construct()
     {

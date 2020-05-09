@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlvParam(RecordParam $FlvParam) Set FLV recording parameter, which is set when FLV recording is enabled.
  * @method RecordParam getHlsParam() Obtain HLS recording parameter, which is set when HLS recording is enabled.
  * @method void setHlsParam(RecordParam $HlsParam) Set HLS recording parameter, which is set when HLS recording is enabled.
- * @method RecordParam getMp4Param() Obtain Mp4 recording parameter, which is set when Mp4 recording is enabled.
- * @method void setMp4Param(RecordParam $Mp4Param) Set Mp4 recording parameter, which is set when Mp4 recording is enabled.
+ * @method RecordParam getMp4Param() Obtain MP4 recording parameter, which is set when MP4 recording is enabled.
+ * @method void setMp4Param(RecordParam $Mp4Param) Set MP4 recording parameter, which is set when MP4 recording is enabled.
  * @method RecordParam getAacParam() Obtain AAC recording parameter, which is set when AAC recording is enabled.
  * @method void setAacParam(RecordParam $AacParam) Set AAC recording parameter, which is set when AAC recording is enabled.
  * @method HlsSpecialParam getHlsSpecialParam() Obtain Custom HLS recording parameter.
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set Custom HLS recording parameter.
- * @method RecordParam getMp3Param() Obtain Mp3 recording parameter, which is set when Mp3 recording is enabled.
- * @method void setMp3Param(RecordParam $Mp3Param) Set Mp3 recording parameter, which is set when Mp3 recording is enabled.
+ * @method RecordParam getMp3Param() Obtain MP3 recording parameter, which is set when MP3 recording is enabled.
+ * @method void setMp3Param(RecordParam $Mp3Param) Set MP3 recording parameter, which is set when MP3 recording is enabled.
  */
 class ModifyLiveRecordTemplateRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $HlsParam;
 
     /**
-     * @var RecordParam Mp4 recording parameter, which is set when Mp4 recording is enabled.
+     * @var RecordParam MP4 recording parameter, which is set when MP4 recording is enabled.
      */
     public $Mp4Param;
 
@@ -82,7 +82,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $HlsSpecialParam;
 
     /**
-     * @var RecordParam Mp3 recording parameter, which is set when Mp3 recording is enabled.
+     * @var RecordParam MP3 recording parameter, which is set when MP3 recording is enabled.
      */
     public $Mp3Param;
 
@@ -92,10 +92,10 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
      * @param string $Description Message description
      * @param RecordParam $FlvParam FLV recording parameter, which is set when FLV recording is enabled.
      * @param RecordParam $HlsParam HLS recording parameter, which is set when HLS recording is enabled.
-     * @param RecordParam $Mp4Param Mp4 recording parameter, which is set when Mp4 recording is enabled.
+     * @param RecordParam $Mp4Param MP4 recording parameter, which is set when MP4 recording is enabled.
      * @param RecordParam $AacParam AAC recording parameter, which is set when AAC recording is enabled.
      * @param HlsSpecialParam $HlsSpecialParam Custom HLS recording parameter.
-     * @param RecordParam $Mp3Param Mp3 recording parameter, which is set when Mp3 recording is enabled.
+     * @param RecordParam $Mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
      */
     function __construct()
     {

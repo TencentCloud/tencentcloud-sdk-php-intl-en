@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerAddress(string $CustomerAddress) Set User-side IP address.
  * @method integer getBandwidth() Obtain Bandwidth value of a dedicated tunnel in Mbps.
  * @method void setBandwidth(integer $Bandwidth) Set Bandwidth value of a dedicated tunnel in Mbps.
+ * @method string getTencentBackupAddress() Obtain Tencent-side standby IP address
+ * @method void setTencentBackupAddress(string $TencentBackupAddress) Set Tencent-side standby IP address
  */
 class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
     public $Bandwidth;
 
     /**
+     * @var string Tencent-side standby IP address
+     */
+    public $TencentBackupAddress;
+
+    /**
      * @param string $DirectConnectTunnelId Dedicated tunnel ID.
      * @param string $DirectConnectTunnelName Dedicated tunnel name.
      * @param BgpPeer $BgpPeer User-side BGP, including Asn and AuthKey.
@@ -80,6 +87,7 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
      * @param string $TencentAddress Tencent-side IP address.
      * @param string $CustomerAddress User-side IP address.
      * @param integer $Bandwidth Bandwidth value of a dedicated tunnel in Mbps.
+     * @param string $TencentBackupAddress Tencent-side standby IP address
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
+            $this->TencentBackupAddress = $param["TencentBackupAddress"];
         }
     }
 }

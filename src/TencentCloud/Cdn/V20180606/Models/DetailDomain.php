@@ -206,6 +206,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set S3 bucket origin access authentication configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method SecurityConfig getSecurityConfig() Obtain SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method ImageOptimization getImageOptimization() Obtain 
+ * @method void setImageOptimization(ImageOptimization $ImageOptimization) Set 
+ * @method UserAgentFilter getUserAgentFilter() Obtain 
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set 
  */
 class DetailDomain extends AbstractModel
 {
@@ -463,6 +471,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AwsPrivateAccess;
 
     /**
+     * @var SecurityConfig SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SecurityConfig;
+
+    /**
+     * @var ImageOptimization 
+     */
+    public $ImageOptimization;
+
+    /**
+     * @var UserAgentFilter 
+     */
+    public $UserAgentFilter;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Acceleration domain name
@@ -556,6 +580,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AwsPrivateAccess $AwsPrivateAccess S3 bucket origin access authentication configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SecurityConfig $SecurityConfig SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ImageOptimization $ImageOptimization 
+     * @param UserAgentFilter $UserAgentFilter 
      */
     function __construct()
     {
@@ -756,6 +784,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
             $this->AwsPrivateAccess = new AwsPrivateAccess();
             $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
+        }
+
+        if (array_key_exists("SecurityConfig",$param) and $param["SecurityConfig"] !== null) {
+            $this->SecurityConfig = new SecurityConfig();
+            $this->SecurityConfig->deserialize($param["SecurityConfig"]);
+        }
+
+        if (array_key_exists("ImageOptimization",$param) and $param["ImageOptimization"] !== null) {
+            $this->ImageOptimization = new ImageOptimization();
+            $this->ImageOptimization->deserialize($param["ImageOptimization"]);
+        }
+
+        if (array_key_exists("UserAgentFilter",$param) and $param["UserAgentFilter"] !== null) {
+            $this->UserAgentFilter = new UserAgentFilter();
+            $this->UserAgentFilter->deserialize($param["UserAgentFilter"]);
         }
     }
 }

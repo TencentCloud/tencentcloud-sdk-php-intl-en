@@ -18,28 +18,40 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Screencapturing template information
+ * Screencapturing template information.
  *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getTemplateName() Obtain Template name.
  * @method void setTemplateName(string $TemplateName) Set Template name.
- * @method integer getSnapshotInterval() Obtain Screencapturing interval in seconds. Value range: 5–300s.
- * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval in seconds. Value range: 5–300s.
- * @method integer getWidth() Obtain Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
- * @method void setWidth(integer $Width) Set Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
- * @method integer getHeight() Obtain Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
- * @method void setHeight(integer $Height) Set Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
+ * @method integer getSnapshotInterval() Obtain Screencapturing interval. Value range: 5–300s.
+ * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval. Value range: 5–300s.
+ * @method integer getWidth() Obtain Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio.
+ * @method void setWidth(integer $Width) Set Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio.
+ * @method integer getHeight() Obtain Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio.
+ * @method void setHeight(integer $Height) Set Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio.
  * @method integer getPornFlag() Obtain Whether to enable porn detection. 0: no, 1: yes.
  * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. 0: no, 1: yes.
- * @method integer getCosAppId() Obtain COS `AppId`.
- * @method void setCosAppId(integer $CosAppId) Set COS `AppId`.
+ * @method integer getCosAppId() Obtain COS application ID.
+ * @method void setCosAppId(integer $CosAppId) Set COS application ID.
  * @method string getCosBucket() Obtain COS bucket name.
  * @method void setCosBucket(string $CosBucket) Set COS bucket name.
  * @method string getCosRegion() Obtain COS region.
  * @method void setCosRegion(string $CosRegion) Set COS region.
- * @method string getDescription() Obtain Template description
- * @method void setDescription(string $Description) Set Template description
+ * @method string getDescription() Obtain Template description.
+ * @method void setDescription(string $Description) Set Template description.
+ * @method string getCosPrefix() Obtain COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setCosPrefix(string $CosPrefix) Set COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getCosFileName() Obtain COS filename.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setCosFileName(string $CosFileName) Set COS filename.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class SnapshotTemplateInfo extends AbstractModel
 {
@@ -54,17 +66,19 @@ class SnapshotTemplateInfo extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer Screencapturing interval in seconds. Value range: 5–300s.
+     * @var integer Screencapturing interval. Value range: 5–300s.
      */
     public $SnapshotInterval;
 
     /**
-     * @var integer Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
+     * @var integer Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio.
      */
     public $Width;
 
     /**
-     * @var integer Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
+     * @var integer Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio.
      */
     public $Height;
 
@@ -74,7 +88,7 @@ class SnapshotTemplateInfo extends AbstractModel
     public $PornFlag;
 
     /**
-     * @var integer COS `AppId`.
+     * @var integer COS application ID.
      */
     public $CosAppId;
 
@@ -89,21 +103,39 @@ class SnapshotTemplateInfo extends AbstractModel
     public $CosRegion;
 
     /**
-     * @var string Template description
+     * @var string Template description.
      */
     public $Description;
 
     /**
+     * @var string COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $CosPrefix;
+
+    /**
+     * @var string COS filename.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $CosFileName;
+
+    /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
-     * @param integer $SnapshotInterval Screencapturing interval in seconds. Value range: 5–300s.
-     * @param integer $Width Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
-     * @param integer $Height Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
+     * @param integer $SnapshotInterval Screencapturing interval. Value range: 5–300s.
+     * @param integer $Width Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio.
+     * @param integer $Height Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio.
      * @param integer $PornFlag Whether to enable porn detection. 0: no, 1: yes.
-     * @param integer $CosAppId COS `AppId`.
+     * @param integer $CosAppId COS application ID.
      * @param string $CosBucket COS bucket name.
      * @param string $CosRegion COS region.
-     * @param string $Description Template description
+     * @param string $Description Template description.
+     * @param string $CosPrefix COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $CosFileName COS filename.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -156,6 +188,14 @@ class SnapshotTemplateInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {
+            $this->CosPrefix = $param["CosPrefix"];
+        }
+
+        if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
+            $this->CosFileName = $param["CosFileName"];
         }
     }
 }

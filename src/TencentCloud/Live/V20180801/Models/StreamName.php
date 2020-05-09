@@ -18,7 +18,7 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of stream names
+ * Stream name list.
  *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
@@ -27,17 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getStreamStartTime() Obtain Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z.
+In UTC format, such as 2019-01-07T12:00:00Z.
  * @method void setStreamStartTime(string $StreamStartTime) Set Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z.
+In UTC format, such as 2019-01-07T12:00:00Z.
  * @method string getStreamEndTime() Obtain Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z.
+In UTC format, such as 2019-01-07T15:00:00Z.
  * @method void setStreamEndTime(string $StreamEndTime) Set Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z.
+In UTC format, such as 2019-01-07T15:00:00Z.
  * @method string getStopReason() Obtain Stop reason.
  * @method void setStopReason(string $StopReason) Set Stop reason.
  * @method integer getDuration() Obtain Push duration in seconds.
@@ -66,15 +62,13 @@ class StreamName extends AbstractModel
 
     /**
      * @var string Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z.
+In UTC format, such as 2019-01-07T12:00:00Z.
      */
     public $StreamStartTime;
 
     /**
      * @var string Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z.
+In UTC format, such as 2019-01-07T15:00:00Z.
      */
     public $StreamEndTime;
 
@@ -103,11 +97,9 @@ Example: 2019-01-07T15:00:00Z.
      * @param string $AppName Application name.
      * @param string $DomainName Push domain name.
      * @param string $StreamStartTime Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z.
+In UTC format, such as 2019-01-07T12:00:00Z.
      * @param string $StreamEndTime Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z.
+In UTC format, such as 2019-01-07T15:00:00Z.
      * @param string $StopReason Stop reason.
      * @param integer $Duration Push duration in seconds.
      * @param string $ClientIp Host IP.

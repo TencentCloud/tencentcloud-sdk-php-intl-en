@@ -18,18 +18,22 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Playback authentication key information
+ * Playback authentication key information.
  *
  * @method string getDomainName() Obtain Domain name.
  * @method void setDomainName(string $DomainName) Set Domain name.
- * @method integer getEnable() Obtain Whether to enable. 0: disabled; 1: enabled.
- * @method void setEnable(integer $Enable) Set Whether to enable. 0: disabled; 1: enabled.
+ * @method integer getEnable() Obtain Whether to enable:
+0: disable.
+1: enable.
+ * @method void setEnable(integer $Enable) Set Whether to enable:
+0: disable.
+1: enable.
  * @method string getAuthKey() Obtain Authentication key.
  * @method void setAuthKey(string $AuthKey) Set Authentication key.
  * @method integer getAuthDelta() Obtain Validity period in seconds.
  * @method void setAuthDelta(integer $AuthDelta) Set Validity period in seconds.
- * @method string getAuthBackKey() Obtain Authentication BackKey.
- * @method void setAuthBackKey(string $AuthBackKey) Set Authentication BackKey.
+ * @method string getAuthBackKey() Obtain Authentication `BackKey`.
+ * @method void setAuthBackKey(string $AuthBackKey) Set Authentication `BackKey`.
  */
 class PlayAuthKeyInfo extends AbstractModel
 {
@@ -39,7 +43,9 @@ class PlayAuthKeyInfo extends AbstractModel
     public $DomainName;
 
     /**
-     * @var integer Whether to enable. 0: disabled; 1: enabled.
+     * @var integer Whether to enable:
+0: disable.
+1: enable.
      */
     public $Enable;
 
@@ -54,16 +60,18 @@ class PlayAuthKeyInfo extends AbstractModel
     public $AuthDelta;
 
     /**
-     * @var string Authentication BackKey.
+     * @var string Authentication `BackKey`.
      */
     public $AuthBackKey;
 
     /**
      * @param string $DomainName Domain name.
-     * @param integer $Enable Whether to enable. 0: disabled; 1: enabled.
+     * @param integer $Enable Whether to enable:
+0: disable.
+1: enable.
      * @param string $AuthKey Authentication key.
      * @param integer $AuthDelta Validity period in seconds.
-     * @param string $AuthBackKey Authentication BackKey.
+     * @param string $AuthBackKey Authentication `BackKey`.
      */
     function __construct()
     {

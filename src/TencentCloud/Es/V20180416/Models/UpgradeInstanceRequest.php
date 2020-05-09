@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getEsVersion() Obtain Target ES version
- * @method void setEsVersion(string $EsVersion) Set Target ES version
+ * @method string getEsVersion() Obtain Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
+ * @method void setEsVersion(string $EsVersion) Set Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
  * @method boolean getCheckOnly() Obtain Whether to check for upgrade only. Default value: false
  * @method void setCheckOnly(boolean $CheckOnly) Set Whether to check for upgrade only. Default value: false
  * @method string getLicenseType() Obtain Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
@@ -39,7 +39,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Target ES version
+     * @var string Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
      */
     public $EsVersion;
 
@@ -60,7 +60,7 @@ class UpgradeInstanceRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID
-     * @param string $EsVersion Target ES version
+     * @param string $EsVersion Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
      * @param boolean $CheckOnly Whether to check for upgrade only. Default value: false
      * @param string $LicenseType Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
      * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>

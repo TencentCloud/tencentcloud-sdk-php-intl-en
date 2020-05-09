@@ -18,24 +18,24 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Push time
+ * Push time.
  *
- * @method string getPublishTime() Obtain Push time
-In UTC format, for example: 2018-06-29T19:00:00Z.
- * @method void setPublishTime(string $PublishTime) Set Push time
-In UTC format, for example: 2018-06-29T19:00:00Z.
+ * @method string getPublishTime() Obtain Push time.
+In UTC format, such as 2018-06-29T19:00:00Z.
+ * @method void setPublishTime(string $PublishTime) Set Push time.
+In UTC format, such as 2018-06-29T19:00:00Z.
  */
 class PublishTime extends AbstractModel
 {
     /**
-     * @var string Push time
-In UTC format, for example: 2018-06-29T19:00:00Z.
+     * @var string Push time.
+In UTC format, such as 2018-06-29T19:00:00Z.
      */
     public $PublishTime;
 
     /**
-     * @param string $PublishTime Push time
-In UTC format, for example: 2018-06-29T19:00:00Z.
+     * @param string $PublishTime Push time.
+In UTC format, such as 2018-06-29T19:00:00Z.
      */
     function __construct()
     {

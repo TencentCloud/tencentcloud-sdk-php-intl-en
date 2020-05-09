@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) Set Information set of the instances related to the scaling activity.
  * @method string getStatusMessageSimplified() Obtain Brief description of the scaling activity status.
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) Set Brief description of the scaling activity status.
+ * @method array getLifecycleActionResultSet() Obtain Result of the lifecycle hook action in the scaling activity
+ * @method void setLifecycleActionResultSet(array $LifecycleActionResultSet) Set Result of the lifecycle hook action in the scaling activity
  */
 class Activity extends AbstractModel
 {
@@ -129,6 +131,11 @@ class Activity extends AbstractModel
     public $StatusMessageSimplified;
 
     /**
+     * @var array Result of the lifecycle hook action in the scaling activity
+     */
+    public $LifecycleActionResultSet;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ActivityId Scaling activity ID.
      * @param string $ActivityType Scaling activity type. Value range:<br>
@@ -148,6 +155,7 @@ class Activity extends AbstractModel
      * @param string $CreatedTime Creation time of the scaling activity.
      * @param array $ActivityRelatedInstanceSet Information set of the instances related to the scaling activity.
      * @param string $StatusMessageSimplified Brief description of the scaling activity status.
+     * @param array $LifecycleActionResultSet Result of the lifecycle hook action in the scaling activity
      */
     function __construct()
     {
@@ -213,6 +221,15 @@ class Activity extends AbstractModel
 
         if (array_key_exists("StatusMessageSimplified",$param) and $param["StatusMessageSimplified"] !== null) {
             $this->StatusMessageSimplified = $param["StatusMessageSimplified"];
+        }
+
+        if (array_key_exists("LifecycleActionResultSet",$param) and $param["LifecycleActionResultSet"] !== null) {
+            $this->LifecycleActionResultSet = [];
+            foreach ($param["LifecycleActionResultSet"] as $key => $value){
+                $obj = new LifecycleActionResultInfo();
+                $obj->deserialize($value);
+                array_push($this->LifecycleActionResultSet, $obj);
+            }
         }
     }
 }

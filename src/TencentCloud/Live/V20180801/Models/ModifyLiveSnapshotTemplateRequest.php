@@ -38,14 +38,22 @@ Value range: 5–600s.
  * @method void setWidth(integer $Width) Set Screenshot width. Default value: 0 (original width).
  * @method integer getHeight() Obtain Screenshot height. Default value: 0 (original height).
  * @method void setHeight(integer $Height) Set Screenshot height. Default value: 0 (original height).
- * @method integer getPornFlag() Obtain Whether to enable porn detection. 0: no, 1: yes.
- * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. 0: no, 1: yes.
- * @method integer getCosAppId() Obtain COS `AppId`.
- * @method void setCosAppId(integer $CosAppId) Set COS `AppId`.
+ * @method integer getPornFlag() Obtain Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable.
+ * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable.
+ * @method integer getCosAppId() Obtain COS application ID.
+ * @method void setCosAppId(integer $CosAppId) Set COS application ID.
  * @method string getCosBucket() Obtain COS bucket name.
  * @method void setCosBucket(string $CosBucket) Set COS bucket name.
  * @method string getCosRegion() Obtain COS region.
  * @method void setCosRegion(string $CosRegion) Set COS region.
+ * @method string getCosPrefix() Obtain COS bucket folder prefix.
+ * @method void setCosPrefix(string $CosPrefix) Set COS bucket folder prefix.
+ * @method string getCosFileName() Obtain COS filename.
+ * @method void setCosFileName(string $CosFileName) Set COS filename.
  */
 class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -83,12 +91,14 @@ Value range: 5–600s.
     public $Height;
 
     /**
-     * @var integer Whether to enable porn detection. 0: no, 1: yes.
+     * @var integer Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable.
      */
     public $PornFlag;
 
     /**
-     * @var integer COS `AppId`.
+     * @var integer COS application ID.
      */
     public $CosAppId;
 
@@ -103,6 +113,16 @@ Value range: 5–600s.
     public $CosRegion;
 
     /**
+     * @var string COS bucket folder prefix.
+     */
+    public $CosPrefix;
+
+    /**
+     * @var string COS filename.
+     */
+    public $CosFileName;
+
+    /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
 Maximum length: 255 bytes.
@@ -112,10 +132,14 @@ Maximum length: 1,024 bytes.
 Value range: 5–600s.
      * @param integer $Width Screenshot width. Default value: 0 (original width).
      * @param integer $Height Screenshot height. Default value: 0 (original height).
-     * @param integer $PornFlag Whether to enable porn detection. 0: no, 1: yes.
-     * @param integer $CosAppId COS `AppId`.
+     * @param integer $PornFlag Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable.
+     * @param integer $CosAppId COS application ID.
      * @param string $CosBucket COS bucket name.
      * @param string $CosRegion COS region.
+     * @param string $CosPrefix COS bucket folder prefix.
+     * @param string $CosFileName COS filename.
      */
     function __construct()
     {
@@ -168,6 +192,14 @@ Value range: 5–600s.
 
         if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
             $this->CosRegion = $param["CosRegion"];
+        }
+
+        if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {
+            $this->CosPrefix = $param["CosPrefix"];
+        }
+
+        if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
+            $this->CosFileName = $param["CosFileName"];
         }
     }
 }
