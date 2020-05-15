@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetworkInterfaceLimit request structure.
  *
- * @method string getInstanceId() Obtain The ID of the CVM instance to be queried.
- * @method void setInstanceId(string $InstanceId) Set The ID of the CVM instance to be queried.
+ * @method string getInstanceId() Obtain ID of a CVM instance or ENI to query
+ * @method void setInstanceId(string $InstanceId) Set ID of a CVM instance or ENI to query
  */
 class DescribeNetworkInterfaceLimitRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the CVM instance to be queried.
+     * @var string ID of a CVM instance or ENI to query
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId The ID of the CVM instance to be queried.
+     * @param string $InstanceId ID of a CVM instance or ENI to query
      */
     function __construct()
     {

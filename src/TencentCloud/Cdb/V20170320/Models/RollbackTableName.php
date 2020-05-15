@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Name of the table for rollback
  *
  * @method string getTableName() Obtain Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTableName(string $TableName) Set Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getNewTableName() Obtain New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNewTableName(string $NewTableName) Set New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class RollbackTableName extends AbstractModel
 {
     /**
      * @var string Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TableName;
 
     /**
      * @var string New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $NewTableName;
 
     /**
      * @param string $TableName Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $NewTableName New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

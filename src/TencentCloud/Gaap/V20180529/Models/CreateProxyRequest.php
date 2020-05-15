@@ -44,6 +44,8 @@ For more information, please see How to Ensure Idempotence.
 The connection is to be replicated if this parameter is set.
  * @method void setClonedProxyId(string $ClonedProxyId) Set ID of the replicated connection. Only a running connection can be replicated.
 The connection is to be replicated if this parameter is set.
+ * @method integer getBillingType() Obtain Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+ * @method void setBillingType(integer $BillingType) Set Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ The connection is to be replicated if this parameter is set.
     public $ClonedProxyId;
 
     /**
+     * @var integer Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+     */
+    public $BillingType;
+
+    /**
      * @param integer $ProjectId Project ID of connection.
      * @param string $ProxyName Connection name.
      * @param string $AccessRegion Access region.
@@ -112,6 +119,7 @@ For more information, please see How to Ensure Idempotence.
      * @param array $TagSet List of tags to be added for connection.
      * @param string $ClonedProxyId ID of the replicated connection. Only a running connection can be replicated.
 The connection is to be replicated if this parameter is set.
+     * @param integer $BillingType Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ The connection is to be replicated if this parameter is set.
 
         if (array_key_exists("ClonedProxyId",$param) and $param["ClonedProxyId"] !== null) {
             $this->ClonedProxyId = $param["ClonedProxyId"];
+        }
+
+        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
+            $this->BillingType = $param["BillingType"];
         }
     }
 }

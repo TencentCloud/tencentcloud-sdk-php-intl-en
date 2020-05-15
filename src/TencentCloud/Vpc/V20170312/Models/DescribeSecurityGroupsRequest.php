@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
 <li>security-group-name - String - (Filter condition) The security group name.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
- * @method string getOffset() Obtain Offset.
- * @method void setOffset(string $Offset) Set Offset.
- * @method string getLimit() Obtain The returned quantity.
- * @method void setLimit(string $Limit) Set The returned quantity.
+ * @method string getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(string $Offset) Set Offset. Default value: 0.
+ * @method string getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(string $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  */
 class DescribeSecurityGroupsRequest extends AbstractModel
 {
@@ -57,12 +57,12 @@ class DescribeSecurityGroupsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string Offset.
+     * @var string Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var string The returned quantity.
+     * @var string Number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -74,8 +74,8 @@ class DescribeSecurityGroupsRequest extends AbstractModel
 <li>security-group-name - String - (Filter condition) The security group name.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-     * @param string $Offset Offset.
-     * @param string $Limit The returned quantity.
+     * @param string $Offset Offset. Default value: 0.
+     * @param string $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()
     {

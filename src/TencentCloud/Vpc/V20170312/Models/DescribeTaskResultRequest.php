@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskResult request structure.
  *
- * @method integer getTaskId() Obtain The async job ID
- * @method void setTaskId(integer $TaskId) Set The async job ID
- * @method string getDealName() Obtain The billing order ID
- * @method void setDealName(string $DealName) Set The billing order ID
+ * @method integer getTaskId() Obtain Async task ID. Either TaskId or DealName must be entered.
+ * @method void setTaskId(integer $TaskId) Set Async task ID. Either TaskId or DealName must be entered.
+ * @method string getDealName() Obtain Billing order No. Either TaskId or DealName must be entered.
+ * @method void setDealName(string $DealName) Set Billing order No. Either TaskId or DealName must be entered.
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
     /**
-     * @var integer The async job ID
+     * @var integer Async task ID. Either TaskId or DealName must be entered.
      */
     public $TaskId;
 
     /**
-     * @var string The billing order ID
+     * @var string Billing order No. Either TaskId or DealName must be entered.
      */
     public $DealName;
 
     /**
-     * @param integer $TaskId The async job ID
-     * @param string $DealName The billing order ID
+     * @param integer $TaskId Async task ID. Either TaskId or DealName must be entered.
+     * @param string $DealName Billing order No. Either TaskId or DealName must be entered.
      */
     function __construct()
     {

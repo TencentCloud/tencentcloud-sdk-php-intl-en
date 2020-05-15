@@ -32,16 +32,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerType(string $RealServerType) Set Origin server type
  * @method string getScheduler() Obtain Forwarding policy of the origin server
  * @method void setScheduler(string $Scheduler) Set Forwarding policy of the origin server
- * @method integer getHealthCheck() Obtain Health check identifier: 1 (enable), 0 (disable).
- * @method void setHealthCheck(integer $HealthCheck) Set Health check identifier: 1 (enable), 0 (disable).
- * @method integer getRuleStatus() Obtain Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
- * @method void setRuleStatus(integer $RuleStatus) Set Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+ * @method integer getHealthCheck() Obtain Whether health check is enabled. 1: enabled, 0: disabled
+ * @method void setHealthCheck(integer $HealthCheck) Set Whether health check is enabled. 1: enabled, 0: disabled
+ * @method integer getRuleStatus() Obtain Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
+ * @method void setRuleStatus(integer $RuleStatus) Set Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
  * @method RuleCheckParams getCheckParams() Obtain Health check parameters
  * @method void setCheckParams(RuleCheckParams $CheckParams) Set Health check parameters
  * @method array getRealServerSet() Obtain Bound origin server information
  * @method void setRealServerSet(array $RealServerSet) Set Bound origin server information
- * @method integer getBindStatus() Obtain Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
- * @method void setBindStatus(integer $BindStatus) Set Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+ * @method integer getBindStatus() Obtain Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
+ * @method void setBindStatus(integer $BindStatus) Set Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
  * @method string getForwardHost() Obtain The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setForwardHost(string $ForwardHost) Set The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
@@ -80,12 +84,12 @@ class RuleInfo extends AbstractModel
     public $Scheduler;
 
     /**
-     * @var integer Health check identifier: 1 (enable), 0 (disable).
+     * @var integer Whether health check is enabled. 1: enabled, 0: disabled
      */
     public $HealthCheck;
 
     /**
-     * @var integer Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+     * @var integer Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
      */
     public $RuleStatus;
 
@@ -100,7 +104,9 @@ class RuleInfo extends AbstractModel
     public $RealServerSet;
 
     /**
-     * @var integer Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+     * @var integer Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
      */
     public $BindStatus;
 
@@ -117,11 +123,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Path Rule path
      * @param string $RealServerType Origin server type
      * @param string $Scheduler Forwarding policy of the origin server
-     * @param integer $HealthCheck Health check identifier: 1 (enable), 0 (disable).
-     * @param integer $RuleStatus Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+     * @param integer $HealthCheck Whether health check is enabled. 1: enabled, 0: disabled
+     * @param integer $RuleStatus Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
      * @param RuleCheckParams $CheckParams Health check parameters
      * @param array $RealServerSet Bound origin server information
-     * @param integer $BindStatus Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+     * @param integer $BindStatus Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
      * @param string $ForwardHost The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

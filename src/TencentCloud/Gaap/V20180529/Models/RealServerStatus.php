@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRealServerId() Obtain Origin server ID.
  * @method void setRealServerId(string $RealServerId) Set Origin server ID.
- * @method integer getBindStatus() Obtain 0: not bound; 1: bound to rules or listeners.
- * @method void setBindStatus(integer $BindStatus) Set 0: not bound; 1: bound to rules or listeners.
+ * @method integer getBindStatus() Obtain 0: not bound, 1: bound to rule or listener.
+ * @method void setBindStatus(integer $BindStatus) Set 0: not bound, 1: bound to rule or listener.
  * @method string getProxyId() Obtain ID of the connection bound to this origin server. This string is empty if they are not bound.
  * @method void setProxyId(string $ProxyId) Set ID of the connection bound to this origin server. This string is empty if they are not bound.
  */
@@ -35,7 +35,7 @@ class RealServerStatus extends AbstractModel
     public $RealServerId;
 
     /**
-     * @var integer 0: not bound; 1: bound to rules or listeners.
+     * @var integer 0: not bound, 1: bound to rule or listener.
      */
     public $BindStatus;
 
@@ -46,7 +46,7 @@ class RealServerStatus extends AbstractModel
 
     /**
      * @param string $RealServerId Origin server ID.
-     * @param integer $BindStatus 0: not bound; 1: bound to rules or listeners.
+     * @param integer $BindStatus 0: not bound, 1: bound to rule or listener.
      * @param string $ProxyId ID of the connection bound to this origin server. This string is empty if they are not bound.
      */
     function __construct()

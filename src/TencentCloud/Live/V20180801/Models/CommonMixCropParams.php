@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * General stream mix input crop parameter.
  *
- * @method float getCropWidth() Obtain Crop width. Value range: [0,3000].
- * @method void setCropWidth(float $CropWidth) Set Crop width. Value range: [0,3000].
- * @method float getCropHeight() Obtain Crop height. Value range: [0,3000].
- * @method void setCropHeight(float $CropHeight) Set Crop height. Value range: [0,3000].
- * @method float getCropStartLocationX() Obtain Starting crop X coordinate. Value range: [0,3000].
- * @method void setCropStartLocationX(float $CropStartLocationX) Set Starting crop X coordinate. Value range: [0,3000].
- * @method float getCropStartLocationY() Obtain Starting crop Y coordinate. Value range: [0,3000].
- * @method void setCropStartLocationY(float $CropStartLocationY) Set Starting crop Y coordinate. Value range: [0,3000].
+ * @method float getCropWidth() Obtain Crop width. Value range: [0,2000].
+ * @method void setCropWidth(float $CropWidth) Set Crop width. Value range: [0,2000].
+ * @method float getCropHeight() Obtain Crop height. Value range: [0,2000].
+ * @method void setCropHeight(float $CropHeight) Set Crop height. Value range: [0,2000].
+ * @method float getCropStartLocationX() Obtain Starting crop X coordinate. Value range: [0,2000].
+ * @method void setCropStartLocationX(float $CropStartLocationX) Set Starting crop X coordinate. Value range: [0,2000].
+ * @method float getCropStartLocationY() Obtain Starting crop Y coordinate. Value range: [0,2000].
+ * @method void setCropStartLocationY(float $CropStartLocationY) Set Starting crop Y coordinate. Value range: [0,2000].
  */
 class CommonMixCropParams extends AbstractModel
 {
     /**
-     * @var float Crop width. Value range: [0,3000].
+     * @var float Crop width. Value range: [0,2000].
      */
     public $CropWidth;
 
     /**
-     * @var float Crop height. Value range: [0,3000].
+     * @var float Crop height. Value range: [0,2000].
      */
     public $CropHeight;
 
     /**
-     * @var float Starting crop X coordinate. Value range: [0,3000].
+     * @var float Starting crop X coordinate. Value range: [0,2000].
      */
     public $CropStartLocationX;
 
     /**
-     * @var float Starting crop Y coordinate. Value range: [0,3000].
+     * @var float Starting crop Y coordinate. Value range: [0,2000].
      */
     public $CropStartLocationY;
 
     /**
-     * @param float $CropWidth Crop width. Value range: [0,3000].
-     * @param float $CropHeight Crop height. Value range: [0,3000].
-     * @param float $CropStartLocationX Starting crop X coordinate. Value range: [0,3000].
-     * @param float $CropStartLocationY Starting crop Y coordinate. Value range: [0,3000].
+     * @param float $CropWidth Crop width. Value range: [0,2000].
+     * @param float $CropHeight Crop height. Value range: [0,2000].
+     * @param float $CropStartLocationX Starting crop X coordinate. Value range: [0,2000].
+     * @param float $CropStartLocationY Starting crop Y coordinate. Value range: [0,2000].
      */
     function __construct()
     {

@@ -46,14 +46,14 @@ If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direc
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
- * @method string getNetDetectId() Obtain The ID of a network detection instance, such as netd-12345678.
- * @method void setNetDetectId(string $NetDetectId) Set The ID of a network detection instance, such as netd-12345678.
- * @method string getVpcId() Obtain The `ID` of a `VPC` instance, such as `vpc-12345678`.
- * @method void setVpcId(string $VpcId) Set The `ID` of a `VPC` instance, such as `vpc-12345678`.
- * @method string getSubnetId() Obtain The ID of a subnet instance, such as subnet-12345678.
- * @method void setSubnetId(string $SubnetId) Set The ID of a subnet instance, such as subnet-12345678.
- * @method string getNetDetectName() Obtain The name of a network detection instance. The maximum length is 60 characters.
- * @method void setNetDetectName(string $NetDetectName) Set The name of a network detection instance. The maximum length is 60 characters.
+ * @method string getNetDetectId() Obtain ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+ * @method void setNetDetectId(string $NetDetectId) Set ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+ * @method string getVpcId() Obtain ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+ * @method void setVpcId(string $VpcId) Set ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+ * @method string getSubnetId() Obtain ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+ * @method void setSubnetId(string $SubnetId) Set ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+ * @method string getNetDetectName() Obtain The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+ * @method void setNetDetectName(string $NetDetectName) Set The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
  */
 class CheckNetDetectStateRequest extends AbstractModel
 {
@@ -83,22 +83,22 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
     public $NextHopDestination;
 
     /**
-     * @var string The ID of a network detection instance, such as netd-12345678.
+     * @var string ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
      */
     public $NetDetectId;
 
     /**
-     * @var string The `ID` of a `VPC` instance, such as `vpc-12345678`.
+     * @var string ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public $VpcId;
 
     /**
-     * @var string The ID of a subnet instance, such as subnet-12345678.
+     * @var string ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public $SubnetId;
 
     /**
-     * @var string The name of a network detection instance. The maximum length is 60 characters.
+     * @var string The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public $NetDetectName;
 
@@ -116,10 +116,10 @@ If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direc
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-     * @param string $NetDetectId The ID of a network detection instance, such as netd-12345678.
-     * @param string $VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
-     * @param string $SubnetId The ID of a subnet instance, such as subnet-12345678.
-     * @param string $NetDetectName The name of a network detection instance. The maximum length is 60 characters.
+     * @param string $NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+     * @param string $VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     * @param string $SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     * @param string $NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     function __construct()
     {

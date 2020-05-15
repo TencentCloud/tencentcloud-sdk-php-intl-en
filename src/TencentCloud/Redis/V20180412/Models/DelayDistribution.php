@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLadder(integer $Ladder) Set Distribution ladder
  * @method integer getSize() Obtain Size
  * @method void setSize(integer $Size) Set Size
+ * @method integer getUpdatetime() Obtain Modification time
+ * @method void setUpdatetime(integer $Updatetime) Set Modification time
  */
 class DelayDistribution extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DelayDistribution extends AbstractModel
     public $Size;
 
     /**
+     * @var integer Modification time
+     */
+    public $Updatetime;
+
+    /**
      * @param integer $Ladder Distribution ladder
      * @param integer $Size Size
+     * @param integer $Updatetime Modification time
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DelayDistribution extends AbstractModel
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
             $this->Size = $param["Size"];
+        }
+
+        if (array_key_exists("Updatetime",$param) and $param["Updatetime"] !== null) {
+            $this->Updatetime = $param["Updatetime"];
         }
     }
 }

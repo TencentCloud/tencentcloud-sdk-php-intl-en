@@ -66,10 +66,10 @@ Whether the Anycast EIP can be bound to CLB instances.
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
 <li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
- * @method string getBandwidthPackageId() Obtain 
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set 
+ * @method array getTags() Obtain List of tags to be bound.
+ * @method void setTags(array $Tags) Set List of tags to be bound.
+ * @method string getBandwidthPackageId() Obtain The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
  */
 class AllocateAddressesRequest extends AbstractModel
 {
@@ -125,12 +125,12 @@ Whether the Anycast EIP can be bound to CLB instances.
     public $ApplicableForCLB;
 
     /**
-     * @var array 
+     * @var array List of tags to be bound.
      */
     public $Tags;
 
     /**
-     * @var string 
+     * @var string The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
      */
     public $BandwidthPackageId;
 
@@ -158,8 +158,8 @@ Whether the Anycast EIP can be bound to CLB instances.
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
 <li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
-     * @param array $Tags 
-     * @param string $BandwidthPackageId 
+     * @param array $Tags List of tags to be bound.
+     * @param string $BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
      */
     function __construct()
     {

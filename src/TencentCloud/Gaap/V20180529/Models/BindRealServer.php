@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerIP(string $RealServerIP) Set Origin server IP or domain name
  * @method integer getRealServerWeight() Obtain Origin server weight
  * @method void setRealServerWeight(integer $RealServerWeight) Set Origin server weight
- * @method integer getRealServerStatus() Obtain 
- * @method void setRealServerStatus(integer $RealServerStatus) Set 
+ * @method integer getRealServerStatus() Obtain Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRealServerStatus(integer $RealServerStatus) Set Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getRealServerPort() Obtain Origin server port number
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRealServerPort(integer $RealServerPort) Set Origin server port number
@@ -53,7 +61,11 @@ class BindRealServer extends AbstractModel
     public $RealServerWeight;
 
     /**
-     * @var integer 
+     * @var integer Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RealServerStatus;
 
@@ -72,7 +84,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RealServerId Origin server ID
      * @param string $RealServerIP Origin server IP or domain name
      * @param integer $RealServerWeight Origin server weight
-     * @param integer $RealServerStatus 
+     * @param integer $RealServerStatus Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $RealServerPort Origin server port number
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DownIPList If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.

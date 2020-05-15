@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region name; It’s a new parameter.
  * @method integer getConcurrent() Obtain Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
  * @method void setConcurrent(integer $Concurrent) Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
+ * @method integer getBillingType() Obtain Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+ * @method void setBillingType(integer $BillingType) Set Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
  */
 class InquiryPriceCreateProxyRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     public $Concurrent;
 
     /**
+     * @var integer Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+     */
+    public $BillingType;
+
+    /**
      * @param string $AccessRegion Acceleration region name.
      * @param integer $Bandwidth Connection bandwidth cap. Unit: Mbps.
      * @param string $DestRegion Origin server region name. It’s an old parameter, please switch to RealServerRegion.
      * @param integer $Concurrency Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
      * @param string $RealServerRegion Origin server region name; It’s a new parameter.
      * @param integer $Concurrent Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
+     * @param integer $BillingType Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
 
         if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
             $this->Concurrent = $param["Concurrent"];
+        }
+
+        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
+            $this->BillingType = $param["BillingType"];
         }
     }
 }

@@ -31,6 +31,9 @@ use TencentCloud\Common\AbstractModel;
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
+<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
  * @method void setFilters(array $Filters) Set Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>subnet-id - String - (Filter condition) Subnet instance ID, such as `subnet-f49l6u0z`.</li>
@@ -40,10 +43,13 @@ use TencentCloud\Common\AbstractModel;
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
- * @method integer getOffset() Obtain Offset. The default value is 0.
- * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
- * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
- * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
+<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
+<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  */
 class DescribeNetworkInterfacesRequest extends AbstractModel
 {
@@ -62,16 +68,19 @@ class DescribeNetworkInterfacesRequest extends AbstractModel
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
+<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
      */
     public $Filters;
 
     /**
-     * @var integer Offset. The default value is 0.
+     * @var integer Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of values to be returned. The default value is 20. Maximum is 100.
+     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -86,8 +95,11 @@ class DescribeNetworkInterfacesRequest extends AbstractModel
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
-     * @param integer $Offset Offset. The default value is 0.
-     * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 100.
+<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
+<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+     * @param integer $Offset Offset. Default value: 0.
+     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()
     {

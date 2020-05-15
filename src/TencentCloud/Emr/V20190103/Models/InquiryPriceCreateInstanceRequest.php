@@ -25,7 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) Set Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
  * @method integer getTimeSpan() Obtain Purchase duration of instance, which needs to be used together with `TimeUnit`.
+<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
+<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
  * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of instance, which needs to be used together with `TimeUnit`.
+<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
+<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
  * @method NewResourceSpec getResourceSpec() Obtain Node specification queried for price.
  * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node specification queried for price.
  * @method string getCurrency() Obtain Currency.
@@ -40,8 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSupportHA(integer $SupportHA) Set Whether to enable high availability of node. Valid values:
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
- * @method array getSoftware() Obtain List of deployed components.
- * @method void setSoftware(array $Software) Set List of deployed components.
+ * @method array getSoftware() Obtain List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+ * @method void setSoftware(array $Software) Set List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
  * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
@@ -79,6 +91,8 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 
     /**
      * @var integer Purchase duration of instance, which needs to be used together with `TimeUnit`.
+<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
+<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
      */
     public $TimeSpan;
 
@@ -106,7 +120,11 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     public $SupportHA;
 
     /**
-     * @var array List of deployed components.
+     * @var array List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
      */
     public $Software;
 
@@ -151,6 +169,8 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
      * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
      * @param integer $TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
+<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
+<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
      * @param NewResourceSpec $ResourceSpec Node specification queried for price.
      * @param string $Currency Currency.
      * @param integer $PayMode Instance billing mode. Valid values:
@@ -158,7 +178,11 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
      * @param integer $SupportHA Whether to enable high availability of node. Valid values:
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
-     * @param array $Software List of deployed components.
+     * @param array $Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
      * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
      * @param string $MetaType Hive-shared metadatabase type. Valid values:

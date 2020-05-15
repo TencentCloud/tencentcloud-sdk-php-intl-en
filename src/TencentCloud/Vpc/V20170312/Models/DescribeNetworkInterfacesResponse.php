@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNetworkInterfaceSet() Obtain List of instance details.
  * @method void setNetworkInterfaceSet(array $NetworkInterfaceSet) Set List of instance details.
- * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
- * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
+ * @method integer getTotalCount() Obtain Number of eligible instances.
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeNetworkInterfacesResponse extends AbstractModel
     public $NetworkInterfaceSet;
 
     /**
-     * @var integer The number of instances meeting the filter condition.
+     * @var integer Number of eligible instances.
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class DescribeNetworkInterfacesResponse extends AbstractModel
 
     /**
      * @param array $NetworkInterfaceSet List of instance details.
-     * @param integer $TotalCount The number of instances meeting the filter condition.
+     * @param integer $TotalCount Number of eligible instances.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

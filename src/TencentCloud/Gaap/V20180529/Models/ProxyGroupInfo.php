@@ -35,17 +35,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method RegionDetail getRealServerRegionInfo() Obtain Target region
  * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) Set Target region
  * @method string getStatus() Obtain Connection group status.
-Where:
+Valid values:
 0: running;
 1: creating;
 4: terminating;
-11: connection migrating.
+11: migrating connection;
  * @method void setStatus(string $Status) Set Connection group status.
-Where:
+Valid values:
 0: running;
 1: creating;
 4: terminating;
-11: connection migrating.
+11: migrating connection;
  * @method array getTagSet() Obtain Tag list.
  * @method void setTagSet(array $TagSet) Set Tag list.
  */
@@ -80,11 +80,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Connection group status.
-Where:
+Valid values:
 0: running;
 1: creating;
 4: terminating;
-11: connection migrating.
+11: migrating connection;
      */
     public $Status;
 
@@ -102,11 +102,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ProjectId Project ID
      * @param RegionDetail $RealServerRegionInfo Target region
      * @param string $Status Connection group status.
-Where:
+Valid values:
 0: running;
 1: creating;
 4: terminating;
-11: connection migrating.
+11: migrating connection;
      * @param array $TagSet Tag list.
      */
     function __construct()

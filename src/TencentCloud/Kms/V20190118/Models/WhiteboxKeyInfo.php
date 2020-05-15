@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptKey(string $EncryptKey) Set Base64-encoded white-box encryption key
  * @method string getDecryptKey() Obtain Base64-encoded white-box decryption key
  * @method void setDecryptKey(string $DecryptKey) Set Base64-encoded white-box decryption key
- * @method string getResourceId() Obtain 
- * @method void setResourceId(string $ResourceId) Set 
+ * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+ * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
  */
 class WhiteboxKeyInfo extends AbstractModel
 {
@@ -96,7 +96,7 @@ class WhiteboxKeyInfo extends AbstractModel
     public $DecryptKey;
 
     /**
-     * @var string 
+     * @var string Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
      */
     public $ResourceId;
 
@@ -111,7 +111,7 @@ class WhiteboxKeyInfo extends AbstractModel
      * @param string $Algorithm Key algorithm type
      * @param string $EncryptKey Base64-encoded white-box encryption key
      * @param string $DecryptKey Base64-encoded white-box decryption key
-     * @param string $ResourceId 
+     * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
      */
     function __construct()
     {

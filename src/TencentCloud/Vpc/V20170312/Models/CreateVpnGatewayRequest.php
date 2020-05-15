@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
  * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-2`.
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`.
+ * @method string getType() Obtain VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+ * @method void setType(string $Type) Set VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var string VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     */
+    public $Type;
+
+    /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
      * @param integer $InternetMaxBandwidthOut The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps
      * @param string $InstanceChargeType The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      * @param string $Zone The availability zone, such as `ap-guangzhou-2`.
+     * @param string $Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class CreateVpnGatewayRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

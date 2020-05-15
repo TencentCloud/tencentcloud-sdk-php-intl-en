@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
 <li>zone - String - (Filter condition) Availability zone.</li>
 <li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
 <li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
- * @method string getOffset() Obtain Offset
- * @method void setOffset(string $Offset) Set Offset
- * @method string getLimit() Obtain The returned quantity
- * @method void setLimit(string $Limit) Set The returned quantity
+ * @method string getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(string $Offset) Set Offset. Default value: 0.
+ * @method string getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(string $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  */
 class DescribeSubnetsRequest extends AbstractModel
 {
@@ -69,12 +69,12 @@ class DescribeSubnetsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string Offset
+     * @var string Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var string The returned quantity
+     * @var string Number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -90,8 +90,8 @@ class DescribeSubnetsRequest extends AbstractModel
 <li>zone - String - (Filter condition) Availability zone.</li>
 <li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
 <li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-     * @param string $Offset Offset
-     * @param string $Limit The returned quantity
+     * @param string $Offset Offset. Default value: 0.
+     * @param string $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()
     {

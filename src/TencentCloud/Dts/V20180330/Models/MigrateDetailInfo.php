@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepAll(integer $StepAll) Set Total number of steps
  * @method integer getStepNow() Obtain Current step
  * @method void setStepNow(integer $StepNow) Set Current step
- * @method string getProgress() Obtain Overall progress, such as:
- * @method void setProgress(string $Progress) Set Overall progress, such as:
- * @method string getCurrentStepProgress() Obtain Progress of the current step, such as:
- * @method void setCurrentStepProgress(string $CurrentStepProgress) Set Progress of the current step, such as:
+ * @method string getProgress() Obtain Overall progress, such as "10"
+ * @method void setProgress(string $Progress) Set Overall progress, such as "10"
+ * @method string getCurrentStepProgress() Obtain Progress of current step, such as "1"
+ * @method void setCurrentStepProgress(string $CurrentStepProgress) Set Progress of current step, such as "1"
  * @method integer getMasterSlaveDistance() Obtain Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
  * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) Set Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
  * @method integer getSecondsBehindMaster() Obtain Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
@@ -48,12 +48,12 @@ class MigrateDetailInfo extends AbstractModel
     public $StepNow;
 
     /**
-     * @var string Overall progress, such as:
+     * @var string Overall progress, such as "10"
      */
     public $Progress;
 
     /**
-     * @var string Progress of the current step, such as:
+     * @var string Progress of current step, such as "1"
      */
     public $CurrentStepProgress;
 
@@ -75,8 +75,8 @@ class MigrateDetailInfo extends AbstractModel
     /**
      * @param integer $StepAll Total number of steps
      * @param integer $StepNow Current step
-     * @param string $Progress Overall progress, such as:
-     * @param string $CurrentStepProgress Progress of the current step, such as:
+     * @param string $Progress Overall progress, such as "10"
+     * @param string $CurrentStepProgress Progress of current step, such as "1"
      * @param integer $MasterSlaveDistance Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
      * @param integer $SecondsBehindMaster Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
      * @param array $StepInfo Step information

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNetworkInterfaceId() Obtain The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
- * @method array getPrivateIpAddresses() Obtain The information of the specified private IPs. You can specify a maximum of 10 each time.
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 each time.
- * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
- * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+ * @method array getPrivateIpAddresses() Obtain The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
+ * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
+ * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
  */
 class AssignPrivateIpAddressesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
     public $NetworkInterfaceId;
 
     /**
-     * @var array The information of the specified private IPs. You can specify a maximum of 10 each time.
+     * @var array The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
      */
     public $PrivateIpAddresses;
 
     /**
-     * @var integer The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+     * @var integer The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
      */
     public $SecondaryPrivateIpAddressCount;
 
     /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
-     * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
-     * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+     * @param array $PrivateIpAddresses The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
+     * @param integer $SecondaryPrivateIpAddressCount The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
      */
     function __construct()
     {

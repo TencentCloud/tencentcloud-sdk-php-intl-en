@@ -30,18 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
  * @method string getProtocol() Obtain Listener protocol
  * @method void setProtocol(string $Protocol) Set Listener protocol
- * @method integer getListenerStatus() Obtain Listener status:
+ * @method integer getListenerStatus() Obtain Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: modifying configuration.
- * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
+4: adjusting configuration.
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: modifying configuration.
+4: adjusting configuration.
  */
 class HTTPListener extends AbstractModel
 {
@@ -71,12 +71,12 @@ class HTTPListener extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer Listener status:
+     * @var integer Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: modifying configuration.
+4: adjusting configuration.
      */
     public $ListenerStatus;
 
@@ -86,12 +86,12 @@ class HTTPListener extends AbstractModel
      * @param integer $Port Listener port
      * @param integer $CreateTime Listener creation time; using UNIX timestamp.
      * @param string $Protocol Listener protocol
-     * @param integer $ListenerStatus Listener status:
+     * @param integer $ListenerStatus Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: modifying configuration.
+4: adjusting configuration.
      */
     function __construct()
     {

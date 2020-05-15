@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set Target instance Vport, which has been disused and does not need to be entered
  * @method integer getReadOnly() Obtain Only valid for MySQL currently. For instance-level migration, the value range is: 1 (read-only), 0 (read/write)
  * @method void setReadOnly(integer $ReadOnly) Set Only valid for MySQL currently. For instance-level migration, the value range is: 1 (read-only), 0 (read/write)
+ * @method string getUser() Obtain Target database account
+ * @method void setUser(string $User) Set Target database account
+ * @method string getPassword() Obtain Target database password
+ * @method void setPassword(string $Password) Set Target database password
  */
 class DstInfo extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DstInfo extends AbstractModel
     public $ReadOnly;
 
     /**
+     * @var string Target database account
+     */
+    public $User;
+
+    /**
+     * @var string Target database password
+     */
+    public $Password;
+
+    /**
      * @param string $InstanceId Target instance ID, such as cdb-jd92ijd8
      * @param string $Region Target instance region, such as ap-guangzhou
      * @param string $Ip Target instance VIP, which has been disused and does not need to be entered
      * @param integer $Port Target instance Vport, which has been disused and does not need to be entered
      * @param integer $ReadOnly Only valid for MySQL currently. For instance-level migration, the value range is: 1 (read-only), 0 (read/write)
+     * @param string $User Target database account
+     * @param string $Password Target database password
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DstInfo extends AbstractModel
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
             $this->ReadOnly = $param["ReadOnly"];
+        }
+
+        if (array_key_exists("User",$param) and $param["User"] !== null) {
+            $this->User = $param["User"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

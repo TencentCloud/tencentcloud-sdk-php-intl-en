@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRouteTables response structure.
  *
- * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
- * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
+ * @method integer getTotalCount() Obtain Number of eligible instances.
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
  * @method array getRouteTableSet() Obtain Route table object.
  * @method void setRouteTableSet(array $RouteTableSet) Set Route table object.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRouteTablesResponse extends AbstractModel
 {
     /**
-     * @var integer The number of instances meeting the filter condition.
+     * @var integer Number of eligible instances.
      */
     public $TotalCount;
 
@@ -45,7 +45,7 @@ class DescribeRouteTablesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount The number of instances meeting the filter condition.
+     * @param integer $TotalCount Number of eligible instances.
      * @param array $RouteTableSet Route table object.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

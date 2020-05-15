@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModifyTime() Obtain Modification time.
  * @method void setModifyTime(string $ModifyTime) Set Modification time.
- * @method string getProtocol() Obtain Protocol. Valid values: TCP, UDP, and ICMP.
- * @method void setProtocol(string $Protocol) Set Protocol. Valid values: TCP, UDP, and ICMP.
- * @method string getPort() Obtain Port (all, a single port, or a port range).
- * @method void setPort(string $Port) Set Port (all, a single port, or a port range).
+ * @method string getProtocol() Obtain Protocol. Valid values: TCP, UDP, ICMP, ALL.
+ * @method void setProtocol(string $Protocol) Set Protocol. Valid values: TCP, UDP, ICMP, ALL.
+ * @method string getPort() Obtain Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
+ * @method void setPort(string $Port) Set Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
  * @method string getCidrBlock() Obtain IP range or IP address (mutually exclusive).
  * @method void setCidrBlock(string $CidrBlock) Set IP range or IP address (mutually exclusive).
  * @method string getIpv6CidrBlock() Obtain CIDR block or IPv6 address (mutually exclusive).
@@ -43,12 +43,12 @@ class NetworkAclEntry extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @var string Protocol. Valid values: TCP, UDP, and ICMP.
+     * @var string Protocol. Valid values: TCP, UDP, ICMP, ALL.
      */
     public $Protocol;
 
     /**
-     * @var string Port (all, a single port, or a port range).
+     * @var string Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
      */
     public $Port;
 
@@ -74,8 +74,8 @@ class NetworkAclEntry extends AbstractModel
 
     /**
      * @param string $ModifyTime Modification time.
-     * @param string $Protocol Protocol. Valid values: TCP, UDP, and ICMP.
-     * @param string $Port Port (all, a single port, or a port range).
+     * @param string $Protocol Protocol. Valid values: TCP, UDP, ICMP, ALL.
+     * @param string $Port Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
      * @param string $CidrBlock IP range or IP address (mutually exclusive).
      * @param string $Ipv6CidrBlock CIDR block or IPv6 address (mutually exclusive).
      * @param string $Action ACCEPT or DROP.

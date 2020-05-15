@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating.
+11: migrating;
  * @method void setStatus(integer $Status) Set Connection group status:
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating.
+11: migrating;
  * @method string getOwnerUin() Obtain Owner UIN
  * @method void setOwnerUin(string $OwnerUin) Set Owner UIN
  * @method string getCreateUin() Obtain Creation UIN
@@ -81,7 +81,7 @@ class ProxyGroupDetail extends AbstractModel
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating.
+11: migrating;
      */
     public $Status;
 
@@ -140,7 +140,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating.
+11: migrating;
      * @param string $OwnerUin Owner UIN
      * @param string $CreateUin Creation UIN
      * @param string $GroupName Connection name

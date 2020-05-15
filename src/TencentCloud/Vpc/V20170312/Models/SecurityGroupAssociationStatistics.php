@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCLB(integer $CLB) Set Number of load balancer instances.
  * @method array getInstanceStatistics() Obtain The binding statistics for all instances.
  * @method void setInstanceStatistics(array $InstanceStatistics) Set The binding statistics for all instances.
+ * @method integer getTotalCount() Obtain Total count of all resources (excluding resources referenced by security groups).
+ * @method void setTotalCount(integer $TotalCount) Set Total count of all resources (excluding resources referenced by security groups).
  */
 class SecurityGroupAssociationStatistics extends AbstractModel
 {
@@ -73,6 +75,11 @@ class SecurityGroupAssociationStatistics extends AbstractModel
     public $InstanceStatistics;
 
     /**
+     * @var integer Total count of all resources (excluding resources referenced by security groups).
+     */
+    public $TotalCount;
+
+    /**
      * @param string $SecurityGroupId Security group instance ID.
      * @param integer $CVM Number of CVM instances.
      * @param integer $CDB Number of database instances.
@@ -80,6 +87,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
      * @param integer $SG Number of times a security group is referenced by other security groups
      * @param integer $CLB Number of load balancer instances.
      * @param array $InstanceStatistics The binding statistics for all instances.
+     * @param integer $TotalCount Total count of all resources (excluding resources referenced by security groups).
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class SecurityGroupAssociationStatistics extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceStatistics, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
     }
 }

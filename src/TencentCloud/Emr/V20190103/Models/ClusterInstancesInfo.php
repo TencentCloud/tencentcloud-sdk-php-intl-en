@@ -178,8 +178,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHiveMetaDb(string $HiveMetaDb) Set Hive metadata
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceClass() Obtain 
- * @method void setServiceClass(string $ServiceClass) Set 
+ * @method string getServiceClass() Obtain Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setServiceClass(string $ServiceClass) Set Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAliasInfo() Obtain Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAliasInfo(string $AliasInfo) Set Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProductId() Obtain Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProductId(integer $ProductId) Set Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -367,9 +377,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $HiveMetaDb;
 
     /**
-     * @var string 
+     * @var string Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceClass;
+
+    /**
+     * @var string Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AliasInfo;
+
+    /**
+     * @var integer Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProductId;
 
     /**
      * @param integer $Id ID
@@ -451,7 +474,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $HiveMetaDb Hive metadata
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceClass 
+     * @param string $ServiceClass Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AliasInfo Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProductId Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -578,6 +606,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ServiceClass",$param) and $param["ServiceClass"] !== null) {
             $this->ServiceClass = $param["ServiceClass"];
+        }
+
+        if (array_key_exists("AliasInfo",$param) and $param["AliasInfo"] !== null) {
+            $this->AliasInfo = $param["AliasInfo"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

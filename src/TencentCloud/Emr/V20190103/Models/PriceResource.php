@@ -64,6 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskNum() Obtain Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDiskNum(integer $DiskNum) Set Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getLocalDiskNum() Obtain Number of local disks
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setLocalDiskNum(integer $LocalDiskNum) Set Number of local disks
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class PriceResource extends AbstractModel
 {
@@ -134,6 +142,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
+     * @var integer Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DiskNum;
+
+    /**
+     * @var integer Number of local disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $LocalDiskNum;
+
+    /**
      * @param string $Spec Target specification
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $StorageType Disk type
@@ -155,6 +175,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceType Specification
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tag
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskNum Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $LocalDiskNum Number of local disks
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -222,6 +246,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DiskNum",$param) and $param["DiskNum"] !== null) {
+            $this->DiskNum = $param["DiskNum"];
+        }
+
+        if (array_key_exists("LocalDiskNum",$param) and $param["LocalDiskNum"] !== null) {
+            $this->LocalDiskNum = $param["LocalDiskNum"];
         }
     }
 }

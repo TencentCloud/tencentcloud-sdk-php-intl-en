@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() Obtain 
  * @method void setKeyId(string $KeyId) Set 
- * @method string getPlaintext() Obtain 
- * @method void setPlaintext(string $Plaintext) Set 
- * @method string getCiphertextBlob() Obtain Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
- * @method void setCiphertextBlob(string $CiphertextBlob) Set Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
+ * @method string getPlaintext() Obtain Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
+ * @method void setPlaintext(string $Plaintext) Set Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
+ * @method string getCiphertextBlob() Obtain Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
+ * @method void setCiphertextBlob(string $CiphertextBlob) Set Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -37,12 +37,12 @@ class GenerateDataKeyResponse extends AbstractModel
     public $KeyId;
 
     /**
-     * @var string 
+     * @var string Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
      */
     public $Plaintext;
 
     /**
-     * @var string Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
+     * @var string Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
      */
     public $CiphertextBlob;
 
@@ -53,8 +53,8 @@ class GenerateDataKeyResponse extends AbstractModel
 
     /**
      * @param string $KeyId 
-     * @param string $Plaintext 
-     * @param string $CiphertextBlob Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
+     * @param string $Plaintext Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
+     * @param string $CiphertextBlob Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

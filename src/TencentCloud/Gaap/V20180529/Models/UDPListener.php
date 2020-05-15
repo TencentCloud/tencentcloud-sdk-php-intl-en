@@ -34,13 +34,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRealServerType(string $RealServerType) Set Type of the origin server bound to listeners
  * @method string getProtocol() Obtain Listener protocol: UDP.
  * @method void setProtocol(string $Protocol) Set Listener protocol: UDP.
- * @method integer getListenerStatus() Obtain Listener status:
+ * @method integer getListenerStatus() Obtain Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
- * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -48,8 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 4: adjusting configuration.
  * @method string getScheduler() Obtain Origin server access policy of listeners
  * @method void setScheduler(string $Scheduler) Set Origin server access policy of listeners
- * @method integer getBindStatus() Obtain Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
- * @method void setBindStatus(integer $BindStatus) Set Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
+ * @method integer getBindStatus() Obtain Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+ * @method void setBindStatus(integer $BindStatus) Set Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
  * @method array getRealServerSet() Obtain Information of the origin server bound to listeners
  * @method void setRealServerSet(array $RealServerSet) Set Information of the origin server bound to listeners
  * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
@@ -89,7 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Protocol;
 
     /**
-     * @var integer Listener status:
+     * @var integer Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -104,7 +104,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Scheduler;
 
     /**
-     * @var integer Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
+     * @var integer Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
      */
     public $BindStatus;
 
@@ -126,14 +126,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealServerType Type of the origin server bound to listeners
      * @param string $Protocol Listener protocol: UDP.
-     * @param integer $ListenerStatus Listener status:
+     * @param integer $ListenerStatus Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
      * @param string $Scheduler Origin server access policy of listeners
-     * @param integer $BindStatus Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
+     * @param integer $BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
      * @param array $RealServerSet Information of the origin server bound to listeners
      * @param integer $CreateTime Listener creation time; using UNIX timestamp.
      */

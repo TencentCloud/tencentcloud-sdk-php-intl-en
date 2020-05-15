@@ -34,41 +34,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRealServerType(string $RealServerType) Set Type of the origin server bound to listeners
  * @method string getProtocol() Obtain Listener protocol: TCP.
  * @method void setProtocol(string $Protocol) Set Listener protocol: TCP.
- * @method integer getListenerStatus() Obtain Listener status:
+ * @method integer getListenerStatus() Obtain Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
- * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
- * @method string getScheduler() Obtain Origin server access policy of listeners:
+ * @method string getScheduler() Obtain Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections.
- * @method void setScheduler(string $Scheduler) Set Origin server access policy of listeners:
+lc: least connection.
+ * @method void setScheduler(string $Scheduler) Set Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections.
+lc: least connection.
  * @method integer getConnectTimeout() Obtain Response timeout of origin server health check (unit: seconds).
  * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds).
  * @method integer getDelayLoop() Obtain Time interval of origin server health check (unit: seconds).
  * @method void setDelayLoop(integer $DelayLoop) Set Time interval of origin server health check (unit: seconds).
- * @method integer getHealthCheck() Obtain Whether to enable the listener health check:
-0: disable;
-1: enable.
- * @method void setHealthCheck(integer $HealthCheck) Set Whether to enable the listener health check:
-0: disable;
-1: enable.
- * @method integer getBindStatus() Obtain Status of the origin server bound to listeners:
-0: exception;
+ * @method integer getHealthCheck() Obtain Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled
+ * @method void setHealthCheck(integer $HealthCheck) Set Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled
+ * @method integer getBindStatus() Obtain Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal.
- * @method void setBindStatus(integer $BindStatus) Set Status of the origin server bound to listeners:
-0: exception;
+ * @method void setBindStatus(integer $BindStatus) Set Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal.
  * @method array getRealServerSet() Obtain Information of the origin server bound to listeners
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -111,7 +111,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Protocol;
 
     /**
-     * @var integer Listener status:
+     * @var integer Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -121,10 +121,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ListenerStatus;
 
     /**
-     * @var string Origin server access policy of listeners:
+     * @var string Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections.
+lc: least connection.
      */
     public $Scheduler;
 
@@ -139,15 +139,15 @@ lc: least connections.
     public $DelayLoop;
 
     /**
-     * @var integer Whether to enable the listener health check:
-0: disable;
-1: enable.
+     * @var integer Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled
      */
     public $HealthCheck;
 
     /**
-     * @var integer Status of the origin server bound to listeners:
-0: exception;
+     * @var integer Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal.
      */
     public $BindStatus;
@@ -171,23 +171,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealServerType Type of the origin server bound to listeners
      * @param string $Protocol Listener protocol: TCP.
-     * @param integer $ListenerStatus Listener status:
+     * @param integer $ListenerStatus Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
-     * @param string $Scheduler Origin server access policy of listeners:
+     * @param string $Scheduler Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections.
+lc: least connection.
      * @param integer $ConnectTimeout Response timeout of origin server health check (unit: seconds).
      * @param integer $DelayLoop Time interval of origin server health check (unit: seconds).
-     * @param integer $HealthCheck Whether to enable the listener health check:
-0: disable;
-1: enable.
-     * @param integer $BindStatus Status of the origin server bound to listeners:
-0: exception;
+     * @param integer $HealthCheck Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled
+     * @param integer $BindStatus Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal.
      * @param array $RealServerSet Information of the origin server bound to listeners
 Note: This field may return null, indicating that no valid values can be obtained.

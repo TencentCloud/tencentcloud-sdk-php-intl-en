@@ -160,8 +160,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getAutoFlag() Obtain 
- * @method void setAutoFlag(integer $AutoFlag) Set 
+ * @method integer getAutoFlag() Obtain Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoFlag(integer $AutoFlag) Set Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -376,7 +378,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
-     * @var integer 
+     * @var integer Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AutoFlag;
 
@@ -451,7 +454,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $AutoFlag 
+     * @param integer $AutoFlag Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

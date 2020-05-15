@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getDate() Obtain Time, such as "20190219"
  * @method void setDate(string $Date) Set Time, such as "20190219"
- * @method integer getSpanType() Obtain Request type. 1: string type; 2: all types
- * @method void setSpanType(integer $SpanType) Set Request type. 1: string type; 2: all types
+ * @method integer getSpanType() Obtain Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+ * @method void setSpanType(integer $SpanType) Set Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
  */
 class DescribeInstanceMonitorTookDistRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeInstanceMonitorTookDistRequest extends AbstractModel
     public $Date;
 
     /**
-     * @var integer Request type. 1: string type; 2: all types
+     * @var integer Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
      */
     public $SpanType;
 
     /**
      * @param string $InstanceId Instance ID
      * @param string $Date Time, such as "20190219"
-     * @param integer $SpanType Request type. 1: string type; 2: all types
+     * @param integer $SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
      */
     function __construct()
     {

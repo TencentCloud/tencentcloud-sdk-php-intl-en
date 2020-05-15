@@ -38,27 +38,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setBandwidth(integer $Bandwidth) Set Bandwidth. Unit: Mbps.
  * @method integer getConcurrent() Obtain Concurrence. Unit: requests/second.
  * @method void setConcurrent(integer $Concurrent) Set Concurrence. Unit: requests/second.
- * @method string getStatus() Obtain Connection status:
+ * @method string getStatus() Obtain Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status.
- * @method void setStatus(string $Status) Set Connection status:
+ * @method void setStatus(string $Status) Set Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status.
  * @method string getDomain() Obtain Accessed domain name.
  * @method void setDomain(string $Domain) Set Accessed domain name.
@@ -149,16 +151,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Concurrent;
 
     /**
-     * @var string Connection status:
+     * @var string Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status.
      */
     public $Status;
@@ -251,16 +254,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RealServerRegion Origin server region.
      * @param integer $Bandwidth Bandwidth. Unit: Mbps.
      * @param integer $Concurrent Concurrence. Unit: requests/second.
-     * @param string $Status Connection status:
+     * @param string $Status Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status.
      * @param string $Domain Accessed domain name.
      * @param string $IP Accessed IP.

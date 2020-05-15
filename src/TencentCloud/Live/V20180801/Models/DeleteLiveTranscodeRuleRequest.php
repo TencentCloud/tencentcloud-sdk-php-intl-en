@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * DeleteLiveTranscodeRule request structure.
  *
  * @method string getDomainName() Obtain Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
- * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
- * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method string getStreamName() Obtain Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  * @method void setStreamName(string $StreamName) Set Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  * @method integer getTemplateId() Obtain Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
  */
 class DeleteLiveTranscodeRuleRequest extends AbstractModel
 {
     /**
      * @var string Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public $DomainName;
 
     /**
-     * @var string Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
+     * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public $AppName;
 
     /**
      * @var string Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public $StreamName;
 
     /**
      * @var integer Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public $TemplateId;
 
     /**
      * @param string $DomainName Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
-     * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
+     * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      * @param string $StreamName Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      * @param integer $TemplateId Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     function __construct()
     {

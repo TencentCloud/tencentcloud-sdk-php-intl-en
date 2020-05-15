@@ -20,31 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateProxy response structure.
  *
- * @method float getProxyDailyPrice() Obtain Basic cost of connection (unit: CNY/day).
- * @method void setProxyDailyPrice(float $ProxyDailyPrice) Set Basic cost of connection (unit: CNY/day).
- * @method array getBandwidthUnitPrice() Obtain Connection bandwidth price gradient.
- * @method void setBandwidthUnitPrice(array $BandwidthUnitPrice) Set Connection bandwidth price gradient.
- * @method float getDiscountProxyDailyPrice() Obtain Discounted basic cost of connection (unit: CNY/day).
- * @method void setDiscountProxyDailyPrice(float $DiscountProxyDailyPrice) Set Discounted basic cost of connection (unit: CNY/day).
+ * @method float getProxyDailyPrice() Obtain Basic price of connection in USD/day.
+ * @method void setProxyDailyPrice(float $ProxyDailyPrice) Set Basic price of connection in USD/day.
+ * @method array getBandwidthUnitPrice() Obtain Tiered price of connection bandwidth.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setBandwidthUnitPrice(array $BandwidthUnitPrice) Set Tiered price of connection bandwidth.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getDiscountProxyDailyPrice() Obtain Discounted basic price of connection in USD/day.
+ * @method void setDiscountProxyDailyPrice(float $DiscountProxyDailyPrice) Set Discounted basic price of connection in USD/day.
  * @method string getCurrency() Obtain Currency, which supports CNY, USD, etc.
  * @method void setCurrency(string $Currency) Set Currency, which supports CNY, USD, etc.
+ * @method float getFlowUnitPrice() Obtain Connection traffic price in USD/GB.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setFlowUnitPrice(float $FlowUnitPrice) Set Connection traffic price in USD/GB.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getDiscountFlowUnitPrice() Obtain Discounted connection traffic price in USD/GB.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDiscountFlowUnitPrice(float $DiscountFlowUnitPrice) Set Discounted connection traffic price in USD/GB.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class InquiryPriceCreateProxyResponse extends AbstractModel
 {
     /**
-     * @var float Basic cost of connection (unit: CNY/day).
+     * @var float Basic price of connection in USD/day.
      */
     public $ProxyDailyPrice;
 
     /**
-     * @var array Connection bandwidth price gradient.
+     * @var array Tiered price of connection bandwidth.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $BandwidthUnitPrice;
 
     /**
-     * @var float Discounted basic cost of connection (unit: CNY/day).
+     * @var float Discounted basic price of connection in USD/day.
      */
     public $DiscountProxyDailyPrice;
 
@@ -54,15 +65,32 @@ class InquiryPriceCreateProxyResponse extends AbstractModel
     public $Currency;
 
     /**
+     * @var float Connection traffic price in USD/GB.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $FlowUnitPrice;
+
+    /**
+     * @var float Discounted connection traffic price in USD/GB.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DiscountFlowUnitPrice;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param float $ProxyDailyPrice Basic cost of connection (unit: CNY/day).
-     * @param array $BandwidthUnitPrice Connection bandwidth price gradient.
-     * @param float $DiscountProxyDailyPrice Discounted basic cost of connection (unit: CNY/day).
+     * @param float $ProxyDailyPrice Basic price of connection in USD/day.
+     * @param array $BandwidthUnitPrice Tiered price of connection bandwidth.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $DiscountProxyDailyPrice Discounted basic price of connection in USD/day.
      * @param string $Currency Currency, which supports CNY, USD, etc.
+     * @param float $FlowUnitPrice Connection traffic price in USD/GB.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $DiscountFlowUnitPrice Discounted connection traffic price in USD/GB.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -97,6 +125,14 @@ class InquiryPriceCreateProxyResponse extends AbstractModel
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("FlowUnitPrice",$param) and $param["FlowUnitPrice"] !== null) {
+            $this->FlowUnitPrice = $param["FlowUnitPrice"];
+        }
+
+        if (array_key_exists("DiscountFlowUnitPrice",$param) and $param["DiscountFlowUnitPrice"] !== null) {
+            $this->DiscountFlowUnitPrice = $param["DiscountFlowUnitPrice"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

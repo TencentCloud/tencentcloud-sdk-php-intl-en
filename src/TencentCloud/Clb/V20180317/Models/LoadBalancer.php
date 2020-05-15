@@ -190,6 +190,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsBlockTime(string $IsBlockTime) Set Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getLocalBgp() Obtain Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained
+ * @method void setLocalBgp(boolean $LocalBgp) Set Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained
  */
 class LoadBalancer extends AbstractModel
 {
@@ -455,6 +459,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IsBlockTime;
 
     /**
+     * @var boolean Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained
+     */
+    public $LocalBgp;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -540,6 +550,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IsBlockTime Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $LocalBgp Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained
      */
     function __construct()
     {
@@ -749,6 +761,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsBlockTime",$param) and $param["IsBlockTime"] !== null) {
             $this->IsBlockTime = $param["IsBlockTime"];
+        }
+
+        if (array_key_exists("LocalBgp",$param) and $param["LocalBgp"] !== null) {
+            $this->LocalBgp = $param["LocalBgp"];
         }
     }
 }

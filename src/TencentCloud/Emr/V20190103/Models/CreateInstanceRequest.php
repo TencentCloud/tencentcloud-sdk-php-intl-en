@@ -32,8 +32,16 @@ use TencentCloud\Common\AbstractModel;
 <li>7: EMR v3.0.0.</li>
  * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
  * @method void setVPCSettings(VPCSettings $VPCSettings) Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
- * @method array getSoftware() Obtain List of deployed components. Different `ProductIds` correspond to components on different versions. For example, when `ProductId` is 4, this parameter can be `Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9`; when `ProductId` is 2, this parameter can be `Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9`.
- * @method void setSoftware(array $Software) Set List of deployed components. Different `ProductIds` correspond to components on different versions. For example, when `ProductId` is 4, this parameter can be `Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9`; when `ProductId` is 2, this parameter can be `Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9`.
+ * @method array getSoftware() Obtain List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+ * @method void setSoftware(array $Software) Set List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
  * @method NewResourceSpec getResourceSpec() Obtain Node resource specification.
  * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node resource specification.
  * @method integer getSupportHA() Obtain Whether to enable high node availability. Valid values:
@@ -55,9 +63,11 @@ use TencentCloud\Common\AbstractModel;
  * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method integer getTimeSpan() Obtain Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
+<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
  * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
+<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
  * @method string getTimeUnit() Obtain Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
@@ -132,7 +142,11 @@ class CreateInstanceRequest extends AbstractModel
     public $VPCSettings;
 
     /**
-     * @var array List of deployed components. Different `ProductIds` correspond to components on different versions. For example, when `ProductId` is 4, this parameter can be `Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9`; when `ProductId` is 2, this parameter can be `Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9`.
+     * @var array List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
      */
     public $Software;
 
@@ -168,7 +182,8 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @var integer Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
+<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
      */
     public $TimeSpan;
 
@@ -275,7 +290,11 @@ class CreateInstanceRequest extends AbstractModel
 <li>4: EMR v2.1.0.</li>
 <li>7: EMR v3.0.0.</li>
      * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-     * @param array $Software List of deployed components. Different `ProductIds` correspond to components on different versions. For example, when `ProductId` is 4, this parameter can be `Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9`; when `ProductId` is 2, this parameter can be `Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9`.
+     * @param array $Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
+<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
      * @param NewResourceSpec $ResourceSpec Node resource specification.
      * @param integer $SupportHA Whether to enable high node availability. Valid values:
 <li>0: does not enable high availability of node.</li>
@@ -287,7 +306,8 @@ class CreateInstanceRequest extends AbstractModel
 <li>0: pay-as-you-go.</li>
      * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param integer $TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
+<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
      * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>

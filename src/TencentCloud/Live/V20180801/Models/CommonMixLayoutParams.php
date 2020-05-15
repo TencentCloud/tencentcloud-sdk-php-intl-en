@@ -41,45 +41,45 @@ If this parameter is left empty, 0 will be used by default.
 4: the input stream is audio.
 5: the input stream is pure video.
  * @method float getImageWidth() Obtain Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
  * @method void setImageWidth(float $ImageWidth) Set Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
  * @method float getImageHeight() Obtain Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
  * @method void setImageHeight(float $ImageHeight) Set Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
  * @method float getLocationX() Obtain X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width).
  * @method void setLocationX(float $LocationX) Set X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width).
  * @method float getLocationY() Obtain Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width)
  * @method void setLocationY(float $LocationY) Set Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
@@ -127,7 +127,7 @@ If this parameter is left empty, 0 will be used by default.
 
     /**
      * @var float Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
@@ -136,7 +136,7 @@ If percentage is used, the expected output is (percentage * background width).
 
     /**
      * @var float Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
@@ -145,7 +145,7 @@ If percentage is used, the expected output is (percentage * background height).
 
     /**
      * @var float X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
@@ -155,7 +155,7 @@ If percentage is used, the expected output is (percentage * background width).
 
     /**
      * @var float Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
@@ -193,23 +193,23 @@ If this parameter is left empty, 0 will be used by default.
 4: the input stream is audio.
 5: the input stream is pure video.
      * @param float $ImageWidth Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
      * @param float $ImageHeight Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
      * @param float $LocationX X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width).
      * @param float $LocationY Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 

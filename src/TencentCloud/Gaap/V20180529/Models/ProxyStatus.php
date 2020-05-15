@@ -23,26 +23,26 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() Obtain Connection instance ID.
  * @method void setInstanceId(string $InstanceId) Set Connection instance ID.
  * @method string getStatus() Obtain Connection status.
-Where:
+Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
+ADJUSTING: adjusting configuration;
 ISOLATING: isolating;
 ISOLATED: isolated;
 UNKNOWN: unknown status.
  * @method void setStatus(string $Status) Set Connection status.
-Where:
+Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
+ADJUSTING: adjusting configuration;
 ISOLATING: isolating;
 ISOLATED: isolated;
 UNKNOWN: unknown status.
@@ -56,14 +56,14 @@ class ProxyStatus extends AbstractModel
 
     /**
      * @var string Connection status.
-Where:
+Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
+ADJUSTING: adjusting configuration;
 ISOLATING: isolating;
 ISOLATED: isolated;
 UNKNOWN: unknown status.
@@ -73,14 +73,14 @@ UNKNOWN: unknown status.
     /**
      * @param string $InstanceId Connection instance ID.
      * @param string $Status Connection status.
-Where:
+Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
+ADJUSTING: adjusting configuration;
 ISOLATING: isolating;
 ISOLATED: isolated;
 UNKNOWN: unknown status.

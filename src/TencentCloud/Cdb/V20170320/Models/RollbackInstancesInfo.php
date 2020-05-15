@@ -21,20 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * Details of the instance for rollback
  *
  * @method string getInstanceId() Obtain TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getStrategy() Obtain Rollback policy. Value range: table, db, full. Default value: full. Table: expedited rollback mode, where only the selected table-level backups and binlogs are imported; for cross-table rollback, if the associated tables are not selected simultaneously, the rollback will fail; the parameter `Databases` must be empty under this mode. db: fast rollback mode, where only the selected database-level backups and binlogs are imported; for cross-database rollback, if the associated databases are not selected simultaneously, the rollback will fail. full: ordinary rollback mode, which imports all the backups and binlogs of the instance at a relatively low speed.
  * @method void setStrategy(string $Strategy) Set Rollback policy. Value range: table, db, full. Default value: full. Table: expedited rollback mode, where only the selected table-level backups and binlogs are imported; for cross-table rollback, if the associated tables are not selected simultaneously, the rollback will fail; the parameter `Databases` must be empty under this mode. db: fast rollback mode, where only the selected database-level backups and binlogs are imported; for cross-database rollback, if the associated databases are not selected simultaneously, the rollback will fail. full: ordinary rollback mode, which imports all the backups and binlogs of the instance at a relatively low speed.
  * @method string getRollbackTime() Obtain Database rollback time in the format of yyyy-mm-dd hh:mm:ss
  * @method void setRollbackTime(string $RollbackTime) Set Database rollback time in the format of yyyy-mm-dd hh:mm:ss
  * @method array getDatabases() Obtain Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDatabases(array $Databases) Set Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getTables() Obtain Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTables(array $Tables) Set Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class RollbackInstancesInfo extends AbstractModel
 {
     /**
      * @var string TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
@@ -50,20 +57,25 @@ class RollbackInstancesInfo extends AbstractModel
 
     /**
      * @var array Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Databases;
 
     /**
      * @var array Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Tables;
 
     /**
      * @param string $InstanceId TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Strategy Rollback policy. Value range: table, db, full. Default value: full. Table: expedited rollback mode, where only the selected table-level backups and binlogs are imported; for cross-table rollback, if the associated tables are not selected simultaneously, the rollback will fail; the parameter `Databases` must be empty under this mode. db: fast rollback mode, where only the selected database-level backups and binlogs are imported; for cross-database rollback, if the associated databases are not selected simultaneously, the rollback will fail. full: ordinary rollback mode, which imports all the backups and binlogs of the instance at a relatively low speed.
      * @param string $RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss
      * @param array $Databases Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tables Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
