@@ -18,21 +18,21 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Queries District/ISP playback information.
+ * Queries playback information by district/ISP.
  *
- * @method string getName() Obtain District/ISP.
- * @method void setName(string $Name) Set District/ISP.
+ * @method string getName() Obtain District/ISP/country/region.
+ * @method void setName(string $Name) Set District/ISP/country/region.
  * @method float getTotalFlux() Obtain Total traffic in MB.
  * @method void setTotalFlux(float $TotalFlux) Set Total traffic in MB.
  * @method integer getTotalRequest() Obtain Total number of requests.
  * @method void setTotalRequest(integer $TotalRequest) Set Total number of requests.
- * @method float getAvgFluxPerSecond() Obtain Average download traffic in MB.
- * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) Set Average download traffic in MB.
+ * @method float getAvgFluxPerSecond() Obtain Average download traffic in MB/s.
+ * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) Set Average download traffic in MB/s.
  */
 class ProIspPlaySumInfo extends AbstractModel
 {
     /**
-     * @var string District/ISP.
+     * @var string District/ISP/country/region.
      */
     public $Name;
 
@@ -47,15 +47,15 @@ class ProIspPlaySumInfo extends AbstractModel
     public $TotalRequest;
 
     /**
-     * @var float Average download traffic in MB.
+     * @var float Average download traffic in MB/s.
      */
     public $AvgFluxPerSecond;
 
     /**
-     * @param string $Name District/ISP.
+     * @param string $Name District/ISP/country/region.
      * @param float $TotalFlux Total traffic in MB.
      * @param integer $TotalRequest Total number of requests.
-     * @param float $AvgFluxPerSecond Average download traffic in MB.
+     * @param float $AvgFluxPerSecond Average download traffic in MB/s.
      */
     function __construct()
     {

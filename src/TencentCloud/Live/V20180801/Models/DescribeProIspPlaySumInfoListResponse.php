@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalNum(integer $TotalNum) Set Total number of results.
  * @method integer getTotalPage() Obtain Total number of pages.
  * @method void setTotalPage(integer $TotalPage) Set Total number of pages.
- * @method array getDataInfoList() Obtain List of aggregated playback data by ISP or district.
- * @method void setDataInfoList(array $DataInfoList) Set List of aggregated playback data by ISP or district.
+ * @method array getDataInfoList() Obtain Aggregated data list by district, ISP, or country/region.
+ * @method void setDataInfoList(array $DataInfoList) Set Aggregated data list by district, ISP, or country/region.
  * @method float getAvgFluxPerSecond() Obtain Average bandwidth.
  * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) Set Average bandwidth.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -79,7 +79,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
     public $TotalPage;
 
     /**
-     * @var array List of aggregated playback data by ISP or district.
+     * @var array Aggregated data list by district, ISP, or country/region.
      */
     public $DataInfoList;
 
@@ -101,7 +101,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
      * @param integer $PageNum Page number.
      * @param integer $TotalNum Total number of results.
      * @param integer $TotalPage Total number of pages.
-     * @param array $DataInfoList List of aggregated playback data by ISP or district.
+     * @param array $DataInfoList Aggregated data list by district, ISP, or country/region.
      * @param float $AvgFluxPerSecond Average bandwidth.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

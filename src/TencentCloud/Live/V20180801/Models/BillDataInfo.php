@@ -18,21 +18,21 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bandwidth and traffic information
+ * Bandwidth and traffic information.
  *
- * @method string getTime() Obtain Time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setTime(string $Time) Set Time point in the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getTime() Obtain Time point in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setTime(string $Time) Set Time point in the format of `yyyy-mm-dd HH:MM:SS`.
  * @method float getBandwidth() Obtain Bandwidth in Mbps.
  * @method void setBandwidth(float $Bandwidth) Set Bandwidth in Mbps.
  * @method float getFlux() Obtain Traffic in MB.
  * @method void setFlux(float $Flux) Set Traffic in MB.
- * @method string getPeakTime() Obtain 
- * @method void setPeakTime(string $PeakTime) Set 
+ * @method string getPeakTime() Obtain Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
+ * @method void setPeakTime(string $PeakTime) Set Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
  */
 class BillDataInfo extends AbstractModel
 {
     /**
-     * @var string Time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $Time;
 
@@ -47,15 +47,15 @@ class BillDataInfo extends AbstractModel
     public $Flux;
 
     /**
-     * @var string 
+     * @var string Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
      */
     public $PeakTime;
 
     /**
-     * @param string $Time Time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $Time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
      * @param float $Bandwidth Bandwidth in Mbps.
      * @param float $Flux Traffic in MB.
-     * @param string $PeakTime 
+     * @param string $PeakTime Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
      */
     function __construct()
     {

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillBandwidthAndFluxList response structure.
  *
- * @method string getPeakBandwidthTime() Obtain Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setPeakBandwidthTime(string $PeakBandwidthTime) Set Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
- * @method float getPeakBandwidth() Obtain Bandwidth in Mbps.
- * @method void setPeakBandwidth(float $PeakBandwidth) Set Bandwidth in Mbps.
- * @method string getP95PeakBandwidthTime() Obtain Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setP95PeakBandwidthTime(string $P95PeakBandwidthTime) Set Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getPeakBandwidthTime() Obtain Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setPeakBandwidthTime(string $PeakBandwidthTime) Set Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method float getPeakBandwidth() Obtain Peak bandwidth in Mbps.
+ * @method void setPeakBandwidth(float $PeakBandwidth) Set Peak bandwidth in Mbps.
+ * @method string getP95PeakBandwidthTime() Obtain Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setP95PeakBandwidthTime(string $P95PeakBandwidthTime) Set Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
  * @method float getP95PeakBandwidth() Obtain 95th percentile bandwidth in Mbps.
  * @method void setP95PeakBandwidth(float $P95PeakBandwidth) Set 95th percentile bandwidth in Mbps.
  * @method float getSumFlux() Obtain Total traffic in MB.
@@ -38,17 +38,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillBandwidthAndFluxListResponse extends AbstractModel
 {
     /**
-     * @var string Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $PeakBandwidthTime;
 
     /**
-     * @var float Bandwidth in Mbps.
+     * @var float Peak bandwidth in Mbps.
      */
     public $PeakBandwidth;
 
     /**
-     * @var string Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $P95PeakBandwidthTime;
 
@@ -73,9 +73,9 @@ class DescribeBillBandwidthAndFluxListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PeakBandwidthTime Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
-     * @param float $PeakBandwidth Bandwidth in Mbps.
-     * @param string $P95PeakBandwidthTime Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $PeakBandwidthTime Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param float $PeakBandwidth Peak bandwidth in Mbps.
+     * @param string $P95PeakBandwidthTime Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
      * @param float $P95PeakBandwidth 95th percentile bandwidth in Mbps.
      * @param float $SumFlux Total traffic in MB.
      * @param array $DataInfoList Detailed data information.

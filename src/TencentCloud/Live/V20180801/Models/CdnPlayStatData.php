@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Downstream playback statistical metrics
  *
- * @method string getTime() Obtain Time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setTime(string $Time) Set Time point in the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getTime() Obtain Time point in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setTime(string $Time) Set Time point in the format of `yyyy-mm-dd HH:MM:SS`.
  * @method float getBandwidth() Obtain Bandwidth in Mbps.
  * @method void setBandwidth(float $Bandwidth) Set Bandwidth in Mbps.
  * @method float getFlux() Obtain Traffic in MB.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CdnPlayStatData extends AbstractModel
 {
     /**
-     * @var string Time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $Time;
 
@@ -59,7 +59,7 @@ class CdnPlayStatData extends AbstractModel
     public $Online;
 
     /**
-     * @param string $Time Time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $Time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
      * @param float $Bandwidth Bandwidth in Mbps.
      * @param float $Flux Traffic in MB.
      * @param integer $Request Number of new requests.

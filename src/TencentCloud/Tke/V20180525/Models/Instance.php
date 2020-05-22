@@ -38,6 +38,14 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method string getCreatedTime() Obtain Creation time
  * @method void setCreatedTime(string $CreatedTime) Set Creation time
+ * @method string getLanIP() Obtain Node private IP
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setLanIP(string $LanIP) Set Node private IP
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getNodePoolId() Obtain 
+ * @method void setNodePoolId(string $NodePoolId) Set 
+ * @method string getAutoscalingGroupId() Obtain 
+ * @method void setAutoscalingGroupId(string $AutoscalingGroupId) Set 
  */
 class Instance extends AbstractModel
 {
@@ -79,6 +87,22 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $CreatedTime;
 
     /**
+     * @var string Node private IP
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $LanIP;
+
+    /**
+     * @var string 
+     */
+    public $NodePoolId;
+
+    /**
+     * @var string 
+     */
+    public $AutoscalingGroupId;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceRole Node role: MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER
      * @param string $FailedReason Reason for instance exception (or initialization)
@@ -88,6 +112,10 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Node settings
 Note: this field may return null, indicating that no valid value is obtained.
      * @param string $CreatedTime Creation time
+     * @param string $LanIP Node private IP
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $NodePoolId 
+     * @param string $AutoscalingGroupId 
      */
     function __construct()
     {
@@ -129,6 +157,18 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("LanIP",$param) and $param["LanIP"] !== null) {
+            $this->LanIP = $param["LanIP"];
+        }
+
+        if (array_key_exists("NodePoolId",$param) and $param["NodePoolId"] !== null) {
+            $this->NodePoolId = $param["NodePoolId"];
+        }
+
+        if (array_key_exists("AutoscalingGroupId",$param) and $param["AutoscalingGroupId"] !== null) {
+            $this->AutoscalingGroupId = $param["AutoscalingGroupId"];
         }
     }
 }

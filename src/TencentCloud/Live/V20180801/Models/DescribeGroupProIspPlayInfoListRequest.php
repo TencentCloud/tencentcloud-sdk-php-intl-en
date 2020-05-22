@@ -20,62 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupProIspPlayInfoList request structure.
  *
- * @method string getStartTime() Obtain Start time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setStartTime(string $StartTime) Set Start time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method string getEndTime() Obtain End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried.
- * @method void setEndTime(string $EndTime) Set End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried.
- * @method array getPlayDomains() Obtain Playback domain name. If it is blank by default, the full data will be queried.
- * @method void setPlayDomains(array $PlayDomains) Set Playback domain name. If it is blank by default, the full data will be queried.
- * @method array getProvinceNames() Obtain List of districts. If it is blank by default, data of all districts will be returned.
- * @method void setProvinceNames(array $ProvinceNames) Set List of districts. If it is blank by default, data of all districts will be returned.
- * @method array getIspNames() Obtain List of ISPs. If it is blank by default, data of all ISPs will be returned.
- * @method void setIspNames(array $IspNames) Set List of ISPs. If it is blank by default, data of all ISPs will be returned.
- * @method string getMainlandOrOversea() Obtain Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried.
- * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried.
+ * @method string getStartTime() Obtain Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setStartTime(string $StartTime) Set Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method string getEndTime() Obtain End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried.
+ * @method void setEndTime(string $EndTime) Set End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried.
+ * @method array getPlayDomains() Obtain Playback domain name. If this parameter is left empty, full data will be queried.
+ * @method void setPlayDomains(array $PlayDomains) Set Playback domain name. If this parameter is left empty, full data will be queried.
+ * @method array getProvinceNames() Obtain District list. If this parameter is left empty, data for all districts will be returned.
+ * @method void setProvinceNames(array $ProvinceNames) Set District list. If this parameter is left empty, data for all districts will be returned.
+ * @method array getIspNames() Obtain ISP list. If this parameter is left empty, data of all ISPs will be returned.
+ * @method void setIspNames(array $IspNames) Set ISP list. If this parameter is left empty, data of all ISPs will be returned.
+ * @method string getMainlandOrOversea() Obtain Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
  */
 class DescribeGroupProIspPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $StartTime;
 
     /**
-     * @var string End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried.
+     * @var string End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried.
      */
     public $EndTime;
 
     /**
-     * @var array Playback domain name. If it is blank by default, the full data will be queried.
+     * @var array Playback domain name. If this parameter is left empty, full data will be queried.
      */
     public $PlayDomains;
 
     /**
-     * @var array List of districts. If it is blank by default, data of all districts will be returned.
+     * @var array District list. If this parameter is left empty, data for all districts will be returned.
      */
     public $ProvinceNames;
 
     /**
-     * @var array List of ISPs. If it is blank by default, data of all ISPs will be returned.
+     * @var array ISP list. If this parameter is left empty, data of all ISPs will be returned.
      */
     public $IspNames;
 
     /**
-     * @var string Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried.
+     * @var string Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
      */
     public $MainlandOrOversea;
 
     /**
-     * @param string $StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param string $EndTime End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried.
-     * @param array $PlayDomains Playback domain name. If it is blank by default, the full data will be queried.
-     * @param array $ProvinceNames List of districts. If it is blank by default, data of all districts will be returned.
-     * @param array $IspNames List of ISPs. If it is blank by default, data of all ISPs will be returned.
-     * @param string $MainlandOrOversea Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried.
+     * @param string $StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param string $EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried.
+     * @param array $PlayDomains Playback domain name. If this parameter is left empty, full data will be queried.
+     * @param array $ProvinceNames District list. If this parameter is left empty, data for all districts will be returned.
+     * @param array $IspNames ISP list. If this parameter is left empty, data of all ISPs will be returned.
+     * @param string $MainlandOrOversea Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
      */
     function __construct()
     {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(boolean $Http2) Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
  * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+ * @method string getNewDefaultServerDomain() Obtain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+ * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) Set A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
  */
 class ModifyDomainAttributesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $DefaultServer;
 
     /**
+     * @var string A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+     */
+    public $NewDefaultServerDomain;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param string $Domain Domain name, which must be under a created forwarding rule.
@@ -80,6 +87,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @param CertificateInput $Certificate Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
      * @param boolean $Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      * @param boolean $DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+     * @param string $NewDefaultServerDomain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class ModifyDomainAttributesRequest extends AbstractModel
 
         if (array_key_exists("DefaultServer",$param) and $param["DefaultServer"] !== null) {
             $this->DefaultServer = $param["DefaultServer"];
+        }
+
+        if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {
+            $this->NewDefaultServerDomain = $param["NewDefaultServerDomain"];
         }
     }
 }

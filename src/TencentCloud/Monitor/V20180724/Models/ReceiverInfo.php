@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifyWay(array $NotifyWay) Set Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
  * @method string getReceiverType() Obtain Recipient type. Valid values: group and user.
  * @method void setReceiverType(string $ReceiverType) Set Recipient type. Valid values: group and user.
- * @method integer getId() Obtain Id
- * @method void setId(integer $Id) Set Id
+ * @method integer getId() Obtain ReceiverId
+ * @method void setId(integer $Id) Set ReceiverId
  * @method array getSendFor() Obtain Call alarm notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
  * @method void setSendFor(array $SendFor) Set Call alarm notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
  * @method array getUidList() Obtain Uid of the alarm call receiver.
@@ -74,7 +74,7 @@ class ReceiverInfo extends AbstractModel
     public $ReceiverType;
 
     /**
-     * @var integer Id
+     * @var integer ReceiverId
      */
     public $Id;
 
@@ -133,7 +133,7 @@ class ReceiverInfo extends AbstractModel
      * @param integer $EndTime End time of the alarm period. The meaning is the same as that of StartTime.
      * @param array $NotifyWay Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
      * @param string $ReceiverType Recipient type. Valid values: group and user.
-     * @param integer $Id Id
+     * @param integer $Id ReceiverId
      * @param array $SendFor Call alarm notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
      * @param array $UidList Uid of the alarm call receiver.
      * @param integer $RoundNumber Number of alarm call rounds.

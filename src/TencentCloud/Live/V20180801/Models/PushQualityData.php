@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Push quality data of a stream.
  *
- * @method string getTime() Obtain Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
- * @method void setTime(string $Time) Set Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+ * @method string getTime() Obtain Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
+ * @method void setTime(string $Time) Set Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
  * @method string getPushDomain() Obtain Push domain name.
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
  * @method string getAppName() Obtain Push path.
  * @method void setAppName(string $AppName) Set Push path.
  * @method string getClientIp() Obtain Push client IP.
  * @method void setClientIp(string $ClientIp) Set Push client IP.
- * @method string getBeginPushTime() Obtain Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
- * @method void setBeginPushTime(string $BeginPushTime) Set Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+ * @method string getBeginPushTime() Obtain Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
+ * @method void setBeginPushTime(string $BeginPushTime) Set Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
  * @method string getResolution() Obtain Resolution information.
  * @method void setResolution(string $Resolution) Set Resolution information.
- * @method string getVCodec() Obtain Video encoding format.
- * @method void setVCodec(string $VCodec) Set Video encoding format.
- * @method string getACodec() Obtain Audio encoding format.
- * @method void setACodec(string $ACodec) Set Audio encoding format.
+ * @method string getVCodec() Obtain Video codec.
+ * @method void setVCodec(string $VCodec) Set Video codec.
+ * @method string getACodec() Obtain Audio codec.
+ * @method void setACodec(string $ACodec) Set Audio codec.
  * @method string getSequence() Obtain Push serial number, which uniquely identifies a push.
  * @method void setSequence(string $Sequence) Set Push serial number, which uniquely identifies a push.
  * @method integer getVideoFps() Obtain Video frame rate.
@@ -52,11 +52,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTs(integer $VideoTs) Set Video elapsed time in milliseconds.
  * @method integer getAudioTs() Obtain Audio elapsed time in milliseconds.
  * @method void setAudioTs(integer $AudioTs) Set Audio elapsed time in milliseconds.
+ * @method integer getMetaVideoRate() Obtain Video bitrate in `metadata` in Kbps.
+ * @method void setMetaVideoRate(integer $MetaVideoRate) Set Video bitrate in `metadata` in Kbps.
+ * @method integer getMetaAudioRate() Obtain Audio bitrate in `metadata` in Kbps.
+ * @method void setMetaAudioRate(integer $MetaAudioRate) Set Audio bitrate in `metadata` in Kbps.
+ * @method integer getMateFps() Obtain Frame rate in `metadata`.
+ * @method void setMateFps(integer $MateFps) Set Frame rate in `metadata`.
  */
 class PushQualityData extends AbstractModel
 {
     /**
-     * @var string Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+     * @var string Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      */
     public $Time;
 
@@ -76,7 +82,7 @@ class PushQualityData extends AbstractModel
     public $ClientIp;
 
     /**
-     * @var string Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+     * @var string Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      */
     public $BeginPushTime;
 
@@ -86,12 +92,12 @@ class PushQualityData extends AbstractModel
     public $Resolution;
 
     /**
-     * @var string Video encoding format.
+     * @var string Video codec.
      */
     public $VCodec;
 
     /**
-     * @var string Audio encoding format.
+     * @var string Audio codec.
      */
     public $ACodec;
 
@@ -136,14 +142,29 @@ class PushQualityData extends AbstractModel
     public $AudioTs;
 
     /**
-     * @param string $Time Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+     * @var integer Video bitrate in `metadata` in Kbps.
+     */
+    public $MetaVideoRate;
+
+    /**
+     * @var integer Audio bitrate in `metadata` in Kbps.
+     */
+    public $MetaAudioRate;
+
+    /**
+     * @var integer Frame rate in `metadata`.
+     */
+    public $MateFps;
+
+    /**
+     * @param string $Time Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      * @param string $PushDomain Push domain name.
      * @param string $AppName Push path.
      * @param string $ClientIp Push client IP.
-     * @param string $BeginPushTime Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+     * @param string $BeginPushTime Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      * @param string $Resolution Resolution information.
-     * @param string $VCodec Video encoding format.
-     * @param string $ACodec Audio encoding format.
+     * @param string $VCodec Video codec.
+     * @param string $ACodec Audio codec.
      * @param string $Sequence Push serial number, which uniquely identifies a push.
      * @param integer $VideoFps Video frame rate.
      * @param integer $VideoRate Video bitrate in bps.
@@ -152,6 +173,9 @@ class PushQualityData extends AbstractModel
      * @param integer $LocalTs Local elapsed time in milliseconds. The greater the difference between audio/video elapsed time and local elapsed time, the poorer the push quality and the more serious the upstream lag.
      * @param integer $VideoTs Video elapsed time in milliseconds.
      * @param integer $AudioTs Audio elapsed time in milliseconds.
+     * @param integer $MetaVideoRate Video bitrate in `metadata` in Kbps.
+     * @param integer $MetaAudioRate Audio bitrate in `metadata` in Kbps.
+     * @param integer $MateFps Frame rate in `metadata`.
      */
     function __construct()
     {
@@ -228,6 +252,18 @@ class PushQualityData extends AbstractModel
 
         if (array_key_exists("AudioTs",$param) and $param["AudioTs"] !== null) {
             $this->AudioTs = $param["AudioTs"];
+        }
+
+        if (array_key_exists("MetaVideoRate",$param) and $param["MetaVideoRate"] !== null) {
+            $this->MetaVideoRate = $param["MetaVideoRate"];
+        }
+
+        if (array_key_exists("MetaAudioRate",$param) and $param["MetaAudioRate"] !== null) {
+            $this->MetaAudioRate = $param["MetaAudioRate"];
+        }
+
+        if (array_key_exists("MateFps",$param) and $param["MateFps"] !== null) {
+            $this->MateFps = $param["MateFps"];
         }
     }
 }

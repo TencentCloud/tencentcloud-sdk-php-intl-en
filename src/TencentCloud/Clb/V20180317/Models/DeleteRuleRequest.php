@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
  * @method string getUrl() Obtain Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
  * @method void setUrl(string $Url) Set Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+ * @method string getNewDefaultServerDomain() Obtain A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+ * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) Set A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
  */
 class DeleteRuleRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DeleteRuleRequest extends AbstractModel
     public $Url;
 
     /**
+     * @var string A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+     */
+    public $NewDefaultServerDomain;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param array $LocationIds Array of IDs of the forwarding rules to be deleted
      * @param string $Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
      * @param string $Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+     * @param string $NewDefaultServerDomain A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DeleteRuleRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {
+            $this->NewDefaultServerDomain = $param["NewDefaultServerDomain"];
         }
     }
 }

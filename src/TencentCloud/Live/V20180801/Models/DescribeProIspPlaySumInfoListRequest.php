@@ -21,97 +21,85 @@ use TencentCloud\Common\AbstractModel;
  * DescribeProIspPlaySumInfoList request structure.
  *
  * @method string getStartTime() Obtain Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+In the format of `yyyy-mm-dd HH:MM:SS`.
  * @method void setStartTime(string $StartTime) Set Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+In the format of `yyyy-mm-dd HH:MM:SS`.
  * @method string getEndTime() Obtain End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
  * @method void setEndTime(string $EndTime) Set End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
- * @method string getStatType() Obtain Statistics type. Value range: "Province", "Isp".
- * @method void setStatType(string $StatType) Set Statistics type. Value range: "Province", "Isp".
- * @method array getPlayDomains() Obtain If it is blank by default, the full data will be queried.
- * @method void setPlayDomains(array $PlayDomains) Set If it is blank by default, the full data will be queried.
- * @method integer getPageNum() Obtain Page number.
-Value range: [1,1000],
-Default value: 1.
- * @method void setPageNum(integer $PageNum) Set Page number.
-Value range: [1,1000],
-Default value: 1.
- * @method integer getPageSize() Obtain Number of entries per page. Value range: [1,1000],
-Default value: 20.
- * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: [1,1000],
-Default value: 20.
- * @method string getMainlandOrOversea() Obtain 
- * @method void setMainlandOrOversea(string $MainlandOrOversea) Set 
- * @method string getOutLanguage() Obtain 
- * @method void setOutLanguage(string $OutLanguage) Set 
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+ * @method string getStatType() Obtain Statistics type. Valid values: Province, Isp, CountryOrArea.
+ * @method void setStatType(string $StatType) Set Statistics type. Valid values: Province, Isp, CountryOrArea.
+ * @method array getPlayDomains() Obtain If this parameter is left empty, full data will be queried.
+ * @method void setPlayDomains(array $PlayDomains) Set If this parameter is left empty, full data will be queried.
+ * @method integer getPageNum() Obtain Page number. Value range: [1,1000]. Default value: 1.
+ * @method void setPageNum(integer $PageNum) Set Page number. Value range: [1,1000]. Default value: 1.
+ * @method integer getPageSize() Obtain Number of entries per page. Value range: [1,1000]. Default value: 20.
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: [1,1000]. Default value: 20.
+ * @method string getMainlandOrOversea() Obtain Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+ * @method string getOutLanguage() Obtain Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+ * @method void setOutLanguage(string $OutLanguage) Set Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
  */
 class DescribeProIspPlaySumInfoListRequest extends AbstractModel
 {
     /**
      * @var string Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $StartTime;
 
     /**
      * @var string End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public $EndTime;
 
     /**
-     * @var string Statistics type. Value range: "Province", "Isp".
+     * @var string Statistics type. Valid values: Province, Isp, CountryOrArea.
      */
     public $StatType;
 
     /**
-     * @var array If it is blank by default, the full data will be queried.
+     * @var array If this parameter is left empty, full data will be queried.
      */
     public $PlayDomains;
 
     /**
-     * @var integer Page number.
-Value range: [1,1000],
-Default value: 1.
+     * @var integer Page number. Value range: [1,1000]. Default value: 1.
      */
     public $PageNum;
 
     /**
-     * @var integer Number of entries per page. Value range: [1,1000],
-Default value: 20.
+     * @var integer Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public $PageSize;
 
     /**
-     * @var string 
+     * @var string Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public $MainlandOrOversea;
 
     /**
-     * @var string 
+     * @var string Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
      */
     public $OutLanguage;
 
     /**
      * @param string $StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+In the format of `yyyy-mm-dd HH:MM:SS`.
      * @param string $EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
-     * @param string $StatType Statistics type. Value range: "Province", "Isp".
-     * @param array $PlayDomains If it is blank by default, the full data will be queried.
-     * @param integer $PageNum Page number.
-Value range: [1,1000],
-Default value: 1.
-     * @param integer $PageSize Number of entries per page. Value range: [1,1000],
-Default value: 20.
-     * @param string $MainlandOrOversea 
-     * @param string $OutLanguage 
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @param string $StatType Statistics type. Valid values: Province, Isp, CountryOrArea.
+     * @param array $PlayDomains If this parameter is left empty, full data will be queried.
+     * @param integer $PageNum Page number. Value range: [1,1000]. Default value: 1.
+     * @param integer $PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+     * @param string $MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+     * @param string $OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
      */
     function __construct()
     {

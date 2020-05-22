@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObjLike(string $ObjLike) Set Filter by alarm object.
  * @method array getInstanceGroupIds() Obtain Filter by instance group ID.
  * @method void setInstanceGroupIds(array $InstanceGroupIds) Set Filter by instance group ID.
- * @method array getMetricNames() Obtain 
- * @method void setMetricNames(array $MetricNames) Set 
+ * @method array getMetricNames() Obtain Filtering by metric names
+ * @method void setMetricNames(array $MetricNames) Set Filtering by metric names
  */
 class DescribeBasicAlarmListRequest extends AbstractModel
 {
@@ -103,7 +103,7 @@ class DescribeBasicAlarmListRequest extends AbstractModel
     public $InstanceGroupIds;
 
     /**
-     * @var array 
+     * @var array Filtering by metric names
      */
     public $MetricNames;
 
@@ -119,7 +119,7 @@ class DescribeBasicAlarmListRequest extends AbstractModel
      * @param array $AlarmStatus Filter by alarm status.
      * @param string $ObjLike Filter by alarm object.
      * @param array $InstanceGroupIds Filter by instance group ID.
-     * @param array $MetricNames 
+     * @param array $MetricNames Filtering by metric names
      */
     function __construct()
     {

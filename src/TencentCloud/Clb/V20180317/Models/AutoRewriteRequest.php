@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getListenerId() Obtain HTTPS:443 listener ID
- * @method void setListenerId(string $ListenerId) Set HTTPS:443 listener ID
- * @method array getDomains() Obtain Domain name to be redirected under an HTTPS:443 listener
- * @method void setDomains(array $Domains) Set Domain name to be redirected under an HTTPS:443 listener
+ * @method string getListenerId() Obtain `HTTPS:443` listener ID
+ * @method void setListenerId(string $ListenerId) Set `HTTPS:443` listener ID
+ * @method array getDomains() Obtain The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
+ * @method void setDomains(array $Domains) Set The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
  */
 class AutoRewriteRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AutoRewriteRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string HTTPS:443 listener ID
+     * @var string `HTTPS:443` listener ID
      */
     public $ListenerId;
 
     /**
-     * @var array Domain name to be redirected under an HTTPS:443 listener
+     * @var array The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
      */
     public $Domains;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
-     * @param string $ListenerId HTTPS:443 listener ID
-     * @param array $Domains Domain name to be redirected under an HTTPS:443 listener
+     * @param string $ListenerId `HTTPS:443` listener ID
+     * @param array $Domains The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
      */
     function __construct()
     {

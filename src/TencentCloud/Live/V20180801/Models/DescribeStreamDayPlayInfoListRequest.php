@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamDayPlayInfoList request structure.
  *
- * @method string getDayTime() Obtain Date,
-In the format of YYYY-mm-dd.
- * @method void setDayTime(string $DayTime) Set Date,
-In the format of YYYY-mm-dd.
+ * @method string getDayTime() Obtain Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+ * @method void setDayTime(string $DayTime) Set Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
  * @method string getPlayDomain() Obtain Playback domain name.
  * @method void setPlayDomain(string $PlayDomain) Set Playback domain name.
- * @method integer getPageNum() Obtain Page number. Value range: [1,10]. Default value: 1.
- * @method void setPageNum(integer $PageNum) Set Page number. Value range: [1,10]. Default value: 1.
+ * @method integer getPageNum() Obtain Page number. Value range: [1,1000]. Default value: 1.
+ * @method void setPageNum(integer $PageNum) Set Page number. Value range: [1,1000]. Default value: 1.
  * @method integer getPageSize() Obtain Number of entries per page. Value range: [100,1000]. Default value: 1,000.
  * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: [100,1000]. Default value: 1,000.
  */
 class DescribeStreamDayPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Date,
-In the format of YYYY-mm-dd.
+     * @var string Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
      */
     public $DayTime;
 
@@ -45,7 +45,7 @@ In the format of YYYY-mm-dd.
     public $PlayDomain;
 
     /**
-     * @var integer Page number. Value range: [1,10]. Default value: 1.
+     * @var integer Page number. Value range: [1,1000]. Default value: 1.
      */
     public $PageNum;
 
@@ -55,10 +55,10 @@ In the format of YYYY-mm-dd.
     public $PageSize;
 
     /**
-     * @param string $DayTime Date,
-In the format of YYYY-mm-dd.
+     * @param string $DayTime Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
      * @param string $PlayDomain Playback domain name.
-     * @param integer $PageNum Page number. Value range: [1,10]. Default value: 1.
+     * @param integer $PageNum Page number. Value range: [1,1000]. Default value: 1.
      * @param integer $PageSize Number of entries per page. Value range: [100,1000]. Default value: 1,000.
      */
     function __construct()

@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPgwEndpoint(string $PgwEndpoint) Set Cluster’s endpoint address
  * @method array getSecurityPolicy() Obtain Cluster’s access policy group
  * @method void setSecurityPolicy(array $SecurityPolicy) Set Cluster’s access policy group
+ * @method string getKubeconfig() Obtain Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setKubeconfig(string $Kubeconfig) Set Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found.
+ * @method string getJnsGwEndpoint() Obtain 
+ * @method void setJnsGwEndpoint(string $JnsGwEndpoint) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -75,6 +81,17 @@ class DescribeClusterSecurityResponse extends AbstractModel
     public $SecurityPolicy;
 
     /**
+     * @var string Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $Kubeconfig;
+
+    /**
+     * @var string 
+     */
+    public $JnsGwEndpoint;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -87,6 +104,9 @@ class DescribeClusterSecurityResponse extends AbstractModel
      * @param string $Domain Domain name accessed by the cluster
      * @param string $PgwEndpoint Cluster’s endpoint address
      * @param array $SecurityPolicy Cluster’s access policy group
+     * @param string $Kubeconfig Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found.
+     * @param string $JnsGwEndpoint 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -128,6 +148,14 @@ class DescribeClusterSecurityResponse extends AbstractModel
 
         if (array_key_exists("SecurityPolicy",$param) and $param["SecurityPolicy"] !== null) {
             $this->SecurityPolicy = $param["SecurityPolicy"];
+        }
+
+        if (array_key_exists("Kubeconfig",$param) and $param["Kubeconfig"] !== null) {
+            $this->Kubeconfig = $param["Kubeconfig"];
+        }
+
+        if (array_key_exists("JnsGwEndpoint",$param) and $param["JnsGwEndpoint"] !== null) {
+            $this->JnsGwEndpoint = $param["JnsGwEndpoint"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

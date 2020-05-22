@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertExpireTime(string $CertExpireTime) Set Certificate expiration time in UTC format.
  * @method string getDomainName() Obtain Domain name that uses this certificate.
  * @method void setDomainName(string $DomainName) Set Domain name that uses this certificate.
- * @method integer getStatus() Obtain Certificate status
- * @method void setStatus(integer $Status) Set Certificate status
+ * @method integer getStatus() Obtain Certificate status.
+ * @method void setStatus(integer $Status) Set Certificate status.
  */
 class DomainCertInfo extends AbstractModel
 {
@@ -88,7 +88,7 @@ class DomainCertInfo extends AbstractModel
     public $DomainName;
 
     /**
-     * @var integer Certificate status
+     * @var integer Certificate status.
      */
     public $Status;
 
@@ -103,7 +103,7 @@ class DomainCertInfo extends AbstractModel
 1: Tencent Cloud-hosted certificate.
      * @param string $CertExpireTime Certificate expiration time in UTC format.
      * @param string $DomainName Domain name that uses this certificate.
-     * @param integer $Status Certificate status
+     * @param integer $Status Certificate status.
      */
     function __construct()
     {

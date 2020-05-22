@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- * @method string getStartTime() Obtain Start time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setStartTime(string $StartTime) Set Start time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method string getEndTime() Obtain End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried.
- * @method void setEndTime(string $EndTime) Set End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried.
+ * @method string getStartTime() Obtain Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setStartTime(string $StartTime) Set Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method string getEndTime() Obtain End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+ * @method void setEndTime(string $EndTime) Set End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
  * @method string getPushDomain() Obtain Push domain name.
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
- * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
- * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  */
 class DescribeStreamPushInfoListRequest extends AbstractModel
 {
@@ -39,12 +39,12 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $StartTime;
 
     /**
-     * @var string End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried.
+     * @var string End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
      */
     public $EndTime;
 
@@ -54,16 +54,16 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
     public $PushDomain;
 
     /**
-     * @var string Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public $AppName;
 
     /**
      * @param string $StreamName Stream name.
-     * @param string $StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param string $EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried.
+     * @param string $StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param string $EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
      * @param string $PushDomain Push domain name.
-     * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     function __construct()
     {
