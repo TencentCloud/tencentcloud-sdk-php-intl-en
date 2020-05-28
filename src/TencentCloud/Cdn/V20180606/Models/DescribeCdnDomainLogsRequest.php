@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Starting time, such as `2019-09-04 00:00:00`
  * @method string getEndTime() Obtain End time, such as `2019-09-04 12:00:00`
  * @method void setEndTime(string $EndTime) Set End time, such as `2019-09-04 12:00:00`
- * @method integer getOffset() Obtain Offset for paged queries. Default value: 0 (the first page)
- * @method void setOffset(integer $Offset) Set Offset for paged queries. Default value: 0 (the first page)
+ * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
+ * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paged queries. Default value: 100. Maximum value: 1,000
  * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 100. Maximum value: 1,000
  * @method string getArea() Obtain Specifies a region for the query.
@@ -40,6 +40,10 @@ Default value: `mainland`.
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
 `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
 Default value: `mainland`.
+ * @method string getLogType() Obtain The type of log to be downloaded.
+access: access logs
+ * @method void setLogType(string $LogType) Set The type of log to be downloaded.
+access: access logs
  */
 class DescribeCdnDomainLogsRequest extends AbstractModel
 {
@@ -59,7 +63,7 @@ class DescribeCdnDomainLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer Offset for paged queries. Default value: 0 (the first page)
+     * @var integer Offset for paginated queries. Default value: 0
      */
     public $Offset;
 
@@ -78,16 +82,24 @@ Default value: `mainland`.
     public $Area;
 
     /**
+     * @var string The type of log to be downloaded.
+access: access logs
+     */
+    public $LogType;
+
+    /**
      * @param string $Domain Specifies a domain name for the query
      * @param string $StartTime Starting time, such as `2019-09-04 00:00:00`
      * @param string $EndTime End time, such as `2019-09-04 12:00:00`
-     * @param integer $Offset Offset for paged queries. Default value: 0 (the first page)
+     * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paged queries. Default value: 100. Maximum value: 1,000
      * @param string $Area Specifies a region for the query.
 `mainland`: specifies to return the download link of logs on acceleration within Mainland China;
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
 `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
 Default value: `mainland`.
+     * @param string $LogType The type of log to be downloaded.
+access: access logs
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ Default value: `mainland`.
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
         }
     }
 }

@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Name of the function to be modified
  * @method string getDescription() Obtain Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
  * @method void setDescription(string $Description) Set Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
- * @method integer getMemorySize() Obtain Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB.
- * @method void setMemorySize(integer $MemorySize) Set Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB.
- * @method integer getTimeout() Obtain The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
- * @method void setTimeout(integer $Timeout) Set The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
- * @method string getRuntime() Obtain Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
- * @method void setRuntime(string $Runtime) Set Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+ * @method integer getMemorySize() Obtain Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+ * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+ * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+ * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+ * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
+ * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
  * @method Environment getEnvironment() Obtain Function environment variable
  * @method void setEnvironment(Environment $Environment) Set Function environment variable
  * @method string getNamespace() Obtain Function namespace
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayers(array $Layers) Set List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
  * @method DeadLetterConfig getDeadLetterConfig() Obtain Information of a dead letter queue associated with a function
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Information of a dead letter queue associated with a function
- * @method string getOnsEnable() Obtain Whether to enable Ons access. TRUE: enable; FALSE: not enable
- * @method void setOnsEnable(string $OnsEnable) Set Whether to enable Ons access. TRUE: enable; FALSE: not enable
+ * @method PublicNetConfigIn getPublicNetConfig() Obtain Public network access configuration
+ * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -66,17 +66,17 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB.
+     * @var integer Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
      */
     public $MemorySize;
 
     /**
-     * @var integer The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+     * @var integer Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
      */
     public $Timeout;
 
     /**
-     * @var string Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
      */
     public $Runtime;
 
@@ -131,16 +131,16 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $DeadLetterConfig;
 
     /**
-     * @var string Whether to enable Ons access. TRUE: enable; FALSE: not enable
+     * @var PublicNetConfigIn Public network access configuration
      */
-    public $OnsEnable;
+    public $PublicNetConfig;
 
     /**
      * @param string $FunctionName Name of the function to be modified
      * @param string $Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
-     * @param integer $MemorySize Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB.
-     * @param integer $Timeout The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
-     * @param string $Runtime Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+     * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+     * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
      * @param Environment $Environment Function environment variable
      * @param string $Namespace Function namespace
      * @param VpcConfig $VpcConfig Function VPC configuration
@@ -151,7 +151,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $L5Enable Whether to enable L5 access. TRUE: enable; FALSE: not enable
      * @param array $Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
      * @param DeadLetterConfig $DeadLetterConfig Information of a dead letter queue associated with a function
-     * @param string $OnsEnable Whether to enable Ons access. TRUE: enable; FALSE: not enable
+     * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
      */
     function __construct()
     {
@@ -234,8 +234,9 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
             $this->DeadLetterConfig->deserialize($param["DeadLetterConfig"]);
         }
 
-        if (array_key_exists("OnsEnable",$param) and $param["OnsEnable"] !== null) {
-            $this->OnsEnable = $param["OnsEnable"];
+        if (array_key_exists("PublicNetConfig",$param) and $param["PublicNetConfig"] !== null) {
+            $this->PublicNetConfig = new PublicNetConfigIn();
+            $this->PublicNetConfig->deserialize($param["PublicNetConfig"]);
         }
     }
 }

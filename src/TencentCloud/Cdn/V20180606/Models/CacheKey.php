@@ -26,6 +26,10 @@ off: disable full-path cache (i.e., enable parameter filter)
  * @method void setFullUrlCache(string $FullUrlCache) Set Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter)
+ * @method string getCaseSensitive() Obtain Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setCaseSensitive(string $CaseSensitive) Set Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class CacheKey extends AbstractModel
 {
@@ -37,9 +41,17 @@ off: disable full-path cache (i.e., enable parameter filter)
     public $FullUrlCache;
 
     /**
+     * @var string Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $CaseSensitive;
+
+    /**
      * @param string $FullUrlCache Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter)
+     * @param string $CaseSensitive Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -56,6 +68,10 @@ off: disable full-path cache (i.e., enable parameter filter)
         }
         if (array_key_exists("FullUrlCache",$param) and $param["FullUrlCache"] !== null) {
             $this->FullUrlCache = $param["FullUrlCache"];
+        }
+
+        if (array_key_exists("CaseSensitive",$param) and $param["CaseSensitive"] !== null) {
+            $this->CaseSensitive = $param["CaseSensitive"];
         }
     }
 }

@@ -36,20 +36,20 @@ EndTime must be greater than or equal to StartTime
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
 Data generated before or at 23:59:59 on the end date will be returned.
 EndTime must be greater than or equal to StartTime
- * @method string getMetric() Obtain Objects to be sorted. Valid values:
-`url`: sorts access URLs with query string parameters included. Supported filters are `flux` and `request`.
-`path`: sorts access URLs with query string parameters excluded. Supported filters are `flux` and `request`. You need to be whitelisted before using this feature.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: sorts domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, `2XX`, `3XX`, `4XX`, `5XX` and `statusCode`.
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `oringin_4XX`, `origin_5XX` and `OriginStatusCode`
- * @method void setMetric(string $Metric) Set Objects to be sorted. Valid values:
-`url`: sorts access URLs with query string parameters included. Supported filters are `flux` and `request`.
-`path`: sorts access URLs with query string parameters excluded. Supported filters are `flux` and `request`. You need to be whitelisted before using this feature.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: sorts domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, `2XX`, `3XX`, `4XX`, `5XX` and `statusCode`.
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `oringin_4XX`, `origin_5XX` and `OriginStatusCode`
+ * @method string getMetric() Obtain Object representing the sort criteria. The following objects are supported:
+url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+district: sorts by district. Supported filters are `flux` and `request`
+isp: sorts by ISP. Supported filters are `flux` and `request`
+host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
+originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+ * @method void setMetric(string $Metric) Set Object representing the sort criteria. The following objects are supported:
+url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+district: sorts by district. Supported filters are `flux` and `request`
+isp: sorts by ISP. Supported filters are `flux` and `request`
+host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
+originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
  * @method string getFilter() Obtain Metric name used for sorting:
 flux: If Metric is `host`, it indicates the access traffic; if Metric is `originHost`, it indicates the origin-pull traffic.
 bandwidth: If Metric is `host`, it indicates the access bandwidth; if Metric is `originHost`, it indicates the origin-pull bandwidth.
@@ -86,10 +86,10 @@ OriginStatusCode: statistics of a specific origin-pull status code which is spec
 Please note that if domain names are specified, this parameter will be ignored.
  * @method void setProject(integer $Project) Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
- * @method boolean getDetail() Obtain Default value: `false`, indicating that results for all domain names are returned together when you query multiple domain names.
-If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `request`, you can set this parameter to `true`, indicating that results for each domain name are returned.
- * @method void setDetail(boolean $Detail) Set Default value: `false`, indicating that results for all domain names are returned together when you query multiple domain names.
-If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `request`, you can set this parameter to `true`, indicating that results for each domain name are returned.
+ * @method boolean getDetail() Obtain Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
+ * @method void setDetail(boolean $Detail) Set Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
  * @method string getCode() Obtain When Filter is `statusCode` or `OriginStatusCode`, enter a code to query and sort results.
  * @method void setCode(string $Code) Set When Filter is `statusCode` or `OriginStatusCode`, enter a code to query and sort results.
  * @method string getArea() Obtain Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
@@ -98,12 +98,12 @@ If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `re
  * @method void setArea(string $Area) Set Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
 `mainland`: specifies to query CDN data within Mainland China;
 `overseas`: specifies to query CDN data outside Mainland China. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
- * @method string getAreaType() Obtain Specifies a region type for the query. If it is left blank, data on the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `District` or `Host`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located; if `Metric` is `Host`, supported filters are `flux`, `request`, and `bandwidth`.
- * @method void setAreaType(string $AreaType) Set Specifies a region type for the query. If it is left blank, data on the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `District` or `Host`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located; if `Metric` is `Host`, supported filters are `flux`, `request`, and `bandwidth`.
+ * @method string getAreaType() Obtain The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
+server: specifies to query data of service region (where a CDN node is located)
+client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
+ * @method void setAreaType(string $AreaType) Set The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
+server: specifies to query data of service region (where a CDN node is located)
+client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
  */
 class ListTopDataRequest extends AbstractModel
 {
@@ -124,13 +124,13 @@ EndTime must be greater than or equal to StartTime
     public $EndTime;
 
     /**
-     * @var string Objects to be sorted. Valid values:
-`url`: sorts access URLs with query string parameters included. Supported filters are `flux` and `request`.
-`path`: sorts access URLs with query string parameters excluded. Supported filters are `flux` and `request`. You need to be whitelisted before using this feature.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: sorts domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, `2XX`, `3XX`, `4XX`, `5XX` and `statusCode`.
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `oringin_4XX`, `origin_5XX` and `OriginStatusCode`
+     * @var string Object representing the sort criteria. The following objects are supported:
+url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+district: sorts by district. Supported filters are `flux` and `request`
+isp: sorts by ISP. Supported filters are `flux` and `request`
+host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
+originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
      */
     public $Metric;
 
@@ -165,8 +165,8 @@ Please note that if domain names are specified, this parameter will be ignored.
     public $Project;
 
     /**
-     * @var boolean Default value: `false`, indicating that results for all domain names are returned together when you query multiple domain names.
-If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `request`, you can set this parameter to `true`, indicating that results for each domain name are returned.
+     * @var boolean Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
      */
     public $Detail;
 
@@ -183,9 +183,9 @@ If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `re
     public $Area;
 
     /**
-     * @var string Specifies a region type for the query. If it is left blank, data on the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `District` or `Host`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located; if `Metric` is `Host`, supported filters are `flux`, `request`, and `bandwidth`.
+     * @var string The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
+server: specifies to query data of service region (where a CDN node is located)
+client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
      */
     public $AreaType;
 
@@ -198,13 +198,13 @@ Only data from the last 90 days will be queried.
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
 Data generated before or at 23:59:59 on the end date will be returned.
 EndTime must be greater than or equal to StartTime
-     * @param string $Metric Objects to be sorted. Valid values:
-`url`: sorts access URLs with query string parameters included. Supported filters are `flux` and `request`.
-`path`: sorts access URLs with query string parameters excluded. Supported filters are `flux` and `request`. You need to be whitelisted before using this feature.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: sorts domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, `2XX`, `3XX`, `4XX`, `5XX` and `statusCode`.
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `oringin_4XX`, `origin_5XX` and `OriginStatusCode`
+     * @param string $Metric Object representing the sort criteria. The following objects are supported:
+url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+district: sorts by district. Supported filters are `flux` and `request`
+isp: sorts by ISP. Supported filters are `flux` and `request`
+host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
+originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
      * @param string $Filter Metric name used for sorting:
 flux: If Metric is `host`, it indicates the access traffic; if Metric is `originHost`, it indicates the origin-pull traffic.
 bandwidth: If Metric is `host`, it indicates the access bandwidth; if Metric is `originHost`, it indicates the origin-pull bandwidth.
@@ -223,15 +223,15 @@ OriginStatusCode: statistics of a specific origin-pull status code which is spec
      * @param array $Domains Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
      * @param integer $Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
-     * @param boolean $Detail Default value: `false`, indicating that results for all domain names are returned together when you query multiple domain names.
-If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `request`, you can set this parameter to `true`, indicating that results for each domain name are returned.
+     * @param boolean $Detail Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
      * @param string $Code When Filter is `statusCode` or `OriginStatusCode`, enter a code to query and sort results.
      * @param string $Area Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
 `mainland`: specifies to query CDN data within Mainland China;
 `overseas`: specifies to query CDN data outside Mainland China. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
-     * @param string $AreaType Specifies a region type for the query. If it is left blank, data on the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `District` or `Host`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located; if `Metric` is `Host`, supported filters are `flux`, `request`, and `bandwidth`.
+     * @param string $AreaType The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
+server: specifies to query data of service region (where a CDN node is located)
+client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
      */
     function __construct()
     {

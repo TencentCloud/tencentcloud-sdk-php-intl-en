@@ -24,24 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
  * @method integer getEndTime() Obtain End time of the alarm period. The meaning is the same as that of StartTime.
  * @method void setEndTime(integer $EndTime) Set End time of the alarm period. The meaning is the same as that of StartTime.
- * @method array getNotifyWay() Obtain Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
- * @method void setNotifyWay(array $NotifyWay) Set Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+ * @method array getNotifyWay() Obtain Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+ * @method void setNotifyWay(array $NotifyWay) Set Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
  * @method string getReceiverType() Obtain Recipient type. Valid values: group and user.
  * @method void setReceiverType(string $ReceiverType) Set Recipient type. Valid values: group and user.
  * @method integer getId() Obtain ReceiverId
  * @method void setId(integer $Id) Set ReceiverId
- * @method array getSendFor() Obtain Call alarm notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
- * @method void setSendFor(array $SendFor) Set Call alarm notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
- * @method array getUidList() Obtain Uid of the alarm call receiver.
- * @method void setUidList(array $UidList) Set Uid of the alarm call receiver.
+ * @method array getSendFor() Obtain Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
+ * @method void setSendFor(array $SendFor) Set Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
+ * @method array getUidList() Obtain Uid of the alarm call recipient.
+ * @method void setUidList(array $UidList) Set Uid of the alarm call recipient.
  * @method integer getRoundNumber() Obtain Number of alarm call rounds.
  * @method void setRoundNumber(integer $RoundNumber) Set Number of alarm call rounds.
- * @method integer getPersonInterval() Obtain Person interval of alarm calls in seconds.
- * @method void setPersonInterval(integer $PersonInterval) Set Person interval of alarm calls in seconds.
- * @method integer getRoundInterval() Obtain Round interval of alarm calls in seconds.
- * @method void setRoundInterval(integer $RoundInterval) Set Round interval of alarm calls in seconds.
- * @method array getRecoverNotify() Obtain Notification method when an alarm is cleared. Valid value: SMS.
- * @method void setRecoverNotify(array $RecoverNotify) Set Notification method when an alarm is cleared. Valid value: SMS.
+ * @method integer getPersonInterval() Obtain Alarm call intervals for individuals in seconds.
+ * @method void setPersonInterval(integer $PersonInterval) Set Alarm call intervals for individuals in seconds.
+ * @method integer getRoundInterval() Obtain Intervals of alarm call rounds in seconds.
+ * @method void setRoundInterval(integer $RoundInterval) Set Intervals of alarm call rounds in seconds.
+ * @method array getRecoverNotify() Obtain Notification method when an alarm is recovered. Valid value: SMS.
+ * @method void setRecoverNotify(array $RecoverNotify) Set Notification method when an alarm is recovered. Valid value: SMS.
  * @method integer getNeedSendNotice() Obtain Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
  * @method void setNeedSendNotice(integer $NeedSendNotice) Set Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
  * @method array getReceiverGroupList() Obtain Recipient group list. The list of recipient group IDs that is queried by a platform API.
@@ -64,7 +64,7 @@ class ReceiverInfo extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+     * @var array Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
      */
     public $NotifyWay;
 
@@ -79,12 +79,12 @@ class ReceiverInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var array Call alarm notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
+     * @var array Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
      */
     public $SendFor;
 
     /**
-     * @var array Uid of the alarm call receiver.
+     * @var array Uid of the alarm call recipient.
      */
     public $UidList;
 
@@ -94,17 +94,17 @@ class ReceiverInfo extends AbstractModel
     public $RoundNumber;
 
     /**
-     * @var integer Person interval of alarm calls in seconds.
+     * @var integer Alarm call intervals for individuals in seconds.
      */
     public $PersonInterval;
 
     /**
-     * @var integer Round interval of alarm calls in seconds.
+     * @var integer Intervals of alarm call rounds in seconds.
      */
     public $RoundInterval;
 
     /**
-     * @var array Notification method when an alarm is cleared. Valid value: SMS.
+     * @var array Notification method when an alarm is recovered. Valid value: SMS.
      */
     public $RecoverNotify;
 
@@ -131,15 +131,15 @@ class ReceiverInfo extends AbstractModel
     /**
      * @param integer $StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
      * @param integer $EndTime End time of the alarm period. The meaning is the same as that of StartTime.
-     * @param array $NotifyWay Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+     * @param array $NotifyWay Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
      * @param string $ReceiverType Recipient type. Valid values: group and user.
      * @param integer $Id ReceiverId
-     * @param array $SendFor Call alarm notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
-     * @param array $UidList Uid of the alarm call receiver.
+     * @param array $SendFor Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
+     * @param array $UidList Uid of the alarm call recipient.
      * @param integer $RoundNumber Number of alarm call rounds.
-     * @param integer $PersonInterval Person interval of alarm calls in seconds.
-     * @param integer $RoundInterval Round interval of alarm calls in seconds.
-     * @param array $RecoverNotify Notification method when an alarm is cleared. Valid value: SMS.
+     * @param integer $PersonInterval Alarm call intervals for individuals in seconds.
+     * @param integer $RoundInterval Intervals of alarm call rounds in seconds.
+     * @param array $RecoverNotify Notification method when an alarm is recovered. Valid value: SMS.
      * @param integer $NeedSendNotice Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
      * @param array $ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by a platform API.
      * @param array $ReceiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.

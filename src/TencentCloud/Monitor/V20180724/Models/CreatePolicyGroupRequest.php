@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) Set Policy group name.
  * @method string getModule() Obtain The value is fixed to monitor.
  * @method void setModule(string $Module) Set The value is fixed to monitor.
- * @method string getViewName() Obtain Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
- * @method void setViewName(string $ViewName) Set Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
+ * @method string getViewName() Obtain Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
+ * @method void setViewName(string $ViewName) Set Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
  * @method integer getProjectId() Obtain ID of the project to which the policy group belongs, which will be used for authentication.
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which the policy group belongs, which will be used for authentication.
  * @method integer getConditionTempGroupId() Obtain ID of a template-based policy group. This parameter is required only when the policy group is created based on a template.
@@ -34,16 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsShielded(integer $IsShielded) Set Whether the policy group is shielded. The value 0 indicates that the policy group is not shielded. The value 1 indicates that the policy group is shielded. The default value is 0.
  * @method string getRemark() Obtain Remarks of the policy group.
  * @method void setRemark(string $Remark) Set Remarks of the policy group.
- * @method integer getInsertTime() Obtain Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
- * @method void setInsertTime(integer $InsertTime) Set Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
- * @method array getConditions() Obtain Alarm threshold rule in the policy group.
- * @method void setConditions(array $Conditions) Set Alarm threshold rule in the policy group.
+ * @method integer getInsertTime() Obtain Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
+ * @method void setInsertTime(integer $InsertTime) Set Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
+ * @method array getConditions() Obtain Alarm threshold rules in the policy group.
+ * @method void setConditions(array $Conditions) Set Alarm threshold rules in the policy group.
  * @method array getEventConditions() Obtain Event alarm rules in the policy group.
  * @method void setEventConditions(array $EventConditions) Set Event alarm rules in the policy group.
- * @method integer getBackEndCall() Obtain Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
- * @method void setBackEndCall(integer $BackEndCall) Set Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
- * @method integer getIsUnionRule() Obtain The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
- * @method void setIsUnionRule(integer $IsUnionRule) Set The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
+ * @method integer getBackEndCall() Obtain Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+ * @method void setBackEndCall(integer $BackEndCall) Set Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+ * @method integer getIsUnionRule() Obtain The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
+ * @method void setIsUnionRule(integer $IsUnionRule) Set The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
  */
 class CreatePolicyGroupRequest extends AbstractModel
 {
@@ -58,7 +58,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
+     * @var string Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
      */
     public $ViewName;
 
@@ -83,12 +83,12 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
+     * @var integer Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
      */
     public $InsertTime;
 
     /**
-     * @var array Alarm threshold rule in the policy group.
+     * @var array Alarm threshold rules in the policy group.
      */
     public $Conditions;
 
@@ -98,28 +98,28 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $EventConditions;
 
     /**
-     * @var integer Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
+     * @var integer Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
      */
     public $BackEndCall;
 
     /**
-     * @var integer The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
+     * @var integer The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
      */
     public $IsUnionRule;
 
     /**
      * @param string $GroupName Policy group name.
      * @param string $Module The value is fixed to monitor.
-     * @param string $ViewName Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
+     * @param string $ViewName Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
      * @param integer $ProjectId ID of the project to which the policy group belongs, which will be used for authentication.
      * @param integer $ConditionTempGroupId ID of a template-based policy group. This parameter is required only when the policy group is created based on a template.
      * @param integer $IsShielded Whether the policy group is shielded. The value 0 indicates that the policy group is not shielded. The value 1 indicates that the policy group is shielded. The default value is 0.
      * @param string $Remark Remarks of the policy group.
-     * @param integer $InsertTime Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
-     * @param array $Conditions Alarm threshold rule in the policy group.
+     * @param integer $InsertTime Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
+     * @param array $Conditions Alarm threshold rules in the policy group.
      * @param array $EventConditions Event alarm rules in the policy group.
-     * @param integer $BackEndCall Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
-     * @param integer $IsUnionRule The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
+     * @param integer $BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+     * @param integer $IsUnionRule The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
      */
     function __construct()
     {

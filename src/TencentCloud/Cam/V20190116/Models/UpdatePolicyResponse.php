@@ -20,17 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePolicy response structure.
  *
+ * @method integer getPolicyId() Obtain Policy ID
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
+Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class UpdatePolicyResponse extends AbstractModel
 {
     /**
+     * @var integer Policy ID
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $PolicyId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param integer $PolicyId Policy ID
+Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +58,10 @@ class UpdatePolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

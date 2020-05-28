@@ -32,8 +32,8 @@ enable: The URL is enabled (unblocked) and can be normally accessed
  * @method void setStatus(string $Status) Set Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
- * @method integer getOffset() Obtain Offset for paged queries. Default value: 0 (the first page)
- * @method void setOffset(integer $Offset) Set Offset for paged queries. Default value: 0 (the first page)
+ * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
+ * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paged queries. Default value: 20
  * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 20
  */
@@ -62,7 +62,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     public $Status;
 
     /**
-     * @var integer Offset for paged queries. Default value: 0 (the first page)
+     * @var integer Offset for paginated queries. Default value: 0
      */
     public $Offset;
 
@@ -78,7 +78,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
      * @param string $Status Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
-     * @param integer $Offset Offset for paged queries. Default value: 0 (the first page)
+     * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paged queries. Default value: 20
      */
     function __construct()

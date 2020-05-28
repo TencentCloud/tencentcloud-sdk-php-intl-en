@@ -88,6 +88,14 @@ deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTlsVersion() Obtain TLS version list. Valid values:
+TLSv1.0, TLSv1.1, TLSv1.2
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTlsVersion(array $TlsVersion) Set TLS version list. Valid values:
+TLSv1.0, TLSv1.1, TLSv1.2
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method Hsts getHsts() Obtain 
+ * @method void setHsts(Hsts $Hsts) Set 
  */
 class Https extends AbstractModel
 {
@@ -158,6 +166,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SslStatus;
 
     /**
+     * @var array TLS version list. Valid values:
+TLSv1.0, TLSv1.1, TLSv1.2
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $TlsVersion;
+
+    /**
+     * @var Hsts 
+     */
+    public $Hsts;
+
+    /**
      * @param string $Switch HTTPS configuration switch
 on: enabled
 off: disabled
@@ -192,6 +212,10 @@ deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $TlsVersion TLS version list. Valid values:
+TLSv1.0, TLSv1.1, TLSv1.2
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Hsts $Hsts 
      */
     function __construct()
     {
@@ -238,6 +262,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SslStatus",$param) and $param["SslStatus"] !== null) {
             $this->SslStatus = $param["SslStatus"];
+        }
+
+        if (array_key_exists("TlsVersion",$param) and $param["TlsVersion"] !== null) {
+            $this->TlsVersion = $param["TlsVersion"];
+        }
+
+        if (array_key_exists("Hsts",$param) and $param["Hsts"] !== null) {
+            $this->Hsts = new Hsts();
+            $this->Hsts->deserialize($param["Hsts"]);
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUrlViolations request structure.
  *
- * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0 (the first page).
- * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0 (the first page).
+ * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
+ * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100.
  * @method array getDomains() Obtain Specified domain name query
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUrlViolationsRequest extends AbstractModel
 {
     /**
-     * @var integer Offset for paginated queries. Default value: 0 (the first page).
+     * @var integer Offset for paginated queries. Default value: 0
      */
     public $Offset;
 
@@ -45,7 +45,7 @@ class DescribeUrlViolationsRequest extends AbstractModel
     public $Domains;
 
     /**
-     * @param integer $Offset Offset for paginated queries. Default value: 0 (the first page).
+     * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paginated queries. Default value: 100.
      * @param array $Domains Specified domain name query
      */

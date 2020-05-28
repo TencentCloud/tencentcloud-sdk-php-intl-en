@@ -210,10 +210,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set SCDN configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method ImageOptimization getImageOptimization() Obtain 
- * @method void setImageOptimization(ImageOptimization $ImageOptimization) Set 
- * @method UserAgentFilter getUserAgentFilter() Obtain 
- * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set 
+ * @method ImageOptimization getImageOptimization() Obtain `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setImageOptimization(ImageOptimization $ImageOptimization) Set `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method UserAgentFilter getUserAgentFilter() Obtain `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -477,12 +481,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SecurityConfig;
 
     /**
-     * @var ImageOptimization 
+     * @var ImageOptimization `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ImageOptimization;
 
     /**
-     * @var UserAgentFilter 
+     * @var UserAgentFilter `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UserAgentFilter;
 
@@ -582,8 +588,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SecurityConfig $SecurityConfig SCDN configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImageOptimization $ImageOptimization 
-     * @param UserAgentFilter $UserAgentFilter 
+     * @param ImageOptimization $ImageOptimization `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UserAgentFilter $UserAgentFilter `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value was found.
  * @method void setDefault(integer $Default) Set Number of default periods.
 Note: This field may return null, indicating that no valid value was found.
- * @method array getKeys() Obtain Number of optional periods.
+ * @method array getKeys() Obtain Number of custom periods.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setKeys(array $Keys) Set Number of optional periods.
+ * @method void setKeys(array $Keys) Set Number of custom periods.
 Note: This field may return null, indicating that no valid value was found.
  * @method boolean getNeed() Obtain Required or not.
  * @method void setNeed(boolean $Need) Set Required or not.
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $Default;
 
     /**
-     * @var array Number of optional periods.
+     * @var array Number of custom periods.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $Keys;
@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid value was found.
     /**
      * @param integer $Default Number of default periods.
 Note: This field may return null, indicating that no valid value was found.
-     * @param array $Keys Number of optional periods.
+     * @param array $Keys Number of custom periods.
 Note: This field may return null, indicating that no valid value was found.
      * @param boolean $Need Required or not.
      */

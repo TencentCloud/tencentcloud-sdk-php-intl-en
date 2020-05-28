@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShowName(string $ShowName) Set Policy type name.
  * @method string getLastEditUin() Obtain Uin that was last edited.
  * @method void setLastEditUin(string $LastEditUin) Set Uin that was last edited.
- * @method string getUpdateTime() Obtain Last update time.
- * @method void setUpdateTime(string $UpdateTime) Set Last update time.
- * @method array getRegion() Obtain Regions that support this policy.
- * @method void setRegion(array $Region) Set Regions that support this policy.
+ * @method string getUpdateTime() Obtain Last edited time.
+ * @method void setUpdateTime(string $UpdateTime) Set Last edited time.
+ * @method array getRegion() Obtain Regions supported by this policy.
+ * @method void setRegion(array $Region) Set Regions supported by this policy.
  * @method array getDimensionGroup() Obtain List of policy type dimensions.
  * @method void setDimensionGroup(array $DimensionGroup) Set List of policy type dimensions.
  * @method array getConditionsConfig() Obtain Threshold rule list.
@@ -60,8 +60,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setConditionsTemp(DescribePolicyGroupInfoConditionTpl $ConditionsTemp) Set Template-based policy group.
 Note: This field may return null, indicating that no valid value was found.
- * @method boolean getCanSetDefault() Obtain Whether the policy can be set as the default policy.
- * @method void setCanSetDefault(boolean $CanSetDefault) Set Whether the policy can be set as the default policy.
+ * @method boolean getCanSetDefault() Obtain Whether the policy can be configured as the default policy.
+ * @method void setCanSetDefault(boolean $CanSetDefault) Set Whether the policy can be configured as the default policy.
  * @method integer getIsUnionRule() Obtain Whether the “AND” rule is used.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setIsUnionRule(integer $IsUnionRule) Set Whether the “AND” rule is used.
@@ -107,12 +107,12 @@ class DescribePolicyGroupInfoResponse extends AbstractModel
     public $LastEditUin;
 
     /**
-     * @var string Last update time.
+     * @var string Last edited time.
      */
     public $UpdateTime;
 
     /**
-     * @var array Regions that support this policy.
+     * @var array Regions supported by this policy.
      */
     public $Region;
 
@@ -152,7 +152,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $ConditionsTemp;
 
     /**
-     * @var boolean Whether the policy can be set as the default policy.
+     * @var boolean Whether the policy can be configured as the default policy.
      */
     public $CanSetDefault;
 
@@ -175,8 +175,8 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $Remark Policy description
      * @param string $ShowName Policy type name.
      * @param string $LastEditUin Uin that was last edited.
-     * @param string $UpdateTime Last update time.
-     * @param array $Region Regions that support this policy.
+     * @param string $UpdateTime Last edited time.
+     * @param array $Region Regions supported by this policy.
      * @param array $DimensionGroup List of policy type dimensions.
      * @param array $ConditionsConfig Threshold rule list.
 Note: This field may return null, indicating that no valid value was found.
@@ -188,7 +188,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param DescribePolicyGroupInfoConditionTpl $ConditionsTemp Template-based policy group.
 Note: This field may return null, indicating that no valid value was found.
-     * @param boolean $CanSetDefault Whether the policy can be set as the default policy.
+     * @param boolean $CanSetDefault Whether the policy can be configured as the default policy.
      * @param integer $IsUnionRule Whether the “AND” rule is used.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

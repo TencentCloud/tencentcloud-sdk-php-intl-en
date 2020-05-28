@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value was found.
  * @method void setDefault(integer $Default) Set Default duration in seconds.
 Note: This field may return null, indicating that no valid value was found.
- * @method array getKeys() Obtain Optional duration in seconds.
+ * @method array getKeys() Obtain Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setKeys(array $Keys) Set Optional duration in seconds.
+ * @method void setKeys(array $Keys) Set Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
  * @method boolean getNeed() Obtain Required or not.
  * @method void setNeed(boolean $Need) Set Required or not.
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $Default;
 
     /**
-     * @var array Optional duration in seconds.
+     * @var array Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $Keys;
@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid value was found.
     /**
      * @param integer $Default Default duration in seconds.
 Note: This field may return null, indicating that no valid value was found.
-     * @param array $Keys Optional duration in seconds.
+     * @param array $Keys Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
      * @param boolean $Need Required or not.
      */

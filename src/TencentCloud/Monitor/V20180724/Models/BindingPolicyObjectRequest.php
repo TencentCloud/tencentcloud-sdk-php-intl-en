@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getGroupId() Obtain Policy group ID.
  * @method void setGroupId(integer $GroupId) Set Policy group ID.
- * @method string getModule() Obtain Required. It is fixed to monitor.
- * @method void setModule(string $Module) Set Required. It is fixed to monitor.
+ * @method string getModule() Obtain Required. The value is fixed to monitor.
+ * @method void setModule(string $Module) Set Required. The value is fixed to monitor.
  * @method integer getInstanceGroupId() Obtain Instance group ID.
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID.
  * @method array getDimensions() Obtain Dimensions of an object to be bound.
@@ -37,7 +37,7 @@ class BindingPolicyObjectRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string Required. It is fixed to monitor.
+     * @var string Required. The value is fixed to monitor.
      */
     public $Module;
 
@@ -53,7 +53,7 @@ class BindingPolicyObjectRequest extends AbstractModel
 
     /**
      * @param integer $GroupId Policy group ID.
-     * @param string $Module Required. It is fixed to monitor.
+     * @param string $Module Required. The value is fixed to monitor.
      * @param integer $InstanceGroupId Instance group ID.
      * @param array $Dimensions Dimensions of an object to be bound.
      */

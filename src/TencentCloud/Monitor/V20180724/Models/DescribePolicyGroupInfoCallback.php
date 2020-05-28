@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User callback information in the output of policy query
+ * User callback information output by the policy query
  *
  * @method string getCallbackUrl() Obtain URL of the user callback API.
  * @method void setCallbackUrl(string $CallbackUrl) Set URL of the user callback API.

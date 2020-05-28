@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Event alarm conditions in the output of policy query
+ * Event alarm conditions output by the policy query
  *
  * @method integer getEventId() Obtain Event ID.
  * @method void setEventId(integer $EventId) Set Event ID.

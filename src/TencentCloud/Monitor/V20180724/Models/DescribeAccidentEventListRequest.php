@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccidentEventList request structure.
  *
- * @method string getModule() Obtain API module name. The value for the current API is monitor.
- * @method void setModule(string $Module) Set API module name. The value for the current API is monitor.
- * @method integer getStartTime() Obtain Start time, which is the timestamp one day earlier by default.
- * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp one day earlier by default.
+ * @method string getModule() Obtain API component name. The value for the current API is monitor.
+ * @method void setModule(string $Module) Set API component name. The value for the current API is monitor.
+ * @method integer getStartTime() Obtain Start time, which is the timestamp one day prior by default.
+ * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp one day prior by default.
  * @method integer getEndTime() Obtain End time, which is the current timestamp by default.
  * @method void setEndTime(integer $EndTime) Set End time, which is the current timestamp by default.
  * @method integer getLimit() Obtain Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Parameter offset on each page. The value starts from 0 and the default value is 0.
  * @method string getUpdateTimeOrder() Obtain Sorting rule by UpdateTime. Valid values: asc and desc.
  * @method void setUpdateTimeOrder(string $UpdateTimeOrder) Set Sorting rule by UpdateTime. Valid values: asc and desc.
- * @method string getOccurTimeOrder() Obtain Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
- * @method void setOccurTimeOrder(string $OccurTimeOrder) Set Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
+ * @method string getOccurTimeOrder() Obtain Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
+ * @method void setOccurTimeOrder(string $OccurTimeOrder) Set Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
  * @method array getAccidentType() Obtain Filter by event type. The value 1 indicates service issues. The value 2 indicates other subscriptions.
  * @method void setAccidentType(array $AccidentType) Set Filter by event type. The value 1 indicates service issues. The value 2 indicates other subscriptions.
- * @method array getAccidentEvent() Obtain Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
- * @method void setAccidentEvent(array $AccidentEvent) Set Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
+ * @method array getAccidentEvent() Obtain Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
+ * @method void setAccidentEvent(array $AccidentEvent) Set Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
  * @method array getAccidentStatus() Obtain Filter by event status. The value 0 indicates that the event has been recovered. The value 1 indicates that the event has not been recovered.
  * @method void setAccidentStatus(array $AccidentStatus) Set Filter by event status. The value 0 indicates that the event has been recovered. The value 1 indicates that the event has not been recovered.
  * @method array getAccidentRegion() Obtain Filter by region where the event occurs. The value gz indicates Guangzhou. The value sh indicates Shanghai.
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccidentEventListRequest extends AbstractModel
 {
     /**
-     * @var string API module name. The value for the current API is monitor.
+     * @var string API component name. The value for the current API is monitor.
      */
     public $Module;
 
     /**
-     * @var integer Start time, which is the timestamp one day earlier by default.
+     * @var integer Start time, which is the timestamp one day prior by default.
      */
     public $StartTime;
 
@@ -78,7 +78,7 @@ class DescribeAccidentEventListRequest extends AbstractModel
     public $UpdateTimeOrder;
 
     /**
-     * @var string Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
+     * @var string Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
      */
     public $OccurTimeOrder;
 
@@ -88,7 +88,7 @@ class DescribeAccidentEventListRequest extends AbstractModel
     public $AccidentType;
 
     /**
-     * @var array Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
+     * @var array Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
      */
     public $AccidentEvent;
 
@@ -108,15 +108,15 @@ class DescribeAccidentEventListRequest extends AbstractModel
     public $AffectResource;
 
     /**
-     * @param string $Module API module name. The value for the current API is monitor.
-     * @param integer $StartTime Start time, which is the timestamp one day earlier by default.
+     * @param string $Module API component name. The value for the current API is monitor.
+     * @param integer $StartTime Start time, which is the timestamp one day prior by default.
      * @param integer $EndTime End time, which is the current timestamp by default.
      * @param integer $Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
      * @param integer $Offset Parameter offset on each page. The value starts from 0 and the default value is 0.
      * @param string $UpdateTimeOrder Sorting rule by UpdateTime. Valid values: asc and desc.
-     * @param string $OccurTimeOrder Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
+     * @param string $OccurTimeOrder Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
      * @param array $AccidentType Filter by event type. The value 1 indicates service issues. The value 2 indicates other subscriptions.
-     * @param array $AccidentEvent Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
+     * @param array $AccidentEvent Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
      * @param array $AccidentStatus Filter by event status. The value 0 indicates that the event has been recovered. The value 1 indicates that the event has not been recovered.
      * @param array $AccidentRegion Filter by region where the event occurs. The value gz indicates Guangzhou. The value sh indicates Shanghai.
      * @param string $AffectResource Filter by affected resource, such as ins-19a06bka.

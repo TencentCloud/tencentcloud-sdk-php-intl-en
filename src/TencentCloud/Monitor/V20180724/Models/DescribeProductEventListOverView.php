@@ -28,9 +28,9 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setUnConfigAlarmAmount(integer $UnConfigAlarmAmount) Set Number of events whose alarm statuses are not configured.
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getUnNormalEventAmount() Obtain Number of exceptional events.
+ * @method integer getUnNormalEventAmount() Obtain Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setUnNormalEventAmount(integer $UnNormalEventAmount) Set Number of exceptional events.
+ * @method void setUnNormalEventAmount(integer $UnNormalEventAmount) Set Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
  * @method integer getUnRecoverAmount() Obtain Number of events that have not been recovered.
 Note: This field may return null, indicating that no valid value was found.
@@ -52,7 +52,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $UnConfigAlarmAmount;
 
     /**
-     * @var integer Number of exceptional events.
+     * @var integer Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $UnNormalEventAmount;
@@ -68,7 +68,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $UnConfigAlarmAmount Number of events whose alarm statuses are not configured.
 Note: This field may return null, indicating that no valid value was found.
-     * @param integer $UnNormalEventAmount Number of exceptional events.
+     * @param integer $UnNormalEventAmount Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $UnRecoverAmount Number of events that have not been recovered.
 Note: This field may return null, indicating that no valid value was found.

@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Dimensions of events returned by the DescribeProductEventList API
  *
- * @method string getKey() Obtain English dimension name.
+ * @method string getKey() Obtain Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setKey(string $Key) Set English dimension name.
+ * @method void setKey(string $Key) Set Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getName() Obtain Chinese dimension name.
+ * @method string getName() Obtain Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setName(string $Name) Set Chinese dimension name.
+ * @method void setName(string $Name) Set Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getValue() Obtain Dimension value.
 Note: This field may return null, indicating that no valid value was found.
@@ -36,13 +36,13 @@ Note: This field may return null, indicating that no valid value was found.
 class DescribeProductEventListEventsDimensions extends AbstractModel
 {
     /**
-     * @var string English dimension name.
+     * @var string Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $Key;
 
     /**
-     * @var string Chinese dimension name.
+     * @var string Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $Name;
@@ -54,9 +54,9 @@ Note: This field may return null, indicating that no valid value was found.
     public $Value;
 
     /**
-     * @param string $Key English dimension name.
+     * @param string $Key Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $Name Chinese dimension name.
+     * @param string $Name Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $Value Dimension value.
 Note: This field may return null, indicating that no valid value was found.

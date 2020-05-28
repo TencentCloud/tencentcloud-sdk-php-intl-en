@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList response structure.
  *
- * @method array getConditions() Obtain List of Alarm policy conditions.
- * @method void setConditions(array $Conditions) Set List of Alarm policy conditions.
+ * @method array getConditions() Obtain List of alarm policy conditions.
+ * @method void setConditions(array $Conditions) Set List of alarm policy conditions.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribePolicyConditionListResponse extends AbstractModel
 {
     /**
-     * @var array List of Alarm policy conditions.
+     * @var array List of alarm policy conditions.
      */
     public $Conditions;
 
@@ -38,7 +38,7 @@ class DescribePolicyConditionListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Conditions List of Alarm policy conditions.
+     * @param array $Conditions List of alarm policy conditions.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

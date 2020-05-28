@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHandler(string $Handler) Set Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
  * @method string getDescription() Obtain Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
  * @method void setDescription(string $Description) Set Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
- * @method integer getMemorySize() Obtain Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
- * @method void setMemorySize(integer $MemorySize) Set Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
- * @method integer getTimeout() Obtain The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
- * @method void setTimeout(integer $Timeout) Set The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+ * @method integer getMemorySize() Obtain Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+ * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+ * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+ * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
  * @method Environment getEnvironment() Obtain Function environment variable
  * @method void setEnvironment(Environment $Environment) Set Function environment variable
- * @method string getRuntime() Obtain Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
- * @method void setRuntime(string $Runtime) Set Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+ * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
+ * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
  * @method VpcConfig getVpcConfig() Obtain Function VPC configuration
  * @method void setVpcConfig(VpcConfig $VpcConfig) Set Function VPC configuration
  * @method string getNamespace() Obtain Function namespace
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayers(array $Layers) Set List of layer versions to be associate with the function. Layers will be overwritten sequentially in the order in the list.
  * @method DeadLetterConfig getDeadLetterConfig() Obtain Dead letter queue parameter
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Dead letter queue parameter
+ * @method PublicNetConfigIn getPublicNetConfig() Obtain Public network access configuration
+ * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -78,12 +80,12 @@ class CreateFunctionRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
+     * @var integer Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
      */
     public $MemorySize;
 
     /**
-     * @var integer The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+     * @var integer Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
      */
     public $Timeout;
 
@@ -93,7 +95,7 @@ class CreateFunctionRequest extends AbstractModel
     public $Environment;
 
     /**
-     * @var string Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
      */
     public $Runtime;
 
@@ -143,14 +145,19 @@ class CreateFunctionRequest extends AbstractModel
     public $DeadLetterConfig;
 
     /**
+     * @var PublicNetConfigIn Public network access configuration
+     */
+    public $PublicNetConfig;
+
+    /**
      * @param string $FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      * @param Code $Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
      * @param string $Handler Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
      * @param string $Description Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
-     * @param integer $MemorySize Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
-     * @param integer $Timeout The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+     * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+     * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
      * @param Environment $Environment Function environment variable
-     * @param string $Runtime Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
      * @param VpcConfig $VpcConfig Function VPC configuration
      * @param string $Namespace Function namespace
      * @param string $Role Role bound to the function
@@ -160,6 +167,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param string $CodeSource Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
      * @param array $Layers List of layer versions to be associate with the function. Layers will be overwritten sequentially in the order in the list.
      * @param DeadLetterConfig $DeadLetterConfig Dead letter queue parameter
+     * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
      */
     function __construct()
     {
@@ -249,6 +257,11 @@ class CreateFunctionRequest extends AbstractModel
         if (array_key_exists("DeadLetterConfig",$param) and $param["DeadLetterConfig"] !== null) {
             $this->DeadLetterConfig = new DeadLetterConfig();
             $this->DeadLetterConfig->deserialize($param["DeadLetterConfig"]);
+        }
+
+        if (array_key_exists("PublicNetConfig",$param) and $param["PublicNetConfig"] !== null) {
+            $this->PublicNetConfig = new PublicNetConfigIn();
+            $this->PublicNetConfig->deserialize($param["PublicNetConfig"]);
         }
     }
 }

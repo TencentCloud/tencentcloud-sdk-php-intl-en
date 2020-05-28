@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Template-based policy group information in the output of policy query
+ * Template-based policy group information output by the policy query
  *
  * @method integer getGroupId() Obtain Policy group ID.
  * @method void setGroupId(integer $GroupId) Set Policy group ID.

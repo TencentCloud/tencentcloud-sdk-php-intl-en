@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicAlarmList request structure.
  *
- * @method string getModule() Obtain API module name. The value for the current API is monitor.
- * @method void setModule(string $Module) Set API module name. The value for the current API is monitor.
- * @method integer getStartTime() Obtain Start time, which is the timestamp one day ago by default.
- * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp one day ago by default.
+ * @method string getModule() Obtain API component name. The value for the current API is monitor.
+ * @method void setModule(string $Module) Set API component name. The value for the current API is monitor.
+ * @method integer getStartTime() Obtain Start time, which is the timestamp one day prior by default.
+ * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp one day prior by default.
  * @method integer getEndTime() Obtain End time, which is the current timestamp by default.
  * @method void setEndTime(integer $EndTime) Set End time, which is the current timestamp by default.
  * @method integer getLimit() Obtain Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBasicAlarmListRequest extends AbstractModel
 {
     /**
-     * @var string API module name. The value for the current API is monitor.
+     * @var string API component name. The value for the current API is monitor.
      */
     public $Module;
 
     /**
-     * @var integer Start time, which is the timestamp one day ago by default.
+     * @var integer Start time, which is the timestamp one day prior by default.
      */
     public $StartTime;
 
@@ -108,8 +108,8 @@ class DescribeBasicAlarmListRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @param string $Module API module name. The value for the current API is monitor.
-     * @param integer $StartTime Start time, which is the timestamp one day ago by default.
+     * @param string $Module API component name. The value for the current API is monitor.
+     * @param integer $StartTime Start time, which is the timestamp one day prior by default.
      * @param integer $EndTime End time, which is the current timestamp by default.
      * @param integer $Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
      * @param integer $Offset Parameter offset on each page. The value starts from 0 and the default value is 0.

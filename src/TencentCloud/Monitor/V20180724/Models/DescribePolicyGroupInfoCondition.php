@@ -18,12 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Alarm threshold conditions in the output of policy query
+ * Alarm threshold conditions output by the policy query
  *
  * @method string getMetricShowName() Obtain Metric name.
  * @method void setMetricShowName(string $MetricShowName) Set Metric name.
- * @method integer getPeriod() Obtain Data statistics period in seconds.
- * @method void setPeriod(integer $Period) Set Data statistics period in seconds.
+ * @method integer getPeriod() Obtain Data aggregation period in seconds.
+ * @method void setPeriod(integer $Period) Set Data aggregation period in seconds.
  * @method integer getMetricId() Obtain Metric ID.
  * @method void setMetricId(integer $MetricId) Set Metric ID.
  * @method integer getRuleId() Obtain Threshold rule ID.
@@ -55,7 +55,7 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
     public $MetricShowName;
 
     /**
-     * @var integer Data statistics period in seconds.
+     * @var integer Data aggregation period in seconds.
      */
     public $Period;
 
@@ -104,7 +104,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * @param string $MetricShowName Metric name.
-     * @param integer $Period Data statistics period in seconds.
+     * @param integer $Period Data aggregation period in seconds.
      * @param integer $MetricId Metric ID.
      * @param integer $RuleId Threshold rule ID.
      * @param string $Unit Metric unit.

@@ -28,9 +28,9 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setTotal(integer $Total) Set Total number of bound object instances.
  * @method integer getNoShieldedSum() Obtain Number of object instances that are not shielded.
  * @method void setNoShieldedSum(integer $NoShieldedSum) Set Number of object instances that are not shielded.
- * @method DescribeBindingPolicyObjectListInstanceGroup getInstanceGroup() Obtain Bound instance group information. You do not need to set this parameter if no instance group is bound.
+ * @method DescribeBindingPolicyObjectListInstanceGroup getInstanceGroup() Obtain Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup) Set Bound instance group information. You do not need to set this parameter if no instance group is bound.
+ * @method void setInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup) Set Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,7 +54,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $NoShieldedSum;
 
     /**
-     * @var DescribeBindingPolicyObjectListInstanceGroup Bound instance group information. You do not need to set this parameter if no instance group is bound.
+     * @var DescribeBindingPolicyObjectListInstanceGroup Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $InstanceGroup;
@@ -69,7 +69,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $Total Total number of bound object instances.
      * @param integer $NoShieldedSum Number of object instances that are not shielded.
-     * @param DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup Bound instance group information. You do not need to set this parameter if no instance group is bound.
+     * @param DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

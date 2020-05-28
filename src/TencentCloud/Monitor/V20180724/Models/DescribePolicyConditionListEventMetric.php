@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventShowName(string $EventShowName) Set Event name.
  * @method boolean getNeedRecovered() Obtain Whether to recover.
  * @method void setNeedRecovered(boolean $NeedRecovered) Set Whether to recover.
- * @method integer getType() Obtain Event type, which is a reserved field. At present, it is fixed to 2.
- * @method void setType(integer $Type) Set Event type, which is a reserved field. At present, it is fixed to 2.
+ * @method integer getType() Obtain Event type, which is a reserved field. Currently, it is fixed to 2.
+ * @method void setType(integer $Type) Set Event type, which is a reserved field. Currently, it is fixed to 2.
  */
 class DescribePolicyConditionListEventMetric extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribePolicyConditionListEventMetric extends AbstractModel
     public $NeedRecovered;
 
     /**
-     * @var integer Event type, which is a reserved field. At present, it is fixed to 2.
+     * @var integer Event type, which is a reserved field. Currently, it is fixed to 2.
      */
     public $Type;
 
@@ -55,7 +55,7 @@ class DescribePolicyConditionListEventMetric extends AbstractModel
      * @param integer $EventId Event ID.
      * @param string $EventShowName Event name.
      * @param boolean $NeedRecovered Whether to recover.
-     * @param integer $Type Event type, which is a reserved field. At present, it is fixed to 2.
+     * @param integer $Type Event type, which is a reserved field. Currently, it is fixed to 2.
      */
     function __construct()
     {

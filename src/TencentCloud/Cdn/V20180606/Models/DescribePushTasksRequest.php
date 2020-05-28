@@ -30,8 +30,8 @@ You must specify either a task ID or a starting time.
 You must specify either a task ID or a starting time.
  * @method string getKeyword() Obtain Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
  * @method void setKeyword(string $Keyword) Set Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
- * @method integer getOffset() Obtain Offset for paged queries. Default value: 0 (the first page)
- * @method void setOffset(integer $Offset) Set Offset for paged queries. Default value: 0 (the first page)
+ * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
+ * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paged queries. Default value: 20
  * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 20
  * @method string getArea() Obtain Specifies a region for your query:
@@ -75,7 +75,7 @@ You must specify either a task ID or a starting time.
     public $Keyword;
 
     /**
-     * @var integer Offset for paged queries. Default value: 0 (the first page)
+     * @var integer Offset for paginated queries. Default value: 0
      */
     public $Offset;
 
@@ -106,7 +106,7 @@ You must specify either a task ID or a starting time.
      * @param string $TaskId Specifies a task ID for your query.
 You must specify either a task ID or a starting time.
      * @param string $Keyword Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
-     * @param integer $Offset Offset for paged queries. Default value: 0 (the first page)
+     * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paged queries. Default value: 20
      * @param string $Area Specifies a region for your query:
 `mainland`: within Mainland China

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProductEventList request structure.
  *
- * @method string getModule() Obtain API module name. It is fixed to monitor.
- * @method void setModule(string $Module) Set API module name. It is fixed to monitor.
+ * @method string getModule() Obtain API component name. It is fixed to monitor.
+ * @method void setModule(string $Module) Set API component name. It is fixed to monitor.
  * @method array getProductName() Obtain Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
  * @method void setProductName(array $ProductName) Set Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
  * @method array getEventName() Obtain Filter by product name. For example, "guest_reboot" indicates server restart.
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDimensions(array $Dimensions) Set Filter by dimension, such as by public IP: 10.0.0.1.
  * @method array getRegionList() Obtain Filter by region, such as by gz.
  * @method void setRegionList(array $RegionList) Set Filter by region, such as by gz.
- * @method array getType() Obtain Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
- * @method void setType(array $Type) Set Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
+ * @method array getType() Obtain Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
+ * @method void setType(array $Type) Set Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
  * @method array getStatus() Obtain Filter by event status. Valid values: ["recover","alarm","-"], which indicate that an event has been recovered, has not been recovered, and has no status respectively.
  * @method void setStatus(array $Status) Set Filter by event status. Valid values: ["recover","alarm","-"], which indicate that an event has been recovered, has not been recovered, and has no status respectively.
  * @method array getProject() Obtain Filter by project ID.
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAlarmConfig(integer $IsAlarmConfig) Set Filter by alarm status configuration. The value 1 indicates that the alarm status has been configured. The value 0 indicates that the alarm status has not been configured.
  * @method string getTimeOrder() Obtain Sorting by update time. The value ASC indicates the ascending order. The value DESC indicates the descending order. The default value is DESC.
  * @method void setTimeOrder(string $TimeOrder) Set Sorting by update time. The value ASC indicates the ascending order. The value DESC indicates the descending order. The default value is DESC.
- * @method integer getStartTime() Obtain Start time, which is the timestamp one day ago by default.
- * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp one day ago by default.
+ * @method integer getStartTime() Obtain Start time, which is the timestamp one day prior by default.
+ * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp one day prior by default.
  * @method integer getEndTime() Obtain End time, which is the current timestamp by default.
  * @method void setEndTime(integer $EndTime) Set End time, which is the current timestamp by default.
  * @method integer getOffset() Obtain Page offset. The default value is 0.
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeProductEventListRequest extends AbstractModel
 {
     /**
-     * @var string API module name. It is fixed to monitor.
+     * @var string API component name. It is fixed to monitor.
      */
     public $Module;
 
@@ -84,7 +84,7 @@ class DescribeProductEventListRequest extends AbstractModel
     public $RegionList;
 
     /**
-     * @var array Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
+     * @var array Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
      */
     public $Type;
 
@@ -109,7 +109,7 @@ class DescribeProductEventListRequest extends AbstractModel
     public $TimeOrder;
 
     /**
-     * @var integer Start time, which is the timestamp one day ago by default.
+     * @var integer Start time, which is the timestamp one day prior by default.
      */
     public $StartTime;
 
@@ -129,18 +129,18 @@ class DescribeProductEventListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $Module API module name. It is fixed to monitor.
+     * @param string $Module API component name. It is fixed to monitor.
      * @param array $ProductName Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
      * @param array $EventName Filter by product name. For example, "guest_reboot" indicates server restart.
      * @param array $InstanceId Affected object, such as ins-19708ino.
      * @param array $Dimensions Filter by dimension, such as by public IP: 10.0.0.1.
      * @param array $RegionList Filter by region, such as by gz.
-     * @param array $Type Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
+     * @param array $Type Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
      * @param array $Status Filter by event status. Valid values: ["recover","alarm","-"], which indicate that an event has been recovered, has not been recovered, and has no status respectively.
      * @param array $Project Filter by project ID.
      * @param integer $IsAlarmConfig Filter by alarm status configuration. The value 1 indicates that the alarm status has been configured. The value 0 indicates that the alarm status has not been configured.
      * @param string $TimeOrder Sorting by update time. The value ASC indicates the ascending order. The value DESC indicates the descending order. The default value is DESC.
-     * @param integer $StartTime Start time, which is the timestamp one day ago by default.
+     * @param integer $StartTime Start time, which is the timestamp one day prior by default.
      * @param integer $EndTime End time, which is the current timestamp by default.
      * @param integer $Offset Page offset. The default value is 0.
      * @param integer $Limit The number of parameters that can be returned on each page. The default value is 20.

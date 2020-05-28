@@ -31,12 +31,16 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(Models\ConsumeCustomMFATokenRequest $req) This API is used to verify a custom multi-factor Token.
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) This API is used to create a user group.
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) This API (CreatePolicy) is used to create a policy.
+ * @method Models\CreatePolicyVersionResponse CreatePolicyVersion(Models\CreatePolicyVersionRequest $req) This API is used to add a policy version. After creating a policy version, you can easily change the policy by changing the policy version.
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) This API (CreateRole) is used to create a role.
  * @method Models\CreateSAMLProviderResponse CreateSAMLProvider(Models\CreateSAMLProviderRequest $req) This API is used to create a SAML identity provider.
+ * @method Models\CreateServiceLinkedRoleResponse CreateServiceLinkedRole(Models\CreateServiceLinkedRoleRequest $req) This API is used to create a service-linked role.
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) This API is used to delete a user group.
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) This API (DeletePolicy) is used to delete a policy.
+ * @method Models\DeletePolicyVersionResponse DeletePolicyVersion(Models\DeletePolicyVersionRequest $req) This API is used to delete a policy version of a policy.
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) This API (DeleteRole) is used to delete a specified role.
  * @method Models\DeleteSAMLProviderResponse DeleteSAMLProvider(Models\DeleteSAMLProviderRequest $req) This API is used to delete a SAML identity provider.
+ * @method Models\DeleteServiceLinkedRoleResponse DeleteServiceLinkedRole(Models\DeleteServiceLinkedRoleRequest $req) This API is used to delete a service-linked role.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a sub-user.
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) This API (DescribeRoleList) is used to get the role list under the account.
  * @method Models\DetachGroupPolicyResponse DetachGroupPolicy(Models\DetachGroupPolicyRequest $req) This API (DetachGroupPolicy) is used to unassociate a policy and a user group.
@@ -45,8 +49,10 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(Models\GetCustomMFATokenInfoRequest $req) This API is used to get information associated with a custom multi-factor Token
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) This API is used to query user group details.
  * @method Models\GetPolicyResponse GetPolicy(Models\GetPolicyRequest $req) This API (GetPolicy) is used to query and view policy details.
+ * @method Models\GetPolicyVersionResponse GetPolicyVersion(Models\GetPolicyVersionRequest $req) This API is used to query policy version details.
  * @method Models\GetRoleResponse GetRole(Models\GetRoleRequest $req) This API (GetRole) is used to get the details of a specified role.
  * @method Models\GetSAMLProviderResponse GetSAMLProvider(Models\GetSAMLProviderRequest $req) This API is used to query SAML identity provider details.
+ * @method Models\GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatus(Models\GetServiceLinkedRoleDeletionStatusRequest $req) This API is used to get the status of the service-linked role deletion based on the `TaskId`
  * @method Models\GetUserResponse GetUser(Models\GetUserRequest $req) This API is used to query sub-users.
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
  * @method Models\ListAttachedRolePoliciesResponse ListAttachedRolePolicies(Models\ListAttachedRolePoliciesRequest $req) This API (ListAttachedRolePolicies) is used to obtain the list of the policies associated with a role.
@@ -55,14 +61,18 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListEntitiesForPolicyResponse ListEntitiesForPolicy(Models\ListEntitiesForPolicyRequest $req) This API (ListEntitiesForPolicy) is used to query the list of entities associated with a policy.
  * @method Models\ListGroupsResponse ListGroups(Models\ListGroupsRequest $req) This API is used to query the list of user groups.
  * @method Models\ListGroupsForUserResponse ListGroupsForUser(Models\ListGroupsForUserRequest $req) This API is used to list user groups associated with a user.
- * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) This API (ListPolicies) is used to query the list of policies.
+ * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) This API is used to query the policy list.
+ * @method Models\ListPolicyVersionsResponse ListPolicyVersions(Models\ListPolicyVersionsRequest $req) This API is used to get the list of policy versions.
  * @method Models\ListSAMLProvidersResponse ListSAMLProviders(Models\ListSAMLProvidersRequest $req) This API is used to query the list of SAML identity providers.
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) This API is used to pull sub-users.
  * @method Models\ListUsersForGroupResponse ListUsersForGroup(Models\ListUsersForGroupRequest $req) This API is used to query the list of users associated with a user group.
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) This API is used to delete users from a user group.
+ * @method Models\SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(Models\SetDefaultPolicyVersionRequest $req) This API is used to set the operative policy version.
+ * @method Models\SetMfaFlagResponse SetMfaFlag(Models\SetMfaFlagRequest $req) This API is used to set account verification for login and sensitive operations for sub-users.
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) This API is used to update a user group.
- * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) This API (UpdatePolicy) is used to update a policy.
+ * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) This API is used to update a policy.
+This API will update the default version of an existing policy instead of creating a new one. If no policy exists, a default version will be created.
  * @method Models\UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(Models\UpdateRoleConsoleLoginRequest $req) This API is used to modify a role’s login permissions.
  * @method Models\UpdateRoleDescriptionResponse UpdateRoleDescription(Models\UpdateRoleDescriptionRequest $req) This API (UpdateRoleDescription) is used to modify the description of a role.
  * @method Models\UpdateSAMLProviderResponse UpdateSAMLProvider(Models\UpdateSAMLProviderRequest $req) This API is used to update SAML identity provider information.

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsOpen(boolean $IsOpen) Set Whether it is enabled.
  * @method string getViewName() Obtain Policy view name.
  * @method void setViewName(string $ViewName) Set Policy view name.
- * @method string getLastEditUin() Obtain Uin that is last edited.
- * @method void setLastEditUin(string $LastEditUin) Set Uin that is last edited.
- * @method integer getUpdateTime() Obtain Last update time.
- * @method void setUpdateTime(integer $UpdateTime) Set Last update time.
+ * @method string getLastEditUin() Obtain Uin that was last edited.
+ * @method void setLastEditUin(string $LastEditUin) Set Uin that was last edited.
+ * @method integer getUpdateTime() Obtain Last modified time.
+ * @method void setUpdateTime(integer $UpdateTime) Set Last modified time.
  * @method integer getInsertTime() Obtain Creation time.
  * @method void setInsertTime(integer $InsertTime) Set Creation time.
  * @method integer getUseSum() Obtain Number of instances that are bound to the policy group.
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoShieldedSum(integer $NoShieldedSum) Set Number of unshielded instances that are bound to the policy group.
  * @method integer getIsDefault() Obtain Whether it is the default policy. The value 0 indicates that it is not the default policy. The value 1 indicates that it is the default policy.
  * @method void setIsDefault(integer $IsDefault) Set Whether it is the default policy. The value 0 indicates that it is not the default policy. The value 1 indicates that it is the default policy.
- * @method boolean getCanSetDefault() Obtain Whether the policy can be set as the default policy.
- * @method void setCanSetDefault(boolean $CanSetDefault) Set Whether the policy can be set as the default policy.
+ * @method boolean getCanSetDefault() Obtain Whether the policy can be configured as the default policy.
+ * @method void setCanSetDefault(boolean $CanSetDefault) Set Whether the policy can be configured as the default policy.
  * @method integer getParentGroupId() Obtain Parent policy group ID.
  * @method void setParentGroupId(integer $ParentGroupId) Set Parent policy group ID.
  * @method string getRemark() Obtain Remarks of the policy group.
@@ -68,9 +68,9 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setInstanceGroup(DescribePolicyGroupListGroupInstanceGroup $InstanceGroup) Set Instance group that is bound to the policy group.
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getIsUnionRule() Obtain The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+ * @method integer getIsUnionRule() Obtain The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found.
- * @method void setIsUnionRule(integer $IsUnionRule) Set The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+ * @method void setIsUnionRule(integer $IsUnionRule) Set The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found.
  */
 class DescribePolicyGroupListGroup extends AbstractModel
@@ -96,12 +96,12 @@ class DescribePolicyGroupListGroup extends AbstractModel
     public $ViewName;
 
     /**
-     * @var string Uin that is last edited.
+     * @var string Uin that was last edited.
      */
     public $LastEditUin;
 
     /**
-     * @var integer Last update time.
+     * @var integer Last modified time.
      */
     public $UpdateTime;
 
@@ -126,7 +126,7 @@ class DescribePolicyGroupListGroup extends AbstractModel
     public $IsDefault;
 
     /**
-     * @var boolean Whether the policy can be set as the default policy.
+     * @var boolean Whether the policy can be configured as the default policy.
      */
     public $CanSetDefault;
 
@@ -176,7 +176,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $InstanceGroup;
 
     /**
-     * @var integer The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+     * @var integer The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found.
      */
     public $IsUnionRule;
@@ -186,13 +186,13 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $GroupName Policy group name.
      * @param boolean $IsOpen Whether it is enabled.
      * @param string $ViewName Policy view name.
-     * @param string $LastEditUin Uin that is last edited.
-     * @param integer $UpdateTime Last update time.
+     * @param string $LastEditUin Uin that was last edited.
+     * @param integer $UpdateTime Last modified time.
      * @param integer $InsertTime Creation time.
      * @param integer $UseSum Number of instances that are bound to the policy group.
      * @param integer $NoShieldedSum Number of unshielded instances that are bound to the policy group.
      * @param integer $IsDefault Whether it is the default policy. The value 0 indicates that it is not the default policy. The value 1 indicates that it is the default policy.
-     * @param boolean $CanSetDefault Whether the policy can be set as the default policy.
+     * @param boolean $CanSetDefault Whether the policy can be configured as the default policy.
      * @param integer $ParentGroupId Parent policy group ID.
      * @param string $Remark Remarks of the policy group.
      * @param integer $ProjectId ID of the project to which the policy group belongs.
@@ -206,7 +206,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param DescribePolicyGroupListGroupInstanceGroup $InstanceGroup Instance group that is bound to the policy group.
 Note: This field may return null, indicating that no valid value was found.
-     * @param integer $IsUnionRule The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+     * @param integer $IsUnionRule The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found.
      */
     function __construct()

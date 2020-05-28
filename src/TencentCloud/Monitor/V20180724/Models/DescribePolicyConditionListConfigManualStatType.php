@@ -28,9 +28,9 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setP10(string $P10) Set Data aggregation method in a period of 10 seconds.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getP60() Obtain Data aggregation method in a period of 1 second.
+ * @method string getP60() Obtain Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setP60(string $P60) Set Data aggregation method in a period of 1 second.
+ * @method void setP60(string $P60) Set Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getP300() Obtain Data aggregation method in a period of 5 minutes.
 Note: This field may return null, indicating that no valid value was found.
@@ -68,7 +68,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $P10;
 
     /**
-     * @var string Data aggregation method in a period of 1 second.
+     * @var string Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $P60;
@@ -108,7 +108,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $P10 Data aggregation method in a period of 10 seconds.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $P60 Data aggregation method in a period of 1 second.
+     * @param string $P60 Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $P300 Data aggregation method in a period of 5 minutes.
 Note: This field may return null, indicating that no valid value was found.

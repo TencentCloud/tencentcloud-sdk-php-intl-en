@@ -24,25 +24,25 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value was found.
  * @method void setEventId(integer $EventId) Set Event ID.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getEventCName() Obtain Chinese event name.
+ * @method string getEventCName() Obtain Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setEventCName(string $EventCName) Set Chinese event name.
+ * @method void setEventCName(string $EventCName) Set Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getEventEName() Obtain English event name.
+ * @method string getEventEName() Obtain Event name in English.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setEventEName(string $EventEName) Set English event name.
+ * @method void setEventEName(string $EventEName) Set Event name in English.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getEventName() Obtain Event name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setEventName(string $EventName) Set Event name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getProductCName() Obtain Chinese product name.
+ * @method string getProductCName() Obtain Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setProductCName(string $ProductCName) Set Chinese product name.
+ * @method void setProductCName(string $ProductCName) Set Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getProductEName() Obtain English product name.
+ * @method string getProductEName() Obtain Product name in English.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setProductEName(string $ProductEName) Set English product name.
+ * @method void setProductEName(string $ProductEName) Set Product name in English.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getProductName() Obtain Product name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
@@ -110,13 +110,13 @@ Note: This field may return null, indicating that no valid value was found.
     public $EventId;
 
     /**
-     * @var string Chinese event name.
+     * @var string Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $EventCName;
 
     /**
-     * @var string English event name.
+     * @var string Event name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $EventEName;
@@ -128,13 +128,13 @@ Note: This field may return null, indicating that no valid value was found.
     public $EventName;
 
     /**
-     * @var string Chinese product name.
+     * @var string Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $ProductCName;
 
     /**
-     * @var string English product name.
+     * @var string Product name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $ProductEName;
@@ -226,15 +226,15 @@ Note: This field may return null, indicating that no valid value was found.
     /**
      * @param integer $EventId Event ID.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $EventCName Chinese event name.
+     * @param string $EventCName Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $EventEName English event name.
+     * @param string $EventEName Event name in English.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $EventName Event name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $ProductCName Chinese product name.
+     * @param string $ProductCName Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $ProductEName English product name.
+     * @param string $ProductEName Product name in English.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $ProductName Product name abbreviation.
 Note: This field may return null, indicating that no valid value was found.

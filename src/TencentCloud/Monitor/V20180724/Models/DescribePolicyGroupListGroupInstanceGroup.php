@@ -18,14 +18,14 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance group that is bound to a policy group returned by the DescribePolicyGroupList API
+ * Instance group that is bound to a policy group of the DescribePolicyGroupList API
  *
  * @method integer getInstanceGroupId() Obtain Instance group name ID.
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group name ID.
  * @method string getViewName() Obtain Policy type view name.
  * @method void setViewName(string $ViewName) Set Policy type view name.
- * @method string getLastEditUin() Obtain Uin that is last edited.
- * @method void setLastEditUin(string $LastEditUin) Set Uin that is last edited.
+ * @method string getLastEditUin() Obtain Uin that was last edited.
+ * @method void setLastEditUin(string $LastEditUin) Set Uin that was last edited.
  * @method string getGroupName() Obtain Instance group name.
  * @method void setGroupName(string $GroupName) Set Instance group name.
  * @method integer getInstanceSum() Obtain Number of instances.
@@ -48,7 +48,7 @@ class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel
     public $ViewName;
 
     /**
-     * @var string Uin that is last edited.
+     * @var string Uin that was last edited.
      */
     public $LastEditUin;
 
@@ -75,7 +75,7 @@ class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel
     /**
      * @param integer $InstanceGroupId Instance group name ID.
      * @param string $ViewName Policy type view name.
-     * @param string $LastEditUin Uin that is last edited.
+     * @param string $LastEditUin Uin that was last edited.
      * @param string $GroupName Instance group name.
      * @param integer $InstanceSum Number of instances.
      * @param integer $UpdateTime Update time.

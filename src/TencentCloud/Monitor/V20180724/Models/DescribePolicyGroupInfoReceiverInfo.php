@@ -18,10 +18,10 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Alarm recipient information in the output of policy query
+ * Alarm recipient information output by the policy query
  *
- * @method array getReceiverGroupList() Obtain List of alarm receiver group IDs.
- * @method void setReceiverGroupList(array $ReceiverGroupList) Set List of alarm receiver group IDs.
+ * @method array getReceiverGroupList() Obtain List of alarm recipient group IDs.
+ * @method void setReceiverGroupList(array $ReceiverGroupList) Set List of alarm recipient group IDs.
  * @method array getReceiverUserList() Obtain List of alarm recipient IDs.
  * @method void setReceiverUserList(array $ReceiverUserList) Set List of alarm recipient IDs.
  * @method integer getStartTime() Obtain Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) Set End time of the alarm period. The meaning is the same as that of StartTime.
  * @method string getReceiverType() Obtain Recipient type. Valid values: group and user.
  * @method void setReceiverType(string $ReceiverType) Set Recipient type. Valid values: group and user.
- * @method array getNotifyWay() Obtain Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
- * @method void setNotifyWay(array $NotifyWay) Set Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
- * @method array getUidList() Obtain Uid of the alarm call receiver.
+ * @method array getNotifyWay() Obtain Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+ * @method void setNotifyWay(array $NotifyWay) Set Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+ * @method array getUidList() Obtain Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setUidList(array $UidList) Set Uid of the alarm call receiver.
+ * @method void setUidList(array $UidList) Set Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found.
  * @method integer getRoundNumber() Obtain Number of alarm call rounds.
  * @method void setRoundNumber(integer $RoundNumber) Set Number of alarm call rounds.
- * @method integer getRoundInterval() Obtain Round interval of alarm calls in seconds.
- * @method void setRoundInterval(integer $RoundInterval) Set Round interval of alarm calls in seconds.
- * @method integer getPersonInterval() Obtain Person interval of alarm calls in seconds.
- * @method void setPersonInterval(integer $PersonInterval) Set Person interval of alarm calls in seconds.
+ * @method integer getRoundInterval() Obtain Intervals of alarm call rounds in seconds.
+ * @method void setRoundInterval(integer $RoundInterval) Set Intervals of alarm call rounds in seconds.
+ * @method integer getPersonInterval() Obtain Alarm call intervals for individuals in seconds.
+ * @method void setPersonInterval(integer $PersonInterval) Set Alarm call intervals for individuals in seconds.
  * @method integer getNeedSendNotice() Obtain Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
  * @method void setNeedSendNotice(integer $NeedSendNotice) Set Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
- * @method array getSendFor() Obtain Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
- * @method void setSendFor(array $SendFor) Set Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
- * @method array getRecoverNotify() Obtain Notification method when an alarm is cleared. Valid value: SMS.
- * @method void setRecoverNotify(array $RecoverNotify) Set Notification method when an alarm is cleared. Valid value: SMS.
+ * @method array getSendFor() Obtain Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
+ * @method void setSendFor(array $SendFor) Set Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
+ * @method array getRecoverNotify() Obtain Notification method when an alarm is recovered. Valid value: SMS.
+ * @method void setRecoverNotify(array $RecoverNotify) Set Notification method when an alarm is recovered. Valid value: SMS.
  * @method string getReceiveLanguage() Obtain Alarm language.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setReceiveLanguage(string $ReceiveLanguage) Set Alarm language.
@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid value was found.
 class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
 {
     /**
-     * @var array List of alarm receiver group IDs.
+     * @var array List of alarm recipient group IDs.
      */
     public $ReceiverGroupList;
 
@@ -81,12 +81,12 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
     public $ReceiverType;
 
     /**
-     * @var array Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+     * @var array Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
      */
     public $NotifyWay;
 
     /**
-     * @var array Uid of the alarm call receiver.
+     * @var array Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $UidList;
@@ -97,12 +97,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $RoundNumber;
 
     /**
-     * @var integer Round interval of alarm calls in seconds.
+     * @var integer Intervals of alarm call rounds in seconds.
      */
     public $RoundInterval;
 
     /**
-     * @var integer Person interval of alarm calls in seconds.
+     * @var integer Alarm call intervals for individuals in seconds.
      */
     public $PersonInterval;
 
@@ -112,12 +112,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $NeedSendNotice;
 
     /**
-     * @var array Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
+     * @var array Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
      */
     public $SendFor;
 
     /**
-     * @var array Notification method when an alarm is cleared. Valid value: SMS.
+     * @var array Notification method when an alarm is recovered. Valid value: SMS.
      */
     public $RecoverNotify;
 
@@ -128,20 +128,20 @@ Note: This field may return null, indicating that no valid value was found.
     public $ReceiveLanguage;
 
     /**
-     * @param array $ReceiverGroupList List of alarm receiver group IDs.
+     * @param array $ReceiverGroupList List of alarm recipient group IDs.
      * @param array $ReceiverUserList List of alarm recipient IDs.
      * @param integer $StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
      * @param integer $EndTime End time of the alarm period. The meaning is the same as that of StartTime.
      * @param string $ReceiverType Recipient type. Valid values: group and user.
-     * @param array $NotifyWay Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
-     * @param array $UidList Uid of the alarm call receiver.
+     * @param array $NotifyWay Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+     * @param array $UidList Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $RoundNumber Number of alarm call rounds.
-     * @param integer $RoundInterval Round interval of alarm calls in seconds.
-     * @param integer $PersonInterval Person interval of alarm calls in seconds.
+     * @param integer $RoundInterval Intervals of alarm call rounds in seconds.
+     * @param integer $PersonInterval Alarm call intervals for individuals in seconds.
      * @param integer $NeedSendNotice Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
-     * @param array $SendFor Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
-     * @param array $RecoverNotify Notification method when an alarm is cleared. Valid value: SMS.
+     * @param array $SendFor Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
+     * @param array $RecoverNotify Notification method when an alarm is recovered. Valid value: SMS.
      * @param string $ReceiveLanguage Alarm language.
 Note: This field may return null, indicating that no valid value was found.
      */

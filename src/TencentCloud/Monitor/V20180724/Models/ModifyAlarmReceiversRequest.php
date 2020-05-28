@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) Set ID of a policy group whose recipient needs to be modified.
  * @method string getModule() Obtain Required. The value is fixed to monitor.
  * @method void setModule(string $Module) Set Required. The value is fixed to monitor.
- * @method array getReceiverInfos() Obtain New recipient information. If this parameter is not set, all recipients will be deleted.
- * @method void setReceiverInfos(array $ReceiverInfos) Set New recipient information. If this parameter is not set, all recipients will be deleted.
+ * @method array getReceiverInfos() Obtain New recipient information. If this parameter is not configured, all recipients will be deleted.
+ * @method void setReceiverInfos(array $ReceiverInfos) Set New recipient information. If this parameter is not configured, all recipients will be deleted.
  */
 class ModifyAlarmReceiversRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyAlarmReceiversRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var array New recipient information. If this parameter is not set, all recipients will be deleted.
+     * @var array New recipient information. If this parameter is not configured, all recipients will be deleted.
      */
     public $ReceiverInfos;
 
     /**
      * @param integer $GroupId ID of a policy group whose recipient needs to be modified.
      * @param string $Module Required. The value is fixed to monitor.
-     * @param array $ReceiverInfos New recipient information. If this parameter is not set, all recipients will be deleted.
+     * @param array $ReceiverInfos New recipient information. If this parameter is not configured, all recipients will be deleted.
      */
     function __construct()
     {

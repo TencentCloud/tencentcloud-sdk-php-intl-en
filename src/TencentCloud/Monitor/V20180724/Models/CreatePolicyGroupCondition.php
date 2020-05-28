@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Alarm threshold condition input when a policy is created.
+ * Alarm threshold condition passed in when a policy is created.
  *
  * @method integer getMetricId() Obtain Metric ID.
  * @method void setMetricId(integer $MetricId) Set Metric ID.
@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmNotifyType(integer $AlarmNotifyType) Set Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
  * @method integer getAlarmNotifyPeriod() Obtain Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
  * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) Set Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
- * @method integer getCalcType() Obtain Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
- * @method void setCalcType(integer $CalcType) Set Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
- * @method float getCalcValue() Obtain Comparative value. This parameter may not be set if a metric has no requirement.
- * @method void setCalcValue(float $CalcValue) Set Comparative value. This parameter may not be set if a metric has no requirement.
- * @method integer getCalcPeriod() Obtain Data statistics period in seconds. This parameter may not be set if a metric has a default value.
- * @method void setCalcPeriod(integer $CalcPeriod) Set Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+ * @method integer getCalcType() Obtain Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
+ * @method void setCalcType(integer $CalcType) Set Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
+ * @method float getCalcValue() Obtain Comparative value. This parameter is optional if the metric has no requirement.
+ * @method void setCalcValue(float $CalcValue) Set Comparative value. This parameter is optional if the metric has no requirement.
+ * @method integer getCalcPeriod() Obtain Data aggregation period in seconds. This parameter is optional if the metric has a default value.
+ * @method void setCalcPeriod(integer $CalcPeriod) Set Data aggregation period in seconds. This parameter is optional if the metric has a default value.
  * @method integer getContinuePeriod() Obtain Number of consecutive periods after which an alarm will be triggered.
  * @method void setContinuePeriod(integer $ContinuePeriod) Set Number of consecutive periods after which an alarm will be triggered.
- * @method integer getRuleId() Obtain If a metric is created based on a template, the RuleId of the metric in the template must be input.
- * @method void setRuleId(integer $RuleId) Set If a metric is created based on a template, the RuleId of the metric in the template must be input.
+ * @method integer getRuleId() Obtain If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+ * @method void setRuleId(integer $RuleId) Set If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
  */
 class CreatePolicyGroupCondition extends AbstractModel
 {
@@ -55,17 +55,17 @@ class CreatePolicyGroupCondition extends AbstractModel
     public $AlarmNotifyPeriod;
 
     /**
-     * @var integer Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+     * @var integer Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
      */
     public $CalcType;
 
     /**
-     * @var float Comparative value. This parameter may not be set if a metric has no requirement.
+     * @var float Comparative value. This parameter is optional if the metric has no requirement.
      */
     public $CalcValue;
 
     /**
-     * @var integer Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+     * @var integer Data aggregation period in seconds. This parameter is optional if the metric has a default value.
      */
     public $CalcPeriod;
 
@@ -75,7 +75,7 @@ class CreatePolicyGroupCondition extends AbstractModel
     public $ContinuePeriod;
 
     /**
-     * @var integer If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     * @var integer If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
      */
     public $RuleId;
 
@@ -83,11 +83,11 @@ class CreatePolicyGroupCondition extends AbstractModel
      * @param integer $MetricId Metric ID.
      * @param integer $AlarmNotifyType Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
      * @param integer $AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
-     * @param integer $CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
-     * @param float $CalcValue Comparative value. This parameter may not be set if a metric has no requirement.
-     * @param integer $CalcPeriod Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+     * @param integer $CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
+     * @param float $CalcValue Comparative value. This parameter is optional if the metric has no requirement.
+     * @param integer $CalcPeriod Data aggregation period in seconds. This parameter is optional if the metric has a default value.
      * @param integer $ContinuePeriod Number of consecutive periods after which an alarm will be triggered.
-     * @param integer $RuleId If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     * @param integer $RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
      */
     function __construct()
     {

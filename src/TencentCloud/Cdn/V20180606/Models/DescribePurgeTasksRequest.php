@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 You must specify either a task ID or a starting time for your query.
  * @method void setTaskId(string $TaskId) Set Specifies a task ID when you want to query by task ID.
 You must specify either a task ID or a starting time for your query.
- * @method integer getOffset() Obtain Offset for paged queries. Default value: 0 (the first page)
- * @method void setOffset(integer $Offset) Set Offset for paged queries. Default value: 0 (the first page)
+ * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
+ * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paged queries. Default value: 20
  * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 20
  * @method string getKeyword() Obtain You can filter the results by domain name or a complete URL beginning with `http(s)://`
@@ -83,7 +83,7 @@ You must specify either a task ID or a starting time for your query.
     public $TaskId;
 
     /**
-     * @var integer Offset for paged queries. Default value: 0 (the first page)
+     * @var integer Offset for paginated queries. Default value: 0
      */
     public $Offset;
 
@@ -121,7 +121,7 @@ You must specify either a task ID or a starting time for your query.
      * @param string $EndTime Specifies the end time of the period you want to query, such as 2018-08-08 23:59:59
      * @param string $TaskId Specifies a task ID when you want to query by task ID.
 You must specify either a task ID or a starting time for your query.
-     * @param integer $Offset Offset for paged queries. Default value: 0 (the first page)
+     * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paged queries. Default value: 20
      * @param string $Keyword You can filter the results by domain name or a complete URL beginning with `http(s)://`
      * @param string $Status Specifies a task state for your query:

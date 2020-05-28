@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) Set Enabling switch
  * @method string getCustomArgument() Obtain Custom parameter
  * @method void setCustomArgument(string $CustomArgument) Set Custom parameter
+ * @method string getAvailableStatus() Obtain Trigger status
+ * @method void setAvailableStatus(string $AvailableStatus) Set Trigger status
  */
 class Trigger extends AbstractModel
 {
@@ -73,6 +75,11 @@ class Trigger extends AbstractModel
     public $CustomArgument;
 
     /**
+     * @var string Trigger status
+     */
+    public $AvailableStatus;
+
+    /**
      * @param string $ModTime Latest modification time of the trigger
      * @param string $Type Trigger type
      * @param string $TriggerDesc Detailed trigger configuration
@@ -80,6 +87,7 @@ class Trigger extends AbstractModel
      * @param string $AddTime Creation time of the trigger
      * @param integer $Enable Enabling switch
      * @param string $CustomArgument Custom parameter
+     * @param string $AvailableStatus Trigger status
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class Trigger extends AbstractModel
 
         if (array_key_exists("CustomArgument",$param) and $param["CustomArgument"] !== null) {
             $this->CustomArgument = $param["CustomArgument"];
+        }
+
+        if (array_key_exists("AvailableStatus",$param) and $param["AvailableStatus"] !== null) {
+            $this->AvailableStatus = $param["AvailableStatus"];
         }
     }
 }

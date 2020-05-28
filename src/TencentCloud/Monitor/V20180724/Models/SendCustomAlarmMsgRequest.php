@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendCustomAlarmMsg request structure.
  *
- * @method string getModule() Obtain API module name. The value for the current API is monitor.
- * @method void setModule(string $Module) Set API module name. The value for the current API is monitor.
+ * @method string getModule() Obtain API component name. The value for the current API is monitor.
+ * @method void setModule(string $Module) Set API component name. The value for the current API is monitor.
  * @method string getPolicyId() Obtain Message policy ID, which is configured on the custom message page of Cloud Monitor.
  * @method void setPolicyId(string $PolicyId) Set Message policy ID, which is configured on the custom message page of Cloud Monitor.
  * @method string getMsg() Obtain Custom message content that a user wants to send.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class SendCustomAlarmMsgRequest extends AbstractModel
 {
     /**
-     * @var string API module name. The value for the current API is monitor.
+     * @var string API component name. The value for the current API is monitor.
      */
     public $Module;
 
@@ -45,7 +45,7 @@ class SendCustomAlarmMsgRequest extends AbstractModel
     public $Msg;
 
     /**
-     * @param string $Module API module name. The value for the current API is monitor.
+     * @param string $Module API component name. The value for the current API is monitor.
      * @param string $PolicyId Message policy ID, which is configured on the custom message page of Cloud Monitor.
      * @param string $Msg Custom message content that a user wants to send.
      */
