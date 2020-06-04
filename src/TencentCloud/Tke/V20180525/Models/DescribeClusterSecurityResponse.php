@@ -33,13 +33,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPgwEndpoint() Obtain Cluster’s endpoint address
  * @method void setPgwEndpoint(string $PgwEndpoint) Set Cluster’s endpoint address
  * @method array getSecurityPolicy() Obtain Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found.
  * @method void setSecurityPolicy(array $SecurityPolicy) Set Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found.
  * @method string getKubeconfig() Obtain Cluster Kubeconfig file
 Note: This field may return null, indicating that no valid value was found.
  * @method void setKubeconfig(string $Kubeconfig) Set Cluster Kubeconfig file
 Note: This field may return null, indicating that no valid value was found.
- * @method string getJnsGwEndpoint() Obtain 
- * @method void setJnsGwEndpoint(string $JnsGwEndpoint) Set 
+ * @method string getJnsGwEndpoint() Obtain Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setJnsGwEndpoint(string $JnsGwEndpoint) Set Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -77,6 +81,7 @@ class DescribeClusterSecurityResponse extends AbstractModel
 
     /**
      * @var array Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found.
      */
     public $SecurityPolicy;
 
@@ -87,7 +92,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $Kubeconfig;
 
     /**
-     * @var string 
+     * @var string Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found.
      */
     public $JnsGwEndpoint;
 
@@ -104,9 +110,11 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $Domain Domain name accessed by the cluster
      * @param string $PgwEndpoint Cluster’s endpoint address
      * @param array $SecurityPolicy Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found.
      * @param string $Kubeconfig Cluster Kubeconfig file
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $JnsGwEndpoint 
+     * @param string $JnsGwEndpoint Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

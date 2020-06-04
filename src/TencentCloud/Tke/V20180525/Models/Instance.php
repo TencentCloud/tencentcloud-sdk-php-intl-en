@@ -42,10 +42,14 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLanIP(string $LanIP) Set Node private IP
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getNodePoolId() Obtain 
- * @method void setNodePoolId(string $NodePoolId) Set 
- * @method string getAutoscalingGroupId() Obtain 
- * @method void setAutoscalingGroupId(string $AutoscalingGroupId) Set 
+ * @method string getNodePoolId() Obtain Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setNodePoolId(string $NodePoolId) Set Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAutoscalingGroupId() Obtain ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setAutoscalingGroupId(string $AutoscalingGroupId) Set ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class Instance extends AbstractModel
 {
@@ -93,12 +97,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $LanIP;
 
     /**
-     * @var string 
+     * @var string Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $NodePoolId;
 
     /**
-     * @var string 
+     * @var string ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $AutoscalingGroupId;
 
@@ -114,8 +120,10 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param string $CreatedTime Creation time
      * @param string $LanIP Node private IP
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $NodePoolId 
-     * @param string $AutoscalingGroupId 
+     * @param string $NodePoolId Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AutoscalingGroupId ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {

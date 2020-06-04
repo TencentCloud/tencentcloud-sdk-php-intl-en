@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKey() Obtain Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
+Default value: createTime.
  * @method void setKey(string $Key) Set Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
+Default value: createTime.
  * @method string getSequence() Obtain `asc` or `desc`. Default: `desc`.
  * @method void setSequence(string $Sequence) Set `asc` or `desc`. Default: `desc`.
  */
@@ -35,6 +37,7 @@ class Sort extends AbstractModel
      * @var string Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
+Default value: createTime.
      */
     public $Key;
 
@@ -47,6 +50,7 @@ class Sort extends AbstractModel
      * @param string $Key Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
+Default value: createTime.
      * @param string $Sequence `asc` or `desc`. Default: `desc`.
      */
     function __construct()

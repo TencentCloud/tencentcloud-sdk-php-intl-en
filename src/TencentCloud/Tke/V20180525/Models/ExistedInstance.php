@@ -50,16 +50,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceChargeType() Obtain Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCPU() Obtain Instance’s number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCPU(integer $CPU) Set Instance’s number of CPU cores. Unit: cores.
@@ -76,6 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceType(string $InstanceType) Set Instance model.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAutoscalingGroupId() Obtain Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setAutoscalingGroupId(string $AutoscalingGroupId) Set Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found.
+ * @method string getInstanceChargeType() Obtain Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found.
  */
 class ExistedInstance extends AbstractModel
 {
@@ -127,15 +125,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreatedTime;
 
     /**
-     * @var string Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $InstanceChargeType;
-
-    /**
      * @var integer Instance’s number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -160,6 +149,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceType;
 
     /**
+     * @var string Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $AutoscalingGroupId;
+
+    /**
+     * @var string Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $InstanceChargeType;
+
+    /**
      * @param boolean $Usable Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UnusableReason Reason that the instance does not support being added.
@@ -175,11 +176,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreatedTime Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceChargeType Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CPU Instance’s number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Memory Instance’s memory capacity. Unit: GB.
@@ -188,6 +184,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceType Instance model.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AutoscalingGroupId Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found.
+     * @param string $InstanceChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -234,10 +234,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->CreatedTime = $param["CreatedTime"];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
-        }
-
         if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
             $this->CPU = $param["CPU"];
         }
@@ -252,6 +248,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("AutoscalingGroupId",$param) and $param["AutoscalingGroupId"] !== null) {
+            $this->AutoscalingGroupId = $param["AutoscalingGroupId"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
         }
     }
 }

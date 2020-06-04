@@ -21,11 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * AddExistedInstances response structure.
  *
  * @method array getFailedInstanceIds() Obtain IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found.
  * @method void setFailedInstanceIds(array $FailedInstanceIds) Set IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found.
  * @method array getSuccInstanceIds() Obtain IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found.
  * @method void setSuccInstanceIds(array $SuccInstanceIds) Set IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found.
  * @method array getTimeoutInstanceIds() Obtain IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found.
  * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) Set IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,16 +39,19 @@ class AddExistedInstancesResponse extends AbstractModel
 {
     /**
      * @var array IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found.
      */
     public $FailedInstanceIds;
 
     /**
      * @var array IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found.
      */
     public $SuccInstanceIds;
 
     /**
      * @var array IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found.
      */
     public $TimeoutInstanceIds;
 
@@ -53,8 +62,11 @@ class AddExistedInstancesResponse extends AbstractModel
 
     /**
      * @param array $FailedInstanceIds IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found.
      * @param array $SuccInstanceIds IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found.
      * @param array $TimeoutInstanceIds IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

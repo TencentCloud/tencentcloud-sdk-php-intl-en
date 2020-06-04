@@ -20,50 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Described the configuration and information of k8s node data disk.
  *
- * @method string getDiskType() Obtain 
- * @method void setDiskType(string $DiskType) Set 
+ * @method string getDiskType() Obtain Disk type
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDiskType(string $DiskType) Set Disk type
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getFileSystem() Obtain File system (ext3/ext4/xfs)
+Note: This field may return null, indicating that no valid value was found.
  * @method void setFileSystem(string $FileSystem) Set File system (ext3/ext4/xfs)
- * @method integer getDiskSize() Obtain 
- * @method void setDiskSize(integer $DiskSize) Set 
- * @method boolean getAutoFormatAndMount() Obtain Whether to automatically format and mount the disk
- * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) Set Whether to automatically format and mount the disk
- * @method string getMountTarget() Obtain 
- * @method void setMountTarget(string $MountTarget) Set 
+Note: This field may return null, indicating that no valid value was found.
+ * @method integer getDiskSize() Obtain Disk size (G)
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setDiskSize(integer $DiskSize) Set Disk size (G)
+Note: This field may return null, indicating that no valid value was found.
+ * @method boolean getAutoFormatAndMount() Obtain Whether the disk is auto-formatted and mounted
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) Set Whether the disk is auto-formatted and mounted
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getMountTarget() Obtain Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setMountTarget(string $MountTarget) Set Mounting directory
+Note: This field may return null, indicating that no valid value was found.
  */
 class DataDisk extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Disk type
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DiskType;
 
     /**
      * @var string File system (ext3/ext4/xfs)
+Note: This field may return null, indicating that no valid value was found.
      */
     public $FileSystem;
 
     /**
-     * @var integer 
+     * @var integer Disk size (G)
+Note: This field may return null, indicating that no valid value was found.
      */
     public $DiskSize;
 
     /**
-     * @var boolean Whether to automatically format and mount the disk
+     * @var boolean Whether the disk is auto-formatted and mounted
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $AutoFormatAndMount;
 
     /**
-     * @var string 
+     * @var string Mounting directory
+Note: This field may return null, indicating that no valid value was found.
      */
     public $MountTarget;
 
     /**
-     * @param string $DiskType 
+     * @param string $DiskType Disk type
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $FileSystem File system (ext3/ext4/xfs)
-     * @param integer $DiskSize 
-     * @param boolean $AutoFormatAndMount Whether to automatically format and mount the disk
-     * @param string $MountTarget 
+Note: This field may return null, indicating that no valid value was found.
+     * @param integer $DiskSize Disk size (G)
+Note: This field may return null, indicating that no valid value was found.
+     * @param boolean $AutoFormatAndMount Whether the disk is auto-formatted and mounted
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $MountTarget Mounting directory
+Note: This field may return null, indicating that no valid value was found.
      */
     function __construct()
     {

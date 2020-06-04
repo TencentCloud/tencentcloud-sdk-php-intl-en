@@ -20,17 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterInstances response structure.
  *
+ * @method array getSuccInstanceIds() Obtain IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setSuccInstanceIds(array $SuccInstanceIds) Set IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found.
+ * @method array getFailedInstanceIds() Obtain IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setFailedInstanceIds(array $FailedInstanceIds) Set IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found.
+ * @method array getNotFoundInstanceIds() Obtain IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setNotFoundInstanceIds(array $NotFoundInstanceIds) Set IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DeleteClusterInstancesResponse extends AbstractModel
 {
     /**
+     * @var array IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $SuccInstanceIds;
+
+    /**
+     * @var array IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $FailedInstanceIds;
+
+    /**
+     * @var array IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $NotFoundInstanceIds;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $SuccInstanceIds IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found.
+     * @param array $FailedInstanceIds IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found.
+     * @param array $NotFoundInstanceIds IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +82,18 @@ class DeleteClusterInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SuccInstanceIds",$param) and $param["SuccInstanceIds"] !== null) {
+            $this->SuccInstanceIds = $param["SuccInstanceIds"];
+        }
+
+        if (array_key_exists("FailedInstanceIds",$param) and $param["FailedInstanceIds"] !== null) {
+            $this->FailedInstanceIds = $param["FailedInstanceIds"];
+        }
+
+        if (array_key_exists("NotFoundInstanceIds",$param) and $param["NotFoundInstanceIds"] !== null) {
+            $this->NotFoundInstanceIds = $param["NotFoundInstanceIds"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

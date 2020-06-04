@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkType(string $NetworkType) Set Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
  * @method boolean getIsNonStaticIpMode() Obtain Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) Set Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
+ * @method boolean getDeletionProtection() Obtain Indicates whether to enable deletion protection
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Indicates whether to enable deletion protection
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ClusterAdvancedSettings extends AbstractModel
     public $IsNonStaticIpMode;
 
     /**
+     * @var boolean Indicates whether to enable deletion protection
+     */
+    public $DeletionProtection;
+
+    /**
      * @param boolean $IPVS Whether IPVS is enabled
      * @param boolean $AsEnabled Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
      * @param string $ContainerRuntime Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
@@ -80,6 +87,7 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param ClusterExtraArgs $ExtraArgs Cluster custom parameter
      * @param string $NetworkType Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
      * @param boolean $IsNonStaticIpMode Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
+     * @param boolean $DeletionProtection Indicates whether to enable deletion protection
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("IsNonStaticIpMode",$param) and $param["IsNonStaticIpMode"] !== null) {
             $this->IsNonStaticIpMode = $param["IsNonStaticIpMode"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }
