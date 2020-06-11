@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterEndpoint request structure.
  *
-
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method boolean getIsExtranet() Obtain Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+ * @method void setIsExtranet(boolean $IsExtranet) Set Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
  */
 class DeleteClusterEndpointRequest extends AbstractModel
 {
-
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
 
     /**
+     * @var boolean Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     */
+    public $IsExtranet;
 
+    /**
+     * @param string $ClusterId Cluster ID
+     * @param boolean $IsExtranet Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DeleteClusterEndpointRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("IsExtranet",$param) and $param["IsExtranet"] !== null) {
+            $this->IsExtranet = $param["IsExtranet"];
+        }
     }
 }

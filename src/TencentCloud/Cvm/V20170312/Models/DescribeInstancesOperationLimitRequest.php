@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesOperationLimit request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The instance ID format is `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688)). The maximum number of instance IDs in each request is 100.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The instance ID format is `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688)). The maximum number of instance IDs in each request is 100.
+ * @method array getInstanceIds() Obtain Query by instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API. For example, instance ID: ins-xxxxxxxx. (For the specific format, refer to section `ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688).) You can query up to 100 instances in each request.
+ * @method void setInstanceIds(array $InstanceIds) Set Query by instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API. For example, instance ID: ins-xxxxxxxx. (For the specific format, refer to section `ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688).) You can query up to 100 instances in each request.
  * @method string getOperation() Obtain Operation on the instance(s).
 <li> INSTANCE_DEGRADE: downgrade the instance configurations</li>
  * @method void setOperation(string $Operation) Set Operation on the instance(s).
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesOperationLimitRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The instance ID format is `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688)). The maximum number of instance IDs in each request is 100.
+     * @var array Query by instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API. For example, instance ID: ins-xxxxxxxx. (For the specific format, refer to section `ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688).) You can query up to 100 instances in each request.
      */
     public $InstanceIds;
 
@@ -41,7 +41,7 @@ class DescribeInstancesOperationLimitRequest extends AbstractModel
     public $Operation;
 
     /**
-     * @param array $InstanceIds Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) and look for `InstanceId` in the response. The instance ID format is `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688)). The maximum number of instance IDs in each request is 100.
+     * @param array $InstanceIds Query by instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API. For example, instance ID: ins-xxxxxxxx. (For the specific format, refer to section `ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688).) You can query up to 100 instances in each request.
      * @param string $Operation Operation on the instance(s).
 <li> INSTANCE_DEGRADE: downgrade the instance configurations</li>
      */

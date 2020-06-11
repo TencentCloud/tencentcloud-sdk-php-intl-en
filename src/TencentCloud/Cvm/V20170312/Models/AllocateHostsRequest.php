@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientToken(string $ClientToken) Set A string used to ensure the idempotency of the request.
  * @method ChargePrepaid getHostChargePrepaid() Obtain Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
  * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) Set Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
- * @method string getHostChargeType() Obtain The billing method of an instance. Currently only `PREPAID` is supported.
- * @method void setHostChargeType(string $HostChargeType) Set The billing method of an instance. Currently only `PREPAID` is supported.
+ * @method string getHostChargeType() Obtain Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+ * @method void setHostChargeType(string $HostChargeType) Set Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
  * @method string getHostType() Obtain CDH instance model. Default value: `HS1`.
  * @method void setHostType(string $HostType) Set CDH instance model. Default value: `HS1`.
- * @method integer getHostCount() Obtain The quantity of CDH instances you want to purchase.
- * @method void setHostCount(integer $HostCount) Set The quantity of CDH instances you want to purchase.
+ * @method integer getHostCount() Obtain Quantity of CDH instances purchased. Default value: 1.
+ * @method void setHostCount(integer $HostCount) Set Quantity of CDH instances purchased. Default value: 1.
  * @method array getTagSpecification() Obtain Tag description. You can specify the parameter to associate a tag with an instance.
  * @method void setTagSpecification(array $TagSpecification) Set Tag description. You can specify the parameter to associate a tag with an instance.
  */
@@ -53,7 +53,7 @@ class AllocateHostsRequest extends AbstractModel
     public $HostChargePrepaid;
 
     /**
-     * @var string The billing method of an instance. Currently only `PREPAID` is supported.
+     * @var string Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
      */
     public $HostChargeType;
 
@@ -63,7 +63,7 @@ class AllocateHostsRequest extends AbstractModel
     public $HostType;
 
     /**
-     * @var integer The quantity of CDH instances you want to purchase.
+     * @var integer Quantity of CDH instances purchased. Default value: 1.
      */
     public $HostCount;
 
@@ -76,9 +76,9 @@ class AllocateHostsRequest extends AbstractModel
      * @param Placement $Placement Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
      * @param string $ClientToken A string used to ensure the idempotency of the request.
      * @param ChargePrepaid $HostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
-     * @param string $HostChargeType The billing method of an instance. Currently only `PREPAID` is supported.
+     * @param string $HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
      * @param string $HostType CDH instance model. Default value: `HS1`.
-     * @param integer $HostCount The quantity of CDH instances you want to purchase.
+     * @param integer $HostCount Quantity of CDH instances purchased. Default value: 1.
      * @param array $TagSpecification Tag description. You can specify the parameter to associate a tag with an instance.
      */
     function __construct()

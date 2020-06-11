@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusterEndpoint request structure.
  *
-
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getSubnetId() Obtain The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC). 
+ * @method void setSubnetId(string $SubnetId) Set The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC). 
+ * @method boolean getIsExtranet() Obtain Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+ * @method void setIsExtranet(boolean $IsExtranet) Set Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
  */
 class CreateClusterEndpointRequest extends AbstractModel
 {
-
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
 
     /**
+     * @var string The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC). 
+     */
+    public $SubnetId;
 
+    /**
+     * @var boolean Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     */
+    public $IsExtranet;
+
+    /**
+     * @param string $ClusterId Cluster ID
+     * @param string $SubnetId The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC). 
+     * @param boolean $IsExtranet Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class CreateClusterEndpointRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("IsExtranet",$param) and $param["IsExtranet"] !== null) {
+            $this->IsExtranet = $param["IsExtranet"];
+        }
     }
 }

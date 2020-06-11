@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusterEndpointVip request structure.
  *
-
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method array getSecurityPolicies() Obtain Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+ * @method void setSecurityPolicies(array $SecurityPolicies) Set Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
  */
 class CreateClusterEndpointVipRequest extends AbstractModel
 {
-
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
 
     /**
+     * @var array Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+     */
+    public $SecurityPolicies;
 
+    /**
+     * @param string $ClusterId Cluster ID
+     * @param array $SecurityPolicies Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class CreateClusterEndpointVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("SecurityPolicies",$param) and $param["SecurityPolicies"] !== null) {
+            $this->SecurityPolicies = $param["SecurityPolicies"];
+        }
     }
 }

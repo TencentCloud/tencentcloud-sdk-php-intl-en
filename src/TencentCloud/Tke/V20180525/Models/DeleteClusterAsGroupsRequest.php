@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterAsGroups request structure.
  *
-
+ * @method string getClusterId() Obtain The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+ * @method void setClusterId(string $ClusterId) Set The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+ * @method array getAutoScalingGroupIds() Obtain Cluster scaling group ID list
+ * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set Cluster scaling group ID list
+ * @method boolean getKeepInstance() Obtain Whether to keep nodes in the scaling group. Default to **false** (not keep)
+ * @method void setKeepInstance(boolean $KeepInstance) Set Whether to keep nodes in the scaling group. Default to **false** (not keep)
  */
 class DeleteClusterAsGroupsRequest extends AbstractModel
 {
-
+    /**
+     * @var string The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     */
+    public $ClusterId;
 
     /**
+     * @var array Cluster scaling group ID list
+     */
+    public $AutoScalingGroupIds;
 
+    /**
+     * @var boolean Whether to keep nodes in the scaling group. Default to **false** (not keep)
+     */
+    public $KeepInstance;
+
+    /**
+     * @param string $ClusterId The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     * @param array $AutoScalingGroupIds Cluster scaling group ID list
+     * @param boolean $KeepInstance Whether to keep nodes in the scaling group. Default to **false** (not keep)
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DeleteClusterAsGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("AutoScalingGroupIds",$param) and $param["AutoScalingGroupIds"] !== null) {
+            $this->AutoScalingGroupIds = $param["AutoScalingGroupIds"];
+        }
+
+        if (array_key_exists("KeepInstance",$param) and $param["KeepInstance"] !== null) {
+            $this->KeepInstance = $param["KeepInstance"];
+        }
     }
 }

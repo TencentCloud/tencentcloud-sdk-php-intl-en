@@ -36,10 +36,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of a prepaid instance, in USD.
 Note: this field may return null, indicating that no valid value is obtained.
- * @method integer getDiscount() Obtain Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setDiscount(integer $Discount) Set Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getDiscount() Obtain Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDiscount(float $Discount) Set Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method float getUnitPriceDiscount() Obtain The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setUnitPriceDiscount(float $UnitPriceDiscount) Set The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
@@ -88,8 +88,8 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $DiscountPrice;
 
     /**
-     * @var integer Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var float Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Discount;
 
@@ -132,8 +132,8 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param float $DiscountPrice Discount price of a prepaid instance, in USD.
 Note: this field may return null, indicating that no valid value is obtained.
-     * @param integer $Discount Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $Discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param float $UnitPriceDiscount The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param float $UnitPriceSecondStep Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.

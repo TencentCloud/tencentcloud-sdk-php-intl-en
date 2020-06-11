@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set Listener port
  * @method string getProtocol() Obtain Listener protocol. The value is `HTTP`.
  * @method void setProtocol(string $Protocol) Set Listener protocol. The value is `HTTP`.
- * @method integer getListenerStatus() Obtain Listener status. Valid values:
+ * @method integer getListenerStatus() Obtain Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration.
- * @method void setListenerStatus(integer $ListenerStatus) Set Listener status. Valid values:
+4: modifying configuration.
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration.
+4: modifying configuration.
  * @method string getCertificateId() Obtain Server SSL certificate ID of the listener
  * @method void setCertificateId(string $CertificateId) Set Server SSL certificate ID of the listener
  * @method string getForwardProtocol() Obtain Protocol used in the forwarding from connections to origin servers
@@ -94,12 +94,12 @@ class HTTPSListener extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer Listener status. Valid values:
+     * @var integer Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration.
+4: modifying configuration.
      */
     public $ListenerStatus;
 
@@ -155,12 +155,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
      * @param string $Protocol Listener protocol. The value is `HTTP`.
-     * @param integer $ListenerStatus Listener status. Valid values:
+     * @param integer $ListenerStatus Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration.
+4: modifying configuration.
      * @param string $CertificateId Server SSL certificate ID of the listener
      * @param string $ForwardProtocol Protocol used in the forwarding from connections to origin servers
      * @param integer $CreateTime Listener creation time; using UNIX timestamp.

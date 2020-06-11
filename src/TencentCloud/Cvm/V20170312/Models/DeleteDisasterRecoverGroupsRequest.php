@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDisasterRecoverGroups request structure.
  *
- * @method array getDisasterRecoverGroupIds() Obtain List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+ * @method array getDisasterRecoverGroupIds() Obtain ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request.
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request.
  */
 class DeleteDisasterRecoverGroupsRequest extends AbstractModel
 {
     /**
-     * @var array List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+     * @var array ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request.
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @param array $DisasterRecoverGroupIds List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+     * @param array $DisasterRecoverGroupIds ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request.
      */
     function __construct()
     {

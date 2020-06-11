@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value is found.
  * @method void setReleaseAddress(boolean $ReleaseAddress) Set Release address
 Note: This field may return null, indicating that no valid value is found.
- * @method array getUnsupportNetworks() Obtain Unsupported network types
-Note: This field may return null, indicating that no valid value is found.
- * @method void setUnsupportNetworks(array $UnsupportNetworks) Set Unsupported network types
-Note: This field may return null, indicating that no valid value is found.
+ * @method array getUnsupportNetworks() Obtain Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setUnsupportNetworks(array $UnsupportNetworks) Set Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found.
  * @method StorageBlock getStorageBlockAttr() Obtain Attributes of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
  * @method void setStorageBlockAttr(StorageBlock $StorageBlockAttr) Set Attributes of local HDD storage
@@ -42,8 +42,8 @@ Note: This field may return null, indicating that no valid value is found.
     public $ReleaseAddress;
 
     /**
-     * @var array Unsupported network types
-Note: This field may return null, indicating that no valid value is found.
+     * @var array Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found.
      */
     public $UnsupportNetworks;
 
@@ -56,8 +56,8 @@ Note: This field may return null, indicating that no valid value is found.
     /**
      * @param boolean $ReleaseAddress Release address
 Note: This field may return null, indicating that no valid value is found.
-     * @param array $UnsupportNetworks Unsupported network types
-Note: This field may return null, indicating that no valid value is found.
+     * @param array $UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found.
      * @param StorageBlock $StorageBlockAttr Attributes of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
      */

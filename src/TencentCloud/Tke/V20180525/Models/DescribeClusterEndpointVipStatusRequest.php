@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterEndpointVipStatus request structure.
  *
-
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
  */
 class DescribeClusterEndpointVipStatusRequest extends AbstractModel
 {
-
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
 
     /**
-
+     * @param string $ClusterId Cluster ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeClusterEndpointVipStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
     }
 }

@@ -20,14 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusterAsGroup request structure.
  *
-
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getAutoScalingGroupPara() Obtain The pass-through parameters for scaling group creation, in the format of a JSON string. For more information, see the [CreateAutoScalingGroup](https://cloud.tencent.com/document/api/377/20440) API. The **LaunchConfigurationId** is created with the LaunchConfigurePara parameter, which does not support data entry.
+ * @method void setAutoScalingGroupPara(string $AutoScalingGroupPara) Set The pass-through parameters for scaling group creation, in the format of a JSON string. For more information, see the [CreateAutoScalingGroup](https://cloud.tencent.com/document/api/377/20440) API. The **LaunchConfigurationId** is created with the LaunchConfigurePara parameter, which does not support data entry.
+ * @method string getLaunchConfigurePara() Obtain The pass-through parameters for launch configuration creation, in the format of a JSON string. For more information, see the [CreateLaunchConfiguration](https://cloud.tencent.com/document/api/377/20447) API. **ImageId** is not required as it is already included in the cluster dimension. **UserData** is not required as it’s set through the **UserScript**.
+ * @method void setLaunchConfigurePara(string $LaunchConfigurePara) Set The pass-through parameters for launch configuration creation, in the format of a JSON string. For more information, see the [CreateLaunchConfiguration](https://cloud.tencent.com/document/api/377/20447) API. **ImageId** is not required as it is already included in the cluster dimension. **UserData** is not required as it’s set through the **UserScript**.
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Advanced configuration information of the node
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Advanced configuration information of the node
+ * @method array getLabels() Obtain Node label array
+ * @method void setLabels(array $Labels) Set Node label array
  */
 class CreateClusterAsGroupRequest extends AbstractModel
 {
-
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
 
     /**
+     * @var string The pass-through parameters for scaling group creation, in the format of a JSON string. For more information, see the [CreateAutoScalingGroup](https://cloud.tencent.com/document/api/377/20440) API. The **LaunchConfigurationId** is created with the LaunchConfigurePara parameter, which does not support data entry.
+     */
+    public $AutoScalingGroupPara;
 
+    /**
+     * @var string The pass-through parameters for launch configuration creation, in the format of a JSON string. For more information, see the [CreateLaunchConfiguration](https://cloud.tencent.com/document/api/377/20447) API. **ImageId** is not required as it is already included in the cluster dimension. **UserData** is not required as it’s set through the **UserScript**.
+     */
+    public $LaunchConfigurePara;
+
+    /**
+     * @var InstanceAdvancedSettings Advanced configuration information of the node
+     */
+    public $InstanceAdvancedSettings;
+
+    /**
+     * @var array Node label array
+     */
+    public $Labels;
+
+    /**
+     * @param string $ClusterId Cluster ID
+     * @param string $AutoScalingGroupPara The pass-through parameters for scaling group creation, in the format of a JSON string. For more information, see the [CreateAutoScalingGroup](https://cloud.tencent.com/document/api/377/20440) API. The **LaunchConfigurationId** is created with the LaunchConfigurePara parameter, which does not support data entry.
+     * @param string $LaunchConfigurePara The pass-through parameters for launch configuration creation, in the format of a JSON string. For more information, see the [CreateLaunchConfiguration](https://cloud.tencent.com/document/api/377/20447) API. **ImageId** is not required as it is already included in the cluster dimension. **UserData** is not required as it’s set through the **UserScript**.
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings Advanced configuration information of the node
+     * @param array $Labels Node label array
      */
     function __construct()
     {
@@ -42,6 +78,30 @@ class CreateClusterAsGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("AutoScalingGroupPara",$param) and $param["AutoScalingGroupPara"] !== null) {
+            $this->AutoScalingGroupPara = $param["AutoScalingGroupPara"];
+        }
+
+        if (array_key_exists("LaunchConfigurePara",$param) and $param["LaunchConfigurePara"] !== null) {
+            $this->LaunchConfigurePara = $param["LaunchConfigurePara"];
+        }
+
+        if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
+            $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
+            $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = [];
+            foreach ($param["Labels"] as $key => $value){
+                $obj = new Label();
+                $obj->deserialize($value);
+                array_push($this->Labels, $obj);
+            }
+        }
     }
 }

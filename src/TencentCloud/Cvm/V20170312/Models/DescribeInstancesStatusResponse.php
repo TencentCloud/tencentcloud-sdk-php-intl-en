@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Number of instance states meeting the filtering conditions.
  * @method void setTotalCount(integer $TotalCount) Set Number of instance states meeting the filtering conditions.
- * @method array getInstanceStatusSet() Obtain List of [instance states](https://cloud.tencent.com/document/api/213/15728).
- * @method void setInstanceStatusSet(array $InstanceStatusSet) Set List of [instance states](https://cloud.tencent.com/document/api/213/15728).
+ * @method array getInstanceStatusSet() Obtain [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
+ * @method void setInstanceStatusSet(array $InstanceStatusSet) Set [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeInstancesStatusResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array List of [instance states](https://cloud.tencent.com/document/api/213/15728).
+     * @var array [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
      */
     public $InstanceStatusSet;
 
@@ -46,7 +46,7 @@ class DescribeInstancesStatusResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Number of instance states meeting the filtering conditions.
-     * @param array $InstanceStatusSet List of [instance states](https://cloud.tencent.com/document/api/213/15728).
+     * @param array $InstanceStatusSet [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageName() Obtain Image name
  * @method void setImageName(string $ImageName) Set Image name
- * @method string getInstanceId() Obtain The ID of the instance used to create an image
- * @method void setInstanceId(string $InstanceId) Set The ID of the instance used to create an image
+ * @method string getInstanceId() Obtain Instance ID used to create an image.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID used to create an image.
  * @method string getImageDescription() Obtain Image description
  * @method void setImageDescription(string $ImageDescription) Set Image description
  * @method string getForcePoweroff() Obtain Whether to force shut down an instance to create an image when a soft shutdown fails
  * @method void setForcePoweroff(string $ForcePoweroff) Set Whether to force shut down an instance to create an image when a soft shutdown fails
  * @method string getSysprep() Obtain Whether to enable Sysprep when creating a Windows image
  * @method void setSysprep(string $Sysprep) Set Whether to enable Sysprep when creating a Windows image
- * @method array getDataDiskIds() Obtain The ID of the data disk used to create an image
- * @method void setDataDiskIds(array $DataDiskIds) Set The ID of the data disk used to create an image
- * @method array getSnapshotIds() Obtain The ID of the snapshot used to create an image. A system disk snapshot must be included.
- * @method void setSnapshotIds(array $SnapshotIds) Set The ID of the snapshot used to create an image. A system disk snapshot must be included.
- * @method boolean getDryRun() Obtain Verifies the validity of the request without affecting the resources involved.
- * @method void setDryRun(boolean $DryRun) Set Verifies the validity of the request without affecting the resources involved.
+ * @method array getDataDiskIds() Obtain Specified data disk ID included in the full image created from the instance.
+ * @method void setDataDiskIds(array $DataDiskIds) Set Specified data disk ID included in the full image created from the instance.
+ * @method array getSnapshotIds() Obtain Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
+ * @method void setSnapshotIds(array $SnapshotIds) Set Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
+ * @method boolean getDryRun() Obtain Success status of this request, without affecting the resources involved
+ * @method void setDryRun(boolean $DryRun) Set Success status of this request, without affecting the resources involved
  */
 class CreateImageRequest extends AbstractModel
 {
@@ -45,7 +45,7 @@ class CreateImageRequest extends AbstractModel
     public $ImageName;
 
     /**
-     * @var string The ID of the instance used to create an image
+     * @var string Instance ID used to create an image.
      */
     public $InstanceId;
 
@@ -65,29 +65,29 @@ class CreateImageRequest extends AbstractModel
     public $Sysprep;
 
     /**
-     * @var array The ID of the data disk used to create an image
+     * @var array Specified data disk ID included in the full image created from the instance.
      */
     public $DataDiskIds;
 
     /**
-     * @var array The ID of the snapshot used to create an image. A system disk snapshot must be included.
+     * @var array Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
      */
     public $SnapshotIds;
 
     /**
-     * @var boolean Verifies the validity of the request without affecting the resources involved.
+     * @var boolean Success status of this request, without affecting the resources involved
      */
     public $DryRun;
 
     /**
      * @param string $ImageName Image name
-     * @param string $InstanceId The ID of the instance used to create an image
+     * @param string $InstanceId Instance ID used to create an image.
      * @param string $ImageDescription Image description
      * @param string $ForcePoweroff Whether to force shut down an instance to create an image when a soft shutdown fails
      * @param string $Sysprep Whether to enable Sysprep when creating a Windows image
-     * @param array $DataDiskIds The ID of the data disk used to create an image
-     * @param array $SnapshotIds The ID of the snapshot used to create an image. A system disk snapshot must be included.
-     * @param boolean $DryRun Verifies the validity of the request without affecting the resources involved.
+     * @param array $DataDiskIds Specified data disk ID included in the full image created from the instance.
+     * @param array $SnapshotIds Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
+     * @param boolean $DryRun Success status of this request, without affecting the resources involved
      */
     function __construct()
     {
