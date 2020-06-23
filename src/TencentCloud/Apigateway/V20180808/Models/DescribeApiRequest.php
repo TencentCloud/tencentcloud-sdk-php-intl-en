@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApi request structure.
  *
- * @method string getServiceId() Obtain Unique ID of API's service.
- * @method void setServiceId(string $ServiceId) Set Unique ID of API's service.
+ * @method string getServiceId() Obtain Unique service ID of API.
+ * @method void setServiceId(string $ServiceId) Set Unique service ID of API.
  * @method string getApiId() Obtain Unique API ID.
  * @method void setApiId(string $ApiId) Set Unique API ID.
  */
 class DescribeApiRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of API's service.
+     * @var string Unique service ID of API.
      */
     public $ServiceId;
 
@@ -38,7 +38,7 @@ class DescribeApiRequest extends AbstractModel
     public $ApiId;
 
     /**
-     * @param string $ServiceId Unique ID of API's service.
+     * @param string $ServiceId Unique service ID of API.
      * @param string $ApiId Unique API ID.
      */
     function __construct()

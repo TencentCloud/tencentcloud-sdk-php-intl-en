@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateApiKey response structure.
  *
- * @method ApiKey getResult() Obtain Changed key details.
+ * @method ApiKey getResult() Obtain Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setResult(ApiKey $Result) Set Changed key details.
+ * @method void setResult(ApiKey $Result) Set Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class UpdateApiKeyResponse extends AbstractModel
 {
     /**
-     * @var ApiKey Changed key details.
+     * @var ApiKey Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Result;
@@ -41,7 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param ApiKey $Result Changed key details.
+     * @param ApiKey $Result Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

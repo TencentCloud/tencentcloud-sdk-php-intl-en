@@ -46,44 +46,44 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
 You can use this API if you use a custom domain name and custom mapping. Please note that if you delete all mappings in all environments, a failure will be returned when this API is called.
  * @method Models\DeleteUsagePlanResponse DeleteUsagePlan(Models\DeleteUsagePlanRequest $req) This API is used to delete a usage plan.
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) This API is used to demote a usage plan of a service in an environment to the API level.
-To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to the service.
-This operation will be denied if there are no APIs under a service.
+ 
+This operation will be denied if there are no APIs under the service.
 This operation will also be denied if the current environment has not been published.
- * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) This API is used to query the detailed information of an API deployed in API Gateway.
+ * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) This API is used to query the details of an API deployed in API Gateway.
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) This API is used to display the throttling policies bound to an API.
- * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) This API is used to query key details.
-After creating an API key, you can query its details using this API which will display its key.
+ * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) This API is used to query the details of a key.
+After creating an API key, you can query its details by using this API.
  * @method Models\DescribeApiUsagePlanResponse DescribeApiUsagePlan(Models\DescribeApiUsagePlanRequest $req) This API is used to query the details of API usage plans in a service.
-To make authentication and throttling for a service takes effect, you need to bind usage plans to it. This API is used to query all usage plans bound to a service and APIs under it.
+To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
  * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) This API is used to search for logs.
  * @method Models\DescribeServiceResponse DescribeService(Models\DescribeServiceRequest $req) This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
  * @method Models\DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(Models\DescribeServiceEnvironmentListRequest $req) This API is used to query the list of environments under a service. All environments and their statuses under the queried service will be returned.
- * @method Models\DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(Models\DescribeServiceEnvironmentReleaseHistoryRequest $req) This API is used to query the release history of a service environment.
-A service can only be used when it is published to an environment after creation. This API is used to query the release history of an environment under a service.
- * @method Models\DescribeServiceEnvironmentStrategyResponse DescribeServiceEnvironmentStrategy(Models\DescribeServiceEnvironmentStrategyRequest $req) This API is used to display service throttling policies.
+ * @method Models\DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(Models\DescribeServiceEnvironmentReleaseHistoryRequest $req) This API is used to query the release history in a service environment.
+A service can only be used when it is published to an environment after creation. This API is used to query the release history in an environment under a service.
+ * @method Models\DescribeServiceEnvironmentStrategyResponse DescribeServiceEnvironmentStrategy(Models\DescribeServiceEnvironmentStrategyRequest $req) This API is used to display a service throttling policy.
  * @method Models\DescribeServiceReleaseVersionResponse DescribeServiceReleaseVersion(Models\DescribeServiceReleaseVersionRequest $req) This API is used to query the list of all published versions under a service.
 A service is generally published on several versions. This API can be used to query the published versions.
  * @method Models\DescribeServiceSubDomainMappingsResponse DescribeServiceSubDomainMappings(Models\DescribeServiceSubDomainMappingsRequest $req) This API is used to query the path mappings of a custom domain name.
-In API Gateway, you can bind a custom domain name to a service and map the paths for it. You can custom different path mappings to up to 3 environments under the service. This API is used to query the list of path mappings of a custom domain name bound to a service.
+In API Gateway, you can bind a custom domain name to a service and map its paths. You can customize different path mappings to up to 3 environments under the service. This API is used to query the list of path mappings of a custom domain name bound to a service.
  * @method Models\DescribeServiceSubDomainsResponse DescribeServiceSubDomains(Models\DescribeServiceSubDomainsRequest $req) This API is used to query the list of custom domain names.
 In API Gateway, you can bind custom domain names to a service for service call. This API is used to query the list of custom domain names bound to a service.
  * @method Models\DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(Models\DescribeServiceUsagePlanRequest $req) This API is used to query the details of usage plans in a service.
-To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to the service.
+To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service.
  * @method Models\DescribeUsagePlanResponse DescribeUsagePlan(Models\DescribeUsagePlanRequest $req) This API is used to query the details of a usage plan, such as its name, QPS, creation time, and bound environment.
  * @method Models\DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(Models\DescribeUsagePlanEnvironmentsRequest $req) This API is used to query the list of environments bound to a usage plan.
 After binding a usage plan to environments, you can use this API to query all service environments bound to the usage plan.
  * @method Models\DescribeUsagePlanSecretIdsResponse DescribeUsagePlanSecretIds(Models\DescribeUsagePlanSecretIdsRequest $req) This API is used to query the list of keys bound to a usage plan.
 In API Gateway, a usage plan can be bound to multiple key pairs. You can use this API to query the list of keys bound to it.
- * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) This API is used to disable an API key pair.
- * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) This API is used to enable a disabled API key pair.
- * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) This API is used to automatically generate API documentation and SDKs. A document and an SDK will be generated for each environment under each service, respectively.
+ * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) This API is used to disable an API key.
+ * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) This API is used to enable a disabled API key.
+ * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
  * @method Models\ModifyApiResponse ModifyApi(Models\ModifyApiRequest $req) This API is used to modify an API. You can call this API to edit/modify a configured API. The modified API takes effect only after its service is published to the corresponding environment again.
  * @method Models\ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(Models\ModifyApiEnvironmentStrategyRequest $req) This API is used to modify an API throttling policy.
- * @method Models\ModifyApiIncrementResponse ModifyApiIncrement(Models\ModifyApiIncrementRequest $req) This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires full API parameters be passed in and is suitable for being used with the console).
+ * @method Models\ModifyApiIncrementResponse ModifyApiIncrement(Models\ModifyApiIncrementRequest $req) This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires that full API parameters be passed in and is suitable for use in the console).
  * @method Models\ModifyIPStrategyResponse ModifyIPStrategy(Models\ModifyIPStrategyRequest $req) This API is used to modify a service IP policy.
- * @method Models\ModifyServiceResponse ModifyService(Models\ModifyServiceRequest $req) This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type all can be modified.
+ * @method Models\ModifyServiceResponse ModifyService(Models\ModifyServiceRequest $req) This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type can be modified.
  * @method Models\ModifyServiceEnvironmentStrategyResponse ModifyServiceEnvironmentStrategy(Models\ModifyServiceEnvironmentStrategyRequest $req) This API is used to modify a service throttling policy.
- * @method Models\ModifySubDomainResponse ModifySubDomain(Models\ModifySubDomainRequest $req) This API is used to modify the path mapping in the custom domain name settings of the service. The path mapping rule can be modified before it is bound to the custom domain name.
+ * @method Models\ModifySubDomainResponse ModifySubDomain(Models\ModifySubDomainRequest $req) This API is used to modify the path mapping in the custom domain name settings of a service. The path mapping rule can be modified before it is bound to the custom domain name.
  * @method Models\ModifyUsagePlanResponse ModifyUsagePlan(Models\ModifyUsagePlanRequest $req) This API is used to modify the name, description, and QPS of a usage plan.
  * @method Models\ReleaseServiceResponse ReleaseService(Models\ReleaseServiceRequest $req) This API is used to publish a service.
 An API Gateway service can only be called when it is published to an environment and takes effect after creation. This API is used to publish a service to an environment such as the `release` environment.
@@ -91,11 +91,11 @@ An API Gateway service can only be called when it is published to an environment
  * @method Models\UnBindIPStrategyResponse UnBindIPStrategy(Models\UnBindIPStrategyRequest $req) This API is used to unbind an IP policy from a service.
  * @method Models\UnBindSecretIdsResponse UnBindSecretIds(Models\UnBindSecretIdsRequest $req) This API is used to unbind a key from a usage plan.
  * @method Models\UnBindSubDomainResponse UnBindSubDomain(Models\UnBindSubDomainRequest $req) This API is used to unbind a custom domain name.
-After binding a custom domain name to a service using API Gateway, you can use this API to unbind it.
+After binding a custom domain name to a service by using API Gateway, you can use this API to unbind it.
  * @method Models\UnReleaseServiceResponse UnReleaseService(Models\UnReleaseServiceRequest $req) This API is used to deactivate a service.
-Only when a service is published to an environment can its APIs be called by callers. You can call this API to deactivate a service from the release environment. Once deactivated, the service cannot be called.
+Only after a service is published to an environment can its APIs be called. You can call this API to deactivate a service in the release environment. Once deactivated, the service cannot be called.
  * @method Models\UpdateApiKeyResponse UpdateApiKey(Models\UpdateApiKeyRequest $req) This API is used to update a created API key pair.
- * @method Models\UpdateServiceResponse UpdateService(Models\UpdateServiceRequest $req) This API is used to switch the running version published in an environment of a service to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+ * @method Models\UpdateServiceResponse UpdateService(Models\UpdateServiceRequest $req) This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
  */
 
 class ApigatewayClient extends AbstractClient

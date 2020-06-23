@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * API information
  *
- * @method string getServiceId() Obtain Unique ID of API's service.
+ * @method string getServiceId() Obtain Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceId(string $ServiceId) Set Unique ID of API's service.
+ * @method void setServiceId(string $ServiceId) Set Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceName() Obtain Name of API's service.
+ * @method string getServiceName() Obtain Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceName(string $ServiceName) Set Name of API's service.
+ * @method void setServiceName(string $ServiceName) Set Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceDesc() Obtain Description of API's service.
+ * @method string getServiceDesc() Obtain Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceDesc(string $ServiceDesc) Set Description of API's service.
+ * @method void setServiceDesc(string $ServiceDesc) Set Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getApiId() Obtain Unique API ID.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -76,9 +76,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOauthConfig(OauthConfig $OauthConfig) Set OAuth configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsDebugAfterCharge() Obtain Whether to enable debugging on purchase (reserved for the marketplace).
+ * @method boolean getIsDebugAfterCharge() Obtain Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Whether to enable debugging on purchase (reserved for the marketplace).
+ * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method RequestConfig getRequestConfig() Obtain Request frontend configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -88,21 +88,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setResponseType(string $ResponseType) Set Return type.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getResponseSuccessExample() Obtain Successful response sample of custom response configuration.
+ * @method string getResponseSuccessExample() Obtain Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setResponseSuccessExample(string $ResponseSuccessExample) Set Successful response sample of custom response configuration.
+ * @method void setResponseSuccessExample(string $ResponseSuccessExample) Set Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getResponseFailExample() Obtain Response failure sample of custom response configuration.
+ * @method string getResponseFailExample() Obtain Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setResponseFailExample(string $ResponseFailExample) Set Response failure sample of custom response configuration.
+ * @method void setResponseFailExample(string $ResponseFailExample) Set Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getResponseErrorCodes() Obtain Custom error code configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setResponseErrorCodes(array $ResponseErrorCodes) Set Custom error code configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getRequestParameters() Obtain Frontend request parameters.
+ * @method array getRequestParameters() Obtain Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRequestParameters(array $RequestParameters) Set Frontend request parameters.
+ * @method void setRequestParameters(array $RequestParameters) Set Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getServiceTimeout() Obtain API backend service timeout period in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -116,89 +116,89 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setServiceConfig(ServiceConfig $ServiceConfig) Set API backend service configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getServiceParameters() Obtain API backend service parameters.
+ * @method array getServiceParameters() Obtain API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceParameters(array $ServiceParameters) Set API backend service parameters.
+ * @method void setServiceParameters(array $ServiceParameters) Set API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getConstantParameters() Obtain Constant parameters.
+ * @method array getConstantParameters() Obtain Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConstantParameters(array $ConstantParameters) Set Constant parameters.
+ * @method void setConstantParameters(array $ConstantParameters) Set Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceMockReturnMessage() Obtain Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+ * @method string getServiceMockReturnMessage() Obtain Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceMockReturnMessage(string $ServiceMockReturnMessage) Set Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+ * @method void setServiceMockReturnMessage(string $ServiceMockReturnMessage) Set Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceScfFunctionName() Obtain SCF function name. This parameter takes effect when the backend type is `SCF`.
+ * @method string getServiceScfFunctionName() Obtain SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceScfFunctionName(string $ServiceScfFunctionName) Set SCF function name. This parameter takes effect when the backend type is `SCF`.
+ * @method void setServiceScfFunctionName(string $ServiceScfFunctionName) Set SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceScfFunctionNamespace() Obtain SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+ * @method string getServiceScfFunctionNamespace() Obtain SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceScfFunctionNamespace(string $ServiceScfFunctionNamespace) Set SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+ * @method void setServiceScfFunctionNamespace(string $ServiceScfFunctionNamespace) Set SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceScfFunctionQualifier() Obtain SCF function version. This parameter takes effect when the backend type is `SCF`.
+ * @method string getServiceScfFunctionQualifier() Obtain SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceScfFunctionQualifier(string $ServiceScfFunctionQualifier) Set SCF function version. This parameter takes effect when the backend type is `SCF`.
+ * @method void setServiceScfFunctionQualifier(string $ServiceScfFunctionQualifier) Set SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getServiceScfIsIntegratedResponse() Obtain Whether to enable integrated response.
+ * @method boolean getServiceScfIsIntegratedResponse() Obtain Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceScfIsIntegratedResponse(boolean $ServiceScfIsIntegratedResponse) Set Whether to enable integrated response.
+ * @method void setServiceScfIsIntegratedResponse(boolean $ServiceScfIsIntegratedResponse) Set Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketRegisterFunctionName() Obtain SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+ * @method string getServiceWebsocketRegisterFunctionName() Obtain SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketRegisterFunctionName(string $ServiceWebsocketRegisterFunctionName) Set SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+ * @method void setServiceWebsocketRegisterFunctionName(string $ServiceWebsocketRegisterFunctionName) Set SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketRegisterFunctionNamespace() Obtain SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketRegisterFunctionNamespace() Obtain SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketRegisterFunctionNamespace(string $ServiceWebsocketRegisterFunctionNamespace) Set SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketRegisterFunctionNamespace(string $ServiceWebsocketRegisterFunctionNamespace) Set SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketRegisterFunctionQualifier() Obtain SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketRegisterFunctionQualifier() Obtain SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketRegisterFunctionQualifier(string $ServiceWebsocketRegisterFunctionQualifier) Set SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketRegisterFunctionQualifier(string $ServiceWebsocketRegisterFunctionQualifier) Set SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketCleanupFunctionName() Obtain SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketCleanupFunctionName() Obtain SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketCleanupFunctionName(string $ServiceWebsocketCleanupFunctionName) Set SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketCleanupFunctionName(string $ServiceWebsocketCleanupFunctionName) Set SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketCleanupFunctionNamespace() Obtain SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketCleanupFunctionNamespace() Obtain SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketCleanupFunctionNamespace(string $ServiceWebsocketCleanupFunctionNamespace) Set SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketCleanupFunctionNamespace(string $ServiceWebsocketCleanupFunctionNamespace) Set SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketCleanupFunctionQualifier() Obtain SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketCleanupFunctionQualifier() Obtain SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketCleanupFunctionQualifier(string $ServiceWebsocketCleanupFunctionQualifier) Set SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketCleanupFunctionQualifier(string $ServiceWebsocketCleanupFunctionQualifier) Set SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getInternalDomain() Obtain WebSocket pushback address.
+ * @method string getInternalDomain() Obtain WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInternalDomain(string $InternalDomain) Set WebSocket pushback address.
+ * @method void setInternalDomain(string $InternalDomain) Set WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketTransportFunctionName() Obtain SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketTransportFunctionName() Obtain SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketTransportFunctionName(string $ServiceWebsocketTransportFunctionName) Set SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketTransportFunctionName(string $ServiceWebsocketTransportFunctionName) Set SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketTransportFunctionNamespace() Obtain SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketTransportFunctionNamespace() Obtain SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketTransportFunctionNamespace(string $ServiceWebsocketTransportFunctionNamespace) Set SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketTransportFunctionNamespace(string $ServiceWebsocketTransportFunctionNamespace) Set SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServiceWebsocketTransportFunctionQualifier() Obtain SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketTransportFunctionQualifier() Obtain SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceWebsocketTransportFunctionQualifier(string $ServiceWebsocketTransportFunctionQualifier) Set SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketTransportFunctionQualifier(string $ServiceWebsocketTransportFunctionQualifier) Set SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getMicroServices() Obtain List of microservices bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMicroServices(array $MicroServices) Set List of microservices bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getMicroServicesInfo() Obtain Microservice detailed information.
+ * @method array getMicroServicesInfo() Obtain Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMicroServicesInfo(array $MicroServicesInfo) Set Microservice detailed information.
+ * @method void setMicroServicesInfo(array $MicroServicesInfo) Set Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method TsfLoadBalanceConfResp getServiceTsfLoadBalanceConf() Obtain Microservice load balancing configuration.
+ * @method TsfLoadBalanceConfResp getServiceTsfLoadBalanceConf() Obtain Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceTsfLoadBalanceConf(TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf) Set Microservice load balancing configuration.
+ * @method void setServiceTsfLoadBalanceConf(TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf) Set Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method HealthCheckConf getServiceTsfHealthCheckConf() Obtain Microservice health check configuration.
+ * @method HealthCheckConf getServiceTsfHealthCheckConf() Obtain Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServiceTsfHealthCheckConf(HealthCheckConf $ServiceTsfHealthCheckConf) Set Microservice health check configuration.
+ * @method void setServiceTsfHealthCheckConf(HealthCheckConf $ServiceTsfHealthCheckConf) Set Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method boolean getEnableCORS() Obtain Whether to enable CORS.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -212,19 +212,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class ApiInfo extends AbstractModel
 {
     /**
-     * @var string Unique ID of API's service.
+     * @var string Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceId;
 
     /**
-     * @var string Name of API's service.
+     * @var string Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceName;
 
     /**
-     * @var string Description of API's service.
+     * @var string Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceDesc;
@@ -296,7 +296,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OauthConfig;
 
     /**
-     * @var boolean Whether to enable debugging on purchase (reserved for the marketplace).
+     * @var boolean Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsDebugAfterCharge;
@@ -314,13 +314,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ResponseType;
 
     /**
-     * @var string Successful response sample of custom response configuration.
+     * @var string Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ResponseSuccessExample;
 
     /**
-     * @var string Response failure sample of custom response configuration.
+     * @var string Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ResponseFailExample;
@@ -332,7 +332,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ResponseErrorCodes;
 
     /**
-     * @var array Frontend request parameters.
+     * @var array Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RequestParameters;
@@ -356,103 +356,103 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ServiceConfig;
 
     /**
-     * @var array API backend service parameters.
+     * @var array API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceParameters;
 
     /**
-     * @var array Constant parameters.
+     * @var array Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ConstantParameters;
 
     /**
-     * @var string Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * @var string Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceMockReturnMessage;
 
     /**
-     * @var string SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * @var string SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceScfFunctionName;
 
     /**
-     * @var string SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * @var string SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceScfFunctionNamespace;
 
     /**
-     * @var string SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * @var string SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceScfFunctionQualifier;
 
     /**
-     * @var boolean Whether to enable integrated response.
+     * @var boolean Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceScfIsIntegratedResponse;
 
     /**
-     * @var string SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+     * @var string SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketRegisterFunctionName;
 
     /**
-     * @var string SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketRegisterFunctionNamespace;
 
     /**
-     * @var string SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketRegisterFunctionQualifier;
 
     /**
-     * @var string SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketCleanupFunctionName;
 
     /**
-     * @var string SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketCleanupFunctionNamespace;
 
     /**
-     * @var string SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketCleanupFunctionQualifier;
 
     /**
-     * @var string WebSocket pushback address.
+     * @var string WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $InternalDomain;
 
     /**
-     * @var string SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketTransportFunctionName;
 
     /**
-     * @var string SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketTransportFunctionNamespace;
 
     /**
-     * @var string SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceWebsocketTransportFunctionQualifier;
@@ -464,19 +464,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MicroServices;
 
     /**
-     * @var array Microservice detailed information.
+     * @var array Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MicroServicesInfo;
 
     /**
-     * @var TsfLoadBalanceConfResp Microservice load balancing configuration.
+     * @var TsfLoadBalanceConfResp Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceTsfLoadBalanceConf;
 
     /**
-     * @var HealthCheckConf Microservice health check configuration.
+     * @var HealthCheckConf Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceTsfHealthCheckConf;
@@ -494,11 +494,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
-     * @param string $ServiceId Unique ID of API's service.
+     * @param string $ServiceId Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceName Name of API's service.
+     * @param string $ServiceName Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceDesc Description of API's service.
+     * @param string $ServiceDesc Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ApiId Unique API ID.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -522,19 +522,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param OauthConfig $OauthConfig OAuth configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsDebugAfterCharge Whether to enable debugging on purchase (reserved for the marketplace).
+     * @param boolean $IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param RequestConfig $RequestConfig Request frontend configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ResponseType Return type.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ResponseSuccessExample Successful response sample of custom response configuration.
+     * @param string $ResponseSuccessExample Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ResponseFailExample Response failure sample of custom response configuration.
+     * @param string $ResponseFailExample Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $ResponseErrorCodes Custom error code configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $RequestParameters Frontend request parameters.
+     * @param array $RequestParameters Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ServiceTimeout API backend service timeout period in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -542,47 +542,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ServiceConfig $ServiceConfig API backend service configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ServiceParameters API backend service parameters.
+     * @param array $ServiceParameters API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ConstantParameters Constant parameters.
+     * @param array $ConstantParameters Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceMockReturnMessage Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * @param string $ServiceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceScfFunctionName SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * @param string $ServiceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceScfFunctionNamespace SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * @param string $ServiceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceScfFunctionQualifier SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * @param string $ServiceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $ServiceScfIsIntegratedResponse Whether to enable integrated response.
+     * @param boolean $ServiceScfIsIntegratedResponse Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketRegisterFunctionName SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+     * @param string $ServiceWebsocketRegisterFunctionName SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $InternalDomain WebSocket pushback address.
+     * @param string $InternalDomain WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketTransportFunctionName SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $MicroServices List of microservices bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $MicroServicesInfo Microservice detailed information.
+     * @param array $MicroServicesInfo Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf Microservice load balancing configuration.
+     * @param TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HealthCheckConf $ServiceTsfHealthCheckConf Microservice health check configuration.
+     * @param HealthCheckConf $ServiceTsfHealthCheckConf Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $EnableCORS Whether to enable CORS.
 Note: this field may return null, indicating that no valid values can be obtained.

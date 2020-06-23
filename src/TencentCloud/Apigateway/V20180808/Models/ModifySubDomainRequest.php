@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() Obtain Unique service ID.
  * @method void setServiceId(string $ServiceId) Set Unique service ID.
- * @method string getSubDomain() Obtain Custom domain name for which the path mapping is to be modified.
- * @method void setSubDomain(string $SubDomain) Set Custom domain name for which the path mapping is to be modified.
- * @method boolean getIsDefaultMapping() Obtain Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
- * @method void setIsDefaultMapping(boolean $IsDefaultMapping) Set Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
- * @method string getCertificateId() Obtain Certificate ID, which is required when the HTTPS protocol is included.
- * @method void setCertificateId(string $CertificateId) Set Certificate ID, which is required when the HTTPS protocol is included.
- * @method string getProtocol() Obtain Modified custom domain name protocol type. Valid values: http, https, http&https.
- * @method void setProtocol(string $Protocol) Set Modified custom domain name protocol type. Valid values: http, https, http&https.
- * @method array getPathMappingSet() Obtain Modified path mapping list.
- * @method void setPathMappingSet(array $PathMappingSet) Set Modified path mapping list.
+ * @method string getSubDomain() Obtain Custom domain name whose path mapping is to be modified.
+ * @method void setSubDomain(string $SubDomain) Set Custom domain name whose path mapping is to be modified.
+ * @method boolean getIsDefaultMapping() Obtain Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
+ * @method void setIsDefaultMapping(boolean $IsDefaultMapping) Set Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
+ * @method string getCertificateId() Obtain Certificate ID, which is required if the HTTPS protocol is included.
+ * @method void setCertificateId(string $CertificateId) Set Certificate ID, which is required if the HTTPS protocol is included.
+ * @method string getProtocol() Obtain Custom domain name protocol type after modification. Valid values: http, https, http&https.
+ * @method void setProtocol(string $Protocol) Set Custom domain name protocol type after modification. Valid values: http, https, http&https.
+ * @method array getPathMappingSet() Obtain Path mapping list after modification.
+ * @method void setPathMappingSet(array $PathMappingSet) Set Path mapping list after modification.
  * @method string getNetType() Obtain Network type. Valid values: INNER, OUTER.
  * @method void setNetType(string $NetType) Set Network type. Valid values: INNER, OUTER.
  */
@@ -43,27 +43,27 @@ class ModifySubDomainRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string Custom domain name for which the path mapping is to be modified.
+     * @var string Custom domain name whose path mapping is to be modified.
      */
     public $SubDomain;
 
     /**
-     * @var boolean Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
+     * @var boolean Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
      */
     public $IsDefaultMapping;
 
     /**
-     * @var string Certificate ID, which is required when the HTTPS protocol is included.
+     * @var string Certificate ID, which is required if the HTTPS protocol is included.
      */
     public $CertificateId;
 
     /**
-     * @var string Modified custom domain name protocol type. Valid values: http, https, http&https.
+     * @var string Custom domain name protocol type after modification. Valid values: http, https, http&https.
      */
     public $Protocol;
 
     /**
-     * @var array Modified path mapping list.
+     * @var array Path mapping list after modification.
      */
     public $PathMappingSet;
 
@@ -74,11 +74,11 @@ class ModifySubDomainRequest extends AbstractModel
 
     /**
      * @param string $ServiceId Unique service ID.
-     * @param string $SubDomain Custom domain name for which the path mapping is to be modified.
-     * @param boolean $IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
-     * @param string $CertificateId Certificate ID, which is required when the HTTPS protocol is included.
-     * @param string $Protocol Modified custom domain name protocol type. Valid values: http, https, http&https.
-     * @param array $PathMappingSet Modified path mapping list.
+     * @param string $SubDomain Custom domain name whose path mapping is to be modified.
+     * @param boolean $IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
+     * @param string $CertificateId Certificate ID, which is required if the HTTPS protocol is included.
+     * @param string $Protocol Custom domain name protocol type after modification. Valid values: http, https, http&https.
+     * @param array $PathMappingSet Path mapping list after modification.
      * @param string $NetType Network type. Valid values: INNER, OUTER.
      */
     function __construct()

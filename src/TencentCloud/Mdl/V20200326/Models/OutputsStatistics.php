@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getPipeline0() Obtain Output information of pipeline 0.
  * @method void setPipeline0(array $Pipeline0) Set Output information of pipeline 0.
  * @method array getPipeline1() Obtain Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPipeline1(array $Pipeline1) Set Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class OutputsStatistics extends AbstractModel
 {
@@ -36,14 +34,12 @@ class OutputsStatistics extends AbstractModel
 
     /**
      * @var array Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Pipeline1;
 
     /**
      * @param array $Pipeline0 Output information of pipeline 0.
      * @param array $Pipeline1 Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

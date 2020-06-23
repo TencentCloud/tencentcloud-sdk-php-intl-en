@@ -30,22 +30,22 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setServiceDesc(string $ServiceDesc) Set Service description.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProtocol() Obtain Protocols supported by service. Valid values: http, https, http&https.
- * @method void setProtocol(string $Protocol) Set Protocols supported by service. Valid values: http, https, http&https.
+ * @method string getProtocol() Obtain Protocol supported by service. Valid values: http, https, http&https.
+ * @method void setProtocol(string $Protocol) Set Protocol supported by service. Valid values: http, https, http&https.
  * @method string getCreatedTime() Obtain Service creation time.
  * @method void setCreatedTime(string $CreatedTime) Set Service creation time.
  * @method string getModifiedTime() Obtain Service modification time.
  * @method void setModifiedTime(string $ModifiedTime) Set Service modification time.
  * @method string getExclusiveSetName() Obtain Self-deployed cluster name.
  * @method void setExclusiveSetName(string $ExclusiveSetName) Set Self-deployed cluster name.
- * @method array getNetTypes() Obtain Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
- * @method void setNetTypes(array $NetTypes) Set Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
- * @method string getInternalSubDomain() Obtain Private network access subdomain name.
- * @method void setInternalSubDomain(string $InternalSubDomain) Set Private network access subdomain name.
- * @method string getOuterSubDomain() Obtain Public network access subdomain name.
- * @method void setOuterSubDomain(string $OuterSubDomain) Set Public network access subdomain name.
- * @method integer getInnerHttpPort() Obtain Port number for HTTP access over private network.
- * @method void setInnerHttpPort(integer $InnerHttpPort) Set Port number for HTTP access over private network.
+ * @method array getNetTypes() Obtain Network type list. INNER: private network access; OUTER: public network access.
+ * @method void setNetTypes(array $NetTypes) Set Network type list. INNER: private network access; OUTER: public network access.
+ * @method string getInternalSubDomain() Obtain Subdomain name for private network access.
+ * @method void setInternalSubDomain(string $InternalSubDomain) Set Subdomain name for private network access.
+ * @method string getOuterSubDomain() Obtain Subdomain name for public network access.
+ * @method void setOuterSubDomain(string $OuterSubDomain) Set Subdomain name for public network access.
+ * @method integer getInnerHttpPort() Obtain Service port number for HTTP access over private network.
+ * @method void setInnerHttpPort(integer $InnerHttpPort) Set Service port number for HTTP access over private network.
  * @method integer getInnerHttpsPort() Obtain Port number for HTTPS access over private network.
  * @method void setInnerHttpsPort(integer $InnerHttpsPort) Set Port number for HTTPS access over private network.
  * @method integer getApiTotalCount() Obtain Total number of APIs.
@@ -99,7 +99,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ServiceDesc;
 
     /**
-     * @var string Protocols supported by service. Valid values: http, https, http&https.
+     * @var string Protocol supported by service. Valid values: http, https, http&https.
      */
     public $Protocol;
 
@@ -119,22 +119,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ExclusiveSetName;
 
     /**
-     * @var array Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+     * @var array Network type list. INNER: private network access; OUTER: public network access.
      */
     public $NetTypes;
 
     /**
-     * @var string Private network access subdomain name.
+     * @var string Subdomain name for private network access.
      */
     public $InternalSubDomain;
 
     /**
-     * @var string Public network access subdomain name.
+     * @var string Subdomain name for public network access.
      */
     public $OuterSubDomain;
 
     /**
-     * @var integer Port number for HTTP access over private network.
+     * @var integer Service port number for HTTP access over private network.
      */
     public $InnerHttpPort;
 
@@ -194,14 +194,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ServiceName Service name.
      * @param string $ServiceDesc Service description.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Protocol Protocols supported by service. Valid values: http, https, http&https.
+     * @param string $Protocol Protocol supported by service. Valid values: http, https, http&https.
      * @param string $CreatedTime Service creation time.
      * @param string $ModifiedTime Service modification time.
      * @param string $ExclusiveSetName Self-deployed cluster name.
-     * @param array $NetTypes Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
-     * @param string $InternalSubDomain Private network access subdomain name.
-     * @param string $OuterSubDomain Public network access subdomain name.
-     * @param integer $InnerHttpPort Port number for HTTP access over private network.
+     * @param array $NetTypes Network type list. INNER: private network access; OUTER: public network access.
+     * @param string $InternalSubDomain Subdomain name for private network access.
+     * @param string $OuterSubDomain Subdomain name for public network access.
+     * @param integer $InnerHttpPort Service port number for HTTP access over private network.
      * @param integer $InnerHttpsPort Port number for HTTPS access over private network.
      * @param integer $ApiTotalCount Total number of APIs.
      * @param array $ApiIdStatusSet API list.

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() Obtain Unique ID of the service to be deactivated.
  * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be deactivated.
- * @method string getEnvironmentName() Obtain Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
- * @method void setEnvironmentName(string $EnvironmentName) Set Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+ * @method string getEnvironmentName() Obtain Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+ * @method void setEnvironmentName(string $EnvironmentName) Set Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
  * @method array getApiIds() Obtain List of APIs to be deactivated, which is a reserved field.
  * @method void setApiIds(array $ApiIds) Set List of APIs to be deactivated, which is a reserved field.
  */
@@ -35,7 +35,7 @@ class UnReleaseServiceRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * @var string Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public $EnvironmentName;
 
@@ -46,7 +46,7 @@ class UnReleaseServiceRequest extends AbstractModel
 
     /**
      * @param string $ServiceId Unique ID of the service to be deactivated.
-     * @param string $EnvironmentName Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * @param string $EnvironmentName Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      * @param array $ApiIds List of APIs to be deactivated, which is a reserved field.
      */
     function __construct()

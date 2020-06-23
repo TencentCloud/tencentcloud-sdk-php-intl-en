@@ -50,9 +50,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProtocol(string $Protocol) Set API protocol.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsDebugAfterCharge() Obtain Whether to enable debugging on purchase.
+ * @method boolean getIsDebugAfterCharge() Obtain Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Whether to enable debugging on purchase.
+ * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getAuthType() Obtain Authorization type.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -141,7 +141,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Protocol;
 
     /**
-     * @var boolean Whether to enable debugging on purchase.
+     * @var boolean Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsDebugAfterCharge;
@@ -198,7 +198,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Protocol API protocol.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsDebugAfterCharge Whether to enable debugging on purchase.
+     * @param boolean $IsDebugAfterCharge Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AuthType Authorization type.
 Note: this field may return null, indicating that no valid values can be obtained.

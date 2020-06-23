@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Access service environment URL.
  * @method integer getStatus() Obtain Release status.
  * @method void setStatus(integer $Status) Set Release status.
- * @method string getVersionName() Obtain Release version ID.
+ * @method string getVersionName() Obtain Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVersionName(string $VersionName) Set Release version ID.
+ * @method void setVersionName(string $VersionName) Set Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getStrategy() Obtain Throttling value.
  * @method void setStrategy(integer $Strategy) Set Throttling value.
@@ -51,7 +51,7 @@ class ServiceEnvironmentStrategy extends AbstractModel
     public $Status;
 
     /**
-     * @var string Release version ID.
+     * @var string Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VersionName;
@@ -65,7 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $EnvironmentName Environment name.
      * @param string $Url Access service environment URL.
      * @param integer $Status Release status.
-     * @param string $VersionName Release version ID.
+     * @param string $VersionName Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Strategy Throttling value.
      */

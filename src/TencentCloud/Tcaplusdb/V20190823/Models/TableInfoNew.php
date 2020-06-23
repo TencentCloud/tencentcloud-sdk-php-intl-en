@@ -124,10 +124,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSortRule(integer $SortRule) Set Sort order of SORTLIST-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDbClusterInfoStruct() Obtain Distributed index information of table
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDbClusterInfoStruct(string $DbClusterInfoStruct) Set Distributed index information of table
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class TableInfoNew extends AbstractModel
 {
@@ -288,12 +284,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SortRule;
 
     /**
-     * @var string Distributed index information of table
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $DbClusterInfoStruct;
-
-    /**
      * @param string $TableName Table name
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TableInstanceId Table instance ID
@@ -345,8 +335,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $SortFieldNum Number of SORTLIST-type table sort fields
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SortRule Sort order of SORTLIST-type tables
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DbClusterInfoStruct Distributed index information of table
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -470,10 +458,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SortRule",$param) and $param["SortRule"] !== null) {
             $this->SortRule = $param["SortRule"];
-        }
-
-        if (array_key_exists("DbClusterInfoStruct",$param) and $param["DbClusterInfoStruct"] !== null) {
-            $this->DbClusterInfoStruct = $param["DbClusterInfoStruct"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
  * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
  * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
- * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
- * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
+ * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+ * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
  * @method Environment getEnvironment() Obtain Function environment variable
  * @method void setEnvironment(Environment $Environment) Set Function environment variable
  * @method string getNamespace() Obtain Function namespace
@@ -76,7 +76,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $Timeout;
 
     /**
-     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
+     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
      */
     public $Runtime;
 
@@ -140,7 +140,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
      * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
      * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
-     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
+     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
      * @param Environment $Environment Function environment variable
      * @param string $Namespace Function namespace
      * @param VpcConfig $VpcConfig Function VPC configuration

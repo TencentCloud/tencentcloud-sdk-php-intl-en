@@ -20,93 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ServiceParameter
  *
- * @method string getName() Obtain API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+ * @method string getName() Obtain API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+ * @method void setName(string $Name) Set API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPosition() Obtain API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method string getPosition() Obtain Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPosition(string $Position) Set API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method void setPosition(string $Position) Set Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRelevantRequestParameterPosition() Obtain Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method string getRelevantRequestParameterPosition() Obtain Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRelevantRequestParameterPosition(string $RelevantRequestParameterPosition) Set Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method void setRelevantRequestParameterPosition(string $RelevantRequestParameterPosition) Set Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRelevantRequestParameterName() Obtain Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method string getRelevantRequestParameterName() Obtain Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRelevantRequestParameterName(string $RelevantRequestParameterName) Set Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method void setRelevantRequestParameterName(string $RelevantRequestParameterName) Set Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDefaultValue() Obtain API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method string getDefaultValue() Obtain Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDefaultValue(string $DefaultValue) Set API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method void setDefaultValue(string $DefaultValue) Set Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRelevantRequestParameterDesc() Obtain API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method string getRelevantRequestParameterDesc() Obtain API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRelevantRequestParameterDesc(string $RelevantRequestParameterDesc) Set API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method void setRelevantRequestParameterDesc(string $RelevantRequestParameterDesc) Set API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRelevantRequestParameterType() Obtain API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method string getRelevantRequestParameterType() Obtain API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRelevantRequestParameterType(string $RelevantRequestParameterType) Set API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method void setRelevantRequestParameterType(string $RelevantRequestParameterType) Set API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ServiceParameter extends AbstractModel
 {
     /**
-     * @var string API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+     * @var string API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var string API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Position;
 
     /**
-     * @var string Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RelevantRequestParameterPosition;
 
     /**
-     * @var string Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RelevantRequestParameterName;
 
     /**
-     * @var string API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DefaultValue;
 
     /**
-     * @var string API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RelevantRequestParameterDesc;
 
     /**
-     * @var string API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RelevantRequestParameterType;
 
     /**
-     * @param string $Name API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+     * @param string $Name API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Position API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param string $Position Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RelevantRequestParameterPosition Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param string $RelevantRequestParameterPosition Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RelevantRequestParameterName Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param string $RelevantRequestParameterName Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DefaultValue API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param string $DefaultValue Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RelevantRequestParameterDesc API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param string $RelevantRequestParameterDesc API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RelevantRequestParameterType API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param string $RelevantRequestParameterType API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

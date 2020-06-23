@@ -50,10 +50,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setImageId(string $ImageId) Set ID of the image used by the cluster
 Note: this field may return null, indicating that no valid value is obtained.
- * @method string getOsCustomizeType() Obtain OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setOsCustomizeType(string $OsCustomizeType) Set OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getOsCustomizeType() Obtain Container image tag
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setOsCustomizeType(string $OsCustomizeType) Set Container image tag
+Note: This field may return null, indicating that no valid value was found.
  * @method string getContainerRuntime() Obtain Runtime environment of the cluster. Values can be `docker` or `containerd`.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setContainerRuntime(string $ContainerRuntime) Set Runtime environment of the cluster. Values can be `docker` or `containerd`.
@@ -61,6 +61,10 @@ Note: this field may return null, indicating that no valid value is obtained.
  * @method string getCreatedTime() Obtain Creation time
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method boolean getDeletionProtection() Obtain Whether Deletion Protection is enabled
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether Deletion Protection is enabled
 Note: this field may return null, indicating that no valid value is obtained.
  */
 class Cluster extends AbstractModel
@@ -137,8 +141,8 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $ImageId;
 
     /**
-     * @var string OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var string Container image tag
+Note: This field may return null, indicating that no valid value was found.
      */
     public $OsCustomizeType;
 
@@ -153,6 +157,12 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public $CreatedTime;
+
+    /**
+     * @var boolean Whether Deletion Protection is enabled
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $DeletionProtection;
 
     /**
      * @param string $ClusterId Cluster ID
@@ -170,11 +180,13 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param integer $ClusterMaterNodeNum Number of master nodes currently in the cluster
      * @param string $ImageId ID of the image used by the cluster
 Note: this field may return null, indicating that no valid value is obtained.
-     * @param string $OsCustomizeType OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $OsCustomizeType Container image tag
+Note: This field may return null, indicating that no valid value was found.
      * @param string $ContainerRuntime Runtime environment of the cluster. Values can be `docker` or `containerd`.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param string $CreatedTime Creation time
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param boolean $DeletionProtection Whether Deletion Protection is enabled
 Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
@@ -262,6 +274,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

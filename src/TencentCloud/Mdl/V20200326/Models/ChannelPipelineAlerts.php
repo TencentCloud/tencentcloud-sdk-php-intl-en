@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetTime(string $SetTime) Set Alarm start time in UTC time.
  * @method string getClearTime() Obtain Alarm end time in UTC time.
 This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setClearTime(string $ClearTime) Set Alarm end time in UTC time.
 This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getType() Obtain Alarm type.
  * @method void setType(string $Type) Set Alarm type.
  * @method string getMessage() Obtain Alarm details.
@@ -43,7 +41,6 @@ class ChannelPipelineAlerts extends AbstractModel
     /**
      * @var string Alarm end time in UTC time.
 This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ClearTime;
 
@@ -61,7 +58,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $SetTime Alarm start time in UTC time.
      * @param string $ClearTime Alarm end time in UTC time.
 This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Type Alarm type.
      * @param string $Message Alarm details.
      */

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteIPStrategy request structure.
  *
- * @method string getServiceId() Obtain Unique ID of the service of the IP policy to be deleted.
- * @method void setServiceId(string $ServiceId) Set Unique ID of the service of the IP policy to be deleted.
+ * @method string getServiceId() Obtain Unique service ID of the IP policy to be deleted.
+ * @method void setServiceId(string $ServiceId) Set Unique service ID of the IP policy to be deleted.
  * @method string getStrategyId() Obtain Unique ID of the IP policy to be deleted.
  * @method void setStrategyId(string $StrategyId) Set Unique ID of the IP policy to be deleted.
  */
 class DeleteIPStrategyRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of the service of the IP policy to be deleted.
+     * @var string Unique service ID of the IP policy to be deleted.
      */
     public $ServiceId;
 
@@ -38,7 +38,7 @@ class DeleteIPStrategyRequest extends AbstractModel
     public $StrategyId;
 
     /**
-     * @param string $ServiceId Unique ID of the service of the IP policy to be deleted.
+     * @param string $ServiceId Unique service ID of the IP policy to be deleted.
      * @param string $StrategyId Unique ID of the IP policy to be deleted.
      */
     function __construct()

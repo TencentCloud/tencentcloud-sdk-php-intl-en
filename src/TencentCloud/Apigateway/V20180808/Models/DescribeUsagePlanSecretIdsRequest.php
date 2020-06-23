@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUsagePlanId() Obtain Unique ID of bound usage plan.
  * @method void setUsagePlanId(string $UsagePlanId) Set Unique ID of bound usage plan.
- * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
+ * @method integer getLimit() Obtain Number of results to be returned. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  */
@@ -35,7 +35,7 @@ class DescribeUsagePlanSecretIdsRequest extends AbstractModel
     public $UsagePlanId;
 
     /**
-     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
+     * @var integer Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeUsagePlanSecretIdsRequest extends AbstractModel
 
     /**
      * @param string $UsagePlanId Unique ID of bound usage plan.
-     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * @param integer $Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      */
     function __construct()

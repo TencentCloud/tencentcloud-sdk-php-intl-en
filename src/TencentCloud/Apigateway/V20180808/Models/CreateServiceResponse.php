@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceDesc(string $ServiceDesc) Set Custom service description.
  * @method string getOuterSubDomain() Obtain Default public network domain name.
  * @method void setOuterSubDomain(string $OuterSubDomain) Set Default public network domain name.
- * @method string getInnerSubDomain() Obtain Default domain name of VPC private network
- * @method void setInnerSubDomain(string $InnerSubDomain) Set Default domain name of VPC private network
+ * @method string getInnerSubDomain() Obtain Default private network domain name of VPC
+ * @method void setInnerSubDomain(string $InnerSubDomain) Set Default private network domain name of VPC
  * @method string getCreatedTime() Obtain Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
  * @method void setCreatedTime(string $CreatedTime) Set Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
- * @method array getNetTypes() Obtain Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
- * @method void setNetTypes(array $NetTypes) Set Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+ * @method array getNetTypes() Obtain Network type list. INNER: private network access; OUTER: public network access.
+ * @method void setNetTypes(array $NetTypes) Set Network type list. INNER: private network access; OUTER: public network access.
  * @method string getIpVersion() Obtain IP version number.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIpVersion(string $IpVersion) Set IP version number.
@@ -64,7 +64,7 @@ class CreateServiceResponse extends AbstractModel
     public $OuterSubDomain;
 
     /**
-     * @var string Default domain name of VPC private network
+     * @var string Default private network domain name of VPC
      */
     public $InnerSubDomain;
 
@@ -74,7 +74,7 @@ class CreateServiceResponse extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var array Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+     * @var array Network type list. INNER: private network access; OUTER: public network access.
      */
     public $NetTypes;
 
@@ -94,9 +94,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ServiceName Custom service name.
      * @param string $ServiceDesc Custom service description.
      * @param string $OuterSubDomain Default public network domain name.
-     * @param string $InnerSubDomain Default domain name of VPC private network
+     * @param string $InnerSubDomain Default private network domain name of VPC
      * @param string $CreatedTime Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
-     * @param array $NetTypes Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+     * @param array $NetTypes Network type list. INNER: private network access; OUTER: public network access.
      * @param string $IpVersion IP version number.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

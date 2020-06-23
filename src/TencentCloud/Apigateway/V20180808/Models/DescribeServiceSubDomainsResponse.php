@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServiceSubDomains response structure.
  *
- * @method DomainSets getResult() Obtain Custom service domain names.
- * @method void setResult(DomainSets $Result) Set Custom service domain names.
+ * @method DomainSets getResult() Obtain Custom service domain name query.
+ * @method void setResult(DomainSets $Result) Set Custom service domain name query.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeServiceSubDomainsResponse extends AbstractModel
 {
     /**
-     * @var DomainSets Custom service domain names.
+     * @var DomainSets Custom service domain name query.
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeServiceSubDomainsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DomainSets $Result Custom service domain names.
+     * @param DomainSets $Result Custom service domain name query.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

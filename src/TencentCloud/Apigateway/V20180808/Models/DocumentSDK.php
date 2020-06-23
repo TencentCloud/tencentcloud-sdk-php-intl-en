@@ -18,28 +18,28 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * API documentation download
+ * API document download
  *
- * @method string getDocumentURL() Obtain Download link of generated file. Generated documents are stored in COS.
- * @method void setDocumentURL(string $DocumentURL) Set Download link of generated file. Generated documents are stored in COS.
- * @method string getSdkURL() Obtain Download link of generated SDK file. Generated SDKs are stored in COS.
- * @method void setSdkURL(string $SdkURL) Set Download link of generated SDK file. Generated SDKs are stored in COS.
+ * @method string getDocumentURL() Obtain Download link of generated file. Generated documents will be stored in COS.
+ * @method void setDocumentURL(string $DocumentURL) Set Download link of generated file. Generated documents will be stored in COS.
+ * @method string getSdkURL() Obtain Download link of generated SDK file. Generated SDK files will be stored in COS.
+ * @method void setSdkURL(string $SdkURL) Set Download link of generated SDK file. Generated SDK files will be stored in COS.
  */
 class DocumentSDK extends AbstractModel
 {
     /**
-     * @var string Download link of generated file. Generated documents are stored in COS.
+     * @var string Download link of generated file. Generated documents will be stored in COS.
      */
     public $DocumentURL;
 
     /**
-     * @var string Download link of generated SDK file. Generated SDKs are stored in COS.
+     * @var string Download link of generated SDK file. Generated SDK files will be stored in COS.
      */
     public $SdkURL;
 
     /**
-     * @param string $DocumentURL Download link of generated file. Generated documents are stored in COS.
-     * @param string $SdkURL Download link of generated SDK file. Generated SDKs are stored in COS.
+     * @param string $DocumentURL Download link of generated file. Generated documents will be stored in COS.
+     * @param string $SdkURL Download link of generated SDK file. Generated SDK files will be stored in COS.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() Obtain Unique ID of the service to be published.
  * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be published.
- * @method string getEnvironmentName() Obtain Name of the environment to be published. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
- * @method void setEnvironmentName(string $EnvironmentName) Set Name of the environment to be published. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+ * @method string getEnvironmentName() Obtain Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+ * @method void setEnvironmentName(string $EnvironmentName) Set Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
  * @method string getReleaseDesc() Obtain Release description.
  * @method void setReleaseDesc(string $ReleaseDesc) Set Release description.
  * @method array getApiIds() Obtain `apiId` list, which is reserved. Full API release is used by default.
@@ -37,7 +37,7 @@ class ReleaseServiceRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string Name of the environment to be published. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * @var string Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public $EnvironmentName;
 
@@ -53,7 +53,7 @@ class ReleaseServiceRequest extends AbstractModel
 
     /**
      * @param string $ServiceId Unique ID of the service to be published.
-     * @param string $EnvironmentName Name of the environment to be published. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * @param string $EnvironmentName Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      * @param string $ReleaseDesc Release description.
      * @param array $ApiIds `apiId` list, which is reserved. Full API release is used by default.
      */

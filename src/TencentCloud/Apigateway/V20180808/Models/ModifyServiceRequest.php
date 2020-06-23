@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() Obtain Unique ID of the service to be modified.
  * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be modified.
- * @method string getServiceName() Obtain Modified service name.
- * @method void setServiceName(string $ServiceName) Set Modified service name.
- * @method string getServiceDesc() Obtain Modified service description.
- * @method void setServiceDesc(string $ServiceDesc) Set Modified service description.
- * @method string getProtocol() Obtain Modified service frontend request type, such as `http`, `https`, and `http&https`.
- * @method void setProtocol(string $Protocol) Set Modified service frontend request type, such as `http`, `https`, and `http&https`.
- * @method array getNetTypes() Obtain Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
- * @method void setNetTypes(array $NetTypes) Set Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+ * @method string getServiceName() Obtain Service name after modification.
+ * @method void setServiceName(string $ServiceName) Set Service name after modification.
+ * @method string getServiceDesc() Obtain Service description after modification.
+ * @method void setServiceDesc(string $ServiceDesc) Set Service description after modification.
+ * @method string getProtocol() Obtain Service frontend request type after modification, such as `http`, `https`, and `http&https`.
+ * @method void setProtocol(string $Protocol) Set Service frontend request type after modification, such as `http`, `https`, and `http&https`.
+ * @method array getNetTypes() Obtain Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+ * @method void setNetTypes(array $NetTypes) Set Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
  */
 class ModifyServiceRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class ModifyServiceRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string Modified service name.
+     * @var string Service name after modification.
      */
     public $ServiceName;
 
     /**
-     * @var string Modified service description.
+     * @var string Service description after modification.
      */
     public $ServiceDesc;
 
     /**
-     * @var string Modified service frontend request type, such as `http`, `https`, and `http&https`.
+     * @var string Service frontend request type after modification, such as `http`, `https`, and `http&https`.
      */
     public $Protocol;
 
     /**
-     * @var array Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+     * @var array Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
      */
     public $NetTypes;
 
     /**
      * @param string $ServiceId Unique ID of the service to be modified.
-     * @param string $ServiceName Modified service name.
-     * @param string $ServiceDesc Modified service description.
-     * @param string $Protocol Modified service frontend request type, such as `http`, `https`, and `http&https`.
-     * @param array $NetTypes Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+     * @param string $ServiceName Service name after modification.
+     * @param string $ServiceDesc Service description after modification.
+     * @param string $Protocol Service frontend request type after modification, such as `http`, `https`, and `http&https`.
+     * @param array $NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
      */
     function __construct()
     {

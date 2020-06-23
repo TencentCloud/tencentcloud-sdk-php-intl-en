@@ -18,11 +18,11 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of policies bound to environment.
+ * List of policies bound to environment
  *
- * @method integer getTotalCount() Obtain Throttling policy number.
+ * @method integer getTotalCount() Obtain Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Throttling policy number.
+ * @method void setTotalCount(integer $TotalCount) Set Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getEnvironmentList() Obtain Throttling policy list.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class ServiceEnvironmentStrategyStatus extends AbstractModel
 {
     /**
-     * @var integer Throttling policy number.
+     * @var integer Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
@@ -44,7 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $EnvironmentList;
 
     /**
-     * @param integer $TotalCount Throttling policy number.
+     * @param integer $TotalCount Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $EnvironmentList Throttling policy list.
 Note: this field may return null, indicating that no valid values can be obtained.

@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ServiceConfig
  *
- * @method string getProduct() Obtain Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
- * @method void setProduct(string $Product) Set Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
+ * @method string getProduct() Obtain Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
+ * @method void setProduct(string $Product) Set Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
  * @method string getUniqVpcId() Obtain Unique VPC ID.
  * @method void setUniqVpcId(string $UniqVpcId) Set Unique VPC ID.
- * @method string getUrl() Obtain API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
- * @method void setUrl(string $Url) Set API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
- * @method string getPath() Obtain API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
- * @method void setPath(string $Path) Set API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
- * @method string getMethod() Obtain API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
- * @method void setMethod(string $Method) Set API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
+ * @method string getUrl() Obtain API backend service URL, which is required if `ServiceType` is `HTTP`.
+ * @method void setUrl(string $Url) Set API backend service URL, which is required if `ServiceType` is `HTTP`.
+ * @method string getPath() Obtain API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
+ * @method void setPath(string $Path) Set API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
+ * @method string getMethod() Obtain API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
+ * @method void setMethod(string $Method) Set API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
  */
 class ServiceConfig extends AbstractModel
 {
     /**
-     * @var string Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
+     * @var string Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
      */
     public $Product;
 
@@ -44,26 +44,26 @@ class ServiceConfig extends AbstractModel
     public $UniqVpcId;
 
     /**
-     * @var string API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
+     * @var string API backend service URL, which is required if `ServiceType` is `HTTP`.
      */
     public $Url;
 
     /**
-     * @var string API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
+     * @var string API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
      */
     public $Path;
 
     /**
-     * @var string API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
+     * @var string API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
      */
     public $Method;
 
     /**
-     * @param string $Product Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
+     * @param string $Product Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
      * @param string $UniqVpcId Unique VPC ID.
-     * @param string $Url API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
-     * @param string $Path API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
-     * @param string $Method API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
+     * @param string $Url API backend service URL, which is required if `ServiceType` is `HTTP`.
+     * @param string $Path API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
+     * @param string $Method API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
      */
     function __construct()
     {

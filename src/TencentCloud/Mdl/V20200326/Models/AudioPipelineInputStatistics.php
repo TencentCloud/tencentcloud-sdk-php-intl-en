@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRate() Obtain Audio bitrate in bps.
  * @method void setRate(integer $Rate) Set Audio bitrate in bps.
  * @method integer getPid() Obtain Audio `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPid(integer $Pid) Set Audio `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class AudioPipelineInputStatistics extends AbstractModel
 {
@@ -43,7 +41,6 @@ class AudioPipelineInputStatistics extends AbstractModel
 
     /**
      * @var integer Audio `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Pid;
 
@@ -51,7 +48,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Fps Audio FPS.
      * @param integer $Rate Audio bitrate in bps.
      * @param integer $Pid Audio `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

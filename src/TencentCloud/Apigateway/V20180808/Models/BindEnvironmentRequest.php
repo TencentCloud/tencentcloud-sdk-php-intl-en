@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getUsagePlanIds() Obtain List of unique IDs of the usage plans to be bound.
  * @method void setUsagePlanIds(array $UsagePlanIds) Set List of unique IDs of the usage plans to be bound.
- * @method string getBindType() Obtain Binding type. Valid values: API, SERVICE (default value).
- * @method void setBindType(string $BindType) Set Binding type. Valid values: API, SERVICE (default value).
+ * @method string getBindType() Obtain Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+ * @method void setBindType(string $BindType) Set Binding type. Valid values: API, SERVICE. Default value: SERVICE.
  * @method string getEnvironment() Obtain Environment to be bound.
  * @method void setEnvironment(string $Environment) Set Environment to be bound.
  * @method string getServiceId() Obtain Unique ID of the service to be bound.
  * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be bound.
- * @method array getApiIds() Obtain Unique API ID array. This parameter will be required when `bindType` is `API`.
- * @method void setApiIds(array $ApiIds) Set Unique API ID array. This parameter will be required when `bindType` is `API`.
+ * @method array getApiIds() Obtain Unique API ID array, which is required if `bindType` is `API`.
+ * @method void setApiIds(array $ApiIds) Set Unique API ID array, which is required if `bindType` is `API`.
  */
 class BindEnvironmentRequest extends AbstractModel
 {
@@ -39,7 +39,7 @@ class BindEnvironmentRequest extends AbstractModel
     public $UsagePlanIds;
 
     /**
-     * @var string Binding type. Valid values: API, SERVICE (default value).
+     * @var string Binding type. Valid values: API, SERVICE. Default value: SERVICE.
      */
     public $BindType;
 
@@ -54,16 +54,16 @@ class BindEnvironmentRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var array Unique API ID array. This parameter will be required when `bindType` is `API`.
+     * @var array Unique API ID array, which is required if `bindType` is `API`.
      */
     public $ApiIds;
 
     /**
      * @param array $UsagePlanIds List of unique IDs of the usage plans to be bound.
-     * @param string $BindType Binding type. Valid values: API, SERVICE (default value).
+     * @param string $BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
      * @param string $Environment Environment to be bound.
      * @param string $ServiceId Unique ID of the service to be bound.
-     * @param array $ApiIds Unique API ID array. This parameter will be required when `bindType` is `API`.
+     * @param array $ApiIds Unique API ID array, which is required if `bindType` is `API`.
      */
     function __construct()
     {

@@ -28,9 +28,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMsg(string $Msg) Set Custom response configuration error message.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDesc() Obtain Remarks of the custom response configuration error code.
+ * @method string getDesc() Obtain Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDesc(string $Desc) Set Remarks of the custom response configuration error code.
+ * @method void setDesc(string $Desc) Set Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getConvertedCode() Obtain Custom error code conversion.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -56,7 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Msg;
 
     /**
-     * @var string Remarks of the custom response configuration error code.
+     * @var string Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Desc;
@@ -78,7 +78,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Msg Custom response configuration error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Desc Remarks of the custom response configuration error code.
+     * @param string $Desc Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ConvertedCode Custom error code conversion.
 Note: this field may return null, indicating that no valid values can be obtained.

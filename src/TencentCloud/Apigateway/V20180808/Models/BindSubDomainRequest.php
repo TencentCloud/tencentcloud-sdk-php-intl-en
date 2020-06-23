@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceId(string $ServiceId) Set Unique service ID.
  * @method string getSubDomain() Obtain Custom domain name to be bound.
  * @method void setSubDomain(string $SubDomain) Set Custom domain name to be bound.
- * @method string getProtocol() Obtain Protocols supported by service. Valid values: http, https, http&https.
- * @method void setProtocol(string $Protocol) Set Protocols supported by service. Valid values: http, https, http&https.
- * @method string getNetType() Obtain Network type. Valid values: INNER, OUTER.
- * @method void setNetType(string $NetType) Set Network type. Valid values: INNER, OUTER.
- * @method boolean getIsDefaultMapping() Obtain Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
- * @method void setIsDefaultMapping(boolean $IsDefaultMapping) Set Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
+ * @method string getProtocol() Obtain Protocol supported by service. Valid values: http, https, http&https.
+ * @method void setProtocol(string $Protocol) Set Protocol supported by service. Valid values: http, https, http&https.
+ * @method string getNetType() Obtain Network type. Valid values: OUTER, INNER.
+ * @method void setNetType(string $NetType) Set Network type. Valid values: OUTER, INNER.
+ * @method boolean getIsDefaultMapping() Obtain Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
+ * @method void setIsDefaultMapping(boolean $IsDefaultMapping) Set Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
  * @method string getNetSubDomain() Obtain Default domain name.
  * @method void setNetSubDomain(string $NetSubDomain) Set Default domain name.
- * @method string getCertificateId() Obtain Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
- * @method void setCertificateId(string $CertificateId) Set Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
- * @method array getPathMappingSet() Obtain Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
- * @method void setPathMappingSet(array $PathMappingSet) Set Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
+ * @method string getCertificateId() Obtain Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
+ * @method void setCertificateId(string $CertificateId) Set Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
+ * @method array getPathMappingSet() Obtain Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
+ * @method void setPathMappingSet(array $PathMappingSet) Set Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
  */
 class BindSubDomainRequest extends AbstractModel
 {
@@ -50,17 +50,17 @@ class BindSubDomainRequest extends AbstractModel
     public $SubDomain;
 
     /**
-     * @var string Protocols supported by service. Valid values: http, https, http&https.
+     * @var string Protocol supported by service. Valid values: http, https, http&https.
      */
     public $Protocol;
 
     /**
-     * @var string Network type. Valid values: INNER, OUTER.
+     * @var string Network type. Valid values: OUTER, INNER.
      */
     public $NetType;
 
     /**
-     * @var boolean Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
+     * @var boolean Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
      */
     public $IsDefaultMapping;
 
@@ -70,24 +70,24 @@ class BindSubDomainRequest extends AbstractModel
     public $NetSubDomain;
 
     /**
-     * @var string Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
+     * @var string Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
      */
     public $CertificateId;
 
     /**
-     * @var array Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
+     * @var array Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
      */
     public $PathMappingSet;
 
     /**
      * @param string $ServiceId Unique service ID.
      * @param string $SubDomain Custom domain name to be bound.
-     * @param string $Protocol Protocols supported by service. Valid values: http, https, http&https.
-     * @param string $NetType Network type. Valid values: INNER, OUTER.
-     * @param boolean $IsDefaultMapping Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
+     * @param string $Protocol Protocol supported by service. Valid values: http, https, http&https.
+     * @param string $NetType Network type. Valid values: OUTER, INNER.
+     * @param boolean $IsDefaultMapping Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
      * @param string $NetSubDomain Default domain name.
-     * @param string $CertificateId Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
-     * @param array $PathMappingSet Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
+     * @param string $CertificateId Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
+     * @param array $PathMappingSet Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
      */
     function __construct()
     {

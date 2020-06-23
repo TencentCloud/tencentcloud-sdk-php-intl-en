@@ -33,19 +33,25 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\DeleteIdlFilesResponse DeleteIdlFiles(Models\DeleteIdlFilesRequest $req) This API is used to delete a target IDL file by specifying the cluster ID and information of the file to be deleted. If the file is associated with a table, deletion will fail.
  * @method Models\DeleteTableGroupResponse DeleteTableGroup(Models\DeleteTableGroupRequest $req) This API is used to delete a table group.
  * @method Models\DeleteTablesResponse DeleteTables(Models\DeleteTablesRequest $req) This API is used to drop a specified table. Calling this API for the first time means to move the table to the recycle bin, while calling it again means to drop the table completely from the recycle bin.
+ * @method Models\DescribeClusterTagsResponse DescribeClusterTags(Models\DescribeClusterTagsRequest $req) This API is used to get the associated tag list of a cluster.
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) This API is used to query the TcaplusDB cluster list, including cluster details.
  * @method Models\DescribeIdlFileInfosResponse DescribeIdlFileInfos(Models\DescribeIdlFileInfosRequest $req) This API is used to query table description file details.
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) This API is used to query the list of regions supported by the TcaplusDB service.
+ * @method Models\DescribeTableGroupTagsResponse DescribeTableGroupTags(Models\DescribeTableGroupTagsRequest $req) This API is used to get the associated tag list of a table group.
  * @method Models\DescribeTableGroupsResponse DescribeTableGroups(Models\DescribeTableGroupsRequest $req) This API is used to query the table group list.
+ * @method Models\DescribeTableTagsResponse DescribeTableTags(Models\DescribeTableTagsRequest $req) This API is used to get table tags.
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) This API is used to query table details.
  * @method Models\DescribeTablesInRecycleResponse DescribeTablesInRecycle(Models\DescribeTablesInRecycleRequest $req) This API is used to query the details of a table in recycle bin.
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) This API is used to query the task list.
  * @method Models\DescribeUinInWhitelistResponse DescribeUinInWhitelist(Models\DescribeUinInWhitelistRequest $req) This API is used to query whether the current user is in the whitelist and control whether the user can create TDR-type apps or tables.
  * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) This API is used to rename a specified cluster.
  * @method Models\ModifyClusterPasswordResponse ModifyClusterPassword(Models\ModifyClusterPasswordRequest $req) This API is used to change the password of a specified cluster. The backend will allow the TcaplusDB SDK to access databases with both old and new passwords before the old password expires. You cannot submit a new password change request before the old password expires or submit a request to modify the expiration time of the old password after the old password expires.
+ * @method Models\ModifyClusterTagsResponse ModifyClusterTags(Models\ModifyClusterTagsRequest $req) This API is used to modify cluster tags.
  * @method Models\ModifyTableGroupNameResponse ModifyTableGroupName(Models\ModifyTableGroupNameRequest $req) This API is used to rename a TcaplusDB table group.
+ * @method Models\ModifyTableGroupTagsResponse ModifyTableGroupTags(Models\ModifyTableGroupTagsRequest $req) This API is used to modify table group tags.
  * @method Models\ModifyTableMemosResponse ModifyTableMemos(Models\ModifyTableMemosRequest $req) This API is used to modify table remarks.
  * @method Models\ModifyTableQuotasResponse ModifyTableQuotas(Models\ModifyTableQuotasRequest $req) This API is used to scale a table.
+ * @method Models\ModifyTableTagsResponse ModifyTableTags(Models\ModifyTableTagsRequest $req) This API is used to modify table tags.
  * @method Models\ModifyTablesResponse ModifyTables(Models\ModifyTablesRequest $req) This API is used to modify specified tables in batches based on the selected table definition IDL file.
  * @method Models\RecoverRecycleTablesResponse RecoverRecycleTables(Models\RecoverRecycleTablesRequest $req) This API is used to recover a dropped table from the recycle bin. It will not work for tables to be released due to arrears.
  * @method Models\RollbackTablesResponse RollbackTables(Models\RollbackTablesRequest $req) This API is used to roll back table data.

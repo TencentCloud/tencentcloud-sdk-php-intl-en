@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTotalCount(integer $TotalCount) Set Number of environments of the service bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getEnvironmentList() Obtain Environment status of the services bound to usage plan.
+ * @method array getEnvironmentList() Obtain Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEnvironmentList(array $EnvironmentList) Set Environment status of the services bound to usage plan.
+ * @method void setEnvironmentList(array $EnvironmentList) Set Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class UsagePlanEnvironmentStatus extends AbstractModel
@@ -38,7 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TotalCount;
 
     /**
-     * @var array Environment status of the services bound to usage plan.
+     * @var array Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EnvironmentList;
@@ -46,7 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $TotalCount Number of environments of the service bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $EnvironmentList Environment status of the services bound to usage plan.
+     * @param array $EnvironmentList Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

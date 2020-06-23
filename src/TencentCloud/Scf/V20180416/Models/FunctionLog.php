@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLevel(string $Level) Set Log level
  * @method string getSource() Obtain Log source
  * @method void setSource(string $Source) Set Log source
+ * @method integer getRetryNum() Obtain Number of retries
+ * @method void setRetryNum(integer $RetryNum) Set Number of retries
  */
 class FunctionLog extends AbstractModel
 {
@@ -108,6 +110,11 @@ class FunctionLog extends AbstractModel
     public $Source;
 
     /**
+     * @var integer Number of retries
+     */
+    public $RetryNum;
+
+    /**
      * @param string $FunctionName Function name
      * @param string $RetMsg Return value after the function is executed
      * @param string $RequestId RequestId corresponding to the executed function
@@ -120,6 +127,7 @@ class FunctionLog extends AbstractModel
      * @param string $Log Function execution logs
      * @param string $Level Log level
      * @param string $Source Log source
+     * @param integer $RetryNum Number of retries
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class FunctionLog extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("RetryNum",$param) and $param["RetryNum"] !== null) {
+            $this->RetryNum = $param["RetryNum"];
         }
     }
 }

@@ -28,8 +28,8 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
 ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
 ID of NAT gateway instance, e.g. `nat-ltjahce6`;
 ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
- * @method integer getBandwidth() Obtain Bandwidth limit value.
- * @method void setBandwidth(integer $Bandwidth) Set Bandwidth limit value.
+ * @method integer getBandwidth() Obtain Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
+ * @method void setBandwidth(integer $Bandwidth) Set Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
  * @method array getIpAddresses() Obtain CVM private IP addresses with limited bandwidth.
  * @method void setIpAddresses(array $IpAddresses) Set CVM private IP addresses with limited bandwidth.
  */
@@ -44,7 +44,7 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
     public $GatewayId;
 
     /**
-     * @var integer Bandwidth limit value.
+     * @var integer Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
      */
     public $Bandwidth;
 
@@ -58,7 +58,7 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
 ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
 ID of NAT gateway instance, e.g. `nat-ltjahce6`;
 ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
-     * @param integer $Bandwidth Bandwidth limit value.
+     * @param integer $Bandwidth Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
      * @param array $IpAddresses CVM private IP addresses with limited bandwidth.
      */
     function __construct()

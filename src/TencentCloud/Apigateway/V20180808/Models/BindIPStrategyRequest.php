@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindIPStrategy request structure.
  *
- * @method string getServiceId() Obtain Unique ID of the service of the IP policy to be bound.
- * @method void setServiceId(string $ServiceId) Set Unique ID of the service of the IP policy to be bound.
+ * @method string getServiceId() Obtain Unique service ID of the IP policy to be bound.
+ * @method void setServiceId(string $ServiceId) Set Unique service ID of the IP policy to be bound.
  * @method string getStrategyId() Obtain Unique ID of the IP policy to be bound.
  * @method void setStrategyId(string $StrategyId) Set Unique ID of the IP policy to be bound.
- * @method string getEnvironmentName() Obtain Environment to be bound to IP policy
- * @method void setEnvironmentName(string $EnvironmentName) Set Environment to be bound to IP policy
+ * @method string getEnvironmentName() Obtain Environment to be bound to IP policy.
+ * @method void setEnvironmentName(string $EnvironmentName) Set Environment to be bound to IP policy.
  * @method array getBindApiIds() Obtain List of APIs to be bound to IP policy.
  * @method void setBindApiIds(array $BindApiIds) Set List of APIs to be bound to IP policy.
  */
 class BindIPStrategyRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of the service of the IP policy to be bound.
+     * @var string Unique service ID of the IP policy to be bound.
      */
     public $ServiceId;
 
@@ -42,7 +42,7 @@ class BindIPStrategyRequest extends AbstractModel
     public $StrategyId;
 
     /**
-     * @var string Environment to be bound to IP policy
+     * @var string Environment to be bound to IP policy.
      */
     public $EnvironmentName;
 
@@ -52,9 +52,9 @@ class BindIPStrategyRequest extends AbstractModel
     public $BindApiIds;
 
     /**
-     * @param string $ServiceId Unique ID of the service of the IP policy to be bound.
+     * @param string $ServiceId Unique service ID of the IP policy to be bound.
      * @param string $StrategyId Unique ID of the IP policy to be bound.
-     * @param string $EnvironmentName Environment to be bound to IP policy
+     * @param string $EnvironmentName Environment to be bound to IP policy.
      * @param array $BindApiIds List of APIs to be bound to IP policy.
      */
     function __construct()

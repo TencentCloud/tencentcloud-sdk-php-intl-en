@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyIPStrategy request structure.
  *
- * @method string getServiceId() Obtain Unique ID of the service of the policy to be modified.
- * @method void setServiceId(string $ServiceId) Set Unique ID of the service of the policy to be modified.
+ * @method string getServiceId() Obtain Unique service ID of the policy to be modified.
+ * @method void setServiceId(string $ServiceId) Set Unique service ID of the policy to be modified.
  * @method string getStrategyId() Obtain Unique ID of the policy to be modified.
  * @method void setStrategyId(string $StrategyId) Set Unique ID of the policy to be modified.
  * @method string getStrategyData() Obtain Details of the policy to be modified.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyIPStrategyRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of the service of the policy to be modified.
+     * @var string Unique service ID of the policy to be modified.
      */
     public $ServiceId;
 
@@ -45,7 +45,7 @@ class ModifyIPStrategyRequest extends AbstractModel
     public $StrategyData;
 
     /**
-     * @param string $ServiceId Unique ID of the service of the policy to be modified.
+     * @param string $ServiceId Unique service ID of the policy to be modified.
      * @param string $StrategyId Unique ID of the policy to be modified.
      * @param string $StrategyData Details of the policy to be modified.
      */

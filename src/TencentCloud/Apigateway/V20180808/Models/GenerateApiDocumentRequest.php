@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() Obtain Unique service ID of the document to be created.
  * @method void setServiceId(string $ServiceId) Set Unique service ID of the document to be created.
- * @method string getGenEnvironment() Obtain Environment of the service for which the SDK is to be created.
- * @method void setGenEnvironment(string $GenEnvironment) Set Environment of the service for which the SDK is to be created.
+ * @method string getGenEnvironment() Obtain Environment of the service for which to create an SDK.
+ * @method void setGenEnvironment(string $GenEnvironment) Set Environment of the service for which to create an SDK.
  * @method string getGenLanguage() Obtain Programming language of the SDK to be created. Currently, only Python and JavaScript are supported.
  * @method void setGenLanguage(string $GenLanguage) Set Programming language of the SDK to be created. Currently, only Python and JavaScript are supported.
  */
@@ -35,7 +35,7 @@ class GenerateApiDocumentRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string Environment of the service for which the SDK is to be created.
+     * @var string Environment of the service for which to create an SDK.
      */
     public $GenEnvironment;
 
@@ -46,7 +46,7 @@ class GenerateApiDocumentRequest extends AbstractModel
 
     /**
      * @param string $ServiceId Unique service ID of the document to be created.
-     * @param string $GenEnvironment Environment of the service for which the SDK is to be created.
+     * @param string $GenEnvironment Environment of the service for which to create an SDK.
      * @param string $GenLanguage Programming language of the SDK to be created. Currently, only Python and JavaScript are supported.
      */
     function __construct()

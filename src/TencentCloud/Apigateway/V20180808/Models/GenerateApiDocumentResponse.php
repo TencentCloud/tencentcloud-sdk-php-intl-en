@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GenerateApiDocument response structure.
  *
- * @method DocumentSDK getResult() Obtain API documentation and SDK link.
- * @method void setResult(DocumentSDK $Result) Set API documentation and SDK link.
+ * @method DocumentSDK getResult() Obtain API document and SDK link.
+ * @method void setResult(DocumentSDK $Result) Set API document and SDK link.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class GenerateApiDocumentResponse extends AbstractModel
 {
     /**
-     * @var DocumentSDK API documentation and SDK link.
+     * @var DocumentSDK API document and SDK link.
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class GenerateApiDocumentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DocumentSDK $Result API documentation and SDK link.
+     * @param DocumentSDK $Result API document and SDK link.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

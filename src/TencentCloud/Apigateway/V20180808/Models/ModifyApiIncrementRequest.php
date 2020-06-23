@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiId(string $ApiId) Set API ID
  * @method string getBusinessType() Obtain Authorization type of the API to be modified (you can select `OAUTH`, i.e., authorization API)
  * @method void setBusinessType(string $BusinessType) Set Authorization type of the API to be modified (you can select `OAUTH`, i.e., authorization API)
- * @method string getPublicKey() Obtain Public key value to be modified of OAuth API
- * @method void setPublicKey(string $PublicKey) Set Public key value to be modified of OAuth API
+ * @method string getPublicKey() Obtain Public key value to be modified by OAuth API
+ * @method void setPublicKey(string $PublicKey) Set Public key value to be modified by OAuth API
  * @method string getLoginRedirectUrl() Obtain OAuth API redirect address
  * @method void setLoginRedirectUrl(string $LoginRedirectUrl) Set OAuth API redirect address
  */
@@ -49,7 +49,7 @@ class ModifyApiIncrementRequest extends AbstractModel
     public $BusinessType;
 
     /**
-     * @var string Public key value to be modified of OAuth API
+     * @var string Public key value to be modified by OAuth API
      */
     public $PublicKey;
 
@@ -62,7 +62,7 @@ class ModifyApiIncrementRequest extends AbstractModel
      * @param string $ServiceId Service ID
      * @param string $ApiId API ID
      * @param string $BusinessType Authorization type of the API to be modified (you can select `OAUTH`, i.e., authorization API)
-     * @param string $PublicKey Public key value to be modified of OAuth API
+     * @param string $PublicKey Public key value to be modified by OAuth API
      * @param string $LoginRedirectUrl OAuth API redirect address
      */
     function __construct()

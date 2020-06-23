@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Service release version
  *
- * @method integer getTotalCount() Obtain Total number of release versions.
+ * @method integer getTotalCount() Obtain Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of release versions.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getVersionList() Obtain Release version list.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class ServiceReleaseVersion extends AbstractModel
 {
     /**
-     * @var integer Total number of release versions.
+     * @var integer Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
@@ -44,7 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $VersionList;
 
     /**
-     * @param integer $TotalCount Total number of release versions.
+     * @param integer $TotalCount Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $VersionList Release version list.
 Note: this field may return null, indicating that no valid values can be obtained.

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Health check configuration, including `TsfHealthCheckConf` and `TargetServicesHealthCheckConf`
  *
- * @method boolean getIsHealthCheck() Obtain Whether to enable health check.
- * @method void setIsHealthCheck(boolean $IsHealthCheck) Set Whether to enable health check.
+ * @method boolean getIsHealthCheck() Obtain Whether health check is enabled.
+ * @method void setIsHealthCheck(boolean $IsHealthCheck) Set Whether health check is enabled.
  * @method integer getRequestVolumeThreshold() Obtain Health check threshold.
  * @method void setRequestVolumeThreshold(integer $RequestVolumeThreshold) Set Health check threshold.
  * @method integer getSleepWindowInMilliseconds() Obtain Window size.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class HealthCheckConf extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable health check.
+     * @var boolean Whether health check is enabled.
      */
     public $IsHealthCheck;
 
@@ -52,7 +52,7 @@ class HealthCheckConf extends AbstractModel
     public $ErrorThresholdPercentage;
 
     /**
-     * @param boolean $IsHealthCheck Whether to enable health check.
+     * @param boolean $IsHealthCheck Whether health check is enabled.
      * @param integer $RequestVolumeThreshold Health check threshold.
      * @param integer $SleepWindowInMilliseconds Window size.
      * @param integer $ErrorThresholdPercentage Threshold percentage.

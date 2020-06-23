@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * >Key-value pair filters for conditional filtering queries, such as filter ID, name, and status
+ * >Key-value pair filter for conditional filtering queries, such as filtering ID, name, status, etc.
 > * If there are multiple `Filter`, the relationship among them is logical `AND`.
 > * If there are multiple `Values` in the same `Filter`, the relationship among them is logical `OR`.
 >

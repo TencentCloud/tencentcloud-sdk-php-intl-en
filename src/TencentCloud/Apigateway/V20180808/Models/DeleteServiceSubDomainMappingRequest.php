@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceId(string $ServiceId) Set Unique service ID.
  * @method string getSubDomain() Obtain Custom domain name bound to service.
  * @method void setSubDomain(string $SubDomain) Set Custom domain name bound to service.
- * @method string getEnvironment() Obtain Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
- * @method void setEnvironment(string $Environment) Set Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+ * @method string getEnvironment() Obtain Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+ * @method void setEnvironment(string $Environment) Set Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
  */
 class DeleteServiceSubDomainMappingRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteServiceSubDomainMappingRequest extends AbstractModel
     public $SubDomain;
 
     /**
-     * @var string Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * @var string Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public $Environment;
 
     /**
      * @param string $ServiceId Unique service ID.
      * @param string $SubDomain Custom domain name bound to service.
-     * @param string $Environment Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * @param string $Environment Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     function __construct()
     {

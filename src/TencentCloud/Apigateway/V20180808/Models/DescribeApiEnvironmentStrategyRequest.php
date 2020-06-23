@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApiEnvironmentStrategy request structure.
  *
- * @method string getServiceId() Obtain Unique ID of the service of API.
- * @method void setServiceId(string $ServiceId) Set Unique ID of the service of API.
+ * @method string getServiceId() Obtain Unique service ID of API.
+ * @method void setServiceId(string $ServiceId) Set Unique service ID of API.
  * @method array getEnvironmentNames() Obtain Environment list.
  * @method void setEnvironmentNames(array $EnvironmentNames) Set Environment list.
  * @method string getApiId() Obtain Unique API ID.
  * @method void setApiId(string $ApiId) Set Unique API ID.
- * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
+ * @method integer getLimit() Obtain Number of results to be returned. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  */
 class DescribeApiEnvironmentStrategyRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of the service of API.
+     * @var string Unique service ID of API.
      */
     public $ServiceId;
 
@@ -49,7 +49,7 @@ class DescribeApiEnvironmentStrategyRequest extends AbstractModel
     public $ApiId;
 
     /**
-     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
+     * @var integer Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -59,10 +59,10 @@ class DescribeApiEnvironmentStrategyRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $ServiceId Unique ID of the service of API.
+     * @param string $ServiceId Unique service ID of API.
      * @param array $EnvironmentNames Environment list.
      * @param string $ApiId Unique API ID.
-     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * @param integer $Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      */
     function __construct()

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateService request structure.
  *
- * @method string getServiceId() Obtain Unique ID of the service to be switch to.
- * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be switch to.
- * @method string getEnvironmentName() Obtain Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
- * @method void setEnvironmentName(string $EnvironmentName) Set Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+ * @method string getServiceId() Obtain Unique ID of the service to be switch.
+ * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be switch.
+ * @method string getEnvironmentName() Obtain Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+ * @method void setEnvironmentName(string $EnvironmentName) Set Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
  * @method string getVersionName() Obtain Number of the version to be switched to.
  * @method void setVersionName(string $VersionName) Set Number of the version to be switched to.
  * @method string getUpdateDesc() Obtain Switch description.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class UpdateServiceRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of the service to be switch to.
+     * @var string Unique ID of the service to be switch.
      */
     public $ServiceId;
 
     /**
-     * @var string Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * @var string Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public $EnvironmentName;
 
@@ -52,8 +52,8 @@ class UpdateServiceRequest extends AbstractModel
     public $UpdateDesc;
 
     /**
-     * @param string $ServiceId Unique ID of the service to be switch to.
-     * @param string $EnvironmentName Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * @param string $ServiceId Unique ID of the service to be switch.
+     * @param string $EnvironmentName Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      * @param string $VersionName Number of the version to be switched to.
      * @param string $UpdateDesc Switch description.
      */

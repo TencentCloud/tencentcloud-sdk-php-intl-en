@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * `TsfLoadBalanceConf` output parameter usage
  *
- * @method boolean getIsLoadBalance() Obtain Whether to enable load balancing.
+ * @method boolean getIsLoadBalance() Obtain Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsLoadBalance(boolean $IsLoadBalance) Set Whether to enable load balancing.
+ * @method void setIsLoadBalance(boolean $IsLoadBalance) Set Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getMethod() Obtain Load balancing method.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMethod(string $Method) Set Load balancing method.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getSessionStickRequired() Obtain Whether to enable session persistence.
+ * @method boolean getSessionStickRequired() Obtain Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSessionStickRequired(boolean $SessionStickRequired) Set Whether to enable session persistence.
+ * @method void setSessionStickRequired(boolean $SessionStickRequired) Set Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getSessionStickTimeout() Obtain Session persistence timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class TsfLoadBalanceConfResp extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable load balancing.
+     * @var boolean Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsLoadBalance;
@@ -52,7 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Method;
 
     /**
-     * @var boolean Whether to enable session persistence.
+     * @var boolean Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SessionStickRequired;
@@ -64,11 +64,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SessionStickTimeout;
 
     /**
-     * @param boolean $IsLoadBalance Whether to enable load balancing.
+     * @param boolean $IsLoadBalance Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Method Load balancing method.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SessionStickRequired Whether to enable session persistence.
+     * @param boolean $SessionStickRequired Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SessionStickTimeout Session persistence timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.

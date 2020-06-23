@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be queried.
  * @method string getEnvironmentName() Obtain Environment name.
  * @method void setEnvironmentName(string $EnvironmentName) Set Environment name.
- * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
+ * @method integer getLimit() Obtain Number of results to be returned. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  */
@@ -42,7 +42,7 @@ class DescribeServiceEnvironmentReleaseHistoryRequest extends AbstractModel
     public $EnvironmentName;
 
     /**
-     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
+     * @var integer Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -54,7 +54,7 @@ class DescribeServiceEnvironmentReleaseHistoryRequest extends AbstractModel
     /**
      * @param string $ServiceId Unique ID of the service to be queried.
      * @param string $EnvironmentName Environment name.
-     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * @param integer $Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      */
     function __construct()

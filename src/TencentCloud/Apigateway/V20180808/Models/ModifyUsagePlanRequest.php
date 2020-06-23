@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUsagePlanId() Obtain Unique usage plan ID.
  * @method void setUsagePlanId(string $UsagePlanId) Set Unique usage plan ID.
- * @method string getUsagePlanName() Obtain Modified custom usage plan name.
- * @method void setUsagePlanName(string $UsagePlanName) Set Modified custom usage plan name.
- * @method string getUsagePlanDesc() Obtain Modified custom usage plan description.
- * @method void setUsagePlanDesc(string $UsagePlanDesc) Set Modified custom usage plan description.
+ * @method string getUsagePlanName() Obtain Custom usage plan name after modification.
+ * @method void setUsagePlanName(string $UsagePlanName) Set Custom usage plan name after modification.
+ * @method string getUsagePlanDesc() Obtain Custom usage plan description after modification.
+ * @method void setUsagePlanDesc(string $UsagePlanDesc) Set Custom usage plan description after modification.
  * @method integer getMaxRequestNum() Obtain Total number of requests allowed. Valid values: -1, [1,99999999]. The default value is `-1`, which indicates no limit.
  * @method void setMaxRequestNum(integer $MaxRequestNum) Set Total number of requests allowed. Valid values: -1, [1,99999999]. The default value is `-1`, which indicates no limit.
  * @method integer getMaxRequestNumPreSec() Obtain Limit of requests per second. Valid values: -1, [1,2000]. The default value is `-1`, which indicates no limit.
@@ -39,12 +39,12 @@ class ModifyUsagePlanRequest extends AbstractModel
     public $UsagePlanId;
 
     /**
-     * @var string Modified custom usage plan name.
+     * @var string Custom usage plan name after modification.
      */
     public $UsagePlanName;
 
     /**
-     * @var string Modified custom usage plan description.
+     * @var string Custom usage plan description after modification.
      */
     public $UsagePlanDesc;
 
@@ -60,8 +60,8 @@ class ModifyUsagePlanRequest extends AbstractModel
 
     /**
      * @param string $UsagePlanId Unique usage plan ID.
-     * @param string $UsagePlanName Modified custom usage plan name.
-     * @param string $UsagePlanDesc Modified custom usage plan description.
+     * @param string $UsagePlanName Custom usage plan name after modification.
+     * @param string $UsagePlanDesc Custom usage plan description after modification.
      * @param integer $MaxRequestNum Total number of requests allowed. Valid values: -1, [1,99999999]. The default value is `-1`, which indicates no limit.
      * @param integer $MaxRequestNumPreSec Limit of requests per second. Valid values: -1, [1,2000]. The default value is `-1`, which indicates no limit.
      */

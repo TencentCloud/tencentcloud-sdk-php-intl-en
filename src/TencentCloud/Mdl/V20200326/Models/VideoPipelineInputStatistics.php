@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRate() Obtain Video bitrate in bps.
  * @method void setRate(integer $Rate) Set Video bitrate in bps.
  * @method integer getPid() Obtain Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPid(integer $Pid) Set Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class VideoPipelineInputStatistics extends AbstractModel
 {
@@ -43,7 +41,6 @@ class VideoPipelineInputStatistics extends AbstractModel
 
     /**
      * @var integer Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Pid;
 
@@ -51,7 +48,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Fps Video FPS.
      * @param integer $Rate Video bitrate in bps.
      * @param integer $Pid Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

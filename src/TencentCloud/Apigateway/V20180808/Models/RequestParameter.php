@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Request parameter name
  * @method string getDesc() Obtain Description
  * @method void setDesc(string $Desc) Set Description
- * @method string getPosition() Obtain Parameter location
- * @method void setPosition(string $Position) Set Parameter location
+ * @method string getPosition() Obtain Parameter position
+ * @method void setPosition(string $Position) Set Parameter position
  * @method string getType() Obtain Parameter type
  * @method void setType(string $Type) Set Parameter type
  * @method string getDefaultValue() Obtain Default value
  * @method void setDefaultValue(string $DefaultValue) Set Default value
- * @method boolean getRequired() Obtain Required
- * @method void setRequired(boolean $Required) Set Required
+ * @method boolean getRequired() Obtain Whether it is required
+ * @method void setRequired(boolean $Required) Set Whether it is required
  */
 class RequestParameter extends AbstractModel
 {
@@ -46,7 +46,7 @@ class RequestParameter extends AbstractModel
     public $Desc;
 
     /**
-     * @var string Parameter location
+     * @var string Parameter position
      */
     public $Position;
 
@@ -61,17 +61,17 @@ class RequestParameter extends AbstractModel
     public $DefaultValue;
 
     /**
-     * @var boolean Required
+     * @var boolean Whether it is required
      */
     public $Required;
 
     /**
      * @param string $Name Request parameter name
      * @param string $Desc Description
-     * @param string $Position Parameter location
+     * @param string $Position Parameter position
      * @param string $Type Parameter type
      * @param string $DefaultValue Default value
-     * @param boolean $Required Required
+     * @param boolean $Required Whether it is required
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Returned parameters for API creation
+ * Return of API creation
  *
  * @method string getApiId() Obtain API ID
 Note: this field may return null, indicating that no valid values can be obtained.

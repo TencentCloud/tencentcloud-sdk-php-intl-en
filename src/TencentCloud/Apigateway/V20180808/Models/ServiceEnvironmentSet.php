@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTotalCount(integer $TotalCount) Set Total number of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getEnvironmentList() Obtain List of environments bound to service
+ * @method array getEnvironmentList() Obtain List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEnvironmentList(array $EnvironmentList) Set List of environments bound to service
+ * @method void setEnvironmentList(array $EnvironmentList) Set List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ServiceEnvironmentSet extends AbstractModel
@@ -38,7 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TotalCount;
 
     /**
-     * @var array List of environments bound to service
+     * @var array List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EnvironmentList;
@@ -46,7 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $TotalCount Total number of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $EnvironmentList List of environments bound to service
+     * @param array $EnvironmentList List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

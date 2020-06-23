@@ -30,6 +30,8 @@ UTC time, such as `2020-01-01T12:00:00Z`.
 UTC time, such as `2020-01-01T12:00:00Z`.
  * @method void setEndTime(string $EndTime) Set Statistics end time, which is one hour after `StartTime` by default.
 UTC time, such as `2020-01-01T12:00:00Z`.
+ * @method string getPeriod() Obtain 
+ * @method void setPeriod(string $Period) Set 
  */
 class DescribeMediaLiveChannelInputStatisticsRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ UTC time, such as `2020-01-01T12:00:00Z`.
     public $EndTime;
 
     /**
+     * @var string 
+     */
+    public $Period;
+
+    /**
      * @param string $ChannelId Channel ID.
      * @param string $StartTime Statistics start time, which is one hour ago by default. Maximum value: the last 7 days.
 UTC time, such as `2020-01-01T12:00:00Z`.
      * @param string $EndTime Statistics end time, which is one hour after `StartTime` by default.
 UTC time, such as `2020-01-01T12:00:00Z`.
+     * @param string $Period 
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ UTC time, such as `2020-01-01T12:00:00Z`.
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

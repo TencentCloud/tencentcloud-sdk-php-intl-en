@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom service domain name path mapping
  *
- * @method boolean getIsDefaultMapping() Obtain Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
- * @method void setIsDefaultMapping(boolean $IsDefaultMapping) Set Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
+ * @method boolean getIsDefaultMapping() Obtain Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
+ * @method void setIsDefaultMapping(boolean $IsDefaultMapping) Set Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
  * @method array getPathMappingSet() Obtain Custom path mapping list.
  * @method void setPathMappingSet(array $PathMappingSet) Set Custom path mapping list.
  */
 class ServiceSubDomainMappings extends AbstractModel
 {
     /**
-     * @var boolean Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
+     * @var boolean Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
      */
     public $IsDefaultMapping;
 
@@ -38,7 +38,7 @@ class ServiceSubDomainMappings extends AbstractModel
     public $PathMappingSet;
 
     /**
-     * @param boolean $IsDefaultMapping Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
+     * @param boolean $IsDefaultMapping Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
      * @param array $PathMappingSet Custom path mapping list.
      */
     function __construct()

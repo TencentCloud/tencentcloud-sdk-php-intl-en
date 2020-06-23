@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApi request structure.
  *
- * @method string getServiceId() Obtain Unique ID of API's service.
- * @method void setServiceId(string $ServiceId) Set Unique ID of API's service.
+ * @method string getServiceId() Obtain Unique service ID of API.
+ * @method void setServiceId(string $ServiceId) Set Unique service ID of API.
  * @method string getServiceType() Obtain API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
  * @method void setServiceType(string $ServiceType) Set API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
  * @method RequestConfig getRequestConfig() Obtain Request frontend configuration.
@@ -32,89 +32,89 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiName(string $ApiName) Set Custom API name.
  * @method string getApiDesc() Obtain Custom API description.
  * @method void setApiDesc(string $ApiDesc) Set Custom API description.
- * @method string getApiType() Obtain API type. Valid values: NORMAL (default value), TSF.
- * @method void setApiType(string $ApiType) Set API type. Valid values: NORMAL (default value), TSF.
- * @method string getAuthType() Obtain API authentication type. Valid values: SECRET, NONE (default), OAUTH.
- * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: SECRET, NONE (default), OAUTH.
- * @method boolean getAuthRequired() Obtain Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused.
- * @method void setAuthRequired(boolean $AuthRequired) Set Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused.
+ * @method string getApiType() Obtain API type. Valid values: NORMAL, TSF. Default value: NORMAL.
+ * @method void setApiType(string $ApiType) Set API type. Valid values: NORMAL, TSF. Default value: NORMAL.
+ * @method string getAuthType() Obtain API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+ * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+ * @method boolean getAuthRequired() Obtain Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
+ * @method void setAuthRequired(boolean $AuthRequired) Set Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
  * @method integer getServiceTimeout() Obtain API backend service timeout period in seconds.
  * @method void setServiceTimeout(integer $ServiceTimeout) Set API backend service timeout period in seconds.
  * @method string getProtocol() Obtain API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
  * @method void setProtocol(string $Protocol) Set API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
- * @method boolean getEnableCORS() Obtain Whether to enable CORS. `True` indicates yes while `False` indicates no.
- * @method void setEnableCORS(boolean $EnableCORS) Set Whether to enable CORS. `True` indicates yes while `False` indicates no.
- * @method array getConstantParameters() Obtain Constant parameters.
- * @method void setConstantParameters(array $ConstantParameters) Set Constant parameters.
- * @method array getRequestParameters() Obtain Frontend request parameters.
- * @method void setRequestParameters(array $RequestParameters) Set Frontend request parameters.
- * @method string getApiBusinessType() Obtain This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
- * @method void setApiBusinessType(string $ApiBusinessType) Set This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
- * @method string getServiceMockReturnMessage() Obtain Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
- * @method void setServiceMockReturnMessage(string $ServiceMockReturnMessage) Set Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+ * @method boolean getEnableCORS() Obtain Whether to enable CORS. True: yes; False: no.
+ * @method void setEnableCORS(boolean $EnableCORS) Set Whether to enable CORS. True: yes; False: no.
+ * @method array getConstantParameters() Obtain Constant parameter.
+ * @method void setConstantParameters(array $ConstantParameters) Set Constant parameter.
+ * @method array getRequestParameters() Obtain Frontend request parameter.
+ * @method void setRequestParameters(array $RequestParameters) Set Frontend request parameter.
+ * @method string getApiBusinessType() Obtain This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
+ * @method void setApiBusinessType(string $ApiBusinessType) Set This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
+ * @method string getServiceMockReturnMessage() Obtain Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
+ * @method void setServiceMockReturnMessage(string $ServiceMockReturnMessage) Set Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
  * @method array getMicroServices() Obtain List of microservices bound to API.
  * @method void setMicroServices(array $MicroServices) Set List of microservices bound to API.
- * @method TsfLoadBalanceConfResp getServiceTsfLoadBalanceConf() Obtain Microservice load balancing configuration.
- * @method void setServiceTsfLoadBalanceConf(TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf) Set Microservice load balancing configuration.
- * @method HealthCheckConf getServiceTsfHealthCheckConf() Obtain Microservice health check configuration.
- * @method void setServiceTsfHealthCheckConf(HealthCheckConf $ServiceTsfHealthCheckConf) Set Microservice health check configuration.
+ * @method TsfLoadBalanceConfResp getServiceTsfLoadBalanceConf() Obtain Load balancing configuration of microservice.
+ * @method void setServiceTsfLoadBalanceConf(TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf) Set Load balancing configuration of microservice.
+ * @method HealthCheckConf getServiceTsfHealthCheckConf() Obtain Health check configuration of microservice.
+ * @method void setServiceTsfHealthCheckConf(HealthCheckConf $ServiceTsfHealthCheckConf) Set Health check configuration of microservice.
  * @method integer getTargetServicesLoadBalanceConf() Obtain `target` type load balancing configuration (in beta test).
  * @method void setTargetServicesLoadBalanceConf(integer $TargetServicesLoadBalanceConf) Set `target` type load balancing configuration (in beta test).
  * @method HealthCheckConf getTargetServicesHealthCheckConf() Obtain `target` health check configuration (in beta test).
  * @method void setTargetServicesHealthCheckConf(HealthCheckConf $TargetServicesHealthCheckConf) Set `target` health check configuration (in beta test).
- * @method string getServiceScfFunctionName() Obtain SCF function name. This parameter takes effect when the backend type is `SCF`.
- * @method void setServiceScfFunctionName(string $ServiceScfFunctionName) Set SCF function name. This parameter takes effect when the backend type is `SCF`.
- * @method string getServiceWebsocketRegisterFunctionName() Obtain SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketRegisterFunctionName(string $ServiceWebsocketRegisterFunctionName) Set SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method string getServiceWebsocketCleanupFunctionName() Obtain SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketCleanupFunctionName(string $ServiceWebsocketCleanupFunctionName) Set SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method string getServiceWebsocketTransportFunctionName() Obtain SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketTransportFunctionName(string $ServiceWebsocketTransportFunctionName) Set SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method string getServiceScfFunctionNamespace() Obtain SCF function namespace. This parameter takes effect when the backend type is `SCF`.
- * @method void setServiceScfFunctionNamespace(string $ServiceScfFunctionNamespace) Set SCF function namespace. This parameter takes effect when the backend type is `SCF`.
- * @method string getServiceScfFunctionQualifier() Obtain SCF function version. This parameter takes effect when the backend type is `SCF`.
- * @method void setServiceScfFunctionQualifier(string $ServiceScfFunctionQualifier) Set SCF function version. This parameter takes effect when the backend type is `SCF`.
- * @method string getServiceWebsocketRegisterFunctionNamespace() Obtain SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketRegisterFunctionNamespace(string $ServiceWebsocketRegisterFunctionNamespace) Set SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method string getServiceWebsocketRegisterFunctionQualifier() Obtain SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketRegisterFunctionQualifier(string $ServiceWebsocketRegisterFunctionQualifier) Set SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method string getServiceWebsocketTransportFunctionNamespace() Obtain SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketTransportFunctionNamespace(string $ServiceWebsocketTransportFunctionNamespace) Set SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method string getServiceWebsocketTransportFunctionQualifier() Obtain SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketTransportFunctionQualifier(string $ServiceWebsocketTransportFunctionQualifier) Set SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method string getServiceWebsocketCleanupFunctionNamespace() Obtain SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketCleanupFunctionNamespace(string $ServiceWebsocketCleanupFunctionNamespace) Set SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method string getServiceWebsocketCleanupFunctionQualifier() Obtain SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method void setServiceWebsocketCleanupFunctionQualifier(string $ServiceWebsocketCleanupFunctionQualifier) Set SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
- * @method boolean getServiceScfIsIntegratedResponse() Obtain Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
- * @method void setServiceScfIsIntegratedResponse(boolean $ServiceScfIsIntegratedResponse) Set Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
- * @method boolean getIsDebugAfterCharge() Obtain Billing after debugging starts (reserved for marketplace).
- * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Billing after debugging starts (reserved for marketplace).
+ * @method string getServiceScfFunctionName() Obtain SCF function name, which takes effect if the backend type is `SCF`.
+ * @method void setServiceScfFunctionName(string $ServiceScfFunctionName) Set SCF function name, which takes effect if the backend type is `SCF`.
+ * @method string getServiceWebsocketRegisterFunctionName() Obtain SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketRegisterFunctionName(string $ServiceWebsocketRegisterFunctionName) Set SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketCleanupFunctionName() Obtain SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketCleanupFunctionName(string $ServiceWebsocketCleanupFunctionName) Set SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketTransportFunctionName() Obtain SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketTransportFunctionName(string $ServiceWebsocketTransportFunctionName) Set SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceScfFunctionNamespace() Obtain SCF function namespace, which takes effect if the backend type is `SCF`.
+ * @method void setServiceScfFunctionNamespace(string $ServiceScfFunctionNamespace) Set SCF function namespace, which takes effect if the backend type is `SCF`.
+ * @method string getServiceScfFunctionQualifier() Obtain SCF function version, which takes effect if the backend type is `SCF`.
+ * @method void setServiceScfFunctionQualifier(string $ServiceScfFunctionQualifier) Set SCF function version, which takes effect if the backend type is `SCF`.
+ * @method string getServiceWebsocketRegisterFunctionNamespace() Obtain SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketRegisterFunctionNamespace(string $ServiceWebsocketRegisterFunctionNamespace) Set SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketRegisterFunctionQualifier() Obtain SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketRegisterFunctionQualifier(string $ServiceWebsocketRegisterFunctionQualifier) Set SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketTransportFunctionNamespace() Obtain SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketTransportFunctionNamespace(string $ServiceWebsocketTransportFunctionNamespace) Set SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketTransportFunctionQualifier() Obtain SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketTransportFunctionQualifier(string $ServiceWebsocketTransportFunctionQualifier) Set SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketCleanupFunctionNamespace() Obtain SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketCleanupFunctionNamespace(string $ServiceWebsocketCleanupFunctionNamespace) Set SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method string getServiceWebsocketCleanupFunctionQualifier() Obtain SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method void setServiceWebsocketCleanupFunctionQualifier(string $ServiceWebsocketCleanupFunctionQualifier) Set SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+ * @method boolean getServiceScfIsIntegratedResponse() Obtain Whether to enable response integration, which takes effect if the backend type is `SCF`.
+ * @method void setServiceScfIsIntegratedResponse(boolean $ServiceScfIsIntegratedResponse) Set Whether to enable response integration, which takes effect if the backend type is `SCF`.
+ * @method boolean getIsDebugAfterCharge() Obtain Billing after debugging starts (reserved field for marketplace).
+ * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Billing after debugging starts (reserved field for marketplace).
  * @method Tag getTagSpecifications() Obtain Tag.
  * @method void setTagSpecifications(Tag $TagSpecifications) Set Tag.
- * @method boolean getIsDeleteResponseErrorCodes() Obtain Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
- * @method void setIsDeleteResponseErrorCodes(boolean $IsDeleteResponseErrorCodes) Set Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+ * @method boolean getIsDeleteResponseErrorCodes() Obtain Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+ * @method void setIsDeleteResponseErrorCodes(boolean $IsDeleteResponseErrorCodes) Set Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
  * @method string getResponseType() Obtain Return type.
  * @method void setResponseType(string $ResponseType) Set Return type.
- * @method string getResponseSuccessExample() Obtain Successful response sample of custom response configuration.
- * @method void setResponseSuccessExample(string $ResponseSuccessExample) Set Successful response sample of custom response configuration.
- * @method string getResponseFailExample() Obtain Response failure sample of custom response configuration.
- * @method void setResponseFailExample(string $ResponseFailExample) Set Response failure sample of custom response configuration.
+ * @method string getResponseSuccessExample() Obtain Sample response for successful custom response configuration.
+ * @method void setResponseSuccessExample(string $ResponseSuccessExample) Set Sample response for successful custom response configuration.
+ * @method string getResponseFailExample() Obtain Sample response for failed custom response configuration.
+ * @method void setResponseFailExample(string $ResponseFailExample) Set Sample response for failed custom response configuration.
  * @method ServiceConfig getServiceConfig() Obtain API backend service configuration.
  * @method void setServiceConfig(ServiceConfig $ServiceConfig) Set API backend service configuration.
- * @method string getAuthRelationApiId() Obtain Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
- * @method void setAuthRelationApiId(string $AuthRelationApiId) Set Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
- * @method array getServiceParameters() Obtain API backend service parameters.
- * @method void setServiceParameters(array $ServiceParameters) Set API backend service parameters.
- * @method OauthConfig getOauthConfig() Obtain OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
- * @method void setOauthConfig(OauthConfig $OauthConfig) Set OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
+ * @method string getAuthRelationApiId() Obtain Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+ * @method void setAuthRelationApiId(string $AuthRelationApiId) Set Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+ * @method array getServiceParameters() Obtain API backend service parameter.
+ * @method void setServiceParameters(array $ServiceParameters) Set API backend service parameter.
+ * @method OauthConfig getOauthConfig() Obtain OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
+ * @method void setOauthConfig(OauthConfig $OauthConfig) Set OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
  * @method array getResponseErrorCodes() Obtain Custom error code configuration.
  * @method void setResponseErrorCodes(array $ResponseErrorCodes) Set Custom error code configuration.
  */
 class ModifyApiRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of API's service.
+     * @var string Unique service ID of API.
      */
     public $ServiceId;
 
@@ -144,17 +144,17 @@ class ModifyApiRequest extends AbstractModel
     public $ApiDesc;
 
     /**
-     * @var string API type. Valid values: NORMAL (default value), TSF.
+     * @var string API type. Valid values: NORMAL, TSF. Default value: NORMAL.
      */
     public $ApiType;
 
     /**
-     * @var string API authentication type. Valid values: SECRET, NONE (default), OAUTH.
+     * @var string API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
      */
     public $AuthType;
 
     /**
-     * @var boolean Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused.
+     * @var boolean Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
      */
     public $AuthRequired;
 
@@ -169,27 +169,27 @@ class ModifyApiRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var boolean Whether to enable CORS. `True` indicates yes while `False` indicates no.
+     * @var boolean Whether to enable CORS. True: yes; False: no.
      */
     public $EnableCORS;
 
     /**
-     * @var array Constant parameters.
+     * @var array Constant parameter.
      */
     public $ConstantParameters;
 
     /**
-     * @var array Frontend request parameters.
+     * @var array Frontend request parameter.
      */
     public $RequestParameters;
 
     /**
-     * @var string This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
+     * @var string This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
      */
     public $ApiBusinessType;
 
     /**
-     * @var string Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * @var string Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
      */
     public $ServiceMockReturnMessage;
 
@@ -199,12 +199,12 @@ class ModifyApiRequest extends AbstractModel
     public $MicroServices;
 
     /**
-     * @var TsfLoadBalanceConfResp Microservice load balancing configuration.
+     * @var TsfLoadBalanceConfResp Load balancing configuration of microservice.
      */
     public $ServiceTsfLoadBalanceConf;
 
     /**
-     * @var HealthCheckConf Microservice health check configuration.
+     * @var HealthCheckConf Health check configuration of microservice.
      */
     public $ServiceTsfHealthCheckConf;
 
@@ -219,72 +219,72 @@ class ModifyApiRequest extends AbstractModel
     public $TargetServicesHealthCheckConf;
 
     /**
-     * @var string SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * @var string SCF function name, which takes effect if the backend type is `SCF`.
      */
     public $ServiceScfFunctionName;
 
     /**
-     * @var string SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketRegisterFunctionName;
 
     /**
-     * @var string SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketCleanupFunctionName;
 
     /**
-     * @var string SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketTransportFunctionName;
 
     /**
-     * @var string SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * @var string SCF function namespace, which takes effect if the backend type is `SCF`.
      */
     public $ServiceScfFunctionNamespace;
 
     /**
-     * @var string SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * @var string SCF function version, which takes effect if the backend type is `SCF`.
      */
     public $ServiceScfFunctionQualifier;
 
     /**
-     * @var string SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketRegisterFunctionNamespace;
 
     /**
-     * @var string SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketRegisterFunctionQualifier;
 
     /**
-     * @var string SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketTransportFunctionNamespace;
 
     /**
-     * @var string SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketTransportFunctionQualifier;
 
     /**
-     * @var string SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketCleanupFunctionNamespace;
 
     /**
-     * @var string SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @var string SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public $ServiceWebsocketCleanupFunctionQualifier;
 
     /**
-     * @var boolean Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
+     * @var boolean Whether to enable response integration, which takes effect if the backend type is `SCF`.
      */
     public $ServiceScfIsIntegratedResponse;
 
     /**
-     * @var boolean Billing after debugging starts (reserved for marketplace).
+     * @var boolean Billing after debugging starts (reserved field for marketplace).
      */
     public $IsDebugAfterCharge;
 
@@ -294,7 +294,7 @@ class ModifyApiRequest extends AbstractModel
     public $TagSpecifications;
 
     /**
-     * @var boolean Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+     * @var boolean Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
      */
     public $IsDeleteResponseErrorCodes;
 
@@ -304,12 +304,12 @@ class ModifyApiRequest extends AbstractModel
     public $ResponseType;
 
     /**
-     * @var string Successful response sample of custom response configuration.
+     * @var string Sample response for successful custom response configuration.
      */
     public $ResponseSuccessExample;
 
     /**
-     * @var string Response failure sample of custom response configuration.
+     * @var string Sample response for failed custom response configuration.
      */
     public $ResponseFailExample;
 
@@ -319,17 +319,17 @@ class ModifyApiRequest extends AbstractModel
     public $ServiceConfig;
 
     /**
-     * @var string Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * @var string Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
      */
     public $AuthRelationApiId;
 
     /**
-     * @var array API backend service parameters.
+     * @var array API backend service parameter.
      */
     public $ServiceParameters;
 
     /**
-     * @var OauthConfig OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
+     * @var OauthConfig OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
      */
     public $OauthConfig;
 
@@ -339,50 +339,50 @@ class ModifyApiRequest extends AbstractModel
     public $ResponseErrorCodes;
 
     /**
-     * @param string $ServiceId Unique ID of API's service.
+     * @param string $ServiceId Unique service ID of API.
      * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
      * @param RequestConfig $RequestConfig Request frontend configuration.
      * @param string $ApiId Unique API ID.
      * @param string $ApiName Custom API name.
      * @param string $ApiDesc Custom API description.
-     * @param string $ApiType API type. Valid values: NORMAL (default value), TSF.
-     * @param string $AuthType API authentication type. Valid values: SECRET, NONE (default), OAUTH.
-     * @param boolean $AuthRequired Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused.
+     * @param string $ApiType API type. Valid values: NORMAL, TSF. Default value: NORMAL.
+     * @param string $AuthType API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+     * @param boolean $AuthRequired Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
      * @param integer $ServiceTimeout API backend service timeout period in seconds.
      * @param string $Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
-     * @param boolean $EnableCORS Whether to enable CORS. `True` indicates yes while `False` indicates no.
-     * @param array $ConstantParameters Constant parameters.
-     * @param array $RequestParameters Frontend request parameters.
-     * @param string $ApiBusinessType This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
-     * @param string $ServiceMockReturnMessage Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * @param boolean $EnableCORS Whether to enable CORS. True: yes; False: no.
+     * @param array $ConstantParameters Constant parameter.
+     * @param array $RequestParameters Frontend request parameter.
+     * @param string $ApiBusinessType This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
+     * @param string $ServiceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
      * @param array $MicroServices List of microservices bound to API.
-     * @param TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf Microservice load balancing configuration.
-     * @param HealthCheckConf $ServiceTsfHealthCheckConf Microservice health check configuration.
+     * @param TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf Load balancing configuration of microservice.
+     * @param HealthCheckConf $ServiceTsfHealthCheckConf Health check configuration of microservice.
      * @param integer $TargetServicesLoadBalanceConf `target` type load balancing configuration (in beta test).
      * @param HealthCheckConf $TargetServicesHealthCheckConf `target` health check configuration (in beta test).
-     * @param string $ServiceScfFunctionName SCF function name. This parameter takes effect when the backend type is `SCF`.
-     * @param string $ServiceWebsocketRegisterFunctionName SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param string $ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param string $ServiceWebsocketTransportFunctionName SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param string $ServiceScfFunctionNamespace SCF function namespace. This parameter takes effect when the backend type is `SCF`.
-     * @param string $ServiceScfFunctionQualifier SCF function version. This parameter takes effect when the backend type is `SCF`.
-     * @param string $ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param string $ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param string $ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param string $ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param string $ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param string $ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param boolean $ServiceScfIsIntegratedResponse Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
-     * @param boolean $IsDebugAfterCharge Billing after debugging starts (reserved for marketplace).
+     * @param string $ServiceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
+     * @param string $ServiceWebsocketRegisterFunctionName SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
+     * @param string $ServiceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
+     * @param string $ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param string $ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param boolean $ServiceScfIsIntegratedResponse Whether to enable response integration, which takes effect if the backend type is `SCF`.
+     * @param boolean $IsDebugAfterCharge Billing after debugging starts (reserved field for marketplace).
      * @param Tag $TagSpecifications Tag.
-     * @param boolean $IsDeleteResponseErrorCodes Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+     * @param boolean $IsDeleteResponseErrorCodes Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
      * @param string $ResponseType Return type.
-     * @param string $ResponseSuccessExample Successful response sample of custom response configuration.
-     * @param string $ResponseFailExample Response failure sample of custom response configuration.
+     * @param string $ResponseSuccessExample Sample response for successful custom response configuration.
+     * @param string $ResponseFailExample Sample response for failed custom response configuration.
      * @param ServiceConfig $ServiceConfig API backend service configuration.
-     * @param string $AuthRelationApiId Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
-     * @param array $ServiceParameters API backend service parameters.
-     * @param OauthConfig $OauthConfig OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
+     * @param string $AuthRelationApiId Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * @param array $ServiceParameters API backend service parameter.
+     * @param OauthConfig $OauthConfig OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
      * @param array $ResponseErrorCodes Custom error code configuration.
      */
     function __construct()

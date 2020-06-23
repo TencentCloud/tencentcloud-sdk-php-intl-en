@@ -18,14 +18,14 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Error code input parameters
+ * Error code input parameter
  *
  * @method integer getCode() Obtain Custom response configuration error code.
  * @method void setCode(integer $Code) Set Custom response configuration error code.
  * @method string getMsg() Obtain Custom response configuration error message.
  * @method void setMsg(string $Msg) Set Custom response configuration error message.
- * @method string getDesc() Obtain Remarks of the custom response configuration error code.
- * @method void setDesc(string $Desc) Set Remarks of the custom response configuration error code.
+ * @method string getDesc() Obtain Custom response configuration error code remarks.
+ * @method void setDesc(string $Desc) Set Custom response configuration error code remarks.
  * @method integer getConvertedCode() Obtain Custom error code conversion.
  * @method void setConvertedCode(integer $ConvertedCode) Set Custom error code conversion.
  * @method boolean getNeedConvert() Obtain Whether to enable error code conversion.
@@ -44,7 +44,7 @@ class ResponseErrorCodeReq extends AbstractModel
     public $Msg;
 
     /**
-     * @var string Remarks of the custom response configuration error code.
+     * @var string Custom response configuration error code remarks.
      */
     public $Desc;
 
@@ -61,7 +61,7 @@ class ResponseErrorCodeReq extends AbstractModel
     /**
      * @param integer $Code Custom response configuration error code.
      * @param string $Msg Custom response configuration error message.
-     * @param string $Desc Remarks of the custom response configuration error code.
+     * @param string $Desc Custom response configuration error code remarks.
      * @param integer $ConvertedCode Custom error code conversion.
      * @param boolean $NeedConvert Whether to enable error code conversion.
      */

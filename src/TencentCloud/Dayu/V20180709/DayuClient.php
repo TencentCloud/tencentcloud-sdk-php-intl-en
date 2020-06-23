@@ -87,6 +87,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DescribeResIpListResponse DescribeResIpList(Models\DescribeResIpListRequest $req) This API is used to get the IP list of a resource.
  * @method Models\DescribeResourceListResponse DescribeResourceList(Models\DescribeResourceListRequest $req) This API is used to get the resource list.
  * @method Models\DescribeRuleSetsResponse DescribeRuleSets(Models\DescribeRuleSetsRequest $req) This API is used to get the number of rules of a resource.
+ * @method Models\DescribeSchedulingDomainListResponse DescribeSchedulingDomainList(Models\DescribeSchedulingDomainListRequest $req) Get scheduling domain name list
  * @method Models\DescribeSecIndexResponse DescribeSecIndex(Models\DescribeSecIndexRequest $req) This API is used to get the security statistics of the current month.
  * @method Models\DescribeSourceIpSegmentResponse DescribeSourceIpSegment(Models\DescribeSourceIpSegmentRequest $req) This API is used to get the intermediate IP range. It is supported for Anti-DDoS Advanced and Anti-DDoS Ultimate.
  * @method Models\DescribeTransmitStatisResponse DescribeTransmitStatis(Models\DescribeTransmitStatisRequest $req) This API is used to get the business forwarding statistics, including forwarded traffic and packet forwarding rate.

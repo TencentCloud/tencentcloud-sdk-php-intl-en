@@ -48,33 +48,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUniqVpcId(string $UniqVpcId) Set Unique VPC ID.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getApiType() Obtain API type. Valid values (general API), TSF (microservice API).
+ * @method string getApiType() Obtain API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setApiType(string $ApiType) Set API type. Valid values (general API), TSF (microservice API).
+ * @method void setApiType(string $ApiType) Set API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getProtocol() Obtain API protocol.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProtocol(string $Protocol) Set API protocol.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsDebugAfterCharge() Obtain Whether to enable debugging on purchase (reserved for the marketplace)
+ * @method boolean getIsDebugAfterCharge() Obtain Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Whether to enable debugging on purchase (reserved for the marketplace)
+ * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getAuthType() Obtain API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getApiBusinessType() Obtain OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+ * @method string getApiBusinessType() Obtain OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setApiBusinessType(string $ApiBusinessType) Set OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+ * @method void setApiBusinessType(string $ApiBusinessType) Set OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAuthRelationApiId() Obtain Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+ * @method string getAuthRelationApiId() Obtain Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAuthRelationApiId(string $AuthRelationApiId) Set Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+ * @method void setAuthRelationApiId(string $AuthRelationApiId) Set Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method OauthConfig getOauthConfig() Obtain OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+ * @method OauthConfig getOauthConfig() Obtain OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOauthConfig(OauthConfig $OauthConfig) Set OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+ * @method void setOauthConfig(OauthConfig $OauthConfig) Set OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getRelationBuniessApiIds() Obtain List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -142,7 +142,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UniqVpcId;
 
     /**
-     * @var string API type. Valid values (general API), TSF (microservice API).
+     * @var string API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ApiType;
@@ -154,7 +154,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Protocol;
 
     /**
-     * @var boolean Whether to enable debugging on purchase (reserved for the marketplace)
+     * @var boolean Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsDebugAfterCharge;
@@ -166,19 +166,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AuthType;
 
     /**
-     * @var string OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+     * @var string OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ApiBusinessType;
 
     /**
-     * @var string Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * @var string Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AuthRelationApiId;
 
     /**
-     * @var OauthConfig OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+     * @var OauthConfig OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OauthConfig;
@@ -222,19 +222,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $UniqVpcId Unique VPC ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ApiType API type. Valid values (general API), TSF (microservice API).
+     * @param string $ApiType API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Protocol API protocol.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsDebugAfterCharge Whether to enable debugging on purchase (reserved for the marketplace)
+     * @param boolean $IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ApiBusinessType OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+     * @param string $ApiBusinessType OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AuthRelationApiId Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * @param string $AuthRelationApiId Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OauthConfig $OauthConfig OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+     * @param OauthConfig $OauthConfig OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $RelationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.

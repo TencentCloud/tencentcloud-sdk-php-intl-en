@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMethod(string $Method) Set API method.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getEnvironment() Obtain Name of the bound environment.
+ * @method string getEnvironment() Obtain Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEnvironment(string $Environment) Set Name of the bound environment.
+ * @method void setEnvironment(string $Environment) Set Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getInUseRequestNum() Obtain Used quota.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -52,9 +52,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMaxRequestNum(integer $MaxRequestNum) Set Maximum number of requests.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxRequestNumPreSec() Obtain Maximum requests per second.
+ * @method integer getMaxRequestNumPreSec() Obtain Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxRequestNumPreSec(integer $MaxRequestNumPreSec) Set Maximum requests per second.
+ * @method void setMaxRequestNumPreSec(integer $MaxRequestNumPreSec) Set Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getCreatedTime() Obtain Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -102,7 +102,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Method;
 
     /**
-     * @var string Name of the bound environment.
+     * @var string Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Environment;
@@ -120,7 +120,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MaxRequestNum;
 
     /**
-     * @var integer Maximum requests per second.
+     * @var integer Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MaxRequestNumPreSec;
@@ -154,13 +154,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Method API method.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Environment Name of the bound environment.
+     * @param string $Environment Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $InUseRequestNum Used quota.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxRequestNum Maximum number of requests.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxRequestNumPreSec Maximum requests per second.
+     * @param integer $MaxRequestNumPreSec Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.

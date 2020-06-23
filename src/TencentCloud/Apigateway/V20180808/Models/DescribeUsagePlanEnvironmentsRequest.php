@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUsagePlanId() Obtain Unique ID of the usage plan to be queried.
  * @method void setUsagePlanId(string $UsagePlanId) Set Unique ID of the usage plan to be queried.
- * @method string getBindType() Obtain Binding type. Valid values: API, SERVICE (default value).
- * @method void setBindType(string $BindType) Set Binding type. Valid values: API, SERVICE (default value).
- * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
+ * @method string getBindType() Obtain Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+ * @method void setBindType(string $BindType) Set Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+ * @method integer getLimit() Obtain Number of results to be returned. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  */
@@ -37,12 +37,12 @@ class DescribeUsagePlanEnvironmentsRequest extends AbstractModel
     public $UsagePlanId;
 
     /**
-     * @var string Binding type. Valid values: API, SERVICE (default value).
+     * @var string Binding type. Valid values: API, SERVICE. Default value: SERVICE.
      */
     public $BindType;
 
     /**
-     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
+     * @var integer Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -53,8 +53,8 @@ class DescribeUsagePlanEnvironmentsRequest extends AbstractModel
 
     /**
      * @param string $UsagePlanId Unique ID of the usage plan to be queried.
-     * @param string $BindType Binding type. Valid values: API, SERVICE (default value).
-     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * @param string $BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+     * @param integer $Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      */
     function __construct()

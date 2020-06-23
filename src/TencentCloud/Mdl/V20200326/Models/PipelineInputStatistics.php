@@ -27,19 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getVideo() Obtain Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVideo(array $Video) Set Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getAudio() Obtain Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAudio(array $Audio) Set Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class PipelineInputStatistics extends AbstractModel
 {
@@ -57,7 +53,6 @@ class PipelineInputStatistics extends AbstractModel
      * @var array Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Video;
 
@@ -65,7 +60,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var array Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Audio;
 
@@ -75,11 +69,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $Video Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Audio Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

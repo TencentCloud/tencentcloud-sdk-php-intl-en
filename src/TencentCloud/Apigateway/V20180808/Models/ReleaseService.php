@@ -18,15 +18,15 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Service publishing returned result
+ * Returned result of service publishing
  *
  * @method string getReleaseDesc() Obtain Release remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setReleaseDesc(string $ReleaseDesc) Set Release remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getReleaseVersion() Obtain Release version ID.
+ * @method string getReleaseVersion() Obtain Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReleaseVersion(string $ReleaseVersion) Set Release version ID.
+ * @method void setReleaseVersion(string $ReleaseVersion) Set Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ReleaseService extends AbstractModel
@@ -38,7 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ReleaseDesc;
 
     /**
-     * @var string Release version ID.
+     * @var string Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ReleaseVersion;
@@ -46,7 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $ReleaseDesc Release remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ReleaseVersion Release version ID.
+     * @param string $ReleaseVersion Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

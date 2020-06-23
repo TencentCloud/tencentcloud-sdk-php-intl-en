@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentName(string $EnvironmentName) Set Environment name.
  * @method string getUrl() Obtain Access path.
  * @method void setUrl(string $Url) Set Access path.
- * @method integer getStatus() Obtain Release status. 1: released. 0: not released.
- * @method void setStatus(integer $Status) Set Release status. 1: released. 0: not released.
+ * @method integer getStatus() Obtain Release status. 1: published. 0: not published.
+ * @method void setStatus(integer $Status) Set Release status. 1: published. 0: not published.
  * @method string getVersionName() Obtain Running version.
  * @method void setVersionName(string $VersionName) Set Running version.
  */
@@ -42,7 +42,7 @@ class Environment extends AbstractModel
     public $Url;
 
     /**
-     * @var integer Release status. 1: released. 0: not released.
+     * @var integer Release status. 1: published. 0: not published.
      */
     public $Status;
 
@@ -54,7 +54,7 @@ class Environment extends AbstractModel
     /**
      * @param string $EnvironmentName Environment name.
      * @param string $Url Access path.
-     * @param integer $Status Release status. 1: released. 0: not released.
+     * @param integer $Status Release status. 1: published. 0: not published.
      * @param string $VersionName Running version.
      */
     function __construct()

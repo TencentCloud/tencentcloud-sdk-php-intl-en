@@ -76,6 +76,7 @@ Before calling this API, be sure to use the CreateMigrateCheckJob API to check t
  * @method Models\StartSyncJobResponse StartSyncJob(Models\StartSyncJobRequest $req) This API is used to start a disaster recovery sync task after it is successfully checked through the CreateSyncCheckJob and DescribeSyncCheckJob APIs.
  * @method Models\StopMigrateJobResponse StopMigrateJob(Models\StopMigrateJobRequest $req) This API (StopMigrateJob) is used to cancel a data migration task.
 During migration, this API can be used to cancel migration if the task status queried through the DescribeMigrateJobs API is running (status=7) or ready (status=8), and the migration task will fail.
+ * @method Models\SwitchDrToMasterResponse SwitchDrToMaster(Models\SwitchDrToMasterRequest $req) This API is used to promote a disaster recovery instance to a master instance, which will stop sync from the original master instance and end the master/slave relationship.
  */
 
 class DtsClient extends AbstractClient

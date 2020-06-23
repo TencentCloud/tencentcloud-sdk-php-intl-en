@@ -28,14 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceId(string $ServiceId) Set Service ID
  * @method array getFilters() Obtain Exact search by `apiid` or `reqid`
  * @method void setFilters(array $Filters) Set Exact search by `apiid` or `reqid`
- * @method integer getLimit() Obtain Number of logs returned at a time. Up to 100 logs can be returned at a time
- * @method void setLimit(integer $Limit) Set Number of logs returned at a time. Up to 100 logs can be returned at a time
+ * @method integer getLimit() Obtain Number of logs to be returned at a time. Maximum value: 100
+ * @method void setLimit(integer $Limit) Set Number of logs to be returned at a time. Maximum value: 100
  * @method string getConText() Obtain Subsequent content can be obtained based on the `ConText` returned last time. Up to 10,000 data entries can be obtained
  * @method void setConText(string $ConText) Set Subsequent content can be obtained based on the `ConText` returned last time. Up to 10,000 data entries can be obtained
- * @method string getSort() Obtain Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
- * @method void setSort(string $Sort) Set Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
- * @method string getQuery() Obtain Fuzzy search of logs by keyword
- * @method void setQuery(string $Query) Set Fuzzy search of logs by keyword
+ * @method string getSort() Obtain Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
+ * @method void setSort(string $Sort) Set Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
+ * @method string getQuery() Obtain Fuzzy search for log by keyword
+ * @method void setQuery(string $Query) Set Fuzzy search for log by keyword
+ * @method array getLogQuerys() Obtain 
+ * @method void setLogQuerys(array $LogQuerys) Set 
  */
 class DescribeLogSearchRequest extends AbstractModel
 {
@@ -60,7 +62,7 @@ class DescribeLogSearchRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer Number of logs returned at a time. Up to 100 logs can be returned at a time
+     * @var integer Number of logs to be returned at a time. Maximum value: 100
      */
     public $Limit;
 
@@ -70,24 +72,30 @@ class DescribeLogSearchRequest extends AbstractModel
     public $ConText;
 
     /**
-     * @var string Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
+     * @var string Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
      */
     public $Sort;
 
     /**
-     * @var string Fuzzy search of logs by keyword
+     * @var string Fuzzy search for log by keyword
      */
     public $Query;
+
+    /**
+     * @var array 
+     */
+    public $LogQuerys;
 
     /**
      * @param string $StartTime Log start time
      * @param string $EndTime Log end time
      * @param string $ServiceId Service ID
      * @param array $Filters Exact search by `apiid` or `reqid`
-     * @param integer $Limit Number of logs returned at a time. Up to 100 logs can be returned at a time
+     * @param integer $Limit Number of logs to be returned at a time. Maximum value: 100
      * @param string $ConText Subsequent content can be obtained based on the `ConText` returned last time. Up to 10,000 data entries can be obtained
-     * @param string $Sort Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
-     * @param string $Query Fuzzy search of logs by keyword
+     * @param string $Sort Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
+     * @param string $Query Fuzzy search for log by keyword
+     * @param array $LogQuerys 
      */
     function __construct()
     {
@@ -137,6 +145,15 @@ class DescribeLogSearchRequest extends AbstractModel
 
         if (array_key_exists("Query",$param) and $param["Query"] !== null) {
             $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("LogQuerys",$param) and $param["LogQuerys"] !== null) {
+            $this->LogQuerys = [];
+            foreach ($param["LogQuerys"] as $key => $value){
+                $obj = new LogQuery();
+                $obj->deserialize($value);
+                array_push($this->LogQuerys, $obj);
+            }
         }
     }
 }

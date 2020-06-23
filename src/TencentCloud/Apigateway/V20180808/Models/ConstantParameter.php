@@ -18,44 +18,44 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Constant parameters
+ * Constant parameter
  *
- * @method string getName() Obtain Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`.
- * @method void setName(string $Name) Set Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`.
- * @method string getDesc() Obtain Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`.
- * @method void setDesc(string $Desc) Set Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`.
- * @method string getPosition() Obtain Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`.
- * @method void setPosition(string $Position) Set Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`.
- * @method string getDefaultValue() Obtain Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
- * @method void setDefaultValue(string $DefaultValue) Set Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+ * @method string getName() Obtain Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+ * @method void setName(string $Name) Set Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+ * @method string getDesc() Obtain Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+ * @method void setDesc(string $Desc) Set Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+ * @method string getPosition() Obtain Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+ * @method void setPosition(string $Position) Set Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+ * @method string getDefaultValue() Obtain Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+ * @method void setDefaultValue(string $DefaultValue) Set Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
  */
 class ConstantParameter extends AbstractModel
 {
     /**
-     * @var string Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string Constant parameter name, which is used only if `ServiceType` is `HTTP`.
      */
     public $Name;
 
     /**
-     * @var string Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string Constant parameter description, which is used only if `ServiceType` is `HTTP`.
      */
     public $Desc;
 
     /**
-     * @var string Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string Constant parameter position, which is used only if `ServiceType` is `HTTP`.
      */
     public $Position;
 
     /**
-     * @var string Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @var string Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
      */
     public $DefaultValue;
 
     /**
-     * @param string $Name Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`.
-     * @param string $Desc Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`.
-     * @param string $Position Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`.
-     * @param string $DefaultValue Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param string $Name Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+     * @param string $Desc Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+     * @param string $Position Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+     * @param string $DefaultValue Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
      */
     function __construct()
     {

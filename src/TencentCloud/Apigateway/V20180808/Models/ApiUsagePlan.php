@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of the usage plans bound to API or service
+ * Details of usage plans bound to API or service
  *
  * @method string getServiceId() Obtain Unique service ID.
 Note: this field may return null, indicating that no valid values can be obtained.
