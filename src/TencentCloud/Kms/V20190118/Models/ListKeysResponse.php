@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListKeys response structure.
  *
+ * @method array getKeys() Obtain CMK list array
+ * @method void setKeys(array $Keys) Set CMK list array
+ * @method integer getTotalCount() Obtain Total number of CMKs
+ * @method void setTotalCount(integer $TotalCount) Set Total number of CMKs
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ListKeysResponse extends AbstractModel
 {
     /**
+     * @var array CMK list array
+     */
+    public $Keys;
+
+    /**
+     * @var integer Total number of CMKs
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $Keys CMK list array
+     * @param integer $TotalCount Total number of CMKs
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +62,19 @@ class ListKeysResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
+            $this->Keys = [];
+            foreach ($param["Keys"] as $key => $value){
+                $obj = new Key();
+                $obj->deserialize($value);
+                array_push($this->Keys, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

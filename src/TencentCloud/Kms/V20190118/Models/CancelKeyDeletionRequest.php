@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelKeyDeletion request structure.
  *
-
+ * @method string getKeyId() Obtain Unique ID of the CMK for which to cancel schedule deletion
+ * @method void setKeyId(string $KeyId) Set Unique ID of the CMK for which to cancel schedule deletion
  */
 class CancelKeyDeletionRequest extends AbstractModel
 {
-
+    /**
+     * @var string Unique ID of the CMK for which to cancel schedule deletion
+     */
+    public $KeyId;
 
     /**
-
+     * @param string $KeyId Unique ID of the CMK for which to cancel schedule deletion
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class CancelKeyDeletionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
     }
 }

@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableKeys request structure.
  *
-
+ * @method array getKeyIds() Obtain List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
+ * @method void setKeyIds(array $KeyIds) Set List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
  */
 class EnableKeysRequest extends AbstractModel
 {
-
+    /**
+     * @var array List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
+     */
+    public $KeyIds;
 
     /**
-
+     * @param array $KeyIds List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class EnableKeysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
+            $this->KeyIds = $param["KeyIds"];
+        }
     }
 }

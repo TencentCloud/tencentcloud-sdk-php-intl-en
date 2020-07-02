@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetServiceStatus response structure.
  *
+ * @method boolean getServiceEnabled() Obtain Whether the KMS service has been activated. true: activated
+ * @method void setServiceEnabled(boolean $ServiceEnabled) Set Whether the KMS service has been activated. true: activated
+ * @method integer getInvalidType() Obtain Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+ * @method void setInvalidType(integer $InvalidType) Set Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class GetServiceStatusResponse extends AbstractModel
 {
     /**
+     * @var boolean Whether the KMS service has been activated. true: activated
+     */
+    public $ServiceEnabled;
+
+    /**
+     * @var integer Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+     */
+    public $InvalidType;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param boolean $ServiceEnabled Whether the KMS service has been activated. true: activated
+     * @param integer $InvalidType Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +62,14 @@ class GetServiceStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ServiceEnabled",$param) and $param["ServiceEnabled"] !== null) {
+            $this->ServiceEnabled = $param["ServiceEnabled"];
+        }
+
+        if (array_key_exists("InvalidType",$param) and $param["InvalidType"] !== null) {
+            $this->InvalidType = $param["InvalidType"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

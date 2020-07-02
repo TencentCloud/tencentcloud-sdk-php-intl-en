@@ -54,6 +54,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\GetSAMLProviderResponse GetSAMLProvider(Models\GetSAMLProviderRequest $req) This API is used to query SAML identity provider details.
  * @method Models\GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatus(Models\GetServiceLinkedRoleDeletionStatusRequest $req) This API is used to get the status of the service-linked role deletion based on the `TaskId`
  * @method Models\GetUserResponse GetUser(Models\GetUserRequest $req) This API is used to query sub-users.
+ * @method Models\ListAccessKeysResponse ListAccessKeys(Models\ListAccessKeysRequest $req) This API is used to list the access keys associated with a specified CAM user.
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
  * @method Models\ListAttachedRolePoliciesResponse ListAttachedRolePolicies(Models\ListAttachedRolePoliciesRequest $req) This API (ListAttachedRolePolicies) is used to obtain the list of the policies associated with a role.
  * @method Models\ListAttachedUserPoliciesResponse ListAttachedUserPolicies(Models\ListAttachedUserPoliciesRequest $req) This API (ListAttachedUserPolicies) is used to query the list of policies associated with a sub-account.

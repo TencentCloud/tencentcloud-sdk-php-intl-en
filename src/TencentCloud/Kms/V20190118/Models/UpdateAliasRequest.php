@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAlias request structure.
  *
-
+ * @method string getAlias() Obtain New alias containing 1–60 characters or digits
+ * @method void setAlias(string $Alias) Set New alias containing 1–60 characters or digits
+ * @method string getKeyId() Obtain Globally unique CMK ID
+ * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
  */
 class UpdateAliasRequest extends AbstractModel
 {
-
+    /**
+     * @var string New alias containing 1–60 characters or digits
+     */
+    public $Alias;
 
     /**
+     * @var string Globally unique CMK ID
+     */
+    public $KeyId;
 
+    /**
+     * @param string $Alias New alias containing 1–60 characters or digits
+     * @param string $KeyId Globally unique CMK ID
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class UpdateAliasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
+        }
 
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
     }
 }

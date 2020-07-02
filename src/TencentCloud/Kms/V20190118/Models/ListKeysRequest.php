@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListKeys request structure.
  *
-
+ * @method integer getOffset() Obtain This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0
+ * @method void setOffset(integer $Offset) Set This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0
+ * @method integer getLimit() Obtain This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200
+ * @method void setLimit(integer $Limit) Set This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200
+ * @method integer getRole() Obtain Filter by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service
+ * @method void setRole(integer $Role) Set Filter by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service
  */
 class ListKeysRequest extends AbstractModel
 {
-
+    /**
+     * @var integer This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0
+     */
+    public $Offset;
 
     /**
+     * @var integer This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200
+     */
+    public $Limit;
 
+    /**
+     * @var integer Filter by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service
+     */
+    public $Role;
+
+    /**
+     * @param integer $Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0
+     * @param integer $Limit This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200
+     * @param integer $Role Filter by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class ListKeysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
+        }
     }
 }

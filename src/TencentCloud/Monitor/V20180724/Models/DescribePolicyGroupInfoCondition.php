@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Alarm threshold conditions output by the policy query
+ * Alarm threshold conditions output by the policy query.
  *
  * @method string getMetricShowName() Obtain Metric name.
  * @method void setMetricShowName(string $MetricShowName) Set Metric name.
@@ -32,20 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnit(string $Unit) Set Metric unit.
  * @method integer getAlarmNotifyType() Obtain Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
  * @method void setAlarmNotifyType(integer $AlarmNotifyType) Set Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
- * @method integer getAlarmNotifyPeriod() Obtain Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
- * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) Set Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+ * @method integer getAlarmNotifyPeriod() Obtain Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
+ * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) Set Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
  * @method integer getCalcType() Obtain Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found.
  * @method void setCalcType(integer $CalcType) Set Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found.
  * @method string getCalcValue() Obtain Threshold.
-Note: This field may return null, indicating that no valid value was found.
  * @method void setCalcValue(string $CalcValue) Set Threshold.
-Note: This field may return null, indicating that no valid value was found.
  * @method integer getContinueTime() Obtain Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found.
  * @method void setContinueTime(integer $ContinueTime) Set Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found.
+ * @method string getMetricName() Obtain Alarm metric name.
+ * @method void setMetricName(string $MetricName) Set Alarm metric name.
  */
 class DescribePolicyGroupInfoCondition extends AbstractModel
 {
@@ -80,27 +76,29 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
     public $AlarmNotifyType;
 
     /**
-     * @var integer Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+     * @var integer Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
      */
     public $AlarmNotifyPeriod;
 
     /**
      * @var integer Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found.
      */
     public $CalcType;
 
     /**
      * @var string Threshold.
-Note: This field may return null, indicating that no valid value was found.
      */
     public $CalcValue;
 
     /**
      * @var integer Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found.
      */
     public $ContinueTime;
+
+    /**
+     * @var string Alarm metric name.
+     */
+    public $MetricName;
 
     /**
      * @param string $MetricShowName Metric name.
@@ -109,13 +107,11 @@ Note: This field may return null, indicating that no valid value was found.
      * @param integer $RuleId Threshold rule ID.
      * @param string $Unit Metric unit.
      * @param integer $AlarmNotifyType Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
-     * @param integer $AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+     * @param integer $AlarmNotifyPeriod Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
      * @param integer $CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found.
      * @param string $CalcValue Threshold.
-Note: This field may return null, indicating that no valid value was found.
      * @param integer $ContinueTime Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found.
+     * @param string $MetricName Alarm metric name.
      */
     function __construct()
     {
@@ -168,6 +164,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("ContinueTime",$param) and $param["ContinueTime"] !== null) {
             $this->ContinueTime = $param["ContinueTime"];
+        }
+
+        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
+            $this->MetricName = $param["MetricName"];
         }
     }
 }

@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetKeyRotationStatus request structure.
  *
-
+ * @method string getKeyId() Obtain Unique CMK ID
+ * @method void setKeyId(string $KeyId) Set Unique CMK ID
  */
 class GetKeyRotationStatusRequest extends AbstractModel
 {
-
+    /**
+     * @var string Unique CMK ID
+     */
+    public $KeyId;
 
     /**
-
+     * @param string $KeyId Unique CMK ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class GetKeyRotationStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
     }
 }

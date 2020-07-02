@@ -41,6 +41,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeInstanceAttributesResponse DescribeInstanceAttributes(Models\DescribeInstanceAttributesRequest $req) This API is used to get instance attributes.
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to get the list of CKafka instances under a user account.
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) This API is used to get instance list details under a user account.
+ * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) This API is used to view route information.
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) API domain name: https://ckafka.tencentcloudapi.com
 This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\DescribeTopicAttributesResponse DescribeTopicAttributes(Models\DescribeTopicAttributesRequest $req) This API is used to get topic attributes.

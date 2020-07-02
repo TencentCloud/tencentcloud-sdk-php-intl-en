@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScheduleKeyDeletion request structure.
  *
-
+ * @method string getKeyId() Obtain Unique CMK ID
+ * @method void setKeyId(string $KeyId) Set Unique CMK ID
+ * @method integer getPendingWindowInDays() Obtain Schedule deletion time range. Value range: [7,30]
+ * @method void setPendingWindowInDays(integer $PendingWindowInDays) Set Schedule deletion time range. Value range: [7,30]
  */
 class ScheduleKeyDeletionRequest extends AbstractModel
 {
-
+    /**
+     * @var string Unique CMK ID
+     */
+    public $KeyId;
 
     /**
+     * @var integer Schedule deletion time range. Value range: [7,30]
+     */
+    public $PendingWindowInDays;
 
+    /**
+     * @param string $KeyId Unique CMK ID
+     * @param integer $PendingWindowInDays Schedule deletion time range. Value range: [7,30]
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class ScheduleKeyDeletionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
 
+        if (array_key_exists("PendingWindowInDays",$param) and $param["PendingWindowInDays"] !== null) {
+            $this->PendingWindowInDays = $param["PendingWindowInDays"];
+        }
     }
 }

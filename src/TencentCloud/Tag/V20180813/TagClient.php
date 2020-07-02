@@ -27,6 +27,7 @@ use TencentCloud\Tag\V20180813\Models as Models;
  * @method Models\CreateTagResponse CreateTag(Models\CreateTagRequest $req) This API is used to create a tag key and tag value pair.
  * @method Models\DeleteResourceTagResponse DeleteResourceTag(Models\DeleteResourceTagRequest $req) This API is used to unassociate tags and resources.
  * @method Models\DeleteTagResponse DeleteTag(Models\DeleteTagRequest $req) This API is used to delete a tag key and tag value pair.
+ * @method Models\DescribeResourceTagsResponse DescribeResourceTags(Models\DescribeResourceTagsRequest $req) This API is used to query the tags associated with a resource.
  * @method Models\DescribeResourceTagsByResourceIdsResponse DescribeResourceTagsByResourceIds(Models\DescribeResourceTagsByResourceIdsRequest $req) This API is used to query tag key and value pairs for existing resources.
  * @method Models\DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeys(Models\DescribeResourceTagsByTagKeysRequest $req) This API is used to get resource tags based on tag keys.
  * @method Models\DescribeResourcesByTagsResponse DescribeResourcesByTags(Models\DescribeResourcesByTagsRequest $req) This API is used to query resources by tags.

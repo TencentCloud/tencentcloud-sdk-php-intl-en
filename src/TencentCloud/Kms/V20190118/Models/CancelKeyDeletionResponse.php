@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelKeyDeletion response structure.
  *
+ * @method string getKeyId() Obtain Unique ID of the CMK for which the schedule deletion is canceled
+ * @method void setKeyId(string $KeyId) Set Unique ID of the CMK for which the schedule deletion is canceled
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CancelKeyDeletionResponse extends AbstractModel
 {
     /**
+     * @var string Unique ID of the CMK for which the schedule deletion is canceled
+     */
+    public $KeyId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param string $KeyId Unique ID of the CMK for which the schedule deletion is canceled
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,10 @@ class CancelKeyDeletionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

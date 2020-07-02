@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
  * @method string getEndTime() Obtain Query end time in the format of 2018-06-10 17:06:38
  * @method void setEndTime(string $EndTime) Set Query end time in the format of 2018-06-10 17:06:38
- * @method integer getLimit() Obtain Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
+ * @method integer getLimit() Obtain Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
+ * @method void setLimit(integer $Limit) Set Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
  * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0. Default value: 0.
  * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0. Default value: 0.
  */
@@ -56,7 +56,7 @@ class DescribeDBBackupsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
+     * @var integer Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeDBBackupsRequest extends AbstractModel
      * @param integer $Type Backup mode (1: full). Currently, only full backup is supported. The value is 1.
      * @param string $StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
      * @param string $EndTime Query end time in the format of 2018-06-10 17:06:38
-     * @param integer $Limit Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
+     * @param integer $Limit Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
      * @param integer $Offset Page number for data return in paged query. Pagination starts from 0. Default value: 0.
      */
     function __construct()

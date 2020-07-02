@@ -48,8 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal flag. 0: normal renewal (default), 1: auto-renewal.
  * @method integer getActivityId() Obtain 
  * @method void setActivityId(integer $ActivityId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
+ * @method string getName() Obtain Instance name (which will be supported in the future)
+ * @method void setName(string $Name) Set Instance name (which will be supported in the future)
+ * @method integer getNeedSupportIpv6() Obtain 
+ * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set 
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -124,9 +126,14 @@ class CreateDBInstancesRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @var string 
+     * @var string Instance name (which will be supported in the future)
      */
     public $Name;
+
+    /**
+     * @var integer 
+     */
+    public $NeedSupportIpv6;
 
     /**
      * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
@@ -143,7 +150,8 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $SubnetId VPC subnet ID.
      * @param integer $AutoRenewFlag Renewal flag. 0: normal renewal (default), 1: auto-renewal.
      * @param integer $ActivityId 
-     * @param string $Name 
+     * @param string $Name Instance name (which will be supported in the future)
+     * @param integer $NeedSupportIpv6 
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("NeedSupportIpv6",$param) and $param["NeedSupportIpv6"] !== null) {
+            $this->NeedSupportIpv6 = $param["NeedSupportIpv6"];
         }
     }
 }
