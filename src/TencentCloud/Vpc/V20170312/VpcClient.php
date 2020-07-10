@@ -24,7 +24,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 
 /**
  * @method Models\AcceptAttachCcnInstancesResponse AcceptAttachCcnInstances(Models\AcceptAttachCcnInstancesRequest $req) This API (AcceptAttachCcnInstances) is used to associate instances across accounts. Cloud Connect Network (CCN) owners accept and agree to the operations.
- * @method Models\AddBandwidthPackageResourcesResponse AddBandwidthPackageResources(Models\AddBandwidthPackageResourcesRequest $req) This API is used to add bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+ * @method Models\AddBandwidthPackageResourcesResponse AddBandwidthPackageResources(Models\AddBandwidthPackageResourcesRequest $req) This API is used to add a bandwidth package resource including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
  * @method Models\AllocateAddressesResponse AllocateAddresses(Models\AllocateAddressesRequest $req) This API is used to apply for one or more [Elastic IP Addresses](https://cloud.tencent.com/document/product/213/1941) (EIPs for short).
 * An EIP is a static IP address that is dedicated for dynamic cloud computing. You can quickly re-map an EIP to another instance under your account to protect against instance failures.
 * Your EIP is associated with your Tencent Cloud account rather than an instance. It remains associated with your Tencent Cloud account until you choose to explicitly release it or your account is in arrears for more than 24 hours.
@@ -52,7 +52,7 @@ This API is completed asynchronously. If you need to query the async execution r
 * To bind the EIP to a NAT gateway, use the API [EipBindNatGateway](https://cloud.tencent.com/document/product/215/4093)
 * EIP that is in arrears or blocked cannot be bound.
 * Only EIP in the UNBIND status can be bound.
- * @method Models\AssociateNatGatewayAddressResponse AssociateNatGatewayAddress(Models\AssociateNatGatewayAddressRequest $req) This API (AssociateNatGatewayAddress) is used to bind a NAT gateway to an Elastic IP (EIP).
+ * @method Models\AssociateNatGatewayAddressResponse AssociateNatGatewayAddress(Models\AssociateNatGatewayAddressRequest $req) This API is used to bind a NAT Gateway to an Elastic IP (EIP).
  * @method Models\AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(Models\AssociateNetworkAclSubnetsRequest $req) This API is used to associate a network ACL with subnets in a VPC instance.
  * @method Models\AssociateNetworkInterfaceSecurityGroupsResponse AssociateNetworkInterfaceSecurityGroups(Models\AssociateNetworkInterfaceSecurityGroupsRequest $req) This API (AssociateNetworkInterfaceSecurityGroups) is used to attach a security group to an ENI.
  * @method Models\AttachCcnInstancesResponse AttachCcnInstances(Models\AttachCcnInstancesRequest $req) This API (AttachCcnInstances) is used to load a network instance to a CCN instance. Network instances include VPCs and Direct Connect gateways.<br />
@@ -72,8 +72,14 @@ The number of network instances that each CCN can be associated with is limited.
  * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) This API is used to verify the network detection status.
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) This API (CreateAddressTemplate) is used to create an IP address template.
  * @method Models\CreateAddressTemplateGroupResponse CreateAddressTemplateGroup(Models\CreateAddressTemplateGroupRequest $req) This API (CreateAddressTemplateGroup) is used to create an IP address template group.
+ * @method Models\CreateAndAttachNetworkInterfaceResponse CreateAndAttachNetworkInterface(Models\CreateAndAttachNetworkInterfaceRequest $req) This API is used to create an ENI and bind it to a CVM.
+* You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be idle and in the same subnet as the ENI.
+* When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
+* An ENI can only be bound to a limited number of IP addresses. For more information about resource limits, see <a href="/document/product/576/18527">ENI Use Limits</a>.
+* You can bind an existing security group when creating an ENI.
+* You can bind a tag when creating an ENI. The tag list in the response indicates the tags that have been successfully added.
  * @method Models\CreateAssistantCidrResponse CreateAssistantCidr(Models\CreateAssistantCidrRequest $req) This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
- * @method Models\CreateBandwidthPackageResponse CreateBandwidthPackage(Models\CreateBandwidthPackageRequest $req) This API is used to support the creation of [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+ * @method Models\CreateBandwidthPackageResponse CreateBandwidthPackage(Models\CreateBandwidthPackageRequest $req) This API is used to create [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
  * @method Models\CreateCcnResponse CreateCcn(Models\CreateCcnRequest $req) This API is used to create a Cloud Connect Network (CCN).<br />
 * You can bind a tag when creating a CCN instance. The tag list in the response indicates the tags that have been successfully added.
 Each account can only create a limited number of CCN instances. For more information, see product documentation. To create more instances, contact the online customer service.
@@ -87,9 +93,9 @@ Under normal circumstances, this API may not create a default VPC. It depends on
 * If only VPC is supported, the default VPC information is returned.
 
 You can also use the Force parameter to forcibly return a default VPC.
- * @method Models\CreateDirectConnectGatewayResponse CreateDirectConnectGateway(Models\CreateDirectConnectGatewayRequest $req) This API (CreateDirectConnectGateway) is used to create a Direct Connect gateway.
+ * @method Models\CreateDirectConnectGatewayResponse CreateDirectConnectGateway(Models\CreateDirectConnectGatewayRequest $req) This API is used to create a direct connect gateway.
  * @method Models\CreateDirectConnectGatewayCcnRoutesResponse CreateDirectConnectGatewayCcnRoutes(Models\CreateDirectConnectGatewayCcnRoutesRequest $req) This API (CreateDirectConnectGatewayCcnRoutes) is used to create the CCN route (IDC IP range) of a Direct Connect gateway.
- * @method Models\CreateFlowLogResponse CreateFlowLog(Models\CreateFlowLogRequest $req) This API (CreateFlowLog) is used to create flow logs.
+ * @method Models\CreateFlowLogResponse CreateFlowLog(Models\CreateFlowLogRequest $req) This API is used to create a flow log.
  * @method Models\CreateHaVipResponse CreateHaVip(Models\CreateHaVipRequest $req) This API (CreateHaVip) is used to create a highly available virtual IP (HAVIP)
  * @method Models\CreateNatGatewayResponse CreateNatGateway(Models\CreateNatGatewayRequest $req) This API (CreateNatGateway) is used to create a NAT gateway.
  * @method Models\CreateNatGatewayDestinationIpPortTranslationNatRuleResponse CreateNatGatewayDestinationIpPortTranslationNatRule(Models\CreateNatGatewayDestinationIpPortTranslationNatRuleRequest $req) This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
@@ -165,18 +171,18 @@ Description:
  * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) This API (DeleteAddressTemplate) is used to delete an IP address template.
  * @method Models\DeleteAddressTemplateGroupResponse DeleteAddressTemplateGroup(Models\DeleteAddressTemplateGroupRequest $req) This API (DeleteAddressTemplateGroup) is used to delete an IP address template group.
  * @method Models\DeleteAssistantCidrResponse DeleteAssistantCidr(Models\DeleteAssistantCidrRequest $req) This API (DeleteAssistantCidr) is used to delete secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
- * @method Models\DeleteBandwidthPackageResponse DeleteBandwidthPackage(Models\DeleteBandwidthPackageRequest $req) This API is used to support the deletion of shared bandwidth packages, including [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
+ * @method Models\DeleteBandwidthPackageResponse DeleteBandwidthPackage(Models\DeleteBandwidthPackageRequest $req) This API is used to delete bandwidth packages, including [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
  * @method Models\DeleteCcnResponse DeleteCcn(Models\DeleteCcnRequest $req) This API (DeleteCcn) is used to delete CCNs.
 * After deletion, the routes between all instances associated with the CCN will be deleted, and the network will be interrupted. Please confirm this operation in advance.
 * CCN deletion is an irreversible operation. Please proceed with caution.
 
  * @method Models\DeleteCustomerGatewayResponse DeleteCustomerGateway(Models\DeleteCustomerGatewayRequest $req) This API (DeleteCustomerGateway) is used to delete customer gateways.
- * @method Models\DeleteDirectConnectGatewayResponse DeleteDirectConnectGateway(Models\DeleteDirectConnectGatewayRequest $req) This API (DeleteDirectConnectGateway) is used to delete Direct Connect gateways.
-<li>For a NAT gateway, NAT and ACL rules will be cleaned upon the deletion of a Direct Connect gateway.
-<li>After the deletion of a Direct Connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
-This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+ * @method Models\DeleteDirectConnectGatewayResponse DeleteDirectConnectGateway(Models\DeleteDirectConnectGatewayRequest $req) This API is used to delete a direct connect gateway.
+<li>For a NAT gateway, NAT and ACL rules will be cleared upon the deletion of a direct connect gateway.
+<li>After the deletion of a direct connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
+This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to poll the `QueryTask` API.
  * @method Models\DeleteDirectConnectGatewayCcnRoutesResponse DeleteDirectConnectGatewayCcnRoutes(Models\DeleteDirectConnectGatewayCcnRoutesRequest $req) This API (DeleteDirectConnectGatewayCcnRoutes) is used to delete the CCN routes (IDC IP range) of a Direct Connect gateway.
- * @method Models\DeleteFlowLogResponse DeleteFlowLog(Models\DeleteFlowLogRequest $req) This API (DeleteFlowLog) is used to delete flow logs.
+ * @method Models\DeleteFlowLogResponse DeleteFlowLog(Models\DeleteFlowLogRequest $req) This API is used to delete a flow log.
  * @method Models\DeleteHaVipResponse DeleteHaVip(Models\DeleteHaVipRequest $req) This API (DeleteHaVip) is used to delete Highly Available Virtual IP (HAVIP)<br />
 This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
  * @method Models\DeleteNatGatewayResponse DeleteNatGateway(Models\DeleteNatGatewayRequest $req) This API (DeleteNatGateway) is used to delete a NAT gateway.
@@ -211,7 +217,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
  * @method Models\DescribeAddressesResponse DescribeAddresses(Models\DescribeAddressesRequest $req) This API (DescribeAddresses) is used to query the information of one or multiple [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
 * If the parameter is empty, a number (as specified by the `Limit`, the default value is 20) of EIPs will be returned.
  * @method Models\DescribeAssistantCidrResponse DescribeAssistantCidr(Models\DescribeAssistantCidrRequest $req) This API (DescribeAssistantCidr) is used to query a list of secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
- * @method Models\DescribeBandwidthPackageQuotaResponse DescribeBandwidthPackageQuota(Models\DescribeBandwidthPackageQuotaRequest $req) This API is used to query the account’s maximum number of bandwidth packages and their usage in the current region.
+ * @method Models\DescribeBandwidthPackageQuotaResponse DescribeBandwidthPackageQuota(Models\DescribeBandwidthPackageQuotaRequest $req) This API is used to query the maximum and used number of bandwidth packages under the account in the current region.
  * @method Models\DescribeBandwidthPackagesResponse DescribeBandwidthPackages(Models\DescribeBandwidthPackagesRequest $req) This API is used to query bandwidth package information, including the unique ID of the bandwidth package, the type, the billing mode, the name, and the resource information.
  * @method Models\DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(Models\DescribeCcnAttachedInstancesRequest $req) This API (DescribeCcnAttachedInstances) is used to query the network instances associated with the CCN instance.
  * @method Models\DescribeCcnRoutesResponse DescribeCcnRoutes(Models\DescribeCcnRoutesRequest $req) This API (DescribeCcnRoutes) is used to query routes that have been added to a CCN.
@@ -220,9 +226,9 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
  * @method Models\DescribeCustomerGatewayVendorsResponse DescribeCustomerGatewayVendors(Models\DescribeCustomerGatewayVendorsRequest $req) This API (DescribeCustomerGatewayVendors) is used to query the information of supported customer gateway vendors.
  * @method Models\DescribeCustomerGatewaysResponse DescribeCustomerGateways(Models\DescribeCustomerGatewaysRequest $req) This API (DescribeCustomerGateways) is used to query the customer gateway list.
  * @method Models\DescribeDirectConnectGatewayCcnRoutesResponse DescribeDirectConnectGatewayCcnRoutes(Models\DescribeDirectConnectGatewayCcnRoutesRequest $req) This API (DescribeDirectConnectGatewayCcnRoutes) is used to query the CCN routes (IDC IP range) of the Direct Connect gateway.
- * @method Models\DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(Models\DescribeDirectConnectGatewaysRequest $req) This API (DescribeDirectConnectGateways) is used to query Direct Connect gateways.
- * @method Models\DescribeFlowLogResponse DescribeFlowLog(Models\DescribeFlowLogRequest $req) This API (DescribeFlowLog) is used to query flow log instance information.
- * @method Models\DescribeFlowLogsResponse DescribeFlowLogs(Models\DescribeFlowLogsRequest $req) This API (DescribeFlowLogs) is used to query and obtain the flow log set.
+ * @method Models\DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(Models\DescribeDirectConnectGatewaysRequest $req) This API is used to query direct connect gateways.
+ * @method Models\DescribeFlowLogResponse DescribeFlowLog(Models\DescribeFlowLogRequest $req) This API is used to query flow log instance information.
+ * @method Models\DescribeFlowLogsResponse DescribeFlowLogs(Models\DescribeFlowLogsRequest $req) This API is used to query and obtain the flow log set.
  * @method Models\DescribeGatewayFlowMonitorDetailResponse DescribeGatewayFlowMonitorDetail(Models\DescribeGatewayFlowMonitorDetailRequest $req) This API (DescribeGatewayFlowMonitorDetail) is used to query the monitoring details of the gateway traffic.
 * Only querying of a single gateway instance is supported. That is, only one of the `VpnId`, `DirectConnectGatewayId`, `PeeringConnectionId`, or `NatId` input parameters is supported, and one must be used.
 * If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring has been enabled in the corresponding gateway details page in the console.
@@ -272,6 +278,7 @@ After unbinding the network instance, the corresponding routing policy will also
  * @method Models\EnableCcnRoutesResponse EnableCcnRoutes(Models\EnableCcnRoutesRequest $req) This API (EnableCcnRoutes) is used to enable CCN routes that are already added.<br />
 This API is used to verify whether there will be conflict with an existing route after a CCN route is enabled. If there is a conflict, the route will not be enabled, and the process will fail. When a conflict occurs, you must disable the conflicting route before you can enable the desired route.
  * @method Models\EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitor(Models\EnableGatewayFlowMonitorRequest $req) This API (EnableGatewayFlowMonitor) is used to enable gateway flow monitor.
+ * @method Models\GetCcnRegionBandwidthLimitsResponse GetCcnRegionBandwidthLimits(Models\GetCcnRegionBandwidthLimitsRequest $req) This API is used to query the CCN bandwidth limits across regions. The monthly-subscribed CCN only supports the cross-region bandwidth limit, while the pay-as-you-go CCN supports both the cross-region and region egress bandwidth limit. Note: currently, this feature is in beta test. To use it, please [contact sales](https://intl.cloud.tencent.com/contact-sales).
  * @method Models\HaVipAssociateAddressIpResponse HaVipAssociateAddressIp(Models\HaVipAssociateAddressIpRequest $req) This API (HaVipAssociateAddressIp) is used to bind an EIP to an HAVIP.<br />
 This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
  * @method Models\HaVipDisassociateAddressIpResponse HaVipDisassociateAddressIp(Models\HaVipDisassociateAddressIpRequest $req) This API (HaVipDisassociateAddressIp) is used to unbind an EIP which has been bound to an HAVIP.<br />
@@ -292,13 +299,13 @@ This API is completed asynchronously. If you need to query the async job executi
  * @method Models\ModifyAddressTemplateGroupAttributeResponse ModifyAddressTemplateGroupAttribute(Models\ModifyAddressTemplateGroupAttributeRequest $req) This API (ModifyAddressTemplateGroupAttribute) is used to modify an IP address template group.
  * @method Models\ModifyAddressesBandwidthResponse ModifyAddressesBandwidth(Models\ModifyAddressesBandwidthRequest $req) This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://cloud.tencent.com/document/product/213/1941) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
  * @method Models\ModifyAssistantCidrResponse ModifyAssistantCidr(Models\ModifyAssistantCidrRequest $req) This API (ModifyAssistantCidr) is used to batch modify (e.g. add and delete) secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
- * @method Models\ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttribute(Models\ModifyBandwidthPackageAttributeRequest $req) This API is used to modify bandwidth package attributes, including the bandwidth package name, and so on.
+ * @method Models\ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttribute(Models\ModifyBandwidthPackageAttributeRequest $req) This API is used to modify the attributes of a bandwidth package, including the bandwidth package name, and so on.
  * @method Models\ModifyCcnAttributeResponse ModifyCcnAttribute(Models\ModifyCcnAttributeRequest $req) This API (ModifyCcnAttribute) is used to modify CCN attributes.
  * @method Models\ModifyCcnRegionBandwidthLimitsTypeResponse ModifyCcnRegionBandwidthLimitsType(Models\ModifyCcnRegionBandwidthLimitsTypeRequest $req) This API is used to modify the bandwidth limit policy of a postpaid CCN instance.
  * @method Models\ModifyCustomerGatewayAttributeResponse ModifyCustomerGatewayAttribute(Models\ModifyCustomerGatewayAttributeRequest $req) This API (ModifyCustomerGatewayAttribute) is used to modify the customer gateway information.
- * @method Models\ModifyDirectConnectGatewayAttributeResponse ModifyDirectConnectGatewayAttribute(Models\ModifyDirectConnectGatewayAttributeRequest $req) This API (ModifyDirectConnectGatewayAttribute) is used to modify the Direct Connect gateway attributes.
+ * @method Models\ModifyDirectConnectGatewayAttributeResponse ModifyDirectConnectGatewayAttribute(Models\ModifyDirectConnectGatewayAttributeRequest $req) This API is used to modify the attributes of a direct connect gateway.
 
- * @method Models\ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(Models\ModifyFlowLogAttributeRequest $req) This API (ModifyFlowLogAttribute) is used to modify flow log attributes.
+ * @method Models\ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(Models\ModifyFlowLogAttributeRequest $req) This API is used to modify the attributes of a flow log.
  * @method Models\ModifyGatewayFlowQosResponse ModifyGatewayFlowQos(Models\ModifyGatewayFlowQosRequest $req) This API (ModifyGatewayFlowQos) is used to adjust the QoS bandwidth limit in a gateway.
  * @method Models\ModifyHaVipAttributeResponse ModifyHaVipAttribute(Models\ModifyHaVipAttributeRequest $req) This API (ModifyHaVipAttribute) is used to modify HAVIP attributes.
  * @method Models\ModifyIpv6AddressesAttributeResponse ModifyIpv6AddressesAttribute(Models\ModifyIpv6AddressesAttributeRequest $req) This API (ModifyIpv6AddressesAttribute) is used to modify the private IPv6 address attributes of an ENI.
@@ -339,7 +346,7 @@ This API is completed asynchronously. If you need to query the async job executi
  * @method Models\ReleaseAddressesResponse ReleaseAddresses(Models\ReleaseAddressesRequest $req) This API (ReleaseAddresses) is used to release one or multiple [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
 * This operation is irreversible. Once you release an EIP, the IP address associated with the EIP no longer belongs to you.
 * Only EIPs in UNBIND status can be released.
- * @method Models\RemoveBandwidthPackageResourcesResponse RemoveBandwidthPackageResources(Models\RemoveBandwidthPackageResourcesRequest $req) This API is used to delete bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+ * @method Models\RemoveBandwidthPackageResourcesResponse RemoveBandwidthPackageResources(Models\RemoveBandwidthPackageResourcesRequest $req) This API is used to delete a bandwidth package resource, including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
  * @method Models\RenewVpnGatewayResponse RenewVpnGateway(Models\RenewVpnGatewayRequest $req) This API (RenewVpnGateway) is used to renew prepaid (monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
  * @method Models\ReplaceDirectConnectGatewayCcnRoutesResponse ReplaceDirectConnectGatewayCcnRoutes(Models\ReplaceDirectConnectGatewayCcnRoutesRequest $req) This API (ReplaceDirectConnectGatewayCcnRoutes) is used to modify the specified route according to the route ID. Batch modification is supported.
  * @method Models\ReplaceRouteTableAssociationResponse ReplaceRouteTableAssociation(Models\ReplaceRouteTableAssociationRequest $req) This API (ReplaceRouteTableAssociation) is used to modify the route table associated with a subnet.

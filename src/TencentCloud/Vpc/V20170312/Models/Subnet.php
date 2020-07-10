@@ -38,16 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteTableId(string $RouteTableId) Set The route table instance ID, such as `rtb-l2h8d7c2`.
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
- * @method integer getAvailableIpAddressCount() Obtain The number of available `IP`s.
- * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) Set The number of available `IP`s.
+ * @method integer getAvailableIpAddressCount() Obtain The number of available `IPv4`.
+ * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) Set The number of available `IPv4`.
  * @method string getIpv6CidrBlock() Obtain The `IPv6` `CIDR` of the subnet.
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The `IPv6` `CIDR` of the subnet.
  * @method string getNetworkAclId() Obtain The associated `ACL`ID
  * @method void setNetworkAclId(string $NetworkAclId) Set The associated `ACL`ID
  * @method boolean getIsRemoteVpcSnat() Obtain Whether it is a `SNAT` address pool subnet.
  * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) Set Whether it is a `SNAT` address pool subnet.
- * @method integer getTotalIpAddressCount() Obtain Total number of subnet `IP` addresses.
- * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) Set Total number of subnet `IP` addresses.
+ * @method integer getTotalIpAddressCount() Obtain The total number of `IPv4` in the subnet.
+ * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) Set The total number of `IPv4` in the subnet.
  * @method array getTagSet() Obtain Tag key-value pairs
  * @method void setTagSet(array $TagSet) Set Tag key-value pairs
  */
@@ -99,7 +99,7 @@ class Subnet extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var integer The number of available `IP`s.
+     * @var integer The number of available `IPv4`.
      */
     public $AvailableIpAddressCount;
 
@@ -119,7 +119,7 @@ class Subnet extends AbstractModel
     public $IsRemoteVpcSnat;
 
     /**
-     * @var integer Total number of subnet `IP` addresses.
+     * @var integer The total number of `IPv4` in the subnet.
      */
     public $TotalIpAddressCount;
 
@@ -138,11 +138,11 @@ class Subnet extends AbstractModel
      * @param string $Zone Availability Zone.
      * @param string $RouteTableId The route table instance ID, such as `rtb-l2h8d7c2`.
      * @param string $CreatedTime Creation Time.
-     * @param integer $AvailableIpAddressCount The number of available `IP`s.
+     * @param integer $AvailableIpAddressCount The number of available `IPv4`.
      * @param string $Ipv6CidrBlock The `IPv6` `CIDR` of the subnet.
      * @param string $NetworkAclId The associated `ACL`ID
      * @param boolean $IsRemoteVpcSnat Whether it is a `SNAT` address pool subnet.
-     * @param integer $TotalIpAddressCount Total number of subnet `IP` addresses.
+     * @param integer $TotalIpAddressCount The total number of `IPv4` in the subnet.
      * @param array $TagSet Tag key-value pairs
      */
     function __construct()

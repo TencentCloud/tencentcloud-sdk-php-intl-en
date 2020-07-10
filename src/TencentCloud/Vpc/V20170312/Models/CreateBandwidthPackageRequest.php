@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBandwidthPackage request structure.
  *
- * @method string getNetworkType() Obtain The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
- * @method void setNetworkType(string $NetworkType) Set The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
- * @method string getChargeType() Obtain The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
- * @method void setChargeType(string $ChargeType) Set The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
- * @method string getBandwidthPackageName() Obtain The name of the bandwidth package
- * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package
- * @method integer getBandwidthPackageCount() Obtain The number of bandwidth packages (non-upward accounts can only enter 1)
- * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) Set The number of bandwidth packages (non-upward accounts can only enter 1)
- * @method integer getInternetMaxBandwidth() Obtain The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
- * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) Set The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
- * @method string getProtocol() Obtain 
- * @method void setProtocol(string $Protocol) Set 
+ * @method string getNetworkType() Obtain The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+ * @method void setNetworkType(string $NetworkType) Set The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+ * @method string getChargeType() Obtain The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+ * @method void setChargeType(string $ChargeType) Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+ * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
+ * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
+ * @method integer getBandwidthPackageCount() Obtain The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+ * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) Set The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+ * @method integer getInternetMaxBandwidth() Obtain The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+ * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+ * @method array getTags() Obtain The list of tags to be bound.
+ * @method void setTags(array $Tags) Set The list of tags to be bound.
+ * @method string getProtocol() Obtain The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
+ * @method void setProtocol(string $Protocol) Set The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
  */
 class CreateBandwidthPackageRequest extends AbstractModel
 {
     /**
-     * @var string The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+     * @var string The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
      */
     public $NetworkType;
 
     /**
-     * @var string The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * @var string The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
      */
     public $ChargeType;
 
     /**
-     * @var string The name of the bandwidth package
+     * @var string The name of the bandwidth package.
      */
     public $BandwidthPackageName;
 
     /**
-     * @var integer The number of bandwidth packages (non-upward accounts can only enter 1)
+     * @var integer The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
      */
     public $BandwidthPackageCount;
 
     /**
-     * @var integer The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+     * @var integer The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
      */
     public $InternetMaxBandwidth;
 
     /**
-     * @var array 
+     * @var array The list of tags to be bound.
      */
     public $Tags;
 
     /**
-     * @var string 
+     * @var string The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
      */
     public $Protocol;
 
     /**
-     * @param string $NetworkType The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
-     * @param string $ChargeType The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
-     * @param string $BandwidthPackageName The name of the bandwidth package
-     * @param integer $BandwidthPackageCount The number of bandwidth packages (non-upward accounts can only enter 1)
-     * @param integer $InternetMaxBandwidth The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
-     * @param array $Tags 
-     * @param string $Protocol 
+     * @param string $NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+     * @param string $ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+     * @param string $BandwidthPackageName The name of the bandwidth package.
+     * @param integer $BandwidthPackageCount The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+     * @param integer $InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+     * @param array $Tags The list of tags to be bound.
+     * @param string $Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ErrorCodes
+ * Custom error code
  *
  * @method integer getCode() Obtain Custom response configuration error code.
 Note: this field may return null, indicating that no valid values can be obtained.

@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Usage plan details (as modification made on a complex type by `yunapi` will be directly synced to the production environment and you cannot query which APIs reference the complex type, you need to create a complex type different from the previous `UsagePlan`)
+ * Usage plan details.
  *
  * @method string getUsagePlanId() Obtain Unique usage plan ID.
 Note: this field may return null, indicating that no valid values can be obtained.

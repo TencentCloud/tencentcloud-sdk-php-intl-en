@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWhiteBoxDeviceFingerprints response structure.
  *
- * @method array getDeviceFingerprints() Obtain 设备指纹列表
- * @method void setDeviceFingerprints(array $DeviceFingerprints) Set 设备指纹列表
+ * @method array getDeviceFingerprints() Obtain Device fingerprint list
+ * @method void setDeviceFingerprints(array $DeviceFingerprints) Set Device fingerprint list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeWhiteBoxDeviceFingerprintsResponse extends AbstractModel
 {
     /**
-     * @var array 设备指纹列表
+     * @var array Device fingerprint list
      */
     public $DeviceFingerprints;
 
@@ -38,7 +38,7 @@ class DescribeWhiteBoxDeviceFingerprintsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DeviceFingerprints 设备指纹列表
+     * @param array $DeviceFingerprints Device fingerprint list
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

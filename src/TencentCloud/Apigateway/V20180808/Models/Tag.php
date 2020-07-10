@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * API tag
+ * Information of tag bound to API.
  *
  * @method string getKey() Obtain Tag key.
  * @method void setKey(string $Key) Set Tag key.

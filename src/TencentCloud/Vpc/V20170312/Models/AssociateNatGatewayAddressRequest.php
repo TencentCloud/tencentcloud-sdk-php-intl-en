@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
- * @method integer getAddressCount() Obtain The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
- * @method void setAddressCount(integer $AddressCount) Set The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
- * @method array getPublicIpAddresses() Obtain The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+ * @method integer getAddressCount() Obtain The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+ * @method void setAddressCount(integer $AddressCount) Set The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+ * @method array getPublicIpAddresses() Obtain The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
  * @method string getZone() Obtain The EIP zone. This is passed in when EIP is automatically assigned.
  * @method void setZone(string $Zone) Set The EIP zone. This is passed in when EIP is automatically assigned.
  */
@@ -37,12 +37,12 @@ class AssociateNatGatewayAddressRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var integer The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+     * @var integer The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public $AddressCount;
 
     /**
-     * @var array The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * @var array The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public $PublicIpAddresses;
 
@@ -53,8 +53,8 @@ class AssociateNatGatewayAddressRequest extends AbstractModel
 
     /**
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
-     * @param integer $AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
-     * @param array $PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * @param integer $AddressCount The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * @param array $PublicIpAddresses The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
      * @param string $Zone The EIP zone. This is passed in when EIP is automatically assigned.
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDirectConnectGateway response structure.
  *
- * @method DirectConnectGateway getDirectConnectGateway() Obtain Direct Connect gateway object.
- * @method void setDirectConnectGateway(DirectConnectGateway $DirectConnectGateway) Set Direct Connect gateway object.
+ * @method DirectConnectGateway getDirectConnectGateway() Obtain The object of the direct connect gateway.
+ * @method void setDirectConnectGateway(DirectConnectGateway $DirectConnectGateway) Set The object of the direct connect gateway.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateDirectConnectGatewayResponse extends AbstractModel
 {
     /**
-     * @var DirectConnectGateway Direct Connect gateway object.
+     * @var DirectConnectGateway The object of the direct connect gateway.
      */
     public $DirectConnectGateway;
 
@@ -38,7 +38,7 @@ class CreateDirectConnectGatewayResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DirectConnectGateway $DirectConnectGateway Direct Connect gateway object.
+     * @param DirectConnectGateway $DirectConnectGateway The object of the direct connect gateway.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

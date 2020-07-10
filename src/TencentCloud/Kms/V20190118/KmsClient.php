@@ -34,7 +34,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\DescribeKeyResponse DescribeKey(Models\DescribeKeyRequest $req) This API is used to get the attribute details of the CMK with a specified `KeyId`.
  * @method Models\DescribeKeysResponse DescribeKeys(Models\DescribeKeysRequest $req) This API is used to get the attribute information of CMKs in batches.
  * @method Models\DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKey(Models\DescribeWhiteBoxDecryptKeyRequest $req) This API is used to get a white-box decryption key.
- * @method Models\DescribeWhiteBoxDeviceFingerprintsResponse DescribeWhiteBoxDeviceFingerprints(Models\DescribeWhiteBoxDeviceFingerprintsRequest $req) 获取指定密钥的设备指纹列表
+ * @method Models\DescribeWhiteBoxDeviceFingerprintsResponse DescribeWhiteBoxDeviceFingerprints(Models\DescribeWhiteBoxDeviceFingerprintsRequest $req) This API is used to get the device fingerprint list of a specified key.
  * @method Models\DescribeWhiteBoxKeyResponse DescribeWhiteBoxKey(Models\DescribeWhiteBoxKeyRequest $req) This API is used to display white-box key information.
  * @method Models\DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetails(Models\DescribeWhiteBoxKeyDetailsRequest $req) This API is used to get the white-box key list.
  * @method Models\DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatus(Models\DescribeWhiteBoxServiceStatusRequest $req) This API is used to get the white-box key service status.
@@ -61,7 +61,7 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
  * @method Models\ListAlgorithmsResponse ListAlgorithms(Models\ListAlgorithmsRequest $req) This API is used to list the encryption methods supported in the current region.
  * @method Models\ListKeyDetailResponse ListKeyDetail(Models\ListKeyDetailRequest $req) Get the master key list details according to the specified Offset and Limit.
  * @method Models\ListKeysResponse ListKeys(Models\ListKeysRequest $req) This API is used to list the KeyIds of CMKs in `Enabled`, `Disabled`, and `PendingImport` status under the account.
- * @method Models\OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(Models\OverwriteWhiteBoxDeviceFingerprintsRequest $req) 覆盖指定密钥的设备指纹信息
+ * @method Models\OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(Models\OverwriteWhiteBoxDeviceFingerprintsRequest $req) This API is used to overwrite the device fingerprint information of a specified key.
  * @method Models\ReEncryptResponse ReEncrypt(Models\ReEncryptRequest $req) Re-encrypt the ciphertext using the specified CMK.
  * @method Models\ScheduleKeyDeletionResponse ScheduleKeyDeletion(Models\ScheduleKeyDeletionRequest $req) CMK planned deletion API, used to specify the time of CMK deletion, the optional time interval is [7,30] days
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) This API is used to modify the alias of a CMK. CMKs in `PendingDelete` status cannot be modified.

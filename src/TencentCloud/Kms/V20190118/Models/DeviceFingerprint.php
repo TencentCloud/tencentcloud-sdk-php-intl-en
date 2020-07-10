@@ -18,28 +18,32 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 设备指纹
+ * Device fingerprint
  *
- * @method string getIdentity() Obtain 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
- * @method void setIdentity(string $Identity) Set 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
- * @method string getDescription() Obtain 描述信息，如：IP，设备名称等，最大1024字节
- * @method void setDescription(string $Description) Set 描述信息，如：IP，设备名称等，最大1024字节
+ * @method string getIdentity() Obtain Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+ * @method void setIdentity(string $Identity) Set Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+ * @method string getDescription() Obtain Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDescription(string $Description) Set Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DeviceFingerprint extends AbstractModel
 {
     /**
-     * @var string 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+     * @var string Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
      */
     public $Identity;
 
     /**
-     * @var string 描述信息，如：IP，设备名称等，最大1024字节
+     * @var string Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
-     * @param string $Identity 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
-     * @param string $Description 描述信息，如：IP，设备名称等，最大1024字节
+     * @param string $Identity Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+     * @param string $Description Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

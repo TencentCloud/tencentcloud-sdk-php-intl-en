@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBlockIPList request structure.
  *
- * @method array getLoadBalancerIds() Obtain 负载均衡实例ID
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set 负载均衡实例ID
- * @method string getType() Obtain 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
- * @method void setType(string $Type) Set 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
- * @method string getClientIPField() Obtain 客户端真实IP存放的header字段名
- * @method void setClientIPField(string $ClientIPField) Set 客户端真实IP存放的header字段名
- * @method array getBlockIPList() Obtain 封禁IP列表，单次操作数组最大长度支持200000
- * @method void setBlockIPList(array $BlockIPList) Set 封禁IP列表，单次操作数组最大长度支持200000
- * @method integer getExpireTime() Obtain 过期时间，单位秒，默认值3600
- * @method void setExpireTime(integer $ExpireTime) Set 过期时间，单位秒，默认值3600
- * @method string getAddStrategy() Obtain 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
- * @method void setAddStrategy(string $AddStrategy) Set 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
+ * @method array getLoadBalancerIds() Obtain CLB instance ID
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID
+ * @method string getType() Obtain Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li>
+ * @method void setType(string $Type) Set Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li>
+ * @method string getClientIPField() Obtain Header field that stores real client IPs
+ * @method void setClientIPField(string $ClientIPField) Set Header field that stores real client IPs
+ * @method array getBlockIPList() Obtain List of blocked IPs. The array can contain up to 200,000 entries in one operation.
+ * @method void setBlockIPList(array $BlockIPList) Set List of blocked IPs. The array can contain up to 200,000 entries in one operation.
+ * @method integer getExpireTime() Obtain Expiration time in seconds. Default value: 3600
+ * @method void setExpireTime(integer $ExpireTime) Set Expiration time in seconds. Default value: 3600
+ * @method string getAddStrategy() Obtain IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
+ * @method void setAddStrategy(string $AddStrategy) Set IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
  */
 class ModifyBlockIPListRequest extends AbstractModel
 {
     /**
-     * @var array 负载均衡实例ID
+     * @var array CLB instance ID
      */
     public $LoadBalancerIds;
 
     /**
-     * @var string 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
+     * @var string Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li>
      */
     public $Type;
 
     /**
-     * @var string 客户端真实IP存放的header字段名
+     * @var string Header field that stores real client IPs
      */
     public $ClientIPField;
 
     /**
-     * @var array 封禁IP列表，单次操作数组最大长度支持200000
+     * @var array List of blocked IPs. The array can contain up to 200,000 entries in one operation.
      */
     public $BlockIPList;
 
     /**
-     * @var integer 过期时间，单位秒，默认值3600
+     * @var integer Expiration time in seconds. Default value: 3600
      */
     public $ExpireTime;
 
     /**
-     * @var string 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
+     * @var string IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
      */
     public $AddStrategy;
 
     /**
-     * @param array $LoadBalancerIds 负载均衡实例ID
-     * @param string $Type 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
-     * @param string $ClientIPField 客户端真实IP存放的header字段名
-     * @param array $BlockIPList 封禁IP列表，单次操作数组最大长度支持200000
-     * @param integer $ExpireTime 过期时间，单位秒，默认值3600
-     * @param string $AddStrategy 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
+     * @param array $LoadBalancerIds CLB instance ID
+     * @param string $Type Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li>
+     * @param string $ClientIPField Header field that stores real client IPs
+     * @param array $BlockIPList List of blocked IPs. The array can contain up to 200,000 entries in one operation.
+     * @param integer $ExpireTime Expiration time in seconds. Default value: 3600
+     * @param string $AddStrategy IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
      */
     function __construct()
     {

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBandwidthPackageAttribute request structure.
  *
- * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package
- * @method string getBandwidthPackageName() Obtain The name of the bandwidth package
- * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package
+ * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package.
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package.
+ * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
+ * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
+ * @method string getChargeType() Obtain The billing mode of the bandwidth package.
+ * @method void setChargeType(string $ChargeType) Set The billing mode of the bandwidth package.
  */
 class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 {
     /**
-     * @var string The unique ID of the bandwidth package
+     * @var string The unique ID of the bandwidth package.
      */
     public $BandwidthPackageId;
 
     /**
-     * @var string The name of the bandwidth package
+     * @var string The name of the bandwidth package.
      */
     public $BandwidthPackageName;
 
     /**
-     * @param string $BandwidthPackageId The unique ID of the bandwidth package
-     * @param string $BandwidthPackageName The name of the bandwidth package
+     * @var string The billing mode of the bandwidth package.
+     */
+    public $ChargeType;
+
+    /**
+     * @param string $BandwidthPackageId The unique ID of the bandwidth package.
+     * @param string $BandwidthPackageName The name of the bandwidth package.
+     * @param string $ChargeType The billing mode of the bandwidth package.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 
         if (array_key_exists("BandwidthPackageName",$param) and $param["BandwidthPackageName"] !== null) {
             $this->BandwidthPackageName = $param["BandwidthPackageName"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
         }
     }
 }

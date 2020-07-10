@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
  * @method void setInstanceId(string $InstanceId) Set ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
+ * @method integer getIpv6Flag() Obtain Whether IPv6 is used. Default value: 0
+ * @method void setIpv6Flag(integer $Ipv6Flag) Set Whether IPv6 is used. Default value: 0
  */
 class CloseDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CloseDBExtranetAccessRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer Whether IPv6 is used. Default value: 0
+     */
+    public $Ipv6Flag;
+
+    /**
      * @param string $InstanceId ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
+     * @param integer $Ipv6Flag Whether IPv6 is used. Default value: 0
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CloseDBExtranetAccessRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
         }
     }
 }

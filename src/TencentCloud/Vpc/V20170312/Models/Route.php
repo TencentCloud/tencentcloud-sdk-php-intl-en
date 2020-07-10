@@ -64,6 +64,10 @@ CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
 Users can only add and operate USER-type routes.
  * @method string getRouteTableId() Obtain Route table instance ID, such as rtb-azd4dt1c.
  * @method void setRouteTableId(string $RouteTableId) Set Route table instance ID, such as rtb-azd4dt1c.
+ * @method string getDestinationIpv6CidrBlock() Obtain Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+ * @method void setDestinationIpv6CidrBlock(string $DestinationIpv6CidrBlock) Set Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+ * @method string getRouteItemId() Obtain Unique routing policy ID.
+ * @method void setRouteItemId(string $RouteItemId) Set Unique routing policy ID.
  */
 class Route extends AbstractModel
 {
@@ -122,6 +126,16 @@ Users can only add and operate USER-type routes.
     public $RouteTableId;
 
     /**
+     * @var string Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+     */
+    public $DestinationIpv6CidrBlock;
+
+    /**
+     * @var string Unique routing policy ID.
+     */
+    public $RouteItemId;
+
+    /**
      * @param string $DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
      * @param string $GatewayType Type of the next hop. Currently supported types are:
 CVM: CVM of the public gateway type;
@@ -144,6 +158,8 @@ NETD: Network probe route. When creating a network probe route, the system deliv
 CCN: CCN route. The system delivers by default. It cannot be edited or deleted.
 Users can only add and operate USER-type routes.
      * @param string $RouteTableId Route table instance ID, such as rtb-azd4dt1c.
+     * @param string $DestinationIpv6CidrBlock Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+     * @param string $RouteItemId Unique routing policy ID.
      */
     function __construct()
     {
@@ -188,6 +204,14 @@ Users can only add and operate USER-type routes.
 
         if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
             $this->RouteTableId = $param["RouteTableId"];
+        }
+
+        if (array_key_exists("DestinationIpv6CidrBlock",$param) and $param["DestinationIpv6CidrBlock"] !== null) {
+            $this->DestinationIpv6CidrBlock = $param["DestinationIpv6CidrBlock"];
+        }
+
+        if (array_key_exists("RouteItemId",$param) and $param["RouteItemId"] !== null) {
+            $this->RouteItemId = $param["RouteItemId"];
         }
     }
 }

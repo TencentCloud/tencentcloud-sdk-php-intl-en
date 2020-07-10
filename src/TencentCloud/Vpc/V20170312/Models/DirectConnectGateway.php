@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Direct Connect gateway object.
+ * The direct connect gateway object.
  *
- * @method string getDirectConnectGatewayId() Obtain Direct Connect `ID`.
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set Direct Connect `ID`.
- * @method string getDirectConnectGatewayName() Obtain Direct Connect gateway name.
- * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) Set Direct Connect gateway name.
- * @method string getVpcId() Obtain The `ID` of the `VPC` instance associated with the Direct Connect gateway.
- * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC` instance associated with the Direct Connect gateway.
+ * @method string getDirectConnectGatewayId() Obtain The direct connect gateway `ID`.
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The direct connect gateway `ID`.
+ * @method string getDirectConnectGatewayName() Obtain The direct connect gateway name.
+ * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) Set The direct connect gateway name.
+ * @method string getVpcId() Obtain The `ID` of the `VPC` instance associated with the direct connect gateway.
+ * @method void setVpcId(string $VpcId) Set The `ID` of the `VPC` instance associated with the direct connect gateway.
  * @method string getNetworkType() Obtain The associated network type:
 <li>`VPC` - VPC</li>
 <li>`CCN` - CCN</li>
@@ -33,50 +33,50 @@ use TencentCloud\Common\AbstractModel;
 <li>`VPC` - VPC</li>
 <li>`CCN` - CCN</li>
  * @method string getNetworkInstanceId() Obtain The `ID` of the associated network instance:
-<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
-<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
+<li>When the `NetworkType` is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the `NetworkType` is `CCN`, this value is the CCN instance `ID`</li>
  * @method void setNetworkInstanceId(string $NetworkInstanceId) Set The `ID` of the associated network instance:
-<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
-<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
- * @method string getGatewayType() Obtain Gateway type:
+<li>When the `NetworkType` is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the `NetworkType` is `CCN`, this value is the CCN instance `ID`</li>
+ * @method string getGatewayType() Obtain The gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT type</li>
-NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
- * @method void setGatewayType(string $GatewayType) Set Gateway type:
+<li>NAT type</li>
+The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+ * @method void setGatewayType(string $GatewayType) Set The gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT type</li>
-NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
- * @method string getCreateTime() Obtain Creation Time.
- * @method void setCreateTime(string $CreateTime) Set Creation Time.
- * @method string getDirectConnectGatewayIp() Obtain Direct Connect gateway IP.
- * @method void setDirectConnectGatewayIp(string $DirectConnectGatewayIp) Set Direct Connect gateway IP.
- * @method string getCcnId() Obtain The `ID` of the `CCN` instance associated with the Direct Connect gateway.
- * @method void setCcnId(string $CcnId) Set The `ID` of the `CCN` instance associated with the Direct Connect gateway.
+<li>NAT type</li>
+The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+ * @method string getCreateTime() Obtain The creation time.
+ * @method void setCreateTime(string $CreateTime) Set The creation time.
+ * @method string getDirectConnectGatewayIp() Obtain The direct connect gateway IP.
+ * @method void setDirectConnectGatewayIp(string $DirectConnectGatewayIp) Set The direct connect gateway IP.
+ * @method string getCcnId() Obtain The `ID` of the `CCN` instance associated with the direct connect gateway.
+ * @method void setCcnId(string $CcnId) Set The `ID` of the `CCN` instance associated with the direct connect gateway.
  * @method string getCcnRouteType() Obtain The route-learning type of the CCN:
 <li>`BGP` - Automatic learning.</li>
 <li>`STATIC` - Static, that is, user-configured.</li>
  * @method void setCcnRouteType(string $CcnRouteType) Set The route-learning type of the CCN:
 <li>`BGP` - Automatic learning.</li>
 <li>`STATIC` - Static, that is, user-configured.</li>
- * @method boolean getEnableBGP() Obtain Whether BGP is enabled.
- * @method void setEnableBGP(boolean $EnableBGP) Set Whether BGP is enabled.
- * @method boolean getEnableBGPCommunity() Obtain 
- * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) Set 
+ * @method boolean getEnableBGP() Obtain Whether the BGP is enabled.
+ * @method void setEnableBGP(boolean $EnableBGP) Set Whether the BGP is enabled.
+ * @method boolean getEnableBGPCommunity() Obtain Whether the `community` attribute of the BGP is enabled.
+ * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) Set Whether the `community` attribute of the BGP is enabled.
  */
 class DirectConnectGateway extends AbstractModel
 {
     /**
-     * @var string Direct Connect `ID`.
+     * @var string The direct connect gateway `ID`.
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @var string Direct Connect gateway name.
+     * @var string The direct connect gateway name.
      */
     public $DirectConnectGatewayName;
 
     /**
-     * @var string The `ID` of the `VPC` instance associated with the Direct Connect gateway.
+     * @var string The `ID` of the `VPC` instance associated with the direct connect gateway.
      */
     public $VpcId;
 
@@ -89,31 +89,31 @@ class DirectConnectGateway extends AbstractModel
 
     /**
      * @var string The `ID` of the associated network instance:
-<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
-<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
+<li>When the `NetworkType` is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the `NetworkType` is `CCN`, this value is the CCN instance `ID`</li>
      */
     public $NetworkInstanceId;
 
     /**
-     * @var string Gateway type:
+     * @var string The gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT type</li>
-NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+<li>NAT type</li>
+The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
      */
     public $GatewayType;
 
     /**
-     * @var string Creation Time.
+     * @var string The creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Direct Connect gateway IP.
+     * @var string The direct connect gateway IP.
      */
     public $DirectConnectGatewayIp;
 
     /**
-     * @var string The `ID` of the `CCN` instance associated with the Direct Connect gateway.
+     * @var string The `ID` of the `CCN` instance associated with the direct connect gateway.
      */
     public $CcnId;
 
@@ -125,37 +125,37 @@ NAT type supports network address switch configuration. After the type is confir
     public $CcnRouteType;
 
     /**
-     * @var boolean Whether BGP is enabled.
+     * @var boolean Whether the BGP is enabled.
      */
     public $EnableBGP;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the `community` attribute of the BGP is enabled.
      */
     public $EnableBGPCommunity;
 
     /**
-     * @param string $DirectConnectGatewayId Direct Connect `ID`.
-     * @param string $DirectConnectGatewayName Direct Connect gateway name.
-     * @param string $VpcId The `ID` of the `VPC` instance associated with the Direct Connect gateway.
+     * @param string $DirectConnectGatewayId The direct connect gateway `ID`.
+     * @param string $DirectConnectGatewayName The direct connect gateway name.
+     * @param string $VpcId The `ID` of the `VPC` instance associated with the direct connect gateway.
      * @param string $NetworkType The associated network type:
 <li>`VPC` - VPC</li>
 <li>`CCN` - CCN</li>
      * @param string $NetworkInstanceId The `ID` of the associated network instance:
-<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
-<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
-     * @param string $GatewayType Gateway type:
+<li>When the `NetworkType` is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the `NetworkType` is `CCN`, this value is the CCN instance `ID`</li>
+     * @param string $GatewayType The gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT type</li>
-NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
-     * @param string $CreateTime Creation Time.
-     * @param string $DirectConnectGatewayIp Direct Connect gateway IP.
-     * @param string $CcnId The `ID` of the `CCN` instance associated with the Direct Connect gateway.
+<li>NAT type</li>
+The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+     * @param string $CreateTime The creation time.
+     * @param string $DirectConnectGatewayIp The direct connect gateway IP.
+     * @param string $CcnId The `ID` of the `CCN` instance associated with the direct connect gateway.
      * @param string $CcnRouteType The route-learning type of the CCN:
 <li>`BGP` - Automatic learning.</li>
 <li>`STATIC` - Static, that is, user-configured.</li>
-     * @param boolean $EnableBGP Whether BGP is enabled.
-     * @param boolean $EnableBGPCommunity 
+     * @param boolean $EnableBGP Whether the BGP is enabled.
+     * @param boolean $EnableBGPCommunity Whether the `community` attribute of the BGP is enabled.
      */
     function __construct()
     {

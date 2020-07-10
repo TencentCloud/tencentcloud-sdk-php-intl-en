@@ -23,9 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Apigateway\V20180808\Models as Models;
 
 /**
- * @method Models\BindEnvironmentResponse BindEnvironment(Models\BindEnvironmentRequest $req) This API is used to bind a usage plan to a service environment.
+ * @method Models\BindEnvironmentResponse BindEnvironment(Models\BindEnvironmentRequest $req) This API is used to bind a usage plan to a service or API.
 After you publish a service to an environment, if the API requires authentication and can be called only when it is bound to a usage plan, you can use this API to bind a usage plan to the specified environment.
-Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to demote it.
+Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to degrade it.
  * @method Models\BindIPStrategyResponse BindIPStrategy(Models\BindIPStrategyRequest $req) This API is used to bind an IP policy to an API.
  * @method Models\BindSecretIdsResponse BindSecretIds(Models\BindSecretIdsRequest $req) This API is used to bind a key to a usage plan.
 You can bind a key to a usage plan and bind the usage plan to an environment where a service is published, so that callers can use the key to call APIs in the service. You can use this API to bind a key to a usage plan.
@@ -45,16 +45,21 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
  * @method Models\DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(Models\DeleteServiceSubDomainMappingRequest $req) This API is used to delete a custom domain name mapping in a service environment.
 You can use this API if you use a custom domain name and custom mapping. Please note that if you delete all mappings in all environments, a failure will be returned when this API is called.
  * @method Models\DeleteUsagePlanResponse DeleteUsagePlan(Models\DeleteUsagePlanRequest $req) This API is used to delete a usage plan.
- * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) This API is used to demote a usage plan of a service in an environment to the API level.
- 
+ * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) This API is used to degrade a usage plan of a service in an environment to the API level.
 This operation will be denied if there are no APIs under the service.
 This operation will also be denied if the current environment has not been published.
  * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) This API is used to query the details of an API deployed in API Gateway.
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) This API is used to display the throttling policies bound to an API.
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) This API is used to query the details of a key.
 After creating an API key, you can query its details by using this API.
+ * @method Models\DescribeApiKeysStatusResponse DescribeApiKeysStatus(Models\DescribeApiKeysStatusRequest $req) This API is used to query the list of keys.
+If you have created multiple API key pairs, you can use this API to query the information of one or more keys. This API does not display the `secretKey`.
  * @method Models\DescribeApiUsagePlanResponse DescribeApiUsagePlan(Models\DescribeApiUsagePlanRequest $req) This API is used to query the details of API usage plans in a service.
 To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
+ * @method Models\DescribeApisStatusResponse DescribeApisStatus(Models\DescribeApisStatusRequest $req) This API is used to view a certain API or the list of all APIs under a service and relevant information.
+ * @method Models\DescribeIPStrategyResponse DescribeIPStrategy(Models\DescribeIPStrategyRequest $req) This API is used to query IP policy details.
+ * @method Models\DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(Models\DescribeIPStrategyApisStatusRequest $req) This API is used to query the list of APIs to which an IP policy can be bound, i.e., the difference set between all APIs under the service and the APIs already bound to the policy.
+ * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) This API is used to query the list of service IP policies.
  * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) This API is used to search for logs.
  * @method Models\DescribeServiceResponse DescribeService(Models\DescribeServiceRequest $req) This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
  * @method Models\DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(Models\DescribeServiceEnvironmentListRequest $req) This API is used to query the list of environments under a service. All environments and their statuses under the queried service will be returned.
@@ -69,11 +74,13 @@ In API Gateway, you can bind a custom domain name to a service and map its paths
 In API Gateway, you can bind custom domain names to a service for service call. This API is used to query the list of custom domain names bound to a service.
  * @method Models\DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(Models\DescribeServiceUsagePlanRequest $req) This API is used to query the details of usage plans in a service.
 To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service.
+ * @method Models\DescribeServicesStatusResponse DescribeServicesStatus(Models\DescribeServicesStatusRequest $req) This API is used to query the list of one or more services and return relevant domain name, time, and other information.
  * @method Models\DescribeUsagePlanResponse DescribeUsagePlan(Models\DescribeUsagePlanRequest $req) This API is used to query the details of a usage plan, such as its name, QPS, creation time, and bound environment.
  * @method Models\DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(Models\DescribeUsagePlanEnvironmentsRequest $req) This API is used to query the list of environments bound to a usage plan.
 After binding a usage plan to environments, you can use this API to query all service environments bound to the usage plan.
  * @method Models\DescribeUsagePlanSecretIdsResponse DescribeUsagePlanSecretIds(Models\DescribeUsagePlanSecretIdsRequest $req) This API is used to query the list of keys bound to a usage plan.
 In API Gateway, a usage plan can be bound to multiple key pairs. You can use this API to query the list of keys bound to it.
+ * @method Models\DescribeUsagePlansStatusResponse DescribeUsagePlansStatus(Models\DescribeUsagePlansStatusRequest $req) This API is used to query the list of usage plans.
  * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) This API is used to disable an API key.
  * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) This API is used to enable a disabled API key.
  * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.

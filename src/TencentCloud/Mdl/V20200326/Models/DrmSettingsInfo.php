@@ -18,36 +18,60 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DRM configuration information, which takes effect only for HLS and DASH.
+ * Drm配置信息，目前只对HLS和DASH有效。
  *
- * @method string getState() Obtain Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
- * @method void setState(string $State) Set Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
- * @method string getContentId() Obtain `ContentId` of DRM encryption, which will be automatically created if this parameter is left empty.
-For more information on the custom creation method, please visit https://cloud.tencent.com/document/product/1000/40960
- * @method void setContentId(string $ContentId) Set `ContentId` of DRM encryption, which will be automatically created if this parameter is left empty.
-For more information on the custom creation method, please visit https://cloud.tencent.com/document/product/1000/40960
+ * @method string getState() Obtain 
+ * @method void setState(string $State) Set 
+ * @method string getContentId() Obtain When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://cloud.tencent.com/document/product/1000/40960).
+When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
+ * @method void setContentId(string $ContentId) Set When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://cloud.tencent.com/document/product/1000/40960).
+When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
+ * @method string getScheme() Obtain Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
+TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://cloud.tencent.com/solution/drm).
+CustomDRMKeys refers to an encryption key customized by the user.
+ * @method void setScheme(string $Scheme) Set Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
+TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://cloud.tencent.com/solution/drm).
+CustomDRMKeys refers to an encryption key customized by the user.
+ * @method array getKeys() Obtain The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setKeys(array $Keys) Set The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DrmSettingsInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
+     * @var string 
      */
     public $State;
 
     /**
-     * @var string `ContentId` of DRM encryption, which will be automatically created if this parameter is left empty.
-For more information on the custom creation method, please visit https://cloud.tencent.com/document/product/1000/40960
+     * @var string When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://cloud.tencent.com/document/product/1000/40960).
+When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
      */
     public $ContentId;
 
     /**
-     * @param string $State Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
-     * @param string $ContentId `ContentId` of DRM encryption, which will be automatically created if this parameter is left empty.
-For more information on the custom creation method, please visit https://cloud.tencent.com/document/product/1000/40960
+     * @var string Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
+TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://cloud.tencent.com/solution/drm).
+CustomDRMKeys refers to an encryption key customized by the user.
+     */
+    public $Scheme;
+
+    /**
+     * @var array The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Keys;
+
+    /**
+     * @param string $State 
+     * @param string $ContentId When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://cloud.tencent.com/document/product/1000/40960).
+When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
+     * @param string $Scheme Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
+TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://cloud.tencent.com/solution/drm).
+CustomDRMKeys refers to an encryption key customized by the user.
+     * @param array $Keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -68,6 +92,19 @@ For more information on the custom creation method, please visit https://cloud.t
 
         if (array_key_exists("ContentId",$param) and $param["ContentId"] !== null) {
             $this->ContentId = $param["ContentId"];
+        }
+
+        if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
+            $this->Scheme = $param["Scheme"];
+        }
+
+        if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
+            $this->Keys = [];
+            foreach ($param["Keys"] as $key => $value){
+                $obj = new DrmKey();
+                $obj->deserialize($value);
+                array_push($this->Keys, $obj);
+            }
         }
     }
 }

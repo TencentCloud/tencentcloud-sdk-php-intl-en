@@ -40,6 +40,8 @@ They represent weighted round robin and least connections, respectively. Default
 They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
  * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
+ * @method string getTargetType() Obtain Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
+ * @method void setTargetType(string $TargetType) Set Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ They represent weighted round robin and least connections, respectively. Default
     public $SniSwitch;
 
     /**
+     * @var string Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
+     */
+    public $TargetType;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
      * @param string $Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
@@ -100,6 +107,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @param string $Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
+     * @param string $TargetType Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ They represent weighted round robin and least connections, respectively. Default
 
         if (array_key_exists("SniSwitch",$param) and $param["SniSwitch"] !== null) {
             $this->SniSwitch = $param["SniSwitch"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
         }
     }
 }

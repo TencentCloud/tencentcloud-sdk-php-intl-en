@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlockIPTask request structure.
  *
- * @method string getTaskId() Obtain ModifyBlockIPList 接口返回的异步任务的ID。
- * @method void setTaskId(string $TaskId) Set ModifyBlockIPList 接口返回的异步任务的ID。
+ * @method string getTaskId() Obtain Async task ID returned by the `ModifyBlockIPList` API
+ * @method void setTaskId(string $TaskId) Set Async task ID returned by the `ModifyBlockIPList` API
  */
 class DescribeBlockIPTaskRequest extends AbstractModel
 {
     /**
-     * @var string ModifyBlockIPList 接口返回的异步任务的ID。
+     * @var string Async task ID returned by the `ModifyBlockIPList` API
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId ModifyBlockIPList 接口返回的异步任务的ID。
+     * @param string $TaskId Async task ID returned by the `ModifyBlockIPList` API
      */
     function __construct()
     {

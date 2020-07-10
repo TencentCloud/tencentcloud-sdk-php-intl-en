@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Flow Log
  *
- * @method string getVpcId() Obtain The VPC ID or the unified ID. We recommend you use the unified ID
- * @method void setVpcId(string $VpcId) Set The VPC ID or the unified ID. We recommend you use the unified ID
- * @method string getFlowLogId() Obtain The unique ID of the flow log
- * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log
- * @method string getFlowLogName() Obtain The name of the flow log instance
- * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance
- * @method string getResourceType() Obtain The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
- * @method void setResourceType(string $ResourceType) Set The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
- * @method string getResourceId() Obtain The unique ID of the resource
- * @method void setResourceId(string $ResourceId) Set The unique ID of the resource
- * @method string getTrafficType() Obtain The collection type of the flow log. ACCEPT|REJECT|ALL
- * @method void setTrafficType(string $TrafficType) Set The collection type of the flow log. ACCEPT|REJECT|ALL
- * @method string getCloudLogId() Obtain The storage ID of the flow log
- * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log
- * @method string getCloudLogState() Obtain Flow log storage ID status
- * @method void setCloudLogState(string $CloudLogState) Set Flow log storage ID status
- * @method string getFlowLogDescription() Obtain Flow log description
- * @method void setFlowLogDescription(string $FlowLogDescription) Set Flow log description
- * @method string getCreatedTime() Obtain Flow log creation time
- * @method void setCreatedTime(string $CreatedTime) Set Flow log creation time
+ * @method string getVpcId() Obtain The VPC ID or the unified ID. We recommend you use the unified ID.
+ * @method void setVpcId(string $VpcId) Set The VPC ID or the unified ID. We recommend you use the unified ID.
+ * @method string getFlowLogId() Obtain The unique ID of the flow log.
+ * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
+ * @method string getFlowLogName() Obtain The name of the flow log instance.
+ * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
+ * @method string getResourceType() Obtain The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+ * @method void setResourceType(string $ResourceType) Set The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+ * @method string getResourceId() Obtain The unique ID of the resource.
+ * @method void setResourceId(string $ResourceId) Set The unique ID of the resource.
+ * @method string getTrafficType() Obtain The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+ * @method void setTrafficType(string $TrafficType) Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+ * @method string getCloudLogId() Obtain The storage ID of the flow log.
+ * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
+ * @method string getCloudLogState() Obtain The storage ID status of the flow log.
+ * @method void setCloudLogState(string $CloudLogState) Set The storage ID status of the flow log.
+ * @method string getFlowLogDescription() Obtain The flow log description.
+ * @method void setFlowLogDescription(string $FlowLogDescription) Set The flow log description.
+ * @method string getCreatedTime() Obtain The creation time of the flow log.
+ * @method void setCreatedTime(string $CreatedTime) Set The creation time of the flow log.
  */
 class FlowLog extends AbstractModel
 {
     /**
-     * @var string The VPC ID or the unified ID. We recommend you use the unified ID
+     * @var string The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public $VpcId;
 
     /**
-     * @var string The unique ID of the flow log
+     * @var string The unique ID of the flow log.
      */
     public $FlowLogId;
 
     /**
-     * @var string The name of the flow log instance
+     * @var string The name of the flow log instance.
      */
     public $FlowLogName;
 
     /**
-     * @var string The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+     * @var string The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public $ResourceType;
 
     /**
-     * @var string The unique ID of the resource
+     * @var string The unique ID of the resource.
      */
     public $ResourceId;
 
     /**
-     * @var string The collection type of the flow log. ACCEPT|REJECT|ALL
+     * @var string The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public $TrafficType;
 
     /**
-     * @var string The storage ID of the flow log
+     * @var string The storage ID of the flow log.
      */
     public $CloudLogId;
 
     /**
-     * @var string Flow log storage ID status
+     * @var string The storage ID status of the flow log.
      */
     public $CloudLogState;
 
     /**
-     * @var string Flow log description
+     * @var string The flow log description.
      */
     public $FlowLogDescription;
 
     /**
-     * @var string Flow log creation time
+     * @var string The creation time of the flow log.
      */
     public $CreatedTime;
 
     /**
-     * @param string $VpcId The VPC ID or the unified ID. We recommend you use the unified ID
-     * @param string $FlowLogId The unique ID of the flow log
-     * @param string $FlowLogName The name of the flow log instance
-     * @param string $ResourceType The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
-     * @param string $ResourceId The unique ID of the resource
-     * @param string $TrafficType The collection type of the flow log. ACCEPT|REJECT|ALL
-     * @param string $CloudLogId The storage ID of the flow log
-     * @param string $CloudLogState Flow log storage ID status
-     * @param string $FlowLogDescription Flow log description
-     * @param string $CreatedTime Flow log creation time
+     * @param string $VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param string $FlowLogId The unique ID of the flow log.
+     * @param string $FlowLogName The name of the flow log instance.
+     * @param string $ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * @param string $ResourceId The unique ID of the resource.
+     * @param string $TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @param string $CloudLogId The storage ID of the flow log.
+     * @param string $CloudLogState The storage ID status of the flow log.
+     * @param string $FlowLogDescription The flow log description.
+     * @param string $CreatedTime The creation time of the flow log.
      */
     function __construct()
     {

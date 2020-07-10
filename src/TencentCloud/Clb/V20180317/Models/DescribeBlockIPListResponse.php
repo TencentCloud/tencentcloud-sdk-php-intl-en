@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlockIPList response structure.
  *
- * @method integer getBlockedIPCount() Obtain 返回的IP的数量
- * @method void setBlockedIPCount(integer $BlockedIPCount) Set 返回的IP的数量
- * @method string getClientIPField() Obtain 获取用户真实IP的字段
- * @method void setClientIPField(string $ClientIPField) Set 获取用户真实IP的字段
- * @method array getBlockedIPList() Obtain 加入了12360黑名单的IP列表
- * @method void setBlockedIPList(array $BlockedIPList) Set 加入了12360黑名单的IP列表
+ * @method integer getBlockedIPCount() Obtain Number of returned IPs
+ * @method void setBlockedIPCount(integer $BlockedIPCount) Set Number of returned IPs
+ * @method string getClientIPField() Obtain Field for getting real client IP
+ * @method void setClientIPField(string $ClientIPField) Set Field for getting real client IP
+ * @method array getBlockedIPList() Obtain List of IPs added to blacklist 12360
+ * @method void setBlockedIPList(array $BlockedIPList) Set List of IPs added to blacklist 12360
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeBlockIPListResponse extends AbstractModel
 {
     /**
-     * @var integer 返回的IP的数量
+     * @var integer Number of returned IPs
      */
     public $BlockedIPCount;
 
     /**
-     * @var string 获取用户真实IP的字段
+     * @var string Field for getting real client IP
      */
     public $ClientIPField;
 
     /**
-     * @var array 加入了12360黑名单的IP列表
+     * @var array List of IPs added to blacklist 12360
      */
     public $BlockedIPList;
 
@@ -52,9 +52,9 @@ class DescribeBlockIPListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $BlockedIPCount 返回的IP的数量
-     * @param string $ClientIPField 获取用户真实IP的字段
-     * @param array $BlockedIPList 加入了12360黑名单的IP列表
+     * @param integer $BlockedIPCount Number of returned IPs
+     * @param string $ClientIPField Field for getting real client IP
+     * @param array $BlockedIPList List of IPs added to blacklist 12360
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

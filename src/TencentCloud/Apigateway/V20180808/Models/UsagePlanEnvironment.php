@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Usage plan binding details
+ * Details of environments bound to usage plan.
  *
  * @method string getServiceId() Obtain Unique ID of bound service.
 Note: this field may return null, indicating that no valid values can be obtained.

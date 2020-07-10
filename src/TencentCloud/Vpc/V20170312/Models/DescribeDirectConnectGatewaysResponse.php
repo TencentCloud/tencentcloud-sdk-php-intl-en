@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDirectConnectGateways response structure.
  *
- * @method integer getTotalCount() Obtain The number of objects meeting the condition.
- * @method void setTotalCount(integer $TotalCount) Set The number of objects meeting the condition.
- * @method array getDirectConnectGatewaySet() Obtain The object array of the Direct Connect gateway.
- * @method void setDirectConnectGatewaySet(array $DirectConnectGatewaySet) Set The object array of the Direct Connect gateway.
+ * @method integer getTotalCount() Obtain The number of eligible objects.
+ * @method void setTotalCount(integer $TotalCount) Set The number of eligible objects.
+ * @method array getDirectConnectGatewaySet() Obtain The object array of the direct connect gateway.
+ * @method void setDirectConnectGatewaySet(array $DirectConnectGatewaySet) Set The object array of the direct connect gateway.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeDirectConnectGatewaysResponse extends AbstractModel
 {
     /**
-     * @var integer The number of objects meeting the condition.
+     * @var integer The number of eligible objects.
      */
     public $TotalCount;
 
     /**
-     * @var array The object array of the Direct Connect gateway.
+     * @var array The object array of the direct connect gateway.
      */
     public $DirectConnectGatewaySet;
 
@@ -45,8 +45,8 @@ class DescribeDirectConnectGatewaysResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount The number of objects meeting the condition.
-     * @param array $DirectConnectGatewaySet The object array of the Direct Connect gateway.
+     * @param integer $TotalCount The number of eligible objects.
+     * @param array $DirectConnectGatewaySet The object array of the direct connect gateway.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

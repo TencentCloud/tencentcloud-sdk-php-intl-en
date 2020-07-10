@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWhiteBoxDeviceFingerprints request structure.
  *
- * @method string getKeyId() Obtain 白盒密钥ID
- * @method void setKeyId(string $KeyId) Set 白盒密钥ID
+ * @method string getKeyId() Obtain White-box key ID
+ * @method void setKeyId(string $KeyId) Set White-box key ID
  */
 class DescribeWhiteBoxDeviceFingerprintsRequest extends AbstractModel
 {
     /**
-     * @var string 白盒密钥ID
+     * @var string White-box key ID
      */
     public $KeyId;
 
     /**
-     * @param string $KeyId 白盒密钥ID
+     * @param string $KeyId White-box key ID
      */
     function __construct()
     {

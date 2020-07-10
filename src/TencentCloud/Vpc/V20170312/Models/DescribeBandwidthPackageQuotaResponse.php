@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBandwidthPackageQuota response structure.
  *
- * @method array getQuotaSet() Obtain The data structure of the bandwidth package quota
- * @method void setQuotaSet(array $QuotaSet) Set The data structure of the bandwidth package quota
+ * @method array getQuotaSet() Obtain The quota of the bandwidth package.
+ * @method void setQuotaSet(array $QuotaSet) Set The quota of the bandwidth package.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeBandwidthPackageQuotaResponse extends AbstractModel
 {
     /**
-     * @var array The data structure of the bandwidth package quota
+     * @var array The quota of the bandwidth package.
      */
     public $QuotaSet;
 
@@ -38,7 +38,7 @@ class DescribeBandwidthPackageQuotaResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $QuotaSet The data structure of the bandwidth package quota
+     * @param array $QuotaSet The quota of the bandwidth package.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

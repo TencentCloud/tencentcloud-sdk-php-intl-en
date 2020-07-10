@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBlockIPList response structure.
  *
- * @method string getJodId() Obtain 异步任务的ID
- * @method void setJodId(string $JodId) Set 异步任务的ID
+ * @method string getJodId() Obtain Async task ID
+ * @method void setJodId(string $JodId) Set Async task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ModifyBlockIPListResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务的ID
+     * @var string Async task ID
      */
     public $JodId;
 
@@ -38,7 +38,7 @@ class ModifyBlockIPListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JodId 异步任务的ID
+     * @param string $JodId Async task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

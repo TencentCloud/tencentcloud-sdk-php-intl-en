@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBandwidthPackage response structure.
  *
- * @method string getBandwidthPackageId() Obtain The ID of the bandwidth package
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The ID of the bandwidth package
- * @method array getBandwidthPackageIds() Obtain The IDs of the bandwidth package (valid when the applied number is greater than 1)
- * @method void setBandwidthPackageIds(array $BandwidthPackageIds) Set The IDs of the bandwidth package (valid when the applied number is greater than 1)
+ * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package.
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package.
+ * @method array getBandwidthPackageIds() Obtain The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
+ * @method void setBandwidthPackageIds(array $BandwidthPackageIds) Set The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateBandwidthPackageResponse extends AbstractModel
 {
     /**
-     * @var string The ID of the bandwidth package
+     * @var string The unique ID of the bandwidth package.
      */
     public $BandwidthPackageId;
 
     /**
-     * @var array The IDs of the bandwidth package (valid when the applied number is greater than 1)
+     * @var array The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
      */
     public $BandwidthPackageIds;
 
@@ -45,8 +45,8 @@ class CreateBandwidthPackageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BandwidthPackageId The ID of the bandwidth package
-     * @param array $BandwidthPackageIds The IDs of the bandwidth package (valid when the applied number is greater than 1)
+     * @param string $BandwidthPackageId The unique ID of the bandwidth package.
+     * @param array $BandwidthPackageIds The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

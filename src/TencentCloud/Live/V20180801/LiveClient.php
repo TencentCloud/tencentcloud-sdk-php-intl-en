@@ -68,6 +68,15 @@ Note: only one screencapturing template can be associated with one domain name.
  * @method Models\CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(Models\CreateLiveTranscodeTemplateRequest $req) After a transcoding template is created and a template ID is successfully returned, you need to call the [CreateLiveTranscodeRule](/document/product/267/32647) API and bind the returned template ID to the stream.
 <br>Transcoding-related document: [LVB Remuxing and Transcoding](/document/product/267/32736).
  * @method Models\CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(Models\CreateLiveWatermarkRuleRequest $req) To create a watermarking rule, you need to first call the [AddLiveWatermark](/document/product/267/30154) API to add a watermark and bind the returned watermark ID to the stream.
+ * @method Models\CreateRecordTaskResponse CreateRecordTask(Models\CreateRecordTaskRequest $req) 创建一个在指定时间启动、结束的录制任务，并使用指定录制模板ID对应的配置进行录制。
+- 使用前提
+1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
+2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 对应文档。
+- 注意事项
+1. 断流会结束当前录制并生成录制文件。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常录制，与是否多次推、断流无关。
+2. 使用上避免创建时间段相互重叠的录制任务。若同一条流当前存在多个时段重叠的任务，为避免重复录制系统将启动最多3个录制任务。
+3. 创建的录制任务记录在平台侧只保留3个月。
+4. 当前录制任务管理API（CreateRecordTask/StopRecordTask/DeleteRecordTask）与旧API（CreateLiveRecord/StopLiveRecord/DeleteLiveRecord）不兼容，两套接口不能混用。
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) This API is used to delete a callback rule.
  * @method Models\DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(Models\DeleteLiveCallbackTemplateRequest $req) This API deletes a callback template.
  * @method Models\DeleteLiveCertResponse DeleteLiveCert(Models\DeleteLiveCertRequest $req) This API is used to delete a certificate corresponding to the domain name.
@@ -82,9 +91,13 @@ Note: only one screencapturing template can be associated with one domain name.
  * @method Models\DeleteLiveTranscodeTemplateResponse DeleteLiveTranscodeTemplate(Models\DeleteLiveTranscodeTemplateRequest $req) This API is used to delete a transcoding template.
  * @method Models\DeleteLiveWatermarkResponse DeleteLiveWatermark(Models\DeleteLiveWatermarkRequest $req) This API is used to delete a watermark.
  * @method Models\DeleteLiveWatermarkRuleResponse DeleteLiveWatermarkRule(Models\DeleteLiveWatermarkRuleRequest $req) This API is used to delete a watermarking rule.
+ * @method Models\DeleteRecordTaskResponse DeleteRecordTask(Models\DeleteRecordTaskRequest $req) 删除录制任务配置。删除操作不影响正在运行当中的任务，仅对删除之后新的推流有效。
+ * @method Models\DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(Models\DescribeAllStreamPlayInfoListRequest $req) 输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
  * @method Models\DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(Models\DescribeBillBandwidthAndFluxListRequest $req) This API is used to query the data of billable LVB bandwidth and traffic.
  * @method Models\DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(Models\DescribeConcurrentRecordStreamNumRequest $req) This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
  * @method Models\DescribeGroupProIspPlayInfoListResponse DescribeGroupProIspPlayInfoList(Models\DescribeGroupProIspPlayInfoListRequest $req) This API is used to query the downstream playback data by district and ISP.
+ * @method Models\DescribeHttpStatusInfoListResponse DescribeHttpStatusInfoList(Models\DescribeHttpStatusInfoListRequest $req) This API is used to query the number of each playback HTTP status code at a 5-minute granularity in a certain period of time.
+Note: Data can be queried one hour after it is generated. For example, data between 10:00 and 10:59 cannot be queried until 12:00.
  * @method Models\DescribeLiveCallbackRulesResponse DescribeLiveCallbackRules(Models\DescribeLiveCallbackRulesRequest $req) This API is used to get the callback rule list.
  * @method Models\DescribeLiveCallbackTemplateResponse DescribeLiveCallbackTemplate(Models\DescribeLiveCallbackTemplateRequest $req) This API is used to get a single callback template.
  * @method Models\DescribeLiveCallbackTemplatesResponse DescribeLiveCallbackTemplates(Models\DescribeLiveCallbackTemplatesRequest $req) This API is used to get the callback template list.
@@ -93,6 +106,7 @@ Note: only one screencapturing template can be associated with one domain name.
  * @method Models\DescribeLiveDelayInfoListResponse DescribeLiveDelayInfoList(Models\DescribeLiveDelayInfoListRequest $req) This API is used to get the list of delayed playbacks.
  * @method Models\DescribeLiveDomainResponse DescribeLiveDomain(Models\DescribeLiveDomainRequest $req) This API is used to query the LVB domain name information.
  * @method Models\DescribeLiveDomainCertResponse DescribeLiveDomainCert(Models\DescribeLiveDomainCertRequest $req) This API is used to get the domain name certificate information.
+ * @method Models\DescribeLiveDomainPlayInfoListResponse DescribeLiveDomainPlayInfoList(Models\DescribeLiveDomainPlayInfoListRequest $req) This API is used to query the real-time downstream playback data at the domain name level.
  * @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) This API is used to query domain names by domain name status and type.
  * @method Models\DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(Models\DescribeLiveForbidStreamListRequest $req) This API is used to get the forbidden stream list.
  * @method Models\DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(Models\DescribeLivePlayAuthKeyRequest $req) This API is used to query the playback authentication key.
@@ -109,16 +123,29 @@ Note: This API can filter by IsFilter and return the push history.
  * @method Models\DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(Models\DescribeLiveStreamOnlineListRequest $req) This API is used to return the live stream list.
  * @method Models\DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(Models\DescribeLiveStreamPublishedListRequest $req) This API is used to return the list of pushed streams. <br>
 Note: Up to 10,000 entries can be queried per page. More data can be obtained by adjusting the query time range.
+ * @method Models\DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(Models\DescribeLiveStreamPushInfoListRequest $req) This API is used to query the push information of all real-time streams, including client IP, server IP, frame rate, bitrate, domain name, and push start time.
  * @method Models\DescribeLiveStreamStateResponse DescribeLiveStreamState(Models\DescribeLiveStreamStateRequest $req) This API is used to return the stream status such as active, inactive, or forbidden.
+ * @method Models\DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(Models\DescribeLiveTranscodeDetailInfoRequest $req) This API is used to query the transcoding details on a day.
+Note: Only the detailed data for one of the past 30 days can be queried currently.
  * @method Models\DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(Models\DescribeLiveTranscodeRulesRequest $req) This API is used to get the list of transcoding rules.
  * @method Models\DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(Models\DescribeLiveTranscodeTemplateRequest $req) This API is used to get a single transcoding template.
  * @method Models\DescribeLiveTranscodeTemplatesResponse DescribeLiveTranscodeTemplates(Models\DescribeLiveTranscodeTemplatesRequest $req) This API is used to get the transcoding template list.
  * @method Models\DescribeLiveWatermarkResponse DescribeLiveWatermark(Models\DescribeLiveWatermarkRequest $req) This API is used to get the information of a single watermark.
  * @method Models\DescribeLiveWatermarkRulesResponse DescribeLiveWatermarkRules(Models\DescribeLiveWatermarkRulesRequest $req) This API is used to get the watermarking rule list.
  * @method Models\DescribeLiveWatermarksResponse DescribeLiveWatermarks(Models\DescribeLiveWatermarksRequest $req) This API is used to query the watermark list.
+ * @method Models\DescribePlayErrorCodeDetailInfoListResponse DescribePlayErrorCodeDetailInfoList(Models\DescribePlayErrorCodeDetailInfoListRequest $req) This API is used to query the information of downstream playback error codes, i.e., the occurrences of each HTTP error code (4xx and 5xx) at a 1-minute granularity in a certain period of time.
+
+
+ * @method Models\DescribePlayErrorCodeSumInfoListResponse DescribePlayErrorCodeSumInfoList(Models\DescribePlayErrorCodeSumInfoListRequest $req) This API is used to query the information of downstream playback error codes.
  * @method Models\DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoList(Models\DescribeProIspPlaySumInfoListRequest $req) This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
+ * @method Models\DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(Models\DescribeProvinceIspPlayInfoListRequest $req) This API is used to query the downstream playback data of an ISP in a district, including bandwidth, traffic, number of requests, and number of concurrent connections.
+ * @method Models\DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(Models\DescribeScreenShotSheetNumListRequest $req) 接口用来查询直播增值业务--截图的张数
  * @method Models\DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(Models\DescribeStreamDayPlayInfoListRequest $req) This API is used to query the playback data of each stream at the day level, including the total traffic.
+ * @method Models\DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(Models\DescribeStreamPlayInfoListRequest $req) This API is used to query the playback data and supports querying the playback details by stream name and aggregated data by playback domain name.
+Note: To query by AppName, you need to submit a ticket for application.
  * @method Models\DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(Models\DescribeStreamPushInfoListRequest $req) This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
+ * @method Models\DescribeTopClientIpSumInfoListResponse DescribeTopClientIpSumInfoList(Models\DescribeTopClientIpSumInfoListRequest $req) This API is used to query the information of the top n client IPs in a certain period of time (top 1,000 is supported currently).
+ * @method Models\DescribeVisitTopSumInfoListResponse DescribeVisitTopSumInfoList(Models\DescribeVisitTopSumInfoListRequest $req) This API is used to query the information of the top n domain names and stream IDs in a certain period of time (top 1,000 is supported currently).
  * @method Models\DropLiveStreamResponse DropLiveStream(Models\DropLiveStreamRequest $req) This API is used to disconnect the push connection, which can be resumed.
  * @method Models\EnableLiveDomainResponse EnableLiveDomain(Models\EnableLiveDomainRequest $req) This API is used to enable a disabled LVB domain name.
  * @method Models\ForbidLiveDomainResponse ForbidLiveDomain(Models\ForbidLiveDomainRequest $req) This API is used to disable an LVB domain name.
@@ -135,6 +162,7 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
  * @method Models\ResumeDelayLiveStreamResponse ResumeDelayLiveStream(Models\ResumeDelayLiveStreamRequest $req) This API is used to resume a delayed playback.
  * @method Models\ResumeLiveStreamResponse ResumeLiveStream(Models\ResumeLiveStreamRequest $req) This API is used to resume the push of a specific stream.
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) Note: Recording files are stored on the VOD platform. To use the recording feature, you need to activate a VOD account and ensure that it is available. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing method. For more information, please see the corresponding document.
+ * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) 提前结束录制，并中止运行中的录制任务。任务被成功中止后将不再启动。
  * @method Models\UnBindLiveDomainCertResponse UnBindLiveDomainCert(Models\UnBindLiveDomainCertRequest $req) This API is used to unbind a domain name certificate.
  * @method Models\UpdateLiveWatermarkResponse UpdateLiveWatermark(Models\UpdateLiveWatermarkRequest $req) This API is used to update a watermark.
  */

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlockIPTask response structure.
  *
- * @method integer getStatus() Obtain 1 running，2 fail，6 succ
- * @method void setStatus(integer $Status) Set 1 running，2 fail，6 succ
+ * @method integer getStatus() Obtain 1: running; 2: failed; 6: succeeded
+ * @method void setStatus(integer $Status) Set 1: running; 2: failed; 6: succeeded
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeBlockIPTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 1 running，2 fail，6 succ
+     * @var integer 1: running; 2: failed; 6: succeeded
      */
     public $Status;
 
@@ -38,7 +38,7 @@ class DescribeBlockIPTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 1 running，2 fail，6 succ
+     * @param integer $Status 1: running; 2: failed; 6: succeeded
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

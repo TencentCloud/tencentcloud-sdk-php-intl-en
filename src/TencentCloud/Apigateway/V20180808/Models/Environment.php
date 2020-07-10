@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Environment
+ * Information of service release environment.
  *
  * @method string getEnvironmentName() Obtain Environment name.
  * @method void setEnvironmentName(string $EnvironmentName) Set Environment name.

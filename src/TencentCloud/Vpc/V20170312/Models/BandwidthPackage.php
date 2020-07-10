@@ -18,44 +18,44 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Structure of information on the bandwidth package
+ * The structure of information of the bandwidth package.
  *
- * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package
- * @method string getNetworkType() Obtain The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
- * @method void setNetworkType(string $NetworkType) Set The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
- * @method string getChargeType() Obtain The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
- * @method void setChargeType(string $ChargeType) Set The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
- * @method string getBandwidthPackageName() Obtain The name of the bandwidth package
- * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package
+ * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package.
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package.
+ * @method string getNetworkType() Obtain The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+ * @method void setNetworkType(string $NetworkType) Set The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+ * @method string getChargeType() Obtain The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+ * @method void setChargeType(string $ChargeType) Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+ * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
+ * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
  * @method string getCreatedTime() Obtain The creation time of the bandwidth package, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
  * @method void setCreatedTime(string $CreatedTime) Set The creation time of the bandwidth package, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method string getStatus() Obtain The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
- * @method void setStatus(string $Status) Set The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
- * @method array getResourceSet() Obtain The resource information of the bandwidth package
- * @method void setResourceSet(array $ResourceSet) Set The resource information of the bandwidth package
- * @method integer getBandwidth() Obtain The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
- * @method void setBandwidth(integer $Bandwidth) Set The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+ * @method string getStatus() Obtain The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+ * @method void setStatus(string $Status) Set The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+ * @method array getResourceSet() Obtain The resource information of the bandwidth package.
+ * @method void setResourceSet(array $ResourceSet) Set The resource information of the bandwidth package.
+ * @method integer getBandwidth() Obtain The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+ * @method void setBandwidth(integer $Bandwidth) Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
  */
 class BandwidthPackage extends AbstractModel
 {
     /**
-     * @var string The unique ID of the bandwidth package
+     * @var string The unique ID of the bandwidth package.
      */
     public $BandwidthPackageId;
 
     /**
-     * @var string The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+     * @var string The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
      */
     public $NetworkType;
 
     /**
-     * @var string The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * @var string The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
      */
     public $ChargeType;
 
     /**
-     * @var string The name of the bandwidth package
+     * @var string The name of the bandwidth package.
      */
     public $BandwidthPackageName;
 
@@ -65,29 +65,29 @@ class BandwidthPackage extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+     * @var string The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
      */
     public $Status;
 
     /**
-     * @var array The resource information of the bandwidth package
+     * @var array The resource information of the bandwidth package.
      */
     public $ResourceSet;
 
     /**
-     * @var integer The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+     * @var integer The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
      */
     public $Bandwidth;
 
     /**
-     * @param string $BandwidthPackageId The unique ID of the bandwidth package
-     * @param string $NetworkType The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
-     * @param string $ChargeType The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
-     * @param string $BandwidthPackageName The name of the bandwidth package
+     * @param string $BandwidthPackageId The unique ID of the bandwidth package.
+     * @param string $NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+     * @param string $ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * @param string $BandwidthPackageName The name of the bandwidth package.
      * @param string $CreatedTime The creation time of the bandwidth package, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
-     * @param string $Status The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
-     * @param array $ResourceSet The resource information of the bandwidth package
-     * @param integer $Bandwidth The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+     * @param string $Status The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+     * @param array $ResourceSet The resource information of the bandwidth package.
+     * @param integer $Bandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
      */
     function __construct()
     {

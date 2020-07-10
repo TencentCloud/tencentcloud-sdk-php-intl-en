@@ -26,18 +26,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set Log end time
  * @method string getServiceId() Obtain Service ID
  * @method void setServiceId(string $ServiceId) Set Service ID
- * @method array getFilters() Obtain Exact search by `apiid` or `reqid`
- * @method void setFilters(array $Filters) Set Exact search by `apiid` or `reqid`
+ * @method array getFilters() Obtain Reserved field
+ * @method void setFilters(array $Filters) Set Reserved field
  * @method integer getLimit() Obtain Number of logs to be returned at a time. Maximum value: 100
  * @method void setLimit(integer $Limit) Set Number of logs to be returned at a time. Maximum value: 100
  * @method string getConText() Obtain Subsequent content can be obtained based on the `ConText` returned last time. Up to 10,000 data entries can be obtained
  * @method void setConText(string $ConText) Set Subsequent content can be obtained based on the `ConText` returned last time. Up to 10,000 data entries can be obtained
  * @method string getSort() Obtain Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
  * @method void setSort(string $Sort) Set Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
- * @method string getQuery() Obtain Fuzzy search for log by keyword
- * @method void setQuery(string $Query) Set Fuzzy search for log by keyword
- * @method array getLogQuerys() Obtain 
- * @method void setLogQuerys(array $LogQuerys) Set 
+ * @method string getQuery() Obtain Reserved field
+ * @method void setQuery(string $Query) Set Reserved field
+ * @method array getLogQuerys() Obtain Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
+ * @method void setLogQuerys(array $LogQuerys) Set Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
  */
 class DescribeLogSearchRequest extends AbstractModel
 {
@@ -57,7 +77,7 @@ class DescribeLogSearchRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var array Exact search by `apiid` or `reqid`
+     * @var array Reserved field
      */
     public $Filters;
 
@@ -77,12 +97,22 @@ class DescribeLogSearchRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var string Fuzzy search for log by keyword
+     * @var string Reserved field
      */
     public $Query;
 
     /**
-     * @var array 
+     * @var array Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
      */
     public $LogQuerys;
 
@@ -90,12 +120,22 @@ class DescribeLogSearchRequest extends AbstractModel
      * @param string $StartTime Log start time
      * @param string $EndTime Log end time
      * @param string $ServiceId Service ID
-     * @param array $Filters Exact search by `apiid` or `reqid`
+     * @param array $Filters Reserved field
      * @param integer $Limit Number of logs to be returned at a time. Maximum value: 100
      * @param string $ConText Subsequent content can be obtained based on the `ConText` returned last time. Up to 10,000 data entries can be obtained
      * @param string $Sort Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
-     * @param string $Query Fuzzy search for log by keyword
-     * @param array $LogQuerys 
+     * @param string $Query Reserved field
+     * @param array $LogQuerys Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
      */
     function __construct()
     {

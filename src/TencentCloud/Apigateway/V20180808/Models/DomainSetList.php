@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() Obtain Domain name.
  * @method void setDomainName(string $DomainName) Set Domain name.
- * @method integer getStatus() Obtain Domain name resolution status. True: success; Flase: failure.
- * @method void setStatus(integer $Status) Set Domain name resolution status. True: success; Flase: failure.
+ * @method integer getStatus() Obtain Domain name resolution status. True: success; False: failure.
+ * @method void setStatus(integer $Status) Set Domain name resolution status. True: success; False: failure.
  * @method string getCertificateId() Obtain Certificate ID.
  * @method void setCertificateId(string $CertificateId) Set Certificate ID.
  * @method boolean getIsDefaultMapping() Obtain Whether the default path mapping is used.
@@ -41,7 +41,7 @@ class DomainSetList extends AbstractModel
     public $DomainName;
 
     /**
-     * @var integer Domain name resolution status. True: success; Flase: failure.
+     * @var integer Domain name resolution status. True: success; False: failure.
      */
     public $Status;
 
@@ -67,7 +67,7 @@ class DomainSetList extends AbstractModel
 
     /**
      * @param string $DomainName Domain name.
-     * @param integer $Status Domain name resolution status. True: success; Flase: failure.
+     * @param integer $Status Domain name resolution status. True: success; False: failure.
      * @param string $CertificateId Certificate ID.
      * @param boolean $IsDefaultMapping Whether the default path mapping is used.
      * @param string $Protocol Custom domain name protocol type.

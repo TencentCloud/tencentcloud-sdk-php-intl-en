@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoadBalancerListeners request structure.
  *
- * @method string getLoadBalancerId() Obtain 负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set 负载均衡实例 ID
- * @method array getListenerIds() Obtain 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
- * @method void setListenerIds(array $ListenerIds) Set 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+ * @method string getLoadBalancerId() Obtain CLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method array getListenerIds() Obtain Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+ * @method void setListenerIds(array $ListenerIds) Set Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
  */
 class DeleteLoadBalancerListenersRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string CLB instance ID
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+     * @var array Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
      */
     public $ListenerIds;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param array $ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+     * @param string $LoadBalancerId CLB instance ID
+     * @param array $ListenerIds Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
      */
     function __construct()
     {

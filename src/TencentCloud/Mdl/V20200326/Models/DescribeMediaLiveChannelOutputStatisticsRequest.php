@@ -30,8 +30,8 @@ UTC time, such as `2020-01-01T12:00:00Z`.
 UTC time, such as `2020-01-01T12:00:00Z`.
  * @method void setEndTime(string $EndTime) Set Statistics end time, which is one hour after `StartTime` by default.
 UTC time, such as `2020-01-01T12:00:00Z`.
- * @method string getPeriod() Obtain 
- * @method void setPeriod(string $Period) Set 
+ * @method string getPeriod() Obtain Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
+ * @method void setPeriod(string $Period) Set Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
  */
 class DescribeMediaLiveChannelOutputStatisticsRequest extends AbstractModel
 {
@@ -53,7 +53,7 @@ UTC time, such as `2020-01-01T12:00:00Z`.
     public $EndTime;
 
     /**
-     * @var string 
+     * @var string Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
      */
     public $Period;
 
@@ -63,7 +63,7 @@ UTC time, such as `2020-01-01T12:00:00Z`.
 UTC time, such as `2020-01-01T12:00:00Z`.
      * @param string $EndTime Statistics end time, which is one hour after `StartTime` by default.
 UTC time, such as `2020-01-01T12:00:00Z`.
-     * @param string $Period 
+     * @param string $Period Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
      */
     function __construct()
     {

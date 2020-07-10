@@ -20,106 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowLogs request structure.
  *
- * @method string getVpcId() Obtain The VPC ID or the unified ID. We recommend you use the unified ID
- * @method void setVpcId(string $VpcId) Set The VPC ID or the unified ID. We recommend you use the unified ID
- * @method string getFlowLogId() Obtain The unique ID of the flow log
- * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log
- * @method string getFlowLogName() Obtain The name of the flow log instance
- * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance
- * @method string getResourceType() Obtain The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
- * @method void setResourceType(string $ResourceType) Set The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
- * @method string getResourceId() Obtain The unique ID of the resource
- * @method void setResourceId(string $ResourceId) Set The unique ID of the resource
- * @method string getTrafficType() Obtain The collection type of the flow log. ACCEPT|REJECT|ALL
- * @method void setTrafficType(string $TrafficType) Set The collection type of the flow log. ACCEPT|REJECT|ALL
- * @method string getCloudLogId() Obtain The storage ID of the flow log
- * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log
- * @method string getCloudLogState() Obtain Flow log storage ID status
- * @method void setCloudLogState(string $CloudLogState) Set Flow log storage ID status
- * @method string getOrderField() Obtain Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
- * @method void setOrderField(string $OrderField) Set Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
- * @method string getOrderDirection() Obtain Ascending (asc) and descending (desc). The default value is desc.
- * @method void setOrderDirection(string $OrderDirection) Set Ascending (asc) and descending (desc). The default value is desc.
- * @method integer getOffset() Obtain Offset. The default value is 0.
- * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
- * @method integer getLimit() Obtain The number of rows per page. The default value is 10.
- * @method void setLimit(integer $Limit) Set The number of rows per page. The default value is 10.
+ * @method string getVpcId() Obtain The VPC ID or the unified ID. We recommend you use the unified ID.
+ * @method void setVpcId(string $VpcId) Set The VPC ID or the unified ID. We recommend you use the unified ID.
+ * @method string getFlowLogId() Obtain The unique ID of the flow log.
+ * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
+ * @method string getFlowLogName() Obtain The name of the flow log instance.
+ * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
+ * @method string getResourceType() Obtain The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+ * @method void setResourceType(string $ResourceType) Set The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+ * @method string getResourceId() Obtain The unique ID of the resource.
+ * @method void setResourceId(string $ResourceId) Set The unique ID of the resource.
+ * @method string getTrafficType() Obtain The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+ * @method void setTrafficType(string $TrafficType) Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+ * @method string getCloudLogId() Obtain The storage ID of the flow log.
+ * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
+ * @method string getCloudLogState() Obtain The storage ID status of the flow log.
+ * @method void setCloudLogState(string $CloudLogState) Set The storage ID status of the flow log.
+ * @method string getOrderField() Obtain Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
+ * @method void setOrderField(string $OrderField) Set Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
+ * @method string getOrderDirection() Obtain In ascending (asc) or descending (desc) order. Default value: 'desc'.
+ * @method void setOrderDirection(string $OrderDirection) Set In ascending (asc) or descending (desc) order. Default value: 'desc'.
+ * @method integer getOffset() Obtain The offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set The offset. Default value: 0.
+ * @method integer getLimit() Obtain The number of rows per page. Default vaue: 10.
+ * @method void setLimit(integer $Limit) Set The number of rows per page. Default vaue: 10.
+ * @method Filter getFilters() Obtain Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+ * @method void setFilters(Filter $Filters) Set Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
  */
 class DescribeFlowLogsRequest extends AbstractModel
 {
     /**
-     * @var string The VPC ID or the unified ID. We recommend you use the unified ID
+     * @var string The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public $VpcId;
 
     /**
-     * @var string The unique ID of the flow log
+     * @var string The unique ID of the flow log.
      */
     public $FlowLogId;
 
     /**
-     * @var string The name of the flow log instance
+     * @var string The name of the flow log instance.
      */
     public $FlowLogName;
 
     /**
-     * @var string The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+     * @var string The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public $ResourceType;
 
     /**
-     * @var string The unique ID of the resource
+     * @var string The unique ID of the resource.
      */
     public $ResourceId;
 
     /**
-     * @var string The collection type of the flow log. ACCEPT|REJECT|ALL
+     * @var string The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public $TrafficType;
 
     /**
-     * @var string The storage ID of the flow log
+     * @var string The storage ID of the flow log.
      */
     public $CloudLogId;
 
     /**
-     * @var string Flow log storage ID status
+     * @var string The storage ID status of the flow log.
      */
     public $CloudLogState;
 
     /**
-     * @var string Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
+     * @var string Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
      */
     public $OrderField;
 
     /**
-     * @var string Ascending (asc) and descending (desc). The default value is desc.
+     * @var string In ascending (asc) or descending (desc) order. Default value: 'desc'.
      */
     public $OrderDirection;
 
     /**
-     * @var integer Offset. The default value is 0.
+     * @var integer The offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer The number of rows per page. The default value is 10.
+     * @var integer The number of rows per page. Default vaue: 10.
      */
     public $Limit;
 
     /**
-     * @param string $VpcId The VPC ID or the unified ID. We recommend you use the unified ID
-     * @param string $FlowLogId The unique ID of the flow log
-     * @param string $FlowLogName The name of the flow log instance
-     * @param string $ResourceType The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
-     * @param string $ResourceId The unique ID of the resource
-     * @param string $TrafficType The collection type of the flow log. ACCEPT|REJECT|ALL
-     * @param string $CloudLogId The storage ID of the flow log
-     * @param string $CloudLogState Flow log storage ID status
-     * @param string $OrderField Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
-     * @param string $OrderDirection Ascending (asc) and descending (desc). The default value is desc.
-     * @param integer $Offset Offset. The default value is 0.
-     * @param integer $Limit The number of rows per page. The default value is 10.
+     * @var Filter Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     */
+    public $Filters;
+
+    /**
+     * @param string $VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param string $FlowLogId The unique ID of the flow log.
+     * @param string $FlowLogName The name of the flow log instance.
+     * @param string $ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * @param string $ResourceId The unique ID of the resource.
+     * @param string $TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @param string $CloudLogId The storage ID of the flow log.
+     * @param string $CloudLogState The storage ID status of the flow log.
+     * @param string $OrderField Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
+     * @param string $OrderDirection In ascending (asc) or descending (desc) order. Default value: 'desc'.
+     * @param integer $Offset The offset. Default value: 0.
+     * @param integer $Limit The number of rows per page. Default vaue: 10.
+     * @param Filter $Filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
      */
     function __construct()
     {
@@ -180,6 +196,11 @@ class DescribeFlowLogsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = new Filter();
+            $this->Filters->deserialize($param["Filters"]);
         }
     }
 }

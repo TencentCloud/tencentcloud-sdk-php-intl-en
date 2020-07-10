@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowLog response structure.
  *
- * @method array getFlowLog() Obtain Flow log information
- * @method void setFlowLog(array $FlowLog) Set Flow log information
+ * @method array getFlowLog() Obtain The flow log information.
+ * @method void setFlowLog(array $FlowLog) Set The flow log information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeFlowLogResponse extends AbstractModel
 {
     /**
-     * @var array Flow log information
+     * @var array The flow log information.
      */
     public $FlowLog;
 
@@ -38,7 +38,7 @@ class DescribeFlowLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowLog Flow log information
+     * @param array $FlowLog The flow log information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

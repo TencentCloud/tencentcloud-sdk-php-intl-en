@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Usage plan binding details
+ * List of environments bound to usage plan.
  *
  * @method integer getTotalCount() Obtain Number of environments of the service bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.

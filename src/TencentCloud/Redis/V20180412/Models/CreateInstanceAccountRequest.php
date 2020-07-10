@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountPassword(string $AccountPassword) Set Sub-account password
  * @method array getReadonlyPolicy() Obtain Routing policy. Enter `master` for master node or `replication` for slave node
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Enter `master` for master node or `replication` for slave node
- * @method string getPrivilege() Obtain Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
- * @method void setPrivilege(string $Privilege) Set Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+ * @method string getPrivilege() Obtain Read/write policy. Valid values: r (read-only), rw (read/write).
+ * @method void setPrivilege(string $Privilege) Set Read/write policy. Valid values: r (read-only), rw (read/write).
  * @method string getRemark() Obtain Sub-account description information
  * @method void setRemark(string $Remark) Set Sub-account description information
  */
@@ -56,7 +56,7 @@ class CreateInstanceAccountRequest extends AbstractModel
     public $ReadonlyPolicy;
 
     /**
-     * @var string Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+     * @var string Read/write policy. Valid values: r (read-only), rw (read/write).
      */
     public $Privilege;
 
@@ -70,7 +70,7 @@ class CreateInstanceAccountRequest extends AbstractModel
      * @param string $AccountName Sub-account name
      * @param string $AccountPassword Sub-account password
      * @param array $ReadonlyPolicy Routing policy. Enter `master` for master node or `replication` for slave node
-     * @param string $Privilege Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+     * @param string $Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
      * @param string $Remark Sub-account description information
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MicroService
+ * Information of microservice bound to API.
  *
  * @method string getClusterId() Obtain Microservice cluster ID.
  * @method void setClusterId(string $ClusterId) Set Microservice cluster ID.

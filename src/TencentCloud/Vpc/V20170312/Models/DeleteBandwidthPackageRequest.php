@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteBandwidthPackage request structure.
  *
- * @method string getBandwidthPackageId() Obtain The bwpID of the bandwidth package to be deleted
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The bwpID of the bandwidth package to be deleted
+ * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package to be deleted.
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package to be deleted.
  */
 class DeleteBandwidthPackageRequest extends AbstractModel
 {
     /**
-     * @var string The bwpID of the bandwidth package to be deleted
+     * @var string The unique ID of the bandwidth package to be deleted.
      */
     public $BandwidthPackageId;
 
     /**
-     * @param string $BandwidthPackageId The bwpID of the bandwidth package to be deleted
+     * @param string $BandwidthPackageId The unique ID of the bandwidth package to be deleted.
      */
     function __construct()
     {

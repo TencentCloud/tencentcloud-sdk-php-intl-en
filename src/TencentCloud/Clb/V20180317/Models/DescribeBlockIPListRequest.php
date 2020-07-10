@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlockIPList request structure.
  *
- * @method string getLoadBalancerId() Obtain 负载均衡实例 ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) Set 负载均衡实例 ID。
- * @method integer getOffset() Obtain 数据偏移量，默认为 0。
- * @method void setOffset(integer $Offset) Set 数据偏移量，默认为 0。
- * @method integer getLimit() Obtain 返回IP的最大个数，默认为 100000。
- * @method void setLimit(integer $Limit) Set 返回IP的最大个数，默认为 100000。
+ * @method string getLoadBalancerId() Obtain CLB instance ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
+ * @method integer getOffset() Obtain Data offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Data offset. Default value: 0.
+ * @method integer getLimit() Obtain Maximum number of IPs to be returned. Default value: 100,000.
+ * @method void setLimit(integer $Limit) Set Maximum number of IPs to be returned. Default value: 100,000.
  */
 class DescribeBlockIPListRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID。
+     * @var string CLB instance ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var integer 数据偏移量，默认为 0。
+     * @var integer Data offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 返回IP的最大个数，默认为 100000。
+     * @var integer Maximum number of IPs to be returned. Default value: 100,000.
      */
     public $Limit;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID。
-     * @param integer $Offset 数据偏移量，默认为 0。
-     * @param integer $Limit 返回IP的最大个数，默认为 100000。
+     * @param string $LoadBalancerId CLB instance ID.
+     * @param integer $Offset Data offset. Default value: 0.
+     * @param integer $Limit Maximum number of IPs to be returned. Default value: 100,000.
      */
     function __construct()
     {

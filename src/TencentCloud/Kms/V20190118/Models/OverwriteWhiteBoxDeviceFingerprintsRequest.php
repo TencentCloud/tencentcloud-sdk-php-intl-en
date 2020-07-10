@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OverwriteWhiteBoxDeviceFingerprints request structure.
  *
- * @method string getKeyId() Obtain 白盒密钥ID
- * @method void setKeyId(string $KeyId) Set 白盒密钥ID
- * @method array getDeviceFingerprints() Obtain 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
- * @method void setDeviceFingerprints(array $DeviceFingerprints) Set 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
+ * @method string getKeyId() Obtain White-box key ID
+ * @method void setKeyId(string $KeyId) Set White-box key ID
+ * @method array getDeviceFingerprints() Obtain Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
+ * @method void setDeviceFingerprints(array $DeviceFingerprints) Set Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
  */
 class OverwriteWhiteBoxDeviceFingerprintsRequest extends AbstractModel
 {
     /**
-     * @var string 白盒密钥ID
+     * @var string White-box key ID
      */
     public $KeyId;
 
     /**
-     * @var array 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
+     * @var array Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
      */
     public $DeviceFingerprints;
 
     /**
-     * @param string $KeyId 白盒密钥ID
-     * @param array $DeviceFingerprints 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
+     * @param string $KeyId White-box key ID
+     * @param array $DeviceFingerprints Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
      */
     function __construct()
     {

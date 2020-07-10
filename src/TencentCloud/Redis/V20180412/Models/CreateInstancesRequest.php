@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getZoneId() Obtain AZ ID of instance
  * @method void setZoneId(integer $ZoneId) Set AZ ID of instance
- * @method integer getTypeId() Obtain Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
- * @method void setTypeId(integer $TypeId) Set Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+ * @method integer getTypeId() Obtain Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
+ * @method void setTypeId(integer $TypeId) Set Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
  * @method integer getMemSize() Obtain Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
  * @method void setMemSize(integer $MemSize) Set Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
  * @method integer getGoodsNum() Obtain Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) Set Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
  * @method integer getBillingMode() Obtain Billing method. 0: pay as you go
  * @method void setBillingMode(integer $BillingMode) Set Billing method. 0: pay as you go
- * @method string getPassword() Obtain Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
- * @method void setPassword(string $Password) Set Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
+ * @method string getPassword() Obtain Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
+ * @method void setPassword(string $Password) Set Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
  * @method string getVpcId() Obtain VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
  * @method void setVpcId(string $VpcId) Set VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
  * @method string getSubnetId() Obtain In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
@@ -46,16 +46,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIdList(array $SecurityGroupIdList) Set Array of security group IDs
  * @method integer getVPort() Obtain User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
  * @method void setVPort(integer $VPort) Set User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
- * @method integer getRedisShardNum() Obtain Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
- * @method void setRedisShardNum(integer $RedisShardNum) Set Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
- * @method integer getRedisReplicasNum() Obtain Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
- * @method boolean getReplicasReadonly() Obtain Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
- * @method void setReplicasReadonly(boolean $ReplicasReadonly) Set Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method boolean getNoAuth() Obtain Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
- * @method void setNoAuth(boolean $NoAuth) Set Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
+ * @method integer getRedisShardNum() Obtain Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+ * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+ * @method integer getRedisReplicasNum() Obtain Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas.
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas.
+ * @method boolean getReplicasReadonly() Obtain Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+ * @method void setReplicasReadonly(boolean $ReplicasReadonly) Set Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+ * @method string getInstanceName() Obtain Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+ * @method void setInstanceName(string $InstanceName) Set Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+ * @method boolean getNoAuth() Obtain Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
+ * @method void setNoAuth(boolean $NoAuth) Set Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -65,7 +65,7 @@ class CreateInstancesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+     * @var integer Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
      */
     public $TypeId;
 
@@ -90,7 +90,7 @@ class CreateInstancesRequest extends AbstractModel
     public $BillingMode;
 
     /**
-     * @var string Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
+     * @var string Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
      */
     public $Password;
 
@@ -125,49 +125,49 @@ class CreateInstancesRequest extends AbstractModel
     public $VPort;
 
     /**
-     * @var integer Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
+     * @var integer Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
      */
     public $RedisShardNum;
 
     /**
-     * @var integer Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+     * @var integer Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas.
      */
     public $RedisReplicasNum;
 
     /**
-     * @var boolean Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
+     * @var boolean Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
      */
     public $ReplicasReadonly;
 
     /**
-     * @var string Instance name
+     * @var string Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
      */
     public $InstanceName;
 
     /**
-     * @var boolean Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
+     * @var boolean Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
      */
     public $NoAuth;
 
     /**
      * @param integer $ZoneId AZ ID of instance
-     * @param integer $TypeId Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+     * @param integer $TypeId Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
      * @param integer $MemSize Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
      * @param integer $GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
      * @param integer $Period Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
      * @param integer $BillingMode Billing method. 0: pay as you go
-     * @param string $Password Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
+     * @param string $Password Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
      * @param string $VpcId VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
      * @param string $SubnetId In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
      * @param integer $ProjectId Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
      * @param integer $AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
      * @param array $SecurityGroupIdList Array of security group IDs
      * @param integer $VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
-     * @param integer $RedisShardNum Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
-     * @param integer $RedisReplicasNum Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
-     * @param boolean $ReplicasReadonly Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
-     * @param string $InstanceName Instance name
-     * @param boolean $NoAuth Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
+     * @param integer $RedisShardNum Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+     * @param integer $RedisReplicasNum Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas.
+     * @param boolean $ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+     * @param string $InstanceName Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+     * @param boolean $NoAuth Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
      */
     function __construct()
     {

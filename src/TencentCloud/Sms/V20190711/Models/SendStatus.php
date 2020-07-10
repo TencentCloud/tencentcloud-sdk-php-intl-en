@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) Set SMS request error code. For specific meanings, please see Error Codes.
  * @method string getMessage() Obtain SMS request error message.
  * @method void setMessage(string $Message) Set SMS request error message.
+ * @method string getIsoCode() Obtain Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+ * @method void setIsoCode(string $IsoCode) Set Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
  */
 class SendStatus extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SendStatus extends AbstractModel
     public $Message;
 
     /**
+     * @var string Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+     */
+    public $IsoCode;
+
+    /**
      * @param string $SerialNo Delivery serial number.
      * @param string $PhoneNumber Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
      * @param integer $Fee Number of billable SMS messages. For billing rules, please see [Billing Policy](https://cloud.tencent.com/document/product/382/36135).
      * @param string $SessionContext User session content.
      * @param string $Code SMS request error code. For specific meanings, please see Error Codes.
      * @param string $Message SMS request error message.
+     * @param string $IsoCode Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class SendStatus extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("IsoCode",$param) and $param["IsoCode"] !== null) {
+            $this->IsoCode = $param["IsoCode"];
         }
     }
 }

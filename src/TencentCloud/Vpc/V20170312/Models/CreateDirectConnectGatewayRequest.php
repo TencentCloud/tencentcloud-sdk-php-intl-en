@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDirectConnectGateway request structure.
  *
- * @method string getDirectConnectGatewayName() Obtain The name of the Direct Connect gateway
- * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) Set The name of the Direct Connect gateway
- * @method string getNetworkType() Obtain The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li>
- * @method void setNetworkType(string $NetworkType) Set The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li>
+ * @method string getDirectConnectGatewayName() Obtain The name of the direct connect gateway.
+ * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) Set The name of the direct connect gateway.
+ * @method string getNetworkType() Obtain The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li>
+ * @method void setNetworkType(string $NetworkType) Set The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li>
  * @method string getNetworkInstanceId() Obtain <li>When the NetworkType is VPC, this value is the VPC instance ID</li>
 <li>When the NetworkType is CCN, this value is the CCN instance ID</li>
  * @method void setNetworkInstanceId(string $NetworkInstanceId) Set <li>When the NetworkType is VPC, this value is the VPC instance ID</li>
 <li>When the NetworkType is CCN, this value is the CCN instance ID</li>
- * @method string getGatewayType() Obtain The type of the gateway. Available values are:
+ * @method string getGatewayType() Obtain The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
- * @method void setGatewayType(string $GatewayType) Set The type of the gateway. Available values are:
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+ * @method void setGatewayType(string $GatewayType) Set The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
  */
 class CreateDirectConnectGatewayRequest extends AbstractModel
 {
     /**
-     * @var string The name of the Direct Connect gateway
+     * @var string The name of the direct connect gateway.
      */
     public $DirectConnectGatewayName;
 
     /**
-     * @var string The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li>
+     * @var string The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li>
      */
     public $NetworkType;
 
@@ -60,22 +60,22 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
     public $NetworkInstanceId;
 
     /**
-     * @var string The type of the gateway. Available values are:
+     * @var string The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
      */
     public $GatewayType;
 
     /**
-     * @param string $DirectConnectGatewayName The name of the Direct Connect gateway
-     * @param string $NetworkType The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li>
+     * @param string $DirectConnectGatewayName The name of the direct connect gateway.
+     * @param string $NetworkType The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li>
      * @param string $NetworkInstanceId <li>When the NetworkType is VPC, this value is the VPC instance ID</li>
 <li>When the NetworkType is CCN, this value is the CCN instance ID</li>
-     * @param string $GatewayType The type of the gateway. Available values are:
+     * @param string $GatewayType The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
      */
     function __construct()
     {

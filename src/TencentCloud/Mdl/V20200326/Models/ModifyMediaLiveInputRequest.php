@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
  * @method array getSecurityGroupIds() Obtain List of IDs of bound security groups.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of IDs of bound security groups.
+ * @method array getInputSettings() Obtain Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
+ * @method void setInputSettings(array $InputSettings) Set Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
  */
 class ModifyMediaLiveInputRequest extends AbstractModel
 {
@@ -45,9 +53,21 @@ class ModifyMediaLiveInputRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
+     */
+    public $InputSettings;
+
+    /**
      * @param string $Id Media input ID.
      * @param string $Name Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
      * @param array $SecurityGroupIds List of IDs of bound security groups.
+     * @param array $InputSettings Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
      */
     function __construct()
     {
@@ -72,6 +92,15 @@ class ModifyMediaLiveInputRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("InputSettings",$param) and $param["InputSettings"] !== null) {
+            $this->InputSettings = [];
+            foreach ($param["InputSettings"] as $key => $value){
+                $obj = new InputSettingInfo();
+                $obj->deserialize($value);
+                array_push($this->InputSettings, $obj);
+            }
         }
     }
 }

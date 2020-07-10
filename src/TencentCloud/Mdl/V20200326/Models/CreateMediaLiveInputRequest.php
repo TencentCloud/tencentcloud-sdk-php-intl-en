@@ -30,8 +30,8 @@ Valid values: RTMP_PUSH/RTP_PUSH/UDP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
 Only one security group can be associated.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID of the input security group to be bound.
 Only one security group can be associated.
- * @method array getInputSettings() Obtain Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
- * @method void setInputSettings(array $InputSettings) Set Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+ * @method array getInputSettings() Obtain Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+ * @method void setInputSettings(array $InputSettings) Set Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
  */
 class CreateMediaLiveInputRequest extends AbstractModel
 {
@@ -53,7 +53,7 @@ Only one security group can be associated.
     public $SecurityGroupIds;
 
     /**
-     * @var array Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+     * @var array Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
      */
     public $InputSettings;
 
@@ -63,7 +63,7 @@ Only one security group can be associated.
 Valid values: RTMP_PUSH/RTP_PUSH/UDP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
      * @param array $SecurityGroupIds ID of the input security group to be bound.
 Only one security group can be associated.
-     * @param array $InputSettings Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+     * @param array $InputSettings Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
      */
     function __construct()
     {

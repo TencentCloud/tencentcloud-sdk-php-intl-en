@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDirectConnectGateway request structure.
  *
- * @method string getDirectConnectGatewayId() Obtain The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+ * @method string getDirectConnectGatewayId() Obtain The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
  */
 class DeleteDirectConnectGatewayRequest extends AbstractModel
 {
     /**
-     * @var string The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+     * @var string The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @param string $DirectConnectGatewayId The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+     * @param string $DirectConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
      */
     function __construct()
     {

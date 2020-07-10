@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowLogs response structure.
  *
- * @method array getFlowLog() Obtain The flow log instance set
- * @method void setFlowLog(array $FlowLog) Set The flow log instance set
- * @method integer getTotalNum() Obtain The total number of flow logs
- * @method void setTotalNum(integer $TotalNum) Set The total number of flow logs
+ * @method array getFlowLog() Obtain The instance set of flow logs.
+ * @method void setFlowLog(array $FlowLog) Set The instance set of flow logs.
+ * @method integer getTotalNum() Obtain The total number of flow logs.
+ * @method void setTotalNum(integer $TotalNum) Set The total number of flow logs.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeFlowLogsResponse extends AbstractModel
 {
     /**
-     * @var array The flow log instance set
+     * @var array The instance set of flow logs.
      */
     public $FlowLog;
 
     /**
-     * @var integer The total number of flow logs
+     * @var integer The total number of flow logs.
      */
     public $TotalNum;
 
@@ -45,8 +45,8 @@ class DescribeFlowLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowLog The flow log instance set
-     * @param integer $TotalNum The total number of flow logs
+     * @param array $FlowLog The instance set of flow logs.
+     * @param integer $TotalNum The total number of flow logs.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
