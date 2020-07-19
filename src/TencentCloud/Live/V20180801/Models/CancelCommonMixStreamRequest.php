@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * CancelCommonMixStream request structure.
  *
  * @method string getMixStreamSessionId() Obtain ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
  * @method void setMixStreamSessionId(string $MixStreamSessionId) Set ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
  */
 class CancelCommonMixStreamRequest extends AbstractModel
 {
     /**
      * @var string ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
      */
     public $MixStreamSessionId;
 
     /**
      * @param string $MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
      */
     function __construct()
     {

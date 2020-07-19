@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeDetailInfo response structure.
  *
- * @method array getDataInfoList() Obtain List of statistics.
- * @method void setDataInfoList(array $DataInfoList) Set List of statistics.
+ * @method array getDataInfoList() Obtain Statistics list.
+ * @method void setDataInfoList(array $DataInfoList) Set Statistics list.
  * @method integer getPageNum() Obtain Page number.
  * @method void setPageNum(integer $PageNum) Set Page number.
  * @method integer getPageSize() Obtain Number of entries per page.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel
 {
     /**
-     * @var array List of statistics.
+     * @var array Statistics list.
      */
     public $DataInfoList;
 
@@ -66,7 +66,7 @@ class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList List of statistics.
+     * @param array $DataInfoList Statistics list.
      * @param integer $PageNum Page number.
      * @param integer $PageSize Number of entries per page.
      * @param integer $TotalNum Total number.

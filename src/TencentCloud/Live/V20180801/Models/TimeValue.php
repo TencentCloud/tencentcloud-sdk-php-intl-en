@@ -18,28 +18,28 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 某个时间点的指标的数值是多少。
+ * Metric value at a specified point in time.
  *
- * @method string getTime() Obtain UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
- * @method void setTime(string $Time) Set UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
- * @method integer getNum() Obtain 数值。
- * @method void setNum(integer $Num) Set 数值。
+ * @method string getTime() Obtain UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+ * @method void setTime(string $Time) Set UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+ * @method integer getNum() Obtain Value.
+ * @method void setNum(integer $Num) Set Value.
  */
 class TimeValue extends AbstractModel
 {
     /**
-     * @var string UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
+     * @var string UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
      */
     public $Time;
 
     /**
-     * @var integer 数值。
+     * @var integer Value.
      */
     public $Num;
 
     /**
-     * @param string $Time UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
-     * @param integer $Num 数值。
+     * @param string $Time UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+     * @param integer $Num Value.
      */
     function __construct()
     {

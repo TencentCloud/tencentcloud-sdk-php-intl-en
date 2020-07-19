@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP return code data
  *
- * @method string getTime() Obtain Time in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setTime(string $Time) Set Time in the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getTime() Obtain Time in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setTime(string $Time) Set Time in the format of `yyyy-mm-dd HH:MM:SS`.
  * @method integer getNumbers() Obtain Occurrences.
  * @method void setNumbers(integer $Numbers) Set Occurrences.
  * @method float getPercentage() Obtain Proportion.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class HttpCodeValue extends AbstractModel
 {
     /**
-     * @var string Time in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $Time;
 
@@ -45,7 +45,7 @@ class HttpCodeValue extends AbstractModel
     public $Percentage;
 
     /**
-     * @param string $Time Time in the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $Time Time in the format of `yyyy-mm-dd HH:MM:SS`.
      * @param integer $Numbers Occurrences.
      * @param float $Percentage Proportion.
      */

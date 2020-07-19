@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name.
  * @method void setDomain(string $Domain) Set Domain name.
- * @method array getDetailInfoList() Obtain Detailed information.
- * @method void setDetailInfoList(array $DetailInfoList) Set Detailed information.
+ * @method array getDetailInfoList() Obtain Details.
+ * @method void setDetailInfoList(array $DetailInfoList) Set Details.
  */
 class DomainInfoList extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DomainInfoList extends AbstractModel
     public $Domain;
 
     /**
-     * @var array Detailed information.
+     * @var array Details.
      */
     public $DetailInfoList;
 
     /**
      * @param string $Domain Domain name.
-     * @param array $DetailInfoList Detailed information.
+     * @param array $DetailInfoList Details.
      */
     function __construct()
     {

@@ -20,55 +20,55 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVisitTopSumInfoList request structure.
  *
- * @method string getStartTime() Obtain Start time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setStartTime(string $StartTime) Set Start time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method string getEndTime() Obtain End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried.
- * @method void setEndTime(string $EndTime) Set End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried.
- * @method string getTopIndex() Obtain Bandwidth metric. Value range: "Domain", "StreamId".
- * @method void setTopIndex(string $TopIndex) Set Bandwidth metric. Value range: "Domain", "StreamId".
- * @method array getPlayDomains() Obtain Playback domain name. If it is blank by default, the full data will be queried.
- * @method void setPlayDomains(array $PlayDomains) Set Playback domain name. If it is blank by default, the full data will be queried.
- * @method integer getPageNum() Obtain Page number.
-Value range: [1,1000].
+ * @method string getStartTime() Obtain Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setStartTime(string $StartTime) Set Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method string getEndTime() Obtain End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried.
+ * @method void setEndTime(string $EndTime) Set End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried.
+ * @method string getTopIndex() Obtain Bandwidth metric. Valid values: "Domain", "StreamId".
+ * @method void setTopIndex(string $TopIndex) Set Bandwidth metric. Valid values: "Domain", "StreamId".
+ * @method array getPlayDomains() Obtain Playback domain name. If this parameter is left empty, full data will be queried by default.
+ * @method void setPlayDomains(array $PlayDomains) Set Playback domain name. If this parameter is left empty, full data will be queried by default.
+ * @method integer getPageNum() Obtain Page number,
+Value range: [1,1000],
 Default value: 1.
- * @method void setPageNum(integer $PageNum) Set Page number.
-Value range: [1,1000].
+ * @method void setPageNum(integer $PageNum) Set Page number,
+Value range: [1,1000],
 Default value: 1.
  * @method integer getPageSize() Obtain Number of entries per page. Value range: [1,1000].
 Default value: 20.
  * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: [1,1000].
 Default value: 20.
- * @method string getOrderParam() Obtain Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
- * @method void setOrderParam(string $OrderParam) Set Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+ * @method string getOrderParam() Obtain Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+ * @method void setOrderParam(string $OrderParam) Set Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
  */
 class DescribeVisitTopSumInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $StartTime;
 
     /**
-     * @var string End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried.
+     * @var string End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried.
      */
     public $EndTime;
 
     /**
-     * @var string Bandwidth metric. Value range: "Domain", "StreamId".
+     * @var string Bandwidth metric. Valid values: "Domain", "StreamId".
      */
     public $TopIndex;
 
     /**
-     * @var array Playback domain name. If it is blank by default, the full data will be queried.
+     * @var array Playback domain name. If this parameter is left empty, full data will be queried by default.
      */
     public $PlayDomains;
 
     /**
-     * @var integer Page number.
-Value range: [1,1000].
+     * @var integer Page number,
+Value range: [1,1000],
 Default value: 1.
      */
     public $PageNum;
@@ -80,22 +80,22 @@ Default value: 20.
     public $PageSize;
 
     /**
-     * @var string Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * @var string Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
      */
     public $OrderParam;
 
     /**
-     * @param string $StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param string $EndTime End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried.
-     * @param string $TopIndex Bandwidth metric. Value range: "Domain", "StreamId".
-     * @param array $PlayDomains Playback domain name. If it is blank by default, the full data will be queried.
-     * @param integer $PageNum Page number.
-Value range: [1,1000].
+     * @param string $StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param string $EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried.
+     * @param string $TopIndex Bandwidth metric. Valid values: "Domain", "StreamId".
+     * @param array $PlayDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
+     * @param integer $PageNum Page number,
+Value range: [1,1000],
 Default value: 1.
      * @param integer $PageSize Number of entries per page. Value range: [1,1000].
 Default value: 20.
-     * @param string $OrderParam Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * @param string $OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
      */
     function __construct()
     {

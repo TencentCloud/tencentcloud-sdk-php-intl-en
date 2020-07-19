@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamPlayInfoList request structure.
  *
- * @method string getStartTime() Obtain Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+ * @method string getStartTime() Obtain Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time.
- * @method void setStartTime(string $StartTime) Set Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+ * @method void setStartTime(string $StartTime) Set Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time.
- * @method string getEndTime() Obtain End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getEndTime() Obtain End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day.
- * @method void setEndTime(string $EndTime) Set End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+ * @method void setEndTime(string $EndTime) Set End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day.
- * @method string getPlayDomain() Obtain Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried.
- * @method void setPlayDomain(string $PlayDomain) Set Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried.
+ * @method string getPlayDomain() Obtain Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried.
+ * @method void setPlayDomain(string $PlayDomain) Set Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried.
  * @method string getStreamName() Obtain Stream name (exact match).
-If it is left blank, the full playback data will be queried.
+If this parameter is left empty, full playback data will be queried.
  * @method void setStreamName(string $StreamName) Set Stream name (exact match).
-If it is left blank, the full playback data will be queried.
- * @method string getAppName() Obtain push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application.
- * @method void setAppName(string $AppName) Set push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application.
+If this parameter is left empty, full playback data will be queried.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application.
  */
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+     * @var string Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time.
      */
     public $StartTime;
 
     /**
-     * @var string End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day.
      */
     public $EndTime;
 
     /**
-     * @var string Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried.
+     * @var string Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried.
      */
     public $PlayDomain;
 
     /**
      * @var string Stream name (exact match).
-If it is left blank, the full playback data will be queried.
+If this parameter is left empty, full playback data will be queried.
      */
     public $StreamName;
 
     /**
-     * @var string push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application.
+     * @var string Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application.
      */
     public $AppName;
 
     /**
-     * @param string $StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+     * @param string $StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time.
-     * @param string $EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day.
-     * @param string $PlayDomain Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried.
+     * @param string $PlayDomain Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried.
      * @param string $StreamName Stream name (exact match).
-If it is left blank, the full playback data will be queried.
-     * @param string $AppName push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application.
+If this parameter is left empty, full playback data will be queried.
+     * @param string $AppName Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application.
      */
     function __construct()
     {

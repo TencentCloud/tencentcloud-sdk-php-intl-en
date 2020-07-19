@@ -23,11 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomainName() Obtain Push domain name.
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method integer getEnable() Obtain Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
  * @method void setEnable(integer $Enable) Set Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
  * @method string getMasterAuthKey() Obtain Master authentication key.
+If this parameter is left empty, the current value will not be modified.
  * @method void setMasterAuthKey(string $MasterAuthKey) Set Master authentication key.
+If this parameter is left empty, the current value will not be modified.
  * @method string getBackupAuthKey() Obtain Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
  * @method void setBackupAuthKey(string $BackupAuthKey) Set Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
  * @method integer getAuthDelta() Obtain Validity period in seconds.
  * @method void setAuthDelta(integer $AuthDelta) Set Validity period in seconds.
  */
@@ -40,16 +46,19 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
 
     /**
      * @var integer Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      */
     public $Enable;
 
     /**
      * @var string Master authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public $MasterAuthKey;
 
     /**
      * @var string Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public $BackupAuthKey;
 
@@ -61,8 +70,11 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
     /**
      * @param string $DomainName Push domain name.
      * @param integer $Enable Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      * @param string $MasterAuthKey Master authentication key.
+If this parameter is left empty, the current value will not be modified.
      * @param string $BackupAuthKey Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      * @param integer $AuthDelta Validity period in seconds.
      */
     function __construct()

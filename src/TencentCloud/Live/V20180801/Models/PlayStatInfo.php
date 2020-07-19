@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Queries the playback information by ISP and district.
  *
- * @method string getTime() Obtain Data time point.
- * @method void setTime(string $Time) Set Data time point.
- * @method float getValue() Obtain Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValue(float $Value) Set Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTime() Obtain Data point in time.
+ * @method void setTime(string $Time) Set Data point in time.
+ * @method float getValue() Obtain Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setValue(float $Value) Set Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class PlayStatInfo extends AbstractModel
 {
     /**
-     * @var string Data time point.
+     * @var string Data point in time.
      */
     public $Time;
 
     /**
-     * @var float Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Value;
 
     /**
-     * @param string $Time Data time point.
-     * @param float $Value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Time Data point in time.
+     * @param float $Value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

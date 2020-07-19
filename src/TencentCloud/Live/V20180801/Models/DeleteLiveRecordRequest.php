@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- * @method integer getTaskId() Obtain Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
- * @method void setTaskId(integer $TaskId) Set Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
+ * @method integer getTaskId() Obtain Task ID returned by the `CreateLiveRecord` API.
+ * @method void setTaskId(integer $TaskId) Set Task ID returned by the `CreateLiveRecord` API.
  */
 class DeleteLiveRecordRequest extends AbstractModel
 {
@@ -35,15 +33,13 @@ class DeleteLiveRecordRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var integer Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
+     * @var integer Task ID returned by the `CreateLiveRecord` API.
      */
     public $TaskId;
 
     /**
      * @param string $StreamName Stream name.
-     * @param integer $TaskId Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
+     * @param integer $TaskId Task ID returned by the `CreateLiveRecord` API.
      */
     function __construct()
     {

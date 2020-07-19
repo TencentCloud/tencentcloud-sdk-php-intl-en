@@ -20,102 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlayErrorCodeSumInfoList request structure.
  *
- * @method string getStartTime() Obtain Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
- * @method void setStartTime(string $StartTime) Set Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
- * @method string getEndTime() Obtain End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
- * @method void setEndTime(string $EndTime) Set End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
- * @method array getPlayDomains() Obtain List of playback domain names. If it is blank by default, the full data will be queried.
- * @method void setPlayDomains(array $PlayDomains) Set List of playback domain names. If it is blank by default, the full data will be queried.
- * @method integer getPageNum() Obtain Page number.
-Value range: [1,1000],
-Default value: 1.
- * @method void setPageNum(integer $PageNum) Set Page number.
-Value range: [1,1000],
-Default value: 1.
- * @method integer getPageSize() Obtain Number of entries per page,
-Value range: [1,1000],
-Default value: 20.
- * @method void setPageSize(integer $PageSize) Set Number of entries per page,
-Value range: [1,1000],
-Default value: 20.
- * @method string getMainlandOrOversea() Obtain 
- * @method void setMainlandOrOversea(string $MainlandOrOversea) Set 
- * @method string getGroupType() Obtain 
- * @method void setGroupType(string $GroupType) Set 
- * @method string getOutLanguage() Obtain 
- * @method void setOutLanguage(string $OutLanguage) Set 
+ * @method string getStartTime() Obtain Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setStartTime(string $StartTime) Set Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method string getEndTime() Obtain End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+ * @method void setEndTime(string $EndTime) Set End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+ * @method array getPlayDomains() Obtain Playback domain name list. If this parameter is left empty, full data will be queried.
+ * @method void setPlayDomains(array $PlayDomains) Set Playback domain name list. If this parameter is left empty, full data will be queried.
+ * @method integer getPageNum() Obtain Number of pages. Value range: [1,1000]. Default value: 1.
+ * @method void setPageNum(integer $PageNum) Set Number of pages. Value range: [1,1000]. Default value: 1.
+ * @method integer getPageSize() Obtain Number of entries per page. Value range: [1,1000]. Default value: 20.
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: [1,1000]. Default value: 20.
+ * @method string getMainlandOrOversea() Obtain Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+ * @method string getGroupType() Obtain Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
+ * @method void setGroupType(string $GroupType) Set Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
+ * @method string getOutLanguage() Obtain Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+ * @method void setOutLanguage(string $OutLanguage) Set Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
  */
 class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $StartTime;
 
     /**
-     * @var string End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * @var string End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public $EndTime;
 
     /**
-     * @var array List of playback domain names. If it is blank by default, the full data will be queried.
+     * @var array Playback domain name list. If this parameter is left empty, full data will be queried.
      */
     public $PlayDomains;
 
     /**
-     * @var integer Page number.
-Value range: [1,1000],
-Default value: 1.
+     * @var integer Number of pages. Value range: [1,1000]. Default value: 1.
      */
     public $PageNum;
 
     /**
-     * @var integer Number of entries per page,
-Value range: [1,1000],
-Default value: 20.
+     * @var integer Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public $PageSize;
 
     /**
-     * @var string 
+     * @var string Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public $MainlandOrOversea;
 
     /**
-     * @var string 
+     * @var string Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
      */
     public $GroupType;
 
     /**
-     * @var string 
+     * @var string Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
      */
     public $OutLanguage;
 
     /**
-     * @param string $StartTime Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-     * @param string $EndTime End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
-     * @param array $PlayDomains List of playback domain names. If it is blank by default, the full data will be queried.
-     * @param integer $PageNum Page number.
-Value range: [1,1000],
-Default value: 1.
-     * @param integer $PageSize Number of entries per page,
-Value range: [1,1000],
-Default value: 20.
-     * @param string $MainlandOrOversea 
-     * @param string $GroupType 
-     * @param string $OutLanguage 
+     * @param string $StartTime Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param string $EndTime End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @param array $PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+     * @param integer $PageNum Number of pages. Value range: [1,1000]. Default value: 1.
+     * @param integer $PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+     * @param string $MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+     * @param string $GroupType Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
+     * @param string $OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
      */
     function __construct()
     {

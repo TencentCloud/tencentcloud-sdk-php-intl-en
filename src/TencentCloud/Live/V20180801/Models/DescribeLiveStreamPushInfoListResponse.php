@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveStreamPushInfoList response structure.
  *
- * @method array getDataInfoList() Obtain Live stream statistics list
- * @method void setDataInfoList(array $DataInfoList) Set Live stream statistics list
+ * @method array getDataInfoList() Obtain Live stream statistics list.
+ * @method void setDataInfoList(array $DataInfoList) Set Live stream statistics list.
  * @method integer getTotalNum() Obtain Total number of live streams.
  * @method void setTotalNum(integer $TotalNum) Set Total number of live streams.
  * @method integer getTotalPage() Obtain Total number of pages.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLiveStreamPushInfoListResponse extends AbstractModel
 {
     /**
-     * @var array Live stream statistics list
+     * @var array Live stream statistics list.
      */
     public $DataInfoList;
 
@@ -66,7 +66,7 @@ class DescribeLiveStreamPushInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList Live stream statistics list
+     * @param array $DataInfoList Live stream statistics list.
      * @param integer $TotalNum Total number of live streams.
      * @param integer $TotalPage Total number of pages.
      * @param integer $PageNum Page number where the current data resides.

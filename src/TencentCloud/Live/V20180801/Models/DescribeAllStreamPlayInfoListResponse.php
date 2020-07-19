@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllStreamPlayInfoList response structure.
  *
- * @method string getQueryTime() Obtain 查询时间点，回传的输入参数中的查询时间。
- * @method void setQueryTime(string $QueryTime) Set 查询时间点，回传的输入参数中的查询时间。
- * @method array getDataInfoList() Obtain 数据信息列表。
- * @method void setDataInfoList(array $DataInfoList) Set 数据信息列表。
+ * @method string getQueryTime() Obtain Query point in time in the returned input parameters.
+ * @method void setQueryTime(string $QueryTime) Set Query point in time in the returned input parameters.
+ * @method array getDataInfoList() Obtain Data information list.
+ * @method void setDataInfoList(array $DataInfoList) Set Data information list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeAllStreamPlayInfoListResponse extends AbstractModel
 {
     /**
-     * @var string 查询时间点，回传的输入参数中的查询时间。
+     * @var string Query point in time in the returned input parameters.
      */
     public $QueryTime;
 
     /**
-     * @var array 数据信息列表。
+     * @var array Data information list.
      */
     public $DataInfoList;
 
@@ -45,8 +45,8 @@ class DescribeAllStreamPlayInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $QueryTime 查询时间点，回传的输入参数中的查询时间。
-     * @param array $DataInfoList 数据信息列表。
+     * @param string $QueryTime Query point in time in the returned input parameters.
+     * @param array $DataInfoList Data information list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

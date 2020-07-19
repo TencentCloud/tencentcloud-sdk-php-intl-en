@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHttpStatusInfoList request structure.
  *
- * @method string getStartTime() Obtain Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago.
- * @method void setStartTime(string $StartTime) Set Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago.
- * @method string getEndTime() Obtain End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
- * @method void setEndTime(string $EndTime) Set End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
- * @method array getPlayDomains() Obtain List of playback domain names.
- * @method void setPlayDomains(array $PlayDomains) Set List of playback domain names.
+ * @method string getStartTime() Obtain Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago.
+ * @method void setStartTime(string $StartTime) Set Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago.
+ * @method string getEndTime() Obtain End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+ * @method void setEndTime(string $EndTime) Set End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+ * @method array getPlayDomains() Obtain Playback domain name list.
+ * @method void setPlayDomains(array $PlayDomains) Set Playback domain name list.
  */
 class DescribeHttpStatusInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago.
+     * @var string Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago.
      */
     public $StartTime;
 
     /**
-     * @var string End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * @var string End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public $EndTime;
 
     /**
-     * @var array List of playback domain names.
+     * @var array Playback domain name list.
      */
     public $PlayDomains;
 
     /**
-     * @param string $StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago.
-     * @param string $EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
-     * @param array $PlayDomains List of playback domain names.
+     * @param string $StartTime Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago.
+     * @param string $EndTime End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @param array $PlayDomains Playback domain name list.
      */
     function __construct()
     {

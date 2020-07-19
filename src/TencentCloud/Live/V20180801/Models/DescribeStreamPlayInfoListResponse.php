@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamPlayInfoList response structure.
  *
- * @method array getDataInfoList() Obtain statistics list.
- * @method void setDataInfoList(array $DataInfoList) Set statistics list.
+ * @method array getDataInfoList() Obtain Statistics list at a 1-minute granularity.
+ * @method void setDataInfoList(array $DataInfoList) Set Statistics list at a 1-minute granularity.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeStreamPlayInfoListResponse extends AbstractModel
 {
     /**
-     * @var array statistics list.
+     * @var array Statistics list at a 1-minute granularity.
      */
     public $DataInfoList;
 
@@ -38,7 +38,7 @@ class DescribeStreamPlayInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList statistics list.
+     * @param array $DataInfoList Statistics list at a 1-minute granularity.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

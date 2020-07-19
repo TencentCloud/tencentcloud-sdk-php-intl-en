@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Playback error code information
  *
- * @method string getTime() Obtain Data time point.
-In the format of yyyy-mm-dd HH:MM:SS.
- * @method void setTime(string $Time) Set Data time point.
-In the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getTime() Obtain Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setTime(string $Time) Set Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`.
  * @method array getHttpStatusInfoList() Obtain Playback status code details.
  * @method void setHttpStatusInfoList(array $HttpStatusInfoList) Set Playback status code details.
  */
 class HttpStatusData extends AbstractModel
 {
     /**
-     * @var string Data time point.
-In the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $Time;
 
@@ -41,8 +41,8 @@ In the format of yyyy-mm-dd HH:MM:SS.
     public $HttpStatusInfoList;
 
     /**
-     * @param string $Time Data time point.
-In the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $Time Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`.
      * @param array $HttpStatusInfoList Playback status code details.
      */
     function __construct()

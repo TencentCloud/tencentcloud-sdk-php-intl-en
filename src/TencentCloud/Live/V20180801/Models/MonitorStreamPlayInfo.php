@@ -18,68 +18,68 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 监控播放数据
+ * Monitored playback data
  *
- * @method string getPlayDomain() Obtain 播放域名。
- * @method void setPlayDomain(string $PlayDomain) Set 播放域名。
- * @method string getStreamName() Obtain 流id。
- * @method void setStreamName(string $StreamName) Set 流id。
- * @method integer getRate() Obtain 播放码率，0表示原始码率。
- * @method void setRate(integer $Rate) Set 播放码率，0表示原始码率。
- * @method string getProtocol() Obtain 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
- * @method void setProtocol(string $Protocol) Set 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
- * @method float getBandwidth() Obtain 带宽，单位是Mbps。
- * @method void setBandwidth(float $Bandwidth) Set 带宽，单位是Mbps。
- * @method integer getOnline() Obtain 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
- * @method void setOnline(integer $Online) Set 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
- * @method integer getRequest() Obtain 请求数。
- * @method void setRequest(integer $Request) Set 请求数。
+ * @method string getPlayDomain() Obtain Playback domain name.
+ * @method void setPlayDomain(string $PlayDomain) Set Playback domain name.
+ * @method string getStreamName() Obtain Stream ID.
+ * @method void setStreamName(string $StreamName) Set Stream ID.
+ * @method integer getRate() Obtain Playback bitrate. 0 indicates the original bitrate.
+ * @method void setRate(integer $Rate) Set Playback bitrate. 0 indicates the original bitrate.
+ * @method string getProtocol() Obtain Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
+ * @method void setProtocol(string $Protocol) Set Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
+ * @method float getBandwidth() Obtain Bandwidth in Mbps.
+ * @method void setBandwidth(float $Bandwidth) Set Bandwidth in Mbps.
+ * @method integer getOnline() Obtain Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
+ * @method void setOnline(integer $Online) Set Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
+ * @method integer getRequest() Obtain Number of requests.
+ * @method void setRequest(integer $Request) Set Number of requests.
  */
 class MonitorStreamPlayInfo extends AbstractModel
 {
     /**
-     * @var string 播放域名。
+     * @var string Playback domain name.
      */
     public $PlayDomain;
 
     /**
-     * @var string 流id。
+     * @var string Stream ID.
      */
     public $StreamName;
 
     /**
-     * @var integer 播放码率，0表示原始码率。
+     * @var integer Playback bitrate. 0 indicates the original bitrate.
      */
     public $Rate;
 
     /**
-     * @var string 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
+     * @var string Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
      */
     public $Protocol;
 
     /**
-     * @var float 带宽，单位是Mbps。
+     * @var float Bandwidth in Mbps.
      */
     public $Bandwidth;
 
     /**
-     * @var integer 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
+     * @var integer Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
      */
     public $Online;
 
     /**
-     * @var integer 请求数。
+     * @var integer Number of requests.
      */
     public $Request;
 
     /**
-     * @param string $PlayDomain 播放域名。
-     * @param string $StreamName 流id。
-     * @param integer $Rate 播放码率，0表示原始码率。
-     * @param string $Protocol 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
-     * @param float $Bandwidth 带宽，单位是Mbps。
-     * @param integer $Online 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
-     * @param integer $Request 请求数。
+     * @param string $PlayDomain Playback domain name.
+     * @param string $StreamName Stream ID.
+     * @param integer $Rate Playback bitrate. 0 indicates the original bitrate.
+     * @param string $Protocol Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
+     * @param float $Bandwidth Bandwidth in Mbps.
+     * @param integer $Online Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
+     * @param integer $Request Number of requests.
      */
     function __construct()
     {

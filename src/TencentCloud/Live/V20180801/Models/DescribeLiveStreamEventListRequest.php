@@ -50,12 +50,12 @@ Note: Currently, query for up to 10,000 entries is supported.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported.
+Note: currently, query for up to 10,000 entries is supported.
  * @method void setPageSize(integer $PageSize) Set Number of entries per page.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported.
+Note: currently, query for up to 10,000 entries is supported.
  * @method integer getIsFilter() Obtain Whether to filter. No filtering by default.
 0: No filtering at all.
 1: Filter out the failing streams and return only the successful ones.
@@ -121,7 +121,7 @@ Note: Currently, query for up to 10,000 entries is supported.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported.
+Note: currently, query for up to 10,000 entries is supported.
      */
     public $PageSize;
 
@@ -165,7 +165,7 @@ Note: Currently, query for up to 10,000 entries is supported.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported.
+Note: currently, query for up to 10,000 entries is supported.
      * @param integer $IsFilter Whether to filter. No filtering by default.
 0: No filtering at all.
 1: Filter out the failing streams and return only the successful ones.

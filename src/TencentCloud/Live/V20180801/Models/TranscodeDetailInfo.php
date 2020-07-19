@@ -18,40 +18,38 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Transcoding details
+ * Transcoding details.
  *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- * @method string getStartTime() Obtain Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM.
- * @method void setStartTime(string $StartTime) Set Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM.
- * @method string getEndTime() Obtain End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM.
- * @method void setEndTime(string $EndTime) Set End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM.
+ * @method string getStartTime() Obtain Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+ * @method void setStartTime(string $StartTime) Set Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+ * @method string getEndTime() Obtain End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+ * @method void setEndTime(string $EndTime) Set End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
  * @method integer getDuration() Obtain Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
  * @method void setDuration(integer $Duration) Set Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
- * @method string getModuleCodec() Obtain Encoding method, with modules,
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
+ * @method string getModuleCodec() Obtain Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265.
- * @method void setModuleCodec(string $ModuleCodec) Set Encoding method, with modules,
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265.
+ * @method void setModuleCodec(string $ModuleCodec) Set Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265.
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265.
  * @method integer getBitrate() Obtain Bitrate.
  * @method void setBitrate(integer $Bitrate) Set Bitrate.
- * @method string getType() Obtain Type. Value range: Transcode, MixStream, WaterMark.
- * @method void setType(string $Type) Set Type. Value range: Transcode, MixStream, WaterMark.
+ * @method string getType() Obtain Type. Valid values: Transcode, MixStream, WaterMark.
+ * @method void setType(string $Type) Set Type. Valid values: Transcode, MixStream, WaterMark.
  * @method string getPushDomain() Obtain Push domain name.
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
+ * @method string getResolution() Obtain Resolution.
+ * @method void setResolution(string $Resolution) Set Resolution.
  */
 class TranscodeDetailInfo extends AbstractModel
 {
@@ -61,30 +59,28 @@ class TranscodeDetailInfo extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM.
+     * @var string Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
      */
     public $StartTime;
 
     /**
-     * @var string End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM.
+     * @var string End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
      */
     public $EndTime;
 
     /**
      * @var integer Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
      */
     public $Duration;
 
     /**
-     * @var string Encoding method, with modules,
+     * @var string Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265.
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265.
      */
     public $ModuleCodec;
 
@@ -94,7 +90,7 @@ topspeed_H265 =》Ultra-fast HD-H265.
     public $Bitrate;
 
     /**
-     * @var string Type. Value range: Transcode, MixStream, WaterMark.
+     * @var string Type. Valid values: Transcode, MixStream, WaterMark.
      */
     public $Type;
 
@@ -104,22 +100,26 @@ topspeed_H265 =》Ultra-fast HD-H265.
     public $PushDomain;
 
     /**
+     * @var string Resolution.
+     */
+    public $Resolution;
+
+    /**
      * @param string $StreamName Stream name.
-     * @param string $StartTime Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM.
-     * @param string $EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM.
+     * @param string $StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+     * @param string $EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
      * @param integer $Duration Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
-     * @param string $ModuleCodec Encoding method, with modules,
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
+     * @param string $ModuleCodec Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265.
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265.
      * @param integer $Bitrate Bitrate.
-     * @param string $Type Type. Value range: Transcode, MixStream, WaterMark.
+     * @param string $Type Type. Valid values: Transcode, MixStream, WaterMark.
      * @param string $PushDomain Push domain name.
+     * @param string $Resolution Resolution.
      */
     function __construct()
     {
@@ -164,6 +164,10 @@ topspeed_H265 =》Ultra-fast HD-H265.
 
         if (array_key_exists("PushDomain",$param) and $param["PushDomain"] !== null) {
             $this->PushDomain = $param["PushDomain"];
+        }
+
+        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
+            $this->Resolution = $param["Resolution"];
         }
     }
 }

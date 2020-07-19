@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScreenShotSheetNumList response structure.
  *
- * @method array getDataInfoList() Obtain 数据信息列表。
- * @method void setDataInfoList(array $DataInfoList) Set 数据信息列表。
+ * @method array getDataInfoList() Obtain Data information list.
+ * @method void setDataInfoList(array $DataInfoList) Set Data information list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeScreenShotSheetNumListResponse extends AbstractModel
 {
     /**
-     * @var array 数据信息列表。
+     * @var array Data information list.
      */
     public $DataInfoList;
 
@@ -38,7 +38,7 @@ class DescribeScreenShotSheetNumListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList 数据信息列表。
+     * @param array $DataInfoList Data information list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

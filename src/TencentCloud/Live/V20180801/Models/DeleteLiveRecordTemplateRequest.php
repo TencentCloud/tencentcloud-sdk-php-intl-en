@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLiveRecordTemplate request structure.
  *
- * @method integer getTemplateId() Obtain Template ID.
- * @method void setTemplateId(integer $TemplateId) Set Template ID.
+ * @method integer getTemplateId() Obtain Template ID obtained through the `DescribeRecordTemplates` API.
+ * @method void setTemplateId(integer $TemplateId) Set Template ID obtained through the `DescribeRecordTemplates` API.
  */
 class DeleteLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Template ID.
+     * @var integer Template ID obtained through the `DescribeRecordTemplates` API.
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId Template ID.
+     * @param integer $TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
      */
     function __construct()
     {

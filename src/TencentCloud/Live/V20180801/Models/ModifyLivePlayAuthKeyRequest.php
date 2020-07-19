@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLivePlayAuthKey request structure.
  *
- * @method string getDomainName() Obtain Domain name.
- * @method void setDomainName(string $DomainName) Set Domain name.
+ * @method string getDomainName() Obtain Playback domain name.
+ * @method void setDomainName(string $DomainName) Set Playback domain name.
  * @method integer getEnable() Obtain Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
  * @method void setEnable(integer $Enable) Set Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
  * @method string getAuthKey() Obtain Authentication key.
+If this parameter is left empty, the current value will not be modified.
  * @method void setAuthKey(string $AuthKey) Set Authentication key.
+If this parameter is left empty, the current value will not be modified.
  * @method integer getAuthDelta() Obtain Validity period in seconds.
+If this parameter is left empty, the current value will not be modified.
  * @method void setAuthDelta(integer $AuthDelta) Set Validity period in seconds.
- * @method string getAuthBackKey() Obtain Authentication backkey.
- * @method void setAuthBackKey(string $AuthBackKey) Set Authentication backkey.
+If this parameter is left empty, the current value will not be modified.
+ * @method string getAuthBackKey() Obtain Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
+ * @method void setAuthBackKey(string $AuthBackKey) Set Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
  */
 class ModifyLivePlayAuthKeyRequest extends AbstractModel
 {
     /**
-     * @var string Domain name.
+     * @var string Playback domain name.
      */
     public $DomainName;
 
     /**
      * @var integer Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      */
     public $Enable;
 
     /**
      * @var string Authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public $AuthKey;
 
     /**
      * @var integer Validity period in seconds.
+If this parameter is left empty, the current value will not be modified.
      */
     public $AuthDelta;
 
     /**
-     * @var string Authentication backkey.
+     * @var string Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public $AuthBackKey;
 
     /**
-     * @param string $DomainName Domain name.
+     * @param string $DomainName Playback domain name.
      * @param integer $Enable Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      * @param string $AuthKey Authentication key.
+If this parameter is left empty, the current value will not be modified.
      * @param integer $AuthDelta Validity period in seconds.
-     * @param string $AuthBackKey Authentication backkey.
+If this parameter is left empty, the current value will not be modified.
+     * @param string $AuthBackKey Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     function __construct()
     {

@@ -18,25 +18,25 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Playback information of the client IP
+ * Aggregated playback information of client IP.
  *
- * @method string getClientIp() Obtain Client IP in the format of dot-decimal notation.
- * @method void setClientIp(string $ClientIp) Set Client IP in the format of dot-decimal notation.
+ * @method string getClientIp() Obtain Client IP in dotted-decimal notation.
+ * @method void setClientIp(string $ClientIp) Set Client IP in dotted-decimal notation.
  * @method string getProvince() Obtain District where the client is located.
  * @method void setProvince(string $Province) Set District where the client is located.
  * @method float getTotalFlux() Obtain Total traffic.
  * @method void setTotalFlux(float $TotalFlux) Set Total traffic.
  * @method integer getTotalRequest() Obtain Total number of requests.
  * @method void setTotalRequest(integer $TotalRequest) Set Total number of requests.
- * @method integer getTotalFailedRequest() Obtain Total number of failing requests.
- * @method void setTotalFailedRequest(integer $TotalFailedRequest) Set Total number of failing requests.
- * @method string getCountryArea() Obtain 
- * @method void setCountryArea(string $CountryArea) Set 
+ * @method integer getTotalFailedRequest() Obtain Total number of failed requests.
+ * @method void setTotalFailedRequest(integer $TotalFailedRequest) Set Total number of failed requests.
+ * @method string getCountryArea() Obtain Country/region where the client is located.
+ * @method void setCountryArea(string $CountryArea) Set Country/region where the client is located.
  */
 class ClientIpPlaySumInfo extends AbstractModel
 {
     /**
-     * @var string Client IP in the format of dot-decimal notation.
+     * @var string Client IP in dotted-decimal notation.
      */
     public $ClientIp;
 
@@ -56,22 +56,22 @@ class ClientIpPlaySumInfo extends AbstractModel
     public $TotalRequest;
 
     /**
-     * @var integer Total number of failing requests.
+     * @var integer Total number of failed requests.
      */
     public $TotalFailedRequest;
 
     /**
-     * @var string 
+     * @var string Country/region where the client is located.
      */
     public $CountryArea;
 
     /**
-     * @param string $ClientIp Client IP in the format of dot-decimal notation.
+     * @param string $ClientIp Client IP in dotted-decimal notation.
      * @param string $Province District where the client is located.
      * @param float $TotalFlux Total traffic.
      * @param integer $TotalRequest Total number of requests.
-     * @param integer $TotalFailedRequest Total number of failing requests.
-     * @param string $CountryArea 
+     * @param integer $TotalFailedRequest Total number of failed requests.
+     * @param string $CountryArea Country/region where the client is located.
      */
     function __construct()
     {

@@ -18,28 +18,32 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
+ * Total occurrences of each status code. Most HTTP return codes are supported.
  *
- * @method string getCode() Obtain HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
- * @method void setCode(string $Code) Set HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
- * @method integer getNum() Obtain Total occurrences
- * @method void setNum(integer $Num) Set Total occurrences
+ * @method string getCode() Obtain HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504.
+ * @method void setCode(string $Code) Set HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504.
+ * @method integer getNum() Obtain Total occurrences.
+ * @method void setNum(integer $Num) Set Total occurrences.
  */
 class PlayCodeTotalInfo extends AbstractModel
 {
     /**
-     * @var string HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
+     * @var string HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504.
      */
     public $Code;
 
     /**
-     * @var integer Total occurrences
+     * @var integer Total occurrences.
      */
     public $Num;
 
     /**
-     * @param string $Code HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
-     * @param integer $Num Total occurrences
+     * @param string $Code HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504.
+     * @param integer $Num Total occurrences.
      */
     function __construct()
     {

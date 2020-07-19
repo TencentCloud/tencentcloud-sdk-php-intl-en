@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPushDomain() Obtain Push domain name.
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
- * @method string getAppName() Obtain Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
- * @method void setAppName(string $AppName) Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
- * @method integer getPageNum() Obtain Page number.
+ * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+ * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+ * @method integer getPageNum() Obtain Number of pages,
 Value range: [1,10000],
 Default value: 1.
- * @method void setPageNum(integer $PageNum) Set Page number.
+ * @method void setPageNum(integer $PageNum) Set Number of pages,
 Value range: [1,10000],
 Default value: 1.
  * @method integer getPageSize() Obtain Number of entries per page,
@@ -45,12 +45,12 @@ class DescribeLiveStreamPushInfoListRequest extends AbstractModel
     public $PushDomain;
 
     /**
-     * @var string Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * @var string Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public $AppName;
 
     /**
-     * @var integer Page number.
+     * @var integer Number of pages,
 Value range: [1,10000],
 Default value: 1.
      */
@@ -65,8 +65,8 @@ Default value: 200.
 
     /**
      * @param string $PushDomain Push domain name.
-     * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-     * @param integer $PageNum Page number.
+     * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+     * @param integer $PageNum Number of pages,
 Value range: [1,10000],
 Default value: 1.
      * @param integer $PageSize Number of entries per page,

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertId(integer $CertId) Set Certificate ID, which can be obtained through the `CreateLiveCert` API.
  * @method string getDomainName() Obtain Playback domain name.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
- * @method integer getStatus() Obtain Status. 0: off, 1: on.
- * @method void setStatus(integer $Status) Set Status. 0: off, 1: on.
+ * @method integer getStatus() Obtain HTTPS status. 0: disabled, 1: enabled.
+ * @method void setStatus(integer $Status) Set HTTPS status. 0: disabled, 1: enabled.
  */
 class BindLiveDomainCertRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class BindLiveDomainCertRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var integer Status. 0: off, 1: on.
+     * @var integer HTTPS status. 0: disabled, 1: enabled.
      */
     public $Status;
 
     /**
      * @param integer $CertId Certificate ID, which can be obtained through the `CreateLiveCert` API.
      * @param string $DomainName Playback domain name.
-     * @param integer $Status Status. 0: off, 1: on.
+     * @param integer $Status HTTPS status. 0: disabled, 1: enabled.
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHttpStatusInfoList response structure.
  *
- * @method array getDataInfoList() Obtain List of playback status codes.
- * @method void setDataInfoList(array $DataInfoList) Set List of playback status codes.
+ * @method array getDataInfoList() Obtain Playback status code list.
+ * @method void setDataInfoList(array $DataInfoList) Set Playback status code list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeHttpStatusInfoListResponse extends AbstractModel
 {
     /**
-     * @var array List of playback status codes.
+     * @var array Playback status code list.
      */
     public $DataInfoList;
 
@@ -38,7 +38,7 @@ class DescribeHttpStatusInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList List of playback status codes.
+     * @param array $DataInfoList Playback status code list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

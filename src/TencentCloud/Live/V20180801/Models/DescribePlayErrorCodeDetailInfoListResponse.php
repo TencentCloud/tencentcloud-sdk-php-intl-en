@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlayErrorCodeDetailInfoList response structure.
  *
- * @method array getHttpCodeList() Obtain statistics list.
- * @method void setHttpCodeList(array $HttpCodeList) Set statistics list.
+ * @method array getHttpCodeList() Obtain Statistics list.
+ * @method void setHttpCodeList(array $HttpCodeList) Set Statistics list.
  * @method string getStatType() Obtain Statistics type.
  * @method void setStatType(string $StatType) Set Statistics type.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePlayErrorCodeDetailInfoListResponse extends AbstractModel
 {
     /**
-     * @var array statistics list.
+     * @var array Statistics list.
      */
     public $HttpCodeList;
 
@@ -45,7 +45,7 @@ class DescribePlayErrorCodeDetailInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $HttpCodeList statistics list.
+     * @param array $HttpCodeList Statistics list.
      * @param string $StatType Statistics type.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

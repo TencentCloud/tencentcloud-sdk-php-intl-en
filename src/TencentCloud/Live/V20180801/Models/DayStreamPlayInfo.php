@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Stream playback information
  *
- * @method string getTime() Obtain Data time point in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setTime(string $Time) Set Data time point in the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getTime() Obtain Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setTime(string $Time) Set Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
  * @method float getBandwidth() Obtain Bandwidth in Mbps.
  * @method void setBandwidth(float $Bandwidth) Set Bandwidth in Mbps.
  * @method float getFlux() Obtain Traffic in MB.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DayStreamPlayInfo extends AbstractModel
 {
     /**
-     * @var string Data time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $Time;
 
@@ -59,7 +59,7 @@ class DayStreamPlayInfo extends AbstractModel
     public $Online;
 
     /**
-     * @param string $Time Data time point in the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $Time Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
      * @param float $Bandwidth Bandwidth in Mbps.
      * @param float $Flux Traffic in MB.
      * @param integer $Request Number of requests.

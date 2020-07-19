@@ -20,39 +20,39 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlayErrorCodeDetailInfoList request structure.
  *
- * @method string getStartTime() Obtain Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
- * @method void setStartTime(string $StartTime) Set Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
- * @method string getEndTime() Obtain End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
- * @method void setEndTime(string $EndTime) Set End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+ * @method string getStartTime() Obtain Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setStartTime(string $StartTime) Set Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method string getEndTime() Obtain End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+ * @method void setEndTime(string $EndTime) Set End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
  * @method integer getGranularity() Obtain Query granularity:
 1: 1-minute granularity.
  * @method void setGranularity(integer $Granularity) Set Query granularity:
 1: 1-minute granularity.
- * @method string getStatType() Obtain Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
- * @method void setStatType(string $StatType) Set Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
- * @method array getPlayDomains() Obtain List of playback domain names.
- * @method void setPlayDomains(array $PlayDomains) Set List of playback domain names.
- * @method string getMainlandOrOversea() Obtain 
- * @method void setMainlandOrOversea(string $MainlandOrOversea) Set 
+ * @method string getStatType() Obtain Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
+ * @method void setStatType(string $StatType) Set Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
+ * @method array getPlayDomains() Obtain Playback domain name list.
+ * @method void setPlayDomains(array $PlayDomains) Set Playback domain name list.
+ * @method string getMainlandOrOversea() Obtain Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
  */
 class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $StartTime;
 
     /**
-     * @var string End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * @var string End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public $EndTime;
 
@@ -63,31 +63,31 @@ Note: EndTime and StartTime only support querying data on the past day.
     public $Granularity;
 
     /**
-     * @var string Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
+     * @var string Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
      */
     public $StatType;
 
     /**
-     * @var array List of playback domain names.
+     * @var array Playback domain name list.
      */
     public $PlayDomains;
 
     /**
-     * @var string 
+     * @var string Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public $MainlandOrOversea;
 
     /**
-     * @param string $StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-     * @param string $EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * @param string $StartTime Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param string $EndTime End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      * @param integer $Granularity Query granularity:
 1: 1-minute granularity.
-     * @param string $StatType Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
-     * @param array $PlayDomains List of playback domain names.
-     * @param string $MainlandOrOversea 
+     * @param string $StatType Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
+     * @param array $PlayDomains Playback domain name list.
+     * @param string $MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     function __construct()
     {

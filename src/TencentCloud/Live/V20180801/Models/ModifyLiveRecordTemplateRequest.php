@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLiveRecordTemplate request structure.
  *
- * @method integer getTemplateId() Obtain Template ID.
- * @method void setTemplateId(integer $TemplateId) Set Template ID.
+ * @method integer getTemplateId() Obtain Template ID obtained through the `DescribeRecordTemplates` API.
+ * @method void setTemplateId(integer $TemplateId) Set Template ID obtained through the `DescribeRecordTemplates` API.
  * @method string getTemplateName() Obtain Template name.
  * @method void setTemplateName(string $TemplateName) Set Template name.
  * @method string getDescription() Obtain Message description
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Template ID.
+     * @var integer Template ID obtained through the `DescribeRecordTemplates` API.
      */
     public $TemplateId;
 
@@ -87,7 +87,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $Mp3Param;
 
     /**
-     * @param integer $TemplateId Template ID.
+     * @param integer $TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
      * @param string $TemplateName Template name.
      * @param string $Description Message description
      * @param RecordParam $FlvParam FLV recording parameter, which is set when FLV recording is enabled.

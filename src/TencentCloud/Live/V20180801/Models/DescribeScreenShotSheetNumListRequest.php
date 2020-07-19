@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScreenShotSheetNumList request structure.
  *
- * @method string getStartTime() Obtain utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
- * @method void setStartTime(string $StartTime) Set utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
- * @method string getEndTime() Obtain utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
- * @method void setEndTime(string $EndTime) Set utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
- * @method string getZone() Obtain 地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
- * @method void setZone(string $Zone) Set 地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
- * @method array getPushDomains() Obtain 推流域名（支持查询2019年11 月1日之后的域名维度数据）。
- * @method void setPushDomains(array $PushDomains) Set 推流域名（支持查询2019年11 月1日之后的域名维度数据）。
- * @method string getGranularity() Obtain 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
- * @method void setGranularity(string $Granularity) Set 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
+ * @method string getStartTime() Obtain Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+ * @method void setStartTime(string $StartTime) Set Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+ * @method string getEndTime() Obtain End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
+ * @method void setEndTime(string $EndTime) Set End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
+ * @method string getZone() Obtain Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
+ * @method void setZone(string $Zone) Set Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
+ * @method array getPushDomains() Obtain Push domain name (data at the domain name level after November 1, 2019 can be queried).
+ * @method void setPushDomains(array $PushDomains) Set Push domain name (data at the domain name level after November 1, 2019 can be queried).
+ * @method string getGranularity() Obtain Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
+ * @method void setGranularity(string $Granularity) Set Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
  */
 class DescribeScreenShotSheetNumListRequest extends AbstractModel
 {
     /**
-     * @var string utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
+     * @var string Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
      */
     public $StartTime;
 
     /**
-     * @var string utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
+     * @var string End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
      */
     public $EndTime;
 
     /**
-     * @var string 地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
+     * @var string Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
      */
     public $Zone;
 
     /**
-     * @var array 推流域名（支持查询2019年11 月1日之后的域名维度数据）。
+     * @var array Push domain name (data at the domain name level after November 1, 2019 can be queried).
      */
     public $PushDomains;
 
     /**
-     * @var string 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
+     * @var string Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
      */
     public $Granularity;
 
     /**
-     * @param string $StartTime utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
-     * @param string $EndTime utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
-     * @param string $Zone 地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
-     * @param array $PushDomains 推流域名（支持查询2019年11 月1日之后的域名维度数据）。
-     * @param string $Granularity 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
+     * @param string $StartTime Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+     * @param string $EndTime End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
+     * @param string $Zone Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
+     * @param array $PushDomains Push domain name (data at the domain name level after November 1, 2019 can be queried).
+     * @param string $Granularity Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
      */
     function __construct()
     {

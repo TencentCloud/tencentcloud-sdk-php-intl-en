@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveWatermark request structure.
  *
- * @method integer getWatermarkId() Obtain Watermark ID.
- * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
+ * @method integer getWatermarkId() Obtain Watermark ID returned by the `DescribeLiveWatermarks` API.
+ * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID returned by the `DescribeLiveWatermarks` API.
  */
 class DescribeLiveWatermarkRequest extends AbstractModel
 {
     /**
-     * @var integer Watermark ID.
+     * @var integer Watermark ID returned by the `DescribeLiveWatermarks` API.
      */
     public $WatermarkId;
 
     /**
-     * @param integer $WatermarkId Watermark ID.
+     * @param integer $WatermarkId Watermark ID returned by the `DescribeLiveWatermarks` API.
      */
     function __construct()
     {

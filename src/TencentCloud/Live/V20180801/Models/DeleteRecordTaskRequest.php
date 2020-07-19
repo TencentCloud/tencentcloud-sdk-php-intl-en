@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRecordTask request structure.
  *
- * @method string getTaskId() Obtain 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
- * @method void setTaskId(string $TaskId) Set 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
+ * @method string getTaskId() Obtain Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
+ * @method void setTaskId(string $TaskId) Set Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
  */
 class DeleteRecordTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
+     * @var string Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
+     * @param string $TaskId Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
      */
     function __construct()
     {

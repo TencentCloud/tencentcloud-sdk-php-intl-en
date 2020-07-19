@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCode4xx(integer $TotalCode4xx) Set Occurrences of 4xx status codes.
  * @method integer getTotalCode5xx() Obtain Occurrences of 5xx status codes.
  * @method void setTotalCode5xx(integer $TotalCode5xx) Set Occurrences of 5xx status codes.
- * @method array getTotalCodeList() Obtain Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
- * @method void setTotalCodeList(array $TotalCodeList) Set Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
+ * @method array getTotalCodeList() Obtain Total occurrences of each status code.
+ * @method void setTotalCodeList(array $TotalCodeList) Set Total occurrences of each status code.
  * @method integer getPageNum() Obtain Page number.
  * @method void setPageNum(integer $PageNum) Set Page number.
  * @method integer getPageSize() Obtain Number of entries per page.
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalPage(integer $TotalPage) Set Total number of pages.
  * @method integer getTotalNum() Obtain Total number of results.
  * @method void setTotalNum(integer $TotalNum) Set Total number of results.
- * @method integer getTotalCode2xx() Obtain 
- * @method void setTotalCode2xx(integer $TotalCode2xx) Set 
- * @method integer getTotalCode3xx() Obtain 
- * @method void setTotalCode3xx(integer $TotalCode3xx) Set 
+ * @method integer getTotalCode2xx() Obtain Occurrences of 2xx status codes.
+ * @method void setTotalCode2xx(integer $TotalCode2xx) Set Occurrences of 2xx status codes.
+ * @method integer getTotalCode3xx() Obtain Occurrences of 3xx status codes.
+ * @method void setTotalCode3xx(integer $TotalCode3xx) Set Occurrences of 3xx status codes.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -68,7 +68,7 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
     public $TotalCode5xx;
 
     /**
-     * @var array Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
+     * @var array Total occurrences of each status code.
      */
     public $TotalCodeList;
 
@@ -93,12 +93,12 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
     public $TotalNum;
 
     /**
-     * @var integer 
+     * @var integer Occurrences of 2xx status codes.
      */
     public $TotalCode2xx;
 
     /**
-     * @var integer 
+     * @var integer Occurrences of 3xx status codes.
      */
     public $TotalCode3xx;
 
@@ -112,13 +112,13 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
      * @param integer $TotalCodeAll Total occurrences of all status codes.
      * @param integer $TotalCode4xx Occurrences of 4xx status codes.
      * @param integer $TotalCode5xx Occurrences of 5xx status codes.
-     * @param array $TotalCodeList Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
+     * @param array $TotalCodeList Total occurrences of each status code.
      * @param integer $PageNum Page number.
      * @param integer $PageSize Number of entries per page.
      * @param integer $TotalPage Total number of pages.
      * @param integer $TotalNum Total number of results.
-     * @param integer $TotalCode2xx 
-     * @param integer $TotalCode3xx 
+     * @param integer $TotalCode2xx Occurrences of 2xx status codes.
+     * @param integer $TotalCode3xx Occurrences of 3xx status codes.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

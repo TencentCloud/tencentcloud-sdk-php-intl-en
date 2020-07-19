@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopRecordTask request structure.
  *
- * @method string getTaskId() Obtain 录制任务ID。
- * @method void setTaskId(string $TaskId) Set 录制任务ID。
+ * @method string getTaskId() Obtain Recording task ID.
+ * @method void setTaskId(string $TaskId) Set Recording task ID.
  */
 class StopRecordTaskRequest extends AbstractModel
 {
     /**
-     * @var string 录制任务ID。
+     * @var string Recording task ID.
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 录制任务ID。
+     * @param string $TaskId Recording task ID.
      */
     function __construct()
     {

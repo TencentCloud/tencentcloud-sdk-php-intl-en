@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Playback error code information
  *
- * @method string getCountryAreaName() Obtain 
- * @method void setCountryAreaName(string $CountryAreaName) Set 
+ * @method string getCountryAreaName() Obtain Country or region.
+ * @method void setCountryAreaName(string $CountryAreaName) Set Country or region.
  * @method string getProvinceName() Obtain District.
  * @method void setProvinceName(string $ProvinceName) Set District.
  * @method string getIspName() Obtain ISP.
  * @method void setIspName(string $IspName) Set ISP.
- * @method integer getCode2xx() Obtain 
- * @method void setCode2xx(integer $Code2xx) Set 
- * @method integer getCode3xx() Obtain 
- * @method void setCode3xx(integer $Code3xx) Set 
+ * @method integer getCode2xx() Obtain Occurrences of 2xx error codes.
+ * @method void setCode2xx(integer $Code2xx) Set Occurrences of 2xx error codes.
+ * @method integer getCode3xx() Obtain Occurrences of 3xx error codes.
+ * @method void setCode3xx(integer $Code3xx) Set Occurrences of 3xx error codes.
  * @method integer getCode4xx() Obtain Occurrences of 4xx error codes.
  * @method void setCode4xx(integer $Code4xx) Set Occurrences of 4xx error codes.
  * @method integer getCode5xx() Obtain Occurrences of 5xx error codes.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ProIspPlayCodeDataInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Country or region.
      */
     public $CountryAreaName;
 
@@ -53,12 +53,12 @@ class ProIspPlayCodeDataInfo extends AbstractModel
     public $IspName;
 
     /**
-     * @var integer 
+     * @var integer Occurrences of 2xx error codes.
      */
     public $Code2xx;
 
     /**
-     * @var integer 
+     * @var integer Occurrences of 3xx error codes.
      */
     public $Code3xx;
 
@@ -73,11 +73,11 @@ class ProIspPlayCodeDataInfo extends AbstractModel
     public $Code5xx;
 
     /**
-     * @param string $CountryAreaName 
+     * @param string $CountryAreaName Country or region.
      * @param string $ProvinceName District.
      * @param string $IspName ISP.
-     * @param integer $Code2xx 
-     * @param integer $Code3xx 
+     * @param integer $Code2xx Occurrences of 2xx error codes.
+     * @param integer $Code3xx Occurrences of 3xx error codes.
      * @param integer $Code4xx Occurrences of 4xx error codes.
      * @param integer $Code5xx Occurrences of 5xx error codes.
      */

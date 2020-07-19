@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveDomainPlayInfoList request structure.
  *
- * @method array getPlayDomains() Obtain List of playback domain names.
- * @method void setPlayDomains(array $PlayDomains) Set List of playback domain names.
+ * @method array getPlayDomains() Obtain Playback domain name list.
+ * @method void setPlayDomains(array $PlayDomains) Set Playback domain name list.
  */
 class DescribeLiveDomainPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var array List of playback domain names.
+     * @var array Playback domain name list.
      */
     public $PlayDomains;
 
     /**
-     * @param array $PlayDomains List of playback domain names.
+     * @param array $PlayDomains Playback domain name list.
      */
     function __construct()
     {

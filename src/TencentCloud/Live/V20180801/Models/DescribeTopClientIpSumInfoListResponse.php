@@ -20,18 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopClientIpSumInfoList response structure.
  *
- * @method integer getPageNum() Obtain Page number.
-Value range: [1,1000].
-Default value: 1.
- * @method void setPageNum(integer $PageNum) Set Page number.
-Value range: [1,1000].
-Default value: 1.
- * @method integer getPageSize() Obtain Number of entries per page. Value range: [1,1000].
-Default value: 20.
- * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: [1,1000].
-Default value: 20.
- * @method string getOrderParam() Obtain Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
- * @method void setOrderParam(string $OrderParam) Set Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
+ * @method integer getPageNum() Obtain Page number. Value range: [1,1000]. Default value: 1.
+ * @method void setPageNum(integer $PageNum) Set Page number. Value range: [1,1000]. Default value: 1.
+ * @method integer getPageSize() Obtain Number of entries per page. Value range: [1,1000]. Default value: 20.
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: [1,1000]. Default value: 20.
+ * @method string getOrderParam() Obtain Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
+ * @method void setOrderParam(string $OrderParam) Set Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
  * @method integer getTotalNum() Obtain Total number of results.
  * @method void setTotalNum(integer $TotalNum) Set Total number of results.
  * @method integer getTotalPage() Obtain Total number of result pages.
@@ -44,20 +38,17 @@ Default value: 20.
 class DescribeTopClientIpSumInfoListResponse extends AbstractModel
 {
     /**
-     * @var integer Page number.
-Value range: [1,1000].
-Default value: 1.
+     * @var integer Page number. Value range: [1,1000]. Default value: 1.
      */
     public $PageNum;
 
     /**
-     * @var integer Number of entries per page. Value range: [1,1000].
-Default value: 20.
+     * @var integer Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public $PageSize;
 
     /**
-     * @var string Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
+     * @var string Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
      */
     public $OrderParam;
 
@@ -82,12 +73,9 @@ Default value: 20.
     public $RequestId;
 
     /**
-     * @param integer $PageNum Page number.
-Value range: [1,1000].
-Default value: 1.
-     * @param integer $PageSize Number of entries per page. Value range: [1,1000].
-Default value: 20.
-     * @param string $OrderParam Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
+     * @param integer $PageNum Page number. Value range: [1,1000]. Default value: 1.
+     * @param integer $PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+     * @param string $OrderParam Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
      * @param integer $TotalNum Total number of results.
      * @param integer $TotalPage Total number of result pages.
      * @param array $DataInfoList Data content.

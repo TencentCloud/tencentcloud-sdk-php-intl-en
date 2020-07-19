@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveDomainPlayInfoList response structure.
  *
- * @method string getTime() Obtain Data time in the format of yyyy-mm-dd HH:MM:SS.
- * @method void setTime(string $Time) Set Data time in the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getTime() Obtain Data time in the format of `yyyy-mm-dd HH:MM:SS`.
+ * @method void setTime(string $Time) Set Data time in the format of `yyyy-mm-dd HH:MM:SS`.
  * @method float getTotalBandwidth() Obtain Real-time total bandwidth.
  * @method void setTotalBandwidth(float $TotalBandwidth) Set Real-time total bandwidth.
  * @method float getTotalFlux() Obtain Real-time total traffic.
  * @method void setTotalFlux(float $TotalFlux) Set Real-time total traffic.
- * @method integer getTotalRequest() Obtain TotalRequest.
- * @method void setTotalRequest(integer $TotalRequest) Set TotalRequest.
+ * @method integer getTotalRequest() Obtain Total number of requests.
+ * @method void setTotalRequest(integer $TotalRequest) Set Total number of requests.
  * @method integer getTotalOnline() Obtain Real-time total number of connections.
  * @method void setTotalOnline(integer $TotalOnline) Set Real-time total number of connections.
- * @method array getDomainInfoList() Obtain Data by region name.
- * @method void setDomainInfoList(array $DomainInfoList) Set Data by region name.
+ * @method array getDomainInfoList() Obtain Data by domain name.
+ * @method void setDomainInfoList(array $DomainInfoList) Set Data by domain name.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
 {
     /**
-     * @var string Data time in the format of yyyy-mm-dd HH:MM:SS.
+     * @var string Data time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public $Time;
 
@@ -53,7 +53,7 @@ class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
     public $TotalFlux;
 
     /**
-     * @var integer TotalRequest.
+     * @var integer Total number of requests.
      */
     public $TotalRequest;
 
@@ -63,7 +63,7 @@ class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
     public $TotalOnline;
 
     /**
-     * @var array Data by region name.
+     * @var array Data by domain name.
      */
     public $DomainInfoList;
 
@@ -73,12 +73,12 @@ class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Time Data time in the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $Time Data time in the format of `yyyy-mm-dd HH:MM:SS`.
      * @param float $TotalBandwidth Real-time total bandwidth.
      * @param float $TotalFlux Real-time total traffic.
-     * @param integer $TotalRequest TotalRequest.
+     * @param integer $TotalRequest Total number of requests.
      * @param integer $TotalOnline Real-time total number of connections.
-     * @param array $DomainInfoList Data by region name.
+     * @param array $DomainInfoList Data by domain name.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

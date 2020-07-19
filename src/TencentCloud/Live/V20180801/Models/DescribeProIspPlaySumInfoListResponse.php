@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalPage(integer $TotalPage) Set Total number of pages.
  * @method array getDataInfoList() Obtain Aggregated data list by district, ISP, or country/region.
  * @method void setDataInfoList(array $DataInfoList) Set Aggregated data list by district, ISP, or country/region.
- * @method float getAvgFluxPerSecond() Obtain Average bandwidth.
- * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) Set Average bandwidth.
+ * @method float getAvgFluxPerSecond() Obtain Download speed in MB/s. Calculation method: total traffic/total duration.
+ * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) Set Download speed in MB/s. Calculation method: total traffic/total duration.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -84,7 +84,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
     public $DataInfoList;
 
     /**
-     * @var float Average bandwidth.
+     * @var float Download speed in MB/s. Calculation method: total traffic/total duration.
      */
     public $AvgFluxPerSecond;
 
@@ -102,7 +102,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
      * @param integer $TotalNum Total number of results.
      * @param integer $TotalPage Total number of pages.
      * @param array $DataInfoList Aggregated data list by district, ISP, or country/region.
-     * @param float $AvgFluxPerSecond Average bandwidth.
+     * @param float $AvgFluxPerSecond Download speed in MB/s. Calculation method: total traffic/total duration.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

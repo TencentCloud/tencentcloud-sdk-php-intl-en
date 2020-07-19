@@ -25,23 +25,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method string getDayTime() Obtain Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried.
  * @method void setDayTime(string $DayTime) Set Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried.
  * @method integer getPageNum() Obtain Number of pages. Default value: 1.
 Up to 100 pages.
  * @method void setPageNum(integer $PageNum) Set Number of pages. Default value: 1.
 Up to 100 pages.
- * @method integer getPageSize() Obtain Number of entries per page. Default value: 20
+ * @method integer getPageSize() Obtain Number of entries per page. Default value: 20,
 Value range: [10,1000].
- * @method void setPageSize(integer $PageSize) Set Number of entries per page. Default value: 20
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page. Default value: 20,
 Value range: [10,1000].
- * @method string getStartDayTime() Obtain 
- * @method void setStartDayTime(string $StartDayTime) Set 
- * @method string getEndDayTime() Obtain 
- * @method void setEndDayTime(string $EndDayTime) Set 
+ * @method string getStartDayTime() Obtain Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried.
+ * @method void setStartDayTime(string $StartDayTime) Set Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried.
+ * @method string getEndDayTime() Obtain End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+ * @method void setEndDayTime(string $EndDayTime) Set End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
  */
 class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 {
@@ -57,8 +65,8 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 
     /**
      * @var string Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried.
      */
     public $DayTime;
 
@@ -69,18 +77,22 @@ Up to 100 pages.
     public $PageNum;
 
     /**
-     * @var integer Number of entries per page. Default value: 20
+     * @var integer Number of entries per page. Default value: 20,
 Value range: [10,1000].
      */
     public $PageSize;
 
     /**
-     * @var string 
+     * @var string Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried.
      */
     public $StartDayTime;
 
     /**
-     * @var string 
+     * @var string End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
      */
     public $EndDayTime;
 
@@ -88,14 +100,18 @@ Value range: [10,1000].
      * @param string $PushDomain Push domain name.
      * @param string $StreamName Stream name.
      * @param string $DayTime Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried.
      * @param integer $PageNum Number of pages. Default value: 1.
 Up to 100 pages.
-     * @param integer $PageSize Number of entries per page. Default value: 20
+     * @param integer $PageSize Number of entries per page. Default value: 20,
 Value range: [10,1000].
-     * @param string $StartDayTime 
-     * @param string $EndDayTime 
+     * @param string $StartDayTime Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried.
+     * @param string $EndDayTime End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
      */
     function __construct()
     {

@@ -39,7 +39,43 @@ In seconds. Value range: 0–93312000.
  * @method integer getVodSubAppId() Obtain VOD subapplication ID.
  * @method void setVodSubAppId(integer $VodSubAppId) Set VOD subapplication ID.
  * @method string getVodFileName() Obtain Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
  * @method void setVodFileName(string $VodFileName) Set Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
  */
 class RecordParam extends AbstractModel
 {
@@ -70,6 +106,24 @@ In seconds. Value range: 0–93312000.
 
     /**
      * @var string Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
      */
     public $VodFileName;
 
@@ -84,6 +138,24 @@ In seconds. Value range: 0–93312000.
      * @param integer $Enable Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
      * @param integer $VodSubAppId VOD subapplication ID.
      * @param string $VodFileName Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
      */
     function __construct()
     {

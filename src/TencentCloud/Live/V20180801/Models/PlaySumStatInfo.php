@@ -18,12 +18,16 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Playback statistics
+ * Aggregated playback statistics.
  *
  * @method string getName() Obtain Domain name or stream ID.
  * @method void setName(string $Name) Set Domain name or stream ID.
- * @method float getAvgFluxPerSecond() Obtain Average download speed in MB, which is the average download speed per minute.
- * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) Set Average download speed in MB, which is the average download speed per minute.
+ * @method float getAvgFluxPerSecond() Obtain Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute.
+ * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) Set Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute.
  * @method float getTotalFlux() Obtain Total traffic in MB.
  * @method void setTotalFlux(float $TotalFlux) Set Total traffic in MB.
  * @method integer getTotalRequest() Obtain Total number of requests.
@@ -37,7 +41,9 @@ class PlaySumStatInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var float Average download speed in MB, which is the average download speed per minute.
+     * @var float Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute.
      */
     public $AvgFluxPerSecond;
 
@@ -53,7 +59,9 @@ class PlaySumStatInfo extends AbstractModel
 
     /**
      * @param string $Name Domain name or stream ID.
-     * @param float $AvgFluxPerSecond Average download speed in MB, which is the average download speed per minute.
+     * @param float $AvgFluxPerSecond Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute.
      * @param float $TotalFlux Total traffic in MB.
      * @param integer $TotalRequest Total number of requests.
      */

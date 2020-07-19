@@ -18,10 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Statistics of each domain name
+ * Statistics of each domain name.
  *
- * @method string getMainlandOrOversea() Obtain Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China).
- * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China).
+ * @method string getMainlandOrOversea() Obtain In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China.
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) Set In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China.
  * @method float getBandwidth() Obtain Bandwidth in Mbps.
  * @method void setBandwidth(float $Bandwidth) Set Bandwidth in Mbps.
  * @method float getFlux() Obtain Traffic in MB.
@@ -34,7 +38,9 @@ use TencentCloud\Common\AbstractModel;
 class DomainDetailInfo extends AbstractModel
 {
     /**
-     * @var string Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China).
+     * @var string In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China.
      */
     public $MainlandOrOversea;
 
@@ -59,7 +65,9 @@ class DomainDetailInfo extends AbstractModel
     public $Request;
 
     /**
-     * @param string $MainlandOrOversea Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China).
+     * @param string $MainlandOrOversea In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China.
      * @param float $Bandwidth Bandwidth in Mbps.
      * @param float $Flux Traffic in MB.
      * @param integer $Online Number of viewers.

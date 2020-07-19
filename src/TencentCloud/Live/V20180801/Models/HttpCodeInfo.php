@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP return code and statistics
  *
- * @method string getHttpCode() Obtain HTTP return code
+ * @method string getHttpCode() Obtain HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
- * @method void setHttpCode(string $HttpCode) Set HTTP return code
+ * @method void setHttpCode(string $HttpCode) Set HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
- * @method array getValueList() Obtain Statistics. 0 will be added for time points when there is no data.
- * @method void setValueList(array $ValueList) Set Statistics. 0 will be added for time points when there is no data.
+ * @method array getValueList() Obtain Statistics. 0 will be added for points in time when there is no data.
+ * @method void setValueList(array $ValueList) Set Statistics. 0 will be added for points in time when there is no data.
  */
 class HttpCodeInfo extends AbstractModel
 {
     /**
-     * @var string HTTP return code
+     * @var string HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
      */
     public $HttpCode;
 
     /**
-     * @var array Statistics. 0 will be added for time points when there is no data.
+     * @var array Statistics. 0 will be added for points in time when there is no data.
      */
     public $ValueList;
 
     /**
-     * @param string $HttpCode HTTP return code
+     * @param string $HttpCode HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
-     * @param array $ValueList Statistics. 0 will be added for time points when there is no data.
+     * @param array $ValueList Statistics. 0 will be added for points in time when there is no data.
      */
     function __construct()
     {

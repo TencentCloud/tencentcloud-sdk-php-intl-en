@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRecordTask request structure.
  *
- * @method string getStreamName() Obtain 流名称。
- * @method void setStreamName(string $StreamName) Set 流名称。
- * @method string getDomainName() Obtain 推流域名。
- * @method void setDomainName(string $DomainName) Set 推流域名。
- * @method string getAppName() Obtain 推流路径。
- * @method void setAppName(string $AppName) Set 推流路径。
- * @method integer getEndTime() Obtain 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
- * @method void setEndTime(integer $EndTime) Set 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
- * @method integer getStartTime() Obtain 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
- * @method void setStartTime(integer $StartTime) Set 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
- * @method integer getStreamType() Obtain 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
- * @method void setStreamType(integer $StreamType) Set 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
- * @method integer getTemplateId() Obtain 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
- * @method void setTemplateId(integer $TemplateId) Set 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
- * @method string getExtension() Obtain 扩展字段，默认空。
- * @method void setExtension(string $Extension) Set 扩展字段，默认空。
+ * @method string getStreamName() Obtain Stream name.
+ * @method void setStreamName(string $StreamName) Set Stream name.
+ * @method string getDomainName() Obtain Push domain name.
+ * @method void setDomainName(string $DomainName) Set Push domain name.
+ * @method string getAppName() Obtain Push path.
+ * @method void setAppName(string $AppName) Set Push path.
+ * @method integer getEndTime() Obtain Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+ * @method void setEndTime(integer $EndTime) Set Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+ * @method integer getStartTime() Obtain Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+ * @method void setStartTime(integer $StartTime) Set Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+ * @method integer getStreamType() Obtain Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream.
+ * @method void setStreamType(integer $StreamType) Set Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream.
+ * @method integer getTemplateId() Obtain Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
+ * @method void setTemplateId(integer $TemplateId) Set Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
+ * @method string getExtension() Obtain Extended field, which is empty by default.
+ * @method void setExtension(string $Extension) Set Extended field, which is empty by default.
  */
 class CreateRecordTaskRequest extends AbstractModel
 {
     /**
-     * @var string 流名称。
+     * @var string Stream name.
      */
     public $StreamName;
 
     /**
-     * @var string 推流域名。
+     * @var string Push domain name.
      */
     public $DomainName;
 
     /**
-     * @var string 推流路径。
+     * @var string Push path.
      */
     public $AppName;
 
     /**
-     * @var integer 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+     * @var integer Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
      */
     public $EndTime;
 
     /**
-     * @var integer 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+     * @var integer Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
      */
     public $StartTime;
 
     /**
-     * @var integer 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
+     * @var integer Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream.
      */
     public $StreamType;
 
     /**
-     * @var integer 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+     * @var integer Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
      */
     public $TemplateId;
 
     /**
-     * @var string 扩展字段，默认空。
+     * @var string Extended field, which is empty by default.
      */
     public $Extension;
 
     /**
-     * @param string $StreamName 流名称。
-     * @param string $DomainName 推流域名。
-     * @param string $AppName 推流路径。
-     * @param integer $EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
-     * @param integer $StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
-     * @param integer $StreamType 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
-     * @param integer $TemplateId 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
-     * @param string $Extension 扩展字段，默认空。
+     * @param string $StreamName Stream name.
+     * @param string $DomainName Push domain name.
+     * @param string $AppName Push path.
+     * @param integer $EndTime Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+     * @param integer $StartTime Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+     * @param integer $StreamType Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream.
+     * @param integer $TemplateId Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
+     * @param string $Extension Extended field, which is empty by default.
      */
     function __construct()
     {

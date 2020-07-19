@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) Set Push path.
  * @method string getClientIp() Obtain Push client IP.
  * @method void setClientIp(string $ClientIp) Set Push client IP.
- * @method string getServerIp() Obtain Push receiving server IP.
- * @method void setServerIp(string $ServerIp) Set Push receiving server IP.
+ * @method string getServerIp() Obtain IP of the server that receives the stream.
+ * @method void setServerIp(string $ServerIp) Set IP of the server that receives the stream.
  * @method integer getVideoFps() Obtain Pushed video frame rate in Hz.
  * @method void setVideoFps(integer $VideoFps) Set Pushed video frame rate in Hz.
  * @method integer getVideoSpeed() Obtain Pushed video bitrate in bps.
@@ -40,18 +40,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
  * @method string getBeginPushTime() Obtain Push start time.
  * @method void setBeginPushTime(string $BeginPushTime) Set Push start time.
- * @method string getAcodec() Obtain Audio encoding format.
+ * @method string getAcodec() Obtain Audio codec,
 Example: AAC.
- * @method void setAcodec(string $Acodec) Set Audio encoding format.
+ * @method void setAcodec(string $Acodec) Set Audio codec,
 Example: AAC.
- * @method string getVcodec() Obtain Video encoding format.
+ * @method string getVcodec() Obtain Video codec,
 Example: H.264.
- * @method void setVcodec(string $Vcodec) Set Video encoding format.
+ * @method void setVcodec(string $Vcodec) Set Video codec,
 Example: H.264.
  * @method string getResolution() Obtain Resolution.
  * @method void setResolution(string $Resolution) Set Resolution.
- * @method integer getAsampleRate() Obtain 
- * @method void setAsampleRate(integer $AsampleRate) Set 
+ * @method integer getAsampleRate() Obtain Sample rate.
+ * @method void setAsampleRate(integer $AsampleRate) Set Sample rate.
+ * @method integer getMetaAudioSpeed() Obtain Audio bitrate in `metadata` in Kbps.
+ * @method void setMetaAudioSpeed(integer $MetaAudioSpeed) Set Audio bitrate in `metadata` in Kbps.
+ * @method integer getMetaVideoSpeed() Obtain Video bitrate in `metadata` in Kbps.
+ * @method void setMetaVideoSpeed(integer $MetaVideoSpeed) Set Video bitrate in `metadata` in Kbps.
+ * @method integer getMetaFps() Obtain Frame rate in `metadata`.
+ * @method void setMetaFps(integer $MetaFps) Set Frame rate in `metadata`.
  */
 class PushDataInfo extends AbstractModel
 {
@@ -71,7 +77,7 @@ class PushDataInfo extends AbstractModel
     public $ClientIp;
 
     /**
-     * @var string Push receiving server IP.
+     * @var string IP of the server that receives the stream.
      */
     public $ServerIp;
 
@@ -106,13 +112,13 @@ class PushDataInfo extends AbstractModel
     public $BeginPushTime;
 
     /**
-     * @var string Audio encoding format.
+     * @var string Audio codec,
 Example: AAC.
      */
     public $Acodec;
 
     /**
-     * @var string Video encoding format.
+     * @var string Video codec,
 Example: H.264.
      */
     public $Vcodec;
@@ -123,27 +129,45 @@ Example: H.264.
     public $Resolution;
 
     /**
-     * @var integer 
+     * @var integer Sample rate.
      */
     public $AsampleRate;
+
+    /**
+     * @var integer Audio bitrate in `metadata` in Kbps.
+     */
+    public $MetaAudioSpeed;
+
+    /**
+     * @var integer Video bitrate in `metadata` in Kbps.
+     */
+    public $MetaVideoSpeed;
+
+    /**
+     * @var integer Frame rate in `metadata`.
+     */
+    public $MetaFps;
 
     /**
      * @param string $StreamName Stream name.
      * @param string $AppName Push path.
      * @param string $ClientIp Push client IP.
-     * @param string $ServerIp Push receiving server IP.
+     * @param string $ServerIp IP of the server that receives the stream.
      * @param integer $VideoFps Pushed video frame rate in Hz.
      * @param integer $VideoSpeed Pushed video bitrate in bps.
      * @param integer $AudioFps Pushed audio frame rate in Hz.
      * @param integer $AudioSpeed Pushed audio bitrate in bps.
      * @param string $PushDomain Push domain name.
      * @param string $BeginPushTime Push start time.
-     * @param string $Acodec Audio encoding format.
+     * @param string $Acodec Audio codec,
 Example: AAC.
-     * @param string $Vcodec Video encoding format.
+     * @param string $Vcodec Video codec,
 Example: H.264.
      * @param string $Resolution Resolution.
-     * @param integer $AsampleRate 
+     * @param integer $AsampleRate Sample rate.
+     * @param integer $MetaAudioSpeed Audio bitrate in `metadata` in Kbps.
+     * @param integer $MetaVideoSpeed Video bitrate in `metadata` in Kbps.
+     * @param integer $MetaFps Frame rate in `metadata`.
      */
     function __construct()
     {
@@ -212,6 +236,18 @@ Example: H.264.
 
         if (array_key_exists("AsampleRate",$param) and $param["AsampleRate"] !== null) {
             $this->AsampleRate = $param["AsampleRate"];
+        }
+
+        if (array_key_exists("MetaAudioSpeed",$param) and $param["MetaAudioSpeed"] !== null) {
+            $this->MetaAudioSpeed = $param["MetaAudioSpeed"];
+        }
+
+        if (array_key_exists("MetaVideoSpeed",$param) and $param["MetaVideoSpeed"] !== null) {
+            $this->MetaVideoSpeed = $param["MetaVideoSpeed"];
+        }
+
+        if (array_key_exists("MetaFps",$param) and $param["MetaFps"] !== null) {
+            $this->MetaFps = $param["MetaFps"];
         }
     }
 }
