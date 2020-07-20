@@ -69,6 +69,10 @@ on: enabled
 off: disabled
 This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method Revalidate getRevalidate() Obtain Always forwards to the origin server for verification
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRevalidate(Revalidate $Revalidate) Set Always forwards to the origin server for verification
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class SimpleCache extends AbstractModel
 {
@@ -116,6 +120,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CompareMaxAge;
 
     /**
+     * @var Revalidate Always forwards to the origin server for verification
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Revalidate;
+
+    /**
      * @param array $CacheRules Cache expiration time rules
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $FollowOrigin Follows origin server Cache-Control: max-age configurations
@@ -138,6 +148,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 on: enabled
 off: disabled
 This is disabled by default
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Revalidate $Revalidate Always forwards to the origin server for verification
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -176,6 +188,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CompareMaxAge",$param) and $param["CompareMaxAge"] !== null) {
             $this->CompareMaxAge = $param["CompareMaxAge"];
+        }
+
+        if (array_key_exists("Revalidate",$param) and $param["Revalidate"] !== null) {
+            $this->Revalidate = new Revalidate();
+            $this->Revalidate->deserialize($param["Revalidate"]);
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDirectConnectGatewayAttribute request structure.
  *
- * @method string getDirectConnectGatewayId() Obtain The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+ * @method string getDirectConnectGatewayId() Obtain The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
  * @method string getDirectConnectGatewayName() Obtain The direct connect gateway name. You can enter any name within 60 characters.
  * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) Set The direct connect gateway name. You can enter any name within 60 characters.
  * @method string getCcnRouteType() Obtain The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
 {
     /**
-     * @var string The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+     * @var string The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public $DirectConnectGatewayId;
 
@@ -45,7 +45,7 @@ class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
     public $CcnRouteType;
 
     /**
-     * @param string $DirectConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+     * @param string $DirectConnectGatewayId The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
      * @param string $DirectConnectGatewayName The direct connect gateway name. You can enter any name within 60 characters.
      * @param string $CcnRouteType The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
      */

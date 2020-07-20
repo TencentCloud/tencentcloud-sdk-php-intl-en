@@ -24,10 +24,19 @@ use TencentCloud\Dc\V20180410\Models as Models;
 
 /**
  * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) This API is used to accept an application for a dedicated tunnel.
+ * @method Models\CreateDirectConnectResponse CreateDirectConnect(Models\CreateDirectConnectRequest $req) This API is used to apply for a connection.
+When calling this API, please note that:
+You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
+If there is any connection in arrears under your account, you cannot apply for more connections.
  * @method Models\CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(Models\CreateDirectConnectTunnelRequest $req) This API is used to create a dedicated tunnel.
+ * @method Models\DeleteDirectConnectResponse DeleteDirectConnect(Models\DeleteDirectConnectRequest $req) This API is used to delete a connection.
+Only connected connections can be deleted.
  * @method Models\DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(Models\DeleteDirectConnectTunnelRequest $req) This API is used to delete a dedicated tunnel.
+ * @method Models\DescribeAccessPointsResponse DescribeAccessPoints(Models\DescribeAccessPointsRequest $req) This API is used to query connection access points.
+
  * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) This API is used to query the list of dedicated tunnels.
  * @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) This API is used to query the list of connections.
+ * @method Models\ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(Models\ModifyDirectConnectAttributeRequest $req) This API is used to modify connection attributes.
  * @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) This API is used to modify the dedicated tunnel attributes.
  * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) This API is used to reject an application for a dedicated tunnel.
  */

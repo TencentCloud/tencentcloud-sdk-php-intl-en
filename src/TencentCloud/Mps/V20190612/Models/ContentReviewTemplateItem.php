@@ -38,6 +38,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Politically sensitive information detection control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom content audit control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Custom content audit control parameter.
@@ -83,6 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PoliticalConfigure;
 
     /**
+     * @var ProhibitedConfigureInfo Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProhibitedConfigure;
+
+    /**
      * @var UserDefineConfigureInfo Custom content audit control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -108,6 +124,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param PoliticalConfigureInfo $PoliticalConfigure Politically sensitive information detection control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param UserDefineConfigureInfo $UserDefineConfigure Custom content audit control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
@@ -151,6 +171,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("PoliticalConfigure",$param) and $param["PoliticalConfigure"] !== null) {
             $this->PoliticalConfigure = new PoliticalConfigureInfo();
             $this->PoliticalConfigure->deserialize($param["PoliticalConfigure"]);
+        }
+
+        if (array_key_exists("ProhibitedConfigure",$param) and $param["ProhibitedConfigure"] !== null) {
+            $this->ProhibitedConfigure = new ProhibitedConfigureInfo();
+            $this->ProhibitedConfigure->deserialize($param["ProhibitedConfigure"]);
         }
 
         if (array_key_exists("UserDefineConfigure",$param) and $param["UserDefineConfigure"] !== null) {

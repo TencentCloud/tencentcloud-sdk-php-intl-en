@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveBandwidthPackageResources request structure.
  *
- * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package, such as 'bwp-xxxx'.
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package, such as 'bwp-xxxx'.
- * @method string getResourceType() Obtain The resource type. Valid values: 'Address' and 'LoadBalance'.
- * @method void setResourceType(string $ResourceType) Set The resource type. Valid values: 'Address' and 'LoadBalance'.
- * @method array getResourceIds() Obtain The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
- * @method void setResourceIds(array $ResourceIds) Set The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
+ * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package, such as `bwp-xxxx`.
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package, such as `bwp-xxxx`.
+ * @method string getResourceType() Obtain The resource type. Valid values: `Address` and `LoadBalance`.
+ * @method void setResourceType(string $ResourceType) Set The resource type. Valid values: `Address` and `LoadBalance`.
+ * @method array getResourceIds() Obtain The resource IP, such as `eip-xxxx` and `lb-xxxx`.
+ * @method void setResourceIds(array $ResourceIds) Set The resource IP, such as `eip-xxxx` and `lb-xxxx`.
  */
 class RemoveBandwidthPackageResourcesRequest extends AbstractModel
 {
     /**
-     * @var string The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+     * @var string The unique ID of the bandwidth package, such as `bwp-xxxx`.
      */
     public $BandwidthPackageId;
 
     /**
-     * @var string The resource type. Valid values: 'Address' and 'LoadBalance'.
+     * @var string The resource type. Valid values: `Address` and `LoadBalance`.
      */
     public $ResourceType;
 
     /**
-     * @var array The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
+     * @var array The resource IP, such as `eip-xxxx` and `lb-xxxx`.
      */
     public $ResourceIds;
 
     /**
-     * @param string $BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
-     * @param string $ResourceType The resource type. Valid values: 'Address' and 'LoadBalance'.
-     * @param array $ResourceIds The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
+     * @param string $BandwidthPackageId The unique ID of the bandwidth package, such as `bwp-xxxx`.
+     * @param string $ResourceType The resource type. Valid values: `Address` and `LoadBalance`.
+     * @param array $ResourceIds The resource IP, such as `eip-xxxx` and `lb-xxxx`.
      */
     function __construct()
     {

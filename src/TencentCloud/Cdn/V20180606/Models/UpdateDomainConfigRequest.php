@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name
  * @method void setDomain(string $Domain) Set Domain name
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method Origin getOrigin() Obtain Origin server configuration
  * @method void setOrigin(Origin $Origin) Set Origin server configuration
  * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration
@@ -94,6 +94,8 @@ global: global acceleration
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
  * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Origin access authentication for S3 bucket
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Origin access authentication for S3 bucket
+ * @method UserAgentFilter getUserAgentFilter() Obtain UA blacklist/whitelist Configuration
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA blacklist/whitelist Configuration
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -103,7 +105,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID
      */
     public $ProjectId;
 
@@ -255,8 +257,13 @@ global: global acceleration
     public $AwsPrivateAccess;
 
     /**
+     * @var UserAgentFilter UA blacklist/whitelist Configuration
+     */
+    public $UserAgentFilter;
+
+    /**
      * @param string $Domain Domain name
-     * @param integer $ProjectId Project ID
+     * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
      * @param IpFilter $IpFilter IP blacklist/whitelist configuration
      * @param IpFreqLimit $IpFreqLimit IP access limit configuration
@@ -292,6 +299,7 @@ overseas: acceleration outside mainland China
 global: global acceleration
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
      * @param AwsPrivateAccess $AwsPrivateAccess Origin access authentication for S3 bucket
+     * @param UserAgentFilter $UserAgentFilter UA blacklist/whitelist Configuration
      */
     function __construct()
     {
@@ -450,6 +458,11 @@ global: global acceleration
         if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
             $this->AwsPrivateAccess = new AwsPrivateAccess();
             $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
+        }
+
+        if (array_key_exists("UserAgentFilter",$param) and $param["UserAgentFilter"] !== null) {
+            $this->UserAgentFilter = new UserAgentFilter();
+            $this->UserAgentFilter->deserialize($param["UserAgentFilter"]);
         }
     }
 }

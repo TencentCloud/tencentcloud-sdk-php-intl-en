@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcId() Obtain The VPC ID or the unified ID. We recommend you use the unified ID.
  * @method void setVpcId(string $VpcId) Set The VPC ID or the unified ID. We recommend you use the unified ID.
- * @method string getFlowLogId() Obtain The unique ID of the flow log.
- * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
- * @method string getFlowLogName() Obtain The name of the flow log instance.
- * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
- * @method string getFlowLogDescription() Obtain The description of the flow log instance.
- * @method void setFlowLogDescription(string $FlowLogDescription) Set The description of the flow log instance.
+ * @method string getFlowLogId() Obtain The unique ID of the flow log collector.
+ * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log collector.
+ * @method string getFlowLogName() Obtain The name of the flow log collector.
+ * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log collector.
+ * @method string getFlowLogDescription() Obtain The description of the flow log collector.
+ * @method void setFlowLogDescription(string $FlowLogDescription) Set The description of the flow log collector.
  */
 class ModifyFlowLogAttributeRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string The unique ID of the flow log.
+     * @var string The unique ID of the flow log collector.
      */
     public $FlowLogId;
 
     /**
-     * @var string The name of the flow log instance.
+     * @var string The name of the flow log collector.
      */
     public $FlowLogName;
 
     /**
-     * @var string The description of the flow log instance.
+     * @var string The description of the flow log collector.
      */
     public $FlowLogDescription;
 
     /**
      * @param string $VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
-     * @param string $FlowLogId The unique ID of the flow log.
-     * @param string $FlowLogName The name of the flow log instance.
-     * @param string $FlowLogDescription The description of the flow log instance.
+     * @param string $FlowLogId The unique ID of the flow log collector.
+     * @param string $FlowLogName The name of the flow log collector.
+     * @param string $FlowLogDescription The description of the flow log collector.
      */
     function __construct()
     {

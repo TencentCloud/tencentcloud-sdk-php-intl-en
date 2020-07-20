@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set List of sampled screencapturing tasks.
  * @method array getImageSpriteTaskSet() Obtain List of image sprite generating tasks.
  * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set List of image sprite generating tasks.
+ * @method array getAdaptiveDynamicStreamingTaskSet() Obtain List of adaptive bitrate streaming tasks.
+ * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) Set List of adaptive bitrate streaming tasks.
  */
 class MediaProcessTaskInput extends AbstractModel
 {
@@ -59,11 +61,17 @@ class MediaProcessTaskInput extends AbstractModel
     public $ImageSpriteTaskSet;
 
     /**
+     * @var array List of adaptive bitrate streaming tasks.
+     */
+    public $AdaptiveDynamicStreamingTaskSet;
+
+    /**
      * @param array $TranscodeTaskSet List of transcoding tasks.
      * @param array $AnimatedGraphicTaskSet List of animated image generating tasks.
      * @param array $SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
      * @param array $SampleSnapshotTaskSet List of sampled screencapturing tasks.
      * @param array $ImageSpriteTaskSet List of image sprite generating tasks.
+     * @param array $AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class MediaProcessTaskInput extends AbstractModel
                 $obj = new ImageSpriteTaskInput();
                 $obj->deserialize($value);
                 array_push($this->ImageSpriteTaskSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AdaptiveDynamicStreamingTaskSet",$param) and $param["AdaptiveDynamicStreamingTaskSet"] !== null) {
+            $this->AdaptiveDynamicStreamingTaskSet = [];
+            foreach ($param["AdaptiveDynamicStreamingTaskSet"] as $key => $value){
+                $obj = new AdaptiveDynamicStreamingTaskInput();
+                $obj->deserialize($value);
+                array_push($this->AdaptiveDynamicStreamingTaskSet, $obj);
             }
         }
     }

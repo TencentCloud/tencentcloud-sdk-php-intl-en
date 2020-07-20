@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDirectConnectGateways request structure.
  *
- * @method array getDirectConnectGatewayIds() Obtain The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
- * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) Set The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
- * @method array getFilters() Obtain Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+ * @method array getDirectConnectGatewayIds() Obtain The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
+ * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) Set The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
+ * @method array getFilters() Obtain Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
- * @method void setFilters(array $Filters) Set Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
+ * @method void setFilters(array $Filters) Set Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
  * @method integer getOffset() Obtain The offset.
  * @method void setOffset(integer $Offset) Set The offset.
- * @method integer getLimit() Obtain The returned quantity.
- * @method void setLimit(integer $Limit) Set The returned quantity.
+ * @method integer getLimit() Obtain Max number of results returned
+ * @method void setLimit(integer $Limit) Set Max number of results returned
  */
 class DescribeDirectConnectGatewaysRequest extends AbstractModel
 {
     /**
-     * @var array The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+     * @var array The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public $DirectConnectGatewayIds;
 
     /**
-     * @var array Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+     * @var array Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
      */
     public $Filters;
 
@@ -68,22 +68,22 @@ class DescribeDirectConnectGatewaysRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer The returned quantity.
+     * @var integer Max number of results returned
      */
     public $Limit;
 
     /**
-     * @param array $DirectConnectGatewayIds The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
-     * @param array $Filters Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+     * @param array $DirectConnectGatewayIds The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
+     * @param array $Filters Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
      * @param integer $Offset The offset.
-     * @param integer $Limit The returned quantity.
+     * @param integer $Limit Max number of results returned
      */
     function __construct()
     {

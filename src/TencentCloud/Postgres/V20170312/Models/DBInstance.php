@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getSubnetId() Obtain SubnetId
- * @method void setSubnetId(string $SubnetId) Set SubnetId
+ * @method string getSubnetId() Obtain Subnet ID
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID
  * @method string getDBInstanceId() Obtain Instance ID
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
  * @method string getDBInstanceName() Obtain Instance name
  * @method void setDBInstanceName(string $DBInstanceName) Set Instance name
- * @method string getDBInstanceStatus() Obtain Instance status
- * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status
+ * @method string getDBInstanceStatus() Obtain Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+ * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
  * @method integer getDBInstanceMemory() Obtain Assigned instance memory size in GB
  * @method void setDBInstanceMemory(integer $DBInstanceMemory) Set Assigned instance memory size in GB
  * @method integer getDBInstanceStorage() Obtain Assigned instance storage capacity in GB
@@ -68,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) Set Instance network connection information
  * @method string getType() Obtain Machine type
  * @method void setType(string $Type) Set Machine type
+ * @method integer getAppId() Obtain 
+ * @method void setAppId(integer $AppId) Set 
+ * @method integer getUid() Obtain 
+ * @method void setUid(integer $Uid) Set 
+ * @method integer getSupportIpv6() Obtain Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+ * @method void setSupportIpv6(integer $SupportIpv6) Set Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
  */
 class DBInstance extends AbstractModel
 {
@@ -92,7 +98,7 @@ class DBInstance extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string SubnetId
+     * @var string Subnet ID
      */
     public $SubnetId;
 
@@ -107,7 +113,7 @@ class DBInstance extends AbstractModel
     public $DBInstanceName;
 
     /**
-     * @var string Instance status
+     * @var string Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
      */
     public $DBInstanceStatus;
 
@@ -192,14 +198,29 @@ class DBInstance extends AbstractModel
     public $Type;
 
     /**
+     * @var integer 
+     */
+    public $AppId;
+
+    /**
+     * @var integer 
+     */
+    public $Uid;
+
+    /**
+     * @var integer Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     */
+    public $SupportIpv6;
+
+    /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
      * @param integer $ProjectId Project ID
      * @param string $VpcId VPC ID
-     * @param string $SubnetId SubnetId
+     * @param string $SubnetId Subnet ID
      * @param string $DBInstanceId Instance ID
      * @param string $DBInstanceName Instance name
-     * @param string $DBInstanceStatus Instance status
+     * @param string $DBInstanceStatus Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
      * @param integer $DBInstanceMemory Assigned instance memory size in GB
      * @param integer $DBInstanceStorage Assigned instance storage capacity in GB
      * @param integer $DBInstanceCpu Number of assigned CPUs
@@ -216,6 +237,9 @@ class DBInstance extends AbstractModel
      * @param integer $AutoRenew Whether to renew automatically. 1: yes, 0: no
      * @param array $DBInstanceNetInfo Instance network connection information
      * @param string $Type Machine type
+     * @param integer $AppId 
+     * @param integer $Uid 
+     * @param integer $SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
      */
     function __construct()
     {
@@ -329,6 +353,18 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
+            $this->Uid = $param["Uid"];
+        }
+
+        if (array_key_exists("SupportIpv6",$param) and $param["SupportIpv6"] !== null) {
+            $this->SupportIpv6 = $param["SupportIpv6"];
         }
     }
 }

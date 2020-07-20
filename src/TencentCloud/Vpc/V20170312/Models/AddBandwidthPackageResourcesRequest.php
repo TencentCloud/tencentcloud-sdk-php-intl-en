@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceIds(array $ResourceIds) Set The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
  * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package, such as 'bwp-xxxx'.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package, such as 'bwp-xxxx'.
- * @method string getNetworkType() Obtain The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
- * @method void setNetworkType(string $NetworkType) Set The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
- * @method string getResourceType() Obtain The resource type, including 'Address' and 'LoadBalance'.
- * @method void setResourceType(string $ResourceType) Set The resource type, including 'Address' and 'LoadBalance'.
- * @method string getProtocol() Obtain The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
- * @method void setProtocol(string $Protocol) Set The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
+ * @method string getNetworkType() Obtain The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
+ * @method void setNetworkType(string $NetworkType) Set The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
+ * @method string getResourceType() Obtain The resource type, including `Address` and `LoadBalance`.
+ * @method void setResourceType(string $ResourceType) Set The resource type, including `Address` and `LoadBalance`.
+ * @method string getProtocol() Obtain The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
+ * @method void setProtocol(string $Protocol) Set The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
  */
 class AddBandwidthPackageResourcesRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class AddBandwidthPackageResourcesRequest extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var string The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
+     * @var string The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
      */
     public $NetworkType;
 
     /**
-     * @var string The resource type, including 'Address' and 'LoadBalance'.
+     * @var string The resource type, including `Address` and `LoadBalance`.
      */
     public $ResourceType;
 
     /**
-     * @var string The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
+     * @var string The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
      */
     public $Protocol;
 
     /**
      * @param array $ResourceIds The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
      * @param string $BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
-     * @param string $NetworkType The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
-     * @param string $ResourceType The resource type, including 'Address' and 'LoadBalance'.
-     * @param string $Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
+     * @param string $NetworkType The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
+     * @param string $ResourceType The resource type, including `Address` and `LoadBalance`.
+     * @param string $Protocol The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
      */
     function __construct()
     {

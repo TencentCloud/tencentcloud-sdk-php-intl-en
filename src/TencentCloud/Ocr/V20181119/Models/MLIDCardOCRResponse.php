@@ -29,11 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSex() Obtain Gender
  * @method void setSex(string $Sex) Set Gender
  * @method array getWarn() Obtain Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card
  * @method void setWarn(array $Warn) Set Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card
  * @method string getImage() Obtain Identity photo
  * @method void setImage(string $Image) Set Identity photo
  * @method string getAdvancedInfo() Obtain Extended field:
@@ -54,6 +56,20 @@ use TencentCloud\Common\AbstractModel;
         Confidence:0.9996
     }
 }
+ * @method string getType() Obtain Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass
+ * @method void setType(string $Type) Set Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -81,8 +97,9 @@ class MLIDCardOCRResponse extends AbstractModel
 
     /**
      * @var array Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card
      */
     public $Warn;
 
@@ -105,6 +122,17 @@ class MLIDCardOCRResponse extends AbstractModel
     public $AdvancedInfo;
 
     /**
+     * @var string Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass
+     */
+    public $Type;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -115,8 +143,9 @@ class MLIDCardOCRResponse extends AbstractModel
      * @param string $Address Address
      * @param string $Sex Gender
      * @param array $Warn Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card
      * @param string $Image Identity photo
      * @param string $AdvancedInfo Extended field:
 {
@@ -127,6 +156,13 @@ class MLIDCardOCRResponse extends AbstractModel
         Confidence:0.9996
     }
 }
+     * @param string $Type Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -168,6 +204,10 @@ class MLIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

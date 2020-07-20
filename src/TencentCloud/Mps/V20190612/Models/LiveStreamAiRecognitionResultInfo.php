@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Live stream AI recognition results
  *
-
+ * @method array getResultSet() Obtain 
+ * @method void setResultSet(array $ResultSet) Set 
  */
 class LiveStreamAiRecognitionResultInfo extends AbstractModel
 {
-
+    /**
+     * @var array 
+     */
+    public $ResultSet;
 
     /**
-
+     * @param array $ResultSet 
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class LiveStreamAiRecognitionResultInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ResultSet",$param) and $param["ResultSet"] !== null) {
+            $this->ResultSet = [];
+            foreach ($param["ResultSet"] as $key => $value){
+                $obj = new LiveStreamAiRecognitionResultItem();
+                $obj->deserialize($value);
+                array_push($this->ResultSet, $obj);
+            }
+        }
     }
 }

@@ -56,6 +56,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set Query result of an image sprite generating task, which is valid when task type is `ImageSprite`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class MediaProcessTaskResult extends AbstractModel
 {
@@ -102,6 +106,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ImageSpriteTask;
 
     /**
+     * @var MediaProcessTaskAdaptiveDynamicStreamingResult Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AdaptiveDynamicStreamingTask;
+
+    /**
      * @param string $Type Task type. Valid values:
 <li>Transcode: Transcoding</li>
 <li>AnimatedGraphics: Animated image generating</li>
@@ -120,6 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask Query result of an image sprite generating task, which is valid when task type is `ImageSprite`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -161,6 +173,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ImageSpriteTask",$param) and $param["ImageSpriteTask"] !== null) {
             $this->ImageSpriteTask = new MediaProcessTaskImageSpriteResult();
             $this->ImageSpriteTask->deserialize($param["ImageSpriteTask"]);
+        }
+
+        if (array_key_exists("AdaptiveDynamicStreamingTask",$param) and $param["AdaptiveDynamicStreamingTask"] !== null) {
+            $this->AdaptiveDynamicStreamingTask = new MediaProcessTaskAdaptiveDynamicStreamingResult();
+            $this->AdaptiveDynamicStreamingTask->deserialize($param["AdaptiveDynamicStreamingTask"]);
         }
     }
 }

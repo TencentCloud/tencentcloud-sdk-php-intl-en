@@ -70,12 +70,14 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
 
 Common reasons why an availability zone or subnet is unavailable include stock-out of CVM instances or CBS cloud disks in the availability zone, insufficient quota in the availability zone, or insufficient IPs in the subnet.
 If an availability zone or subnet in Zones/SubnetIds does not exist, a verification error will be reported regardless of the value of ZonesCheckPolicy.
- * @method array getTags() Obtain List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
- * @method void setTags(array $Tags) Set List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
+ * @method array getTags() Obtain List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+ * @method void setTags(array $Tags) Set List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
  * @method ServiceSettings getServiceSettings() Obtain Service settings such as unhealthy instance replacement.
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings such as unhealthy instance replacement.
  * @method integer getIpv6AddressCount() Obtain 
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
+ * @method string getMultiZoneSubnetPolicy() Obtain 
+ * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) Set 
  */
 class CreateAutoScalingGroupRequest extends AbstractModel
 {
@@ -165,7 +167,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     public $ZonesCheckPolicy;
 
     /**
-     * @var array List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
+     * @var array List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
      */
     public $Tags;
 
@@ -178,6 +180,11 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
      * @var integer 
      */
     public $Ipv6AddressCount;
+
+    /**
+     * @var string 
+     */
+    public $MultiZoneSubnetPolicy;
 
     /**
      * @param string $AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
@@ -205,9 +212,10 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
 
 Common reasons why an availability zone or subnet is unavailable include stock-out of CVM instances or CBS cloud disks in the availability zone, insufficient quota in the availability zone, or insufficient IPs in the subnet.
 If an availability zone or subnet in Zones/SubnetIds does not exist, a verification error will be reported regardless of the value of ZonesCheckPolicy.
-     * @param array $Tags List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
+     * @param array $Tags List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
      * @param ServiceSettings $ServiceSettings Service settings such as unhealthy instance replacement.
      * @param integer $Ipv6AddressCount 
+     * @param string $MultiZoneSubnetPolicy 
      */
     function __construct()
     {
@@ -303,6 +311,10 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
 
         if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
             $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
+        }
+
+        if (array_key_exists("MultiZoneSubnetPolicy",$param) and $param["MultiZoneSubnetPolicy"] !== null) {
+            $this->MultiZoneSubnetPolicy = $param["MultiZoneSubnetPolicy"];
         }
     }
 }

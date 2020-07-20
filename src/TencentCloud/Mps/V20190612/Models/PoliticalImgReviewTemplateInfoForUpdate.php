@@ -26,16 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Switch of a politically sensitive information detection in image task. Valid values:
 <li>ON: Enables a politically sensitive information detection in image task;</li>
 <li>OFF: Disables a politically sensitive information detection in image task.</li>
- * @method array getLabelSet() Obtain Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li>
- * @method void setLabelSet(array $LabelSet) Set Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li>
+ * @method array getLabelSet() Obtain Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li>
+ * @method void setLabelSet(array $LabelSet) Set Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li>
  * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
  * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
@@ -51,11 +59,15 @@ class PoliticalImgReviewTemplateInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var array Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li>
+     * @var array Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li>
      */
     public $LabelSet;
 
@@ -73,11 +85,15 @@ class PoliticalImgReviewTemplateInfoForUpdate extends AbstractModel
      * @param string $Switch Switch of a politically sensitive information detection in image task. Valid values:
 <li>ON: Enables a politically sensitive information detection in image task;</li>
 <li>OFF: Disables a politically sensitive information detection in image task.</li>
-     * @param array $LabelSet Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li>
+     * @param array $LabelSet Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li>
      * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
      * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
      */

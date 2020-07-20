@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI video intelligent analysis input parameter types
  *
-
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiAnalysisTaskInput extends AbstractModel
 {
-
+    /**
+     * @var integer 
+     */
+    public $Definition;
 
     /**
-
+     * @param integer $Definition 
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class AiAnalysisTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
+        }
     }
 }

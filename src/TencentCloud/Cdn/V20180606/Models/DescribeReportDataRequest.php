@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReportData request structure.
  *
- * @method string getStartTime() Obtain Query start time
- * @method void setStartTime(string $StartTime) Set Query start time
- * @method string getEndTime() Obtain Query end time
- * @method void setEndTime(string $EndTime) Set Query end time
+ * @method string getStartTime() Obtain Query start time in the format of `yyyy-MM-dd`
+ * @method void setStartTime(string $StartTime) Set Query start time in the format of `yyyy-MM-dd`
+ * @method string getEndTime() Obtain Query end time in the format of `yyyy-MM-dd`
+ * @method void setEndTime(string $EndTime) Set Query end time in the format of `yyyy-MM-dd`
  * @method string getReportType() Obtain Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month)
  * @method void setReportType(string $ReportType) Set Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month)
  * @method string getArea() Obtain Domain name acceleration region
 mainland: in Mainland China
 overseas: outside Mainland China
@@ -48,20 +48,20 @@ overseas: outside Mainland China
 class DescribeReportDataRequest extends AbstractModel
 {
     /**
-     * @var string Query start time
+     * @var string Query start time in the format of `yyyy-MM-dd`
      */
     public $StartTime;
 
     /**
-     * @var string Query end time
+     * @var string Query end time in the format of `yyyy-MM-dd`
      */
     public $EndTime;
 
     /**
      * @var string Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month)
      */
     public $ReportType;
 
@@ -88,12 +88,12 @@ overseas: outside Mainland China
     public $Project;
 
     /**
-     * @param string $StartTime Query start time
-     * @param string $EndTime Query end time
+     * @param string $StartTime Query start time in the format of `yyyy-MM-dd`
+     * @param string $EndTime Query end time in the format of `yyyy-MM-dd`
      * @param string $ReportType Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month)
      * @param string $Area Domain name acceleration region
 mainland: in Mainland China
 overseas: outside Mainland China

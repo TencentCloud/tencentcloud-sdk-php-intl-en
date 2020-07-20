@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) Set The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
  * @method string getResourceId() Obtain The unique ID of the resource.
  * @method void setResourceId(string $ResourceId) Set The unique ID of the resource.
- * @method string getTrafficType() Obtain The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
- * @method void setTrafficType(string $TrafficType) Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+ * @method string getTrafficType() Obtain Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
+ * @method void setTrafficType(string $TrafficType) Set Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
  * @method string getCloudLogId() Obtain The storage ID of the flow log.
  * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
  * @method string getFlowLogDescription() Obtain The description of the flow log instance
@@ -58,7 +58,7 @@ class CreateFlowLogRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @var string Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      */
     public $TrafficType;
 
@@ -77,7 +77,7 @@ class CreateFlowLogRequest extends AbstractModel
      * @param string $FlowLogName The name of the flow log instance.
      * @param string $ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
      * @param string $ResourceId The unique ID of the resource.
-     * @param string $TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @param string $TrafficType Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      * @param string $CloudLogId The storage ID of the flow log.
      * @param string $FlowLogDescription The description of the flow log instance
      */

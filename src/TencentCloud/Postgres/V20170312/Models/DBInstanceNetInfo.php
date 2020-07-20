@@ -18,16 +18,16 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance network connection information
+ * Instance network connection information.
  *
  * @method string getAddress() Obtain DNS domain name
  * @method void setAddress(string $Address) Set DNS domain name
- * @method string getIp() Obtain Ip
- * @method void setIp(string $Ip) Set Ip
+ * @method string getIp() Obtain IP address
+ * @method void setIp(string $Ip) Set IP address
  * @method integer getPort() Obtain Connection port address
  * @method void setPort(integer $Port) Set Connection port address
- * @method string getNetType() Obtain Network type. 1: inner (private network address), 2: public (public network address)
- * @method void setNetType(string $NetType) Set Network type. 1: inner (private network address), 2: public (public network address)
+ * @method string getNetType() Obtain Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
+ * @method void setNetType(string $NetType) Set Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
  * @method string getStatus() Obtain Network connection status
  * @method void setStatus(string $Status) Set Network connection status
  */
@@ -39,7 +39,7 @@ class DBInstanceNetInfo extends AbstractModel
     public $Address;
 
     /**
-     * @var string Ip
+     * @var string IP address
      */
     public $Ip;
 
@@ -49,7 +49,7 @@ class DBInstanceNetInfo extends AbstractModel
     public $Port;
 
     /**
-     * @var string Network type. 1: inner (private network address), 2: public (public network address)
+     * @var string Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
      */
     public $NetType;
 
@@ -60,9 +60,9 @@ class DBInstanceNetInfo extends AbstractModel
 
     /**
      * @param string $Address DNS domain name
-     * @param string $Ip Ip
+     * @param string $Ip IP address
      * @param integer $Port Connection port address
-     * @param string $NetType Network type. 1: inner (private network address), 2: public (public network address)
+     * @param string $NetType Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
      * @param string $Status Network connection status
      */
     function __construct()

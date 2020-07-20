@@ -33,17 +33,17 @@ index: home page
 `path`: effective for specified absolute paths
 index: home page
  * @method array getCacheContents() Obtain Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index`
  * @method void setCacheContents(array $CacheContents) Set Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index`
  * @method integer getCacheTime() Obtain Cache expiration time settings
 Unit: second. The maximum value is 365 days.
  * @method void setCacheTime(integer $CacheTime) Set Cache expiration time settings
@@ -63,11 +63,11 @@ index: home page
 
     /**
      * @var array Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index`
      */
     public $CacheContents;
 
@@ -85,11 +85,11 @@ Unit: second. The maximum value is 365 days.
 `path`: effective for specified absolute paths
 index: home page
      * @param array $CacheContents Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index`
      * @param integer $CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
      */

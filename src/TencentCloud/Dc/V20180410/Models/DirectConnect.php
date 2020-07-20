@@ -116,6 +116,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setChargeState(string $ChargeState) Set Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getStartTime() Obtain Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setStartTime(string $StartTime) Set Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DirectConnect extends AbstractModel
 {
@@ -272,6 +276,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ChargeState;
 
     /**
+     * @var string Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $StartTime;
+
+    /**
      * @param string $DirectConnectId Connection ID.
      * @param string $DirectConnectName Connection name.
      * @param string $AccessPointId Access point ID of a connection.
@@ -319,6 +329,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $IdcCity IDC city.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ChargeState Billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $StartTime Connection activation time.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -441,6 +453,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ChargeState",$param) and $param["ChargeState"] !== null) {
             $this->ChargeState = $param["ChargeState"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
     }
 }

@@ -100,16 +100,18 @@ http: specifies the HTTP metric to be queried
 https: specifies the HTTPS metric to be queried
  * @method string getDataSource() Obtain Specifies the data source to be queried, which can be seen as the whitelist function.
  * @method void setDataSource(string $DataSource) Set Specifies the data source to be queried, which can be seen as the whitelist function.
- * @method string getIpProtocol() Obtain Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
+ * @method string getIpProtocol() Obtain Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
- * @method void setIpProtocol(string $IpProtocol) Set Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+ * @method void setIpProtocol(string $IpProtocol) Set Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
  * @method string getArea() Obtain Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
 `mainland`: specifies to query CDN data within Mainland China;
 `overseas`: specifies to query CDN data outside Mainland China.
@@ -210,11 +212,12 @@ https: specifies the HTTPS metric to be queried
     public $DataSource;
 
     /**
-     * @var string Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
+     * @var string Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
      */
     public $IpProtocol;
 
@@ -273,11 +276,12 @@ all: All protocols
 http: specifies the HTTP metric to be queried
 https: specifies the HTTPS metric to be queried
      * @param string $DataSource Specifies the data source to be queried, which can be seen as the whitelist function.
-     * @param string $IpProtocol Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
+     * @param string $IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
      * @param string $Area Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
 `mainland`: specifies to query CDN data within Mainland China;
 `overseas`: specifies to query CDN data outside Mainland China.

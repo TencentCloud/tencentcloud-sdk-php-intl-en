@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Alarm-based scaling policy ID
  * @method boolean getHonorCooldown() Obtain Whether to check if the auto scaling group is in the cooldown period. Default value: false
  * @method void setHonorCooldown(boolean $HonorCooldown) Set Whether to check if the auto scaling group is in the cooldown period. Default value: false
+ * @method string getTriggerSource() Obtain Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+ * @method void setTriggerSource(string $TriggerSource) Set Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
  */
 class ExecuteScalingPolicyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ExecuteScalingPolicyRequest extends AbstractModel
     public $HonorCooldown;
 
     /**
+     * @var string Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+     */
+    public $TriggerSource;
+
+    /**
      * @param string $AutoScalingPolicyId Alarm-based scaling policy ID
      * @param boolean $HonorCooldown Whether to check if the auto scaling group is in the cooldown period. Default value: false
+     * @param string $TriggerSource Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ExecuteScalingPolicyRequest extends AbstractModel
 
         if (array_key_exists("HonorCooldown",$param) and $param["HonorCooldown"] !== null) {
             $this->HonorCooldown = $param["HonorCooldown"];
+        }
+
+        if (array_key_exists("TriggerSource",$param) and $param["TriggerSource"] !== null) {
+            $this->TriggerSource = $param["TriggerSource"];
         }
     }
 }

@@ -26,6 +26,30 @@ off: disable full-path cache (i.e., enable parameter filter)
  * @method void setFullUrlCache(string $FullUrlCache) Set Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter)
+ * @method string getIgnoreCase() Obtain Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIgnoreCase(string $IgnoreCase) Set Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method QueryStringKey getQueryString() Obtain Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setQueryString(QueryStringKey $QueryString) Set Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method CookieKey getCookie() Obtain Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setCookie(CookieKey $Cookie) Set Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method HeaderKey getHeader() Obtain Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setHeader(HeaderKey $Header) Set Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method CacheTagKey getCacheTag() Obtain Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setCacheTag(CacheTagKey $CacheTag) Set Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method SchemeKey getScheme() Obtain Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setScheme(SchemeKey $Scheme) Set Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class CacheKey extends AbstractModel
 {
@@ -37,9 +61,57 @@ off: disable full-path cache (i.e., enable parameter filter)
     public $FullUrlCache;
 
     /**
+     * @var string Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $IgnoreCase;
+
+    /**
+     * @var QueryStringKey Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $QueryString;
+
+    /**
+     * @var CookieKey Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Cookie;
+
+    /**
+     * @var HeaderKey Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Header;
+
+    /**
+     * @var CacheTagKey Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $CacheTag;
+
+    /**
+     * @var SchemeKey Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Scheme;
+
+    /**
      * @param string $FullUrlCache Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter)
+     * @param string $IgnoreCase Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param QueryStringKey $QueryString Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CookieKey $Cookie Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param HeaderKey $Header Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CacheTagKey $CacheTag Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SchemeKey $Scheme Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -56,6 +128,35 @@ off: disable full-path cache (i.e., enable parameter filter)
         }
         if (array_key_exists("FullUrlCache",$param) and $param["FullUrlCache"] !== null) {
             $this->FullUrlCache = $param["FullUrlCache"];
+        }
+
+        if (array_key_exists("IgnoreCase",$param) and $param["IgnoreCase"] !== null) {
+            $this->IgnoreCase = $param["IgnoreCase"];
+        }
+
+        if (array_key_exists("QueryString",$param) and $param["QueryString"] !== null) {
+            $this->QueryString = new QueryStringKey();
+            $this->QueryString->deserialize($param["QueryString"]);
+        }
+
+        if (array_key_exists("Cookie",$param) and $param["Cookie"] !== null) {
+            $this->Cookie = new CookieKey();
+            $this->Cookie->deserialize($param["Cookie"]);
+        }
+
+        if (array_key_exists("Header",$param) and $param["Header"] !== null) {
+            $this->Header = new HeaderKey();
+            $this->Header->deserialize($param["Header"]);
+        }
+
+        if (array_key_exists("CacheTag",$param) and $param["CacheTag"] !== null) {
+            $this->CacheTag = new CacheTagKey();
+            $this->CacheTag->deserialize($param["CacheTag"]);
+        }
+
+        if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
+            $this->Scheme = new SchemeKey();
+            $this->Scheme->deserialize($param["Scheme"]);
         }
     }
 }

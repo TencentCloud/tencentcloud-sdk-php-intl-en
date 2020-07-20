@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain The number of eligible bandwidth packages.
  * @method void setTotalCount(integer $TotalCount) Set The number of eligible bandwidth packages.
- * @method array getBandwidthPackageSet() Obtain The description of the bandwidth packages.
- * @method void setBandwidthPackageSet(array $BandwidthPackageSet) Set The description of the bandwidth packages.
+ * @method array getBandwidthPackageSet() Obtain Detail information of the bandwidth package.
+ * @method void setBandwidthPackageSet(array $BandwidthPackageSet) Set Detail information of the bandwidth package.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeBandwidthPackagesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array The description of the bandwidth packages.
+     * @var array Detail information of the bandwidth package.
      */
     public $BandwidthPackageSet;
 
@@ -46,7 +46,7 @@ class DescribeBandwidthPackagesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount The number of eligible bandwidth packages.
-     * @param array $BandwidthPackageSet The description of the bandwidth packages.
+     * @param array $BandwidthPackageSet Detail information of the bandwidth package.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

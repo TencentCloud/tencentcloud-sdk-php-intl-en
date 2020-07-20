@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) Set AZ number
  * @method string getZoneState() Obtain Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
  * @method void setZoneState(string $ZoneState) Set Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+ * @method integer getZoneSupportIpv6() Obtain Whether the availability zone supports IPv6 address access
+ * @method void setZoneSupportIpv6(integer $ZoneSupportIpv6) Set Whether the availability zone supports IPv6 address access
  */
 class ZoneInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ZoneInfo extends AbstractModel
     public $ZoneState;
 
     /**
+     * @var integer Whether the availability zone supports IPv6 address access
+     */
+    public $ZoneSupportIpv6;
+
+    /**
      * @param string $Zone AZ abbreviation
      * @param string $ZoneName AZ name
      * @param integer $ZoneId AZ number
      * @param string $ZoneState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+     * @param integer $ZoneSupportIpv6 Whether the availability zone supports IPv6 address access
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("ZoneState",$param) and $param["ZoneState"] !== null) {
             $this->ZoneState = $param["ZoneState"];
+        }
+
+        if (array_key_exists("ZoneSupportIpv6",$param) and $param["ZoneSupportIpv6"] !== null) {
+            $this->ZoneSupportIpv6 = $param["ZoneSupportIpv6"];
         }
     }
 }

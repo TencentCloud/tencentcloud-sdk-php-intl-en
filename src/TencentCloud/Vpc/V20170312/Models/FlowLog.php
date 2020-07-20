@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
  * @method string getFlowLogName() Obtain The name of the flow log instance.
  * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
- * @method string getResourceType() Obtain The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
- * @method void setResourceType(string $ResourceType) Set The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+ * @method string getResourceType() Obtain The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+ * @method void setResourceType(string $ResourceType) Set The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
  * @method string getResourceId() Obtain The unique ID of the resource.
  * @method void setResourceId(string $ResourceId) Set The unique ID of the resource.
- * @method string getTrafficType() Obtain The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
- * @method void setTrafficType(string $TrafficType) Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+ * @method string getTrafficType() Obtain Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
+ * @method void setTrafficType(string $TrafficType) Set Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
  * @method string getCloudLogId() Obtain The storage ID of the flow log.
  * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
  * @method string getCloudLogState() Obtain The storage ID status of the flow log.
@@ -59,7 +59,7 @@ class FlowLog extends AbstractModel
     public $FlowLogName;
 
     /**
-     * @var string The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * @var string The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public $ResourceType;
 
@@ -69,7 +69,7 @@ class FlowLog extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @var string Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      */
     public $TrafficType;
 
@@ -97,9 +97,9 @@ class FlowLog extends AbstractModel
      * @param string $VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      * @param string $FlowLogId The unique ID of the flow log.
      * @param string $FlowLogName The name of the flow log instance.
-     * @param string $ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * @param string $ResourceType The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      * @param string $ResourceId The unique ID of the resource.
-     * @param string $TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @param string $TrafficType Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      * @param string $CloudLogId The storage ID of the flow log.
      * @param string $CloudLogState The storage ID status of the flow log.
      * @param string $FlowLogDescription The flow log description.

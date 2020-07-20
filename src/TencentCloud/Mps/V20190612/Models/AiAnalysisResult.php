@@ -20,14 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent analysis results
  *
-
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method AiAnalysisTaskClassificationResult getClassificationTask() Obtain 
+ * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) Set 
+ * @method AiAnalysisTaskCoverResult getCoverTask() Obtain 
+ * @method void setCoverTask(AiAnalysisTaskCoverResult $CoverTask) Set 
+ * @method AiAnalysisTaskTagResult getTagTask() Obtain 
+ * @method void setTagTask(AiAnalysisTaskTagResult $TagTask) Set 
+ * @method AiAnalysisTaskFrameTagResult getFrameTagTask() Obtain 
+ * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) Set 
  */
 class AiAnalysisResult extends AbstractModel
 {
-
+    /**
+     * @var string 
+     */
+    public $Type;
 
     /**
+     * @var AiAnalysisTaskClassificationResult 
+     */
+    public $ClassificationTask;
 
+    /**
+     * @var AiAnalysisTaskCoverResult 
+     */
+    public $CoverTask;
+
+    /**
+     * @var AiAnalysisTaskTagResult 
+     */
+    public $TagTask;
+
+    /**
+     * @var AiAnalysisTaskFrameTagResult 
+     */
+    public $FrameTagTask;
+
+    /**
+     * @param string $Type 
+     * @param AiAnalysisTaskClassificationResult $ClassificationTask 
+     * @param AiAnalysisTaskCoverResult $CoverTask 
+     * @param AiAnalysisTaskTagResult $TagTask 
+     * @param AiAnalysisTaskFrameTagResult $FrameTagTask 
      */
     function __construct()
     {
@@ -42,6 +78,28 @@ class AiAnalysisResult extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
 
+        if (array_key_exists("ClassificationTask",$param) and $param["ClassificationTask"] !== null) {
+            $this->ClassificationTask = new AiAnalysisTaskClassificationResult();
+            $this->ClassificationTask->deserialize($param["ClassificationTask"]);
+        }
+
+        if (array_key_exists("CoverTask",$param) and $param["CoverTask"] !== null) {
+            $this->CoverTask = new AiAnalysisTaskCoverResult();
+            $this->CoverTask->deserialize($param["CoverTask"]);
+        }
+
+        if (array_key_exists("TagTask",$param) and $param["TagTask"] !== null) {
+            $this->TagTask = new AiAnalysisTaskTagResult();
+            $this->TagTask->deserialize($param["TagTask"]);
+        }
+
+        if (array_key_exists("FrameTagTask",$param) and $param["FrameTagTask"] !== null) {
+            $this->FrameTagTask = new AiAnalysisTaskFrameTagResult();
+            $this->FrameTagTask->deserialize($param["FrameTagTask"]);
+        }
     }
 }

@@ -206,17 +206,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set S3 bucket origin access authentication configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method SecurityConfig getSecurityConfig() Obtain SCDN configuration
+ * @method SecurityConfig getSecurityConfig() Obtain 
+ * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set 
+ * @method ImageOptimization getImageOptimization() Obtain 
+ * @method void setImageOptimization(ImageOptimization $ImageOptimization) Set 
+ * @method UserAgentFilter getUserAgentFilter() Obtain 
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set 
+ * @method AccessControl getAccessControl() Obtain Access control
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set SCDN configuration
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ImageOptimization getImageOptimization() Obtain `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImageOptimization(ImageOptimization $ImageOptimization) Set `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method UserAgentFilter getUserAgentFilter() Obtain `UA` blacklist/whitelist Configuration
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set `UA` blacklist/whitelist Configuration
+ * @method void setAccessControl(AccessControl $AccessControl) Set Access control
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
@@ -475,22 +473,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AwsPrivateAccess;
 
     /**
-     * @var SecurityConfig SCDN configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var SecurityConfig 
      */
     public $SecurityConfig;
 
     /**
-     * @var ImageOptimization `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ImageOptimization 
      */
     public $ImageOptimization;
 
     /**
-     * @var UserAgentFilter `UA` blacklist/whitelist Configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var UserAgentFilter 
      */
     public $UserAgentFilter;
+
+    /**
+     * @var AccessControl Access control
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AccessControl;
 
     /**
      * @param string $ResourceId Domain name ID
@@ -586,11 +587,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AwsPrivateAccess $AwsPrivateAccess S3 bucket origin access authentication configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SecurityConfig $SecurityConfig SCDN configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImageOptimization $ImageOptimization `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UserAgentFilter $UserAgentFilter `UA` blacklist/whitelist Configuration
+     * @param SecurityConfig $SecurityConfig 
+     * @param ImageOptimization $ImageOptimization 
+     * @param UserAgentFilter $UserAgentFilter 
+     * @param AccessControl $AccessControl Access control
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -807,6 +807,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("UserAgentFilter",$param) and $param["UserAgentFilter"] !== null) {
             $this->UserAgentFilter = new UserAgentFilter();
             $this->UserAgentFilter->deserialize($param["UserAgentFilter"]);
+        }
+
+        if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
+            $this->AccessControl = new AccessControl();
+            $this->AccessControl->deserialize($param["AccessControl"]);
         }
     }
 }

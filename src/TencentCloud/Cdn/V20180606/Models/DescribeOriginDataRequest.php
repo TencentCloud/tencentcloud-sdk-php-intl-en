@@ -58,10 +58,12 @@ statusCode: origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
  * @method array getDomains() Obtain Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
  * @method void setDomains(array $Domains) Set Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
- * @method integer getProject() Obtain Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
- * @method void setProject(integer $Project) Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+ * @method integer getProject() Obtain Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail
+ * @method void setProject(integer $Project) Set Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail
  * @method string getInterval() Obtain Time granularity; valid values:
 `min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
 `5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
@@ -121,8 +123,9 @@ It is supported to specify a status code for query. The return will be empty if 
     public $Domains;
 
     /**
-     * @var integer Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+     * @var integer Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail
      */
     public $Project;
 
@@ -168,8 +171,9 @@ statusCode: origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5
 5xx: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
      * @param array $Domains Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
-     * @param integer $Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+     * @param integer $Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail
      * @param string $Interval Time granularity; valid values:
 `min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
 `5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;

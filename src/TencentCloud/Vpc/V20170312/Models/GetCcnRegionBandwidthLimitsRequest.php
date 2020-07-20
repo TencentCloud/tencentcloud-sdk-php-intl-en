@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) Set The filter condition.
 <li>sregion - String - (Filter condition) Filter by the source region, such as 'ap-guangzhou'.</li>
 <li>dregion - String - (Filter condition) Filter by the destination region, such as 'ap-shanghai-bm'.</li>
- * @method string getSortedBy() Obtain The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
- * @method void setSortedBy(string $SortedBy) Set The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
+ * @method string getSortedBy() Obtain The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
+ * @method void setSortedBy(string $SortedBy) Set The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
  * @method integer getOffset() Obtain The offset.
  * @method void setOffset(integer $Offset) Set The offset.
  * @method integer getLimit() Obtain The returned quantity.
@@ -52,7 +52,7 @@ class GetCcnRegionBandwidthLimitsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
+     * @var string The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
      */
     public $SortedBy;
 
@@ -76,7 +76,7 @@ class GetCcnRegionBandwidthLimitsRequest extends AbstractModel
      * @param array $Filters The filter condition.
 <li>sregion - String - (Filter condition) Filter by the source region, such as 'ap-guangzhou'.</li>
 <li>dregion - String - (Filter condition) Filter by the destination region, such as 'ap-shanghai-bm'.</li>
-     * @param string $SortedBy The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
+     * @param string $SortedBy The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
      * @param integer $Offset The offset.
      * @param integer $Limit The returned quantity.
      * @param string $OrderBy In ascending or descending order. Valid values: 'ASC' and 'DESC'.

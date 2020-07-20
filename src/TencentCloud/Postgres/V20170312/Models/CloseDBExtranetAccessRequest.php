@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6r233v55
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6r233v55
+ * @method integer getIsIpv6() Obtain Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+ * @method void setIsIpv6(integer $IsIpv6) Set Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
  */
 class CloseDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CloseDBExtranetAccessRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
+     * @var integer Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     */
+    public $IsIpv6;
+
+    /**
      * @param string $DBInstanceId Instance ID in the format of postgres-6r233v55
+     * @param integer $IsIpv6 Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CloseDBExtranetAccessRequest extends AbstractModel
         }
         if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
             $this->DBInstanceId = $param["DBInstanceId"];
+        }
+
+        if (array_key_exists("IsIpv6",$param) and $param["IsIpv6"] !== null) {
+            $this->IsIpv6 = $param["IsIpv6"];
         }
     }
 }

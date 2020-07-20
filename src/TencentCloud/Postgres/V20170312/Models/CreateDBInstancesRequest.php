@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(integer $ActivityId) Set 
  * @method string getName() Obtain Instance name (which will be supported in the future)
  * @method void setName(string $Name) Set Instance name (which will be supported in the future)
- * @method integer getNeedSupportIpv6() Obtain 
- * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set 
+ * @method integer getNeedSupportIpv6() Obtain Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
+ * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -131,7 +131,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
      */
     public $NeedSupportIpv6;
 
@@ -151,7 +151,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $AutoRenewFlag Renewal flag. 0: normal renewal (default), 1: auto-renewal.
      * @param integer $ActivityId 
      * @param string $Name Instance name (which will be supported in the future)
-     * @param integer $NeedSupportIpv6 
+     * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
      */
     function __construct()
     {

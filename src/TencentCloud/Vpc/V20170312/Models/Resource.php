@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The structure of information of the bandwidth package.
  *
- * @method string getResourceType() Obtain The bandwidth package resource type, including 'Address', and 'LoadBalance'
- * @method void setResourceType(string $ResourceType) Set The bandwidth package resource type, including 'Address', and 'LoadBalance'
- * @method string getResourceId() Obtain The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
- * @method void setResourceId(string $ResourceId) Set The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
+ * @method string getResourceType() Obtain The bandwidth package resource type, including `Address`, and `LoadBalance`
+ * @method void setResourceType(string $ResourceType) Set The bandwidth package resource type, including `Address`, and `LoadBalance`
+ * @method string getResourceId() Obtain The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
+ * @method void setResourceId(string $ResourceId) Set The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
  * @method string getAddressIp() Obtain The bandwidth package resource IP.
  * @method void setAddressIp(string $AddressIp) Set The bandwidth package resource IP.
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string The bandwidth package resource type, including 'Address', and 'LoadBalance'
+     * @var string The bandwidth package resource type, including `Address`, and `LoadBalance`
      */
     public $ResourceType;
 
     /**
-     * @var string The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
+     * @var string The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
      */
     public $ResourceId;
 
@@ -45,8 +45,8 @@ class Resource extends AbstractModel
     public $AddressIp;
 
     /**
-     * @param string $ResourceType The bandwidth package resource type, including 'Address', and 'LoadBalance'
-     * @param string $ResourceId The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
+     * @param string $ResourceType The bandwidth package resource type, including `Address`, and `LoadBalance`
+     * @param string $ResourceId The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
      * @param string $AddressIp The bandwidth package resource IP.
      */
     function __construct()

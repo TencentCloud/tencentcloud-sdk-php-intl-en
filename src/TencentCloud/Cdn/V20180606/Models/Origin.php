@@ -101,6 +101,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBackupServerName(string $BackupServerName) Set Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getBasePath() Obtain Origin-pull path
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setBasePath(string $BasePath) Set Origin-pull path
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class Origin extends AbstractModel
 {
@@ -174,6 +178,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BackupServerName;
 
     /**
+     * @var string Origin-pull path
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $BasePath;
+
+    /**
      * @param array $Origins Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -210,6 +220,8 @@ ip: IP list used as origin server
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $BasePath Origin-pull path
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -255,6 +267,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BackupServerName",$param) and $param["BackupServerName"] !== null) {
             $this->BackupServerName = $param["BackupServerName"];
+        }
+
+        if (array_key_exists("BasePath",$param) and $param["BasePath"] !== null) {
+            $this->BasePath = $param["BasePath"];
         }
     }
 }

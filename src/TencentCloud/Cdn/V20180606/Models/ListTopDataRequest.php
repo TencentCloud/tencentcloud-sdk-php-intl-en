@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTopData request structure.
  *
- * @method string getStartTime() Obtain Query start date. Example: 2018-09-09.
+ * @method string getStartTime() Obtain Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated at or after 00:00:00 on the start date will be returned.
-Only data from the last 90 days will be queried.
- * @method void setStartTime(string $StartTime) Set Query start date. Example: 2018-09-09.
+Data generated after or at 00:00:00 on the start date will be returned
+Only data for the last 90 days can be queried
+ * @method void setStartTime(string $StartTime) Set Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated at or after 00:00:00 on the start date will be returned.
-Only data from the last 90 days will be queried.
- * @method string getEndTime() Obtain Query end date. Example: 2018-09-10
+Data generated after or at 00:00:00 on the start date will be returned
+Only data for the last 90 days can be queried
+ * @method string getEndTime() Obtain Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned.
-EndTime must be greater than or equal to StartTime
- * @method void setEndTime(string $EndTime) Set Query end date. Example: 2018-09-10
+Data generated before or at 23:59:59 on the end date will be returned
+`EndTime` must be later than or equal to `StartTime`
+ * @method void setEndTime(string $EndTime) Set Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned.
-EndTime must be greater than or equal to StartTime
+Data generated before or at 23:59:59 on the end date will be returned
+`EndTime` must be later than or equal to `StartTime`
  * @method string getMetric() Obtain Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
 path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
@@ -108,18 +108,18 @@ client: specifies to query data of the client region (where a user request devic
 class ListTopDataRequest extends AbstractModel
 {
     /**
-     * @var string Query start date. Example: 2018-09-09.
+     * @var string Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated at or after 00:00:00 on the start date will be returned.
-Only data from the last 90 days will be queried.
+Data generated after or at 00:00:00 on the start date will be returned
+Only data for the last 90 days can be queried
      */
     public $StartTime;
 
     /**
-     * @var string Query end date. Example: 2018-09-10
+     * @var string Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned.
-EndTime must be greater than or equal to StartTime
+Data generated before or at 23:59:59 on the end date will be returned
+`EndTime` must be later than or equal to `StartTime`
      */
     public $EndTime;
 
@@ -190,14 +190,14 @@ client: specifies to query data of the client region (where a user request devic
     public $AreaType;
 
     /**
-     * @param string $StartTime Query start date. Example: 2018-09-09.
+     * @param string $StartTime Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated at or after 00:00:00 on the start date will be returned.
-Only data from the last 90 days will be queried.
-     * @param string $EndTime Query end date. Example: 2018-09-10
+Data generated after or at 00:00:00 on the start date will be returned
+Only data for the last 90 days can be queried
+     * @param string $EndTime Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned.
-EndTime must be greater than or equal to StartTime
+Data generated before or at 23:59:59 on the end date will be returned
+`EndTime` must be later than or equal to `StartTime`
      * @param string $Metric Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
 path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)

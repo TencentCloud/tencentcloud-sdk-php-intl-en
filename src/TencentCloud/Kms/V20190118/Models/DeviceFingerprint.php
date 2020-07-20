@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Device fingerprint
  *
- * @method string getIdentity() Obtain Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
- * @method void setIdentity(string $Identity) Set Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+ * @method string getIdentity() Obtain Fingerprint information collected by device fingerprint collector. Its format must be in the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+ * @method void setIdentity(string $Identity) Set Fingerprint information collected by device fingerprint collector. Its format must be in the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
  * @method string getDescription() Obtain Description, such as IP and device name. Length limit: 1,024 bytes
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Description, such as IP and device name. Length limit: 1,024 bytes
@@ -30,7 +30,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class DeviceFingerprint extends AbstractModel
 {
     /**
-     * @var string Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+     * @var string Fingerprint information collected by device fingerprint collector. Its format must be in the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
      */
     public $Identity;
 
@@ -41,7 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Description;
 
     /**
-     * @param string $Identity Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+     * @param string $Identity Fingerprint information collected by device fingerprint collector. Its format must be in the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
      * @param string $Description Description, such as IP and device name. Length limit: 1,024 bytes
 Note: this field may return null, indicating that no valid values can be obtained.
      */

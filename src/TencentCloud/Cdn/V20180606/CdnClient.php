@@ -27,6 +27,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\CreateClsLogTopicResponse CreateClsLogTopic(Models\CreateClsLogTopicRequest $req) This API is used to create a log topic. Note: up to 10 log topics can be created under one logset.
  * @method Models\DeleteCdnDomainResponse DeleteCdnDomain(Models\DeleteCdnDomainRequest $req) This API is used to delete a specified acceleration domain name.
  * @method Models\DeleteClsLogTopicResponse DeleteClsLogTopic(Models\DeleteClsLogTopicRequest $req) This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
+ * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) This API is used to query billing data details.
  * @method Models\DescribeCdnDataResponse DescribeCdnData(Models\DescribeCdnDataRequest $req) This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
 
 + Traffic (in bytes)
@@ -42,6 +43,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) This API is used to query the basic configuration information of CDN acceleration domain names (inside and outside mainland China), including the project ID, service status, service type, creation time, and update time, etc.
  * @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) This API is used to query the complete configuration information of CDN acceleration domain names (inside and outside mainland China).
+ * @method Models\DescribeIpStatusResponse DescribeIpStatus(Models\DescribeIpStatusRequest $req) This API is used to query the status of the edge servers and intermediate nodes on the domain name acceleration platform. Note: edge servers are not generally available. This API can only be used by whitelisted accounts.
  * @method Models\DescribeIpVisitResponse DescribeIpVisit(Models\DescribeIpVisitRequest $req) This API (DescribeIpVisit) is used to query the number of users who remain active for 5 minutes and the detailed number of daily active users.
 
 + Number of users who remain active for 5 minutes: Collects deduplicated statistics based on client IP addresses in the log with the 5-minute granularity.
@@ -59,7 +61,9 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + Aggregate list of 4xx origin-pull status codes and the details of origin-pull status codes starting with 4 (in entries)
 + Aggregate list of 5xx origin-pull status codes and the details of origin-pull status codes starting with 5 (in entries)
  * @method Models\DescribePayTypeResponse DescribePayType(Models\DescribePayTypeRequest $req) This API (DescribePayType) is used to query billing information of the current account, such as billing mode and billing cycle.
+ * @method Models\DescribePurgeQuotaResponse DescribePurgeQuota(Models\DescribePurgeQuotaRequest $req) This API is used to query the purge usage quota and daily available usage for an account.
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) This API is used to query the record and progress of URL or directory purge tasks submitted via the `PurgePathCache` or `PurgeUrlsCache` APIs.
+ * @method Models\DescribePushQuotaResponse DescribePushQuota(Models\DescribePushQuotaRequest $req) This API is used to query the prefetch quota and daily available usage.
  * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) This API is used to query the submission record and progress of prefetch tasks.
 This API is in beta test and not fully available yet. Please stay tuned.
  * @method Models\DescribeReportDataResponse DescribeReportData(Models\DescribeReportDataRequest $req) This API is used to query the daily/weekly/monthly report data at domain name/project levels.

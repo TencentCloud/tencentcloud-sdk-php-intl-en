@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'.</li>
 <li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx' and 'lb-xxxx'.</li>
 <li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
- * @method integer getOffset() Obtain Queries the bandwidth package offset.
- * @method void setOffset(integer $Offset) Set Queries the bandwidth package offset.
- * @method integer getLimit() Obtain Queries the limit on the number of bandwidth packages.
- * @method void setLimit(integer $Limit) Set Queries the limit on the number of bandwidth packages.
+ * @method integer getOffset() Obtain Offset of the query results
+ * @method void setOffset(integer $Offset) Set Offset of the query results
+ * @method integer getLimit() Obtain Max number of the bandwidth packages to be returned.
+ * @method void setLimit(integer $Limit) Set Max number of the bandwidth packages to be returned.
  */
 class DescribeBandwidthPackagesRequest extends AbstractModel
 {
@@ -63,12 +63,12 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer Queries the bandwidth package offset.
+     * @var integer Offset of the query results
      */
     public $Offset;
 
     /**
-     * @var integer Queries the limit on the number of bandwidth packages.
+     * @var integer Max number of the bandwidth packages to be returned.
      */
     public $Limit;
 
@@ -82,8 +82,8 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
 <li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'.</li>
 <li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx' and 'lb-xxxx'.</li>
 <li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
-     * @param integer $Offset Queries the bandwidth package offset.
-     * @param integer $Limit Queries the limit on the number of bandwidth packages.
+     * @param integer $Offset Offset of the query results
+     * @param integer $Limit Max number of the bandwidth packages to be returned.
      */
     function __construct()
     {
