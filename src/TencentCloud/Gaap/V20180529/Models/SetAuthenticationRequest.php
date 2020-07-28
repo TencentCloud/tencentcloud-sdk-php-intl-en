@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getListenerId() Obtain Listener ID.
  * @method void setListenerId(string $ListenerId) Set Listener ID.
- * @method string getDomain() Obtain The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
- * @method void setDomain(string $Domain) Set The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+ * @method string getDomain() Obtain The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
+ * @method void setDomain(string $Domain) Set The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
  * @method integer getBasicAuth() Obtain Whether to enable the basic authentication:
 0: disable basic authentication;
 1: enable basic authentication.
@@ -67,7 +67,7 @@ class SetAuthenticationRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var string The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+     * @var string The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
      */
     public $Domain;
 
@@ -122,7 +122,7 @@ The default value is 0.
 
     /**
      * @param string $ListenerId Listener ID.
-     * @param string $Domain The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+     * @param string $Domain The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
      * @param integer $BasicAuth Whether to enable the basic authentication:
 0: disable basic authentication;
 1: enable basic authentication.

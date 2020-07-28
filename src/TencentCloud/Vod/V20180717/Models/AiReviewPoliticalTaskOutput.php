@@ -34,14 +34,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>review.</li>
 <li>block.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getLabel() Obtain Tag of detected politically sensitive information in video. Valid values:
-<li>politician: politically sensitive figure.</li>
+ * @method string getLabel() Obtain Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
 <li>violation_photo: violating photo.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLabel(string $Label) Set Tag of detected politically sensitive information in video. Valid values:
-<li>politician: politically sensitive figure.</li>
+Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: political figure.</li>
+ * @method void setLabel(string $Label) Set Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
 <li>violation_photo: violating photo.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: political figure.</li>
  * @method array getSegmentSet() Obtain List of video segments that contain the detected politically sensitive information.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected politically sensitive information.
@@ -65,10 +67,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Suggestion;
 
     /**
-     * @var string Tag of detected politically sensitive information in video. Valid values:
-<li>politician: politically sensitive figure.</li>
+     * @var string Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
 <li>violation_photo: violating photo.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: political figure.</li>
      */
     public $Label;
 
@@ -86,10 +89,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>review.</li>
 <li>block.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Label Tag of detected politically sensitive information in video. Valid values:
-<li>politician: politically sensitive figure.</li>
+     * @param string $Label Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
 <li>violation_photo: violating photo.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: political figure.</li>
      * @param array $SegmentSet List of video segments that contain the detected politically sensitive information.
 Note: this field may return null, indicating that no valid values can be obtained.
      */

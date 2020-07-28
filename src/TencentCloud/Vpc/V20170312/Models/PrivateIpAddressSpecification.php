@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrimary(boolean $Primary) Set Whether it is a primary IP.
  * @method string getPublicIpAddress() Obtain Public IP address.
  * @method void setPublicIpAddress(string $PublicIpAddress) Set Public IP address.
- * @method string getAddressId() Obtain EIP instance ID, such as `eip-11112222`。
- * @method void setAddressId(string $AddressId) Set EIP instance ID, such as `eip-11112222`。
+ * @method string getAddressId() Obtain EIP instance ID, such as `eip-11112222`.
+ * @method void setAddressId(string $AddressId) Set EIP instance ID, such as `eip-11112222`.
  * @method string getDescription() Obtain Private IP description.
  * @method void setDescription(string $Description) Set Private IP description.
  * @method boolean getIsWanIpBlocked() Obtain Whether the public IP is blocked.
@@ -61,7 +61,7 @@ class PrivateIpAddressSpecification extends AbstractModel
     public $PublicIpAddress;
 
     /**
-     * @var string EIP instance ID, such as `eip-11112222`。
+     * @var string EIP instance ID, such as `eip-11112222`.
      */
     public $AddressId;
 
@@ -88,7 +88,7 @@ AVAILABLE: Available
      * @param string $PrivateIpAddress Private IP address.
      * @param boolean $Primary Whether it is a primary IP.
      * @param string $PublicIpAddress Public IP address.
-     * @param string $AddressId EIP instance ID, such as `eip-11112222`。
+     * @param string $AddressId EIP instance ID, such as `eip-11112222`.
      * @param string $Description Private IP description.
      * @param boolean $IsWanIpBlocked Whether the public IP is blocked.
      * @param string $State IP status:

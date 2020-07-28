@@ -54,6 +54,8 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
  * @method integer getHeight() Obtain Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
  * @method void setHeight(integer $Height) Set Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+ * @method integer getGop() Obtain 
+ * @method void setGop(integer $Gop) Set 
  * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -107,6 +109,11 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
     public $Height;
 
     /**
+     * @var integer 
+     */
+    public $Gop;
+
+    /**
      * @var string Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -132,6 +139,7 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
      * @param integer $Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+     * @param integer $Gop 
      * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -172,6 +180,10 @@ Default value: black.
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
+            $this->Gop = $param["Gop"];
         }
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {

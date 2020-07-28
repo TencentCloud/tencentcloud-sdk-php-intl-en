@@ -20,10 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateImageSpriteTemplate request structure.
  *
- * @method integer getWidth() Obtain Subimage width of an image sprite in px. Value range: [128, 4,096].
- * @method void setWidth(integer $Width) Set Subimage width of an image sprite in px. Value range: [128, 4,096].
- * @method integer getHeight() Obtain Subimage height of an image sprite in px. Value range: [128, 4,096].
- * @method void setHeight(integer $Height) Set Subimage height of an image sprite in px. Value range: [128, 4,096].
  * @method string getSampleType() Obtain Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -42,19 +38,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColumnCount(integer $ColumnCount) Set Subimage column count of an image sprite.
  * @method string getName() Obtain Name of an image sprite generating template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of an image sprite generating template. Length limit: 64 characters.
+ * @method integer getWidth() Obtain Subimage width of an image sprite in px. Value range: [128, 4,096].
+ * @method void setWidth(integer $Width) Set Subimage width of an image sprite in px. Value range: [128, 4,096].
+ * @method integer getHeight() Obtain Subimage height of an image sprite in px. Value range: [128, 4,096].
+ * @method void setHeight(integer $Height) Set Subimage height of an image sprite in px. Value range: [128, 4,096].
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
-    /**
-     * @var integer Subimage width of an image sprite in px. Value range: [128, 4,096].
-     */
-    public $Width;
-
-    /**
-     * @var integer Subimage height of an image sprite in px. Value range: [128, 4,096].
-     */
-    public $Height;
-
     /**
      * @var string Sampling type. Valid values:
 <li>Percent: By percent.</li>
@@ -85,8 +81,31 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @param integer $Width Subimage width of an image sprite in px. Value range: [128, 4,096].
-     * @param integer $Height Subimage height of an image sprite in px. Value range: [128, 4,096].
+     * @var integer Subimage width of an image sprite in px. Value range: [128, 4,096].
+     */
+    public $Width;
+
+    /**
+     * @var integer Subimage height of an image sprite in px. Value range: [128, 4,096].
+     */
+    public $Height;
+
+    /**
+     * @var string 
+     */
+    public $ResolutionAdaptive;
+
+    /**
+     * @var string 
+     */
+    public $FillType;
+
+    /**
+     * @var string 
+     */
+    public $Comment;
+
+    /**
      * @param string $SampleType Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -96,6 +115,11 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
      * @param integer $RowCount Subimage row count of an image sprite.
      * @param integer $ColumnCount Subimage column count of an image sprite.
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
+     * @param integer $Width Subimage width of an image sprite in px. Value range: [128, 4,096].
+     * @param integer $Height Subimage height of an image sprite in px. Value range: [128, 4,096].
+     * @param string $ResolutionAdaptive 
+     * @param string $FillType 
+     * @param string $Comment 
      */
     function __construct()
     {
@@ -110,14 +134,6 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
-        }
-
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
-        }
-
         if (array_key_exists("SampleType",$param) and $param["SampleType"] !== null) {
             $this->SampleType = $param["SampleType"];
         }
@@ -136,6 +152,26 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

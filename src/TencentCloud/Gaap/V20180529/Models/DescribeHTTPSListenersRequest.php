@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Quantity limit. The default value is 20.
  * @method string getSearchValue() Obtain Filter condition. It supports fuzzy query by ports or listener names.
  * @method void setSearchValue(string $SearchValue) Set Filter condition. It supports fuzzy query by ports or listener names.
+ * @method string getGroupId() Obtain Connection group ID as a filter
+ * @method void setGroupId(string $GroupId) Set Connection group ID as a filter
  */
 class DescribeHTTPSListenersRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeHTTPSListenersRequest extends AbstractModel
     public $SearchValue;
 
     /**
+     * @var string Connection group ID as a filter
+     */
+    public $GroupId;
+
+    /**
      * @param string $ProxyId Filter condition. Connection ID.
      * @param string $ListenerId Filter condition. Exact query by listener IDs.
      * @param string $ListenerName Filter condition. Exact query by listener names.
@@ -80,6 +87,7 @@ class DescribeHTTPSListenersRequest extends AbstractModel
      * @param integer $Offset Offset. The default value is 0
      * @param integer $Limit Quantity limit. The default value is 20.
      * @param string $SearchValue Filter condition. It supports fuzzy query by ports or listener names.
+     * @param string $GroupId Connection group ID as a filter
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeHTTPSListenersRequest extends AbstractModel
 
         if (array_key_exists("SearchValue",$param) and $param["SearchValue"] !== null) {
             $this->SearchValue = $param["SearchValue"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

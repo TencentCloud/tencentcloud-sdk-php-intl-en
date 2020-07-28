@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) Set ID of the connection group to be modified.
  * @method string getGroupName() Obtain New connection group name. Up to 30 characters. The extra characters will be truncated.
  * @method void setGroupName(string $GroupName) Set New connection group name. Up to 30 characters. The extra characters will be truncated.
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
  */
 class ModifyProxyGroupAttributeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
     public $GroupName;
 
     /**
+     * @var integer Project ID
+     */
+    public $ProjectId;
+
+    /**
      * @param string $GroupId ID of the connection group to be modified.
      * @param string $GroupName New connection group name. Up to 30 characters. The extra characters will be truncated.
+     * @param integer $ProjectId Project ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
 
         if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
             $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

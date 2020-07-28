@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldPassword(string $OldPassword) Set Old cluster password
  * @method string getOldPasswordExpireTime() Obtain Expected expiration time of old cluster password
  * @method void setOldPasswordExpireTime(string $OldPasswordExpireTime) Set Expected expiration time of old cluster password
- * @method string getNewPassword() Obtain New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
- * @method void setNewPassword(string $NewPassword) Set New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+ * @method string getNewPassword() Obtain New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
+ * @method void setNewPassword(string $NewPassword) Set New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
  * @method string getMode() Obtain Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
  * @method void setMode(string $Mode) Set Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
  */
@@ -49,7 +49,7 @@ class ModifyClusterPasswordRequest extends AbstractModel
     public $OldPasswordExpireTime;
 
     /**
-     * @var string New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+     * @var string New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
      */
     public $NewPassword;
 
@@ -62,7 +62,7 @@ class ModifyClusterPasswordRequest extends AbstractModel
      * @param string $ClusterId ID of the cluster for which to modify the password
      * @param string $OldPassword Old cluster password
      * @param string $OldPasswordExpireTime Expected expiration time of old cluster password
-     * @param string $NewPassword New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+     * @param string $NewPassword New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
      * @param string $Mode Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
      */
     function __construct()

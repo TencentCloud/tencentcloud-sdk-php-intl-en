@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Control parameter of a terrorism information detection in image task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain 
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set 
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
@@ -34,8 +36,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ImgReviewInfo;
 
     /**
+     * @var TerrorismOcrReviewTemplateInfo 
+     */
+    public $OcrReviewInfo;
+
+    /**
      * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Control parameter of a terrorism information detection in image task.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo 
      */
     function __construct()
     {
@@ -53,6 +61,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ImgReviewInfo",$param) and $param["ImgReviewInfo"] !== null) {
             $this->ImgReviewInfo = new TerrorismImgReviewTemplateInfo();
             $this->ImgReviewInfo->deserialize($param["ImgReviewInfo"]);
+        }
+
+        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+            $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfo();
+            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
         }
     }
 }

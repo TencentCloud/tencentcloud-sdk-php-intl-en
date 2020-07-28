@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Task flow name
  * @method void setName(string $Name) Set Task flow name
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Parameter of AI-based content audit task.
@@ -39,6 +41,11 @@ class ResetProcedureTemplateRequest extends AbstractModel
      * @var string Task flow name
      */
     public $Name;
+
+    /**
+     * @var string 
+     */
+    public $Comment;
 
     /**
      * @var MediaProcessTaskInput Parameter of video processing task.
@@ -67,6 +74,7 @@ class ResetProcedureTemplateRequest extends AbstractModel
 
     /**
      * @param string $Name Task flow name
+     * @param string $Comment 
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
      * @param AiContentReviewTaskInput $AiContentReviewTask Parameter of AI-based content audit task.
      * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.
@@ -88,6 +96,10 @@ class ResetProcedureTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
 
         if (array_key_exists("MediaProcessTask",$param) and $param["MediaProcessTask"] !== null) {

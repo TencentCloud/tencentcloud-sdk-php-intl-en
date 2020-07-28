@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Query list offset
  * @method integer getLimit() Obtain Number of returned results in query list. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of returned results in query list. Default value: 20
+ * @method integer getIpv6Enable() Obtain Whether to enable IPv6 address access
+ * @method void setIpv6Enable(integer $Ipv6Enable) Set Whether to enable IPv6 address access
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeClustersRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer Whether to enable IPv6 address access
+     */
+    public $Ipv6Enable;
+
+    /**
      * @param array $ClusterIds List of IDs of clusters to be queried
      * @param array $Filters Query filter
      * @param integer $Offset Query list offset
      * @param integer $Limit Number of returned results in query list. Default value: 20
+     * @param integer $Ipv6Enable Whether to enable IPv6 address access
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeClustersRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Ipv6Enable",$param) and $param["Ipv6Enable"] !== null) {
+            $this->Ipv6Enable = $param["Ipv6Enable"];
         }
     }
 }

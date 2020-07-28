@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PullUpload request structure.
  *
- * @method string getMediaUrl() Obtain URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
- * @method void setMediaUrl(string $MediaUrl) Set URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+ * @method string getMediaUrl() Obtain URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+ * @method void setMediaUrl(string $MediaUrl) Set URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
  * @method string getMediaName() Obtain Media name.
  * @method void setMediaName(string $MediaName) Set Media name.
  * @method string getCoverUrl() Obtain URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
@@ -44,12 +44,14 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
  * @method void setExtInfo(string $ExtInfo) Set Reserved field for special purposes.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+ * @method string getSourceContext() Obtain Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
+ * @method void setSourceContext(string $SourceContext) Set Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
  */
 class PullUploadRequest extends AbstractModel
 {
     /**
-     * @var string URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+     * @var string URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
      */
     public $MediaUrl;
 
@@ -104,8 +106,13 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
     public $SubAppId;
 
     /**
-     * @param string $MediaUrl URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+     * @var string Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
+     */
+    public $SourceContext;
+
+    /**
+     * @param string $MediaUrl URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
      * @param string $MediaName Media name.
      * @param string $CoverUrl URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
      * @param string $Procedure Subsequent task for media. For more information, please see [Specifying Task Flow After Upload](https://cloud.tencent.com/document/product/266/9759).
@@ -116,6 +123,7 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
      * @param string $ExtInfo Reserved field for special purposes.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param string $SourceContext Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
+            $this->SourceContext = $param["SourceContext"];
         }
     }
 }

@@ -46,9 +46,9 @@ lc: least connections.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
  * @method void setForwardProtocol(string $ForwardProtocol) Set Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
- * @method string getForwardHost() Obtain The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+ * @method string getForwardHost() Obtain The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
- * @method void setForwardHost(string $ForwardHost) Set The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+ * @method void setForwardHost(string $ForwardHost) Set The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
  */
 class ModifyRuleAttributeRequest extends AbstractModel
@@ -95,7 +95,7 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
     public $ForwardProtocol;
 
     /**
-     * @var string The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+     * @var string The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
      */
     public $ForwardHost;
@@ -114,7 +114,7 @@ lc: least connections.
      * @param string $Path Forwarding rule path
      * @param string $ForwardProtocol Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
-     * @param string $ForwardHost The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+     * @param string $ForwardHost The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
      */
     function __construct()

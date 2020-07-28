@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBVersion(string $DBVersion) Set PostgreSQL kernel version. Currently, only two versions are supported: 9.3.5 and 9.5.4.
  * @method integer getStorage() Obtain Instance capacity size in GB.
  * @method void setStorage(integer $Storage) Set Instance capacity size in GB.
- * @method integer getInstanceCount() Obtain Number of instances purchased at a time. Value range: 1–100.
- * @method void setInstanceCount(integer $InstanceCount) Set Number of instances purchased at a time. Value range: 1–100.
+ * @method integer getInstanceCount() Obtain Number of instances purchased at a time. Value range: 1-100.
+ * @method void setInstanceCount(integer $InstanceCount) Set Number of instances purchased at a time. Value range: 1-100.
  * @method integer getPeriod() Obtain Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
  * @method void setPeriod(integer $Period) Set Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
  * @method string getZone() Obtain AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
@@ -71,7 +71,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer Number of instances purchased at a time. Value range: 1–100.
+     * @var integer Number of instances purchased at a time. Value range: 1-100.
      */
     public $InstanceCount;
 
@@ -139,7 +139,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
      * @param string $DBVersion PostgreSQL kernel version. Currently, only two versions are supported: 9.3.5 and 9.5.4.
      * @param integer $Storage Instance capacity size in GB.
-     * @param integer $InstanceCount Number of instances purchased at a time. Value range: 1–100.
+     * @param integer $InstanceCount Number of instances purchased at a time. Value range: 1-100.
      * @param integer $Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
      * @param string $Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
      * @param integer $ProjectId Project ID.

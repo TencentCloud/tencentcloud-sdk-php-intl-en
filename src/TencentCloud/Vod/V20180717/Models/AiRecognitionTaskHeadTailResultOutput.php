@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output of video opening and ending credits recognition.
  *
- * @method float getHeadConfidence() Obtain Confidence of recognized opening credits. Value range: 0–100.
- * @method void setHeadConfidence(float $HeadConfidence) Set Confidence of recognized opening credits. Value range: 0–100.
+ * @method float getHeadConfidence() Obtain Confidence of recognized opening credits. Value range: 0-100.
+ * @method void setHeadConfidence(float $HeadConfidence) Set Confidence of recognized opening credits. Value range: 0-100.
  * @method float getHeadTimeOffset() Obtain End time point of video opening credits in seconds.
  * @method void setHeadTimeOffset(float $HeadTimeOffset) Set End time point of video opening credits in seconds.
- * @method float getTailConfidence() Obtain Confidence of recognized closing credits. Value range: 0–100.
- * @method void setTailConfidence(float $TailConfidence) Set Confidence of recognized closing credits. Value range: 0–100.
+ * @method float getTailConfidence() Obtain Confidence of recognized closing credits. Value range: 0-100.
+ * @method void setTailConfidence(float $TailConfidence) Set Confidence of recognized closing credits. Value range: 0-100.
  * @method float getTailTimeOffset() Obtain Start time point of video closing credits in seconds.
  * @method void setTailTimeOffset(float $TailTimeOffset) Set Start time point of video closing credits in seconds.
  */
 class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
 {
     /**
-     * @var float Confidence of recognized opening credits. Value range: 0–100.
+     * @var float Confidence of recognized opening credits. Value range: 0-100.
      */
     public $HeadConfidence;
 
@@ -42,7 +42,7 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
     public $HeadTimeOffset;
 
     /**
-     * @var float Confidence of recognized closing credits. Value range: 0–100.
+     * @var float Confidence of recognized closing credits. Value range: 0-100.
      */
     public $TailConfidence;
 
@@ -52,9 +52,9 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
     public $TailTimeOffset;
 
     /**
-     * @param float $HeadConfidence Confidence of recognized opening credits. Value range: 0–100.
+     * @param float $HeadConfidence Confidence of recognized opening credits. Value range: 0-100.
      * @param float $HeadTimeOffset End time point of video opening credits in seconds.
-     * @param float $TailConfidence Confidence of recognized closing credits. Value range: 0–100.
+     * @param float $TailConfidence Confidence of recognized closing credits. Value range: 0-100.
      * @param float $TailTimeOffset Start time point of video closing credits in seconds.
      */
     function __construct()

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionAbbr(string $RegionAbbr) Set Region abbreviation
  * @method integer getRegionId() Obtain Region ID
  * @method void setRegionId(integer $RegionId) Set Region ID
+ * @method integer getIpv6Enable() Obtain Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
+ * @method void setIpv6Enable(integer $Ipv6Enable) Set Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
  */
 class RegionInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class RegionInfo extends AbstractModel
     public $RegionId;
 
     /**
+     * @var integer Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
+     */
+    public $Ipv6Enable;
+
+    /**
      * @param string $RegionName Region `Ap-code`
      * @param string $RegionAbbr Region abbreviation
      * @param integer $RegionId Region ID
+     * @param integer $Ipv6Enable Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class RegionInfo extends AbstractModel
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("Ipv6Enable",$param) and $param["Ipv6Enable"] !== null) {
+            $this->Ipv6Enable = $param["Ipv6Enable"];
         }
     }
 }

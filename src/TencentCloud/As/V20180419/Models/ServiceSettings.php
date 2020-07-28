@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getReplaceMonitorUnhealthy() Obtain Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
  * @method void setReplaceMonitorUnhealthy(boolean $ReplaceMonitorUnhealthy) Set Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
+ * @method string getScalingMode() Obtain 
+ * @method void setScalingMode(string $ScalingMode) Set 
  */
 class ServiceSettings extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ServiceSettings extends AbstractModel
     public $ReplaceMonitorUnhealthy;
 
     /**
+     * @var string 
+     */
+    public $ScalingMode;
+
+    /**
      * @param boolean $ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
+     * @param string $ScalingMode 
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ServiceSettings extends AbstractModel
         }
         if (array_key_exists("ReplaceMonitorUnhealthy",$param) and $param["ReplaceMonitorUnhealthy"] !== null) {
             $this->ReplaceMonitorUnhealthy = $param["ReplaceMonitorUnhealthy"];
+        }
+
+        if (array_key_exists("ScalingMode",$param) and $param["ScalingMode"] !== null) {
+            $this->ScalingMode = $param["ScalingMode"];
         }
     }
 }

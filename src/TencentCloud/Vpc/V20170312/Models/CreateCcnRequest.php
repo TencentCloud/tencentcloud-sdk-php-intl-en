@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnName(string $CcnName) Set The name of the CCN. The maximum length is 60 characters.
  * @method string getCcnDescription() Obtain The description of the CCN. The maximum length is 100 characters.
  * @method void setCcnDescription(string $CcnDescription) Set The description of the CCN. The maximum length is 100 characters.
- * @method string getQosLevel() Obtain CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
- * @method void setQosLevel(string $QosLevel) Set CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
+ * @method string getQosLevel() Obtain CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
+ * @method void setQosLevel(string $QosLevel) Set CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
  * @method string getInstanceChargeType() Obtain The billing method. POSTPAID: postpaid by traffic. Default: POSTPAID.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set The billing method. POSTPAID: postpaid by traffic. Default: POSTPAID.
  * @method string getBandwidthLimitType() Obtain The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
@@ -46,7 +46,7 @@ class CreateCcnRequest extends AbstractModel
     public $CcnDescription;
 
     /**
-     * @var string CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
+     * @var string CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
      */
     public $QosLevel;
 
@@ -68,7 +68,7 @@ class CreateCcnRequest extends AbstractModel
     /**
      * @param string $CcnName The name of the CCN. The maximum length is 60 characters.
      * @param string $CcnDescription The description of the CCN. The maximum length is 100 characters.
-     * @param string $QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
+     * @param string $QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
      * @param string $InstanceChargeType The billing method. POSTPAID: postpaid by traffic. Default: POSTPAID.
      * @param string $BandwidthLimitType The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].

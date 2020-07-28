@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdlFiles(array $IdlFiles) Set Table creation IDL file list selected by user
  * @method array getSelectedTables() Obtain Information list of tables to be created
  * @method void setSelectedTables(array $SelectedTables) Set Information list of tables to be created
+ * @method array getResourceTags() Obtain 
+ * @method void setResourceTags(array $ResourceTags) Set 
  */
 class CreateTablesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateTablesRequest extends AbstractModel
     public $SelectedTables;
 
     /**
+     * @var array 
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $ClusterId ID of the cluster where to create a table
      * @param array $IdlFiles Table creation IDL file list selected by user
      * @param array $SelectedTables Information list of tables to be created
+     * @param array $ResourceTags 
      */
     function __construct()
     {
@@ -81,6 +89,15 @@ class CreateTablesRequest extends AbstractModel
                 $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfoUnit();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
             }
         }
     }

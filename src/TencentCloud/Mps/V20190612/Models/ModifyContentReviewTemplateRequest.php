@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTerrorismConfigure(TerrorismConfigureInfoForUpdate $TerrorismConfigure) Set Terrorism information detection control parameter.
  * @method PoliticalConfigureInfoForUpdate getPoliticalConfigure() Obtain Politically sensitive information detection control parameter.
  * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) Set Politically sensitive information detection control parameter.
+ * @method ProhibitedConfigureInfoForUpdate getProhibitedConfigure() Obtain 
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate $ProhibitedConfigure) Set 
  * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain Custom content audit control parameter.
  * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set Custom content audit control parameter.
  */
@@ -68,6 +70,11 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     public $PoliticalConfigure;
 
     /**
+     * @var ProhibitedConfigureInfoForUpdate 
+     */
+    public $ProhibitedConfigure;
+
+    /**
      * @var UserDefineConfigureInfoForUpdate Custom content audit control parameter.
      */
     public $UserDefineConfigure;
@@ -79,6 +86,7 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @param PornConfigureInfoForUpdate $PornConfigure Porn information detection control parameter.
      * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure Terrorism information detection control parameter.
      * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure Politically sensitive information detection control parameter.
+     * @param ProhibitedConfigureInfoForUpdate $ProhibitedConfigure 
      * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure Custom content audit control parameter.
      */
     function __construct()
@@ -119,6 +127,11 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
         if (array_key_exists("PoliticalConfigure",$param) and $param["PoliticalConfigure"] !== null) {
             $this->PoliticalConfigure = new PoliticalConfigureInfoForUpdate();
             $this->PoliticalConfigure->deserialize($param["PoliticalConfigure"]);
+        }
+
+        if (array_key_exists("ProhibitedConfigure",$param) and $param["ProhibitedConfigure"] !== null) {
+            $this->ProhibitedConfigure = new ProhibitedConfigureInfoForUpdate();
+            $this->ProhibitedConfigure->deserialize($param["ProhibitedConfigure"]);
         }
 
         if (array_key_exists("UserDefineConfigure",$param) and $param["UserDefineConfigure"] !== null) {

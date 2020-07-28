@@ -18,16 +18,16 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAudioTrackTemplates response structure.
+ * DescribeWordSamples response structure.
  *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
- * @method array getAudioTrackTemplateSet() Obtain List of audio track template details.
- * @method void setAudioTrackTemplateSet(array $AudioTrackTemplateSet) Set List of audio track template details.
+ * @method array getWordSet() Obtain Keyword information.
+ * @method void setWordSet(array $WordSet) Set Keyword information.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeAudioTrackTemplatesResponse extends AbstractModel
+class DescribeWordSamplesResponse extends AbstractModel
 {
     /**
      * @var integer Number of eligible entries.
@@ -35,9 +35,9 @@ class DescribeAudioTrackTemplatesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array List of audio track template details.
+     * @var array Keyword information.
      */
-    public $AudioTrackTemplateSet;
+    public $WordSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,7 +46,7 @@ class DescribeAudioTrackTemplatesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Number of eligible entries.
-     * @param array $AudioTrackTemplateSet List of audio track template details.
+     * @param array $WordSet Keyword information.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,12 +66,12 @@ class DescribeAudioTrackTemplatesResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("AudioTrackTemplateSet",$param) and $param["AudioTrackTemplateSet"] !== null) {
-            $this->AudioTrackTemplateSet = [];
-            foreach ($param["AudioTrackTemplateSet"] as $key => $value){
-                $obj = new AudioTrackTemplateInfo();
+        if (array_key_exists("WordSet",$param) and $param["WordSet"] !== null) {
+            $this->WordSet = [];
+            foreach ($param["WordSet"] as $key => $value){
+                $obj = new AiSampleWord();
                 $obj->deserialize($value);
-                array_push($this->AudioTrackTemplateSet, $obj);
+                array_push($this->WordSet, $obj);
             }
         }
 

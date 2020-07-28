@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set Listener port
  * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
  * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
- * @method string getProtocol() Obtain Listener protocol
- * @method void setProtocol(string $Protocol) Set Listener protocol
+ * @method string getProtocol() Obtain Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
+ * @method void setProtocol(string $Protocol) Set Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
  * @method integer getListenerStatus() Obtain Listener status:
 0: running;
 1: creating;
@@ -66,7 +66,7 @@ class HTTPListener extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string Listener protocol
+     * @var string Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
      */
     public $Protocol;
 
@@ -85,7 +85,7 @@ class HTTPListener extends AbstractModel
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
      * @param integer $CreateTime Listener creation time; using UNIX timestamp.
-     * @param string $Protocol Listener protocol
+     * @param string $Protocol Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
      * @param integer $ListenerStatus Listener status:
 0: running;
 1: creating;

@@ -20,19 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSnapshotByTimeOffsetTemplate request structure.
  *
+ * @method string getName() Obtain Name of a time point screencapturing template. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Name of a time point screencapturing template. Length limit: 64 characters.
  * @method integer getWidth() Obtain Image width in px. Value range: [128, 4,096].
  * @method void setWidth(integer $Width) Set Image width in px. Value range: [128, 4,096].
  * @method integer getHeight() Obtain Image height in px. Value range: [128, 4,096].
  * @method void setHeight(integer $Height) Set Image height in px. Value range: [128, 4,096].
- * @method string getName() Obtain Name of a time point screencapturing template. Length limit: 64 characters.
- * @method void setName(string $Name) Set Name of a time point screencapturing template. Length limit: 64 characters.
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
  * @method string getFormat() Obtain Image format. Valid values: jpg; png. Default value: jpg.
  * @method void setFormat(string $Format) Set Image format. Valid values: jpg; png. Default value: jpg.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
  */
 class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
+    /**
+     * @var string Name of a time point screencapturing template. Length limit: 64 characters.
+     */
+    public $Name;
+
     /**
      * @var integer Image width in px. Value range: [128, 4,096].
      */
@@ -44,9 +53,9 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
     public $Height;
 
     /**
-     * @var string Name of a time point screencapturing template. Length limit: 64 characters.
+     * @var string 
      */
-    public $Name;
+    public $ResolutionAdaptive;
 
     /**
      * @var string Image format. Valid values: jpg; png. Default value: jpg.
@@ -59,11 +68,18 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 
+     */
+    public $FillType;
+
+    /**
+     * @param string $Name Name of a time point screencapturing template. Length limit: 64 characters.
      * @param integer $Width Image width in px. Value range: [128, 4,096].
      * @param integer $Height Image height in px. Value range: [128, 4,096].
-     * @param string $Name Name of a time point screencapturing template. Length limit: 64 characters.
+     * @param string $ResolutionAdaptive 
      * @param string $Format Image format. Valid values: jpg; png. Default value: jpg.
      * @param string $Comment Template description. Length limit: 256 characters.
+     * @param string $FillType 
      */
     function __construct()
     {
@@ -78,6 +94,10 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
         if (array_key_exists("Width",$param) and $param["Width"] !== null) {
             $this->Width = $param["Width"];
         }
@@ -86,8 +106,8 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
             $this->Height = $param["Height"];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
         }
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
@@ -96,6 +116,10 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
         }
     }
 }

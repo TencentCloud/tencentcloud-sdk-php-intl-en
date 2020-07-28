@@ -70,6 +70,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPoliticalOcrTask(AiReviewTaskPoliticalOcrResult $PoliticalOcrTask) Set Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() Obtain 
+ * @method void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult $TerrorismOcrTask) Set 
+ * @method AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() Obtain 
+ * @method void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask) Set 
+ * @method AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() Obtain 
+ * @method void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask) Set 
  */
 class AiContentReviewResult extends AbstractModel
 {
@@ -139,6 +145,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PoliticalOcrTask;
 
     /**
+     * @var AiReviewTaskTerrorismOcrResult 
+     */
+    public $TerrorismOcrTask;
+
+    /**
+     * @var AiReviewTaskProhibitedAsrResult 
+     */
+    public $ProhibitedAsrTask;
+
+    /**
+     * @var AiReviewTaskProhibitedOcrResult 
+     */
+    public $ProhibitedOcrTask;
+
+    /**
      * @param string $Type Task type. Valid values:
 <li>Porn: Porn information detection in image</li>
 <li>Terrorism: Terrorism information detection in image</li>
@@ -164,6 +185,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiReviewTaskPoliticalOcrResult $PoliticalOcrTask Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewTaskTerrorismOcrResult $TerrorismOcrTask 
+     * @param AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask 
+     * @param AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask 
      */
     function __construct()
     {
@@ -223,6 +247,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("PoliticalOcrTask",$param) and $param["PoliticalOcrTask"] !== null) {
             $this->PoliticalOcrTask = new AiReviewTaskPoliticalOcrResult();
             $this->PoliticalOcrTask->deserialize($param["PoliticalOcrTask"]);
+        }
+
+        if (array_key_exists("TerrorismOcrTask",$param) and $param["TerrorismOcrTask"] !== null) {
+            $this->TerrorismOcrTask = new AiReviewTaskTerrorismOcrResult();
+            $this->TerrorismOcrTask->deserialize($param["TerrorismOcrTask"]);
+        }
+
+        if (array_key_exists("ProhibitedAsrTask",$param) and $param["ProhibitedAsrTask"] !== null) {
+            $this->ProhibitedAsrTask = new AiReviewTaskProhibitedAsrResult();
+            $this->ProhibitedAsrTask->deserialize($param["ProhibitedAsrTask"]);
+        }
+
+        if (array_key_exists("ProhibitedOcrTask",$param) and $param["ProhibitedOcrTask"] !== null) {
+            $this->ProhibitedOcrTask = new AiReviewTaskProhibitedOcrResult();
+            $this->ProhibitedOcrTask->deserialize($param["ProhibitedOcrTask"]);
         }
     }
 }

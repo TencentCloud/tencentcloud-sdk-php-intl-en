@@ -33,15 +33,15 @@ use TencentCloud\Common\AbstractModel;
 3: origin server CA certificate;
 4: connection SSL certificate.
  * @method string getCertificateContent() Obtain Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
  * @method void setCertificateContent(string $CertificateContent) Set Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
  * @method string getCertificateAlias() Obtain Certificate name
  * @method void setCertificateAlias(string $CertificateAlias) Set Certificate name
- * @method string getCertificateKey() Obtain Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
- * @method void setCertificateKey(string $CertificateKey) Set Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
+ * @method string getCertificateKey() Obtain Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
+ * @method void setCertificateKey(string $CertificateKey) Set Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
  */
 class CreateCertificateRequest extends AbstractModel
 {
@@ -57,8 +57,8 @@ class CreateCertificateRequest extends AbstractModel
 
     /**
      * @var string Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
      */
     public $CertificateContent;
 
@@ -68,7 +68,7 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
     public $CertificateAlias;
 
     /**
-     * @var string Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
+     * @var string Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
      */
     public $CertificateKey;
 
@@ -80,10 +80,10 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
 3: origin server CA certificate;
 4: connection SSL certificate.
      * @param string $CertificateContent Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
      * @param string $CertificateAlias Certificate name
-     * @param string $CertificateKey Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is ‘pem’.
+     * @param string $CertificateKey Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
      */
     function __construct()
     {

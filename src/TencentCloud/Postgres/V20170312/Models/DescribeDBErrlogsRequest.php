@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) Set Database name
  * @method array getSearchKeys() Obtain Search keyword
  * @method void setSearchKeys(array $SearchKeys) Set Search keyword
- * @method integer getLimit() Obtain Number of entries returned per page. Value range: 1–100
- * @method void setLimit(integer $Limit) Set Number of entries returned per page. Value range: 1–100
+ * @method integer getLimit() Obtain Number of entries returned per page. Value range: 1-100
+ * @method void setLimit(integer $Limit) Set Number of entries returned per page. Value range: 1-100
  * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0
  * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
  */
@@ -63,7 +63,7 @@ class DescribeDBErrlogsRequest extends AbstractModel
     public $SearchKeys;
 
     /**
-     * @var integer Number of entries returned per page. Value range: 1–100
+     * @var integer Number of entries returned per page. Value range: 1-100
      */
     public $Limit;
 
@@ -78,7 +78,7 @@ class DescribeDBErrlogsRequest extends AbstractModel
      * @param string $EndTime Query end time in the format of 2018-01-01 00:00:00
      * @param string $DatabaseName Database name
      * @param array $SearchKeys Search keyword
-     * @param integer $Limit Number of entries returned per page. Value range: 1–100
+     * @param integer $Limit Number of entries returned per page. Value range: 1-100
      * @param integer $Offset Page number for data return in paged query. Pagination starts from 0
      */
     function __construct()

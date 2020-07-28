@@ -100,8 +100,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method boolean getShareable() Obtain Whether or not cloud disk is shareable cloud disk.
  * @method void setShareable(boolean $Shareable) Set Whether or not cloud disk is shareable cloud disk.
- * @method array getInstanceIdList() Obtain For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk’s Instance IDs currently mounted to the CVM.
- * @method void setInstanceIdList(array $InstanceIdList) Set For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk’s Instance IDs currently mounted to the CVM.
+ * @method array getInstanceIdList() Obtain For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+ * @method void setInstanceIdList(array $InstanceIdList) Set For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
  * @method integer getSnapshotCount() Obtain The total number of snapshots of the cloud disk.
  * @method void setSnapshotCount(integer $SnapshotCount) Set The total number of snapshots of the cloud disk.
  * @method integer getSnapshotSize() Obtain The total capacity of the snapshots of the cloud disk. Unit: MB.
@@ -268,7 +268,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $Shareable;
 
     /**
-     * @var array For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk’s Instance IDs currently mounted to the CVM.
+     * @var array For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
      */
     public $InstanceIdList;
 
@@ -328,7 +328,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @param integer $MigratePercent Migration progress of cloud disk type change, from 0 to 100.
 Note: This field may return null, indicating that no valid value was found.
      * @param boolean $Shareable Whether or not cloud disk is shareable cloud disk.
-     * @param array $InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk’s Instance IDs currently mounted to the CVM.
+     * @param array $InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
      * @param integer $SnapshotCount The total number of snapshots of the cloud disk.
      * @param integer $SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
      * @param boolean $BackupDisk Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup

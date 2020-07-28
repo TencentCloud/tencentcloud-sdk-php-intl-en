@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Terrorism information detection control parameter.
  * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Politically sensitive information detection control parameter.
  * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Politically sensitive information detection control parameter.
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain 
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set 
  * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom content audit control parameter.
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Custom content audit control parameter.
  */
@@ -61,6 +63,11 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $PoliticalConfigure;
 
     /**
+     * @var ProhibitedConfigureInfo 
+     */
+    public $ProhibitedConfigure;
+
+    /**
      * @var UserDefineConfigureInfo Custom content audit control parameter.
      */
     public $UserDefineConfigure;
@@ -71,6 +78,7 @@ class CreateContentReviewTemplateRequest extends AbstractModel
      * @param PornConfigureInfo $PornConfigure Porn information detection control parameter.
      * @param TerrorismConfigureInfo $TerrorismConfigure Terrorism information detection control parameter.
      * @param PoliticalConfigureInfo $PoliticalConfigure Politically sensitive information detection control parameter.
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure 
      * @param UserDefineConfigureInfo $UserDefineConfigure Custom content audit control parameter.
      */
     function __construct()
@@ -107,6 +115,11 @@ class CreateContentReviewTemplateRequest extends AbstractModel
         if (array_key_exists("PoliticalConfigure",$param) and $param["PoliticalConfigure"] !== null) {
             $this->PoliticalConfigure = new PoliticalConfigureInfo();
             $this->PoliticalConfigure->deserialize($param["PoliticalConfigure"]);
+        }
+
+        if (array_key_exists("ProhibitedConfigure",$param) and $param["ProhibitedConfigure"] !== null) {
+            $this->ProhibitedConfigure = new ProhibitedConfigureInfo();
+            $this->ProhibitedConfigure->deserialize($param["ProhibitedConfigure"]);
         }
 
         if (array_key_exists("UserDefineConfigure",$param) and $param["UserDefineConfigure"] !== null) {

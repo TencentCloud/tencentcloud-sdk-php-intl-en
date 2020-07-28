@@ -41,12 +41,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom content audit control parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -104,7 +102,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var ProhibitedConfigureInfo Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProhibitedConfigure;
@@ -150,7 +147,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param UserDefineConfigureInfo $UserDefineConfigure Custom content audit control parameter.
 Note: this field may return null, indicating that no valid values can be obtained.

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) Set Connection bandwidth cap. Unit: Mbps.
  * @method integer getConcurrent() Obtain Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
  * @method void setConcurrent(integer $Concurrent) Set Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+ * @method string getGroupId() Obtain Connection group ID that needs to be entered when a connection is created in a connection group
+ * @method void setGroupId(string $GroupId) Set Connection group ID that needs to be entered when a connection is created in a connection group
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CheckProxyCreateRequest extends AbstractModel
     public $Concurrent;
 
     /**
+     * @var string Connection group ID that needs to be entered when a connection is created in a connection group
+     */
+    public $GroupId;
+
+    /**
      * @param string $AccessRegion Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
      * @param string $RealServerRegion Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
      * @param integer $Bandwidth Connection bandwidth cap. Unit: Mbps.
      * @param integer $Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+     * @param string $GroupId Connection group ID that needs to be entered when a connection is created in a connection group
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CheckProxyCreateRequest extends AbstractModel
 
         if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
             $this->Concurrent = $param["Concurrent"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

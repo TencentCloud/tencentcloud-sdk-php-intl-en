@@ -74,6 +74,10 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
  * @method void setCamRoleName(string $CamRoleName) Set CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
  * @method HostNameSettings getHostNameSettings() Obtain CVM HostName settings.
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM HostName settings.
+ * @method InstanceNameSettings getInstanceNameSettings() Obtain 
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set 
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain 
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set 
  */
 class CreateLaunchConfigurationRequest extends AbstractModel
 {
@@ -177,6 +181,16 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     public $HostNameSettings;
 
     /**
+     * @var InstanceNameSettings 
+     */
+    public $InstanceNameSettings;
+
+    /**
+     * @var InstanceChargePrepaid 
+     */
+    public $InstanceChargePrepaid;
+
+    /**
      * @param string $LaunchConfigurationName Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
      * @param string $ImageId Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
      * @param integer $ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
@@ -204,6 +218,8 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
      * @param array $InstanceTags List of tags. This parameter is used to bind up to 10 tags to newly added instances.
      * @param string $CamRoleName CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
      * @param HostNameSettings $HostNameSettings CVM HostName settings.
+     * @param InstanceNameSettings $InstanceNameSettings 
+     * @param InstanceChargePrepaid $InstanceChargePrepaid 
      */
     function __construct()
     {
@@ -304,6 +320,16 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
         if (array_key_exists("HostNameSettings",$param) and $param["HostNameSettings"] !== null) {
             $this->HostNameSettings = new HostNameSettings();
             $this->HostNameSettings->deserialize($param["HostNameSettings"]);
+        }
+
+        if (array_key_exists("InstanceNameSettings",$param) and $param["InstanceNameSettings"] !== null) {
+            $this->InstanceNameSettings = new InstanceNameSettings();
+            $this->InstanceNameSettings->deserialize($param["InstanceNameSettings"]);
+        }
+
+        if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
+            $this->InstanceChargePrepaid = new InstanceChargePrepaid();
+            $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
         }
     }
 }

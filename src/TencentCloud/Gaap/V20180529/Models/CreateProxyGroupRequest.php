@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
  * @method array getTagSet() Obtain Tag list
  * @method void setTagSet(array $TagSet) Set Tag list
+ * @method array getAccessRegionSet() Obtain List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+ * @method void setAccessRegionSet(array $AccessRegionSet) Set List of acceleration regions, including their names, bandwidth, and concurrence configuration.
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateProxyGroupRequest extends AbstractModel
     public $TagSet;
 
     /**
+     * @var array List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+     */
+    public $AccessRegionSet;
+
+    /**
      * @param integer $ProjectId Project ID of connection group
      * @param string $GroupName Alias of connection group
      * @param string $RealServerRegion Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
      * @param array $TagSet Tag list
+     * @param array $AccessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
      */
     function __construct()
     {
@@ -88,6 +96,15 @@ class CreateProxyGroupRequest extends AbstractModel
                 $obj = new TagPair();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AccessRegionSet",$param) and $param["AccessRegionSet"] !== null) {
+            $this->AccessRegionSet = [];
+            foreach ($param["AccessRegionSet"] as $key => $value){
+                $obj = new AccessConfiguration();
+                $obj->deserialize($value);
+                array_push($this->AccessRegionSet, $obj);
             }
         }
     }

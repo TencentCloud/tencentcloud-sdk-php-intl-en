@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Type. Valid values:
 <li> Rotate: image rotation.</li>
 <li> Flip: image flipping.</li>
- * @method float getRotateAngle() Obtain Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
- * @method void setRotateAngle(float $RotateAngle) Set Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
+ * @method float getRotateAngle() Obtain Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
+ * @method void setRotateAngle(float $RotateAngle) Set Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
  * @method string getFlip() Obtain Image flipping action. Valid values:
 <li>Horizental: horizontal flipping, i.e., horizontally mirrored.</li>
 <li>Vertical: vertical flipping, i.e., vertically mirrored.</li>
@@ -47,7 +47,7 @@ class ImageTransform extends AbstractModel
     public $Type;
 
     /**
-     * @var float Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
+     * @var float Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
      */
     public $RotateAngle;
 
@@ -63,7 +63,7 @@ This is valid if `Type` is `Flip`.
      * @param string $Type Type. Valid values:
 <li> Rotate: image rotation.</li>
 <li> Flip: image flipping.</li>
-     * @param float $RotateAngle Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
+     * @param float $RotateAngle Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
      * @param string $Flip Image flipping action. Valid values:
 <li>Horizental: horizontal flipping, i.e., horizontally mirrored.</li>
 <li>Vertical: vertical flipping, i.e., vertically mirrored.</li>

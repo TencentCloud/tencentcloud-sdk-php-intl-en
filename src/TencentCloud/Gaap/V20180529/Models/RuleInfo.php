@@ -46,9 +46,9 @@ As long as one origin server is exceptional, this status will be exceptional. Pl
  * @method void setBindStatus(integer $BindStatus) Set Origin server service status. 0: exceptional, 1: normal
 If health check is not enabled, this status will always be normal.
 As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
- * @method string getForwardHost() Obtain The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+ * @method string getForwardHost() Obtain The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setForwardHost(string $ForwardHost) Set The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+ * @method void setForwardHost(string $ForwardHost) Set The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RuleInfo extends AbstractModel
@@ -111,7 +111,7 @@ As long as one origin server is exceptional, this status will be exceptional. Pl
     public $BindStatus;
 
     /**
-     * @var string The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+     * @var string The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ForwardHost;
@@ -130,7 +130,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $BindStatus Origin server service status. 0: exceptional, 1: normal
 If health check is not enabled, this status will always be normal.
 As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
-     * @param string $ForwardHost The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+     * @param string $ForwardHost The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

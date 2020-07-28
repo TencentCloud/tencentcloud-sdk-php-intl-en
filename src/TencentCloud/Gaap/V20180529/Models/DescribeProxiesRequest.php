@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies request structure.
  *
- * @method array getInstanceIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
- * @method void setInstanceIds(array $InstanceIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+ * @method array getInstanceIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+ * @method void setInstanceIds(array $InstanceIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
  * @method integer getOffset() Obtain Offset. The default value is 0.
  * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
  * @method integer getLimit() Obtain Number of results to be returned. The default value is 20, and the maximum value is 100.
@@ -38,8 +38,8 @@ ProjectId - String - Required: No - Filter by a project ID.
 AccessRegion - String - Required: No - Filter by an access region.    
 RealServerRegion - String - Required: No - Filter by an origin server region.
 GroupId - String - Required: No - Filter by a connection group ID.
- * @method array getProxyIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
- * @method void setProxyIds(array $ProxyIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
+ * @method array getProxyIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+ * @method void setProxyIds(array $ProxyIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
  * @method array getTagSet() Obtain Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connections tagged any of them will be pulled.
  * @method void setTagSet(array $TagSet) Set Tag list. If this field exists, the list of the resources with the tag will be pulled.
@@ -54,7 +54,7 @@ When this field does not exist, all connections are pulled, including both not-g
 class DescribeProxiesRequest extends AbstractModel
 {
     /**
-     * @var array Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+     * @var array Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
      */
     public $InstanceIds;
 
@@ -79,7 +79,7 @@ GroupId - String - Required: No - Filter by a connection group ID.
     public $Filters;
 
     /**
-     * @var array Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
+     * @var array Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
      */
     public $ProxyIds;
 
@@ -97,7 +97,7 @@ When this field does not exist, all connections are pulled, including both not-g
     public $Independent;
 
     /**
-     * @param array $InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+     * @param array $InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
      * @param integer $Offset Offset. The default value is 0.
      * @param integer $Limit Number of results to be returned. The default value is 20, and the maximum value is 100.
      * @param array $Filters Filter conditions.   
@@ -106,7 +106,7 @@ ProjectId - String - Required: No - Filter by a project ID.
 AccessRegion - String - Required: No - Filter by an access region.    
 RealServerRegion - String - Required: No - Filter by an origin server region.
 GroupId - String - Required: No - Filter by a connection group ID.
-     * @param array $ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
+     * @param array $ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
      * @param array $TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connections tagged any of them will be pulled.
      * @param integer $Independent When this field is 1, only not-grouped connections are pulled.

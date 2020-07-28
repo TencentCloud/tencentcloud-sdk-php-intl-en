@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) Set Image width in px. Value range: [128, 4,096].
  * @method integer getHeight() Obtain Image height in px. Value range: [128, 4,096].
  * @method void setHeight(integer $Height) Set Image height in px. Value range: [128, 4,096].
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
  * @method string getSampleType() Obtain Sampled screencapturing type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -44,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) Set Image format. Valid values: jpg; png.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
  */
 class ModifySampleSnapshotTemplateRequest extends AbstractModel
 {
@@ -66,6 +70,11 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
      * @var integer Image height in px. Value range: [128, 4,096].
      */
     public $Height;
+
+    /**
+     * @var string 
+     */
+    public $ResolutionAdaptive;
 
     /**
      * @var string Sampled screencapturing type. Valid values:
@@ -92,10 +101,16 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 
+     */
+    public $FillType;
+
+    /**
      * @param integer $Definition Unique ID of a sampled screencapturing template.
      * @param string $Name Name of a sampled screencapturing template. Length limit: 64 characters.
      * @param integer $Width Image width in px. Value range: [128, 4,096].
      * @param integer $Height Image height in px. Value range: [128, 4,096].
+     * @param string $ResolutionAdaptive 
      * @param string $SampleType Sampled screencapturing type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -104,6 +119,7 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
      * @param string $Format Image format. Valid values: jpg; png.
      * @param string $Comment Template description. Length limit: 256 characters.
+     * @param string $FillType 
      */
     function __construct()
     {
@@ -134,6 +150,10 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
             $this->Height = $param["Height"];
         }
 
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        }
+
         if (array_key_exists("SampleType",$param) and $param["SampleType"] !== null) {
             $this->SampleType = $param["SampleType"];
         }
@@ -148,6 +168,10 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
         }
     }
 }

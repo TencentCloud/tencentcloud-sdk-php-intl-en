@@ -72,6 +72,8 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings such as unhealthy instance replacement.
  * @method integer getIpv6AddressCount() Obtain 
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
+ * @method string getMultiZoneSubnetPolicy() Obtain 
+ * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) Set 
  */
 class ModifyAutoScalingGroupRequest extends AbstractModel
 {
@@ -166,6 +168,11 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     public $Ipv6AddressCount;
 
     /**
+     * @var string 
+     */
+    public $MultiZoneSubnetPolicy;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
      * @param integer $DefaultCooldown Default cooldown period in seconds. Default value: 300
@@ -192,6 +199,7 @@ Common reasons why an availability zone or subnet is unavailable include stock-o
 If an availability zone or subnet in Zones/SubnetIds does not exist, a verification error will be reported regardless of the value of ZonesCheckPolicy.
      * @param ServiceSettings $ServiceSettings Service settings such as unhealthy instance replacement.
      * @param integer $Ipv6AddressCount 
+     * @param string $MultiZoneSubnetPolicy 
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
 
         if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
             $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
+        }
+
+        if (array_key_exists("MultiZoneSubnetPolicy",$param) and $param["MultiZoneSubnetPolicy"] !== null) {
+            $this->MultiZoneSubnetPolicy = $param["MultiZoneSubnetPolicy"];
         }
     }
 }

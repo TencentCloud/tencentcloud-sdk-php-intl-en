@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteFlowLog request structure.
  *
- * @method string getVpcId() Obtain The VPC ID or the unified ID. We recommend you use the unified ID.
- * @method void setVpcId(string $VpcId) Set The VPC ID or the unified ID. We recommend you use the unified ID.
+ * @method string getVpcId() Obtain ID of the VPC instance
+ * @method void setVpcId(string $VpcId) Set ID of the VPC instance
  * @method string getFlowLogId() Obtain The unique ID of the flow log.
  * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
  */
 class DeleteFlowLogRequest extends AbstractModel
 {
     /**
-     * @var string The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @var string ID of the VPC instance
      */
     public $VpcId;
 
@@ -38,7 +38,7 @@ class DeleteFlowLogRequest extends AbstractModel
     public $FlowLogId;
 
     /**
-     * @param string $VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param string $VpcId ID of the VPC instance
      * @param string $FlowLogId The unique ID of the flow log.
      */
     function __construct()

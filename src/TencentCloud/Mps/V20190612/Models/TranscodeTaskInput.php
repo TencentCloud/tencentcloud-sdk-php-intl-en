@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getMosaicSet() Obtain 
+ * @method void setMosaicSet(array $MosaicSet) Set 
  * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -60,6 +62,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WatermarkSet;
 
     /**
+     * @var array 
+     */
+    public $MosaicSet;
+
+    /**
      * @var TaskOutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -86,6 +93,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param RawTranscodeParameter $RawParameter 
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $MosaicSet 
      * @param TaskOutputStorage $OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OutputObjectPath Path to a master output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
@@ -121,6 +129,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new WatermarkInput();
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
+            }
+        }
+
+        if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {
+            $this->MosaicSet = [];
+            foreach ($param["MosaicSet"] as $key => $value){
+                $obj = new MosaicInput();
+                $obj->deserialize($value);
+                array_push($this->MosaicSet, $obj);
             }
         }
 

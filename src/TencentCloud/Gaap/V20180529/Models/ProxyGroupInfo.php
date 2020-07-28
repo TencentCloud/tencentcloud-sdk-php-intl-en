@@ -48,6 +48,14 @@ Where:
 11: connection migrating.
  * @method array getTagSet() Obtain Tag list.
  * @method void setTagSet(array $TagSet) Set Tag list.
+ * @method string getVersion() Obtain Connection group version
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setVersion(string $Version) Set Connection group version
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getCreateTime() Obtain Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setCreateTime(integer $CreateTime) Set Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -94,6 +102,18 @@ Where:
     public $TagSet;
 
     /**
+     * @var string Connection group version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Version;
+
+    /**
+     * @var integer Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $CreateTime;
+
+    /**
      * @param string $GroupId Connection group ID
      * @param string $Domain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -108,6 +128,10 @@ Where:
 4: terminating;
 11: connection migrating.
      * @param array $TagSet Tag list.
+     * @param string $Version Connection group version
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $CreateTime Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -154,6 +178,14 @@ Where:
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

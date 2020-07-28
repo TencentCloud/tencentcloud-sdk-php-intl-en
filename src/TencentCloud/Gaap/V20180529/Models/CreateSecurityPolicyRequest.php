@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityPolicy request structure.
  *
- * @method string getProxyId() Obtain Acceleration connection ID
- * @method void setProxyId(string $ProxyId) Set Acceleration connection ID
  * @method string getDefaultAction() Obtain Default policy: ACCEPT or DROP
  * @method void setDefaultAction(string $DefaultAction) Set Default policy: ACCEPT or DROP
+ * @method string getProxyId() Obtain Acceleration connection ID
+ * @method void setProxyId(string $ProxyId) Set Acceleration connection ID
+ * @method string getGroupId() Obtain Connection group ID
+ * @method void setGroupId(string $GroupId) Set Connection group ID
  */
 class CreateSecurityPolicyRequest extends AbstractModel
 {
-    /**
-     * @var string Acceleration connection ID
-     */
-    public $ProxyId;
-
     /**
      * @var string Default policy: ACCEPT or DROP
      */
     public $DefaultAction;
 
     /**
-     * @param string $ProxyId Acceleration connection ID
+     * @var string Acceleration connection ID
+     */
+    public $ProxyId;
+
+    /**
+     * @var string Connection group ID
+     */
+    public $GroupId;
+
+    /**
      * @param string $DefaultAction Default policy: ACCEPT or DROP
+     * @param string $ProxyId Acceleration connection ID
+     * @param string $GroupId Connection group ID
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class CreateSecurityPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DefaultAction",$param) and $param["DefaultAction"] !== null) {
+            $this->DefaultAction = $param["DefaultAction"];
+        }
+
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
         }
 
-        if (array_key_exists("DefaultAction",$param) and $param["DefaultAction"] !== null) {
-            $this->DefaultAction = $param["DefaultAction"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

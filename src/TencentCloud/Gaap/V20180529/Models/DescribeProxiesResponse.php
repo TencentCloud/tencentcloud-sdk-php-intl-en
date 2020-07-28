@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Number of connections.
  * @method void setTotalCount(integer $TotalCount) Set Number of connections.
- * @method array getInstanceSet() Obtain Connection instance information list; It’s an old parameter, please switch to ProxySet.
- * @method void setInstanceSet(array $InstanceSet) Set Connection instance information list; It’s an old parameter, please switch to ProxySet.
- * @method array getProxySet() Obtain Connection instance information list; It’s a new parameter.
- * @method void setProxySet(array $ProxySet) Set Connection instance information list; It’s a new parameter.
+ * @method array getInstanceSet() Obtain Connection instance information list; It's an old parameter, please switch to ProxySet.
+ * @method void setInstanceSet(array $InstanceSet) Set Connection instance information list; It's an old parameter, please switch to ProxySet.
+ * @method array getProxySet() Obtain Connection instance information list; It's a new parameter.
+ * @method void setProxySet(array $ProxySet) Set Connection instance information list; It's a new parameter.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -37,12 +37,12 @@ class DescribeProxiesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array Connection instance information list; It’s an old parameter, please switch to ProxySet.
+     * @var array Connection instance information list; It's an old parameter, please switch to ProxySet.
      */
     public $InstanceSet;
 
     /**
-     * @var array Connection instance information list; It’s a new parameter.
+     * @var array Connection instance information list; It's a new parameter.
      */
     public $ProxySet;
 
@@ -53,8 +53,8 @@ class DescribeProxiesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Number of connections.
-     * @param array $InstanceSet Connection instance information list; It’s an old parameter, please switch to ProxySet.
-     * @param array $ProxySet Connection instance information list; It’s a new parameter.
+     * @param array $InstanceSet Connection instance information list; It's an old parameter, please switch to ProxySet.
+     * @param array $ProxySet Connection instance information list; It's a new parameter.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

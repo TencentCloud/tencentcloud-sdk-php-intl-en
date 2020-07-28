@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 <li>snapshot-id - Array of String - Required or not: Yes - Filter by snapshot ID, with maximum of 10 snapshot IDs able to be specified per request.
  * @method void setFilters(array $Filters) Set Filter conditions. The following conditions are supported:
 <li>snapshot-id - Array of String - Required or not: Yes - Filter by snapshot ID, with maximum of 10 snapshot IDs able to be specified per request.
- * @method string getBeginTime() Obtain The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
- * @method void setBeginTime(string $BeginTime) Set The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
- * @method string getEndTime() Obtain The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
- * @method void setEndTime(string $EndTime) Set The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+ * @method string getBeginTime() Obtain The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+ * @method void setBeginTime(string $BeginTime) Set The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+ * @method string getEndTime() Obtain The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
+ * @method void setEndTime(string $EndTime) Set The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
  */
 class DescribeSnapshotOperationLogsRequest extends AbstractModel
 {
@@ -38,20 +38,20 @@ class DescribeSnapshotOperationLogsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
+     * @var string The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
      */
     public $BeginTime;
 
     /**
-     * @var string The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+     * @var string The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
      */
     public $EndTime;
 
     /**
      * @param array $Filters Filter conditions. The following conditions are supported:
 <li>snapshot-id - Array of String - Required or not: Yes - Filter by snapshot ID, with maximum of 10 snapshot IDs able to be specified per request.
-     * @param string $BeginTime The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
-     * @param string $EndTime The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+     * @param string $BeginTime The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+     * @param string $EndTime The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
      */
     function __construct()
     {

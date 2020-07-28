@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Flow Log
  *
- * @method string getVpcId() Obtain The VPC ID or the unified ID. We recommend you use the unified ID.
- * @method void setVpcId(string $VpcId) Set The VPC ID or the unified ID. We recommend you use the unified ID.
+ * @method string getVpcId() Obtain ID of the VPC instance
+ * @method void setVpcId(string $VpcId) Set ID of the VPC instance
  * @method string getFlowLogId() Obtain The unique ID of the flow log.
  * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
  * @method string getFlowLogName() Obtain The name of the flow log instance.
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class FlowLog extends AbstractModel
 {
     /**
-     * @var string The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @var string ID of the VPC instance
      */
     public $VpcId;
 
@@ -94,7 +94,7 @@ class FlowLog extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @param string $VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param string $VpcId ID of the VPC instance
      * @param string $FlowLogId The unique ID of the flow log.
      * @param string $FlowLogName The name of the flow log instance.
      * @param string $ResourceType The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.

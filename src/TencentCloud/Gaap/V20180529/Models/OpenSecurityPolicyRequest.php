@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyId() Obtain ID of the connections requiring enabled security policies.
  * @method void setProxyId(string $ProxyId) Set ID of the connections requiring enabled security policies.
+ * @method string getPolicyId() Obtain Security policy ID
+ * @method void setPolicyId(string $PolicyId) Set Security policy ID
  */
 class OpenSecurityPolicyRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class OpenSecurityPolicyRequest extends AbstractModel
     public $ProxyId;
 
     /**
+     * @var string Security policy ID
+     */
+    public $PolicyId;
+
+    /**
      * @param string $ProxyId ID of the connections requiring enabled security policies.
+     * @param string $PolicyId Security policy ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class OpenSecurityPolicyRequest extends AbstractModel
         }
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

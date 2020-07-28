@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set Unified VPC ID
  * @method string getUniqSubnetId() Obtain Unified subnet ID.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Unified subnet ID.
- * @method integer getReleaseDuration() Obtain Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
- * @method void setReleaseDuration(integer $ReleaseDuration) Set Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+ * @method integer getReleaseDuration() Obtain Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+ * @method void setReleaseDuration(integer $ReleaseDuration) Set Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
  */
 class ModifyDBInstanceVipVportRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var integer Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+     * @var integer Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
      */
     public $ReleaseDuration;
 
@@ -71,7 +71,7 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
      * @param integer $DstPort Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
      * @param string $UniqVpcId Unified VPC ID
      * @param string $UniqSubnetId Unified subnet ID.
-     * @param integer $ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+     * @param integer $ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
      */
     function __construct()
     {

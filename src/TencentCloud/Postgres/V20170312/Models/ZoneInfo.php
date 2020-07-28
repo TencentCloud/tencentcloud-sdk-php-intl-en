@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) Set AZ number
  * @method string getZoneState() Obtain Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
  * @method void setZoneState(string $ZoneState) Set Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
- * @method integer getZoneSupportIpv6() Obtain Whether the availability zone supports IPv6 address access
- * @method void setZoneSupportIpv6(integer $ZoneSupportIpv6) Set Whether the availability zone supports IPv6 address access
+ * @method integer getZoneSupportIpv6() Obtain Whether the AZ supports IPv6 address access
+ * @method void setZoneSupportIpv6(integer $ZoneSupportIpv6) Set Whether the AZ supports IPv6 address access
  */
 class ZoneInfo extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ZoneInfo extends AbstractModel
     public $ZoneState;
 
     /**
-     * @var integer Whether the availability zone supports IPv6 address access
+     * @var integer Whether the AZ supports IPv6 address access
      */
     public $ZoneSupportIpv6;
 
@@ -63,7 +63,7 @@ class ZoneInfo extends AbstractModel
      * @param string $ZoneName AZ name
      * @param integer $ZoneId AZ number
      * @param string $ZoneState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
-     * @param integer $ZoneSupportIpv6 Whether the availability zone supports IPv6 address access
+     * @param integer $ZoneSupportIpv6 Whether the AZ supports IPv6 address access
      */
     function __construct()
     {

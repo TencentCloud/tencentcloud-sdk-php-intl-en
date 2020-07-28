@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) Set Subimage width of an image sprite in px. Value range: [128, 4,096].
  * @method integer getHeight() Obtain Subimage height of an image sprite in px. Value range: [128, 4,096].
  * @method void setHeight(integer $Height) Set Subimage height of an image sprite in px. Value range: [128, 4,096].
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
  * @method string getSampleType() Obtain Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -44,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowCount(integer $RowCount) Set Subimage row count of an image sprite.
  * @method integer getColumnCount() Obtain Subimage column count of an image sprite.
  * @method void setColumnCount(integer $ColumnCount) Set Subimage column count of an image sprite.
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
@@ -66,6 +72,11 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
      * @var integer Subimage height of an image sprite in px. Value range: [128, 4,096].
      */
     public $Height;
+
+    /**
+     * @var string 
+     */
+    public $ResolutionAdaptive;
 
     /**
      * @var string Sampling type. Valid values:
@@ -92,10 +103,21 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
     public $ColumnCount;
 
     /**
+     * @var string 
+     */
+    public $FillType;
+
+    /**
+     * @var string 
+     */
+    public $Comment;
+
+    /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
      * @param integer $Width Subimage width of an image sprite in px. Value range: [128, 4,096].
      * @param integer $Height Subimage height of an image sprite in px. Value range: [128, 4,096].
+     * @param string $ResolutionAdaptive 
      * @param string $SampleType Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -104,6 +126,8 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
      * @param integer $RowCount Subimage row count of an image sprite.
      * @param integer $ColumnCount Subimage column count of an image sprite.
+     * @param string $FillType 
+     * @param string $Comment 
      */
     function __construct()
     {
@@ -134,6 +158,10 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
             $this->Height = $param["Height"];
         }
 
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        }
+
         if (array_key_exists("SampleType",$param) and $param["SampleType"] !== null) {
             $this->SampleType = $param["SampleType"];
         }
@@ -148,6 +176,14 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
 
         if (array_key_exists("ColumnCount",$param) and $param["ColumnCount"] !== null) {
             $this->ColumnCount = $param["ColumnCount"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

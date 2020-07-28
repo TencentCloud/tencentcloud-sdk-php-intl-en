@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalAddr(string $InternalAddr) Set Download address on private network
  * @method string getExternalAddr() Obtain Download address on public network
  * @method void setExternalAddr(string $ExternalAddr) Set Download address on public network
+ * @method integer getSize() Obtain 
+ * @method void setSize(integer $Size) Set 
  */
 class Xlog extends AbstractModel
 {
@@ -59,11 +61,17 @@ class Xlog extends AbstractModel
     public $ExternalAddr;
 
     /**
+     * @var integer 
+     */
+    public $Size;
+
+    /**
      * @param integer $Id Unique backup file ID
      * @param string $StartTime File generation start time
      * @param string $EndTime File generation end time
      * @param string $InternalAddr Download address on private network
      * @param string $ExternalAddr Download address on public network
+     * @param integer $Size 
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class Xlog extends AbstractModel
 
         if (array_key_exists("ExternalAddr",$param) and $param["ExternalAddr"] !== null) {
             $this->ExternalAddr = $param["ExternalAddr"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
     }
 }

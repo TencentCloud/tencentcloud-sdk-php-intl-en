@@ -52,9 +52,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTableGroupName(string $TableGroupName) Set Name of the table group where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getKeyStruct() Obtain JSON string of table’s primary key field structure
+ * @method string getKeyStruct() Obtain JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKeyStruct(string $KeyStruct) Set JSON string of table’s primary key field structure
+ * @method void setKeyStruct(string $KeyStruct) Set JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getValueStruct() Obtain JSON string of table non-primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -100,9 +100,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCreatedTime(string $CreatedTime) Set Table creation time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUpdatedTime() Obtain Table’s last modified time
+ * @method string getUpdatedTime() Obtain Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUpdatedTime(string $UpdatedTime) Set Table’s last modified time
+ * @method void setUpdatedTime(string $UpdatedTime) Set Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getMemo() Obtain Table remarks
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -124,6 +124,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSortRule(integer $SortRule) Set Sort order of SORTLIST-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDbClusterInfoStruct() Obtain 
+ * @method void setDbClusterInfoStruct(string $DbClusterInfoStruct) Set 
  */
 class TableInfoNew extends AbstractModel
 {
@@ -176,7 +178,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TableGroupName;
 
     /**
-     * @var string JSON string of table’s primary key field structure
+     * @var string JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $KeyStruct;
@@ -248,7 +250,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CreatedTime;
 
     /**
-     * @var string Table’s last modified time
+     * @var string Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UpdatedTime;
@@ -284,6 +286,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SortRule;
 
     /**
+     * @var string 
+     */
+    public $DbClusterInfoStruct;
+
+    /**
      * @param string $TableName Table name
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TableInstanceId Table instance ID
@@ -300,7 +307,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TableGroupName Name of the table group where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $KeyStruct JSON string of table’s primary key field structure
+     * @param string $KeyStruct JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ValueStruct JSON string of table non-primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -324,7 +331,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CreatedTime Table creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdatedTime Table’s last modified time
+     * @param string $UpdatedTime Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Memo Table remarks
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -336,6 +343,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SortRule Sort order of SORTLIST-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DbClusterInfoStruct 
      */
     function __construct()
     {
@@ -458,6 +466,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SortRule",$param) and $param["SortRule"] !== null) {
             $this->SortRule = $param["SortRule"];
+        }
+
+        if (array_key_exists("DbClusterInfoStruct",$param) and $param["DbClusterInfoStruct"] !== null) {
+            $this->DbClusterInfoStruct = $param["DbClusterInfoStruct"];
         }
     }
 }

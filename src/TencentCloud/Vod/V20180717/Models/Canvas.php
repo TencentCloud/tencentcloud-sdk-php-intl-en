@@ -28,13 +28,13 @@ Default value: Black.
 <li>Black: black background</li>
 <li>White: white background</li>
 Default value: Black.
- * @method integer getWidth() Obtain Canvas width, which is the width of the output video. Value range: 0–4096 px.
+ * @method integer getWidth() Obtain Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
- * @method void setWidth(integer $Width) Set Canvas width, which is the width of the output video. Value range: 0–4096 px.
+ * @method void setWidth(integer $Width) Set Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
- * @method integer getHeight() Obtain Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+ * @method integer getHeight() Obtain Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
- * @method void setHeight(integer $Height) Set Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+ * @method void setHeight(integer $Height) Set Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
  */
 class Canvas extends AbstractModel
@@ -48,13 +48,13 @@ Default value: Black.
     public $Color;
 
     /**
-     * @var integer Canvas width, which is the width of the output video. Value range: 0–4096 px.
+     * @var integer Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
      */
     public $Width;
 
     /**
-     * @var integer Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+     * @var integer Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
      */
     public $Height;
@@ -64,9 +64,9 @@ Default value: 0, which means that the value is the same as the video height of 
 <li>Black: black background</li>
 <li>White: white background</li>
 Default value: Black.
-     * @param integer $Width Canvas width, which is the width of the output video. Value range: 0–4096 px.
+     * @param integer $Width Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
-     * @param integer $Height Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+     * @param integer $Height Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
      */
     function __construct()

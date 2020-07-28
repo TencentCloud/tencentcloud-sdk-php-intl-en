@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) Set List of short instance IDs.
  * @method array getParamList() Obtain List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
  * @method void setParamList(array $ParamList) Set List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
+ * @method integer getTemplateId() Obtain 
+ * @method void setTemplateId(integer $TemplateId) Set 
+ * @method integer getWaitSwitch() Obtain 
+ * @method void setWaitSwitch(integer $WaitSwitch) Set 
  */
 class ModifyInstanceParamRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $ParamList;
 
     /**
+     * @var integer 
+     */
+    public $TemplateId;
+
+    /**
+     * @var integer 
+     */
+    public $WaitSwitch;
+
+    /**
      * @param array $InstanceIds List of short instance IDs.
      * @param array $ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
+     * @param integer $TemplateId 
+     * @param integer $WaitSwitch 
      */
     function __construct()
     {
@@ -65,6 +81,14 @@ class ModifyInstanceParamRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ParamList, $obj);
             }
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
+            $this->WaitSwitch = $param["WaitSwitch"];
         }
     }
 }

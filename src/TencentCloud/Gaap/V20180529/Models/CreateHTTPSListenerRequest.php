@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateId(string $CertificateId) Set Server certificate ID
  * @method string getForwardProtocol() Obtain Protocol types of the forwarding from acceleration connection to origin server: HTTP | HTTPS
  * @method void setForwardProtocol(string $ForwardProtocol) Set Protocol types of the forwarding from acceleration connection to origin server: HTTP | HTTPS
- * @method string getProxyId() Obtain Connection ID
- * @method void setProxyId(string $ProxyId) Set Connection ID
+ * @method string getProxyId() Obtain Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
+ * @method void setProxyId(string $ProxyId) Set Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
  * @method integer getAuthType() Obtain Authentication type, where:
 0: one-way authentication;
 1: mutual authentication.
@@ -42,6 +42,8 @@ The one-way authentication is used by default.
  * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate ID, which is required only when the mutual authentication is adopted.
  * @method array getPolyClientCertificateIds() Obtain IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
+ * @method string getGroupId() Obtain Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+ * @method void setGroupId(string $GroupId) Set Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
  */
 class CreateHTTPSListenerRequest extends AbstractModel
 {
@@ -66,7 +68,7 @@ class CreateHTTPSListenerRequest extends AbstractModel
     public $ForwardProtocol;
 
     /**
-     * @var string Connection ID
+     * @var string Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
      */
     public $ProxyId;
 
@@ -89,17 +91,23 @@ The one-way authentication is used by default.
     public $PolyClientCertificateIds;
 
     /**
+     * @var string Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+     */
+    public $GroupId;
+
+    /**
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
      * @param string $CertificateId Server certificate ID
      * @param string $ForwardProtocol Protocol types of the forwarding from acceleration connection to origin server: HTTP | HTTPS
-     * @param string $ProxyId Connection ID
+     * @param string $ProxyId Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
      * @param integer $AuthType Authentication type, where:
 0: one-way authentication;
 1: mutual authentication.
 The one-way authentication is used by default.
      * @param string $ClientCertificateId Client CA certificate ID, which is required only when the mutual authentication is adopted.
      * @param array $PolyClientCertificateIds IDs of multiple new client CA certificates. This field or the `ClientCertificateId` field is required for mutual authentication only.
+     * @param string $GroupId Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ The one-way authentication is used by default.
 
         if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
             $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

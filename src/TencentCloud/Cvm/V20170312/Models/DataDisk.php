@@ -54,11 +54,11 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Default value: FALSE<br>
 This parameter is only used with `RunInstances`.
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getKmsKeyId() Obtain ID of the custom CMK in the format of “UUID” or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+ * @method string getKmsKeyId() Obtain ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
 
 Currently, this parameter is only used in the `RunInstances` API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKmsKeyId(string $KmsKeyId) Set ID of the custom CMK in the format of “UUID” or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+ * @method void setKmsKeyId(string $KmsKeyId) Set ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
 
 Currently, this parameter is only used in the `RunInstances` API.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -107,7 +107,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $Encrypt;
 
     /**
-     * @var string ID of the custom CMK in the format of “UUID” or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+     * @var string ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
 
 Currently, this parameter is only used in the `RunInstances` API.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -132,7 +132,7 @@ Note: This field may return null, indicating that no valid value is found.
 Default value: FALSE<br>
 This parameter is only used with `RunInstances`.
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $KmsKeyId ID of the custom CMK in the format of “UUID” or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+     * @param string $KmsKeyId ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
 
 Currently, this parameter is only used in the `RunInstances` API.
 Note: this field may return null, indicating that no valid values can be obtained.

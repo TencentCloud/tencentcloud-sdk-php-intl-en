@@ -76,10 +76,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTagSet(array $TagSet) Set Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVid() Obtain Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVid(string $Vid) Set Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getVid() Obtain Unique ID of an LVB recording file.
+ * @method void setVid(string $Vid) Set Unique ID of an LVB recording file.
+ * @method string getCategory() Obtain 
+ * @method void setCategory(string $Category) Set 
+ * @method string getStatus() Obtain File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet.
+ * @method void setStatus(string $Status) Set File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet.
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -168,10 +174,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TagSet;
 
     /**
-     * @var string Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Unique ID of an LVB recording file.
      */
     public $Vid;
+
+    /**
+     * @var string 
+     */
+    public $Category;
+
+    /**
+     * @var string File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet.
+     */
+    public $Status;
 
     /**
      * @param string $Name Media filename.
@@ -202,8 +219,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $TagSet Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Vid Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Vid Unique ID of an LVB recording file.
+     * @param string $Category 
+     * @param string $Status File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet.
      */
     function __construct()
     {
@@ -277,6 +297,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
             $this->Vid = $param["Vid"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Full text recognition segment.
  *
- * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
- * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
+ * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0-100.
  * @method array getAreaCoordSet() Obtain Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
  * @method string getText() Obtain Recognized text.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel
 {
     /**
-     * @var float Confidence of recognized segment. Value range: 0–100.
+     * @var float Confidence of recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
@@ -45,7 +45,7 @@ class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel
     public $Text;
 
     /**
-     * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
+     * @param float $Confidence Confidence of recognized segment. Value range: 0-100.
      * @param array $AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
      * @param string $Text Recognized text.
      */

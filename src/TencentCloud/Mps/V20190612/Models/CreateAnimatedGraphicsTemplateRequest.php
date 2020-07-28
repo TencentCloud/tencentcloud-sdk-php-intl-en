@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAnimatedGraphicsTemplate request structure.
  *
+ * @method integer getFps() Obtain Video frame rate in Hz. Value range: [1, 30].
+ * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [1, 30].
  * @method integer getWidth() Obtain Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
@@ -44,8 +46,8 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
- * @method integer getFps() Obtain Video frame rate in Hz. Value range: [1, 30].
- * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [1, 30].
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
  * @method string getFormat() Obtain Animated image format. Valid values: gif; webp. Default value: gif.
  * @method void setFormat(string $Format) Set Animated image format. Valid values: gif; webp. Default value: gif.
  * @method float getQuality() Obtain Image quality. Value range: [1, 100]. Default value: 75.
@@ -57,6 +59,11 @@ Default value: 0.
  */
 class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
 {
+    /**
+     * @var integer Video frame rate in Hz. Value range: [1, 30].
+     */
+    public $Fps;
+
     /**
      * @var integer Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
@@ -78,9 +85,9 @@ Default value: 0.
     public $Height;
 
     /**
-     * @var integer Video frame rate in Hz. Value range: [1, 30].
+     * @var string 
      */
-    public $Fps;
+    public $ResolutionAdaptive;
 
     /**
      * @var string Animated image format. Valid values: gif; webp. Default value: gif.
@@ -103,6 +110,7 @@ Default value: 0.
     public $Comment;
 
     /**
+     * @param integer $Fps Video frame rate in Hz. Value range: [1, 30].
      * @param integer $Width Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
@@ -115,7 +123,7 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
-     * @param integer $Fps Video frame rate in Hz. Value range: [1, 30].
+     * @param string $ResolutionAdaptive 
      * @param string $Format Animated image format. Valid values: gif; webp. Default value: gif.
      * @param float $Quality Image quality. Value range: [1, 100]. Default value: 75.
      * @param string $Name Name of an animated image generating template. Length limit: 64 characters.
@@ -134,6 +142,10 @@ Default value: 0.
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
+            $this->Fps = $param["Fps"];
+        }
+
         if (array_key_exists("Width",$param) and $param["Width"] !== null) {
             $this->Width = $param["Width"];
         }
@@ -142,8 +154,8 @@ Default value: 0.
             $this->Height = $param["Height"];
         }
 
-        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
-            $this->Fps = $param["Fps"];
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
         }
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {

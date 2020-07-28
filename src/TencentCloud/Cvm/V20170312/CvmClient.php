@@ -39,7 +39,7 @@ If you currently use a password to log in, you will no longer be able to do so a
 * You only need to specify a name, and the system will automatically create a key pair and return its `ID` and the public and private keys.
 * The name of the key pair must be unique.
 * You can save the private key to a file and use it as an authentication method for `SSH`.
-* Tencent Cloud does not save users’ private keys. Be sure to save it yourself.
+* Tencent Cloud does not save users' private keys. Be sure to save it yourself.
  * @method Models\DeleteDisasterRecoverGroupsResponse DeleteDisasterRecoverGroups(Models\DeleteDisasterRecoverGroupsRequest $req) This API is used to delete a [spread placement group](https://cloud.tencent.com/document/product/213/15486). Only empty placement groups can be deleted. To delete a non-empty group, you need to terminate all the CVM instances in it first. Otherwise, the deletion will fail.
  * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) This API is used to delete images.
 
@@ -146,7 +146,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
  * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) This API is used to modify the attributes of an instance. Currently you can only use the API to modify the name and the associated security groups of the instance.
 
-* Instance names are used only for users’ convenience. Tencent Cloud does not use the name for ticket submission or instance management.
+* Instance names are used only for users' convenience. Tencent Cloud does not use the name for ticket submission or instance management.
 * Batch operations are supported. The maximum number of instances in each request is 100.
 * When you change the security groups associated with an instance, the original security groups will be disassociated.
  * @method Models\ModifyInstancesProjectResponse ModifyInstancesProject(Models\ModifyInstancesProjectRequest $req) This API is used to change the project to which an instance belongs.

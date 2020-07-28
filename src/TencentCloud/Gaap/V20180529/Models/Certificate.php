@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() Obtain Certificate ID
  * @method void setCertificateId(string $CertificateId) Set Certificate ID
- * @method string getCertificateName() Obtain Certificate name; It’s an old parameter, please switch to CertificateAlias.
- * @method void setCertificateName(string $CertificateName) Set Certificate name; It’s an old parameter, please switch to CertificateAlias.
+ * @method string getCertificateName() Obtain Certificate name; It's an old parameter, please switch to CertificateAlias.
+ * @method void setCertificateName(string $CertificateName) Set Certificate name; It's an old parameter, please switch to CertificateAlias.
  * @method integer getCertificateType() Obtain Certificate type.
  * @method void setCertificateType(integer $CertificateType) Set Certificate type.
  * @method string getCertificateAlias() Obtain Certificate name.
@@ -57,7 +57,7 @@ class Certificate extends AbstractModel
     public $CertificateId;
 
     /**
-     * @var string Certificate name; It’s an old parameter, please switch to CertificateAlias.
+     * @var string Certificate name; It's an old parameter, please switch to CertificateAlias.
      */
     public $CertificateName;
 
@@ -103,7 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $CertificateId Certificate ID
-     * @param string $CertificateName Certificate name; It’s an old parameter, please switch to CertificateAlias.
+     * @param string $CertificateName Certificate name; It's an old parameter, please switch to CertificateAlias.
      * @param integer $CertificateType Certificate type.
      * @param string $CertificateAlias Certificate name.
 Note: This field may return null, indicating that no valid values can be obtained.

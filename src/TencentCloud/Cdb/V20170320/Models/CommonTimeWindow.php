@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Common time window
  *
- * @method string getMonday() Obtain Time window on Monday in the format of 02:00–06:00
- * @method void setMonday(string $Monday) Set Time window on Monday in the format of 02:00–06:00
- * @method string getTuesday() Obtain Time window on Tuesday in the format of 02:00–06:00
- * @method void setTuesday(string $Tuesday) Set Time window on Tuesday in the format of 02:00–06:00
- * @method string getWednesday() Obtain Time window on Wednesday in the format of 02:00–06:00
- * @method void setWednesday(string $Wednesday) Set Time window on Wednesday in the format of 02:00–06:00
- * @method string getThursday() Obtain Time window on Thursday in the format of 02:00–06:00
- * @method void setThursday(string $Thursday) Set Time window on Thursday in the format of 02:00–06:00
- * @method string getFriday() Obtain Time window on Friday in the format of 02:00–06:00
- * @method void setFriday(string $Friday) Set Time window on Friday in the format of 02:00–06:00
- * @method string getSaturday() Obtain Time window on Saturday in the format of 02:00–06:00
- * @method void setSaturday(string $Saturday) Set Time window on Saturday in the format of 02:00–06:00
- * @method string getSunday() Obtain Time window on Sunday in the format of 02:00–06:00
- * @method void setSunday(string $Sunday) Set Time window on Sunday in the format of 02:00–06:00
+ * @method string getMonday() Obtain Time window on Monday in the format of 02:00-06:00
+ * @method void setMonday(string $Monday) Set Time window on Monday in the format of 02:00-06:00
+ * @method string getTuesday() Obtain Time window on Tuesday in the format of 02:00-06:00
+ * @method void setTuesday(string $Tuesday) Set Time window on Tuesday in the format of 02:00-06:00
+ * @method string getWednesday() Obtain Time window on Wednesday in the format of 02:00-06:00
+ * @method void setWednesday(string $Wednesday) Set Time window on Wednesday in the format of 02:00-06:00
+ * @method string getThursday() Obtain Time window on Thursday in the format of 02:00-06:00
+ * @method void setThursday(string $Thursday) Set Time window on Thursday in the format of 02:00-06:00
+ * @method string getFriday() Obtain Time window on Friday in the format of 02:00-06:00
+ * @method void setFriday(string $Friday) Set Time window on Friday in the format of 02:00-06:00
+ * @method string getSaturday() Obtain Time window on Saturday in the format of 02:00-06:00
+ * @method void setSaturday(string $Saturday) Set Time window on Saturday in the format of 02:00-06:00
+ * @method string getSunday() Obtain Time window on Sunday in the format of 02:00-06:00
+ * @method void setSunday(string $Sunday) Set Time window on Sunday in the format of 02:00-06:00
  */
 class CommonTimeWindow extends AbstractModel
 {
     /**
-     * @var string Time window on Monday in the format of 02:00–06:00
+     * @var string Time window on Monday in the format of 02:00-06:00
      */
     public $Monday;
 
     /**
-     * @var string Time window on Tuesday in the format of 02:00–06:00
+     * @var string Time window on Tuesday in the format of 02:00-06:00
      */
     public $Tuesday;
 
     /**
-     * @var string Time window on Wednesday in the format of 02:00–06:00
+     * @var string Time window on Wednesday in the format of 02:00-06:00
      */
     public $Wednesday;
 
     /**
-     * @var string Time window on Thursday in the format of 02:00–06:00
+     * @var string Time window on Thursday in the format of 02:00-06:00
      */
     public $Thursday;
 
     /**
-     * @var string Time window on Friday in the format of 02:00–06:00
+     * @var string Time window on Friday in the format of 02:00-06:00
      */
     public $Friday;
 
     /**
-     * @var string Time window on Saturday in the format of 02:00–06:00
+     * @var string Time window on Saturday in the format of 02:00-06:00
      */
     public $Saturday;
 
     /**
-     * @var string Time window on Sunday in the format of 02:00–06:00
+     * @var string Time window on Sunday in the format of 02:00-06:00
      */
     public $Sunday;
 
     /**
-     * @param string $Monday Time window on Monday in the format of 02:00–06:00
-     * @param string $Tuesday Time window on Tuesday in the format of 02:00–06:00
-     * @param string $Wednesday Time window on Wednesday in the format of 02:00–06:00
-     * @param string $Thursday Time window on Thursday in the format of 02:00–06:00
-     * @param string $Friday Time window on Friday in the format of 02:00–06:00
-     * @param string $Saturday Time window on Saturday in the format of 02:00–06:00
-     * @param string $Sunday Time window on Sunday in the format of 02:00–06:00
+     * @param string $Monday Time window on Monday in the format of 02:00-06:00
+     * @param string $Tuesday Time window on Tuesday in the format of 02:00-06:00
+     * @param string $Wednesday Time window on Wednesday in the format of 02:00-06:00
+     * @param string $Thursday Time window on Thursday in the format of 02:00-06:00
+     * @param string $Friday Time window on Friday in the format of 02:00-06:00
+     * @param string $Saturday Time window on Saturday in the format of 02:00-06:00
+     * @param string $Sunday Time window on Sunday in the format of 02:00-06:00
      */
     function __construct()
     {

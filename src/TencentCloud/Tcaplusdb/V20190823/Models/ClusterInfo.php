@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOldPasswordExpireTime(string $OldPasswordExpireTime) Set If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getApiAccessIpv6() Obtain TcaplusDB SDK connection parameter for accessing IPv6 addresses
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setApiAccessIpv6(string $ApiAccessIpv6) Set TcaplusDB SDK connection parameter for accessing IPv6 addresses
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ClusterInfo extends AbstractModel
 {
@@ -125,6 +129,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OldPasswordExpireTime;
 
     /**
+     * @var string TcaplusDB SDK connection parameter for accessing IPv6 addresses
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ApiAccessIpv6;
+
+    /**
      * @param string $ClusterName Cluster name
      * @param string $ClusterId Cluster ID
      * @param string $Region Cluster region
@@ -139,6 +149,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ApiAccessIp TcaplusDB SDK connection parameter: access address
      * @param integer $ApiAccessPort TcaplusDB SDK connection parameter: access port
      * @param string $OldPasswordExpireTime If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -208,6 +220,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("OldPasswordExpireTime",$param) and $param["OldPasswordExpireTime"] !== null) {
             $this->OldPasswordExpireTime = $param["OldPasswordExpireTime"];
+        }
+
+        if (array_key_exists("ApiAccessIpv6",$param) and $param["ApiAccessIpv6"] !== null) {
+            $this->ApiAccessIpv6 = $param["ApiAccessIpv6"];
         }
     }
 }

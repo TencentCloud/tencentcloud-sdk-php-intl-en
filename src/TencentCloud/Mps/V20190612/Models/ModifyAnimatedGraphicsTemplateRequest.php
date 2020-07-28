@@ -48,6 +48,8 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
  * @method string getFormat() Obtain Animated image format. Valid values: gif, webp.
  * @method void setFormat(string $Format) Set Animated image format. Valid values: gif, webp.
  * @method integer getFps() Obtain Video frame rate in Hz. Value range: [1, 30].
@@ -90,6 +92,11 @@ Default value: 0.
     public $Height;
 
     /**
+     * @var string 
+     */
+    public $ResolutionAdaptive;
+
+    /**
      * @var string Animated image format. Valid values: gif, webp.
      */
     public $Format;
@@ -124,6 +131,7 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
+     * @param string $ResolutionAdaptive 
      * @param string $Format Animated image format. Valid values: gif, webp.
      * @param integer $Fps Video frame rate in Hz. Value range: [1, 30].
      * @param float $Quality Image quality. Value range: [1, 100]. Default value: 75.
@@ -156,6 +164,10 @@ Default value: 0.
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
         }
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {

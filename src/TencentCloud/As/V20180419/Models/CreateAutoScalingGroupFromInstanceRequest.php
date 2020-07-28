@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoScalingGroupFromInstance request structure.
  *
- * @method string getAutoScalingGroupName() Obtain The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
- * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+ * @method string getAutoScalingGroupName() Obtain The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+ * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
  * @method string getInstanceId() Obtain The instance ID.
  * @method void setInstanceId(string $InstanceId) Set The instance ID.
- * @method integer getMinSize() Obtain The maximum number of instances. Value range: 0-2000.
- * @method void setMinSize(integer $MinSize) Set The maximum number of instances. Value range: 0-2000.
- * @method integer getMaxSize() Obtain The minimum number of instances. Value range: 0-2000.
- * @method void setMaxSize(integer $MaxSize) Set The minimum number of instances. Value range: 0-2000.
+ * @method integer getMinSize() Obtain The minimum number of instances. Value range: 0 - 2000.
+ * @method void setMinSize(integer $MinSize) Set The minimum number of instances. Value range: 0 - 2000.
+ * @method integer getMaxSize() Obtain The maximum number of instances. Value range: 0 - 2000.
+ * @method void setMaxSize(integer $MaxSize) Set The maximum number of instances. Value range: 0 - 2000.
  * @method integer getDesiredCapacity() Obtain The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
  * @method void setDesiredCapacity(integer $DesiredCapacity) Set The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
  * @method boolean getInheritInstanceTag() Obtain Whether to inherit the instance tag. Default value: False
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
 {
     /**
-     * @var string The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+     * @var string The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
      */
     public $AutoScalingGroupName;
 
@@ -46,12 +46,12 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer The maximum number of instances. Value range: 0-2000.
+     * @var integer The minimum number of instances. Value range: 0 - 2000.
      */
     public $MinSize;
 
     /**
-     * @var integer The minimum number of instances. Value range: 0-2000.
+     * @var integer The maximum number of instances. Value range: 0 - 2000.
      */
     public $MaxSize;
 
@@ -66,10 +66,10 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
     public $InheritInstanceTag;
 
     /**
-     * @param string $AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+     * @param string $AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
      * @param string $InstanceId The instance ID.
-     * @param integer $MinSize The maximum number of instances. Value range: 0-2000.
-     * @param integer $MaxSize The minimum number of instances. Value range: 0-2000.
+     * @param integer $MinSize The minimum number of instances. Value range: 0 - 2000.
+     * @param integer $MaxSize The maximum number of instances. Value range: 0 - 2000.
      * @param integer $DesiredCapacity The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
      * @param boolean $InheritInstanceTag Whether to inherit the instance tag. Default value: False
      */

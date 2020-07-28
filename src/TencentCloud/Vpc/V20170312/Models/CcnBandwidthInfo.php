@@ -18,20 +18,84 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * The information of the cross-region bandwidth limit for CCN instances.
  *
- * @method string getRenewFlag() Obtain 
- * @method void setRenewFlag(string $RenewFlag) Set 
+ * @method string getCcnId() Obtain The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setCcnId(string $CcnId) Set The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found.
+ * @method string getCreatedTime() Obtain The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setCreatedTime(string $CreatedTime) Set The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+ * @method string getExpiredTime() Obtain The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setExpiredTime(string $ExpiredTime) Set The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+ * @method string getRegionFlowControlId() Obtain The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setRegionFlowControlId(string $RegionFlowControlId) Set The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found.
+ * @method string getRenewFlag() Obtain The billing flag.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setRenewFlag(string $RenewFlag) Set The billing flag.
+Note: this field may return null, indicating that no valid value was found.
+ * @method CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() Obtain The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit $CcnRegionBandwidthLimit) Set The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found.
  */
 class CcnBandwidthInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $CcnId;
+
+    /**
+     * @var string The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $CreatedTime;
+
+    /**
+     * @var string The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $ExpiredTime;
+
+    /**
+     * @var string The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $RegionFlowControlId;
+
+    /**
+     * @var string The billing flag.
+Note: this field may return null, indicating that no valid value was found.
      */
     public $RenewFlag;
 
     /**
-     * @param string $RenewFlag 
+     * @var CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $CcnRegionBandwidthLimit;
+
+    /**
+     * @param string $CcnId The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found.
+     * @param string $CreatedTime The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     * @param string $ExpiredTime The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     * @param string $RegionFlowControlId The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found.
+     * @param string $RenewFlag The billing flag.
+Note: this field may return null, indicating that no valid value was found.
+     * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -46,8 +110,29 @@ class CcnBandwidthInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
+            $this->CcnId = $param["CcnId"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("RegionFlowControlId",$param) and $param["RegionFlowControlId"] !== null) {
+            $this->RegionFlowControlId = $param["RegionFlowControlId"];
+        }
+
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("CcnRegionBandwidthLimit",$param) and $param["CcnRegionBandwidthLimit"] !== null) {
+            $this->CcnRegionBandwidthLimit = new CcnRegionBandwidthLimit();
+            $this->CcnRegionBandwidthLimit->deserialize($param["CcnRegionBandwidthLimit"]);
         }
     }
 }

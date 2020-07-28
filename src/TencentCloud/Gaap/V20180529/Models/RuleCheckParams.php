@@ -18,7 +18,7 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Health check parameters of the layer-7 listeners’ forwarding rules
+ * Health check parameters of the layer-7 listeners' forwarding rules
  *
  * @method integer getDelayLoop() Obtain Time interval of health check
  * @method void setDelayLoop(integer $DelayLoop) Set Time interval of health check

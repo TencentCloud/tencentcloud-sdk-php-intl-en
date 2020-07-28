@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Time point screencapturing template ID.
  * @method void setDefinition(integer $Definition) Set Time point screencapturing template ID.
+ * @method array getExtTimeOffsetSet() Obtain 
+ * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set 
  * @method array getTimeOffsetSet() Obtain List of time points for screencapturing in <font color=red>milliseconds</font>.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTimeOffsetSet(array $TimeOffsetSet) Set List of time points for screencapturing in <font color=red>milliseconds</font>.
@@ -39,6 +41,11 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
     public $Definition;
 
     /**
+     * @var array 
+     */
+    public $ExtTimeOffsetSet;
+
+    /**
      * @var array List of time points for screencapturing in <font color=red>milliseconds</font>.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -52,6 +59,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $Definition Time point screencapturing template ID.
+     * @param array $ExtTimeOffsetSet 
      * @param array $TimeOffsetSet List of time points for screencapturing in <font color=red>milliseconds</font>.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
@@ -72,6 +80,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtTimeOffsetSet",$param) and $param["ExtTimeOffsetSet"] !== null) {
+            $this->ExtTimeOffsetSet = $param["ExtTimeOffsetSet"];
         }
 
         if (array_key_exists("TimeOffsetSet",$param) and $param["TimeOffsetSet"] !== null) {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set Query end time in the format of 2018-06-10 17:06:38
  * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0
  * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
- * @method integer getLimit() Obtain Number of entries returned per page in paged query. Value range: 1–100.
- * @method void setLimit(integer $Limit) Set Number of entries returned per page in paged query. Value range: 1–100.
+ * @method integer getLimit() Obtain Number of entries returned per page in paged query. Value range: 1-100.
+ * @method void setLimit(integer $Limit) Set Number of entries returned per page in paged query. Value range: 1-100.
  */
 class DescribeDBXlogsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeDBXlogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of entries returned per page in paged query. Value range: 1–100.
+     * @var integer Number of entries returned per page in paged query. Value range: 1-100.
      */
     public $Limit;
 
@@ -63,7 +63,7 @@ class DescribeDBXlogsRequest extends AbstractModel
      * @param string $StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
      * @param string $EndTime Query end time in the format of 2018-06-10 17:06:38
      * @param integer $Offset Page number for data return in paged query. Pagination starts from 0
-     * @param integer $Limit Number of entries returned per page in paged query. Value range: 1–100.
+     * @param integer $Limit Number of entries returned per page in paged query. Value range: 1-100.
      */
     function __construct()
     {

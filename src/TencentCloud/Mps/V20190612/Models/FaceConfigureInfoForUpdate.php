@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Switch of a face recognition task. Valid values:
 <li>ON: Enables an intelligent face recognition task;</li>
 <li>OFF: Disables an intelligent face recognition task.</li>
- * @method float getScore() Obtain Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
- * @method void setScore(float $Score) Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+ * @method float getScore() Obtain Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
+ * @method void setScore(float $Score) Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
  * @method array getDefaultLibraryLabelSet() Obtain Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the default figures will be returned. Valid values:
 <li>entertainment: Entertainment celebrity;</li>
 <li>sport: Sports celebrity;</li>
@@ -59,7 +59,7 @@ class FaceConfigureInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var float Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+     * @var float Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
      */
     public $Score;
 
@@ -89,7 +89,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
      * @param string $Switch Switch of a face recognition task. Valid values:
 <li>ON: Enables an intelligent face recognition task;</li>
 <li>OFF: Disables an intelligent face recognition task.</li>
-     * @param float $Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+     * @param float $Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
      * @param array $DefaultLibraryLabelSet Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the default figures will be returned. Valid values:
 <li>entertainment: Entertainment celebrity;</li>
 <li>sport: Sports celebrity;</li>

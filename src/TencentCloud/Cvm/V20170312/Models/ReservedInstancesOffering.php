@@ -24,37 +24,37 @@ use TencentCloud\Common\AbstractModel;
 Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
  * @method void setZone(string $Zone) Set The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
 Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
- * @method string getCurrencyCode() Obtain The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD.
- * @method void setCurrencyCode(string $CurrencyCode) Set The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD.
- * @method integer getDuration() Obtain The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+ * @method string getCurrencyCode() Obtain The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD.
+ * @method void setCurrencyCode(string $CurrencyCode) Set The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD.
+ * @method integer getDuration() Obtain The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second
- * @method void setDuration(integer $Duration) Set The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+ * @method void setDuration(integer $Duration) Set The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second
  * @method float getFixedPrice() Obtain The purchase price of the Reserved Instance, such as 4000.0.
 Unit: this field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
  * @method void setFixedPrice(float $FixedPrice) Set The purchase price of the Reserved Instance, such as 4000.0.
 Unit: this field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
- * @method string getInstanceType() Obtain The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
- * @method void setInstanceType(string $InstanceType) Set The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
- * @method string getOfferingType() Obtain The payment term of the Reserved Instance, such as All Upfront.
+ * @method string getInstanceType() Obtain The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+ * @method void setInstanceType(string $InstanceType) Set The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+ * @method string getOfferingType() Obtain The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
- * @method void setOfferingType(string $OfferingType) Set The payment term of the Reserved Instance, such as All Upfront.
+ * @method void setOfferingType(string $OfferingType) Set The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
  * @method string getReservedInstancesOfferingId() Obtain The ID of the Reserved Instance offering, such as 650c138f-ae7e-4750-952a-96841d6e9fc1.
  * @method void setReservedInstancesOfferingId(string $ReservedInstancesOfferingId) Set The ID of the Reserved Instance offering, such as 650c138f-ae7e-4750-952a-96841d6e9fc1.
- * @method string getProductDescription() Obtain The platform description (operating system) of the Reserved Instance, such as linux.
+ * @method string getProductDescription() Obtain The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux.
- * @method void setProductDescription(string $ProductDescription) Set The platform description (operating system) of the Reserved Instance, such as linux.
+ * @method void setProductDescription(string $ProductDescription) Set The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux.
  * @method float getUsagePrice() Obtain The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
  * @method void setUsagePrice(float $UsagePrice) Set The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
  */
 class ReservedInstancesOffering extends AbstractModel
@@ -66,13 +66,13 @@ Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Avail
     public $Zone;
 
     /**
-     * @var string The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD.
+     * @var string The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD.
      */
     public $CurrencyCode;
 
     /**
-     * @var integer The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+     * @var integer The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second
      */
     public $Duration;
@@ -84,13 +84,13 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
     public $FixedPrice;
 
     /**
-     * @var string The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
+     * @var string The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
      */
     public $InstanceType;
 
     /**
-     * @var string The payment term of the Reserved Instance, such as All Upfront.
+     * @var string The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
      */
     public $OfferingType;
@@ -101,14 +101,14 @@ Valid value: All Upfront.
     public $ReservedInstancesOfferingId;
 
     /**
-     * @var string The platform description (operating system) of the Reserved Instance, such as linux.
+     * @var string The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux.
      */
     public $ProductDescription;
 
     /**
      * @var float The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
      */
     public $UsagePrice;
@@ -116,21 +116,21 @@ Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and
     /**
      * @param string $Zone The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
 Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
-     * @param string $CurrencyCode The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD.
-     * @param integer $Duration The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+     * @param string $CurrencyCode The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD.
+     * @param integer $Duration The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second
      * @param float $FixedPrice The purchase price of the Reserved Instance, such as 4000.0.
 Unit: this field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
-     * @param string $InstanceType The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
-     * @param string $OfferingType The payment term of the Reserved Instance, such as All Upfront.
+     * @param string $InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+     * @param string $OfferingType The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
      * @param string $ReservedInstancesOfferingId The ID of the Reserved Instance offering, such as 650c138f-ae7e-4750-952a-96841d6e9fc1.
-     * @param string $ProductDescription The platform description (operating system) of the Reserved Instance, such as linux.
+     * @param string $ProductDescription The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux.
      * @param float $UsagePrice The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
      */
     function __construct()

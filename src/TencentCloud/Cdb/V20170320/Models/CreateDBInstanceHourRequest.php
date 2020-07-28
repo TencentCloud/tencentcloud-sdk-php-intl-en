@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstanceHour request structure.
  *
- * @method integer getGoodsNum() Obtain Number of instances. Value range: 1–100. Default value: 1.
- * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Value range: 1–100. Default value: 1.
+ * @method integer getGoodsNum() Obtain Number of instances. Value range: 1-100. Default value: 1.
+ * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Value range: 1-100. Default value: 1.
  * @method integer getMemory() Obtain Instance memory size in MB. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported memory specifications.
  * @method void setMemory(integer $Memory) Set Instance memory size in MB. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported memory specifications.
  * @method integer getVolume() Obtain Instance disk size in GB. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported disk specifications.
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterRegion(string $MasterRegion) Set AZ information of the master instance, which is required for purchasing disaster recovery instances.
  * @method integer getPort() Obtain Custom port. Value range: [1024-65535].
  * @method void setPort(integer $Port) Set Custom port. Value range: [1024-65535].
- * @method string getPassword() Obtain Sets the root account password. Rule: the password can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
- * @method void setPassword(string $Password) Set Sets the root account password. Rule: the password can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+ * @method string getPassword() Obtain Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+ * @method void setPassword(string $Password) Set Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
  * @method array getParamList() Obtain List of parameters in the format of `ParamList.0.Name=auto_increment&ParamList.0.Value=1`. You can use the [DescribeDefaultParams](https://cloud.tencent.com/document/api/236/32662) API to query the configurable parameters.
  * @method void setParamList(array $ParamList) Set List of parameters in the format of `ParamList.0.Name=auto_increment&ParamList.0.Value=1`. You can use the [DescribeDefaultParams](https://cloud.tencent.com/document/api/236/32662) API to query the configurable parameters.
  * @method integer getProtectMode() Obtain Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
@@ -76,7 +76,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBInstanceHourRequest extends AbstractModel
 {
     /**
-     * @var integer Number of instances. Value range: 1–100. Default value: 1.
+     * @var integer Number of instances. Value range: 1-100. Default value: 1.
      */
     public $GoodsNum;
 
@@ -136,7 +136,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var string Sets the root account password. Rule: the password can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+     * @var string Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
      */
     public $Password;
 
@@ -206,7 +206,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $DeviceType;
 
     /**
-     * @param integer $GoodsNum Number of instances. Value range: 1–100. Default value: 1.
+     * @param integer $GoodsNum Number of instances. Value range: 1-100. Default value: 1.
      * @param integer $Memory Instance memory size in MB. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported memory specifications.
      * @param integer $Volume Instance disk size in GB. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported disk specifications.
      * @param string $EngineVersion MySQL version. Valid values: 5.5, 5.6, 5.7. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported instance versions.
@@ -218,7 +218,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $InstanceRole Instance type. Valid values: master (master instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
      * @param string $MasterRegion AZ information of the master instance, which is required for purchasing disaster recovery instances.
      * @param integer $Port Custom port. Value range: [1024-65535].
-     * @param string $Password Sets the root account password. Rule: the password can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+     * @param string $Password Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
      * @param array $ParamList List of parameters in the format of `ParamList.0.Name=auto_increment&ParamList.0.Value=1`. You can use the [DescribeDefaultParams](https://cloud.tencent.com/document/api/236/32662) API to query the configurable parameters.
      * @param integer $ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
      * @param integer $DeployMode Multi-AZ. Valid value: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.

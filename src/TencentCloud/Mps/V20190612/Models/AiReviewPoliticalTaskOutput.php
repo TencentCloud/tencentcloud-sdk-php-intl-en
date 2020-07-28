@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li>
+<li>politician: political figure.</li>
  * @method void setLabel(string $Label) Set Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li>
+<li>politician: political figure.</li>
  * @method array getSegmentSet() Obtain List of video segments that contain the detected politically sensitive information.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected politically sensitive information.
  */
@@ -63,7 +63,7 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li>
+<li>politician: political figure.</li>
      */
     public $Label;
 
@@ -82,7 +82,7 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li>
+<li>politician: political figure.</li>
      * @param array $SegmentSet List of video segments that contain the detected politically sensitive information.
      */
     function __construct()

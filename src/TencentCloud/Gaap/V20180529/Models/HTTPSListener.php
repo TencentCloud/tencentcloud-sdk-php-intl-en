@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) Set Listener name
  * @method integer getPort() Obtain Listener port
  * @method void setPort(integer $Port) Set Listener port
- * @method string getProtocol() Obtain Listener protocol. The value is `HTTP`.
- * @method void setProtocol(string $Protocol) Set Listener protocol. The value is `HTTP`.
+ * @method string getProtocol() Obtain Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
+ * @method void setProtocol(string $Protocol) Set Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
  * @method integer getListenerStatus() Obtain Listener status:
 0: running;
 1: creating;
@@ -54,14 +54,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate ID of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAuthType() Obtain Listener authentication method:
+ * @method integer getAuthType() Obtain Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAuthType(integer $AuthType) Set Listener authentication method:
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAuthType(integer $AuthType) Set Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getClientCertificateAlias() Obtain Client CA certificate alias
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClientCertificateAlias(string $ClientCertificateAlias) Set Client CA certificate alias
@@ -89,7 +89,7 @@ class HTTPSListener extends AbstractModel
     public $Port;
 
     /**
-     * @var string Listener protocol. The value is `HTTP`.
+     * @var string Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
      */
     public $Protocol;
 
@@ -131,10 +131,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ClientCertificateId;
 
     /**
-     * @var integer Listener authentication method:
+     * @var integer Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AuthType;
 
@@ -154,7 +154,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
-     * @param string $Protocol Listener protocol. The value is `HTTP`.
+     * @param string $Protocol Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
      * @param integer $ListenerStatus Listener status:
 0: running;
 1: creating;
@@ -168,10 +168,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ClientCertificateId Client CA certificate ID of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AuthType Listener authentication method:
+     * @param integer $AuthType Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ClientCertificateAlias Client CA certificate alias
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $PolyClientCertificateAliasInfo Alias information of multiple client CA certificates.

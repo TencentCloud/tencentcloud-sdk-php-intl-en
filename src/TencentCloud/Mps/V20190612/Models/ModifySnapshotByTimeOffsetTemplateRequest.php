@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) Set Image width in px. Value range: [128, 4,096].
  * @method integer getHeight() Obtain Image height in px. Value range: [128, 4,096].
  * @method void setHeight(integer $Height) Set Image height in px. Value range: [128, 4,096].
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
  * @method string getFormat() Obtain Image format. Valid values: jpg, png.
  * @method void setFormat(string $Format) Set Image format. Valid values: jpg, png.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
  */
 class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
@@ -56,6 +60,11 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
     public $Height;
 
     /**
+     * @var string 
+     */
+    public $ResolutionAdaptive;
+
+    /**
      * @var string Image format. Valid values: jpg, png.
      */
     public $Format;
@@ -66,12 +75,19 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 
+     */
+    public $FillType;
+
+    /**
      * @param integer $Definition Unique ID of a time point screencapturing template.
      * @param string $Name Name of a time point screencapturing template. Length limit: 64 characters.
      * @param integer $Width Image width in px. Value range: [128, 4,096].
      * @param integer $Height Image height in px. Value range: [128, 4,096].
+     * @param string $ResolutionAdaptive 
      * @param string $Format Image format. Valid values: jpg, png.
      * @param string $Comment Template description. Length limit: 256 characters.
+     * @param string $FillType 
      */
     function __construct()
     {
@@ -102,12 +118,20 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
             $this->Height = $param["Height"];
         }
 
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        }
+
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
         }
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
         }
     }
 }

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceState(string $InstanceState) Set CVM status.
  * @method integer getCPU() Obtain Number of CPU cores in an instance (in core).
  * @method void setCPU(integer $CPU) Set Number of CPU cores in an instance (in core).
- * @method integer getMemory() Obtain Instance’s memory capacity. Unit: GB.
- * @method void setMemory(integer $Memory) Set Instance’s memory capacity. Unit: GB.
+ * @method integer getMemory() Obtain Instance's memory capacity. Unit: GB.
+ * @method void setMemory(integer $Memory) Set Instance's memory capacity. Unit: GB.
  * @method string getCreatedTime() Obtain The creation time.
  * @method void setCreatedTime(string $CreatedTime) Set The creation time.
  * @method string getInstanceType() Obtain 
@@ -78,7 +78,7 @@ class CvmInstance extends AbstractModel
     public $CPU;
 
     /**
-     * @var integer Instance’s memory capacity. Unit: GB.
+     * @var integer Instance's memory capacity. Unit: GB.
      */
     public $Memory;
 
@@ -114,7 +114,7 @@ class CvmInstance extends AbstractModel
      * @param string $InstanceName CVM Name
      * @param string $InstanceState CVM status.
      * @param integer $CPU Number of CPU cores in an instance (in core).
-     * @param integer $Memory Instance’s memory capacity. Unit: GB.
+     * @param integer $Memory Instance's memory capacity. Unit: GB.
      * @param string $CreatedTime The creation time.
      * @param string $InstanceType 
      * @param integer $EniLimit Instance ENI quota (including primary ENIs).

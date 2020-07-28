@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set Metric for sorting. Valid values: `sum_calls` (total number of calls), `sum_cost_time` (total time consumed)
  * @method string getOrderByType() Obtain Sorting order. desc: descending, asc: ascending
  * @method void setOrderByType(string $OrderByType) Set Sorting order. desc: descending, asc: ascending
- * @method integer getLimit() Obtain Number of entries returned per page. Value range: 1–100. Default value: 20.
- * @method void setLimit(integer $Limit) Set Number of entries returned per page. Value range: 1–100. Default value: 20.
+ * @method integer getLimit() Obtain Number of entries returned per page. Value range: 1-100. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Number of entries returned per page. Value range: 1-100. Default value: 20.
  * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0
  * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
  */
@@ -70,7 +70,7 @@ class DescribeDBSlowlogsRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @var integer Number of entries returned per page. Value range: 1–100. Default value: 20.
+     * @var integer Number of entries returned per page. Value range: 1-100. Default value: 20.
      */
     public $Limit;
 
@@ -86,7 +86,7 @@ class DescribeDBSlowlogsRequest extends AbstractModel
      * @param string $DatabaseName Database name
      * @param string $OrderBy Metric for sorting. Valid values: `sum_calls` (total number of calls), `sum_cost_time` (total time consumed)
      * @param string $OrderByType Sorting order. desc: descending, asc: ascending
-     * @param integer $Limit Number of entries returned per page. Value range: 1–100. Default value: 20.
+     * @param integer $Limit Number of entries returned per page. Value range: 1-100. Default value: 20.
      * @param integer $Offset Page number for data return in paged query. Pagination starts from 0
      */
     function __construct()

@@ -76,6 +76,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) Set Value of InstanceTypesCheckPolicy upon the last operation.
  * @method HostNameSettings getHostNameSettings() Obtain CVM HostName settings.
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM HostName settings.
+ * @method InstanceNameSettings getInstanceNameSettings() Obtain 
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set 
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain 
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set 
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -204,6 +208,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HostNameSettings;
 
     /**
+     * @var InstanceNameSettings 
+     */
+    public $InstanceNameSettings;
+
+    /**
+     * @var InstanceChargePrepaid 
+     */
+    public $InstanceChargePrepaid;
+
+    /**
      * @param integer $ProjectId Project ID of the instance.
      * @param string $LaunchConfigurationId Launch configuration ID.
      * @param string $LaunchConfigurationName Launch configuration name.
@@ -232,6 +246,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CamRoleName CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
      * @param string $LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
      * @param HostNameSettings $HostNameSettings CVM HostName settings.
+     * @param InstanceNameSettings $InstanceNameSettings 
+     * @param InstanceChargePrepaid $InstanceChargePrepaid 
      */
     function __construct()
     {
@@ -361,6 +377,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("HostNameSettings",$param) and $param["HostNameSettings"] !== null) {
             $this->HostNameSettings = new HostNameSettings();
             $this->HostNameSettings->deserialize($param["HostNameSettings"]);
+        }
+
+        if (array_key_exists("InstanceNameSettings",$param) and $param["InstanceNameSettings"] !== null) {
+            $this->InstanceNameSettings = new InstanceNameSettings();
+            $this->InstanceNameSettings->deserialize($param["InstanceNameSettings"]);
+        }
+
+        if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
+            $this->InstanceChargePrepaid = new InstanceChargePrepaid();
+            $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
         }
     }
 }

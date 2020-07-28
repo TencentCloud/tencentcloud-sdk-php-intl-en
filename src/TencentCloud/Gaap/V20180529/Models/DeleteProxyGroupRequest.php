@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() Obtain ID of the connection group to be deleted.
  * @method void setGroupId(string $GroupId) Set ID of the connection group to be deleted.
+ * @method integer getForce() Obtain Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
+ * @method void setForce(integer $Force) Set Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
  */
 class DeleteProxyGroupRequest extends AbstractModel
 {
@@ -31,7 +39,19 @@ class DeleteProxyGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
+     */
+    public $Force;
+
+    /**
      * @param string $GroupId ID of the connection group to be deleted.
+     * @param integer $Force Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
      */
     function __construct()
     {
@@ -48,6 +68,10 @@ class DeleteProxyGroupRequest extends AbstractModel
         }
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

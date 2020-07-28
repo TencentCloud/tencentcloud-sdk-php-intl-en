@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getParentId() Obtain Parent category ID. For a first-level category, enter `-1`.
  * @method void setParentId(integer $ParentId) Set Parent category ID. For a first-level category, enter `-1`.
- * @method string getClassName() Obtain Category name. Length limit: 1–64 characters.
- * @method void setClassName(string $ClassName) Set Category name. Length limit: 1–64 characters.
+ * @method string getClassName() Obtain Category name. Length limit: 1-64 characters.
+ * @method void setClassName(string $ClassName) Set Category name. Length limit: 1-64 characters.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
@@ -35,7 +35,7 @@ class CreateClassRequest extends AbstractModel
     public $ParentId;
 
     /**
-     * @var string Category name. Length limit: 1–64 characters.
+     * @var string Category name. Length limit: 1-64 characters.
      */
     public $ClassName;
 
@@ -46,7 +46,7 @@ class CreateClassRequest extends AbstractModel
 
     /**
      * @param integer $ParentId Parent category ID. For a first-level category, enter `-1`.
-     * @param string $ClassName Category name. Length limit: 1–64 characters.
+     * @param string $ClassName Category name. Length limit: 1-64 characters.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()

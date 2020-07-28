@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) Set NAT gateway creation time.
  * @method string getState() Obtain The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+'FAILED': Failed.
  * @method void setState(string $State) Set The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+'FAILED': Failed.
  * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the gateway. Unit: Mbps.
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the gateway. Unit: Mbps.
  * @method integer getMaxConcurrentConnection() Obtain The concurrent connections cap of the gateway.
@@ -67,7 +67,7 @@ class NatGateway extends AbstractModel
     /**
      * @var string The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+'FAILED': Failed.
      */
     public $State;
 
@@ -112,7 +112,7 @@ class NatGateway extends AbstractModel
      * @param string $CreatedTime NAT gateway creation time.
      * @param string $State The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+'FAILED': Failed.
      * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the gateway. Unit: Mbps.
      * @param integer $MaxConcurrentConnection The concurrent connections cap of the gateway.
      * @param array $PublicIpAddressSet The public IP object array of the bound NAT gateway.

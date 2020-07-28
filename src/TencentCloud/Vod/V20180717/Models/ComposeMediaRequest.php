@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutput(ComposeMediaOutput $Output) Set Information of output media file.
  * @method Canvas getCanvas() Obtain Canvas used for composing video file.
  * @method void setCanvas(Canvas $Canvas) Set Canvas used for composing video file.
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
@@ -47,6 +51,16 @@ class ComposeMediaRequest extends AbstractModel
     public $Canvas;
 
     /**
+     * @var string 
+     */
+    public $SessionContext;
+
+    /**
+     * @var string 
+     */
+    public $SessionId;
+
+    /**
      * @var integer [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
@@ -55,6 +69,8 @@ class ComposeMediaRequest extends AbstractModel
      * @param array $Tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials. Multiple input tracks are aligned with the output media file on the time axis. The materials of each track at the same time point on the time axis will be superimposed. Specifically, videos or images will be superimposed for video image by track order, where a material with a higher track order will be more on top, while audio materials will be mixed.
      * @param ComposeMediaOutput $Output Information of output media file.
      * @param Canvas $Canvas Canvas used for composing video file.
+     * @param string $SessionContext 
+     * @param string $SessionId 
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
@@ -87,6 +103,14 @@ class ComposeMediaRequest extends AbstractModel
         if (array_key_exists("Canvas",$param) and $param["Canvas"] !== null) {
             $this->Canvas = new Canvas();
             $this->Canvas->deserialize($param["Canvas"]);
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

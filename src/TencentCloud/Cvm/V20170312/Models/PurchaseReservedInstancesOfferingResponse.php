@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PurchaseReservedInstancesOffering response structure.
  *
- * @method string getReservedInstanceId() Obtain 
- * @method void setReservedInstanceId(string $ReservedInstanceId) Set 
+ * @method string getReservedInstanceId() Obtain The ID of the Reserved Instance purchased.
+ * @method void setReservedInstanceId(string $ReservedInstanceId) Set The ID of the Reserved Instance purchased.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class PurchaseReservedInstancesOfferingResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The ID of the Reserved Instance purchased.
      */
     public $ReservedInstanceId;
 
@@ -38,7 +38,7 @@ class PurchaseReservedInstancesOfferingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ReservedInstanceId 
+     * @param string $ReservedInstanceId The ID of the Reserved Instance purchased.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -32,12 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Name of a transcoding to adaptive bitrate streaming template.
  * @method string getComment() Obtain Description of a transcoding to adaptive bitrate streaming template.
  * @method void setComment(string $Comment) Set Description of a transcoding to adaptive bitrate streaming template.
- * @method string getPackageType() Obtain Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li>
- * @method void setPackageType(string $PackageType) Set Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li>
+ * @method string getFormat() Obtain Adaptive bitstream format. Valid value:
+<li>HLS.</li>
+ * @method void setFormat(string $Format) Set Adaptive bitstream format. Valid value:
+<li>HLS.</li>
  * @method string getDrmType() Obtain DRM type. Valid values:
 <li>FairPlay;</li>
 <li>SimpleAES;</li>
@@ -48,14 +46,6 @@ If this field is a blank string, DRM will not be performed on the video.
 <li>SimpleAES;</li>
 <li>Widevine.</li>
 If this field is a blank string, DRM will not be performed on the video.
- * @method array getVideoTrackTemplateSet() Obtain List of video track templates.
- * @method void setVideoTrackTemplateSet(array $VideoTrackTemplateSet) Set List of video track templates.
- * @method array getAudioTrackTemplateSet() Obtain List of audio track templates.
- * @method void setAudioTrackTemplateSet(array $AudioTrackTemplateSet) Set List of audio track templates.
- * @method string getFormat() Obtain Adaptive bitstream format. Valid value:
-<li>HLS.</li>
- * @method void setFormat(string $Format) Set Adaptive bitstream format. Valid value:
-<li>HLS.</li>
  * @method array getStreamInfos() Obtain Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
  * @method void setStreamInfos(array $StreamInfos) Set Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
  * @method integer getDisableHigherVideoBitrate() Obtain Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
@@ -100,11 +90,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $Comment;
 
     /**
-     * @var string Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li>
+     * @var string Adaptive bitstream format. Valid value:
+<li>HLS.</li>
      */
-    public $PackageType;
+    public $Format;
 
     /**
      * @var string DRM type. Valid values:
@@ -114,22 +103,6 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 If this field is a blank string, DRM will not be performed on the video.
      */
     public $DrmType;
-
-    /**
-     * @var array List of video track templates.
-     */
-    public $VideoTrackTemplateSet;
-
-    /**
-     * @var array List of audio track templates.
-     */
-    public $AudioTrackTemplateSet;
-
-    /**
-     * @var string Adaptive bitstream format. Valid value:
-<li>HLS.</li>
-     */
-    public $Format;
 
     /**
      * @var array Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
@@ -167,18 +140,13 @@ If this field is a blank string, DRM will not be performed on the video.
 <li>Custom: custom template.</li>
      * @param string $Name Name of a transcoding to adaptive bitrate streaming template.
      * @param string $Comment Description of a transcoding to adaptive bitrate streaming template.
-     * @param string $PackageType Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li>
+     * @param string $Format Adaptive bitstream format. Valid value:
+<li>HLS.</li>
      * @param string $DrmType DRM type. Valid values:
 <li>FairPlay;</li>
 <li>SimpleAES;</li>
 <li>Widevine.</li>
 If this field is a blank string, DRM will not be performed on the video.
-     * @param array $VideoTrackTemplateSet List of video track templates.
-     * @param array $AudioTrackTemplateSet List of audio track templates.
-     * @param string $Format Adaptive bitstream format. Valid value:
-<li>HLS.</li>
      * @param array $StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
      * @param integer $DisableHigherVideoBitrate Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
@@ -218,34 +186,12 @@ If this field is a blank string, DRM will not be performed on the video.
             $this->Comment = $param["Comment"];
         }
 
-        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
-            $this->PackageType = $param["PackageType"];
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
 
         if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
             $this->DrmType = $param["DrmType"];
-        }
-
-        if (array_key_exists("VideoTrackTemplateSet",$param) and $param["VideoTrackTemplateSet"] !== null) {
-            $this->VideoTrackTemplateSet = [];
-            foreach ($param["VideoTrackTemplateSet"] as $key => $value){
-                $obj = new VideoTrackTemplateInfo();
-                $obj->deserialize($value);
-                array_push($this->VideoTrackTemplateSet, $obj);
-            }
-        }
-
-        if (array_key_exists("AudioTrackTemplateSet",$param) and $param["AudioTrackTemplateSet"] !== null) {
-            $this->AudioTrackTemplateSet = [];
-            foreach ($param["AudioTrackTemplateSet"] as $key => $value){
-                $obj = new AudioTrackTemplateInfo();
-                $obj->deserialize($value);
-                array_push($this->AudioTrackTemplateSet, $obj);
-            }
-        }
-
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
         }
 
         if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {

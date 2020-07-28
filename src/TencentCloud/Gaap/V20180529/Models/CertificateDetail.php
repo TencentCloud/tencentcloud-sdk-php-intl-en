@@ -46,9 +46,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEndTime(integer $EndTime) Set Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuerCN() Obtain Common name of the certificate’s issuer.
+ * @method string getIssuerCN() Obtain Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuerCN(string $IssuerCN) Set Common name of the certificate’s issuer.
+ * @method void setIssuerCN(string $IssuerCN) Set Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubjectCN() Obtain Common name of the certificate subject.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -103,7 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EndTime;
 
     /**
-     * @var string Common name of the certificate’s issuer.
+     * @var string Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IssuerCN;
@@ -128,7 +128,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $EndTime Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuerCN Common name of the certificate’s issuer.
+     * @param string $IssuerCN Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubjectCN Common name of the certificate subject.
 Note: This field may return null, indicating that no valid values can be obtained.

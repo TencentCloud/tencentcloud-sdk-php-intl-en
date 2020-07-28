@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Control parameter of a terrorism information detection in image task.
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Control parameter of a terrorism information detection in image task.
+ * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
  */
 class TerrorismConfigureInfoForUpdate extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
     public $ImgReviewInfo;
 
     /**
+     * @var TerrorismOcrReviewTemplateInfoForUpdate 
+     */
+    public $OcrReviewInfo;
+
+    /**
      * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo Control parameter of a terrorism information detection in image task.
+     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
         if (array_key_exists("ImgReviewInfo",$param) and $param["ImgReviewInfo"] !== null) {
             $this->ImgReviewInfo = new TerrorismImgReviewTemplateInfoForUpdate();
             $this->ImgReviewInfo->deserialize($param["ImgReviewInfo"]);
+        }
+
+        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+            $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfoForUpdate();
+            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
         }
     }
 }

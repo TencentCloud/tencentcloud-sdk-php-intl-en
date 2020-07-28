@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableGroupName(string $TableGroupName) Set Table group name, which can contain up to 32 letters and digits
  * @method string getTableGroupId() Obtain Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
  * @method void setTableGroupId(string $TableGroupId) Set Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
+ * @method array getResourceTags() Obtain 
+ * @method void setResourceTags(array $ResourceTags) Set 
  */
 class CreateTableGroupRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateTableGroupRequest extends AbstractModel
     public $TableGroupId;
 
     /**
+     * @var array 
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $ClusterId ID of the cluster where a table group resides
      * @param string $TableGroupName Table group name, which can contain up to 32 letters and digits
      * @param string $TableGroupId Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
+     * @param array $ResourceTags 
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreateTableGroupRequest extends AbstractModel
 
         if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
             $this->TableGroupId = $param["TableGroupId"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfoUnit();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

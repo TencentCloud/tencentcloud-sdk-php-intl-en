@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
  * @method string getSegmentUrl() Obtain Split video segment URL.
  * @method void setSegmentUrl(string $SegmentUrl) Set Split video segment URL.
- * @method float getConfidence() Obtain Confidence of split segment. Value range: 0–100.
- * @method void setConfidence(float $Confidence) Set Confidence of split segment. Value range: 0–100.
+ * @method float getConfidence() Obtain Confidence of split segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of split segment. Value range: 0-100.
  * @method float getStartTimeOffset() Obtain Start time offset of split segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of split segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of split segment in seconds.
@@ -48,7 +48,7 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
     public $SegmentUrl;
 
     /**
-     * @var float Confidence of split segment. Value range: 0–100.
+     * @var float Confidence of split segment. Value range: 0-100.
      */
     public $Confidence;
 
@@ -75,7 +75,7 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
     /**
      * @param string $FileId File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
      * @param string $SegmentUrl Split video segment URL.
-     * @param float $Confidence Confidence of split segment. Value range: 0–100.
+     * @param float $Confidence Confidence of split segment. Value range: 0-100.
      * @param float $StartTimeOffset Start time offset of split segment in seconds.
      * @param float $EndTimeOffset End time offset of split segment in seconds.
      * @param string $CovImgUrl Split cover image URL.

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) Set Listener name
  * @method integer getPort() Obtain Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
  * @method void setPort(integer $Port) Set Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
- * @method string getProxyId() Obtain Connection ID
- * @method void setProxyId(string $ProxyId) Set Connection ID
+ * @method string getProxyId() Obtain Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
+ * @method void setProxyId(string $ProxyId) Set Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
+ * @method string getGroupId() Obtain Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+ * @method void setGroupId(string $GroupId) Set Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
  */
 class CreateHTTPListenerRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class CreateHTTPListenerRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var string Connection ID
+     * @var string Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
      */
     public $ProxyId;
 
     /**
+     * @var string Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+     */
+    public $GroupId;
+
+    /**
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port, which is based on the listeners of same transport layer protocol (TCP or UDP). The port must be unique.
-     * @param string $ProxyId Connection ID
+     * @param string $ProxyId Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
+     * @param string $GroupId Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateHTTPListenerRequest extends AbstractModel
 
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

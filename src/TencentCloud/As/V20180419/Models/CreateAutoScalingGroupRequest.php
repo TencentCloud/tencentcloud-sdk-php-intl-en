@@ -70,8 +70,8 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
 
 Common reasons why an availability zone or subnet is unavailable include stock-out of CVM instances or CBS cloud disks in the availability zone, insufficient quota in the availability zone, or insufficient IPs in the subnet.
 If an availability zone or subnet in Zones/SubnetIds does not exist, a verification error will be reported regardless of the value of ZonesCheckPolicy.
- * @method array getTags() Obtain List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
- * @method void setTags(array $Tags) Set List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+ * @method array getTags() Obtain List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+ * @method void setTags(array $Tags) Set List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
  * @method ServiceSettings getServiceSettings() Obtain Service settings such as unhealthy instance replacement.
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings such as unhealthy instance replacement.
  * @method integer getIpv6AddressCount() Obtain 
@@ -167,7 +167,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     public $ZonesCheckPolicy;
 
     /**
-     * @var array List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+     * @var array List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
      */
     public $Tags;
 
@@ -212,7 +212,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
 
 Common reasons why an availability zone or subnet is unavailable include stock-out of CVM instances or CBS cloud disks in the availability zone, insufficient quota in the availability zone, or insufficient IPs in the subnet.
 If an availability zone or subnet in Zones/SubnetIds does not exist, a verification error will be reported regardless of the value of ZonesCheckPolicy.
-     * @param array $Tags List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+     * @param array $Tags List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
      * @param ServiceSettings $ServiceSettings Service settings such as unhealthy instance replacement.
      * @param integer $Ipv6AddressCount 
      * @param string $MultiZoneSubnetPolicy 

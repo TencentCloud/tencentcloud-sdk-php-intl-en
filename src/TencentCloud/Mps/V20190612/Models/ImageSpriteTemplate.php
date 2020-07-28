@@ -56,6 +56,8 @@ Default value: black.
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
  */
 class ImageSpriteTemplate extends AbstractModel
 {
@@ -130,6 +132,11 @@ Default value: black.
     public $FillType;
 
     /**
+     * @var string 
+     */
+    public $Comment;
+
+    /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      * @param string $Type Template type. Valid values:
 <li>Preset: Preset template;</li>
@@ -148,6 +155,7 @@ Default value: black.
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
+     * @param string $Comment 
      */
     function __construct()
     {
@@ -212,6 +220,10 @@ Default value: black.
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

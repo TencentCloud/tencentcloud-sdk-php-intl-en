@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskTotal(integer $DiskTotal) Set Total disk size of the CDH instance; unit: GiB
  * @method integer getDiskAvailable() Obtain Avilable disk size of the CDH instance; unit: GiB
  * @method void setDiskAvailable(integer $DiskAvailable) Set Avilable disk size of the CDH instance; unit: GiB
+ * @method string getDiskType() Obtain 
+ * @method void setDiskType(string $DiskType) Set 
  */
 class HostResource extends AbstractModel
 {
@@ -66,12 +68,18 @@ class HostResource extends AbstractModel
     public $DiskAvailable;
 
     /**
+     * @var string 
+     */
+    public $DiskType;
+
+    /**
      * @param integer $CpuTotal Total number of CPU cores in the CDH instance
      * @param integer $CpuAvailable Number of available CPU cores in the CDH instance
      * @param float $MemTotal Total memory of the CDH instance; unit: GiB
      * @param float $MemAvailable Available memory of the CDH instance; unit: GiB
      * @param integer $DiskTotal Total disk size of the CDH instance; unit: GiB
      * @param integer $DiskAvailable Avilable disk size of the CDH instance; unit: GiB
+     * @param string $DiskType 
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class HostResource extends AbstractModel
 
         if (array_key_exists("DiskAvailable",$param) and $param["DiskAvailable"] !== null) {
             $this->DiskAvailable = $param["DiskAvailable"];
+        }
+
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
         }
     }
 }

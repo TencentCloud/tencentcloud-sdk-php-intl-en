@@ -29,13 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getMetricNames() Obtain Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
  * @method void setMetricNames(array $MetricNames) Set Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
  * @method integer getGranularity() Obtain Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
-Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
-Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
+Time range: <= 1 day, supported minimum granularity: 60 seconds;
+Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
+Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
  * @method void setGranularity(integer $Granularity) Set Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
-Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
-Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
+Time range: <= 1 day, supported minimum granularity: 60 seconds;
+Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
+Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
  */
 class DescribeProxyStatisticsRequest extends AbstractModel
 {
@@ -61,9 +61,9 @@ class DescribeProxyStatisticsRequest extends AbstractModel
 
     /**
      * @var integer Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
-Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
-Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
+Time range: <= 1 day, supported minimum granularity: 60 seconds;
+Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
+Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
      */
     public $Granularity;
 
@@ -73,9 +73,9 @@ Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
      * @param string $EndTime End time (2019-03-25 12:00:00)
      * @param array $MetricNames Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
      * @param integer $Granularity Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: ≤ 1 day, supported minimum granularity: 60 seconds;
-Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
-Time range: ≤ 30 days, supported minimum granularity: 86,400 seconds;
+Time range: <= 1 day, supported minimum granularity: 60 seconds;
+Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
+Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
      */
     function __construct()
     {

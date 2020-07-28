@@ -26,19 +26,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldDomain(string $OldDomain) Set Original domain name information
  * @method string getNewDomain() Obtain New domain name information
  * @method void setNewDomain(string $NewDomain) Set New domain name information
- * @method string getCertificateId() Obtain Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+ * @method string getCertificateId() Obtain Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
- * @method void setCertificateId(string $CertificateId) Set Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+ * @method void setCertificateId(string $CertificateId) Set Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
- * @method string getClientCertificateId() Obtain Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+ * @method string getClientCertificateId() Obtain Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.
- * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+ * @method void setClientCertificateId(string $ClientCertificateId) Set Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.
@@ -69,7 +69,7 @@ class ModifyDomainRequest extends AbstractModel
     public $NewDomain;
 
     /**
-     * @var string Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+     * @var string Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
@@ -77,7 +77,7 @@ For other cases, the certificate specified by CertificateId will be used.
     public $CertificateId;
 
     /**
-     * @var string Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+     * @var string Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.
@@ -96,11 +96,11 @@ In other cases, the certificate specified by `ClientCertificateId` or `PolyClien
      * @param string $ListenerId Layer-7 listener ID
      * @param string $OldDomain Original domain name information
      * @param string $NewDomain New domain name information
-     * @param string $CertificateId Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+     * @param string $CertificateId Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
-     * @param string $ClientCertificateId Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+     * @param string $ClientCertificateId Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.

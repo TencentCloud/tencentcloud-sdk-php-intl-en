@@ -18,26 +18,19 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVideoTrackTemplates response structure.
+ * CreateAIRecognitionTemplate response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible entries.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
- * @method array getVideoTrackTemplateSet() Obtain List of video track template details.
- * @method void setVideoTrackTemplateSet(array $VideoTrackTemplateSet) Set List of video track template details.
+ * @method integer getDefinition() Obtain Unique ID of video content recognition template.
+ * @method void setDefinition(integer $Definition) Set Unique ID of video content recognition template.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeVideoTrackTemplatesResponse extends AbstractModel
+class CreateAIRecognitionTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible entries.
+     * @var integer Unique ID of video content recognition template.
      */
-    public $TotalCount;
-
-    /**
-     * @var array List of video track template details.
-     */
-    public $VideoTrackTemplateSet;
+    public $Definition;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeVideoTrackTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible entries.
-     * @param array $VideoTrackTemplateSet List of video track template details.
+     * @param integer $Definition Unique ID of video content recognition template.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeVideoTrackTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("VideoTrackTemplateSet",$param) and $param["VideoTrackTemplateSet"] !== null) {
-            $this->VideoTrackTemplateSet = [];
-            foreach ($param["VideoTrackTemplateSet"] as $key => $value){
-                $obj = new VideoTrackTemplateInfo();
-                $obj->deserialize($value);
-                array_push($this->VideoTrackTemplateSet, $obj);
-            }
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

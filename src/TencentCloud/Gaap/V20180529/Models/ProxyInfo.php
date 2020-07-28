@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Connection information
  *
- * @method string getInstanceId() Obtain Connection instance ID; It’s an old parameter, please switch to ProxyId.
+ * @method string getInstanceId() Obtain Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Connection instance ID; It’s an old parameter, please switch to ProxyId.
+ * @method void setInstanceId(string $InstanceId) Set Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCreateTime() Obtain Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
  * @method void setCreateTime(integer $CreateTime) Set Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
@@ -46,8 +46,8 @@ OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
 ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ISOLATING: isolating (it's triggered when the account is in arrears);
+ISOLATED: isolated (it's triggered when the account is in arrears);
 UNKNOWN: unknown status.
  * @method void setStatus(string $Status) Set Connection status:
 RUNNING: running;
@@ -57,8 +57,8 @@ OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
 ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ISOLATING: isolating (it's triggered when the account is in arrears);
+ISOLATED: isolated (it's triggered when the account is in arrears);
 UNKNOWN: unknown status.
  * @method string getDomain() Obtain Accessed domain name.
  * @method void setDomain(string $Domain) Set Accessed domain name.
@@ -66,9 +66,9 @@ UNKNOWN: unknown status.
  * @method void setIP(string $IP) Set Accessed IP.
  * @method string getVersion() Obtain Connection versions: 1.0, 2.0, 3.0.
  * @method void setVersion(string $Version) Set Connection versions: 1.0, 2.0, 3.0.
- * @method string getProxyId() Obtain Connection instance ID; It’s a new parameter.
+ * @method string getProxyId() Obtain Connection instance ID; It's a new parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyId(string $ProxyId) Set Connection instance ID; It’s a new parameter.
+ * @method void setProxyId(string $ProxyId) Set Connection instance ID; It's a new parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getScalarable() Obtain 1: this connection is expandable; 0: this connection is not expandable.
  * @method void setScalarable(integer $Scalarable) Set 1: this connection is expandable; 0: this connection is not expandable.
@@ -100,15 +100,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSupportSecurity(integer $SupportSecurity) Set Whether security groups are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBillingType() Obtain Billing mode. 0: bill by bandwidth; 1: bill by traffic
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setBillingType(integer $BillingType) Set Billing mode. 0: bill by bandwidth; 1: bill by traffic
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method integer getBillingType() Obtain Billing mode. 0: bill-by-bandwidth; 1: bill-by-traffic.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setBillingType(integer $BillingType) Set Billing mode. 0: bill-by-bandwidth; 1: bill-by-traffic.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getRelatedGlobalDomains() Obtain List of domain names associated with resolution record
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRelatedGlobalDomains(array $RelatedGlobalDomains) Set List of domain names associated with resolution record
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getModifyConfigTime() Obtain Configuration change time
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setModifyConfigTime(integer $ModifyConfigTime) Set Configuration change time
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ProxyInfo extends AbstractModel
 {
     /**
-     * @var string Connection instance ID; It’s an old parameter, please switch to ProxyId.
+     * @var string Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
@@ -157,8 +165,8 @@ OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
 ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ISOLATING: isolating (it's triggered when the account is in arrears);
+ISOLATED: isolated (it's triggered when the account is in arrears);
 UNKNOWN: unknown status.
      */
     public $Status;
@@ -179,7 +187,7 @@ UNKNOWN: unknown status.
     public $Version;
 
     /**
-     * @var string Connection instance ID; It’s a new parameter.
+     * @var string Connection instance ID; It's a new parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProxyId;
@@ -236,13 +244,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SupportSecurity;
 
     /**
-     * @var integer Billing mode. 0: bill by bandwidth; 1: bill by traffic
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var integer Billing mode. 0: bill-by-bandwidth; 1: bill-by-traffic.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $BillingType;
 
     /**
-     * @param string $InstanceId Connection instance ID; It’s an old parameter, please switch to ProxyId.
+     * @var array List of domain names associated with resolution record
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $RelatedGlobalDomains;
+
+    /**
+     * @var integer Configuration change time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ModifyConfigTime;
+
+    /**
+     * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
      * @param integer $ProjectId Project ID.
@@ -259,13 +279,13 @@ OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
 ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ISOLATING: isolating (it's triggered when the account is in arrears);
+ISOLATED: isolated (it's triggered when the account is in arrears);
 UNKNOWN: unknown status.
      * @param string $Domain Accessed domain name.
      * @param string $IP Accessed IP.
      * @param string $Version Connection versions: 1.0, 2.0, 3.0.
-     * @param string $ProxyId Connection instance ID; It’s a new parameter.
+     * @param string $ProxyId Connection instance ID; It's a new parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Scalarable 1: this connection is expandable; 0: this connection is not expandable.
      * @param array $SupportProtocols Supported protocol types.
@@ -282,8 +302,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SupportSecurity Whether security groups are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BillingType Billing mode. 0: bill by bandwidth; 1: bill by traffic
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param integer $BillingType Billing mode. 0: bill-by-bandwidth; 1: bill-by-traffic.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $RelatedGlobalDomains List of domain names associated with resolution record
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ModifyConfigTime Configuration change time
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -395,6 +419,14 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
             $this->BillingType = $param["BillingType"];
+        }
+
+        if (array_key_exists("RelatedGlobalDomains",$param) and $param["RelatedGlobalDomains"] !== null) {
+            $this->RelatedGlobalDomains = $param["RelatedGlobalDomains"];
+        }
+
+        if (array_key_exists("ModifyConfigTime",$param) and $param["ModifyConfigTime"] !== null) {
+            $this->ModifyConfigTime = $param["ModifyConfigTime"];
         }
     }
 }

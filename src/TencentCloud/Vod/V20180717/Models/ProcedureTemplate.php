@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Type of a task flow template. Valid values:
 <li>Preset: preset task flow template;</li>
 <li>Custom: custom task flow template.</li>
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
@@ -66,6 +68,11 @@ class ProcedureTemplate extends AbstractModel
 <li>Custom: custom task flow template.</li>
      */
     public $Type;
+
+    /**
+     * @var string 
+     */
+    public $Comment;
 
     /**
      * @var MediaProcessTaskInput Parameter of video processing task.
@@ -112,6 +119,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Type Type of a task flow template. Valid values:
 <li>Preset: preset task flow template;</li>
 <li>Custom: custom task flow template.</li>
+     * @param string $Comment 
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiContentReviewTaskInput $AiContentReviewTask Parameter of AI-based content audit task.
@@ -144,6 +152,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
 
         if (array_key_exists("MediaProcessTask",$param) and $param["MediaProcessTask"] !== null) {

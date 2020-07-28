@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of recognized segment in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of recognized segment in seconds.
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of recognized segment in seconds.
- * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
- * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
+ * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0-100.
  * @method array getAreaCoordSet() Obtain Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
  */
@@ -66,7 +66,7 @@ class LiveStreamFaceRecognitionResult extends AbstractModel
     public $EndPtsTime;
 
     /**
-     * @var float Confidence of recognized segment. Value range: 0–100.
+     * @var float Confidence of recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
@@ -82,7 +82,7 @@ class LiveStreamFaceRecognitionResult extends AbstractModel
 <li>Default: default figure library</li><li>UserDefine: custom figure library</li>
      * @param float $StartPtsTime Start PTS time of recognized segment in seconds.
      * @param float $EndPtsTime End PTS time of recognized segment in seconds.
-     * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
+     * @param float $Confidence Confidence of recognized segment. Value range: 0-100.
      * @param array $AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
      */
     function __construct()

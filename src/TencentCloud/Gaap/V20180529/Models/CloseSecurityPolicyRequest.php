@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyId() Obtain Connection ID
  * @method void setProxyId(string $ProxyId) Set Connection ID
+ * @method string getPolicyId() Obtain Security group policy ID
+ * @method void setPolicyId(string $PolicyId) Set Security group policy ID
  */
 class CloseSecurityPolicyRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CloseSecurityPolicyRequest extends AbstractModel
     public $ProxyId;
 
     /**
+     * @var string Security group policy ID
+     */
+    public $PolicyId;
+
+    /**
      * @param string $ProxyId Connection ID
+     * @param string $PolicyId Security group policy ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CloseSecurityPolicyRequest extends AbstractModel
         }
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

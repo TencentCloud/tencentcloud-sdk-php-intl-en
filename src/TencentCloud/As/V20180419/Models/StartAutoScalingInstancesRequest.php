@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() Obtain The scaling group ID.
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set The scaling group ID.
- * @method array getInstanceIds() Obtain The list of the CVM instances you want to launch.
- * @method void setInstanceIds(array $InstanceIds) Set The list of the CVM instances you want to launch.
+ * @method array getInstanceIds() Obtain The list of the CVM instances you want to start up.
+ * @method void setInstanceIds(array $InstanceIds) Set The list of the CVM instances you want to start up.
  */
 class StartAutoScalingInstancesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class StartAutoScalingInstancesRequest extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
-     * @var array The list of the CVM instances you want to launch.
+     * @var array The list of the CVM instances you want to start up.
      */
     public $InstanceIds;
 
     /**
      * @param string $AutoScalingGroupId The scaling group ID.
-     * @param array $InstanceIds The list of the CVM instances you want to launch.
+     * @param array $InstanceIds The list of the CVM instances you want to start up.
      */
     function __construct()
     {

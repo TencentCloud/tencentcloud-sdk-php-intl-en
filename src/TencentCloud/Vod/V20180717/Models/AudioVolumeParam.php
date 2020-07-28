@@ -28,12 +28,12 @@ Default value: 0.
 <li>0: not muted.</li>
 <li>1: muted.</li>
 Default value: 0.
- * @method float getGain() Obtain Audio gain. Value range: 0–10.
+ * @method float getGain() Obtain Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
 Default value: 0.
- * @method void setGain(float $Gain) Set Audio gain. Value range: 0–10.
+ * @method void setGain(float $Gain) Set Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
@@ -50,7 +50,7 @@ Default value: 0.
     public $Mute;
 
     /**
-     * @var float Audio gain. Value range: 0–10.
+     * @var float Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
@@ -63,7 +63,7 @@ Default value: 0.
 <li>0: not muted.</li>
 <li>1: muted.</li>
 Default value: 0.
-     * @param float $Gain Audio gain. Value range: 0–10.
+     * @param float $Gain Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
