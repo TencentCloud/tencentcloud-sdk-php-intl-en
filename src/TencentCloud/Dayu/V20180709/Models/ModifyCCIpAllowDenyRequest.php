@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) Set Anti-DDoS instance ID
  * @method string getMethod() Obtain add: add, delete: delete
  * @method void setMethod(string $Method) Set add: add, delete: delete
- * @method string getType() Obtain Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
- * @method void setType(string $Type) Set Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
- * @method array getIpList() Obtain Blacklisted/whitelisted IP array
- * @method void setIpList(array $IpList) Set Blacklisted/whitelisted IP array
+ * @method string getType() Obtain Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
+ * @method void setType(string $Type) Set Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
+ * @method array getIpList() Obtain Blocklisted/whitelisted IP array
+ * @method void setIpList(array $IpList) Set Blocklisted/whitelisted IP array
  * @method string getProtocol() Obtain CC protection type, which is optional. Valid values: [http (HTTP CC protection), https (HTTPS CC protection)]; if this field is left empty, HTTPS CC protection will be used by default; if `https` is entered, the `Domain` and `RuleId` fields are required;
  * @method void setProtocol(string $Protocol) Set CC protection type, which is optional. Valid values: [http (HTTP CC protection), https (HTTPS CC protection)]; if this field is left empty, HTTPS CC protection will be used by default; if `https` is entered, the `Domain` and `RuleId` fields are required;
  * @method string getDomain() Obtain HTTPS layer-7 forwarding rule domain name (which is optional and can be obtained from the layer-7 forwarding rule API). This field is required only if `Protocol` is `https`;
@@ -57,12 +57,12 @@ class ModifyCCIpAllowDenyRequest extends AbstractModel
     public $Method;
 
     /**
-     * @var string Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
+     * @var string Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
      */
     public $Type;
 
     /**
-     * @var array Blacklisted/whitelisted IP array
+     * @var array Blocklisted/whitelisted IP array
      */
     public $IpList;
 
@@ -86,8 +86,8 @@ If `Method` is `delete`, this field can be left empty;
      * @param string $Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (single IP); `bgp-multip`: Anti-DDoS Pro (multi-IP), `net`: Anti-DDoS Ultimate
      * @param string $Id Anti-DDoS instance ID
      * @param string $Method add: add, delete: delete
-     * @param string $Type Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
-     * @param array $IpList Blacklisted/whitelisted IP array
+     * @param string $Type Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
+     * @param array $IpList Blocklisted/whitelisted IP array
      * @param string $Protocol CC protection type, which is optional. Valid values: [http (HTTP CC protection), https (HTTPS CC protection)]; if this field is left empty, HTTPS CC protection will be used by default; if `https` is entered, the `Domain` and `RuleId` fields are required;
      * @param string $Domain HTTPS layer-7 forwarding rule domain name (which is optional and can be obtained from the layer-7 forwarding rule API). This field is required only if `Protocol` is `https`;
      * @param string $RuleId HTTPS layer-7 forwarding rule ID (which is optional and can be obtained from the layer-7 forwarding rule API),

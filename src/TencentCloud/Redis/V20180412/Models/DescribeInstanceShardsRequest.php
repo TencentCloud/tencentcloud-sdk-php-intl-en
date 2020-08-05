@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method boolean getFilterSlave() Obtain Whether to filter out the slave node information
- * @method void setFilterSlave(boolean $FilterSlave) Set Whether to filter out the slave node information
+ * @method boolean getFilterSlave() Obtain Whether to filter out the secondary node information
+ * @method void setFilterSlave(boolean $FilterSlave) Set Whether to filter out the secondary node information
  */
 class DescribeInstanceShardsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeInstanceShardsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var boolean Whether to filter out the slave node information
+     * @var boolean Whether to filter out the secondary node information
      */
     public $FilterSlave;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param boolean $FilterSlave Whether to filter out the slave node information
+     * @param boolean $FilterSlave Whether to filter out the secondary node information
      */
     function __construct()
     {

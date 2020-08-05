@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time (yyyy-MM-dd HH:mm:ss)
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-njj2mtpl
- * @method integer getLimit() Obtain Number of results per page. Value range: 1–100. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1–100. Default value: 20
+ * @method integer getLimit() Obtain Number of results per page. Value range: 1-100. Default value: 20
+ * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1-100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
  */
@@ -49,7 +49,7 @@ class DescribeBackupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Number of results per page. Value range: 1–100. Default value: 20
+     * @var integer Number of results per page. Value range: 1-100. Default value: 20
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @param string $StartTime Start name (yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime End time (yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
-     * @param integer $Limit Number of results per page. Value range: 1–100. Default value: 20
+     * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 20
      * @param integer $Offset Page number. Default value: 0
      */
     function __construct()

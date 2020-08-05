@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIops(MonitorData $DiskIops) Set Number of disk IOs per second
  * @method MonitorData getConnActive() Obtain Number of active connections
  * @method void setConnActive(MonitorData $ConnActive) Set Number of active connections
- * @method MonitorData getIsMasterSwitched() Obtain Whether master/slave switch occurred. 1: yes, 0: no
- * @method void setIsMasterSwitched(MonitorData $IsMasterSwitched) Set Whether master/slave switch occurred. 1: yes, 0: no
- * @method MonitorData getSlaveDelay() Obtain Master/slave delay
- * @method void setSlaveDelay(MonitorData $SlaveDelay) Set Master/slave delay
+ * @method MonitorData getIsMasterSwitched() Obtain Whether primary/secondary switch occurred. 1: yes, 0: no
+ * @method void setIsMasterSwitched(MonitorData $IsMasterSwitched) Set Whether primary/secondary switch occurred. 1: yes, 0: no
+ * @method MonitorData getSlaveDelay() Obtain primary/secondary delay
+ * @method void setSlaveDelay(MonitorData $SlaveDelay) Set primary/secondary delay
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -86,12 +86,12 @@ class DescribeDBPerformanceResponse extends AbstractModel
     public $ConnActive;
 
     /**
-     * @var MonitorData Whether master/slave switch occurred. 1: yes, 0: no
+     * @var MonitorData Whether primary/secondary switch occurred. 1: yes, 0: no
      */
     public $IsMasterSwitched;
 
     /**
-     * @var MonitorData Master/slave delay
+     * @var MonitorData primary/secondary delay
      */
     public $SlaveDelay;
 
@@ -109,8 +109,8 @@ class DescribeDBPerformanceResponse extends AbstractModel
      * @param MonitorData $MemHitRate Cache hit rate
      * @param MonitorData $DiskIops Number of disk IOs per second
      * @param MonitorData $ConnActive Number of active connections
-     * @param MonitorData $IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
-     * @param MonitorData $SlaveDelay Master/slave delay
+     * @param MonitorData $IsMasterSwitched Whether primary/secondary switch occurred. 1: yes, 0: no
+     * @param MonitorData $SlaveDelay primary/secondary delay
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

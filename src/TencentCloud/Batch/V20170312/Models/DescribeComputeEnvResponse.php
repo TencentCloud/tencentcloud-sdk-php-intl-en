@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
  * @method string getEnvType() Obtain Compute environment type
  * @method void setEnvType(string $EnvType) Set Compute environment type
+ * @method string getResourceType() Obtain 
+ * @method void setResourceType(string $ResourceType) Set 
+ * @method string getNextAction() Obtain 
+ * @method void setNextAction(string $NextAction) Set 
+ * @method integer getAttachedComputeNodeCount() Obtain 
+ * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -82,6 +88,21 @@ class DescribeComputeEnvResponse extends AbstractModel
     public $EnvType;
 
     /**
+     * @var string 
+     */
+    public $ResourceType;
+
+    /**
+     * @var string 
+     */
+    public $NextAction;
+
+    /**
+     * @var integer 
+     */
+    public $AttachedComputeNodeCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -95,6 +116,9 @@ class DescribeComputeEnvResponse extends AbstractModel
      * @param ComputeNodeMetrics $ComputeNodeMetrics Compute node statistical metrics
      * @param integer $DesiredComputeNodeCount Number of desired compute nodes
      * @param string $EnvType Compute environment type
+     * @param string $ResourceType 
+     * @param string $NextAction 
+     * @param integer $AttachedComputeNodeCount 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -147,6 +171,18 @@ class DescribeComputeEnvResponse extends AbstractModel
 
         if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
             $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("NextAction",$param) and $param["NextAction"] !== null) {
+            $this->NextAction = $param["NextAction"];
+        }
+
+        if (array_key_exists("AttachedComputeNodeCount",$param) and $param["AttachedComputeNodeCount"] !== null) {
+            $this->AttachedComputeNodeCount = $param["AttachedComputeNodeCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

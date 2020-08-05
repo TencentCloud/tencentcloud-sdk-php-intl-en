@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMainDict(array $MainDict) Set List of non-stop words
  * @method array getStopwords() Obtain List of stop words
  * @method void setStopwords(array $Stopwords) Set List of stop words
+ * @method array getQQDict() Obtain 
+ * @method void setQQDict(array $QQDict) Set 
+ * @method array getSynonym() Obtain 
+ * @method void setSynonym(array $Synonym) Set 
+ * @method string getUpdateType() Obtain 
+ * @method void setUpdateType(string $UpdateType) Set 
  */
 class EsDictionaryInfo extends AbstractModel
 {
@@ -38,8 +44,26 @@ class EsDictionaryInfo extends AbstractModel
     public $Stopwords;
 
     /**
+     * @var array 
+     */
+    public $QQDict;
+
+    /**
+     * @var array 
+     */
+    public $Synonym;
+
+    /**
+     * @var string 
+     */
+    public $UpdateType;
+
+    /**
      * @param array $MainDict List of non-stop words
      * @param array $Stopwords List of stop words
+     * @param array $QQDict 
+     * @param array $Synonym 
+     * @param string $UpdateType 
      */
     function __construct()
     {
@@ -70,6 +94,28 @@ class EsDictionaryInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Stopwords, $obj);
             }
+        }
+
+        if (array_key_exists("QQDict",$param) and $param["QQDict"] !== null) {
+            $this->QQDict = [];
+            foreach ($param["QQDict"] as $key => $value){
+                $obj = new DictInfo();
+                $obj->deserialize($value);
+                array_push($this->QQDict, $obj);
+            }
+        }
+
+        if (array_key_exists("Synonym",$param) and $param["Synonym"] !== null) {
+            $this->Synonym = [];
+            foreach ($param["Synonym"] as $key => $value){
+                $obj = new DictInfo();
+                $obj->deserialize($value);
+                array_push($this->Synonym, $obj);
+            }
+        }
+
+        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
+            $this->UpdateType = $param["UpdateType"];
         }
     }
 }

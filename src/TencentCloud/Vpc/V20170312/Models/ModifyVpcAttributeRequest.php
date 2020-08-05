@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcName(string $VpcName) Set VPC can be named freely, but the maximum length is 60 characters.
  * @method string getEnableMulticast() Obtain Whether multicast is enabled. `true`: Enabled. `false`: Off.
  * @method void setEnableMulticast(string $EnableMulticast) Set Whether multicast is enabled. `true`: Enabled. `false`: Off.
- * @method array getDnsServers() Obtain DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
- * @method void setDnsServers(array $DnsServers) Set DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+ * @method array getDnsServers() Obtain DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
+ * @method void setDnsServers(array $DnsServers) Set DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
  * @method string getDomainName() Obtain Domain name
  * @method void setDomainName(string $DomainName) Set Domain name
  */
@@ -49,7 +49,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $EnableMulticast;
 
     /**
-     * @var array DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+     * @var array DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
      */
     public $DnsServers;
 
@@ -62,7 +62,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
      * @param string $VpcId Security group can be named freely, but cannot exceed 60 characters.
      * @param string $VpcName VPC can be named freely, but the maximum length is 60 characters.
      * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
-     * @param array $DnsServers DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+     * @param array $DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
      * @param string $DomainName Domain name
      */
     function __construct()

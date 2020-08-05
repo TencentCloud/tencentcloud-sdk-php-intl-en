@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentValue(string $CurrentValue) Set Current value of a parameter
  * @method string getTips() Obtain Parameter description
  * @method void setTips(string $Tips) Set Parameter description
- * @method string getEnumValue() Obtain Parameter description
- * @method void setEnumValue(string $EnumValue) Set Parameter description
+ * @method array getEnumValue() Obtain Parameter description
+ * @method void setEnumValue(array $EnumValue) Set Parameter description
  * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
  * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
  */
@@ -70,7 +70,7 @@ class InstanceMultiParam extends AbstractModel
     public $Tips;
 
     /**
-     * @var string Parameter description
+     * @var array Parameter description
      */
     public $EnumValue;
 
@@ -86,7 +86,7 @@ class InstanceMultiParam extends AbstractModel
      * @param string $DefaultValue Default value of the parameter
      * @param string $CurrentValue Current value of a parameter
      * @param string $Tips Parameter description
-     * @param string $EnumValue Parameter description
+     * @param array $EnumValue Parameter description
      * @param integer $Status Parameter status. 1: modifying; 2: modified
      */
     function __construct()

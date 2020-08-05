@@ -32,6 +32,8 @@ Note: this parameter is currently fixed at 0.
  * @method void setPhoneNumber(string $PhoneNumber) Set Target mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
  * @method string getSmsSdkAppid() Obtain SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
  * @method void setSmsSdkAppid(string $SmsSdkAppid) Set SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+ * @method integer getEndDateTime() Obtain 
+ * @method void setEndDateTime(integer $EndDateTime) Set 
  */
 class PullSmsSendStatusByPhoneNumberRequest extends AbstractModel
 {
@@ -62,12 +64,18 @@ Note: this parameter is currently fixed at 0.
     public $SmsSdkAppid;
 
     /**
+     * @var integer 
+     */
+    public $EndDateTime;
+
+    /**
      * @param integer $SendDateTime Pull start time in seconds in the format of UNIX timestamp.
      * @param integer $Offset Offset.
 Note: this parameter is currently fixed at 0.
      * @param integer $Limit Maximum number of pulled entries. Maximum value: 100.
      * @param string $PhoneNumber Target mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
      * @param string $SmsSdkAppid SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+     * @param integer $EndDateTime 
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ Note: this parameter is currently fixed at 0.
 
         if (array_key_exists("SmsSdkAppid",$param) and $param["SmsSdkAppid"] !== null) {
             $this->SmsSdkAppid = $param["SmsSdkAppid"];
+        }
+
+        if (array_key_exists("EndDateTime",$param) and $param["EndDateTime"] !== null) {
+            $this->EndDateTime = $param["EndDateTime"];
         }
     }
 }

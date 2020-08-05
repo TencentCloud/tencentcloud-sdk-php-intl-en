@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTags request structure.
  *
-
+ * @method string getMachineType() Obtain 
+ * @method void setMachineType(string $MachineType) Set 
+ * @method string getMachineRegion() Obtain 
+ * @method void setMachineRegion(string $MachineRegion) Set 
  */
 class DescribeTagsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 
+     */
+    public $MachineType;
 
     /**
+     * @var string 
+     */
+    public $MachineRegion;
 
+    /**
+     * @param string $MachineType 
+     * @param string $MachineRegion 
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeTagsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
 
+        if (array_key_exists("MachineRegion",$param) and $param["MachineRegion"] !== null) {
+            $this->MachineRegion = $param["MachineRegion"];
+        }
     }
 }

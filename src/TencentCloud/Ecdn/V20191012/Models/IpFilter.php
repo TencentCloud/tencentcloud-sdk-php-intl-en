@@ -18,43 +18,43 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP blacklist/whitelist.
+ * IP blocklist/allowlist.
  *
- * @method string getSwitch() Obtain IP blacklist/whitelist switch. Valid values: on, off.
- * @method void setSwitch(string $Switch) Set IP blacklist/whitelist switch. Valid values: on, off.
- * @method string getFilterType() Obtain IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+ * @method string getSwitch() Obtain IP blocklist/allowlist switch. Valid values: on, off.
+ * @method void setSwitch(string $Switch) Set IP blocklist/allowlist switch. Valid values: on, off.
+ * @method string getFilterType() Obtain IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilterType(string $FilterType) Set IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+ * @method void setFilterType(string $FilterType) Set IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getFilters() Obtain IP blacklist/whitelist list.
+ * @method array getFilters() Obtain IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilters(array $Filters) Set IP blacklist/whitelist list.
+ * @method void setFilters(array $Filters) Set IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class IpFilter extends AbstractModel
 {
     /**
-     * @var string IP blacklist/whitelist switch. Valid values: on, off.
+     * @var string IP blocklist/allowlist switch. Valid values: on, off.
      */
     public $Switch;
 
     /**
-     * @var string IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+     * @var string IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FilterType;
 
     /**
-     * @var array IP blacklist/whitelist list.
+     * @var array IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Filters;
 
     /**
-     * @param string $Switch IP blacklist/whitelist switch. Valid values: on, off.
-     * @param string $FilterType IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+     * @param string $Switch IP blocklist/allowlist switch. Valid values: on, off.
+     * @param string $FilterType IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Filters IP blacklist/whitelist list.
+     * @param array $Filters IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

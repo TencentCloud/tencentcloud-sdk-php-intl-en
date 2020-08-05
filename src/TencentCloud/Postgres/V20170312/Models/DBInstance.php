@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceCpu(integer $DBInstanceCpu) Set Number of assigned CPUs
  * @method string getDBInstanceClass() Obtain Purchasable specification ID
  * @method void setDBInstanceClass(string $DBInstanceClass) Set Purchasable specification ID
- * @method string getDBInstanceType() Obtain Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
- * @method void setDBInstanceType(string $DBInstanceType) Set Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
- * @method string getDBInstanceVersion() Obtain Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
- * @method void setDBInstanceVersion(string $DBInstanceVersion) Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+ * @method string getDBInstanceType() Obtain Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+ * @method void setDBInstanceType(string $DBInstanceType) Set Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+ * @method string getDBInstanceVersion() Obtain Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+ * @method void setDBInstanceVersion(string $DBInstanceVersion) Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
  * @method string getDBCharset() Obtain Instance database character set
  * @method void setDBCharset(string $DBCharset) Set Instance database character set
  * @method string getDBVersion() Obtain PostgreSQL kernel version
@@ -138,12 +138,12 @@ class DBInstance extends AbstractModel
     public $DBInstanceClass;
 
     /**
-     * @var string Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * @var string Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
      */
     public $DBInstanceType;
 
     /**
-     * @var string Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+     * @var string Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
      */
     public $DBInstanceVersion;
 
@@ -225,8 +225,8 @@ class DBInstance extends AbstractModel
      * @param integer $DBInstanceStorage Assigned instance storage capacity in GB
      * @param integer $DBInstanceCpu Number of assigned CPUs
      * @param string $DBInstanceClass Purchasable specification ID
-     * @param string $DBInstanceType Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
-     * @param string $DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+     * @param string $DBInstanceType Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * @param string $DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
      * @param string $DBCharset Instance database character set
      * @param string $DBVersion PostgreSQL kernel version
      * @param string $CreateTime Instance creation time

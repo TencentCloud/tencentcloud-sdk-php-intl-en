@@ -36,9 +36,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setStatus(integer $Status) Set Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
  * @method integer getVpcId() Obtain VPC ID, such as 51102
  * @method void setVpcId(integer $VpcId) Set VPC ID, such as 51102
- * @method SlaveInfo getSlaveInfo() Obtain Information of a slave server
+ * @method SlaveInfo getSlaveInfo() Obtain Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSlaveInfo(SlaveInfo $SlaveInfo) Set Information of a slave server
+ * @method void setSlaveInfo(SlaveInfo $SlaveInfo) Set Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
@@ -54,8 +54,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSubnetId() Obtain Subnet ID, such as 2333
  * @method void setSubnetId(integer $SubnetId) Set Subnet ID, such as 2333
- * @method integer getInstanceType() Obtain Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
- * @method void setInstanceType(integer $InstanceType) Set Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+ * @method integer getInstanceType() Obtain Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+ * @method void setInstanceType(integer $InstanceType) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getRegion() Obtain Region information
@@ -64,11 +64,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setDeadlineTime(string $DeadlineTime) Set Instance expiration time
  * @method integer getDeployMode() Obtain AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
  * @method void setDeployMode(integer $DeployMode) Set AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
- * @method integer getTaskStatus() Obtain Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
- * @method void setTaskStatus(integer $TaskStatus) Set Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
- * @method MasterInfo getMasterInfo() Obtain Details of a master instance
+ * @method integer getTaskStatus() Obtain Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+ * @method void setTaskStatus(integer $TaskStatus) Set Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+ * @method MasterInfo getMasterInfo() Obtain Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMasterInfo(MasterInfo $MasterInfo) Set Details of a master instance
+ * @method void setMasterInfo(MasterInfo $MasterInfo) Set Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDeviceType() Obtain Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
  * @method void setDeviceType(string $DeviceType) Set Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
@@ -158,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VpcId;
 
     /**
-     * @var SlaveInfo Information of a slave server
+     * @var SlaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaveInfo;
@@ -195,7 +195,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SubnetId;
 
     /**
-     * @var integer Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+     * @var integer Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      */
     public $InstanceType;
 
@@ -220,12 +220,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DeployMode;
 
     /**
-     * @var integer Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+     * @var integer Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
      */
     public $TaskStatus;
 
     /**
-     * @var MasterInfo Details of a master instance
+     * @var MasterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MasterInfo;
@@ -343,7 +343,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Memory Memory capacity in MB
      * @param integer $Status Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
      * @param integer $VpcId VPC ID, such as 51102
-     * @param SlaveInfo $SlaveInfo Information of a slave server
+     * @param SlaveInfo $SlaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceId Instance ID
      * @param integer $Volume Disk capacity in GB
@@ -352,13 +352,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $RoGroups Details of a read-only group
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SubnetId Subnet ID, such as 2333
-     * @param integer $InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+     * @param integer $InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      * @param integer $ProjectId Project ID
      * @param string $Region Region information
      * @param string $DeadlineTime Instance expiration time
      * @param integer $DeployMode AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
-     * @param integer $TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
-     * @param MasterInfo $MasterInfo Details of a master instance
+     * @param integer $TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+     * @param MasterInfo $MasterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DeviceType Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
      * @param string $EngineVersion Kernel version

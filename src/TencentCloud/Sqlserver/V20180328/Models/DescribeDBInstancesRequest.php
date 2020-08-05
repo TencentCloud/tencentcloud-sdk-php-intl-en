@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() Obtain Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
 <li>12: restarting</li>
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
- * @method integer getLimit() Obtain Number of results per page. Value range: 1–100. Default value: 100
- * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1–100. Default value: 100
+ * @method integer getLimit() Obtain Number of results per page. Value range: 1-100. Default value: 100
+ * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1-100. Default value: 100
  * @method array getInstanceIdSet() Obtain One or more instance IDs in the format of mssql-si2823jyl
  * @method void setInstanceIdSet(array $InstanceIdSet) Set One or more instance IDs in the format of mssql-si2823jyl
  * @method integer getPayMode() Obtain Retrieves billing type. 0: pay-as-you-go
@@ -72,7 +72,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var integer Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -91,7 +91,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results per page. Value range: 1–100. Default value: 100
+     * @var integer Number of results per page. Value range: 1-100. Default value: 100
      */
     public $Limit;
 
@@ -120,7 +120,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $Status Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -131,7 +131,7 @@ class DescribeDBInstancesRequest extends AbstractModel
 <li>11: read-only</li>
 <li>12: restarting</li>
      * @param integer $Offset Page number. Default value: 0
-     * @param integer $Limit Number of results per page. Value range: 1–100. Default value: 100
+     * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 100
      * @param array $InstanceIdSet One or more instance IDs in the format of mssql-si2823jyl
      * @param integer $PayMode Retrieves billing type. 0: pay-as-you-go
      * @param string $VpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.

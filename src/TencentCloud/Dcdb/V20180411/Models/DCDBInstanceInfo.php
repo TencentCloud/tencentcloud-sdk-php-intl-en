@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) Set UIN
  * @method array getShardDetail() Obtain Shard details
  * @method void setShardDetail(array $ShardDetail) Set Shard details
- * @method integer getNodeCount() Obtain Number of nodes. 2: one master and one slave; 3: one master and two slaves
- * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one master and one slave; 3: one master and two slaves
+ * @method integer getNodeCount() Obtain Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+ * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
  * @method integer getIsTmp() Obtain Temporary instance flag. 0: non-temporary instance
  * @method void setIsTmp(integer $IsTmp) Set Temporary instance flag. 0: non-temporary instance
  * @method string getExclusterId() Obtain Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
@@ -209,7 +209,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $ShardDetail;
 
     /**
-     * @var integer Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * @var integer Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      */
     public $NodeCount;
 
@@ -321,7 +321,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $IsolatedTimestamp Isolation time
      * @param string $Uin UIN
      * @param array $ShardDetail Shard details
-     * @param integer $NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * @param integer $NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      * @param integer $IsTmp Temporary instance flag. 0: non-temporary instance
      * @param string $ExclusterId Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
      * @param string $UniqueVpcId VPC ID in string type

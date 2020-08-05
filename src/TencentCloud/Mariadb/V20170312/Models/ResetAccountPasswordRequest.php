@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Login username.
  * @method string getHost() Obtain Access host allowed for user. An account is uniquely identified by username and host.
  * @method void setHost(string $Host) Set Access host allowed for user. An account is uniquely identified by username and host.
- * @method string getPassword() Obtain New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
- * @method void setPassword(string $Password) Set New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+ * @method string getPassword() Obtain New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+ * @method void setPassword(string $Password) Set New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
  */
 class ResetAccountPasswordRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ResetAccountPasswordRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @var string New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public $Password;
 
@@ -55,7 +55,7 @@ class ResetAccountPasswordRequest extends AbstractModel
      * @param string $InstanceId Instance ID, which is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
      * @param string $UserName Login username.
      * @param string $Host Access host allowed for user. An account is uniquely identified by username and host.
-     * @param string $Password New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @param string $Password New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     function __construct()
     {

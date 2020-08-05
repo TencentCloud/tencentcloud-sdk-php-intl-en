@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountPassword(string $AccountPassword) Set Sub-account password
  * @method string getRemark() Obtain Sub-account description information
  * @method void setRemark(string $Remark) Set Sub-account description information
- * @method array getReadonlyPolicy() Obtain Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+ * @method array getReadonlyPolicy() Obtain Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
  * @method string getPrivilege() Obtain Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
  * @method void setPrivilege(string $Privilege) Set Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
  * @method boolean getNoAuth() Obtain true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
@@ -58,7 +58,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+     * @var array Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
      */
     public $ReadonlyPolicy;
 
@@ -77,7 +77,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
      * @param string $AccountName Sub-account name. If the root account is to be modified, enter `root`
      * @param string $AccountPassword Sub-account password
      * @param string $Remark Sub-account description information
-     * @param array $ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+     * @param array $ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
      * @param string $Privilege Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
      * @param boolean $NoAuth true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
      */

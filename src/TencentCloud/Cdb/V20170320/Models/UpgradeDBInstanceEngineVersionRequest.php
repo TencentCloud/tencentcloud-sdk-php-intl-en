@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
- * @method string getEngineVersion() Obtain Version of master instance database engine. Value range: 5.6, 5.7
- * @method void setEngineVersion(string $EngineVersion) Set Version of master instance database engine. Value range: 5.6, 5.7
+ * @method string getEngineVersion() Obtain Version of primary instance database engine. Value range: 5.6, 5.7
+ * @method void setEngineVersion(string $EngineVersion) Set Version of primary instance database engine. Value range: 5.6, 5.7
  * @method integer getWaitSwitch() Obtain Mode of switch to a new instance. Value range: 0 (switch immediately), 1 (switch within a time window). Default value: 0. If the value is 1, the switch process will be performed within a time window. Or, you can call the [switching to new instance API](https://cloud.tencent.com/document/product/236/15864) to trigger the process.
  * @method void setWaitSwitch(integer $WaitSwitch) Set Mode of switch to a new instance. Value range: 0 (switch immediately), 1 (switch within a time window). Default value: 0. If the value is 1, the switch process will be performed within a time window. Or, you can call the [switching to new instance API](https://cloud.tencent.com/document/product/236/15864) to trigger the process.
  * @method integer getUpgradeSubversion() Obtain Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
@@ -37,7 +37,7 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Version of master instance database engine. Value range: 5.6, 5.7
+     * @var string Version of primary instance database engine. Value range: 5.6, 5.7
      */
     public $EngineVersion;
 
@@ -53,7 +53,7 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
-     * @param string $EngineVersion Version of master instance database engine. Value range: 5.6, 5.7
+     * @param string $EngineVersion Version of primary instance database engine. Value range: 5.6, 5.7
      * @param integer $WaitSwitch Mode of switch to a new instance. Value range: 0 (switch immediately), 1 (switch within a time window). Default value: 0. If the value is 1, the switch process will be performed within a time window. Or, you can call the [switching to new instance API](https://cloud.tencent.com/document/product/236/15864) to trigger the process.
      * @param integer $UpgradeSubversion Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
      */

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainStatus(integer $DomainStatus) Set Filter by domain name status. 0: disabled, 1: enabled.
  * @method integer getDomainType() Obtain Filter by domain name type. 0: push. 1: playback
  * @method void setDomainType(integer $DomainType) Set Filter by domain name type. 0: push. 1: playback
- * @method integer getPageSize() Obtain Number of entries per page. Value range: 10–100. Default value: 10.
- * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: 10–100. Default value: 10.
- * @method integer getPageNum() Obtain Page number to get. Value range: 1–100000. Default value: 1.
- * @method void setPageNum(integer $PageNum) Set Page number to get. Value range: 1–100000. Default value: 1.
+ * @method integer getPageSize() Obtain Number of entries per page. Value range: 10-100. Default value: 10.
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: 10-100. Default value: 10.
+ * @method integer getPageNum() Obtain Page number to get. Value range: 1-100000. Default value: 1.
+ * @method void setPageNum(integer $PageNum) Set Page number to get. Value range: 1-100000. Default value: 1.
  * @method integer getIsDelayLive() Obtain 0: LVB, 1: LCB. Default value: 0.
  * @method void setIsDelayLive(integer $IsDelayLive) Set 0: LVB, 1: LCB. Default value: 0.
  * @method string getDomainPrefix() Obtain Domain name prefix.
@@ -46,12 +46,12 @@ class DescribeLiveDomainsRequest extends AbstractModel
     public $DomainType;
 
     /**
-     * @var integer Number of entries per page. Value range: 10–100. Default value: 10.
+     * @var integer Number of entries per page. Value range: 10-100. Default value: 10.
      */
     public $PageSize;
 
     /**
-     * @var integer Page number to get. Value range: 1–100000. Default value: 1.
+     * @var integer Page number to get. Value range: 1-100000. Default value: 1.
      */
     public $PageNum;
 
@@ -68,8 +68,8 @@ class DescribeLiveDomainsRequest extends AbstractModel
     /**
      * @param integer $DomainStatus Filter by domain name status. 0: disabled, 1: enabled.
      * @param integer $DomainType Filter by domain name type. 0: push. 1: playback
-     * @param integer $PageSize Number of entries per page. Value range: 10–100. Default value: 10.
-     * @param integer $PageNum Page number to get. Value range: 1–100000. Default value: 1.
+     * @param integer $PageSize Number of entries per page. Value range: 10-100. Default value: 10.
+     * @param integer $PageNum Page number to get. Value range: 1-100000. Default value: 1.
      * @param integer $IsDelayLive 0: LVB, 1: LCB. Default value: 0.
      * @param string $DomainPrefix Domain name prefix.
      */

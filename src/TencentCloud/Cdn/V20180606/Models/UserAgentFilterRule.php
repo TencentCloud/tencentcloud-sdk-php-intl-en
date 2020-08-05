@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `UserAgent` blacklist/whitelist rule configuration
+ * `UserAgent` blocklist/allowlist rule configuration
  *
  * @method string getRuleType() Obtain Effective access path type
 all: all access paths are effective
@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUserAgents(array $UserAgents) Set `UserAgent` list
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFilterType() Obtain Blacklist or whitelist. Valid values: blacklist, whitelist
+ * @method string getFilterType() Obtain blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilterType(string $FilterType) Set Blacklist or whitelist. Valid values: blacklist, whitelist
+ * @method void setFilterType(string $FilterType) Set blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class UserAgentFilterRule extends AbstractModel
@@ -70,7 +70,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UserAgents;
 
     /**
-     * @var string Blacklist or whitelist. Valid values: blacklist, whitelist
+     * @var string blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FilterType;
@@ -86,7 +86,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $UserAgents `UserAgent` list
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FilterType Blacklist or whitelist. Valid values: blacklist, whitelist
+     * @param string $FilterType blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

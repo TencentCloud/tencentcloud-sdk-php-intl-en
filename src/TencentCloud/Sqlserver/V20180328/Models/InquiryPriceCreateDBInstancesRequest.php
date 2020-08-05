@@ -28,12 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) Set Instance capacity in GB
  * @method string getInstanceChargeType() Obtain Billing type. Valid value: POSTPAID.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Billing type. Valid value: POSTPAID.
- * @method integer getPeriod() Obtain Length of purchase in months. Value range: 1–48. Default value: 1
- * @method void setPeriod(integer $Period) Set Length of purchase in months. Value range: 1–48. Default value: 1
- * @method integer getGoodsNum() Obtain Number of instances purchased at a time. Value range: 1–100. Default value: 1
- * @method void setGoodsNum(integer $GoodsNum) Set Number of instances purchased at a time. Value range: 1–100. Default value: 1
+ * @method integer getPeriod() Obtain Length of purchase in months. Value range: 1-48. Default value: 1
+ * @method void setPeriod(integer $Period) Set Length of purchase in months. Value range: 1-48. Default value: 1
+ * @method integer getGoodsNum() Obtain Number of instances purchased at a time. Value range: 1-100. Default value: 1
+ * @method void setGoodsNum(integer $GoodsNum) Set Number of instances purchased at a time. Value range: 1-100. Default value: 1
  * @method string getDBVersion() Obtain SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
  * @method void setDBVersion(string $DBVersion) Set SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
+ * @method integer getCpu() Obtain 
+ * @method void setCpu(integer $Cpu) Set 
+ * @method string getInstanceType() Obtain 
+ * @method void setInstanceType(string $InstanceType) Set 
+ * @method string getMachineType() Obtain 
+ * @method void setMachineType(string $MachineType) Set 
  */
 class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -58,12 +64,12 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var integer Length of purchase in months. Value range: 1–48. Default value: 1
+     * @var integer Length of purchase in months. Value range: 1-48. Default value: 1
      */
     public $Period;
 
     /**
-     * @var integer Number of instances purchased at a time. Value range: 1–100. Default value: 1
+     * @var integer Number of instances purchased at a time. Value range: 1-100. Default value: 1
      */
     public $GoodsNum;
 
@@ -73,13 +79,31 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $DBVersion;
 
     /**
+     * @var integer 
+     */
+    public $Cpu;
+
+    /**
+     * @var string 
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 
+     */
+    public $MachineType;
+
+    /**
      * @param string $Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API
      * @param integer $Memory Memory size in GB
      * @param integer $Storage Instance capacity in GB
      * @param string $InstanceChargeType Billing type. Valid value: POSTPAID.
-     * @param integer $Period Length of purchase in months. Value range: 1–48. Default value: 1
-     * @param integer $GoodsNum Number of instances purchased at a time. Value range: 1–100. Default value: 1
+     * @param integer $Period Length of purchase in months. Value range: 1-48. Default value: 1
+     * @param integer $GoodsNum Number of instances purchased at a time. Value range: 1-100. Default value: 1
      * @param string $DBVersion SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
+     * @param integer $Cpu 
+     * @param string $InstanceType 
+     * @param string $MachineType 
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
             $this->DBVersion = $param["DBVersion"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

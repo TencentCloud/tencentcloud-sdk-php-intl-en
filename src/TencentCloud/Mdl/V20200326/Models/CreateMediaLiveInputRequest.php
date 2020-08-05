@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMediaLiveInput request structure.
  *
- * @method string getName() Obtain Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
- * @method void setName(string $Name) Set Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+ * @method string getName() Obtain Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+ * @method void setName(string $Name) Set Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
  * @method string getType() Obtain Media input type.
 Valid values: RTMP_PUSH/RTP_PUSH/UDP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
  * @method void setType(string $Type) Set Media input type.
@@ -36,7 +36,7 @@ Only one security group can be associated.
 class CreateMediaLiveInputRequest extends AbstractModel
 {
     /**
-     * @var string Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * @var string Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public $Name;
 
@@ -58,7 +58,7 @@ Only one security group can be associated.
     public $InputSettings;
 
     /**
-     * @param string $Name Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * @param string $Name Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      * @param string $Type Media input type.
 Valid values: RTMP_PUSH/RTP_PUSH/UDP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
      * @param array $SecurityGroupIds ID of the input security group to be bound.

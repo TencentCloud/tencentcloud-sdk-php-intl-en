@@ -40,14 +40,14 @@ If this is enabled, resources that do not match CacheRules rules will be cached 
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getIgnoreCacheControl() Obtain Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getIgnoreSetCookie() Obtain Ignores the Set-Cookie header of the origin server
 on: enabled
@@ -94,9 +94,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IgnoreCacheControl;
@@ -135,9 +135,9 @@ If this is enabled, resources that do not match CacheRules rules will be cached 
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IgnoreCacheControl Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IgnoreSetCookie Ignores the Set-Cookie header of the origin server
 on: enabled

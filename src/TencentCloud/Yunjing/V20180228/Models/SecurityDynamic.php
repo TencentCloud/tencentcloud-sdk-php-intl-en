@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>BASELINE: security baseline</li>
  * @method string getMessage() Obtain Security event message.
  * @method void setMessage(string $Message) Set Security event message.
+ * @method string getSecurityLevel() Obtain 
+ * @method void setSecurityLevel(string $SecurityLevel) Set 
  */
 class SecurityDynamic extends AbstractModel
 {
@@ -67,6 +69,11 @@ class SecurityDynamic extends AbstractModel
     public $Message;
 
     /**
+     * @var string 
+     */
+    public $SecurityLevel;
+
+    /**
      * @param string $Uuid CWP agent `UUID`.
      * @param string $EventTime Security event occurrence time.
      * @param string $EventType Security event type.
@@ -76,6 +83,7 @@ class SecurityDynamic extends AbstractModel
 <li>VUL: vulnerability</li>
 <li>BASELINE: security baseline</li>
      * @param string $Message Security event message.
+     * @param string $SecurityLevel 
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class SecurityDynamic extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("SecurityLevel",$param) and $param["SecurityLevel"] !== null) {
+            $this->SecurityLevel = $param["SecurityLevel"];
         }
     }
 }

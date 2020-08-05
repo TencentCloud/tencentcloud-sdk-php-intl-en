@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDropOptions(array $DropOptions) Set Protocol disablement, which must be entered, and the array length must be 1
  * @method array getPortLimits() Obtain Port disablement. If no ports are to be disabled, enter an empty array
  * @method void setPortLimits(array $PortLimits) Set Port disablement. If no ports are to be disabled, enter an empty array
- * @method array getIpAllowDenys() Obtain IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
- * @method void setIpAllowDenys(array $IpAllowDenys) Set IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+ * @method array getIpAllowDenys() Obtain IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
+ * @method void setIpAllowDenys(array $IpAllowDenys) Set IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
  * @method array getPacketFilters() Obtain Packet filter. Enter an empty array if there are no packets to filter
  * @method void setPacketFilters(array $PacketFilters) Set Packet filter. Enter an empty array if there are no packets to filter
  * @method array getWaterPrint() Obtain Watermarking policy parameter. Enter an empty array if the watermarking feature is not enabled. At most one watermarking policy can be passed in (that is, the size of the array cannot exceed 1)
@@ -58,7 +58,7 @@ class ModifyDDoSPolicyRequest extends AbstractModel
     public $PortLimits;
 
     /**
-     * @var array IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+     * @var array IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
      */
     public $IpAllowDenys;
 
@@ -77,7 +77,7 @@ class ModifyDDoSPolicyRequest extends AbstractModel
      * @param string $PolicyId Policy ID
      * @param array $DropOptions Protocol disablement, which must be entered, and the array length must be 1
      * @param array $PortLimits Port disablement. If no ports are to be disabled, enter an empty array
-     * @param array $IpAllowDenys IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+     * @param array $IpAllowDenys IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
      * @param array $PacketFilters Packet filter. Enter an empty array if there are no packets to filter
      * @param array $WaterPrint Watermarking policy parameter. Enter an empty array if the watermarking feature is not enabled. At most one watermarking policy can be passed in (that is, the size of the array cannot exceed 1)
      */

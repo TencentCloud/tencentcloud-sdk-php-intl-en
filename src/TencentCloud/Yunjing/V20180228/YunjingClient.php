@@ -23,14 +23,14 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Yunjing\V20180228\Models as Models;
 
 /**
- * @method Models\AddLoginWhiteListResponse AddLoginWhiteList(Models\AddLoginWhiteListRequest $req) This API is used to add a whitelist rule.
+ * @method Models\AddLoginWhiteListResponse AddLoginWhiteList(Models\AddLoginWhiteListRequest $req) This API is used to add a allowlist rule.
  * @method Models\AddMachineTagResponse AddMachineTag(Models\AddMachineTagRequest $req) This API is used to add a tag to a server.
  * @method Models\CloseProVersionResponse CloseProVersion(Models\CloseProVersionRequest $req) This API is used to deactivate CWP Pro.
  * @method Models\CreateOpenPortTaskResponse CreateOpenPortTask(Models\CreateOpenPortTaskRequest $req) This API is used to create a real-time port acquisition task.
  * @method Models\CreateProcessTaskResponse CreateProcessTask(Models\CreateProcessTaskRequest $req) This API is used to create a real-time process pulling task.
  * @method Models\CreateUsualLoginPlacesResponse CreateUsualLoginPlaces(Models\CreateUsualLoginPlacesRequest $req) This API is used to add one or more usual login locations.
  * @method Models\DeleteBruteAttacksResponse DeleteBruteAttacks(Models\DeleteBruteAttacksRequest $req) This API is used to delete brute force attack records.
- * @method Models\DeleteLoginWhiteListResponse DeleteLoginWhiteList(Models\DeleteLoginWhiteListRequest $req) This API is used to delete a whitelist rule.
+ * @method Models\DeleteLoginWhiteListResponse DeleteLoginWhiteList(Models\DeleteLoginWhiteListRequest $req) This API is used to delete a allowlist rule.
  * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) This API is used to uninstall the CWP agent.
  * @method Models\DeleteMachineTagResponse DeleteMachineTag(Models\DeleteMachineTagRequest $req) This API is used to remove a tag from a server.
  * @method Models\DeleteMaliciousRequestsResponse DeleteMaliciousRequests(Models\DeleteMaliciousRequestsRequest $req) This API is used to delete malicious request records.
@@ -47,7 +47,7 @@ use TencentCloud\Yunjing\V20180228\Models as Models;
  * @method Models\DescribeComponentsResponse DescribeComponents(Models\DescribeComponentsRequest $req) This API is used to get the component list.
  * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) This API is used to get the account change history list.
  * @method Models\DescribeImpactedHostsResponse DescribeImpactedHosts(Models\DescribeImpactedHostsRequest $req) This API is used to get the list of servers affected by a vulnerability.
- * @method Models\DescribeLoginWhiteListResponse DescribeLoginWhiteList(Models\DescribeLoginWhiteListRequest $req) This API is used to get the list of login whitelist entries.
+ * @method Models\DescribeLoginWhiteListResponse DescribeLoginWhiteList(Models\DescribeLoginWhiteListRequest $req) This API is used to get the list of login allowlist entries.
  * @method Models\DescribeMachineInfoResponse DescribeMachineInfo(Models\DescribeMachineInfoRequest $req) This API is used to get server details.
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) This API is used to get the list of servers in a specified region.
  * @method Models\DescribeMaliciousRequestsResponse DescribeMaliciousRequests(Models\DescribeMaliciousRequestsRequest $req) This API is used to get malicious request data.
@@ -87,7 +87,7 @@ use TencentCloud\Yunjing\V20180228\Models as Models;
  * @method Models\MisAlarmNonlocalLoginPlacesResponse MisAlarmNonlocalLoginPlaces(Models\MisAlarmNonlocalLoginPlacesRequest $req) This API is used to set the current location as the usual login location.
  * @method Models\ModifyAlarmAttributeResponse ModifyAlarmAttribute(Models\ModifyAlarmAttributeRequest $req) This API is used to modify alarm settings.
  * @method Models\ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(Models\ModifyAutoOpenProVersionConfigRequest $req) This API is used to set whether to automatically activate CWP Pro for newly added servers.
- * @method Models\ModifyLoginWhiteListResponse ModifyLoginWhiteList(Models\ModifyLoginWhiteListRequest $req) This API is used to edit a whitelist rule.
+ * @method Models\ModifyLoginWhiteListResponse ModifyLoginWhiteList(Models\ModifyLoginWhiteListRequest $req) This API is used to edit a allowlist rule.
  * @method Models\ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(Models\ModifyProVersionRenewFlagRequest $req) This API is used to modify the renewal flag of CWP Pro.
  * @method Models\OpenProVersionResponse OpenProVersion(Models\OpenProVersionRequest $req) This API is used to activate CWP Pro.
  * @method Models\RecoverMalwaresResponse RecoverMalwares(Models\RecoverMalwaresRequest $req) This API is used to recover isolated trojan files in a batch.

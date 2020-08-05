@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusSet(array $StatusSet) Set Status set. As long as a migration task is in a status therein, it will be listed
  * @method string getMigrateName() Obtain Migration task name (fuzzy match)
  * @method void setMigrateName(string $MigrateName) Set Migration task name (fuzzy match)
- * @method integer getLimit() Obtain Number of results per page. Value range: 1–100. Default value: 100
- * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1–100. Default value: 100
+ * @method integer getLimit() Obtain Number of results per page. Value range: 1-100. Default value: 100
+ * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1-100. Default value: 100
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
  * @method string getOrderBy() Obtain The query results are sorted by keyword. Valid values: name, createTime, startTime, endTime, status
@@ -46,7 +46,7 @@ class DescribeMigrationsRequest extends AbstractModel
     public $MigrateName;
 
     /**
-     * @var integer Number of results per page. Value range: 1–100. Default value: 100
+     * @var integer Number of results per page. Value range: 1-100. Default value: 100
      */
     public $Limit;
 
@@ -68,7 +68,7 @@ class DescribeMigrationsRequest extends AbstractModel
     /**
      * @param array $StatusSet Status set. As long as a migration task is in a status therein, it will be listed
      * @param string $MigrateName Migration task name (fuzzy match)
-     * @param integer $Limit Number of results per page. Value range: 1–100. Default value: 100
+     * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 100
      * @param integer $Offset Page number. Default value: 0
      * @param string $OrderBy The query results are sorted by keyword. Valid values: name, createTime, startTime, endTime, status
      * @param string $OrderByType Sorting order. Valid values: desc, asc

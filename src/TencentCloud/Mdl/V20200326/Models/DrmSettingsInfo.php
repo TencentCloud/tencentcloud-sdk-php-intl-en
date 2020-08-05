@@ -18,7 +18,7 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Drm配置信息，目前只对HLS和DASH有效。
+ * DRM configuration information, which takes effect only for HLS and DASH.
  *
  * @method string getState() Obtain 
  * @method void setState(string $State) Set 

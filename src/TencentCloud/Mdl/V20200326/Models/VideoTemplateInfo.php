@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video transcoding template.
  *
- * @method string getName() Obtain Video transcoding template name, which can contain 1–20 letters and digits.
- * @method void setName(string $Name) Set Video transcoding template name, which can contain 1–20 letters and digits.
+ * @method string getName() Obtain Video transcoding template name, which can contain 1-20 letters and digits.
+ * @method void setName(string $Name) Set Video transcoding template name, which can contain 1-20 letters and digits.
  * @method string getVcodec() Obtain Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
  * @method void setVcodec(string $Vcodec) Set Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
  * @method integer getVideoBitrate() Obtain Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class VideoTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Video transcoding template name, which can contain 1–20 letters and digits.
+     * @var string Video transcoding template name, which can contain 1-20 letters and digits.
      */
     public $Name;
 
@@ -80,7 +80,7 @@ class VideoTemplateInfo extends AbstractModel
     public $BitrateCompressionRatio;
 
     /**
-     * @param string $Name Video transcoding template name, which can contain 1–20 letters and digits.
+     * @param string $Name Video transcoding template name, which can contain 1-20 letters and digits.
      * @param string $Vcodec Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
      * @param integer $VideoBitrate Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
      * @param integer $Width Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.

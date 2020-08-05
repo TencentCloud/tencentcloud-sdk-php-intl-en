@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Serial ID of an instance
  * @method void setInstanceId(string $InstanceId) Set Serial ID of an instance
- * @method array getReadonlyPolicy() Obtain Account routing policy. If `master` or `replication` is entered, it means to route to the master or slave node; if this is left blank, it means to write into the master node and read from the slave node by default
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Account routing policy. If `master` or `replication` is entered, it means to route to the master or slave node; if this is left blank, it means to write into the master node and read from the slave node by default
+ * @method array getReadonlyPolicy() Obtain Account routing policy. If `master` or `replication` is entered, it means to route to the primary or secondary node; if this is left blank, it means to write into the primary node and read from the secondary node by default
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Account routing policy. If `master` or `replication` is entered, it means to route to the primary or secondary node; if this is left blank, it means to write into the primary node and read from the secondary node by default
  */
 class EnableReplicaReadonlyRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class EnableReplicaReadonlyRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Account routing policy. If `master` or `replication` is entered, it means to route to the master or slave node; if this is left blank, it means to write into the master node and read from the slave node by default
+     * @var array Account routing policy. If `master` or `replication` is entered, it means to route to the primary or secondary node; if this is left blank, it means to write into the primary node and read from the secondary node by default
      */
     public $ReadonlyPolicy;
 
     /**
      * @param string $InstanceId Serial ID of an instance
-     * @param array $ReadonlyPolicy Account routing policy. If `master` or `replication` is entered, it means to route to the master or slave node; if this is left blank, it means to write into the master node and read from the slave node by default
+     * @param array $ReadonlyPolicy Account routing policy. If `master` or `replication` is entered, it means to route to the primary or secondary node; if this is left blank, it means to write into the primary node and read from the secondary node by default
      */
     function __construct()
     {

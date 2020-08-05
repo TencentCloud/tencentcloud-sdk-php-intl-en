@@ -18,76 +18,76 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User information, including when the user enters/exits a room, etc.
+ * 
  *
- * @method string getRoomStr() Obtain Room ID of string type.
- * @method void setRoomStr(string $RoomStr) Set Room ID of string type.
- * @method string getUserId() Obtain User ID
- * @method void setUserId(string $UserId) Set User ID
- * @method integer getJoinTs() Obtain The time when the user enters the room
- * @method void setJoinTs(integer $JoinTs) Set The time when the user enters the room
- * @method integer getLeaveTs() Obtain The time when the user exits the room
- * @method void setLeaveTs(integer $LeaveTs) Set The time when the user exits the room
- * @method string getDeviceType() Obtain Device type
- * @method void setDeviceType(string $DeviceType) Set Device type
- * @method string getSdkVersion() Obtain SDK version number
- * @method void setSdkVersion(string $SdkVersion) Set SDK version number
- * @method string getClientIp() Obtain Client IP
- * @method void setClientIp(string $ClientIp) Set Client IP
- * @method boolean getFinished() Obtain Determine whether a user has left the room
- * @method void setFinished(boolean $Finished) Set Determine whether a user has left the room
+ * @method string getRoomStr() Obtain 
+ * @method void setRoomStr(string $RoomStr) Set 
+ * @method string getUserId() Obtain 
+ * @method void setUserId(string $UserId) Set 
+ * @method integer getJoinTs() Obtain 
+ * @method void setJoinTs(integer $JoinTs) Set 
+ * @method integer getLeaveTs() Obtain 
+ * @method void setLeaveTs(integer $LeaveTs) Set 
+ * @method string getDeviceType() Obtain 
+ * @method void setDeviceType(string $DeviceType) Set 
+ * @method string getSdkVersion() Obtain 
+ * @method void setSdkVersion(string $SdkVersion) Set 
+ * @method string getClientIp() Obtain 
+ * @method void setClientIp(string $ClientIp) Set 
+ * @method boolean getFinished() Obtain 
+ * @method void setFinished(boolean $Finished) Set 
  */
 class UserInformation extends AbstractModel
 {
     /**
-     * @var string Room ID of string type.
+     * @var string 
      */
     public $RoomStr;
 
     /**
-     * @var string User ID
+     * @var string 
      */
     public $UserId;
 
     /**
-     * @var integer The time when the user enters the room
+     * @var integer 
      */
     public $JoinTs;
 
     /**
-     * @var integer The time when the user exits the room
+     * @var integer 
      */
     public $LeaveTs;
 
     /**
-     * @var string Device type
+     * @var string 
      */
     public $DeviceType;
 
     /**
-     * @var string SDK version number
+     * @var string 
      */
     public $SdkVersion;
 
     /**
-     * @var string Client IP
+     * @var string 
      */
     public $ClientIp;
 
     /**
-     * @var boolean Determine whether a user has left the room
+     * @var boolean 
      */
     public $Finished;
 
     /**
-     * @param string $RoomStr Room ID of string type.
-     * @param string $UserId User ID
-     * @param integer $JoinTs The time when the user enters the room
-     * @param integer $LeaveTs The time when the user exits the room
-     * @param string $DeviceType Device type
-     * @param string $SdkVersion SDK version number
-     * @param string $ClientIp Client IP
-     * @param boolean $Finished Determine whether a user has left the room
+     * @param string $RoomStr 
+     * @param string $UserId 
+     * @param integer $JoinTs 
+     * @param integer $LeaveTs 
+     * @param string $DeviceType 
+     * @param string $SdkVersion 
+     * @param string $ClientIp 
+     * @param boolean $Finished 
      */
     function __construct()
     {

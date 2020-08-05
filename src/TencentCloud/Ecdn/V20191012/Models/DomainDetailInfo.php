@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setUpdateTime(string $UpdateTime) Set Domain name update time.
  * @method Origin getOrigin() Obtain Origin server configuration.
  * @method void setOrigin(Origin $Origin) Set Origin server configuration.
- * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration.
+ * @method IpFilter getIpFilter() Obtain IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpFilter(IpFilter $IpFilter) Set IP blacklist/whitelist configuration.
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method IpFreqLimit getIpFreqLimit() Obtain IP access limit configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -130,7 +130,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Origin;
 
     /**
-     * @var IpFilter IP blacklist/whitelist configuration.
+     * @var IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IpFilter;
@@ -200,7 +200,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Domain name creation time.
      * @param string $UpdateTime Domain name update time.
      * @param Origin $Origin Origin server configuration.
-     * @param IpFilter $IpFilter IP blacklist/whitelist configuration.
+     * @param IpFilter $IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param IpFreqLimit $IpFreqLimit IP access limit configuration.
 Note: this field may return null, indicating that no valid values can be obtained.

@@ -24,15 +24,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getTemplateName() Obtain Template name.
  * @method void setTemplateName(string $TemplateName) Set Template name.
- * @method integer getSnapshotInterval() Obtain Screencapturing interval. Value range: 5–300s.
- * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval. Value range: 5–300s.
- * @method integer getWidth() Obtain Screenshot width. Value range: 0–3000. 
+ * @method integer getSnapshotInterval() Obtain Screencapturing interval. Value range: 5-300s.
+ * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval. Value range: 5-300s.
+ * @method integer getWidth() Obtain Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
- * @method void setWidth(integer $Width) Set Screenshot width. Value range: 0–3000. 
+ * @method void setWidth(integer $Width) Set Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
- * @method integer getHeight() Obtain Screenshot height. Value range: 0–2000.
+ * @method integer getHeight() Obtain Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
- * @method void setHeight(integer $Height) Set Screenshot height. Value range: 0–2000.
+ * @method void setHeight(integer $Height) Set Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
  * @method integer getPornFlag() Obtain Whether to enable porn detection. 0: no, 1: yes.
  * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. 0: no, 1: yes.
@@ -66,18 +66,18 @@ class SnapshotTemplateInfo extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer Screencapturing interval. Value range: 5–300s.
+     * @var integer Screencapturing interval. Value range: 5-300s.
      */
     public $SnapshotInterval;
 
     /**
-     * @var integer Screenshot width. Value range: 0–3000. 
+     * @var integer Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
      */
     public $Width;
 
     /**
-     * @var integer Screenshot height. Value range: 0–2000.
+     * @var integer Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
      */
     public $Height;
@@ -122,10 +122,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
-     * @param integer $SnapshotInterval Screencapturing interval. Value range: 5–300s.
-     * @param integer $Width Screenshot width. Value range: 0–3000. 
+     * @param integer $SnapshotInterval Screencapturing interval. Value range: 5-300s.
+     * @param integer $Width Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
-     * @param integer $Height Screenshot height. Value range: 0–2000.
+     * @param integer $Height Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
      * @param integer $PornFlag Whether to enable porn detection. 0: no, 1: yes.
      * @param integer $CosAppId COS application ID.

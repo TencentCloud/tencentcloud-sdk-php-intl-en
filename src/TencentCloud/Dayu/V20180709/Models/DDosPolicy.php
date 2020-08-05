@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPortLimits(array $PortLimits) Set Disabled port
  * @method array getPacketFilters() Obtain Packet filter
  * @method void setPacketFilters(array $PacketFilters) Set Packet filter
- * @method array getIpBlackWhiteLists() Obtain IP blacklist/whitelist
- * @method void setIpBlackWhiteLists(array $IpBlackWhiteLists) Set IP blacklist/whitelist
+ * @method array getIpBlackWhiteLists() Obtain IP blocklist/allowlist
+ * @method void setIpBlackWhiteLists(array $IpBlackWhiteLists) Set IP blocklist/allowlist
  * @method string getPolicyId() Obtain Policy ID
  * @method void setPolicyId(string $PolicyId) Set Policy ID
  * @method string getPolicyName() Obtain Policy name
@@ -72,7 +72,7 @@ class DDosPolicy extends AbstractModel
     public $PacketFilters;
 
     /**
-     * @var array IP blacklist/whitelist
+     * @var array IP blocklist/allowlist
      */
     public $IpBlackWhiteLists;
 
@@ -118,7 +118,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param DDoSPolicyDropOption $DropOptions Disabled protocol
      * @param array $PortLimits Disabled port
      * @param array $PacketFilters Packet filter
-     * @param array $IpBlackWhiteLists IP blacklist/whitelist
+     * @param array $IpBlackWhiteLists IP blocklist/allowlist
      * @param string $PolicyId Policy ID
      * @param string $PolicyName Policy name
      * @param string $CreateTime Policy creation time

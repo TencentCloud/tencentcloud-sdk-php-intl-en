@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAudioSelectorName() Obtain Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
  * @method void setAudioSelectorName(string $AudioSelectorName) Set Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
- * @method string getName() Obtain Audio transcoding template name, which can contain 1–20 letters and digits.
- * @method void setName(string $Name) Set Audio transcoding template name, which can contain 1–20 letters and digits.
+ * @method string getName() Obtain Audio transcoding template name, which can contain 1-20 letters and digits.
+ * @method void setName(string $Name) Set Audio transcoding template name, which can contain 1-20 letters and digits.
  * @method string getAcodec() Obtain Audio codec. Valid value: AAC. Default value: AAC.
  * @method void setAcodec(string $Acodec) Set Audio codec. Valid value: AAC. Default value: AAC.
  * @method integer getAudioBitrate() Obtain Audio bitrate. If this parameter is left empty, the original value will be used.
@@ -41,7 +41,7 @@ class AudioTemplateInfo extends AbstractModel
     public $AudioSelectorName;
 
     /**
-     * @var string Audio transcoding template name, which can contain 1–20 letters and digits.
+     * @var string Audio transcoding template name, which can contain 1-20 letters and digits.
      */
     public $Name;
 
@@ -63,7 +63,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
 
     /**
      * @param string $AudioSelectorName Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
-     * @param string $Name Audio transcoding template name, which can contain 1–20 letters and digits.
+     * @param string $Name Audio transcoding template name, which can contain 1-20 letters and digits.
      * @param string $Acodec Audio codec. Valid value: AAC. Default value: AAC.
      * @param integer $AudioBitrate Audio bitrate. If this parameter is left empty, the original value will be used.
 Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000

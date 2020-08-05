@@ -36,14 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set RO instance ID in the format of cdbro-c1nl9rpv
  * @method integer getStatus() Obtain RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
  * @method void setStatus(integer $Status) Set RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
- * @method integer getInstanceType() Obtain Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
- * @method void setInstanceType(integer $InstanceType) Set Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+ * @method integer getInstanceType() Obtain Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+ * @method void setInstanceType(integer $InstanceType) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
  * @method string getInstanceName() Obtain RO instance name
  * @method void setInstanceName(string $InstanceName) Set RO instance name
  * @method integer getHourFeeStatus() Obtain Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
  * @method void setHourFeeStatus(integer $HourFeeStatus) Set Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
- * @method integer getTaskStatus() Obtain RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
- * @method void setTaskStatus(integer $TaskStatus) Set RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+ * @method integer getTaskStatus() Obtain RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+ * @method void setTaskStatus(integer $TaskStatus) Set RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
  * @method integer getMemory() Obtain RO instance memory size in MB
  * @method void setMemory(integer $Memory) Set RO instance memory size in MB
  * @method integer getVolume() Obtain RO instance disk size in GB
@@ -110,7 +110,7 @@ class RoInstanceInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+     * @var integer Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      */
     public $InstanceType;
 
@@ -125,7 +125,7 @@ class RoInstanceInfo extends AbstractModel
     public $HourFeeStatus;
 
     /**
-     * @var integer RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+     * @var integer RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
      */
     public $TaskStatus;
 
@@ -193,10 +193,10 @@ class RoInstanceInfo extends AbstractModel
      * @param string $Zone Name of RO AZ, such as ap-shanghai-1
      * @param string $InstanceId RO instance ID in the format of cdbro-c1nl9rpv
      * @param integer $Status RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
-     * @param integer $InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+     * @param integer $InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      * @param string $InstanceName RO instance name
      * @param integer $HourFeeStatus Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
-     * @param integer $TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+     * @param integer $TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
      * @param integer $Memory RO instance memory size in MB
      * @param integer $Volume RO instance disk size in GB
      * @param integer $Qps Queries per second

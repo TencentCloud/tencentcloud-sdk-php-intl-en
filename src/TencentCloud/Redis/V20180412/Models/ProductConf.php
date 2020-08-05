@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Product information
  *
- * @method integer getType() Obtain Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
- * @method void setType(integer $Type) Set Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
- * @method string getTypeName() Obtain Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
- * @method void setTypeName(string $TypeName) Set Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+ * @method integer getType() Obtain Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+ * @method void setType(integer $Type) Set Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+ * @method string getTypeName() Obtain Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+ * @method void setTypeName(string $TypeName) Set Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
  * @method integer getMinBuyNum() Obtain Minimum purchasable quantity
  * @method void setMinBuyNum(integer $MinBuyNum) Set Minimum purchasable quantity
  * @method integer getMaxBuyNum() Obtain Maximum purchasable quantity
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class ProductConf extends AbstractModel
 {
     /**
-     * @var integer Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+     * @var integer Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
      */
     public $Type;
 
     /**
-     * @var string Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+     * @var string Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
      */
     public $TypeName;
 
@@ -115,8 +115,8 @@ class ProductConf extends AbstractModel
     public $EnableRepicaReadOnly;
 
     /**
-     * @param integer $Type Product type. 2: Redis master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
-     * @param string $TypeName Product name: Redis master-slave edition, CKV master-slave edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+     * @param integer $Type Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+     * @param string $TypeName Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
      * @param integer $MinBuyNum Minimum purchasable quantity
      * @param integer $MaxBuyNum Maximum purchasable quantity
      * @param boolean $Saleout Whether a product is sold out

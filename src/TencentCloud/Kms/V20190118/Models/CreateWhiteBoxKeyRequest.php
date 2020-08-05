@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlgorithm(string $Algorithm) Set All algorithm types for creating keys. Valid values: AES_256, SM4
  * @method string getDescription() Obtain Key description of up to 1024 bytes
  * @method void setDescription(string $Description) Set Key description of up to 1024 bytes
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
  */
 class CreateWhiteBoxKeyRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateWhiteBoxKeyRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array 
+     */
+    public $Tags;
+
+    /**
      * @param string $Alias Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
      * @param string $Algorithm All algorithm types for creating keys. Valid values: AES_256, SM4
      * @param string $Description Key description of up to 1024 bytes
+     * @param array $Tags 
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreateWhiteBoxKeyRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

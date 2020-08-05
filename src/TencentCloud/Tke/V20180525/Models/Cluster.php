@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterStatus(string $ClusterStatus) Set 
  * @method string getProperty() Obtain 
  * @method void setProperty(string $Property) Set 
- * @method integer getClusterMaterNodeNum() Obtain Number of master nodes currently in the cluster
- * @method void setClusterMaterNodeNum(integer $ClusterMaterNodeNum) Set Number of master nodes currently in the cluster
+ * @method integer getClusterMaterNodeNum() Obtain Number of primary nodes currently in the cluster
+ * @method void setClusterMaterNodeNum(integer $ClusterMaterNodeNum) Set Number of primary nodes currently in the cluster
  * @method string getImageId() Obtain ID of the image used by the cluster
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setImageId(string $ImageId) Set ID of the image used by the cluster
@@ -130,7 +130,7 @@ class Cluster extends AbstractModel
     public $Property;
 
     /**
-     * @var integer Number of master nodes currently in the cluster
+     * @var integer Number of primary nodes currently in the cluster
      */
     public $ClusterMaterNodeNum;
 
@@ -177,7 +177,7 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param array $TagSpecification 
      * @param string $ClusterStatus 
      * @param string $Property 
-     * @param integer $ClusterMaterNodeNum Number of master nodes currently in the cluster
+     * @param integer $ClusterMaterNodeNum Number of primary nodes currently in the cluster
      * @param string $ImageId ID of the image used by the cluster
 Note: this field may return null, indicating that no valid value is obtained.
      * @param string $OsCustomizeType Container image tag

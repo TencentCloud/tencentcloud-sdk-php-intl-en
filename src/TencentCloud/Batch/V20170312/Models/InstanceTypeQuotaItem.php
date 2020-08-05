@@ -50,6 +50,20 @@ Note: This field may return null, indicating that no valid value is found.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setSoldOutReason(string $SoldOutReason) Set Details of out-of-stock items
 Note: this field may return null, indicating that no valid value is obtained.
+ * @method float getInstanceBandwidth() Obtain 
+ * @method void setInstanceBandwidth(float $InstanceBandwidth) Set 
+ * @method integer getInstancePps() Obtain 
+ * @method void setInstancePps(integer $InstancePps) Set 
+ * @method integer getStorageBlockAmount() Obtain 
+ * @method void setStorageBlockAmount(integer $StorageBlockAmount) Set 
+ * @method string getCpuType() Obtain 
+ * @method void setCpuType(string $CpuType) Set 
+ * @method integer getGpu() Obtain Number of GPUs of the instance.
+ * @method void setGpu(integer $Gpu) Set Number of GPUs of the instance.
+ * @method integer getFpga() Obtain Number of FPGAs of the instance.
+ * @method void setFpga(integer $Fpga) Set Number of FPGAs of the instance.
+ * @method string getRemark() Obtain Descriptive information of the instance.
+ * @method void setRemark(string $Remark) Set Descriptive information of the instance.
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -121,6 +135,41 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $SoldOutReason;
 
     /**
+     * @var float 
+     */
+    public $InstanceBandwidth;
+
+    /**
+     * @var integer 
+     */
+    public $InstancePps;
+
+    /**
+     * @var integer 
+     */
+    public $StorageBlockAmount;
+
+    /**
+     * @var string 
+     */
+    public $CpuType;
+
+    /**
+     * @var integer Number of GPUs of the instance.
+     */
+    public $Gpu;
+
+    /**
+     * @var integer Number of FPGAs of the instance.
+     */
+    public $Fpga;
+
+    /**
+     * @var string Descriptive information of the instance.
+     */
+    public $Remark;
+
+    /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
      * @param string $InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
@@ -136,6 +185,13 @@ Note: This field may return null, indicating that no valid value is found.
      * @param ItemPrice $Price Price of an instance model.
      * @param string $SoldOutReason Details of out-of-stock items
 Note: this field may return null, indicating that no valid value is obtained.
+     * @param float $InstanceBandwidth 
+     * @param integer $InstancePps 
+     * @param integer $StorageBlockAmount 
+     * @param string $CpuType 
+     * @param integer $Gpu Number of GPUs of the instance.
+     * @param integer $Fpga Number of FPGAs of the instance.
+     * @param string $Remark Descriptive information of the instance.
      */
     function __construct()
     {
@@ -207,6 +263,34 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("SoldOutReason",$param) and $param["SoldOutReason"] !== null) {
             $this->SoldOutReason = $param["SoldOutReason"];
+        }
+
+        if (array_key_exists("InstanceBandwidth",$param) and $param["InstanceBandwidth"] !== null) {
+            $this->InstanceBandwidth = $param["InstanceBandwidth"];
+        }
+
+        if (array_key_exists("InstancePps",$param) and $param["InstancePps"] !== null) {
+            $this->InstancePps = $param["InstancePps"];
+        }
+
+        if (array_key_exists("StorageBlockAmount",$param) and $param["StorageBlockAmount"] !== null) {
+            $this->StorageBlockAmount = $param["StorageBlockAmount"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
+        }
+
+        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
+            $this->Gpu = $param["Gpu"];
+        }
+
+        if (array_key_exists("Fpga",$param) and $param["Fpga"] !== null) {
+            $this->Fpga = $param["Fpga"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

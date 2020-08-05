@@ -36,9 +36,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPrivilege(string $Privilege) Set Read/write policy. r: read-only; w: write-only; rw: read/write
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getReadonlyPolicy() Obtain Routing policy. master: master node; replication: slave node
+ * @method array getReadonlyPolicy() Obtain Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. master: master node; replication: slave node
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStatus() Obtain Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -72,7 +72,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Privilege;
 
     /**
-     * @var array Routing policy. master: master node; replication: slave node
+     * @var array Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReadonlyPolicy;
@@ -92,7 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Privilege Read/write policy. r: read-only; w: write-only; rw: read/write
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ReadonlyPolicy Routing policy. master: master node; replication: slave node
+     * @param array $ReadonlyPolicy Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
 Note: This field may return null, indicating that no valid values can be obtained.

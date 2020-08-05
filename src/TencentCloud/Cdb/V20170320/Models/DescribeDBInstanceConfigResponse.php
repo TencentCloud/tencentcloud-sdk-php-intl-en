@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceConfig response structure.
  *
- * @method integer getProtectMode() Obtain Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
- * @method void setProtectMode(integer $ProtectMode) Set Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+ * @method integer getProtectMode() Obtain Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+ * @method void setProtectMode(integer $ProtectMode) Set Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
  * @method integer getDeployMode() Obtain Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
  * @method void setDeployMode(integer $DeployMode) Set Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
  * @method string getZone() Obtain Instance AZ information in the format of "ap-shanghai-1".
  * @method void setZone(string $Zone) Set Instance AZ information in the format of "ap-shanghai-1".
- * @method SlaveConfig getSlaveConfig() Obtain Configuration information of the slave database.
- * @method void setSlaveConfig(SlaveConfig $SlaveConfig) Set Configuration information of the slave database.
- * @method BackupConfig getBackupConfig() Obtain Configuration information of slave database 2 of a strong sync instance.
- * @method void setBackupConfig(BackupConfig $BackupConfig) Set Configuration information of slave database 2 of a strong sync instance.
+ * @method SlaveConfig getSlaveConfig() Obtain Configuration information of the secondary database.
+ * @method void setSlaveConfig(SlaveConfig $SlaveConfig) Set Configuration information of the secondary database.
+ * @method BackupConfig getBackupConfig() Obtain Configuration information of secondary database 2 of a strong sync instance.
+ * @method void setBackupConfig(BackupConfig $BackupConfig) Set Configuration information of secondary database 2 of a strong sync instance.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeDBInstanceConfigResponse extends AbstractModel
 {
     /**
-     * @var integer Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+     * @var integer Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
      */
     public $ProtectMode;
 
@@ -51,12 +51,12 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $Zone;
 
     /**
-     * @var SlaveConfig Configuration information of the slave database.
+     * @var SlaveConfig Configuration information of the secondary database.
      */
     public $SlaveConfig;
 
     /**
-     * @var BackupConfig Configuration information of slave database 2 of a strong sync instance.
+     * @var BackupConfig Configuration information of secondary database 2 of a strong sync instance.
      */
     public $BackupConfig;
 
@@ -66,11 +66,11 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ProtectMode Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+     * @param integer $ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
      * @param integer $DeployMode Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
      * @param string $Zone Instance AZ information in the format of "ap-shanghai-1".
-     * @param SlaveConfig $SlaveConfig Configuration information of the slave database.
-     * @param BackupConfig $BackupConfig Configuration information of slave database 2 of a strong sync instance.
+     * @param SlaveConfig $SlaveConfig Configuration information of the secondary database.
+     * @param BackupConfig $BackupConfig Configuration information of secondary database 2 of a strong sync instance.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 频道输出组信息。
+ * Channel output group information.
  *
  * @method string getName() Obtain 
  * @method void setName(string $Name) Set 

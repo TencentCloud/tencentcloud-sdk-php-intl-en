@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
- * @method string getFunctionVersion() Obtain If this parameter is provided, only aliases associated with this function version will be returned
- * @method void setFunctionVersion(string $FunctionVersion) Set If this parameter is provided, only aliases associated with this function version will be returned
+ * @method string getFunctionVersion() Obtain If this parameter is provided, only aliases associated with this function version will be returned.
+ * @method void setFunctionVersion(string $FunctionVersion) Set If this parameter is provided, only aliases associated with this function version will be returned.
  * @method string getOffset() Obtain Data offset. Default value: 0
  * @method void setOffset(string $Offset) Set Data offset. Default value: 0
  * @method string getLimit() Obtain Number of results to be returned. Default value: 20
@@ -44,7 +44,7 @@ class ListAliasesRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string If this parameter is provided, only aliases associated with this function version will be returned
+     * @var string If this parameter is provided, only aliases associated with this function version will be returned.
      */
     public $FunctionVersion;
 
@@ -61,7 +61,7 @@ class ListAliasesRequest extends AbstractModel
     /**
      * @param string $FunctionName Function name
      * @param string $Namespace Function namespace
-     * @param string $FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned
+     * @param string $FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned.
      * @param string $Offset Data offset. Default value: 0
      * @param string $Limit Number of results to be returned. Default value: 20
      */

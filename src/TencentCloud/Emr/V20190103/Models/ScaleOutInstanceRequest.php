@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
  * @method array getTags() Obtain List of tags bound to added nodes.
  * @method void setTags(array $Tags) Set List of tags bound to added nodes.
+ * @method string getHardwareResourceType() Obtain 
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set 
+ * @method PodSpec getPodSpec() Obtain 
+ * @method void setPodSpec(PodSpec $PodSpec) Set 
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -137,6 +141,16 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 
+     */
+    public $HardwareResourceType;
+
+    /**
+     * @var PodSpec 
+     */
+    public $PodSpec;
+
+    /**
      * @param string $TimeUnit Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
@@ -156,6 +170,8 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param array $ServiceNodeInfo Started process.
      * @param array $DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
      * @param array $Tags List of tags bound to added nodes.
+     * @param string $HardwareResourceType 
+     * @param PodSpec $PodSpec 
      */
     function __construct()
     {
@@ -234,6 +250,15 @@ class ScaleOutInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("PodSpec",$param) and $param["PodSpec"] !== null) {
+            $this->PodSpec = new PodSpec();
+            $this->PodSpec->deserialize($param["PodSpec"]);
         }
     }
 }

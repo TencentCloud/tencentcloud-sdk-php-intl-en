@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) Set Storage capacity in GB
  * @method string getPeriodEndTime() Obtain Expiration time
  * @method void setPeriodEndTime(string $PeriodEndTime) Set Expiration time
- * @method integer getNodeCount() Obtain Number of nodes. 2: one master and one slave; 3: one master and two slaves
- * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one master and one slave; 3: one master and two slaves
+ * @method integer getNodeCount() Obtain Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+ * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
  * @method float getStorageUsage() Obtain Storage utilization in %
  * @method void setStorageUsage(float $StorageUsage) Set Storage utilization in %
  * @method float getMemoryUsage() Obtain Memory utilization in %
@@ -68,9 +68,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setShardMasterZone(string $ShardMasterZone) Set Master AZ of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getShardSlaveZones() Obtain List of slave AZs of a shard
+ * @method array getShardSlaveZones() Obtain List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setShardSlaveZones(array $ShardSlaveZones) Set List of slave AZs of a shard
+ * @method void setShardSlaveZones(array $ShardSlaveZones) Set List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
@@ -148,7 +148,7 @@ class DCDBShardInfo extends AbstractModel
     public $PeriodEndTime;
 
     /**
-     * @var integer Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * @var integer Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      */
     public $NodeCount;
 
@@ -190,7 +190,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ShardMasterZone;
 
     /**
-     * @var array List of slave AZs of a shard
+     * @var array List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ShardSlaveZones;
@@ -215,7 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Memory Memory size in GB
      * @param integer $Storage Storage capacity in GB
      * @param string $PeriodEndTime Expiration time
-     * @param integer $NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * @param integer $NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      * @param float $StorageUsage Storage utilization in %
      * @param float $MemoryUsage Memory utilization in %
      * @param integer $ShardId Numeric ID of a shard (this field is obsolete and should not be depended on)
@@ -225,7 +225,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ShardMasterZone Master AZ of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ShardSlaveZones List of slave AZs of a shard
+     * @param array $ShardSlaveZones List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Cpu Number of CPU cores
      */

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Public network ACL information of ES
  *
- * @method array getBlackIpList() Obtain Access blacklist
- * @method void setBlackIpList(array $BlackIpList) Set Access blacklist
- * @method array getWhiteIpList() Obtain Access whitelist
- * @method void setWhiteIpList(array $WhiteIpList) Set Access whitelist
+ * @method array getBlackIpList() Obtain Access blocklist
+ * @method void setBlackIpList(array $BlackIpList) Set Access blocklist
+ * @method array getWhiteIpList() Obtain Access allowlist
+ * @method void setWhiteIpList(array $WhiteIpList) Set Access allowlist
  */
 class EsPublicAcl extends AbstractModel
 {
     /**
-     * @var array Access blacklist
+     * @var array Access blocklist
      */
     public $BlackIpList;
 
     /**
-     * @var array Access whitelist
+     * @var array Access allowlist
      */
     public $WhiteIpList;
 
     /**
-     * @param array $BlackIpList Access blacklist
-     * @param array $WhiteIpList Access whitelist
+     * @param array $BlackIpList Access blocklist
+     * @param array $WhiteIpList Access allowlist
      */
     function __construct()
     {

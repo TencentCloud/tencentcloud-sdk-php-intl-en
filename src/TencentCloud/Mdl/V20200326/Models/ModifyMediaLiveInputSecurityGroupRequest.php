@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() Obtain Input security group ID.
  * @method void setId(string $Id) Set Input security group ID.
- * @method string getName() Obtain Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
- * @method void setName(string $Name) Set Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
- * @method array getWhitelist() Obtain List of whitelist entries. Up to 10 entries are allowed.
- * @method void setWhitelist(array $Whitelist) Set List of whitelist entries. Up to 10 entries are allowed.
+ * @method string getName() Obtain Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+ * @method void setName(string $Name) Set Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+ * @method array getWhitelist() Obtain List of allowlist entries. Up to 10 entries are allowed.
+ * @method void setWhitelist(array $Whitelist) Set List of allowlist entries. Up to 10 entries are allowed.
  */
 class ModifyMediaLiveInputSecurityGroupRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyMediaLiveInputSecurityGroupRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * @var string Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public $Name;
 
     /**
-     * @var array List of whitelist entries. Up to 10 entries are allowed.
+     * @var array List of allowlist entries. Up to 10 entries are allowed.
      */
     public $Whitelist;
 
     /**
      * @param string $Id Input security group ID.
-     * @param string $Name Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
-     * @param array $Whitelist List of whitelist entries. Up to 10 entries are allowed.
+     * @param string $Name Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+     * @param array $Whitelist List of allowlist entries. Up to 10 entries are allowed.
      */
     function __construct()
     {

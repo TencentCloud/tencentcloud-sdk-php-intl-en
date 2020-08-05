@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) Set Shard disk size in MB
  * @method integer getOplogSize() Obtain Shard oplog size in MB
  * @method void setOplogSize(integer $OplogSize) Set Shard oplog size in MB
- * @method integer getSecondaryNum() Obtain Number of slave nodes of a shard
- * @method void setSecondaryNum(integer $SecondaryNum) Set Number of slave nodes of a shard
+ * @method integer getSecondaryNum() Obtain Number of secondary nodes of a shard
+ * @method void setSecondaryNum(integer $SecondaryNum) Set Number of secondary nodes of a shard
  * @method string getRealReplicaSetId() Obtain Shard physical ID
  * @method void setRealReplicaSetId(string $RealReplicaSetId) Set Shard physical ID
  */
@@ -70,7 +70,7 @@ class ShardInfo extends AbstractModel
     public $OplogSize;
 
     /**
-     * @var integer Number of slave nodes of a shard
+     * @var integer Number of secondary nodes of a shard
      */
     public $SecondaryNum;
 
@@ -86,7 +86,7 @@ class ShardInfo extends AbstractModel
      * @param integer $Memory Shard memory size in MB
      * @param integer $Volume Shard disk size in MB
      * @param integer $OplogSize Shard oplog size in MB
-     * @param integer $SecondaryNum Number of slave nodes of a shard
+     * @param integer $SecondaryNum Number of secondary nodes of a shard
      * @param string $RealReplicaSetId Shard physical ID
      */
     function __construct()

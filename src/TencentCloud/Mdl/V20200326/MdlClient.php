@@ -32,6 +32,7 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\DescribeMediaLiveChannelResponse DescribeMediaLiveChannel(Models\DescribeMediaLiveChannelRequest $req) This API is used to query the information of a MediaLive channel.
  * @method Models\DescribeMediaLiveChannelAlertsResponse DescribeMediaLiveChannelAlerts(Models\DescribeMediaLiveChannelAlertsRequest $req) This API is used to query the channel alarm information.
  * @method Models\DescribeMediaLiveChannelInputStatisticsResponse DescribeMediaLiveChannelInputStatistics(Models\DescribeMediaLiveChannelInputStatisticsRequest $req) This API is used to query the input statistics.
+ * @method Models\DescribeMediaLiveChannelLogsResponse DescribeMediaLiveChannelLogs(Models\DescribeMediaLiveChannelLogsRequest $req) This API is used to query MediaLive channel logs, such as push event logs.
  * @method Models\DescribeMediaLiveChannelOutputStatisticsResponse DescribeMediaLiveChannelOutputStatistics(Models\DescribeMediaLiveChannelOutputStatisticsRequest $req) This API is used to query the output statistics of a channel.
  * @method Models\DescribeMediaLiveChannelsResponse DescribeMediaLiveChannels(Models\DescribeMediaLiveChannelsRequest $req) This API is used to query the information of MediaLive channels in batches.
  * @method Models\DescribeMediaLiveInputResponse DescribeMediaLiveInput(Models\DescribeMediaLiveInputRequest $req) This API is used to query a media input.

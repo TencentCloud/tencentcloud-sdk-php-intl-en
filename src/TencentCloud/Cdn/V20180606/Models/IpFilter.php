@@ -18,67 +18,67 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP blacklist/whitelist configuration. This is disabled by default.
+ * IP blocklist/allowlist configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain IP blacklist/whitelist configuration switch
+ * @method string getSwitch() Obtain IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
- * @method void setSwitch(string $Switch) Set IP blacklist/whitelist configuration switch
+ * @method void setSwitch(string $Switch) Set IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
- * @method string getFilterType() Obtain IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+ * @method string getFilterType() Obtain IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilterType(string $FilterType) Set IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+ * @method void setFilterType(string $FilterType) Set IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getFilters() Obtain IP blacklist/whitelist list
+ * @method array getFilters() Obtain IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilters(array $Filters) Set IP blacklist/whitelist list
+ * @method void setFilters(array $Filters) Set IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class IpFilter extends AbstractModel
 {
     /**
-     * @var string IP blacklist/whitelist configuration switch
+     * @var string IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
      */
     public $Switch;
 
     /**
-     * @var string IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+     * @var string IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FilterType;
 
     /**
-     * @var array IP blacklist/whitelist list
+     * @var array IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Filters;
 
     /**
-     * @param string $Switch IP blacklist/whitelist configuration switch
+     * @param string $Switch IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
-     * @param string $FilterType IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+     * @param string $FilterType IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Filters IP blacklist/whitelist list
+     * @param array $Filters IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

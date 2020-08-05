@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Referer blacklist/whitelist configuration rules, which is effective for specific resources.
+ * Referer blocklist/allowlist configuration rules, which is effective for specific resources.
  *
  * @method string getRuleType() Obtain Rule types:
 `all`: effective for all files
@@ -41,11 +41,11 @@ For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
  * @method string getRefererType() Obtain Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
  * @method void setRefererType(string $RefererType) Set Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
  * @method array getReferers() Obtain Referer content list
  * @method void setReferers(array $Referers) Set Referer content list
  * @method boolean getAllowEmpty() Obtain Whether to allow empty referer
@@ -77,8 +77,8 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
     /**
      * @var string Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
      */
     public $RefererType;
 
@@ -106,8 +106,8 @@ For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
      * @param string $RefererType Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
      * @param array $Referers Referer content list
      * @param boolean $AllowEmpty Whether to allow empty referer
 true: allow empty referer

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitchTime() Obtain Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
  * @method void setSwitchTime(string $SwitchTime) Set Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
- * @method string getSwitchType() Obtain Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
- * @method void setSwitchType(string $SwitchType) Set Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+ * @method string getSwitchType() Obtain Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
+ * @method void setSwitchType(string $SwitchType) Set Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
  */
 class DBSwitchInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DBSwitchInfo extends AbstractModel
     public $SwitchTime;
 
     /**
-     * @var string Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+     * @var string Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
      */
     public $SwitchType;
 
     /**
      * @param string $SwitchTime Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
-     * @param string $SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+     * @param string $SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
      */
     function __construct()
     {

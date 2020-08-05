@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PublishLayerVersion request structure.
  *
- * @method string getLayerName() Obtain Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
- * @method void setLayerName(string $LayerName) Set Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+ * @method string getLayerName() Obtain Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+ * @method void setLayerName(string $LayerName) Set Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
  * @method array getCompatibleRuntimes() Obtain Runtimes compatible with layer. Multiple choices are allowed. The valid values of this parameter correspond to the valid values of the `Runtime` of the function.
  * @method void setCompatibleRuntimes(array $CompatibleRuntimes) Set Runtimes compatible with layer. Multiple choices are allowed. The valid values of this parameter correspond to the valid values of the `Runtime` of the function.
  * @method Code getContent() Obtain Layer file source or content
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class PublishLayerVersionRequest extends AbstractModel
 {
     /**
-     * @var string Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+     * @var string Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
      */
     public $LayerName;
 
@@ -59,7 +59,7 @@ class PublishLayerVersionRequest extends AbstractModel
     public $LicenseInfo;
 
     /**
-     * @param string $LayerName Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+     * @param string $LayerName Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
      * @param array $CompatibleRuntimes Runtimes compatible with layer. Multiple choices are allowed. The valid values of this parameter correspond to the valid values of the `Runtime` of the function.
      * @param Code $Content Layer file source or content
      * @param string $Description Layer version description

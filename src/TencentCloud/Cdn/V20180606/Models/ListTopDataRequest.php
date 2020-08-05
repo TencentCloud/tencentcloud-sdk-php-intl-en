@@ -38,14 +38,14 @@ Data generated before or at 23:59:59 on the end date will be returned
 `EndTime` must be later than or equal to `StartTime`
  * @method string getMetric() Obtain Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
 originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
  * @method void setMetric(string $Metric) Set Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
@@ -86,9 +86,9 @@ OriginStatusCode: statistics of a specific origin-pull status code which is spec
 Please note that if domain names are specified, this parameter will be ignored.
  * @method void setProject(integer $Project) Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
- * @method boolean getDetail() Obtain Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+ * @method boolean getDetail() Obtain Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
- * @method void setDetail(boolean $Detail) Set Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+ * @method void setDetail(boolean $Detail) Set Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
  * @method string getCode() Obtain When Filter is `statusCode` or `OriginStatusCode`, enter a code to query and sort results.
  * @method void setCode(string $Code) Set When Filter is `statusCode` or `OriginStatusCode`, enter a code to query and sort results.
@@ -126,7 +126,7 @@ Data generated before or at 23:59:59 on the end date will be returned
     /**
      * @var string Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
@@ -165,7 +165,7 @@ Please note that if domain names are specified, this parameter will be ignored.
     public $Project;
 
     /**
-     * @var boolean Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+     * @var boolean Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
      */
     public $Detail;
@@ -200,7 +200,7 @@ Data generated before or at 23:59:59 on the end date will be returned
 `EndTime` must be later than or equal to `StartTime`
      * @param string $Metric Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
@@ -223,7 +223,7 @@ OriginStatusCode: statistics of a specific origin-pull status code which is spec
      * @param array $Domains Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
      * @param integer $Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
-     * @param boolean $Detail Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+     * @param boolean $Detail Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
      * @param string $Code When Filter is `statusCode` or `OriginStatusCode`, enter a code to query and sort results.
      * @param string $Area Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.

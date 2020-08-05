@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() Obtain Media input ID.
  * @method void setId(string $Id) Set Media input ID.
- * @method string getName() Obtain Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
- * @method void setName(string $Name) Set Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+ * @method string getName() Obtain Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+ * @method void setName(string $Name) Set Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
  * @method array getSecurityGroupIds() Obtain List of IDs of bound security groups.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of IDs of bound security groups.
  * @method array getInputSettings() Obtain Input settings information.
@@ -43,7 +43,7 @@ class ModifyMediaLiveInputRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * @var string Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public $Name;
 
@@ -62,7 +62,7 @@ Note: if it is left empty or the array is empty, the original `InputSettings` va
 
     /**
      * @param string $Id Media input ID.
-     * @param string $Name Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * @param string $Name Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      * @param array $SecurityGroupIds List of IDs of bound security groups.
      * @param array $InputSettings Input settings information.
 One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.

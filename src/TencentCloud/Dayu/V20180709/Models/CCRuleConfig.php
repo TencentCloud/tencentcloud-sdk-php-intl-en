@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPeriod() Obtain Reference period in seconds. Valid values: [10, 30, 60]
  * @method void setPeriod(integer $Period) Set Reference period in seconds. Valid values: [10, 30, 60]
- * @method integer getReqNumber() Obtain Number of access requests. Value range: [1–10000]
- * @method void setReqNumber(integer $ReqNumber) Set Number of access requests. Value range: [1–10000]
+ * @method integer getReqNumber() Obtain Number of access requests. Value range: [1-10000]
+ * @method void setReqNumber(integer $ReqNumber) Set Number of access requests. Value range: [1-10000]
  * @method string getAction() Obtain Action take. Valid values: ["alg" (CAPTCHA), "drop" (blocking)]
  * @method void setAction(string $Action) Set Action take. Valid values: ["alg" (CAPTCHA), "drop" (blocking)]
  * @method integer getExeDuration() Obtain Execution duration in seconds. Valid range: [1-900]
@@ -37,7 +37,7 @@ class CCRuleConfig extends AbstractModel
     public $Period;
 
     /**
-     * @var integer Number of access requests. Value range: [1–10000]
+     * @var integer Number of access requests. Value range: [1-10000]
      */
     public $ReqNumber;
 
@@ -53,7 +53,7 @@ class CCRuleConfig extends AbstractModel
 
     /**
      * @param integer $Period Reference period in seconds. Valid values: [10, 30, 60]
-     * @param integer $ReqNumber Number of access requests. Value range: [1–10000]
+     * @param integer $ReqNumber Number of access requests. Value range: [1-10000]
      * @param string $Action Action take. Valid values: ["alg" (CAPTCHA), "drop" (blocking)]
      * @param integer $ExeDuration Execution duration in seconds. Valid range: [1-900]
      */

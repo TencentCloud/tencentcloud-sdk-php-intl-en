@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) Set Input security group ID.
  * @method string getName() Obtain Input security group name.
  * @method void setName(string $Name) Set Input security group name.
- * @method array getWhitelist() Obtain List of whitelist entries.
- * @method void setWhitelist(array $Whitelist) Set List of whitelist entries.
+ * @method array getWhitelist() Obtain List of allowlist entries.
+ * @method void setWhitelist(array $Whitelist) Set List of allowlist entries.
  * @method array getOccupiedInputs() Obtain List of bound input streams.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOccupiedInputs(array $OccupiedInputs) Set List of bound input streams.
@@ -46,7 +46,7 @@ class InputSecurityGroupInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var array List of whitelist entries.
+     * @var array List of allowlist entries.
      */
     public $Whitelist;
 
@@ -64,7 +64,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Id Input security group ID.
      * @param string $Name Input security group name.
-     * @param array $Whitelist List of whitelist entries.
+     * @param array $Whitelist List of allowlist entries.
      * @param array $OccupiedInputs List of bound input streams.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Region Input security group address.

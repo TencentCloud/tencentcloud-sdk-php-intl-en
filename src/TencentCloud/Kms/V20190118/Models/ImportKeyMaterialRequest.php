@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImportToken(string $ImportToken) Set Import token obtained by calling `GetParametersForImport`.
  * @method string getKeyId() Obtain Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
  * @method void setKeyId(string $KeyId) Set Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
- * @method integer getValidTo() Obtain Unix timestamp of the key material’s expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
- * @method void setValidTo(integer $ValidTo) Set Unix timestamp of the key material’s expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+ * @method integer getValidTo() Obtain Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+ * @method void setValidTo(integer $ValidTo) Set Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
  */
 class ImportKeyMaterialRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ImportKeyMaterialRequest extends AbstractModel
     public $KeyId;
 
     /**
-     * @var integer Unix timestamp of the key material’s expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+     * @var integer Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
      */
     public $ValidTo;
 
@@ -55,7 +55,7 @@ class ImportKeyMaterialRequest extends AbstractModel
      * @param string $EncryptedKeyMaterial Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
      * @param string $ImportToken Import token obtained by calling `GetParametersForImport`.
      * @param string $KeyId Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
-     * @param integer $ValidTo Unix timestamp of the key material’s expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+     * @param integer $ValidTo Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
      */
     function __construct()
     {

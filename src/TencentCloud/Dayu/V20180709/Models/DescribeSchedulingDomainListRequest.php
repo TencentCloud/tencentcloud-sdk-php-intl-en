@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSchedulingDomainList request structure.
  *
- * @method integer getLimit() Obtain Number of items in a page. Returned results are not paged if you enter “0”.
- * @method void setLimit(integer $Limit) Set Number of items in a page. Returned results are not paged if you enter “0”.
+ * @method integer getLimit() Obtain Number of items in a page. Returned results are not paged if you enter '0'.
+ * @method void setLimit(integer $Limit) Set Number of items in a page. Returned results are not paged if you enter '0'.
  * @method integer getOffset() Obtain Starting offset of the page. Value: (number of pages - 1) * items per page
  * @method void setOffset(integer $Offset) Set Starting offset of the page. Value: (number of pages - 1) * items per page
  * @method string getDomain() Obtain (Optional) Filter by specific domain name
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSchedulingDomainListRequest extends AbstractModel
 {
     /**
-     * @var integer Number of items in a page. Returned results are not paged if you enter “0”.
+     * @var integer Number of items in a page. Returned results are not paged if you enter '0'.
      */
     public $Limit;
 
@@ -45,7 +45,7 @@ class DescribeSchedulingDomainListRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @param integer $Limit Number of items in a page. Returned results are not paged if you enter “0”.
+     * @param integer $Limit Number of items in a page. Returned results are not paged if you enter '0'.
      * @param integer $Offset Starting offset of the page. Value: (number of pages - 1) * items per page
      * @param string $Domain (Optional) Filter by specific domain name
      */

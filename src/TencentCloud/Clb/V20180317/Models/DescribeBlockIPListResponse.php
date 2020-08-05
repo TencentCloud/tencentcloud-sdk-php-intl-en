@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockedIPCount(integer $BlockedIPCount) Set Number of returned IPs
  * @method string getClientIPField() Obtain Field for getting real client IP
  * @method void setClientIPField(string $ClientIPField) Set Field for getting real client IP
- * @method array getBlockedIPList() Obtain List of IPs added to blacklist 12360
- * @method void setBlockedIPList(array $BlockedIPList) Set List of IPs added to blacklist 12360
+ * @method array getBlockedIPList() Obtain List of IPs added to blocklist 12360
+ * @method void setBlockedIPList(array $BlockedIPList) Set List of IPs added to blocklist 12360
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -42,7 +42,7 @@ class DescribeBlockIPListResponse extends AbstractModel
     public $ClientIPField;
 
     /**
-     * @var array List of IPs added to blacklist 12360
+     * @var array List of IPs added to blocklist 12360
      */
     public $BlockedIPList;
 
@@ -54,7 +54,7 @@ class DescribeBlockIPListResponse extends AbstractModel
     /**
      * @param integer $BlockedIPCount Number of returned IPs
      * @param string $ClientIPField Field for getting real client IP
-     * @param array $BlockedIPList List of IPs added to blacklist 12360
+     * @param array $BlockedIPList List of IPs added to blocklist 12360
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

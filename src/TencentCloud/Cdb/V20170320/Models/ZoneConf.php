@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDeployMode() Obtain AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
  * @method void setDeployMode(array $DeployMode) Set AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
- * @method array getMasterZone() Obtain AZ where the master instance is located
- * @method void setMasterZone(array $MasterZone) Set AZ where the master instance is located
+ * @method array getMasterZone() Obtain AZ where the primary instance is located
+ * @method void setMasterZone(array $MasterZone) Set AZ where the primary instance is located
  * @method array getSlaveZone() Obtain AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
  * @method void setSlaveZone(array $SlaveZone) Set AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
  * @method array getBackupZone() Obtain AZ where salve database 2 is located when the instance is deployed in multi-AZ mode
@@ -37,7 +37,7 @@ class ZoneConf extends AbstractModel
     public $DeployMode;
 
     /**
-     * @var array AZ where the master instance is located
+     * @var array AZ where the primary instance is located
      */
     public $MasterZone;
 
@@ -53,7 +53,7 @@ class ZoneConf extends AbstractModel
 
     /**
      * @param array $DeployMode AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
-     * @param array $MasterZone AZ where the master instance is located
+     * @param array $MasterZone AZ where the primary instance is located
      * @param array $SlaveZone AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
      * @param array $BackupZone AZ where salve database 2 is located when the instance is deployed in multi-AZ mode
      */

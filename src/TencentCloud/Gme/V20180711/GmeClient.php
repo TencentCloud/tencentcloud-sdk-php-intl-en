@@ -27,7 +27,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) This API is used to get the usage statistics of a GME application, including those of voice chat, voice messaging and speech-to-text, phrase analysis, etc. The maximum query period is the past 30 days.
  * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) This API is used to query the speech detection result. Up to 100 tasks can be added in the task query list.
 <p style="color:red">If the `Callback` field is not set when a speech detection task is submitted, this API will be needed to get the detection result.</p>
- * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) This API is used to change the status of an application's master switch.
+ * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) This API is used to change the status of an application's primary switch.
  * @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) This API is used to submit a speech detection task. Up to 100 tasks can be added in the detection task list. Before using this API, please enable the speech analysis service in [Console > Service Configuration](https://console.cloud.tencent.com/gamegme/conf).
 </br></br>
 
@@ -74,7 +74,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <p>ad: advertising</p>
 <p>terrorism: terrorism</p>
 <p>contraband: prohibited</p>
-<p>customized: custom keyword library. This feature is only available to whitelisted users. To try it out, please <a href="https://cloud.tencent.com/apply/p/8809fjcik56">contact us</a>.</p>
+<p>customized: custom keyword library. This feature is only available to allowlisted users. To try it out, please <a href="https://cloud.tencent.com/apply/p/8809fjcik56">contact us</a>.</p>
 </td>
 </tr>
 </tbody>

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionNum(integer $PartitionNum) Set Number of partitions, which should be greater than 0
  * @method integer getReplicaNum() Obtain Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
  * @method void setReplicaNum(integer $ReplicaNum) Set Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
- * @method integer getEnableWhiteList() Obtain IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
- * @method void setEnableWhiteList(integer $EnableWhiteList) Set IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
- * @method array getIpWhiteList() Obtain IP whitelist list for quota limit, which is required if `enableWhileList` is 1
- * @method void setIpWhiteList(array $IpWhiteList) Set IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+ * @method integer getEnableWhiteList() Obtain IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+ * @method void setEnableWhiteList(integer $EnableWhiteList) Set IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+ * @method array getIpWhiteList() Obtain IP allowlist list for quota limit, which is required if `enableWhileList` is 1
+ * @method void setIpWhiteList(array $IpWhiteList) Set IP allowlist list for quota limit, which is required if `enableWhileList` is 1
  * @method string getCleanUpPolicy() Obtain Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
  * @method void setCleanUpPolicy(string $CleanUpPolicy) Set Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
  * @method string getNote() Obtain Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
@@ -68,12 +68,12 @@ class CreateTopicRequest extends AbstractModel
     public $ReplicaNum;
 
     /**
-     * @var integer IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
+     * @var integer IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
      */
     public $EnableWhiteList;
 
     /**
-     * @var array IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+     * @var array IP allowlist list for quota limit, which is required if `enableWhileList` is 1
      */
     public $IpWhiteList;
 
@@ -112,8 +112,8 @@ class CreateTopicRequest extends AbstractModel
      * @param string $TopicName Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
      * @param integer $PartitionNum Number of partitions, which should be greater than 0
      * @param integer $ReplicaNum Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
-     * @param integer $EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
-     * @param array $IpWhiteList IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+     * @param integer $EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+     * @param array $IpWhiteList IP allowlist list for quota limit, which is required if `enableWhileList` is 1
      * @param string $CleanUpPolicy Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
      * @param integer $MinInsyncReplicas Default value: 1

@@ -23,12 +23,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() Obtain Cluster instance ID
  * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
  * @method integer getLogType() Obtain Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
  * @method void setLogType(integer $LogType) Set Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
@@ -58,7 +58,7 @@ class DescribeInstanceLogsRequest extends AbstractModel
 
     /**
      * @var integer Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
@@ -100,7 +100,7 @@ class DescribeInstanceLogsRequest extends AbstractModel
     /**
      * @param string $InstanceId Cluster instance ID
      * @param integer $LogType Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountName(string $AccountName) Set Sub-account name
  * @method string getAccountPassword() Obtain Sub-account password
  * @method void setAccountPassword(string $AccountPassword) Set Sub-account password
- * @method array getReadonlyPolicy() Obtain Routing policy. Enter `master` for master node or `replication` for slave node
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Enter `master` for master node or `replication` for slave node
+ * @method array getReadonlyPolicy() Obtain Routing policy. Enter `master` for primary node or `replication` for secondary node
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Enter `master` for primary node or `replication` for secondary node
  * @method string getPrivilege() Obtain Read/write policy. Valid values: r (read-only), rw (read/write).
  * @method void setPrivilege(string $Privilege) Set Read/write policy. Valid values: r (read-only), rw (read/write).
  * @method string getRemark() Obtain Sub-account description information
@@ -51,7 +51,7 @@ class CreateInstanceAccountRequest extends AbstractModel
     public $AccountPassword;
 
     /**
-     * @var array Routing policy. Enter `master` for master node or `replication` for slave node
+     * @var array Routing policy. Enter `master` for primary node or `replication` for secondary node
      */
     public $ReadonlyPolicy;
 
@@ -69,7 +69,7 @@ class CreateInstanceAccountRequest extends AbstractModel
      * @param string $InstanceId Instance ID
      * @param string $AccountName Sub-account name
      * @param string $AccountPassword Sub-account password
-     * @param array $ReadonlyPolicy Routing policy. Enter `master` for master node or `replication` for slave node
+     * @param array $ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
      * @param string $Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
      * @param string $Remark Sub-account description information
      */

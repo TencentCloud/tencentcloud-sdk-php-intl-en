@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Input security group name, which can contain letters, digits, and underscores and must be unique at the region level.
  * @method void setName(string $Name) Set Input security group name, which can contain letters, digits, and underscores and must be unique at the region level.
- * @method array getWhitelist() Obtain List of whitelist entries. Quantity limit: [1,10].
- * @method void setWhitelist(array $Whitelist) Set List of whitelist entries. Quantity limit: [1,10].
+ * @method array getWhitelist() Obtain List of allowlist entries. Quantity limit: [1,10].
+ * @method void setWhitelist(array $Whitelist) Set List of allowlist entries. Quantity limit: [1,10].
  */
 class CreateMediaLiveInputSecurityGroupRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateMediaLiveInputSecurityGroupRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array List of whitelist entries. Quantity limit: [1,10].
+     * @var array List of allowlist entries. Quantity limit: [1,10].
      */
     public $Whitelist;
 
     /**
      * @param string $Name Input security group name, which can contain letters, digits, and underscores and must be unique at the region level.
-     * @param array $Whitelist List of whitelist entries. Quantity limit: [1,10].
+     * @param array $Whitelist List of allowlist entries. Quantity limit: [1,10].
      */
     function __construct()
     {

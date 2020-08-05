@@ -44,9 +44,9 @@ Unit: second. The maximum value is 31536000.
 If it contains an asterisk (*), this indicates all files.
  * @method void setFileExtensions(array $FileExtensions) Set File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
- * @method string getFilterType() Obtain whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+ * @method string getFilterType() Obtain allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
- * @method void setFilterType(string $FilterType) Set whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+ * @method void setFilterType(string $FilterType) Set allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
  */
 class AuthenticationTypeA extends AbstractModel
@@ -77,7 +77,7 @@ If it contains an asterisk (*), this indicates all files.
     public $FileExtensions;
 
     /**
-     * @var string whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+     * @var string allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     public $FilterType;
@@ -92,7 +92,7 @@ Only upper and lower-case letters, digits, and underscores (_) are allowed. It c
 Unit: second. The maximum value is 31536000.
      * @param array $FileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
-     * @param string $FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+     * @param string $FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     function __construct()

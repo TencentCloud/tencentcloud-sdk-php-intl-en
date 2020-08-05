@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRid(integer $Rid) Set Associated tag ID
  * @method string getName() Obtain Tag name
  * @method void setName(string $Name) Set Tag name
+ * @method integer getTagId() Obtain 
+ * @method void setTagId(integer $TagId) Set 
  */
 class MachineTag extends AbstractModel
 {
@@ -38,8 +40,14 @@ class MachineTag extends AbstractModel
     public $Name;
 
     /**
+     * @var integer 
+     */
+    public $TagId;
+
+    /**
      * @param integer $Rid Associated tag ID
      * @param string $Name Tag name
+     * @param integer $TagId 
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class MachineTag extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("TagId",$param) and $param["TagId"] !== null) {
+            $this->TagId = $param["TagId"];
         }
     }
 }

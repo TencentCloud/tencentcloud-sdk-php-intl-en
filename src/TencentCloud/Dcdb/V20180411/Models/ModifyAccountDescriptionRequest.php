@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Login username.
  * @method string getHost() Obtain Access host allowed for a user. An account is uniquely identified by username and host.
  * @method void setHost(string $Host) Set Access host allowed for a user. An account is uniquely identified by username and host.
- * @method string getDescription() Obtain New account remarks, which can contain 0–256 characters.
- * @method void setDescription(string $Description) Set New account remarks, which can contain 0–256 characters.
+ * @method string getDescription() Obtain New account remarks, which can contain 0-256 characters.
+ * @method void setDescription(string $Description) Set New account remarks, which can contain 0-256 characters.
  */
 class ModifyAccountDescriptionRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string New account remarks, which can contain 0–256 characters.
+     * @var string New account remarks, which can contain 0-256 characters.
      */
     public $Description;
 
@@ -55,7 +55,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc.
      * @param string $UserName Login username.
      * @param string $Host Access host allowed for a user. An account is uniquely identified by username and host.
-     * @param string $Description New account remarks, which can contain 0–256 characters.
+     * @param string $Description New account remarks, which can contain 0-256 characters.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusiness() Obtain Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
  * @method void setBusiness(string $Business) Set Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
- * @method string getId() Obtain Anti-DDoS instance ID
- * @method void setId(string $Id) Set Anti-DDoS instance ID
+ * @method string getId() Obtain The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
+ * @method void setId(string $Id) Set The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
  * @method string getRuleId() Obtain Rule ID
  * @method void setRuleId(string $RuleId) Set Rule ID
  * @method integer getCertType() Obtain Certificate type, which is required if the protocol is HTTPS. Valid value: [2 (Tencent Cloud-hosted certificate)]
@@ -43,7 +43,7 @@ class CreateL7RuleCertRequest extends AbstractModel
     public $Business;
 
     /**
-     * @var string Anti-DDoS instance ID
+     * @var string The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
      */
     public $Id;
 
@@ -74,7 +74,7 @@ class CreateL7RuleCertRequest extends AbstractModel
 
     /**
      * @param string $Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
-     * @param string $Id Anti-DDoS instance ID
+     * @param string $Id The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
      * @param string $RuleId Rule ID
      * @param integer $CertType Certificate type, which is required if the protocol is HTTPS. Valid value: [2 (Tencent Cloud-hosted certificate)]
      * @param string $SSLId If the certificate is a Tencent Cloud-hosted certificate, this field must be entered with the hosted certificate ID.

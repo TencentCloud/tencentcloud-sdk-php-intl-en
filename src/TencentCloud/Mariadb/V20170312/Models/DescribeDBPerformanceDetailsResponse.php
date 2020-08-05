@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSlave1(PerformanceMonitorSet $Slave1) Set Slave 1 performance monitoring data
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method PerformanceMonitorSet getSlave2() Obtain Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+ * @method PerformanceMonitorSet getSlave2() Obtain Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSlave2(PerformanceMonitorSet $Slave2) Set Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+ * @method void setSlave2(PerformanceMonitorSet $Slave2) Set Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Slave1;
 
     /**
-     * @var PerformanceMonitorSet Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+     * @var PerformanceMonitorSet Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Slave2;
@@ -61,7 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param PerformanceMonitorSet $Master Master node performance monitoring data
      * @param PerformanceMonitorSet $Slave1 Slave 1 performance monitoring data
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PerformanceMonitorSet $Slave2 Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+     * @param PerformanceMonitorSet $Slave2 Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private IP of the instance
  * @method array getPublicIpAddresses() Obtain Public IP of the instance
  * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public IP of the instance
+ * @method string getResourceType() Obtain 
+ * @method void setResourceType(string $ResourceType) Set 
+ * @method string getResourceOrigin() Obtain 
+ * @method void setResourceOrigin(string $ResourceOrigin) Set 
  */
 class ComputeNode extends AbstractModel
 {
@@ -94,6 +98,16 @@ class ComputeNode extends AbstractModel
     public $PublicIpAddresses;
 
     /**
+     * @var string 
+     */
+    public $ResourceType;
+
+    /**
+     * @var string 
+     */
+    public $ResourceOrigin;
+
+    /**
      * @param string $ComputeNodeId Compute node ID
      * @param string $ComputeNodeInstanceId Compute node instance ID. In a CVM scenario, this parameter is the CVM InstanceId
      * @param string $ComputeNodeState Compute node state
@@ -104,6 +118,8 @@ class ComputeNode extends AbstractModel
      * @param string $AgentVersion BatchCompute Agent version
      * @param array $PrivateIpAddresses Private IP of the instance
      * @param array $PublicIpAddresses Public IP of the instance
+     * @param string $ResourceType 
+     * @param string $ResourceOrigin 
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class ComputeNode extends AbstractModel
 
         if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
             $this->PublicIpAddresses = $param["PublicIpAddresses"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("ResourceOrigin",$param) and $param["ResourceOrigin"] !== null) {
+            $this->ResourceOrigin = $param["ResourceOrigin"];
         }
     }
 }

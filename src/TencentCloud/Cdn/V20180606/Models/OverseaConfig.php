@@ -66,9 +66,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHttps(Https $Https) Set HTTPS configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration.
+ * @method IpFilter getIpFilter() Obtain IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpFilter(IpFilter $IpFilter) Set IP blacklist/whitelist configuration.
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method IpFreqLimit getIpFreqLimit() Obtain IP access limit configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -186,7 +186,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Https;
 
     /**
-     * @var IpFilter IP blacklist/whitelist configuration.
+     * @var IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IpFilter;
@@ -290,7 +290,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Https $Https HTTPS configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IpFilter $IpFilter IP blacklist/whitelist configuration.
+     * @param IpFilter $IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param IpFreqLimit $IpFreqLimit IP access limit configuration.
 Note: this field may return null, indicating that no valid values can be obtained.

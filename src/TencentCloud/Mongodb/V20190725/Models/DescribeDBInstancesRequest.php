@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
  * @method integer getPayMode() Obtain Billing type. Valid value: 0 (pay-as-you-go)
  * @method void setPayMode(integer $PayMode) Set Billing type. Valid value: 0 (pay-as-you-go)
- * @method integer getLimit() Obtain Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
+ * @method integer getLimit() Obtain Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+ * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
  * @method integer getOffset() Obtain Offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0
  * @method string getOrderBy() Obtain Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
@@ -85,7 +85,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
+     * @var integer Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
      */
     public $Limit;
 
@@ -122,7 +122,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $VpcId VPC ID. This parameter can be left empty for the basic network
      * @param string $SubnetId Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
      * @param integer $PayMode Billing type. Valid value: 0 (pay-as-you-go)
-     * @param integer $Limit Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
+     * @param integer $Limit Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
      * @param integer $Offset Offset. Default value: 0
      * @param string $OrderBy Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
      * @param string $OrderByType Sorting method of the return result set. Currently, "ASC" or "DESC" is supported

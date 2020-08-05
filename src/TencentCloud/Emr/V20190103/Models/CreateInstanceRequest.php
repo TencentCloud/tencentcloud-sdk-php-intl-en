@@ -51,10 +51,10 @@ use TencentCloud\Common\AbstractModel;
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
  * @method string getInstanceName() Obtain Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
  * @method void setInstanceName(string $InstanceName) Set Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
  * @method integer getPayMode() Obtain Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
@@ -164,7 +164,7 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @var string Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
      */
     public $InstanceName;
@@ -300,7 +300,7 @@ class CreateInstanceRequest extends AbstractModel
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
      * @param string $InstanceName Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
      * @param integer $PayMode Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Total number of records
  * @method void setTotalCount(integer $TotalCount) Set Total number of records
- * @method array getLoginWhiteLists() Obtain Login whitelist array
- * @method void setLoginWhiteLists(array $LoginWhiteLists) Set Login whitelist array
+ * @method array getLoginWhiteLists() Obtain Login allowlist array
+ * @method void setLoginWhiteLists(array $LoginWhiteLists) Set Login allowlist array
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeLoginWhiteListResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array Login whitelist array
+     * @var array Login allowlist array
      */
     public $LoginWhiteLists;
 
@@ -46,7 +46,7 @@ class DescribeLoginWhiteListResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Total number of records
-     * @param array $LoginWhiteLists Login whitelist array
+     * @param array $LoginWhiteLists Login allowlist array
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

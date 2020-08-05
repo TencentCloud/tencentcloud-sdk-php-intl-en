@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMalwareNum(integer $MalwareNum) Set Number of trojans.
  * @method array getTag() Obtain Tag information
  * @method void setTag(array $Tag) Set Tag information
+ * @method integer getBaselineNum() Obtain 
+ * @method void setBaselineNum(integer $BaselineNum) Set 
+ * @method integer getCyberAttackNum() Obtain 
+ * @method void setCyberAttackNum(integer $CyberAttackNum) Set 
+ * @method string getSecurityStatus() Obtain 
+ * @method void setSecurityStatus(string $SecurityStatus) Set 
+ * @method integer getInvasionNum() Obtain 
+ * @method void setInvasionNum(integer $InvasionNum) Set 
  */
 class Machine extends AbstractModel
 {
@@ -126,6 +134,26 @@ class Machine extends AbstractModel
     public $Tag;
 
     /**
+     * @var integer 
+     */
+    public $BaselineNum;
+
+    /**
+     * @var integer 
+     */
+    public $CyberAttackNum;
+
+    /**
+     * @var string 
+     */
+    public $SecurityStatus;
+
+    /**
+     * @var integer 
+     */
+    public $InvasionNum;
+
+    /**
      * @param string $MachineName Server name.
      * @param string $MachineOs Server OS.
      * @param string $MachineStatus Server status.
@@ -144,6 +172,10 @@ class Machine extends AbstractModel
 <li>POSTPAY: post-paid, i.e., pay-as-you-go </li>
      * @param integer $MalwareNum Number of trojans.
      * @param array $Tag Tag information
+     * @param integer $BaselineNum 
+     * @param integer $CyberAttackNum 
+     * @param string $SecurityStatus 
+     * @param integer $InvasionNum 
      */
     function __construct()
     {
@@ -209,6 +241,22 @@ class Machine extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tag, $obj);
             }
+        }
+
+        if (array_key_exists("BaselineNum",$param) and $param["BaselineNum"] !== null) {
+            $this->BaselineNum = $param["BaselineNum"];
+        }
+
+        if (array_key_exists("CyberAttackNum",$param) and $param["CyberAttackNum"] !== null) {
+            $this->CyberAttackNum = $param["CyberAttackNum"];
+        }
+
+        if (array_key_exists("SecurityStatus",$param) and $param["SecurityStatus"] !== null) {
+            $this->SecurityStatus = $param["SecurityStatus"];
+        }
+
+        if (array_key_exists("InvasionNum",$param) and $param["InvasionNum"] !== null) {
+            $this->InvasionNum = $param["InvasionNum"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) Set Topic name.
  * @method string getNote() Obtain Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
  * @method void setNote(string $Note) Set Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
- * @method integer getEnableWhiteList() Obtain IP whitelist switch. 1: enabled, 0: disabled.
- * @method void setEnableWhiteList(integer $EnableWhiteList) Set IP whitelist switch. 1: enabled, 0: disabled.
+ * @method integer getEnableWhiteList() Obtain IP allowlist switch. 1: enabled, 0: disabled.
+ * @method void setEnableWhiteList(integer $EnableWhiteList) Set IP allowlist switch. 1: enabled, 0: disabled.
  * @method integer getMinInsyncReplicas() Obtain Default value: 1.
  * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) Set Default value: 1.
  * @method integer getUncleanLeaderElectionEnable() Obtain 0: false, 1: true. Default value: 0.
@@ -59,7 +59,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $Note;
 
     /**
-     * @var integer IP whitelist switch. 1: enabled, 0: disabled.
+     * @var integer IP allowlist switch. 1: enabled, 0: disabled.
      */
     public $EnableWhiteList;
 
@@ -97,7 +97,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param string $InstanceId Instance ID.
      * @param string $TopicName Topic name.
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
-     * @param integer $EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled.
+     * @param integer $EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
      * @param integer $MinInsyncReplicas Default value: 1.
      * @param integer $UncleanLeaderElectionEnable 0: false, 1: true. Default value: 0.
      * @param integer $RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.

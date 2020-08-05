@@ -30,11 +30,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method string getUpdateTime() Obtain Last updated time
  * @method void setUpdateTime(string $UpdateTime) Set Last updated time
- * @method integer getReadOnly() Obtain Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
- * @method void setReadOnly(integer $ReadOnly) Set Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
- * @method integer getDelayThresh() Obtain If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+ * @method integer getReadOnly() Obtain Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+ * @method void setReadOnly(integer $ReadOnly) Set Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+ * @method integer getDelayThresh() Obtain If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
- * @method void setDelayThresh(integer $DelayThresh) Set If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+ * @method void setDelayThresh(integer $DelayThresh) Set If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
  */
 class DBAccount extends AbstractModel
@@ -65,12 +65,12 @@ class DBAccount extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * @var integer Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public $ReadOnly;
 
     /**
-     * @var integer If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * @var integer If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      */
     public $DelayThresh;
@@ -81,8 +81,8 @@ It is recommended that this parameter be set to a value greater than 10. This pa
      * @param string $Description User remarks
      * @param string $CreateTime Creation time
      * @param string $UpdateTime Last updated time
-     * @param integer $ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-     * @param integer $DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * @param integer $ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+     * @param integer $DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      */
     function __construct()

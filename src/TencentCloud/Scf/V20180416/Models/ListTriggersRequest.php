@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOrder() Obtain Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
  * @method void setOrder(string $Order) Set Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
  * @method array getFilters() Obtain * Qualifier:
-Function version, i.e., alias
+Function version, alias
  * @method void setFilters(array $Filters) Set * Qualifier:
-Function version, i.e., alias
+Function version, alias
  */
 class ListTriggersRequest extends AbstractModel
 {
@@ -71,7 +71,7 @@ class ListTriggersRequest extends AbstractModel
 
     /**
      * @var array * Qualifier:
-Function version, i.e., alias
+Function version, alias
      */
     public $Filters;
 
@@ -83,7 +83,7 @@ Function version, i.e., alias
      * @param string $OrderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
      * @param string $Order Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
      * @param array $Filters * Qualifier:
-Function version, i.e., alias
+Function version, alias
      */
     function __construct()
     {

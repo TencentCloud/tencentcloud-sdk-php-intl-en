@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Name of the function to be modified
  * @method string getDescription() Obtain Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
  * @method void setDescription(string $Description) Set Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
- * @method integer getMemorySize() Obtain Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
- * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
- * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
- * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+ * @method integer getMemorySize() Obtain Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+ * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+ * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+ * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
  * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
  * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
  * @method Environment getEnvironment() Obtain Function environment variable
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Information of a dead letter queue associated with a function
  * @method PublicNetConfigIn getPublicNetConfig() Obtain Public network access configuration
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
+ * @method CfsConfig getCfsConfig() Obtain File system configuration input parameter, which is used for the function to bind the file system
+ * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration input parameter, which is used for the function to bind the file system
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -66,12 +68,12 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+     * @var integer Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
      */
     public $MemorySize;
 
     /**
-     * @var integer Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * @var integer Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      */
     public $Timeout;
 
@@ -136,10 +138,15 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $PublicNetConfig;
 
     /**
+     * @var CfsConfig File system configuration input parameter, which is used for the function to bind the file system
+     */
+    public $CfsConfig;
+
+    /**
      * @param string $FunctionName Name of the function to be modified
      * @param string $Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
-     * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
-     * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+     * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
      * @param Environment $Environment Function environment variable
      * @param string $Namespace Function namespace
@@ -152,6 +159,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param array $Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
      * @param DeadLetterConfig $DeadLetterConfig Information of a dead letter queue associated with a function
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
+     * @param CfsConfig $CfsConfig File system configuration input parameter, which is used for the function to bind the file system
      */
     function __construct()
     {
@@ -237,6 +245,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
         if (array_key_exists("PublicNetConfig",$param) and $param["PublicNetConfig"] !== null) {
             $this->PublicNetConfig = new PublicNetConfigIn();
             $this->PublicNetConfig->deserialize($param["PublicNetConfig"]);
+        }
+
+        if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
+            $this->CfsConfig = new CfsConfig();
+            $this->CfsConfig->deserialize($param["CfsConfig"]);
         }
     }
 }

@@ -80,8 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(integer $InstanceType) Set Instance type (instance type identifier, which can be only 1 or 2 currently)
  * @method EsDictionaryInfo getIkConfig() Obtain IK analyzer configuration
  * @method void setIkConfig(EsDictionaryInfo $IkConfig) Set IK analyzer configuration
- * @method MasterNodeInfo getMasterNodeInfo() Obtain Dedicated master node configuration
- * @method void setMasterNodeInfo(MasterNodeInfo $MasterNodeInfo) Set Dedicated master node configuration
+ * @method MasterNodeInfo getMasterNodeInfo() Obtain Dedicated primary node configuration
+ * @method void setMasterNodeInfo(MasterNodeInfo $MasterNodeInfo) Set Dedicated primary node configuration
  * @method CosBackup getCosBackup() Obtain Auto-backup to COS configuration
  * @method void setCosBackup(CosBackup $CosBackup) Set Auto-backup to COS configuration
  * @method boolean getAllowCosBackup() Obtain Whether to allow auto-backup to COS
@@ -310,7 +310,7 @@ class InstanceInfo extends AbstractModel
     public $IkConfig;
 
     /**
-     * @var MasterNodeInfo Dedicated master node configuration
+     * @var MasterNodeInfo Dedicated primary node configuration
      */
     public $MasterNodeInfo;
 
@@ -466,7 +466,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Deadline This parameter is not used on the global website
      * @param integer $InstanceType Instance type (instance type identifier, which can be only 1 or 2 currently)
      * @param EsDictionaryInfo $IkConfig IK analyzer configuration
-     * @param MasterNodeInfo $MasterNodeInfo Dedicated master node configuration
+     * @param MasterNodeInfo $MasterNodeInfo Dedicated primary node configuration
      * @param CosBackup $CosBackup Auto-backup to COS configuration
      * @param boolean $AllowCosBackup Whether to allow auto-backup to COS
      * @param array $TagList List of tags owned by the instance

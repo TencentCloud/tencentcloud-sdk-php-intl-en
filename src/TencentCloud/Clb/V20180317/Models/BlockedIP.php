@@ -18,7 +18,7 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP added to blacklist 12306
+ * IP added to blocklist 12306
  *
  * @method string getIP() Obtain Blacklisted IP
  * @method void setIP(string $IP) Set Blacklisted IP

@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The authentication information of channel endpoints.
  *
- * @method array getWhiteIpList() Obtain The security group whitelist in CIDR format.
+ * @method array getWhiteIpList() Obtain The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWhiteIpList(array $WhiteIpList) Set The security group whitelist in CIDR format.
+ * @method void setWhiteIpList(array $WhiteIpList) Set The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getBlackIpList() Obtain The security group blacklist in CIDR format.
+ * @method array getBlackIpList() Obtain The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBlackIpList(array $BlackIpList) Set The security group blacklist in CIDR format.
+ * @method void setBlackIpList(array $BlackIpList) Set The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getAuthKey() Obtain The authentication key. Its value is same as `X-TENCENT-PACKAGE` set in the HTTP request header.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -36,13 +36,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class EndpointAuthInfo extends AbstractModel
 {
     /**
-     * @var array The security group whitelist in CIDR format.
+     * @var array The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $WhiteIpList;
 
     /**
-     * @var array The security group blacklist in CIDR format.
+     * @var array The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $BlackIpList;
@@ -54,9 +54,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AuthKey;
 
     /**
-     * @param array $WhiteIpList The security group whitelist in CIDR format.
+     * @param array $WhiteIpList The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $BlackIpList The security group blacklist in CIDR format.
+     * @param array $BlackIpList The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AuthKey The authentication key. Its value is same as `X-TENCENT-PACKAGE` set in the HTTP request header.
 Note: this field may return null, indicating that no valid values can be obtained.

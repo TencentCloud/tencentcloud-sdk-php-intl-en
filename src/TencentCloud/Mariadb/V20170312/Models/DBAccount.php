@@ -30,11 +30,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method string getUpdateTime() Obtain Last updated time
  * @method void setUpdateTime(string $UpdateTime) Set Last updated time
- * @method integer getReadOnly() Obtain Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
- * @method void setReadOnly(integer $ReadOnly) Set Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
- * @method integer getDelayThresh() Obtain This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+ * @method integer getReadOnly() Obtain Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+ * @method void setReadOnly(integer $ReadOnly) Set Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+ * @method integer getDelayThresh() Obtain This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDelayThresh(integer $DelayThresh) Set This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+ * @method void setDelayThresh(integer $DelayThresh) Set This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DBAccount extends AbstractModel
@@ -65,12 +65,12 @@ class DBAccount extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * @var integer Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public $ReadOnly;
 
     /**
-     * @var integer This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+     * @var integer This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DelayThresh;
@@ -81,8 +81,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Description User remarks
      * @param string $CreateTime Creation time
      * @param string $UpdateTime Last updated time
-     * @param integer $ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-     * @param integer $DelayThresh This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+     * @param integer $ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+     * @param integer $DelayThresh This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

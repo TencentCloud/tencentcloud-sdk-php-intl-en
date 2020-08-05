@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) Set Storage capacity in GB
  * @method integer getShardId() Obtain Numeric ID of a shard
  * @method void setShardId(integer $ShardId) Set Numeric ID of a shard
- * @method integer getNodeCount() Obtain Number of nodes. 2: one master and one slave; 3: one master and two slaves
- * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one master and one slave; 3: one master and two slaves
+ * @method integer getNodeCount() Obtain Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+ * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
  * @method integer getPid() Obtain Product type ID (this field is obsolete and should not be depended on)
  * @method void setPid(integer $Pid) Set Product type ID (this field is obsolete and should not be depended on)
  * @method integer getCpu() Obtain Number of CPU cores
@@ -79,7 +79,7 @@ class ShardInfo extends AbstractModel
     public $ShardId;
 
     /**
-     * @var integer Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * @var integer Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      */
     public $NodeCount;
 
@@ -101,7 +101,7 @@ class ShardInfo extends AbstractModel
      * @param integer $Memory Memory size in GB
      * @param integer $Storage Storage capacity in GB
      * @param integer $ShardId Numeric ID of a shard
-     * @param integer $NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * @param integer $NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      * @param integer $Pid Product type ID (this field is obsolete and should not be depended on)
      * @param integer $Cpu Number of CPU cores
      */

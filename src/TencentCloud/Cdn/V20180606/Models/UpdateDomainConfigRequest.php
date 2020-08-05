@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method Origin getOrigin() Obtain Origin server configuration
  * @method void setOrigin(Origin $Origin) Set Origin server configuration
- * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration
- * @method void setIpFilter(IpFilter $IpFilter) Set IP blacklist/whitelist configuration
+ * @method IpFilter getIpFilter() Obtain IP blocklist/allowlist configuration
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP blocklist/allowlist configuration
  * @method IpFreqLimit getIpFreqLimit() Obtain IP access limit configuration
  * @method void setIpFreqLimit(IpFreqLimit $IpFreqLimit) Set IP access limit configuration
  * @method StatusCodeCache getStatusCodeCache() Obtain Status code cache configuration
@@ -94,8 +94,8 @@ global: global acceleration
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
  * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Origin access authentication for S3 bucket
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Origin access authentication for S3 bucket
- * @method UserAgentFilter getUserAgentFilter() Obtain UA blacklist/whitelist Configuration
- * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA blacklist/whitelist Configuration
+ * @method UserAgentFilter getUserAgentFilter() Obtain UA blocklist/allowlist Configuration
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA blocklist/allowlist Configuration
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -115,7 +115,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Origin;
 
     /**
-     * @var IpFilter IP blacklist/whitelist configuration
+     * @var IpFilter IP blocklist/allowlist configuration
      */
     public $IpFilter;
 
@@ -257,7 +257,7 @@ global: global acceleration
     public $AwsPrivateAccess;
 
     /**
-     * @var UserAgentFilter UA blacklist/whitelist Configuration
+     * @var UserAgentFilter UA blocklist/allowlist Configuration
      */
     public $UserAgentFilter;
 
@@ -265,7 +265,7 @@ global: global acceleration
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
-     * @param IpFilter $IpFilter IP blacklist/whitelist configuration
+     * @param IpFilter $IpFilter IP blocklist/allowlist configuration
      * @param IpFreqLimit $IpFreqLimit IP access limit configuration
      * @param StatusCodeCache $StatusCodeCache Status code cache configuration
      * @param Compression $Compression Smart compression configuration
@@ -299,7 +299,7 @@ overseas: acceleration outside mainland China
 global: global acceleration
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
      * @param AwsPrivateAccess $AwsPrivateAccess Origin access authentication for S3 bucket
-     * @param UserAgentFilter $UserAgentFilter UA blacklist/whitelist Configuration
+     * @param UserAgentFilter $UserAgentFilter UA blocklist/allowlist Configuration
      */
     function __construct()
     {

@@ -54,6 +54,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Default value: FALSE<br>
 This parameter is only used with `RunInstances`.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getKmsKeyId() Obtain ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setKmsKeyId(string $KmsKeyId) Set ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DataDisk extends AbstractModel
 {
@@ -99,6 +107,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $Encrypt;
 
     /**
+     * @var string ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $KmsKeyId;
+
+    /**
      * @param integer $DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://cloud.tencent.com/document/product/213/4952). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
      * @param string $DiskType The type of the data disk. For more information regarding data disk types and limits, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk<br><br>Default value: LOCAL_BASIC.<br><br>This parameter is invalid for `ResizeInstanceDisk`.
      * @param string $DiskId Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
@@ -116,6 +132,10 @@ Note: This field may return null, indicating that no valid value is found.
 Default value: FALSE<br>
 This parameter is only used with `RunInstances`.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $KmsKeyId ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -152,6 +172,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
             $this->Encrypt = $param["Encrypt"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
         }
     }
 }

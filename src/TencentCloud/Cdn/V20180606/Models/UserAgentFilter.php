@@ -18,15 +18,15 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `UserAgent` blacklist/whitelist configuration
+ * `UserAgent` blocklist/allowlist configuration
  *
  * @method string getSwitch() Obtain Switch. Valid values: on, off
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSwitch(string $Switch) Set Switch. Valid values: on, off
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getFilterRules() Obtain UA blacklist/whitelist effect rule list
+ * @method array getFilterRules() Obtain UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilterRules(array $FilterRules) Set UA blacklist/whitelist effect rule list
+ * @method void setFilterRules(array $FilterRules) Set UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class UserAgentFilter extends AbstractModel
@@ -38,7 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Switch;
 
     /**
-     * @var array UA blacklist/whitelist effect rule list
+     * @var array UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FilterRules;
@@ -46,7 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Switch Switch. Valid values: on, off
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $FilterRules UA blacklist/whitelist effect rule list
+     * @param array $FilterRules UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

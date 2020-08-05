@@ -23,27 +23,27 @@ use TencentCloud\Common\AbstractModel;
  * @method array getLoadBalancerIds() Obtain CLB instance ID
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID
  * @method string getType() Obtain Operation type. Valid values:
-<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> add_customized_field (sets header initially to enable the blocklist feature)</li>
 <li> set_customized_field (modifies header)</li>
 <li> del_customized_field (deletes header)</li>
-<li> add_blocked (adds IPs to blacklist)</li>
-<li> del_blocked (deletes IPs from blacklist)</li>
-<li> flush_blocked (clears blacklist)</li>
+<li> add_blocked (adds IPs to blocklist)</li>
+<li> del_blocked (deletes IPs from blocklist)</li>
+<li> flush_blocked (clears blocklist)</li>
  * @method void setType(string $Type) Set Operation type. Valid values:
-<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> add_customized_field (sets header initially to enable the blocklist feature)</li>
 <li> set_customized_field (modifies header)</li>
 <li> del_customized_field (deletes header)</li>
-<li> add_blocked (adds IPs to blacklist)</li>
-<li> del_blocked (deletes IPs from blacklist)</li>
-<li> flush_blocked (clears blacklist)</li>
+<li> add_blocked (adds IPs to blocklist)</li>
+<li> del_blocked (deletes IPs from blocklist)</li>
+<li> flush_blocked (clears blocklist)</li>
  * @method string getClientIPField() Obtain Header field that stores real client IPs
  * @method void setClientIPField(string $ClientIPField) Set Header field that stores real client IPs
  * @method array getBlockIPList() Obtain List of blocked IPs. The array can contain up to 200,000 entries in one operation.
  * @method void setBlockIPList(array $BlockIPList) Set List of blocked IPs. The array can contain up to 200,000 entries in one operation.
  * @method integer getExpireTime() Obtain Expiration time in seconds. Default value: 3600
  * @method void setExpireTime(integer $ExpireTime) Set Expiration time in seconds. Default value: 3600
- * @method string getAddStrategy() Obtain IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
- * @method void setAddStrategy(string $AddStrategy) Set IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
+ * @method string getAddStrategy() Obtain IP adding policy. Valid value: fifo (if a blocklist is full, new IPs added to the blocklist will adopt the first-in first-out policy)
+ * @method void setAddStrategy(string $AddStrategy) Set IP adding policy. Valid value: fifo (if a blocklist is full, new IPs added to the blocklist will adopt the first-in first-out policy)
  */
 class ModifyBlockIPListRequest extends AbstractModel
 {
@@ -54,12 +54,12 @@ class ModifyBlockIPListRequest extends AbstractModel
 
     /**
      * @var string Operation type. Valid values:
-<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> add_customized_field (sets header initially to enable the blocklist feature)</li>
 <li> set_customized_field (modifies header)</li>
 <li> del_customized_field (deletes header)</li>
-<li> add_blocked (adds IPs to blacklist)</li>
-<li> del_blocked (deletes IPs from blacklist)</li>
-<li> flush_blocked (clears blacklist)</li>
+<li> add_blocked (adds IPs to blocklist)</li>
+<li> del_blocked (deletes IPs from blocklist)</li>
+<li> flush_blocked (clears blocklist)</li>
      */
     public $Type;
 
@@ -79,23 +79,23 @@ class ModifyBlockIPListRequest extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var string IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
+     * @var string IP adding policy. Valid value: fifo (if a blocklist is full, new IPs added to the blocklist will adopt the first-in first-out policy)
      */
     public $AddStrategy;
 
     /**
      * @param array $LoadBalancerIds CLB instance ID
      * @param string $Type Operation type. Valid values:
-<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> add_customized_field (sets header initially to enable the blocklist feature)</li>
 <li> set_customized_field (modifies header)</li>
 <li> del_customized_field (deletes header)</li>
-<li> add_blocked (adds IPs to blacklist)</li>
-<li> del_blocked (deletes IPs from blacklist)</li>
-<li> flush_blocked (clears blacklist)</li>
+<li> add_blocked (adds IPs to blocklist)</li>
+<li> del_blocked (deletes IPs from blocklist)</li>
+<li> flush_blocked (clears blocklist)</li>
      * @param string $ClientIPField Header field that stores real client IPs
      * @param array $BlockIPList List of blocked IPs. The array can contain up to 200,000 entries in one operation.
      * @param integer $ExpireTime Expiration time in seconds. Default value: 3600
-     * @param string $AddStrategy IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
+     * @param string $AddStrategy IP adding policy. Valid value: fifo (if a blocklist is full, new IPs added to the blocklist will adopt the first-in first-out policy)
      */
     function __construct()
     {

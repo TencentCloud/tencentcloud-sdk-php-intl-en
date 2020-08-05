@@ -18,12 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP blacklist/whitelist
+ * IP blocklist/allowlist
  *
  * @method string getIp() Obtain IP address
  * @method void setIp(string $Ip) Set IP address
- * @method string getType() Obtain Blacklist/whitelist type. Valid values: [black, white]
- * @method void setType(string $Type) Set Blacklist/whitelist type. Valid values: [black, white]
+ * @method string getType() Obtain Blocklist/allowlist type. Valid values: [black, white]
+ * @method void setType(string $Type) Set Blocklist/allowlist type. Valid values: [black, white]
  */
 class IpBlackWhite extends AbstractModel
 {
@@ -33,13 +33,13 @@ class IpBlackWhite extends AbstractModel
     public $Ip;
 
     /**
-     * @var string Blacklist/whitelist type. Valid values: [black, white]
+     * @var string Blocklist/allowlist type. Valid values: [black, white]
      */
     public $Type;
 
     /**
      * @param string $Ip IP address
-     * @param string $Type Blacklist/whitelist type. Valid values: [black, white]
+     * @param string $Type Blocklist/allowlist type. Valid values: [black, white]
      */
     function __construct()
     {

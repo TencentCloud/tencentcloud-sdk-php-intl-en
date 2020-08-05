@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusiness(string $Business) Set Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (single IP); `bgp-multip`: Anti-DDoS Pro (multi-IP), `net`: Anti-DDoS Ultimate
  * @method string getId() Obtain Anti-DDoS instance ID
  * @method void setId(string $Id) Set Anti-DDoS instance ID
- * @method array getType() Obtain Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
- * @method void setType(array $Type) Set Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
+ * @method array getType() Obtain Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
+ * @method void setType(array $Type) Set Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
  * @method integer getLimit() Obtain Pagination parameter
  * @method void setLimit(integer $Limit) Set Pagination parameter
  * @method integer getOffset() Obtain Pagination parameter
@@ -48,8 +48,8 @@ class DescribeCCIpAllowDenyRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var array Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
+     * @var array Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
      */
     public $Type;
 
@@ -71,8 +71,8 @@ Note: this array can only have one value. It cannot get the blacklist and whitel
     /**
      * @param string $Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (single IP); `bgp-multip`: Anti-DDoS Pro (multi-IP), `net`: Anti-DDoS Ultimate
      * @param string $Id Anti-DDoS instance ID
-     * @param array $Type Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
+     * @param array $Type Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
      * @param integer $Limit Pagination parameter
      * @param integer $Offset Pagination parameter
      * @param string $Protocol HTTP or HTTPS CC protection, which is optional. Valid values: [http (HTTP CC protection), https (HTTPS CC protection)];

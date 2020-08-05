@@ -30,10 +30,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getPartitionNum() Obtain Number of partitions
  * @method void setPartitionNum(integer $PartitionNum) Set Number of partitions
- * @method integer getEnableWhiteList() Obtain IP whitelist switch. 1: enabled, 0: disabled
- * @method void setEnableWhiteList(integer $EnableWhiteList) Set IP whitelist switch. 1: enabled, 0: disabled
- * @method array getIpWhiteList() Obtain IP whitelist list
- * @method void setIpWhiteList(array $IpWhiteList) Set IP whitelist list
+ * @method integer getEnableWhiteList() Obtain IP allowlist switch. 1: enabled, 0: disabled
+ * @method void setEnableWhiteList(integer $EnableWhiteList) Set IP allowlist switch. 1: enabled, 0: disabled
+ * @method array getIpWhiteList() Obtain IP allowlist list
+ * @method void setIpWhiteList(array $IpWhiteList) Set IP allowlist list
  * @method Config getConfig() Obtain Topic configuration array
  * @method void setConfig(Config $Config) Set Topic configuration array
  * @method array getPartitions() Obtain Partition details
@@ -63,12 +63,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PartitionNum;
 
     /**
-     * @var integer IP whitelist switch. 1: enabled, 0: disabled
+     * @var integer IP allowlist switch. 1: enabled, 0: disabled
      */
     public $EnableWhiteList;
 
     /**
-     * @var array IP whitelist list
+     * @var array IP allowlist list
      */
     public $IpWhiteList;
 
@@ -88,8 +88,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Note Topic remarks
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $PartitionNum Number of partitions
-     * @param integer $EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled
-     * @param array $IpWhiteList IP whitelist list
+     * @param integer $EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled
+     * @param array $IpWhiteList IP allowlist list
      * @param Config $Config Topic configuration array
      * @param array $Partitions Partition details
      */

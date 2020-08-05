@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOrigin(string $Origin) Set CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getValidTo() Obtain It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+ * @method integer getValidTo() Obtain It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValidTo(integer $ValidTo) Set It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+ * @method void setValidTo(integer $ValidTo) Set It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
  * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
@@ -124,7 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Origin;
 
     /**
-     * @var integer It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+     * @var integer It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ValidTo;
@@ -149,7 +149,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $DeletionDate 
      * @param string $Origin CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ValidTo It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+     * @param integer $ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
      */

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
  * @method array getVoucherIds() Obtain Voucher ID (currently, only one voucher can be used per order)
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID (currently, only one voucher can be used per order)
+ * @method integer getCpu() Obtain 
+ * @method void setCpu(integer $Cpu) Set 
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
+     * @var integer 
+     */
+    public $Cpu;
+
+    /**
      * @param string $InstanceId Instance ID in the format of mssql-j8kv137v
      * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
      * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
      * @param integer $AutoVoucher Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
      * @param array $VoucherIds Voucher ID (currently, only one voucher can be used per order)
+     * @param integer $Cpu 
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
             $this->VoucherIds = $param["VoucherIds"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ES cluster configuration item
  *
- * @method array getBlackIpList() Obtain Kibana access blacklist
- * @method void setBlackIpList(array $BlackIpList) Set Kibana access blacklist
- * @method array getWhiteIpList() Obtain Kibana access whitelist
- * @method void setWhiteIpList(array $WhiteIpList) Set Kibana access whitelist
+ * @method array getBlackIpList() Obtain Kibana access blocklist
+ * @method void setBlackIpList(array $BlackIpList) Set Kibana access blocklist
+ * @method array getWhiteIpList() Obtain Kibana access allowlist
+ * @method void setWhiteIpList(array $WhiteIpList) Set Kibana access allowlist
  */
 class EsAcl extends AbstractModel
 {
     /**
-     * @var array Kibana access blacklist
+     * @var array Kibana access blocklist
      */
     public $BlackIpList;
 
     /**
-     * @var array Kibana access whitelist
+     * @var array Kibana access allowlist
      */
     public $WhiteIpList;
 
     /**
-     * @param array $BlackIpList Kibana access blacklist
-     * @param array $WhiteIpList Kibana access whitelist
+     * @param array $BlackIpList Kibana access blocklist
+     * @param array $WhiteIpList Kibana access allowlist
      */
     function __construct()
     {

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
  * @method Code getCode() Obtain Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
  * @method void setCode(Code $Code) Set Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
- * @method string getHandler() Obtain Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
- * @method void setHandler(string $Handler) Set Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+ * @method string getHandler() Obtain Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+ * @method void setHandler(string $Handler) Set Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
  * @method string getDescription() Obtain Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
  * @method void setDescription(string $Description) Set Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
- * @method integer getMemorySize() Obtain Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
- * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
- * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
- * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+ * @method integer getMemorySize() Obtain Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
+ * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
+ * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+ * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
  * @method Environment getEnvironment() Obtain Function environment variable
  * @method void setEnvironment(Environment $Environment) Set Function environment variable
  * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Dead letter queue parameter
  * @method PublicNetConfigIn getPublicNetConfig() Obtain Public network access configuration
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
+ * @method CfsConfig getCfsConfig() Obtain File system configuration parameter, which is used for the function to mount the file system
+ * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration parameter, which is used for the function to mount the file system
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -70,7 +72,7 @@ class CreateFunctionRequest extends AbstractModel
     public $Code;
 
     /**
-     * @var string Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * @var string Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
      */
     public $Handler;
 
@@ -80,12 +82,12 @@ class CreateFunctionRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+     * @var integer Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
      */
     public $MemorySize;
 
     /**
-     * @var integer Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * @var integer Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      */
     public $Timeout;
 
@@ -150,12 +152,17 @@ class CreateFunctionRequest extends AbstractModel
     public $PublicNetConfig;
 
     /**
+     * @var CfsConfig File system configuration parameter, which is used for the function to mount the file system
+     */
+    public $CfsConfig;
+
+    /**
      * @param string $FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      * @param Code $Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
-     * @param string $Handler Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * @param string $Handler Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
      * @param string $Description Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
-     * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
-     * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
+     * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      * @param Environment $Environment Function environment variable
      * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
      * @param VpcConfig $VpcConfig Function VPC configuration
@@ -168,6 +175,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param array $Layers List of layer versions to be associate with the function. Layers will be overwritten sequentially in the order in the list.
      * @param DeadLetterConfig $DeadLetterConfig Dead letter queue parameter
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
+     * @param CfsConfig $CfsConfig File system configuration parameter, which is used for the function to mount the file system
      */
     function __construct()
     {
@@ -262,6 +270,11 @@ class CreateFunctionRequest extends AbstractModel
         if (array_key_exists("PublicNetConfig",$param) and $param["PublicNetConfig"] !== null) {
             $this->PublicNetConfig = new PublicNetConfigIn();
             $this->PublicNetConfig->deserialize($param["PublicNetConfig"]);
+        }
+
+        if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
+            $this->CfsConfig = new CfsConfig();
+            $this->CfsConfig->deserialize($param["CfsConfig"]);
         }
     }
 }

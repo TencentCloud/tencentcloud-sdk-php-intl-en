@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set Sort by metric. Valid values: query_time_sum, query_count
  * @method string getOrderByType() Obtain Sorting order. Valid values: desc, asc
  * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: desc, asc
- * @method integer getSlave() Obtain Whether to query slow queries of the slave. 0: master, 1: slave
- * @method void setSlave(integer $Slave) Set Whether to query slow queries of the slave. 0: master, 1: slave
+ * @method integer getSlave() Obtain Whether to query slow queries of the secondary. 0: primary, 1: secondary
+ * @method void setSlave(integer $Slave) Set Whether to query slow queries of the secondary. 0: primary, 1: secondary
  */
 class DescribeDBSlowLogsRequest extends AbstractModel
 {
@@ -82,7 +82,7 @@ class DescribeDBSlowLogsRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @var integer Whether to query slow queries of the slave. 0: master, 1: slave
+     * @var integer Whether to query slow queries of the secondary. 0: primary, 1: secondary
      */
     public $Slave;
 
@@ -95,7 +95,7 @@ class DescribeDBSlowLogsRequest extends AbstractModel
      * @param string $Db Specific name of database to be queried
      * @param string $OrderBy Sort by metric. Valid values: query_time_sum, query_count
      * @param string $OrderByType Sorting order. Valid values: desc, asc
-     * @param integer $Slave Whether to query slow queries of the slave. 0: master, 1: slave
+     * @param integer $Slave Whether to query slow queries of the secondary. 0: primary, 1: secondary
      */
     function __construct()
     {

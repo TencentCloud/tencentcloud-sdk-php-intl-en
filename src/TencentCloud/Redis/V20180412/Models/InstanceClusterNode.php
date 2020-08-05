@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Node name
  * @method string getRunId() Obtain ID of the runtime node of an instance
  * @method void setRunId(string $RunId) Set ID of the runtime node of an instance
- * @method integer getRole() Obtain Cluster role. 0: master; 1: slave
- * @method void setRole(integer $Role) Set Cluster role. 0: master; 1: slave
+ * @method integer getRole() Obtain Cluster role. 0: primary; 1: secondary
+ * @method void setRole(integer $Role) Set Cluster role. 0: primary; 1: secondary
  * @method integer getStatus() Obtain Node status. 0: readwrite; 1: read; 2: backup
  * @method void setStatus(integer $Status) Set Node status. 0: readwrite; 1: read; 2: backup
  * @method integer getConnected() Obtain Service status. 0: down; 1: on
@@ -60,7 +60,7 @@ class InstanceClusterNode extends AbstractModel
     public $RunId;
 
     /**
-     * @var integer Cluster role. 0: master; 1: slave
+     * @var integer Cluster role. 0: primary; 1: secondary
      */
     public $Role;
 
@@ -117,7 +117,7 @@ class InstanceClusterNode extends AbstractModel
     /**
      * @param string $Name Node name
      * @param string $RunId ID of the runtime node of an instance
-     * @param integer $Role Cluster role. 0: master; 1: slave
+     * @param integer $Role Cluster role. 0: primary; 1: secondary
      * @param integer $Status Node status. 0: readwrite; 1: read; 2: backup
      * @param integer $Connected Service status. 0: down; 1: on
      * @param string $CreateTime Node creation time

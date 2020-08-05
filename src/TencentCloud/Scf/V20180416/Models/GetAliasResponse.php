@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAlias response structure.
  *
- * @method string getFunctionVersion() Obtain Master version of alias
- * @method void setFunctionVersion(string $FunctionVersion) Set Master version of alias
+ * @method string getFunctionVersion() Obtain Master version pointed to by the alias
+ * @method void setFunctionVersion(string $FunctionVersion) Set Master version pointed to by the alias
  * @method string getName() Obtain Alias name
  * @method void setName(string $Name) Set Alias name
  * @method RoutingConfig getRoutingConfig() Obtain Routing information of alias
@@ -44,7 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class GetAliasResponse extends AbstractModel
 {
     /**
-     * @var string Master version of alias
+     * @var string Master version pointed to by the alias
      */
     public $FunctionVersion;
 
@@ -82,7 +82,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $FunctionVersion Master version of alias
+     * @param string $FunctionVersion Master version pointed to by the alias
      * @param string $Name Alias name
      * @param RoutingConfig $RoutingConfig Routing information of alias
      * @param string $Description Alias description

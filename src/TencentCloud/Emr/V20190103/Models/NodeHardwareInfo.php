@@ -160,10 +160,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getAutoFlag() Obtain Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAutoFlag(integer $AutoFlag) Set Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getAutoFlag() Obtain 
+ * @method void setAutoFlag(integer $AutoFlag) Set 
+ * @method string getHardwareResourceType() Obtain 
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set 
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -378,10 +378,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
-     * @var integer Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $AutoFlag;
+
+    /**
+     * @var string 
+     */
+    public $HardwareResourceType;
 
     /**
      * @param integer $AppId User `APPID`
@@ -454,8 +458,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $AutoFlag Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $AutoFlag 
+     * @param string $HardwareResourceType 
      */
     function __construct()
     {
@@ -623,6 +627,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AutoFlag",$param) and $param["AutoFlag"] !== null) {
             $this->AutoFlag = $param["AutoFlag"];
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
         }
     }
 }

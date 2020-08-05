@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() Obtain Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
- * @method array getInstanceTypes() Obtain Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
- * @method void setInstanceTypes(array $InstanceTypes) Set Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
+ * @method array getInstanceTypes() Obtain Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+ * @method void setInstanceTypes(array $InstanceTypes) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
  * @method array getVips() Obtain Private IP address of the instance.
  * @method void setVips(array $Vips) Set Private IP address of the instance.
  * @method array getStatus() Obtain Instance status. Value range: <br>0 - creating <br>1 - running <br>4 - isolating <br>5 - isolated (the instance can be restored and started in the recycle bin)
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayTypes(array $PayTypes) Set Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
  * @method array getInstanceNames() Obtain Instance name.
  * @method void setInstanceNames(array $InstanceNames) Set Instance name.
- * @method array getTaskStatus() Obtain Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
- * @method void setTaskStatus(array $TaskStatus) Set Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
+ * @method array getTaskStatus() Obtain Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+ * @method void setTaskStatus(array $TaskStatus) Set Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
  * @method array getEngineVersions() Obtain Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
  * @method void setEngineVersions(array $EngineVersions) Set Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
  * @method array getVpcIds() Obtain VPC ID.
@@ -64,12 +64,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID.
  * @method integer getInitFlag() Obtain Initialization flag. Value range: 0 (not initialized), 1 (initialized).
  * @method void setInitFlag(integer $InitFlag) Set Initialization flag. Value range: 0 (not initialized), 1 (initialized).
- * @method integer getWithDr() Obtain Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
- * @method void setWithDr(integer $WithDr) Set Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+ * @method integer getWithDr() Obtain Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+ * @method void setWithDr(integer $WithDr) Set Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
  * @method integer getWithRo() Obtain Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
  * @method void setWithRo(integer $WithRo) Set Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
- * @method integer getWithMaster() Obtain Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
- * @method void setWithMaster(integer $WithMaster) Set Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+ * @method integer getWithMaster() Obtain Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+ * @method void setWithMaster(integer $WithMaster) Set Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
  * @method array getDeployGroupIds() Obtain Placement group ID list.
  * @method void setDeployGroupIds(array $DeployGroupIds) Set Placement group ID list.
  */
@@ -81,7 +81,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
+     * @var array Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      */
     public $InstanceTypes;
 
@@ -121,7 +121,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $InstanceNames;
 
     /**
-     * @var array Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
+     * @var array Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
      */
     public $TaskStatus;
 
@@ -186,7 +186,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $InitFlag;
 
     /**
-     * @var integer Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+     * @var integer Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
      */
     public $WithDr;
 
@@ -196,7 +196,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $WithRo;
 
     /**
-     * @var integer Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+     * @var integer Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
      */
     public $WithMaster;
 
@@ -207,7 +207,7 @@ class DescribeDBInstancesRequest extends AbstractModel
 
     /**
      * @param integer $ProjectId Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
-     * @param array $InstanceTypes Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
+     * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
      * @param array $Status Instance status. Value range: <br>0 - creating <br>1 - running <br>4 - isolating <br>5 - isolated (the instance can be restored and started in the recycle bin)
      * @param integer $Offset Offset. Default value: 0.
@@ -215,7 +215,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $SecurityGroupId Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
      * @param array $PayTypes Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
      * @param array $InstanceNames Instance name.
-     * @param array $TaskStatus Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
+     * @param array $TaskStatus Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
      * @param array $EngineVersions Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
      * @param array $VpcIds VPC ID.
      * @param array $ZoneIds AZ ID.
@@ -228,9 +228,9 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $ExClusterId Exclusive cluster ID.
      * @param array $InstanceIds Instance ID.
      * @param integer $InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized).
-     * @param integer $WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+     * @param integer $WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
      * @param integer $WithRo Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-     * @param integer $WithMaster Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+     * @param integer $WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
      * @param array $DeployGroupIds Placement group ID list.
      */
     function __construct()

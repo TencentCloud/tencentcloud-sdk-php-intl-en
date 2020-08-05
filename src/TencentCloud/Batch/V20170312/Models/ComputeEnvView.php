@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvType(string $EnvType) Set Compute environment type
  * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
+ * @method string getResourceType() Obtain 
+ * @method void setResourceType(string $ResourceType) Set 
+ * @method string getNextAction() Obtain 
+ * @method void setNextAction(string $NextAction) Set 
+ * @method integer getAttachedComputeNodeCount() Obtain 
+ * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) Set 
  */
 class ComputeEnvView extends AbstractModel
 {
@@ -73,6 +79,21 @@ class ComputeEnvView extends AbstractModel
     public $DesiredComputeNodeCount;
 
     /**
+     * @var string 
+     */
+    public $ResourceType;
+
+    /**
+     * @var string 
+     */
+    public $NextAction;
+
+    /**
+     * @var integer 
+     */
+    public $AttachedComputeNodeCount;
+
+    /**
      * @param string $EnvId Compute environment ID
      * @param string $EnvName Compute environment name
      * @param Placement $Placement Location information
@@ -80,6 +101,9 @@ class ComputeEnvView extends AbstractModel
      * @param ComputeNodeMetrics $ComputeNodeMetrics Compute node statistical metrics
      * @param string $EnvType Compute environment type
      * @param integer $DesiredComputeNodeCount Number of desired compute nodes
+     * @param string $ResourceType 
+     * @param string $NextAction 
+     * @param integer $AttachedComputeNodeCount 
      */
     function __construct()
     {
@@ -122,6 +146,18 @@ class ComputeEnvView extends AbstractModel
 
         if (array_key_exists("DesiredComputeNodeCount",$param) and $param["DesiredComputeNodeCount"] !== null) {
             $this->DesiredComputeNodeCount = $param["DesiredComputeNodeCount"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("NextAction",$param) and $param["NextAction"] !== null) {
+            $this->NextAction = $param["NextAction"];
+        }
+
+        if (array_key_exists("AttachedComputeNodeCount",$param) and $param["AttachedComputeNodeCount"] !== null) {
+            $this->AttachedComputeNodeCount = $param["AttachedComputeNodeCount"];
         }
     }
 }

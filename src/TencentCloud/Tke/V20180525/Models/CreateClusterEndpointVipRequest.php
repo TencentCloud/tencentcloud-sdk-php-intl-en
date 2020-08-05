@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getSecurityPolicies() Obtain Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
- * @method void setSecurityPolicies(array $SecurityPolicies) Set Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+ * @method array getSecurityPolicies() Obtain Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
+ * @method void setSecurityPolicies(array $SecurityPolicies) Set Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
  */
 class CreateClusterEndpointVipRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateClusterEndpointVipRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+     * @var array Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
      */
     public $SecurityPolicies;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $SecurityPolicies Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+     * @param array $SecurityPolicies Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
      */
     function __construct()
     {

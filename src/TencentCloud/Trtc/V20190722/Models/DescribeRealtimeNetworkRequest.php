@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRealtimeNetwork request structure.
  *
- * @method integer getStartTime() Obtain Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
- * @method void setStartTime(integer $StartTime) Set Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+ * @method integer getStartTime() Obtain Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+ * @method void setStartTime(integer $StartTime) Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
  * @method integer getEndTime() Obtain Query end time in the format of local UNIX timestamp, such as 1588031999s.
  * @method void setEndTime(integer $EndTime) Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
  * @method string getSdkAppId() Obtain User `sdkappid`
@@ -36,7 +36,7 @@ recvLossRateRaw: downstream packet loss rate.
 class DescribeRealtimeNetworkRequest extends AbstractModel
 {
     /**
-     * @var integer Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+     * @var integer Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
      */
     public $StartTime;
 
@@ -58,7 +58,7 @@ recvLossRateRaw: downstream packet loss rate.
     public $DataType;
 
     /**
-     * @param integer $StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+     * @param integer $StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
      * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
      * @param string $SdkAppId User `sdkappid`
      * @param array $DataType Type of data to query

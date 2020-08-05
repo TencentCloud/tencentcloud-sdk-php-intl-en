@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusterEndpointVip response structure.
  *
- * @method integer getRequestFlowId() Obtain Request job’s FlowId
- * @method void setRequestFlowId(integer $RequestFlowId) Set Request job’s FlowId
+ * @method integer getRequestFlowId() Obtain Request job's FlowId
+ * @method void setRequestFlowId(integer $RequestFlowId) Set Request job's FlowId
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateClusterEndpointVipResponse extends AbstractModel
 {
     /**
-     * @var integer Request job’s FlowId
+     * @var integer Request job's FlowId
      */
     public $RequestFlowId;
 
@@ -38,7 +38,7 @@ class CreateClusterEndpointVipResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $RequestFlowId Request job’s FlowId
+     * @param integer $RequestFlowId Request job's FlowId
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

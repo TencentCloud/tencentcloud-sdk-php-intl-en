@@ -18,44 +18,44 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration information of ECDB slave database 2. This field is only applicable to ECDB instances
+ * Configuration information of ECDB secondary database 2. This field is only applicable to ECDB instances
  *
- * @method string getReplicationMode() Obtain Replication mode of slave database 2. Value range: async, semi-sync
- * @method void setReplicationMode(string $ReplicationMode) Set Replication mode of slave database 2. Value range: async, semi-sync
- * @method string getZone() Obtain Name of the AZ of slave database 2, such as ap-shanghai-1
- * @method void setZone(string $Zone) Set Name of the AZ of slave database 2, such as ap-shanghai-1
- * @method string getVip() Obtain Private IP address of slave database 2
- * @method void setVip(string $Vip) Set Private IP address of slave database 2
- * @method integer getVport() Obtain Access port of slave database 2
- * @method void setVport(integer $Vport) Set Access port of slave database 2
+ * @method string getReplicationMode() Obtain Replication mode of secondary database 2. Value range: async, semi-sync
+ * @method void setReplicationMode(string $ReplicationMode) Set Replication mode of secondary database 2. Value range: async, semi-sync
+ * @method string getZone() Obtain Name of the AZ of secondary database 2, such as ap-shanghai-1
+ * @method void setZone(string $Zone) Set Name of the AZ of secondary database 2, such as ap-shanghai-1
+ * @method string getVip() Obtain Private IP address of secondary database 2
+ * @method void setVip(string $Vip) Set Private IP address of secondary database 2
+ * @method integer getVport() Obtain Access port of secondary database 2
+ * @method void setVport(integer $Vport) Set Access port of secondary database 2
  */
 class BackupConfig extends AbstractModel
 {
     /**
-     * @var string Replication mode of slave database 2. Value range: async, semi-sync
+     * @var string Replication mode of secondary database 2. Value range: async, semi-sync
      */
     public $ReplicationMode;
 
     /**
-     * @var string Name of the AZ of slave database 2, such as ap-shanghai-1
+     * @var string Name of the AZ of secondary database 2, such as ap-shanghai-1
      */
     public $Zone;
 
     /**
-     * @var string Private IP address of slave database 2
+     * @var string Private IP address of secondary database 2
      */
     public $Vip;
 
     /**
-     * @var integer Access port of slave database 2
+     * @var integer Access port of secondary database 2
      */
     public $Vport;
 
     /**
-     * @param string $ReplicationMode Replication mode of slave database 2. Value range: async, semi-sync
-     * @param string $Zone Name of the AZ of slave database 2, such as ap-shanghai-1
-     * @param string $Vip Private IP address of slave database 2
-     * @param integer $Vport Access port of slave database 2
+     * @param string $ReplicationMode Replication mode of secondary database 2. Value range: async, semi-sync
+     * @param string $Zone Name of the AZ of secondary database 2, such as ap-shanghai-1
+     * @param string $Vip Private IP address of secondary database 2
+     * @param integer $Vport Access port of secondary database 2
      */
     function __construct()
     {

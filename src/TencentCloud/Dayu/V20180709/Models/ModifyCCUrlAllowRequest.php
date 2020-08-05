@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) Set Anti-DDoS instance ID
  * @method string getMethod() Obtain add: add, delete: delete
  * @method void setMethod(string $Method) Set add: add, delete: delete
- * @method string getType() Obtain Blacklist/whitelist type. Valid value: [white (whitelist)]
- * @method void setType(string $Type) Set Blacklist/whitelist type. Valid value: [white (whitelist)]
+ * @method string getType() Obtain Blocklist/allowlist type. Valid value: [white (allowlist)]
+ * @method void setType(string $Type) Set Blocklist/allowlist type. Valid value: [white (allowlist)]
  * @method array getUrlList() Obtain URL array. URL format:
 http://domain name/cgi
 https://domain name/cgi
@@ -61,7 +61,7 @@ class ModifyCCUrlAllowRequest extends AbstractModel
     public $Method;
 
     /**
-     * @var string Blacklist/whitelist type. Valid value: [white (whitelist)]
+     * @var string Blocklist/allowlist type. Valid value: [white (allowlist)]
      */
     public $Type;
 
@@ -92,7 +92,7 @@ If `Method` is `delete`, this field can be left empty;
      * @param string $Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (single IP); `bgp-multip`: Anti-DDoS Pro (multi-IP), `net`: Anti-DDoS Ultimate
      * @param string $Id Anti-DDoS instance ID
      * @param string $Method add: add, delete: delete
-     * @param string $Type Blacklist/whitelist type. Valid value: [white (whitelist)]
+     * @param string $Type Blocklist/allowlist type. Valid value: [white (allowlist)]
      * @param array $UrlList URL array. URL format:
 http://domain name/cgi
 https://domain name/cgi

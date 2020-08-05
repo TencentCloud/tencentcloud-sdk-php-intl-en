@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Trigger information
  *
- * @method integer getEnable() Obtain Enablement switch
- * @method void setEnable(integer $Enable) Set Enablement switch
+ * @method integer getEnable() Obtain Whether to enable
+ * @method void setEnable(integer $Enable) Set Whether to enable
  * @method string getQualifier() Obtain Function version or alias
  * @method void setQualifier(string $Qualifier) Set Function version or alias
  * @method string getTriggerName() Obtain Trigger name
@@ -44,7 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class TriggerInfo extends AbstractModel
 {
     /**
-     * @var integer Enablement switch
+     * @var integer Whether to enable
      */
     public $Enable;
 
@@ -90,7 +90,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ModTime;
 
     /**
-     * @param integer $Enable Enablement switch
+     * @param integer $Enable Whether to enable
      * @param string $Qualifier Function version or alias
      * @param string $TriggerName Trigger name
      * @param string $Type Trigger type

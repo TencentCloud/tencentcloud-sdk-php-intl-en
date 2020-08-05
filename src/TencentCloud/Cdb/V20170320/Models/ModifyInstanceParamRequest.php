@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) Set List of short instance IDs.
  * @method array getParamList() Obtain List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
  * @method void setParamList(array $ParamList) Set List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
- * @method integer getTemplateId() Obtain 
- * @method void setTemplateId(integer $TemplateId) Set 
- * @method integer getWaitSwitch() Obtain 
- * @method void setWaitSwitch(integer $WaitSwitch) Set 
+ * @method integer getTemplateId() Obtain Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+ * @method void setTemplateId(integer $TemplateId) Set Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+ * @method integer getWaitSwitch() Obtain When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
+ * @method void setWaitSwitch(integer $WaitSwitch) Set When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
  */
 class ModifyInstanceParamRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @var integer 
+     * @var integer Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
      */
     public $TemplateId;
 
     /**
-     * @var integer 
+     * @var integer When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
      */
     public $WaitSwitch;
 
     /**
      * @param array $InstanceIds List of short instance IDs.
      * @param array $ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
-     * @param integer $TemplateId 
-     * @param integer $WaitSwitch 
+     * @param integer $TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+     * @param integer $WaitSwitch When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
      */
     function __construct()
     {

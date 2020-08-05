@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Container networking parameters for the cluster
  *
- * @method string getClusterCIDR() Obtain CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
- * @method void setClusterCIDR(string $ClusterCIDR) Set CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
+ * @method string getClusterCIDR() Obtain CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
+ * @method void setClusterCIDR(string $ClusterCIDR) Set CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
  * @method boolean getIgnoreClusterCIDRConflict() Obtain Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
  * @method void setIgnoreClusterCIDRConflict(boolean $IgnoreClusterCIDRConflict) Set Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
  * @method integer getMaxNodePodNum() Obtain Maximum number of pods on each node in the cluster
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ClusterCIDRSettings extends AbstractModel
 {
     /**
-     * @var string CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
+     * @var string CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
      */
     public $ClusterCIDR;
 
@@ -73,7 +73,7 @@ class ClusterCIDRSettings extends AbstractModel
     public $ClaimExpiredSeconds;
 
     /**
-     * @param string $ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
+     * @param string $ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
      * @param boolean $IgnoreClusterCIDRConflict Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
      * @param integer $MaxNodePodNum Maximum number of pods on each node in the cluster
      * @param integer $MaxClusterServiceNum Maximum number of cluster services

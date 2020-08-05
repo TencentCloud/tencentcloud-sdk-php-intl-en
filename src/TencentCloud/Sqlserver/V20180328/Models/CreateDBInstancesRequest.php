@@ -46,6 +46,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBVersion(string $DBVersion) Set SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). The version purchasable varies by region and can be queried by calling the `DescribeProductConfig` API. If this parameter is left empty, 2008R2 will be used by default.
  * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
+ * @method array getSecurityGroupList() Obtain 
+ * @method void setSecurityGroupList(array $SecurityGroupList) Set 
+ * @method array getWeekly() Obtain 
+ * @method void setWeekly(array $Weekly) Set 
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method integer getSpan() Obtain 
+ * @method void setSpan(integer $Span) Set 
+ * @method string getHAType() Obtain 
+ * @method void setHAType(string $HAType) Set 
+ * @method boolean getMultiZones() Obtain 
+ * @method void setMultiZones(boolean $MultiZones) Set 
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -115,6 +127,36 @@ class CreateDBInstancesRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var array 
+     */
+    public $SecurityGroupList;
+
+    /**
+     * @var array 
+     */
+    public $Weekly;
+
+    /**
+     * @var string 
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 
+     */
+    public $Span;
+
+    /**
+     * @var string 
+     */
+    public $HAType;
+
+    /**
+     * @var boolean 
+     */
+    public $MultiZones;
+
+    /**
      * @param string $Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
      * @param integer $Memory Instance memory size in GB
      * @param integer $Storage Instance storage capacity in GB
@@ -128,6 +170,12 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param array $VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
      * @param string $DBVersion SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). The version purchasable varies by region and can be queried by calling the `DescribeProductConfig` API. If this parameter is left empty, 2008R2 will be used by default.
      * @param integer $AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
+     * @param array $SecurityGroupList 
+     * @param array $Weekly 
+     * @param string $StartTime 
+     * @param integer $Span 
+     * @param string $HAType 
+     * @param boolean $MultiZones 
      */
     function __construct()
     {
@@ -192,6 +240,30 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("SecurityGroupList",$param) and $param["SecurityGroupList"] !== null) {
+            $this->SecurityGroupList = $param["SecurityGroupList"];
+        }
+
+        if (array_key_exists("Weekly",$param) and $param["Weekly"] !== null) {
+            $this->Weekly = $param["Weekly"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("Span",$param) and $param["Span"] !== null) {
+            $this->Span = $param["Span"];
+        }
+
+        if (array_key_exists("HAType",$param) and $param["HAType"] !== null) {
+            $this->HAType = $param["HAType"];
+        }
+
+        if (array_key_exists("MultiZones",$param) and $param["MultiZones"] !== null) {
+            $this->MultiZones = $param["MultiZones"];
         }
     }
 }

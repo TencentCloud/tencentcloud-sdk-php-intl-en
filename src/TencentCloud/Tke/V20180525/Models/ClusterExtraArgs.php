@@ -18,7 +18,7 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster master custom parameter
+ * Cluster primary custom parameter
  *
  * @method array getKubeAPIServer() Obtain kube-apiserver custom parameter
 Note: this field may return null, indicating that no valid value is obtained.

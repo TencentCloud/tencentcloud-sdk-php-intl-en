@@ -94,6 +94,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value was found.
  * @method void setOnsEnable(string $OnsEnable) Set Whether Ons is enabled
 Note: This field may return null, indicating that no valid value was found.
+ * @method CfsConfig getCfsConfig() Obtain File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAvailableStatus() Obtain Function billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAvailableStatus(string $AvailableStatus) Set Function billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getQualifier() Obtain Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setQualifier(string $Qualifier) Set Function version
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -277,6 +289,24 @@ Note: This field may return null, indicating that no valid value was found.
     public $OnsEnable;
 
     /**
+     * @var CfsConfig File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $CfsConfig;
+
+    /**
+     * @var string Function billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AvailableStatus;
+
+    /**
+     * @var string Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Qualifier;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -319,6 +349,12 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OnsEnable Whether Ons is enabled
 Note: This field may return null, indicating that no valid value was found.
+     * @param CfsConfig $CfsConfig File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AvailableStatus Function billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Qualifier Function version
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -493,6 +529,19 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("OnsEnable",$param) and $param["OnsEnable"] !== null) {
             $this->OnsEnable = $param["OnsEnable"];
+        }
+
+        if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
+            $this->CfsConfig = new CfsConfig();
+            $this->CfsConfig->deserialize($param["CfsConfig"]);
+        }
+
+        if (array_key_exists("AvailableStatus",$param) and $param["AvailableStatus"] !== null) {
+            $this->AvailableStatus = $param["AvailableStatus"];
+        }
+
+        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
+            $this->Qualifier = $param["Qualifier"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

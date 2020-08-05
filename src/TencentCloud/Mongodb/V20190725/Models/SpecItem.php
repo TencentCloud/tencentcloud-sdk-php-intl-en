@@ -48,18 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineName(string $EngineName) Set Storage engine
  * @method integer getClusterType() Obtain Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
  * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
- * @method integer getMinNodeNum() Obtain Minimum number of slave nodes in a replica set
- * @method void setMinNodeNum(integer $MinNodeNum) Set Minimum number of slave nodes in a replica set
- * @method integer getMaxNodeNum() Obtain Maximum number of slave nodes in a replica set
- * @method void setMaxNodeNum(integer $MaxNodeNum) Set Maximum number of slave nodes in a replica set
+ * @method integer getMinNodeNum() Obtain Minimum number of secondary nodes in a replica set
+ * @method void setMinNodeNum(integer $MinNodeNum) Set Minimum number of secondary nodes in a replica set
+ * @method integer getMaxNodeNum() Obtain Maximum number of secondary nodes in a replica set
+ * @method void setMaxNodeNum(integer $MaxNodeNum) Set Maximum number of secondary nodes in a replica set
  * @method integer getMinReplicateSetNum() Obtain Minimum number of shards
  * @method void setMinReplicateSetNum(integer $MinReplicateSetNum) Set Minimum number of shards
  * @method integer getMaxReplicateSetNum() Obtain Maximum number of shards
  * @method void setMaxReplicateSetNum(integer $MaxReplicateSetNum) Set Maximum number of shards
- * @method integer getMinReplicateSetNodeNum() Obtain Minimum number of slave nodes in a shard
- * @method void setMinReplicateSetNodeNum(integer $MinReplicateSetNodeNum) Set Minimum number of slave nodes in a shard
- * @method integer getMaxReplicateSetNodeNum() Obtain Maximum number of slave nodes in a shard
- * @method void setMaxReplicateSetNodeNum(integer $MaxReplicateSetNodeNum) Set Maximum number of slave nodes in a shard
+ * @method integer getMinReplicateSetNodeNum() Obtain Minimum number of secondary nodes in a shard
+ * @method void setMinReplicateSetNodeNum(integer $MinReplicateSetNodeNum) Set Minimum number of secondary nodes in a shard
+ * @method integer getMaxReplicateSetNodeNum() Obtain Maximum number of secondary nodes in a shard
+ * @method void setMaxReplicateSetNodeNum(integer $MaxReplicateSetNodeNum) Set Maximum number of secondary nodes in a shard
  * @method string getMachineType() Obtain Server type. Valid values: 0 (HIO), 4 (HIO10G)
  * @method void setMachineType(string $MachineType) Set Server type. Valid values: 0 (HIO), 4 (HIO10G)
  */
@@ -136,12 +136,12 @@ class SpecItem extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var integer Minimum number of slave nodes in a replica set
+     * @var integer Minimum number of secondary nodes in a replica set
      */
     public $MinNodeNum;
 
     /**
-     * @var integer Maximum number of slave nodes in a replica set
+     * @var integer Maximum number of secondary nodes in a replica set
      */
     public $MaxNodeNum;
 
@@ -156,12 +156,12 @@ class SpecItem extends AbstractModel
     public $MaxReplicateSetNum;
 
     /**
-     * @var integer Minimum number of slave nodes in a shard
+     * @var integer Minimum number of secondary nodes in a shard
      */
     public $MinReplicateSetNodeNum;
 
     /**
-     * @var integer Maximum number of slave nodes in a shard
+     * @var integer Maximum number of secondary nodes in a shard
      */
     public $MaxReplicateSetNodeNum;
 
@@ -185,12 +185,12 @@ class SpecItem extends AbstractModel
      * @param string $Version MongoDB version number of an instance (short)
      * @param string $EngineName Storage engine
      * @param integer $ClusterType Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
-     * @param integer $MinNodeNum Minimum number of slave nodes in a replica set
-     * @param integer $MaxNodeNum Maximum number of slave nodes in a replica set
+     * @param integer $MinNodeNum Minimum number of secondary nodes in a replica set
+     * @param integer $MaxNodeNum Maximum number of secondary nodes in a replica set
      * @param integer $MinReplicateSetNum Minimum number of shards
      * @param integer $MaxReplicateSetNum Maximum number of shards
-     * @param integer $MinReplicateSetNodeNum Minimum number of slave nodes in a shard
-     * @param integer $MaxReplicateSetNodeNum Maximum number of slave nodes in a shard
+     * @param integer $MinReplicateSetNodeNum Minimum number of secondary nodes in a shard
+     * @param integer $MaxReplicateSetNodeNum Maximum number of secondary nodes in a shard
      * @param string $MachineType Server type. Valid values: 0 (HIO), 4 (HIO10G)
      */
     function __construct()

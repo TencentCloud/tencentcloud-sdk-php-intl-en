@@ -18,39 +18,39 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Referer blacklist/whitelist configuration. This is disabled by default.
+ * Referer blocklist/allowlist configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain Referer blacklist/whitelist configuration switch
+ * @method string getSwitch() Obtain Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
- * @method void setSwitch(string $Switch) Set Referer blacklist/whitelist configuration switch
+ * @method void setSwitch(string $Switch) Set Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
- * @method array getRefererRules() Obtain Referer blacklist/whitelist configuration rule
+ * @method array getRefererRules() Obtain Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRefererRules(array $RefererRules) Set Referer blacklist/whitelist configuration rule
+ * @method void setRefererRules(array $RefererRules) Set Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class Referer extends AbstractModel
 {
     /**
-     * @var string Referer blacklist/whitelist configuration switch
+     * @var string Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
      */
     public $Switch;
 
     /**
-     * @var array Referer blacklist/whitelist configuration rule
+     * @var array Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RefererRules;
 
     /**
-     * @param string $Switch Referer blacklist/whitelist configuration switch
+     * @param string $Switch Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
-     * @param array $RefererRules Referer blacklist/whitelist configuration rule
+     * @param array $RefererRules Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

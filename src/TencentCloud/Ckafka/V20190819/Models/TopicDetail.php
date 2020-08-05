@@ -34,10 +34,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getCreateTime() Obtain Creation time
  * @method void setCreateTime(integer $CreateTime) Set Creation time
- * @method boolean getEnableWhiteList() Obtain Whether to enable IP authentication whitelist. true: yes, false: no
- * @method void setEnableWhiteList(boolean $EnableWhiteList) Set Whether to enable IP authentication whitelist. true: yes, false: no
- * @method integer getIpWhiteListCount() Obtain Number of IPs in IP whitelist
- * @method void setIpWhiteListCount(integer $IpWhiteListCount) Set Number of IPs in IP whitelist
+ * @method boolean getEnableWhiteList() Obtain Whether to enable IP authentication allowlist. true: yes, false: no
+ * @method void setEnableWhiteList(boolean $EnableWhiteList) Set Whether to enable IP authentication allowlist. true: yes, false: no
+ * @method integer getIpWhiteListCount() Obtain Number of IPs in IP allowlist
+ * @method void setIpWhiteListCount(integer $IpWhiteListCount) Set Number of IPs in IP allowlist
  * @method string getForwardCosBucket() Obtain COS bucket for data backup: address of the destination COS bucket
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setForwardCosBucket(string $ForwardCosBucket) Set COS bucket for data backup: address of the destination COS bucket
@@ -85,12 +85,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
-     * @var boolean Whether to enable IP authentication whitelist. true: yes, false: no
+     * @var boolean Whether to enable IP authentication allowlist. true: yes, false: no
      */
     public $EnableWhiteList;
 
     /**
-     * @var integer Number of IPs in IP whitelist
+     * @var integer Number of IPs in IP allowlist
      */
     public $IpWhiteListCount;
 
@@ -124,8 +124,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Note Remarks
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time
-     * @param boolean $EnableWhiteList Whether to enable IP authentication whitelist. true: yes, false: no
-     * @param integer $IpWhiteListCount Number of IPs in IP whitelist
+     * @param boolean $EnableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
+     * @param integer $IpWhiteListCount Number of IPs in IP allowlist
      * @param string $ForwardCosBucket COS bucket for data backup: address of the destination COS bucket
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ForwardStatus Status of data backup to COS. 1: not enabled, 0: enabled

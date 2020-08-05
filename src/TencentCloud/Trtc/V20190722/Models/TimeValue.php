@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Returned quality data in the format of time:value
  *
- * @method integer getTime() Obtain Time
- * @method void setTime(integer $Time) Set Time
- * @method float getValue() Obtain Current time value in the format of UNIX timestamp
- * @method void setValue(float $Value) Set Current time value in the format of UNIX timestamp
+ * @method integer getTime() Obtain Time in the format of UNIX timestamp, such as 1590065877s.
+ * @method void setTime(integer $Time) Set Time in the format of UNIX timestamp, such as 1590065877s.
+ * @method float getValue() Obtain Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
+ * @method void setValue(float $Value) Set Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
  */
 class TimeValue extends AbstractModel
 {
     /**
-     * @var integer Time
+     * @var integer Time in the format of UNIX timestamp, such as 1590065877s.
      */
     public $Time;
 
     /**
-     * @var float Current time value in the format of UNIX timestamp
+     * @var float Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
      */
     public $Value;
 
     /**
-     * @param integer $Time Time
-     * @param float $Value Current time value in the format of UNIX timestamp
+     * @param integer $Time Time in the format of UNIX timestamp, such as 1590065877s.
+     * @param float $Value Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
      */
     function __construct()
     {

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDecryptKey(string $DecryptKey) Set Base64-encoded decryption key
  * @method string getKeyId() Obtain Globally unique white-box key ID
  * @method void setKeyId(string $KeyId) Set Globally unique white-box key ID
+ * @method integer getTagCode() Obtain 
+ * @method void setTagCode(integer $TagCode) Set 
+ * @method string getTagMsg() Obtain 
+ * @method void setTagMsg(string $TagMsg) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -47,6 +51,16 @@ class CreateWhiteBoxKeyResponse extends AbstractModel
     public $KeyId;
 
     /**
+     * @var integer 
+     */
+    public $TagCode;
+
+    /**
+     * @var string 
+     */
+    public $TagMsg;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -55,6 +69,8 @@ class CreateWhiteBoxKeyResponse extends AbstractModel
      * @param string $EncryptKey Base64-encoded encryption key
      * @param string $DecryptKey Base64-encoded decryption key
      * @param string $KeyId Globally unique white-box key ID
+     * @param integer $TagCode 
+     * @param string $TagMsg 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -80,6 +96,14 @@ class CreateWhiteBoxKeyResponse extends AbstractModel
 
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("TagCode",$param) and $param["TagCode"] !== null) {
+            $this->TagCode = $param["TagCode"];
+        }
+
+        if (array_key_exists("TagMsg",$param) and $param["TagMsg"] !== null) {
+            $this->TagMsg = $param["TagMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

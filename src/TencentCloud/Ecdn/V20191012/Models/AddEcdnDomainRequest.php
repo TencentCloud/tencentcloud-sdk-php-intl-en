@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) Set Domain name acceleration region. Valid values: mainland (acceleration in Mainland China), overseas (acceleration outside Mainland China), global (global acceleration).
  * @method integer getProjectId() Obtain Project ID. Default value: 0.
  * @method void setProjectId(integer $ProjectId) Set Project ID. Default value: 0.
- * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration.
- * @method void setIpFilter(IpFilter $IpFilter) Set IP blacklist/whitelist configuration.
+ * @method IpFilter getIpFilter() Obtain IP block/allowlist configuration.
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP block/allowlist configuration.
  * @method IpFreqLimit getIpFreqLimit() Obtain IP access limit configuration.
  * @method void setIpFreqLimit(IpFreqLimit $IpFreqLimit) Set IP access limit configuration.
  * @method ResponseHeader getResponseHeader() Obtain Origin server response header configuration.
@@ -66,7 +66,7 @@ class AddEcdnDomainRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var IpFilter IP blacklist/whitelist configuration.
+     * @var IpFilter IP block/allowlist configuration.
      */
     public $IpFilter;
 
@@ -105,7 +105,7 @@ class AddEcdnDomainRequest extends AbstractModel
      * @param Origin $Origin Origin server configuration.
      * @param string $Area Domain name acceleration region. Valid values: mainland (acceleration in Mainland China), overseas (acceleration outside Mainland China), global (global acceleration).
      * @param integer $ProjectId Project ID. Default value: 0.
-     * @param IpFilter $IpFilter IP blacklist/whitelist configuration.
+     * @param IpFilter $IpFilter IP block/allowlist configuration.
      * @param IpFreqLimit $IpFreqLimit IP access limit configuration.
      * @param ResponseHeader $ResponseHeader Origin server response header configuration.
      * @param CacheKey $CacheKey Node caching configuration.

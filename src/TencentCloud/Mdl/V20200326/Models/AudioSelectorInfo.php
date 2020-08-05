@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio selector.
  *
- * @method string getName() Obtain Audio name, which can contain 1–32 letters, digits, and underscores.
- * @method void setName(string $Name) Set Audio name, which can contain 1–32 letters, digits, and underscores.
+ * @method string getName() Obtain Audio name, which can contain 1-32 letters, digits, and underscores.
+ * @method void setName(string $Name) Set Audio name, which can contain 1-32 letters, digits, and underscores.
  * @method AudioPidSelectionInfo getAudioPidSelection() Obtain Audio `Pid` selection.
  * @method void setAudioPidSelection(AudioPidSelectionInfo $AudioPidSelection) Set Audio `Pid` selection.
  */
 class AudioSelectorInfo extends AbstractModel
 {
     /**
-     * @var string Audio name, which can contain 1–32 letters, digits, and underscores.
+     * @var string Audio name, which can contain 1-32 letters, digits, and underscores.
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class AudioSelectorInfo extends AbstractModel
     public $AudioPidSelection;
 
     /**
-     * @param string $Name Audio name, which can contain 1–32 letters, digits, and underscores.
+     * @param string $Name Audio name, which can contain 1-32 letters, digits, and underscores.
      * @param AudioPidSelectionInfo $AudioPidSelection Audio `Pid` selection.
      */
     function __construct()

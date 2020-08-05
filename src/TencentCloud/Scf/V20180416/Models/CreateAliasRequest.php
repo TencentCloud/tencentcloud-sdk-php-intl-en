@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlias request structure.
  *
- * @method string getName() Obtain Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
- * @method void setName(string $Name) Set Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+ * @method string getName() Obtain Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
+ * @method void setName(string $Name) Set Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
- * @method string getFunctionVersion() Obtain Master version of alias
- * @method void setFunctionVersion(string $FunctionVersion) Set Master version of alias
+ * @method string getFunctionVersion() Obtain Master version pointed to by the alias
+ * @method void setFunctionVersion(string $FunctionVersion) Set Master version pointed to by the alias
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
  * @method RoutingConfig getRoutingConfig() Obtain Request routing configuration of alias
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAliasRequest extends AbstractModel
 {
     /**
-     * @var string Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+     * @var string Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
      */
     public $Name;
 
@@ -46,7 +46,7 @@ class CreateAliasRequest extends AbstractModel
     public $FunctionName;
 
     /**
-     * @var string Master version of alias
+     * @var string Master version pointed to by the alias
      */
     public $FunctionVersion;
 
@@ -66,9 +66,9 @@ class CreateAliasRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $Name Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+     * @param string $Name Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
      * @param string $FunctionName Function name
-     * @param string $FunctionVersion Master version of alias
+     * @param string $FunctionVersion Master version pointed to by the alias
      * @param string $Namespace Function namespace
      * @param RoutingConfig $RoutingConfig Request routing configuration of alias
      * @param string $Description Alias description

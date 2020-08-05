@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() Obtain Scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
- * @method string getStatus() Obtain Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
- * @method void setStatus(string $Status) Set Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+ * @method string getStatus() Obtain Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
+ * @method void setStatus(string $Status) Set Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
  * @method boolean getIsUnschedulable() Obtain Whether the node is set to unschedulable
 Note: this field may return null, indicating that no valid value was found.
  * @method void setIsUnschedulable(boolean $IsUnschedulable) Set Whether the node is set to unschedulable
@@ -43,7 +43,7 @@ class ClusterAsGroup extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
-     * @var string Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+     * @var string Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
      */
     public $Status;
 
@@ -66,7 +66,7 @@ Note: this field may return null, indicating that no valid value was found.
 
     /**
      * @param string $AutoScalingGroupId Scaling group ID
-     * @param string $Status Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+     * @param string $Status Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
      * @param boolean $IsUnschedulable Whether the node is set to unschedulable
 Note: this field may return null, indicating that no valid value was found.
      * @param array $Labels Scaling group label list

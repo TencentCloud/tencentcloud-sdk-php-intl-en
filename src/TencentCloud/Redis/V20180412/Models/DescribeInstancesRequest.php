@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionIds(array $RegionIds) Set Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
  * @method array getStatus() Obtain Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
  * @method void setStatus(array $Status) Set Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
- * @method integer getTypeVersion() Obtain Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
- * @method void setTypeVersion(integer $TypeVersion) Set Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+ * @method integer getTypeVersion() Obtain Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+ * @method void setTypeVersion(integer $TypeVersion) Set Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
  * @method string getEngineName() Obtain Engine information: Redis-2.8, Redis-4.0, CKV
  * @method void setEngineName(string $EngineName) Set Engine information: Redis-2.8, Redis-4.0, CKV
  * @method array getAutoRenew() Obtain Renewal mode. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
@@ -136,7 +136,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+     * @var integer Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
      */
     public $TypeVersion;
 
@@ -185,7 +185,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
      * @param array $RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
      * @param array $Status Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
-     * @param integer $TypeVersion Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+     * @param integer $TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
      * @param string $EngineName Engine information: Redis-2.8, Redis-4.0, CKV
      * @param array $AutoRenew Renewal mode. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
      * @param string $BillingMode Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription

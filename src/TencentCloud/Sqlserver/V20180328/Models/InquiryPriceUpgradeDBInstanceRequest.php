@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
  * @method integer getStorage() Obtain Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
  * @method void setStorage(integer $Storage) Set Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+ * @method integer getCpu() Obtain 
+ * @method void setCpu(integer $Cpu) Set 
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $Storage;
 
     /**
+     * @var integer 
+     */
+    public $Cpu;
+
+    /**
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
      * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
      * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+     * @param integer $Cpu 
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

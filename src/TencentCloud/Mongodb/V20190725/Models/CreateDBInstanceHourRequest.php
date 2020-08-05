@@ -42,12 +42,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID. If this parameter is not set, the basic network will be selected by default
  * @method string getSubnetId() Obtain VPC subnet ID. If VpcId is set, then SubnetId will be required
  * @method void setSubnetId(string $SubnetId) Set VPC subnet ID. If VpcId is set, then SubnetId will be required
- * @method string getPassword() Obtain Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
- * @method void setPassword(string $Password) Set Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+ * @method string getPassword() Obtain Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+ * @method void setPassword(string $Password) Set Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
  * @method integer getProjectId() Obtain Project ID. If this parameter is not set, the default project will be used
  * @method void setProjectId(integer $ProjectId) Set Project ID. If this parameter is not set, the default project will be used
  * @method array getTags() Obtain Instance tag information
  * @method void setTags(array $Tags) Set Instance tag information
+ * @method integer getClone() Obtain 
+ * @method void setClone(integer $Clone) Set 
+ * @method string getFather() Obtain 
+ * @method void setFather(string $Father) Set 
+ * @method array getSecurityGroup() Obtain 
+ * @method void setSecurityGroup(array $SecurityGroup) Set 
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -107,7 +113,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+     * @var string Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
      */
     public $Password;
 
@@ -122,6 +128,21 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 
+     */
+    public $Clone;
+
+    /**
+     * @var string 
+     */
+    public $Father;
+
+    /**
+     * @var array 
+     */
+    public $SecurityGroup;
+
+    /**
      * @param integer $Memory Instance memory size in GB
      * @param integer $Volume Instance disk size in GB
      * @param integer $ReplicateSetNum Number of replica sets. When a replica set instance is created, this parameter must be set to 1. When a sharding instance is created, please see the parameters returned by the DescribeSpecInfo API
@@ -133,9 +154,12 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $ClusterType Instance type. REPLSET: replica set; SHARD: sharding cluster
      * @param string $VpcId VPC ID. If this parameter is not set, the basic network will be selected by default
      * @param string $SubnetId VPC subnet ID. If VpcId is set, then SubnetId will be required
-     * @param string $Password Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+     * @param string $Password Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
      * @param integer $ProjectId Project ID. If this parameter is not set, the default project will be used
      * @param array $Tags Instance tag information
+     * @param integer $Clone 
+     * @param string $Father 
+     * @param array $SecurityGroup 
      */
     function __construct()
     {
@@ -209,6 +233,18 @@ class CreateDBInstanceHourRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Clone",$param) and $param["Clone"] !== null) {
+            $this->Clone = $param["Clone"];
+        }
+
+        if (array_key_exists("Father",$param) and $param["Father"] !== null) {
+            $this->Father = $param["Father"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
         }
     }
 }

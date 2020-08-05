@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateName() Obtain Template name, such as 900 900p. This can be only a combination of letters and digits.
  * @method void setTemplateName(string $TemplateName) Set Template name, such as 900 900p. This can be only a combination of letters and digits.
- * @method integer getVideoBitrate() Obtain Video bitrate. Value range: 100–8,000.
+ * @method integer getVideoBitrate() Obtain Video bitrate. Value range: 100-8,000.
 Note: The bitrate must be a multiple of 100.
- * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: 100–8,000.
+ * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: 100-8,000.
 Note: The bitrate must be a multiple of 100.
  * @method string getVcodec() Obtain Video encoding format. Valid values: h264, h265. Default value: h264.
  * @method void setVcodec(string $Vcodec) Set Video encoding format. Valid values: h264, h265. Default value: h264.
@@ -32,8 +32,8 @@ Note: The bitrate must be a multiple of 100.
 Note: This parameter will take effect later.
  * @method void setAcodec(string $Acodec) Set Audio encoding in ACC format. Default value: original audio format.
 Note: This parameter will take effect later.
- * @method integer getAudioBitrate() Obtain Audio bitrate. Value range: 0–500. Default value: 0.
- * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. Value range: 0–500. Default value: 0.
+ * @method integer getAudioBitrate() Obtain Audio bitrate. Value range: 0-500. Default value: 0.
+ * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. Value range: 0-500. Default value: 0.
  * @method string getDescription() Obtain Template description.
  * @method void setDescription(string $Description) Set Template description.
  * @method integer getWidth() Obtain Width. Default value: 0.
@@ -62,8 +62,8 @@ baseline/main/high. Default value: baseline.
  * @method void setFpsToOrig(integer $FpsToOrig) Set Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
  * @method integer getAiTransCode() Obtain Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
  * @method void setAiTransCode(integer $AiTransCode) Set Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
- * @method float getAdaptBitratePercent() Obtain `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+ * @method float getAdaptBitratePercent() Obtain `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -73,7 +73,7 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer Video bitrate. Value range: 100–8,000.
+     * @var integer Video bitrate. Value range: 100-8,000.
 Note: The bitrate must be a multiple of 100.
      */
     public $VideoBitrate;
@@ -90,7 +90,7 @@ Note: This parameter will take effect later.
     public $Acodec;
 
     /**
-     * @var integer Audio bitrate. Value range: 0–500. Default value: 0.
+     * @var integer Audio bitrate. Value range: 0-500. Default value: 0.
      */
     public $AudioBitrate;
 
@@ -161,18 +161,18 @@ baseline/main/high. Default value: baseline.
     public $AiTransCode;
 
     /**
-     * @var float `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+     * @var float `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
      */
     public $AdaptBitratePercent;
 
     /**
      * @param string $TemplateName Template name, such as 900 900p. This can be only a combination of letters and digits.
-     * @param integer $VideoBitrate Video bitrate. Value range: 100–8,000.
+     * @param integer $VideoBitrate Video bitrate. Value range: 100-8,000.
 Note: The bitrate must be a multiple of 100.
      * @param string $Vcodec Video encoding format. Valid values: h264, h265. Default value: h264.
      * @param string $Acodec Audio encoding in ACC format. Default value: original audio format.
 Note: This parameter will take effect later.
-     * @param integer $AudioBitrate Audio bitrate. Value range: 0–500. Default value: 0.
+     * @param integer $AudioBitrate Audio bitrate. Value range: 0-500. Default value: 0.
      * @param string $Description Template description.
      * @param integer $Width Width. Default value: 0.
      * @param integer $NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
@@ -187,7 +187,7 @@ baseline/main/high. Default value: baseline.
      * @param integer $HeightToOrig Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
      * @param integer $FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
      * @param integer $AiTransCode Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
-     * @param float $AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+     * @param float $AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
      */
     function __construct()
     {

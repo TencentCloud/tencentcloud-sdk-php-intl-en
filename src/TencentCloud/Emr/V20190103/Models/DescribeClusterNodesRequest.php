@@ -44,6 +44,10 @@ Note: only the above values are supported for the time being. Entering other val
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0, indicating the first page.
  * @method integer getLimit() Obtain Number of returned results per page. Default value: 100. Maximum value: 100
  * @method void setLimit(integer $Limit) Set Number of returned results per page. Default value: 100. Maximum value: 100
+ * @method string getHardwareResourceType() Obtain 
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set 
+ * @method array getSearchFields() Obtain 
+ * @method void setSearchFields(array $SearchFields) Set 
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -76,6 +80,16 @@ Note: only the above values are supported for the time being. Entering other val
     public $Limit;
 
     /**
+     * @var string 
+     */
+    public $HardwareResourceType;
+
+    /**
+     * @var array 
+     */
+    public $SearchFields;
+
+    /**
      * @param string $InstanceId Cluster instance ID in the format of emr-xxxxxxxx
      * @param string $NodeFlag Node flag. Valid values:
 <li>all: gets the information of nodes in all types except TencentDB information.</li>
@@ -88,6 +102,8 @@ Note: only the above values are supported for the time being. Entering other val
 Note: only the above values are supported for the time being. Entering other values will cause errors.
      * @param integer $Offset Page number. Default value: 0, indicating the first page.
      * @param integer $Limit Number of returned results per page. Default value: 100. Maximum value: 100
+     * @param string $HardwareResourceType 
+     * @param array $SearchFields 
      */
     function __construct()
     {
@@ -116,6 +132,19 @@ Note: only the above values are supported for the time being. Entering other val
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("SearchFields",$param) and $param["SearchFields"] !== null) {
+            $this->SearchFields = [];
+            foreach ($param["SearchFields"] as $key => $value){
+                $obj = new SearchItem();
+                $obj->deserialize($value);
+                array_push($this->SearchFields, $obj);
+            }
         }
     }
 }

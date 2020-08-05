@@ -18,7 +18,7 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specification information of a node type in the cluster (such as hot data node, warm data node, or dedicated master node), including node type, number of nodes, node specification, disk type, and disk size. If `Type` is not specified, it will be a hot data node by default; if the node is a master node, then the `DiskType` and `DiskSize` parameters will be ignored (as a master node has no data disks)
+ * Specification information of a node type in the cluster (such as hot data node, warm data node, or dedicated primary node), including node type, number of nodes, node specification, disk type, and disk size. If `Type` is not specified, it will be a hot data node by default; if the node is a primary node, then the `DiskType` and `DiskSize` parameters will be ignored (as a primary node has no data disks)
  *
  * @method integer getNodeNum() Obtain Number of nodes
  * @method void setNodeNum(integer $NodeNum) Set Number of nodes
@@ -26,11 +26,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeType(string $NodeType) Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
  * @method string getType() Obtain Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData
  * @method void setType(string $Type) Set Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData
  * @method string getDiskType() Obtain Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
  * @method void setDiskType(string $DiskType) Set Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
@@ -42,6 +42,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getDiskCount() Obtain Number of node disks
  * @method void setDiskCount(integer $DiskCount) Set Number of node disks
+ * @method integer getDiskEncrypt() Obtain 
+ * @method void setDiskEncrypt(integer $DiskEncrypt) Set 
  */
 class NodeInfo extends AbstractModel
 {
@@ -58,7 +60,7 @@ class NodeInfo extends AbstractModel
     /**
      * @var string Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData
      */
     public $Type;
@@ -85,17 +87,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DiskCount;
 
     /**
+     * @var integer 
+     */
+    public $DiskEncrypt;
+
+    /**
      * @param integer $NodeNum Number of nodes
      * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      * @param string $Type Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData
      * @param string $DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
      * @param integer $DiskSize Node disk size in GB
      * @param LocalDiskInfo $LocalDiskInfo Local disk information
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $DiskCount Number of node disks
+     * @param integer $DiskEncrypt 
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
             $this->DiskCount = $param["DiskCount"];
+        }
+
+        if (array_key_exists("DiskEncrypt",$param) and $param["DiskEncrypt"] !== null) {
+            $this->DiskEncrypt = $param["DiskEncrypt"];
         }
     }
 }

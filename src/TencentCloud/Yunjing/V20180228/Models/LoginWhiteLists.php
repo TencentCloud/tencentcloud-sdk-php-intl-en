@@ -18,7 +18,7 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Login whitelist
+ * Login allowlist
  *
  * @method integer getId() Obtain Record ID
  * @method void setId(integer $Id) Set Record ID
@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) Set Server name
  * @method string getHostIp() Obtain Server IP
  * @method void setHostIp(string $HostIp) Set Server IP
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
  */
 class LoginWhiteLists extends AbstractModel
 {
@@ -94,6 +98,16 @@ class LoginWhiteLists extends AbstractModel
     public $HostIp;
 
     /**
+     * @var string 
+     */
+    public $StartTime;
+
+    /**
+     * @var string 
+     */
+    public $EndTime;
+
+    /**
      * @param integer $Id Record ID
      * @param string $Uuid CWP agent ID
      * @param array $Places Whitelisted location
@@ -104,6 +118,8 @@ class LoginWhiteLists extends AbstractModel
      * @param string $ModifyTime Whitelist modification time
      * @param string $MachineName Server name
      * @param string $HostIp Server IP
+     * @param string $StartTime 
+     * @param string $EndTime 
      */
     function __construct()
     {
@@ -161,6 +177,14 @@ class LoginWhiteLists extends AbstractModel
 
         if (array_key_exists("HostIp",$param) and $param["HostIp"] !== null) {
             $this->HostIp = $param["HostIp"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

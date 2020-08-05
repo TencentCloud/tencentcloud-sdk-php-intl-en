@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Query start time
  * @method string getEndTime() Obtain Query end time
  * @method void setEndTime(string $EndTime) Set Query end time
- * @method integer getLimit() Obtain Number of results per page. Value range: 1–100. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1–100. Default value: 20
+ * @method integer getLimit() Obtain Number of results per page. Value range: 1-100. Default value: 20
+ * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1-100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
  */
@@ -49,7 +49,7 @@ class DescribeSlowlogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer Number of results per page. Value range: 1–100. Default value: 20
+     * @var integer Number of results per page. Value range: 1-100. Default value: 20
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeSlowlogsRequest extends AbstractModel
      * @param string $InstanceId Instance ID in the format of mssql-k8voqdlz
      * @param string $StartTime Query start time
      * @param string $EndTime Query end time
-     * @param integer $Limit Number of results per page. Value range: 1–100. Default value: 20
+     * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 20
      * @param integer $Offset Page number. Default value: 0
      */
     function __construct()

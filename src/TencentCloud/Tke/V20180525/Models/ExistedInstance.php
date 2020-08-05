@@ -38,25 +38,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceName(string $InstanceName) Set Instance name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPrivateIpAddresses() Obtain List of private IPs of the instance’s primary ENI.
+ * @method array getPrivateIpAddresses() Obtain List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set List of private IPs of the instance’s primary ENI.
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPublicIpAddresses() Obtain List of public IPs of the instance’s primary ENI.
+ * @method array getPublicIpAddresses() Obtain List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) Set List of public IPs of the instance’s primary ENI.
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreatedTime() Obtain Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCPU() Obtain Instance’s number of CPU cores. Unit: cores.
+ * @method integer getCPU() Obtain Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCPU(integer $CPU) Set Instance’s number of CPU cores. Unit: cores.
+ * @method void setCPU(integer $CPU) Set Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMemory() Obtain Instance’s memory capacity. Unit: GB.
+ * @method integer getMemory() Obtain Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemory(integer $Memory) Set Instance’s memory capacity. Unit: GB.
+ * @method void setMemory(integer $Memory) Set Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOsName() Obtain Operating system name.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -107,13 +107,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceName;
 
     /**
-     * @var array List of private IPs of the instance’s primary ENI.
+     * @var array List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PrivateIpAddresses;
 
     /**
-     * @var array List of public IPs of the instance’s primary ENI.
+     * @var array List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PublicIpAddresses;
@@ -125,13 +125,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreatedTime;
 
     /**
-     * @var integer Instance’s number of CPU cores. Unit: cores.
+     * @var integer Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CPU;
 
     /**
-     * @var integer Instance’s memory capacity. Unit: GB.
+     * @var integer Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Memory;
@@ -170,15 +170,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceId Instance ID, in the format of ins-xxxxxxxx.
      * @param string $InstanceName Instance name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $PrivateIpAddresses List of private IPs of the instance’s primary ENI.
+     * @param array $PrivateIpAddresses List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $PublicIpAddresses List of public IPs of the instance’s primary ENI.
+     * @param array $PublicIpAddresses List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreatedTime Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CPU Instance’s number of CPU cores. Unit: cores.
+     * @param integer $CPU Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Memory Instance’s memory capacity. Unit: GB.
+     * @param integer $Memory Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OsName Operating system name.
 Note: This field may return null, indicating that no valid values can be obtained.

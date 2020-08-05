@@ -56,14 +56,14 @@ dynamic_flux: dynamic traffic in bytes
 dynamic_bandwidth: dynamic bandwidth in bps
  * @method integer getInterval() Obtain Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
  * @method void setInterval(integer $Interval) Set Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
  * @method array getDomains() Obtain Specifies the list of domain names to be queried
 
 Up to 30 acceleration domain names can be queried at a time.
@@ -109,9 +109,9 @@ dynamic_bandwidth: dynamic bandwidth in bps
     /**
      * @var integer Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
      */
     public $Interval;
 
@@ -148,9 +148,9 @@ dynamic_flux: dynamic traffic in bytes
 dynamic_bandwidth: dynamic bandwidth in bps
      * @param integer $Interval Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
      * @param array $Domains Specifies the list of domain names to be queried
 
 Up to 30 acceleration domain names can be queried at a time.

@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuNum(integer $CpuNum) Set Number of CPU cores of an instance
  * @method string getMachineType() Obtain Instance machine type
  * @method void setMachineType(string $MachineType) Set Instance machine type
- * @method integer getSecondaryNum() Obtain Number of slave nodes of an instance
- * @method void setSecondaryNum(integer $SecondaryNum) Set Number of slave nodes of an instance
+ * @method integer getSecondaryNum() Obtain Number of secondary nodes of an instance
+ * @method void setSecondaryNum(integer $SecondaryNum) Set Number of secondary nodes of an instance
  * @method integer getReplicationSetNum() Obtain Number of instance shards
  * @method void setReplicationSetNum(integer $ReplicationSetNum) Set Number of instance shards
  * @method integer getAutoRenewFlag() Obtain Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
@@ -80,8 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStandbyInstances(array $StandbyInstances) Set Information of disaster recovery instances
  * @method array getCloneInstances() Obtain Information of temp instances
  * @method void setCloneInstances(array $CloneInstances) Set Information of temp instances
- * @method DBInstanceInfo getRelatedInstance() Obtain Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
- * @method void setRelatedInstance(DBInstanceInfo $RelatedInstance) Set Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+ * @method DBInstanceInfo getRelatedInstance() Obtain Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+ * @method void setRelatedInstance(DBInstanceInfo $RelatedInstance) Set Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
  * @method array getTags() Obtain Instance tag information set
  * @method void setTags(array $Tags) Set Instance tag information set
  * @method integer getInstanceVer() Obtain Instance version tag
@@ -200,7 +200,7 @@ class InstanceDetail extends AbstractModel
     public $MachineType;
 
     /**
-     * @var integer Number of slave nodes of an instance
+     * @var integer Number of secondary nodes of an instance
      */
     public $SecondaryNum;
 
@@ -250,7 +250,7 @@ class InstanceDetail extends AbstractModel
     public $CloneInstances;
 
     /**
-     * @var DBInstanceInfo Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+     * @var DBInstanceInfo Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
      */
     public $RelatedInstance;
 
@@ -310,7 +310,7 @@ class InstanceDetail extends AbstractModel
      * @param integer $Volume Instance disk size in MB
      * @param integer $CpuNum Number of CPU cores of an instance
      * @param string $MachineType Instance machine type
-     * @param integer $SecondaryNum Number of slave nodes of an instance
+     * @param integer $SecondaryNum Number of secondary nodes of an instance
      * @param integer $ReplicationSetNum Number of instance shards
      * @param integer $AutoRenewFlag Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
      * @param integer $UsedVolume Used capacity in MB
@@ -320,7 +320,7 @@ class InstanceDetail extends AbstractModel
      * @param array $ReadonlyInstances Information of read-only instances
      * @param array $StandbyInstances Information of disaster recovery instances
      * @param array $CloneInstances Information of temp instances
-     * @param DBInstanceInfo $RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+     * @param DBInstanceInfo $RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
      * @param array $Tags Instance tag information set
      * @param integer $InstanceVer Instance version tag
      * @param integer $ClusterVer Instance version tag

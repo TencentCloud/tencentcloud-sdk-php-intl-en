@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID, which is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
  * @method void setInstanceId(string $InstanceId) Set Instance ID, which is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
- * @method string getUserName() Obtain Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
- * @method void setUserName(string $UserName) Set Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+ * @method string getUserName() Obtain Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
+ * @method void setUserName(string $UserName) Set Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
  * @method string getHost() Obtain Host that can be logged in to, which is in the same format as the host of the MySQL account and supports wildcards, such as %, 10.%, and 10.20.%.
  * @method void setHost(string $Host) Set Host that can be logged in to, which is in the same format as the host of the MySQL account and supports wildcards, such as %, 10.%, and 10.20.%.
- * @method string getPassword() Obtain Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
- * @method void setPassword(string $Password) Set Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
- * @method integer getReadOnly() Obtain Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
- * @method void setReadOnly(integer $ReadOnly) Set Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
- * @method string getDescription() Obtain Account remarks, which can contain 0–256 letters, digits, and common symbols.
- * @method void setDescription(string $Description) Set Account remarks, which can contain 0–256 letters, digits, and common symbols.
- * @method integer getDelayThresh() Obtain Determines whether the slave is unavailable based on the passed-in time
- * @method void setDelayThresh(integer $DelayThresh) Set Determines whether the slave is unavailable based on the passed-in time
+ * @method string getPassword() Obtain Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+ * @method void setPassword(string $Password) Set Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+ * @method integer getReadOnly() Obtain Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+ * @method void setReadOnly(integer $ReadOnly) Set Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+ * @method string getDescription() Obtain Account remarks, which can contain 0-256 letters, digits, and common symbols.
+ * @method void setDescription(string $Description) Set Account remarks, which can contain 0-256 letters, digits, and common symbols.
+ * @method integer getDelayThresh() Obtain Determines whether the secondary is unavailable based on the passed-in time
+ * @method void setDelayThresh(integer $DelayThresh) Set Determines whether the secondary is unavailable based on the passed-in time
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -43,7 +43,7 @@ class CreateAccountRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+     * @var string Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
      */
     public $UserName;
 
@@ -53,33 +53,33 @@ class CreateAccountRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @var string Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public $Password;
 
     /**
-     * @var integer Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * @var integer Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public $ReadOnly;
 
     /**
-     * @var string Account remarks, which can contain 0–256 letters, digits, and common symbols.
+     * @var string Account remarks, which can contain 0-256 letters, digits, and common symbols.
      */
     public $Description;
 
     /**
-     * @var integer Determines whether the slave is unavailable based on the passed-in time
+     * @var integer Determines whether the secondary is unavailable based on the passed-in time
      */
     public $DelayThresh;
 
     /**
      * @param string $InstanceId Instance ID, which is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
-     * @param string $UserName Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+     * @param string $UserName Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
      * @param string $Host Host that can be logged in to, which is in the same format as the host of the MySQL account and supports wildcards, such as %, 10.%, and 10.20.%.
-     * @param string $Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
-     * @param integer $ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-     * @param string $Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
-     * @param integer $DelayThresh Determines whether the slave is unavailable based on the passed-in time
+     * @param string $Password Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @param integer $ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+     * @param string $Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
+     * @param integer $DelayThresh Determines whether the secondary is unavailable based on the passed-in time
      */
     function __construct()
     {

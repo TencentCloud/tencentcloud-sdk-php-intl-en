@@ -18,68 +18,68 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the dedicated master node in an instance
+ * Information of the dedicated primary node in an instance
  *
- * @method boolean getEnableDedicatedMaster() Obtain Whether to enable the dedicated master node
- * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) Set Whether to enable the dedicated master node
- * @method string getMasterNodeType() Obtain Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method void setMasterNodeType(string $MasterNodeType) Set Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method integer getMasterNodeNum() Obtain Number of dedicated master nodes
- * @method void setMasterNodeNum(integer $MasterNodeNum) Set Number of dedicated master nodes
- * @method integer getMasterNodeCpuNum() Obtain Number of CPU cores of the dedicated master node
- * @method void setMasterNodeCpuNum(integer $MasterNodeCpuNum) Set Number of CPU cores of the dedicated master node
- * @method integer getMasterNodeMemSize() Obtain Memory size of the dedicated master node in GB
- * @method void setMasterNodeMemSize(integer $MasterNodeMemSize) Set Memory size of the dedicated master node in GB
- * @method integer getMasterNodeDiskSize() Obtain Disk size of the dedicated master node in GB
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set Disk size of the dedicated master node in GB
- * @method string getMasterNodeDiskType() Obtain Disk type of the dedicated master node
- * @method void setMasterNodeDiskType(string $MasterNodeDiskType) Set Disk type of the dedicated master node
+ * @method boolean getEnableDedicatedMaster() Obtain Whether to enable the dedicated primary node
+ * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) Set Whether to enable the dedicated primary node
+ * @method string getMasterNodeType() Obtain Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+ * @method void setMasterNodeType(string $MasterNodeType) Set Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+ * @method integer getMasterNodeNum() Obtain Number of dedicated primary nodes
+ * @method void setMasterNodeNum(integer $MasterNodeNum) Set Number of dedicated primary nodes
+ * @method integer getMasterNodeCpuNum() Obtain Number of CPU cores of the dedicated primary node
+ * @method void setMasterNodeCpuNum(integer $MasterNodeCpuNum) Set Number of CPU cores of the dedicated primary node
+ * @method integer getMasterNodeMemSize() Obtain Memory size of the dedicated primary node in GB
+ * @method void setMasterNodeMemSize(integer $MasterNodeMemSize) Set Memory size of the dedicated primary node in GB
+ * @method integer getMasterNodeDiskSize() Obtain Disk size of the dedicated primary node in GB
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set Disk size of the dedicated primary node in GB
+ * @method string getMasterNodeDiskType() Obtain Disk type of the dedicated primary node
+ * @method void setMasterNodeDiskType(string $MasterNodeDiskType) Set Disk type of the dedicated primary node
  */
 class MasterNodeInfo extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable the dedicated master node
+     * @var boolean Whether to enable the dedicated primary node
      */
     public $EnableDedicatedMaster;
 
     /**
-     * @var string Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @var string Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public $MasterNodeType;
 
     /**
-     * @var integer Number of dedicated master nodes
+     * @var integer Number of dedicated primary nodes
      */
     public $MasterNodeNum;
 
     /**
-     * @var integer Number of CPU cores of the dedicated master node
+     * @var integer Number of CPU cores of the dedicated primary node
      */
     public $MasterNodeCpuNum;
 
     /**
-     * @var integer Memory size of the dedicated master node in GB
+     * @var integer Memory size of the dedicated primary node in GB
      */
     public $MasterNodeMemSize;
 
     /**
-     * @var integer Disk size of the dedicated master node in GB
+     * @var integer Disk size of the dedicated primary node in GB
      */
     public $MasterNodeDiskSize;
 
     /**
-     * @var string Disk type of the dedicated master node
+     * @var string Disk type of the dedicated primary node
      */
     public $MasterNodeDiskType;
 
     /**
-     * @param boolean $EnableDedicatedMaster Whether to enable the dedicated master node
-     * @param string $MasterNodeType Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-     * @param integer $MasterNodeNum Number of dedicated master nodes
-     * @param integer $MasterNodeCpuNum Number of CPU cores of the dedicated master node
-     * @param integer $MasterNodeMemSize Memory size of the dedicated master node in GB
-     * @param integer $MasterNodeDiskSize Disk size of the dedicated master node in GB
-     * @param string $MasterNodeDiskType Disk type of the dedicated master node
+     * @param boolean $EnableDedicatedMaster Whether to enable the dedicated primary node
+     * @param string $MasterNodeType Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @param integer $MasterNodeNum Number of dedicated primary nodes
+     * @param integer $MasterNodeCpuNum Number of CPU cores of the dedicated primary node
+     * @param integer $MasterNodeMemSize Memory size of the dedicated primary node in GB
+     * @param integer $MasterNodeDiskSize Disk size of the dedicated primary node in GB
+     * @param string $MasterNodeDiskType Disk type of the dedicated primary node
      */
     function __construct()
     {

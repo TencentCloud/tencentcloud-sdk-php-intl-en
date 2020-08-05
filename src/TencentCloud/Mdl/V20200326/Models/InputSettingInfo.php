@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input settings information.
  *
- * @method string getAppName() Obtain Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+ * @method string getAppName() Obtain Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAppName(string $AppName) Set Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+ * @method void setAppName(string $AppName) Set Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStreamName() Obtain Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+ * @method string getStreamName() Obtain Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStreamName(string $StreamName) Set Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+ * @method void setStreamName(string $StreamName) Set Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getSourceUrl() Obtain Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -40,13 +40,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class InputSettingInfo extends AbstractModel
 {
     /**
-     * @var string Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * @var string Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AppName;
 
     /**
-     * @var string Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * @var string Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StreamName;
@@ -64,9 +64,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $InputAddress;
 
     /**
-     * @param string $AppName Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * @param string $AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StreamName Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * @param string $StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SourceUrl Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
 Note: this field may return null, indicating that no valid values can be obtained.

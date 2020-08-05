@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterSecurity response structure.
  *
- * @method string getUserName() Obtain Cluster’s account name
- * @method void setUserName(string $UserName) Set Cluster’s account name
- * @method string getPassword() Obtain Cluster’s password
- * @method void setPassword(string $Password) Set Cluster’s password
- * @method string getCertificationAuthority() Obtain Cluster’s access CA certificate
- * @method void setCertificationAuthority(string $CertificationAuthority) Set Cluster’s access CA certificate
- * @method string getClusterExternalEndpoint() Obtain Cluster’s access address
- * @method void setClusterExternalEndpoint(string $ClusterExternalEndpoint) Set Cluster’s access address
+ * @method string getUserName() Obtain Cluster's account name
+ * @method void setUserName(string $UserName) Set Cluster's account name
+ * @method string getPassword() Obtain Cluster's password
+ * @method void setPassword(string $Password) Set Cluster's password
+ * @method string getCertificationAuthority() Obtain Cluster's access CA certificate
+ * @method void setCertificationAuthority(string $CertificationAuthority) Set Cluster's access CA certificate
+ * @method string getClusterExternalEndpoint() Obtain Cluster's access address
+ * @method void setClusterExternalEndpoint(string $ClusterExternalEndpoint) Set Cluster's access address
  * @method string getDomain() Obtain Domain name accessed by the cluster
  * @method void setDomain(string $Domain) Set Domain name accessed by the cluster
- * @method string getPgwEndpoint() Obtain Cluster’s endpoint address
- * @method void setPgwEndpoint(string $PgwEndpoint) Set Cluster’s endpoint address
- * @method array getSecurityPolicy() Obtain Cluster’s access policy group
+ * @method string getPgwEndpoint() Obtain Cluster's endpoint address
+ * @method void setPgwEndpoint(string $PgwEndpoint) Set Cluster's endpoint address
+ * @method array getSecurityPolicy() Obtain Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
- * @method void setSecurityPolicy(array $SecurityPolicy) Set Cluster’s access policy group
+ * @method void setSecurityPolicy(array $SecurityPolicy) Set Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
  * @method string getKubeconfig() Obtain Cluster Kubeconfig file
 Note: This field may return null, indicating that no valid value was found.
@@ -50,22 +50,22 @@ Note: This field may return null, indicating that no valid value was found.
 class DescribeClusterSecurityResponse extends AbstractModel
 {
     /**
-     * @var string Cluster’s account name
+     * @var string Cluster's account name
      */
     public $UserName;
 
     /**
-     * @var string Cluster’s password
+     * @var string Cluster's password
      */
     public $Password;
 
     /**
-     * @var string Cluster’s access CA certificate
+     * @var string Cluster's access CA certificate
      */
     public $CertificationAuthority;
 
     /**
-     * @var string Cluster’s access address
+     * @var string Cluster's access address
      */
     public $ClusterExternalEndpoint;
 
@@ -75,12 +75,12 @@ class DescribeClusterSecurityResponse extends AbstractModel
     public $Domain;
 
     /**
-     * @var string Cluster’s endpoint address
+     * @var string Cluster's endpoint address
      */
     public $PgwEndpoint;
 
     /**
-     * @var array Cluster’s access policy group
+     * @var array Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
      */
     public $SecurityPolicy;
@@ -103,13 +103,13 @@ Note: This field may return null, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param string $UserName Cluster’s account name
-     * @param string $Password Cluster’s password
-     * @param string $CertificationAuthority Cluster’s access CA certificate
-     * @param string $ClusterExternalEndpoint Cluster’s access address
+     * @param string $UserName Cluster's account name
+     * @param string $Password Cluster's password
+     * @param string $CertificationAuthority Cluster's access CA certificate
+     * @param string $ClusterExternalEndpoint Cluster's access address
      * @param string $Domain Domain name accessed by the cluster
-     * @param string $PgwEndpoint Cluster’s endpoint address
-     * @param array $SecurityPolicy Cluster’s access policy group
+     * @param string $PgwEndpoint Cluster's endpoint address
+     * @param array $SecurityPolicy Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
      * @param string $Kubeconfig Cluster Kubeconfig file
 Note: This field may return null, indicating that no valid value was found.

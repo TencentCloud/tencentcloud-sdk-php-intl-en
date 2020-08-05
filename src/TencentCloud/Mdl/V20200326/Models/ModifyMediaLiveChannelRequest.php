@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() Obtain Channel ID.
  * @method void setId(string $Id) Set Channel ID.
- * @method string getName() Obtain Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
- * @method void setName(string $Name) Set Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+ * @method string getName() Obtain Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+ * @method void setName(string $Name) Set Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
  * @method array getAttachedInputs() Obtain Associated media input. Quantity limit: [1,1].
  * @method void setAttachedInputs(array $AttachedInputs) Set Associated media input. Quantity limit: [1,1].
  * @method array getOutputGroups() Obtain Configuration information of channel output groups. Quantity limit: [1,10].
@@ -41,7 +41,7 @@ class ModifyMediaLiveChannelRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * @var string Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public $Name;
 
@@ -67,7 +67,7 @@ class ModifyMediaLiveChannelRequest extends AbstractModel
 
     /**
      * @param string $Id Channel ID.
-     * @param string $Name Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * @param string $Name Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      * @param array $AttachedInputs Associated media input. Quantity limit: [1,1].
      * @param array $OutputGroups Configuration information of channel output groups. Quantity limit: [1,10].
      * @param array $AudioTemplates Audio transcoding template array. Quantity limit: [1,20].

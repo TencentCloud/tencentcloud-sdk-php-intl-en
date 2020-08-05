@@ -24,15 +24,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(array $Data) Set This field has been replaced by `RecordList` and should not be used
  * @method integer getTotal() Obtain Number of records
  * @method void setTotal(integer $Total) Set Number of records
- * @method array getRecordList() Obtain Returned Blacklist/whitelist record,
+ * @method array getRecordList() Obtain Returned Blocklist/allowlist record,
 If "Key":"ip", "Value": IP;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection protocol (HTTP or HTTPS);
- * @method void setRecordList(array $RecordList) Set Returned Blacklist/whitelist record,
+ * @method void setRecordList(array $RecordList) Set Returned Blocklist/allowlist record,
 If "Key":"ip", "Value": IP;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection protocol (HTTP or HTTPS);
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -50,10 +50,10 @@ class DescribeCCIpAllowDenyResponse extends AbstractModel
     public $Total;
 
     /**
-     * @var array Returned Blacklist/whitelist record,
+     * @var array Returned Blocklist/allowlist record,
 If "Key":"ip", "Value": IP;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection protocol (HTTP or HTTPS);
      */
     public $RecordList;
@@ -66,10 +66,10 @@ If "Key":"protocol", "Value": CC protection protocol (HTTP or HTTPS);
     /**
      * @param array $Data This field has been replaced by `RecordList` and should not be used
      * @param integer $Total Number of records
-     * @param array $RecordList Returned Blacklist/whitelist record,
+     * @param array $RecordList Returned Blocklist/allowlist record,
 If "Key":"ip", "Value": IP;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection protocol (HTTP or HTTPS);
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getTopicName() Obtain Topic name
  * @method void setTopicName(string $TopicName) Set Topic name
- * @method array getIpWhiteList() Obtain IP whitelist list
- * @method void setIpWhiteList(array $IpWhiteList) Set IP whitelist list
+ * @method array getIpWhiteList() Obtain IP allowlist list
+ * @method void setIpWhiteList(array $IpWhiteList) Set IP allowlist list
  */
 class DeleteTopicIpWhiteListRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteTopicIpWhiteListRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var array IP whitelist list
+     * @var array IP allowlist list
      */
     public $IpWhiteList;
 
     /**
      * @param string $InstanceId Instance ID
      * @param string $TopicName Topic name
-     * @param array $IpWhiteList IP whitelist list
+     * @param array $IpWhiteList IP allowlist list
      */
     function __construct()
     {

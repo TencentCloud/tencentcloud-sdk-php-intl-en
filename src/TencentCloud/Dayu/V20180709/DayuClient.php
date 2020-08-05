@@ -54,10 +54,10 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DescribeCCAlarmThresholdResponse DescribeCCAlarmThreshold(Models\DescribeCCAlarmThresholdRequest $req) This API is used to get the alarm notification threshold set for CC attacks in Anti-DDoS Pro, Anti-DDoS Advanced, Anti-DDoS Ultimate, and Chess Shield.
  * @method Models\DescribeCCEvListResponse DescribeCCEvList(Models\DescribeCCEvListRequest $req) This API is used to get the CC attack event list.
  * @method Models\DescribeCCFrequencyRulesResponse DescribeCCFrequencyRules(Models\DescribeCCFrequencyRulesRequest $req) This API is used to get an access frequency control rule for CC protection.
- * @method Models\DescribeCCIpAllowDenyResponse DescribeCCIpAllowDeny(Models\DescribeCCIpAllowDenyRequest $req) This API is used to get the CC IP blacklist/whitelist.
+ * @method Models\DescribeCCIpAllowDenyResponse DescribeCCIpAllowDeny(Models\DescribeCCIpAllowDenyRequest $req) This API is used to get the CC IP blocklist/allowlist.
  * @method Models\DescribeCCSelfDefinePolicyResponse DescribeCCSelfDefinePolicy(Models\DescribeCCSelfDefinePolicyRequest $req) This API is used to get a custom CC policy.
  * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) This API is used to get CC attack metric data, including total requests peak (QPS) and attack requests (QPS).
- * @method Models\DescribeCCUrlAllowResponse DescribeCCUrlAllow(Models\DescribeCCUrlAllowRequest $req) This API is used to get the CC URL whitelist.
+ * @method Models\DescribeCCUrlAllowResponse DescribeCCUrlAllow(Models\DescribeCCUrlAllowRequest $req) This API is used to get the CC URL allowlist.
  * @method Models\DescribeDDoSAlarmThresholdResponse DescribeDDoSAlarmThreshold(Models\DescribeDDoSAlarmThresholdRequest $req) This API is used to get the alarm notification threshold set for DDoS attacks in Anti-DDoS Pro, Anti-DDoS Advanced, Anti-DDoS Ultimate, and Chess Shield.
  * @method Models\DescribeDDoSAttackIPRegionMapResponse DescribeDDoSAttackIPRegionMap(Models\DescribeDDoSAttackIPRegionMapRequest $req) This API is used to get the geographical distribution map of DDoS attack source IPs. It supports display by global regions and Chinese provinces.
  * @method Models\DescribeDDoSAttackSourceResponse DescribeDDoSAttackSource(Models\DescribeDDoSAttackSourceRequest $req) This API is used to get the DDoS attack source list.
@@ -99,12 +99,12 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\ModifyCCFrequencyRulesResponse ModifyCCFrequencyRules(Models\ModifyCCFrequencyRulesRequest $req) This API is used to modify an access frequency control rule for CC protection.
  * @method Models\ModifyCCFrequencyRulesStatusResponse ModifyCCFrequencyRulesStatus(Models\ModifyCCFrequencyRulesStatusRequest $req) This API is used to enable or disable an access frequency control rule for CC protection.
  * @method Models\ModifyCCHostProtectionResponse ModifyCCHostProtection(Models\ModifyCCHostProtectionRequest $req) This API is used to enable or disable CC domain name protection.
- * @method Models\ModifyCCIpAllowDenyResponse ModifyCCIpAllowDeny(Models\ModifyCCIpAllowDenyRequest $req) This API is used to add/remove a CC IP to/from the blacklist/whitelist.
+ * @method Models\ModifyCCIpAllowDenyResponse ModifyCCIpAllowDeny(Models\ModifyCCIpAllowDenyRequest $req) This API is used to add/remove a CC IP to/from the blocklist/allowlist.
  * @method Models\ModifyCCLevelResponse ModifyCCLevel(Models\ModifyCCLevelRequest $req) This API is used to modify CC protection level.
  * @method Models\ModifyCCPolicySwitchResponse ModifyCCPolicySwitch(Models\ModifyCCPolicySwitchRequest $req) This API is used to enable or disable a custom CC policy.
  * @method Models\ModifyCCSelfDefinePolicyResponse ModifyCCSelfDefinePolicy(Models\ModifyCCSelfDefinePolicyRequest $req) This API is used to modify a custom CC policy.
  * @method Models\ModifyCCThresholdResponse ModifyCCThreshold(Models\ModifyCCThresholdRequest $req) This API is used to modify the CC protection threshold.
- * @method Models\ModifyCCUrlAllowResponse ModifyCCUrlAllow(Models\ModifyCCUrlAllowRequest $req) This API is used to add/remove a CC URL to/from the whitelist.
+ * @method Models\ModifyCCUrlAllowResponse ModifyCCUrlAllow(Models\ModifyCCUrlAllowRequest $req) This API is used to add/remove a CC URL to/from the allowlist.
  * @method Models\ModifyDDoSAIStatusResponse ModifyDDoSAIStatus(Models\ModifyDDoSAIStatusRequest $req) This API is used to read or modify DDoS AI protection status.
  * @method Models\ModifyDDoSAlarmThresholdResponse ModifyDDoSAlarmThreshold(Models\ModifyDDoSAlarmThresholdRequest $req) This API is used to set the alarm notification threshold for DDoS attacks in Anti-DDoS Pro, Anti-DDoS Advanced, Anti-DDoS Ultimate, and Chess Shield.
  * @method Models\ModifyDDoSDefendStatusResponse ModifyDDoSDefendStatus(Models\ModifyDDoSDefendStatusRequest $req) This API is used to enable or disable DDoS. It can disable DDoS protection for a period of time, which will be automatically enabled after the period of time elapses.
@@ -121,6 +121,8 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\ModifyL4RulesResponse ModifyL4Rules(Models\ModifyL4RulesRequest $req) This API is used to modify a layer-4 forwarding rule.
  * @method Models\ModifyL7RulesResponse ModifyL7Rules(Models\ModifyL7RulesRequest $req) This API is used to modify the layer-7 forwarding rules.
  * @method Models\ModifyNetReturnSwitchResponse ModifyNetReturnSwitch(Models\ModifyNetReturnSwitchRequest $req) This API is used to switch a client to the real server and set the switch duration when the client is under attack or blocked.
+ * @method Models\ModifyNewDomainRulesResponse ModifyNewDomainRules(Models\ModifyNewDomainRulesRequest $req) This API is used to modify layer-7 forwarding rules.
+ * @method Models\ModifyNewL4RuleResponse ModifyNewL4Rule(Models\ModifyNewL4RuleRequest $req) This API is used to modify layer-4 forwarding rules.
  * @method Models\ModifyResBindDDoSPolicyResponse ModifyResBindDDoSPolicy(Models\ModifyResBindDDoSPolicyRequest $req) This API is used to bind an advanced DDoS policy to an instance.
  * @method Models\ModifyResourceRenewFlagResponse ModifyResourceRenewFlag(Models\ModifyResourceRenewFlagRequest $req) This API is used to enable or disable auto-renewal for a resource.
  */

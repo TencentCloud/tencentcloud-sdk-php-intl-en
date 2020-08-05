@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIdSet() Obtain Instance ID
  * @method void setInstanceIdSet(array $InstanceIdSet) Set Instance ID
- * @method integer getLimit() Obtain Number of results per page. Value range: 1–100. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1–100. Default value: 20
+ * @method integer getLimit() Obtain Number of results per page. Value range: 1-100. Default value: 20
+ * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1-100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
  */
@@ -35,7 +35,7 @@ class DescribeDBsRequest extends AbstractModel
     public $InstanceIdSet;
 
     /**
-     * @var integer Number of results per page. Value range: 1–100. Default value: 20
+     * @var integer Number of results per page. Value range: 1-100. Default value: 20
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeDBsRequest extends AbstractModel
 
     /**
      * @param array $InstanceIdSet Instance ID
-     * @param integer $Limit Number of results per page. Value range: 1–100. Default value: 20
+     * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 20
      * @param integer $Offset Page number. Default value: 0
      */
     function __construct()

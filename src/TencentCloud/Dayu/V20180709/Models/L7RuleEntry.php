@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCCLevel(string $CCLevel) Set HTTPS CC protection level
  * @method integer getHttpsToHttpEnable() Obtain 
  * @method void setHttpsToHttpEnable(integer $HttpsToHttpEnable) Set 
+ * @method integer getVirtualPort() Obtain Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setVirtualPort(integer $VirtualPort) Set Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class L7RuleEntry extends AbstractModel
 {
@@ -157,6 +161,12 @@ class L7RuleEntry extends AbstractModel
     public $HttpsToHttpEnable;
 
     /**
+     * @var integer Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $VirtualPort;
+
+    /**
      * @param string $Protocol Forwarding protocol. Valid values: [http, https]
      * @param string $Domain Forwarding domain name
      * @param integer $SourceType Forwarding method. Valid values: [1 (forwarding via domain name), 2 (forwarding via IP)]
@@ -176,6 +186,8 @@ class L7RuleEntry extends AbstractModel
      * @param integer $CCThreshold HTTPS CC protection threshold
      * @param string $CCLevel HTTPS CC protection level
      * @param integer $HttpsToHttpEnable 
+     * @param integer $VirtualPort Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -269,6 +281,10 @@ class L7RuleEntry extends AbstractModel
 
         if (array_key_exists("HttpsToHttpEnable",$param) and $param["HttpsToHttpEnable"] !== null) {
             $this->HttpsToHttpEnable = $param["HttpsToHttpEnable"];
+        }
+
+        if (array_key_exists("VirtualPort",$param) and $param["VirtualPort"] !== null) {
+            $this->VirtualPort = $param["VirtualPort"];
         }
     }
 }

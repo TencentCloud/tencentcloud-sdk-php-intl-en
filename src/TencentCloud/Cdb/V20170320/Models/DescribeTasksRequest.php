@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance.
  * @method void setTaskTypes(array $TaskTypes) Set Task type. If no value is passed in, all task types will be queried. Valid values:
@@ -47,7 +47,7 @@ use TencentCloud\Common\AbstractModel;
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance.
  * @method array getTaskStatus() Obtain Task status. If no value is passed in, all task statuses will be queried. Valid values:
@@ -100,7 +100,7 @@ class DescribeTasksRequest extends AbstractModel
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance.
      */
@@ -152,7 +152,7 @@ class DescribeTasksRequest extends AbstractModel
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance.
      * @param array $TaskStatus Task status. If no value is passed in, all task statuses will be queried. Valid values:

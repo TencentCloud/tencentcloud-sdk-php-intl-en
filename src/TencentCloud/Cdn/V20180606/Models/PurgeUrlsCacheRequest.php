@@ -22,6 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getUrls() Obtain List of URLs. The protocol header such as "http://" or "https://" needs to be included.
  * @method void setUrls(array $Urls) Set List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+ * @method string getArea() Obtain Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region
+ * @method void setArea(string $Area) Set Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region
  */
 class PurgeUrlsCacheRequest extends AbstractModel
 {
@@ -31,7 +41,21 @@ class PurgeUrlsCacheRequest extends AbstractModel
     public $Urls;
 
     /**
+     * @var string Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region
+     */
+    public $Area;
+
+    /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+     * @param string $Area Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region
      */
     function __construct()
     {
@@ -48,6 +72,10 @@ class PurgeUrlsCacheRequest extends AbstractModel
         }
         if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
             $this->Urls = $param["Urls"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

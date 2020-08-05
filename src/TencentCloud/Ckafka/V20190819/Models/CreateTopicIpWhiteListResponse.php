@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopicIpWhiteList response structure.
  *
- * @method JgwOperateResponse getResult() Obtain Result of deleting topic IP whitelist
- * @method void setResult(JgwOperateResponse $Result) Set Result of deleting topic IP whitelist
+ * @method JgwOperateResponse getResult() Obtain Result of deleting topic IP allowlist
+ * @method void setResult(JgwOperateResponse $Result) Set Result of deleting topic IP allowlist
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateTopicIpWhiteListResponse extends AbstractModel
 {
     /**
-     * @var JgwOperateResponse Result of deleting topic IP whitelist
+     * @var JgwOperateResponse Result of deleting topic IP allowlist
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateTopicIpWhiteListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param JgwOperateResponse $Result Result of deleting topic IP whitelist
+     * @param JgwOperateResponse $Result Result of deleting topic IP allowlist
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTP domain name–related information
+ * HTTP domain name-related information
  *
  * @method string getHost() Obtain Domain name
  * @method void setHost(string $Host) Set Domain name

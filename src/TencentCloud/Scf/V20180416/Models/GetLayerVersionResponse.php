@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getCompatibleRuntimes() Obtain Compatible runtimes
  * @method void setCompatibleRuntimes(array $CompatibleRuntimes) Set Compatible runtimes
- * @method string getCodeSha256() Obtain SHA256 encoding of file on layer version
- * @method void setCodeSha256(string $CodeSha256) Set SHA256 encoding of file on layer version
- * @method string getLocation() Obtain Download address of file on layer version
- * @method void setLocation(string $Location) Set Download address of file on layer version
+ * @method string getCodeSha256() Obtain SHA256 encoding of version file on the layer
+ * @method void setCodeSha256(string $CodeSha256) Set SHA256 encoding of version file on the layer
+ * @method string getLocation() Obtain Download address of version file on the layer
+ * @method void setLocation(string $Location) Set Download address of version file on the layer
  * @method string getAddTime() Obtain Version creation time
  * @method void setAddTime(string $AddTime) Set Version creation time
  * @method string getDescription() Obtain Version description
@@ -57,12 +57,12 @@ class GetLayerVersionResponse extends AbstractModel
     public $CompatibleRuntimes;
 
     /**
-     * @var string SHA256 encoding of file on layer version
+     * @var string SHA256 encoding of version file on the layer
      */
     public $CodeSha256;
 
     /**
-     * @var string Download address of file on layer version
+     * @var string Download address of version file on the layer
      */
     public $Location;
 
@@ -107,8 +107,8 @@ Deleted: deleted
 
     /**
      * @param array $CompatibleRuntimes Compatible runtimes
-     * @param string $CodeSha256 SHA256 encoding of file on layer version
-     * @param string $Location Download address of file on layer version
+     * @param string $CodeSha256 SHA256 encoding of version file on the layer
+     * @param string $Location Download address of version file on the layer
      * @param string $AddTime Version creation time
      * @param string $Description Version description
      * @param string $LicenseInfo License information

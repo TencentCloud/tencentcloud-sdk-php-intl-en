@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cluster auto scaling configuration
  *
- * @method boolean getIsScaleDownEnabled() Obtain Whether to enable scale-down
+ * @method boolean getIsScaleDownEnabled() Obtain Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
- * @method void setIsScaleDownEnabled(boolean $IsScaleDownEnabled) Set Whether to enable scale-down
+ * @method void setIsScaleDownEnabled(boolean $IsScaleDownEnabled) Set Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
- * @method string getExpander() Obtain Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+ * @method string getExpander() Obtain The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
- * @method void setExpander(string $Expander) Set Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+ * @method void setExpander(string $Expander) Set The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
- * @method integer getMaxEmptyBulkDelete() Obtain Max concurrent scale-down volume
+ * @method integer getMaxEmptyBulkDelete() Obtain Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
- * @method void setMaxEmptyBulkDelete(integer $MaxEmptyBulkDelete) Set Max concurrent scale-down volume
+ * @method void setMaxEmptyBulkDelete(integer $MaxEmptyBulkDelete) Set Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
- * @method integer getScaleDownDelay() Obtain Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+ * @method integer getScaleDownDelay() Obtain Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
- * @method void setScaleDownDelay(integer $ScaleDownDelay) Set Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+ * @method void setScaleDownDelay(integer $ScaleDownDelay) Set Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
- * @method integer getScaleDownUnneededTime() Obtain Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+ * @method integer getScaleDownUnneededTime() Obtain Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
- * @method void setScaleDownUnneededTime(integer $ScaleDownUnneededTime) Set Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+ * @method void setScaleDownUnneededTime(integer $ScaleDownUnneededTime) Set Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
  * @method integer getScaleDownUtilizationThreshold() Obtain Percentage of node resource usage below which the node is considered to be idle (default value: 50)
 Note: this field may return null, indicating that no valid value was found.
  * @method void setScaleDownUtilizationThreshold(integer $ScaleDownUtilizationThreshold) Set Percentage of node resource usage below which the node is considered to be idle (default value: 50)
 Note: this field may return null, indicating that no valid value was found.
- * @method boolean getSkipNodesWithLocalStorage() Obtain Whether to skip scale-down for nodes with local storage pods (default value: False)
+ * @method boolean getSkipNodesWithLocalStorage() Obtain During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
- * @method void setSkipNodesWithLocalStorage(boolean $SkipNodesWithLocalStorage) Set Whether to skip scale-down for nodes with local storage pods (default value: False)
+ * @method void setSkipNodesWithLocalStorage(boolean $SkipNodesWithLocalStorage) Set During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
- * @method boolean getSkipNodesWithSystemPods() Obtain Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+ * @method boolean getSkipNodesWithSystemPods() Obtain During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
- * @method void setSkipNodesWithSystemPods(boolean $SkipNodesWithSystemPods) Set Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+ * @method void setSkipNodesWithSystemPods(boolean $SkipNodesWithSystemPods) Set During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
  * @method boolean getIgnoreDaemonSetsUtilization() Obtain Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
 Note: this field may return null, indicating that no valid value was found.
@@ -64,9 +64,9 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setMaxTotalUnreadyPercentage(integer $MaxTotalUnreadyPercentage) Set Max percentage of unready nodes. After the max percentage is exceeded, CA will stop operation.
 Note: this field may return null, indicating that no valid value was found.
- * @method integer getScaleDownUnreadyTime() Obtain Amount of time before unready nodes become eligible for scale-down
+ * @method integer getScaleDownUnreadyTime() Obtain Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
- * @method void setScaleDownUnreadyTime(integer $ScaleDownUnreadyTime) Set Amount of time before unready nodes become eligible for scale-down
+ * @method void setScaleDownUnreadyTime(integer $ScaleDownUnreadyTime) Set Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
  * @method integer getUnregisteredNodeRemovalTime() Obtain Waiting time before CA deletes nodes that are not registered in Kubernetes
 Note: this field may return null, indicating that no valid value was found.
@@ -76,31 +76,31 @@ Note: this field may return null, indicating that no valid value was found.
 class ClusterAsGroupOption extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable scale-down
+     * @var boolean Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public $IsScaleDownEnabled;
 
     /**
-     * @var string Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+     * @var string The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
      */
     public $Expander;
 
     /**
-     * @var integer Max concurrent scale-down volume
+     * @var integer Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
      */
     public $MaxEmptyBulkDelete;
 
     /**
-     * @var integer Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+     * @var integer Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public $ScaleDownDelay;
 
     /**
-     * @var integer Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+     * @var integer Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
      */
     public $ScaleDownUnneededTime;
@@ -112,13 +112,13 @@ Note: this field may return null, indicating that no valid value was found.
     public $ScaleDownUtilizationThreshold;
 
     /**
-     * @var boolean Whether to skip scale-down for nodes with local storage pods (default value: False)
+     * @var boolean During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
      */
     public $SkipNodesWithLocalStorage;
 
     /**
-     * @var boolean Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+     * @var boolean During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
      */
     public $SkipNodesWithSystemPods;
@@ -142,7 +142,7 @@ Note: this field may return null, indicating that no valid value was found.
     public $MaxTotalUnreadyPercentage;
 
     /**
-     * @var integer Amount of time before unready nodes become eligible for scale-down
+     * @var integer Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public $ScaleDownUnreadyTime;
@@ -154,21 +154,21 @@ Note: this field may return null, indicating that no valid value was found.
     public $UnregisteredNodeRemovalTime;
 
     /**
-     * @param boolean $IsScaleDownEnabled Whether to enable scale-down
+     * @param boolean $IsScaleDownEnabled Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
-     * @param string $Expander Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+     * @param string $Expander The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
-     * @param integer $MaxEmptyBulkDelete Max concurrent scale-down volume
+     * @param integer $MaxEmptyBulkDelete Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
-     * @param integer $ScaleDownDelay Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+     * @param integer $ScaleDownDelay Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
-     * @param integer $ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+     * @param integer $ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
      * @param integer $ScaleDownUtilizationThreshold Percentage of node resource usage below which the node is considered to be idle (default value: 50)
 Note: this field may return null, indicating that no valid value was found.
-     * @param boolean $SkipNodesWithLocalStorage Whether to skip scale-down for nodes with local storage pods (default value: False)
+     * @param boolean $SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-     * @param boolean $SkipNodesWithSystemPods Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+     * @param boolean $SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
      * @param boolean $IgnoreDaemonSetsUtilization Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
 Note: this field may return null, indicating that no valid value was found.
@@ -176,7 +176,7 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
      * @param integer $MaxTotalUnreadyPercentage Max percentage of unready nodes. After the max percentage is exceeded, CA will stop operation.
 Note: this field may return null, indicating that no valid value was found.
-     * @param integer $ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-down
+     * @param integer $ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
      * @param integer $UnregisteredNodeRemovalTime Waiting time before CA deletes nodes that are not registered in Kubernetes
 Note: this field may return null, indicating that no valid value was found.

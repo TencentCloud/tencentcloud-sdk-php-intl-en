@@ -22,17 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRecordInterval() Obtain Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
  * @method void setRecordInterval(integer $RecordInterval) Set Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
  * @method integer getStorageTime() Obtain Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage.
  * @method void setStorageTime(integer $StorageTime) Set Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage.
  * @method integer getEnable() Obtain Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
  * @method void setEnable(integer $Enable) Set Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
@@ -82,14 +82,14 @@ class RecordParam extends AbstractModel
     /**
      * @var integer Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
      */
     public $RecordInterval;
 
     /**
      * @var integer Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage.
      */
     public $StorageTime;
@@ -130,10 +130,10 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
     /**
      * @param integer $RecordInterval Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
      * @param integer $StorageTime Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage.
      * @param integer $Enable Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
      * @param integer $VodSubAppId VOD subapplication ID.

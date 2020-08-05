@@ -30,6 +30,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTagKeys(array $TagKeys) Set List of tag keys owned by user
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getHardwareResourceTypeList() Obtain 
+ * @method void setHardwareResourceTypeList(array $HardwareResourceTypeList) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -53,6 +55,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TagKeys;
 
     /**
+     * @var array 
+     */
+    public $HardwareResourceTypeList;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -63,6 +70,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $TagKeys List of tag keys owned by user
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $HardwareResourceTypeList 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -93,6 +101,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
             $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("HardwareResourceTypeList",$param) and $param["HardwareResourceTypeList"] !== null) {
+            $this->HardwareResourceTypeList = $param["HardwareResourceTypeList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

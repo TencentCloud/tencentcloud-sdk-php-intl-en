@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(integer $VpcId) Set Instance VPC ID, which will be 0 if the basic network is used
  * @method integer getSubnetId() Obtain Instance VPC subnet ID, which will be 0 if the basic network is used
  * @method void setSubnetId(integer $SubnetId) Set Instance VPC subnet ID, which will be 0 if the basic network is used
- * @method integer getStatus() Obtain Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
- * @method void setStatus(integer $Status) Set Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+ * @method integer getStatus() Obtain Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
  * @method string getVip() Obtain Instance access IP
  * @method void setVip(string $Vip) Set Instance access IP
  * @method integer getVport() Obtain Instance access port
@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
  * @method string getUniqSubnetId() Obtain Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+ * @method string getIsolateOperator() Obtain 
+ * @method void setIsolateOperator(string $IsolateOperator) Set 
+ * @method string getSubFlag() Obtain 
+ * @method void setSubFlag(string $SubFlag) Set 
+ * @method string getROFlag() Obtain 
+ * @method void setROFlag(string $ROFlag) Set 
+ * @method string getHAFlag() Obtain 
+ * @method void setHAFlag(string $HAFlag) Set 
  */
 class DBInstance extends AbstractModel
 {
@@ -123,7 +131,7 @@ class DBInstance extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+     * @var integer Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
      */
     public $Status;
 
@@ -248,6 +256,26 @@ class DBInstance extends AbstractModel
     public $UniqSubnetId;
 
     /**
+     * @var string 
+     */
+    public $IsolateOperator;
+
+    /**
+     * @var string 
+     */
+    public $SubFlag;
+
+    /**
+     * @var string 
+     */
+    public $ROFlag;
+
+    /**
+     * @var string 
+     */
+    public $HAFlag;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
      * @param integer $ProjectId Project ID of instance
@@ -255,7 +283,7 @@ class DBInstance extends AbstractModel
      * @param integer $ZoneId Instance AZ ID
      * @param integer $VpcId Instance VPC ID, which will be 0 if the basic network is used
      * @param integer $SubnetId Instance VPC subnet ID, which will be 0 if the basic network is used
-     * @param integer $Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+     * @param integer $Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
      * @param string $Vip Instance access IP
      * @param integer $Vport Instance access port
      * @param string $CreateTime Instance creation time
@@ -280,6 +308,10 @@ class DBInstance extends AbstractModel
      * @param integer $Pid Billing ID
      * @param string $UniqVpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
      * @param string $UniqSubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+     * @param string $IsolateOperator 
+     * @param string $SubFlag 
+     * @param string $ROFlag 
+     * @param string $HAFlag 
      */
     function __construct()
     {
@@ -420,6 +452,22 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
             $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("IsolateOperator",$param) and $param["IsolateOperator"] !== null) {
+            $this->IsolateOperator = $param["IsolateOperator"];
+        }
+
+        if (array_key_exists("SubFlag",$param) and $param["SubFlag"] !== null) {
+            $this->SubFlag = $param["SubFlag"];
+        }
+
+        if (array_key_exists("ROFlag",$param) and $param["ROFlag"] !== null) {
+            $this->ROFlag = $param["ROFlag"];
+        }
+
+        if (array_key_exists("HAFlag",$param) and $param["HAFlag"] !== null) {
+            $this->HAFlag = $param["HAFlag"];
         }
     }
 }

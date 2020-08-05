@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrigin(Origin $Origin) Set Origin server configuration.
  * @method integer getProjectId() Obtain Project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration.
- * @method void setIpFilter(IpFilter $IpFilter) Set IP blacklist/whitelist configuration.
+ * @method IpFilter getIpFilter() Obtain IP blocklist/allowlist configuration.
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP blocklist/allowlist configuration.
  * @method IpFreqLimit getIpFreqLimit() Obtain IP access limit configuration.
  * @method void setIpFreqLimit(IpFreqLimit $IpFreqLimit) Set IP access limit configuration.
  * @method ResponseHeader getResponseHeader() Obtain Origin server response header configuration.
@@ -61,7 +61,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var IpFilter IP blacklist/whitelist configuration.
+     * @var IpFilter IP blocklist/allowlist configuration.
      */
     public $IpFilter;
 
@@ -104,7 +104,7 @@ class UpdateDomainConfigRequest extends AbstractModel
      * @param string $Domain Domain name.
      * @param Origin $Origin Origin server configuration.
      * @param integer $ProjectId Project ID.
-     * @param IpFilter $IpFilter IP blacklist/whitelist configuration.
+     * @param IpFilter $IpFilter IP blocklist/allowlist configuration.
      * @param IpFreqLimit $IpFreqLimit IP access limit configuration.
      * @param ResponseHeader $ResponseHeader Origin server response header configuration.
      * @param CacheKey $CacheKey Node caching configuration.

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnActive(MonitorData $ConnActive) Set Number of active connections
  * @method MonitorData getMemHitRate() Obtain Cache hit rate
  * @method void setMemHitRate(MonitorData $MemHitRate) Set Cache hit rate
- * @method MonitorData getSlaveDelay() Obtain Master/slave delay
- * @method void setSlaveDelay(MonitorData $SlaveDelay) Set Master/slave delay
+ * @method MonitorData getSlaveDelay() Obtain Primary/Secondary delay
+ * @method void setSlaveDelay(MonitorData $SlaveDelay) Set Primary/Secondary delay
  * @method MonitorData getSelectTotal() Obtain Number of SELECT operations
  * @method void setSelectTotal(MonitorData $SelectTotal) Set Number of SELECT operations
  * @method MonitorData getLongQuery() Obtain Number of slow queries
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteTotal(MonitorData $DeleteTotal) Set Number of DELETE operations
  * @method MonitorData getInsertTotal() Obtain Number of INSERT operations
  * @method void setInsertTotal(MonitorData $InsertTotal) Set Number of INSERT operations
- * @method MonitorData getIsMasterSwitched() Obtain Whether master/slave switch occurred. 1: yes, 0: no
- * @method void setIsMasterSwitched(MonitorData $IsMasterSwitched) Set Whether master/slave switch occurred. 1: yes, 0: no
+ * @method MonitorData getIsMasterSwitched() Obtain Whether primary/Secondary switch occurred. 1: yes, 0: no
+ * @method void setIsMasterSwitched(MonitorData $IsMasterSwitched) Set Whether primary/Secondary switch occurred. 1: yes, 0: no
  */
 class PerformanceMonitorSet extends AbstractModel
 {
@@ -64,7 +64,7 @@ class PerformanceMonitorSet extends AbstractModel
     public $MemHitRate;
 
     /**
-     * @var MonitorData Master/slave delay
+     * @var MonitorData Primary/Secondary delay
      */
     public $SlaveDelay;
 
@@ -89,7 +89,7 @@ class PerformanceMonitorSet extends AbstractModel
     public $InsertTotal;
 
     /**
-     * @var MonitorData Whether master/slave switch occurred. 1: yes, 0: no
+     * @var MonitorData Whether primary/Secondary switch occurred. 1: yes, 0: no
      */
     public $IsMasterSwitched;
 
@@ -98,12 +98,12 @@ class PerformanceMonitorSet extends AbstractModel
      * @param MonitorData $DiskIops Number of disk IOs per second
      * @param MonitorData $ConnActive Number of active connections
      * @param MonitorData $MemHitRate Cache hit rate
-     * @param MonitorData $SlaveDelay Master/slave delay
+     * @param MonitorData $SlaveDelay Primary/Secondary delay
      * @param MonitorData $SelectTotal Number of SELECT operations
      * @param MonitorData $LongQuery Number of slow queries
      * @param MonitorData $DeleteTotal Number of DELETE operations
      * @param MonitorData $InsertTotal Number of INSERT operations
-     * @param MonitorData $IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
+     * @param MonitorData $IsMasterSwitched Whether primary/Secondary switch occurred. 1: yes, 0: no
      */
     function __construct()
     {

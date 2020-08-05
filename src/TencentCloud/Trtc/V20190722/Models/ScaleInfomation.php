@@ -22,12 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTime() Obtain Start time for each day
  * @method void setTime(integer $Time) Set Start time for each day
- * @method integer getUserNumber() Obtain Number of users in room
- * @method void setUserNumber(integer $UserNumber) Set Number of users in room
- * @method integer getUserCount() Obtain Number of times a room has been entered
- * @method void setUserCount(integer $UserCount) Set Number of times a room has been entered
- * @method integer getRoomNumbers() Obtain Number of rooms.
- * @method void setRoomNumbers(integer $RoomNumbers) Set Number of rooms.
+ * @method integer getUserNumber() Obtain Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setUserNumber(integer $UserNumber) Set Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getUserCount() Obtain Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setUserCount(integer $UserCount) Set Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getRoomNumbers() Obtain Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRoomNumbers(integer $RoomNumbers) Set Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ScaleInfomation extends AbstractModel
 {
@@ -37,25 +43,31 @@ class ScaleInfomation extends AbstractModel
     public $Time;
 
     /**
-     * @var integer Number of users in room
+     * @var integer Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UserNumber;
 
     /**
-     * @var integer Number of times a room has been entered
+     * @var integer Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UserCount;
 
     /**
-     * @var integer Number of rooms.
+     * @var integer Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RoomNumbers;
 
     /**
      * @param integer $Time Start time for each day
-     * @param integer $UserNumber Number of users in room
-     * @param integer $UserCount Number of times a room has been entered
-     * @param integer $RoomNumbers Number of rooms.
+     * @param integer $UserNumber Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $UserCount Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $RoomNumbers Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

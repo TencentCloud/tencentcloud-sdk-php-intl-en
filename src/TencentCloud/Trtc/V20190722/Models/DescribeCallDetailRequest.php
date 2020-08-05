@@ -20,49 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCallDetail request structure.
  *
- * @method string getCommId() Obtain Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
- * @method void setCommId(string $CommId) Set Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
+ * @method string getCommId() Obtain Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://cloud.tencent.com/document/product/647/44050).
+ * @method void setCommId(string $CommId) Set Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://cloud.tencent.com/document/product/647/44050).
  * @method integer getStartTime() Obtain Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
  * @method void setStartTime(integer $StartTime) Set Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
  * @method integer getEndTime() Obtain Query end time in the format of local UNIX timestamp, such as 1588031999s.
  * @method void setEndTime(integer $EndTime) Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
- * @method string getSdkAppId() Obtain User `sdkappid`
- * @method void setSdkAppId(string $SdkAppId) Set User `sdkappid`
+ * @method string getSdkAppId() Obtain User `sdkappid`, such as 1400188366.
+ * @method void setSdkAppId(string $SdkAppId) Set User `sdkappid`, such as 1400188366.
  * @method array getUserIds() Obtain User array to query, which contains up to 6 users. If it is left empty, 6 users will be returned by default.
  * @method void setUserIds(array $UserIds) Set User array to query, which contains up to 6 users. If it is left empty, 6 users will be returned by default.
  * @method array getDataType() Obtain Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
  * @method void setDataType(array $DataType) Set Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
  */
 class DescribeCallDetailRequest extends AbstractModel
 {
     /**
-     * @var string Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
+     * @var string Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://cloud.tencent.com/document/product/647/44050).
      */
     public $CommId;
 
@@ -77,7 +77,7 @@ class DescribeCallDetailRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string User `sdkappid`
+     * @var string User `sdkappid`, such as 1400188366.
      */
     public $SdkAppId;
 
@@ -88,42 +88,42 @@ class DescribeCallDetailRequest extends AbstractModel
 
     /**
      * @var array Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
      */
     public $DataType;
 
     /**
-     * @param string $CommId Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
+     * @param string $CommId Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://cloud.tencent.com/document/product/647/44050).
      * @param integer $StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
      * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
-     * @param string $SdkAppId User `sdkappid`
+     * @param string $SdkAppId User `sdkappid`, such as 1400188366.
      * @param array $UserIds User array to query, which contains up to 6 users. If it is left empty, 6 users will be returned by default.
      * @param array $DataType Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
      */
     function __construct()
     {

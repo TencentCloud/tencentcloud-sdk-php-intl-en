@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Whitelisted usernames (separated by commas)
  * @method boolean getIsGlobal() Obtain Whether this rule is applied to all servers under the current account
  * @method void setIsGlobal(boolean $IsGlobal) Set Whether this rule is applied to all servers under the current account
- * @method string getHostIp() Obtain Server for which the whitelist takes effect
- * @method void setHostIp(string $HostIp) Set Server for which the whitelist takes effect
+ * @method string getHostIp() Obtain Server for which the allowlist takes effect
+ * @method void setHostIp(string $HostIp) Set Server for which the allowlist takes effect
  * @method integer getId() Obtain Rule ID, used for rule updating
  * @method void setId(integer $Id) Set Rule ID, used for rule updating
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
  */
 class LoginWhiteListsRule extends AbstractModel
 {
@@ -56,7 +60,7 @@ class LoginWhiteListsRule extends AbstractModel
     public $IsGlobal;
 
     /**
-     * @var string Server for which the whitelist takes effect
+     * @var string Server for which the allowlist takes effect
      */
     public $HostIp;
 
@@ -66,12 +70,24 @@ class LoginWhiteListsRule extends AbstractModel
     public $Id;
 
     /**
+     * @var string 
+     */
+    public $StartTime;
+
+    /**
+     * @var string 
+     */
+    public $EndTime;
+
+    /**
      * @param array $Places Whitelisted location
      * @param string $SrcIp Whitelisted IPs (separated by commas). This parameter can be an IP range.
      * @param string $UserName Whitelisted usernames (separated by commas)
      * @param boolean $IsGlobal Whether this rule is applied to all servers under the current account
-     * @param string $HostIp Server for which the whitelist takes effect
+     * @param string $HostIp Server for which the allowlist takes effect
      * @param integer $Id Rule ID, used for rule updating
+     * @param string $StartTime 
+     * @param string $EndTime 
      */
     function __construct()
     {
@@ -113,6 +129,14 @@ class LoginWhiteListsRule extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }
