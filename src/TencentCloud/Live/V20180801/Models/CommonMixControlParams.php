@@ -18,24 +18,28 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * General stream mix control parameter
+ * 
  *
- * @method integer getUseMixCropCenter() Obtain Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
- * @method void setUseMixCropCenter(integer $UseMixCropCenter) Set Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+ * @method integer getUseMixCropCenter() Obtain 
+ * @method void setUseMixCropCenter(integer $UseMixCropCenter) Set 
+ * @method integer getAllowCopy() Obtain 
+ * @method void setAllowCopy(integer $AllowCopy) Set 
  */
 class CommonMixControlParams extends AbstractModel
 {
     /**
-     * @var integer Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+     * @var integer 
      */
     public $UseMixCropCenter;
 
     /**
-     * @param integer $UseMixCropCenter Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+     * @var integer 
+     */
+    public $AllowCopy;
+
+    /**
+     * @param integer $UseMixCropCenter 
+     * @param integer $AllowCopy 
      */
     function __construct()
     {
@@ -52,6 +56,10 @@ If 1 is entered, when the layer resolution in the parameter is different from th
         }
         if (array_key_exists("UseMixCropCenter",$param) and $param["UseMixCropCenter"] !== null) {
             $this->UseMixCropCenter = $param["UseMixCropCenter"];
+        }
+
+        if (array_key_exists("AllowCopy",$param) and $param["AllowCopy"] !== null) {
+            $this->AllowCopy = $param["AllowCopy"];
         }
     }
 }

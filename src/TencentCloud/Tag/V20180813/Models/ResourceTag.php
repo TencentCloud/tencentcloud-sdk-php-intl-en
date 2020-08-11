@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource tag.
  *
- * @method string getResourceRegion() Obtain The resource’s region.
+ * @method string getResourceRegion() Obtain The resource's region.
 Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceRegion(string $ResourceRegion) Set The resource’s region.
+ * @method void setResourceRegion(string $ResourceRegion) Set The resource's region.
 Note: This field may return null, indicating that no valid value is found.
  * @method string getServiceType() Obtain Service type.
 Note: This field may return null, indicating that no valid value is found.
@@ -44,7 +44,7 @@ Note: This field may return null, indicating that no valid value is found.
 class ResourceTag extends AbstractModel
 {
     /**
-     * @var string The resource’s region.
+     * @var string The resource's region.
 Note: This field may return null, indicating that no valid value is found.
      */
     public $ResourceRegion;
@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid value is found.
     public $Tags;
 
     /**
-     * @param string $ResourceRegion The resource’s region.
+     * @param string $ResourceRegion The resource's region.
 Note: This field may return null, indicating that no valid value is found.
      * @param string $ServiceType Service type.
 Note: This field may return null, indicating that no valid value is found.

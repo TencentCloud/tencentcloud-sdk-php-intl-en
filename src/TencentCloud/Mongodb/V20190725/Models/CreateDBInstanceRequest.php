@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Instance memory size in GB.
  * @method integer getVolume() Obtain Instance disk size in GB.
  * @method void setVolume(integer $Volume) Set Instance disk size in GB.
- * @method string getMongoVersion() Obtain Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
- * @method void setMongoVersion(string $MongoVersion) Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
+ * @method string getMongoVersion() Obtain Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+ * @method void setMongoVersion(string $MongoVersion) Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
  * @method integer getGoodsNum() Obtain Number of instances. Minimum value: 1. Maximum value: 10.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Minimum value: 1. Maximum value: 10.
  * @method string getZone() Obtain Instance region name in the format of ap-guangzhou-2.
  * @method void setZone(string $Zone) Set Instance region name in the format of ap-guangzhou-2.
  * @method integer getPeriod() Obtain Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
  * @method void setPeriod(integer $Period) Set Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
- * @method string getMachineCode() Obtain Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
- * @method void setMachineCode(string $MachineCode) Set Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
- * @method string getClusterType() Obtain Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
- * @method void setClusterType(string $ClusterType) Set Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
- * @method integer getReplicateSetNum() Obtain Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
- * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
+ * @method string getMachineCode() Obtain Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+ * @method void setMachineCode(string $MachineCode) Set Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+ * @method string getClusterType() Obtain Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
+ * @method void setClusterType(string $ClusterType) Set Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
+ * @method integer getReplicateSetNum() Obtain Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
  * @method integer getProjectId() Obtain Project ID. If this parameter is not set, the default project will be used.
  * @method void setProjectId(integer $ProjectId) Set Project ID. If this parameter is not set, the default project will be used.
  * @method string getVpcId() Obtain VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
@@ -52,14 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Instance tag information.
  * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
- * @method integer getAutoVoucher() Obtain 
- * @method void setAutoVoucher(integer $AutoVoucher) Set 
- * @method integer getClone() Obtain 
- * @method void setClone(integer $Clone) Set 
- * @method string getFather() Obtain 
- * @method void setFather(string $Father) Set 
- * @method array getSecurityGroup() Obtain 
- * @method void setSecurityGroup(array $SecurityGroup) Set 
+ * @method integer getAutoVoucher() Obtain Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
+ * @method integer getClone() Obtain Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+ * @method void setClone(integer $Clone) Set Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+ * @method string getFather() Obtain Primary instance ID. It is required for read-only and disaster recovery instances.
+ * @method void setFather(string $Father) Set Primary instance ID. It is required for read-only and disaster recovery instances.
+ * @method array getSecurityGroup() Obtain Security group.
+ * @method void setSecurityGroup(array $SecurityGroup) Set Security group.
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -79,7 +79,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
+     * @var string Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
      */
     public $MongoVersion;
 
@@ -99,17 +99,17 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var string Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
+     * @var string Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
      */
     public $MachineCode;
 
     /**
-     * @var string Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
+     * @var string Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
      */
     public $ClusterType;
 
     /**
-     * @var integer Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
+     * @var integer Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
      */
     public $ReplicateSetNum;
 
@@ -144,22 +144,22 @@ class CreateDBInstanceRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var integer 
+     * @var integer Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
      */
     public $AutoVoucher;
 
     /**
-     * @var integer 
+     * @var integer Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
      */
     public $Clone;
 
     /**
-     * @var string 
+     * @var string Primary instance ID. It is required for read-only and disaster recovery instances.
      */
     public $Father;
 
     /**
-     * @var array 
+     * @var array Security group.
      */
     public $SecurityGroup;
 
@@ -167,23 +167,23 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $NodeNum Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
      * @param integer $Memory Instance memory size in GB.
      * @param integer $Volume Instance disk size in GB.
-     * @param string $MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
+     * @param string $MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
      * @param integer $GoodsNum Number of instances. Minimum value: 1. Maximum value: 10.
      * @param string $Zone Instance region name in the format of ap-guangzhou-2.
      * @param integer $Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-     * @param string $MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
-     * @param string $ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
-     * @param integer $ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
+     * @param string $MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+     * @param string $ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
+     * @param integer $ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
      * @param integer $ProjectId Project ID. If this parameter is not set, the default project will be used.
      * @param string $VpcId VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
      * @param string $SubnetId VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
      * @param string $Password Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
      * @param array $Tags Instance tag information.
      * @param integer $AutoRenewFlag Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
-     * @param integer $AutoVoucher 
-     * @param integer $Clone 
-     * @param string $Father 
-     * @param array $SecurityGroup 
+     * @param integer $AutoVoucher Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
+     * @param integer $Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+     * @param string $Father Primary instance ID. It is required for read-only and disaster recovery instances.
+     * @param array $SecurityGroup Security group.
      */
     function __construct()
     {

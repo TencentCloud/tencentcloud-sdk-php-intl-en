@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix.
  * @method string getResourceId() Obtain Unique resource ID.
  * @method void setResourceId(string $ResourceId) Set Unique resource ID.
- * @method string getResourceRegion() Obtain The resource’s region.
- * @method void setResourceRegion(string $ResourceRegion) Set The resource’s region.
+ * @method string getResourceRegion() Obtain The resource's region.
+ * @method void setResourceRegion(string $ResourceRegion) Set The resource's region.
  * @method string getServiceType() Obtain Service type.
  * @method void setServiceType(string $ServiceType) Set Service type.
  */
@@ -70,7 +70,7 @@ class DescribeResourcesByTagsRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string The resource’s region.
+     * @var string The resource's region.
      */
     public $ResourceRegion;
 
@@ -86,7 +86,7 @@ class DescribeResourcesByTagsRequest extends AbstractModel
      * @param integer $Limit Page size. The default value is 15.
      * @param string $ResourcePrefix Resource prefix.
      * @param string $ResourceId Unique resource ID.
-     * @param string $ResourceRegion The resource’s region.
+     * @param string $ResourceRegion The resource's region.
      * @param string $ServiceType Service type.
      */
     function __construct()

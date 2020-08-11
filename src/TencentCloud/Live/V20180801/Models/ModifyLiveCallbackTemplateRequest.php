@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLiveCallbackTemplate request structure.
  *
- * @method integer getTemplateId() Obtain Template ID.
- * @method void setTemplateId(integer $TemplateId) Set Template ID.
+ * @method integer getTemplateId() Obtain Template ID returned by the `DescribeLiveCallbackTemplates` API.
+ * @method void setTemplateId(integer $TemplateId) Set Template ID returned by the `DescribeLiveCallbackTemplates` API.
  * @method string getTemplateName() Obtain Template name.
  * @method void setTemplateName(string $TemplateName) Set Template name.
  * @method string getDescription() Obtain Description.
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLiveCallbackTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Template ID.
+     * @var integer Template ID returned by the `DescribeLiveCallbackTemplates` API.
      */
     public $TemplateId;
 
@@ -90,7 +90,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     public $CallbackKey;
 
     /**
-     * @param integer $TemplateId Template ID.
+     * @param integer $TemplateId Template ID returned by the `DescribeLiveCallbackTemplates` API.
      * @param string $TemplateName Template name.
      * @param string $Description Description.
      * @param string $StreamBeginNotifyUrl Stream starting callback URL.

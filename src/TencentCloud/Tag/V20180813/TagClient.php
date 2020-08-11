@@ -24,19 +24,27 @@ use TencentCloud\Tag\V20180813\Models as Models;
 
 /**
  * @method Models\AddResourceTagResponse AddResourceTag(Models\AddResourceTagRequest $req) This API is used to associate resources with tags.
+ * @method Models\AttachResourcesTagResponse AttachResourcesTag(Models\AttachResourcesTagRequest $req) This API is used to associate a tag with multiple resources.
  * @method Models\CreateTagResponse CreateTag(Models\CreateTagRequest $req) This API is used to create a tag key and tag value pair.
  * @method Models\DeleteResourceTagResponse DeleteResourceTag(Models\DeleteResourceTagRequest $req) This API is used to unassociate tags and resources.
  * @method Models\DeleteTagResponse DeleteTag(Models\DeleteTagRequest $req) This API is used to delete a tag key and tag value pair.
  * @method Models\DescribeResourceTagsResponse DescribeResourceTags(Models\DescribeResourceTagsRequest $req) This API is used to query the tags associated with a resource.
  * @method Models\DescribeResourceTagsByResourceIdsResponse DescribeResourceTagsByResourceIds(Models\DescribeResourceTagsByResourceIdsRequest $req) This API is used to query tag key and value pairs for existing resources.
+ * @method Models\DescribeResourceTagsByResourceIdsSeqResponse DescribeResourceTagsByResourceIdsSeq(Models\DescribeResourceTagsByResourceIdsSeqRequest $req) This API is used to view the tags associated with a resource in sequence.
  * @method Models\DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeys(Models\DescribeResourceTagsByTagKeysRequest $req) This API is used to get resource tags based on tag keys.
  * @method Models\DescribeResourcesByTagsResponse DescribeResourcesByTags(Models\DescribeResourcesByTagsRequest $req) This API is used to query resources by tags.
+ * @method Models\DescribeResourcesByTagsUnionResponse DescribeResourcesByTagsUnion(Models\DescribeResourcesByTagsUnionRequest $req) This API is used to query resource list by tags.
  * @method Models\DescribeTagKeysResponse DescribeTagKeys(Models\DescribeTagKeysRequest $req) This API is used to query tag keys in an existing tag list.
 
  * @method Models\DescribeTagValuesResponse DescribeTagValues(Models\DescribeTagValuesRequest $req) This API is used to query tag values in an existing tag list.
+ * @method Models\DescribeTagValuesSeqResponse DescribeTagValuesSeq(Models\DescribeTagValuesSeqRequest $req) This API is used to query tag values in a created tag list.
  * @method Models\DescribeTagsResponse DescribeTags(Models\DescribeTagsRequest $req) This API is used to query existing tag lists.
 
+ * @method Models\DescribeTagsSeqResponse DescribeTagsSeq(Models\DescribeTagsSeqRequest $req) This API is used to query the created tag lists.
+
+ * @method Models\DetachResourcesTagResponse DetachResourcesTag(Models\DetachResourcesTagRequest $req) This API is used to unbind a tag from multiple resources.
  * @method Models\ModifyResourceTagsResponse ModifyResourceTags(Models\ModifyResourceTagsRequest $req) This API is used to modify all tags associated with a resource.
+ * @method Models\ModifyResourcesTagValueResponse ModifyResourcesTagValue(Models\ModifyResourcesTagValueRequest $req) This API is used to modify the tag value corresponding to a tag key associated with multiple resources.
  * @method Models\UpdateResourceTagValueResponse UpdateResourceTagValue(Models\UpdateResourceTagValueRequest $req) This API is used to modify the values of tags associated with a resource (the tag key does not change).
  */
 

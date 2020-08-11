@@ -37,13 +37,17 @@ Note: This parameter will take effect later.
  * @method string getDescription() Obtain Template description.
  * @method void setDescription(string $Description) Set Template description.
  * @method integer getWidth() Obtain Width. Default value: 0.
+Value range: [0-3000].
  * @method void setWidth(integer $Width) Set Width. Default value: 0.
+Value range: [0-3000].
  * @method integer getNeedVideo() Obtain Whether to keep the video. 0: no; 1: yes. Default value: 1.
  * @method void setNeedVideo(integer $NeedVideo) Set Whether to keep the video. 0: no; 1: yes. Default value: 1.
  * @method integer getNeedAudio() Obtain Whether to keep the audio. 0: no; 1: yes. Default value: 1.
  * @method void setNeedAudio(integer $NeedAudio) Set Whether to keep the audio. 0: no; 1: yes. Default value: 1.
  * @method integer getHeight() Obtain Height. Default value: 0.
+Value range: [0-3000].
  * @method void setHeight(integer $Height) Set Height. Default value: 0.
+Value range: [0-3000].
  * @method integer getFps() Obtain Frame rate. Default value: 0.
  * @method void setFps(integer $Fps) Set Frame rate. Default value: 0.
  * @method integer getGop() Obtain Keyframe interval in seconds. Original interval by default
@@ -101,6 +105,7 @@ Note: This parameter will take effect later.
 
     /**
      * @var integer Width. Default value: 0.
+Value range: [0-3000].
      */
     public $Width;
 
@@ -116,6 +121,7 @@ Note: This parameter will take effect later.
 
     /**
      * @var integer Height. Default value: 0.
+Value range: [0-3000].
      */
     public $Height;
 
@@ -175,9 +181,11 @@ Note: This parameter will take effect later.
      * @param integer $AudioBitrate Audio bitrate. Value range: 0-500. Default value: 0.
      * @param string $Description Template description.
      * @param integer $Width Width. Default value: 0.
+Value range: [0-3000].
      * @param integer $NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
      * @param integer $NeedAudio Whether to keep the audio. 0: no; 1: yes. Default value: 1.
      * @param integer $Height Height. Default value: 0.
+Value range: [0-3000].
      * @param integer $Fps Frame rate. Default value: 0.
      * @param integer $Gop Keyframe interval in seconds. Original interval by default
      * @param integer $Rotate Whether to rotate. 0: no; 1: yes. Default value: 0.

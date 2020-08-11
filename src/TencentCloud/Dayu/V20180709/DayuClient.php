@@ -38,6 +38,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\CreateL7RulesResponse CreateL7Rules(Models\CreateL7RulesRequest $req) This API is used to add a layer-7 (website) forwarding rule.
  * @method Models\CreateL7RulesUploadResponse CreateL7RulesUpload(Models\CreateL7RulesUploadRequest $req) This API is used to upload layer-7 forwarding rules in batches.
  * @method Models\CreateNetReturnResponse CreateNetReturn(Models\CreateNetReturnRequest $req) This API is used to switch to the real server in Anti-DDoS Ultimate.
+ * @method Models\CreateNewL7RulesUploadResponse CreateNewL7RulesUpload(Models\CreateNewL7RulesUploadRequest $req) This API is used to batch upload Layer-7 forwarding rules.
  * @method Models\CreateUnblockIpResponse CreateUnblockIp(Models\CreateUnblockIpRequest $req) This API is used to unblock an IP.
  * @method Models\DeleteCCFrequencyRulesResponse DeleteCCFrequencyRules(Models\DeleteCCFrequencyRulesRequest $req) This API is used to delete an access frequency control rule for CC protection.
  * @method Models\DeleteCCSelfDefinePolicyResponse DeleteCCSelfDefinePolicy(Models\DeleteCCSelfDefinePolicyRequest $req) This API is used to delete a custom CC policy.

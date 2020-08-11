@@ -43,6 +43,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://cloud.t
 5. If `Port`, `ParamList`, or `Password` is set in the input parameters, the instance will be initialized.
  * @method Models\CreateDeployGroupResponse CreateDeployGroup(Models\CreateDeployGroupRequest $req) This API is used to create a placement group for placing instances.
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) This API (CreateParamTemplate) is used to create a parameter template.
+ * @method Models\CreateRoInstanceIpResponse CreateRoInstanceIp(Models\CreateRoInstanceIpRequest $req) This API is used to create a VIP exclusive to a TencentDB read-only instance.
  * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) This API (DeleteAccounts) is used to delete TencentDB accounts.
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) This API is used to delete a database backup. It can only delete manually initiated backups.
  * @method Models\DeleteDeployGroupsResponse DeleteDeployGroups(Models\DeleteDeployGroupsRequest $req) This API is used to delete placement groups by placement group ID (a placement group cannot be deleted if it contains resources).

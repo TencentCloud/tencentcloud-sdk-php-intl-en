@@ -45,7 +45,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -55,7 +56,8 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
  * @method void setLabel(string $Label) Set Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
@@ -67,7 +69,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -77,7 +80,8 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
  * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
@@ -131,7 +135,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -141,7 +146,8 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
      */
@@ -186,7 +192,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -196,7 +203,8 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
      * @param string $Url URL of a suspected image (which will not be permanently stored

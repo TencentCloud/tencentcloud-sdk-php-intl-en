@@ -203,7 +203,7 @@ There are two ways to create a task flow template:
 2. Intelligent content analysis (tag, category, cover, and frame-specific tag);
 3. Intelligent content recognition (opening and closing credits, face, full text, text keyword, full speech, speech keyword, and object).
 
-If the event notification is used, its type is [Task Flow Status Change](https://cloud.tencent.com/document/product/266/9636).
+If the event notification is used, its type is [Task Flow Status Change](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
  * @method Models\PullEventsResponse PullEvents(Models\PullEventsRequest $req) * This API is used to get event notifications from the business server through [reliable callback](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83);
 * The API is in long polling mode, i.e., if there is an unconsumed event on the server, it will be immediately returned to the requester; otherwise, the backend will suspend the request until a new event is generated;
 * The request can be suspended for 5 seconds at most. It is recommended that the requester set the timeout period to 10 seconds.

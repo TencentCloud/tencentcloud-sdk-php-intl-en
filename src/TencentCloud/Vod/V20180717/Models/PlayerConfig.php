@@ -46,10 +46,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time of player configuration in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time of player configuration in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of player configuration in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getScheme() Obtain 
- * @method void setScheme(string $Scheme) Set 
+ * @method string getDomain() Obtain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
+ * @method void setDomain(string $Domain) Set Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
+ * @method string getScheme() Obtain Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
+ * @method void setScheme(string $Scheme) Set Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
  * @method string getComment() Obtain Template description.
  * @method void setComment(string $Comment) Set Template description.
  */
@@ -105,12 +111,15 @@ class PlayerConfig extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public $Scheme;
 
@@ -133,8 +142,11 @@ class PlayerConfig extends AbstractModel
      * @param array $ResolutionNameSet Display name of player for substreams with different resolutions.
      * @param string $CreateTime Creation time of player configuration in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $UpdateTime Last modified time of player configuration in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $Domain 
-     * @param string $Scheme 
+     * @param string $Domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
+     * @param string $Scheme Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      * @param string $Comment Template description.
      */
     function __construct()

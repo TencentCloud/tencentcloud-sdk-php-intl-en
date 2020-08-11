@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDetectedText() Obtain Recognized text line content
  * @method void setDetectedText(string $DetectedText) Set Recognized text line content
- * @method integer getConfidence() Obtain Confidence. Value range: 0–100
- * @method void setConfidence(integer $Confidence) Set Confidence. Value range: 0–100
+ * @method integer getConfidence() Obtain Confidence. Value range: 0-100
+ * @method void setConfidence(integer $Confidence) Set Confidence. Value range: 0-100
  * @method array getPolygon() Obtain Text line coordinates, which are represented as 4 vertex coordinates
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPolygon(array $Polygon) Set Text line coordinates, which are represented as 4 vertex coordinates
@@ -43,7 +43,7 @@ class TextDetection extends AbstractModel
     public $DetectedText;
 
     /**
-     * @var integer Confidence. Value range: 0–100
+     * @var integer Confidence. Value range: 0-100
      */
     public $Confidence;
 
@@ -66,7 +66,7 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
 
     /**
      * @param string $DetectedText Recognized text line content
-     * @param integer $Confidence Confidence. Value range: 0–100
+     * @param integer $Confidence Confidence. Value range: 0-100
      * @param array $Polygon Text line coordinates, which are represented as 4 vertex coordinates
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AdvancedInfo Extended field.

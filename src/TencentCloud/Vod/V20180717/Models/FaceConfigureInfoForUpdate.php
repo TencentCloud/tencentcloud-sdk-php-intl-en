@@ -18,88 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of face recognition task
+ * 
  *
- * @method string getSwitch() Obtain Switch of face recognition task. Valid values:
-<li>ON: enables intelligent face recognition task;</li>
-<li>OFF: disables intelligent face recognition task.</li>
- * @method void setSwitch(string $Switch) Set Switch of face recognition task. Valid values:
-<li>ON: enables intelligent face recognition task;</li>
-<li>OFF: disables intelligent face recognition task.</li>
- * @method float getScore() Obtain Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
- * @method void setScore(float $Score) Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
- * @method array getDefaultLibraryLabelSet() Obtain Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: entertainment celebrity;</li>
-<li>sport: sports celebrity;</li>
-<li>politician: politically sensitive figure.</li>
- * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) Set Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: entertainment celebrity;</li>
-<li>sport: sports celebrity;</li>
-<li>politician: politically sensitive figure.</li>
- * @method array getUserDefineLibraryLabelSet() Obtain Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
- * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
- * @method string getFaceLibrary() Obtain Figure library. Valid values:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-<li>All: both default and custom figure libraries will be used.</li>
- * @method void setFaceLibrary(string $FaceLibrary) Set Figure library. Valid values:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-<li>All: both default and custom figure libraries will be used.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method float getScore() Obtain 
+ * @method void setScore(float $Score) Set 
+ * @method array getDefaultLibraryLabelSet() Obtain 
+ * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) Set 
+ * @method array getUserDefineLibraryLabelSet() Obtain 
+ * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set 
+ * @method string getFaceLibrary() Obtain 
+ * @method void setFaceLibrary(string $FaceLibrary) Set 
  */
 class FaceConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch of face recognition task. Valid values:
-<li>ON: enables intelligent face recognition task;</li>
-<li>OFF: disables intelligent face recognition task.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var float Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+     * @var float 
      */
     public $Score;
 
     /**
-     * @var array Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: entertainment celebrity;</li>
-<li>sport: sports celebrity;</li>
-<li>politician: politically sensitive figure.</li>
+     * @var array 
      */
     public $DefaultLibraryLabelSet;
 
     /**
-     * @var array Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * @var array 
      */
     public $UserDefineLibraryLabelSet;
 
     /**
-     * @var string Figure library. Valid values:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-<li>All: both default and custom figure libraries will be used.</li>
+     * @var string 
      */
     public $FaceLibrary;
 
     /**
-     * @param string $Switch Switch of face recognition task. Valid values:
-<li>ON: enables intelligent face recognition task;</li>
-<li>OFF: disables intelligent face recognition task.</li>
-     * @param float $Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
-     * @param array $DefaultLibraryLabelSet Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: entertainment celebrity;</li>
-<li>sport: sports celebrity;</li>
-<li>politician: politically sensitive figure.</li>
-     * @param array $UserDefineLibraryLabelSet Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
-     * @param string $FaceLibrary Figure library. Valid values:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-<li>All: both default and custom figure libraries will be used.</li>
+     * @param string $Switch 
+     * @param float $Score 
+     * @param array $DefaultLibraryLabelSet 
+     * @param array $UserDefineLibraryLabelSet 
+     * @param string $FaceLibrary 
      */
     function __construct()
     {

@@ -36,10 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set ID of the image sprite generating template that allows output.
  * @method array getResolutionNames() Obtain Display name of player for substreams with different resolutions.
  * @method void setResolutionNames(array $ResolutionNames) Set Display name of player for substreams with different resolutions.
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getScheme() Obtain 
- * @method void setScheme(string $Scheme) Set 
+ * @method string getDomain() Obtain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
+ * @method void setDomain(string $Domain) Set Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
+ * @method string getScheme() Obtain Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
+ * @method void setScheme(string $Scheme) Set Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method integer getSubAppId() Obtain [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -80,12 +86,15 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
     public $ResolutionNames;
 
     /**
-     * @var string 
+     * @var string Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public $Scheme;
 
@@ -108,8 +117,11 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
      * @param DrmStreamingsInfoForUpdate $DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output.
      * @param integer $ImageSpriteDefinition ID of the image sprite generating template that allows output.
      * @param array $ResolutionNames Display name of player for substreams with different resolutions.
-     * @param string $Domain 
-     * @param string $Scheme 
+     * @param string $Domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
+     * @param string $Scheme Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param integer $SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
