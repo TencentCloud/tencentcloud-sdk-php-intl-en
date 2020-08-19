@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventConditions(array $EventConditions) Set Event alarm rules in the policy group.
  * @method integer getBackEndCall() Obtain Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
  * @method void setBackEndCall(integer $BackEndCall) Set Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
- * @method integer getIsUnionRule() Obtain The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
- * @method void setIsUnionRule(integer $IsUnionRule) Set The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
+ * @method integer getIsUnionRule() Obtain The 'AND' and 'OR' rules for alarm metrics. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met.
+ * @method void setIsUnionRule(integer $IsUnionRule) Set The 'AND' and 'OR' rules for alarm metrics. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met.
  */
 class CreatePolicyGroupRequest extends AbstractModel
 {
@@ -103,7 +103,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $BackEndCall;
 
     /**
-     * @var integer The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
+     * @var integer The 'AND' and 'OR' rules for alarm metrics. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met.
      */
     public $IsUnionRule;
 
@@ -119,7 +119,7 @@ class CreatePolicyGroupRequest extends AbstractModel
      * @param array $Conditions Alarm threshold rules in the policy group.
      * @param array $EventConditions Event alarm rules in the policy group.
      * @param integer $BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
-     * @param integer $IsUnionRule The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
+     * @param integer $IsUnionRule The 'AND' and 'OR' rules for alarm metrics. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met.
      */
     function __construct()
     {

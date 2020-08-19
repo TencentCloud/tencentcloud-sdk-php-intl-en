@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
  * @method array getVoucherIds() Obtain Voucher ID (currently, only one voucher can be used per order)
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID (currently, only one voucher can be used per order)
- * @method integer getCpu() Obtain 
- * @method void setCpu(integer $Cpu) Set 
+ * @method integer getCpu() Obtain The number of CUP cores after the instance is upgraded.
+ * @method void setCpu(integer $Cpu) Set The number of CUP cores after the instance is upgraded.
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var integer 
+     * @var integer The number of CUP cores after the instance is upgraded.
      */
     public $Cpu;
 
@@ -71,7 +71,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
      * @param integer $AutoVoucher Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
      * @param array $VoucherIds Voucher ID (currently, only one voucher can be used per order)
-     * @param integer $Cpu 
+     * @param integer $Cpu The number of CUP cores after the instance is upgraded.
      */
     function __construct()
     {

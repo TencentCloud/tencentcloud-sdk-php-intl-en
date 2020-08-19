@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances purchased at a time. Value range: 1-100. Default value: 1
  * @method string getDBVersion() Obtain SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
  * @method void setDBVersion(string $DBVersion) Set SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
- * @method integer getCpu() Obtain 
- * @method void setCpu(integer $Cpu) Set 
- * @method string getInstanceType() Obtain 
- * @method void setInstanceType(string $InstanceType) Set 
- * @method string getMachineType() Obtain 
- * @method void setMachineType(string $MachineType) Set 
+ * @method integer getCpu() Obtain The number of CPU cores of the instance you want to purchase.
+ * @method void setCpu(integer $Cpu) Set The number of CPU cores of the instance you want to purchase.
+ * @method string getInstanceType() Obtain The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+ * @method void setInstanceType(string $InstanceType) Set The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+ * @method string getMachineType() Obtain The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
+ * @method void setMachineType(string $MachineType) Set The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
  */
 class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -79,17 +79,17 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $DBVersion;
 
     /**
-     * @var integer 
+     * @var integer The number of CPU cores of the instance you want to purchase.
      */
     public $Cpu;
 
     /**
-     * @var string 
+     * @var string The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
      */
     public $InstanceType;
 
     /**
-     * @var string 
+     * @var string The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
      */
     public $MachineType;
 
@@ -101,9 +101,9 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
      * @param integer $Period Length of purchase in months. Value range: 1-48. Default value: 1
      * @param integer $GoodsNum Number of instances purchased at a time. Value range: 1-100. Default value: 1
      * @param string $DBVersion SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). Default value: 2008R2.
-     * @param integer $Cpu 
-     * @param string $InstanceType 
-     * @param string $MachineType 
+     * @param integer $Cpu The number of CPU cores of the instance you want to purchase.
+     * @param string $InstanceType The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+     * @param string $MachineType The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
      */
     function __construct()
     {

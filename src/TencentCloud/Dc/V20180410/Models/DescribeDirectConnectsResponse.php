@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirectConnectSet(array $DirectConnectSet) Set List of connections.
  * @method integer getTotalCount() Obtain Number of eligible connection lists.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible connection lists.
+ * @method boolean getAllSignLaw() Obtain Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setAllSignLaw(boolean $AllSignLaw) Set Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +44,12 @@ class DescribeDirectConnectsResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var boolean Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $AllSignLaw;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class DescribeDirectConnectsResponse extends AbstractModel
     /**
      * @param array $DirectConnectSet List of connections.
      * @param integer $TotalCount Number of eligible connection lists.
+     * @param boolean $AllSignLaw Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -73,6 +85,10 @@ class DescribeDirectConnectsResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("AllSignLaw",$param) and $param["AllSignLaw"] !== null) {
+            $this->AllSignLaw = $param["AllSignLaw"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

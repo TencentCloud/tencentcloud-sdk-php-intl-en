@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceId(string $ServiceId) Set Unique service ID.
  * @method string getStrategyName() Obtain Custom policy name.
  * @method void setStrategyName(string $StrategyName) Set Custom policy name.
- * @method string getStrategyType() Obtain Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
- * @method void setStrategyType(string $StrategyType) Set Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+ * @method string getStrategyType() Obtain Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
+ * @method void setStrategyType(string $StrategyType) Set Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
  * @method string getStrategyData() Obtain Policy details.
  * @method void setStrategyData(string $StrategyData) Set Policy details.
  */
@@ -42,7 +42,7 @@ class CreateIPStrategyRequest extends AbstractModel
     public $StrategyName;
 
     /**
-     * @var string Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * @var string Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
      */
     public $StrategyType;
 
@@ -54,7 +54,7 @@ class CreateIPStrategyRequest extends AbstractModel
     /**
      * @param string $ServiceId Unique service ID.
      * @param string $StrategyName Custom policy name.
-     * @param string $StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * @param string $StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
      * @param string $StrategyData Policy details.
      */
     function __construct()

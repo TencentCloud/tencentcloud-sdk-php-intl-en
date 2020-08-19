@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetMonitorData request structure.
  *
- * @method string getNamespace() Obtain Namespace. Each Tencent Cloud product has a namespace
- * @method void setNamespace(string $Namespace) Set Namespace. Each Tencent Cloud product has a namespace
- * @method string getMetricName() Obtain Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
- * @method void setMetricName(string $MetricName) Set Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
+ * @method string getNamespace() Obtain Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+ * @method void setNamespace(string $Namespace) Set Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+ * @method string getMetricName() Obtain Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+ * @method void setMetricName(string $MetricName) Set Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
  * @method array getInstances() Obtain Combination of instance object dimensions
  * @method void setInstances(array $Instances) Set Combination of instance object dimensions
  * @method integer getPeriod() Obtain Monitoring statistical period. The default value is 300, and the unit is s
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class GetMonitorDataRequest extends AbstractModel
 {
     /**
-     * @var string Namespace. Each Tencent Cloud product has a namespace
+     * @var string Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
      */
     public $Namespace;
 
     /**
-     * @var string Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
+     * @var string Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
      */
     public $MetricName;
 
@@ -66,8 +66,8 @@ class GetMonitorDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $Namespace Namespace. Each Tencent Cloud product has a namespace
-     * @param string $MetricName Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
+     * @param string $Namespace Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+     * @param string $MetricName Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
      * @param array $Instances Combination of instance object dimensions
      * @param integer $Period Monitoring statistical period. The default value is 300, and the unit is s
      * @param string $StartTime Start time such as 2018-09-22T19:51:23+08:00

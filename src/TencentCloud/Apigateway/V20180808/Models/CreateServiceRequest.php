@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set Service frontend request type, such as `http`, `https`, and `http&https`.
  * @method string getServiceDesc() Obtain Custom service description.
  * @method void setServiceDesc(string $ServiceDesc) Set Custom service description.
- * @method string getExclusiveSetName() Obtain Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
- * @method void setExclusiveSetName(string $ExclusiveSetName) Set Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+ * @method string getExclusiveSetName() Obtain Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
+ * @method void setExclusiveSetName(string $ExclusiveSetName) Set Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
  * @method array getNetTypes() Obtain Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
  * @method void setNetTypes(array $NetTypes) Set Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
  * @method string getIpVersion() Obtain IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
@@ -55,7 +55,7 @@ class CreateServiceRequest extends AbstractModel
     public $ServiceDesc;
 
     /**
-     * @var string Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+     * @var string Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
      */
     public $ExclusiveSetName;
 
@@ -83,7 +83,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $ServiceName Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
      * @param string $Protocol Service frontend request type, such as `http`, `https`, and `http&https`.
      * @param string $ServiceDesc Custom service description.
-     * @param string $ExclusiveSetName Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+     * @param string $ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
      * @param array $NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
      * @param string $IpVersion IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
      * @param string $SetServerName Cluster name, which is reserved and used by the `tsf serverless` type.

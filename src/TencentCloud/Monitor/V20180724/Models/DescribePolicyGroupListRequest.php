@@ -46,8 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDimensions(string $Dimensions) Set Dimension set field (json string), for example, [[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]].
  * @method string getConditionTempGroupId() Obtain Template-based policy group IDs, which are separated by commas.
  * @method void setConditionTempGroupId(string $ConditionTempGroupId) Set Template-based policy group IDs, which are separated by commas.
- * @method string getReceiverType() Obtain Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
- * @method void setReceiverType(string $ReceiverType) Set Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+ * @method string getReceiverType() Obtain Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
+ * @method void setReceiverType(string $ReceiverType) Set Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
+ * @method boolean getIsOpen() Obtain Filter conditions. Whether the alarm policy has been enabled or disabled
+ * @method void setIsOpen(boolean $IsOpen) Set Filter conditions. Whether the alarm policy has been enabled or disabled
  */
 class DescribePolicyGroupListRequest extends AbstractModel
 {
@@ -117,9 +119,14 @@ class DescribePolicyGroupListRequest extends AbstractModel
     public $ConditionTempGroupId;
 
     /**
-     * @var string Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+     * @var string Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
      */
     public $ReceiverType;
+
+    /**
+     * @var boolean Filter conditions. Whether the alarm policy has been enabled or disabled
+     */
+    public $IsOpen;
 
     /**
      * @param string $Module The value is fixed to monitor.
@@ -135,7 +142,8 @@ class DescribePolicyGroupListRequest extends AbstractModel
      * @param array $ReceiverUserList Filter by recipient.
      * @param string $Dimensions Dimension set field (json string), for example, [[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]].
      * @param string $ConditionTempGroupId Template-based policy group IDs, which are separated by commas.
-     * @param string $ReceiverType Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+     * @param string $ReceiverType Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
+     * @param boolean $IsOpen Filter conditions. Whether the alarm policy has been enabled or disabled
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class DescribePolicyGroupListRequest extends AbstractModel
 
         if (array_key_exists("ReceiverType",$param) and $param["ReceiverType"] !== null) {
             $this->ReceiverType = $param["ReceiverType"];
+        }
+
+        if (array_key_exists("IsOpen",$param) and $param["IsOpen"] !== null) {
+            $this->IsOpen = $param["IsOpen"];
         }
     }
 }

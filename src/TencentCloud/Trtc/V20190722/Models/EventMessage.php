@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 7: relayed stream image.
  * @method integer getTime() Obtain Event reporting time in the format of UNIX timestamp, such as 1589891188801ms
  * @method void setTime(integer $Time) Set Event reporting time in the format of UNIX timestamp, such as 1589891188801ms
- * @method integer getEventId() Obtain Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916
- * @method void setEventId(integer $EventId) Set Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916
+ * @method integer getEventId() Obtain Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+ * @method void setEventId(integer $EventId) Set Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
  * @method integer getParamOne() Obtain First event parameter, such as video resolution width
  * @method void setParamOne(integer $ParamOne) Set First event parameter, such as video resolution width
  * @method integer getParamTwo() Obtain Second event parameter, such as video resolution height
@@ -56,7 +56,7 @@ class EventMessage extends AbstractModel
     public $Time;
 
     /**
-     * @var integer Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916
+     * @var integer Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
      */
     public $EventId;
 
@@ -77,7 +77,7 @@ class EventMessage extends AbstractModel
 3: small image;
 7: relayed stream image.
      * @param integer $Time Event reporting time in the format of UNIX timestamp, such as 1589891188801ms
-     * @param integer $EventId Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916
+     * @param integer $EventId Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
      * @param integer $ParamOne First event parameter, such as video resolution width
      * @param integer $ParamTwo Second event parameter, such as video resolution height
      */

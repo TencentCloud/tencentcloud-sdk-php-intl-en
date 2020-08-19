@@ -42,12 +42,12 @@ Task types compatible with v2017:
 <li>Concat: video splicing task;</li>
 <li>Clip: video clipping task;</li>
 <li>ImageSprites: image sprite generating task.</li>
- * @method string getCreateTime() Obtain Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method string getBeginProcessTime() Obtain Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
- * @method string getFinishTime() Obtain End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
- * @method void setFinishTime(string $FinishTime) Set End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+ * @method string getCreateTime() Obtain Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getBeginProcessTime() Obtain Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+ * @method string getFinishTime() Obtain End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
+ * @method void setFinishTime(string $FinishTime) Set End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
  * @method string getSessionId() Obtain ID used for deduplication if there was a request with the same ID in the last seven days.
  * @method void setSessionId(string $SessionId) Set ID used for deduplication if there was a request with the same ID in the last seven days.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information.
@@ -75,17 +75,17 @@ Task types compatible with v2017:
     public $TaskType;
 
     /**
-     * @var string Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
+     * @var string Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
      */
     public $BeginProcessTime;
 
     /**
-     * @var string End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+     * @var string End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
      */
     public $FinishTime;
 
@@ -111,9 +111,9 @@ Task types compatible with v2017:
 <li>Concat: video splicing task;</li>
 <li>Clip: video clipping task;</li>
 <li>ImageSprites: image sprite generating task.</li>
-     * @param string $CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
-     * @param string $FinishTime End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+     * @param string $CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+     * @param string $FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
      * @param string $SessionId ID used for deduplication if there was a request with the same ID in the last seven days.
      * @param string $SessionContext Source context, which is used to pass through the user request information.
      */

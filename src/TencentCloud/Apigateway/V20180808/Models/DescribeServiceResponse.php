@@ -36,8 +36,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCreatedTime(string $CreatedTime) Set Service creation time.
  * @method string getModifiedTime() Obtain Service modification time.
  * @method void setModifiedTime(string $ModifiedTime) Set Service modification time.
- * @method string getExclusiveSetName() Obtain Self-deployed cluster name.
- * @method void setExclusiveSetName(string $ExclusiveSetName) Set Self-deployed cluster name.
+ * @method string getExclusiveSetName() Obtain Dedicated cluster name.
+ * @method void setExclusiveSetName(string $ExclusiveSetName) Set Dedicated cluster name.
  * @method array getNetTypes() Obtain Network type list. INNER: private network access; OUTER: public network access.
  * @method void setNetTypes(array $NetTypes) Set Network type list. INNER: private network access; OUTER: public network access.
  * @method string getInternalSubDomain() Obtain Subdomain name for private network access.
@@ -72,6 +72,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSetId(integer $SetId) Set Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -114,7 +116,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ModifiedTime;
 
     /**
-     * @var string Self-deployed cluster name.
+     * @var string Dedicated cluster name.
      */
     public $ExclusiveSetName;
 
@@ -184,6 +186,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SetId;
 
     /**
+     * @var array 
+     */
+    public $Tags;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -197,7 +204,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Protocol Protocol supported by service. Valid values: http, https, http&https.
      * @param string $CreatedTime Service creation time.
      * @param string $ModifiedTime Service modification time.
-     * @param string $ExclusiveSetName Self-deployed cluster name.
+     * @param string $ExclusiveSetName Dedicated cluster name.
      * @param array $NetTypes Network type list. INNER: private network access; OUTER: public network access.
      * @param string $InternalSubDomain Subdomain name for private network access.
      * @param string $OuterSubDomain Subdomain name for public network access.
@@ -215,6 +222,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SetId Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -318,6 +326,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
             $this->SetId = $param["SetId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

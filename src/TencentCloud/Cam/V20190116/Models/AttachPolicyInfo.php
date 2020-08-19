@@ -40,8 +40,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRemark() Obtain 
  * @method void setRemark(string $Remark) Set 
- * @method string getOperateOwnerUin() Obtain 
- * @method void setOperateOwnerUin(string $OperateOwnerUin) Set 
+ * @method string getOperateOwnerUin() Obtain Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setOperateOwnerUin(string $OperateOwnerUin) Set Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getOperateUin() Obtain 
  * @method void setOperateUin(string $OperateUin) Set 
  * @method integer getOperateUinType() Obtain 
@@ -92,7 +94,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $Remark;
 
     /**
-     * @var string 
+     * @var string Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OperateOwnerUin;
 
@@ -129,7 +132,8 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $PolicyType Valid values: `user` and `QCS`
 Note: This field may return null, indicating that no valid value was found.
      * @param string $Remark 
-     * @param string $OperateOwnerUin 
+     * @param string $OperateOwnerUin Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $OperateUin 
      * @param integer $OperateUinType 
      * @param integer $Deactived Queries if the policy has been deactivated

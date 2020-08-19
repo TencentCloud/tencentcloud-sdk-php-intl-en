@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  and will be deleted after `PicUrlExpireTime`).
  * @method integer getPicUrlExpireTimeStamp() Obtain This field has been disused. Please use `PicUrlExpireTime`.
  * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set This field has been disused. Please use `PicUrlExpireTime`.
- * @method string getPicUrlExpireTime() Obtain Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getPicUrlExpireTime() Obtain Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class MediaContentReviewSegmentItem extends AbstractModel
 {
@@ -87,7 +87,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
     public $PicUrlExpireTimeStamp;
 
     /**
-     * @var string Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $PicUrlExpireTime;
 
@@ -103,7 +103,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
      * @param string $Url URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
      * @param integer $PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
-     * @param string $PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

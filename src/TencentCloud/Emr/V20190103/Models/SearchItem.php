@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Search field
  *
- * @method string getSearchType() Obtain 
- * @method void setSearchType(string $SearchType) Set 
- * @method string getSearchValue() Obtain 
- * @method void setSearchValue(string $SearchValue) Set 
+ * @method string getSearchType() Obtain Searchable type
+ * @method void setSearchType(string $SearchType) Set Searchable type
+ * @method string getSearchValue() Obtain Searchable value
+ * @method void setSearchValue(string $SearchValue) Set Searchable value
  */
 class SearchItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Searchable type
      */
     public $SearchType;
 
     /**
-     * @var string 
+     * @var string Searchable value
      */
     public $SearchValue;
 
     /**
-     * @param string $SearchType 
-     * @param string $SearchValue 
+     * @param string $SearchType Searchable type
+     * @param string $SearchValue Searchable value
      */
     function __construct()
     {

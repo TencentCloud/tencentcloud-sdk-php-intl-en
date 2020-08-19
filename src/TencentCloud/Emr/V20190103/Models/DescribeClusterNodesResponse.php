@@ -30,8 +30,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTagKeys(array $TagKeys) Set List of tag keys owned by user
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getHardwareResourceTypeList() Obtain 
- * @method void setHardwareResourceTypeList(array $HardwareResourceTypeList) Set 
+ * @method array getHardwareResourceTypeList() Obtain Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setHardwareResourceTypeList(array $HardwareResourceTypeList) Set Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -55,7 +57,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TagKeys;
 
     /**
-     * @var array 
+     * @var array Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $HardwareResourceTypeList;
 
@@ -70,7 +73,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $TagKeys List of tag keys owned by user
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $HardwareResourceTypeList 
+     * @param array $HardwareResourceTypeList Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

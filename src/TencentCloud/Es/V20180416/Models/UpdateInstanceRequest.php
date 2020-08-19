@@ -72,8 +72,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Enables or disables user authentication for ES Basic Edition v6.8 and above
  * @method integer getKibanaPrivatePort() Obtain Kibana private port
  * @method void setKibanaPrivatePort(integer $KibanaPrivatePort) Set Kibana private port
- * @method integer getScaleType() Obtain 
- * @method void setScaleType(integer $ScaleType) Set 
+ * @method integer getScaleType() Obtain 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+ * @method void setScaleType(integer $ScaleType) Set 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -184,7 +184,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $KibanaPrivatePort;
 
     /**
-     * @var integer 
+     * @var integer 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
      */
     public $ScaleType;
 
@@ -215,7 +215,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
      * @param string $KibanaPrivateAccess Private network access status of Kibana
      * @param integer $BasicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
      * @param integer $KibanaPrivatePort Kibana private port
-     * @param integer $ScaleType 
+     * @param integer $ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
      */
     function __construct()
     {

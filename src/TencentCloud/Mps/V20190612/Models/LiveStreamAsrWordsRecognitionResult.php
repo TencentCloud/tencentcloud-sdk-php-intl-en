@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of recognized segment in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of recognized segment in seconds.
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of recognized segment in seconds.
- * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0-100.
+ * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
+ * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
  */
 class LiveStreamAsrWordsRecognitionResult extends AbstractModel
 {
@@ -47,7 +47,7 @@ class LiveStreamAsrWordsRecognitionResult extends AbstractModel
     public $EndPtsTime;
 
     /**
-     * @var float Confidence of recognized segment. Value range: 0-100.
+     * @var float Confidence of recognized segment. Value range: 0–100.
      */
     public $Confidence;
 
@@ -55,7 +55,7 @@ class LiveStreamAsrWordsRecognitionResult extends AbstractModel
      * @param string $Word Speech keyword.
      * @param float $StartPtsTime Start PTS time of recognized segment in seconds.
      * @param float $EndPtsTime End PTS time of recognized segment in seconds.
-     * @param float $Confidence Confidence of recognized segment. Value range: 0-100.
+     * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
      */
     function __construct()
     {

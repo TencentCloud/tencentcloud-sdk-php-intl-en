@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setViewName(string $ViewName) Set Alarm type.
  * @method string getGroupName() Obtain Policy group name.
  * @method void setGroupName(string $GroupName) Set Policy group name.
- * @method integer getIsUnionRule() Obtain The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
- * @method void setIsUnionRule(integer $IsUnionRule) Set The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
+ * @method integer getIsUnionRule() Obtain The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
+ * @method void setIsUnionRule(integer $IsUnionRule) Set The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
  * @method array getConditions() Obtain Metric alarm condition rules. No filling indicates that all existing metric alarm condition rules will be deleted.
  * @method void setConditions(array $Conditions) Set Metric alarm condition rules. No filling indicates that all existing metric alarm condition rules will be deleted.
  * @method array getEventConditions() Obtain Event alarm conditions. No filling indicates that all existing event alarm conditions will be deleted.
@@ -60,7 +60,7 @@ class ModifyPolicyGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var integer The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
+     * @var integer The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
      */
     public $IsUnionRule;
 
@@ -84,7 +84,7 @@ class ModifyPolicyGroupRequest extends AbstractModel
      * @param integer $GroupId Policy group ID.
      * @param string $ViewName Alarm type.
      * @param string $GroupName Policy group name.
-     * @param integer $IsUnionRule The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
+     * @param integer $IsUnionRule The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
      * @param array $Conditions Metric alarm condition rules. No filling indicates that all existing metric alarm condition rules will be deleted.
      * @param array $EventConditions Event alarm conditions. No filling indicates that all existing event alarm conditions will be deleted.
      * @param integer $ConditionTempGroupId Template-based policy group ID.

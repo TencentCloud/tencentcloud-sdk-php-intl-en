@@ -46,18 +46,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBVersion(string $DBVersion) Set SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). The version purchasable varies by region and can be queried by calling the `DescribeProductConfig` API. If this parameter is left empty, 2008R2 will be used by default.
  * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
- * @method array getSecurityGroupList() Obtain 
- * @method void setSecurityGroupList(array $SecurityGroupList) Set 
- * @method array getWeekly() Obtain 
- * @method void setWeekly(array $Weekly) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method integer getSpan() Obtain 
- * @method void setSpan(integer $Span) Set 
- * @method string getHAType() Obtain 
- * @method void setHAType(string $HAType) Set 
- * @method boolean getMultiZones() Obtain 
- * @method void setMultiZones(boolean $MultiZones) Set 
+ * @method array getSecurityGroupList() Obtain Security group list, which contains security group IDs in the format of sg-xxx.
+ * @method void setSecurityGroupList(array $SecurityGroupList) Set Security group list, which contains security group IDs in the format of sg-xxx.
+ * @method array getWeekly() Obtain Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+ * @method void setWeekly(array $Weekly) Set Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+ * @method string getStartTime() Obtain Configuration of the maintenance window, which specifies the start time of daily maintenance.
+ * @method void setStartTime(string $StartTime) Set Configuration of the maintenance window, which specifies the start time of daily maintenance.
+ * @method integer getSpan() Obtain Configuration of the maintenance window, which specifies the maintenance duration in hours.
+ * @method void setSpan(integer $Span) Set Configuration of the maintenance window, which specifies the maintenance duration in hours.
+ * @method string getHAType() Obtain The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+ * @method void setHAType(string $HAType) Set The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+ * @method boolean getMultiZones() Obtain Whether to deploy across availability zones. Default value: false.
+ * @method void setMultiZones(boolean $MultiZones) Set Whether to deploy across availability zones. Default value: false.
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -127,32 +127,32 @@ class CreateDBInstancesRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var array 
+     * @var array Security group list, which contains security group IDs in the format of sg-xxx.
      */
     public $SecurityGroupList;
 
     /**
-     * @var array 
+     * @var array Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
      */
     public $Weekly;
 
     /**
-     * @var string 
+     * @var string Configuration of the maintenance window, which specifies the start time of daily maintenance.
      */
     public $StartTime;
 
     /**
-     * @var integer 
+     * @var integer Configuration of the maintenance window, which specifies the maintenance duration in hours.
      */
     public $Span;
 
     /**
-     * @var string 
+     * @var string The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
      */
     public $HAType;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to deploy across availability zones. Default value: false.
      */
     public $MultiZones;
 
@@ -170,12 +170,12 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param array $VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
      * @param string $DBVersion SQL Server version. Valid values: 2008R2 (SQL Server 2008 Enterprise), 2012SP3 (SQL Server 2012 Enterprise), 2016SP1 (SQL Server 2016 Enterprise), 201602 (SQL Server 2016 Standard), 2017 (SQL Server 2017 Enterprise). The version purchasable varies by region and can be queried by calling the `DescribeProductConfig` API. If this parameter is left empty, 2008R2 will be used by default.
      * @param integer $AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
-     * @param array $SecurityGroupList 
-     * @param array $Weekly 
-     * @param string $StartTime 
-     * @param integer $Span 
-     * @param string $HAType 
-     * @param boolean $MultiZones 
+     * @param array $SecurityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
+     * @param array $Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+     * @param string $StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
+     * @param integer $Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
+     * @param string $HAType The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+     * @param boolean $MultiZones Whether to deploy across availability zones. Default value: false.
      */
     function __construct()
     {

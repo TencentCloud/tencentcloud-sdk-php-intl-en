@@ -28,12 +28,12 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
 You can call `DescribeAccessPoints` to get the region ID. The selected access point must exist and be available.
  * @method string getLineOperator() Obtain ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
  * @method void setLineOperator(string $LineOperator) Set ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
- * @method string getLocation() Obtain Local IDC location.
- * @method void setLocation(string $Location) Set Local IDC location.
  * @method string getPortType() Obtain Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
  * @method void setPortType(string $PortType) Set Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
  * @method string getCircuitCode() Obtain Circuit code of connection, which is provided by the ISP or connection provider.
  * @method void setCircuitCode(string $CircuitCode) Set Circuit code of connection, which is provided by the ISP or connection provider.
+ * @method string getLocation() Obtain Local IDC location.
+ * @method void setLocation(string $Location) Set Local IDC location.
  * @method integer getBandwidth() Obtain Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
  * @method void setBandwidth(integer $Bandwidth) Set Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
  * @method string getRedundantDirectConnectId() Obtain ID of redundant connection.
@@ -54,6 +54,8 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) Set Fault reporting contact person.
  * @method string getFaultReportContactNumber() Obtain Fault reporting contact number.
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) Set Fault reporting contact number.
+ * @method boolean getSignLaw() Obtain Whether the connection applicant has signed the service agreement. Default value: true.
+ * @method void setSignLaw(boolean $SignLaw) Set Whether the connection applicant has signed the service agreement. Default value: true.
  */
 class CreateDirectConnectRequest extends AbstractModel
 {
@@ -74,11 +76,6 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     public $LineOperator;
 
     /**
-     * @var string Local IDC location.
-     */
-    public $Location;
-
-    /**
      * @var string Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
      */
     public $PortType;
@@ -87,6 +84,11 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
      * @var string Circuit code of connection, which is provided by the ISP or connection provider.
      */
     public $CircuitCode;
+
+    /**
+     * @var string Local IDC location.
+     */
+    public $Location;
 
     /**
      * @var integer Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
@@ -139,13 +141,18 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     public $FaultReportContactNumber;
 
     /**
+     * @var boolean Whether the connection applicant has signed the service agreement. Default value: true.
+     */
+    public $SignLaw;
+
+    /**
      * @param string $DirectConnectName Connection name.
      * @param string $AccessPointId Access point of connection.
 You can call `DescribeAccessPoints` to get the region ID. The selected access point must exist and be available.
      * @param string $LineOperator ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
-     * @param string $Location Local IDC location.
      * @param string $PortType Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
      * @param string $CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+     * @param string $Location Local IDC location.
      * @param integer $Bandwidth Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
      * @param string $RedundantDirectConnectId ID of redundant connection.
      * @param integer $Vlan VLAN for connection debugging, which is enabled and automatically assigned by default.
@@ -156,6 +163,7 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
      * @param string $CustomerContactNumber Contact number of connection applicant, which is obtained from the account system by default.
      * @param string $FaultReportContactPerson Fault reporting contact person.
      * @param string $FaultReportContactNumber Fault reporting contact number.
+     * @param boolean $SignLaw Whether the connection applicant has signed the service agreement. Default value: true.
      */
     function __construct()
     {
@@ -182,16 +190,16 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
             $this->LineOperator = $param["LineOperator"];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
-        }
-
         if (array_key_exists("PortType",$param) and $param["PortType"] !== null) {
             $this->PortType = $param["PortType"];
         }
 
         if (array_key_exists("CircuitCode",$param) and $param["CircuitCode"] !== null) {
             $this->CircuitCode = $param["CircuitCode"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
         }
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
@@ -232,6 +240,10 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
 
         if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
             $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        }
+
+        if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
+            $this->SignLaw = $param["SignLaw"];
         }
     }
 }

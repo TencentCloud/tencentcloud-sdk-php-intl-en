@@ -94,6 +94,14 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setCamRoleName(string $CamRoleName) Set CAM role name.
 Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getHpcClusterId() Obtain HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setHpcClusterId(string $HpcClusterId) Set HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+ * @method array getRdmaIpAddresses() Obtain IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setRdmaIpAddresses(array $RdmaIpAddresses) Set IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
  */
 class Instance extends AbstractModel
 {
@@ -259,6 +267,18 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $CamRoleName;
 
     /**
+     * @var string HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $HpcClusterId;
+
+    /**
+     * @var array IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $RdmaIpAddresses;
+
+    /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
      * @param string $InstanceType Instance model
@@ -296,6 +316,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param string $CamRoleName CAM role name.
 Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $HpcClusterId HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+     * @param array $RdmaIpAddresses IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -447,6 +471,14 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
             $this->CamRoleName = $param["CamRoleName"];
+        }
+
+        if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
+            $this->HpcClusterId = $param["HpcClusterId"];
+        }
+
+        if (array_key_exists("RdmaIpAddresses",$param) and $param["RdmaIpAddresses"] !== null) {
+            $this->RdmaIpAddresses = $param["RdmaIpAddresses"];
         }
     }
 }

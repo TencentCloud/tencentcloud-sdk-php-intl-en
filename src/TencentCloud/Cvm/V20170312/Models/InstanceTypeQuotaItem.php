@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Availability zone.
  * @method string getInstanceType() Obtain Instance model.
  * @method void setInstanceType(string $InstanceType) Set Instance model.
- * @method string getInstanceChargeType() Obtain Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+ * @method string getInstanceChargeType() Obtain Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
  * @method integer getNetworkCard() Obtain ENI type. For example, 25 represents an ENI of 25 GB.
  * @method void setNetworkCard(integer $NetworkCard) Set ENI type. For example, 25 represents an ENI of 25 GB.
  * @method Externals getExternals() Obtain Additional data.
@@ -78,7 +78,7 @@ class InstanceTypeQuotaItem extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+     * @var string Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
      */
     public $InstanceChargeType;
 
@@ -172,7 +172,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
-     * @param string $InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+     * @param string $InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
      * @param integer $NetworkCard ENI type. For example, 25 represents an ENI of 25 GB.
      * @param Externals $Externals Additional data.
 Note: This field may return null, indicating that no valid value is found.

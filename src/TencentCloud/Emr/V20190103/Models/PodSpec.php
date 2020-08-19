@@ -18,60 +18,60 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Resource description for container resource expansion
  *
- * @method string getResourceProviderIdentifier() Obtain 
- * @method void setResourceProviderIdentifier(string $ResourceProviderIdentifier) Set 
- * @method string getResourceProviderType() Obtain 
- * @method void setResourceProviderType(string $ResourceProviderType) Set 
- * @method string getNodeType() Obtain 
- * @method void setNodeType(string $NodeType) Set 
- * @method integer getCpu() Obtain 
- * @method void setCpu(integer $Cpu) Set 
- * @method integer getMemory() Obtain 
- * @method void setMemory(integer $Memory) Set 
- * @method array getDataVolumes() Obtain 
- * @method void setDataVolumes(array $DataVolumes) Set 
+ * @method string getResourceProviderIdentifier() Obtain Identifier of external resource provider, such as "cls-a1cd23fa".
+ * @method void setResourceProviderIdentifier(string $ResourceProviderIdentifier) Set Identifier of external resource provider, such as "cls-a1cd23fa".
+ * @method string getResourceProviderType() Obtain Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+ * @method void setResourceProviderType(string $ResourceProviderType) Set Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+ * @method string getNodeType() Obtain Purpose of the resource, i.e., node type, which currently can only be "TASK".
+ * @method void setNodeType(string $NodeType) Set Purpose of the resource, i.e., node type, which currently can only be "TASK".
+ * @method integer getCpu() Obtain Number of CPU cores.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores.
+ * @method integer getMemory() Obtain Memory size in GB.
+ * @method void setMemory(integer $Memory) Set Memory size in GB.
+ * @method array getDataVolumes() Obtain Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+ * @method void setDataVolumes(array $DataVolumes) Set Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
  */
 class PodSpec extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Identifier of external resource provider, such as "cls-a1cd23fa".
      */
     public $ResourceProviderIdentifier;
 
     /**
-     * @var string 
+     * @var string Type of external resource provider, such as "tke". Currently, only "tke" is supported.
      */
     public $ResourceProviderType;
 
     /**
-     * @var string 
+     * @var string Purpose of the resource, i.e., node type, which currently can only be "TASK".
      */
     public $NodeType;
 
     /**
-     * @var integer 
+     * @var integer Number of CPU cores.
      */
     public $Cpu;
 
     /**
-     * @var integer 
+     * @var integer Memory size in GB.
      */
     public $Memory;
 
     /**
-     * @var array 
+     * @var array Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
      */
     public $DataVolumes;
 
     /**
-     * @param string $ResourceProviderIdentifier 
-     * @param string $ResourceProviderType 
-     * @param string $NodeType 
-     * @param integer $Cpu 
-     * @param integer $Memory 
-     * @param array $DataVolumes 
+     * @param string $ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
+     * @param string $ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+     * @param string $NodeType Purpose of the resource, i.e., node type, which currently can only be "TASK".
+     * @param integer $Cpu Number of CPU cores.
+     * @param integer $Memory Memory size in GB.
+     * @param array $DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
      */
     function __construct()
     {

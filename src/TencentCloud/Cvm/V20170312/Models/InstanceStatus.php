@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes instance states. For state types, see [here](/document/api/213/15753#InstanceStatus).
+ * Describes instance states. For state types, see [here](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
  *
  * @method string getInstanceId() Obtain Instance `ID`.
  * @method void setInstanceId(string $InstanceId) Set Instance `ID`.

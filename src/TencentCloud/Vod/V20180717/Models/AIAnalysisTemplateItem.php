@@ -44,10 +44,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method HighlightsConfigureInfo getHighlightConfigure() Obtain Control parameter of an intelligent highlight generating task.
  * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set Control parameter of an intelligent highlight generating task.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AIAnalysisTemplateItem extends AbstractModel
 {
@@ -96,12 +96,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $HighlightConfigure;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
@@ -118,8 +118,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param FrameTagConfigureInfo $FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param HighlightsConfigureInfo $HighlightConfigure Control parameter of an intelligent highlight generating task.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

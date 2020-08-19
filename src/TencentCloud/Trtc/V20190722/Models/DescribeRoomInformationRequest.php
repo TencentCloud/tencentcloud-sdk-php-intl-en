@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
  * @method string getRoomId() Obtain Room ID of uint type
  * @method void setRoomId(string $RoomId) Set Room ID of uint type
- * @method string getPageNumber() Obtain Page index. If it is left empty, 10 entries will be returned by default.
- * @method void setPageNumber(string $PageNumber) Set Page index. If it is left empty, 10 entries will be returned by default.
- * @method string getPageSize() Obtain Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
- * @method void setPageSize(string $PageSize) Set Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+ * @method string getPageNumber() Obtain Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
+ * @method void setPageNumber(string $PageNumber) Set Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
+ * @method string getPageSize() Obtain Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
+ * @method void setPageSize(string $PageSize) Set Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
  */
 class DescribeRoomInformationRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DescribeRoomInformationRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var string Page index. If it is left empty, 10 entries will be returned by default.
+     * @var string Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
      */
     public $PageNumber;
 
     /**
-     * @var string Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+     * @var string Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
      */
     public $PageSize;
 
@@ -70,8 +70,8 @@ class DescribeRoomInformationRequest extends AbstractModel
      * @param integer $StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
      * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
      * @param string $RoomId Room ID of uint type
-     * @param string $PageNumber Page index. If it is left empty, 10 entries will be returned by default.
-     * @param string $PageSize Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+     * @param string $PageNumber Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
+     * @param string $PageSize Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
      */
     function __construct()
     {

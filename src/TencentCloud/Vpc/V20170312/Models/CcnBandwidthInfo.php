@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setRenewFlag(string $RenewFlag) Set The billing flag.
 Note: this field may return null, indicating that no valid value was found.
- * @method CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() Obtain The information of bandwidth regions and bandwidth caps.
+ * @method CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() Obtain The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
- * @method void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit $CcnRegionBandwidthLimit) Set The information of bandwidth regions and bandwidth caps.
+ * @method void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit $CcnRegionBandwidthLimit) Set The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
  */
 class CcnBandwidthInfo extends AbstractModel
@@ -78,7 +78,7 @@ Note: this field may return null, indicating that no valid value was found.
     public $RenewFlag;
 
     /**
-     * @var CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+     * @var CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
      */
     public $CcnRegionBandwidthLimit;
@@ -94,7 +94,7 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
      * @param string $RenewFlag The billing flag.
 Note: this field may return null, indicating that no valid value was found.
-     * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+     * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
      */
     function __construct()

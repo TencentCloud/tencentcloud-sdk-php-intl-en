@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-1`.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method string getSubnetId() Obtain Subnet of the NAT gateway
+ * @method void setSubnetId(string $SubnetId) Set Subnet of the NAT gateway
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateNatGatewayRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Subnet of the NAT gateway
+     */
+    public $SubnetId;
+
+    /**
      * @param string $NatGatewayName NAT gateway name
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
@@ -88,6 +95,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param array $PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
      * @param string $Zone The availability zone, such as `ap-guangzhou-1`.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param string $SubnetId Subnet of the NAT gateway
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class CreateNatGatewayRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

@@ -44,10 +44,10 @@ Note: only the above values are supported for the time being. Entering other val
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0, indicating the first page.
  * @method integer getLimit() Obtain Number of returned results per page. Default value: 100. Maximum value: 100
  * @method void setLimit(integer $Limit) Set Number of returned results per page. Default value: 100. Maximum value: 100
- * @method string getHardwareResourceType() Obtain 
- * @method void setHardwareResourceType(string $HardwareResourceType) Set 
- * @method array getSearchFields() Obtain 
- * @method void setSearchFields(array $SearchFields) Set 
+ * @method string getHardwareResourceType() Obtain Resource type. Valid values: all, host, pod. Default value: all
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type. Valid values: all, host, pod. Default value: all
+ * @method array getSearchFields() Obtain Searchable field
+ * @method void setSearchFields(array $SearchFields) Set Searchable field
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -80,12 +80,12 @@ Note: only the above values are supported for the time being. Entering other val
     public $Limit;
 
     /**
-     * @var string 
+     * @var string Resource type. Valid values: all, host, pod. Default value: all
      */
     public $HardwareResourceType;
 
     /**
-     * @var array 
+     * @var array Searchable field
      */
     public $SearchFields;
 
@@ -102,8 +102,8 @@ Note: only the above values are supported for the time being. Entering other val
 Note: only the above values are supported for the time being. Entering other values will cause errors.
      * @param integer $Offset Page number. Default value: 0, indicating the first page.
      * @param integer $Limit Number of returned results per page. Default value: 100. Maximum value: 100
-     * @param string $HardwareResourceType 
-     * @param array $SearchFields 
+     * @param string $HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
+     * @param array $SearchFields Searchable field
      */
     function __construct()
     {

@@ -23,13 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReservedInstancesId() Obtain The ID of the purchased reserved instance, taking the form 650c138f-ae7e-4750-952a-96841d6e9fc1.
  * @method void setReservedInstancesId(string $ReservedInstancesId) Set The ID of the purchased reserved instance, taking the form 650c138f-ae7e-4750-952a-96841d6e9fc1.
  * @method string getInstanceType() Obtain The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
  * @method void setInstanceType(string $InstanceType) Set The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
  * @method string getZone() Obtain Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
  * @method void setZone(string $Zone) Set Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
  * @method string getStartTime() Obtain Start time of the reserved instance billing, taking the form of 2019-10-23 00:00:00.
  * @method void setStartTime(string $StartTime) Set Start time of the reserved instance billing, taking the form of 2019-10-23 00:00:00.
  * @method string getEndTime() Obtain End time of the reserved instance, taking the form of 2019-10-23 00:00:00
@@ -66,13 +66,13 @@ class ReservedInstances extends AbstractModel
 
     /**
      * @var string The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
      */
     public $InstanceType;
 
     /**
      * @var string Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
      */
     public $Zone;
 
@@ -124,9 +124,9 @@ Returned value: All Upfront.
     /**
      * @param string $ReservedInstancesId The ID of the purchased reserved instance, taking the form 650c138f-ae7e-4750-952a-96841d6e9fc1.
      * @param string $InstanceType The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
      * @param string $Zone Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
      * @param string $StartTime Start time of the reserved instance billing, taking the form of 2019-10-23 00:00:00.
      * @param string $EndTime End time of the reserved instance, taking the form of 2019-10-23 00:00:00
      * @param integer $Duration The **validity** of the reserved instance in seconds, which is the purchased usage period. For example, 31536000.

@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Sub-user username
  * @method string getPassword() Obtain If the combination of input parameters indicates that a random password should be generated, the generated password is returned
  * @method void setPassword(string $Password) Set If the combination of input parameters indicates that a random password should be generated, the generated password is returned
- * @method string getSecretId() Obtain Sub-user’s key ID
- * @method void setSecretId(string $SecretId) Set Sub-user’s key ID
- * @method string getSecretKey() Obtain Sub-user’s secret key
- * @method void setSecretKey(string $SecretKey) Set Sub-user’s secret key
+ * @method string getSecretId() Obtain Sub-user's key ID
+ * @method void setSecretId(string $SecretId) Set Sub-user's key ID
+ * @method string getSecretKey() Obtain Sub-user's secret key
+ * @method void setSecretKey(string $SecretKey) Set Sub-user's secret key
  * @method integer getUid() Obtain Sub-user UID
  * @method void setUid(integer $Uid) Set Sub-user UID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -53,12 +53,12 @@ class AddUserResponse extends AbstractModel
     public $Password;
 
     /**
-     * @var string Sub-user’s key ID
+     * @var string Sub-user's key ID
      */
     public $SecretId;
 
     /**
-     * @var string Sub-user’s secret key
+     * @var string Sub-user's secret key
      */
     public $SecretKey;
 
@@ -76,8 +76,8 @@ class AddUserResponse extends AbstractModel
      * @param integer $Uin Sub-user UIN
      * @param string $Name Sub-user username
      * @param string $Password If the combination of input parameters indicates that a random password should be generated, the generated password is returned
-     * @param string $SecretId Sub-user’s key ID
-     * @param string $SecretKey Sub-user’s secret key
+     * @param string $SecretId Sub-user's key ID
+     * @param string $SecretKey Sub-user's secret key
      * @param integer $Uid Sub-user UID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

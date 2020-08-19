@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) Set Backup policy (0: instance backup, 1: multi-database backup)
  * @method integer getBackupWay() Obtain Backup mode. 0: scheduled, 1: manual
  * @method void setBackupWay(integer $BackupWay) Set Backup mode. 0: scheduled, 1: manual
+ * @method string getBackupName() Obtain Backup name, which can be customized.
+ * @method void setBackupName(string $BackupName) Set Backup name, which can be customized.
  */
 class Backup extends AbstractModel
 {
@@ -101,6 +103,11 @@ class Backup extends AbstractModel
     public $BackupWay;
 
     /**
+     * @var string Backup name, which can be customized.
+     */
+    public $BackupName;
+
+    /**
      * @param string $FileName Filename
      * @param integer $Size File size in KB
      * @param string $StartTime Backup start time
@@ -112,6 +119,7 @@ class Backup extends AbstractModel
      * @param array $DBs List of databases for multi-database backup
      * @param integer $Strategy Backup policy (0: instance backup, 1: multi-database backup)
      * @param integer $BackupWay Backup mode. 0: scheduled, 1: manual
+     * @param string $BackupName Backup name, which can be customized.
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class Backup extends AbstractModel
 
         if (array_key_exists("BackupWay",$param) and $param["BackupWay"] !== null) {
             $this->BackupWay = $param["BackupWay"];
+        }
+
+        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
+            $this->BackupName = $param["BackupName"];
         }
     }
 }

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set The creation time
  * @method string getState() Obtain The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
  * @method void setState(string $State) Set The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
- * @method string getQosLevel() Obtain The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
- * @method void setQosLevel(string $QosLevel) Set The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
+ * @method string getQosLevel() Obtain The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+ * @method void setQosLevel(string $QosLevel) Set The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
  * @method string getInstanceChargeType() Obtain The billing method. POSTPAID indicates postpaid.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set The billing method. POSTPAID indicates postpaid.
@@ -78,7 +78,7 @@ class CCN extends AbstractModel
     public $State;
 
     /**
-     * @var string The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
+     * @var string The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
      */
     public $QosLevel;
 
@@ -106,7 +106,7 @@ Note: This field may return null, indicating no valid value.
      * @param integer $InstanceCount The number of associated instances
      * @param string $CreateTime The creation time
      * @param string $State The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
-     * @param string $QosLevel The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
+     * @param string $QosLevel The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
      * @param string $InstanceChargeType The billing method. POSTPAID indicates postpaid.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BandwidthLimitType The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.

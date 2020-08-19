@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(integer $Uin) Set UIN of the invitee
  * @method integer getHostUin() Obtain Creator UIN
  * @method void setHostUin(integer $HostUin) Set Creator UIN
- * @method string getHostName() Obtain Creator’s name
- * @method void setHostName(string $HostName) Set Creator’s name
- * @method string getHostMail() Obtain Creator’s email address
- * @method void setHostMail(string $HostMail) Set Creator’s email address
+ * @method string getHostName() Obtain Creator's name
+ * @method void setHostName(string $HostName) Set Creator's name
+ * @method string getHostMail() Obtain Creator's email address
+ * @method void setHostMail(string $HostMail) Set Creator's email address
  * @method integer getStatus() Obtain Invitation status. `-1`: expired; `0`: normal; `1`: accepted; `2`: invalid; `3`: cancelled
  * @method void setStatus(integer $Status) Set Invitation status. `-1`: expired; `0`: normal; `1`: accepted; `2`: invalid; `3`: cancelled
  * @method string getName() Obtain Name
@@ -61,12 +61,12 @@ class OrgInvitation extends AbstractModel
     public $HostUin;
 
     /**
-     * @var string Creator’s name
+     * @var string Creator's name
      */
     public $HostName;
 
     /**
-     * @var string Creator’s email address
+     * @var string Creator's email address
      */
     public $HostMail;
 
@@ -104,8 +104,8 @@ class OrgInvitation extends AbstractModel
      * @param integer $Id Invitation ID
      * @param integer $Uin UIN of the invitee
      * @param integer $HostUin Creator UIN
-     * @param string $HostName Creator’s name
-     * @param string $HostMail Creator’s email address
+     * @param string $HostName Creator's name
+     * @param string $HostMail Creator's email address
      * @param integer $Status Invitation status. `-1`: expired; `0`: normal; `1`: accepted; `2`: invalid; `3`: cancelled
      * @param string $Name Name
      * @param string $Remark Notes

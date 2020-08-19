@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Subapplication name.
  * @method string getDescription() Obtain Subapplication overview.
  * @method void setDescription(string $Description) Set Subapplication overview.
- * @method string getCreateTime() Obtain Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method void setCreateTime(string $CreateTime) Set Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getCreateTime() Obtain Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getStatus() Obtain Subapplication status. Valid values:
 <li>On: enabled;</li>
 <li>Off: disabled.</li>
@@ -53,7 +53,7 @@ class SubAppIdInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
@@ -68,7 +68,7 @@ class SubAppIdInfo extends AbstractModel
      * @param integer $SubAppId Subapplication ID.
      * @param string $Name Subapplication name.
      * @param string $Description Subapplication overview.
-     * @param string $CreateTime Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $Status Subapplication status. Valid values:
 <li>On: enabled;</li>
 <li>Off: disabled.</li>

@@ -70,10 +70,10 @@ Default value: open.
  * @method void setFps(integer $Fps) Set Frame rate.
  * @method float getQuality() Obtain Image quality.
  * @method void setQuality(float $Quality) Set Image quality.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AnimatedGraphicsTemplate extends AbstractModel
 {
@@ -143,12 +143,12 @@ Default value: open.
     public $Quality;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
@@ -178,8 +178,8 @@ Default value: open.
      * @param string $Format Animated image format.
      * @param integer $Fps Frame rate.
      * @param float $Quality Image quality.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

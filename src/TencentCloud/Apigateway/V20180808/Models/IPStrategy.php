@@ -28,9 +28,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStrategyName(string $StrategyName) Set Custom policy name.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStrategyType() Obtain Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+ * @method string getStrategyType() Obtain Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStrategyType(string $StrategyType) Set Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+ * @method void setStrategyType(string $StrategyType) Set Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getStrategyData() Obtain IP list.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -72,7 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $StrategyName;
 
     /**
-     * @var string Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * @var string Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StrategyType;
@@ -118,7 +118,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $StrategyName Custom policy name.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * @param string $StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $StrategyData IP list.
 Note: this field may return null, indicating that no valid values can be obtained.

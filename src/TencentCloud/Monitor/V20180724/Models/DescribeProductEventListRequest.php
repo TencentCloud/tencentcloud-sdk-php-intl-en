@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() Obtain API component name. It is fixed to monitor.
  * @method void setModule(string $Module) Set API component name. It is fixed to monitor.
- * @method array getProductName() Obtain Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
- * @method void setProductName(array $ProductName) Set Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+ * @method array getProductName() Obtain Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+ * @method void setProductName(array $ProductName) Set Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
  * @method array getEventName() Obtain Filter by product name. For example, "guest_reboot" indicates server restart.
  * @method void setEventName(array $EventName) Set Filter by product name. For example, "guest_reboot" indicates server restart.
  * @method array getInstanceId() Obtain Affected object, such as ins-19708ino.
@@ -59,7 +59,7 @@ class DescribeProductEventListRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var array Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+     * @var array Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
      */
     public $ProductName;
 
@@ -130,7 +130,7 @@ class DescribeProductEventListRequest extends AbstractModel
 
     /**
      * @param string $Module API component name. It is fixed to monitor.
-     * @param array $ProductName Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+     * @param array $ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
      * @param array $EventName Filter by product name. For example, "guest_reboot" indicates server restart.
      * @param array $InstanceId Affected object, such as ins-19708ino.
      * @param array $Dimensions Filter by dimension, such as by public IP: 10.0.0.1.

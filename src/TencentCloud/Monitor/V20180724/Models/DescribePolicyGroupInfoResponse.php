@@ -62,9 +62,9 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method boolean getCanSetDefault() Obtain Whether the policy can be configured as the default policy.
  * @method void setCanSetDefault(boolean $CanSetDefault) Set Whether the policy can be configured as the default policy.
- * @method integer getIsUnionRule() Obtain Whether the “AND” rule is used.
+ * @method integer getIsUnionRule() Obtain Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setIsUnionRule(integer $IsUnionRule) Set Whether the “AND” rule is used.
+ * @method void setIsUnionRule(integer $IsUnionRule) Set Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -157,7 +157,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $CanSetDefault;
 
     /**
-     * @var integer Whether the “AND” rule is used.
+     * @var integer Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $IsUnionRule;
@@ -189,7 +189,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @param DescribePolicyGroupInfoConditionTpl $ConditionsTemp Template-based policy group.
 Note: This field may return null, indicating that no valid value was found.
      * @param boolean $CanSetDefault Whether the policy can be configured as the default policy.
-     * @param integer $IsUnionRule Whether the “AND” rule is used.
+     * @param integer $IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

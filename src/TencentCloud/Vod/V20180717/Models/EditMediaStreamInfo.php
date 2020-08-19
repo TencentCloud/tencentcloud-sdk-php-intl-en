@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStreamId() Obtain ID of recorded stream
  * @method void setStreamId(string $StreamId) Set ID of recorded stream
- * @method string getStartTime() Obtain Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getStartTime() Obtain Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method void setStartTime(string $StartTime) Set Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method string getEndTime() Obtain End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+ * @method void setEndTime(string $EndTime) Set End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class EditMediaStreamInfo extends AbstractModel
@@ -39,22 +39,22 @@ class EditMediaStreamInfo extends AbstractModel
     public $StreamId;
 
     /**
-     * @var string Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
 
     /**
-     * @var string End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @var string End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
 
     /**
      * @param string $StreamId ID of recorded stream
-     * @param string $StartTime Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $StartTime Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param string $EndTime End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

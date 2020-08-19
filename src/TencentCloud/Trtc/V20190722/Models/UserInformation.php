@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) Set 
  * @method integer getJoinTs() Obtain 
  * @method void setJoinTs(integer $JoinTs) Set 
- * @method integer getLeaveTs() Obtain 
- * @method void setLeaveTs(integer $LeaveTs) Set 
+ * @method integer getLeaveTs() Obtain The time when the user exits the room. If the user is still in the room, the current time will be returned
+ * @method void setLeaveTs(integer $LeaveTs) Set The time when the user exits the room. If the user is still in the room, the current time will be returned
  * @method string getDeviceType() Obtain 
  * @method void setDeviceType(string $DeviceType) Set 
  * @method string getSdkVersion() Obtain 
@@ -55,7 +55,7 @@ class UserInformation extends AbstractModel
     public $JoinTs;
 
     /**
-     * @var integer 
+     * @var integer The time when the user exits the room. If the user is still in the room, the current time will be returned
      */
     public $LeaveTs;
 
@@ -83,7 +83,7 @@ class UserInformation extends AbstractModel
      * @param string $RoomStr 
      * @param string $UserId 
      * @param integer $JoinTs 
-     * @param integer $LeaveTs 
+     * @param integer $LeaveTs The time when the user exits the room. If the user is still in the room, the current time will be returned
      * @param string $DeviceType 
      * @param string $SdkVersion 
      * @param string $ClientIp 

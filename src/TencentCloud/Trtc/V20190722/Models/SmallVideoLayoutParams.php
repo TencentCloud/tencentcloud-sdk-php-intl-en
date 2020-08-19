@@ -18,60 +18,60 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Layout parameter of the small image, which takes effect in a picture-in-picture template
  *
- * @method string getUserId() Obtain 
- * @method void setUserId(string $UserId) Set 
- * @method integer getStreamType() Obtain 
- * @method void setStreamType(integer $StreamType) Set 
- * @method integer getImageWidth() Obtain 
- * @method void setImageWidth(integer $ImageWidth) Set 
- * @method integer getImageHeight() Obtain 
- * @method void setImageHeight(integer $ImageHeight) Set 
- * @method integer getLocationX() Obtain 
- * @method void setLocationX(integer $LocationX) Set 
- * @method integer getLocationY() Obtain 
- * @method void setLocationY(integer $LocationY) Set 
+ * @method string getUserId() Obtain ID of the user in the small image.
+ * @method void setUserId(string $UserId) Set ID of the user in the small image.
+ * @method integer getStreamType() Obtain Stream type of the small image. 0: camera; 1: screen sharing. If a web user's stream is displayed in the small image, enter 0 for this parameter.
+ * @method void setStreamType(integer $StreamType) Set Stream type of the small image. 0: camera; 1: screen sharing. If a web user's stream is displayed in the small image, enter 0 for this parameter.
+ * @method integer getImageWidth() Obtain Output width of the small image in pixels. If this parameter is left empty, 0 will be used by default.
+ * @method void setImageWidth(integer $ImageWidth) Set Output width of the small image in pixels. If this parameter is left empty, 0 will be used by default.
+ * @method integer getImageHeight() Obtain Output height of the small image in pixels. If this parameter is left empty, 0 will be used by default.
+ * @method void setImageHeight(integer $ImageHeight) Set Output height of the small image in pixels. If this parameter is left empty, 0 will be used by default.
+ * @method integer getLocationX() Obtain Output X-axis offset of the small image in pixels. The sum of `LocationX` and `ImageWidth` cannot exceed the total width of the output mixed stream. If this parameter is left empty, 0 will be used by default.
+ * @method void setLocationX(integer $LocationX) Set Output X-axis offset of the small image in pixels. The sum of `LocationX` and `ImageWidth` cannot exceed the total width of the output mixed stream. If this parameter is left empty, 0 will be used by default.
+ * @method integer getLocationY() Obtain Output Y-axis offset of the small image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the output mixed stream. If this parameter is left empty, 0 will be used by default.
+ * @method void setLocationY(integer $LocationY) Set Output Y-axis offset of the small image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the output mixed stream. If this parameter is left empty, 0 will be used by default.
  */
 class SmallVideoLayoutParams extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string ID of the user in the small image.
      */
     public $UserId;
 
     /**
-     * @var integer 
+     * @var integer Stream type of the small image. 0: camera; 1: screen sharing. If a web user's stream is displayed in the small image, enter 0 for this parameter.
      */
     public $StreamType;
 
     /**
-     * @var integer 
+     * @var integer Output width of the small image in pixels. If this parameter is left empty, 0 will be used by default.
      */
     public $ImageWidth;
 
     /**
-     * @var integer 
+     * @var integer Output height of the small image in pixels. If this parameter is left empty, 0 will be used by default.
      */
     public $ImageHeight;
 
     /**
-     * @var integer 
+     * @var integer Output X-axis offset of the small image in pixels. The sum of `LocationX` and `ImageWidth` cannot exceed the total width of the output mixed stream. If this parameter is left empty, 0 will be used by default.
      */
     public $LocationX;
 
     /**
-     * @var integer 
+     * @var integer Output Y-axis offset of the small image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the output mixed stream. If this parameter is left empty, 0 will be used by default.
      */
     public $LocationY;
 
     /**
-     * @param string $UserId 
-     * @param integer $StreamType 
-     * @param integer $ImageWidth 
-     * @param integer $ImageHeight 
-     * @param integer $LocationX 
-     * @param integer $LocationY 
+     * @param string $UserId ID of the user in the small image.
+     * @param integer $StreamType Stream type of the small image. 0: camera; 1: screen sharing. If a web user's stream is displayed in the small image, enter 0 for this parameter.
+     * @param integer $ImageWidth Output width of the small image in pixels. If this parameter is left empty, 0 will be used by default.
+     * @param integer $ImageHeight Output height of the small image in pixels. If this parameter is left empty, 0 will be used by default.
+     * @param integer $LocationX Output X-axis offset of the small image in pixels. The sum of `LocationX` and `ImageWidth` cannot exceed the total width of the output mixed stream. If this parameter is left empty, 0 will be used by default.
+     * @param integer $LocationY Output Y-axis offset of the small image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the output mixed stream. If this parameter is left empty, 0 will be used by default.
      */
     function __construct()
     {

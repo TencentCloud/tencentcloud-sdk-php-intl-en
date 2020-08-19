@@ -58,10 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
  * @method array getTags() Obtain List of tags bound to added nodes.
  * @method void setTags(array $Tags) Set List of tags bound to added nodes.
- * @method string getHardwareResourceType() Obtain 
- * @method void setHardwareResourceType(string $HardwareResourceType) Set 
- * @method PodSpec getPodSpec() Obtain 
- * @method void setPodSpec(PodSpec $PodSpec) Set 
+ * @method string getHardwareResourceType() Obtain Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+ * @method PodSpec getPodSpec() Obtain Specified information such as pod specification and source for expansion with pod resources
+ * @method void setPodSpec(PodSpec $PodSpec) Set Specified information such as pod specification and source for expansion with pod resources
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -141,12 +141,12 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 
+     * @var string Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
      */
     public $HardwareResourceType;
 
     /**
-     * @var PodSpec 
+     * @var PodSpec Specified information such as pod specification and source for expansion with pod resources
      */
     public $PodSpec;
 
@@ -170,8 +170,8 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param array $ServiceNodeInfo Started process.
      * @param array $DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
      * @param array $Tags List of tags bound to added nodes.
-     * @param string $HardwareResourceType 
-     * @param PodSpec $PodSpec 
+     * @param string $HardwareResourceType Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+     * @param PodSpec $PodSpec Specified information such as pod specification and source for expansion with pod resources
      */
     function __construct()
     {

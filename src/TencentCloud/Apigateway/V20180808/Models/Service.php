@@ -80,6 +80,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTradeIsolateStatus(integer $TradeIsolateStatus) Set Billing status of service.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
  */
 class Service extends AbstractModel
 {
@@ -174,6 +176,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TradeIsolateStatus;
 
     /**
+     * @var array 
+     */
+    public $Tags;
+
+    /**
      * @param integer $InnerHttpsPort Port for HTTPS access over private network.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ServiceDesc Custom service description.
@@ -204,6 +211,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $TradeIsolateStatus Billing status of service.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags 
      */
     function __construct()
     {
@@ -276,6 +284,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TradeIsolateStatus",$param) and $param["TradeIsolateStatus"] !== null) {
             $this->TradeIsolateStatus = $param["TradeIsolateStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

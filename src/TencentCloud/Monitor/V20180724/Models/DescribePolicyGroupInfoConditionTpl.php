@@ -38,9 +38,9 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setInsertTime(integer $InsertTime) Set Creation time.
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getIsUnionRule() Obtain Whether the “AND” rule is used.
+ * @method integer getIsUnionRule() Obtain Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
- * @method void setIsUnionRule(integer $IsUnionRule) Set Whether the “AND” rule is used.
+ * @method void setIsUnionRule(integer $IsUnionRule) Set Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
  */
 class DescribePolicyGroupInfoConditionTpl extends AbstractModel
@@ -83,7 +83,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $InsertTime;
 
     /**
-     * @var integer Whether the “AND” rule is used.
+     * @var integer Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
      */
     public $IsUnionRule;
@@ -98,7 +98,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $InsertTime Creation time.
 Note: This field may return null, indicating that no valid value was found.
-     * @param integer $IsUnionRule Whether the “AND” rule is used.
+     * @param integer $IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
      */
     function __construct()

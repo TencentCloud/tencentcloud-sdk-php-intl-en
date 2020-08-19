@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Control parameter of intelligent cover generating task.
  * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Control parameter of intelligent frame-specific tagging task.
  * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Control parameter of intelligent frame-specific tagging task.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+ * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class AIAnalysisTemplateItem extends AbstractModel
 {
@@ -77,12 +77,12 @@ class AIAnalysisTemplateItem extends AbstractModel
     public $FrameTagConfigure;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $UpdateTime;
 
@@ -94,8 +94,8 @@ class AIAnalysisTemplateItem extends AbstractModel
      * @param TagConfigureInfo $TagConfigure Control parameter of intelligent tagging task.
      * @param CoverConfigureInfo $CoverConfigure Control parameter of intelligent cover generating task.
      * @param FrameTagConfigureInfo $FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

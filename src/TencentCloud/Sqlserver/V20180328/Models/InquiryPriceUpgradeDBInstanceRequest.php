@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
  * @method integer getStorage() Obtain Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
  * @method void setStorage(integer $Storage) Set Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
- * @method integer getCpu() Obtain 
- * @method void setCpu(integer $Cpu) Set 
+ * @method integer getCpu() Obtain The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+ * @method void setCpu(integer $Cpu) Set The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer 
+     * @var integer The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
      */
     public $Cpu;
 
@@ -55,7 +55,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
      * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
      * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
-     * @param integer $Cpu 
+     * @param integer $Cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
      */
     function __construct()
     {

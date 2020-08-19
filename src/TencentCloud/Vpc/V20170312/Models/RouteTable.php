@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteTableName(string $RouteTableName) Set Route table name.
  * @method array getAssociationSet() Obtain The association relationships of the route table.
  * @method void setAssociationSet(array $AssociationSet) Set The association relationships of the route table.
- * @method array getRouteSet() Obtain Route table policy set.
- * @method void setRouteSet(array $RouteSet) Set Route table policy set.
+ * @method array getRouteSet() Obtain IPv4 routing policy set.
+ * @method void setRouteSet(array $RouteSet) Set IPv4 routing policy set.
  * @method boolean getMain() Obtain Whether it is the default route table.
  * @method void setMain(boolean $Main) Set Whether it is the default route table.
  * @method string getCreatedTime() Obtain Creation Time.
@@ -60,7 +60,7 @@ class RouteTable extends AbstractModel
     public $AssociationSet;
 
     /**
-     * @var array Route table policy set.
+     * @var array IPv4 routing policy set.
      */
     public $RouteSet;
 
@@ -84,7 +84,7 @@ class RouteTable extends AbstractModel
      * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      * @param string $RouteTableName Route table name.
      * @param array $AssociationSet The association relationships of the route table.
-     * @param array $RouteSet Route table policy set.
+     * @param array $RouteSet IPv4 routing policy set.
      * @param boolean $Main Whether it is the default route table.
      * @param string $CreatedTime Creation Time.
      * @param array $TagSet Tag key-value pairs.

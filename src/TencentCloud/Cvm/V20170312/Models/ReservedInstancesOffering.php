@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * The information of the Reserved Instance offering.
  *
  * @method string getZone() Obtain The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
  * @method void setZone(string $Zone) Set The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
  * @method string getCurrencyCode() Obtain The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
 Value: USD.
  * @method void setCurrencyCode(string $CurrencyCode) Set The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
@@ -37,9 +37,9 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
  * @method void setFixedPrice(float $FixedPrice) Set The purchase price of the Reserved Instance, such as 4000.0.
 Unit: this field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
  * @method string getInstanceType() Obtain The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
  * @method void setInstanceType(string $InstanceType) Set The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
  * @method string getOfferingType() Obtain The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
  * @method void setOfferingType(string $OfferingType) Set The payment term of the Reserved Instance, such as **All Upfront**.
@@ -61,7 +61,7 @@ class ReservedInstancesOffering extends AbstractModel
 {
     /**
      * @var string The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
      */
     public $Zone;
 
@@ -85,7 +85,7 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
 
     /**
      * @var string The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
      */
     public $InstanceType;
 
@@ -115,7 +115,7 @@ Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and
 
     /**
      * @param string $Zone The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
      * @param string $CurrencyCode The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
 Value: USD.
      * @param integer $Duration The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
@@ -123,7 +123,7 @@ Unit: second
      * @param float $FixedPrice The purchase price of the Reserved Instance, such as 4000.0.
 Unit: this field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
      * @param string $InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
      * @param string $OfferingType The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
      * @param string $ReservedInstancesOfferingId The ID of the Reserved Instance offering, such as 650c138f-ae7e-4750-952a-96841d6e9fc1.

@@ -116,10 +116,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setChargeState(string $ChargeState) Set Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method boolean getSignLaw() Obtain Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setSignLaw(boolean $SignLaw) Set Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class DirectConnect extends AbstractModel
 {
@@ -276,10 +278,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ChargeState;
 
     /**
-     * @var string Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $StartTime;
+
+    /**
+     * @var boolean Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $SignLaw;
 
     /**
      * @param string $DirectConnectId Connection ID.
@@ -330,8 +337,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ChargeState Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $StartTime 
+     * @param boolean $SignLaw Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -457,6 +465,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
+            $this->SignLaw = $param["SignLaw"];
         }
     }
 }

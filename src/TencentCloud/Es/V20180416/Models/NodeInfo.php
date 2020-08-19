@@ -42,8 +42,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getDiskCount() Obtain Number of node disks
  * @method void setDiskCount(integer $DiskCount) Set Number of node disks
- * @method integer getDiskEncrypt() Obtain 
- * @method void setDiskEncrypt(integer $DiskEncrypt) Set 
+ * @method integer getDiskEncrypt() Obtain Whether to encrypt node disk. 0: no (default); 1: yes.
+ * @method void setDiskEncrypt(integer $DiskEncrypt) Set Whether to encrypt node disk. 0: no (default); 1: yes.
  */
 class NodeInfo extends AbstractModel
 {
@@ -87,7 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DiskCount;
 
     /**
-     * @var integer 
+     * @var integer Whether to encrypt node disk. 0: no (default); 1: yes.
      */
     public $DiskEncrypt;
 
@@ -103,7 +103,7 @@ Default value: hotData
      * @param LocalDiskInfo $LocalDiskInfo Local disk information
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $DiskCount Number of node disks
-     * @param integer $DiskEncrypt 
+     * @param integer $DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
      */
     function __construct()
     {

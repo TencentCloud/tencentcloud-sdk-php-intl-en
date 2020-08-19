@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDisasterRecoverGroupAttribute request structure.
  *
- * @method string getDisasterRecoverGroupId() Obtain Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
- * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+ * @method string getDisasterRecoverGroupId() Obtain Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
  * @method string getName() Obtain Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
  * @method void setName(string $Name) Set Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
  */
 class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+     * @var string Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
      */
     public $DisasterRecoverGroupId;
 
@@ -38,7 +38,7 @@ class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel
     public $Name;
 
     /**
-     * @param string $DisasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+     * @param string $DisasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
      * @param string $Name Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
      */
     function __construct()

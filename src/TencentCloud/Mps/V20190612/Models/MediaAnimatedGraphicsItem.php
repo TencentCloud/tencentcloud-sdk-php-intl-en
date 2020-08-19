@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of a generated animated image file.
  * @method string getPath() Obtain Path to a generated animated image file.
  * @method void setPath(string $Path) Set Path to a generated animated image file.
- * @method integer getDefinition() Obtain ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method void setDefinition(integer $Definition) Set ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method integer getDefinition() Obtain ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
  * @method string getContainer() Obtain Animated image format, such as gif.
  * @method void setContainer(string $Container) Set Animated image format, such as gif.
  * @method integer getHeight() Obtain Height of an animated image in px.
@@ -56,7 +56,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     public $Path;
 
     /**
-     * @var integer ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @var integer ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
@@ -103,7 +103,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     /**
      * @param TaskOutputStorage $Storage Storage location of a generated animated image file.
      * @param string $Path Path to a generated animated image file.
-     * @param integer $Definition ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param integer $Definition ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      * @param string $Container Animated image format, such as gif.
      * @param integer $Height Height of an animated image in px.
      * @param integer $Width Width of an animated image in px.

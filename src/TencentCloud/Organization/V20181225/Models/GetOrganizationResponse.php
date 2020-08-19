@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrgId(integer $OrgId) Set Organization ID
  * @method integer getHostUin() Obtain Creator UIN
  * @method void setHostUin(integer $HostUin) Set Creator UIN
- * @method string getNickname() Obtain Creator’s name
- * @method void setNickname(string $Nickname) Set Creator’s name
- * @method string getMail() Obtain Creator’s email address
- * @method void setMail(string $Mail) Set Creator’s email address
+ * @method string getNickname() Obtain Creator's name
+ * @method void setNickname(string $Nickname) Set Creator's name
+ * @method string getMail() Obtain Creator's email address
+ * @method void setMail(string $Mail) Set Creator's email address
  * @method integer getOrgType() Obtain Organization type
  * @method void setOrgType(integer $OrgType) Set Organization type
  * @method integer getIsEmpty() Obtain Whether the organization is empty or not 
@@ -48,12 +48,12 @@ class GetOrganizationResponse extends AbstractModel
     public $HostUin;
 
     /**
-     * @var string Creator’s name
+     * @var string Creator's name
      */
     public $Nickname;
 
     /**
-     * @var string Creator’s email address
+     * @var string Creator's email address
      */
     public $Mail;
 
@@ -75,8 +75,8 @@ class GetOrganizationResponse extends AbstractModel
     /**
      * @param integer $OrgId Organization ID
      * @param integer $HostUin Creator UIN
-     * @param string $Nickname Creator’s name
-     * @param string $Mail Creator’s email address
+     * @param string $Nickname Creator's name
+     * @param string $Mail Creator's email address
      * @param integer $OrgType Organization type
      * @param integer $IsEmpty Whether the organization is empty or not 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

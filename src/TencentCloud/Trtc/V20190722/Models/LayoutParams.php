@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCU On-Cloud MixTranscoding layout parameters
  *
- * @method integer getTemplate() Obtain On-Cloud MixTranscoding layout template ID. 0: floating template (default value); 1: 9-grid template; 2: screen sharing template
- * @method void setTemplate(integer $Template) Set On-Cloud MixTranscoding layout template ID. 0: floating template (default value); 1: 9-grid template; 2: screen sharing template
- * @method string getMainVideoUserId() Obtain ID of the user in the big image on the left, which takes effect in the screen sharing template
- * @method void setMainVideoUserId(string $MainVideoUserId) Set ID of the user in the big image on the left, which takes effect in the screen sharing template
- * @method integer getMainVideoStreamType() Obtain Stream type of the big image on the left, which takes effect in the screen sharing template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter
- * @method void setMainVideoStreamType(integer $MainVideoStreamType) Set Stream type of the big image on the left, which takes effect in the screen sharing template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter
- * @method SmallVideoLayoutParams getSmallVideoLayoutParams() Obtain 
- * @method void setSmallVideoLayoutParams(SmallVideoLayoutParams $SmallVideoLayoutParams) Set 
+ * @method integer getTemplate() Obtain On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
+ * @method void setTemplate(integer $Template) Set On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
+ * @method string getMainVideoUserId() Obtain ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
+ * @method void setMainVideoUserId(string $MainVideoUserId) Set ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
+ * @method integer getMainVideoStreamType() Obtain Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
+ * @method void setMainVideoStreamType(integer $MainVideoStreamType) Set Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
+ * @method SmallVideoLayoutParams getSmallVideoLayoutParams() Obtain Layout parameter of the small image, which takes effect in a picture-in-picture template.
+ * @method void setSmallVideoLayoutParams(SmallVideoLayoutParams $SmallVideoLayoutParams) Set Layout parameter of the small image, which takes effect in a picture-in-picture template.
  */
 class LayoutParams extends AbstractModel
 {
     /**
-     * @var integer On-Cloud MixTranscoding layout template ID. 0: floating template (default value); 1: 9-grid template; 2: screen sharing template
+     * @var integer On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
      */
     public $Template;
 
     /**
-     * @var string ID of the user in the big image on the left, which takes effect in the screen sharing template
+     * @var string ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
      */
     public $MainVideoUserId;
 
     /**
-     * @var integer Stream type of the big image on the left, which takes effect in the screen sharing template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter
+     * @var integer Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
      */
     public $MainVideoStreamType;
 
     /**
-     * @var SmallVideoLayoutParams 
+     * @var SmallVideoLayoutParams Layout parameter of the small image, which takes effect in a picture-in-picture template.
      */
     public $SmallVideoLayoutParams;
 
     /**
-     * @param integer $Template On-Cloud MixTranscoding layout template ID. 0: floating template (default value); 1: 9-grid template; 2: screen sharing template
-     * @param string $MainVideoUserId ID of the user in the big image on the left, which takes effect in the screen sharing template
-     * @param integer $MainVideoStreamType Stream type of the big image on the left, which takes effect in the screen sharing template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter
-     * @param SmallVideoLayoutParams $SmallVideoLayoutParams 
+     * @param integer $Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
+     * @param string $MainVideoUserId ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
+     * @param integer $MainVideoStreamType Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
+     * @param SmallVideoLayoutParams $SmallVideoLayoutParams Layout parameter of the small image, which takes effect in a picture-in-picture template.
      */
     function __construct()
     {

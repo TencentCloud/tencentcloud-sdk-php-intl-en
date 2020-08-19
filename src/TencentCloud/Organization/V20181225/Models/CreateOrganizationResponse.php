@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOrgId() Obtain Organization ID
  * @method void setOrgId(integer $OrgId) Set Organization ID
- * @method string getNickname() Obtain Creator’s name
- * @method void setNickname(string $Nickname) Set Creator’s name
- * @method string getMail() Obtain Creator’s email address
- * @method void setMail(string $Mail) Set Creator’s email address
+ * @method string getNickname() Obtain Creator's name
+ * @method void setNickname(string $Nickname) Set Creator's name
+ * @method string getMail() Obtain Creator's email address
+ * @method void setMail(string $Mail) Set Creator's email address
  * @method integer getOrgType() Obtain Organization type
  * @method void setOrgType(integer $OrgType) Set Organization type
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -39,12 +39,12 @@ class CreateOrganizationResponse extends AbstractModel
     public $OrgId;
 
     /**
-     * @var string Creator’s name
+     * @var string Creator's name
      */
     public $Nickname;
 
     /**
-     * @var string Creator’s email address
+     * @var string Creator's email address
      */
     public $Mail;
 
@@ -60,8 +60,8 @@ class CreateOrganizationResponse extends AbstractModel
 
     /**
      * @param integer $OrgId Organization ID
-     * @param string $Nickname Creator’s name
-     * @param string $Mail Creator’s email address
+     * @param string $Nickname Creator's name
+     * @param string $Mail Creator's email address
      * @param integer $OrgType Organization type
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

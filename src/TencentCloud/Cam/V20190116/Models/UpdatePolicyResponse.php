@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePolicy response structure.
  *
- * @method integer getPolicyId() Obtain Policy ID
-Note: This field may return null, indicating that no valid value was found.
- * @method void setPolicyId(integer $PolicyId) Set Policy ID
-Note: This field may return null, indicating that no valid value was found.
+ * @method integer getPolicyId() Obtain Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class UpdatePolicyResponse extends AbstractModel
 {
     /**
-     * @var integer Policy ID
-Note: This field may return null, indicating that no valid value was found.
+     * @var integer Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PolicyId;
 
@@ -41,8 +41,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param integer $PolicyId Policy ID
-Note: This field may return null, indicating that no valid value was found.
+     * @param integer $PolicyId Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

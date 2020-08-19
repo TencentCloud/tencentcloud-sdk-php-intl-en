@@ -162,8 +162,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getAutoFlag() Obtain 
  * @method void setAutoFlag(integer $AutoFlag) Set 
- * @method string getHardwareResourceType() Obtain 
- * @method void setHardwareResourceType(string $HardwareResourceType) Set 
+ * @method string getHardwareResourceType() Obtain Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -383,7 +385,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AutoFlag;
 
     /**
-     * @var string 
+     * @var string Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $HardwareResourceType;
 
@@ -459,7 +462,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $Tags Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $AutoFlag 
-     * @param string $HardwareResourceType 
+     * @param string $HardwareResourceType Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

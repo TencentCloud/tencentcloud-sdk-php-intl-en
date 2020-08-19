@@ -18,60 +18,72 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access point information.
+ * 
  *
- * @method string getAccessPointName() Obtain Access point name.
- * @method void setAccessPointName(string $AccessPointName) Set Access point name.
- * @method string getAccessPointId() Obtain Unique access point ID.
- * @method void setAccessPointId(string $AccessPointId) Set Unique access point ID.
- * @method string getState() Obtain Access point status. Valid values: available, unavailable.
- * @method void setState(string $State) Set Access point status. Valid values: available, unavailable.
- * @method string getLocation() Obtain Access point location.
- * @method void setLocation(string $Location) Set Access point location.
- * @method array getLineOperator() Obtain List of ISPs supported by access point.
- * @method void setLineOperator(array $LineOperator) Set List of ISPs supported by access point.
- * @method string getRegionId() Obtain ID of the region that manages the access point.
- * @method void setRegionId(string $RegionId) Set ID of the region that manages the access point.
+ * @method string getAccessPointName() Obtain 
+ * @method void setAccessPointName(string $AccessPointName) Set 
+ * @method string getAccessPointId() Obtain 
+ * @method void setAccessPointId(string $AccessPointId) Set 
+ * @method string getState() Obtain 
+ * @method void setState(string $State) Set 
+ * @method string getLocation() Obtain 
+ * @method void setLocation(string $Location) Set 
+ * @method array getLineOperator() Obtain 
+ * @method void setLineOperator(array $LineOperator) Set 
+ * @method string getRegionId() Obtain 
+ * @method void setRegionId(string $RegionId) Set 
+ * @method array getAvailablePortType() Obtain Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setAvailablePortType(array $AvailablePortType) Set Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class AccessPoint extends AbstractModel
 {
     /**
-     * @var string Access point name.
+     * @var string 
      */
     public $AccessPointName;
 
     /**
-     * @var string Unique access point ID.
+     * @var string 
      */
     public $AccessPointId;
 
     /**
-     * @var string Access point status. Valid values: available, unavailable.
+     * @var string 
      */
     public $State;
 
     /**
-     * @var string Access point location.
+     * @var string 
      */
     public $Location;
 
     /**
-     * @var array List of ISPs supported by access point.
+     * @var array 
      */
     public $LineOperator;
 
     /**
-     * @var string ID of the region that manages the access point.
+     * @var string 
      */
     public $RegionId;
 
     /**
-     * @param string $AccessPointName Access point name.
-     * @param string $AccessPointId Unique access point ID.
-     * @param string $State Access point status. Valid values: available, unavailable.
-     * @param string $Location Access point location.
-     * @param array $LineOperator List of ISPs supported by access point.
-     * @param string $RegionId ID of the region that manages the access point.
+     * @var array Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $AvailablePortType;
+
+    /**
+     * @param string $AccessPointName 
+     * @param string $AccessPointId 
+     * @param string $State 
+     * @param string $Location 
+     * @param array $LineOperator 
+     * @param string $RegionId 
+     * @param array $AvailablePortType Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class AccessPoint extends AbstractModel
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("AvailablePortType",$param) and $param["AvailablePortType"] !== null) {
+            $this->AvailablePortType = $param["AvailablePortType"];
         }
     }
 }

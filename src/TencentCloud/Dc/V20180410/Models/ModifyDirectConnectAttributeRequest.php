@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) Set Fault reporting contact person.
  * @method string getFaultReportContactNumber() Obtain Fault reporting contact number.
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) Set Fault reporting contact number.
+ * @method boolean getSignLaw() Obtain Whether the connection applicant has signed the service agreement.
+ * @method void setSignLaw(boolean $SignLaw) Set Whether the connection applicant has signed the service agreement.
  */
 class ModifyDirectConnectAttributeRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
     public $FaultReportContactNumber;
 
     /**
+     * @var boolean Whether the connection applicant has signed the service agreement.
+     */
+    public $SignLaw;
+
+    /**
      * @param string $DirectConnectId Connection ID.
      * @param string $DirectConnectName Connection name.
      * @param string $CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
@@ -112,6 +119,7 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
      * @param string $CustomerContactNumber Contact number of connection applicant, which is obtained from the account system by default.
      * @param string $FaultReportContactPerson Fault reporting contact person.
      * @param string $FaultReportContactNumber Fault reporting contact number.
+     * @param boolean $SignLaw Whether the connection applicant has signed the service agreement.
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
 
         if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
             $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        }
+
+        if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
+            $this->SignLaw = $param["SignLaw"];
         }
     }
 }

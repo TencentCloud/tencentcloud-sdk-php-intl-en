@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePolicy request structure.
  *
- * @method integer getPolicyId() Obtain Policy ID
- * @method void setPolicyId(integer $PolicyId) Set Policy ID
- * @method string getPolicyName() Obtain Policy Name
- * @method void setPolicyName(string $PolicyName) Set Policy Name
+ * @method integer getPolicyId() Obtain Policy ID. Either `PolicyId` or `PolicyName` must be entered
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID. Either `PolicyId` or `PolicyName` must be entered
+ * @method string getPolicyName() Obtain Policy name. Either `PolicyName` or `PolicyId` must be entered
+ * @method void setPolicyName(string $PolicyName) Set Policy name. Either `PolicyName` or `PolicyId` must be entered
  * @method string getDescription() Obtain Policy description
  * @method void setDescription(string $Description) Set Policy description
- * @method string getPolicyDocument() Obtain Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
- * @method void setPolicyDocument(string $PolicyDocument) Set Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+ * @method string getPolicyDocument() Obtain Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
+ * @method void setPolicyDocument(string $PolicyDocument) Set Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
  * @method string getAlias() Obtain Preset policy remark
  * @method void setAlias(string $Alias) Set Preset policy remark
  */
 class UpdatePolicyRequest extends AbstractModel
 {
     /**
-     * @var integer Policy ID
+     * @var integer Policy ID. Either `PolicyId` or `PolicyName` must be entered
      */
     public $PolicyId;
 
     /**
-     * @var string Policy Name
+     * @var string Policy name. Either `PolicyName` or `PolicyId` must be entered
      */
     public $PolicyName;
 
@@ -49,7 +49,7 @@ class UpdatePolicyRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+     * @var string Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
      */
     public $PolicyDocument;
 
@@ -59,10 +59,10 @@ class UpdatePolicyRequest extends AbstractModel
     public $Alias;
 
     /**
-     * @param integer $PolicyId Policy ID
-     * @param string $PolicyName Policy Name
+     * @param integer $PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
+     * @param string $PolicyName Policy name. Either `PolicyName` or `PolicyId` must be entered
      * @param string $Description Policy description
-     * @param string $PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+     * @param string $PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
      * @param string $Alias Preset policy remark
      */
     function __construct()
