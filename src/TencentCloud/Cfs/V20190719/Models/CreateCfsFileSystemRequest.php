@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCfsFileSystem request structure.
  *
- * @method string getZone() Obtain AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
- * @method void setZone(string $Zone) Set AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
+ * @method string getZone() Obtain AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
+ * @method void setZone(string $Zone) Set AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
  * @method string getNetInterface() Obtain Network type. Valid values: VPC (VPC), BASIC (basic network)
  * @method void setNetInterface(string $NetInterface) Set Network type. Valid values: VPC (VPC), BASIC (basic network)
  * @method string getPGroupId() Obtain Permission group ID
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateCfsFileSystemRequest extends AbstractModel
 {
     /**
-     * @var string AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
+     * @var string AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
      */
     public $Zone;
 
@@ -94,7 +94,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @param string $Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
+     * @param string $Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
      * @param string $NetInterface Network type. Valid values: VPC (VPC), BASIC (basic network)
      * @param string $PGroupId Permission group ID
      * @param string $Protocol File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default

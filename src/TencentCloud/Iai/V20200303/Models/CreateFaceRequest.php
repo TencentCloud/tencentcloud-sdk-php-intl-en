@@ -20,17 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFace request structure.
  *
- * @method string getPersonId() Obtain Person ID.
- * @method void setPersonId(string $PersonId) Set Person ID.
+ * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API
+ * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API
  * @method array getImages() Obtain Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 There can be up to 5 faces in one image.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setImages(array $Images) Set Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 There can be up to 5 faces in one image.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method array getUrls() Obtain Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -38,6 +41,7 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 There can be up to 5 faces in one image.
 If there are multiple faces in the image, only the face with the largest size will be selected.
  * @method void setUrls(array $Urls) Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -70,12 +74,13 @@ If the image quality does not meet the requirement, the returned result will pro
 class CreateFaceRequest extends AbstractModel
 {
     /**
-     * @var string Person ID.
+     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public $PersonId;
 
     /**
      * @var array Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 There can be up to 5 faces in one image.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
@@ -84,6 +89,7 @@ If there are multiple faces in the image, only the face with the largest size wi
 
     /**
      * @var array Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -117,12 +123,14 @@ If the image quality does not meet the requirement, the returned result will pro
     public $NeedRotateDetection;
 
     /**
-     * @param string $PersonId Person ID.
+     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      * @param array $Images Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 There can be up to 5 faces in one image.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param array $Urls Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.

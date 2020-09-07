@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() Obtain SdkAppId of the customer
  * @method void setSdkAppId(integer $SdkAppId) Set SdkAppId of the customer
- * @method string getCallback() Obtain Callback address of the real-time recording task result. If it is specified as null, the set callback address is deleted. The callback address only supports the HTTP or HTTPS protocol, and therefore the callback address must start with http:// or https://.
- * @method void setCallback(string $Callback) Set Callback address of the real-time recording task result. If it is specified as null, the set callback address is deleted. The callback address only supports the HTTP or HTTPS protocol, and therefore the callback address must start with http:// or https://.
+ * @method string getCallback() Obtain Callback address of the real-time recording task result. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
+ * @method void setCallback(string $Callback) Set Callback address of the real-time recording task result. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
  */
 class SetOnlineRecordCallbackRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SetOnlineRecordCallbackRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string Callback address of the real-time recording task result. If it is specified as null, the set callback address is deleted. The callback address only supports the HTTP or HTTPS protocol, and therefore the callback address must start with http:// or https://.
+     * @var string Callback address of the real-time recording task result. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
      */
     public $Callback;
 
     /**
      * @param integer $SdkAppId SdkAppId of the customer
-     * @param string $Callback Callback address of the real-time recording task result. If it is specified as null, the set callback address is deleted. The callback address only supports the HTTP or HTTPS protocol, and therefore the callback address must start with http:// or https://.
+     * @param string $Callback Callback address of the real-time recording task result. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
      */
     function __construct()
     {

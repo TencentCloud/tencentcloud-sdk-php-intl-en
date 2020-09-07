@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeLiveTranscodeTemplate request structure.
  *
  * @method integer getTemplateId() Obtain Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
  */
 class DescribeLiveTranscodeTemplateRequest extends AbstractModel
 {
     /**
      * @var integer Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
      */
     public $TemplateId;
 
     /**
      * @param integer $TemplateId Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
      */
     function __construct()
     {

@@ -36,6 +36,8 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
 `overseas`: prefetches resources to nodes outside Mainland China
 `global`: prefetches resources to global nodes
 Default value: `mainland`. You can prefetch a URL to nodes in a region provided that CDN service has been enabled for the domain name in the URL in the region.
+ * @method string getLayer() Obtain If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+ * @method void setLayer(string $Layer) Set If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -60,6 +62,11 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     public $Area;
 
     /**
+     * @var string If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+     */
+    public $Layer;
+
+    /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $UserAgent Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
 Default value: `TencentCdn`
@@ -68,6 +75,7 @@ Default value: `TencentCdn`
 `overseas`: prefetches resources to nodes outside Mainland China
 `global`: prefetches resources to global nodes
 Default value: `mainland`. You can prefetch a URL to nodes in a region provided that CDN service has been enabled for the domain name in the URL in the region.
+     * @param string $Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Layer",$param) and $param["Layer"] !== null) {
+            $this->Layer = $param["Layer"];
         }
     }
 }

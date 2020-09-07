@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Instance name (which will be supported in the future)
  * @method integer getNeedSupportIpv6() Obtain Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
  * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
+ * @method array getTagList() Obtain The information of tags to be associated with instances. This parameter is left empty by default.
+ * @method void setTagList(array $TagList) Set The information of tags to be associated with instances. This parameter is left empty by default.
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class CreateDBInstancesRequest extends AbstractModel
     public $NeedSupportIpv6;
 
     /**
+     * @var array The information of tags to be associated with instances. This parameter is left empty by default.
+     */
+    public $TagList;
+
+    /**
      * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
      * @param string $DBVersion PostgreSQL kernel version. Currently, only two versions are supported: 9.3.5 and 9.5.4.
      * @param integer $Storage Instance capacity size in GB.
@@ -152,6 +159,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $ActivityId 
      * @param string $Name Instance name (which will be supported in the future)
      * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * @param array $TagList The information of tags to be associated with instances. This parameter is left empty by default.
      */
     function __construct()
     {
@@ -228,6 +236,15 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("NeedSupportIpv6",$param) and $param["NeedSupportIpv6"] !== null) {
             $this->NeedSupportIpv6 = $param["NeedSupportIpv6"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

@@ -31,9 +31,9 @@ Maximum length: 1,024 bytes.
  * @method void setDescription(string $Description) Set Description.
 Maximum length: 1,024 bytes.
  * @method integer getSnapshotInterval() Obtain Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
  * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
  * @method integer getWidth() Obtain Screenshot width. Default value: 0 (original width).
  * @method void setWidth(integer $Width) Set Screenshot width. Default value: 0 (original width).
  * @method integer getHeight() Obtain Screenshot height. Default value: 0 (original height).
@@ -47,7 +47,9 @@ Value range: 5-600s.
  * @method integer getCosAppId() Obtain COS application ID.
  * @method void setCosAppId(integer $CosAppId) Set COS application ID.
  * @method string getCosBucket() Obtain COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
  * @method void setCosBucket(string $CosBucket) Set COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
  * @method string getCosRegion() Obtain COS region.
  * @method void setCosRegion(string $CosRegion) Set COS region.
  * @method string getCosPrefix() Obtain COS bucket folder prefix.
@@ -76,7 +78,7 @@ Maximum length: 1,024 bytes.
 
     /**
      * @var integer Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      */
     public $SnapshotInterval;
 
@@ -104,6 +106,7 @@ Value range: 5-600s.
 
     /**
      * @var string COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      */
     public $CosBucket;
 
@@ -129,7 +132,7 @@ Maximum length: 255 bytes.
      * @param string $Description Description.
 Maximum length: 1,024 bytes.
      * @param integer $SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      * @param integer $Width Screenshot width. Default value: 0 (original width).
      * @param integer $Height Screenshot height. Default value: 0 (original height).
      * @param integer $PornFlag Whether to enable porn detection. Default value: 0.
@@ -137,6 +140,7 @@ Value range: 5-600s.
 1: enable.
      * @param integer $CosAppId COS application ID.
      * @param string $CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      * @param string $CosRegion COS region.
      * @param string $CosPrefix COS bucket folder prefix.
      * @param string $CosFileName COS filename.

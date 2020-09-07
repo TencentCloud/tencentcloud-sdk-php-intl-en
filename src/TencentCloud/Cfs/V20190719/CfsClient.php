@@ -31,6 +31,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DeleteCfsRuleResponse DeleteCfsRule(Models\DeleteCfsRuleRequest $req) This API is used to delete a permission group rule.
  * @method Models\DeleteMountTargetResponse DeleteMountTarget(Models\DeleteMountTargetRequest $req) This API is used to delete a mount target.
  * @method Models\DescribeAvailableZoneInfoResponse DescribeAvailableZoneInfo(Models\DescribeAvailableZoneInfoRequest $req) This API is used to query the availability of a region.
+ * @method Models\DescribeCfsFileSystemClientsResponse DescribeCfsFileSystemClients(Models\DescribeCfsFileSystemClientsRequest $req) This API is used to query clients on which this file system is mounted. To do so, the client needs to have the CFS monitoring plugin installed.
  * @method Models\DescribeCfsFileSystemsResponse DescribeCfsFileSystems(Models\DescribeCfsFileSystemsRequest $req) This API is used to query file systems.
  * @method Models\DescribeCfsPGroupsResponse DescribeCfsPGroups(Models\DescribeCfsPGroupsRequest $req) This API is used to query the list of permission groups.
  * @method Models\DescribeCfsRulesResponse DescribeCfsRules(Models\DescribeCfsRulesRequest $req) This API is used to query the list of permission group rules.

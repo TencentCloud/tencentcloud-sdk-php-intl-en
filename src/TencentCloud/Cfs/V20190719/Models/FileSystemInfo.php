@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set File system protocol type
  * @method string getStorageType() Obtain File system storage class
  * @method void setStorageType(string $StorageType) Set File system storage class
- * @method string getStorageResourcePkg() Obtain Prepaid storage pack bound to a file system (not supported currently)
- * @method void setStorageResourcePkg(string $StorageResourcePkg) Set Prepaid storage pack bound to a file system (not supported currently)
+ * @method string getStorageResourcePkg() Obtain Prepaid storage pack bound with the file system
+ * @method void setStorageResourcePkg(string $StorageResourcePkg) Set Prepaid storage pack bound with the file system
  * @method string getBandwidthResourcePkg() Obtain Prepaid bandwidth pack bound to a file system (not supported currently)
  * @method void setBandwidthResourcePkg(string $BandwidthResourcePkg) Set Prepaid bandwidth pack bound to a file system (not supported currently)
  * @method PGroup getPGroup() Obtain Information of permission groups bound to a file system
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsKeyId(string $KmsKeyId) Set Key used for encryption, which can be the key ID or ARN
  * @method integer getAppId() Obtain Application ID
  * @method void setAppId(integer $AppId) Set Application ID
+ * @method float getBandwidthLimit() Obtain The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+ * @method void setBandwidthLimit(float $BandwidthLimit) Set The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -108,7 +110,7 @@ class FileSystemInfo extends AbstractModel
     public $StorageType;
 
     /**
-     * @var string Prepaid storage pack bound to a file system (not supported currently)
+     * @var string Prepaid storage pack bound with the file system
      */
     public $StorageResourcePkg;
 
@@ -143,6 +145,11 @@ class FileSystemInfo extends AbstractModel
     public $AppId;
 
     /**
+     * @var float The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     */
+    public $BandwidthLimit;
+
+    /**
      * @param string $CreationTime Creation time
      * @param string $CreationToken Custom name
      * @param string $FileSystemId File system ID
@@ -153,13 +160,14 @@ class FileSystemInfo extends AbstractModel
      * @param string $Zone Region name
      * @param string $Protocol File system protocol type
      * @param string $StorageType File system storage class
-     * @param string $StorageResourcePkg Prepaid storage pack bound to a file system (not supported currently)
+     * @param string $StorageResourcePkg Prepaid storage pack bound with the file system
      * @param string $BandwidthResourcePkg Prepaid bandwidth pack bound to a file system (not supported currently)
      * @param PGroup $PGroup Information of permission groups bound to a file system
      * @param string $FsName Custom name
      * @param boolean $Encrypted Whether a file system is encrypted
      * @param string $KmsKeyId Key used for encryption, which can be the key ID or ARN
      * @param integer $AppId Application ID
+     * @param float $BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class FileSystemInfo extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("BandwidthLimit",$param) and $param["BandwidthLimit"] !== null) {
+            $this->BandwidthLimit = $param["BandwidthLimit"];
         }
     }
 }

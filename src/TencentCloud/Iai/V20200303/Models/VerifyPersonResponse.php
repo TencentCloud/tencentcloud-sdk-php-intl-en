@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScore(float $Score) Set Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
  * @method boolean getIsMatch() Obtain Whether the person in the image matches the `PersonId`.
  * @method void setIsMatch(boolean $IsMatch) Set Whether the person in the image matches the `PersonId`.
- * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition.
- * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition.
+ * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
+ * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -42,7 +42,7 @@ class VerifyPersonResponse extends AbstractModel
     public $IsMatch;
 
     /**
-     * @var string Algorithm model version used for face recognition.
+     * @var string Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
      */
     public $FaceModelVersion;
 
@@ -54,7 +54,7 @@ class VerifyPersonResponse extends AbstractModel
     /**
      * @param float $Score Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
      * @param boolean $IsMatch Whether the person in the image matches the `PersonId`.
-     * @param string $FaceModelVersion Algorithm model version used for face recognition.
+     * @param string $FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

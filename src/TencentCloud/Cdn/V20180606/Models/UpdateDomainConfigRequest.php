@@ -96,6 +96,12 @@ global: global acceleration
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Origin access authentication for S3 bucket
  * @method UserAgentFilter getUserAgentFilter() Obtain UA blocklist/allowlist Configuration
  * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA blocklist/allowlist Configuration
+ * @method AccessControl getAccessControl() Obtain Access control
+ * @method void setAccessControl(AccessControl $AccessControl) Set Access control
+ * @method UrlRedirect getUrlRedirect() Obtain URL redirect configuration
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) Set URL redirect configuration
+ * @method array getAccessPort() Obtain Access port configuration
+ * @method void setAccessPort(array $AccessPort) Set Access port configuration
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -262,6 +268,21 @@ global: global acceleration
     public $UserAgentFilter;
 
     /**
+     * @var AccessControl Access control
+     */
+    public $AccessControl;
+
+    /**
+     * @var UrlRedirect URL redirect configuration
+     */
+    public $UrlRedirect;
+
+    /**
+     * @var array Access port configuration
+     */
+    public $AccessPort;
+
+    /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
@@ -300,6 +321,9 @@ global: global acceleration
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
      * @param AwsPrivateAccess $AwsPrivateAccess Origin access authentication for S3 bucket
      * @param UserAgentFilter $UserAgentFilter UA blocklist/allowlist Configuration
+     * @param AccessControl $AccessControl Access control
+     * @param UrlRedirect $UrlRedirect URL redirect configuration
+     * @param array $AccessPort Access port configuration
      */
     function __construct()
     {
@@ -463,6 +487,20 @@ global: global acceleration
         if (array_key_exists("UserAgentFilter",$param) and $param["UserAgentFilter"] !== null) {
             $this->UserAgentFilter = new UserAgentFilter();
             $this->UserAgentFilter->deserialize($param["UserAgentFilter"]);
+        }
+
+        if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
+            $this->AccessControl = new AccessControl();
+            $this->AccessControl->deserialize($param["AccessControl"]);
+        }
+
+        if (array_key_exists("UrlRedirect",$param) and $param["UrlRedirect"] !== null) {
+            $this->UrlRedirect = new UrlRedirect();
+            $this->UrlRedirect->deserialize($param["UrlRedirect"]);
+        }
+
+        if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
+            $this->AccessPort = $param["AccessPort"];
         }
     }
 }

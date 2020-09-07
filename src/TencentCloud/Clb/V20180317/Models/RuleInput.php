@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Forwarding rule path. Length: 1-200.
  * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
- * @method HealthCheck getHealthCheck() Obtain Health check information
- * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information
+ * @method HealthCheck getHealthCheck() Obtain Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
  * @method CertificateInput getCertificate() Obtain Certificate information
  * @method void setCertificate(CertificateInput $Certificate) Set Certificate information
  * @method string getScheduler() Obtain Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
@@ -67,7 +67,7 @@ class RuleInput extends AbstractModel
     public $SessionExpireTime;
 
     /**
-     * @var HealthCheck Health check information
+     * @var HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
      */
     public $HealthCheck;
 
@@ -121,7 +121,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param string $Domain Domain name of the forwarding rule. Length: 1-80.
      * @param string $Url Forwarding rule path. Length: 1-200.
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
-     * @param HealthCheck $HealthCheck Health check information
+     * @param HealthCheck $HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
      * @param CertificateInput $Certificate Certificate information
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.

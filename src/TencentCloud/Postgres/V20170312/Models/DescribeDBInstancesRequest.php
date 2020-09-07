@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances request structure.
  *
- * @method array getFilters() Obtain Filter. Valid values: db-instance-id, db-instance-name
- * @method void setFilters(array $Filters) Set Filter. Valid values: db-instance-id, db-instance-name
+ * @method array getFilters() Obtain Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
+ * @method void setFilters(array $Filters) Set Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
  * @method integer getLimit() Obtain Number of entries returned per page. Default value: 10.
  * @method void setLimit(integer $Limit) Set Number of entries returned per page. Default value: 10.
  * @method integer getOffset() Obtain Page number, starting from 0.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Filter. Valid values: db-instance-id, db-instance-name
+     * @var array Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
      */
     public $Filters;
 
@@ -59,7 +59,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @param array $Filters Filter. Valid values: db-instance-id, db-instance-name
+     * @param array $Filters Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
      * @param integer $Limit Number of entries returned per page. Default value: 10.
      * @param integer $Offset Page number, starting from 0.
      * @param string $OrderBy 

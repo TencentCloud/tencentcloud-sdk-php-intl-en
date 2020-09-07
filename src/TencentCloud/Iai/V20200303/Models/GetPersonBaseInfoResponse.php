@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPersonName() Obtain Person name
  * @method void setPersonName(string $PersonName) Set Person name
- * @method integer getGender() Obtain Person gender
- * @method void setGender(integer $Gender) Set Person gender
+ * @method integer getGender() Obtain Person gender. 0: empty; 1: male; 2: female
+ * @method void setGender(integer $Gender) Set Person gender. 0: empty; 1: male; 2: female
  * @method array getFaceIds() Obtain List of the IDs of included faces
  * @method void setFaceIds(array $FaceIds) Set List of the IDs of included faces
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,7 +37,7 @@ class GetPersonBaseInfoResponse extends AbstractModel
     public $PersonName;
 
     /**
-     * @var integer Person gender
+     * @var integer Person gender. 0: empty; 1: male; 2: female
      */
     public $Gender;
 
@@ -53,7 +53,7 @@ class GetPersonBaseInfoResponse extends AbstractModel
 
     /**
      * @param string $PersonName Person name
-     * @param integer $Gender Person gender
+     * @param integer $Gender Person gender. 0: empty; 1: male; 2: female
      * @param array $FaceIds List of the IDs of included faces
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

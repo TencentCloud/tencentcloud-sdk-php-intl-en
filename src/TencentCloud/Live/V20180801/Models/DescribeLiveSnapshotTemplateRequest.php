@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeLiveSnapshotTemplate request structure.
  *
  * @method integer getTemplateId() Obtain Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
  */
 class DescribeLiveSnapshotTemplateRequest extends AbstractModel
 {
     /**
      * @var integer Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
      */
     public $TemplateId;
 
     /**
      * @param integer $TemplateId Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
      */
     function __construct()
     {

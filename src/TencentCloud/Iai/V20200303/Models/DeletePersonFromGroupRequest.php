@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePersonFromGroup request structure.
  *
- * @method string getPersonId() Obtain Person ID
- * @method void setPersonId(string $PersonId) Set Person ID
- * @method string getGroupId() Obtain Group ID
- * @method void setGroupId(string $GroupId) Set Group ID
+ * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API
+ * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API
+ * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API
+ * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API
  */
 class DeletePersonFromGroupRequest extends AbstractModel
 {
     /**
-     * @var string Person ID
+     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public $PersonId;
 
     /**
-     * @var string Group ID
+     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API
      */
     public $GroupId;
 
     /**
-     * @param string $PersonId Person ID
-     * @param string $GroupId Group ID
+     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRWPermission(string $RWPermission) Set Read/write permission. ro: read-only; rw: read & write
  * @method string getUserPermission() Obtain User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
  * @method void setUserPermission(string $UserPermission) Set User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
- * @method integer getPriority() Obtain Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
- * @method void setPriority(integer $Priority) Set Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+ * @method integer getPriority() Obtain Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+ * @method void setPriority(integer $Priority) Set Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
  */
 class PGroupRuleInfo extends AbstractModel
 {
@@ -54,7 +54,7 @@ class PGroupRuleInfo extends AbstractModel
     public $UserPermission;
 
     /**
-     * @var integer Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+     * @var integer Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
      */
     public $Priority;
 
@@ -63,7 +63,7 @@ class PGroupRuleInfo extends AbstractModel
      * @param string $AuthClientIp Client IP allowed for access
      * @param string $RWPermission Read/write permission. ro: read-only; rw: read & write
      * @param string $UserPermission User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
-     * @param integer $Priority Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+     * @param integer $Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
      */
     function __construct()
     {

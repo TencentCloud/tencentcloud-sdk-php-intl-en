@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getReplaceMonitorUnhealthy() Obtain Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
  * @method void setReplaceMonitorUnhealthy(boolean $ReplaceMonitorUnhealthy) Set Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
- * @method string getScalingMode() Obtain 
- * @method void setScalingMode(string $ScalingMode) Set 
+ * @method string getScalingMode() Obtain Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
+ * @method void setScalingMode(string $ScalingMode) Set Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
  */
 class ServiceSettings extends AbstractModel
 {
@@ -33,13 +39,19 @@ class ServiceSettings extends AbstractModel
     public $ReplaceMonitorUnhealthy;
 
     /**
-     * @var string 
+     * @var string Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
      */
     public $ScalingMode;
 
     /**
      * @param boolean $ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
-     * @param string $ScalingMode 
+     * @param string $ScalingMode Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
      */
     function __construct()
     {

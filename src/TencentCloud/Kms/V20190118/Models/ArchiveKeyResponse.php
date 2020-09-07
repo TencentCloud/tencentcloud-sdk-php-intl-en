@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckSimilarPerson response structure.
+ * ArchiveKey response structure.
  *
- * @method string getJobId() Obtain Duplicate check task ID, which is used to query and get the progress and result of the task.
- * @method void setJobId(string $JobId) Set Duplicate check task ID, which is used to query and get the progress and result of the task.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CheckSimilarPersonResponse extends AbstractModel
+class ArchiveKeyResponse extends AbstractModel
 {
-    /**
-     * @var string Duplicate check task ID, which is used to query and get the progress and result of the task.
-     */
-    public $JobId;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $JobId Duplicate check task ID, which is used to query and get the progress and result of the task.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,10 +46,6 @@ class CheckSimilarPersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

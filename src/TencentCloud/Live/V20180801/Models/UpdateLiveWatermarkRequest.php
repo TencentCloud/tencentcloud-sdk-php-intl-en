@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * UpdateLiveWatermark request structure.
  *
  * @method integer getWatermarkId() Obtain Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
  * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
  * @method string getPictureUrl() Obtain Watermark image URL.
  * @method void setPictureUrl(string $PictureUrl) Set Watermark image URL.
  * @method integer getXPosition() Obtain Display position: X-axis offset in %. Default value: 0.
@@ -43,7 +43,7 @@ class UpdateLiveWatermarkRequest extends AbstractModel
 {
     /**
      * @var integer Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
      */
     public $WatermarkId;
 
@@ -80,7 +80,7 @@ Up to 16 bytes.
 
     /**
      * @param integer $WatermarkId Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
      * @param string $PictureUrl Watermark image URL.
      * @param integer $XPosition Display position: X-axis offset in %. Default value: 0.
      * @param integer $YPosition Display position: Y-axis offset in %. Default value: 0.

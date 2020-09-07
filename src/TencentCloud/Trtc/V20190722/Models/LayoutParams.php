@@ -18,7 +18,7 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MCU On-Cloud MixTranscoding layout parameters
+ * 
  *
  * @method integer getTemplate() Obtain On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
  * @method void setTemplate(integer $Template) Set On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMainVideoStreamType(integer $MainVideoStreamType) Set Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
  * @method SmallVideoLayoutParams getSmallVideoLayoutParams() Obtain Layout parameter of the small image, which takes effect in a picture-in-picture template.
  * @method void setSmallVideoLayoutParams(SmallVideoLayoutParams $SmallVideoLayoutParams) Set Layout parameter of the small image, which takes effect in a picture-in-picture template.
+ * @method integer getMainVideoRightAlign() Obtain You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
+ * @method void setMainVideoRightAlign(integer $MainVideoRightAlign) Set You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
  */
 class LayoutParams extends AbstractModel
 {
@@ -52,10 +54,16 @@ class LayoutParams extends AbstractModel
     public $SmallVideoLayoutParams;
 
     /**
+     * @var integer You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
+     */
+    public $MainVideoRightAlign;
+
+    /**
      * @param integer $Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
      * @param string $MainVideoUserId ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
      * @param integer $MainVideoStreamType Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
      * @param SmallVideoLayoutParams $SmallVideoLayoutParams Layout parameter of the small image, which takes effect in a picture-in-picture template.
+     * @param integer $MainVideoRightAlign You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class LayoutParams extends AbstractModel
         if (array_key_exists("SmallVideoLayoutParams",$param) and $param["SmallVideoLayoutParams"] !== null) {
             $this->SmallVideoLayoutParams = new SmallVideoLayoutParams();
             $this->SmallVideoLayoutParams->deserialize($param["SmallVideoLayoutParams"]);
+        }
+
+        if (array_key_exists("MainVideoRightAlign",$param) and $param["MainVideoRightAlign"] !== null) {
+            $this->MainVideoRightAlign = $param["MainVideoRightAlign"];
         }
     }
 }

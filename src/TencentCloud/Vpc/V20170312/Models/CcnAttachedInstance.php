@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttachedTime(string $AttachedTime) Set Association Time.
  * @method string getCcnUin() Obtain The UIN (root account) to which the CCN belongs.
  * @method void setCcnUin(string $CcnUin) Set The UIN (root account) to which the CCN belongs.
+ * @method string getInstanceArea() Obtain General location of the associated instance, such as CHINA_MAINLAND.
+ * @method void setInstanceArea(string $InstanceArea) Set General location of the associated instance, such as CHINA_MAINLAND.
  */
 class CcnAttachedInstance extends AbstractModel
 {
@@ -130,6 +132,11 @@ class CcnAttachedInstance extends AbstractModel
     public $CcnUin;
 
     /**
+     * @var string General location of the associated instance, such as CHINA_MAINLAND.
+     */
+    public $InstanceArea;
+
+    /**
      * @param string $CcnId The ID of a CCN instance.
      * @param string $InstanceType The type of associated instances:
 <li>`VPC`: VPC</li>
@@ -152,6 +159,7 @@ class CcnAttachedInstance extends AbstractModel
 <li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
      * @param string $AttachedTime Association Time.
      * @param string $CcnUin The UIN (root account) to which the CCN belongs.
+     * @param string $InstanceArea General location of the associated instance, such as CHINA_MAINLAND.
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class CcnAttachedInstance extends AbstractModel
 
         if (array_key_exists("CcnUin",$param) and $param["CcnUin"] !== null) {
             $this->CcnUin = $param["CcnUin"];
+        }
+
+        if (array_key_exists("InstanceArea",$param) and $param["InstanceArea"] !== null) {
+            $this->InstanceArea = $param["InstanceArea"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
  * @method void setClusterId(string $ClusterId) Set Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
- * @method string getRunInstancePara() Obtain Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://cloud.tencent.com/document/product/213/15730) API.
- * @method void setRunInstancePara(string $RunInstancePara) Set Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://cloud.tencent.com/document/product/213/15730) API.
+ * @method string getRunInstancePara() Obtain Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
+ * @method void setRunInstancePara(string $RunInstancePara) Set Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Additional parameter to be set for the instance
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Additional parameter to be set for the instance
  */
@@ -35,7 +35,7 @@ class CreateClusterInstancesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://cloud.tencent.com/document/product/213/15730) API.
+     * @var string Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
      */
     public $RunInstancePara;
 
@@ -46,7 +46,7 @@ class CreateClusterInstancesRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
-     * @param string $RunInstancePara Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://cloud.tencent.com/document/product/213/15730) API.
+     * @param string $RunInstancePara Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Additional parameter to be set for the instance
      */
     function __construct()

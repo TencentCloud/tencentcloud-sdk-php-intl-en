@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonList request structure.
  *
- * @method string getGroupId() Obtain Group ID
- * @method void setGroupId(string $GroupId) Set Group ID
+ * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API
+ * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API
  * @method integer getOffset() Obtain Starting number. Default value: 0
  * @method void setOffset(integer $Offset) Set Starting number. Default value: 0
  * @method integer getLimit() Obtain Number of returned results. Default value: 10. Maximum value: 1000
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetPersonListRequest extends AbstractModel
 {
     /**
-     * @var string Group ID
+     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API
      */
     public $GroupId;
 
@@ -45,7 +45,7 @@ class GetPersonListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $GroupId Group ID
+     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
      * @param integer $Offset Starting number. Default value: 0
      * @param integer $Limit Number of returned results. Default value: 10. Maximum value: 1000
      */

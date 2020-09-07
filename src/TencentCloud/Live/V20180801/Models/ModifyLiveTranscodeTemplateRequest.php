@@ -66,8 +66,14 @@ baseline/main/high.
  * @method void setHeightToOrig(integer $HeightToOrig) Set Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
  * @method integer getFpsToOrig() Obtain Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
  * @method void setFpsToOrig(integer $FpsToOrig) Set Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
- * @method float getAdaptBitratePercent() Obtain `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+ * @method float getAdaptBitratePercent() Obtain Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) Set Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
  */
 class ModifyLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -163,7 +169,10 @@ baseline/main/high.
     public $FpsToOrig;
 
     /**
-     * @var float `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+     * @var float Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
      */
     public $AdaptBitratePercent;
 
@@ -191,7 +200,10 @@ baseline/main/high.
      * @param integer $BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
      * @param integer $HeightToOrig Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
      * @param integer $FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
-     * @param float $AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+     * @param float $AdaptBitratePercent Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
      */
     function __construct()
     {

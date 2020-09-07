@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getDomainName() Obtain Instance domain name
  * @method void setDomainName(string $DomainName) Set Instance domain name
- * @method string getPaiMateUrl() Obtain 
- * @method void setPaiMateUrl(string $PaiMateUrl) Set 
+ * @method string getPaiMateUrl() Obtain URL of the PAI management page
+ * @method void setPaiMateUrl(string $PaiMateUrl) Set URL of the PAI management page
  */
 class PaiInstance extends AbstractModel
 {
@@ -40,14 +40,14 @@ class PaiInstance extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 
+     * @var string URL of the PAI management page
      */
     public $PaiMateUrl;
 
     /**
      * @param string $InstanceId Instance ID
      * @param string $DomainName Instance domain name
-     * @param string $PaiMateUrl 
+     * @param string $PaiMateUrl URL of the PAI management page
      */
     function __construct()
     {

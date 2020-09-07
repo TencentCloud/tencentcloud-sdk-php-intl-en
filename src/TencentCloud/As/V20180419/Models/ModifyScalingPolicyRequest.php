@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCooldown(integer $Cooldown) Set Cooldown period in seconds.
  * @method MetricAlarm getMetricAlarm() Obtain Alarm monitoring metric.
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) Set Alarm monitoring metric.
- * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+ * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
  */
 class ModifyScalingPolicyRequest extends AbstractModel
@@ -70,7 +70,7 @@ class ModifyScalingPolicyRequest extends AbstractModel
     public $MetricAlarm;
 
     /**
-     * @var array Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+     * @var array Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
      */
     public $NotificationUserGroupIds;
@@ -82,7 +82,7 @@ If you want to clear the user group, you need to pass in the specific string "NU
      * @param integer $AdjustmentValue The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
      * @param integer $Cooldown Cooldown period in seconds.
      * @param MetricAlarm $MetricAlarm Alarm monitoring metric.
-     * @param array $NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+     * @param array $NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
      */
     function __construct()

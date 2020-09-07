@@ -30,10 +30,10 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
  * @method void setEndTime(string $EndTime) Set End time (Beijing time).
 In the format of `yyyy-mm-dd HH:MM:SS`.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
- * @method string getStatType() Obtain Statistics type. Valid values: Province, Isp, CountryOrArea.
- * @method void setStatType(string $StatType) Set Statistics type. Valid values: Province, Isp, CountryOrArea.
- * @method array getPlayDomains() Obtain If this parameter is left empty, full data will be queried.
- * @method void setPlayDomains(array $PlayDomains) Set If this parameter is left empty, full data will be queried.
+ * @method string getStatType() Obtain Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
+ * @method void setStatType(string $StatType) Set Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
+ * @method array getPlayDomains() Obtain Playback domain name list. If it is left empty, it refers to all playback domain names.
+ * @method void setPlayDomains(array $PlayDomains) Set Playback domain name list. If it is left empty, it refers to all playback domain names.
  * @method integer getPageNum() Obtain Page number. Value range: [1,1000]. Default value: 1.
  * @method void setPageNum(integer $PageNum) Set Page number. Value range: [1,1000]. Default value: 1.
  * @method integer getPageSize() Obtain Number of entries per page. Value range: [1,1000]. Default value: 20.
@@ -59,12 +59,12 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
     public $EndTime;
 
     /**
-     * @var string Statistics type. Valid values: Province, Isp, CountryOrArea.
+     * @var string Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
      */
     public $StatType;
 
     /**
-     * @var array If this parameter is left empty, full data will be queried.
+     * @var array Playback domain name list. If it is left empty, it refers to all playback domain names.
      */
     public $PlayDomains;
 
@@ -94,8 +94,8 @@ In the format of `yyyy-mm-dd HH:MM:SS`.
      * @param string $EndTime End time (Beijing time).
 In the format of `yyyy-mm-dd HH:MM:SS`.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
-     * @param string $StatType Statistics type. Valid values: Province, Isp, CountryOrArea.
-     * @param array $PlayDomains If this parameter is left empty, full data will be queried.
+     * @param string $StatType Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
+     * @param array $PlayDomains Playback domain name list. If it is left empty, it refers to all playback domain names.
      * @param integer $PageNum Page number. Value range: [1,1000]. Default value: 1.
      * @param integer $PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
      * @param string $MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.

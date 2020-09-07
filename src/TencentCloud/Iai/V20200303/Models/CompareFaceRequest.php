@@ -21,36 +21,44 @@ use TencentCloud\Common\AbstractModel;
  * CompareFace request structure.
  *
  * @method string getImageA() Obtain Base64-encoded image A data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setImageA(string $ImageA) Set Base64-encoded image A data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method string getImageB() Obtain Base64-encoded image B data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setImageB(string $ImageB) Set Base64-encoded image B data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method string getUrlA() Obtain Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setUrlA(string $UrlA) Set Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method string getUrlB() Obtain Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setUrlB(string $UrlB) Set Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -85,6 +93,7 @@ class CompareFaceRequest extends AbstractModel
 {
     /**
      * @var string Base64-encoded image A data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      */
@@ -92,6 +101,7 @@ If there are multiple faces in the image, only the face with the largest size wi
 
     /**
      * @var string Base64-encoded image B data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      */
@@ -99,6 +109,7 @@ If there are multiple faces in the image, only the face with the largest size wi
 
     /**
      * @var string Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -109,6 +120,7 @@ If there are multiple faces in the image, only the face with the largest size wi
 
     /**
      * @var string Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -143,18 +155,22 @@ If the image quality does not meet the requirement, the returned result will pro
 
     /**
      * @param string $ImageA Base64-encoded image A data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param string $ImageB Base64-encoded image B data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param string $UrlA Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param string $UrlB Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.

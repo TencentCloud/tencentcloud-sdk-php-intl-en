@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method string getActivityId() Obtain Scaling activity ID.
  * @method void setActivityId(string $ActivityId) Set Scaling activity ID.
- * @method string getActivityType() Obtain Scaling activity type. Value range:<br>
-<li>SCALE_OUT: scale-out <li>SCALE_IN: scale-in <li>ATTACH_INSTANCES: adding an instance <li>REMOVE_INSTANCES: terminating an instance <li>DETACH_INSTANCES: removing an instance <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminating an instance in the CVM console <li>REPLACE_UNHEALTHY_INSTANCE: replacing an unhealthy instance
- * @method void setActivityType(string $ActivityType) Set Scaling activity type. Value range:<br>
-<li>SCALE_OUT: scale-out <li>SCALE_IN: scale-in <li>ATTACH_INSTANCES: adding an instance <li>REMOVE_INSTANCES: terminating an instance <li>DETACH_INSTANCES: removing an instance <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminating an instance in the CVM console <li>REPLACE_UNHEALTHY_INSTANCE: replacing an unhealthy instance
+ * @method string getActivityType() Obtain Type of the scaling activity. Valid values:<br>
+<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
+<li>START_INSTANCES: starts an instance.
+<li>STOP_INSTANCES: stops an instance.
+ * @method void setActivityType(string $ActivityType) Set Type of the scaling activity. Valid values:<br>
+<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
+<li>START_INSTANCES: starts an instance.
+<li>STOP_INSTANCES: stops an instance.
  * @method string getStatusCode() Obtain Scaling activity status. Value range:<br>
 <li>INIT: initializing
 <li>RUNNING: running
@@ -74,8 +78,10 @@ class Activity extends AbstractModel
     public $ActivityId;
 
     /**
-     * @var string Scaling activity type. Value range:<br>
-<li>SCALE_OUT: scale-out <li>SCALE_IN: scale-in <li>ATTACH_INSTANCES: adding an instance <li>REMOVE_INSTANCES: terminating an instance <li>DETACH_INSTANCES: removing an instance <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminating an instance in the CVM console <li>REPLACE_UNHEALTHY_INSTANCE: replacing an unhealthy instance
+     * @var string Type of the scaling activity. Valid values:<br>
+<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
+<li>START_INSTANCES: starts an instance.
+<li>STOP_INSTANCES: stops an instance.
      */
     public $ActivityType;
 
@@ -138,8 +144,10 @@ class Activity extends AbstractModel
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ActivityId Scaling activity ID.
-     * @param string $ActivityType Scaling activity type. Value range:<br>
-<li>SCALE_OUT: scale-out <li>SCALE_IN: scale-in <li>ATTACH_INSTANCES: adding an instance <li>REMOVE_INSTANCES: terminating an instance <li>DETACH_INSTANCES: removing an instance <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminating an instance in the CVM console <li>REPLACE_UNHEALTHY_INSTANCE: replacing an unhealthy instance
+     * @param string $ActivityType Type of the scaling activity. Valid values:<br>
+<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
+<li>START_INSTANCES: starts an instance.
+<li>STOP_INSTANCES: stops an instance.
      * @param string $StatusCode Scaling activity status. Value range:<br>
 <li>INIT: initializing
 <li>RUNNING: running

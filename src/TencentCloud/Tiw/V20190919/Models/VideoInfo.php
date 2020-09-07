@@ -32,20 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoUrl(string $VideoUrl) Set Video file URL
  * @method string getVideoId() Obtain Video file ID
  * @method void setVideoId(string $VideoId) Set Video file ID
- * @method integer getVideoType() Obtain Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3)
- * @method void setVideoType(integer $VideoType) Set Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3)
+ * @method integer getVideoType() Obtain Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
+ * @method void setVideoType(integer $VideoType) Set Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
  * @method string getUserId() Obtain ID of the user to which the camera video or screen-sharing video belongs (whiteboard video: null, mixed stream video: tic_mixstream_<Room ID>_<Mixed stream layout type>, auxiliary video: tic_substream_user ID)
  * @method void setUserId(string $UserId) Set ID of the user to which the camera video or screen-sharing video belongs (whiteboard video: null, mixed stream video: tic_mixstream_<Room ID>_<Mixed stream layout type>, auxiliary video: tic_substream_user ID)
+ * @method integer getWidth() Obtain Width of the video resolution.
+ * @method void setWidth(integer $Width) Set Width of the video resolution.
+ * @method integer getHeight() Obtain Height of the video resolution.
+ * @method void setHeight(integer $Height) Set Height of the video resolution.
  */
 class VideoInfo extends AbstractModel
 {
@@ -80,12 +74,7 @@ class VideoInfo extends AbstractModel
     public $VideoId;
 
     /**
-     * @var integer Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3)
+     * @var integer Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
      */
     public $VideoType;
 
@@ -95,19 +84,26 @@ class VideoInfo extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer Width of the video resolution.
+     */
+    public $Width;
+
+    /**
+     * @var integer Height of the video resolution.
+     */
+    public $Height;
+
+    /**
      * @param integer $VideoPlayTime Video playback start time, in milliseconds
      * @param integer $VideoSize Video size, in bytes
      * @param string $VideoFormat Video format
      * @param integer $VideoDuration Video playback duration, in milliseconds
      * @param string $VideoUrl Video file URL
      * @param string $VideoId Video file ID
-     * @param integer $VideoType Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3)
+     * @param integer $VideoType Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
      * @param string $UserId ID of the user to which the camera video or screen-sharing video belongs (whiteboard video: null, mixed stream video: tic_mixstream_<Room ID>_<Mixed stream layout type>, auxiliary video: tic_substream_user ID)
+     * @param integer $Width Width of the video resolution.
+     * @param integer $Height Height of the video resolution.
      */
     function __construct()
     {
@@ -152,6 +148,14 @@ class VideoInfo extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
         }
     }
 }

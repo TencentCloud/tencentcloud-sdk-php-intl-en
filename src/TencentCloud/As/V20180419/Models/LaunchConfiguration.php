@@ -76,10 +76,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) Set Value of InstanceTypesCheckPolicy upon the last operation.
  * @method HostNameSettings getHostNameSettings() Obtain CVM HostName settings.
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM HostName settings.
- * @method InstanceNameSettings getInstanceNameSettings() Obtain 
- * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set 
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain 
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set 
+ * @method InstanceNameSettings getInstanceNameSettings() Obtain Settings of CVM instance names.
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Settings of CVM instance names.
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -208,12 +208,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HostNameSettings;
 
     /**
-     * @var InstanceNameSettings 
+     * @var InstanceNameSettings Settings of CVM instance names.
      */
     public $InstanceNameSettings;
 
     /**
-     * @var InstanceChargePrepaid 
+     * @var InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      */
     public $InstanceChargePrepaid;
 
@@ -246,8 +246,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CamRoleName CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
      * @param string $LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
      * @param HostNameSettings $HostNameSettings CVM HostName settings.
-     * @param InstanceNameSettings $InstanceNameSettings 
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 
+     * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names.
+     * @param InstanceChargePrepaid $InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      */
     function __construct()
     {

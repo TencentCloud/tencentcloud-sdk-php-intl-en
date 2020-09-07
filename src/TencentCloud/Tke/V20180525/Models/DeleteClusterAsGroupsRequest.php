@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterAsGroups request structure.
  *
- * @method string getClusterId() Obtain The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
- * @method void setClusterId(string $ClusterId) Set The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+ * @method string getClusterId() Obtain The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
+ * @method void setClusterId(string $ClusterId) Set The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
  * @method array getAutoScalingGroupIds() Obtain Cluster scaling group ID list
  * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set Cluster scaling group ID list
  * @method boolean getKeepInstance() Obtain Whether to keep nodes in the scaling group. Default to **false** (not keep)
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteClusterAsGroupsRequest extends AbstractModel
 {
     /**
-     * @var string The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     * @var string The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
      */
     public $ClusterId;
 
@@ -45,7 +45,7 @@ class DeleteClusterAsGroupsRequest extends AbstractModel
     public $KeepInstance;
 
     /**
-     * @param string $ClusterId The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     * @param string $ClusterId The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
      * @param array $AutoScalingGroupIds Cluster scaling group ID list
      * @param boolean $KeepInstance Whether to keep nodes in the scaling group. Default to **false** (not keep)
      */

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopyPerson request structure.
  *
- * @method string getPersonId() Obtain Person ID
- * @method void setPersonId(string $PersonId) Set Person ID
- * @method array getGroupIds() Obtain List of the groups to add to.
- * @method void setGroupIds(array $GroupIds) Set List of the groups to add to.
+ * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API
+ * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API
+ * @method array getGroupIds() Obtain List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
+ * @method void setGroupIds(array $GroupIds) Set List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
  */
 class CopyPersonRequest extends AbstractModel
 {
     /**
-     * @var string Person ID
+     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public $PersonId;
 
     /**
-     * @var array List of the groups to add to.
+     * @var array List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
      */
     public $GroupIds;
 
     /**
-     * @param string $PersonId Person ID
-     * @param array $GroupIds List of the groups to add to.
+     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @param array $GroupIds List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
      */
     function __construct()
     {

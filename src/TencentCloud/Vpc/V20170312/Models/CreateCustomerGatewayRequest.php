@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerGatewayName(string $CustomerGatewayName) Set Customer gateway can be named freely, but the maximum length is 60 characters.
  * @method string getIpAddress() Obtain Customer gateway public IP.
  * @method void setIpAddress(string $IpAddress) Set Customer gateway public IP.
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateCustomerGatewayRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateCustomerGatewayRequest extends AbstractModel
     public $IpAddress;
 
     /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
+    /**
      * @param string $CustomerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
      * @param string $IpAddress Customer gateway public IP.
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateCustomerGatewayRequest extends AbstractModel
 
         if (array_key_exists("IpAddress",$param) and $param["IpAddress"] !== null) {
             $this->IpAddress = $param["IpAddress"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

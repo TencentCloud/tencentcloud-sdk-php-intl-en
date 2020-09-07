@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security group policy object
  *
- * @method integer getPolicyIndex() Obtain Security group policy index number.
- * @method void setPolicyIndex(integer $PolicyIndex) Set Security group policy index number.
- * @method string getProtocol() Obtain Protocol. Values: TCP, UDP, ICMP
- * @method void setProtocol(string $Protocol) Set Protocol. Values: TCP, UDP, ICMP
+ * @method integer getPolicyIndex() Obtain The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
+ * @method void setPolicyIndex(integer $PolicyIndex) Set The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
+ * @method string getProtocol() Obtain Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
+ * @method void setProtocol(string $Protocol) Set Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
  * @method string getPort() Obtain Port (all, discrete port, range).
  * @method void setPort(string $Port) Set Port (all, discrete port, range).
  * @method ServiceTemplateSpecification getServiceTemplate() Obtain Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
 class SecurityGroupPolicy extends AbstractModel
 {
     /**
-     * @var integer Security group policy index number.
+     * @var integer The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
      */
     public $PolicyIndex;
 
     /**
-     * @var string Protocol. Values: TCP, UDP, ICMP
+     * @var string Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
      */
     public $Protocol;
 
@@ -101,8 +101,8 @@ class SecurityGroupPolicy extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @param integer $PolicyIndex Security group policy index number.
-     * @param string $Protocol Protocol. Values: TCP, UDP, ICMP
+     * @param integer $PolicyIndex The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
+     * @param string $Protocol Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
      * @param string $Port Port (all, discrete port, range).
      * @param ServiceTemplateSpecification $ServiceTemplate Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
      * @param string $CidrBlock IP range or IP (mutually exclusive).

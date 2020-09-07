@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
- * @method array getPublicIpAddresses() Obtain The array of EIPs bound to the NAT gateway.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The array of EIPs bound to the NAT gateway.
+ * @method array getPublicIpAddresses() Obtain Array of the EIPs to be unbound from the NAT gateway.
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Array of the EIPs to be unbound from the NAT gateway.
  */
 class DisassociateNatGatewayAddressRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DisassociateNatGatewayAddressRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var array The array of EIPs bound to the NAT gateway.
+     * @var array Array of the EIPs to be unbound from the NAT gateway.
      */
     public $PublicIpAddresses;
 
     /**
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
-     * @param array $PublicIpAddresses The array of EIPs bound to the NAT gateway.
+     * @param array $PublicIpAddresses Array of the EIPs to be unbound from the NAT gateway.
      */
     function __construct()
     {

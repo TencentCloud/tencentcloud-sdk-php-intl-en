@@ -52,6 +52,8 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
  * @method void setVipIsp(string $VipIsp) Set This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
  * @method array getTags() Obtain Tags a CLB instance when purchasing it
  * @method void setTags(array $Tags) Set Tags a CLB instance when purchasing it
+ * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+ * @method void setClientToken(string $ClientToken) Set A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -124,6 +126,11 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $Tags;
 
     /**
+     * @var string A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+     */
+    public $ClientToken;
+
+    /**
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
@@ -140,6 +147,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @param InternetAccessible $InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
      * @param string $VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
      * @param array $Tags Tags a CLB instance when purchasing it
+     * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
      */
     function __construct()
     {
@@ -210,6 +218,10 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

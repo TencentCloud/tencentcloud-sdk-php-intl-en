@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- * @method integer getTemplateId() Obtain Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
- * @method void setTemplateId(integer $TemplateId) Set Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+ * @method integer getTemplateId() Obtain Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
+ * @method void setTemplateId(integer $TemplateId) Set Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
  */
 class CreateLiveWatermarkRuleRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateLiveWatermarkRuleRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var integer Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+     * @var integer Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
      */
     public $TemplateId;
 
@@ -55,7 +55,7 @@ class CreateLiveWatermarkRuleRequest extends AbstractModel
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      * @param string $StreamName Stream name.
-     * @param integer $TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+     * @param integer $TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
      */
     function __construct()
     {

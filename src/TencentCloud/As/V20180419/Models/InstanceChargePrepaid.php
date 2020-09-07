@@ -18,7 +18,7 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This describes the billing method of an instance
+ * This API is used to describe the billing mode of an instance.
  *
  * @method integer getPeriod() Obtain Purchased usage period of an instance in months. Value range: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
  * @method void setPeriod(integer $Period) Set Purchased usage period of an instance in months. Value range: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.

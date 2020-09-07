@@ -25,11 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() Obtain Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
  * @method void setFilters(array $Filters) Set Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
  * @method integer getOffset() Obtain Offset. The default value is 0.
  * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
  * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
@@ -46,7 +48,8 @@ class DescribeNatGatewaysRequest extends AbstractModel
      * @var array Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
      */
     public $Filters;
 
@@ -65,7 +68,8 @@ class DescribeNatGatewaysRequest extends AbstractModel
      * @param array $Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
      * @param integer $Offset Offset. The default value is 0.
      * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */

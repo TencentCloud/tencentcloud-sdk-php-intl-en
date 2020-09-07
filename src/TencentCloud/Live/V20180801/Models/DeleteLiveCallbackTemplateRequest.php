@@ -21,25 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * DeleteLiveCallbackTemplate request structure.
  *
  * @method integer getTemplateId() Obtain Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
  */
 class DeleteLiveCallbackTemplateRequest extends AbstractModel
 {
     /**
      * @var integer Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
      */
     public $TemplateId;
 
     /**
      * @param integer $TemplateId Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
      */
     function __construct()
     {

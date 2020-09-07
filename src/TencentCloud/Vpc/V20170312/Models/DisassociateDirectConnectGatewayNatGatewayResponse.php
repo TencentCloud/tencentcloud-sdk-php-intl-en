@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetCheckSimilarPersonJobIdList response structure.
+ * DisassociateDirectConnectGatewayNatGateway response structure.
  *
- * @method array getJobIdInfos() Obtain List of duplicate person check task information.
- * @method void setJobIdInfos(array $JobIdInfos) Set List of duplicate person check task information.
- * @method integer getJobIdNum() Obtain Total number of duplicate check tasks.
- * @method void setJobIdNum(integer $JobIdNum) Set Total number of duplicate check tasks.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
+class DisassociateDirectConnectGatewayNatGatewayResponse extends AbstractModel
 {
-    /**
-     * @var array List of duplicate person check task information.
-     */
-    public $JobIdInfos;
-
-    /**
-     * @var integer Total number of duplicate check tasks.
-     */
-    public $JobIdNum;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param array $JobIdInfos List of duplicate person check task information.
-     * @param integer $JobIdNum Total number of duplicate check tasks.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,19 +46,6 @@ class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobIdInfos",$param) and $param["JobIdInfos"] !== null) {
-            $this->JobIdInfos = [];
-            foreach ($param["JobIdInfos"] as $key => $value){
-                $obj = new JobIdInfo();
-                $obj->deserialize($value);
-                array_push($this->JobIdInfos, $obj);
-            }
-        }
-
-        if (array_key_exists("JobIdNum",$param) and $param["JobIdNum"] !== null) {
-            $this->JobIdNum = $param["JobIdNum"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

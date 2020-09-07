@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
+ * @method string getSubnetId() Obtain SubnetId
+ * @method void setSubnetId(string $SubnetId) Set SubnetId
  * @method string getDBInstanceId() Obtain Instance ID
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
  * @method string getDBInstanceName() Obtain Instance name
  * @method void setDBInstanceName(string $DBInstanceName) Set Instance name
- * @method string getDBInstanceStatus() Obtain Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
- * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+ * @method string getDBInstanceStatus() Obtain Instance status
+ * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status
  * @method integer getDBInstanceMemory() Obtain Assigned instance memory size in GB
  * @method void setDBInstanceMemory(integer $DBInstanceMemory) Set Assigned instance memory size in GB
  * @method integer getDBInstanceStorage() Obtain Assigned instance storage capacity in GB
@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceCpu(integer $DBInstanceCpu) Set Number of assigned CPUs
  * @method string getDBInstanceClass() Obtain Purchasable specification ID
  * @method void setDBInstanceClass(string $DBInstanceClass) Set Purchasable specification ID
- * @method string getDBInstanceType() Obtain Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
- * @method void setDBInstanceType(string $DBInstanceType) Set Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
- * @method string getDBInstanceVersion() Obtain Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
- * @method void setDBInstanceVersion(string $DBInstanceVersion) Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+ * @method string getDBInstanceType() Obtain Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+ * @method void setDBInstanceType(string $DBInstanceType) Set Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+ * @method string getDBInstanceVersion() Obtain Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+ * @method void setDBInstanceVersion(string $DBInstanceVersion) Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
  * @method string getDBCharset() Obtain Instance database character set
  * @method void setDBCharset(string $DBCharset) Set Instance database character set
  * @method string getDBVersion() Obtain PostgreSQL kernel version
@@ -72,8 +72,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) Set 
  * @method integer getUid() Obtain 
  * @method void setUid(integer $Uid) Set 
- * @method integer getSupportIpv6() Obtain Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
- * @method void setSupportIpv6(integer $SupportIpv6) Set Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+ * @method integer getSupportIpv6() Obtain 
+ * @method void setSupportIpv6(integer $SupportIpv6) Set 
+ * @method array getTagList() Obtain The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTagList(array $TagList) Set The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -98,7 +102,7 @@ class DBInstance extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string SubnetId
      */
     public $SubnetId;
 
@@ -113,7 +117,7 @@ class DBInstance extends AbstractModel
     public $DBInstanceName;
 
     /**
-     * @var string Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+     * @var string Instance status
      */
     public $DBInstanceStatus;
 
@@ -138,12 +142,12 @@ class DBInstance extends AbstractModel
     public $DBInstanceClass;
 
     /**
-     * @var string Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * @var string Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
      */
     public $DBInstanceType;
 
     /**
-     * @var string Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+     * @var string Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
      */
     public $DBInstanceVersion;
 
@@ -208,25 +212,31 @@ class DBInstance extends AbstractModel
     public $Uid;
 
     /**
-     * @var integer Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * @var integer 
      */
     public $SupportIpv6;
+
+    /**
+     * @var array The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $TagList;
 
     /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
      * @param integer $ProjectId Project ID
      * @param string $VpcId VPC ID
-     * @param string $SubnetId Subnet ID
+     * @param string $SubnetId SubnetId
      * @param string $DBInstanceId Instance ID
      * @param string $DBInstanceName Instance name
-     * @param string $DBInstanceStatus Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+     * @param string $DBInstanceStatus Instance status
      * @param integer $DBInstanceMemory Assigned instance memory size in GB
      * @param integer $DBInstanceStorage Assigned instance storage capacity in GB
      * @param integer $DBInstanceCpu Number of assigned CPUs
      * @param string $DBInstanceClass Purchasable specification ID
-     * @param string $DBInstanceType Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
-     * @param string $DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+     * @param string $DBInstanceType Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * @param string $DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
      * @param string $DBCharset Instance database character set
      * @param string $DBVersion PostgreSQL kernel version
      * @param string $CreateTime Instance creation time
@@ -239,7 +249,9 @@ class DBInstance extends AbstractModel
      * @param string $Type Machine type
      * @param integer $AppId 
      * @param integer $Uid 
-     * @param integer $SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * @param integer $SupportIpv6 
+     * @param array $TagList The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -365,6 +377,15 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("SupportIpv6",$param) and $param["SupportIpv6"] !== null) {
             $this->SupportIpv6 = $param["SupportIpv6"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

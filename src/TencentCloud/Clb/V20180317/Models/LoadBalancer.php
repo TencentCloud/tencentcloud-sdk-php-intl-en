@@ -170,13 +170,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIPv6Mode(string $IPv6Mode) Set This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getSnatPro() Obtain Whether to enable SnatPro
+ * @method boolean getSnatPro() Obtain Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSnatPro(boolean $SnatPro) Set Whether to enable SnatPro
+ * @method void setSnatPro(boolean $SnatPro) Set Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getSnatIps() Obtain SnatIp list after SnatPro load balancing is enabled
+ * @method array getSnatIps() Obtain `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSnatIps(array $SnatIps) Set SnatIp list after SnatPro load balancing is enabled
+ * @method void setSnatIps(array $SnatIps) Set `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getSlaType() Obtain Performance guarantee specification
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -190,10 +190,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsBlockTime(string $IsBlockTime) Set Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getLocalBgp() Obtain Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained
- * @method void setLocalBgp(boolean $LocalBgp) Set Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained
+ * @method boolean getLocalBgp() Obtain 
+ * @method void setLocalBgp(boolean $LocalBgp) Set 
+ * @method string getClusterTag() Obtain Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterTag(string $ClusterTag) Set Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getMixIpTarget() Obtain If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setMixIpTarget(boolean $MixIpTarget) Set If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -429,13 +435,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IPv6Mode;
 
     /**
-     * @var boolean Whether to enable SnatPro
+     * @var boolean Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SnatPro;
 
     /**
-     * @var array SnatIp list after SnatPro load balancing is enabled
+     * @var array `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SnatIps;
@@ -459,10 +465,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IsBlockTime;
 
     /**
-     * @var boolean Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained
+     * @var boolean 
      */
     public $LocalBgp;
+
+    /**
+     * @var string Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClusterTag;
+
+    /**
+     * @var boolean If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $MixIpTarget;
 
     /**
      * @param string $LoadBalancerId CLB instance ID.
@@ -540,9 +557,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SnatPro Whether to enable SnatPro
+     * @param boolean $SnatPro Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $SnatIps SnatIp list after SnatPro load balancing is enabled
+     * @param array $SnatIps `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SlaType Performance guarantee specification
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -550,8 +567,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IsBlockTime Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $LocalBgp Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained
+     * @param boolean $LocalBgp 
+     * @param string $ClusterTag Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -765,6 +785,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LocalBgp",$param) and $param["LocalBgp"] !== null) {
             $this->LocalBgp = $param["LocalBgp"];
+        }
+
+        if (array_key_exists("ClusterTag",$param) and $param["ClusterTag"] !== null) {
+            $this->ClusterTag = $param["ClusterTag"];
+        }
+
+        if (array_key_exists("MixIpTarget",$param) and $param["MixIpTarget"] !== null) {
+            $this->MixIpTarget = $param["MixIpTarget"];
         }
     }
 }

@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HLS-specific recording parameter
  *
- * @method integer getFlowContinueDuration() Obtain HLS timeout period.
- * @method void setFlowContinueDuration(integer $FlowContinueDuration) Set HLS timeout period.
+ * @method integer getFlowContinueDuration() Obtain Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
+ * @method void setFlowContinueDuration(integer $FlowContinueDuration) Set Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
  */
 class HlsSpecialParam extends AbstractModel
 {
     /**
-     * @var integer HLS timeout period.
+     * @var integer Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
      */
     public $FlowContinueDuration;
 
     /**
-     * @param integer $FlowContinueDuration HLS timeout period.
+     * @param integer $FlowContinueDuration Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
      */
     function __construct()
     {

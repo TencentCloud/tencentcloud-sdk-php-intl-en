@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRWPermission(string $RWPermission) Set Read/write permission. Valid values: RO (read-only), RW (read & write). Default value: RO
  * @method string getUserPermission() Obtain User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
  * @method void setUserPermission(string $UserPermission) Set User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
- * @method integer getPriority() Obtain Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
- * @method void setPriority(integer $Priority) Set Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+ * @method integer getPriority() Obtain Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+ * @method void setPriority(integer $Priority) Set Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
  */
 class UpdateCfsRuleRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class UpdateCfsRuleRequest extends AbstractModel
     public $UserPermission;
 
     /**
-     * @var integer Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+     * @var integer Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
      */
     public $Priority;
 
@@ -71,7 +71,7 @@ class UpdateCfsRuleRequest extends AbstractModel
      * @param string $AuthClientIp You can enter a single IP or IP range, such as 10.1.10.11 or 10.10.1.0/24. The default visiting address is `*`, indicating that all IPs are allowed. Please note that you need to enter the CVM instance's private IP here.
      * @param string $RWPermission Read/write permission. Valid values: RO (read-only), RW (read & write). Default value: RO
      * @param string $UserPermission User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
-     * @param integer $Priority Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+     * @param integer $Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
      */
     function __construct()
     {

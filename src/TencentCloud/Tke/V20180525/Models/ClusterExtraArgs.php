@@ -18,12 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster primary custom parameter
+ * Cluster master custom parameter
  *
- * @method array getKubeAPIServer() Obtain kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setKubeAPIServer(array $KubeAPIServer) Set kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method array getKubeAPIServer() Obtain kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setKubeAPIServer(array $KubeAPIServer) Set kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method array getKubeControllerManager() Obtain kube-controller-manager custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setKubeControllerManager(array $KubeControllerManager) Set kube-controller-manager custom parameter
@@ -36,8 +36,8 @@ Note: this field may return null, indicating that no valid value is obtained.
 class ClusterExtraArgs extends AbstractModel
 {
     /**
-     * @var array kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var array kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $KubeAPIServer;
 
@@ -54,8 +54,8 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $KubeScheduler;
 
     /**
-     * @param array $KubeAPIServer kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param array $KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param array $KubeControllerManager kube-controller-manager custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
      * @param array $KubeScheduler kube-scheduler custom parameter

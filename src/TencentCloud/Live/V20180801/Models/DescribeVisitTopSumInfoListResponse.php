@@ -32,8 +32,8 @@ Default value: 20.
 Default value: 20.
  * @method string getTopIndex() Obtain Bandwidth metric. Valid values: "Domain", "StreamId".
  * @method void setTopIndex(string $TopIndex) Set Bandwidth metric. Valid values: "Domain", "StreamId".
- * @method string getOrderParam() Obtain Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
- * @method void setOrderParam(string $OrderParam) Set Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+ * @method string getOrderParam() Obtain Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
+ * @method void setOrderParam(string $OrderParam) Set Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
  * @method integer getTotalNum() Obtain Total number of results.
  * @method void setTotalNum(integer $TotalNum) Set Total number of results.
  * @method integer getTotalPage() Obtain Total number of result pages.
@@ -64,7 +64,7 @@ Default value: 20.
     public $TopIndex;
 
     /**
-     * @var string Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * @var string Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
      */
     public $OrderParam;
 
@@ -95,7 +95,7 @@ Default value: 1.
      * @param integer $PageSize Number of entries per page. Value range: [1,1000].
 Default value: 20.
      * @param string $TopIndex Bandwidth metric. Valid values: "Domain", "StreamId".
-     * @param string $OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * @param string $OrderParam Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
      * @param integer $TotalNum Total number of results.
      * @param integer $TotalPage Total number of result pages.
      * @param array $DataInfoList Data content.

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetSimilarPersonResult request structure.
+ * The information of tags associated with instances, including `TagKey` and `TagValue`
  *
- * @method string getJobId() Obtain Duplicate check task ID, which is used to query and get the progress and result of the task.
- * @method void setJobId(string $JobId) Set Duplicate check task ID, which is used to query and get the progress and result of the task.
+ * @method string getTagKey() Obtain Tag key
+ * @method void setTagKey(string $TagKey) Set Tag key
+ * @method string getTagValue() Obtain Tag value
+ * @method void setTagValue(string $TagValue) Set Tag value
  */
-class GetSimilarPersonResultRequest extends AbstractModel
+class Tag extends AbstractModel
 {
     /**
-     * @var string Duplicate check task ID, which is used to query and get the progress and result of the task.
+     * @var string Tag key
      */
-    public $JobId;
+    public $TagKey;
 
     /**
-     * @param string $JobId Duplicate check task ID, which is used to query and get the progress and result of the task.
+     * @var string Tag value
+     */
+    public $TagValue;
+
+    /**
+     * @param string $TagKey Tag key
+     * @param string $TagValue Tag value
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class GetSimilarPersonResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

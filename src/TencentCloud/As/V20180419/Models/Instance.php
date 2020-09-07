@@ -28,8 +28,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
  * @method string getLaunchConfigurationName() Obtain Launch configuration name
  * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Launch configuration name
- * @method string getLifeCycleState() Obtain Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
- * @method void setLifeCycleState(string $LifeCycleState) Set Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+ * @method string getLifeCycleState() Obtain Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped.
+ * @method void setLifeCycleState(string $LifeCycleState) Set Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped.
  * @method string getHealthStatus() Obtain Health status. Value range: HEALTHY, UNHEALTHY
  * @method void setHealthStatus(string $HealthStatus) Set Health status. Value range: HEALTHY, UNHEALTHY
  * @method boolean getProtectedFromScaleIn() Obtain Whether to add scale-in protection
@@ -70,7 +96,20 @@ class Instance extends AbstractModel
     public $LaunchConfigurationName;
 
     /**
-     * @var string Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+     * @var string Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped.
      */
     public $LifeCycleState;
 
@@ -119,7 +158,20 @@ class Instance extends AbstractModel
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $LaunchConfigurationName Launch configuration name
-     * @param string $LifeCycleState Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+     * @param string $LifeCycleState Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped.
      * @param string $HealthStatus Health status. Value range: HEALTHY, UNHEALTHY
      * @param boolean $ProtectedFromScaleIn Whether to add scale-in protection
      * @param string $Zone Availability zone

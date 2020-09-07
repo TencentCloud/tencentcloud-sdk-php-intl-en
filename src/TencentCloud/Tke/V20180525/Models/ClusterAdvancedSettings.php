@@ -36,8 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) Set Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
  * @method boolean getDeletionProtection() Obtain 
  * @method void setDeletionProtection(boolean $DeletionProtection) Set 
- * @method string getKubeProxyMode() Obtain Cluster network proxy model
- * @method void setKubeProxyMode(string $KubeProxyMode) Set Cluster network proxy model
+ * @method string getKubeProxyMode() Obtain 
+ * @method void setKubeProxyMode(string $KubeProxyMode) Set 
+ * @method boolean getAuditEnabled() Obtain Indicates whether to enable auditing
+ * @method void setAuditEnabled(boolean $AuditEnabled) Set Indicates whether to enable auditing
+ * @method string getAuditLogsetId() Obtain Specifies the ID of logset to which the audit logs are uploaded.
+ * @method void setAuditLogsetId(string $AuditLogsetId) Set Specifies the ID of logset to which the audit logs are uploaded.
+ * @method string getAuditLogTopicId() Obtain Specifies the ID of topic to which the audit logs are uploaded.
+ * @method void setAuditLogTopicId(string $AuditLogTopicId) Set Specifies the ID of topic to which the audit logs are uploaded.
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -82,9 +88,24 @@ class ClusterAdvancedSettings extends AbstractModel
     public $DeletionProtection;
 
     /**
-     * @var string Cluster network proxy model
+     * @var string 
      */
     public $KubeProxyMode;
+
+    /**
+     * @var boolean Indicates whether to enable auditing
+     */
+    public $AuditEnabled;
+
+    /**
+     * @var string Specifies the ID of logset to which the audit logs are uploaded.
+     */
+    public $AuditLogsetId;
+
+    /**
+     * @var string Specifies the ID of topic to which the audit logs are uploaded.
+     */
+    public $AuditLogTopicId;
 
     /**
      * @param boolean $IPVS Whether IPVS is enabled
@@ -95,7 +116,10 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param string $NetworkType Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
      * @param boolean $IsNonStaticIpMode Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
      * @param boolean $DeletionProtection 
-     * @param string $KubeProxyMode Cluster network proxy model
+     * @param string $KubeProxyMode 
+     * @param boolean $AuditEnabled Indicates whether to enable auditing
+     * @param string $AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
+     * @param string $AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
      */
     function __construct()
     {
@@ -145,6 +169,18 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("KubeProxyMode",$param) and $param["KubeProxyMode"] !== null) {
             $this->KubeProxyMode = $param["KubeProxyMode"];
+        }
+
+        if (array_key_exists("AuditEnabled",$param) and $param["AuditEnabled"] !== null) {
+            $this->AuditEnabled = $param["AuditEnabled"];
+        }
+
+        if (array_key_exists("AuditLogsetId",$param) and $param["AuditLogsetId"] !== null) {
+            $this->AuditLogsetId = $param["AuditLogsetId"];
+        }
+
+        if (array_key_exists("AuditLogTopicId",$param) and $param["AuditLogTopicId"] !== null) {
+            $this->AuditLogTopicId = $param["AuditLogTopicId"];
         }
     }
 }

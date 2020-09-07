@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitScript(string $InitScript) Set Base64-encoded string of the launch script.
  * @method array getZones() Obtain List of availability zones.
  * @method void setZones(array $Zones) Set List of availability zones.
- * @method string getVpcId() Obtain VpcId.
- * @method void setVpcId(string $VpcId) Set VpcId.
+ * @method string getVpcId() Obtain VPC ID.
+ * @method void setVpcId(string $VpcId) Set VPC ID.
  * @method array getSubnetIds() Obtain List of subnets.
  * @method void setSubnetIds(array $SubnetIds) Set List of subnets.
  * @method string getInstanceName() Obtain Instance display name.
@@ -66,7 +66,7 @@ class CreatePaiInstanceRequest extends AbstractModel
     public $Zones;
 
     /**
-     * @var string VpcId.
+     * @var string VPC ID.
      */
     public $VpcId;
 
@@ -105,7 +105,7 @@ class CreatePaiInstanceRequest extends AbstractModel
      * @param InternetAccessible $InternetAccessible Information of the public network bandwidth configuration.
      * @param string $InitScript Base64-encoded string of the launch script.
      * @param array $Zones List of availability zones.
-     * @param string $VpcId VpcId.
+     * @param string $VpcId VPC ID.
      * @param array $SubnetIds List of subnets.
      * @param string $InstanceName Instance display name.
      * @param array $InstanceTypes List of instance models.

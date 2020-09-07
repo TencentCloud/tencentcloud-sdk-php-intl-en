@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterCIDRSettings(ClusterCIDRSettings $ClusterCIDRSettings) Set Container networking configuration information for the cluster
  * @method string getClusterType() Obtain Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
  * @method void setClusterType(string $ClusterType) Set Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
- * @method array getRunInstancesForNode() Obtain Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
- * @method void setRunInstancesForNode(array $RunInstancesForNode) Set Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
+ * @method array getRunInstancesForNode() Obtain Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
+ * @method void setRunInstancesForNode(array $RunInstancesForNode) Set Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
  * @method ClusterBasicSettings getClusterBasicSettings() Obtain Basic configuration information of the cluster
  * @method void setClusterBasicSettings(ClusterBasicSettings $ClusterBasicSettings) Set Basic configuration information of the cluster
  * @method ClusterAdvancedSettings getClusterAdvancedSettings() Obtain Advanced configuration information of the cluster
@@ -50,7 +50,7 @@ class CreateClusterRequest extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
+     * @var array Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
      */
     public $RunInstancesForNode;
 
@@ -82,7 +82,7 @@ class CreateClusterRequest extends AbstractModel
     /**
      * @param ClusterCIDRSettings $ClusterCIDRSettings Container networking configuration information for the cluster
      * @param string $ClusterType Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
-     * @param array $RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
+     * @param array $RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
      * @param ClusterBasicSettings $ClusterBasicSettings Basic configuration information of the cluster
      * @param ClusterAdvancedSettings $ClusterAdvancedSettings Advanced configuration information of the cluster
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Advanced configuration information of the node

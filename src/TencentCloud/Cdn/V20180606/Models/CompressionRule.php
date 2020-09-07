@@ -42,11 +42,11 @@ The maximum value is 30 MB
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getAlgorithms() Obtain File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAlgorithms(array $Algorithms) Set File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class CompressionRule extends AbstractModel
@@ -80,7 +80,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @var array File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Algorithms;
@@ -98,7 +98,7 @@ The maximum value is 30 MB
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Algorithms File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

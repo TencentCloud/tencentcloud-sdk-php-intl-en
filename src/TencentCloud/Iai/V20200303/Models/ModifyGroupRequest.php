@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGroup request structure.
  *
- * @method string getGroupId() Obtain Group ID
- * @method void setGroupId(string $GroupId) Set Group ID
+ * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API
+ * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API
  * @method string getGroupName() Obtain Group name
  * @method void setGroupName(string $GroupName) Set Group name
  * @method array getGroupExDescriptionInfos() Obtain Custom description field of the group to be modified, which is a `key-value`
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyGroupRequest extends AbstractModel
 {
     /**
-     * @var string Group ID
+     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API
      */
     public $GroupId;
 
@@ -52,7 +52,7 @@ class ModifyGroupRequest extends AbstractModel
     public $Tag;
 
     /**
-     * @param string $GroupId Group ID
+     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
      * @param string $GroupName Group name
      * @param array $GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value`
      * @param string $Tag Group remarks

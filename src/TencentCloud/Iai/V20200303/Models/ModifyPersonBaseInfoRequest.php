@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonBaseInfo request structure.
  *
- * @method string getPersonId() Obtain Person ID
- * @method void setPersonId(string $PersonId) Set Person ID
+ * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API
+ * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API
  * @method string getPersonName() Obtain Name of the person to be modified
  * @method void setPersonName(string $PersonName) Set Name of the person to be modified
- * @method integer getGender() Obtain Gender of the person to be modified
- * @method void setGender(integer $Gender) Set Gender of the person to be modified
+ * @method integer getGender() Obtain Gender of the person to be modified. 1: male; 2: female
+ * @method void setGender(integer $Gender) Set Gender of the person to be modified. 1: male; 2: female
  */
 class ModifyPersonBaseInfoRequest extends AbstractModel
 {
     /**
-     * @var string Person ID
+     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public $PersonId;
 
@@ -40,14 +40,14 @@ class ModifyPersonBaseInfoRequest extends AbstractModel
     public $PersonName;
 
     /**
-     * @var integer Gender of the person to be modified
+     * @var integer Gender of the person to be modified. 1: male; 2: female
      */
     public $Gender;
 
     /**
-     * @param string $PersonId Person ID
+     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      * @param string $PersonName Name of the person to be modified
-     * @param integer $Gender Gender of the person to be modified
+     * @param integer $Gender Gender of the person to be modified. 1: male; 2: female
      */
     function __construct()
     {

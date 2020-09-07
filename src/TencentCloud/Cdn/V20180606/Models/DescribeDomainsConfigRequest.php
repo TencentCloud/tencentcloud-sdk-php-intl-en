@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainsConfig request structure.
  *
- * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0 (the first page).
- * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0 (the first page).
+ * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
+ * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100. Maximum value: 1000.
  * @method array getFilters() Obtain Query condition filter, complex type.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDomainsConfigRequest extends AbstractModel
 {
     /**
-     * @var integer Offset for paginated queries. Default value: 0 (the first page).
+     * @var integer Offset for paginated queries. Default value: 0
      */
     public $Offset;
 
@@ -52,7 +52,7 @@ class DescribeDomainsConfigRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @param integer $Offset Offset for paginated queries. Default value: 0 (the first page).
+     * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
      * @param array $Filters Query condition filter, complex type.
      * @param Sort $Sort Sorting rules

@@ -18,28 +18,68 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Settings of CVM instance names.
  *
- * @method string getInstanceName() Obtain 
- * @method void setInstanceName(string $InstanceName) Set 
- * @method string getInstanceNameStyle() Obtain 
- * @method void setInstanceNameStyle(string $InstanceNameStyle) Set 
+ * @method string getInstanceName() Obtain CVM instance name.
+
+The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+
+Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceName(string $InstanceName) Set CVM instance name.
+
+The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+
+Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceNameStyle() Obtain Type of CVM instance name. Valid values: "ORIGINAL" and "UNIQUE". Default value: "ORIGINAL".
+
+ORIGINAL: Auto Scaling transfers the input parameter `InstanceName` to the CVM directly. The CVM may append a serial number to the `InstanceName`. The `InstanceName` of the instances within the auto scaling group may conflict.
+
+UNIQUE: the input parameter `InstanceName` is the prefix of an instance name. Auto Scaling and CVM expand it. The `InstanceName` of an instance in the auto scaling group is unique.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceNameStyle(string $InstanceNameStyle) Set Type of CVM instance name. Valid values: "ORIGINAL" and "UNIQUE". Default value: "ORIGINAL".
+
+ORIGINAL: Auto Scaling transfers the input parameter `InstanceName` to the CVM directly. The CVM may append a serial number to the `InstanceName`. The `InstanceName` of the instances within the auto scaling group may conflict.
+
+UNIQUE: the input parameter `InstanceName` is the prefix of an instance name. Auto Scaling and CVM expand it. The `InstanceName` of an instance in the auto scaling group is unique.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class InstanceNameSettings extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string CVM instance name.
+
+The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+
+Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceName;
 
     /**
-     * @var string 
+     * @var string Type of CVM instance name. Valid values: "ORIGINAL" and "UNIQUE". Default value: "ORIGINAL".
+
+ORIGINAL: Auto Scaling transfers the input parameter `InstanceName` to the CVM directly. The CVM may append a serial number to the `InstanceName`. The `InstanceName` of the instances within the auto scaling group may conflict.
+
+UNIQUE: the input parameter `InstanceName` is the prefix of an instance name. Auto Scaling and CVM expand it. The `InstanceName` of an instance in the auto scaling group is unique.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceNameStyle;
 
     /**
-     * @param string $InstanceName 
-     * @param string $InstanceNameStyle 
+     * @param string $InstanceName CVM instance name.
+
+The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+
+Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceNameStyle Type of CVM instance name. Valid values: "ORIGINAL" and "UNIQUE". Default value: "ORIGINAL".
+
+ORIGINAL: Auto Scaling transfers the input parameter `InstanceName` to the CVM directly. The CVM may append a serial number to the `InstanceName`. The `InstanceName` of the instances within the auto scaling group may conflict.
+
+UNIQUE: the input parameter `InstanceName` is the prefix of an instance name. Auto Scaling and CVM expand it. The `InstanceName` of an instance in the auto scaling group is unique.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

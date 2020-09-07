@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getUseMixCropCenter() Obtain 
  * @method void setUseMixCropCenter(integer $UseMixCropCenter) Set 
- * @method integer getAllowCopy() Obtain 
- * @method void setAllowCopy(integer $AllowCopy) Set 
+ * @method integer getAllowCopy() Obtain Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
+ * @method void setAllowCopy(integer $AllowCopy) Set Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
  */
 class CommonMixControlParams extends AbstractModel
 {
@@ -33,13 +35,15 @@ class CommonMixControlParams extends AbstractModel
     public $UseMixCropCenter;
 
     /**
-     * @var integer 
+     * @var integer Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
      */
     public $AllowCopy;
 
     /**
      * @param integer $UseMixCropCenter 
-     * @param integer $AllowCopy 
+     * @param integer $AllowCopy Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
      */
     function __construct()
     {

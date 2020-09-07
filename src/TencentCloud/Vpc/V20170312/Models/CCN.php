@@ -44,6 +44,8 @@ Note: This field may return null, indicating no valid value.
 Note: This field may return null, indicating no valid value.
  * @method array getTagSet() Obtain Tag key-value pairs.
  * @method void setTagSet(array $TagSet) Set Tag key-value pairs.
+ * @method boolean getRoutePriorityFlag() Obtain Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+ * @method void setRoutePriorityFlag(boolean $RoutePriorityFlag) Set Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
  */
 class CCN extends AbstractModel
 {
@@ -100,6 +102,11 @@ Note: This field may return null, indicating no valid value.
     public $TagSet;
 
     /**
+     * @var boolean Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+     */
+    public $RoutePriorityFlag;
+
+    /**
      * @param string $CcnId The unique ID of the CCN
      * @param string $CcnName The name of the CCN
      * @param string $CcnDescription The detailed information of the CCN
@@ -112,6 +119,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BandwidthLimitType The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
 Note: This field may return null, indicating no valid value.
      * @param array $TagSet Tag key-value pairs.
+     * @param boolean $RoutePriorityFlag Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ Note: This field may return null, indicating no valid value.
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("RoutePriorityFlag",$param) and $param["RoutePriorityFlag"] !== null) {
+            $this->RoutePriorityFlag = $param["RoutePriorityFlag"];
         }
     }
 }

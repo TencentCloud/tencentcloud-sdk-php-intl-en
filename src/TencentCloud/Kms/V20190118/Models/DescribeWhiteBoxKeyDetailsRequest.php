@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getKeyStatus() Obtain Filter: key status. 0: disabled, 1: enabled
  * @method void setKeyStatus(integer $KeyStatus) Set Filter: key status. 0: disabled, 1: enabled
+ * @method integer getOffset() Obtain This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
+ * @method void setOffset(integer $Offset) Set This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
+ * @method integer getLimit() Obtain This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 0, indicating not to paginate.
+ * @method void setLimit(integer $Limit) Set This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 0, indicating not to paginate.
+ * @method array getTagFilters() Obtain Tag filter condition
+ * @method void setTagFilters(array $TagFilters) Set Tag filter condition
  */
 class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel
     public $KeyStatus;
 
     /**
+     * @var integer This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
+     */
+    public $Offset;
+
+    /**
+     * @var integer This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 0, indicating not to paginate.
+     */
+    public $Limit;
+
+    /**
+     * @var array Tag filter condition
+     */
+    public $TagFilters;
+
+    /**
      * @param integer $KeyStatus Filter: key status. 0: disabled, 1: enabled
+     * @param integer $Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
+     * @param integer $Limit This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 0, indicating not to paginate.
+     * @param array $TagFilters Tag filter condition
      */
     function __construct()
     {
@@ -48,6 +72,23 @@ class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel
         }
         if (array_key_exists("KeyStatus",$param) and $param["KeyStatus"] !== null) {
             $this->KeyStatus = $param["KeyStatus"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

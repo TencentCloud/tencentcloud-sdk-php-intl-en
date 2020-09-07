@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getProtocols() Obtain Protocol and sale details
  * @method void setProtocols(array $Protocols) Set Protocol and sale details
- * @method string getType() Obtain Storage class. Valid values: SD (standard), HP (high-performance)
- * @method void setType(string $Type) Set Storage class. Valid values: SD (standard), HP (high-performance)
+ * @method string getType() Obtain Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+ * @method void setType(string $Type) Set Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+ * @method boolean getPrepayment() Obtain Indicates whether prepaid is supported. `true`: yes; `false`: no
+ * @method void setPrepayment(boolean $Prepayment) Set Indicates whether prepaid is supported. `true`: yes; `false`: no
  */
 class AvailableType extends AbstractModel
 {
@@ -33,13 +35,19 @@ class AvailableType extends AbstractModel
     public $Protocols;
 
     /**
-     * @var string Storage class. Valid values: SD (standard), HP (high-performance)
+     * @var string Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
      */
     public $Type;
 
     /**
+     * @var boolean Indicates whether prepaid is supported. `true`: yes; `false`: no
+     */
+    public $Prepayment;
+
+    /**
      * @param array $Protocols Protocol and sale details
-     * @param string $Type Storage class. Valid values: SD (standard), HP (high-performance)
+     * @param string $Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+     * @param boolean $Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class AvailableType extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Prepayment",$param) and $param["Prepayment"] !== null) {
+            $this->Prepayment = $param["Prepayment"];
         }
     }
 }

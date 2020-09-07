@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getAutoScalingGroupIds() Obtain Scaling group ID list. If this value is null, it indicates that all cluster-associated scaling groups are pulled.
  * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set Scaling group ID list. If this value is null, it indicates that all cluster-associated scaling groups are pulled.
- * @method integer getOffset() Obtain Offset. This value defaults to 0. For more information on Offset, see the relevant sections in API [Overview](https://cloud.tencent.com/document/api/213/15688).
- * @method void setOffset(integer $Offset) Set Offset. This value defaults to 0. For more information on Offset, see the relevant sections in API [Overview](https://cloud.tencent.com/document/api/213/15688).
- * @method integer getLimit() Obtain Number of returned results. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant sections in API [Overview](https://cloud.tencent.com/document/api/213/15688).
- * @method void setLimit(integer $Limit) Set Number of returned results. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant sections in API [Overview](https://cloud.tencent.com/document/api/213/15688).
+ * @method integer getOffset() Obtain Offset. This value defaults to 0. For more information on Offset, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+ * @method void setOffset(integer $Offset) Set Offset. This value defaults to 0. For more information on Offset, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+ * @method integer getLimit() Obtain Number of returned results. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+ * @method void setLimit(integer $Limit) Set Number of returned results. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  */
 class DescribeClusterAsGroupsRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DescribeClusterAsGroupsRequest extends AbstractModel
     public $AutoScalingGroupIds;
 
     /**
-     * @var integer Offset. This value defaults to 0. For more information on Offset, see the relevant sections in API [Overview](https://cloud.tencent.com/document/api/213/15688).
+     * @var integer Offset. This value defaults to 0. For more information on Offset, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant sections in API [Overview](https://cloud.tencent.com/document/api/213/15688).
+     * @var integer Number of returned results. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      */
     public $Limit;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param array $AutoScalingGroupIds Scaling group ID list. If this value is null, it indicates that all cluster-associated scaling groups are pulled.
-     * @param integer $Offset Offset. This value defaults to 0. For more information on Offset, see the relevant sections in API [Overview](https://cloud.tencent.com/document/api/213/15688).
-     * @param integer $Limit Number of returned results. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant sections in API [Overview](https://cloud.tencent.com/document/api/213/15688).
+     * @param integer $Offset Offset. This value defaults to 0. For more information on Offset, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+     * @param integer $Limit Number of returned results. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      */
     function __construct()
     {

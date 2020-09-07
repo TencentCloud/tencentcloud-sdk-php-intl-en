@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonBaseInfo request structure.
  *
- * @method string getPersonId() Obtain Person ID
- * @method void setPersonId(string $PersonId) Set Person ID
+ * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API
+ * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API
  */
 class GetPersonBaseInfoRequest extends AbstractModel
 {
     /**
-     * @var string Person ID
+     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public $PersonId;
 
     /**
-     * @param string $PersonId Person ID
+     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     function __construct()
     {

@@ -70,6 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) Set Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSessionType() Obtain Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionType(string $SessionType) Set Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getKeepaliveEnable() Obtain Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class Listener extends AbstractModel
 {
@@ -155,6 +163,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TargetGroup;
 
     /**
+     * @var string Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SessionType;
+
+    /**
+     * @var integer Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $KeepaliveEnable;
+
+    /**
      * @param string $ListenerId CLB listener ID
      * @param string $Protocol Listener protocol
      * @param integer $Port Listener port
@@ -180,6 +200,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param BasicTargetGroupInfo $TargetGroup Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $KeepaliveEnable Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -256,6 +280,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TargetGroup",$param) and $param["TargetGroup"] !== null) {
             $this->TargetGroup = new BasicTargetGroupInfo();
             $this->TargetGroup->deserialize($param["TargetGroup"]);
+        }
+
+        if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
+            $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
+            $this->KeepaliveEnable = $param["KeepaliveEnable"];
         }
     }
 }

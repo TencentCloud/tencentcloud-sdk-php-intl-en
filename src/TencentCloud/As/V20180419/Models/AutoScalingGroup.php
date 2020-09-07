@@ -68,10 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set List of auto scaling group tags
  * @method ServiceSettings getServiceSettings() Obtain Service settings
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings
- * @method integer getIpv6AddressCount() Obtain 
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set 
- * @method string getMultiZoneSubnetPolicy() Obtain 
- * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) Set 
+ * @method integer getIpv6AddressCount() Obtain The number of IPv6 addresses that an instance has.
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set The number of IPv6 addresses that an instance has.
+ * @method string getMultiZoneSubnetPolicy() Obtain The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+ * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) Set The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -196,12 +200,14 @@ class AutoScalingGroup extends AbstractModel
     public $ServiceSettings;
 
     /**
-     * @var integer 
+     * @var integer The number of IPv6 addresses that an instance has.
      */
     public $Ipv6AddressCount;
 
     /**
-     * @var string 
+     * @var string The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
      */
     public $MultiZoneSubnetPolicy;
 
@@ -230,8 +236,10 @@ class AutoScalingGroup extends AbstractModel
      * @param string $InActivityStatus Whether the auto scaling group is performing a scaling activity. `IN_ACTIVITY` indicates yes, and `NOT_IN_ACTIVITY` indicates no.
      * @param array $Tags List of auto scaling group tags
      * @param ServiceSettings $ServiceSettings Service settings
-     * @param integer $Ipv6AddressCount 
-     * @param string $MultiZoneSubnetPolicy 
+     * @param integer $Ipv6AddressCount The number of IPv6 addresses that an instance has.
+     * @param string $MultiZoneSubnetPolicy The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
      */
     function __construct()
     {

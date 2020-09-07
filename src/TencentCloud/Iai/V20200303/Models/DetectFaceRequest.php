@@ -31,15 +31,19 @@ Faces below the `MinFaceSize` value will not be detected.
 Default value: 34. You are recommended to keep it at or above 34.
 Faces below the `MinFaceSize` value will not be detected.
  * @method string getImage() Obtain Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setImage(string $Image) Set Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method string getUrl() Obtain Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setUrl(string $Url) Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -86,12 +90,14 @@ Faces below the `MinFaceSize` value will not be detected.
 
     /**
      * @var string Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      */
     public $Image;
 
     /**
      * @var string Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -134,8 +140,10 @@ This parameter is used to control the number of faces in the image to be detecte
 Default value: 34. You are recommended to keep it at or above 34.
 Faces below the `MinFaceSize` value will not be detected.
      * @param string $Image Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param string $Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.

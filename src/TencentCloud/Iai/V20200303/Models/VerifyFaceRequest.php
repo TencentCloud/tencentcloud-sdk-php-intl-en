@@ -23,18 +23,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPersonId() Obtain ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
  * @method void setPersonId(string $PersonId) Set ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
  * @method string getImage() Obtain Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setImage(string $Image) Set Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method string getUrl() Obtain Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
  * @method void setUrl(string $Url) Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -68,6 +72,7 @@ class VerifyFaceRequest extends AbstractModel
 
     /**
      * @var string Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      */
@@ -75,6 +80,7 @@ If there are multiple faces in the image, only the face with the largest size wi
 
     /**
      * @var string Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -103,9 +109,11 @@ If the image quality does not meet the requirement, the returned result will pro
     /**
      * @param string $PersonId ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
      * @param string $Image Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param string $Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.

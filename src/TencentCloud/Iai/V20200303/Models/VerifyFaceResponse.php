@@ -32,8 +32,8 @@ If you need to verify whether the faces in the two images are the same person, t
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person.
  * @method boolean getIsMatch() Obtain Whether the person in the image matches the `PersonId`.
  * @method void setIsMatch(boolean $IsMatch) Set Whether the person in the image matches the `PersonId`.
- * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition.
- * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition.
+ * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
+ * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,7 +54,7 @@ The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90,
     public $IsMatch;
 
     /**
-     * @var string Algorithm model version used for face recognition.
+     * @var string Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
      */
     public $FaceModelVersion;
 
@@ -70,7 +70,7 @@ The returned similarity score varies by algorithm version.
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person.
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person.
      * @param boolean $IsMatch Whether the person in the image matches the `PersonId`.
-     * @param string $FaceModelVersion Algorithm model version used for face recognition.
+     * @param string $FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -33,7 +33,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setOrigins(array $Origins) Set Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOriginType() Obtain Primary origin server type
+ * @method string getOriginType() Obtain Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -44,9 +44,9 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOriginType(string $OriginType) Set Primary origin server type
+ * @method void setOriginType(string $OriginType) Set Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -57,12 +57,12 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getServerName() Obtain Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+ * @method string getServerName() Obtain Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setServerName(string $ServerName) Set Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+ * @method void setServerName(string $ServerName) Set Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getCosPrivateAccess() Obtain When OriginType is COS, you can specify if access to private buckets is allowed.
@@ -97,13 +97,9 @@ domain: domain name type
 ip: IP list used as origin server
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getBackupServerName() Obtain Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
+ * @method string getBackupServerName() Obtain Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBackupServerName(string $BackupServerName) Set Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getBasePath() Obtain Origin-pull path
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBasePath(string $BasePath) Set Origin-pull path
+ * @method void setBackupServerName(string $BackupServerName) Set Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class Origin extends AbstractModel
@@ -116,7 +112,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Origins;
 
     /**
-     * @var string Primary origin server type
+     * @var string Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -127,13 +123,13 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OriginType;
 
     /**
-     * @var string Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+     * @var string Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -172,22 +168,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BackupOriginType;
 
     /**
-     * @var string Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
+     * @var string Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $BackupServerName;
 
     /**
-     * @var string Origin-pull path
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $BasePath;
-
-    /**
      * @param array $Origins Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginType Primary origin server type
+     * @param string $OriginType Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -198,9 +188,9 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ServerName Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+     * @param string $ServerName Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
@@ -219,9 +209,7 @@ domain: domain name type
 ip: IP list used as origin server
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $BasePath Origin-pull path
+     * @param string $BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -267,10 +255,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BackupServerName",$param) and $param["BackupServerName"] !== null) {
             $this->BackupServerName = $param["BackupServerName"];
-        }
-
-        if (array_key_exists("BasePath",$param) and $param["BasePath"] !== null) {
-            $this->BasePath = $param["BasePath"];
         }
     }
 }

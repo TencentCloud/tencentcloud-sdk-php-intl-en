@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`.
  * @method string getType() Obtain VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
  * @method void setType(string $Type) Set VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
      * @param integer $InternetMaxBandwidthOut The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps
@@ -80,6 +87,7 @@ class CreateVpnGatewayRequest extends AbstractModel
      * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      * @param string $Zone The availability zone, such as `ap-guangzhou-2`.
      * @param string $Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()
     {
@@ -121,6 +129,15 @@ class CreateVpnGatewayRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

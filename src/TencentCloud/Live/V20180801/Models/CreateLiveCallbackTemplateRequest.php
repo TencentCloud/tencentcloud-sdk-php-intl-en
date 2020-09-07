@@ -33,29 +33,33 @@ Only letters, digits, underscores, and hyphens can be contained.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
  * @method string getStreamBeginNotifyUrl() Obtain Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) Set Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method string getStreamEndNotifyUrl() Obtain Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) Set Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method string getRecordNotifyUrl() Obtain Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method void setRecordNotifyUrl(string $RecordNotifyUrl) Set Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method string getSnapshotNotifyUrl() Obtain Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) Set Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method string getPornCensorshipNotifyUrl() Obtain Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) Set Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
  * @method string getCallbackKey() Obtain Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method void setCallbackKey(string $CallbackKey) Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+ * @method string getStreamMixNotifyUrl() Obtain Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+ * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) Set Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -75,39 +79,45 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
      * @var string Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public $StreamBeginNotifyUrl;
 
     /**
      * @var string Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public $StreamEndNotifyUrl;
 
     /**
      * @var string Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public $RecordNotifyUrl;
 
     /**
      * @var string Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public $SnapshotNotifyUrl;
 
     /**
      * @var string Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
      */
     public $PornCensorshipNotifyUrl;
 
     /**
      * @var string Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public $CallbackKey;
+
+    /**
+     * @var string Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     */
+    public $StreamMixNotifyUrl;
 
     /**
      * @param string $TemplateName Template name.
@@ -117,17 +127,19 @@ Only letters, digits, underscores, and hyphens can be contained.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
      * @param string $StreamBeginNotifyUrl Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param string $StreamEndNotifyUrl Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param string $RecordNotifyUrl Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param string $SnapshotNotifyUrl Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param string $PornCensorshipNotifyUrl Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
      * @param string $CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     * @param string $StreamMixNotifyUrl Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     function __construct()
     {
@@ -172,6 +184,10 @@ Protocol document: [Event Message Notification](/document/product/267/32741).
 
         if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
             $this->CallbackKey = $param["CallbackKey"];
+        }
+
+        if (array_key_exists("StreamMixNotifyUrl",$param) and $param["StreamMixNotifyUrl"] !== null) {
+            $this->StreamMixNotifyUrl = $param["StreamMixNotifyUrl"];
         }
     }
 }

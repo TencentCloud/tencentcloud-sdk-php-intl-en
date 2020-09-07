@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) Set 
  * @method string getDescription() Obtain 
  * @method void setDescription(string $Description) Set 
- * @method string getKeyState() Obtain CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
- * @method void setKeyState(string $KeyState) Set CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+ * @method string getKeyState() Obtain CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+ * @method void setKeyState(string $KeyState) Set CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
  * @method string getKeyUsage() Obtain CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
  * @method void setKeyUsage(string $KeyUsage) Set CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
  * @method integer getType() Obtain CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
@@ -78,7 +78,7 @@ class KeyMetadata extends AbstractModel
     public $Description;
 
     /**
-     * @var string CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+     * @var string CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
      */
     public $KeyState;
 
@@ -139,7 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Alias 
      * @param integer $CreateTime 
      * @param string $Description 
-     * @param string $KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+     * @param string $KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
      * @param string $KeyUsage CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
      * @param integer $Type CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
      * @param integer $CreatorUin 

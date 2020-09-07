@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EstimateCheckSimilarPersonCostTime request structure.
+ * CancelKeyArchive request structure.
  *
- * @method array getGroupIds() Obtain List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups.
- * @method void setGroupIds(array $GroupIds) Set List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups.
+ * @method string getKeyId() Obtain Unique CMK ID
+ * @method void setKeyId(string $KeyId) Set Unique CMK ID
  */
-class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel
+class CancelKeyArchiveRequest extends AbstractModel
 {
     /**
-     * @var array List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups.
+     * @var string Unique CMK ID
      */
-    public $GroupIds;
+    public $KeyId;
 
     /**
-     * @param array $GroupIds List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups.
+     * @param string $KeyId Unique CMK ID
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ There can be up to 2 million persons in one group and up to 10 groups.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
-            $this->GroupIds = $param["GroupIds"];
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
         }
     }
 }

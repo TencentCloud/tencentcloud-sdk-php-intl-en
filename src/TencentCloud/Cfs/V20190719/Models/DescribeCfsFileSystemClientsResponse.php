@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EstimateCheckSimilarPersonCostTime response structure.
+ * DescribeCfsFileSystemClients response structure.
  *
- * @method integer getEstimatedTimeCost() Obtain Estimated duration of duplicate person check task in minutes.
- * @method void setEstimatedTimeCost(integer $EstimatedTimeCost) Set Estimated duration of duplicate person check task in minutes.
+ * @method array getClientList() Obtain Client list
+ * @method void setClientList(array $ClientList) Set Client list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel
+class DescribeCfsFileSystemClientsResponse extends AbstractModel
 {
     /**
-     * @var integer Estimated duration of duplicate person check task in minutes.
+     * @var array Client list
      */
-    public $EstimatedTimeCost;
+    public $ClientList;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $EstimatedTimeCost Estimated duration of duplicate person check task in minutes.
+     * @param array $ClientList Client list
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,13 @@ class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EstimatedTimeCost",$param) and $param["EstimatedTimeCost"] !== null) {
-            $this->EstimatedTimeCost = $param["EstimatedTimeCost"];
+        if (array_key_exists("ClientList",$param) and $param["ClientList"] !== null) {
+            $this->ClientList = [];
+            foreach ($param["ClientList"] as $key => $value){
+                $obj = new FileSystemClient();
+                $obj->deserialize($value);
+                array_push($this->ClientList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

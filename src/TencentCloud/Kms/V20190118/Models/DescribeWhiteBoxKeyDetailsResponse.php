@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getKeyInfos() Obtain White-box key information list
  * @method void setKeyInfos(array $KeyInfos) Set White-box key information list
+ * @method integer getTotalCount() Obtain Total number of keys
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of keys
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +37,20 @@ class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel
     public $KeyInfos;
 
     /**
+     * @var integer Total number of keys
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param array $KeyInfos White-box key information list
+     * @param integer $TotalCount Total number of keys
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +73,10 @@ class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->KeyInfos, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

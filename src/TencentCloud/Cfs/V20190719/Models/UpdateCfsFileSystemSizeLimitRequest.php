@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCfsFileSystemSizeLimit request structure.
  *
- * @method integer getFsLimit() Obtain File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
- * @method void setFsLimit(integer $FsLimit) Set File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+ * @method integer getFsLimit() Obtain File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+ * @method void setFsLimit(integer $FsLimit) Set File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
  */
 class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
 {
     /**
-     * @var integer File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+     * @var integer File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
      */
     public $FsLimit;
 
@@ -38,7 +38,7 @@ class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @param integer $FsLimit File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+     * @param integer $FsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
      * @param string $FileSystemId File system ID
      */
     function __construct()

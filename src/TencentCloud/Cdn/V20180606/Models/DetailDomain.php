@@ -56,9 +56,9 @@ media: streaming VOD acceleration
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of domain name
  * @method Origin getOrigin() Obtain Origin server configuration
  * @method void setOrigin(Origin $Origin) Set Origin server configuration
- * @method IpFilter getIpFilter() Obtain IP blocklist/allowlist configuration
+ * @method IpFilter getIpFilter() Obtain IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpFilter(IpFilter $IpFilter) Set IP blocklist/allowlist configuration
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method IpFreqLimit getIpFreqLimit() Obtain IP access frequency limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -212,9 +212,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setImageOptimization(ImageOptimization $ImageOptimization) Set 
  * @method UserAgentFilter getUserAgentFilter() Obtain 
  * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set 
- * @method AccessControl getAccessControl() Obtain Access control
+ * @method AccessControl getAccessControl() Obtain 
+ * @method void setAccessControl(AccessControl $AccessControl) Set 
+ * @method string getAdvance() Obtain Whether to support advanced configuration items
+on: supported
+off: not supported
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAccessControl(AccessControl $AccessControl) Set Access control
+ * @method void setAdvance(string $Advance) Set Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method UrlRedirect getUrlRedirect() Obtain URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) Set URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAccessPort() Obtain Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAccessPort(array $AccessPort) Set Access port configuration
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
@@ -278,7 +292,7 @@ media: streaming VOD acceleration
     public $Origin;
 
     /**
-     * @var IpFilter IP blocklist/allowlist configuration
+     * @var IpFilter IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IpFilter;
@@ -488,10 +502,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UserAgentFilter;
 
     /**
-     * @var AccessControl Access control
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AccessControl 
      */
     public $AccessControl;
+
+    /**
+     * @var string Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Advance;
+
+    /**
+     * @var UrlRedirect URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $UrlRedirect;
+
+    /**
+     * @var array Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AccessPort;
 
     /**
      * @param string $ResourceId Domain name ID
@@ -512,7 +545,7 @@ media: streaming VOD acceleration
      * @param string $CreateTime Domain name creation time
      * @param string $UpdateTime Last modified time of domain name
      * @param Origin $Origin Origin server configuration
-     * @param IpFilter $IpFilter IP blocklist/allowlist configuration
+     * @param IpFilter $IpFilter IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param IpFreqLimit $IpFreqLimit IP access frequency limit configuration
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -590,7 +623,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param SecurityConfig $SecurityConfig 
      * @param ImageOptimization $ImageOptimization 
      * @param UserAgentFilter $UserAgentFilter 
-     * @param AccessControl $AccessControl Access control
+     * @param AccessControl $AccessControl 
+     * @param string $Advance Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UrlRedirect $UrlRedirect URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AccessPort Access port configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -812,6 +852,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
             $this->AccessControl = new AccessControl();
             $this->AccessControl->deserialize($param["AccessControl"]);
+        }
+
+        if (array_key_exists("Advance",$param) and $param["Advance"] !== null) {
+            $this->Advance = $param["Advance"];
+        }
+
+        if (array_key_exists("UrlRedirect",$param) and $param["UrlRedirect"] !== null) {
+            $this->UrlRedirect = new UrlRedirect();
+            $this->UrlRedirect->deserialize($param["UrlRedirect"]);
+        }
+
+        if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
+            $this->AccessPort = $param["AccessPort"];
         }
     }
 }

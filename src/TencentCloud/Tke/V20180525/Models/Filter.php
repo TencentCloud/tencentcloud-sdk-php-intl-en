@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
 > * If there are multiple `Filter` parameters, they are evaluated using the logical `AND` operator.
 > * If a `Filter` contains multiple `Values`, they are evaluated using the logical `OR` operator.
 >
-> Take [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) as an example. You can use the following filters to query the instances in availability zone (`zone`) Guangzhou Zone 1 ***and*** whose billing plan (`instance-charge-type`) is pay-as-you-go:
+> Take [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) as an example. You can use the following filters to query the instances in availability zone (`zone`) Guangzhou Zone 1 ***and*** whose billing plan (`instance-charge-type`) is pay-as-you-go:
 ```
 Filters.0.Name=zone
 &Filters.0.Values.0=ap-guangzhou-1

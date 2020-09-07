@@ -30,8 +30,8 @@ The ID must be an unused ID in the SDK. The real-time recording service uses the
 The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
  * @method string getRecordUserSig() Obtain Signature corresponding to RecordUserId
  * @method void setRecordUserSig(string $RecordUserSig) Set Signature corresponding to RecordUserId
- * @method string getGroupId() Obtain IM group ID of the whiteboard. By default, it is the same as the room ID.
- * @method void setGroupId(string $GroupId) Set IM group ID of the whiteboard. By default, it is the same as the room ID.
+ * @method string getGroupId() Obtain (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
+ * @method void setGroupId(string $GroupId) Set (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
  * @method Concat getConcat() Obtain Real-time recording video splicing parameter
  * @method void setConcat(Concat $Concat) Set Real-time recording video splicing parameter
  * @method Whiteboard getWhiteboard() Obtain Real-time recording whiteboard parameter, such as the whiteboard width and height
@@ -52,6 +52,8 @@ List of possible values:
 MIX_STREAM - Stream mixing feature
  * @method boolean getAudioFileNeeded() Obtain Whether to return the audio-only recording file of different streams in the result callback. The file format is mp3.
  * @method void setAudioFileNeeded(boolean $AudioFileNeeded) Set Whether to return the audio-only recording file of different streams in the result callback. The file format is mp3.
+ * @method RecordControl getRecordControl() Obtain A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+ * @method void setRecordControl(RecordControl $RecordControl) Set A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
  */
 class StartOnlineRecordRequest extends AbstractModel
 {
@@ -77,7 +79,7 @@ The ID must be an unused ID in the SDK. The real-time recording service uses the
     public $RecordUserSig;
 
     /**
-     * @var string IM group ID of the whiteboard. By default, it is the same as the room ID.
+     * @var string (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
      */
     public $GroupId;
 
@@ -112,12 +114,17 @@ MIX_STREAM - Stream mixing feature
     public $AudioFileNeeded;
 
     /**
+     * @var RecordControl A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+     */
+    public $RecordControl;
+
+    /**
      * @param integer $SdkAppId SdkAppId of the customer
      * @param integer $RoomId ID of the room for recording. Value range: (1, 4294967295)
      * @param string $RecordUserId User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
 The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
      * @param string $RecordUserSig Signature corresponding to RecordUserId
-     * @param string $GroupId IM group ID of the whiteboard. By default, it is the same as the room ID.
+     * @param string $GroupId (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
      * @param Concat $Concat Real-time recording video splicing parameter
      * @param Whiteboard $Whiteboard Real-time recording whiteboard parameter, such as the whiteboard width and height
      * @param MixStream $MixStream Real-time recording stream mixing parameter
@@ -128,6 +135,7 @@ Notes:
 List of possible values:
 MIX_STREAM - Stream mixing feature
      * @param boolean $AudioFileNeeded Whether to return the audio-only recording file of different streams in the result callback. The file format is mp3.
+     * @param RecordControl $RecordControl A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
      */
     function __construct()
     {
@@ -183,6 +191,11 @@ MIX_STREAM - Stream mixing feature
 
         if (array_key_exists("AudioFileNeeded",$param) and $param["AudioFileNeeded"] !== null) {
             $this->AudioFileNeeded = $param["AudioFileNeeded"];
+        }
+
+        if (array_key_exists("RecordControl",$param) and $param["RecordControl"] !== null) {
+            $this->RecordControl = new RecordControl();
+            $this->RecordControl->deserialize($param["RecordControl"]);
         }
     }
 }

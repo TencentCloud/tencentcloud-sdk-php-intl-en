@@ -21,24 +21,24 @@ use TencentCloud\Common\AbstractModel;
  * DeleteLiveWatermark request structure.
  *
  * @method integer getWatermarkId() Obtain Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
  * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
  */
 class DeleteLiveWatermarkRequest extends AbstractModel
 {
     /**
      * @var integer Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
      */
     public $WatermarkId;
 
     /**
      * @param integer $WatermarkId Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
      */
     function __construct()

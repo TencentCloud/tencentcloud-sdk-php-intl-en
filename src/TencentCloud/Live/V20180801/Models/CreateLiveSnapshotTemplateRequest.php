@@ -29,7 +29,9 @@ Only letters, digits, underscores, and hyphens can be contained.
  * @method integer getCosAppId() Obtain COS application ID.
  * @method void setCosAppId(integer $CosAppId) Set COS application ID.
  * @method string getCosBucket() Obtain COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
  * @method void setCosBucket(string $CosBucket) Set COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
  * @method string getCosRegion() Obtain COS region.
  * @method void setCosRegion(string $CosRegion) Set COS region.
  * @method string getDescription() Obtain Description.
@@ -39,19 +41,31 @@ Only letters, digits, underscores, and hyphens can be contained.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
  * @method integer getSnapshotInterval() Obtain Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
  * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
  * @method integer getWidth() Obtain Screenshot width. Default value: 0 (original width).
  * @method void setWidth(integer $Width) Set Screenshot width. Default value: 0 (original width).
  * @method integer getHeight() Obtain Screenshot height. Default value: 0 (original height).
  * @method void setHeight(integer $Height) Set Screenshot height. Default value: 0 (original height).
  * @method integer getPornFlag() Obtain Whether to enable porn detection. 0: no, 1: yes. Default value: 0
  * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. 0: no, 1: yes. Default value: 0
- * @method string getCosPrefix() Obtain COS bucket folder prefix.
- * @method void setCosPrefix(string $CosPrefix) Set COS bucket folder prefix.
+ * @method string getCosPrefix() Obtain COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
+ * @method void setCosPrefix(string $CosPrefix) Set COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
  * @method string getCosFileName() Obtain COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
  * @method void setCosFileName(string $CosFileName) Set COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
  */
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -69,6 +83,7 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
      * @var string COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      */
     public $CosBucket;
 
@@ -86,7 +101,7 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
      * @var integer Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      */
     public $SnapshotInterval;
 
@@ -106,12 +121,18 @@ Value range: 5-600s.
     public $PornFlag;
 
     /**
-     * @var string COS bucket folder prefix.
+     * @var string COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
      */
     public $CosPrefix;
 
     /**
      * @var string COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
      */
     public $CosFileName;
 
@@ -121,17 +142,24 @@ Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
      * @param integer $CosAppId COS application ID.
      * @param string $CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      * @param string $CosRegion COS region.
      * @param string $Description Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
      * @param integer $SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      * @param integer $Width Screenshot width. Default value: 0 (original width).
      * @param integer $Height Screenshot height. Default value: 0 (original height).
      * @param integer $PornFlag Whether to enable porn detection. 0: no, 1: yes. Default value: 0
-     * @param string $CosPrefix COS bucket folder prefix.
+     * @param string $CosPrefix COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
      * @param string $CosFileName COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
      */
     function __construct()
     {

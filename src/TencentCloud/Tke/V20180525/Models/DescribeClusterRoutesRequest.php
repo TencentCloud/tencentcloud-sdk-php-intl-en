@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableName() Obtain Route table name.
  * @method void setRouteTableName(string $RouteTableName) Set Route table name.
+ * @method array getFilters() Obtain Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+ * @method void setFilters(array $Filters) Set Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
  */
 class DescribeClusterRoutesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeClusterRoutesRequest extends AbstractModel
     public $RouteTableName;
 
     /**
+     * @var array Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+     */
+    public $Filters;
+
+    /**
      * @param string $RouteTableName Route table name.
+     * @param array $Filters Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class DescribeClusterRoutesRequest extends AbstractModel
         }
         if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
             $this->RouteTableName = $param["RouteTableName"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

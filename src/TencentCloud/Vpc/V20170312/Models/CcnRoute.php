@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) Set Whether the route is enabled
  * @method string getInstanceUin() Obtain The UIN (root account) to which the associated instance belongs
  * @method void setInstanceUin(string $InstanceUin) Set The UIN (root account) to which the associated instance belongs
+ * @method string getExtraState() Obtain Additional status of the route
+ * @method void setExtraState(string $ExtraState) Set Additional status of the route
+ * @method boolean getIsBgp() Obtain Whether it is a dynamic route
+ * @method void setIsBgp(boolean $IsBgp) Set Whether it is a dynamic route
+ * @method integer getRoutePriority() Obtain Route priority
+ * @method void setRoutePriority(integer $RoutePriority) Set Route priority
+ * @method string getInstanceExtraName() Obtain Next hop port name (associated instance’s port name)
+ * @method void setInstanceExtraName(string $InstanceExtraName) Set Next hop port name (associated instance’s port name)
  */
 class CcnRoute extends AbstractModel
 {
@@ -87,6 +95,26 @@ class CcnRoute extends AbstractModel
     public $InstanceUin;
 
     /**
+     * @var string Additional status of the route
+     */
+    public $ExtraState;
+
+    /**
+     * @var boolean Whether it is a dynamic route
+     */
+    public $IsBgp;
+
+    /**
+     * @var integer Route priority
+     */
+    public $RoutePriority;
+
+    /**
+     * @var string Next hop port name (associated instance’s port name)
+     */
+    public $InstanceExtraName;
+
+    /**
      * @param string $RouteId The ID of the routing policy
      * @param string $DestinationCidrBlock Destination
      * @param string $InstanceType The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
@@ -96,6 +124,10 @@ class CcnRoute extends AbstractModel
      * @param string $UpdateTime Update Time
      * @param boolean $Enabled Whether the route is enabled
      * @param string $InstanceUin The UIN (root account) to which the associated instance belongs
+     * @param string $ExtraState Additional status of the route
+     * @param boolean $IsBgp Whether it is a dynamic route
+     * @param integer $RoutePriority Route priority
+     * @param string $InstanceExtraName Next hop port name (associated instance’s port name)
      */
     function __construct()
     {
@@ -144,6 +176,22 @@ class CcnRoute extends AbstractModel
 
         if (array_key_exists("InstanceUin",$param) and $param["InstanceUin"] !== null) {
             $this->InstanceUin = $param["InstanceUin"];
+        }
+
+        if (array_key_exists("ExtraState",$param) and $param["ExtraState"] !== null) {
+            $this->ExtraState = $param["ExtraState"];
+        }
+
+        if (array_key_exists("IsBgp",$param) and $param["IsBgp"] !== null) {
+            $this->IsBgp = $param["IsBgp"];
+        }
+
+        if (array_key_exists("RoutePriority",$param) and $param["RoutePriority"] !== null) {
+            $this->RoutePriority = $param["RoutePriority"];
+        }
+
+        if (array_key_exists("InstanceExtraName",$param) and $param["InstanceExtraName"] !== null) {
+            $this->InstanceExtraName = $param["InstanceExtraName"];
         }
     }
 }

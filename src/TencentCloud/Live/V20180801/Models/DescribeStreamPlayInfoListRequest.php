@@ -36,12 +36,12 @@ If this parameter is left empty, data of live streams of all playback domain nam
 If this parameter is left empty, full playback data will be queried.
  * @method void setStreamName(string $StreamName) Set Stream name (exact match).
 If this parameter is left empty, full playback data will be queried.
- * @method string getAppName() Obtain Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
- * @method void setAppName(string $AppName) Set Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
+ * @method string getAppName() Obtain Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
+ * @method void setAppName(string $AppName) Set Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
  */
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
@@ -70,9 +70,9 @@ If this parameter is left empty, full playback data will be queried.
     public $StreamName;
 
     /**
-     * @var string Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
+     * @var string Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
      */
     public $AppName;
 
@@ -85,9 +85,9 @@ The end time and start time must be on the same day.
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
      * @param string $StreamName Stream name (exact match).
 If this parameter is left empty, full playback data will be queried.
-     * @param string $AppName Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
+     * @param string $AppName Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
      */
     function __construct()
     {

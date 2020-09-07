@@ -64,11 +64,13 @@ This is an async API. After it is returned successfully, you can call the Descri
  * @method Models\DescribeClassicalLBHealthStatusResponse DescribeClassicalLBHealthStatus(Models\DescribeClassicalLBHealthStatusRequest $req) This API (DescribeClassicalLBHealthStatus) is used to get the real server health status of a classic CLB
  * @method Models\DescribeClassicalLBListenersResponse DescribeClassicalLBListeners(Models\DescribeClassicalLBListenersRequest $req) This API (DescribeClassicalLBListeners) is used to get the listener information of a classic CLB.
  * @method Models\DescribeClassicalLBTargetsResponse DescribeClassicalLBTargets(Models\DescribeClassicalLBTargetsRequest $req) This API (DescribeClassicalLBTargets) is used to get the real servers bound to a classic CLB.
- * @method Models\DescribeClsLogSetResponse DescribeClsLogSet(Models\DescribeClsLogSetRequest $req) This API is used to obtain the CLB exclusive logset of a user.
+ * @method Models\DescribeClsLogSetResponse DescribeClsLogSet(Models\DescribeClsLogSetRequest $req) This API is used to get the CLB dedicated logset.
  * @method Models\DescribeListenersResponse DescribeListeners(Models\DescribeListenersRequest $req) This API is used to get the list of listeners by CLB instance ID, listener protocol, or port. If no filter is specified, all listeners under the CLB instance will be returned.
  * @method Models\DescribeLoadBalancerListByCertIdResponse DescribeLoadBalancerListByCertId(Models\DescribeLoadBalancerListByCertIdRequest $req) This API is used to query the list of CLB instances associated with a certificate in a region by certificate ID.
  * @method Models\DescribeLoadBalancersResponse DescribeLoadBalancers(Models\DescribeLoadBalancersRequest $req) This API is used to query the list of CLB instances in a region.
 
+ * @method Models\DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetail(Models\DescribeLoadBalancersDetailRequest $req) This API is used to query CLB instance details, including listener, rules, and target real servers.
+ * @method Models\DescribeQuotaResponse DescribeQuota(Models\DescribeQuotaRequest $req) This API is used to query various quotas in the current region.
  * @method Models\DescribeRewriteResponse DescribeRewrite(Models\DescribeRewriteRequest $req) This API (DescribeRewrite) is used to query the redirection relationship between the forwarding rules of a CLB instance by instance ID. If no listener ID or forwarding rule ID is specified, all redirection relationships in the instance will be returned.
  * @method Models\DescribeTargetGroupInstancesResponse DescribeTargetGroupInstances(Models\DescribeTargetGroupInstancesRequest $req) This API is used to get the information of servers bound to a target group.
  * @method Models\DescribeTargetGroupListResponse DescribeTargetGroupList(Models\DescribeTargetGroupListRequest $req) This API is used to get the target group list.

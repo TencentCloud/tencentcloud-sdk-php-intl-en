@@ -18,7 +18,7 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specification information
+ * Specification description
  *
  * @method string getSpecCode() Obtain Specification ID
  * @method void setSpecCode(string $SpecCode) Set Specification ID

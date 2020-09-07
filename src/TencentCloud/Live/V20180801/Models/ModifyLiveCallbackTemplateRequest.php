@@ -37,9 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPornCensorshipNotifyUrl() Obtain Porn detection callback URL.
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) Set Porn detection callback URL.
  * @method string getCallbackKey() Obtain Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method void setCallbackKey(string $CallbackKey) Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  */
 class ModifyLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -85,7 +85,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
 
     /**
      * @var string Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public $CallbackKey;
 
@@ -99,7 +99,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @param string $SnapshotNotifyUrl Screencapturing callback URL.
      * @param string $PornCensorshipNotifyUrl Porn detection callback URL.
      * @param string $CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     function __construct()
     {

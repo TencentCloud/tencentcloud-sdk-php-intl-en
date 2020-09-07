@@ -18,100 +18,112 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * White-box key information
+ * 
  *
- * @method string getKeyId() Obtain Globally unique white-box key ID
- * @method void setKeyId(string $KeyId) Set Globally unique white-box key ID
- * @method string getAlias() Obtain Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
- * @method void setAlias(string $Alias) Set Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
- * @method integer getCreatorUin() Obtain Creator
- * @method void setCreatorUin(integer $CreatorUin) Set Creator
- * @method string getDescription() Obtain Key description information
- * @method void setDescription(string $Description) Set Key description information
- * @method integer getCreateTime() Obtain Key creation time in Unix timestamp
- * @method void setCreateTime(integer $CreateTime) Set Key creation time in Unix timestamp
- * @method string getStatus() Obtain White-box key status. Valid values: Enabled, Disabled
- * @method void setStatus(string $Status) Set White-box key status. Valid values: Enabled, Disabled
- * @method integer getOwnerUin() Obtain Creator
- * @method void setOwnerUin(integer $OwnerUin) Set Creator
- * @method string getAlgorithm() Obtain Key algorithm type
- * @method void setAlgorithm(string $Algorithm) Set Key algorithm type
- * @method string getEncryptKey() Obtain Base64-encoded white-box encryption key
- * @method void setEncryptKey(string $EncryptKey) Set Base64-encoded white-box encryption key
- * @method string getDecryptKey() Obtain Base64-encoded white-box decryption key
- * @method void setDecryptKey(string $DecryptKey) Set Base64-encoded white-box decryption key
- * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
- * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+ * @method string getKeyId() Obtain 
+ * @method void setKeyId(string $KeyId) Set 
+ * @method string getAlias() Obtain 
+ * @method void setAlias(string $Alias) Set 
+ * @method integer getCreatorUin() Obtain 
+ * @method void setCreatorUin(integer $CreatorUin) Set 
+ * @method string getDescription() Obtain 
+ * @method void setDescription(string $Description) Set 
+ * @method integer getCreateTime() Obtain 
+ * @method void setCreateTime(integer $CreateTime) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getOwnerUin() Obtain 
+ * @method void setOwnerUin(integer $OwnerUin) Set 
+ * @method string getAlgorithm() Obtain 
+ * @method void setAlgorithm(string $Algorithm) Set 
+ * @method string getEncryptKey() Obtain 
+ * @method void setEncryptKey(string $EncryptKey) Set 
+ * @method string getDecryptKey() Obtain 
+ * @method void setDecryptKey(string $DecryptKey) Set 
+ * @method string getResourceId() Obtain 
+ * @method void setResourceId(string $ResourceId) Set 
+ * @method boolean getDeviceFingerprintBind() Obtain Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDeviceFingerprintBind(boolean $DeviceFingerprintBind) Set Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class WhiteboxKeyInfo extends AbstractModel
 {
     /**
-     * @var string Globally unique white-box key ID
+     * @var string 
      */
     public $KeyId;
 
     /**
-     * @var string Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
+     * @var string 
      */
     public $Alias;
 
     /**
-     * @var integer Creator
+     * @var integer 
      */
     public $CreatorUin;
 
     /**
-     * @var string Key description information
+     * @var string 
      */
     public $Description;
 
     /**
-     * @var integer Key creation time in Unix timestamp
+     * @var integer 
      */
     public $CreateTime;
 
     /**
-     * @var string White-box key status. Valid values: Enabled, Disabled
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Creator
+     * @var integer 
      */
     public $OwnerUin;
 
     /**
-     * @var string Key algorithm type
+     * @var string 
      */
     public $Algorithm;
 
     /**
-     * @var string Base64-encoded white-box encryption key
+     * @var string 
      */
     public $EncryptKey;
 
     /**
-     * @var string Base64-encoded white-box decryption key
+     * @var string 
      */
     public $DecryptKey;
 
     /**
-     * @var string Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     * @var string 
      */
     public $ResourceId;
 
     /**
-     * @param string $KeyId Globally unique white-box key ID
-     * @param string $Alias Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
-     * @param integer $CreatorUin Creator
-     * @param string $Description Key description information
-     * @param integer $CreateTime Key creation time in Unix timestamp
-     * @param string $Status White-box key status. Valid values: Enabled, Disabled
-     * @param integer $OwnerUin Creator
-     * @param string $Algorithm Key algorithm type
-     * @param string $EncryptKey Base64-encoded white-box encryption key
-     * @param string $DecryptKey Base64-encoded white-box decryption key
-     * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     * @var boolean Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DeviceFingerprintBind;
+
+    /**
+     * @param string $KeyId 
+     * @param string $Alias 
+     * @param integer $CreatorUin 
+     * @param string $Description 
+     * @param integer $CreateTime 
+     * @param string $Status 
+     * @param integer $OwnerUin 
+     * @param string $Algorithm 
+     * @param string $EncryptKey 
+     * @param string $DecryptKey 
+     * @param string $ResourceId 
+     * @param boolean $DeviceFingerprintBind Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class WhiteboxKeyInfo extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("DeviceFingerprintBind",$param) and $param["DeviceFingerprintBind"] !== null) {
+            $this->DeviceFingerprintBind = $param["DeviceFingerprintBind"];
         }
     }
 }

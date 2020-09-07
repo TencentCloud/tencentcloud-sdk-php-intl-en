@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node custom parameter
  *
- * @method array getKubelet() Obtain Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setKubelet(array $Kubelet) Set Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method array getKubelet() Obtain Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setKubelet(array $Kubelet) Set Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class InstanceExtraArgs extends AbstractModel
 {
     /**
-     * @var array Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var array Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Kubelet;
 
     /**
-     * @param array $Kubelet Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param array $Kubelet Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
