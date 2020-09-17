@@ -56,14 +56,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMalwareNum(integer $MalwareNum) Set Number of trojans.
  * @method array getTag() Obtain Tag information
  * @method void setTag(array $Tag) Set Tag information
- * @method integer getBaselineNum() Obtain 
- * @method void setBaselineNum(integer $BaselineNum) Set 
- * @method integer getCyberAttackNum() Obtain 
- * @method void setCyberAttackNum(integer $CyberAttackNum) Set 
- * @method string getSecurityStatus() Obtain 
- * @method void setSecurityStatus(string $SecurityStatus) Set 
- * @method integer getInvasionNum() Obtain 
- * @method void setInvasionNum(integer $InvasionNum) Set 
+ * @method integer getBaselineNum() Obtain Number of baseline risks.
+ * @method void setBaselineNum(integer $BaselineNum) Set Number of baseline risks.
+ * @method integer getCyberAttackNum() Obtain Number of network risks.
+ * @method void setCyberAttackNum(integer $CyberAttackNum) Set Number of network risks.
+ * @method string getSecurityStatus() Obtain Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+ * @method void setSecurityStatus(string $SecurityStatus) Set Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+ * @method integer getInvasionNum() Obtain Number of intrusions
+ * @method void setInvasionNum(integer $InvasionNum) Set Number of intrusions
+ * @method RegionInfo getRegionInfo() Obtain Region information
+ * @method void setRegionInfo(RegionInfo $RegionInfo) Set Region information
  */
 class Machine extends AbstractModel
 {
@@ -134,24 +142,32 @@ class Machine extends AbstractModel
     public $Tag;
 
     /**
-     * @var integer 
+     * @var integer Number of baseline risks.
      */
     public $BaselineNum;
 
     /**
-     * @var integer 
+     * @var integer Number of network risks.
      */
     public $CyberAttackNum;
 
     /**
-     * @var string 
+     * @var string Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
      */
     public $SecurityStatus;
 
     /**
-     * @var integer 
+     * @var integer Number of intrusions
      */
     public $InvasionNum;
+
+    /**
+     * @var RegionInfo Region information
+     */
+    public $RegionInfo;
 
     /**
      * @param string $MachineName Server name.
@@ -172,10 +188,14 @@ class Machine extends AbstractModel
 <li>POSTPAY: post-paid, i.e., pay-as-you-go </li>
      * @param integer $MalwareNum Number of trojans.
      * @param array $Tag Tag information
-     * @param integer $BaselineNum 
-     * @param integer $CyberAttackNum 
-     * @param string $SecurityStatus 
-     * @param integer $InvasionNum 
+     * @param integer $BaselineNum Number of baseline risks.
+     * @param integer $CyberAttackNum Number of network risks.
+     * @param string $SecurityStatus Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+     * @param integer $InvasionNum Number of intrusions
+     * @param RegionInfo $RegionInfo Region information
      */
     function __construct()
     {
@@ -257,6 +277,11 @@ class Machine extends AbstractModel
 
         if (array_key_exists("InvasionNum",$param) and $param["InvasionNum"] !== null) {
             $this->InvasionNum = $param["InvasionNum"];
+        }
+
+        if (array_key_exists("RegionInfo",$param) and $param["RegionInfo"] !== null) {
+            $this->RegionInfo = new RegionInfo();
+            $this->RegionInfo->deserialize($param["RegionInfo"]);
         }
     }
 }

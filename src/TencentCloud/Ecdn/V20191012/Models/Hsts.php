@@ -18,36 +18,36 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * HSTS configuration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method integer getMaxAge() Obtain 
- * @method void setMaxAge(integer $MaxAge) Set 
- * @method string getIncludeSubDomains() Obtain 
- * @method void setIncludeSubDomains(string $IncludeSubDomains) Set 
+ * @method string getSwitch() Obtain Whether to enable. Valid values: on, off.
+ * @method void setSwitch(string $Switch) Set Whether to enable. Valid values: on, off.
+ * @method integer getMaxAge() Obtain `MaxAge` value.
+ * @method void setMaxAge(integer $MaxAge) Set `MaxAge` value.
+ * @method string getIncludeSubDomains() Obtain Whether to include subdomain names. Valid values: on, off.
+ * @method void setIncludeSubDomains(string $IncludeSubDomains) Set Whether to include subdomain names. Valid values: on, off.
  */
 class Hsts extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Whether to enable. Valid values: on, off.
      */
     public $Switch;
 
     /**
-     * @var integer 
+     * @var integer `MaxAge` value.
      */
     public $MaxAge;
 
     /**
-     * @var string 
+     * @var string Whether to include subdomain names. Valid values: on, off.
      */
     public $IncludeSubDomains;
 
     /**
-     * @param string $Switch 
-     * @param integer $MaxAge 
-     * @param string $IncludeSubDomains 
+     * @param string $Switch Whether to enable. Valid values: on, off.
+     * @param integer $MaxAge `MaxAge` value.
+     * @param string $IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
      */
     function __construct()
     {

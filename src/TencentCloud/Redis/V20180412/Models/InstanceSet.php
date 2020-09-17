@@ -126,6 +126,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set Internal parameter, which can be ignored
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskSize() Obtain Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDiskSize(integer $DiskSize) Set Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getMonitorVersion() Obtain Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class InstanceSet extends AbstractModel
 {
@@ -355,6 +363,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RemainBandwidthDuration;
 
     /**
+     * @var integer Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DiskSize;
+
+    /**
+     * @var string Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $MonitorVersion;
+
+    /**
      * @param string $InstanceName Instance name
      * @param string $InstanceId Instance ID
      * @param integer $Appid User's Appid
@@ -407,6 +427,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Vip6 Internal parameter, which can be ignored
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RemainBandwidthDuration Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskSize Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $MonitorVersion Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -602,6 +626,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RemainBandwidthDuration",$param) and $param["RemainBandwidthDuration"] !== null) {
             $this->RemainBandwidthDuration = $param["RemainBandwidthDuration"];
+        }
+
+        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
+            $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("MonitorVersion",$param) and $param["MonitorVersion"] !== null) {
+            $this->MonitorVersion = $param["MonitorVersion"];
         }
     }
 }

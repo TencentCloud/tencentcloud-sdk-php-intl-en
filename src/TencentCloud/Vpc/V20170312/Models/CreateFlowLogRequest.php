@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
  * @method string getFlowLogDescription() Obtain The description of the flow log instance
  * @method void setFlowLogDescription(string $FlowLogDescription) Set The description of the flow log instance
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
  */
 class CreateFlowLogRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogDescription;
 
     /**
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId ID of the VPC instance
      * @param string $FlowLogName The name of the flow log instance.
      * @param string $ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
@@ -80,6 +87,7 @@ class CreateFlowLogRequest extends AbstractModel
      * @param string $TrafficType Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      * @param string $CloudLogId The storage ID of the flow log.
      * @param string $FlowLogDescription The description of the flow log instance
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class CreateFlowLogRequest extends AbstractModel
 
         if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {
             $this->FlowLogDescription = $param["FlowLogDescription"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

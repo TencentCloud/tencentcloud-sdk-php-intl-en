@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set ID of the subnet instance bound to a cluster in the format of `subnet-pxir56ns`
  * @method string getPassword() Obtain Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
  * @method void setPassword(string $Password) Set Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
- * @method array getResourceTags() Obtain 
- * @method void setResourceTags(array $ResourceTags) Set 
+ * @method array getResourceTags() Obtain Cluster tag list
+ * @method void setResourceTags(array $ResourceTags) Set Cluster tag list
  * @method integer getIpv6Enable() Obtain Whether to enable IPv6 address access for clusters
  * @method void setIpv6Enable(integer $Ipv6Enable) Set Whether to enable IPv6 address access for clusters
  */
@@ -63,7 +63,7 @@ class CreateClusterRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var array 
+     * @var array Cluster tag list
      */
     public $ResourceTags;
 
@@ -78,7 +78,7 @@ class CreateClusterRequest extends AbstractModel
      * @param string $VpcId ID of the VPC instance bound to a cluster in the format of `vpc-f49l6u0z`
      * @param string $SubnetId ID of the subnet instance bound to a cluster in the format of `subnet-pxir56ns`
      * @param string $Password Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
-     * @param array $ResourceTags 
+     * @param array $ResourceTags Cluster tag list
      * @param integer $Ipv6Enable Whether to enable IPv6 address access for clusters
      */
     function __construct()

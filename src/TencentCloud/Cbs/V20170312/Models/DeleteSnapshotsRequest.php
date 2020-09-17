@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSnapshots request structure.
  *
- * @method array getSnapshotIds() Obtain List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
- * @method void setSnapshotIds(array $SnapshotIds) Set List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+ * @method array getSnapshotIds() Obtain List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+ * @method void setSnapshotIds(array $SnapshotIds) Set List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
  */
 class DeleteSnapshotsRequest extends AbstractModel
 {
     /**
-     * @var array List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+     * @var array List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      */
     public $SnapshotIds;
 
     /**
-     * @param array $SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+     * @param array $SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      */
     function __construct()
     {

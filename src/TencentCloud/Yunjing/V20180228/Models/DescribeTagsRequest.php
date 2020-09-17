@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTags request structure.
  *
- * @method string getMachineType() Obtain 
- * @method void setMachineType(string $MachineType) Set 
- * @method string getMachineRegion() Obtain 
- * @method void setMachineRegion(string $MachineRegion) Set 
+ * @method string getMachineType() Obtain CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+ * @method void setMachineType(string $MachineType) Set CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+ * @method string getMachineRegion() Obtain Server region, such as `ap-guangzhou` and `ap-shanghai`
+ * @method void setMachineRegion(string $MachineRegion) Set Server region, such as `ap-guangzhou` and `ap-shanghai`
  */
 class DescribeTagsRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
      */
     public $MachineType;
 
     /**
-     * @var string 
+     * @var string Server region, such as `ap-guangzhou` and `ap-shanghai`
      */
     public $MachineRegion;
 
     /**
-     * @param string $MachineType 
-     * @param string $MachineRegion 
+     * @param string $MachineType CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+     * @param string $MachineRegion Server region, such as `ap-guangzhou` and `ap-shanghai`
      */
     function __construct()
     {

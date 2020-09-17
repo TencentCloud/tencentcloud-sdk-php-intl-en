@@ -20,54 +20,68 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GeneralBasicOCR request structure.
  *
- * @method string getImageBase64() Obtain Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+ * @method string getImageBase64() Obtain Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
- * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+ * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
- * @method string getImageUrl() Obtain URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
- * @method void setImageUrl(string $ImageUrl) Set URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+ * @method string getImageUrl() Obtain URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+ * @method void setImageUrl(string $ImageUrl) Set URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
  * @method string getScene() Obtain Reserved field.
  * @method void setScene(string $Scene) Set Reserved field.
  * @method string getLanguageType() Obtain Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+Norwegian, Hungarian, Thai, Latin,
+Arabic.
  * @method void setLanguageType(string $LanguageType) Set Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+Norwegian, Hungarian, Thai, Latin,
+Arabic.
+ * @method boolean getIsPdf() Obtain Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+ * @method void setIsPdf(boolean $IsPdf) Set Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+ * @method integer getPdfPageNumber() Obtain Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+ * @method void setPdfPageNumber(integer $PdfPageNumber) Set Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
  */
 class GeneralBasicOCRRequest extends AbstractModel
 {
     /**
-     * @var string Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+     * @var string Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
      */
     public $ImageBase64;
 
     /**
-     * @var string URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @var string URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public $ImageUrl;
 
@@ -80,34 +94,56 @@ You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL 
      * @var string Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+Norwegian, Hungarian, Thai, Latin,
+Arabic.
      */
     public $LanguageType;
 
     /**
-     * @param string $ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+     * @var boolean Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+     */
+    public $IsPdf;
+
+    /**
+     * @var integer Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+     */
+    public $PdfPageNumber;
+
+    /**
+     * @param string $ImageBase64 Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-     * @param string $ImageUrl URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param string $ImageUrl URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
      * @param string $Scene Reserved field.
      * @param string $LanguageType Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+Norwegian, Hungarian, Thai, Latin,
+Arabic.
+     * @param boolean $IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+     * @param integer $PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
      */
     function __construct()
     {
@@ -136,6 +172,14 @@ Norwegian, Hungarian, Thai, Latin.
 
         if (array_key_exists("LanguageType",$param) and $param["LanguageType"] !== null) {
             $this->LanguageType = $param["LanguageType"];
+        }
+
+        if (array_key_exists("IsPdf",$param) and $param["IsPdf"] !== null) {
+            $this->IsPdf = $param["IsPdf"];
+        }
+
+        if (array_key_exists("PdfPageNumber",$param) and $param["PdfPageNumber"] !== null) {
+            $this->PdfPageNumber = $param["PdfPageNumber"];
         }
     }
 }

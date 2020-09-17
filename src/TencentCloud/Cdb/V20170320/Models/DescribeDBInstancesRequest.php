@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances request structure.
  *
- * @method integer getProjectId() Obtain Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
+ * @method integer getProjectId() Obtain Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
  * @method array getInstanceTypes() Obtain Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
  * @method void setInstanceTypes(array $InstanceTypes) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
  * @method array getVips() Obtain Private IP address of the instance.
@@ -76,7 +76,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
+     * @var integer Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
      */
     public $ProjectId;
 
@@ -206,7 +206,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $DeployGroupIds;
 
     /**
-     * @param integer $ProjectId Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
+     * @param integer $ProjectId Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
      * @param array $Status Instance status. Value range: <br>0 - creating <br>1 - running <br>4 - isolating <br>5 - isolated (the instance can be restored and started in the recycle bin)

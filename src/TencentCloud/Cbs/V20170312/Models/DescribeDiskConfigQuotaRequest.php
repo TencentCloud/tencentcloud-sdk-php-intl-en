@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInquiryType() Obtain Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
  * @method void setInquiryType(string $InquiryType) Set Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
- * @method array getZones() Obtain Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
- * @method void setZones(array $Zones) Set Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+ * @method array getZones() Obtain Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+ * @method void setZones(array $Zones) Set Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
  * @method string getDiskChargeType() Obtain Billing mode. Value range: <br><li>POSTPAID_BY_HOUR: postpaid.
  * @method void setDiskChargeType(string $DiskChargeType) Set Billing mode. Value range: <br><li>POSTPAID_BY_HOUR: postpaid.
  * @method array getDiskTypes() Obtain Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
  * @method void setDiskTypes(array $DiskTypes) Set Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
  * @method string getDiskUsage() Obtain The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
  * @method void setDiskUsage(string $DiskUsage) Set The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method array getInstanceFamilies() Obtain Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
- * @method void setInstanceFamilies(array $InstanceFamilies) Set Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+ * @method array getInstanceFamilies() Obtain Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+ * @method void setInstanceFamilies(array $InstanceFamilies) Set Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
  * @method integer getCPU() Obtain Instance CPU cores.
  * @method void setCPU(integer $CPU) Set Instance CPU cores.
  * @method integer getMemory() Obtain Instance memory size.
@@ -45,7 +45,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     public $InquiryType;
 
     /**
-     * @var array Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+     * @var array Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
      */
     public $Zones;
 
@@ -65,7 +65,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     public $DiskUsage;
 
     /**
-     * @var array Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+     * @var array Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
      */
     public $InstanceFamilies;
 
@@ -81,11 +81,11 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
 
     /**
      * @param string $InquiryType Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
-     * @param array $Zones Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+     * @param array $Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
      * @param string $DiskChargeType Billing mode. Value range: <br><li>POSTPAID_BY_HOUR: postpaid.
      * @param array $DiskTypes Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
      * @param string $DiskUsage The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     * @param array $InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+     * @param array $InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
      * @param integer $CPU Instance CPU cores.
      * @param integer $Memory Instance memory size.
      */

@@ -64,8 +64,8 @@ Required if `Protocol` is `https`;
  * @method void setBasicIpInstance(string $BasicIpInstance) Set IPInstance Nat gateway (only provided for Anti-DDoS Basic), which is optional. (If the device type to be queried is a NAT server, this parameter is required, which can be obtained through the NAT resource query API)
  * @method integer getBasicIspCode() Obtain ISP line (only provided for Anti-DDoS Basic), which is optional. (If the device type to be queried is a NAT server, this parameter should be 5)
  * @method void setBasicIspCode(integer $BasicIspCode) Set ISP line (only provided for Anti-DDoS Basic), which is optional. (If the device type to be queried is a NAT server, this parameter should be 5)
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
+ * @method string getDomain() Obtain This optional field must be specified when HTTPS protocol is used.
+ * @method void setDomain(string $Domain) Set This optional field must be specified when HTTPS protocol is used.
  */
 class ModifyCCThresholdRequest extends AbstractModel
 {
@@ -136,7 +136,7 @@ Required if `Protocol` is `https`;
     public $BasicIspCode;
 
     /**
-     * @var string 
+     * @var string This optional field must be specified when HTTPS protocol is used.
      */
     public $Domain;
 
@@ -163,7 +163,7 @@ Required if `Protocol` is `https`;
      * @param string $BasicDeviceType Device type (only provided for Anti-DDoS Basic). Valid values: cvm (CVM), clb (public CLB), lb (BM CLB), nat (NAT server), channel (internet channel).
      * @param string $BasicIpInstance IPInstance Nat gateway (only provided for Anti-DDoS Basic), which is optional. (If the device type to be queried is a NAT server, this parameter is required, which can be obtained through the NAT resource query API)
      * @param integer $BasicIspCode ISP line (only provided for Anti-DDoS Basic), which is optional. (If the device type to be queried is a NAT server, this parameter should be 5)
-     * @param string $Domain 
+     * @param string $Domain This optional field must be specified when HTTPS protocol is used.
      */
     function __construct()
     {

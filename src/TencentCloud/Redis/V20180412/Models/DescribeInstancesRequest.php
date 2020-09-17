@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKeys(array $SearchKeys) Set Search keywords, which can be instance ID, instance name, or complete IP
  * @method array getTypeList() Obtain Internal parameter, which can be ignored
  * @method void setTypeList(array $TypeList) Set Internal parameter, which can be ignored
+ * @method string getMonitorVersion() Obtain Internal parameter, which can be ignored
+ * @method void setMonitorVersion(string $MonitorVersion) Set Internal parameter, which can be ignored
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $TypeList;
 
     /**
+     * @var string Internal parameter, which can be ignored
+     */
+    public $MonitorVersion;
+
+    /**
      * @param integer $Limit Instance list size. Default value: 20
      * @param integer $Offset Offset, which is an integral multiple of `Limit`
      * @param string $InstanceId Instance ID, such as crs-6ubhgouj
@@ -192,6 +199,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      * @param array $SearchKeys Search keywords, which can be instance ID, instance name, or complete IP
      * @param array $TypeList Internal parameter, which can be ignored
+     * @param string $MonitorVersion Internal parameter, which can be ignored
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("TypeList",$param) and $param["TypeList"] !== null) {
             $this->TypeList = $param["TypeList"];
+        }
+
+        if (array_key_exists("MonitorVersion",$param) and $param["MonitorVersion"] !== null) {
+            $this->MonitorVersion = $param["MonitorVersion"];
         }
     }
 }

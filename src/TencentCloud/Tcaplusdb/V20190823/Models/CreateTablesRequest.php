@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdlFiles(array $IdlFiles) Set Table creation IDL file list selected by user
  * @method array getSelectedTables() Obtain Information list of tables to be created
  * @method void setSelectedTables(array $SelectedTables) Set Information list of tables to be created
- * @method array getResourceTags() Obtain 
- * @method void setResourceTags(array $ResourceTags) Set 
+ * @method array getResourceTags() Obtain Table tag list
+ * @method void setResourceTags(array $ResourceTags) Set Table tag list
  */
 class CreateTablesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateTablesRequest extends AbstractModel
     public $SelectedTables;
 
     /**
-     * @var array 
+     * @var array Table tag list
      */
     public $ResourceTags;
 
@@ -55,7 +55,7 @@ class CreateTablesRequest extends AbstractModel
      * @param string $ClusterId ID of the cluster where to create a table
      * @param array $IdlFiles Table creation IDL file list selected by user
      * @param array $SelectedTables Information list of tables to be created
-     * @param array $ResourceTags 
+     * @param array $ResourceTags Table tag list
      */
     function __construct()
     {

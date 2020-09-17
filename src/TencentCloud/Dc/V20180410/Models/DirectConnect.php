@@ -116,8 +116,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setChargeState(string $ChargeState) Set Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
+ * @method string getStartTime() Obtain Connection activation time.
+ * @method void setStartTime(string $StartTime) Set Connection activation time.
  * @method boolean getSignLaw() Obtain Whether the connection has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setSignLaw(boolean $SignLaw) Set Whether the connection has the service agreement signed.
@@ -278,7 +278,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ChargeState;
 
     /**
-     * @var string 
+     * @var string Connection activation time.
      */
     public $StartTime;
 
@@ -337,7 +337,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ChargeState Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime 
+     * @param string $StartTime Connection activation time.
      * @param boolean $SignLaw Whether the connection has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */

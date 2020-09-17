@@ -36,8 +36,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setStartTime(string $StartTime) Set Statistics start time
  * @method string getEndTime() Obtain Statistics end time
  * @method void setEndTime(string $EndTime) Set Statistics end time
- * @method array getData() Obtain Value array
- * @method void setData(array $Data) Set Value array
+ * @method array getData() Obtain Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
+ * @method void setData(array $Data) Set Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
  * @method integer getCount() Obtain Number of values
  * @method void setCount(integer $Count) Set Number of values
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -82,7 +82,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $EndTime;
 
     /**
-     * @var array Value array
+     * @var array Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
      */
     public $Data;
 
@@ -105,7 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Period Statistical granularity. Valid values: [300 (5-minute), 3600 (hourly), 86400 (daily)]
      * @param string $StartTime Statistics start time
      * @param string $EndTime Statistics end time
-     * @param array $Data Value array
+     * @param array $Data Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
      * @param integer $Count Number of values
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

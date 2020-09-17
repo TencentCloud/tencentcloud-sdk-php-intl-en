@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqueSubnetId(string $UniqueSubnetId) Set VPC subnet ID in string type
  * @method string getOriginSerialId() Obtain Original ID of instance (this field is obsolete and should not be depended on)
  * @method void setOriginSerialId(string $OriginSerialId) Set Original ID of instance (this field is obsolete and should not be depended on)
- * @method integer getNodeCount() Obtain Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
- * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
+ * @method integer getNodeCount() Obtain Number of nodes. 2: one master and one slave, 3: one master and two slaves
+ * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one master and one slave, 3: one master and two slaves
  * @method integer getIsTmp() Obtain Whether it is a temp instance. 0: no, non-zero value: yes
  * @method void setIsTmp(integer $IsTmp) Set Whether it is a temp instance. 0: no, non-zero value: yes
  * @method string getExclusterId() Obtain Dedicated cluster ID. If this parameter is empty, the instance is a general instance
@@ -233,7 +233,7 @@ class DBInstance extends AbstractModel
     public $OriginSerialId;
 
     /**
-     * @var integer Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
+     * @var integer Number of nodes. 2: one master and one slave, 3: one master and two slaves
      */
     public $NodeCount;
 
@@ -331,7 +331,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $UniqueVpcId VPC ID in string type
      * @param string $UniqueSubnetId VPC subnet ID in string type
      * @param string $OriginSerialId Original ID of instance (this field is obsolete and should not be depended on)
-     * @param integer $NodeCount Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
+     * @param integer $NodeCount Number of nodes. 2: one master and one slave, 3: one master and two slaves
      * @param integer $IsTmp Whether it is a temp instance. 0: no, non-zero value: yes
      * @param string $ExclusterId Dedicated cluster ID. If this parameter is empty, the instance is a general instance
      * @param integer $Id Numeric ID of instance (this field is obsolete and should not be depended on)

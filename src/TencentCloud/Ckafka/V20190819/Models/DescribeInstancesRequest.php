@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(array $Status) Set (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
  * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default
  * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+ * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+ * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
  * @method string getTagKey() Obtain Tag key match.
  * @method void setTagKey(string $TagKey) Set Tag key match.
  */
@@ -56,7 +56,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $SearchWord (Filter) filter by instance name. Fuzzy search is supported
      * @param array $Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
      * @param string $TagKey Tag key match.
      */
     function __construct()

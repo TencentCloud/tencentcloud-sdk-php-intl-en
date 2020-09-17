@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC instance ID.
  * @method string getZone() Obtain The availability zone in which the NAT gateway is located.
  * @method void setZone(string $Zone) Set The availability zone in which the NAT gateway is located.
- * @method array getDirectConnectGatewayIds() Obtain 
- * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) Set 
- * @method string getSubnetId() Obtain 
- * @method void setSubnetId(string $SubnetId) Set 
+ * @method array getDirectConnectGatewayIds() Obtain IDs of direct connect gateway associated.
+ * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) Set IDs of direct connect gateway associated.
+ * @method string getSubnetId() Obtain Subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID.
  * @method array getTagSet() Obtain Tag key-value pair.
  * @method void setTagSet(array $TagSet) Set Tag key-value pair.
  */
@@ -113,12 +113,12 @@ class NatGateway extends AbstractModel
     public $Zone;
 
     /**
-     * @var array 
+     * @var array IDs of direct connect gateway associated.
      */
     public $DirectConnectGatewayIds;
 
     /**
-     * @var string 
+     * @var string Subnet ID.
      */
     public $SubnetId;
 
@@ -141,8 +141,8 @@ class NatGateway extends AbstractModel
      * @param array $DestinationIpPortTranslationNatRuleSet The port forwarding rules of the NAT gateway.
      * @param string $VpcId VPC instance ID.
      * @param string $Zone The availability zone in which the NAT gateway is located.
-     * @param array $DirectConnectGatewayIds 
-     * @param string $SubnetId 
+     * @param array $DirectConnectGatewayIds IDs of direct connect gateway associated.
+     * @param string $SubnetId Subnet ID.
      * @param array $TagSet Tag key-value pair.
      */
     function __construct()

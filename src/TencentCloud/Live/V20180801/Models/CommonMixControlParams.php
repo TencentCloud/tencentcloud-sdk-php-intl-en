@@ -18,10 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * General stream mix control parameter
  *
- * @method integer getUseMixCropCenter() Obtain 
- * @method void setUseMixCropCenter(integer $UseMixCropCenter) Set 
+ * @method integer getUseMixCropCenter() Obtain Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+ * @method void setUseMixCropCenter(integer $UseMixCropCenter) Set Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
  * @method integer getAllowCopy() Obtain Value range: [0,1].
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
  * @method void setAllowCopy(integer $AllowCopy) Set Value range: [0,1].
@@ -30,7 +32,8 @@ If this parameter is set to 1, when both `InputStreamList` and `OutputParams.Out
 class CommonMixControlParams extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
      */
     public $UseMixCropCenter;
 
@@ -41,7 +44,8 @@ If this parameter is set to 1, when both `InputStreamList` and `OutputParams.Out
     public $AllowCopy;
 
     /**
-     * @param integer $UseMixCropCenter 
+     * @param integer $UseMixCropCenter Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
      * @param integer $AllowCopy Value range: [0,1].
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
      */

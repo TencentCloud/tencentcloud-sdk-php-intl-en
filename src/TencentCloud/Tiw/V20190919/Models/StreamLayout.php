@@ -18,14 +18,24 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Stream layout parameter
  *
- * @method LayoutParams getLayoutParams() Obtain 
- * @method void setLayoutParams(LayoutParams $LayoutParams) Set 
- * @method string getInputStreamId() Obtain 
- * @method void setInputStreamId(string $InputStreamId) Set 
- * @method string getBackgroundColor() Obtain 
- * @method void setBackgroundColor(string $BackgroundColor) Set 
+ * @method LayoutParams getLayoutParams() Obtain Stream layout configuration
+ * @method void setLayoutParams(LayoutParams $LayoutParams) Set Stream layout configuration
+ * @method string getInputStreamId() Obtain Video stream ID
+Description of the possible video stream ID values:
+1. tic_record_user: the current picture is used to display the whiteboard video stream.
+2. tic_substream: the current picture is used to display the auxiliary video stream.
+3. Specific user ID: the current picture is used to display the video stream of a specific user.
+4.Left empty: the current picture is vacant for new video stream.
+ * @method void setInputStreamId(string $InputStreamId) Set Video stream ID
+Description of the possible video stream ID values:
+1. tic_record_user: the current picture is used to display the whiteboard video stream.
+2. tic_substream: the current picture is used to display the auxiliary video stream.
+3. Specific user ID: the current picture is used to display the video stream of a specific user.
+4.Left empty: the current picture is vacant for new video stream.
+ * @method string getBackgroundColor() Obtain Background color in RGB format, such as "#FF0000" for red. The default color is black. 
+ * @method void setBackgroundColor(string $BackgroundColor) Set Background color in RGB format, such as "#FF0000" for red. The default color is black. 
  * @method integer getFillMode() Obtain Video filling mode.
 
 0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
@@ -38,17 +48,22 @@ use TencentCloud\Common\AbstractModel;
 class StreamLayout extends AbstractModel
 {
     /**
-     * @var LayoutParams 
+     * @var LayoutParams Stream layout configuration
      */
     public $LayoutParams;
 
     /**
-     * @var string 
+     * @var string Video stream ID
+Description of the possible video stream ID values:
+1. tic_record_user: the current picture is used to display the whiteboard video stream.
+2. tic_substream: the current picture is used to display the auxiliary video stream.
+3. Specific user ID: the current picture is used to display the video stream of a specific user.
+4.Left empty: the current picture is vacant for new video stream.
      */
     public $InputStreamId;
 
     /**
-     * @var string 
+     * @var string Background color in RGB format, such as "#FF0000" for red. The default color is black. 
      */
     public $BackgroundColor;
 
@@ -61,9 +76,14 @@ class StreamLayout extends AbstractModel
     public $FillMode;
 
     /**
-     * @param LayoutParams $LayoutParams 
-     * @param string $InputStreamId 
-     * @param string $BackgroundColor 
+     * @param LayoutParams $LayoutParams Stream layout configuration
+     * @param string $InputStreamId Video stream ID
+Description of the possible video stream ID values:
+1. tic_record_user: the current picture is used to display the whiteboard video stream.
+2. tic_substream: the current picture is used to display the auxiliary video stream.
+3. Specific user ID: the current picture is used to display the video stream of a specific user.
+4.Left empty: the current picture is vacant for new video stream.
+     * @param string $BackgroundColor Background color in RGB format, such as "#FF0000" for red. The default color is black. 
      * @param integer $FillMode Video filling mode.
 
 0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.

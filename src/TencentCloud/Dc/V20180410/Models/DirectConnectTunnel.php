@@ -110,8 +110,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVpcName(string $VpcName) Set VPC name.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getTencentBackupAddress() Obtain 
- * @method void setTencentBackupAddress(string $TencentBackupAddress) Set 
+ * @method string getTencentBackupAddress() Obtain Backup IP address on the Tencent side.
+ * @method void setTencentBackupAddress(string $TencentBackupAddress) Set Backup IP address on the Tencent side.
  * @method boolean getSignLaw() Obtain Whether the connection associated with the dedicated tunnel has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setSignLaw(boolean $SignLaw) Set Whether the connection associated with the dedicated tunnel has the service agreement signed.
@@ -273,7 +273,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $VpcName;
 
     /**
-     * @var string 
+     * @var string Backup IP address on the Tencent side.
      */
     public $TencentBackupAddress;
 
@@ -329,7 +329,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $VpcName VPC name.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $TencentBackupAddress 
+     * @param string $TencentBackupAddress Backup IP address on the Tencent side.
      * @param boolean $SignLaw Whether the connection associated with the dedicated tunnel has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */

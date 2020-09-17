@@ -82,8 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCFS(integer $CFS) Set Cloud file storage - CFS.
  * @method integer getOracle() Obtain Oracle.
  * @method void setOracle(integer $Oracle) Set Oracle.
- * @method integer getElasticSearch() Obtain 
- * @method void setElasticSearch(integer $ElasticSearch) Set 
+ * @method integer getElasticSearch() Obtain ElasticSearch Service.
+ * @method void setElasticSearch(integer $ElasticSearch) Set ElasticSearch Service.
  * @method integer getTBaaS() Obtain Blockchain service.
  * @method void setTBaaS(integer $TBaaS) Set Blockchain service.
  * @method integer getItop() Obtain Itop.
@@ -263,7 +263,7 @@ class ResourceDashboard extends AbstractModel
     public $Oracle;
 
     /**
-     * @var integer 
+     * @var integer ElasticSearch Service.
      */
     public $ElasticSearch;
 
@@ -349,7 +349,7 @@ class ResourceDashboard extends AbstractModel
      * @param integer $SEAL SEAL.
      * @param integer $CFS Cloud file storage - CFS.
      * @param integer $Oracle Oracle.
-     * @param integer $ElasticSearch 
+     * @param integer $ElasticSearch ElasticSearch Service.
      * @param integer $TBaaS Blockchain service.
      * @param integer $Itop Itop.
      * @param integer $DBAudit Cloud database audit.

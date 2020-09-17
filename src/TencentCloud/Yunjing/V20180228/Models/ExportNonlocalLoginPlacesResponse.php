@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDownloadUrl() Obtain Download address for exported file.
  * @method void setDownloadUrl(string $DownloadUrl) Set Download address for exported file.
+ * @method string getTaskId() Obtain Export task ID
+ * @method void setTaskId(string $TaskId) Set Export task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +35,18 @@ class ExportNonlocalLoginPlacesResponse extends AbstractModel
     public $DownloadUrl;
 
     /**
+     * @var string Export task ID
+     */
+    public $TaskId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param string $DownloadUrl Download address for exported file.
+     * @param string $TaskId Export task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -56,6 +64,10 @@ class ExportNonlocalLoginPlacesResponse extends AbstractModel
         }
         if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
             $this->DownloadUrl = $param["DownloadUrl"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableGroupName(string $TableGroupName) Set Table group name, which can contain up to 32 letters and digits
  * @method string getTableGroupId() Obtain Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
  * @method void setTableGroupId(string $TableGroupId) Set Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
- * @method array getResourceTags() Obtain 
- * @method void setResourceTags(array $ResourceTags) Set 
+ * @method array getResourceTags() Obtain Table group tag list
+ * @method void setResourceTags(array $ResourceTags) Set Table group tag list
  */
 class CreateTableGroupRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateTableGroupRequest extends AbstractModel
     public $TableGroupId;
 
     /**
-     * @var array 
+     * @var array Table group tag list
      */
     public $ResourceTags;
 
@@ -55,7 +55,7 @@ class CreateTableGroupRequest extends AbstractModel
      * @param string $ClusterId ID of the cluster where a table group resides
      * @param string $TableGroupName Table group name, which can contain up to 32 letters and digits
      * @param string $TableGroupId Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
-     * @param array $ResourceTags 
+     * @param array $ResourceTags Table group tag list
      */
     function __construct()
     {

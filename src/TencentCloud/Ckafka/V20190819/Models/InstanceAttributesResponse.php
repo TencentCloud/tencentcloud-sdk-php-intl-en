@@ -84,6 +84,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCvm(integer $Cvm) Set Sale type
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain Type.
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setInstanceType(string $InstanceType) Set Type.
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method array getFeatures() Obtain 
+ * @method void setFeatures(array $Features) Set 
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -224,6 +230,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Cvm;
 
     /**
+     * @var string Type.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $InstanceType;
+
+    /**
+     * @var array 
+     */
+    public $Features;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param array $VipList VIP list information of access point
@@ -256,6 +273,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Cvm Sale type
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceType Type.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param array $Features 
      */
     function __construct()
     {
@@ -383,6 +403,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Cvm",$param) and $param["Cvm"] !== null) {
             $this->Cvm = $param["Cvm"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
         }
     }
 }

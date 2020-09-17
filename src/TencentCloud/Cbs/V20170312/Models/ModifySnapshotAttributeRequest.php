@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySnapshotAttribute request structure.
  *
- * @method string getSnapshotId() Obtain Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
- * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+ * @method string getSnapshotId() Obtain Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
  * @method string getSnapshotName() Obtain Name of new snapshot. Maximum length is 60 bytes.
  * @method void setSnapshotName(string $SnapshotName) Set Name of new snapshot. Maximum length is 60 bytes.
  * @method boolean getIsPermanent() Obtain The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifySnapshotAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+     * @var string Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      */
     public $SnapshotId;
 
@@ -45,7 +45,7 @@ class ModifySnapshotAttributeRequest extends AbstractModel
     public $IsPermanent;
 
     /**
-     * @param string $SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+     * @param string $SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      * @param string $SnapshotName Name of new snapshot. Maximum length is 60 bytes.
      * @param boolean $IsPermanent The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
      */

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) Set Size of the cloud disk used to create this snapshot (in GB).
  * @method string getSnapshotState() Obtain Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
  * @method void setSnapshotState(string $SnapshotState) Set Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
- * @method string getSnapshotName() Obtain Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
- * @method void setSnapshotName(string $SnapshotName) Set Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+ * @method string getSnapshotName() Obtain Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
+ * @method void setSnapshotName(string $SnapshotName) Set Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
  * @method integer getPercent() Obtain The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
  * @method void setPercent(integer $Percent) Set The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
  * @method string getCreateTime() Obtain Creation time of the snapshot.
@@ -90,7 +90,7 @@ class Snapshot extends AbstractModel
     public $SnapshotState;
 
     /**
-     * @var string Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+     * @var string Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
      */
     public $SnapshotName;
 
@@ -156,7 +156,7 @@ class Snapshot extends AbstractModel
      * @param string $DiskId ID of the cloud disk used to create this snapshot.
      * @param integer $DiskSize Size of the cloud disk used to create this snapshot (in GB).
      * @param string $SnapshotState Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
-     * @param string $SnapshotName Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+     * @param string $SnapshotName Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
      * @param integer $Percent The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
      * @param string $CreateTime Creation time of the snapshot.
      * @param string $DeadlineTime The expiration time of the snapshot. If the snapshot is permanently retained, this field is blank.

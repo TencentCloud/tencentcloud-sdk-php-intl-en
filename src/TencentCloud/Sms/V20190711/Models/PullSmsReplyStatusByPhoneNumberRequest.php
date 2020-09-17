@@ -32,8 +32,8 @@ Note: this parameter is currently fixed at 0.
  * @method void setPhoneNumber(string $PhoneNumber) Set Target mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
  * @method string getSmsSdkAppid() Obtain SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
  * @method void setSmsSdkAppid(string $SmsSdkAppid) Set SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
- * @method integer getEndDateTime() Obtain 
- * @method void setEndDateTime(integer $EndDateTime) Set 
+ * @method integer getEndDateTime() Obtain Pull end time in UNIX timestamp accurate to seconds.
+ * @method void setEndDateTime(integer $EndDateTime) Set Pull end time in UNIX timestamp accurate to seconds.
  */
 class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel
 {
@@ -64,7 +64,7 @@ Note: this parameter is currently fixed at 0.
     public $SmsSdkAppid;
 
     /**
-     * @var integer 
+     * @var integer Pull end time in UNIX timestamp accurate to seconds.
      */
     public $EndDateTime;
 
@@ -75,7 +75,7 @@ Note: this parameter is currently fixed at 0.
      * @param integer $Limit Maximum number of pulled entries. Maximum value: 100.
      * @param string $PhoneNumber Target mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
      * @param string $SmsSdkAppid SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
-     * @param integer $EndDateTime 
+     * @param integer $EndDateTime Pull end time in UNIX timestamp accurate to seconds.
      */
     function __construct()
     {

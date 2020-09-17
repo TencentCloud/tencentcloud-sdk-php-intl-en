@@ -30,8 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) Set Number of CPU cores.
  * @method integer getMemory() Obtain Memory size in GB.
  * @method void setMemory(integer $Memory) Set Memory size in GB.
- * @method array getDataVolumes() Obtain Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
- * @method void setDataVolumes(array $DataVolumes) Set Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+ * @method array getDataVolumes() Obtain Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+ * @method void setDataVolumes(array $DataVolumes) Set Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+ * @method string getCpuType() Obtain EKS cluster - CPU type. Valid values: "intel", "amd"
+ * @method void setCpuType(string $CpuType) Set EKS cluster - CPU type. Valid values: "intel", "amd"
+ * @method array getPodVolumes() Obtain Pod node data directory mounting information.
+ * @method void setPodVolumes(array $PodVolumes) Set Pod node data directory mounting information.
  */
 class PodSpec extends AbstractModel
 {
@@ -61,9 +65,19 @@ class PodSpec extends AbstractModel
     public $Memory;
 
     /**
-     * @var array Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+     * @var array Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
      */
     public $DataVolumes;
+
+    /**
+     * @var string EKS cluster - CPU type. Valid values: "intel", "amd"
+     */
+    public $CpuType;
+
+    /**
+     * @var array Pod node data directory mounting information.
+     */
+    public $PodVolumes;
 
     /**
      * @param string $ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
@@ -71,7 +85,9 @@ class PodSpec extends AbstractModel
      * @param string $NodeType Purpose of the resource, i.e., node type, which currently can only be "TASK".
      * @param integer $Cpu Number of CPU cores.
      * @param integer $Memory Memory size in GB.
-     * @param array $DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+     * @param array $DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * @param string $CpuType EKS cluster - CPU type. Valid values: "intel", "amd"
+     * @param array $PodVolumes Pod node data directory mounting information.
      */
     function __construct()
     {
@@ -108,6 +124,19 @@ class PodSpec extends AbstractModel
 
         if (array_key_exists("DataVolumes",$param) and $param["DataVolumes"] !== null) {
             $this->DataVolumes = $param["DataVolumes"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
+        }
+
+        if (array_key_exists("PodVolumes",$param) and $param["PodVolumes"] !== null) {
+            $this->PodVolumes = [];
+            foreach ($param["PodVolumes"] as $key => $value){
+                $obj = new PodVolume();
+                $obj->deserialize($value);
+                array_push($this->PodVolumes, $obj);
+            }
         }
     }
 }

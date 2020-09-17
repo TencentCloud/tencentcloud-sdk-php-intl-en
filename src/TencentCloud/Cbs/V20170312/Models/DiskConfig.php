@@ -32,15 +32,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxDiskSize(integer $MaxDiskSize) Set The maximum configurable cloud disk size (in GB).
  * @method integer getMinDiskSize() Obtain The minimum configurable cloud disk size (in GB).
  * @method void setMinDiskSize(integer $MinDiskSize) Set The minimum configurable cloud disk size (in GB).
- * @method string getZone() Obtain The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
- * @method void setZone(string $Zone) Set The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+ * @method string getZone() Obtain The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
+ * @method void setZone(string $Zone) Set The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
  * @method string getDeviceClass() Obtain Instance model.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setDeviceClass(string $DeviceClass) Set Instance model.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getInstanceFamily() Obtain Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+ * @method string getInstanceFamily() Obtain Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
- * @method void setInstanceFamily(string $InstanceFamily) Set Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+ * @method void setInstanceFamily(string $InstanceFamily) Set Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
  */
 class DiskConfig extends AbstractModel
@@ -76,7 +76,7 @@ class DiskConfig extends AbstractModel
     public $MinDiskSize;
 
     /**
-     * @var string The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+     * @var string The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
      */
     public $Zone;
 
@@ -87,7 +87,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $DeviceClass;
 
     /**
-     * @var string Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+     * @var string Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
      */
     public $InstanceFamily;
@@ -99,10 +99,10 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
      * @param integer $MaxDiskSize The maximum configurable cloud disk size (in GB).
      * @param integer $MinDiskSize The minimum configurable cloud disk size (in GB).
-     * @param string $Zone The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+     * @param string $Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
      * @param string $DeviceClass Instance model.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $InstanceFamily Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+     * @param string $InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
      */
     function __construct()

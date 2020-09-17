@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIp(string $HostIp) Set Server for which the allowlist takes effect
  * @method integer getId() Obtain Rule ID, used for rule updating
  * @method void setId(integer $Id) Set Rule ID, used for rule updating
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
+ * @method string getStartTime() Obtain Start time
+ * @method void setStartTime(string $StartTime) Set Start time
+ * @method string getEndTime() Obtain End time
+ * @method void setEndTime(string $EndTime) Set End time
  */
 class LoginWhiteListsRule extends AbstractModel
 {
@@ -70,12 +70,12 @@ class LoginWhiteListsRule extends AbstractModel
     public $Id;
 
     /**
-     * @var string 
+     * @var string Start time
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End time
      */
     public $EndTime;
 
@@ -86,8 +86,8 @@ class LoginWhiteListsRule extends AbstractModel
      * @param boolean $IsGlobal Whether this rule is applied to all servers under the current account
      * @param string $HostIp Server for which the allowlist takes effect
      * @param integer $Id Rule ID, used for rule updating
-     * @param string $StartTime 
-     * @param string $EndTime 
+     * @param string $StartTime Start time
+     * @param string $EndTime End time
      */
     function __construct()
     {

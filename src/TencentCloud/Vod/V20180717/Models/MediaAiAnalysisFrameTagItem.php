@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTag() Obtain Frame-specific tag name.
  * @method void setTag(string $Tag) Set Frame-specific tag name.
+ * @method array getCategorySet() Obtain Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+ * @method void setCategorySet(array $CategorySet) Set Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
  * @method float getConfidence() Obtain Confidence of intelligently generated frame-specific tag between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Confidence of intelligently generated frame-specific tag between 0 and 100.
  */
@@ -33,12 +37,20 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
     public $Tag;
 
     /**
+     * @var array Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+     */
+    public $CategorySet;
+
+    /**
      * @var float Confidence of intelligently generated frame-specific tag between 0 and 100.
      */
     public $Confidence;
 
     /**
      * @param string $Tag Frame-specific tag name.
+     * @param array $CategorySet Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
      * @param float $Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
      */
     function __construct()
@@ -56,6 +68,10 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
         }
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("CategorySet",$param) and $param["CategorySet"] !== null) {
+            $this->CategorySet = $param["CategorySet"];
         }
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {

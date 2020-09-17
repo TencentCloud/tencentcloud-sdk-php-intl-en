@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSnapshot request structure.
  *
- * @method string getDiskId() Obtain ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
- * @method void setDiskId(string $DiskId) Set ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
+ * @method string getDiskId() Obtain ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+ * @method void setDiskId(string $DiskId) Set ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
  * @method string getSnapshotName() Obtain Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
  * @method void setSnapshotName(string $SnapshotName) Set Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
  */
 class CreateSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
+     * @var string ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
      */
     public $DiskId;
 
@@ -38,7 +38,7 @@ class CreateSnapshotRequest extends AbstractModel
     public $SnapshotName;
 
     /**
-     * @param string $DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
+     * @param string $DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
      * @param string $SnapshotName Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
      */
     function __construct()

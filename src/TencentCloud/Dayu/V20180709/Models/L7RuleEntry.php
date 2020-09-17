@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCCThreshold(integer $CCThreshold) Set HTTPS CC protection threshold
  * @method string getCCLevel() Obtain HTTPS CC protection level
  * @method void setCCLevel(string $CCLevel) Set HTTPS CC protection level
- * @method integer getHttpsToHttpEnable() Obtain 
- * @method void setHttpsToHttpEnable(integer $HttpsToHttpEnable) Set 
+ * @method integer getHttpsToHttpEnable() Obtain Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
+ * @method void setHttpsToHttpEnable(integer $HttpsToHttpEnable) Set Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
  * @method integer getVirtualPort() Obtain Access port number.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVirtualPort(integer $VirtualPort) Set Access port number.
@@ -156,7 +156,7 @@ class L7RuleEntry extends AbstractModel
     public $CCLevel;
 
     /**
-     * @var integer 
+     * @var integer Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
      */
     public $HttpsToHttpEnable;
 
@@ -185,7 +185,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $CCEnable HTTPS CC protection status. Valid values: [0 (disabled), 1 (enabled)]
      * @param integer $CCThreshold HTTPS CC protection threshold
      * @param string $CCLevel HTTPS CC protection level
-     * @param integer $HttpsToHttpEnable 
+     * @param integer $HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
      * @param integer $VirtualPort Access port number.
 Note: this field may return null, indicating that no valid values can be obtained.
      */

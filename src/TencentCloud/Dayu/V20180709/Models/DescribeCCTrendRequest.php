@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set Statistics end time
  * @method string getId() Obtain Resource instance ID. If `Business` is `basic`, this field is not required (because Anti-DDoS Basic has no resource instance)
  * @method void setId(string $Id) Set Resource instance ID. If `Business` is `basic`, this field is not required (because Anti-DDoS Basic has no resource instance)
+ * @method string getDomain() Obtain (Optional) Domain name
+ * @method void setDomain(string $Domain) Set (Optional) Domain name
  */
 class DescribeCCTrendRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeCCTrendRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var string (Optional) Domain name
+     */
+    public $Domain;
+
+    /**
      * @param string $Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
      * @param string $Ip Resource IP
      * @param string $MetricName Metric. Valid values: [inqps (total requests peak), dropqps (attack requests peak)]
@@ -80,6 +87,7 @@ class DescribeCCTrendRequest extends AbstractModel
      * @param string $StartTime Statistics start time
      * @param string $EndTime Statistics end time
      * @param string $Id Resource instance ID. If `Business` is `basic`, this field is not required (because Anti-DDoS Basic has no resource instance)
+     * @param string $Domain (Optional) Domain name
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeCCTrendRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

@@ -50,6 +50,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEipAlgType(AlgType $EipAlgType) Set Type of the protocol used in EIP ALG
  * @method string getInternetServiceProvider() Obtain The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
  * @method void setInternetServiceProvider(string $InternetServiceProvider) Set The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+ * @method boolean getLocalBgp() Obtain Whether the EIP is in a local BGP.
+ * @method void setLocalBgp(boolean $LocalBgp) Set Whether the EIP is in a local BGP.
+ * @method integer getBandwidth() Obtain Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setBandwidth(integer $Bandwidth) Set Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method string getInternetChargeType() Obtain Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setInternetChargeType(string $InternetChargeType) Set Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
  */
 class Address extends AbstractModel
 {
@@ -129,6 +139,23 @@ class Address extends AbstractModel
     public $InternetServiceProvider;
 
     /**
+     * @var boolean Whether the EIP is in a local BGP.
+     */
+    public $LocalBgp;
+
+    /**
+     * @var integer Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $Bandwidth;
+
+    /**
+     * @var string Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $InternetChargeType;
+
+    /**
      * @param string $AddressId `EIP` `ID`, the unique ID of the `EIP`.
      * @param string $AddressName The `EIP` name.
      * @param string $AddressStatus Possible `EIP` states are 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.
@@ -144,6 +171,11 @@ class Address extends AbstractModel
      * @param boolean $CascadeRelease Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
      * @param AlgType $EipAlgType Type of the protocol used in EIP ALG
      * @param string $InternetServiceProvider The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+     * @param boolean $LocalBgp Whether the EIP is in a local BGP.
+     * @param integer $Bandwidth Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param string $InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -217,6 +249,18 @@ class Address extends AbstractModel
 
         if (array_key_exists("InternetServiceProvider",$param) and $param["InternetServiceProvider"] !== null) {
             $this->InternetServiceProvider = $param["InternetServiceProvider"];
+        }
+
+        if (array_key_exists("LocalBgp",$param) and $param["LocalBgp"] !== null) {
+            $this->LocalBgp = $param["LocalBgp"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("InternetChargeType",$param) and $param["InternetChargeType"] !== null) {
+            $this->InternetChargeType = $param["InternetChargeType"];
         }
     }
 }

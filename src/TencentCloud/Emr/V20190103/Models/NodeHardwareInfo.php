@@ -36,9 +36,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWanIp(string $WanIp) Set Public IP bound to master node
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getFlag() Obtain Node type
+ * @method integer getFlag() Obtain Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFlag(integer $Flag) Set Node type
+ * @method void setFlag(integer $Flag) Set Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getSpec() Obtain Node specification
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -160,8 +162,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getAutoFlag() Obtain 
- * @method void setAutoFlag(integer $AutoFlag) Set 
+ * @method integer getAutoFlag() Obtain Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+ * @method void setAutoFlag(integer $AutoFlag) Set Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
  * @method string getHardwareResourceType() Obtain Resource type. Valid values: host, pod
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type. Valid values: host, pod
@@ -194,7 +196,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $WanIp;
 
     /**
-     * @var integer Node type
+     * @var integer Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Flag;
@@ -380,7 +383,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
-     * @var integer 
+     * @var integer Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
      */
     public $AutoFlag;
 
@@ -399,7 +402,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $WanIp Public IP bound to master node
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Flag Node type
+     * @param integer $Flag Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Spec Node specification
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -461,7 +465,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $AutoFlag 
+     * @param integer $AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
      * @param string $HardwareResourceType Resource type. Valid values: host, pod
 Note: this field may return null, indicating that no valid values can be obtained.
      */

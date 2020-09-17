@@ -70,6 +70,8 @@ MyTentera: Malaysian Armed Forces Identity Card
 MyKAS: Malaysian Temporary Resident Identity Card
 POLIS: Royal Malaysia Police Identity Card
 IKAD: Malaysia Temporary Employment Visit Pass
+ * @method string getBirthday() Obtain Date of birth (currently, this field is only supported for IKAD)
+ * @method void setBirthday(string $Birthday) Set Date of birth (currently, this field is only supported for IKAD)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -133,6 +135,11 @@ IKAD: Malaysia Temporary Employment Visit Pass
     public $Type;
 
     /**
+     * @var string Date of birth (currently, this field is only supported for IKAD)
+     */
+    public $Birthday;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -163,6 +170,7 @@ MyTentera: Malaysian Armed Forces Identity Card
 MyKAS: Malaysian Temporary Resident Identity Card
 POLIS: Royal Malaysia Police Identity Card
 IKAD: Malaysia Temporary Employment Visit Pass
+     * @param string $Birthday Date of birth (currently, this field is only supported for IKAD)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -208,6 +216,10 @@ IKAD: Malaysia Temporary Employment Visit Pass
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
+            $this->Birthday = $param["Birthday"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

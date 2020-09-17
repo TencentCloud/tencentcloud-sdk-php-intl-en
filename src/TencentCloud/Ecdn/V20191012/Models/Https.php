@@ -52,8 +52,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSslStatus(string $SslStatus) Set HTTPS certificate deployment status. Valid values: closed (disabled), deploying (deploying), deployed (deployment succeeded), failed (deployment failed). This parameter cannot be used as an input parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Hsts getHsts() Obtain 
- * @method void setHsts(Hsts $Hsts) Set 
+ * @method Hsts getHsts() Obtain Hsts configuration.
+ * @method void setHsts(Hsts $Hsts) Set Hsts configuration.
  */
 class Https extends AbstractModel
 {
@@ -106,7 +106,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SslStatus;
 
     /**
-     * @var Hsts 
+     * @var Hsts Hsts configuration.
      */
     public $Hsts;
 
@@ -127,7 +127,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SslStatus HTTPS certificate deployment status. Valid values: closed (disabled), deploying (deploying), deployed (deployment succeeded), failed (deployment failed). This parameter cannot be used as an input parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Hsts $Hsts 
+     * @param Hsts $Hsts Hsts configuration.
      */
     function __construct()
     {

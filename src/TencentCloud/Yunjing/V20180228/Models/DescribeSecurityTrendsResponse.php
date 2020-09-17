@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVuls(array $Vuls) Set Vulnerability statistics array.
  * @method array getBaseLines() Obtain Baseline statistics array.
  * @method void setBaseLines(array $BaseLines) Set Baseline statistics array.
- * @method array getMaliciousRequests() Obtain 
- * @method void setMaliciousRequests(array $MaliciousRequests) Set 
- * @method array getHighRiskBashs() Obtain 
- * @method void setHighRiskBashs(array $HighRiskBashs) Set 
- * @method array getReverseShells() Obtain 
- * @method void setReverseShells(array $ReverseShells) Set 
- * @method array getPrivilegeEscalations() Obtain 
- * @method void setPrivilegeEscalations(array $PrivilegeEscalations) Set 
- * @method array getCyberAttacks() Obtain 
- * @method void setCyberAttacks(array $CyberAttacks) Set 
+ * @method array getMaliciousRequests() Obtain Statistics array of malicious requests.
+ * @method void setMaliciousRequests(array $MaliciousRequests) Set Statistics array of malicious requests.
+ * @method array getHighRiskBashs() Obtain Statistics array of high-risk commands.
+ * @method void setHighRiskBashs(array $HighRiskBashs) Set Statistics array of high-risk commands.
+ * @method array getReverseShells() Obtain Statistics array of reverse shells.
+ * @method void setReverseShells(array $ReverseShells) Set Statistics array of reverse shells.
+ * @method array getPrivilegeEscalations() Obtain Statistics array of local privilege escalations.
+ * @method void setPrivilegeEscalations(array $PrivilegeEscalations) Set Statistics array of local privilege escalations.
+ * @method array getCyberAttacks() Obtain Statistics array of network attacks.
+ * @method void setCyberAttacks(array $CyberAttacks) Set Statistics array of network attacks.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -71,27 +71,27 @@ class DescribeSecurityTrendsResponse extends AbstractModel
     public $BaseLines;
 
     /**
-     * @var array 
+     * @var array Statistics array of malicious requests.
      */
     public $MaliciousRequests;
 
     /**
-     * @var array 
+     * @var array Statistics array of high-risk commands.
      */
     public $HighRiskBashs;
 
     /**
-     * @var array 
+     * @var array Statistics array of reverse shells.
      */
     public $ReverseShells;
 
     /**
-     * @var array 
+     * @var array Statistics array of local privilege escalations.
      */
     public $PrivilegeEscalations;
 
     /**
-     * @var array 
+     * @var array Statistics array of network attacks.
      */
     public $CyberAttacks;
 
@@ -106,11 +106,11 @@ class DescribeSecurityTrendsResponse extends AbstractModel
      * @param array $BruteAttacks Brute force attack event statistics array.
      * @param array $Vuls Vulnerability statistics array.
      * @param array $BaseLines Baseline statistics array.
-     * @param array $MaliciousRequests 
-     * @param array $HighRiskBashs 
-     * @param array $ReverseShells 
-     * @param array $PrivilegeEscalations 
-     * @param array $CyberAttacks 
+     * @param array $MaliciousRequests Statistics array of malicious requests.
+     * @param array $HighRiskBashs Statistics array of high-risk commands.
+     * @param array $ReverseShells Statistics array of reverse shells.
+     * @param array $PrivilegeEscalations Statistics array of local privilege escalations.
+     * @param array $CyberAttacks Statistics array of network attacks.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

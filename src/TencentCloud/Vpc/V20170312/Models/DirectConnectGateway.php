@@ -60,8 +60,8 @@ NAT type supports network address switch configuration. After the type is confir
 <li>`STATIC` - Static, that is, user-configured.</li>
  * @method boolean getEnableBGP() Obtain Whether BGP is enabled.
  * @method void setEnableBGP(boolean $EnableBGP) Set Whether BGP is enabled.
- * @method boolean getEnableBGPCommunity() Obtain 
- * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) Set 
+ * @method boolean getEnableBGPCommunity() Obtain Whether to enable BGP's `community` attribute. Valid values: enable, disable
+ * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) Set Whether to enable BGP's `community` attribute. Valid values: enable, disable
  * @method string getNatGatewayId() Obtain ID of the NAT gateway bound.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setNatGatewayId(string $NatGatewayId) Set ID of the NAT gateway bound.
@@ -134,7 +134,7 @@ NAT type supports network address switch configuration. After the type is confir
     public $EnableBGP;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable BGP's `community` attribute. Valid values: enable, disable
      */
     public $EnableBGPCommunity;
 
@@ -165,7 +165,7 @@ NAT type supports network address switch configuration. After the type is confir
 <li>`BGP` - Automatic learning.</li>
 <li>`STATIC` - Static, that is, user-configured.</li>
      * @param boolean $EnableBGP Whether BGP is enabled.
-     * @param boolean $EnableBGPCommunity 
+     * @param boolean $EnableBGPCommunity Whether to enable BGP's `community` attribute. Valid values: enable, disable
      * @param string $NatGatewayId ID of the NAT gateway bound.
 Note: this field may return `null`, indicating that no valid value was found.
      */

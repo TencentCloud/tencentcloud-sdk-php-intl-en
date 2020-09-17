@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstanceEngineVersion response structure.
  *
- * @method string getAsyncRequestId() Obtain Async task ID. The task execution result can be queried using the [async task execution result querying API](https://cloud.tencent.com/document/api/236/20410).
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID. The task execution result can be queried using the [async task execution result querying API](https://cloud.tencent.com/document/api/236/20410).
+ * @method string getAsyncRequestId() Obtain Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
+ * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class UpgradeDBInstanceEngineVersionResponse extends AbstractModel
 {
     /**
-     * @var string Async task ID. The task execution result can be queried using the [async task execution result querying API](https://cloud.tencent.com/document/api/236/20410).
+     * @var string Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
      */
     public $AsyncRequestId;
 
@@ -38,7 +38,7 @@ class UpgradeDBInstanceEngineVersionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async task ID. The task execution result can be queried using the [async task execution result querying API](https://cloud.tencent.com/document/api/236/20410).
+     * @param string $AsyncRequestId Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

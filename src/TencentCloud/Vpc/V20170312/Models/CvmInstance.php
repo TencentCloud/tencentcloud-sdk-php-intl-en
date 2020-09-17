@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Instance's memory capacity. Unit: GB.
  * @method string getCreatedTime() Obtain The creation time.
  * @method void setCreatedTime(string $CreatedTime) Set The creation time.
- * @method string getInstanceType() Obtain 
- * @method void setInstanceType(string $InstanceType) Set 
+ * @method string getInstanceType() Obtain Instance type.
+ * @method void setInstanceType(string $InstanceType) Set Instance type.
  * @method integer getEniLimit() Obtain Instance ENI quota (including primary ENIs).
  * @method void setEniLimit(integer $EniLimit) Set Instance ENI quota (including primary ENIs).
  * @method integer getEniIpLimit() Obtain Private IP quoata for instance ENIs (including primary ENIs).
@@ -88,7 +88,7 @@ class CvmInstance extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string 
+     * @var string Instance type.
      */
     public $InstanceType;
 
@@ -116,7 +116,7 @@ class CvmInstance extends AbstractModel
      * @param integer $CPU Number of CPU cores in an instance (in core).
      * @param integer $Memory Instance's memory capacity. Unit: GB.
      * @param string $CreatedTime The creation time.
-     * @param string $InstanceType 
+     * @param string $InstanceType Instance type.
      * @param integer $EniLimit Instance ENI quota (including primary ENIs).
      * @param integer $EniIpLimit Private IP quoata for instance ENIs (including primary ENIs).
      * @param integer $InstanceEniCount The number of ENIs (including primary ENIs) bound to a instance.

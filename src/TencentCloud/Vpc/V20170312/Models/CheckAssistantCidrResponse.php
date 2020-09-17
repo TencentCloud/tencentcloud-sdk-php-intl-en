@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckAssistantCidr response structure.
  *
- * @method array getConflictSourceSet() Obtain 
- * @method void setConflictSourceSet(array $ConflictSourceSet) Set 
+ * @method array getConflictSourceSet() Obtain Array of conflict resources.
+ * @method void setConflictSourceSet(array $ConflictSourceSet) Set Array of conflict resources.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CheckAssistantCidrResponse extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Array of conflict resources.
      */
     public $ConflictSourceSet;
 
@@ -38,7 +38,7 @@ class CheckAssistantCidrResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ConflictSourceSet 
+     * @param array $ConflictSourceSet Array of conflict resources.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

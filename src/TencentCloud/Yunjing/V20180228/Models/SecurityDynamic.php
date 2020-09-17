@@ -38,8 +38,16 @@ use TencentCloud\Common\AbstractModel;
 <li>BASELINE: security baseline</li>
  * @method string getMessage() Obtain Security event message.
  * @method void setMessage(string $Message) Set Security event message.
- * @method string getSecurityLevel() Obtain 
- * @method void setSecurityLevel(string $SecurityLevel) Set 
+ * @method string getSecurityLevel() Obtain Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li>
+ * @method void setSecurityLevel(string $SecurityLevel) Set Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li>
  */
 class SecurityDynamic extends AbstractModel
 {
@@ -69,7 +77,11 @@ class SecurityDynamic extends AbstractModel
     public $Message;
 
     /**
-     * @var string 
+     * @var string Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li>
      */
     public $SecurityLevel;
 
@@ -83,7 +95,11 @@ class SecurityDynamic extends AbstractModel
 <li>VUL: vulnerability</li>
 <li>BASELINE: security baseline</li>
      * @param string $Message Security event message.
-     * @param string $SecurityLevel 
+     * @param string $SecurityLevel Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li>
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainer(string $Container) Set Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
  * @method string getName() Obtain Transcoding template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Transcoding template name. Length limit: 64 characters.
- * @method string getComment() Obtain Template description. Length limit: 256 bytes.
- * @method void setComment(string $Comment) Set Template description. Length limit: 256 bytes.
+ * @method string getComment() Obtain Template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method integer getRemoveVideo() Obtain Whether to remove video data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
@@ -67,7 +67,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string Template description. Length limit: 256 bytes.
+     * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
 
@@ -109,7 +109,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
      * @param integer $Definition Unique ID of transcoding template.
      * @param string $Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      * @param string $Name Transcoding template name. Length limit: 64 characters.
-     * @param string $Comment Template description. Length limit: 256 bytes.
+     * @param string $Comment Template description. Length limit: 256 characters.
      * @param integer $RemoveVideo Whether to remove video data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>

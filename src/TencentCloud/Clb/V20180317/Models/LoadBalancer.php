@@ -190,8 +190,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsBlockTime(string $IsBlockTime) Set Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getLocalBgp() Obtain 
- * @method void setLocalBgp(boolean $LocalBgp) Set 
+ * @method boolean getLocalBgp() Obtain Whether the IP type is the local BGP
+ * @method void setLocalBgp(boolean $LocalBgp) Set Whether the IP type is the local BGP
  * @method string getClusterTag() Obtain Dedicated layer-7 tag.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setClusterTag(string $ClusterTag) Set Dedicated layer-7 tag.
@@ -465,7 +465,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IsBlockTime;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the IP type is the local BGP
      */
     public $LocalBgp;
 
@@ -567,7 +567,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IsBlockTime Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $LocalBgp 
+     * @param boolean $LocalBgp Whether the IP type is the local BGP
      * @param string $ClusterTag Dedicated layer-7 tag.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.

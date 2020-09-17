@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getClients() Obtain Client connection information, including client IP and number of connections
  * @method void setClients(array $Clients) Set Client connection information, including client IP and number of connections
- * @method integer getTotalCount() Obtain 
- * @method void setTotalCount(integer $TotalCount) Set 
+ * @method integer getTotalCount() Obtain The total number of records that meet the query condition, which can be used for paginated queries.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of records that meet the query condition, which can be used for paginated queries.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeClientConnectionsResponse extends AbstractModel
     public $Clients;
 
     /**
-     * @var integer 
+     * @var integer The total number of records that meet the query condition, which can be used for paginated queries.
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class DescribeClientConnectionsResponse extends AbstractModel
 
     /**
      * @param array $Clients Client connection information, including client IP and number of connections
-     * @param integer $TotalCount 
+     * @param integer $TotalCount The total number of records that meet the query condition, which can be used for paginated queries.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRollbackTaskDetail request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://cloud.tencent.com/document/api/236/15872) to query the ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://cloud.tencent.com/document/api/236/15872) to query the ID.
+ * @method string getInstanceId() Obtain Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID.
  * @method string getAsyncRequestId() Obtain Async task ID.
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID.
  * @method integer getLimit() Obtain Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRollbackTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://cloud.tencent.com/document/api/236/15872) to query the ID.
+     * @var string Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID.
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeRollbackTaskDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://cloud.tencent.com/document/api/236/15872) to query the ID.
+     * @param string $InstanceId Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID.
      * @param string $AsyncRequestId Async task ID.
      * @param integer $Limit Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
      * @param integer $Offset Pagination offset. Default value: 0.

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesDiskNum request structure.
  *
- * @method array getInstanceIds() Obtain ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
- * @method void setInstanceIds(array $InstanceIds) Set ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+ * @method array getInstanceIds() Obtain ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
+ * @method void setInstanceIds(array $InstanceIds) Set ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
  */
 class DescribeInstancesDiskNumRequest extends AbstractModel
 {
     /**
-     * @var array ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+     * @var array ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+     * @param array $InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
      */
     function __construct()
     {
