@@ -34,7 +34,7 @@ abstract class AbstractClient
     /**
      * @var string SDK version
      */
-    public static $SDK_VERSION = "SDK_PHP_3.0.61";
+    public static $SDK_VERSION = "SDK_PHP_3.0.62";
 
     /**
      * @var integer http response code 200
