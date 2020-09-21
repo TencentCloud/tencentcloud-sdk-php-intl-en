@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes the location of an instance, including its availability zone, project, host (for CDH products only), primary host IP, etc.
  *
- * @method string getZone() Obtain The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
- * @method void setZone(string $Zone) Set The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
- * @method integer getProjectId() Obtain ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
- * @method void setProjectId(integer $ProjectId) Set ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
+ * @method string getZone() Obtain The ID of [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://intl.cloud.tencent.com/document/213/15707?from_cn_redirect=1) API.
+ * @method void setZone(string $Zone) Set The ID of [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://intl.cloud.tencent.com/document/213/15707?from_cn_redirect=1) API.
+ * @method integer getProjectId() Obtain ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
+ * @method void setProjectId(integer $ProjectId) Set ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
  * @method array getHostIds() Obtain ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
  * @method void setHostIds(array $HostIds) Set ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
  * @method array getHostIps() Obtain Master host IP used to create the CVM
  * @method void setHostIps(array $HostIps) Set Master host IP used to create the CVM
- * @method string getHostId() Obtain 
- * @method void setHostId(string $HostId) Set 
+ * @method string getHostId() Obtain The ID of the CDH to which the instance belongs, only used as an output parameter.
+ * @method void setHostId(string $HostId) Set The ID of the CDH to which the instance belongs, only used as an output parameter.
  */
 class Placement extends AbstractModel
 {
     /**
-     * @var string The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
+     * @var string The ID of [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://intl.cloud.tencent.com/document/213/15707?from_cn_redirect=1) API.
      */
     public $Zone;
 
     /**
-     * @var integer ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
+     * @var integer ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
      */
     public $ProjectId;
 
@@ -54,16 +54,16 @@ class Placement extends AbstractModel
     public $HostIps;
 
     /**
-     * @var string 
+     * @var string The ID of the CDH to which the instance belongs, only used as an output parameter.
      */
     public $HostId;
 
     /**
-     * @param string $Zone The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
-     * @param integer $ProjectId ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](/document/api/378/4400) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
+     * @param string $Zone The ID of [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://intl.cloud.tencent.com/document/213/15707?from_cn_redirect=1) API.
+     * @param integer $ProjectId ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
      * @param array $HostIds ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
      * @param array $HostIps Master host IP used to create the CVM
-     * @param string $HostId 
+     * @param string $HostId The ID of the CDH to which the instance belongs, only used as an output parameter.
      */
     function __construct()
     {

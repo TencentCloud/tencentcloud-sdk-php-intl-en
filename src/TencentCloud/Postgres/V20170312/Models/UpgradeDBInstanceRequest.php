@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers. 1: yes, 0: no. Default value: no
  * @method array getVoucherIds() Obtain Voucher ID list (only one voucher can be specified currently)
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID list (only one voucher can be specified currently)
- * @method integer getActivityId() Obtain 
- * @method void setActivityId(integer $ActivityId) Set 
+ * @method integer getActivityId() Obtain Activity ID
+ * @method void setActivityId(integer $ActivityId) Set Activity ID
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var integer 
+     * @var integer Activity ID
      */
     public $ActivityId;
 
@@ -71,7 +71,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $DBInstanceId Instance ID in the format of postgres-lnp6j617
      * @param integer $AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: no
      * @param array $VoucherIds Voucher ID list (only one voucher can be specified currently)
-     * @param integer $ActivityId 
+     * @param integer $ActivityId Activity ID
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIds(array $HostIds) Set ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
  * @method array getHostIps() Obtain Master host IP used to create the CVM
  * @method void setHostIps(array $HostIps) Set Master host IP used to create the CVM
- * @method string getHostId() Obtain 
- * @method void setHostId(string $HostId) Set 
+ * @method string getHostId() Obtain The ID of the CDH to which the instance belongs, only used as an output parameter.
+ * @method void setHostId(string $HostId) Set The ID of the CDH to which the instance belongs, only used as an output parameter.
  */
 class Placement extends AbstractModel
 {
@@ -54,7 +54,7 @@ class Placement extends AbstractModel
     public $HostIps;
 
     /**
-     * @var string 
+     * @var string The ID of the CDH to which the instance belongs, only used as an output parameter.
      */
     public $HostId;
 
@@ -63,7 +63,7 @@ class Placement extends AbstractModel
      * @param integer $ProjectId ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
      * @param array $HostIds ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
      * @param array $HostIps Master host IP used to create the CVM
-     * @param string $HostId 
+     * @param string $HostId The ID of the CDH to which the instance belongs, only used as an output parameter.
      */
     function __construct()
     {

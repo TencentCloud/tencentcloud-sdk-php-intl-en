@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) Set Dry run
  * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.<br>For more information, see Ensuring Idempotency.
  * @method void setClientToken(string $ClientToken) Set A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.<br>For more information, see Ensuring Idempotency.
+ * @method string getReservedInstanceName() Obtain Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+ * @method void setReservedInstanceName(string $ReservedInstanceName) Set Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
  */
 class PurchaseReservedInstancesOfferingRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class PurchaseReservedInstancesOfferingRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var string Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+     */
+    public $ReservedInstanceName;
+
+    /**
      * @param integer $InstanceCount The number of the Reserved Instance you are purchasing.
      * @param string $ReservedInstancesOfferingId The ID of the Reserved Instance.
      * @param boolean $DryRun Dry run
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.<br>For more information, see Ensuring Idempotency.
+     * @param string $ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class PurchaseReservedInstancesOfferingRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("ReservedInstanceName",$param) and $param["ReservedInstanceName"] !== null) {
+            $this->ReservedInstanceName = $param["ReservedInstanceName"];
         }
     }
 }

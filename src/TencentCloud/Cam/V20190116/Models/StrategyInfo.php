@@ -42,8 +42,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setServiceType(string $ServiceType) Set Product associated with the policy
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getIsAttached() Obtain 
- * @method void setIsAttached(integer $IsAttached) Set 
+ * @method integer getIsAttached() Obtain This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
+ * @method void setIsAttached(integer $IsAttached) Set This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
  * @method integer getDeactived() Obtain Queries if the policy has been deactivated
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeactived(integer $Deactived) Set Queries if the policy has been deactivated
@@ -103,7 +103,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $ServiceType;
 
     /**
-     * @var integer 
+     * @var integer This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
      */
     public $IsAttached;
 
@@ -137,7 +137,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @param integer $Attachments Number of associated users
      * @param string $ServiceType Product associated with the policy
 Note: This field may return null, indicating that no valid value was found.
-     * @param integer $IsAttached 
+     * @param integer $IsAttached This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
      * @param integer $Deactived Queries if the policy has been deactivated
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $DeactivedDetail List of deprecated products

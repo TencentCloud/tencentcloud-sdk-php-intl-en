@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GeneralAccurateOCR response structure.
  *
- * @method array getTextDetections() Obtain Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
- * @method void setTextDetections(array $TextDetections) Set Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+ * @method array getTextDetections() Obtain Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+ * @method void setTextDetections(array $TextDetections) Set Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
  * @method float getAngel() Obtain Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation.
  * @method void setAngel(float $Angel) Set Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GeneralAccurateOCRResponse extends AbstractModel
 {
     /**
-     * @var array Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+     * @var array Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
      */
     public $TextDetections;
 
@@ -45,7 +45,7 @@ class GeneralAccurateOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TextDetections Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+     * @param array $TextDetections Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
      * @param float $Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

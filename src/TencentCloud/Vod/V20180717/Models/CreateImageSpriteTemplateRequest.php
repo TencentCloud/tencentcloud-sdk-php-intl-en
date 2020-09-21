@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColumnCount(integer $ColumnCount) Set Subimage column count of an image sprite.
  * @method string getName() Obtain Name of an image sprite generating template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of an image sprite generating template. Length limit: 64 characters.
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getComment() Obtain Template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -115,7 +115,7 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 
+     * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
 
@@ -170,7 +170,7 @@ Default value: open.
      * @param integer $RowCount Subimage row count of an image sprite.
      * @param integer $ColumnCount Subimage column count of an image sprite.
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
-     * @param string $Comment 
+     * @param string $Comment Template description. Length limit: 256 characters.
      * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>

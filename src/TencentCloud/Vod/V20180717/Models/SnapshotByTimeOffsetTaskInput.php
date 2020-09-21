@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Time point screencapturing template ID.
  * @method void setDefinition(integer $Definition) Set Time point screencapturing template ID.
- * @method array getExtTimeOffsetSet() Obtain 
- * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set 
+ * @method array getExtTimeOffsetSet() Obtain The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5 s” means the 3.5th second of the video;</li>
+<li>When a time point string ends with “%”, it is marked with corresponding percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
+ * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5 s” means the 3.5th second of the video;</li>
+<li>When a time point string ends with “%”, it is marked with corresponding percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
  * @method array getTimeOffsetSet() Obtain List of time points for screencapturing in <font color=red>milliseconds</font>.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTimeOffsetSet(array $TimeOffsetSet) Set List of time points for screencapturing in <font color=red>milliseconds</font>.
@@ -41,7 +45,9 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var array 
+     * @var array The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5 s” means the 3.5th second of the video;</li>
+<li>When a time point string ends with “%”, it is marked with corresponding percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
      */
     public $ExtTimeOffsetSet;
 
@@ -59,7 +65,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $Definition Time point screencapturing template ID.
-     * @param array $ExtTimeOffsetSet 
+     * @param array $ExtTimeOffsetSet The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5 s” means the 3.5th second of the video;</li>
+<li>When a time point string ends with “%”, it is marked with corresponding percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
      * @param array $TimeOffsetSet List of time points for screencapturing in <font color=red>milliseconds</font>.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.

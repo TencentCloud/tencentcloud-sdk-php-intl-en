@@ -74,14 +74,14 @@ Note: This field may return null, indicating that no valid value is found.
 Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
  * @method void setStopChargingMode(string $StopChargingMode) Set Instance billing method after shutdown.
 Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
- * @method string getUuid() Obtain 
- * @method void setUuid(string $Uuid) Set 
- * @method string getLatestOperation() Obtain 
- * @method void setLatestOperation(string $LatestOperation) Set 
- * @method string getLatestOperationState() Obtain 
- * @method void setLatestOperationState(string $LatestOperationState) Set 
- * @method string getLatestOperationRequestId() Obtain 
- * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set 
+ * @method string getUuid() Obtain Globally unique ID of the instance.
+ * @method void setUuid(string $Uuid) Set Globally unique ID of the instance.
+ * @method string getLatestOperation() Obtain Last operation of the instance, such as StopInstances or ResetInstance.
+ * @method void setLatestOperation(string $LatestOperation) Set Last operation of the instance, such as StopInstances or ResetInstance.
+ * @method string getLatestOperationState() Obtain The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+ * @method void setLatestOperationState(string $LatestOperationState) Set The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+ * @method string getLatestOperationRequestId() Obtain Unique request ID for the last operation of the instance.
+ * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set Unique request ID for the last operation of the instance.
  * @method string getDisasterRecoverGroupId() Obtain ID of a spread placement group.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set ID of a spread placement group.
@@ -229,22 +229,22 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     public $StopChargingMode;
 
     /**
-     * @var string 
+     * @var string Globally unique ID of the instance.
      */
     public $Uuid;
 
     /**
-     * @var string 
+     * @var string Last operation of the instance, such as StopInstances or ResetInstance.
      */
     public $LatestOperation;
 
     /**
-     * @var string 
+     * @var string The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
      */
     public $LatestOperationState;
 
     /**
-     * @var string 
+     * @var string Unique request ID for the last operation of the instance.
      */
     public $LatestOperationRequestId;
 
@@ -306,10 +306,10 @@ Note: This field may return null, indicating that no valid value is found.
      * @param array $Tags List of tags associated with the instance.
      * @param string $StopChargingMode Instance billing method after shutdown.
 Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
-     * @param string $Uuid 
-     * @param string $LatestOperation 
-     * @param string $LatestOperationState 
-     * @param string $LatestOperationRequestId 
+     * @param string $Uuid Globally unique ID of the instance.
+     * @param string $LatestOperation Last operation of the instance, such as StopInstances or ResetInstance.
+     * @param string $LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+     * @param string $LatestOperationRequestId Unique request ID for the last operation of the instance.
      * @param string $DisasterRecoverGroupId ID of a spread placement group.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param array $IPv6Addresses IPv6 address of the instance.

@@ -206,14 +206,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set S3 bucket origin access authentication configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method SecurityConfig getSecurityConfig() Obtain 
- * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set 
- * @method ImageOptimization getImageOptimization() Obtain 
- * @method void setImageOptimization(ImageOptimization $ImageOptimization) Set 
- * @method UserAgentFilter getUserAgentFilter() Obtain 
- * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set 
- * @method AccessControl getAccessControl() Obtain 
- * @method void setAccessControl(AccessControl $AccessControl) Set 
+ * @method SecurityConfig getSecurityConfig() Obtain SCDN configuration
+ * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set SCDN configuration
+ * @method ImageOptimization getImageOptimization() Obtain Image Optimization configuration
+ * @method void setImageOptimization(ImageOptimization $ImageOptimization) Set Image Optimization configuration
+ * @method UserAgentFilter getUserAgentFilter() Obtain `UA` blocklist/allowlist configuration
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set `UA` blocklist/allowlist configuration
+ * @method AccessControl getAccessControl() Obtain Access control
+ * @method void setAccessControl(AccessControl $AccessControl) Set Access control
  * @method string getAdvance() Obtain Whether to support advanced configuration items
 on: supported
 off: not supported
@@ -230,6 +230,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAccessPort(array $AccessPort) Set Access port configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTag() Obtain 
+ * @method void setTag(array $Tag) Set 
  */
 class DetailDomain extends AbstractModel
 {
@@ -487,22 +489,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AwsPrivateAccess;
 
     /**
-     * @var SecurityConfig 
+     * @var SecurityConfig SCDN configuration
      */
     public $SecurityConfig;
 
     /**
-     * @var ImageOptimization 
+     * @var ImageOptimization Image Optimization configuration
      */
     public $ImageOptimization;
 
     /**
-     * @var UserAgentFilter 
+     * @var UserAgentFilter `UA` blocklist/allowlist configuration
      */
     public $UserAgentFilter;
 
     /**
-     * @var AccessControl 
+     * @var AccessControl Access control
      */
     public $AccessControl;
 
@@ -525,6 +527,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AccessPort;
+
+    /**
+     * @var array 
+     */
+    public $Tag;
 
     /**
      * @param string $ResourceId Domain name ID
@@ -620,10 +627,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AwsPrivateAccess $AwsPrivateAccess S3 bucket origin access authentication configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SecurityConfig $SecurityConfig 
-     * @param ImageOptimization $ImageOptimization 
-     * @param UserAgentFilter $UserAgentFilter 
-     * @param AccessControl $AccessControl 
+     * @param SecurityConfig $SecurityConfig SCDN configuration
+     * @param ImageOptimization $ImageOptimization Image Optimization configuration
+     * @param UserAgentFilter $UserAgentFilter `UA` blocklist/allowlist configuration
+     * @param AccessControl $AccessControl Access control
      * @param string $Advance Whether to support advanced configuration items
 on: supported
 off: not supported
@@ -632,6 +639,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $AccessPort Access port configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Tag 
      */
     function __construct()
     {
@@ -865,6 +873,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
             $this->AccessPort = $param["AccessPort"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

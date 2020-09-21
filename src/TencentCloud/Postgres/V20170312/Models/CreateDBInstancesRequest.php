@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set VPC subnet ID.
  * @method integer getAutoRenewFlag() Obtain Renewal flag. 0: normal renewal (default), 1: auto-renewal.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal flag. 0: normal renewal (default), 1: auto-renewal.
- * @method integer getActivityId() Obtain 
- * @method void setActivityId(integer $ActivityId) Set 
+ * @method integer getActivityId() Obtain Activity ID
+ * @method void setActivityId(integer $ActivityId) Set Activity ID
  * @method string getName() Obtain Instance name (which will be supported in the future)
  * @method void setName(string $Name) Set Instance name (which will be supported in the future)
  * @method integer getNeedSupportIpv6() Obtain Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
@@ -123,7 +123,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var integer 
+     * @var integer Activity ID
      */
     public $ActivityId;
 
@@ -156,7 +156,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $VpcId VPC ID.
      * @param string $SubnetId VPC subnet ID.
      * @param integer $AutoRenewFlag Renewal flag. 0: normal renewal (default), 1: auto-renewal.
-     * @param integer $ActivityId 
+     * @param integer $ActivityId Activity ID
      * @param string $Name Instance name (which will be supported in the future)
      * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
      * @param array $TagList The information of tags to be associated with instances. This parameter is left empty by default.

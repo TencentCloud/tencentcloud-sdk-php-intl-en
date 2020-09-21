@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceProvider() Obtain (Exact match) Service provider. Valid values: `UNICOM`.
  * @method void setServiceProvider(string $ServiceProvider) Set (Exact match) Service provider. Valid values: `UNICOM`.
- * @method integer getComplianceId() Obtain (Exact match) ID of compliance review form.
- * @method void setComplianceId(integer $ComplianceId) Set (Exact match) ID of compliance review form.
+ * @method integer getComplianceId() Obtain (Exact match) ID of compliance review request.
+ * @method void setComplianceId(integer $ComplianceId) Set (Exact match) ID of compliance review request.
  * @method string getCompany() Obtain (Fuzzy match) Company name.
  * @method void setCompany(string $Company) Set (Fuzzy match) Company name.
  * @method string getUniformSocialCreditCode() Obtain (Fuzzy match) Unified Social Credit Code.
@@ -61,7 +61,7 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
     public $ServiceProvider;
 
     /**
-     * @var integer (Exact match) ID of compliance review form.
+     * @var integer (Exact match) ID of compliance review request.
      */
     public $ComplianceId;
 
@@ -137,7 +137,7 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
 
     /**
      * @param string $ServiceProvider (Exact match) Service provider. Valid values: `UNICOM`.
-     * @param integer $ComplianceId (Exact match) ID of compliance review form.
+     * @param integer $ComplianceId (Exact match) ID of compliance review request.
      * @param string $Company (Fuzzy match) Company name.
      * @param string $UniformSocialCreditCode (Fuzzy match) Unified Social Credit Code.
      * @param string $LegalPerson (Fuzzy match) Legal person.

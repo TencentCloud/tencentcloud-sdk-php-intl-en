@@ -20,44 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Form recognition result.
  *
- * @method integer getColTl() Obtain Column index of the top-left corner of the cell
- * @method void setColTl(integer $ColTl) Set Column index of the top-left corner of the cell
- * @method integer getRowTl() Obtain Row index of the top-left corner of the cell
- * @method void setRowTl(integer $RowTl) Set Row index of the top-left corner of the cell
- * @method integer getColBr() Obtain Column index of the bottom-right corner of the cell
- * @method void setColBr(integer $ColBr) Set Column index of the bottom-right corner of the cell
- * @method integer getRowBr() Obtain Row index of the bottom-right corner of the cell
- * @method void setRowBr(integer $RowBr) Set Row index of the bottom-right corner of the cell
+ * @method integer getColTl() Obtain Column index of the top-left corner of the cell.
+ * @method void setColTl(integer $ColTl) Set Column index of the top-left corner of the cell.
+ * @method integer getRowTl() Obtain Row index of the top-left corner of the cell.
+ * @method void setRowTl(integer $RowTl) Set Row index of the top-left corner of the cell.
+ * @method integer getColBr() Obtain Column index of the bottom-right corner of the cell.
+ * @method void setColBr(integer $ColBr) Set Column index of the bottom-right corner of the cell.
+ * @method integer getRowBr() Obtain Row index of the bottom-right corner of the cell.
+ * @method void setRowBr(integer $RowBr) Set Row index of the bottom-right corner of the cell.
  * @method string getText() Obtain Cell text
  * @method void setText(string $Text) Set Cell text
  * @method string getType() Obtain Cell type. Valid values: body, header, footer
  * @method void setType(string $Type) Set Cell type. Valid values: body, header, footer
  * @method integer getConfidence() Obtain Confidence. Value range: 0–100
  * @method void setConfidence(integer $Confidence) Set Confidence. Value range: 0–100
- * @method array getPolygon() Obtain Text line coordinates, which are represented as 4 vertex coordinates
- * @method void setPolygon(array $Polygon) Set Text line coordinates, which are represented as 4 vertex coordinates
+ * @method array getPolygon() Obtain Text line coordinates, which are represented as 4 vertex coordinates.
+ * @method void setPolygon(array $Polygon) Set Text line coordinates, which are represented as 4 vertex coordinates.
  * @method string getAdvancedInfo() Obtain Extended field
  * @method void setAdvancedInfo(string $AdvancedInfo) Set Extended field
  */
 class TextTable extends AbstractModel
 {
     /**
-     * @var integer Column index of the top-left corner of the cell
+     * @var integer Column index of the top-left corner of the cell.
      */
     public $ColTl;
 
     /**
-     * @var integer Row index of the top-left corner of the cell
+     * @var integer Row index of the top-left corner of the cell.
      */
     public $RowTl;
 
     /**
-     * @var integer Column index of the bottom-right corner of the cell
+     * @var integer Column index of the bottom-right corner of the cell.
      */
     public $ColBr;
 
     /**
-     * @var integer Row index of the bottom-right corner of the cell
+     * @var integer Row index of the bottom-right corner of the cell.
      */
     public $RowBr;
 
@@ -77,7 +77,7 @@ class TextTable extends AbstractModel
     public $Confidence;
 
     /**
-     * @var array Text line coordinates, which are represented as 4 vertex coordinates
+     * @var array Text line coordinates, which are represented as 4 vertex coordinates.
      */
     public $Polygon;
 
@@ -87,14 +87,14 @@ class TextTable extends AbstractModel
     public $AdvancedInfo;
 
     /**
-     * @param integer $ColTl Column index of the top-left corner of the cell
-     * @param integer $RowTl Row index of the top-left corner of the cell
-     * @param integer $ColBr Column index of the bottom-right corner of the cell
-     * @param integer $RowBr Row index of the bottom-right corner of the cell
+     * @param integer $ColTl Column index of the top-left corner of the cell.
+     * @param integer $RowTl Row index of the top-left corner of the cell.
+     * @param integer $ColBr Column index of the bottom-right corner of the cell.
+     * @param integer $RowBr Row index of the bottom-right corner of the cell.
      * @param string $Text Cell text
      * @param string $Type Cell type. Valid values: body, header, footer
      * @param integer $Confidence Confidence. Value range: 0–100
-     * @param array $Polygon Text line coordinates, which are represented as 4 vertex coordinates
+     * @param array $Polygon Text line coordinates, which are represented as 4 vertex coordinates.
      * @param string $AdvancedInfo Extended field
      */
     function __construct()

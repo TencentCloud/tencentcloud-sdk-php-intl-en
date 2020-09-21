@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReservedInstancesId() Obtain The ID of the purchased reserved instance, taking the form 650c138f-ae7e-4750-952a-96841d6e9fc1.
  * @method void setReservedInstancesId(string $ReservedInstancesId) Set The ID of the purchased reserved instance, taking the form 650c138f-ae7e-4750-952a-96841d6e9fc1.
- * @method string getInstanceType() Obtain The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
- * @method void setInstanceType(string $InstanceType) Set The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
+ * @method string getInstanceType() Obtain Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
+ * @method void setInstanceType(string $InstanceType) Set Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
  * @method string getZone() Obtain Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
 Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
  * @method void setZone(string $Zone) Set Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
@@ -56,6 +56,10 @@ Returned value: USD.
 Returned value: All Upfront.
  * @method void setOfferingType(string $OfferingType) Set The payment method of the reserved instance. For example, "All Upfront".
 Returned value: All Upfront.
+ * @method string getInstanceFamily() Obtain Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+ * @method void setInstanceFamily(string $InstanceFamily) Set Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
  */
 class ReservedInstances extends AbstractModel
 {
@@ -65,8 +69,8 @@ class ReservedInstances extends AbstractModel
     public $ReservedInstancesId;
 
     /**
-     * @var string The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
+     * @var string Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
      */
     public $InstanceType;
 
@@ -122,9 +126,15 @@ Returned value: All Upfront.
     public $OfferingType;
 
     /**
+     * @var string Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+     */
+    public $InstanceFamily;
+
+    /**
      * @param string $ReservedInstancesId The ID of the purchased reserved instance, taking the form 650c138f-ae7e-4750-952a-96841d6e9fc1.
-     * @param string $InstanceType The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
+     * @param string $InstanceType Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
      * @param string $Zone Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
 Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
      * @param string $StartTime Start time of the reserved instance billing, taking the form of 2019-10-23 00:00:00.
@@ -140,6 +150,8 @@ Returned value: "active" (created) | "pending" (waiting to be created) | "retire
 Returned value: USD.
      * @param string $OfferingType The payment method of the reserved instance. For example, "All Upfront".
 Returned value: All Upfront.
+     * @param string $InstanceFamily Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
      */
     function __construct()
     {
@@ -196,6 +208,10 @@ Returned value: All Upfront.
 
         if (array_key_exists("OfferingType",$param) and $param["OfferingType"] !== null) {
             $this->OfferingType = $param["OfferingType"];
+        }
+
+        if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
+            $this->InstanceFamily = $param["InstanceFamily"];
         }
     }
 }

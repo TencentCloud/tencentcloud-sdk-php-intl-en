@@ -18,37 +18,37 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OCR result
+ * OCR result.
  *
- * @method string getDetectedText() Obtain Recognized text line content
- * @method void setDetectedText(string $DetectedText) Set Recognized text line content
- * @method integer getConfidence() Obtain Confidence. Value range: 0-100
- * @method void setConfidence(integer $Confidence) Set Confidence. Value range: 0-100
- * @method array getPolygon() Obtain Text line coordinates, which are represented as 4 vertex coordinates
+ * @method string getDetectedText() Obtain Recognized text line content.
+ * @method void setDetectedText(string $DetectedText) Set Recognized text line content.
+ * @method integer getConfidence() Obtain Confidence. Value range: 0–100.
+ * @method void setConfidence(integer $Confidence) Set Confidence. Value range: 0–100.
+ * @method array getPolygon() Obtain Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPolygon(array $Polygon) Set Text line coordinates, which are represented as 4 vertex coordinates
+ * @method void setPolygon(array $Polygon) Set Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getAdvancedInfo() Obtain Extended field.
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
  * @method void setAdvancedInfo(string $AdvancedInfo) Set Extended field.
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
- * @method ItemCoord getItemPolygon() Obtain Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
- * @method void setItemPolygon(ItemCoord $ItemPolygon) Set Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+ * @method ItemCoord getItemPolygon() Obtain Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+ * @method void setItemPolygon(ItemCoord $ItemPolygon) Set Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
  */
 class TextDetection extends AbstractModel
 {
     /**
-     * @var string Recognized text line content
+     * @var string Recognized text line content.
      */
     public $DetectedText;
 
     /**
-     * @var integer Confidence. Value range: 0-100
+     * @var integer Confidence. Value range: 0–100.
      */
     public $Confidence;
 
     /**
-     * @var array Text line coordinates, which are represented as 4 vertex coordinates
+     * @var array Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Polygon;
@@ -60,18 +60,18 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
     public $AdvancedInfo;
 
     /**
-     * @var ItemCoord Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+     * @var ItemCoord Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
      */
     public $ItemPolygon;
 
     /**
-     * @param string $DetectedText Recognized text line content
-     * @param integer $Confidence Confidence. Value range: 0-100
-     * @param array $Polygon Text line coordinates, which are represented as 4 vertex coordinates
+     * @param string $DetectedText Recognized text line content.
+     * @param integer $Confidence Confidence. Value range: 0–100.
+     * @param array $Polygon Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AdvancedInfo Extended field.
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
-     * @param ItemCoord $ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+     * @param ItemCoord $ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
      */
     function __construct()
     {

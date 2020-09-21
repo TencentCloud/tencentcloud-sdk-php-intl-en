@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
  * @method string getEnvType() Obtain Compute environment type
  * @method void setEnvType(string $EnvType) Set Compute environment type
- * @method string getResourceType() Obtain 
- * @method void setResourceType(string $ResourceType) Set 
- * @method string getNextAction() Obtain 
- * @method void setNextAction(string $NextAction) Set 
- * @method integer getAttachedComputeNodeCount() Obtain 
- * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) Set 
+ * @method string getResourceType() Obtain Compute environment resource type. Valid values: CVM, CPM (Bare Metal)
+ * @method void setResourceType(string $ResourceType) Set Compute environment resource type. Valid values: CVM, CPM (Bare Metal)
+ * @method string getNextAction() Obtain Next action
+ * @method void setNextAction(string $NextAction) Set Next action
+ * @method integer getAttachedComputeNodeCount() Obtain Number of compute nodes added to the compute environment by the user
+ * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) Set Number of compute nodes added to the compute environment by the user
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -88,17 +88,17 @@ class DescribeComputeEnvResponse extends AbstractModel
     public $EnvType;
 
     /**
-     * @var string 
+     * @var string Compute environment resource type. Valid values: CVM, CPM (Bare Metal)
      */
     public $ResourceType;
 
     /**
-     * @var string 
+     * @var string Next action
      */
     public $NextAction;
 
     /**
-     * @var integer 
+     * @var integer Number of compute nodes added to the compute environment by the user
      */
     public $AttachedComputeNodeCount;
 
@@ -116,9 +116,9 @@ class DescribeComputeEnvResponse extends AbstractModel
      * @param ComputeNodeMetrics $ComputeNodeMetrics Compute node statistical metrics
      * @param integer $DesiredComputeNodeCount Number of desired compute nodes
      * @param string $EnvType Compute environment type
-     * @param string $ResourceType 
-     * @param string $NextAction 
-     * @param integer $AttachedComputeNodeCount 
+     * @param string $ResourceType Compute environment resource type. Valid values: CVM, CPM (Bare Metal)
+     * @param string $NextAction Next action
+     * @param integer $AttachedComputeNodeCount Number of compute nodes added to the compute environment by the user
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDealNames() Obtain Order number list. Each instance corresponds to an order number.
  * @method void setDealNames(array $DealNames) Set Order number list. Each instance corresponds to an order number.
- * @method string getBillId() Obtain 
- * @method void setBillId(string $BillId) Set 
- * @method array getDBInstanceIdSet() Obtain 
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set 
+ * @method string getBillId() Obtain Bill ID of frozen fees
+ * @method void setBillId(string $BillId) Set Bill ID of frozen fees
+ * @method array getDBInstanceIdSet() Obtain ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -37,12 +37,12 @@ class CreateDBInstancesResponse extends AbstractModel
     public $DealNames;
 
     /**
-     * @var string 
+     * @var string Bill ID of frozen fees
      */
     public $BillId;
 
     /**
-     * @var array 
+     * @var array ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
      */
     public $DBInstanceIdSet;
 
@@ -53,8 +53,8 @@ class CreateDBInstancesResponse extends AbstractModel
 
     /**
      * @param array $DealNames Order number list. Each instance corresponds to an order number.
-     * @param string $BillId 
-     * @param array $DBInstanceIdSet 
+     * @param string $BillId Bill ID of frozen fees
+     * @param array $DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

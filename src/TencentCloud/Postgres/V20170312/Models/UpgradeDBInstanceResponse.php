@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDealName() Obtain Transaction name.
  * @method void setDealName(string $DealName) Set Transaction name.
- * @method string getBillId() Obtain 
- * @method void setBillId(string $BillId) Set 
+ * @method string getBillId() Obtain Bill ID of frozen fees
+ * @method void setBillId(string $BillId) Set Bill ID of frozen fees
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class UpgradeDBInstanceResponse extends AbstractModel
     public $DealName;
 
     /**
-     * @var string 
+     * @var string Bill ID of frozen fees
      */
     public $BillId;
 
@@ -46,7 +46,7 @@ class UpgradeDBInstanceResponse extends AbstractModel
 
     /**
      * @param string $DealName Transaction name.
-     * @param string $BillId 
+     * @param string $BillId Bill ID of frozen fees
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

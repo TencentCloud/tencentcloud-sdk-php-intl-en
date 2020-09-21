@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCrossBorderCompliance response structure.
  *
- * @method array getCrossBorderComplianceSet() Obtain List of compliance review forms.
- * @method void setCrossBorderComplianceSet(array $CrossBorderComplianceSet) Set List of compliance review forms.
- * @method integer getTotalCount() Obtain Total number of compliance review forms.
- * @method void setTotalCount(integer $TotalCount) Set Total number of compliance review forms.
+ * @method array getCrossBorderComplianceSet() Obtain List of compliance review requests.
+ * @method void setCrossBorderComplianceSet(array $CrossBorderComplianceSet) Set List of compliance review requests.
+ * @method integer getTotalCount() Obtain Total number of compliance review requests.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of compliance review requests.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeCrossBorderComplianceResponse extends AbstractModel
 {
     /**
-     * @var array List of compliance review forms.
+     * @var array List of compliance review requests.
      */
     public $CrossBorderComplianceSet;
 
     /**
-     * @var integer Total number of compliance review forms.
+     * @var integer Total number of compliance review requests.
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeCrossBorderComplianceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CrossBorderComplianceSet List of compliance review forms.
-     * @param integer $TotalCount Total number of compliance review forms.
+     * @param array $CrossBorderComplianceSet List of compliance review requests.
+     * @param integer $TotalCount Total number of compliance review requests.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

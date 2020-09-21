@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Task flow name (up to 20 characters).
  * @method void setName(string $Name) Set Task flow name (up to 20 characters).
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getComment() Obtain Template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Parameter of AI-based content audit task.
@@ -43,7 +43,7 @@ class CreateProcedureTemplateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 
+     * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
 
@@ -74,7 +74,7 @@ class CreateProcedureTemplateRequest extends AbstractModel
 
     /**
      * @param string $Name Task flow name (up to 20 characters).
-     * @param string $Comment 
+     * @param string $Comment Template description. Length limit: 256 characters.
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
      * @param AiContentReviewTaskInput $AiContentReviewTask Parameter of AI-based content audit task.
      * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.

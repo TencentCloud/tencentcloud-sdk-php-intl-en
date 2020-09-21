@@ -38,16 +38,16 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setPolicyType(string $PolicyType) Set Valid values: `user` and `QCS`
 Note: This field may return null, indicating that no valid value was found.
- * @method string getRemark() Obtain 
- * @method void setRemark(string $Remark) Set 
+ * @method string getRemark() Obtain Policy remarks
+ * @method void setRemark(string $Remark) Set Policy remarks
  * @method string getOperateOwnerUin() Obtain Root account of the operator associating the policy
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOperateOwnerUin(string $OperateOwnerUin) Set Root account of the operator associating the policy
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOperateUin() Obtain 
- * @method void setOperateUin(string $OperateUin) Set 
- * @method integer getOperateUinType() Obtain 
- * @method void setOperateUinType(integer $OperateUinType) Set 
+ * @method string getOperateUin() Obtain The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
+ * @method void setOperateUin(string $OperateUin) Set The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
+ * @method integer getOperateUinType() Obtain If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
+ * @method void setOperateUinType(integer $OperateUinType) Set If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
  * @method integer getDeactived() Obtain Queries if the policy has been deactivated
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeactived(integer $Deactived) Set Queries if the policy has been deactivated
@@ -89,7 +89,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $PolicyType;
 
     /**
-     * @var string 
+     * @var string Policy remarks
      */
     public $Remark;
 
@@ -100,12 +100,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OperateOwnerUin;
 
     /**
-     * @var string 
+     * @var string The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
      */
     public $OperateUin;
 
     /**
-     * @var integer 
+     * @var integer If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
      */
     public $OperateUinType;
 
@@ -131,11 +131,11 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $PolicyType Valid values: `user` and `QCS`
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $Remark 
+     * @param string $Remark Policy remarks
      * @param string $OperateOwnerUin Root account of the operator associating the policy
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OperateUin 
-     * @param integer $OperateUinType 
+     * @param string $OperateUin The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
+     * @param integer $OperateUinType If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
      * @param integer $Deactived Queries if the policy has been deactivated
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $DeactivedDetail List of deprecated products

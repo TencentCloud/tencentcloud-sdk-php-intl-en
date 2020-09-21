@@ -88,8 +88,8 @@ deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Hsts getHsts() Obtain 
- * @method void setHsts(Hsts $Hsts) Set 
+ * @method Hsts getHsts() Obtain HSTS configuration
+ * @method void setHsts(Hsts $Hsts) Set HSTS configuration
  */
 class Https extends AbstractModel
 {
@@ -160,7 +160,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SslStatus;
 
     /**
-     * @var Hsts 
+     * @var Hsts HSTS configuration
      */
     public $Hsts;
 
@@ -199,7 +199,7 @@ deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Hsts $Hsts 
+     * @param Hsts $Hsts HSTS configuration
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinSize(integer $MinSize) Set Minimum size of a local disk.
  * @method integer getMaxSize() Obtain Maximum size of a local disk.
  * @method void setMaxSize(integer $MaxSize) Set Maximum size of a local disk.
- * @method string getRequired() Obtain 
- * @method void setRequired(string $Required) Set 
+ * @method string getRequired() Obtain Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
+ * @method void setRequired(string $Required) Set Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
  */
 class LocalDiskType extends AbstractModel
 {
@@ -54,7 +54,7 @@ class LocalDiskType extends AbstractModel
     public $MaxSize;
 
     /**
-     * @var string 
+     * @var string Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
      */
     public $Required;
 
@@ -63,7 +63,7 @@ class LocalDiskType extends AbstractModel
      * @param string $PartitionType Attributes of a local disk.
      * @param integer $MinSize Minimum size of a local disk.
      * @param integer $MaxSize Maximum size of a local disk.
-     * @param string $Required 
+     * @param string $Required Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
      */
     function __construct()
     {

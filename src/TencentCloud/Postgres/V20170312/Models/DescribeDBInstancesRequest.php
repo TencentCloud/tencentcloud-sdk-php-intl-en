@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of entries returned per page. Default value: 10.
  * @method integer getOffset() Obtain Page number, starting from 0.
  * @method void setOffset(integer $Offset) Set Page number, starting from 0.
- * @method string getOrderBy() Obtain 
- * @method void setOrderBy(string $OrderBy) Set 
- * @method string getOrderByType() Obtain 
- * @method void setOrderByType(string $OrderByType) Set 
+ * @method string getOrderBy() Obtain Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+ * @method void setOrderBy(string $OrderBy) Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+ * @method string getOrderByType() Obtain In ascending or descending order
+ * @method void setOrderByType(string $OrderByType) Set In ascending or descending order
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 
+     * @var string Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
      */
     public $OrderBy;
 
     /**
-     * @var string 
+     * @var string In ascending or descending order
      */
     public $OrderByType;
 
@@ -62,8 +62,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $Filters Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
      * @param integer $Limit Number of entries returned per page. Default value: 10.
      * @param integer $Offset Page number, starting from 0.
-     * @param string $OrderBy 
-     * @param string $OrderByType 
+     * @param string $OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+     * @param string $OrderByType In ascending or descending order
      */
     function __construct()
     {

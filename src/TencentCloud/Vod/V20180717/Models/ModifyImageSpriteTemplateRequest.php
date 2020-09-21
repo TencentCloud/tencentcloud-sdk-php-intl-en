@@ -60,8 +60,8 @@ Default value: black.
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getComment() Obtain Template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method integer getSubAppId() Obtain ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
@@ -128,7 +128,7 @@ Default value: black.
     public $FillType;
 
     /**
-     * @var string 
+     * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
 
@@ -158,7 +158,7 @@ Default value: open.
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
-     * @param string $Comment 
+     * @param string $Comment Template description. Length limit: 256 characters.
      * @param integer $SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()

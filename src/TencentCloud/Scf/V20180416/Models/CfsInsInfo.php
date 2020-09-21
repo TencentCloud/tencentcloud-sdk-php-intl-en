@@ -32,17 +32,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocalMountDir(string $LocalMountDir) Set Local mount target
  * @method string getRemoteMountDir() Obtain Remote mount target
  * @method void setRemoteMountDir(string $RemoteMountDir) Set Remote mount target
- * @method string getIpAddress() Obtain File system IP
+ * @method string getIpAddress() Obtain File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpAddress(string $IpAddress) Set File system IP
+ * @method void setIpAddress(string $IpAddress) Set File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMountVpcId() Obtain VPC ID of file system
+ * @method string getMountVpcId() Obtain VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMountVpcId(string $MountVpcId) Set VPC ID of file system
+ * @method void setMountVpcId(string $MountVpcId) Set VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMountSubnetId() Obtain VPC subnet ID of file system
+ * @method string getMountSubnetId() Obtain VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMountSubnetId(string $MountSubnetId) Set VPC subnet ID of file system
+ * @method void setMountSubnetId(string $MountSubnetId) Set VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class CfsInsInfo extends AbstractModel
@@ -78,19 +78,19 @@ class CfsInsInfo extends AbstractModel
     public $RemoteMountDir;
 
     /**
-     * @var string File system IP
+     * @var string File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IpAddress;
 
     /**
-     * @var string VPC ID of file system
+     * @var string VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MountVpcId;
 
     /**
-     * @var string VPC subnet ID of file system
+     * @var string VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MountSubnetId;
@@ -102,11 +102,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $MountInsId File system mount target ID
      * @param string $LocalMountDir Local mount target
      * @param string $RemoteMountDir Remote mount target
-     * @param string $IpAddress File system IP
+     * @param string $IpAddress File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MountVpcId VPC ID of file system
+     * @param string $MountVpcId VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MountSubnetId VPC subnet ID of file system
+     * @param string $MountSubnetId VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

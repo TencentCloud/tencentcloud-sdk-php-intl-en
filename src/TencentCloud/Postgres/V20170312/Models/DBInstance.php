@@ -68,12 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) Set Instance network connection information
  * @method string getType() Obtain Machine type
  * @method void setType(string $Type) Set Machine type
- * @method integer getAppId() Obtain 
- * @method void setAppId(integer $AppId) Set 
- * @method integer getUid() Obtain 
- * @method void setUid(integer $Uid) Set 
- * @method integer getSupportIpv6() Obtain 
- * @method void setSupportIpv6(integer $SupportIpv6) Set 
+ * @method integer getAppId() Obtain User `AppId`
+ * @method void setAppId(integer $AppId) Set User `AppId`
+ * @method integer getUid() Obtain Instance `Uid`
+ * @method void setUid(integer $Uid) Set Instance `Uid`
+ * @method integer getSupportIpv6() Obtain Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+ * @method void setSupportIpv6(integer $SupportIpv6) Set Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
  * @method array getTagList() Obtain The information of tags associated with instances.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTagList(array $TagList) Set The information of tags associated with instances.
@@ -202,17 +202,17 @@ class DBInstance extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer User `AppId`
      */
     public $AppId;
 
     /**
-     * @var integer 
+     * @var integer Instance `Uid`
      */
     public $Uid;
 
     /**
-     * @var integer 
+     * @var integer Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
      */
     public $SupportIpv6;
 
@@ -247,9 +247,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $AutoRenew Whether to renew automatically. 1: yes, 0: no
      * @param array $DBInstanceNetInfo Instance network connection information
      * @param string $Type Machine type
-     * @param integer $AppId 
-     * @param integer $Uid 
-     * @param integer $SupportIpv6 
+     * @param integer $AppId User `AppId`
+     * @param integer $Uid Instance `Uid`
+     * @param integer $SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
      * @param array $TagList The information of tags associated with instances.
 Note: this field may return null, indicating that no valid values can be obtained.
      */

@@ -20,22 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Channel output group information.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
+ * @method string getName() Obtain Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
+ * @method void setName(string $Name) Set Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
  * @method string getType() Obtain Output protocol type.
 Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
  * @method void setType(string $Type) Set Output protocol type.
 Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
- * @method array getOutputs() Obtain 
- * @method void setOutputs(array $Outputs) Set 
- * @method array getDestinations() Obtain 
- * @method void setDestinations(array $Destinations) Set 
- * @method HlsRemuxSettingsInfo getHlsRemuxSettings() Obtain 
- * @method void setHlsRemuxSettings(HlsRemuxSettingsInfo $HlsRemuxSettings) Set 
- * @method DashRemuxSettingsInfo getDashRemuxSettings() Obtain 
- * @method void setDashRemuxSettings(DashRemuxSettingsInfo $DashRemuxSettings) Set 
- * @method DrmSettingsInfo getDrmSettings() Obtain 
- * @method void setDrmSettings(DrmSettingsInfo $DrmSettings) Set 
+ * @method array getOutputs() Obtain Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
+ * @method void setOutputs(array $Outputs) Set Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
+ * @method array getDestinations() Obtain Relay destination address. Quantity limit: [1,2].
+ * @method void setDestinations(array $Destinations) Set Relay destination address. Quantity limit: [1,2].
+ * @method HlsRemuxSettingsInfo getHlsRemuxSettings() Obtain HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
+ * @method void setHlsRemuxSettings(HlsRemuxSettingsInfo $HlsRemuxSettings) Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
+ * @method DashRemuxSettingsInfo getDashRemuxSettings() Obtain DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
+ * @method void setDashRemuxSettings(DashRemuxSettingsInfo $DashRemuxSettings) Set DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
+ * @method DrmSettingsInfo getDrmSettings() Obtain DRM configuration information.
+ * @method void setDrmSettings(DrmSettingsInfo $DrmSettings) Set DRM configuration information.
  * @method MediaPackageSettingsInfo getMediaPackageSettings() Obtain Configuration information of media packaging, which is required when `Type` is set to MediaPackage.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMediaPackageSettings(MediaPackageSettingsInfo $MediaPackageSettings) Set Configuration information of media packaging, which is required when `Type` is set to MediaPackage.
@@ -44,7 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class OutputGroupsInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
      */
     public $Name;
 
@@ -55,27 +57,28 @@ Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
     public $Type;
 
     /**
-     * @var array 
+     * @var array Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
      */
     public $Outputs;
 
     /**
-     * @var array 
+     * @var array Relay destination address. Quantity limit: [1,2].
      */
     public $Destinations;
 
     /**
-     * @var HlsRemuxSettingsInfo 
+     * @var HlsRemuxSettingsInfo HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
      */
     public $HlsRemuxSettings;
 
     /**
-     * @var DashRemuxSettingsInfo 
+     * @var DashRemuxSettingsInfo DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
      */
     public $DashRemuxSettings;
 
     /**
-     * @var DrmSettingsInfo 
+     * @var DrmSettingsInfo DRM configuration information.
      */
     public $DrmSettings;
 
@@ -86,14 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MediaPackageSettings;
 
     /**
-     * @param string $Name 
+     * @param string $Name Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
      * @param string $Type Output protocol type.
 Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
-     * @param array $Outputs 
-     * @param array $Destinations 
-     * @param HlsRemuxSettingsInfo $HlsRemuxSettings 
-     * @param DashRemuxSettingsInfo $DashRemuxSettings 
-     * @param DrmSettingsInfo $DrmSettings 
+     * @param array $Outputs Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
+     * @param array $Destinations Relay destination address. Quantity limit: [1,2].
+     * @param HlsRemuxSettingsInfo $HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
+     * @param DashRemuxSettingsInfo $DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
+     * @param DrmSettingsInfo $DrmSettings DRM configuration information.
      * @param MediaPackageSettingsInfo $MediaPackageSettings Configuration information of media packaging, which is required when `Type` is set to MediaPackage.
 Note: this field may return null, indicating that no valid values can be obtained.
      */

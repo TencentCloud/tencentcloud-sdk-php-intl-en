@@ -78,8 +78,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getVid() Obtain Unique ID of an LVB recording file.
  * @method void setVid(string $Vid) Set Unique ID of an LVB recording file.
- * @method string getCategory() Obtain 
- * @method void setCategory(string $Category) Set 
+ * @method string getCategory() Obtain File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+ * @method void setCategory(string $Category) Set File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
  * @method string getStatus() Obtain File status. Valid values: Normal, Forbidden.
 
 *Note: this field is not supported yet.
@@ -179,7 +185,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Vid;
 
     /**
-     * @var string 
+     * @var string File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
      */
     public $Category;
 
@@ -220,7 +229,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $TagSet Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Vid Unique ID of an LVB recording file.
-     * @param string $Category 
+     * @param string $Category File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
      * @param string $Status File status. Valid values: Normal, Forbidden.
 
 *Note: this field is not supported yet.

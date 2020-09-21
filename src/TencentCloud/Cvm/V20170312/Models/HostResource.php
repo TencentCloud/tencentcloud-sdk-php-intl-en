@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskTotal(integer $DiskTotal) Set Total disk size of the CDH instance; unit: GiB
  * @method integer getDiskAvailable() Obtain Avilable disk size of the CDH instance; unit: GiB
  * @method void setDiskAvailable(integer $DiskAvailable) Set Avilable disk size of the CDH instance; unit: GiB
- * @method string getDiskType() Obtain 
- * @method void setDiskType(string $DiskType) Set 
+ * @method string getDiskType() Obtain CDH instance disk type.
+ * @method void setDiskType(string $DiskType) Set CDH instance disk type.
  */
 class HostResource extends AbstractModel
 {
@@ -68,7 +68,7 @@ class HostResource extends AbstractModel
     public $DiskAvailable;
 
     /**
-     * @var string 
+     * @var string CDH instance disk type.
      */
     public $DiskType;
 
@@ -79,7 +79,7 @@ class HostResource extends AbstractModel
      * @param float $MemAvailable Available memory of the CDH instance; unit: GiB
      * @param integer $DiskTotal Total disk size of the CDH instance; unit: GiB
      * @param integer $DiskAvailable Avilable disk size of the CDH instance; unit: GiB
-     * @param string $DiskType 
+     * @param string $DiskType CDH instance disk type.
      */
     function __construct()
     {

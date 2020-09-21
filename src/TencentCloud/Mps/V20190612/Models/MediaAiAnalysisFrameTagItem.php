@@ -18,28 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of intelligent frame-specific tagging
+ * 
  *
- * @method string getTag() Obtain Frame-specific tag name.
- * @method void setTag(string $Tag) Set Frame-specific tag name.
- * @method float getConfidence() Obtain Confidence of intelligently generated frame-specific tag between 0 and 100.
- * @method void setConfidence(float $Confidence) Set Confidence of intelligently generated frame-specific tag between 0 and 100.
+ * @method string getTag() Obtain 
+ * @method void setTag(string $Tag) Set 
+ * @method array getCategorySet() Obtain 
+ * @method void setCategorySet(array $CategorySet) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
  */
 class MediaAiAnalysisFrameTagItem extends AbstractModel
 {
     /**
-     * @var string Frame-specific tag name.
+     * @var string 
      */
     public $Tag;
 
     /**
-     * @var float Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * @var array 
+     */
+    public $CategorySet;
+
+    /**
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @param string $Tag Frame-specific tag name.
-     * @param float $Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * @param string $Tag 
+     * @param array $CategorySet 
+     * @param float $Confidence 
      */
     function __construct()
     {
@@ -56,6 +64,10 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
         }
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("CategorySet",$param) and $param["CategorySet"] !== null) {
+            $this->CategorySet = $param["CategorySet"];
         }
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {

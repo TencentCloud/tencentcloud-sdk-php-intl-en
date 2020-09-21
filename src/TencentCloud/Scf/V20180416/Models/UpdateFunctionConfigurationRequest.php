@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
  * @method CfsConfig getCfsConfig() Obtain File system configuration input parameter, which is used for the function to bind the file system
  * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration input parameter, which is used for the function to bind the file system
+ * @method integer getInitTimeout() Obtain Timeout period for function initialization. Default value: 15 seconds
+ * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization. Default value: 15 seconds
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $CfsConfig;
 
     /**
+     * @var integer Timeout period for function initialization. Default value: 15 seconds
+     */
+    public $InitTimeout;
+
+    /**
      * @param string $FunctionName Name of the function to be modified
      * @param string $Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
      * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
@@ -160,6 +167,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param DeadLetterConfig $DeadLetterConfig Information of a dead letter queue associated with a function
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
      * @param CfsConfig $CfsConfig File system configuration input parameter, which is used for the function to bind the file system
+     * @param integer $InitTimeout Timeout period for function initialization. Default value: 15 seconds
      */
     function __construct()
     {
@@ -250,6 +258,10 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
         if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
             $this->CfsConfig = new CfsConfig();
             $this->CfsConfig->deserialize($param["CfsConfig"]);
+        }
+
+        if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
+            $this->InitTimeout = $param["InitTimeout"];
         }
     }
 }

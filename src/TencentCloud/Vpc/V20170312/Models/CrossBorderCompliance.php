@@ -18,12 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Compliance review form.
+ * Compliance review request
  *
  * @method string getServiceProvider() Obtain Service provider. Valid values: `UNICOM`.
  * @method void setServiceProvider(string $ServiceProvider) Set Service provider. Valid values: `UNICOM`.
- * @method integer getComplianceId() Obtain ID of compliance review form.
- * @method void setComplianceId(integer $ComplianceId) Set ID of compliance review form.
+ * @method integer getComplianceId() Obtain ID of compliance review request.
+ * @method void setComplianceId(integer $ComplianceId) Set ID of compliance review request.
  * @method string getCompany() Obtain Full company name.
  * @method void setCompany(string $Company) Set Full company name.
  * @method string getUniformSocialCreditCode() Obtain Unified Social Credit Code.
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLegalPerson(string $LegalPerson) Set Legal person.
  * @method string getIssuingAuthority() Obtain Issuing authority.
  * @method void setIssuingAuthority(string $IssuingAuthority) Set Issuing authority.
- * @method string getBusinessLicense() Obtain Business License.
- * @method void setBusinessLicense(string $BusinessLicense) Set Business License.
+ * @method string getBusinessLicense() Obtain Business license.
+ * @method void setBusinessLicense(string $BusinessLicense) Set Business license.
  * @method string getBusinessAddress() Obtain Business address.
  * @method void setBusinessAddress(string $BusinessAddress) Set Business address.
  * @method integer getPostCode() Obtain Zip code.
@@ -73,7 +73,7 @@ class CrossBorderCompliance extends AbstractModel
     public $ServiceProvider;
 
     /**
-     * @var integer ID of compliance review form.
+     * @var integer ID of compliance review request.
      */
     public $ComplianceId;
 
@@ -98,7 +98,7 @@ class CrossBorderCompliance extends AbstractModel
     public $IssuingAuthority;
 
     /**
-     * @var string Business License.
+     * @var string Business license.
      */
     public $BusinessLicense;
 
@@ -179,12 +179,12 @@ class CrossBorderCompliance extends AbstractModel
 
     /**
      * @param string $ServiceProvider Service provider. Valid values: `UNICOM`.
-     * @param integer $ComplianceId ID of compliance review form.
+     * @param integer $ComplianceId ID of compliance review request.
      * @param string $Company Full company name.
      * @param string $UniformSocialCreditCode Unified Social Credit Code.
      * @param string $LegalPerson Legal person.
      * @param string $IssuingAuthority Issuing authority.
-     * @param string $BusinessLicense Business License.
+     * @param string $BusinessLicense Business license.
      * @param string $BusinessAddress Business address.
      * @param integer $PostCode Zip code.
      * @param string $Manager Operator.

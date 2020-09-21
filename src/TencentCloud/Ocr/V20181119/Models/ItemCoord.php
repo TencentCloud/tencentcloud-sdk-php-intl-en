@@ -18,12 +18,12 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+ * Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
  *
- * @method integer getX() Obtain X-coordinate of top-left point
- * @method void setX(integer $X) Set X-coordinate of top-left point
- * @method integer getY() Obtain Y-coordinate of top-left point
- * @method void setY(integer $Y) Set Y-coordinate of top-left point
+ * @method integer getX() Obtain X-coordinate of top-left point.
+ * @method void setX(integer $X) Set X-coordinate of top-left point.
+ * @method integer getY() Obtain Y-coordinate of top-left point.
+ * @method void setY(integer $Y) Set Y-coordinate of top-left point.
  * @method integer getWidth() Obtain Width
  * @method void setWidth(integer $Width) Set Width
  * @method integer getHeight() Obtain Height
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ItemCoord extends AbstractModel
 {
     /**
-     * @var integer X-coordinate of top-left point
+     * @var integer X-coordinate of top-left point.
      */
     public $X;
 
     /**
-     * @var integer Y-coordinate of top-left point
+     * @var integer Y-coordinate of top-left point.
      */
     public $Y;
 
@@ -52,8 +52,8 @@ class ItemCoord extends AbstractModel
     public $Height;
 
     /**
-     * @param integer $X X-coordinate of top-left point
-     * @param integer $Y Y-coordinate of top-left point
+     * @param integer $X X-coordinate of top-left point.
+     * @param integer $Y Y-coordinate of top-left point.
      * @param integer $Width Width
      * @param integer $Height Height
      */

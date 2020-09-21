@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
  * @method CfsConfig getCfsConfig() Obtain File system configuration parameter, which is used for the function to mount the file system
  * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration parameter, which is used for the function to mount the file system
+ * @method integer getInitTimeout() Obtain Timeout period for function initialization
+ * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateFunctionRequest extends AbstractModel
     public $CfsConfig;
 
     /**
+     * @var integer Timeout period for function initialization
+     */
+    public $InitTimeout;
+
+    /**
      * @param string $FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      * @param Code $Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
      * @param string $Handler Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
@@ -176,6 +183,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param DeadLetterConfig $DeadLetterConfig Dead letter queue parameter
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
      * @param CfsConfig $CfsConfig File system configuration parameter, which is used for the function to mount the file system
+     * @param integer $InitTimeout Timeout period for function initialization
      */
     function __construct()
     {
@@ -275,6 +283,10 @@ class CreateFunctionRequest extends AbstractModel
         if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
             $this->CfsConfig = new CfsConfig();
             $this->CfsConfig->deserialize($param["CfsConfig"]);
+        }
+
+        if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
+            $this->InitTimeout = $param["InitTimeout"];
         }
     }
 }

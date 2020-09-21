@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceProvider() Obtain Service provider. Valid values: `UNICOM`.
  * @method void setServiceProvider(string $ServiceProvider) Set Service provider. Valid values: `UNICOM`.
- * @method integer getComplianceId() Obtain Unique ID of compliance review form.
- * @method void setComplianceId(integer $ComplianceId) Set Unique ID of compliance review form.
+ * @method integer getComplianceId() Obtain Unique ID of compliance review request.
+ * @method void setComplianceId(integer $ComplianceId) Set Unique ID of compliance review request.
  * @method string getAuditBehavior() Obtain Audit behavior. Valid values: `APPROVED` and `DENY`.
  * @method void setAuditBehavior(string $AuditBehavior) Set Audit behavior. Valid values: `APPROVED` and `DENY`.
  */
@@ -35,7 +35,7 @@ class AuditCrossBorderComplianceRequest extends AbstractModel
     public $ServiceProvider;
 
     /**
-     * @var integer Unique ID of compliance review form.
+     * @var integer Unique ID of compliance review request.
      */
     public $ComplianceId;
 
@@ -46,7 +46,7 @@ class AuditCrossBorderComplianceRequest extends AbstractModel
 
     /**
      * @param string $ServiceProvider Service provider. Valid values: `UNICOM`.
-     * @param integer $ComplianceId Unique ID of compliance review form.
+     * @param integer $ComplianceId Unique ID of compliance review request.
      * @param string $AuditBehavior Audit behavior. Valid values: `APPROVED` and `DENY`.
      */
     function __construct()

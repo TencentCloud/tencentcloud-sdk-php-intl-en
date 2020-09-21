@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextDetections(array $TextDetections) Set Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
  * @method string getLanguage() Obtain Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
  * @method void setLanguage(string $Language) Set Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
- * @method float getAngel() Obtain Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
- * @method void setAngel(float $Angel) Set Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
- * @method integer getPdfPageSize() Obtain Total number of PDF pages to be returned if the image is a PDF. Default value: 0
- * @method void setPdfPageSize(integer $PdfPageSize) Set Total number of PDF pages to be returned if the image is a PDF. Default value: 0
+ * @method float getAngel() Obtain Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>.
+ * @method void setAngel(float $Angel) Set Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>.
+ * @method integer getPdfPageSize() Obtain Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+ * @method void setPdfPageSize(integer $PdfPageSize) Set Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -44,12 +44,12 @@ class GeneralBasicOCRResponse extends AbstractModel
     public $Language;
 
     /**
-     * @var float Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
+     * @var float Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>.
      */
     public $Angel;
 
     /**
-     * @var integer Total number of PDF pages to be returned if the image is a PDF. Default value: 0
+     * @var integer Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
      */
     public $PdfPageSize;
 
@@ -61,8 +61,8 @@ class GeneralBasicOCRResponse extends AbstractModel
     /**
      * @param array $TextDetections Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
      * @param string $Language Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
-     * @param float $Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
-     * @param integer $PdfPageSize Total number of PDF pages to be returned if the image is a PDF. Default value: 0
+     * @param float $Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>.
+     * @param integer $PdfPageSize Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -50,14 +50,14 @@ Note: This field may return null, indicating that no valid value is found.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setSoldOutReason(string $SoldOutReason) Set Details of out-of-stock items
 Note: this field may return null, indicating that no valid value is obtained.
- * @method float getInstanceBandwidth() Obtain 
- * @method void setInstanceBandwidth(float $InstanceBandwidth) Set 
- * @method integer getInstancePps() Obtain 
- * @method void setInstancePps(integer $InstancePps) Set 
- * @method integer getStorageBlockAmount() Obtain 
- * @method void setStorageBlockAmount(integer $StorageBlockAmount) Set 
- * @method string getCpuType() Obtain 
- * @method void setCpuType(string $CpuType) Set 
+ * @method float getInstanceBandwidth() Obtain Private network bandwidth, in Gbps.
+ * @method void setInstanceBandwidth(float $InstanceBandwidth) Set Private network bandwidth, in Gbps.
+ * @method integer getInstancePps() Obtain The max packet sending and receiving capability (in 10k PPS).
+ * @method void setInstancePps(integer $InstancePps) Set The max packet sending and receiving capability (in 10k PPS).
+ * @method integer getStorageBlockAmount() Obtain Number of local storage blocks.
+ * @method void setStorageBlockAmount(integer $StorageBlockAmount) Set Number of local storage blocks.
+ * @method string getCpuType() Obtain CPU type.
+ * @method void setCpuType(string $CpuType) Set CPU type.
  * @method integer getGpu() Obtain Number of GPUs of the instance.
  * @method void setGpu(integer $Gpu) Set Number of GPUs of the instance.
  * @method integer getFpga() Obtain Number of FPGAs of the instance.
@@ -135,22 +135,22 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $SoldOutReason;
 
     /**
-     * @var float 
+     * @var float Private network bandwidth, in Gbps.
      */
     public $InstanceBandwidth;
 
     /**
-     * @var integer 
+     * @var integer The max packet sending and receiving capability (in 10k PPS).
      */
     public $InstancePps;
 
     /**
-     * @var integer 
+     * @var integer Number of local storage blocks.
      */
     public $StorageBlockAmount;
 
     /**
-     * @var string 
+     * @var string CPU type.
      */
     public $CpuType;
 
@@ -185,10 +185,10 @@ Note: This field may return null, indicating that no valid value is found.
      * @param ItemPrice $Price Price of an instance model.
      * @param string $SoldOutReason Details of out-of-stock items
 Note: this field may return null, indicating that no valid value is obtained.
-     * @param float $InstanceBandwidth 
-     * @param integer $InstancePps 
-     * @param integer $StorageBlockAmount 
-     * @param string $CpuType 
+     * @param float $InstanceBandwidth Private network bandwidth, in Gbps.
+     * @param integer $InstancePps The max packet sending and receiving capability (in 10k PPS).
+     * @param integer $StorageBlockAmount Number of local storage blocks.
+     * @param string $CpuType CPU type.
      * @param integer $Gpu Number of GPUs of the instance.
      * @param integer $Fpga Number of FPGAs of the instance.
      * @param string $Remark Descriptive information of the instance.

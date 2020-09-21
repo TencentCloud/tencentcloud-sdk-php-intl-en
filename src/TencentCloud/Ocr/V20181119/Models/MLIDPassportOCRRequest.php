@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageBase64() Obtain Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
  * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
- * @method boolean getRetImage() Obtain Whether to return an image. Default value: false
- * @method void setRetImage(boolean $RetImage) Set Whether to return an image. Default value: false
+ * @method boolean getRetImage() Obtain Whether to return an image. Default value: false.
+ * @method void setRetImage(boolean $RetImage) Set Whether to return an image. Default value: false.
  */
 class MLIDPassportOCRRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class MLIDPassportOCRRequest extends AbstractModel
     public $ImageBase64;
 
     /**
-     * @var boolean Whether to return an image. Default value: false
+     * @var boolean Whether to return an image. Default value: false.
      */
     public $RetImage;
 
     /**
      * @param string $ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
-     * @param boolean $RetImage Whether to return an image. Default value: false
+     * @param boolean $RetImage Whether to return an image. Default value: false.
      */
     function __construct()
     {

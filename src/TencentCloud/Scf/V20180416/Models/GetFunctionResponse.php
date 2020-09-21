@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) Set Role bound to the function
  * @method string getInstallDependency() Obtain Whether to install dependencies automatically
  * @method void setInstallDependency(string $InstallDependency) Set Whether to install dependencies automatically
- * @method string getStatus() Obtain Function status
- * @method void setStatus(string $Status) Set Function status
+ * @method string getStatus() Obtain Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
+ * @method void setStatus(string $Status) Set Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
  * @method string getStatusDesc() Obtain Status description
  * @method void setStatusDesc(string $StatusDesc) Set Status description
  * @method string getClsLogsetId() Obtain CLS logset to which logs are shipped
@@ -98,14 +98,16 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration parameter, which is used for the function to mount the file system
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAvailableStatus() Obtain Function billing status
+ * @method string getAvailableStatus() Obtain Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAvailableStatus(string $AvailableStatus) Set Function billing status
+ * @method void setAvailableStatus(string $AvailableStatus) Set Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getQualifier() Obtain Function version
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setQualifier(string $Qualifier) Set Function version
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getInitTimeout() Obtain Timeout period for function initialization
+ * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -212,7 +214,7 @@ class GetFunctionResponse extends AbstractModel
     public $InstallDependency;
 
     /**
-     * @var string Function status
+     * @var string Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
      */
     public $Status;
 
@@ -295,7 +297,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CfsConfig;
 
     /**
-     * @var string Function billing status
+     * @var string Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AvailableStatus;
@@ -305,6 +307,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Qualifier;
+
+    /**
+     * @var integer Timeout period for function initialization
+     */
+    public $InitTimeout;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -332,7 +339,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Namespace Function namespace
      * @param string $Role Role bound to the function
      * @param string $InstallDependency Whether to install dependencies automatically
-     * @param string $Status Function status
+     * @param string $Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
      * @param string $StatusDesc Status description
      * @param string $ClsLogsetId CLS logset to which logs are shipped
      * @param string $ClsTopicId CLS Topic to which logs are shipped
@@ -351,10 +358,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value was found.
      * @param CfsConfig $CfsConfig File system configuration parameter, which is used for the function to mount the file system
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AvailableStatus Function billing status
+     * @param string $AvailableStatus Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Qualifier Function version
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $InitTimeout Timeout period for function initialization
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -542,6 +550,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
             $this->Qualifier = $param["Qualifier"];
+        }
+
+        if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
+            $this->InitTimeout = $param["InitTimeout"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

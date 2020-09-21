@@ -40,10 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private IP of the instance
  * @method array getPublicIpAddresses() Obtain Public IP of the instance
  * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public IP of the instance
- * @method string getResourceType() Obtain 
- * @method void setResourceType(string $ResourceType) Set 
- * @method string getResourceOrigin() Obtain 
- * @method void setResourceOrigin(string $ResourceOrigin) Set 
+ * @method string getResourceType() Obtain Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+ * @method void setResourceType(string $ResourceType) Set Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+ * @method string getResourceOrigin() Obtain Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
+ * @method void setResourceOrigin(string $ResourceOrigin) Set Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
  */
 class ComputeNode extends AbstractModel
 {
@@ -98,12 +100,13 @@ class ComputeNode extends AbstractModel
     public $PublicIpAddresses;
 
     /**
-     * @var string 
+     * @var string Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
      */
     public $ResourceType;
 
     /**
-     * @var string 
+     * @var string Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
      */
     public $ResourceOrigin;
 
@@ -118,8 +121,9 @@ class ComputeNode extends AbstractModel
      * @param string $AgentVersion BatchCompute Agent version
      * @param array $PrivateIpAddresses Private IP of the instance
      * @param array $PublicIpAddresses Public IP of the instance
-     * @param string $ResourceType 
-     * @param string $ResourceOrigin 
+     * @param string $ResourceType Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+     * @param string $ResourceOrigin Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
      */
     function __construct()
     {

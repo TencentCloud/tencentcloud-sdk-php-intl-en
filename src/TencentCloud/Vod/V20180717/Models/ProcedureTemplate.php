@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Type of a task flow template. Valid values:
 <li>Preset: preset task flow template;</li>
 <li>Custom: custom task flow template.</li>
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getComment() Obtain Template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
@@ -70,7 +70,7 @@ class ProcedureTemplate extends AbstractModel
     public $Type;
 
     /**
-     * @var string 
+     * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
 
@@ -119,7 +119,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Type Type of a task flow template. Valid values:
 <li>Preset: preset task flow template;</li>
 <li>Custom: custom task flow template.</li>
-     * @param string $Comment 
+     * @param string $Comment Template description. Length limit: 256 characters.
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiContentReviewTaskInput $AiContentReviewTask Parameter of AI-based content audit task.
