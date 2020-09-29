@@ -18,7 +18,7 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Unusual login location settings
+ * Suspicious login location settings
  *
  * @method integer getVerifyFlag() Obtain Verification flag
  * @method void setVerifyFlag(integer $VerifyFlag) Set Verification flag

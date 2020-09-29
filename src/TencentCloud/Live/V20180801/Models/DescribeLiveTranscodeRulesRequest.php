@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeRules request structure.
  *
-
+ * @method array getTemplateIds() Obtain 
+ * @method void setTemplateIds(array $TemplateIds) Set 
+ * @method array getDomainNames() Obtain 
+ * @method void setDomainNames(array $DomainNames) Set 
  */
 class DescribeLiveTranscodeRulesRequest extends AbstractModel
 {
-
+    /**
+     * @var array 
+     */
+    public $TemplateIds;
 
     /**
+     * @var array 
+     */
+    public $DomainNames;
 
+    /**
+     * @param array $TemplateIds 
+     * @param array $DomainNames 
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeLiveTranscodeRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TemplateIds",$param) and $param["TemplateIds"] !== null) {
+            $this->TemplateIds = $param["TemplateIds"];
+        }
 
+        if (array_key_exists("DomainNames",$param) and $param["DomainNames"] !== null) {
+            $this->DomainNames = $param["DomainNames"];
+        }
     }
 }

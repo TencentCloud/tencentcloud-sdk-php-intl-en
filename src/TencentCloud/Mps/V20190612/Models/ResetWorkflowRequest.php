@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of a video processing task.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of a video content audit task.
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Video content analysis task parameter.
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Video content analysis task parameter.
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of a video content recognition task.
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of a video content recognition task.
  * @method integer getTaskPriority() Obtain Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
@@ -81,7 +81,7 @@ class ResetWorkflowRequest extends AbstractModel
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput 
+     * @var AiAnalysisTaskInput Video content analysis task parameter.
      */
     public $AiAnalysisTask;
 
@@ -108,7 +108,7 @@ class ResetWorkflowRequest extends AbstractModel
      * @param string $OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located, i.e.; `{inputDir}`.
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of a video processing task.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
-     * @param AiAnalysisTaskInput $AiAnalysisTask 
+     * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of a video content recognition task.
      * @param integer $TaskPriority Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.

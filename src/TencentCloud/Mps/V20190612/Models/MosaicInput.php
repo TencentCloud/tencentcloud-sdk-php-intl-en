@@ -18,68 +18,148 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Blur parameter type of video processing task
  *
- * @method string getCoordinateOrigin() Obtain 
- * @method void setCoordinateOrigin(string $CoordinateOrigin) Set 
- * @method string getXPos() Obtain 
- * @method void setXPos(string $XPos) Set 
- * @method string getYPos() Obtain 
- * @method void setYPos(string $YPos) Set 
- * @method string getWidth() Obtain 
- * @method void setWidth(string $Width) Set 
- * @method string getHeight() Obtain 
- * @method void setHeight(string $Height) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method string getCoordinateOrigin() Obtain Origin position, which currently can only be:
+<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the blur is in the top-left corner of the image or text.</li>
+Default value: TopLeft.
+ * @method void setCoordinateOrigin(string $CoordinateOrigin) Set Origin position, which currently can only be:
+<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the blur is in the top-left corner of the image or text.</li>
+Default value: TopLeft.
+ * @method string getXPos() Obtain The horizontal position of the origin of the blur relative to the origin of coordinates of the video. % and px formats are supported:
+<li>If the string ends in %, the `XPos` of the blur will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
+<li>If the string ends in px, the `XPos` of the blur will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
+Default value: 0 px.
+ * @method void setXPos(string $XPos) Set The horizontal position of the origin of the blur relative to the origin of coordinates of the video. % and px formats are supported:
+<li>If the string ends in %, the `XPos` of the blur will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
+<li>If the string ends in px, the `XPos` of the blur will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
+Default value: 0 px.
+ * @method string getYPos() Obtain Vertical position of the origin of blur relative to the origin of coordinates of video. % and px formats are supported:
+<li>If the string ends in %, the `YPos` of the blur will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
+<li>If the string ends in px, the `YPos` of the blur will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
+Default value: 0 px.
+ * @method void setYPos(string $YPos) Set Vertical position of the origin of blur relative to the origin of coordinates of video. % and px formats are supported:
+<li>If the string ends in %, the `YPos` of the blur will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
+<li>If the string ends in px, the `YPos` of the blur will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
+Default value: 0 px.
+ * @method string getWidth() Obtain Blur width. % and px formats are supported:
+<li>If the string ends in %, the `Width` of the blur will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
+<li>If the string ends in px, the `Width` of the blur will be in px; for example, `100px` means that `Width` is 100 px.</li>
+Default value: 10%.
+ * @method void setWidth(string $Width) Set Blur width. % and px formats are supported:
+<li>If the string ends in %, the `Width` of the blur will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
+<li>If the string ends in px, the `Width` of the blur will be in px; for example, `100px` means that `Width` is 100 px.</li>
+Default value: 10%.
+ * @method string getHeight() Obtain Blur height. % and px formats are supported:
+<li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
+<li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
+Default value: 10%.
+ * @method void setHeight(string $Height) Set Blur height. % and px formats are supported:
+<li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
+<li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
+Default value: 10%.
+ * @method float getStartTimeOffset() Obtain Start time offset of blur in seconds. If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame.
+<li>If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame;</li>
+<li>If this value is greater than 0 (e.g., n), the blur will appear at second n after the first video frame;</li>
+<li>If this value is smaller than 0 (e.g., -n), the blur will appear at second n before the last video frame.</li>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of blur in seconds. If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame.
+<li>If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame;</li>
+<li>If this value is greater than 0 (e.g., n), the blur will appear at second n after the first video frame;</li>
+<li>If this value is smaller than 0 (e.g., -n), the blur will appear at second n before the last video frame.</li>
+ * @method float getEndTimeOffset() Obtain End time offset of blur in seconds.
+<li>If this parameter is left empty or 0 is entered, the blur will exist till the last video frame;</li>
+<li>If this value is greater than 0 (e.g., n), the blur will exist till second n;</li>
+<li>If this value is smaller than 0 (e.g., -n), the blur will exist till second n before the last video frame.</li>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of blur in seconds.
+<li>If this parameter is left empty or 0 is entered, the blur will exist till the last video frame;</li>
+<li>If this value is greater than 0 (e.g., n), the blur will exist till second n;</li>
+<li>If this value is smaller than 0 (e.g., -n), the blur will exist till second n before the last video frame.</li>
  */
 class MosaicInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Origin position, which currently can only be:
+<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the blur is in the top-left corner of the image or text.</li>
+Default value: TopLeft.
      */
     public $CoordinateOrigin;
 
     /**
-     * @var string 
+     * @var string The horizontal position of the origin of the blur relative to the origin of coordinates of the video. % and px formats are supported:
+<li>If the string ends in %, the `XPos` of the blur will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
+<li>If the string ends in px, the `XPos` of the blur will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
+Default value: 0 px.
      */
     public $XPos;
 
     /**
-     * @var string 
+     * @var string Vertical position of the origin of blur relative to the origin of coordinates of video. % and px formats are supported:
+<li>If the string ends in %, the `YPos` of the blur will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
+<li>If the string ends in px, the `YPos` of the blur will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
+Default value: 0 px.
      */
     public $YPos;
 
     /**
-     * @var string 
+     * @var string Blur width. % and px formats are supported:
+<li>If the string ends in %, the `Width` of the blur will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
+<li>If the string ends in px, the `Width` of the blur will be in px; for example, `100px` means that `Width` is 100 px.</li>
+Default value: 10%.
      */
     public $Width;
 
     /**
-     * @var string 
+     * @var string Blur height. % and px formats are supported:
+<li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
+<li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
+Default value: 10%.
      */
     public $Height;
 
     /**
-     * @var float 
+     * @var float Start time offset of blur in seconds. If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame.
+<li>If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame;</li>
+<li>If this value is greater than 0 (e.g., n), the blur will appear at second n after the first video frame;</li>
+<li>If this value is smaller than 0 (e.g., -n), the blur will appear at second n before the last video frame.</li>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of blur in seconds.
+<li>If this parameter is left empty or 0 is entered, the blur will exist till the last video frame;</li>
+<li>If this value is greater than 0 (e.g., n), the blur will exist till second n;</li>
+<li>If this value is smaller than 0 (e.g., -n), the blur will exist till second n before the last video frame.</li>
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $CoordinateOrigin 
-     * @param string $XPos 
-     * @param string $YPos 
-     * @param string $Width 
-     * @param string $Height 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
+     * @param string $CoordinateOrigin Origin position, which currently can only be:
+<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the blur is in the top-left corner of the image or text.</li>
+Default value: TopLeft.
+     * @param string $XPos The horizontal position of the origin of the blur relative to the origin of coordinates of the video. % and px formats are supported:
+<li>If the string ends in %, the `XPos` of the blur will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
+<li>If the string ends in px, the `XPos` of the blur will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
+Default value: 0 px.
+     * @param string $YPos Vertical position of the origin of blur relative to the origin of coordinates of video. % and px formats are supported:
+<li>If the string ends in %, the `YPos` of the blur will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
+<li>If the string ends in px, the `YPos` of the blur will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
+Default value: 0 px.
+     * @param string $Width Blur width. % and px formats are supported:
+<li>If the string ends in %, the `Width` of the blur will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
+<li>If the string ends in px, the `Width` of the blur will be in px; for example, `100px` means that `Width` is 100 px.</li>
+Default value: 10%.
+     * @param string $Height Blur height. % and px formats are supported:
+<li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
+<li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
+Default value: 10%.
+     * @param float $StartTimeOffset Start time offset of blur in seconds. If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame.
+<li>If this parameter is left empty or 0 is entered, the blur will appear upon the first video frame;</li>
+<li>If this value is greater than 0 (e.g., n), the blur will appear at second n after the first video frame;</li>
+<li>If this value is smaller than 0 (e.g., -n), the blur will appear at second n before the last video frame.</li>
+     * @param float $EndTimeOffset End time offset of blur in seconds.
+<li>If this parameter is left empty or 0 is entered, the blur will exist till the last video frame;</li>
+<li>If this value is greater than 0 (e.g., n), the blur will exist till second n;</li>
+<li>If this value is smaller than 0 (e.g., -n), the blur will exist till second n before the last video frame.</li>
      */
     function __construct()
     {

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Migration task start time
  * @method string getEndTime() Obtain Migration task end time
  * @method void setEndTime(string $EndTime) Set Migration task end time
- * @method integer getStatus() Obtain Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
- * @method void setStatus(integer $Status) Set Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+ * @method integer getStatus() Obtain Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
+ * @method void setStatus(integer $Status) Set Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
  * @method string getMessage() Obtain Information
  * @method void setMessage(string $Message) Set Information
  * @method integer getCheckFlag() Obtain Whether migration task has been checked (0: not checked, 1: check succeeded, 2: check failed, 3: checking)
@@ -90,7 +90,7 @@ class MigrateTask extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+     * @var integer Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
      */
     public $Status;
 
@@ -123,7 +123,7 @@ class MigrateTask extends AbstractModel
      * @param string $CreateTime Migration task creation time
      * @param string $StartTime Migration task start time
      * @param string $EndTime Migration task end time
-     * @param integer $Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+     * @param integer $Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
      * @param string $Message Information
      * @param integer $CheckFlag Whether migration task has been checked (0: not checked, 1: check succeeded, 2: check failed, 3: checking)
      * @param integer $Progress Migration task progress in %

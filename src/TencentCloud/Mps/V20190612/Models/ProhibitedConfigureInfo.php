@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameter of prohibited information detection task
  *
- * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain 
- * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set 
- * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() Obtain 
- * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set 
+ * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain Control parameter of prohibited information detection in speech.
+ * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set Control parameter of prohibited information detection in speech.
+ * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameter of prohibited information detection in text.
+ * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of prohibited information detection in text.
  */
 class ProhibitedConfigureInfo extends AbstractModel
 {
     /**
-     * @var ProhibitedAsrReviewTemplateInfo 
+     * @var ProhibitedAsrReviewTemplateInfo Control parameter of prohibited information detection in speech.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var ProhibitedOcrReviewTemplateInfo 
+     * @var ProhibitedOcrReviewTemplateInfo Control parameter of prohibited information detection in text.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo 
-     * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo 
+     * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo Control parameter of prohibited information detection in speech.
+     * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo Control parameter of prohibited information detection in text.
      */
     function __construct()
     {

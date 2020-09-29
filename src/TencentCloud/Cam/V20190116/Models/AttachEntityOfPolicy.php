@@ -32,6 +32,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method integer getRelatedType() Obtain Type of entity association. 1: Associate by users; 2: Associate by User Groups
  * @method void setRelatedType(integer $RelatedType) Set Type of entity association. 1: Associate by users; 2: Associate by User Groups
+ * @method string getAttachmentTime() Obtain Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setAttachmentTime(string $AttachmentTime) Set Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
  */
 class AttachEntityOfPolicy extends AbstractModel
 {
@@ -58,12 +62,20 @@ Note: This field may return null, indicating that no valid value was found.
     public $RelatedType;
 
     /**
+     * @var string Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $AttachmentTime;
+
+    /**
      * @param string $Id Entity ID
      * @param string $Name Entity Name
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $Uin Entity UIN
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $RelatedType Type of entity association. 1: Associate by users; 2: Associate by User Groups
+     * @param string $AttachmentTime Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -92,6 +104,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("RelatedType",$param) and $param["RelatedType"] !== null) {
             $this->RelatedType = $param["RelatedType"];
+        }
+
+        if (array_key_exists("AttachmentTime",$param) and $param["AttachmentTime"] !== null) {
+            $this->AttachmentTime = $param["AttachmentTime"];
         }
     }
 }

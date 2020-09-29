@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRecordTask response structure.
  *
- * @method string getTaskId() Obtain Task ID, which uniquely identifies the recording task globally.
- * @method void setTaskId(string $TaskId) Set Task ID, which uniquely identifies the recording task globally.
+ * @method string getTaskId() Obtain `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
+ * @method void setTaskId(string $TaskId) Set `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateRecordTaskResponse extends AbstractModel
 {
     /**
-     * @var string Task ID, which uniquely identifies the recording task globally.
+     * @var string `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class CreateRecordTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId Task ID, which uniquely identifies the recording task globally.
+     * @param string $TaskId `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Control parameter of a terrorism information detection in image task.
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Control parameter of a terrorism information detection in image task.
- * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
+ * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of terrorism information detection in text task.
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of terrorism information detection in text task.
  */
 class TerrorismConfigureInfoForUpdate extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfoForUpdate 
+     * @var TerrorismOcrReviewTemplateInfoForUpdate Control parameter of terrorism information detection in text task.
      */
     public $OcrReviewInfo;
 
     /**
      * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo Control parameter of a terrorism information detection in image task.
-     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
+     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo Control parameter of terrorism information detection in text task.
      */
     function __construct()
     {

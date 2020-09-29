@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Live stream AI recognition results
  *
- * @method array getResultSet() Obtain 
- * @method void setResultSet(array $ResultSet) Set 
+ * @method array getResultSet() Obtain Content recognition result list.
+ * @method void setResultSet(array $ResultSet) Set Content recognition result list.
  */
 class LiveStreamAiRecognitionResultInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Content recognition result list.
      */
     public $ResultSet;
 
     /**
-     * @param array $ResultSet 
+     * @param array $ResultSet Content recognition result list.
      */
     function __construct()
     {

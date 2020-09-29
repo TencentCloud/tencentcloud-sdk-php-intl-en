@@ -28,8 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) Set Subimage width of an image sprite in px. Value range: [128, 4,096].
  * @method integer getHeight() Obtain Subimage height of an image sprite in px. Value range: [128, 4,096].
  * @method void setHeight(integer $Height) Set Subimage height of an image sprite in px. Value range: [128, 4,096].
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
+ * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
  * @method string getSampleType() Obtain Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -46,10 +52,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowCount(integer $RowCount) Set Subimage row count of an image sprite.
  * @method integer getColumnCount() Obtain Subimage column count of an image sprite.
  * @method void setColumnCount(integer $ColumnCount) Set Subimage column count of an image sprite.
- * @method string getFillType() Obtain 
- * @method void setFillType(string $FillType) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black.
+ * @method void setFillType(string $FillType) Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black.
+ * @method string getComment() Obtain Template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
@@ -74,7 +86,10 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
     public $Height;
 
     /**
-     * @var string 
+     * @var string Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
      */
     public $ResolutionAdaptive;
 
@@ -103,12 +118,15 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
     public $ColumnCount;
 
     /**
-     * @var string 
+     * @var string Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black.
      */
     public $FillType;
 
     /**
-     * @var string 
+     * @var string Template description. Length limit: 256 characters.
      */
     public $Comment;
 
@@ -117,7 +135,10 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
      * @param integer $Width Subimage width of an image sprite in px. Value range: [128, 4,096].
      * @param integer $Height Subimage height of an image sprite in px. Value range: [128, 4,096].
-     * @param string $ResolutionAdaptive 
+     * @param string $ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
      * @param string $SampleType Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -126,8 +147,11 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
      * @param integer $RowCount Subimage row count of an image sprite.
      * @param integer $ColumnCount Subimage column count of an image sprite.
-     * @param string $FillType 
-     * @param string $Comment 
+     * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black.
+     * @param string $Comment Template description. Length limit: 256 characters.
      */
     function __construct()
     {

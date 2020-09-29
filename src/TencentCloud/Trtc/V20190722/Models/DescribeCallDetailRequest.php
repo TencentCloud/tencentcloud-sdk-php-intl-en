@@ -58,6 +58,10 @@ aLoss: upstream/downstream audio packet loss;
 bigvLoss: upstream/downstream video packet loss;
 bigvWidth: upstream/downstream resolution in width;
 bigvHeight: upstream/downstream resolution in height.
+ * @method string getPageNumber() Obtain Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+ * @method void setPageNumber(string $PageNumber) Set Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+ * @method string getPageSize() Obtain Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+ * @method void setPageSize(string $PageSize) Set Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
  */
 class DescribeCallDetailRequest extends AbstractModel
 {
@@ -105,6 +109,16 @@ bigvHeight: upstream/downstream resolution in height.
     public $DataType;
 
     /**
+     * @var string Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+     */
+    public $PageNumber;
+
+    /**
+     * @var string Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+     */
+    public $PageSize;
+
+    /**
      * @param string $CommId Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
      * @param integer $StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
      * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
@@ -124,6 +138,8 @@ aLoss: upstream/downstream audio packet loss;
 bigvLoss: upstream/downstream video packet loss;
 bigvWidth: upstream/downstream resolution in width;
 bigvHeight: upstream/downstream resolution in height.
+     * @param string $PageNumber Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+     * @param string $PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
      */
     function __construct()
     {
@@ -160,6 +176,14 @@ bigvHeight: upstream/downstream resolution in height.
 
         if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
             $this->DataType = $param["DataType"];
+        }
+
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

@@ -36,8 +36,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAiReviewResultInfo(LiveStreamAiReviewResultInfo $AiReviewResultInfo) Set Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method LiveStreamAiRecognitionResultInfo getAiRecognitionResultInfo() Obtain 
- * @method void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo) Set 
+ * @method LiveStreamAiRecognitionResultInfo getAiRecognitionResultInfo() Obtain Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
+ * @method void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo) Set Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
@@ -72,7 +72,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AiReviewResultInfo;
 
     /**
-     * @var LiveStreamAiRecognitionResultInfo 
+     * @var LiveStreamAiRecognitionResultInfo Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
      */
     public $AiRecognitionResultInfo;
 
@@ -100,7 +100,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveStreamAiReviewResultInfo $AiReviewResultInfo Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo 
+     * @param LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

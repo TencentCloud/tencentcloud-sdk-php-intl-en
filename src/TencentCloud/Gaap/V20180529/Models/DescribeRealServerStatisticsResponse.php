@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRealServerStatistics response structure.
  *
- * @method array getStatisticsData() Obtain Origin server status statistics
- * @method void setStatisticsData(array $StatisticsData) Set Origin server status statistics
+ * @method array getStatisticsData() Obtain Origin server status statistics of specified listener
+ * @method void setStatisticsData(array $StatisticsData) Set Origin server status statistics of specified listener
+ * @method array getRsStatisticsData() Obtain Status statistics of multiple origin servers
+ * @method void setRsStatisticsData(array $RsStatisticsData) Set Status statistics of multiple origin servers
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeRealServerStatisticsResponse extends AbstractModel
 {
     /**
-     * @var array Origin server status statistics
+     * @var array Origin server status statistics of specified listener
      */
     public $StatisticsData;
+
+    /**
+     * @var array Status statistics of multiple origin servers
+     */
+    public $RsStatisticsData;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class DescribeRealServerStatisticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $StatisticsData Origin server status statistics
+     * @param array $StatisticsData Origin server status statistics of specified listener
+     * @param array $RsStatisticsData Status statistics of multiple origin servers
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -60,6 +68,15 @@ class DescribeRealServerStatisticsResponse extends AbstractModel
                 $obj = new StatisticsDataInfo();
                 $obj->deserialize($value);
                 array_push($this->StatisticsData, $obj);
+            }
+        }
+
+        if (array_key_exists("RsStatisticsData",$param) and $param["RsStatisticsData"] !== null) {
+            $this->RsStatisticsData = [];
+            foreach ($param["RsStatisticsData"] as $key => $value){
+                $obj = new MetricStatisticsInfo();
+                $obj->deserialize($value);
+                array_push($this->RsStatisticsData, $obj);
             }
         }
 

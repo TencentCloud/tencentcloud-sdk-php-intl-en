@@ -44,8 +44,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set Execution status and result of a video processing task.
  * @method array getAiContentReviewResultSet() Obtain Execution status and result of a video content audit task.
  * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Execution status and result of a video content audit task.
- * @method array getAiAnalysisResultSet() Obtain 
- * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set 
+ * @method array getAiAnalysisResultSet() Obtain Execution status and result of video content analysis task.
+ * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set Execution status and result of video content analysis task.
  * @method array getAiRecognitionResultSet() Obtain Execution status and result of a video content recognition task.
  * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set Execution status and result of a video content recognition task.
  */
@@ -96,7 +96,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AiContentReviewResultSet;
 
     /**
-     * @var array 
+     * @var array Execution status and result of video content analysis task.
      */
     public $AiAnalysisResultSet;
 
@@ -118,7 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $MediaProcessResultSet Execution status and result of a video processing task.
      * @param array $AiContentReviewResultSet Execution status and result of a video content audit task.
-     * @param array $AiAnalysisResultSet 
+     * @param array $AiAnalysisResultSet Execution status and result of video content analysis task.
      * @param array $AiRecognitionResultSet Execution status and result of a video content recognition task.
      */
     function __construct()

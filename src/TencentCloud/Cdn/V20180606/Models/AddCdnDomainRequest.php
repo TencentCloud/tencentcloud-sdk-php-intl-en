@@ -96,6 +96,8 @@ global: global acceleration
 Overseas acceleration service must be enabled to use overseas acceleration and global acceleration.
  * @method OriginPullTimeout getOriginPullTimeout() Obtain Origin-pull timeout configuration
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
+ * @method array getTag() Obtain Tag configuration
+ * @method void setTag(array $Tag) Set Tag configuration
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -258,6 +260,11 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     public $OriginPullTimeout;
 
     /**
+     * @var array Tag configuration
+     */
+    public $Tag;
+
+    /**
      * @param string $Domain Domain name
      * @param string $ServiceType Acceleration domain name service type
 web: static acceleration
@@ -296,6 +303,7 @@ overseas: acceleration outside mainland China
 global: global acceleration
 Overseas acceleration service must be enabled to use overseas acceleration and global acceleration.
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
+     * @param array $Tag Tag configuration
      */
     function __construct()
     {
@@ -454,6 +462,15 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         if (array_key_exists("OriginPullTimeout",$param) and $param["OriginPullTimeout"] !== null) {
             $this->OriginPullTimeout = new OriginPullTimeout();
             $this->OriginPullTimeout->deserialize($param["OriginPullTimeout"]);
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

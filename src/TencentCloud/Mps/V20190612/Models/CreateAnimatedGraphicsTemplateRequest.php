@@ -46,8 +46,14 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
+ * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
  * @method string getFormat() Obtain Animated image format. Valid values: gif; webp. Default value: gif.
  * @method void setFormat(string $Format) Set Animated image format. Valid values: gif; webp. Default value: gif.
  * @method float getQuality() Obtain Image quality. Value range: [1, 100]. Default value: 75.
@@ -85,7 +91,10 @@ Default value: 0.
     public $Height;
 
     /**
-     * @var string 
+     * @var string Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
      */
     public $ResolutionAdaptive;
 
@@ -123,7 +132,10 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
-     * @param string $ResolutionAdaptive 
+     * @param string $ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
      * @param string $Format Animated image format. Valid values: gif; webp. Default value: gif.
      * @param float $Quality Image quality. Value range: [1, 100]. Default value: 75.
      * @param string $Name Name of an animated image generating template. Length limit: 64 characters.

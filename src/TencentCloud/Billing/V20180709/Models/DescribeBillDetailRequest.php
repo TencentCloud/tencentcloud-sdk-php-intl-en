@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) Set Billing mode: prePay/postPay
  * @method string getResourceId() Obtain Queries information on a specified resource
  * @method void setResourceId(string $ResourceId) Set Queries information on a specified resource
+ * @method string getActionType() Obtain 
+ * @method void setActionType(string $ActionType) Set 
  */
 class DescribeBillDetailRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ class DescribeBillDetailRequest extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var string 
+     */
+    public $ActionType;
+
+    /**
      * @param integer $Offset Offset
      * @param integer $Limit Quantity, maximum is 100
      * @param string $PeriodType The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
@@ -108,6 +115,7 @@ class DescribeBillDetailRequest extends AbstractModel
      * @param string $ProductCode Queries information on a specified product
      * @param string $PayMode Billing mode: prePay/postPay
      * @param string $ResourceId Queries information on a specified resource
+     * @param string $ActionType 
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ class DescribeBillDetailRequest extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
+            $this->ActionType = $param["ActionType"];
         }
     }
 }

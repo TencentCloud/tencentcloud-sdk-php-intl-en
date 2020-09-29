@@ -50,6 +50,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setScheme(SchemeKey $Scheme) Set Request protocol contained in `CacheKey`
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getKeyRules() Obtain Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setKeyRules(array $KeyRules) Set Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class CacheKey extends AbstractModel
 {
@@ -97,6 +101,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Scheme;
 
     /**
+     * @var array Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $KeyRules;
+
+    /**
      * @param string $FullUrlCache Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter)
@@ -112,6 +122,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SchemeKey $Scheme Request protocol contained in `CacheKey`
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $KeyRules Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -157,6 +169,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
             $this->Scheme = new SchemeKey();
             $this->Scheme->deserialize($param["Scheme"]);
+        }
+
+        if (array_key_exists("KeyRules",$param) and $param["KeyRules"] !== null) {
+            $this->KeyRules = [];
+            foreach ($param["KeyRules"] as $key => $value){
+                $obj = new KeyRule();
+                $obj->deserialize($value);
+                array_push($this->KeyRules, $obj);
+            }
         }
     }
 }

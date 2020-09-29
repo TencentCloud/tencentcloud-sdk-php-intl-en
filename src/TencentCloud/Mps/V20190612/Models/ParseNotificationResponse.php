@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWorkflowTaskEvent(WorkflowTask $WorkflowTaskEvent) Set Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method EditMediaTask getEditMediaTaskEvent() Obtain 
- * @method void setEditMediaTaskEvent(EditMediaTask $EditMediaTaskEvent) Set 
+ * @method EditMediaTask getEditMediaTaskEvent() Obtain Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+ * @method void setEditMediaTaskEvent(EditMediaTask $EditMediaTaskEvent) Set Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
@@ -52,7 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WorkflowTaskEvent;
 
     /**
-     * @var EditMediaTask 
+     * @var EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      */
     public $EditMediaTaskEvent;
 
@@ -76,7 +76,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>WorkflowTask: Video workflow processing task.</li>
      * @param WorkflowTask $WorkflowTaskEvent Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EditMediaTask $EditMediaTaskEvent 
+     * @param EditMediaTask $EditMediaTaskEvent Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 1 = yes, 0 = no
  * @method void setNeedRecordNum(integer $NeedRecordNum) Set Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
+ * @method string getActionType() Obtain 
+ * @method void setActionType(string $ActionType) Set 
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -62,12 +64,18 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $NeedRecordNum;
 
     /**
+     * @var string 
+     */
+    public $ActionType;
+
+    /**
      * @param integer $Offset Offset
      * @param integer $Limit Quantity, maximum is 1000
      * @param string $PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
      * @param string $Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
      * @param integer $NeedRecordNum Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
+     * @param string $ActionType 
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 
         if (array_key_exists("NeedRecordNum",$param) and $param["NeedRecordNum"] !== null) {
             $this->NeedRecordNum = $param["NeedRecordNum"];
+        }
+
+        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
+            $this->ActionType = $param["ActionType"];
         }
     }
 }

@@ -18,36 +18,48 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * ASR-detected prohibited information in speech
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
+ * @method float getConfidence() Obtain Score of ASR-detected prohibited information in speech between 0 and 100.
+ * @method void setConfidence(float $Confidence) Set Score of ASR-detected prohibited information in speech between 0 and 100.
+ * @method string getSuggestion() Obtain Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method array getSegmentSet() Obtain List of video segments that contain the ASR-detected prohibited information in speech.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the ASR-detected prohibited information in speech.
  */
 class AiReviewProhibitedAsrTaskOutput extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Score of ASR-detected prohibited information in speech between 0 and 100.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var array 
+     * @var array List of video segments that contain the ASR-detected prohibited information in speech.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param array $SegmentSet 
+     * @param float $Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
+     * @param string $Suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param array $SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
      */
     function __construct()
     {

@@ -44,8 +44,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Video content analysis task parameter.
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Video content analysis task parameter.
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of a video content recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of a video content recognition task.
@@ -106,7 +106,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput 
+     * @var AiAnalysisTaskInput Video content analysis task parameter.
      */
     public $AiAnalysisTask;
 
@@ -155,7 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisTaskInput $AiAnalysisTask 
+     * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of a video content recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.

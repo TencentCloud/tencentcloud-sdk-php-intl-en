@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Porn.Voice: Porn information detection in speech</li>
 <li>Political.Asr: ASR-based politically sensitive information detection in text</li>
 <li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
- * @method float getSampleRate() Obtain 
- * @method void setSampleRate(float $SampleRate) Set 
- * @method float getDuration() Obtain 
- * @method void setDuration(float $Duration) Set 
+ * @method float getSampleRate() Obtain Sample rate, which indicates the number of video frames captured per second for audit
+ * @method void setSampleRate(float $SampleRate) Set Sample rate, which indicates the number of video frames captured per second for audit
+ * @method float getDuration() Obtain Audited video duration in seconds.
+ * @method void setDuration(float $Duration) Set Audited video duration in seconds.
  * @method AiReviewTaskPornResult getPornTask() Obtain Query result of an intelligent porn information detection in image task in video content audit, which is valid when task type is `Porn`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPornTask(AiReviewTaskPornResult $PornTask) Set Query result of an intelligent porn information detection in image task in video content audit, which is valid when task type is `Porn`.
@@ -70,12 +70,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPoliticalOcrTask(AiReviewTaskPoliticalOcrResult $PoliticalOcrTask) Set Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() Obtain 
- * @method void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult $TerrorismOcrTask) Set 
- * @method AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() Obtain 
- * @method void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask) Set 
- * @method AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() Obtain 
- * @method void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask) Set 
+ * @method AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() Obtain Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+ * @method void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult $TerrorismOcrTask) Set Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+ * @method AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() Obtain Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
+ * @method void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask) Set Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
+ * @method AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() Obtain Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
+ * @method void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask) Set Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
  */
 class AiContentReviewResult extends AbstractModel
 {
@@ -93,12 +93,12 @@ class AiContentReviewResult extends AbstractModel
     public $Type;
 
     /**
-     * @var float 
+     * @var float Sample rate, which indicates the number of video frames captured per second for audit
      */
     public $SampleRate;
 
     /**
-     * @var float 
+     * @var float Audited video duration in seconds.
      */
     public $Duration;
 
@@ -145,17 +145,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PoliticalOcrTask;
 
     /**
-     * @var AiReviewTaskTerrorismOcrResult 
+     * @var AiReviewTaskTerrorismOcrResult Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
      */
     public $TerrorismOcrTask;
 
     /**
-     * @var AiReviewTaskProhibitedAsrResult 
+     * @var AiReviewTaskProhibitedAsrResult Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
      */
     public $ProhibitedAsrTask;
 
     /**
-     * @var AiReviewTaskProhibitedOcrResult 
+     * @var AiReviewTaskProhibitedOcrResult Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
      */
     public $ProhibitedOcrTask;
 
@@ -169,8 +169,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>Porn.Voice: Porn information detection in speech</li>
 <li>Political.Asr: ASR-based politically sensitive information detection in text</li>
 <li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
-     * @param float $SampleRate 
-     * @param float $Duration 
+     * @param float $SampleRate Sample rate, which indicates the number of video frames captured per second for audit
+     * @param float $Duration Audited video duration in seconds.
      * @param AiReviewTaskPornResult $PornTask Query result of an intelligent porn information detection in image task in video content audit, which is valid when task type is `Porn`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiReviewTaskTerrorismResult $TerrorismTask Query result of an intelligent terrorism information detection in image task in video content audit, which is valid when task type is `Terrorism`.
@@ -185,9 +185,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiReviewTaskPoliticalOcrResult $PoliticalOcrTask Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskTerrorismOcrResult $TerrorismOcrTask 
-     * @param AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask 
-     * @param AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask 
+     * @param AiReviewTaskTerrorismOcrResult $TerrorismOcrTask Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+     * @param AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
+     * @param AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
      */
     function __construct()
     {

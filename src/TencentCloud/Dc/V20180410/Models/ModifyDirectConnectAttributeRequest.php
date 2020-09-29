@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirectConnectId(string $DirectConnectId) Set Connection ID.
  * @method string getDirectConnectName() Obtain Connection name.
  * @method void setDirectConnectName(string $DirectConnectName) Set Connection name.
- * @method string getCircuitCode() Obtain Circuit code of connection, which is provided by the ISP or connection provider.
- * @method void setCircuitCode(string $CircuitCode) Set Circuit code of connection, which is provided by the ISP or connection provider.
+ * @method string getCircuitCode() Obtain Circuit code of a connection, which is provided by the ISP or connection provider.
+ * @method void setCircuitCode(string $CircuitCode) Set Circuit code of a connection, which is provided by the ISP or connection provider.
  * @method integer getVlan() Obtain VLAN for connection debugging.
  * @method void setVlan(integer $Vlan) Set VLAN for connection debugging.
  * @method string getTencentAddress() Obtain Tencent-side IP address for connection debugging.
@@ -58,7 +58,7 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
     public $DirectConnectName;
 
     /**
-     * @var string Circuit code of connection, which is provided by the ISP or connection provider.
+     * @var string Circuit code of a connection, which is provided by the ISP or connection provider.
      */
     public $CircuitCode;
 
@@ -110,7 +110,7 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
     /**
      * @param string $DirectConnectId Connection ID.
      * @param string $DirectConnectName Connection name.
-     * @param string $CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+     * @param string $CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
      * @param integer $Vlan VLAN for connection debugging.
      * @param string $TencentAddress Tencent-side IP address for connection debugging.
      * @param string $CustomerAddress User-side IP address for connection debugging.

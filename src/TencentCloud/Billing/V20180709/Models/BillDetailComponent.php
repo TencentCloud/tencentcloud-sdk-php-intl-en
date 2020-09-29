@@ -52,12 +52,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) Set Amount paid in cash
  * @method string getIncentivePayAmount() Obtain Amount paid in trial credit
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Amount paid in trial credit
- * @method string getItemCode() Obtain 
- * @method void setItemCode(string $ItemCode) Set 
- * @method string getComponentCode() Obtain 
- * @method void setComponentCode(string $ComponentCode) Set 
- * @method string getContractPrice() Obtain 
- * @method void setContractPrice(string $ContractPrice) Set 
+ * @method string getItemCode() Obtain Component type/code (optional)
+ * @method void setItemCode(string $ItemCode) Set Component type/code (optional)
+ * @method string getComponentCode() Obtain Component name/code (optional)
+ * @method void setComponentCode(string $ComponentCode) Set Component name/code (optional)
+ * @method string getContractPrice() Obtain Contract price
+ * @method void setContractPrice(string $ContractPrice) Set Contract price
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -142,17 +142,17 @@ class BillDetailComponent extends AbstractModel
     public $IncentivePayAmount;
 
     /**
-     * @var string 
+     * @var string Component type/code (optional)
      */
     public $ItemCode;
 
     /**
-     * @var string 
+     * @var string Component name/code (optional)
      */
     public $ComponentCode;
 
     /**
-     * @var string 
+     * @var string Contract price
      */
     public $ContractPrice;
 
@@ -173,9 +173,9 @@ class BillDetailComponent extends AbstractModel
      * @param string $VoucherPayAmount Amount paid in voucher
      * @param string $CashPayAmount Amount paid in cash
      * @param string $IncentivePayAmount Amount paid in trial credit
-     * @param string $ItemCode 
-     * @param string $ComponentCode 
-     * @param string $ContractPrice 
+     * @param string $ItemCode Component type/code (optional)
+     * @param string $ComponentCode Component name/code (optional)
+     * @param string $ContractPrice Contract price
      */
     function __construct()
     {

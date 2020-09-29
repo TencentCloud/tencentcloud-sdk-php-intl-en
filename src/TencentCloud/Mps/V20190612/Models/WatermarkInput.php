@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain ID of a watermarking template.
  * @method void setDefinition(integer $Definition) Set ID of a watermarking template.
- * @method RawWatermarkParameter getRawParameter() Obtain 
- * @method void setRawParameter(RawWatermarkParameter $RawParameter) Set 
+ * @method RawWatermarkParameter getRawParameter() Obtain Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+ * @method void setRawParameter(RawWatermarkParameter $RawParameter) Set Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
  * @method string getTextContent() Obtain Text content of up to 100 characters. This field is required only when the watermark type is text.
  * @method void setTextContent(string $TextContent) Set Text content of up to 100 characters. This field is required only when the watermark type is text.
  * @method string getSvgContent() Obtain SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
@@ -53,7 +55,8 @@ class WatermarkInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var RawWatermarkParameter 
+     * @var RawWatermarkParameter Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
      */
     public $RawParameter;
 
@@ -85,7 +88,8 @@ class WatermarkInput extends AbstractModel
 
     /**
      * @param integer $Definition ID of a watermarking template.
-     * @param RawWatermarkParameter $RawParameter 
+     * @param RawWatermarkParameter $RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
      * @param string $TextContent Text content of up to 100 characters. This field is required only when the watermark type is text.
      * @param string $SvgContent SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
      * @param float $StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.

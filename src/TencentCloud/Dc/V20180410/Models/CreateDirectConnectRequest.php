@@ -30,8 +30,8 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
  * @method void setLineOperator(string $LineOperator) Set ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
  * @method string getPortType() Obtain Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
  * @method void setPortType(string $PortType) Set Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
- * @method string getCircuitCode() Obtain Circuit code of connection, which is provided by the ISP or connection provider.
- * @method void setCircuitCode(string $CircuitCode) Set Circuit code of connection, which is provided by the ISP or connection provider.
+ * @method string getCircuitCode() Obtain Circuit code of a connection, which is provided by the ISP or connection provider.
+ * @method void setCircuitCode(string $CircuitCode) Set Circuit code of a connection, which is provided by the ISP or connection provider.
  * @method string getLocation() Obtain Local IDC location.
  * @method void setLocation(string $Location) Set Local IDC location.
  * @method integer getBandwidth() Obtain Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
@@ -81,7 +81,7 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     public $PortType;
 
     /**
-     * @var string Circuit code of connection, which is provided by the ISP or connection provider.
+     * @var string Circuit code of a connection, which is provided by the ISP or connection provider.
      */
     public $CircuitCode;
 
@@ -151,7 +151,7 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
 You can call `DescribeAccessPoints` to get the region ID. The selected access point must exist and be available.
      * @param string $LineOperator ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
      * @param string $PortType Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
-     * @param string $CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+     * @param string $CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
      * @param string $Location Local IDC location.
      * @param integer $Bandwidth Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
      * @param string $RedundantDirectConnectId ID of redundant connection.

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(MigrateTarget $Target) Set Migration target
  * @method array getMigrateDBSet() Obtain Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
  * @method void setMigrateDBSet(array $MigrateDBSet) Set Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
+ * @method array getRenameRestore() Obtain Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+ * @method void setRenameRestore(array $RenameRestore) Set Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
  */
 class CreateMigrationRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateMigrationRequest extends AbstractModel
     public $MigrateDBSet;
 
     /**
+     * @var array Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+     */
+    public $RenameRestore;
+
+    /**
      * @param string $MigrateName Migration task name
      * @param integer $MigrateType Migration type (1: structure migration, 2: data migration, 3: incremental sync)
      * @param integer $SourceType Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode)
      * @param MigrateSource $Source Migration source
      * @param MigrateTarget $Target Migration target
      * @param array $MigrateDBSet Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
+     * @param array $RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
      */
     function __construct()
     {
@@ -114,6 +122,15 @@ class CreateMigrationRequest extends AbstractModel
                 $obj = new MigrateDB();
                 $obj->deserialize($value);
                 array_push($this->MigrateDBSet, $obj);
+            }
+        }
+
+        if (array_key_exists("RenameRestore",$param) and $param["RenameRestore"] !== null) {
+            $this->RenameRestore = [];
+            foreach ($param["RenameRestore"] as $key => $value){
+                $obj = new RenameRestoreDatabase();
+                $obj->deserialize($value);
+                array_push($this->RenameRestore, $obj);
             }
         }
     }

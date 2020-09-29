@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAccessPointName() Obtain Access point name.
  * @method void setAccessPointName(string $AccessPointName) Set Access point name.
- * @method string getAccessPointId() Obtain Unique ID of access point.
- * @method void setAccessPointId(string $AccessPointId) Set Unique ID of access point.
+ * @method string getAccessPointId() Obtain Unique access point ID.
+ * @method void setAccessPointId(string $AccessPointId) Set Unique access point ID.
  * @method string getState() Obtain Access point status. Valid values: available, unavailable.
  * @method void setState(string $State) Set Access point status. Valid values: available, unavailable.
  * @method string getLocation() Obtain Access point location.
  * @method void setLocation(string $Location) Set Access point location.
- * @method array getLineOperator() Obtain Supported ISP list of access pint.
- * @method void setLineOperator(array $LineOperator) Set Supported ISP list of access pint.
- * @method string getRegionId() Obtain Region ID where the access point resides.
- * @method void setRegionId(string $RegionId) Set Region ID where the access point resides.
+ * @method array getLineOperator() Obtain List of ISPs supported by access point.
+ * @method void setLineOperator(array $LineOperator) Set List of ISPs supported by access point.
+ * @method string getRegionId() Obtain ID of the region that manages the access point.
+ * @method void setRegionId(string $RegionId) Set ID of the region that manages the access point.
  * @method array getAvailablePortType() Obtain Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setAvailablePortType(array $AvailablePortType) Set Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
@@ -45,7 +45,7 @@ class AccessPoint extends AbstractModel
     public $AccessPointName;
 
     /**
-     * @var string Unique ID of access point.
+     * @var string Unique access point ID.
      */
     public $AccessPointId;
 
@@ -60,12 +60,12 @@ class AccessPoint extends AbstractModel
     public $Location;
 
     /**
-     * @var array Supported ISP list of access pint.
+     * @var array List of ISPs supported by access point.
      */
     public $LineOperator;
 
     /**
-     * @var string Region ID where the access point resides.
+     * @var string ID of the region that manages the access point.
      */
     public $RegionId;
 
@@ -77,11 +77,11 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * @param string $AccessPointName Access point name.
-     * @param string $AccessPointId Unique ID of access point.
+     * @param string $AccessPointId Unique access point ID.
      * @param string $State Access point status. Valid values: available, unavailable.
      * @param string $Location Access point location.
-     * @param array $LineOperator Supported ISP list of access pint.
-     * @param string $RegionId Region ID where the access point resides.
+     * @param array $LineOperator List of ISPs supported by access point.
+     * @param string $RegionId ID of the region that manages the access point.
      * @param array $AvailablePortType Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */

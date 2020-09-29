@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputDir(string $OutputDir) Set Target directory of a live stream processing output file, such as `/movie/201909/`. If this parameter is left empty, the `/` directory will be used.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of a video content audit task.
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain 
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set 
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of video content recognition task.
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of video content recognition task.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
@@ -65,7 +65,7 @@ class ProcessLiveStreamRequest extends AbstractModel
     public $AiContentReviewTask;
 
     /**
-     * @var AiRecognitionTaskInput 
+     * @var AiRecognitionTaskInput Type parameter of video content recognition task.
      */
     public $AiRecognitionTask;
 
@@ -85,7 +85,7 @@ class ProcessLiveStreamRequest extends AbstractModel
      * @param TaskOutputStorage $OutputStorage Target bucket of a live stream processing output file. This parameter is required if a file will be output.
      * @param string $OutputDir Target directory of a live stream processing output file, such as `/movie/201909/`. If this parameter is left empty, the `/` directory will be used.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
-     * @param AiRecognitionTaskInput $AiRecognitionTask 
+     * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of video content recognition task.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      */

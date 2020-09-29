@@ -30,6 +30,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAdvancedCache(AdvancedCache $AdvancedCache) Set Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getRuleCache() Obtain Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setRuleCache(array $RuleCache) Set Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class Cache extends AbstractModel
 {
@@ -46,10 +50,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AdvancedCache;
 
     /**
+     * @var array Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public $RuleCache;
+
+    /**
      * @param SimpleCache $SimpleCache Basic cache expiration time configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AdvancedCache $AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $RuleCache Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -72,6 +84,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AdvancedCache",$param) and $param["AdvancedCache"] !== null) {
             $this->AdvancedCache = new AdvancedCache();
             $this->AdvancedCache->deserialize($param["AdvancedCache"]);
+        }
+
+        if (array_key_exists("RuleCache",$param) and $param["RuleCache"] !== null) {
+            $this->RuleCache = [];
+            foreach ($param["RuleCache"] as $key => $value){
+                $obj = new RuleCache();
+                $obj->deserialize($value);
+                array_push($this->RuleCache, $obj);
+            }
         }
     }
 }

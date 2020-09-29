@@ -18,52 +18,64 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Result type of OCR-based prohibited information detection in text task in content audit
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method AiReviewProhibitedOcrTaskInput getInput() Obtain 
- * @method void setInput(AiReviewProhibitedOcrTaskInput $Input) Set 
- * @method AiReviewProhibitedOcrTaskOutput getOutput() Obtain 
- * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set 
+ * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+ * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method AiReviewProhibitedOcrTaskInput getInput() Obtain Input of OCR-based prohibited information detection in text task in content audit
+ * @method void setInput(AiReviewProhibitedOcrTaskInput $Input) Set Input of OCR-based prohibited information detection in text task in content audit
+ * @method AiReviewProhibitedOcrTaskOutput getOutput() Obtain Output of OCR-based prohibited information detection in text task in content audit
+ * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set Output of OCR-based prohibited information detection in text task in content audit
  */
 class AiReviewTaskProhibitedOcrResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var AiReviewProhibitedOcrTaskInput 
+     * @var AiReviewProhibitedOcrTaskInput Input of OCR-based prohibited information detection in text task in content audit
      */
     public $Input;
 
     /**
-     * @var AiReviewProhibitedOcrTaskOutput 
+     * @var AiReviewProhibitedOcrTaskOutput Output of OCR-based prohibited information detection in text task in content audit
      */
     public $Output;
 
     /**
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param AiReviewProhibitedOcrTaskInput $Input 
-     * @param AiReviewProhibitedOcrTaskOutput $Output 
+     * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @param integer $ErrCode Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
+     * @param string $Message Error message.
+     * @param AiReviewProhibitedOcrTaskInput $Input Input of OCR-based prohibited information detection in text task in content audit
+     * @param AiReviewProhibitedOcrTaskOutput $Output Output of OCR-based prohibited information detection in text task in content audit
      */
     function __construct()
     {

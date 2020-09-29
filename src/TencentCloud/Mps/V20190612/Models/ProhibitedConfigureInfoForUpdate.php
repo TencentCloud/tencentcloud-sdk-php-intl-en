@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameter of prohibited information detection task
  *
- * @method ProhibitedAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain 
- * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set 
- * @method ProhibitedOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
- * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
+ * @method ProhibitedAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Control parameter of prohibited information detection in speech.
+ * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Control parameter of prohibited information detection in speech.
+ * @method ProhibitedOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of prohibited information detection in text.
+ * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of prohibited information detection in text.
  */
 class ProhibitedConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var ProhibitedAsrReviewTemplateInfoForUpdate 
+     * @var ProhibitedAsrReviewTemplateInfoForUpdate Control parameter of prohibited information detection in speech.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var ProhibitedOcrReviewTemplateInfoForUpdate 
+     * @var ProhibitedOcrReviewTemplateInfoForUpdate Control parameter of prohibited information detection in text.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo 
-     * @param ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
+     * @param ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo Control parameter of prohibited information detection in speech.
+     * @param ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo Control parameter of prohibited information detection in text.
      */
     function __construct()
     {

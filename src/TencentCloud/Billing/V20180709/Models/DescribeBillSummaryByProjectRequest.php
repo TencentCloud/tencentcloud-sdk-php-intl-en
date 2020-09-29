@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByProject request structure.
  *
- * @method string getPayerUin() Obtain Queries bill data user’s UIN
- * @method void setPayerUin(string $PayerUin) Set Queries bill data user’s UIN
+ * @method string getPayerUin() Obtain Queries bill data user's UIN
+ * @method void setPayerUin(string $PayerUin) Set Queries bill data user's UIN
  * @method string getBeginTime() Obtain Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
  * @method void setBeginTime(string $BeginTime) Set Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
  * @method string getEndTime() Obtain Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillSummaryByProjectRequest extends AbstractModel
 {
     /**
-     * @var string Queries bill data user’s UIN
+     * @var string Queries bill data user's UIN
      */
     public $PayerUin;
 
@@ -45,7 +45,7 @@ class DescribeBillSummaryByProjectRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $PayerUin Queries bill data user’s UIN
+     * @param string $PayerUin Queries bill data user's UIN
      * @param string $BeginTime Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
      * @param string $EndTime Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
      */

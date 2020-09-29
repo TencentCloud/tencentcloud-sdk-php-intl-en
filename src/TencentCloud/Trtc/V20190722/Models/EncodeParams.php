@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output stream encoding parameters for MCU On-Cloud MixTranscoding
  *
- * @method integer getAudioSampleRate() Obtain Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000.
- * @method void setAudioSampleRate(integer $AudioSampleRate) Set Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000.
+ * @method integer getAudioSampleRate() Obtain Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
+ * @method void setAudioSampleRate(integer $AudioSampleRate) Set Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
  * @method integer getAudioBitrate() Obtain Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
  * @method void setAudioBitrate(integer $AudioBitrate) Set Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
  * @method integer getAudioChannels() Obtain Number of output stream audio sound channels for On-Cloud MixTranscoding. Value range: [1, 2].
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class EncodeParams extends AbstractModel
 {
     /**
-     * @var integer Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000.
+     * @var integer Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
      */
     public $AudioSampleRate;
 
@@ -94,7 +94,7 @@ class EncodeParams extends AbstractModel
     public $BackgroundImageId;
 
     /**
-     * @param integer $AudioSampleRate Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000.
+     * @param integer $AudioSampleRate Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
      * @param integer $AudioBitrate Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
      * @param integer $AudioChannels Number of output stream audio sound channels for On-Cloud MixTranscoding. Value range: [1, 2].
      * @param integer $VideoWidth Output stream width in pixels for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [0, 1920].

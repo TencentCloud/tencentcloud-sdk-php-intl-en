@@ -112,6 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setModifyConfigTime(integer $ModifyConfigTime) Set Configuration change time
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProxyType() Obtain Connection type
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProxyType(integer $ProxyType) Set Connection type
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ProxyInfo extends AbstractModel
 {
@@ -262,6 +266,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ModifyConfigTime;
 
     /**
+     * @var integer Connection type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProxyType;
+
+    /**
      * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
@@ -307,6 +317,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $RelatedGlobalDomains List of domain names associated with resolution record
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ModifyConfigTime Configuration change time
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProxyType Connection type
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -427,6 +439,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ModifyConfigTime",$param) and $param["ModifyConfigTime"] !== null) {
             $this->ModifyConfigTime = $param["ModifyConfigTime"];
+        }
+
+        if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
+            $this->ProxyType = $param["ProxyType"];
         }
     }
 }

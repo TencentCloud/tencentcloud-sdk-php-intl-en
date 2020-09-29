@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input parameter type of OCR-based terrorism information detection in text task in content audit
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Terrorism information detection template ID.
+ * @method void setDefinition(integer $Definition) Set Terrorism information detection template ID.
  */
 class AiReviewTerrorismOcrTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Terrorism information detection template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Terrorism information detection template ID.
      */
     function __construct()
     {

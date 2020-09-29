@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) Set Database to be rolled back
  * @method string getTime() Obtain Target time point for rollback
  * @method void setTime(string $Time) Set Target time point for rollback
+ * @method string getTargetInstanceId() Obtain ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+ * @method void setTargetInstanceId(string $TargetInstanceId) Set ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+ * @method array getRenameRestore() Obtain Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+ * @method void setRenameRestore(array $RenameRestore) Set Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
  */
 class RollbackInstanceRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class RollbackInstanceRequest extends AbstractModel
     public $Time;
 
     /**
+     * @var string ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+     */
+    public $TargetInstanceId;
+
+    /**
+     * @var array Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+     */
+    public $RenameRestore;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $Type Rollback type. 0: the database rolled back overwrites the original database; 1: the database rolled back is renamed and does not overwrite the original database
      * @param array $DBs Database to be rolled back
      * @param string $Time Target time point for rollback
+     * @param string $TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+     * @param array $RenameRestore Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
      */
     function __construct()
     {
@@ -84,6 +100,19 @@ class RollbackInstanceRequest extends AbstractModel
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("TargetInstanceId",$param) and $param["TargetInstanceId"] !== null) {
+            $this->TargetInstanceId = $param["TargetInstanceId"];
+        }
+
+        if (array_key_exists("RenameRestore",$param) and $param["RenameRestore"] !== null) {
+            $this->RenameRestore = [];
+            foreach ($param["RenameRestore"] as $key => $value){
+                $obj = new RenameRestoreDatabase();
+                $obj->deserialize($value);
+                array_push($this->RenameRestore, $obj);
+            }
         }
     }
 }

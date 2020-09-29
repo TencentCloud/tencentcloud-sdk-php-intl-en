@@ -68,8 +68,10 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
- * @method integer getGop() Obtain 
- * @method void setGop(integer $Gop) Set 
+ * @method integer getGop() Obtain Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length.
+ * @method void setGop(integer $Gop) Set Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length.
  * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -130,7 +132,8 @@ Default value: 0.
     public $Height;
 
     /**
-     * @var integer 
+     * @var integer Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length.
      */
     public $Gop;
 
@@ -167,7 +170,8 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
-     * @param integer $Gop 
+     * @param integer $Gop Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length.
      * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>

@@ -56,6 +56,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(integer $CreateTime) Set Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProxyType() Obtain Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProxyType(integer $ProxyType) Set Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -114,6 +118,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
+     * @var integer Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProxyType;
+
+    /**
      * @param string $GroupId Connection group ID
      * @param string $Domain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -131,6 +141,8 @@ Where:
      * @param string $Version Connection group version
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProxyType Whether the connection group contains a Microsoft connection
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -186,6 +198,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
+            $this->ProxyType = $param["ProxyType"];
         }
     }
 }

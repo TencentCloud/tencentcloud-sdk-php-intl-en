@@ -88,8 +88,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setInstanceType(string $InstanceType) Set Type.
 Note: this field may return `null`, indicating that no valid value was found.
- * @method array getFeatures() Obtain 
- * @method void setFeatures(array $Features) Set 
+ * @method array getFeatures() Obtain Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setFeatures(array $Features) Set Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -236,7 +238,8 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $InstanceType;
 
     /**
-     * @var array 
+     * @var array Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Features;
 
@@ -275,7 +278,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceType Type.
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param array $Features 
+     * @param array $Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

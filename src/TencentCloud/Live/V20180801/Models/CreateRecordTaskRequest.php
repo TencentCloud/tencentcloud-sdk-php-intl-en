@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path.
  * @method void setAppName(string $AppName) Set Push path.
- * @method integer getEndTime() Obtain Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
- * @method void setEndTime(integer $EndTime) Set Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
- * @method integer getStartTime() Obtain Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
- * @method void setStartTime(integer $StartTime) Set Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+ * @method integer getEndTime() Obtain The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
+ * @method void setEndTime(integer $EndTime) Set The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
+ * @method integer getStartTime() Obtain The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
+ * @method void setStartTime(integer $StartTime) Set The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
  * @method integer getStreamType() Obtain Push type. Default value: 0. Valid values:
 0: LVB push.
 1: mixed stream, i.e., A + B = C mixed stream.
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 1: mixed stream, i.e., A + B = C mixed stream.
  * @method integer getTemplateId() Obtain Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
  * @method void setTemplateId(integer $TemplateId) Set Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
- * @method string getExtension() Obtain Extended field, which is empty by default.
- * @method void setExtension(string $Extension) Set Extended field, which is empty by default.
+ * @method string getExtension() Obtain Extension field which is not defined now. It is empty by default.
+ * @method void setExtension(string $Extension) Set Extension field which is not defined now. It is empty by default.
  */
 class CreateRecordTaskRequest extends AbstractModel
 {
@@ -59,12 +59,12 @@ class CreateRecordTaskRequest extends AbstractModel
     public $AppName;
 
     /**
-     * @var integer Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+     * @var integer The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
      */
     public $EndTime;
 
     /**
-     * @var integer Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+     * @var integer The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
      */
     public $StartTime;
 
@@ -81,7 +81,7 @@ class CreateRecordTaskRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string Extended field, which is empty by default.
+     * @var string Extension field which is not defined now. It is empty by default.
      */
     public $Extension;
 
@@ -89,13 +89,13 @@ class CreateRecordTaskRequest extends AbstractModel
      * @param string $StreamName Stream name.
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path.
-     * @param integer $EndTime Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
-     * @param integer $StartTime Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+     * @param integer $EndTime The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
+     * @param integer $StartTime The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
      * @param integer $StreamType Push type. Default value: 0. Valid values:
 0: LVB push.
 1: mixed stream, i.e., A + B = C mixed stream.
      * @param integer $TemplateId Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
-     * @param string $Extension Extended field, which is empty by default.
+     * @param string $Extension Extension field which is not defined now. It is empty by default.
      */
     function __construct()
     {

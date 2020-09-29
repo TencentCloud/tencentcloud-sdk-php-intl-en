@@ -28,6 +28,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDiskType(string $DiskType) Set Disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskNum() Obtain 
+ * @method void setDiskNum(integer $DiskNum) Set 
  */
 class PersistentVolumeContext extends AbstractModel
 {
@@ -44,10 +46,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DiskType;
 
     /**
+     * @var integer 
+     */
+    public $DiskNum;
+
+    /**
      * @param integer $DiskSize Disk size in GB
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DiskType Disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskNum 
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
             $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("DiskNum",$param) and $param["DiskNum"] !== null) {
+            $this->DiskNum = $param["DiskNum"];
         }
     }
 }

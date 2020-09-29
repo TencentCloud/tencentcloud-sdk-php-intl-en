@@ -18,19 +18,19 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Result information of intelligent frame-specific tagging
  *
- * @method string getTag() Obtain 
- * @method void setTag(string $Tag) Set 
+ * @method string getTag() Obtain Frame-specific tag name.
+ * @method void setTag(string $Tag) Set Frame-specific tag name.
  * @method array getCategorySet() Obtain 
  * @method void setCategorySet(array $CategorySet) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
+ * @method float getConfidence() Obtain Confidence of intelligently generated frame-specific tag between 0 and 100.
+ * @method void setConfidence(float $Confidence) Set Confidence of intelligently generated frame-specific tag between 0 and 100.
  */
 class MediaAiAnalysisFrameTagItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Frame-specific tag name.
      */
     public $Tag;
 
@@ -40,14 +40,14 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
     public $CategorySet;
 
     /**
-     * @var float 
+     * @var float Confidence of intelligently generated frame-specific tag between 0 and 100.
      */
     public $Confidence;
 
     /**
-     * @param string $Tag 
+     * @param string $Tag Frame-specific tag name.
      * @param array $CategorySet 
-     * @param float $Confidence 
+     * @param float $Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
      */
     function __construct()
     {

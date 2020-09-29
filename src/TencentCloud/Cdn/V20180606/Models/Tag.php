@@ -18,28 +18,36 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Domain name tag configuration
  *
- * @method string getTagKey() Obtain 
- * @method void setTagKey(string $TagKey) Set 
- * @method string getTagValue() Obtain 
- * @method void setTagValue(string $TagValue) Set 
+ * @method string getTagKey() Obtain Tag key
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setTagKey(string $TagKey) Set Tag key
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getTagValue() Obtain Tag value.
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setTagValue(string $TagValue) Set Tag value.
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Tag key
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $TagKey;
 
     /**
-     * @var string 
+     * @var string Tag value.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey 
-     * @param string $TagValue 
+     * @param string $TagKey Tag key
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $TagValue Tag value.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {

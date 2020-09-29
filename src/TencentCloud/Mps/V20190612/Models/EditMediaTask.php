@@ -18,60 +18,76 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video editing task information
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method EditMediaTaskInput getInput() Obtain 
- * @method void setInput(EditMediaTaskInput $Input) Set 
- * @method EditMediaTaskOutput getOutput() Obtain 
- * @method void setOutput(EditMediaTaskOutput $Output) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
+ * @method void setStatus(string $Status) Set Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
+ * @method integer getErrCode() Obtain Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method EditMediaTaskInput getInput() Obtain Input of video editing task.
+ * @method void setInput(EditMediaTaskInput $Input) Set Input of video editing task.
+ * @method EditMediaTaskOutput getOutput() Obtain Output of video editing task.
+ * @method void setOutput(EditMediaTaskOutput $Output) Set Output of video editing task.
  */
 class EditMediaTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var EditMediaTaskInput 
+     * @var EditMediaTaskInput Input of video editing task.
      */
     public $Input;
 
     /**
-     * @var EditMediaTaskOutput 
+     * @var EditMediaTaskOutput Output of video editing task.
      */
     public $Output;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param EditMediaTaskInput $Input 
-     * @param EditMediaTaskOutput $Output 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
+     * @param integer $ErrCode Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
+     * @param string $Message Error message.
+     * @param EditMediaTaskInput $Input Input of video editing task.
+     * @param EditMediaTaskOutput $Output Output of video editing task.
      */
     function __construct()
     {

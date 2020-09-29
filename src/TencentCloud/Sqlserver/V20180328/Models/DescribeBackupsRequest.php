@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1-100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
+ * @method string getBackupName() Obtain Filter by backup name. If this parameter is left empty, backup name will not be used in filtering.
+ * @method void setBackupName(string $BackupName) Set Filter by backup name. If this parameter is left empty, backup name will not be used in filtering.
+ * @method integer getStrategy() Obtain Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
+ * @method void setStrategy(integer $Strategy) Set Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
+ * @method integer getBackupWay() Obtain Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+ * @method void setBackupWay(integer $BackupWay) Set Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+ * @method integer getBackupId() Obtain Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
+ * @method void setBackupId(integer $BackupId) Set Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -59,11 +67,35 @@ class DescribeBackupsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string Filter by backup name. If this parameter is left empty, backup name will not be used in filtering.
+     */
+    public $BackupName;
+
+    /**
+     * @var integer Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
+     */
+    public $Strategy;
+
+    /**
+     * @var integer Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+     */
+    public $BackupWay;
+
+    /**
+     * @var integer Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
+     */
+    public $BackupId;
+
+    /**
      * @param string $StartTime Start name (yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime End time (yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
      * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 20
      * @param integer $Offset Page number. Default value: 0
+     * @param string $BackupName Filter by backup name. If this parameter is left empty, backup name will not be used in filtering.
+     * @param integer $Strategy Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
+     * @param integer $BackupWay Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+     * @param integer $BackupId Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
      */
     function __construct()
     {
@@ -96,6 +128,22 @@ class DescribeBackupsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
+            $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
+            $this->Strategy = $param["Strategy"];
+        }
+
+        if (array_key_exists("BackupWay",$param) and $param["BackupWay"] !== null) {
+            $this->BackupWay = $param["BackupWay"];
+        }
+
+        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
+            $this->BackupId = $param["BackupId"];
         }
     }
 }

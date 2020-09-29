@@ -30,6 +30,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPartitionOffset(array $PartitionOffset) Set Partition offset information
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTopicId() Obtain ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTopicId(string $TopicId) Set ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class SubscribedInfo extends AbstractModel
 {
@@ -51,10 +55,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PartitionOffset;
 
     /**
+     * @var string ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $TopicId;
+
+    /**
      * @param string $TopicName Subscribed topic name
      * @param array $Partition Subscribed partition
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $PartitionOffset Partition offset information
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TopicId ID of the subscribed topic. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -85,6 +97,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->PartitionOffset, $obj);
             }
+        }
+
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
         }
     }
 }

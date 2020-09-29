@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain ID of a video transcoding template.
  * @method void setDefinition(integer $Definition) Set ID of a video transcoding template.
- * @method RawTranscodeParameter getRawParameter() Obtain 
- * @method void setRawParameter(RawTranscodeParameter $RawParameter) Set 
+ * @method RawTranscodeParameter getRawParameter() Obtain Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+ * @method void setRawParameter(RawTranscodeParameter $RawParameter) Set Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
  * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getMosaicSet() Obtain 
- * @method void setMosaicSet(array $MosaicSet) Set 
+ * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
+ * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
  * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -51,7 +53,8 @@ class TranscodeTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var RawTranscodeParameter 
+     * @var RawTranscodeParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
      */
     public $RawParameter;
 
@@ -62,7 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WatermarkSet;
 
     /**
-     * @var array 
+     * @var array List of blurs. Up to 10 ones can be supported.
      */
     public $MosaicSet;
 
@@ -90,10 +93,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $Definition ID of a video transcoding template.
-     * @param RawTranscodeParameter $RawParameter 
+     * @param RawTranscodeParameter $RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $MosaicSet 
+     * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
      * @param TaskOutputStorage $OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OutputObjectPath Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.

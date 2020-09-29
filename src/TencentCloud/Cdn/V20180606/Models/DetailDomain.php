@@ -230,8 +230,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAccessPort(array $AccessPort) Set Access port configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain 
- * @method void setTag(array $Tag) Set 
+ * @method array getTag() Obtain Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setTag(array $Tag) Set Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -529,7 +531,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AccessPort;
 
     /**
-     * @var array 
+     * @var array Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $Tag;
 
@@ -639,7 +642,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $AccessPort Access port configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Tag 
+     * @param array $Tag Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {

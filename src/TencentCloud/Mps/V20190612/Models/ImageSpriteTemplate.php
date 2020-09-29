@@ -34,8 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) Set Subimage width of an image sprite.
  * @method integer getHeight() Obtain Subimage height of an image sprite.
  * @method void setHeight(integer $Height) Set Subimage height of an image sprite.
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
+ * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
  * @method string getSampleType() Obtain Sampling type.
  * @method void setSampleType(string $SampleType) Set Sampling type.
  * @method integer getSampleInterval() Obtain Sampling interval.
@@ -56,8 +62,8 @@ Default value: black.
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getComment() Obtain Template description.
+ * @method void setComment(string $Comment) Set Template description.
  */
 class ImageSpriteTemplate extends AbstractModel
 {
@@ -89,7 +95,10 @@ class ImageSpriteTemplate extends AbstractModel
     public $Height;
 
     /**
-     * @var string 
+     * @var string Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
      */
     public $ResolutionAdaptive;
 
@@ -132,7 +141,7 @@ Default value: black.
     public $FillType;
 
     /**
-     * @var string 
+     * @var string Template description.
      */
     public $Comment;
 
@@ -144,7 +153,10 @@ Default value: black.
      * @param string $Name Name of an image sprite generating template.
      * @param integer $Width Subimage width of an image sprite.
      * @param integer $Height Subimage height of an image sprite.
-     * @param string $ResolutionAdaptive 
+     * @param string $ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
      * @param string $SampleType Sampling type.
      * @param integer $SampleInterval Sampling interval.
      * @param integer $RowCount Subimage row count of an image sprite.
@@ -155,7 +167,7 @@ Default value: black.
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
-     * @param string $Comment 
+     * @param string $Comment Template description.
      */
     function __construct()
     {

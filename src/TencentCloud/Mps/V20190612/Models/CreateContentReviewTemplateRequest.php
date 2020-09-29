@@ -30,8 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Terrorism information detection control parameter.
  * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Politically sensitive information detection control parameter.
  * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Politically sensitive information detection control parameter.
- * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain 
- * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set 
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
  * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom content audit control parameter.
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Custom content audit control parameter.
  */
@@ -63,7 +69,10 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $PoliticalConfigure;
 
     /**
-     * @var ProhibitedConfigureInfo 
+     * @var ProhibitedConfigureInfo Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
      */
     public $ProhibitedConfigure;
 
@@ -78,7 +87,10 @@ class CreateContentReviewTemplateRequest extends AbstractModel
      * @param PornConfigureInfo $PornConfigure Porn information detection control parameter.
      * @param TerrorismConfigureInfo $TerrorismConfigure Terrorism information detection control parameter.
      * @param PoliticalConfigureInfo $PoliticalConfigure Politically sensitive information detection control parameter.
-     * @param ProhibitedConfigureInfo $ProhibitedConfigure 
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
      * @param UserDefineConfigureInfo $UserDefineConfigure Custom content audit control parameter.
      */
     function __construct()

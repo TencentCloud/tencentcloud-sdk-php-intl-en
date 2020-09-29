@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWorkflowTask(WorkflowTask $WorkflowTask) Set Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method EditMediaTask getEditMediaTask() Obtain 
- * @method void setEditMediaTask(EditMediaTask $EditMediaTask) Set 
+ * @method EditMediaTask getEditMediaTask() Obtain Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+ * @method void setEditMediaTask(EditMediaTask $EditMediaTask) Set Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
  * @method LiveStreamProcessTask getLiveStreamProcessTask() Obtain Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLiveStreamProcessTask(LiveStreamProcessTask $LiveStreamProcessTask) Set Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
@@ -104,7 +104,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WorkflowTask;
 
     /**
-     * @var EditMediaTask 
+     * @var EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      */
     public $EditMediaTask;
 
@@ -158,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param WorkflowTask $WorkflowTask Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EditMediaTask $EditMediaTask 
+     * @param EditMediaTask $EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      * @param LiveStreamProcessTask $LiveStreamProcessTask Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task.

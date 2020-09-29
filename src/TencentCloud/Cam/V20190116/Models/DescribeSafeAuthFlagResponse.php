@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginFlag(LoginActionFlag $LoginFlag) Set Login protection settings
  * @method LoginActionFlag getActionFlag() Obtain Sensitive operation protection settings
  * @method void setActionFlag(LoginActionFlag $ActionFlag) Set Sensitive operation protection settings
- * @method OffsiteFlag getOffsiteFlag() Obtain Unusual login location protection settings
- * @method void setOffsiteFlag(OffsiteFlag $OffsiteFlag) Set Unusual login location protection settings
+ * @method OffsiteFlag getOffsiteFlag() Obtain Suspicious login location protection settings
+ * @method void setOffsiteFlag(OffsiteFlag $OffsiteFlag) Set Suspicious login location protection settings
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -42,7 +42,7 @@ class DescribeSafeAuthFlagResponse extends AbstractModel
     public $ActionFlag;
 
     /**
-     * @var OffsiteFlag Unusual login location protection settings
+     * @var OffsiteFlag Suspicious login location protection settings
      */
     public $OffsiteFlag;
 
@@ -54,7 +54,7 @@ class DescribeSafeAuthFlagResponse extends AbstractModel
     /**
      * @param LoginActionFlag $LoginFlag Login protection settings
      * @param LoginActionFlag $ActionFlag Sensitive operation protection settings
-     * @param OffsiteFlag $OffsiteFlag Unusual login location protection settings
+     * @param OffsiteFlag $OffsiteFlag Suspicious login location protection settings
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

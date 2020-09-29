@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthRange(array $BandwidthRange) Set Bandwidth range.
  * @method float getBandwidthUnitPrice() Obtain Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
  * @method void setBandwidthUnitPrice(float $BandwidthUnitPrice) Set Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
+ * @method float getDiscountBandwidthUnitPrice() Obtain Discounted bandwidth price in CNY/Mbps/day.
+ * @method void setDiscountBandwidthUnitPrice(float $DiscountBandwidthUnitPrice) Set Discounted bandwidth price in CNY/Mbps/day.
  */
 class BandwidthPriceGradient extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BandwidthPriceGradient extends AbstractModel
     public $BandwidthUnitPrice;
 
     /**
+     * @var float Discounted bandwidth price in CNY/Mbps/day.
+     */
+    public $DiscountBandwidthUnitPrice;
+
+    /**
      * @param array $BandwidthRange Bandwidth range.
      * @param float $BandwidthUnitPrice Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
+     * @param float $DiscountBandwidthUnitPrice Discounted bandwidth price in CNY/Mbps/day.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BandwidthPriceGradient extends AbstractModel
 
         if (array_key_exists("BandwidthUnitPrice",$param) and $param["BandwidthUnitPrice"] !== null) {
             $this->BandwidthUnitPrice = $param["BandwidthUnitPrice"];
+        }
+
+        if (array_key_exists("DiscountBandwidthUnitPrice",$param) and $param["DiscountBandwidthUnitPrice"] !== null) {
+            $this->DiscountBandwidthUnitPrice = $param["DiscountBandwidthUnitPrice"];
         }
     }
 }

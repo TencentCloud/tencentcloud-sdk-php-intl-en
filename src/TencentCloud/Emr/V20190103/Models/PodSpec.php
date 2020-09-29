@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) Set Number of CPU cores.
  * @method integer getMemory() Obtain Memory size in GB.
  * @method void setMemory(integer $Memory) Set Memory size in GB.
- * @method array getDataVolumes() Obtain Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
- * @method void setDataVolumes(array $DataVolumes) Set Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+ * @method array getDataVolumes() Obtain Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+ * @method void setDataVolumes(array $DataVolumes) Set Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
  * @method string getCpuType() Obtain EKS cluster - CPU type. Valid values: "intel", "amd"
  * @method void setCpuType(string $CpuType) Set EKS cluster - CPU type. Valid values: "intel", "amd"
  * @method array getPodVolumes() Obtain Pod node data directory mounting information.
@@ -65,7 +65,7 @@ class PodSpec extends AbstractModel
     public $Memory;
 
     /**
-     * @var array Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * @var array Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
      */
     public $DataVolumes;
 
@@ -85,7 +85,7 @@ class PodSpec extends AbstractModel
      * @param string $NodeType Purpose of the resource, i.e., node type, which currently can only be "TASK".
      * @param integer $Cpu Number of CPU cores.
      * @param integer $Memory Memory size in GB.
-     * @param array $DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * @param array $DataVolumes Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
      * @param string $CpuType EKS cluster - CPU type. Valid values: "intel", "amd"
      * @param array $PodVolumes Pod node data directory mounting information.
      */

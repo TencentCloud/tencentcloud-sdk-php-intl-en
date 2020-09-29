@@ -50,22 +50,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFeeEndTime(string $FeeEndTime) Set Service end time
  * @method array getComponentSet() Obtain Component list
  * @method void setComponentSet(array $ComponentSet) Set Component list
- * @method string getPayerUin() Obtain Payer’s UIN
- * @method void setPayerUin(string $PayerUin) Set Payer’s UIN
- * @method string getOwnerUin() Obtain User’s UIN
- * @method void setOwnerUin(string $OwnerUin) Set User’s UIN
+ * @method string getPayerUin() Obtain Payer's UIN
+ * @method void setPayerUin(string $PayerUin) Set Payer's UIN
+ * @method string getOwnerUin() Obtain User's UIN
+ * @method void setOwnerUin(string $OwnerUin) Set User's UIN
  * @method string getOperateUin() Obtain Operator's UIN
  * @method void setOperateUin(string $OperateUin) Set Operator's UIN
  * @method array getTags() Obtain Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessCode() Obtain 
- * @method void setBusinessCode(string $BusinessCode) Set 
- * @method string getProductCode() Obtain 
- * @method void setProductCode(string $ProductCode) Set 
- * @method string getActionType() Obtain 
- * @method void setActionType(string $ActionType) Set 
+ * @method string getBusinessCode() Obtain Product name/code (optional)
+ * @method void setBusinessCode(string $BusinessCode) Set Product name/code (optional)
+ * @method string getProductCode() Obtain Subproduct name/code (optional)
+ * @method void setProductCode(string $ProductCode) Set Subproduct name/code (optional)
+ * @method string getActionType() Obtain Transaction type/code (optional)
+ * @method void setActionType(string $ActionType) Set Transaction type/code (optional)
+ * @method string getRegionId() Obtain 
+ * @method void setRegionId(string $RegionId) Set 
  */
 class BillDetail extends AbstractModel
 {
@@ -145,12 +147,12 @@ class BillDetail extends AbstractModel
     public $ComponentSet;
 
     /**
-     * @var string Payer’s UIN
+     * @var string Payer's UIN
      */
     public $PayerUin;
 
     /**
-     * @var string User’s UIN
+     * @var string User's UIN
      */
     public $OwnerUin;
 
@@ -166,19 +168,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
-     * @var string 
+     * @var string Product name/code (optional)
      */
     public $BusinessCode;
 
     /**
-     * @var string 
+     * @var string Subproduct name/code (optional)
      */
     public $ProductCode;
 
     /**
-     * @var string 
+     * @var string Transaction type/code (optional)
      */
     public $ActionType;
+
+    /**
+     * @var string 
+     */
+    public $RegionId;
 
     /**
      * @param string $BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
@@ -196,14 +203,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FeeBeginTime Service start time
      * @param string $FeeEndTime Service end time
      * @param array $ComponentSet Component list
-     * @param string $PayerUin Payer’s UIN
-     * @param string $OwnerUin User’s UIN
+     * @param string $PayerUin Payer's UIN
+     * @param string $OwnerUin User's UIN
      * @param string $OperateUin Operator's UIN
      * @param array $Tags Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessCode 
-     * @param string $ProductCode 
-     * @param string $ActionType 
+     * @param string $BusinessCode Product name/code (optional)
+     * @param string $ProductCode Subproduct name/code (optional)
+     * @param string $ActionType Transaction type/code (optional)
+     * @param string $RegionId 
      */
     function __construct()
     {
@@ -314,6 +322,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }
