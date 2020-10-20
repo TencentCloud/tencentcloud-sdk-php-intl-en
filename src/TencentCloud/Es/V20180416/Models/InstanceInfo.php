@@ -156,6 +156,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSecurityType(integer $SecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSceneType() Obtain Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSceneType(integer $SceneType) Set Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -436,6 +440,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SecurityType;
 
     /**
+     * @var integer Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SceneType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -504,6 +514,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -744,6 +756,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SecurityType",$param) and $param["SecurityType"] !== null) {
             $this->SecurityType = $param["SecurityType"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Maximum number of output entries. Default value: 20
  * @method array getInstanceIds() Obtain List of instance IDs to be obtained. This parameter is empty by default, which indicates that all instances in the cluster will be pulled.
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs to be obtained. This parameter is empty by default, which indicates that all instances in the cluster will be pulled.
- * @method string getInstanceRole() Obtain 
- * @method void setInstanceRole(string $InstanceRole) Set 
+ * @method string getInstanceRole() Obtain Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
+ * @method void setInstanceRole(string $InstanceRole) Set Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
  */
 class DescribeClusterInstancesRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeClusterInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 
+     * @var string Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
      */
     public $InstanceRole;
 
@@ -63,7 +63,7 @@ class DescribeClusterInstancesRequest extends AbstractModel
      * @param integer $Offset Offset. Default value: 0
      * @param integer $Limit Maximum number of output entries. Default value: 20
      * @param array $InstanceIds List of instance IDs to be obtained. This parameter is empty by default, which indicates that all instances in the cluster will be pulled.
-     * @param string $InstanceRole 
+     * @param string $InstanceRole Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
      */
     function __construct()
     {

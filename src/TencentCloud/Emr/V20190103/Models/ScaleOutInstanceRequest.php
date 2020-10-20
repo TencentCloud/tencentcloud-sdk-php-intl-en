@@ -62,6 +62,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
  * @method PodSpec getPodSpec() Obtain Specified information such as pod specification and source for expansion with pod resources
  * @method void setPodSpec(PodSpec $PodSpec) Set Specified information such as pod specification and source for expansion with pod resources
+ * @method string getClickHouseClusterName() Obtain Machine group name selected for ClickHouse cluster scaling-out
+ * @method void setClickHouseClusterName(string $ClickHouseClusterName) Set Machine group name selected for ClickHouse cluster scaling-out
+ * @method string getClickHouseClusterType() Obtain Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+ * @method void setClickHouseClusterType(string $ClickHouseClusterType) Set Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+ * @method string getYarnNodeLabel() Obtain YARN node label specified for rule-based scaling-out
+ * @method void setYarnNodeLabel(string $YarnNodeLabel) Set YARN node label specified for rule-based scaling-out
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -151,6 +157,21 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $PodSpec;
 
     /**
+     * @var string Machine group name selected for ClickHouse cluster scaling-out
+     */
+    public $ClickHouseClusterName;
+
+    /**
+     * @var string Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+     */
+    public $ClickHouseClusterType;
+
+    /**
+     * @var string YARN node label specified for rule-based scaling-out
+     */
+    public $YarnNodeLabel;
+
+    /**
      * @param string $TimeUnit Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
@@ -172,6 +193,9 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param array $Tags List of tags bound to added nodes.
      * @param string $HardwareResourceType Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
      * @param PodSpec $PodSpec Specified information such as pod specification and source for expansion with pod resources
+     * @param string $ClickHouseClusterName Machine group name selected for ClickHouse cluster scaling-out
+     * @param string $ClickHouseClusterType Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+     * @param string $YarnNodeLabel YARN node label specified for rule-based scaling-out
      */
     function __construct()
     {
@@ -259,6 +283,18 @@ class ScaleOutInstanceRequest extends AbstractModel
         if (array_key_exists("PodSpec",$param) and $param["PodSpec"] !== null) {
             $this->PodSpec = new PodSpec();
             $this->PodSpec->deserialize($param["PodSpec"]);
+        }
+
+        if (array_key_exists("ClickHouseClusterName",$param) and $param["ClickHouseClusterName"] !== null) {
+            $this->ClickHouseClusterName = $param["ClickHouseClusterName"];
+        }
+
+        if (array_key_exists("ClickHouseClusterType",$param) and $param["ClickHouseClusterType"] !== null) {
+            $this->ClickHouseClusterType = $param["ClickHouseClusterType"];
+        }
+
+        if (array_key_exists("YarnNodeLabel",$param) and $param["YarnNodeLabel"] !== null) {
+            $this->YarnNodeLabel = $param["YarnNodeLabel"];
         }
     }
 }

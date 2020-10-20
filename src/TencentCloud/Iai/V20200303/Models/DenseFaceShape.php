@@ -20,52 +20,52 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Dense keypoint details
  *
- * @method integer getX() Obtain Horizontal coordinate of the top-left corner of face frame.
- * @method void setX(integer $X) Set Horizontal coordinate of the top-left corner of face frame.
- * @method integer getY() Obtain Vertical coordinate of the top-left corner of face frame.
- * @method void setY(integer $Y) Set Vertical coordinate of the top-left corner of face frame.
+ * @method integer getX() Obtain X-coordinate of the top-left vertex of the face frame.
+ * @method void setX(integer $X) Set X-coordinate of the top-left vertex of the face frame.
+ * @method integer getY() Obtain Y-coordinate of the top-left vertex of the face frame.
+ * @method void setY(integer $Y) Set Y-coordinate of the top-left vertex of the face frame.
  * @method integer getWidth() Obtain Face frame width.
  * @method void setWidth(integer $Width) Set Face frame width.
  * @method integer getHeight() Obtain Face frame height.
  * @method void setHeight(integer $Height) Set Face frame height.
- * @method array getLeftEye() Obtain XX points that describe the left eye.
- * @method void setLeftEye(array $LeftEye) Set XX points that describe the left eye.
- * @method array getRightEye() Obtain XX points that describe the right eye.
- * @method void setRightEye(array $RightEye) Set XX points that describe the right eye.
- * @method array getLeftEyeBrow() Obtain XX points that describe the left eyebrow.
- * @method void setLeftEyeBrow(array $LeftEyeBrow) Set XX points that describe the left eyebrow.
- * @method array getRightEyeBrow() Obtain XX points that describe the right eyebrow.
- * @method void setRightEyeBrow(array $RightEyeBrow) Set XX points that describe the right eyebrow.
- * @method array getMouthOutside() Obtain XX points that describe the outer contour of the mouth, which are returned from left anticlockwise.
- * @method void setMouthOutside(array $MouthOutside) Set XX points that describe the outer contour of the mouth, which are returned from left anticlockwise.
- * @method array getMouthInside() Obtain XX points that describe the inner contour of the mouth, which are returned from left anticlockwise.
- * @method void setMouthInside(array $MouthInside) Set XX points that describe the inner contour of the mouth, which are returned from left anticlockwise.
- * @method array getNose() Obtain XX points that describe the nose.
- * @method void setNose(array $Nose) Set XX points that describe the nose.
- * @method array getLeftPupil() Obtain XX points that describe the left pupil.
- * @method void setLeftPupil(array $LeftPupil) Set XX points that describe the left pupil.
- * @method array getRightPupil() Obtain XX points that describe the right pupil.
- * @method void setRightPupil(array $RightPupil) Set XX points that describe the right pupil.
- * @method array getCentralAxis() Obtain XX points that describe the midline.
- * @method void setCentralAxis(array $CentralAxis) Set XX points that describe the midline.
- * @method array getChin() Obtain XX points that describe the chin.
- * @method void setChin(array $Chin) Set XX points that describe the chin.
- * @method array getLeftEyeBags() Obtain XX points that describe the left eye bag.
- * @method void setLeftEyeBags(array $LeftEyeBags) Set XX points that describe the left eye bag.
- * @method array getRightEyeBags() Obtain XX points that describe the right eye bag.
- * @method void setRightEyeBags(array $RightEyeBags) Set XX points that describe the right eye bag.
- * @method array getForehead() Obtain XX points that describe the forehead.
- * @method void setForehead(array $Forehead) Set XX points that describe the forehead.
+ * @method array getLeftEye() Obtain XX points that outline the left eye.
+ * @method void setLeftEye(array $LeftEye) Set XX points that outline the left eye.
+ * @method array getRightEye() Obtain XX points that outline the right eye.
+ * @method void setRightEye(array $RightEye) Set XX points that outline the right eye.
+ * @method array getLeftEyeBrow() Obtain XX points that outline the left eyebrow.
+ * @method void setLeftEyeBrow(array $LeftEyeBrow) Set XX points that outline the left eyebrow.
+ * @method array getRightEyeBrow() Obtain XX points that outline the right eyebrow.
+ * @method void setRightEyeBrow(array $RightEyeBrow) Set XX points that outline the right eyebrow.
+ * @method array getMouthOutside() Obtain XX points that outline the outer contour of the mouth, which are returned from left anticlockwise.
+ * @method void setMouthOutside(array $MouthOutside) Set XX points that outline the outer contour of the mouth, which are returned from left anticlockwise.
+ * @method array getMouthInside() Obtain XX points that outline the inner contour of the mouth, which are returned from left anticlockwise.
+ * @method void setMouthInside(array $MouthInside) Set XX points that outline the inner contour of the mouth, which are returned from left anticlockwise.
+ * @method array getNose() Obtain XX points that outline the nose.
+ * @method void setNose(array $Nose) Set XX points that outline the nose.
+ * @method array getLeftPupil() Obtain XX points that outline the left pupil.
+ * @method void setLeftPupil(array $LeftPupil) Set XX points that outline the left pupil.
+ * @method array getRightPupil() Obtain XX points that outline the right pupil.
+ * @method void setRightPupil(array $RightPupil) Set XX points that outline the right pupil.
+ * @method array getCentralAxis() Obtain XX points that outline the midline.
+ * @method void setCentralAxis(array $CentralAxis) Set XX points that outline the midline.
+ * @method array getChin() Obtain XX points that outline the chin.
+ * @method void setChin(array $Chin) Set XX points that outline the chin.
+ * @method array getLeftEyeBags() Obtain XX points that outline the left eye bag.
+ * @method void setLeftEyeBags(array $LeftEyeBags) Set XX points that outline the left eye bag.
+ * @method array getRightEyeBags() Obtain XX points that outline the right eye bag.
+ * @method void setRightEyeBags(array $RightEyeBags) Set XX points that outline the right eye bag.
+ * @method array getForehead() Obtain XX points that outline the forehead.
+ * @method void setForehead(array $Forehead) Set XX points that outline the forehead.
  */
 class DenseFaceShape extends AbstractModel
 {
     /**
-     * @var integer Horizontal coordinate of the top-left corner of face frame.
+     * @var integer X-coordinate of the top-left vertex of the face frame.
      */
     public $X;
 
     /**
-     * @var integer Vertical coordinate of the top-left corner of face frame.
+     * @var integer Y-coordinate of the top-left vertex of the face frame.
      */
     public $Y;
 
@@ -80,94 +80,94 @@ class DenseFaceShape extends AbstractModel
     public $Height;
 
     /**
-     * @var array XX points that describe the left eye.
+     * @var array XX points that outline the left eye.
      */
     public $LeftEye;
 
     /**
-     * @var array XX points that describe the right eye.
+     * @var array XX points that outline the right eye.
      */
     public $RightEye;
 
     /**
-     * @var array XX points that describe the left eyebrow.
+     * @var array XX points that outline the left eyebrow.
      */
     public $LeftEyeBrow;
 
     /**
-     * @var array XX points that describe the right eyebrow.
+     * @var array XX points that outline the right eyebrow.
      */
     public $RightEyeBrow;
 
     /**
-     * @var array XX points that describe the outer contour of the mouth, which are returned from left anticlockwise.
+     * @var array XX points that outline the outer contour of the mouth, which are returned from left anticlockwise.
      */
     public $MouthOutside;
 
     /**
-     * @var array XX points that describe the inner contour of the mouth, which are returned from left anticlockwise.
+     * @var array XX points that outline the inner contour of the mouth, which are returned from left anticlockwise.
      */
     public $MouthInside;
 
     /**
-     * @var array XX points that describe the nose.
+     * @var array XX points that outline the nose.
      */
     public $Nose;
 
     /**
-     * @var array XX points that describe the left pupil.
+     * @var array XX points that outline the left pupil.
      */
     public $LeftPupil;
 
     /**
-     * @var array XX points that describe the right pupil.
+     * @var array XX points that outline the right pupil.
      */
     public $RightPupil;
 
     /**
-     * @var array XX points that describe the midline.
+     * @var array XX points that outline the midline.
      */
     public $CentralAxis;
 
     /**
-     * @var array XX points that describe the chin.
+     * @var array XX points that outline the chin.
      */
     public $Chin;
 
     /**
-     * @var array XX points that describe the left eye bag.
+     * @var array XX points that outline the left eye bag.
      */
     public $LeftEyeBags;
 
     /**
-     * @var array XX points that describe the right eye bag.
+     * @var array XX points that outline the right eye bag.
      */
     public $RightEyeBags;
 
     /**
-     * @var array XX points that describe the forehead.
+     * @var array XX points that outline the forehead.
      */
     public $Forehead;
 
     /**
-     * @param integer $X Horizontal coordinate of the top-left corner of face frame.
-     * @param integer $Y Vertical coordinate of the top-left corner of face frame.
+     * @param integer $X X-coordinate of the top-left vertex of the face frame.
+     * @param integer $Y Y-coordinate of the top-left vertex of the face frame.
      * @param integer $Width Face frame width.
      * @param integer $Height Face frame height.
-     * @param array $LeftEye XX points that describe the left eye.
-     * @param array $RightEye XX points that describe the right eye.
-     * @param array $LeftEyeBrow XX points that describe the left eyebrow.
-     * @param array $RightEyeBrow XX points that describe the right eyebrow.
-     * @param array $MouthOutside XX points that describe the outer contour of the mouth, which are returned from left anticlockwise.
-     * @param array $MouthInside XX points that describe the inner contour of the mouth, which are returned from left anticlockwise.
-     * @param array $Nose XX points that describe the nose.
-     * @param array $LeftPupil XX points that describe the left pupil.
-     * @param array $RightPupil XX points that describe the right pupil.
-     * @param array $CentralAxis XX points that describe the midline.
-     * @param array $Chin XX points that describe the chin.
-     * @param array $LeftEyeBags XX points that describe the left eye bag.
-     * @param array $RightEyeBags XX points that describe the right eye bag.
-     * @param array $Forehead XX points that describe the forehead.
+     * @param array $LeftEye XX points that outline the left eye.
+     * @param array $RightEye XX points that outline the right eye.
+     * @param array $LeftEyeBrow XX points that outline the left eyebrow.
+     * @param array $RightEyeBrow XX points that outline the right eyebrow.
+     * @param array $MouthOutside XX points that outline the outer contour of the mouth, which are returned from left anticlockwise.
+     * @param array $MouthInside XX points that outline the inner contour of the mouth, which are returned from left anticlockwise.
+     * @param array $Nose XX points that outline the nose.
+     * @param array $LeftPupil XX points that outline the left pupil.
+     * @param array $RightPupil XX points that outline the right pupil.
+     * @param array $CentralAxis XX points that outline the midline.
+     * @param array $Chin XX points that outline the chin.
+     * @param array $LeftEyeBags XX points that outline the left eye bag.
+     * @param array $RightEyeBags XX points that outline the right eye bag.
+     * @param array $Forehead XX points that outline the forehead.
      */
     function __construct()
     {

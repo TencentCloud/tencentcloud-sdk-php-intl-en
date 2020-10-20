@@ -18,11 +18,11 @@ namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
-emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
-hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+ * Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: Age, Beauty, 
+Emotion, Eye, Eyebrow, Gender, 
+Hair, Hat, Headpose, Mask, Mouth, Moustache, 
+Nose, Shape, Skin, Smile, etc.  
+If no types are specified in `FaceAttributesType`, the details returned by `FaceDetaiAttributesInfo` will be meaningless.
  *
  * @method integer getAge() Obtain Age. Value range: [0,65], where 65 indicates 65 years old or above. 
 If `FaceAttributesType` does not include `Age` or more than 5 faces are detected, this parameter will still be returned but meaningless.
@@ -33,10 +33,10 @@ If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detec
  * @method void setBeauty(integer $Beauty) Set Beauty score. Value range: [0,100]. 
 If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detected, this parameter will still be returned but meaningless.
  * @method AttributeItem getEmotion() Obtain Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
  * @method void setEmotion(AttributeItem $Emotion) Set Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
  * @method Eye getEye() Obtain Eye information, including whether glasses are worn, whether eyes are closed, whether the person has double eyelids, and the eye size. 
 If `FaceAttributesType` does not include `Eye` or more than 5 faces are detected, this parameter will still be returned but meaningless.
@@ -81,10 +81,10 @@ If `FaceAttributesType` does not include `Moustache` or more than 5 faces are de
 The `Type` values of the `AttributeItem` include: 0: no beard; 1: beard detected. 
 If `FaceAttributesType` does not include `Moustache` or more than 5 faces are detected, this parameter will still be returned but meaningless.
  * @method AttributeItem getNose() Obtain Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
  * @method void setNose(AttributeItem $Nose) Set Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
  * @method AttributeItem getShape() Obtain Face shape information. 
 The `Type` values of the `AttributeItem` include: 0: square; 1: triangular; 2: oval; 3: heart-shaped; 4: round.
@@ -119,7 +119,7 @@ If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detec
 
     /**
      * @var AttributeItem Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public $Emotion;
@@ -183,7 +183,7 @@ If `FaceAttributesType` does not include `Moustache` or more than 5 faces are de
 
     /**
      * @var AttributeItem Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public $Nose;
@@ -214,7 +214,7 @@ If `FaceAttributesType` does not include `Age` or more than 5 faces are detected
      * @param integer $Beauty Beauty score. Value range: [0,100]. 
 If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      * @param AttributeItem $Emotion Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      * @param Eye $Eye Eye information, including whether glasses are worn, whether eyes are closed, whether the person has double eyelids, and the eye size. 
 If `FaceAttributesType` does not include `Eye` or more than 5 faces are detected, this parameter will still be returned but meaningless.
@@ -238,7 +238,7 @@ If `FaceAttributesType` does not include `Mouth` or more than 5 faces are detect
 The `Type` values of the `AttributeItem` include: 0: no beard; 1: beard detected. 
 If `FaceAttributesType` does not include `Moustache` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      * @param AttributeItem $Nose Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      * @param AttributeItem $Shape Face shape information. 
 The `Type` values of the `AttributeItem` include: 0: square; 1: triangular; 2: oval; 3: heart-shaped; 4: round.

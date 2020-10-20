@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
  * @method integer getEndTime() Obtain Query end time in the format of local UNIX timestamp, such as 1588031999s.
  * @method void setEndTime(integer $EndTime) Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
- * @method string getSdkAppId() Obtain User `sdkappid`, such as 1400188366.
- * @method void setSdkAppId(string $SdkAppId) Set User `sdkappid`, such as 1400188366.
+ * @method string getSdkAppId() Obtain User `SDKAppID`, such as 1400188366.
+ * @method void setSdkAppId(string $SdkAppId) Set User `SDKAppID`, such as 1400188366.
  * @method array getUserIds() Obtain User array to query, which contains up to 6 users. If it is left empty, 6 users will be returned by default.
  * @method void setUserIds(array $UserIds) Set User array to query, which contains up to 6 users. If it is left empty, 6 users will be returned by default.
  * @method array getDataType() Obtain Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
@@ -60,8 +60,8 @@ bigvWidth: upstream/downstream resolution in width;
 bigvHeight: upstream/downstream resolution in height.
  * @method string getPageNumber() Obtain Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
  * @method void setPageNumber(string $PageNumber) Set Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
- * @method string getPageSize() Obtain Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
- * @method void setPageSize(string $PageSize) Set Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+ * @method string getPageSize() Obtain Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
+ * @method void setPageSize(string $PageSize) Set Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
  */
 class DescribeCallDetailRequest extends AbstractModel
 {
@@ -81,7 +81,7 @@ class DescribeCallDetailRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string User `sdkappid`, such as 1400188366.
+     * @var string User `SDKAppID`, such as 1400188366.
      */
     public $SdkAppId;
 
@@ -114,7 +114,7 @@ bigvHeight: upstream/downstream resolution in height.
     public $PageNumber;
 
     /**
-     * @var string Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+     * @var string Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
      */
     public $PageSize;
 
@@ -122,7 +122,7 @@ bigvHeight: upstream/downstream resolution in height.
      * @param string $CommId Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
      * @param integer $StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
      * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
-     * @param string $SdkAppId User `sdkappid`, such as 1400188366.
+     * @param string $SdkAppId User `SDKAppID`, such as 1400188366.
      * @param array $UserIds User array to query, which contains up to 6 users. If it is left empty, 6 users will be returned by default.
      * @param array $DataType Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
 appCpu: CPU utilization of the application;
@@ -139,7 +139,7 @@ bigvLoss: upstream/downstream video packet loss;
 bigvWidth: upstream/downstream resolution in width;
 bigvHeight: upstream/downstream resolution in height.
      * @param string $PageNumber Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
-     * @param string $PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+     * @param string $PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
      */
     function __construct()
     {

@@ -44,6 +44,8 @@ They represent weighted round robin and least connections, respectively. Default
  * @method void setTargetType(string $TargetType) Set Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
  * @method string getSessionType() Obtain Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
  * @method void setSessionType(string $SessionType) Set Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+ * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -104,6 +106,11 @@ They represent weighted round robin and least connections, respectively. Default
     public $SessionType;
 
     /**
+     * @var integer Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     */
+    public $KeepaliveEnable;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
      * @param string $Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
@@ -116,6 +123,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
      * @param string $TargetType Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
      * @param string $SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+     * @param integer $KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ They represent weighted round robin and least connections, respectively. Default
 
         if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
             $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
+            $this->KeepaliveEnable = $param["KeepaliveEnable"];
         }
     }
 }

@@ -38,10 +38,12 @@ Value range: 0-500.
 Value range: 0-500.
  * @method string getDescription() Obtain Template description.
  * @method void setDescription(string $Description) Set Template description.
- * @method integer getVideoBitrate() Obtain Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
- * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+ * @method integer getVideoBitrate() Obtain Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+ * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
  * @method integer getWidth() Obtain Width in pixels. Value range: 0-3,000.
 It must be a multiple of 2. The original width is 0
  * @method void setWidth(integer $Width) Set Width in pixels. Value range: 0-3,000.
@@ -70,12 +72,24 @@ Valid values: 0, 90, 180, 270
 baseline/main/high.
  * @method void setProfile(string $Profile) Set Encoding quality:
 baseline/main/high.
- * @method integer getBitrateToOrig() Obtain Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
- * @method void setBitrateToOrig(integer $BitrateToOrig) Set Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
- * @method integer getHeightToOrig() Obtain Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
- * @method void setHeightToOrig(integer $HeightToOrig) Set Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
- * @method integer getFpsToOrig() Obtain Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
- * @method void setFpsToOrig(integer $FpsToOrig) Set Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
+ * @method integer getBitrateToOrig() Obtain Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
+ * @method void setBitrateToOrig(integer $BitrateToOrig) Set Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
+ * @method integer getHeightToOrig() Obtain Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
+ * @method void setHeightToOrig(integer $HeightToOrig) Set Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
+ * @method integer getFpsToOrig() Obtain Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
+ * @method void setFpsToOrig(integer $FpsToOrig) Set Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
  * @method float getAdaptBitratePercent() Obtain Bitrate compression ratio of top speed codec video.
 Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
 
@@ -119,8 +133,9 @@ Value range: 0-500.
     public $Description;
 
     /**
-     * @var integer Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+     * @var integer Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
      */
     public $VideoBitrate;
 
@@ -171,17 +186,23 @@ baseline/main/high.
     public $Profile;
 
     /**
-     * @var integer Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
+     * @var integer Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
      */
     public $BitrateToOrig;
 
     /**
-     * @var integer Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
+     * @var integer Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
      */
     public $HeightToOrig;
 
     /**
-     * @var integer Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
+     * @var integer Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
      */
     public $FpsToOrig;
 
@@ -208,8 +229,9 @@ Note: this parameter is unsupported now.
      * @param integer $AudioBitrate Audio bitrate. Default value: 0.
 Value range: 0-500.
      * @param string $Description Template description.
-     * @param integer $VideoBitrate Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+     * @param integer $VideoBitrate Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
      * @param integer $Width Width in pixels. Value range: 0-3,000.
 It must be a multiple of 2. The original width is 0
      * @param integer $NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
@@ -224,9 +246,15 @@ Value range: 2-6
 Valid values: 0, 90, 180, 270
      * @param string $Profile Encoding quality:
 baseline/main/high.
-     * @param integer $BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
-     * @param integer $HeightToOrig Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
-     * @param integer $FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
+     * @param integer $BitrateToOrig Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
+     * @param integer $HeightToOrig Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
+     * @param integer $FpsToOrig Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
      * @param float $AdaptBitratePercent Bitrate compression ratio of top speed codec video.
 Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
 

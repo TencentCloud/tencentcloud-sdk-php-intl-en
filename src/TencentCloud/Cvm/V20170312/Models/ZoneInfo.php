@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information on availability zones.
  *
- * @method string getZone() Obtain Availability zone name, such as ap-guangzhou-3.
+ * @method string getZone() Obtain Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
@@ -52,6 +52,7 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -60,7 +61,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
- * @method void setZone(string $Zone) Set Availability zone name, such as ap-guangzhou-3.
+ * @method void setZone(string $Zone) Set Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
@@ -92,6 +93,7 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -110,7 +112,7 @@ The following is a list of all availability zones:
 class ZoneInfo extends AbstractModel
 {
     /**
-     * @var string Availability zone name, such as ap-guangzhou-3.
+     * @var string Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
@@ -142,6 +144,7 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -169,7 +172,7 @@ The following is a list of all availability zones:
     public $ZoneState;
 
     /**
-     * @param string $Zone Availability zone name, such as ap-guangzhou-3.
+     * @param string $Zone Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
@@ -201,6 +204,7 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>

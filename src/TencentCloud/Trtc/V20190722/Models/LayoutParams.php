@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmallVideoLayoutParams(SmallVideoLayoutParams $SmallVideoLayoutParams) Set Layout parameter of the small image, which takes effect in a picture-in-picture template.
  * @method integer getMainVideoRightAlign() Obtain You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
  * @method void setMainVideoRightAlign(integer $MainVideoRightAlign) Set You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
- * @method array getMixVideoUids() Obtain 
- * @method void setMixVideoUids(array $MixVideoUids) Set 
+ * @method array getMixVideoUids() Obtain A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
+ * @method void setMixVideoUids(array $MixVideoUids) Set A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
  */
 class LayoutParams extends AbstractModel
 {
@@ -61,7 +61,7 @@ class LayoutParams extends AbstractModel
     public $MainVideoRightAlign;
 
     /**
-     * @var array 
+     * @var array A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
      */
     public $MixVideoUids;
 
@@ -71,7 +71,7 @@ class LayoutParams extends AbstractModel
      * @param integer $MainVideoStreamType Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
      * @param SmallVideoLayoutParams $SmallVideoLayoutParams Layout parameter of the small image, which takes effect in a picture-in-picture template.
      * @param integer $MainVideoRightAlign You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
-     * @param array $MixVideoUids 
+     * @param array $MixVideoUids A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
      */
     function __construct()
     {

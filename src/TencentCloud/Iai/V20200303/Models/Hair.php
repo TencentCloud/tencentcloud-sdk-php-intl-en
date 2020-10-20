@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * Hair information
  *
  * @method AttributeItem getLength() Obtain Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
  * @method void setLength(AttributeItem $Length) Set Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
  * @method AttributeItem getBang() Obtain Bang information.
 The `Type` values of the `AttributeItem` include: 0: no bang; 1: bang detected.
  * @method void setBang(AttributeItem $Bang) Set Bang information.
@@ -37,7 +37,7 @@ class Hair extends AbstractModel
 {
     /**
      * @var AttributeItem Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
      */
     public $Length;
 
@@ -55,7 +55,7 @@ The `Type` values of the `AttributeItem` include: 0: black; 1: golden; 2: brown;
 
     /**
      * @param AttributeItem $Length Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
      * @param AttributeItem $Bang Bang information.
 The `Type` values of the `AttributeItem` include: 0: no bang; 1: bang detected.
      * @param AttributeItem $Color Hair color information.

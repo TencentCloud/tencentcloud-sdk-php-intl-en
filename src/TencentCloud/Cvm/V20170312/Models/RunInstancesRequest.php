@@ -74,6 +74,8 @@ true: dry run only. The request will not create instance(s). A dry run can check
 If the dry run fails, the corresponding error code will be returned.
 If the dry run succeeds, the RequestId will be returned.
 false (default value): send a normal request and create instance(s) if all the requirements are met.
+ * @method string getCamRoleName() Obtain CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
+ * @method void setCamRoleName(string $CamRoleName) Set CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
  * @method string getHpcClusterId() Obtain HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance.
  * @method void setHpcClusterId(string $HpcClusterId) Set HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance.
  */
@@ -195,6 +197,11 @@ false (default value): send a normal request and create instance(s) if all the r
     public $DryRun;
 
     /**
+     * @var string CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
+     */
+    public $CamRoleName;
+
+    /**
      * @var string HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance.
      */
     public $HpcClusterId;
@@ -227,6 +234,7 @@ true: dry run only. The request will not create instance(s). A dry run can check
 If the dry run fails, the corresponding error code will be returned.
 If the dry run succeeds, the RequestId will be returned.
 false (default value): send a normal request and create instance(s) if all the requirements are met.
+     * @param string $CamRoleName CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
      * @param string $HpcClusterId HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance.
      */
     function __construct()
@@ -347,6 +355,10 @@ false (default value): send a normal request and create instance(s) if all the r
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
+            $this->CamRoleName = $param["CamRoleName"];
         }
 
         if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {

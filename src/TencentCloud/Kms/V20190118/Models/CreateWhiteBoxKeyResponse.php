@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDecryptKey(string $DecryptKey) Set Base64-encoded decryption key
  * @method string getKeyId() Obtain Globally unique white-box key ID
  * @method void setKeyId(string $KeyId) Set Globally unique white-box key ID
- * @method integer getTagCode() Obtain 
- * @method void setTagCode(integer $TagCode) Set 
- * @method string getTagMsg() Obtain 
- * @method void setTagMsg(string $TagMsg) Set 
+ * @method integer getTagCode() Obtain Tag operation return code. 0: success; 1: internal error; 2: business processing error
+ * @method void setTagCode(integer $TagCode) Set Tag operation return code. 0: success; 1: internal error; 2: business processing error
+ * @method string getTagMsg() Obtain Tag operation return message
+ * @method void setTagMsg(string $TagMsg) Set Tag operation return message
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -51,12 +51,12 @@ class CreateWhiteBoxKeyResponse extends AbstractModel
     public $KeyId;
 
     /**
-     * @var integer 
+     * @var integer Tag operation return code. 0: success; 1: internal error; 2: business processing error
      */
     public $TagCode;
 
     /**
-     * @var string 
+     * @var string Tag operation return message
      */
     public $TagMsg;
 
@@ -69,8 +69,8 @@ class CreateWhiteBoxKeyResponse extends AbstractModel
      * @param string $EncryptKey Base64-encoded encryption key
      * @param string $DecryptKey Base64-encoded decryption key
      * @param string $KeyId Globally unique white-box key ID
-     * @param integer $TagCode 
-     * @param string $TagMsg 
+     * @param integer $TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     * @param string $TagMsg Tag operation return message
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

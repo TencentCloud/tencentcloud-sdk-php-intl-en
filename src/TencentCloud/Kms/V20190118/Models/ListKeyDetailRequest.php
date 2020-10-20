@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListKeyDetail request structure.
  *
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
+ * @method integer getOffset() Obtain This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
+ * @method void setOffset(integer $Offset) Set This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
  * @method integer getLimit() Obtain This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
  * @method void setLimit(integer $Limit) Set This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
- * @method integer getRole() Obtain 
- * @method void setRole(integer $Role) Set 
- * @method integer getOrderType() Obtain 
- * @method void setOrderType(integer $OrderType) Set 
+ * @method integer getRole() Obtain Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
+ * @method void setRole(integer $Role) Set Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
+ * @method integer getOrderType() Obtain Sorts by CMK creation time. 0: descending; 1: ascending
+ * @method void setOrderType(integer $OrderType) Set Sorts by CMK creation time. 0: descending; 1: ascending
  * @method integer getKeyState() Obtain Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
  * @method void setKeyState(integer $KeyState) Set Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
- * @method string getSearchKeyAlias() Obtain 
- * @method void setSearchKeyAlias(string $SearchKeyAlias) Set 
+ * @method string getSearchKeyAlias() Obtain Performs a fuzzy query by `KeyId` or `Alias`
+ * @method void setSearchKeyAlias(string $SearchKeyAlias) Set Performs a fuzzy query by `KeyId` or `Alias`
  * @method string getOrigin() Obtain Filters by CMK type. "TENCENT_KMS" indicates to filter CMKs whose key materials are created by KMS; "EXTERNAL" indicates to filter CMKs of `EXTERNAL` type whose key materials are imported by users; "ALL" or empty indicates to filter CMKs of both types. This value is case-sensitive.
  * @method void setOrigin(string $Origin) Set Filters by CMK type. "TENCENT_KMS" indicates to filter CMKs whose key materials are created by KMS; "EXTERNAL" indicates to filter CMKs of `EXTERNAL` type whose key materials are imported by users; "ALL" or empty indicates to filter CMKs of both types. This value is case-sensitive.
  * @method string getKeyUsage() Obtain Filter by `KeyUsage` of CMKs. Valid values: `ALL` (filter all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`.
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class ListKeyDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
      */
     public $Offset;
 
@@ -52,12 +52,12 @@ class ListKeyDetailRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 
+     * @var integer Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
      */
     public $Role;
 
     /**
-     * @var integer 
+     * @var integer Sorts by CMK creation time. 0: descending; 1: ascending
      */
     public $OrderType;
 
@@ -67,7 +67,7 @@ class ListKeyDetailRequest extends AbstractModel
     public $KeyState;
 
     /**
-     * @var string 
+     * @var string Performs a fuzzy query by `KeyId` or `Alias`
      */
     public $SearchKeyAlias;
 
@@ -87,12 +87,12 @@ class ListKeyDetailRequest extends AbstractModel
     public $TagFilters;
 
     /**
-     * @param integer $Offset 
+     * @param integer $Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
      * @param integer $Limit This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
-     * @param integer $Role 
-     * @param integer $OrderType 
+     * @param integer $Role Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
+     * @param integer $OrderType Sorts by CMK creation time. 0: descending; 1: ascending
      * @param integer $KeyState Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
-     * @param string $SearchKeyAlias 
+     * @param string $SearchKeyAlias Performs a fuzzy query by `KeyId` or `Alias`
      * @param string $Origin Filters by CMK type. "TENCENT_KMS" indicates to filter CMKs whose key materials are created by KMS; "EXTERNAL" indicates to filter CMKs of `EXTERNAL` type whose key materials are imported by users; "ALL" or empty indicates to filter CMKs of both types. This value is case-sensitive.
      * @param string $KeyUsage Filter by `KeyUsage` of CMKs. Valid values: `ALL` (filter all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`.
      * @param array $TagFilters Tag filter condition

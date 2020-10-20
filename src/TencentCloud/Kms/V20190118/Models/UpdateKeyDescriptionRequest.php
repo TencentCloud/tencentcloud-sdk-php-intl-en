@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateKeyDescription request structure.
  *
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
+ * @method string getDescription() Obtain New description of up to 1,024 bytes in length
+ * @method void setDescription(string $Description) Set New description of up to 1,024 bytes in length
  * @method string getKeyId() Obtain ID of the CMK for which to modify the description
  * @method void setKeyId(string $KeyId) Set ID of the CMK for which to modify the description
  */
 class UpdateKeyDescriptionRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string New description of up to 1,024 bytes in length
      */
     public $Description;
 
@@ -38,7 +38,7 @@ class UpdateKeyDescriptionRequest extends AbstractModel
     public $KeyId;
 
     /**
-     * @param string $Description 
+     * @param string $Description New description of up to 1,024 bytes in length
      * @param string $KeyId ID of the CMK for which to modify the description
      */
     function __construct()

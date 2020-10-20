@@ -108,6 +108,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getInitTimeout() Obtain Timeout period for function initialization
  * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization
+ * @method array getStatusReasons() Obtain Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setStatusReasons(array $StatusReasons) Set Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -314,6 +318,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $InitTimeout;
 
     /**
+     * @var array Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $StatusReasons;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -363,6 +373,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Qualifier Function version
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $InitTimeout Timeout period for function initialization
+     * @param array $StatusReasons Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -554,6 +566,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
             $this->InitTimeout = $param["InitTimeout"];
+        }
+
+        if (array_key_exists("StatusReasons",$param) and $param["StatusReasons"] !== null) {
+            $this->StatusReasons = [];
+            foreach ($param["StatusReasons"] as $key => $value){
+                $obj = new StatusReason();
+                $obj->deserialize($value);
+                array_push($this->StatusReasons, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

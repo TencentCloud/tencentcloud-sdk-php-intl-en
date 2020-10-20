@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EIP cost object
  *
- * @method integer getPeriod() Obtain Purchase duration of instance
- * @method void setPeriod(integer $Period) Set Purchase duration of instance
- * @method string getRenewFlag() Obtain Whether auto-renewal is enabled
- * @method void setRenewFlag(string $RenewFlag) Set Whether auto-renewal is enabled
+ * @method integer getPeriod() Obtain Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+ * @method void setPeriod(integer $Period) Set Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+ * @method integer getAutoRenewFlag() Obtain Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
  */
 class AddressChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer Purchase duration of instance
+     * @var integer Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
      */
     public $Period;
 
     /**
-     * @var string Whether auto-renewal is enabled
+     * @var integer Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
      */
-    public $RenewFlag;
+    public $AutoRenewFlag;
 
     /**
-     * @param integer $Period Purchase duration of instance
-     * @param string $RenewFlag Whether auto-renewal is enabled
+     * @param integer $Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+     * @param integer $AutoRenewFlag Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class AddressChargePrepaid extends AbstractModel
             $this->Period = $param["Period"];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

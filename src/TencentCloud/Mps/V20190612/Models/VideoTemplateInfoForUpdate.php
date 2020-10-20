@@ -28,9 +28,9 @@ Currently, a resolution within 640*480p must be specified for H.265.
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 Currently, a resolution within 640*480p must be specified for H.265.
- * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0, 60].
+ * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
- * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0, 60].
+ * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
  * @method integer getBitrate() Obtain Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
 If the value is 0, the bitrate of the video will be the same as that of the source video.
@@ -76,7 +76,7 @@ Currently, a resolution within 640*480p must be specified for H.265.
     public $Codec;
 
     /**
-     * @var integer Video frame rate in Hz. Value range: [0, 60].
+     * @var integer Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
      */
     public $Fps;
@@ -126,7 +126,7 @@ Default value: black.
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 Currently, a resolution within 640*480p must be specified for H.265.
-     * @param integer $Fps Video frame rate in Hz. Value range: [0, 60].
+     * @param integer $Fps Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
      * @param integer $Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
 If the value is 0, the bitrate of the video will be the same as that of the source video.

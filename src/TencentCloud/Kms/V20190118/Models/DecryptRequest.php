@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCiphertextBlob() Obtain The ciphertext data to be decrypted.
  * @method void setCiphertextBlob(string $CiphertextBlob) Set The ciphertext data to be decrypted.
- * @method string getEncryptionContext() Obtain 
- * @method void setEncryptionContext(string $EncryptionContext) Set 
+ * @method string getEncryptionContext() Obtain JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
+ * @method void setEncryptionContext(string $EncryptionContext) Set JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
  */
 class DecryptRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DecryptRequest extends AbstractModel
     public $CiphertextBlob;
 
     /**
-     * @var string 
+     * @var string JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
      */
     public $EncryptionContext;
 
     /**
      * @param string $CiphertextBlob The ciphertext data to be decrypted.
-     * @param string $EncryptionContext 
+     * @param string $EncryptionContext JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
      */
     function __construct()
     {

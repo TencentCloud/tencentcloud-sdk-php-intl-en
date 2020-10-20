@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Face information list.
  *
- * @method FaceRect getFaceRect() Obtain Position of detected face frame.
- * @method void setFaceRect(FaceRect $FaceRect) Set Position of detected face frame.
+ * @method FaceRect getFaceRect() Obtain Position of the detected face frame.
+ * @method void setFaceRect(FaceRect $FaceRect) Set Position of the detected face frame.
  * @method FaceDetailAttributesInfo getFaceDetailAttributesInfo() Obtain Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
  * @method void setFaceDetailAttributesInfo(FaceDetailAttributesInfo $FaceDetailAttributesInfo) Set Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
  */
 class FaceDetailInfo extends AbstractModel
 {
     /**
-     * @var FaceRect Position of detected face frame.
+     * @var FaceRect Position of the detected face frame.
      */
     public $FaceRect;
 
@@ -44,18 +44,18 @@ class FaceDetailInfo extends AbstractModel
      * @var FaceDetailAttributesInfo Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
      */
     public $FaceDetailAttributesInfo;
 
     /**
-     * @param FaceRect $FaceRect Position of detected face frame.
+     * @param FaceRect $FaceRect Position of the detected face frame.
      * @param FaceDetailAttributesInfo $FaceDetailAttributesInfo Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
      */
     function __construct()
     {

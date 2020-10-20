@@ -30,6 +30,14 @@ If this parameter is left empty, edge server information will be returned by def
 edge: edge server
 last: intermediate server
 If this parameter is left empty, edge server information will be returned by default
+ * @method string getArea() Obtain Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+ * @method void setArea(string $Area) Set Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
  */
 class DescribeIpStatusRequest extends AbstractModel
 {
@@ -47,11 +55,23 @@ If this parameter is left empty, edge server information will be returned by def
     public $Layer;
 
     /**
+     * @var string Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+     */
+    public $Area;
+
+    /**
      * @param string $Domain Acceleration domain name
      * @param string $Layer Node type.
 edge: edge server
 last: intermediate server
 If this parameter is left empty, edge server information will be returned by default
+     * @param string $Area Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
      */
     function __construct()
     {
@@ -72,6 +92,10 @@ If this parameter is left empty, edge server information will be returned by def
 
         if (array_key_exists("Layer",$param) and $param["Layer"] !== null) {
             $this->Layer = $param["Layer"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

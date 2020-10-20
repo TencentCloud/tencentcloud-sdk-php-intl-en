@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) Set ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
  * @method string getSnapshotName() Obtain Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
  * @method void setSnapshotName(string $SnapshotName) Set Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+ * @method string getDeadline() Obtain Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+ * @method void setDeadline(string $Deadline) Set Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
  */
 class CreateSnapshotRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateSnapshotRequest extends AbstractModel
     public $SnapshotName;
 
     /**
+     * @var string Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+     */
+    public $Deadline;
+
+    /**
      * @param string $DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
      * @param string $SnapshotName Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+     * @param string $Deadline Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateSnapshotRequest extends AbstractModel
 
         if (array_key_exists("SnapshotName",$param) and $param["SnapshotName"] !== null) {
             $this->SnapshotName = $param["SnapshotName"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
     }
 }

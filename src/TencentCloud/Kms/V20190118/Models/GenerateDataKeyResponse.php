@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GenerateDataKey response structure.
  *
- * @method string getKeyId() Obtain 
- * @method void setKeyId(string $KeyId) Set 
+ * @method string getKeyId() Obtain Globally unique CMK ID
+ * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
  * @method string getPlaintext() Obtain Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
  * @method void setPlaintext(string $Plaintext) Set Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
  * @method string getCiphertextBlob() Obtain Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class GenerateDataKeyResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Globally unique CMK ID
      */
     public $KeyId;
 
@@ -52,7 +52,7 @@ class GenerateDataKeyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $KeyId 
+     * @param string $KeyId Globally unique CMK ID
      * @param string $Plaintext Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
      * @param string $CiphertextBlob Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

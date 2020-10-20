@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListKeyDetail response structure.
  *
- * @method integer getTotalCount() Obtain 
- * @method void setTotalCount(integer $TotalCount) Set 
+ * @method integer getTotalCount() Obtain Total number of CMKs
+ * @method void setTotalCount(integer $TotalCount) Set Total number of CMKs
  * @method array getKeyMetadatas() Obtain List of returned attribute information.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setKeyMetadatas(array $KeyMetadatas) Set List of returned attribute information.
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class ListKeyDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Total number of CMKs
      */
     public $TotalCount;
 
@@ -48,7 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 
+     * @param integer $TotalCount Total number of CMKs
      * @param array $KeyMetadatas List of returned attribute information.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

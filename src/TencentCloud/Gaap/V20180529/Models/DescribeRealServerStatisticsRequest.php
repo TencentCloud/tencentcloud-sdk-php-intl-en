@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) Set Layer-7 rule ID
  * @method integer getWithinTime() Obtain Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
  * @method void setWithinTime(integer $WithinTime) Set Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
- * @method string getStartTime() Obtain Statistics start time, such as 2020-08-19 00:00:00
- * @method void setStartTime(string $StartTime) Set Statistics start time, such as 2020-08-19 00:00:00
- * @method string getEndTime() Obtain Statistics end time, such as 2020-08-19 23:59:59
- * @method void setEndTime(string $EndTime) Set Statistics end time, such as 2020-08-19 23:59:59
- * @method integer getGranularity() Obtain Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
- * @method void setGranularity(integer $Granularity) Set Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+ * @method string getStartTime() Obtain Statistics start time, such as `2020-08-19 00:00:00`
+ * @method void setStartTime(string $StartTime) Set Statistics start time, such as `2020-08-19 00:00:00`
+ * @method string getEndTime() Obtain Statistics end time, such as `2020-08-19 23:59:59`
+ * @method void setEndTime(string $EndTime) Set Statistics end time, such as `2020-08-19 23:59:59`
+ * @method integer getGranularity() Obtain Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
+ * @method void setGranularity(integer $Granularity) Set Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
  */
 class DescribeRealServerStatisticsRequest extends AbstractModel
 {
@@ -58,17 +58,17 @@ class DescribeRealServerStatisticsRequest extends AbstractModel
     public $WithinTime;
 
     /**
-     * @var string Statistics start time, such as 2020-08-19 00:00:00
+     * @var string Statistics start time, such as `2020-08-19 00:00:00`
      */
     public $StartTime;
 
     /**
-     * @var string Statistics end time, such as 2020-08-19 23:59:59
+     * @var string Statistics end time, such as `2020-08-19 23:59:59`
      */
     public $EndTime;
 
     /**
-     * @var integer Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+     * @var integer Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
      */
     public $Granularity;
 
@@ -77,9 +77,9 @@ class DescribeRealServerStatisticsRequest extends AbstractModel
      * @param string $ListenerId Listener ID
      * @param string $RuleId Layer-7 rule ID
      * @param integer $WithinTime Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
-     * @param string $StartTime Statistics start time, such as 2020-08-19 00:00:00
-     * @param string $EndTime Statistics end time, such as 2020-08-19 23:59:59
-     * @param integer $Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+     * @param string $StartTime Statistics start time, such as `2020-08-19 00:00:00`
+     * @param string $EndTime Statistics end time, such as `2020-08-19 23:59:59`
+     * @param integer $Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
      */
     function __construct()
     {

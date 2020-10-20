@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * Mouth information
  *
  * @method AttributeItem getMouthOpen() Obtain Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
  * @method void setMouthOpen(AttributeItem $MouthOpen) Set Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
  */
 class Mouth extends AbstractModel
 {
     /**
      * @var AttributeItem Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
      */
     public $MouthOpen;
 
     /**
      * @param AttributeItem $MouthOpen Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
      */
     function __construct()
     {

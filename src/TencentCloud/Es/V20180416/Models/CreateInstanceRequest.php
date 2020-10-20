@@ -90,6 +90,8 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
  * @method void setTagList(array $TagList) Set Node tag information list
  * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+ * @method integer getSceneType() Obtain Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+ * @method void setSceneType(integer $SceneType) Set Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -237,6 +239,11 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     public $BasicSecurityType;
 
     /**
+     * @var integer Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+     */
+    public $SceneType;
+
+    /**
      * @param string $Zone Availability Zone
      * @param string $EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
      * @param string $VpcId VPC ID
@@ -272,6 +279,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
      * @param array $NodeInfoList Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
      * @param array $TagList Node tag information list
      * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * @param integer $SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
      */
     function __construct()
     {
@@ -407,6 +415,10 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
 
         if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
             $this->BasicSecurityType = $param["BasicSecurityType"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

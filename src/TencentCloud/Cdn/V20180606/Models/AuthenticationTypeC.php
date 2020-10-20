@@ -41,6 +41,14 @@ If it contains an asterisk (*), this indicates all files.
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
  * @method void setFilterType(string $FilterType) Set allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
+ * @method string getTimeFormat() Obtain Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setTimeFormat(string $TimeFormat) Set Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class AuthenticationTypeC extends AbstractModel
 {
@@ -70,6 +78,14 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
     public $FilterType;
 
     /**
+     * @var string Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $TimeFormat;
+
+    /**
      * @param string $SecretKey The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -79,6 +95,10 @@ Unit: second. The maximum value is 31536000.
 If it contains an asterisk (*), this indicates all files.
      * @param string $FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
+     * @param string $TimeFormat Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -107,6 +127,10 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
 
         if (array_key_exists("FilterType",$param) and $param["FilterType"] !== null) {
             $this->FilterType = $param["FilterType"];
+        }
+
+        if (array_key_exists("TimeFormat",$param) and $param["TimeFormat"] !== null) {
+            $this->TimeFormat = $param["TimeFormat"];
         }
     }
 }

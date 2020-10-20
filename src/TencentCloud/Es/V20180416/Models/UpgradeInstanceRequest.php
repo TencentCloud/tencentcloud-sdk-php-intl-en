@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseType(string $LicenseType) Set Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
  * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+ * @method string getUpgradeMode() Obtain Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+ * @method void setUpgradeMode(string $UpgradeMode) Set Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpgradeInstanceRequest extends AbstractModel
     public $BasicSecurityType;
 
     /**
+     * @var string Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+     */
+    public $UpgradeMode;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $EsVersion Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
      * @param boolean $CheckOnly Whether to check for upgrade only. Default value: false
      * @param string $LicenseType Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
      * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * @param string $UpgradeMode Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
             $this->BasicSecurityType = $param["BasicSecurityType"];
+        }
+
+        if (array_key_exists("UpgradeMode",$param) and $param["UpgradeMode"] !== null) {
+            $this->UpgradeMode = $param["UpgradeMode"];
         }
     }
 }

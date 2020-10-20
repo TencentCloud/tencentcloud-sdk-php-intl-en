@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of tag descriptions. By specifying this parameter, you can bind tags to corresponding resource instances at the same time. Currently, only tags are bound to cloud host instances.
  *
- * @method string getResourceType() Obtain 
- * @method void setResourceType(string $ResourceType) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method string getResourceType() Obtain The type of resource that the tag is bound to. The type currently supported is `cluster`.
+ * @method void setResourceType(string $ResourceType) Set The type of resource that the tag is bound to. The type currently supported is `cluster`.
+ * @method array getTags() Obtain List of tag pairs
+ * @method void setTags(array $Tags) Set List of tag pairs
  */
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The type of resource that the tag is bound to. The type currently supported is `cluster`.
      */
     public $ResourceType;
 
     /**
-     * @var array 
+     * @var array List of tag pairs
      */
     public $Tags;
 
     /**
-     * @param string $ResourceType 
-     * @param array $Tags 
+     * @param string $ResourceType The type of resource that the tag is bound to. The type currently supported is `cluster`.
+     * @param array $Tags List of tag pairs
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() Obtain Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
  * @method void setStartTime(string $StartTime) Set Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
- * @method string getEndTime() Obtain End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
- * @method void setEndTime(string $EndTime) Set End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
+ * @method string getEndTime() Obtain End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
+ * @method void setEndTime(string $EndTime) Set End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
  * @method array getPlayDomains() Obtain LVB playback domain name. If this parameter is left empty, full data will be queried.
  * @method void setPlayDomains(array $PlayDomains) Set LVB playback domain name. If this parameter is left empty, full data will be queried.
  * @method string getMainlandOrOversea() Obtain Valid values:
@@ -57,7 +57,7 @@ class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
+     * @var string End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
      */
     public $EndTime;
 
@@ -91,7 +91,7 @@ Default value: 5.
 
     /**
      * @param string $StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
-     * @param string $EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
+     * @param string $EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
      * @param array $PlayDomains LVB playback domain name. If this parameter is left empty, full data will be queried.
      * @param string $MainlandOrOversea Valid values:
 Mainland: query data for Mainland China,

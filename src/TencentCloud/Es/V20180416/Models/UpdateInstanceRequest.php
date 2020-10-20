@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 Number of nodes (2-50)
  * @method void setNodeNum(integer $NodeNum) Set This parameter has been disused. Please use `NodeInfoList`
 Number of nodes (2-50)
- * @method string getEsConfig() Obtain Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
- * @method void setEsConfig(string $EsConfig) Set Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+ * @method string getEsConfig() Obtain Configuration item (JSON string)
+ * @method void setEsConfig(string $EsConfig) Set Configuration item (JSON string)
  * @method string getPassword() Obtain Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
  * @method void setPassword(string $Password) Set Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
  * @method EsAcl getEsAcl() Obtain Access control list
@@ -74,6 +74,10 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
  * @method void setKibanaPrivatePort(integer $KibanaPrivatePort) Set Kibana private port
  * @method integer getScaleType() Obtain 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
  * @method void setScaleType(integer $ScaleType) Set 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+ * @method array getMultiZoneInfo() Obtain Multi-AZ deployment
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) Set Multi-AZ deployment
+ * @method integer getSceneType() Obtain Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+ * @method void setSceneType(integer $SceneType) Set Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -94,7 +98,7 @@ Number of nodes (2-50)
     public $NodeNum;
 
     /**
-     * @var string Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * @var string Configuration item (JSON string)
      */
     public $EsConfig;
 
@@ -189,11 +193,21 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $ScaleType;
 
     /**
+     * @var array Multi-AZ deployment
+     */
+    public $MultiZoneInfo;
+
+    /**
+     * @var integer Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+     */
+    public $SceneType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
      * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
 Number of nodes (2-50)
-     * @param string $EsConfig Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * @param string $EsConfig Configuration item (JSON string)
      * @param string $Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
      * @param EsAcl $EsAcl Access control list
      * @param integer $DiskSize This parameter has been disused. Please use `NodeInfoList`
@@ -216,6 +230,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
      * @param integer $BasicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
      * @param integer $KibanaPrivatePort Kibana private port
      * @param integer $ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+     * @param array $MultiZoneInfo Multi-AZ deployment
+     * @param integer $SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
      */
     function __construct()
     {
@@ -320,6 +336,19 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
         if (array_key_exists("ScaleType",$param) and $param["ScaleType"] !== null) {
             $this->ScaleType = $param["ScaleType"];
+        }
+
+        if (array_key_exists("MultiZoneInfo",$param) and $param["MultiZoneInfo"] !== null) {
+            $this->MultiZoneInfo = [];
+            foreach ($param["MultiZoneInfo"] as $key => $value){
+                $obj = new ZoneDetail();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

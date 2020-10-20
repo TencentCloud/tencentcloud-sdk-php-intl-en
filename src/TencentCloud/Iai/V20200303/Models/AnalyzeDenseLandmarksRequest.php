@@ -27,27 +27,27 @@ Specific information of facial feature localization (facial keypoints) of up to 
 Default value: 0. 
 Specific information of facial feature localization (facial keypoints) of up to 5 faces can be returned.
  * @method string getImage() Obtain Base64-encoded image data, which cannot exceed 5 MB.  
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method void setImage(string $Image) Set Base64-encoded image data, which cannot exceed 5 MB.  
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method string getUrl() Obtain Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.  
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.  
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.  
 The download speed and stability of non-Tencent Cloud URLs may be low.  
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method void setUrl(string $Url) Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.  
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.  
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.  
 The download speed and stability of non-Tencent Cloud URLs may be low.  
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method string getFaceModelVersion() Obtain Algorithm model version used by the Face Recognition service. You can enter only `3.0` for this API.
  * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used by the Face Recognition service. You can enter only `3.0` for this API.
- * @method integer getNeedRotateDetection() Obtain Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
- * @method void setNeedRotateDetection(integer $NeedRotateDetection) Set Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+ * @method integer getNeedRotateDetection() Obtain Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image is not rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+ * @method void setNeedRotateDetection(integer $NeedRotateDetection) Set Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image is not rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
  */
 class AnalyzeDenseLandmarksRequest extends AbstractModel
 {
@@ -60,18 +60,18 @@ Specific information of facial feature localization (facial keypoints) of up to 
 
     /**
      * @var string Base64-encoded image data, which cannot exceed 5 MB.  
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public $Image;
 
     /**
      * @var string Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.  
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.  
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.  
 The download speed and stability of non-Tencent Cloud URLs may be low.  
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public $Url;
 
@@ -81,7 +81,7 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     public $FaceModelVersion;
 
     /**
-     * @var integer Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+     * @var integer Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image is not rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
      */
     public $NeedRotateDetection;
 
@@ -90,16 +90,16 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 Default value: 0. 
 Specific information of facial feature localization (facial keypoints) of up to 5 faces can be returned.
      * @param string $Image Base64-encoded image data, which cannot exceed 5 MB.  
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      * @param string $Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.  
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.  
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.  
 The download speed and stability of non-Tencent Cloud URLs may be low.  
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      * @param string $FaceModelVersion Algorithm model version used by the Face Recognition service. You can enter only `3.0` for this API.
-     * @param integer $NeedRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+     * @param integer $NeedRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image is not rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
      */
     function __construct()
     {

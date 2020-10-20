@@ -18,28 +18,28 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Tag key and tag value
  *
- * @method string getTagKey() Obtain 
- * @method void setTagKey(string $TagKey) Set 
- * @method string getTagValue() Obtain 
- * @method void setTagValue(string $TagValue) Set 
+ * @method string getTagKey() Obtain Tag key
+ * @method void setTagKey(string $TagKey) Set Tag key
+ * @method string getTagValue() Obtain Tag value
+ * @method void setTagValue(string $TagValue) Set Tag value
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Tag key
      */
     public $TagKey;
 
     /**
-     * @var string 
+     * @var string Tag value
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey 
-     * @param string $TagValue 
+     * @param string $TagKey Tag key
+     * @param string $TagValue Tag value
      */
     function __construct()
     {

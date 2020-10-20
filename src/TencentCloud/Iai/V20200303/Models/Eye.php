@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * Eye information
  *
  * @method AttributeItem getGlass() Obtain Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
  * @method void setGlass(AttributeItem $Glass) Set Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
  * @method AttributeItem getEyeOpen() Obtain Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
  * @method void setEyeOpen(AttributeItem $EyeOpen) Set Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
  * @method AttributeItem getEyelidType() Obtain Whether the person has double eyelids.
 The `Type` values of the `AttributeItem` include: 0: no; 1: yes.
  * @method void setEyelidType(AttributeItem $EyelidType) Set Whether the person has double eyelids.
@@ -41,13 +41,13 @@ class Eye extends AbstractModel
 {
     /**
      * @var AttributeItem Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
      */
     public $Glass;
 
     /**
      * @var AttributeItem Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
      */
     public $EyeOpen;
 
@@ -65,9 +65,9 @@ The `Type` values of the `AttributeItem` include: 0: small eyes; 1: general eyes
 
     /**
      * @param AttributeItem $Glass Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
      * @param AttributeItem $EyeOpen Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
      * @param AttributeItem $EyelidType Whether the person has double eyelids.
 The `Type` values of the `AttributeItem` include: 0: no; 1: yes.
      * @param AttributeItem $EyeSize Eye size.

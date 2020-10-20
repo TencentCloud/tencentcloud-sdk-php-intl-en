@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * k8s tags, generally exist as an array
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getValue() Obtain 
- * @method void setValue(string $Value) Set 
+ * @method string getName() Obtain Name in map list
+ * @method void setName(string $Name) Set Name in map list
+ * @method string getValue() Obtain Value in map list
+ * @method void setValue(string $Value) Set Value in map list
  */
 class Label extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Name in map list
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Value in map list
      */
     public $Value;
 
     /**
-     * @param string $Name 
-     * @param string $Value 
+     * @param string $Name Name in map list
+     * @param string $Value Value in map list
      */
     function __construct()
     {

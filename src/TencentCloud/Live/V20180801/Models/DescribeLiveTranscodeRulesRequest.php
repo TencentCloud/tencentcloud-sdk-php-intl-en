@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeRules request structure.
  *
- * @method array getTemplateIds() Obtain 
- * @method void setTemplateIds(array $TemplateIds) Set 
- * @method array getDomainNames() Obtain 
- * @method void setDomainNames(array $DomainNames) Set 
+ * @method array getTemplateIds() Obtain An array of template IDs to be filtered.
+ * @method void setTemplateIds(array $TemplateIds) Set An array of template IDs to be filtered.
+ * @method array getDomainNames() Obtain An array of domain names to be filtered.
+ * @method void setDomainNames(array $DomainNames) Set An array of domain names to be filtered.
  */
 class DescribeLiveTranscodeRulesRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array An array of template IDs to be filtered.
      */
     public $TemplateIds;
 
     /**
-     * @var array 
+     * @var array An array of domain names to be filtered.
      */
     public $DomainNames;
 
     /**
-     * @param array $TemplateIds 
-     * @param array $DomainNames 
+     * @param array $TemplateIds An array of template IDs to be filtered.
+     * @param array $DomainNames An array of domain names to be filtered.
      */
     function __construct()
     {

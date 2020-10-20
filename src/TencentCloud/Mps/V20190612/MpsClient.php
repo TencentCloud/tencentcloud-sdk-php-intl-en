@@ -86,6 +86,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
 2. Splicing multiple files to generate a new video;
 3. Clipping multiple files and then splicing the clips to generate a new video.
  * @method Models\EnableWorkflowResponse EnableWorkflow(Models\EnableWorkflowRequest $req) This API is used to enable a workflow.
+ * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) This API is only used in unique custom development scenarios. Unless requested by Media Processing Service customer service, please do not call it.
  * @method Models\ManageTaskResponse ManageTask(Models\ManageTaskRequest $req) This API is used to manage an initiated task.
 > Note: currently, you can only terminate an ongoing live stream processing task.
  * @method Models\ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(Models\ModifyAIAnalysisTemplateRequest $req) This API is used to modify a custom content analysis template.

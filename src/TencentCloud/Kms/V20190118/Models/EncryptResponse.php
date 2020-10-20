@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCiphertextBlob() Obtain Base64-encoded encrypted ciphertext
  * @method void setCiphertextBlob(string $CiphertextBlob) Set Base64-encoded encrypted ciphertext
- * @method string getKeyId() Obtain 
- * @method void setKeyId(string $KeyId) Set 
+ * @method string getKeyId() Obtain Globally unique ID of the CMK used for encryption
+ * @method void setKeyId(string $KeyId) Set Globally unique ID of the CMK used for encryption
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class EncryptResponse extends AbstractModel
     public $CiphertextBlob;
 
     /**
-     * @var string 
+     * @var string Globally unique ID of the CMK used for encryption
      */
     public $KeyId;
 
@@ -46,7 +46,7 @@ class EncryptResponse extends AbstractModel
 
     /**
      * @param string $CiphertextBlob Base64-encoded encrypted ciphertext
-     * @param string $KeyId 
+     * @param string $KeyId Globally unique ID of the CMK used for encryption
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

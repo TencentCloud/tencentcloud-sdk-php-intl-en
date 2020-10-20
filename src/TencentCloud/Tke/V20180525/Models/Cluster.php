@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterNodeNum(integer $ClusterNodeNum) Set Current number of nodes in the cluster
  * @method integer getProjectId() Obtain ID of the project to which the cluster belongs
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which the cluster belongs
- * @method array getTagSpecification() Obtain 
- * @method void setTagSpecification(array $TagSpecification) Set 
- * @method string getClusterStatus() Obtain 
- * @method void setClusterStatus(string $ClusterStatus) Set 
- * @method string getProperty() Obtain 
- * @method void setProperty(string $Property) Set 
+ * @method array getTagSpecification() Obtain Tag description list.
+ * @method void setTagSpecification(array $TagSpecification) Set Tag description list.
+ * @method string getClusterStatus() Obtain Cluster status (Running, Creating, or Abnormal)
+ * @method void setClusterStatus(string $ClusterStatus) Set Cluster status (Running, Creating, or Abnormal)
+ * @method string getProperty() Obtain Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
+ * @method void setProperty(string $Property) Set Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
  * @method integer getClusterMaterNodeNum() Obtain Number of primary nodes currently in the cluster
  * @method void setClusterMaterNodeNum(integer $ClusterMaterNodeNum) Set Number of primary nodes currently in the cluster
  * @method string getImageId() Obtain ID of the image used by the cluster
@@ -115,17 +115,17 @@ class Cluster extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 
+     * @var array Tag description list.
      */
     public $TagSpecification;
 
     /**
-     * @var string 
+     * @var string Cluster status (Running, Creating, or Abnormal)
      */
     public $ClusterStatus;
 
     /**
-     * @var string 
+     * @var string Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
      */
     public $Property;
 
@@ -174,9 +174,9 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param ClusterNetworkSettings $ClusterNetworkSettings Cluster network-related parameters
      * @param integer $ClusterNodeNum Current number of nodes in the cluster
      * @param integer $ProjectId ID of the project to which the cluster belongs
-     * @param array $TagSpecification 
-     * @param string $ClusterStatus 
-     * @param string $Property 
+     * @param array $TagSpecification Tag description list.
+     * @param string $ClusterStatus Cluster status (Running, Creating, or Abnormal)
+     * @param string $Property Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
      * @param integer $ClusterMaterNodeNum Number of primary nodes currently in the cluster
      * @param string $ImageId ID of the image used by the cluster
 Note: this field may return null, indicating that no valid value is obtained.

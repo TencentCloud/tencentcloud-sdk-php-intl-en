@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CMK attribute information
  *
- * @method string getKeyId() Obtain 
- * @method void setKeyId(string $KeyId) Set 
- * @method string getAlias() Obtain 
- * @method void setAlias(string $Alias) Set 
- * @method integer getCreateTime() Obtain 
- * @method void setCreateTime(integer $CreateTime) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
+ * @method string getKeyId() Obtain Globally unique CMK ID
+ * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
+ * @method string getAlias() Obtain Alias that makes a key more recognizable and understandable
+ * @method void setAlias(string $Alias) Set Alias that makes a key more recognizable and understandable
+ * @method integer getCreateTime() Obtain Key creation time
+ * @method void setCreateTime(integer $CreateTime) Set Key creation time
+ * @method string getDescription() Obtain CMK description
+ * @method void setDescription(string $Description) Set CMK description
  * @method string getKeyState() Obtain CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
  * @method void setKeyState(string $KeyState) Set CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
  * @method string getKeyUsage() Obtain CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
  * @method void setKeyUsage(string $KeyUsage) Set CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
  * @method integer getType() Obtain CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
  * @method void setType(integer $Type) Set CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
- * @method integer getCreatorUin() Obtain 
- * @method void setCreatorUin(integer $CreatorUin) Set 
- * @method boolean getKeyRotationEnabled() Obtain 
- * @method void setKeyRotationEnabled(boolean $KeyRotationEnabled) Set 
- * @method string getOwner() Obtain 
- * @method void setOwner(string $Owner) Set 
- * @method integer getNextRotateTime() Obtain 
- * @method void setNextRotateTime(integer $NextRotateTime) Set 
- * @method integer getDeletionDate() Obtain 
- * @method void setDeletionDate(integer $DeletionDate) Set 
+ * @method integer getCreatorUin() Obtain Creator
+ * @method void setCreatorUin(integer $CreatorUin) Set Creator
+ * @method boolean getKeyRotationEnabled() Obtain Whether key rotation is enabled
+ * @method void setKeyRotationEnabled(boolean $KeyRotationEnabled) Set Whether key rotation is enabled
+ * @method string getOwner() Obtain CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+ * @method void setOwner(string $Owner) Set CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+ * @method integer getNextRotateTime() Obtain Time of next rotation if key rotation is enabled
+ * @method void setNextRotateTime(integer $NextRotateTime) Set Time of next rotation if key rotation is enabled
+ * @method integer getDeletionDate() Obtain Scheduled deletion time
+ * @method void setDeletionDate(integer $DeletionDate) Set Scheduled deletion time
  * @method string getOrigin() Obtain CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOrigin(string $Origin) Set CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
@@ -58,22 +58,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class KeyMetadata extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Globally unique CMK ID
      */
     public $KeyId;
 
     /**
-     * @var string 
+     * @var string Alias that makes a key more recognizable and understandable
      */
     public $Alias;
 
     /**
-     * @var integer 
+     * @var integer Key creation time
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string CMK description
      */
     public $Description;
 
@@ -93,27 +93,27 @@ class KeyMetadata extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Creator
      */
     public $CreatorUin;
 
     /**
-     * @var boolean 
+     * @var boolean Whether key rotation is enabled
      */
     public $KeyRotationEnabled;
 
     /**
-     * @var string 
+     * @var string CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
      */
     public $Owner;
 
     /**
-     * @var integer 
+     * @var integer Time of next rotation if key rotation is enabled
      */
     public $NextRotateTime;
 
     /**
-     * @var integer 
+     * @var integer Scheduled deletion time
      */
     public $DeletionDate;
 
@@ -135,18 +135,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ResourceId;
 
     /**
-     * @param string $KeyId 
-     * @param string $Alias 
-     * @param integer $CreateTime 
-     * @param string $Description 
+     * @param string $KeyId Globally unique CMK ID
+     * @param string $Alias Alias that makes a key more recognizable and understandable
+     * @param integer $CreateTime Key creation time
+     * @param string $Description CMK description
      * @param string $KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
      * @param string $KeyUsage CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
      * @param integer $Type CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
-     * @param integer $CreatorUin 
-     * @param boolean $KeyRotationEnabled 
-     * @param string $Owner 
-     * @param integer $NextRotateTime 
-     * @param integer $DeletionDate 
+     * @param integer $CreatorUin Creator
+     * @param boolean $KeyRotationEnabled Whether key rotation is enabled
+     * @param string $Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+     * @param integer $NextRotateTime Time of next rotation if key rotation is enabled
+     * @param integer $DeletionDate Scheduled deletion time
      * @param string $Origin CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.

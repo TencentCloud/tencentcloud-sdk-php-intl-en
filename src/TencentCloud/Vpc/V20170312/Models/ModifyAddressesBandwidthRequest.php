@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressIds(array $AddressIds) Set The unique ID of the EIP, such as 'eip-xxxx'.
  * @method integer getInternetMaxBandwidthOut() Obtain Target bandwidth value adjustment
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Target bandwidth value adjustment
- * @method string getStartTime() Obtain The monthly bandwidth start time
- * @method void setStartTime(string $StartTime) Set The monthly bandwidth start time
- * @method string getEndTime() Obtain The monthly bandwidth end time
- * @method void setEndTime(string $EndTime) Set The monthly bandwidth end time
+ * @method string getStartTime() Obtain (Disused) The start time of the monthly bandwidth subscription
+ * @method void setStartTime(string $StartTime) Set (Disused) The start time of the monthly bandwidth subscription
+ * @method string getEndTime() Obtain (Disused) The end time of the monthly bandwidth subscription
+ * @method void setEndTime(string $EndTime) Set (Disused) The end time of the monthly bandwidth subscription
  */
 class ModifyAddressesBandwidthRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class ModifyAddressesBandwidthRequest extends AbstractModel
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string The monthly bandwidth start time
+     * @var string (Disused) The start time of the monthly bandwidth subscription
      */
     public $StartTime;
 
     /**
-     * @var string The monthly bandwidth end time
+     * @var string (Disused) The end time of the monthly bandwidth subscription
      */
     public $EndTime;
 
     /**
      * @param array $AddressIds The unique ID of the EIP, such as 'eip-xxxx'.
      * @param integer $InternetMaxBandwidthOut Target bandwidth value adjustment
-     * @param string $StartTime The monthly bandwidth start time
-     * @param string $EndTime The monthly bandwidth end time
+     * @param string $StartTime (Disused) The start time of the monthly bandwidth subscription
+     * @param string $EndTime (Disused) The end time of the monthly bandwidth subscription
      */
     function __construct()
     {

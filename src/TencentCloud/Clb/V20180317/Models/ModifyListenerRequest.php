@@ -38,6 +38,8 @@ They represent weighted round robin and least connections, respectively. Default
 They represent weighted round robin and least connections, respectively. Default value: WRR.
  * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+ * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
  */
 class ModifyListenerRequest extends AbstractModel
 {
@@ -83,6 +85,11 @@ They represent weighted round robin and least connections, respectively. Default
     public $SniSwitch;
 
     /**
+     * @var integer Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     */
+    public $KeepaliveEnable;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param string $ListenerName New listener name
@@ -92,6 +99,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @param string $Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+     * @param integer $KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ They represent weighted round robin and least connections, respectively. Default
 
         if (array_key_exists("SniSwitch",$param) and $param["SniSwitch"] !== null) {
             $this->SniSwitch = $param["SniSwitch"];
+        }
+
+        if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
+            $this->KeepaliveEnable = $param["KeepaliveEnable"];
         }
     }
 }

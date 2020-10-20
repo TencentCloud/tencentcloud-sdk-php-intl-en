@@ -18,30 +18,30 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * White-box key information
  *
- * @method string getKeyId() Obtain 
- * @method void setKeyId(string $KeyId) Set 
- * @method string getAlias() Obtain 
- * @method void setAlias(string $Alias) Set 
- * @method integer getCreatorUin() Obtain 
- * @method void setCreatorUin(integer $CreatorUin) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method integer getCreateTime() Obtain 
- * @method void setCreateTime(integer $CreateTime) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getOwnerUin() Obtain 
- * @method void setOwnerUin(integer $OwnerUin) Set 
- * @method string getAlgorithm() Obtain 
- * @method void setAlgorithm(string $Algorithm) Set 
- * @method string getEncryptKey() Obtain 
- * @method void setEncryptKey(string $EncryptKey) Set 
- * @method string getDecryptKey() Obtain 
- * @method void setDecryptKey(string $DecryptKey) Set 
- * @method string getResourceId() Obtain 
- * @method void setResourceId(string $ResourceId) Set 
+ * @method string getKeyId() Obtain Globally unique white-box key ID
+ * @method void setKeyId(string $KeyId) Set Globally unique white-box key ID
+ * @method string getAlias() Obtain Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+ * @method void setAlias(string $Alias) Set Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+ * @method integer getCreatorUin() Obtain Creator
+ * @method void setCreatorUin(integer $CreatorUin) Set Creator
+ * @method string getDescription() Obtain Key description information
+ * @method void setDescription(string $Description) Set Key description information
+ * @method integer getCreateTime() Obtain Key creation time in Unix timestamp
+ * @method void setCreateTime(integer $CreateTime) Set Key creation time in Unix timestamp
+ * @method string getStatus() Obtain White-box key status. Valid values: Enabled, Disabled
+ * @method void setStatus(string $Status) Set White-box key status. Valid values: Enabled, Disabled
+ * @method integer getOwnerUin() Obtain Creator
+ * @method void setOwnerUin(integer $OwnerUin) Set Creator
+ * @method string getAlgorithm() Obtain Key algorithm type
+ * @method void setAlgorithm(string $Algorithm) Set Key algorithm type
+ * @method string getEncryptKey() Obtain Base64-encoded white-box encryption key
+ * @method void setEncryptKey(string $EncryptKey) Set Base64-encoded white-box encryption key
+ * @method string getDecryptKey() Obtain Base64-encoded white-box decryption key
+ * @method void setDecryptKey(string $DecryptKey) Set Base64-encoded white-box decryption key
+ * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$keyId`
+ * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`
  * @method boolean getDeviceFingerprintBind() Obtain Whether there is a device fingerprint bound to the current key
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeviceFingerprintBind(boolean $DeviceFingerprintBind) Set Whether there is a device fingerprint bound to the current key
@@ -50,57 +50,57 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class WhiteboxKeyInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Globally unique white-box key ID
      */
     public $KeyId;
 
     /**
-     * @var string 
+     * @var string Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
      */
     public $Alias;
 
     /**
-     * @var integer 
+     * @var integer Creator
      */
     public $CreatorUin;
 
     /**
-     * @var string 
+     * @var string Key description information
      */
     public $Description;
 
     /**
-     * @var integer 
+     * @var integer Key creation time in Unix timestamp
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string White-box key status. Valid values: Enabled, Disabled
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Creator
      */
     public $OwnerUin;
 
     /**
-     * @var string 
+     * @var string Key algorithm type
      */
     public $Algorithm;
 
     /**
-     * @var string 
+     * @var string Base64-encoded white-box encryption key
      */
     public $EncryptKey;
 
     /**
-     * @var string 
+     * @var string Base64-encoded white-box decryption key
      */
     public $DecryptKey;
 
     /**
-     * @var string 
+     * @var string Resource ID in the format of `creatorUin/$creatorUin/$keyId`
      */
     public $ResourceId;
 
@@ -111,17 +111,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DeviceFingerprintBind;
 
     /**
-     * @param string $KeyId 
-     * @param string $Alias 
-     * @param integer $CreatorUin 
-     * @param string $Description 
-     * @param integer $CreateTime 
-     * @param string $Status 
-     * @param integer $OwnerUin 
-     * @param string $Algorithm 
-     * @param string $EncryptKey 
-     * @param string $DecryptKey 
-     * @param string $ResourceId 
+     * @param string $KeyId Globally unique white-box key ID
+     * @param string $Alias Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+     * @param integer $CreatorUin Creator
+     * @param string $Description Key description information
+     * @param integer $CreateTime Key creation time in Unix timestamp
+     * @param string $Status White-box key status. Valid values: Enabled, Disabled
+     * @param integer $OwnerUin Creator
+     * @param string $Algorithm Key algorithm type
+     * @param string $EncryptKey Base64-encoded white-box encryption key
+     * @param string $DecryptKey Base64-encoded white-box decryption key
+     * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`
      * @param boolean $DeviceFingerprintBind Whether there is a device fingerprint bound to the current key
 Note: this field may return null, indicating that no valid values can be obtained.
      */

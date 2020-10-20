@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Node login information (currently only supports using Password or single KeyIds)
  * @method array getSecurityGroupIds() Obtain Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
- * @method string getHostName() Obtain 
- * @method void setHostName(string $HostName) Set 
+ * @method string getHostName() Obtain When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+ * @method void setHostName(string $HostName) Set When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class AddExistedInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var string 
+     * @var string When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
      */
     public $HostName;
 
@@ -79,7 +79,7 @@ class AddExistedInstancesRequest extends AbstractModel
      * @param EnhancedService $EnhancedService Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
      * @param LoginSettings $LoginSettings Node login information (currently only supports using Password or single KeyIds)
      * @param array $SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
-     * @param string $HostName 
+     * @param string $HostName When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
      */
     function __construct()
     {

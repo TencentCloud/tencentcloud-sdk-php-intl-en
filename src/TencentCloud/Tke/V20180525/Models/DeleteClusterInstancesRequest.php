@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) Set List of Instance IDs
  * @method string getInstanceDeleteMode() Obtain Policy used to delete an instance in the cluster: `terminate` (terminates the instance. Only available for pay-as-you-go CVMs); `retain` (only removes it from the cluster. The instance will be retained.)
  * @method void setInstanceDeleteMode(string $InstanceDeleteMode) Set Policy used to delete an instance in the cluster: `terminate` (terminates the instance. Only available for pay-as-you-go CVMs); `retain` (only removes it from the cluster. The instance will be retained.)
- * @method boolean getForceDelete() Obtain 
- * @method void setForceDelete(boolean $ForceDelete) Set 
+ * @method boolean getForceDelete() Obtain Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
+ * @method void setForceDelete(boolean $ForceDelete) Set Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
  */
 class DeleteClusterInstancesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DeleteClusterInstancesRequest extends AbstractModel
     public $InstanceDeleteMode;
 
     /**
-     * @var boolean 
+     * @var boolean Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
      */
     public $ForceDelete;
 
@@ -55,7 +55,7 @@ class DeleteClusterInstancesRequest extends AbstractModel
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIds List of Instance IDs
      * @param string $InstanceDeleteMode Policy used to delete an instance in the cluster: `terminate` (terminates the instance. Only available for pay-as-you-go CVMs); `retain` (only removes it from the cluster. The instance will be retained.)
-     * @param boolean $ForceDelete 
+     * @param boolean $ForceDelete Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
      */
     function __construct()
     {

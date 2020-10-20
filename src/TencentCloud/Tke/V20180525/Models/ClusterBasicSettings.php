@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID, in the format of vpc-xxx, which is required when you create an empty managed cluster.
  * @method integer getProjectId() Obtain ID of the project to which the new resources in the cluster belong.
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which the new resources in the cluster belong.
- * @method array getTagSpecification() Obtain 
- * @method void setTagSpecification(array $TagSpecification) Set 
- * @method string getOsCustomizeType() Obtain 
- * @method void setOsCustomizeType(string $OsCustomizeType) Set 
- * @method boolean getNeedWorkSecurityGroup() Obtain 
- * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) Set 
+ * @method array getTagSpecification() Obtain Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
+ * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
+ * @method string getOsCustomizeType() Obtain Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+ * @method void setOsCustomizeType(string $OsCustomizeType) Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+ * @method boolean getNeedWorkSecurityGroup() Obtain Whether to enable the node’s default security group (default: `No`, Aphla feature)
+ * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) Set Whether to enable the node’s default security group (default: `No`, Aphla feature)
  */
 class ClusterBasicSettings extends AbstractModel
 {
@@ -72,17 +72,17 @@ class ClusterBasicSettings extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 
+     * @var array Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
      */
     public $TagSpecification;
 
     /**
-     * @var string 
+     * @var string Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      */
     public $OsCustomizeType;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable the node’s default security group (default: `No`, Aphla feature)
      */
     public $NeedWorkSecurityGroup;
 
@@ -93,9 +93,9 @@ class ClusterBasicSettings extends AbstractModel
      * @param string $ClusterDescription Cluster description
      * @param string $VpcId VPC ID, in the format of vpc-xxx, which is required when you create an empty managed cluster.
      * @param integer $ProjectId ID of the project to which the new resources in the cluster belong.
-     * @param array $TagSpecification 
-     * @param string $OsCustomizeType 
-     * @param boolean $NeedWorkSecurityGroup 
+     * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
+     * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     * @param boolean $NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
      */
     function __construct()
     {

@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsEnabled(boolean $AsEnabled) Set Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
  * @method string getContainerRuntime() Obtain Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
  * @method void setContainerRuntime(string $ContainerRuntime) Set Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
- * @method string getNodeNameType() Obtain 
- * @method void setNodeNameType(string $NodeNameType) Set 
+ * @method string getNodeNameType() Obtain NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
+ * @method void setNodeNameType(string $NodeNameType) Set NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
  * @method ClusterExtraArgs getExtraArgs() Obtain Cluster custom parameter
  * @method void setExtraArgs(ClusterExtraArgs $ExtraArgs) Set Cluster custom parameter
  * @method string getNetworkType() Obtain Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
  * @method void setNetworkType(string $NetworkType) Set Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
  * @method boolean getIsNonStaticIpMode() Obtain Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) Set Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
- * @method boolean getDeletionProtection() Obtain 
- * @method void setDeletionProtection(boolean $DeletionProtection) Set 
- * @method string getKubeProxyMode() Obtain 
- * @method void setKubeProxyMode(string $KubeProxyMode) Set 
+ * @method boolean getDeletionProtection() Obtain Indicates whether to enable cluster deletion protection.
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Indicates whether to enable cluster deletion protection.
+ * @method string getKubeProxyMode() Obtain Cluster network proxy model
+ * @method void setKubeProxyMode(string $KubeProxyMode) Set Cluster network proxy model
  * @method boolean getAuditEnabled() Obtain Indicates whether to enable auditing
  * @method void setAuditEnabled(boolean $AuditEnabled) Set Indicates whether to enable auditing
  * @method string getAuditLogsetId() Obtain Specifies the ID of logset to which the audit logs are uploaded.
@@ -63,7 +63,7 @@ class ClusterAdvancedSettings extends AbstractModel
     public $ContainerRuntime;
 
     /**
-     * @var string 
+     * @var string NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
      */
     public $NodeNameType;
 
@@ -83,12 +83,12 @@ class ClusterAdvancedSettings extends AbstractModel
     public $IsNonStaticIpMode;
 
     /**
-     * @var boolean 
+     * @var boolean Indicates whether to enable cluster deletion protection.
      */
     public $DeletionProtection;
 
     /**
-     * @var string 
+     * @var string Cluster network proxy model
      */
     public $KubeProxyMode;
 
@@ -111,12 +111,12 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param boolean $IPVS Whether IPVS is enabled
      * @param boolean $AsEnabled Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
      * @param string $ContainerRuntime Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
-     * @param string $NodeNameType 
+     * @param string $NodeNameType NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
      * @param ClusterExtraArgs $ExtraArgs Cluster custom parameter
      * @param string $NetworkType Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
      * @param boolean $IsNonStaticIpMode Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
-     * @param boolean $DeletionProtection 
-     * @param string $KubeProxyMode 
+     * @param boolean $DeletionProtection Indicates whether to enable cluster deletion protection.
+     * @param string $KubeProxyMode Cluster network proxy model
      * @param boolean $AuditEnabled Indicates whether to enable auditing
      * @param string $AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
      * @param string $AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.

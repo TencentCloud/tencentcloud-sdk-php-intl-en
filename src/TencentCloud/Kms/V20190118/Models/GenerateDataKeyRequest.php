@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GenerateDataKey request structure.
  *
- * @method string getKeyId() Obtain 
- * @method void setKeyId(string $KeyId) Set 
+ * @method string getKeyId() Obtain Globally unique CMK ID
+ * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
  * @method string getKeySpec() Obtain Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
  * @method void setKeySpec(string $KeySpec) Set Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
  * @method integer getNumberOfBytes() Obtain Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
  * @method void setNumberOfBytes(integer $NumberOfBytes) Set Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
- * @method string getEncryptionContext() Obtain 
- * @method void setEncryptionContext(string $EncryptionContext) Set 
+ * @method string getEncryptionContext() Obtain JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+ * @method void setEncryptionContext(string $EncryptionContext) Set JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
  */
 class GenerateDataKeyRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Globally unique CMK ID
      */
     public $KeyId;
 
@@ -47,15 +47,15 @@ class GenerateDataKeyRequest extends AbstractModel
     public $NumberOfBytes;
 
     /**
-     * @var string 
+     * @var string JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
      */
     public $EncryptionContext;
 
     /**
-     * @param string $KeyId 
+     * @param string $KeyId Globally unique CMK ID
      * @param string $KeySpec Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
      * @param integer $NumberOfBytes Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
-     * @param string $EncryptionContext 
+     * @param string $EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
      */
     function __construct()
     {

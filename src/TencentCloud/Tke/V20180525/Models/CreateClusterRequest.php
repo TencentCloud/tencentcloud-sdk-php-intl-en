@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) Set Configuration information of an existing instance
  * @method array getInstanceDataDiskMountSettings() Obtain CVM type and the corresponding data disk mounting configuration information.
  * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) Set CVM type and the corresponding data disk mounting configuration information.
+ * @method array getExtensionAddons() Obtain Information of the add-on to be installed
+ * @method void setExtensionAddons(array $ExtensionAddons) Set Information of the add-on to be installed
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateClusterRequest extends AbstractModel
     public $InstanceDataDiskMountSettings;
 
     /**
+     * @var array Information of the add-on to be installed
+     */
+    public $ExtensionAddons;
+
+    /**
      * @param ClusterCIDRSettings $ClusterCIDRSettings Container networking configuration information for the cluster
      * @param string $ClusterType Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
      * @param array $RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
@@ -88,6 +95,7 @@ class CreateClusterRequest extends AbstractModel
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Advanced configuration information of the node
      * @param array $ExistedInstancesForNode Configuration information of an existing instance
      * @param array $InstanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
+     * @param array $ExtensionAddons Information of the add-on to be installed
      */
     function __construct()
     {
@@ -150,6 +158,15 @@ class CreateClusterRequest extends AbstractModel
                 $obj = new InstanceDataDiskMountSetting();
                 $obj->deserialize($value);
                 array_push($this->InstanceDataDiskMountSettings, $obj);
+            }
+        }
+
+        if (array_key_exists("ExtensionAddons",$param) and $param["ExtensionAddons"] !== null) {
+            $this->ExtensionAddons = [];
+            foreach ($param["ExtensionAddons"] as $key => $value){
+                $obj = new ExtensionAddon();
+                $obj->deserialize($value);
+                array_push($this->ExtensionAddons, $obj);
             }
         }
     }

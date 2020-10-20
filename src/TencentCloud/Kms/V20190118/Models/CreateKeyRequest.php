@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAlias() Obtain Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1-60 letters, digits, `-`, and `_`, and must begin with a letter or digit. The `kms-` prefix is used for Tencent Cloud products.
  * @method void setAlias(string $Alias) Set Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1-60 letters, digits, `-`, and `_`, and must begin with a letter or digit. The `kms-` prefix is used for Tencent Cloud products.
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
+ * @method string getDescription() Obtain CMK description of up to 1,024 bytes in length
+ * @method void setDescription(string $Description) Set CMK description of up to 1,024 bytes in length
  * @method string getKeyUsage() Obtain Key purpose. The default value is `ENCRYPT_DECRYPT` (creating a symmetric key for encryption and decryption). Other valid values include `ASYMMETRIC_DECRYPT_RSA_2048` (creating an RSA2048 asymmetric key for encryption and decryption) and `ASYMMETRIC_DECRYPT_SM2` (creating an SM2 asymmetric key for encryption and decryption).
  * @method void setKeyUsage(string $KeyUsage) Set Key purpose. The default value is `ENCRYPT_DECRYPT` (creating a symmetric key for encryption and decryption). Other valid values include `ASYMMETRIC_DECRYPT_RSA_2048` (creating an RSA2048 asymmetric key for encryption and decryption) and `ASYMMETRIC_DECRYPT_SM2` (creating an SM2 asymmetric key for encryption and decryption).
  * @method integer getType() Obtain Specifies the key type. Default value: 1. Valid value: 1 - default type, indicating that the CMK is created by KMS; 2 - EXTERNAL type, indicating that you need to import key material. For more information, please see the `GetParametersForImport` and `ImportKeyMaterial` API documents.
  * @method void setType(integer $Type) Set Specifies the key type. Default value: 1. Valid value: 1 - default type, indicating that the CMK is created by KMS; 2 - EXTERNAL type, indicating that you need to import key material. For more information, please see the `GetParametersForImport` and `ImportKeyMaterial` API documents.
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method array getTags() Obtain Tag list
+ * @method void setTags(array $Tags) Set Tag list
  */
 class CreateKeyRequest extends AbstractModel
 {
@@ -39,7 +39,7 @@ class CreateKeyRequest extends AbstractModel
     public $Alias;
 
     /**
-     * @var string 
+     * @var string CMK description of up to 1,024 bytes in length
      */
     public $Description;
 
@@ -54,16 +54,16 @@ class CreateKeyRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var array 
+     * @var array Tag list
      */
     public $Tags;
 
     /**
      * @param string $Alias Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1-60 letters, digits, `-`, and `_`, and must begin with a letter or digit. The `kms-` prefix is used for Tencent Cloud products.
-     * @param string $Description 
+     * @param string $Description CMK description of up to 1,024 bytes in length
      * @param string $KeyUsage Key purpose. The default value is `ENCRYPT_DECRYPT` (creating a symmetric key for encryption and decryption). Other valid values include `ASYMMETRIC_DECRYPT_RSA_2048` (creating an RSA2048 asymmetric key for encryption and decryption) and `ASYMMETRIC_DECRYPT_SM2` (creating an SM2 asymmetric key for encryption and decryption).
      * @param integer $Type Specifies the key type. Default value: 1. Valid value: 1 - default type, indicating that the CMK is created by KMS; 2 - EXTERNAL type, indicating that you need to import key material. For more information, please see the `GetParametersForImport` and `ImportKeyMaterial` API documents.
-     * @param array $Tags 
+     * @param array $Tags Tag list
      */
     function __construct()
     {

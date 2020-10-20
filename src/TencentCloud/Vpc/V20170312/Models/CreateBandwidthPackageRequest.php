@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChargeType(string $ChargeType) Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
  * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
  * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
- * @method integer getBandwidthPackageCount() Obtain The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
- * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) Set The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+ * @method integer getBandwidthPackageCount() Obtain The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
+ * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) Set The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
  * @method integer getInternetMaxBandwidth() Obtain The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
  * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
  * @method array getTags() Obtain The list of tags to be bound.
@@ -53,7 +53,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $BandwidthPackageName;
 
     /**
-     * @var integer The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+     * @var integer The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
      */
     public $BandwidthPackageCount;
 
@@ -76,7 +76,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @param string $NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
      * @param string $ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
      * @param string $BandwidthPackageName The name of the bandwidth package.
-     * @param integer $BandwidthPackageCount The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+     * @param integer $BandwidthPackageCount The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
      * @param integer $InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
      * @param array $Tags The list of tags to be bound.
      * @param string $Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.

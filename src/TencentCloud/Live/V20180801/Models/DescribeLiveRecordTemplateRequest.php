@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveRecordTemplate request structure.
  *
- * @method integer getTemplateId() Obtain Template ID obtained through the `DescribeRecordTemplates` API.
- * @method void setTemplateId(integer $TemplateId) Set Template ID obtained through the `DescribeRecordTemplates` API.
+ * @method integer getTemplateId() Obtain Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
+ * @method void setTemplateId(integer $TemplateId) Set Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
  */
 class DescribeLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Template ID obtained through the `DescribeRecordTemplates` API.
+     * @var integer Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
+     * @param integer $TemplateId Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
      */
     function __construct()
     {

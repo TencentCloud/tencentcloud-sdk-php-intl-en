@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamDayPlayInfoList request structure.
  *
- * @method string getDayTime() Obtain Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
- * @method void setDayTime(string $DayTime) Set Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+ * @method string getDayTime() Obtain Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
+ * @method void setDayTime(string $DayTime) Set Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
  * @method string getPlayDomain() Obtain Playback domain name.
  * @method void setPlayDomain(string $PlayDomain) Set Playback domain name.
  * @method integer getPageNum() Obtain Page number. Value range: [1,1000]. Default value: 1.
@@ -34,8 +34,8 @@ Data is available at 3 AM the next day. You are recommended to query the latest 
 class DescribeStreamDayPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+     * @var string Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
      */
     public $DayTime;
 
@@ -55,8 +55,8 @@ Data is available at 3 AM the next day. You are recommended to query the latest 
     public $PageSize;
 
     /**
-     * @param string $DayTime Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+     * @param string $DayTime Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
      * @param string $PlayDomain Playback domain name.
      * @param integer $PageNum Page number. Value range: [1,1000]. Default value: 1.
      * @param integer $PageSize Number of entries per page. Value range: [100,1000]. Default value: 1,000.
