@@ -52,6 +52,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
+ * @method array getTags() Obtain Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTags(array $Tags) Set Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class ComputeEnvCreateInfo extends AbstractModel
 {
@@ -112,6 +116,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DesiredComputeNodeCount;
 
     /**
+     * @var array Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvId Compute environment ID
      * @param string $EnvName Compute environment name
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -128,6 +138,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $Notifications Notification information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DesiredComputeNodeCount Number of desired compute nodes
+     * @param array $Tags Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -201,6 +213,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DesiredComputeNodeCount",$param) and $param["DesiredComputeNodeCount"] !== null) {
             $this->DesiredComputeNodeCount = $param["DesiredComputeNodeCount"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

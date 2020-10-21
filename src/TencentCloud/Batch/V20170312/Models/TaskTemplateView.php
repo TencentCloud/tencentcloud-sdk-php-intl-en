@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) Set Task template information
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method array getTags() Obtain Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTags(array $Tags) Set Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class TaskTemplateView extends AbstractModel
 {
@@ -59,11 +63,19 @@ class TaskTemplateView extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var array Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Tags;
+
+    /**
      * @param string $TaskTemplateId Task template ID
      * @param string $TaskTemplateName Task template name
      * @param string $TaskTemplateDescription Task template description
      * @param Task $TaskTemplateInfo Task template information
      * @param string $CreateTime Creation time
+     * @param array $Tags Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -97,6 +109,15 @@ class TaskTemplateView extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

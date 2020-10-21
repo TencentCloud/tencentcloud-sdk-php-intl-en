@@ -40,6 +40,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method TaskMetrics getTaskMetrics() Obtain Task statistical metrics
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) Set Task statistical metrics
+ * @method array getTags() Obtain Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTags(array $Tags) Set Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class JobView extends AbstractModel
 {
@@ -86,6 +90,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TaskMetrics;
 
     /**
+     * @var array Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Tags;
+
+    /**
      * @param string $JobId Instance ID
      * @param string $JobName Instance name
      * @param string $JobState Instance state
@@ -96,6 +106,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $EndTime End time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskMetrics $TaskMetrics Task statistical metrics
+     * @param array $Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -142,6 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TaskMetrics",$param) and $param["TaskMetrics"] !== null) {
             $this->TaskMetrics = new TaskMetrics();
             $this->TaskMetrics->deserialize($param["TaskMetrics"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

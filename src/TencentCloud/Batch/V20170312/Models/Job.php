@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskExecutionDependOn(string $TaskExecutionDependOn) Set This is the dependency of the subsequent task on the previous task if there is a dependent relationship between them. Value range: PRE_TASK_SUCCEED, PRE_TASK_AT_LEAST_PARTLY_SUCCEED, PRE_TASK_FINISHED. Default value: PRE_TASK_SUCCEED.
  * @method string getStateIfCreateCvmFailed() Obtain Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
  * @method void setStateIfCreateCvmFailed(string $StateIfCreateCvmFailed) Set Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
+ * @method array getTags() Obtain Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
+ * @method void setTags(array $Tags) Set Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
  */
 class Job extends AbstractModel
 {
@@ -80,6 +82,11 @@ class Job extends AbstractModel
     public $StateIfCreateCvmFailed;
 
     /**
+     * @var array Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
+     */
+    public $Tags;
+
+    /**
      * @param array $Tasks Job information
      * @param string $JobName Instance name
      * @param string $JobDescription Instance description
@@ -88,6 +95,7 @@ class Job extends AbstractModel
      * @param array $Notifications Notification information
      * @param string $TaskExecutionDependOn This is the dependency of the subsequent task on the previous task if there is a dependent relationship between them. Value range: PRE_TASK_SUCCEED, PRE_TASK_AT_LEAST_PARTLY_SUCCEED, PRE_TASK_FINISHED. Default value: PRE_TASK_SUCCEED.
      * @param string $StateIfCreateCvmFailed Indicates which policy will be used in case that CVM instance creation fails. Value range: FAILED, RUNNABLE. FAILED indicates that the CVM instance creation failure will be processed as an execution failure, while RUNNABLE indicates that the failure will be processed as "keep waiting". Default value: FAILED. StateIfCreateCvmFailed is not valid for submitted jobs for which a compute environment is specified.
+     * @param array $Tags Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
      */
     function __construct()
     {
@@ -147,6 +155,15 @@ class Job extends AbstractModel
 
         if (array_key_exists("StateIfCreateCvmFailed",$param) and $param["StateIfCreateCvmFailed"] !== null) {
             $this->StateIfCreateCvmFailed = $param["StateIfCreateCvmFailed"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(array $Tasks) Set Task information
  * @method array getDependences() Obtain Dependency information
  * @method void setDependences(array $Dependences) Set Dependency information
+ * @method array getTags() Obtain Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTags(array $Tags) Set Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -68,6 +72,12 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
     public $Dependences;
 
     /**
+     * @var array Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Tags;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -79,6 +89,8 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
      * @param integer $Priority Job priority. Tasks (Task) and task instances (TaskInstance) inherit the priority of the job
      * @param array $Tasks Task information
      * @param array $Dependences Dependency information
+     * @param array $Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -125,6 +137,15 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
                 $obj = new Dependence();
                 $obj->deserialize($value);
                 array_push($this->Dependences, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
 

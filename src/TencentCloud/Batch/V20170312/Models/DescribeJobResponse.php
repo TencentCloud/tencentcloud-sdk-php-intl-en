@@ -40,10 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDependenceSet(array $DependenceSet) Set Information of the dependency among tasks
  * @method TaskMetrics getTaskMetrics() Obtain Task statistical metrics
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) Set Task statistical metrics
- * @method TaskInstanceView getTaskInstanceMetrics() Obtain Task instance statistical metrics
- * @method void setTaskInstanceMetrics(TaskInstanceView $TaskInstanceMetrics) Set Task instance statistical metrics
+ * @method TaskInstanceMetrics getTaskInstanceMetrics() Obtain Task instance statistical metrics
+ * @method void setTaskInstanceMetrics(TaskInstanceMetrics $TaskInstanceMetrics) Set Task instance statistical metrics
  * @method string getStateReason() Obtain Instance failure reason
  * @method void setStateReason(string $StateReason) Set Instance failure reason
+ * @method array getTags() Obtain Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTags(array $Tags) Set Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getNextAction() Obtain 
+ * @method void setNextAction(string $NextAction) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -100,7 +106,7 @@ class DescribeJobResponse extends AbstractModel
     public $TaskMetrics;
 
     /**
-     * @var TaskInstanceView Task instance statistical metrics
+     * @var TaskInstanceMetrics Task instance statistical metrics
      */
     public $TaskInstanceMetrics;
 
@@ -108,6 +114,17 @@ class DescribeJobResponse extends AbstractModel
      * @var string Instance failure reason
      */
     public $StateReason;
+
+    /**
+     * @var array Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Tags;
+
+    /**
+     * @var string 
+     */
+    public $NextAction;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -125,8 +142,11 @@ class DescribeJobResponse extends AbstractModel
      * @param array $TaskSet Task view information
      * @param array $DependenceSet Information of the dependency among tasks
      * @param TaskMetrics $TaskMetrics Task statistical metrics
-     * @param TaskInstanceView $TaskInstanceMetrics Task instance statistical metrics
+     * @param TaskInstanceMetrics $TaskInstanceMetrics Task instance statistical metrics
      * @param string $StateReason Instance failure reason
+     * @param array $Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $NextAction 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -194,12 +214,25 @@ class DescribeJobResponse extends AbstractModel
         }
 
         if (array_key_exists("TaskInstanceMetrics",$param) and $param["TaskInstanceMetrics"] !== null) {
-            $this->TaskInstanceMetrics = new TaskInstanceView();
+            $this->TaskInstanceMetrics = new TaskInstanceMetrics();
             $this->TaskInstanceMetrics->deserialize($param["TaskInstanceMetrics"]);
         }
 
         if (array_key_exists("StateReason",$param) and $param["StateReason"] !== null) {
             $this->StateReason = $param["StateReason"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("NextAction",$param) and $param["NextAction"] !== null) {
+            $this->NextAction = $param["NextAction"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

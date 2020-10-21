@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextAction(string $NextAction) Set Next action
  * @method integer getAttachedComputeNodeCount() Obtain Number of compute nodes added to the compute environment by the user
  * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) Set Number of compute nodes added to the compute environment by the user
+ * @method array getTags() Obtain Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTags(array $Tags) Set Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class ComputeEnvView extends AbstractModel
 {
@@ -94,6 +98,12 @@ class ComputeEnvView extends AbstractModel
     public $AttachedComputeNodeCount;
 
     /**
+     * @var array Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvId Compute environment ID
      * @param string $EnvName Compute environment name
      * @param Placement $Placement Location information
@@ -104,6 +114,8 @@ class ComputeEnvView extends AbstractModel
      * @param string $ResourceType Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
      * @param string $NextAction Next action
      * @param integer $AttachedComputeNodeCount Number of compute nodes added to the compute environment by the user
+     * @param array $Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -158,6 +170,15 @@ class ComputeEnvView extends AbstractModel
 
         if (array_key_exists("AttachedComputeNodeCount",$param) and $param["AttachedComputeNodeCount"] !== null) {
             $this->AttachedComputeNodeCount = $param["AttachedComputeNodeCount"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

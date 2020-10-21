@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) Set Task template content with the same parameter requirements as the task
  * @method string getTaskTemplateDescription() Obtain Task template description
  * @method void setTaskTemplateDescription(string $TaskTemplateDescription) Set Task template description
+ * @method array getTags() Obtain Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
+ * @method void setTags(array $Tags) Set Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
  */
 class CreateTaskTemplateRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateTaskTemplateRequest extends AbstractModel
     public $TaskTemplateDescription;
 
     /**
+     * @var array Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
+     */
+    public $Tags;
+
+    /**
      * @param string $TaskTemplateName Task template name
      * @param Task $TaskTemplateInfo Task template content with the same parameter requirements as the task
      * @param string $TaskTemplateDescription Task template description
+     * @param array $Tags Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
      */
     function __construct()
     {
@@ -73,6 +81,15 @@ class CreateTaskTemplateRequest extends AbstractModel
 
         if (array_key_exists("TaskTemplateDescription",$param) and $param["TaskTemplateDescription"] !== null) {
             $this->TaskTemplateDescription = $param["TaskTemplateDescription"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

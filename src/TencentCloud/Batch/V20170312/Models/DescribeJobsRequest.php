@@ -22,16 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getJobIds() Obtain Instance ID
  * @method void setJobIds(array $JobIds) Set Instance ID
- * @method array getFilters() Obtain Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
- * @method void setFilters(array $Filters) Set Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+ * @method array getFilters() Obtain Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
+ * @method void setFilters(array $Filters) Set Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Number of returned results
@@ -45,11 +53,15 @@ class DescribeJobsRequest extends AbstractModel
     public $JobIds;
 
     /**
-     * @var array Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+     * @var array Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
      */
     public $Filters;
 
@@ -65,11 +77,15 @@ class DescribeJobsRequest extends AbstractModel
 
     /**
      * @param array $JobIds Instance ID
-     * @param array $Filters Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+     * @param array $Filters Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
      * @param integer $Offset Offset
      * @param integer $Limit Number of returned results
      */

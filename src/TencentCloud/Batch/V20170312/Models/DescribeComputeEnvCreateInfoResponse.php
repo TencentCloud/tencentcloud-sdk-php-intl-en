@@ -42,6 +42,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setNotifications(array $Notifications) Set Notification information
  * @method integer getDesiredComputeNodeCount() Obtain Number of desired compute nodes
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) Set Number of desired compute nodes
+ * @method array getTags() Obtain Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTags(array $Tags) Set Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -99,6 +103,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DesiredComputeNodeCount;
 
     /**
+     * @var array Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Tags;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -115,6 +125,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $Authentications Authorization information
      * @param array $Notifications Notification information
      * @param integer $DesiredComputeNodeCount Number of desired compute nodes
+     * @param array $Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -189,6 +201,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DesiredComputeNodeCount",$param) and $param["DesiredComputeNodeCount"] !== null) {
             $this->DesiredComputeNodeCount = $param["DesiredComputeNodeCount"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

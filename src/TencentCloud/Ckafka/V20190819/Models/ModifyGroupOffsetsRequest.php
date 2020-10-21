@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShiftTimestamp(integer $ShiftTimestamp) Set Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
  * @method integer getOffset() Obtain Position of the offset that needs to be reset. When `strategy` is 2, this field is required
  * @method void setOffset(integer $Offset) Set Position of the offset that needs to be reset. When `strategy` is 2, this field is required
+ * @method array getPartitions() Obtain List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+ * @method void setPartitions(array $Partitions) Set List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
  */
 class ModifyGroupOffsetsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyGroupOffsetsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+     */
+    public $Partitions;
+
+    /**
      * @param string $InstanceId Kafka instance ID
      * @param string $Group Kafka consumer group
      * @param integer $Strategy Offset resetting policy. Meanings of the input parameters: 0: equivalent to the `shift-by` parameter, which indicates to shift the offset forward or backward by the value of the `shift`. 1: equivalent to `by-duration`, `to-datetime`, `to-earliest`, or `to-latest`, which indicates to move the offset to the specified timestamp. 2: equivalent to `to-offset`, which indicates to move the offset to the specified offset position
@@ -80,6 +87,7 @@ class ModifyGroupOffsetsRequest extends AbstractModel
      * @param integer $Shift When `strategy` is 0, this field is required. If it is above zero, the offset will be shifted backward by the value of the `shift`. If it is below zero, the offset will be shifted forward by the value of the `shift`. After a correct reset, the new offset should be (old_offset + shift). Note that if the new offset is smaller than the `earliest` parameter of the partition, it will be set to `earliest`, and if it is greater than the `latest` parameter of the partition, it will be set to `latest`
      * @param integer $ShiftTimestamp Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
      * @param integer $Offset Position of the offset that needs to be reset. When `strategy` is 2, this field is required
+     * @param array $Partitions List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyGroupOffsetsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Partitions",$param) and $param["Partitions"] !== null) {
+            $this->Partitions = $param["Partitions"];
         }
     }
 }

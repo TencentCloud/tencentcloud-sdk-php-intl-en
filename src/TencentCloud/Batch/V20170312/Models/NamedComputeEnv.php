@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) Set Inactive node processing policy. Default value: RECREATE, which means that instance resources will be re-created periodically for compute nodes where instance creation fails or is abnormally returned.
  * @method integer getResourceMaxRetryCount() Obtain When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
  * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) Set When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
+ * @method array getTags() Obtain Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+ * @method void setTags(array $Tags) Set Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
  */
 class NamedComputeEnv extends AbstractModel
 {
@@ -108,6 +110,11 @@ class NamedComputeEnv extends AbstractModel
     public $ResourceMaxRetryCount;
 
     /**
+     * @var array Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvName Compute environment name
      * @param integer $DesiredComputeNodeCount Number of desired compute nodes
      * @param string $EnvDescription Compute environment description
@@ -120,6 +127,7 @@ class NamedComputeEnv extends AbstractModel
      * @param Notification $Notifications Notification information
      * @param string $ActionIfComputeNodeInactive Inactive node processing policy. Default value: RECREATE, which means that instance resources will be re-created periodically for compute nodes where instance creation fails or is abnormally returned.
      * @param integer $ResourceMaxRetryCount When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
+     * @param array $Tags Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
      */
     function __construct()
     {
@@ -198,6 +206,15 @@ class NamedComputeEnv extends AbstractModel
 
         if (array_key_exists("ResourceMaxRetryCount",$param) and $param["ResourceMaxRetryCount"] !== null) {
             $this->ResourceMaxRetryCount = $param["ResourceMaxRetryCount"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

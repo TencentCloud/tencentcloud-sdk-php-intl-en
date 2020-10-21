@@ -22,14 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEnvIds() Obtain Compute environment ID
  * @method void setEnvIds(array $EnvIds) Set Compute environment ID
- * @method array getFilters() Obtain Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li>
- * @method void setFilters(array $Filters) Set Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li>
+ * @method array getFilters() Obtain Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter.
+ * @method void setFilters(array $Filters) Set Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter.
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Number of returned results
@@ -43,10 +53,15 @@ class DescribeComputeEnvsRequest extends AbstractModel
     public $EnvIds;
 
     /**
-     * @var array Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li>
+     * @var array Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter.
      */
     public $Filters;
 
@@ -62,10 +77,15 @@ class DescribeComputeEnvsRequest extends AbstractModel
 
     /**
      * @param array $EnvIds Compute environment ID
-     * @param array $Filters Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li>
+     * @param array $Filters Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter.
      * @param integer $Offset Offset
      * @param integer $Limit Number of returned results
      */
