@@ -18,7 +18,7 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Request parameter structure of LookUpEvents
+ * `LookUpEvents` request parameters structure
  *
  * @method integer getEndTime() Obtain End time
  * @method void setEndTime(integer $EndTime) Set End time
@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start time
  * @method array getLookupAttributes() Obtain Search criteria
  * @method void setLookupAttributes(array $LookupAttributes) Set Search criteria
- * @method integer getMaxResults() Obtain Maximum number of logs that can be returned
- * @method void setMaxResults(integer $MaxResults) Set Maximum number of logs that can be returned
+ * @method integer getMaxResults() Obtain Maximum number of logs to be returned
+ * @method void setMaxResults(integer $MaxResults) Set Maximum number of logs to be returned
+ * @method string getMode() Obtain CloudAudit mode. Valid values: standard, quick. Default value: standard
+ * @method void setMode(string $Mode) Set CloudAudit mode. Valid values: standard, quick. Default value: standard
  * @method string getNextToken() Obtain Credential for viewing more logs
  * @method void setNextToken(string $NextToken) Set Credential for viewing more logs
  */
@@ -49,9 +51,14 @@ class LookUpEventsRequest extends AbstractModel
     public $LookupAttributes;
 
     /**
-     * @var integer Maximum number of logs that can be returned
+     * @var integer Maximum number of logs to be returned
      */
     public $MaxResults;
+
+    /**
+     * @var string CloudAudit mode. Valid values: standard, quick. Default value: standard
+     */
+    public $Mode;
 
     /**
      * @var string Credential for viewing more logs
@@ -62,7 +69,8 @@ class LookUpEventsRequest extends AbstractModel
      * @param integer $EndTime End time
      * @param integer $StartTime Start time
      * @param array $LookupAttributes Search criteria
-     * @param integer $MaxResults Maximum number of logs that can be returned
+     * @param integer $MaxResults Maximum number of logs to be returned
+     * @param string $Mode CloudAudit mode. Valid values: standard, quick. Default value: standard
      * @param string $NextToken Credential for viewing more logs
      */
     function __construct()
@@ -97,6 +105,10 @@ class LookUpEventsRequest extends AbstractModel
 
         if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
             $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {

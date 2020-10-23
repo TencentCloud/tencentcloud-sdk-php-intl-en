@@ -18,28 +18,28 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Return parameter structure of CreateAudit
+ * `CreateAudit` response parameters structure
  *
- * @method integer getIsSuccess() Obtain Whether creation is successful.
- * @method void setIsSuccess(integer $IsSuccess) Set Whether creation is successful.
- * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+ * @method integer getIsSuccess() Obtain Indicates if the creation was successful
+ * @method void setIsSuccess(integer $IsSuccess) Set Indicates if the creation was successful
+ * @method string getRequestId() Obtain Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+ * @method void setRequestId(string $RequestId) Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
  */
 class CreateAuditResponse extends AbstractModel
 {
     /**
-     * @var integer Whether creation is successful.
+     * @var integer Indicates if the creation was successful
      */
     public $IsSuccess;
 
     /**
-     * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @var string Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public $RequestId;
 
     /**
-     * @param integer $IsSuccess Whether creation is successful.
-     * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @param integer $IsSuccess Indicates if the creation was successful
+     * @param string $RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     function __construct()
     {

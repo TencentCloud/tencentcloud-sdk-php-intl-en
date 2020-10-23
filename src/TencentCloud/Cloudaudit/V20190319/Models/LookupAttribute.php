@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Search criteria
  *
- * @method string getAttributeKey() Obtain AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
- * @method void setAttributeKey(string $AttributeKey) Set AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+ * @method string getAttributeKey() Obtain Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+ * @method void setAttributeKey(string $AttributeKey) Set Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
  * @method string getAttributeValue() Obtain AttributeValue
  * @method void setAttributeValue(string $AttributeValue) Set AttributeValue
  */
 class LookupAttribute extends AbstractModel
 {
     /**
-     * @var string AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+     * @var string Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
      */
     public $AttributeKey;
 
@@ -38,7 +38,7 @@ class LookupAttribute extends AbstractModel
     public $AttributeValue;
 
     /**
-     * @param string $AttributeKey AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+     * @param string $AttributeKey Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
      * @param string $AttributeValue AttributeValue
      */
     function __construct()

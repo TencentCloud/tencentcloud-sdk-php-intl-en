@@ -18,28 +18,28 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Return parameter structure of StartLogging
+ * `StartLogging` response parameters structure
  *
- * @method integer getIsSuccess() Obtain Whether it is successfully enabled
- * @method void setIsSuccess(integer $IsSuccess) Set Whether it is successfully enabled
- * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+ * @method integer getIsSuccess() Obtain Indicates if the tracking set was enabled successfully
+ * @method void setIsSuccess(integer $IsSuccess) Set Indicates if the tracking set was enabled successfully
+ * @method string getRequestId() Obtain Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+ * @method void setRequestId(string $RequestId) Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
  */
 class StartLoggingResponse extends AbstractModel
 {
     /**
-     * @var integer Whether it is successfully enabled
+     * @var integer Indicates if the tracking set was enabled successfully
      */
     public $IsSuccess;
 
     /**
-     * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @var string Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public $RequestId;
 
     /**
-     * @param integer $IsSuccess Whether it is successfully enabled
-     * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @param integer $IsSuccess Indicates if the tracking set was enabled successfully
+     * @param string $RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     function __construct()
     {

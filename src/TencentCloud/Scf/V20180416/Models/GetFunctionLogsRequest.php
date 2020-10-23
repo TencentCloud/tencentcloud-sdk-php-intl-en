@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
  * @method string getEndTime() Obtain Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
  * @method void setEndTime(string $EndTime) Set Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
- * @method LogSearchContext getSearchContext() Obtain Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
- * @method void setSearchContext(LogSearchContext $SearchContext) Set Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+ * @method LogSearchContext getSearchContext() Obtain This field is disused.
+ * @method void setSearchContext(LogSearchContext $SearchContext) Set This field is disused.
  */
 class GetFunctionLogsRequest extends AbstractModel
 {
@@ -103,7 +103,7 @@ class GetFunctionLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var LogSearchContext Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+     * @var LogSearchContext This field is disused.
      */
     public $SearchContext;
 
@@ -119,7 +119,7 @@ class GetFunctionLogsRequest extends AbstractModel
      * @param string $FunctionRequestId RequestId corresponding to the executed function
      * @param string $StartTime Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
      * @param string $EndTime Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
-     * @param LogSearchContext $SearchContext Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+     * @param LogSearchContext $SearchContext This field is disused.
      */
     function __construct()
     {

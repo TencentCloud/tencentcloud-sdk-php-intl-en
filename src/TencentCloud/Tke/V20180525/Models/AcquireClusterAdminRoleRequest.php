@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `ListCmqEnableRegion` request parameters structure
+ * AcquireClusterAdminRole request structure.
  *
- * @method string getWebsiteType() Obtain Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
- * @method void setWebsiteType(string $WebsiteType) Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
  */
-class ListCmqEnableRegionRequest extends AbstractModel
+class AcquireClusterAdminRoleRequest extends AbstractModel
 {
     /**
-     * @var string Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @var string Cluster ID
      */
-    public $WebsiteType;
+    public $ClusterId;
 
     /**
-     * @param string $WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @param string $ClusterId Cluster ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ListCmqEnableRegionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WebsiteType",$param) and $param["WebsiteType"] !== null) {
-            $this->WebsiteType = $param["WebsiteType"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

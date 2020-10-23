@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(string $EventId) Set Log ID
  * @method string getEventName() Obtain Event name
  * @method void setEventName(string $EventName) Set Event name
- * @method string getEventNameCn() Obtain Description of event name
- * @method void setEventNameCn(string $EventNameCn) Set Description of event name
+ * @method string getEventNameCn() Obtain Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
+ * @method void setEventNameCn(string $EventNameCn) Set Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
  * @method string getEventRegion() Obtain Event region
  * @method void setEventRegion(string $EventRegion) Set Event region
  * @method string getEventSource() Obtain Request source
@@ -42,8 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventTime(string $EventTime) Set Event time
  * @method string getRequestID() Obtain Request ID
  * @method void setRequestID(string $RequestID) Set Request ID
- * @method string getResourceTypeCn() Obtain Description of resource type
- * @method void setResourceTypeCn(string $ResourceTypeCn) Set Description of resource type
+ * @method string getResourceRegion() Obtain Resource region
+ * @method void setResourceRegion(string $ResourceRegion) Set Resource region
+ * @method string getResourceTypeCn() Obtain Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
+ * @method void setResourceTypeCn(string $ResourceTypeCn) Set Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
  * @method string getSecretId() Obtain Certificate ID
  * @method void setSecretId(string $SecretId) Set Certificate ID
  * @method string getSourceIPAddress() Obtain Source IP
@@ -84,7 +86,7 @@ class Event extends AbstractModel
     public $EventName;
 
     /**
-     * @var string Description of event name
+     * @var string Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
      */
     public $EventNameCn;
 
@@ -109,7 +111,12 @@ class Event extends AbstractModel
     public $RequestID;
 
     /**
-     * @var string Description of resource type
+     * @var string Resource region
+     */
+    public $ResourceRegion;
+
+    /**
+     * @var string Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
      */
     public $ResourceTypeCn;
 
@@ -135,12 +142,13 @@ class Event extends AbstractModel
      * @param integer $ErrorCode Authentication error code
      * @param string $EventId Log ID
      * @param string $EventName Event name
-     * @param string $EventNameCn Description of event name
+     * @param string $EventNameCn Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
      * @param string $EventRegion Event region
      * @param string $EventSource Request source
      * @param string $EventTime Event time
      * @param string $RequestID Request ID
-     * @param string $ResourceTypeCn Description of resource type
+     * @param string $ResourceRegion Resource region
+     * @param string $ResourceTypeCn Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
      * @param string $SecretId Certificate ID
      * @param string $SourceIPAddress Source IP
      * @param string $Username Username
@@ -201,6 +209,10 @@ class Event extends AbstractModel
 
         if (array_key_exists("RequestID",$param) and $param["RequestID"] !== null) {
             $this->RequestID = $param["RequestID"];
+        }
+
+        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
+            $this->ResourceRegion = $param["ResourceRegion"];
         }
 
         if (array_key_exists("ResourceTypeCn",$param) and $param["ResourceTypeCn"] !== null) {

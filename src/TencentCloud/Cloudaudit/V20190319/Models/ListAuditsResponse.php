@@ -18,28 +18,28 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Return parameter structure of ListAudits
+ * `ListAudits` response parameters structure
  *
- * @method array getAuditSummarys() Obtain Queries the summary set of tracking sets
- * @method void setAuditSummarys(array $AuditSummarys) Set Queries the summary set of tracking sets
- * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+ * @method array getAuditSummarys() Obtain Set of queried tracking set summaries
+ * @method void setAuditSummarys(array $AuditSummarys) Set Set of queried tracking set summaries
+ * @method string getRequestId() Obtain Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+ * @method void setRequestId(string $RequestId) Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
  */
 class ListAuditsResponse extends AbstractModel
 {
     /**
-     * @var array Queries the summary set of tracking sets
+     * @var array Set of queried tracking set summaries
      */
     public $AuditSummarys;
 
     /**
-     * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @var string Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public $RequestId;
 
     /**
-     * @param array $AuditSummarys Queries the summary set of tracking sets
-     * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @param array $AuditSummarys Set of queried tracking set summaries
+     * @param string $RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     function __construct()
     {

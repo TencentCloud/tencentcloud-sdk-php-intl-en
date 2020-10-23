@@ -18,20 +18,20 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Request parameter structure of GetAttributeKey
+ * `GetAttributeKey` request parameters structure
  *
- * @method string getWebsiteType() Obtain Website type. Value range: zh, en. Default value: zh
- * @method void setWebsiteType(string $WebsiteType) Set Website type. Value range: zh, en. Default value: zh
+ * @method string getWebsiteType() Obtain Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
+ * @method void setWebsiteType(string $WebsiteType) Set Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
  */
 class GetAttributeKeyRequest extends AbstractModel
 {
     /**
-     * @var string Website type. Value range: zh, en. Default value: zh
+     * @var string Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
      */
     public $WebsiteType;
 
     /**
-     * @param string $WebsiteType Website type. Value range: zh, en. Default value: zh
+     * @param string $WebsiteType Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
      */
     function __construct()
     {

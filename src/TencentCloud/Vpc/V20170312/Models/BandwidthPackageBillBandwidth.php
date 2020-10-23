@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `ListCmqEnableRegion` request parameters structure
+ * Current billable usage of a pay-as-you-go bandwidth package
  *
- * @method string getWebsiteType() Obtain Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
- * @method void setWebsiteType(string $WebsiteType) Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+ * @method integer getBandwidthUsage() Obtain Current billable usage, in Mbps
+ * @method void setBandwidthUsage(integer $BandwidthUsage) Set Current billable usage, in Mbps
  */
-class ListCmqEnableRegionRequest extends AbstractModel
+class BandwidthPackageBillBandwidth extends AbstractModel
 {
     /**
-     * @var string Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @var integer Current billable usage, in Mbps
      */
-    public $WebsiteType;
+    public $BandwidthUsage;
 
     /**
-     * @param string $WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @param integer $BandwidthUsage Current billable usage, in Mbps
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ListCmqEnableRegionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WebsiteType",$param) and $param["WebsiteType"] !== null) {
-            $this->WebsiteType = $param["WebsiteType"];
+        if (array_key_exists("BandwidthUsage",$param) and $param["BandwidthUsage"] !== null) {
+            $this->BandwidthUsage = $param["BandwidthUsage"];
         }
     }
 }

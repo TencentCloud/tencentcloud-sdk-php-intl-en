@@ -45,11 +45,11 @@ This API is completed asynchronously. If you need to query the async execution r
 * An ENI can only be bound with a limited number of IP addresses. For more information about resource limits, see <a href="/document/product/576/18527">ENI Use Limits</a>.
 * You can specify the private IP you want to apply for. It cannot be the primary IP, which already exists and cannot be modified. The private IP must be in the same subnet as the ENI, and cannot be occupied.
 * You can apply for more than one secondary private IP on the ENI. The API will return the specified number of secondary private IPs in the subnet IP range of the ENI.
- * @method Models\AssociateAddressResponse AssociateAddress(Models\AssociateAddressRequest $req) This API (AssociateAddress) is used to bind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short) to the specified private IP of an instance or ENI.
-* Essentially, binding an EIP to an instance (CVM) means binding an EIP to the primary private IP of the primary ENI on an instance.
-* When you bind an EIP to the primary private IP of the primary ENI, the previously bound public IP is automatically unbound and released.
-* To bind the EIP to the private IP of the specified ENI (not the primary private IP of the primary ENI), you must unbind the EIP before you can bind a new one.
-* To bind the EIP to a NAT gateway, use the API [EipBindNatGateway](https://intl.cloud.tencent.com/document/product/215/4093?from_cn_redirect=1)
+ * @method Models\AssociateAddressResponse AssociateAddress(Models\AssociateAddressRequest $req) This API is used to bind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short) to the specified private IP of an instance or ENI.
+* The EIP is essentially bound to the primary private IP of the primary ENI on a CVM instance.
+* The EIP binding will automatically unbind and release the public IP previously bound to the CVM instance.
+* To bind another EIP to the private IP of the specified ENI (not the primary private IP of the primary ENI), you must first unbind the EIP.
+* To bind an EIP to a NAT Gateway, use the [`AssociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/product/215/36722?from_cn_redirect=1) API.
 * EIP that is in arrears or blocked cannot be bound.
 * Only EIP in the UNBIND status can be bound.
  * @method Models\AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(Models\AssociateDirectConnectGatewayNatGatewayRequest $req) This API is used to bind a direct connect gateway with a NAT gateway,  and direct its default route to the NAT Gateway.
@@ -221,6 +221,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
  * @method Models\DescribeAddressesResponse DescribeAddresses(Models\DescribeAddressesRequest $req) This API (DescribeAddresses) is used to query the information of one or multiple [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
 * If the parameter is empty, a number (as specified by the `Limit`, the default value is 20) of EIPs will be returned.
  * @method Models\DescribeAssistantCidrResponse DescribeAssistantCidr(Models\DescribeAssistantCidrRequest $req) This API (DescribeAssistantCidr) is used to query a list of secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+ * @method Models\DescribeBandwidthPackageBillUsageResponse DescribeBandwidthPackageBillUsage(Models\DescribeBandwidthPackageBillUsageRequest $req) This API is used to query the current billable usage of a pay-as-you-go bandwidth package.
  * @method Models\DescribeBandwidthPackageQuotaResponse DescribeBandwidthPackageQuota(Models\DescribeBandwidthPackageQuotaRequest $req) This API is used to query the maximum and used number of bandwidth packages under the account in the current region.
  * @method Models\DescribeBandwidthPackageResourcesResponse DescribeBandwidthPackageResources(Models\DescribeBandwidthPackageResourcesRequest $req) This API is used to query resources in a bandwidth package based on the unique package ID. You can filter the result by specifying conditions and paginate the query results.
 
@@ -274,10 +275,10 @@ After unbinding the network instance, the corresponding routing policy will also
  * @method Models\DetachNetworkInterfaceResponse DetachNetworkInterface(Models\DetachNetworkInterfaceRequest $req) This API (DetachNetworkInterface) is used to unbind an ENI from a CVM.
  * @method Models\DisableCcnRoutesResponse DisableCcnRoutes(Models\DisableCcnRoutesRequest $req) This API (DisableCcnRoutes) is used to disable CCN routes that are already enabled.
  * @method Models\DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitor(Models\DisableGatewayFlowMonitorRequest $req) This API (DisableGatewayFlowMonitor) is used to disable gateway flow monitor.
- * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) This API (DisassociateAddress) is used to unbind [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
-* The unbinding of EIPs from CVM instances and ENIs is supported.
-* The unbinding of EIPs from NATs is not supported. For information about how to unbind an EIP from a NAT, see [EipUnBindNatGateway](https://intl.cloud.tencent.com/document/product/215/4092?from_cn_redirect=1).
-* You can only unbind EIPs in BIND or BIND_ENI status.
+ * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
+* This API supports unbinding an EIP from CVM instances and ENIs.
+* This API does not support unbinding an EIP from a NAT Gateway. To unbind an EIP from a NAT Gateway, use the [`DisassociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/api/215/36716?from_cn_redirect=1) API.
+* Only EIPs in BIND or BIND_ENI status can be unbound.
 * Blocked EIPs cannot be unbound.
  * @method Models\DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGateway(Models\DisassociateDirectConnectGatewayNatGatewayRequest $req) This API is used to unbind a direct connect gateway from a NAT Gateway. After unbinding, the direct connect gateway cannot access internet through the NAT Gateway.
  * @method Models\DisassociateNatGatewayAddressResponse DisassociateNatGatewayAddress(Models\DisassociateNatGatewayAddressRequest $req) This API (DisassociateNatGatewayAddress) is used to unbind an EIP from a NAT gateway.

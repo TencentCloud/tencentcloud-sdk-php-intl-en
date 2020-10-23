@@ -18,7 +18,7 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Request parameter structure of InquireAuditCredit
+ * `InquireAuditCredit` request parameters structure
  *
 
  */

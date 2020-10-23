@@ -18,7 +18,7 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Return parameter structure of LookUpEvents
+ * `LookUpEvents` response parameters structure
  *
  * @method array getEvents() Obtain Logset
  * @method void setEvents(array $Events) Set Logset
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListOver(boolean $ListOver) Set Whether the logset ends
  * @method string getNextToken() Obtain Credential for viewing more logs
  * @method void setNextToken(string $NextToken) Set Credential for viewing more logs
- * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+ * @method string getRequestId() Obtain Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+ * @method void setRequestId(string $RequestId) Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
  */
 class LookUpEventsResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class LookUpEventsResponse extends AbstractModel
     public $NextToken;
 
     /**
-     * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @var string Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class LookUpEventsResponse extends AbstractModel
      * @param array $Events Logset
      * @param boolean $ListOver Whether the logset ends
      * @param string $NextToken Credential for viewing more logs
-     * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @param string $RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     function __construct()
     {

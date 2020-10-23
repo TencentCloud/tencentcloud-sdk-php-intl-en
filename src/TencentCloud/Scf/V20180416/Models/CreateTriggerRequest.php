@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualifier(string $Qualifier) Set Function version
  * @method string getEnable() Obtain Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
  * @method void setEnable(string $Enable) Set Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+ * @method string getCustomArgument() Obtain Custom argument, supporting only the timer trigger.
+ * @method void setCustomArgument(string $CustomArgument) Set Custom argument, supporting only the timer trigger.
  */
 class CreateTriggerRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateTriggerRequest extends AbstractModel
     public $Enable;
 
     /**
+     * @var string Custom argument, supporting only the timer trigger.
+     */
+    public $CustomArgument;
+
+    /**
      * @param string $FunctionName Name of the function bound to the new trigger
      * @param string $TriggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
      * @param string $Type Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
@@ -80,6 +87,7 @@ class CreateTriggerRequest extends AbstractModel
      * @param string $Namespace Function namespace
      * @param string $Qualifier Function version
      * @param string $Enable Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+     * @param string $CustomArgument Custom argument, supporting only the timer trigger.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateTriggerRequest extends AbstractModel
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("CustomArgument",$param) and $param["CustomArgument"] !== null) {
+            $this->CustomArgument = $param["CustomArgument"];
         }
     }
 }

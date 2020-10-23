@@ -22,15 +22,15 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getCacheRules() Obtain Caching configuration rule array.
  * @method void setCacheRules(array $CacheRules) Set Caching configuration rule array.
- * @method string getFollowOrigin() Obtain Whether to follow origin server's `Cache-Control: max-age` configuration
-on: enable.
-off: disable.
-After this feature is enabled, resources that do not match the `CacheRules` rule will be cached on nodes according to the `max-age` value returned by the origin server, while resources that match the `CacheRules` rule will be cached on nodes according to the cache expiration time set in `CacheRules`.
+ * @method string getFollowOrigin() Obtain Whether to follow the `Cache-Control: max-age` configuration on the origin server (this feature is only available to users on the allowlist).
+on: enable
+off: disable
+If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFollowOrigin(string $FollowOrigin) Set Whether to follow origin server's `Cache-Control: max-age` configuration
-on: enable.
-off: disable.
-After this feature is enabled, resources that do not match the `CacheRules` rule will be cached on nodes according to the `max-age` value returned by the origin server, while resources that match the `CacheRules` rule will be cached on nodes according to the cache expiration time set in `CacheRules`.
+ * @method void setFollowOrigin(string $FollowOrigin) Set Whether to follow the `Cache-Control: max-age` configuration on the origin server (this feature is only available to users on the allowlist).
+on: enable
+off: disable
+If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class Cache extends AbstractModel
@@ -41,20 +41,20 @@ class Cache extends AbstractModel
     public $CacheRules;
 
     /**
-     * @var string Whether to follow origin server's `Cache-Control: max-age` configuration
-on: enable.
-off: disable.
-After this feature is enabled, resources that do not match the `CacheRules` rule will be cached on nodes according to the `max-age` value returned by the origin server, while resources that match the `CacheRules` rule will be cached on nodes according to the cache expiration time set in `CacheRules`.
+     * @var string Whether to follow the `Cache-Control: max-age` configuration on the origin server (this feature is only available to users on the allowlist).
+on: enable
+off: disable
+If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FollowOrigin;
 
     /**
      * @param array $CacheRules Caching configuration rule array.
-     * @param string $FollowOrigin Whether to follow origin server's `Cache-Control: max-age` configuration
-on: enable.
-off: disable.
-After this feature is enabled, resources that do not match the `CacheRules` rule will be cached on nodes according to the `max-age` value returned by the origin server, while resources that match the `CacheRules` rule will be cached on nodes according to the cache expiration time set in `CacheRules`.
+     * @param string $FollowOrigin Whether to follow the `Cache-Control: max-age` configuration on the origin server (this feature is only available to users on the allowlist).
+on: enable
+off: disable
+If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

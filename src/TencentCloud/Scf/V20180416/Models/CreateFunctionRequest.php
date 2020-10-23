@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration parameter, which is used for the function to mount the file system
  * @method integer getInitTimeout() Obtain Timeout period for function initialization
  * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization
+ * @method array getTags() Obtain Tag parameter of the function. It is an array of key-value pairs.
+ * @method void setTags(array $Tags) Set Tag parameter of the function. It is an array of key-value pairs.
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class CreateFunctionRequest extends AbstractModel
     public $InitTimeout;
 
     /**
+     * @var array Tag parameter of the function. It is an array of key-value pairs.
+     */
+    public $Tags;
+
+    /**
      * @param string $FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      * @param Code $Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
      * @param string $Handler Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
@@ -184,6 +191,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
      * @param CfsConfig $CfsConfig File system configuration parameter, which is used for the function to mount the file system
      * @param integer $InitTimeout Timeout period for function initialization
+     * @param array $Tags Tag parameter of the function. It is an array of key-value pairs.
      */
     function __construct()
     {
@@ -287,6 +295,15 @@ class CreateFunctionRequest extends AbstractModel
 
         if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
             $this->InitTimeout = $param["InitTimeout"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

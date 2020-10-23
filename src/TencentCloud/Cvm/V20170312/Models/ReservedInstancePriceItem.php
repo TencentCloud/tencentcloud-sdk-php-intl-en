@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOfferingType() Obtain Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
  * @method void setOfferingType(string $OfferingType) Set Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
- * @method float getFixedPrice() Obtain Total upfront price, in USD.
- * @method void setFixedPrice(float $FixedPrice) Set Total upfront price, in USD.
- * @method float getUsagePrice() Obtain Total usage price, in USD/hr.
- * @method void setUsagePrice(float $UsagePrice) Set Total usage price, in USD/hr.
+ * @method float getFixedPrice() Obtain Upfront payment, in USD.
+ * @method void setFixedPrice(float $FixedPrice) Set Upfront payment, in USD.
+ * @method float getUsagePrice() Obtain Subsequent unit price, in USD/hr.
+ * @method void setUsagePrice(float $UsagePrice) Set Subsequent unit price, in USD/hr.
  * @method string getReservedInstancesOfferingId() Obtain The ID of the reserved instance offering.
  * @method void setReservedInstancesOfferingId(string $ReservedInstancesOfferingId) Set The ID of the reserved instance offering.
  * @method string getZone() Obtain The availability zone in which the reserved instance can be purchased.
@@ -47,12 +47,12 @@ class ReservedInstancePriceItem extends AbstractModel
     public $OfferingType;
 
     /**
-     * @var float Total upfront price, in USD.
+     * @var float Upfront payment, in USD.
      */
     public $FixedPrice;
 
     /**
-     * @var float Total usage price, in USD/hr.
+     * @var float Subsequent unit price, in USD/hr.
      */
     public $UsagePrice;
 
@@ -80,8 +80,8 @@ Valid value: linux.
 
     /**
      * @param string $OfferingType Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
-     * @param float $FixedPrice Total upfront price, in USD.
-     * @param float $UsagePrice Total usage price, in USD/hr.
+     * @param float $FixedPrice Upfront payment, in USD.
+     * @param float $UsagePrice Subsequent unit price, in USD/hr.
      * @param string $ReservedInstancesOfferingId The ID of the reserved instance offering.
      * @param string $Zone The availability zone in which the reserved instance can be purchased.
      * @param integer $Duration The **validity** of the reserved instance in seconds, which is the purchased usage period. For example, `31536000`.

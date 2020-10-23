@@ -18,7 +18,7 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Request parameter structure of DeleteAudit
+ * `DeleteAudit` request parameters structure
  *
  * @method string getAuditName() Obtain Tracking set name
  * @method void setAuditName(string $AuditName) Set Tracking set name

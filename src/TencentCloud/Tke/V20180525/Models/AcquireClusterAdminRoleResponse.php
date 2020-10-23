@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `ListCmqEnableRegion` request parameters structure
+ * AcquireClusterAdminRole response structure.
  *
- * @method string getWebsiteType() Obtain Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
- * @method void setWebsiteType(string $WebsiteType) Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ListCmqEnableRegionRequest extends AbstractModel
+class AcquireClusterAdminRoleResponse extends AbstractModel
 {
     /**
-     * @var string Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $WebsiteType;
+    public $RequestId;
 
     /**
-     * @param string $WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ListCmqEnableRegionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WebsiteType",$param) and $param["WebsiteType"] !== null) {
-            $this->WebsiteType = $param["WebsiteType"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

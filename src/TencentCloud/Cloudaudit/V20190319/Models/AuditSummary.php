@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAuditName() Obtain Tracking set name
  * @method void setAuditName(string $AuditName) Set Tracking set name
- * @method integer getAuditStatus() Obtain Tracking set status. Value range: 1 (enabled), 0 (disabled)
- * @method void setAuditStatus(integer $AuditStatus) Set Tracking set status. Value range: 1 (enabled), 0 (disabled)
+ * @method integer getAuditStatus() Obtain Tracking set status. Valid values: 1: enabled, 0: disabled
+ * @method void setAuditStatus(integer $AuditStatus) Set Tracking set status. Valid values: 1: enabled, 0: disabled
  * @method string getCosBucketName() Obtain COS bucket name
  * @method void setCosBucketName(string $CosBucketName) Set COS bucket name
  * @method string getLogFilePrefix() Obtain Log prefix
@@ -37,7 +37,7 @@ class AuditSummary extends AbstractModel
     public $AuditName;
 
     /**
-     * @var integer Tracking set status. Value range: 1 (enabled), 0 (disabled)
+     * @var integer Tracking set status. Valid values: 1: enabled, 0: disabled
      */
     public $AuditStatus;
 
@@ -53,7 +53,7 @@ class AuditSummary extends AbstractModel
 
     /**
      * @param string $AuditName Tracking set name
-     * @param integer $AuditStatus Tracking set status. Value range: 1 (enabled), 0 (disabled)
+     * @param integer $AuditStatus Tracking set status. Valid values: 1: enabled, 0: disabled
      * @param string $CosBucketName COS bucket name
      * @param string $LogFilePrefix Log prefix
      */

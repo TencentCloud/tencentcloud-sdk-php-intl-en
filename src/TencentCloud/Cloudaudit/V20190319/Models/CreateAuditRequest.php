@@ -18,92 +18,116 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Request parameter structure of CreateAudit
+ * `CreateAudit` request parameters structure
  *
- * @method string getAuditName() Obtain Tracking set name, which can contain 3-128 ASCII letters (a-z; A-Z), digits (0-9), and underscores (_).
- * @method void setAuditName(string $AuditName) Set Tracking set name, which can contain 3-128 ASCII letters (a-z; A-Z), digits (0-9), and underscores (_).
- * @method string getCosBucketName() Obtain User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
- * @method void setCosBucketName(string $CosBucketName) Set User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
- * @method string getCosRegion() Obtain COS region. Supported regions can be queried using the ListCosEnableRegion API.
- * @method void setCosRegion(string $CosRegion) Set COS region. Supported regions can be queried using the ListCosEnableRegion API.
- * @method integer getIsCreateNewBucket() Obtain Whether to create a COS bucket. 1: yes; 0: no.
- * @method void setIsCreateNewBucket(integer $IsCreateNewBucket) Set Whether to create a COS bucket. 1: yes; 0: no.
- * @method integer getIsEnableCmqNotify() Obtain Whether to enable CMQ message notification. 1: yes; 0: no. Only CMQ queue service is currently supported. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
- * @method void setIsEnableCmqNotify(integer $IsEnableCmqNotify) Set Whether to enable CMQ message notification. 1: yes; 0: no. Only CMQ queue service is currently supported. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
- * @method integer getReadWriteAttribute() Obtain Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write).
- * @method void setReadWriteAttribute(integer $ReadWriteAttribute) Set Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write).
- * @method string getCmqQueueName() Obtain Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of IsEnableCmqNotify is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
- * @method void setCmqQueueName(string $CmqQueueName) Set Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of IsEnableCmqNotify is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
- * @method string getCmqRegion() Obtain Region where the queue is located. Supported CMQ regions can be queried using the ListCmqEnableRegion API. This field is required if the value of IsEnableCmqNotify is 1.
- * @method void setCmqRegion(string $CmqRegion) Set Region where the queue is located. Supported CMQ regions can be queried using the ListCmqEnableRegion API. This field is required if the value of IsEnableCmqNotify is 1.
- * @method integer getIsCreateNewQueue() Obtain Whether to create a queue. 1: yes; 0: no. This field is required if the value of IsEnableCmqNotify is 1.
- * @method void setIsCreateNewQueue(integer $IsCreateNewQueue) Set Whether to create a queue. 1: yes; 0: no. This field is required if the value of IsEnableCmqNotify is 1.
- * @method string getLogFilePrefix() Obtain Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9). It can be left empty and is the account ID by default.
- * @method void setLogFilePrefix(string $LogFilePrefix) Set Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9). It can be left empty and is the account ID by default.
+ * @method string getAuditName() Obtain Tracking set name, which can contain 3–128 ASCII letters (a–z; A–Z), digits (0–9), and underscores (_).
+ * @method void setAuditName(string $AuditName) Set Tracking set name, which can contain 3–128 ASCII letters (a–z; A–Z), digits (0–9), and underscores (_).
+ * @method string getCosBucketName() Obtain User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+ * @method void setCosBucketName(string $CosBucketName) Set User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+ * @method string getCosRegion() Obtain COS region. Supported regions can be queried through the `ListCosEnableRegion` API.
+ * @method void setCosRegion(string $CosRegion) Set COS region. Supported regions can be queried through the `ListCosEnableRegion` API.
+ * @method integer getIsCreateNewBucket() Obtain Whether to create a COS bucket. Valid values: 1: yes; 0: no.
+ * @method void setIsCreateNewBucket(integer $IsCreateNewBucket) Set Whether to create a COS bucket. Valid values: 1: yes; 0: no.
+ * @method integer getIsEnableCmqNotify() Obtain Whether to enable CMQ message notification. Valid values: 1: yes; 0: no. Currently, only CMQ is supported for message queue services. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
+ * @method void setIsEnableCmqNotify(integer $IsEnableCmqNotify) Set Whether to enable CMQ message notification. Valid values: 1: yes; 0: no. Currently, only CMQ is supported for message queue services. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
+ * @method integer getReadWriteAttribute() Obtain Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write).
+ * @method void setReadWriteAttribute(integer $ReadWriteAttribute) Set Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write).
+ * @method string getCmqQueueName() Obtain Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of `IsEnableCmqNotify` is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+ * @method void setCmqQueueName(string $CmqQueueName) Set Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of `IsEnableCmqNotify` is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+ * @method string getCmqRegion() Obtain Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
+ * @method void setCmqRegion(string $CmqRegion) Set Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
+ * @method integer getIsCreateNewQueue() Obtain Whether to create a queue. Valid values: 1: yes; 0: no. This field is required if the value of `IsEnableCmqNotify` is 1.
+ * @method void setIsCreateNewQueue(integer $IsCreateNewQueue) Set Whether to create a queue. Valid values: 1: yes; 0: no. This field is required if the value of `IsEnableCmqNotify` is 1.
+ * @method integer getIsEnableKmsEncry() Obtain Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+ * @method void setIsEnableKmsEncry(integer $IsEnableKmsEncry) Set Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+ * @method string getKeyId() Obtain Globally unique ID of the CMK. This value is required if it is not a newly created KMS element. It can be obtained via the `ListKeyAliasByRegion` API. CloudAudit will not verify the validity of the `KeyId`. Please enter it with caution to avoid consequent data loss.
+ * @method void setKeyId(string $KeyId) Set Globally unique ID of the CMK. This value is required if it is not a newly created KMS element. It can be obtained via the `ListKeyAliasByRegion` API. CloudAudit will not verify the validity of the `KeyId`. Please enter it with caution to avoid consequent data loss.
+ * @method string getKmsRegion() Obtain KMS region. Currently supported regions can be obtained via the `ListKmsEnableRegion` API. This must be the same as the COS region.
+ * @method void setKmsRegion(string $KmsRegion) Set KMS region. Currently supported regions can be obtained via the `ListKmsEnableRegion` API. This must be the same as the COS region.
+ * @method string getLogFilePrefix() Obtain Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9). It can be left empty and is set to the account ID by default.
+ * @method void setLogFilePrefix(string $LogFilePrefix) Set Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9). It can be left empty and is set to the account ID by default.
  */
 class CreateAuditRequest extends AbstractModel
 {
     /**
-     * @var string Tracking set name, which can contain 3-128 ASCII letters (a-z; A-Z), digits (0-9), and underscores (_).
+     * @var string Tracking set name, which can contain 3–128 ASCII letters (a–z; A–Z), digits (0–9), and underscores (_).
      */
     public $AuditName;
 
     /**
-     * @var string User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+     * @var string User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
      */
     public $CosBucketName;
 
     /**
-     * @var string COS region. Supported regions can be queried using the ListCosEnableRegion API.
+     * @var string COS region. Supported regions can be queried through the `ListCosEnableRegion` API.
      */
     public $CosRegion;
 
     /**
-     * @var integer Whether to create a COS bucket. 1: yes; 0: no.
+     * @var integer Whether to create a COS bucket. Valid values: 1: yes; 0: no.
      */
     public $IsCreateNewBucket;
 
     /**
-     * @var integer Whether to enable CMQ message notification. 1: yes; 0: no. Only CMQ queue service is currently supported. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
+     * @var integer Whether to enable CMQ message notification. Valid values: 1: yes; 0: no. Currently, only CMQ is supported for message queue services. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
      */
     public $IsEnableCmqNotify;
 
     /**
-     * @var integer Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write).
+     * @var integer Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write).
      */
     public $ReadWriteAttribute;
 
     /**
-     * @var string Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of IsEnableCmqNotify is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+     * @var string Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of `IsEnableCmqNotify` is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
      */
     public $CmqQueueName;
 
     /**
-     * @var string Region where the queue is located. Supported CMQ regions can be queried using the ListCmqEnableRegion API. This field is required if the value of IsEnableCmqNotify is 1.
+     * @var string Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
      */
     public $CmqRegion;
 
     /**
-     * @var integer Whether to create a queue. 1: yes; 0: no. This field is required if the value of IsEnableCmqNotify is 1.
+     * @var integer Whether to create a queue. Valid values: 1: yes; 0: no. This field is required if the value of `IsEnableCmqNotify` is 1.
      */
     public $IsCreateNewQueue;
 
     /**
-     * @var string Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9). It can be left empty and is the account ID by default.
+     * @var integer Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+     */
+    public $IsEnableKmsEncry;
+
+    /**
+     * @var string Globally unique ID of the CMK. This value is required if it is not a newly created KMS element. It can be obtained via the `ListKeyAliasByRegion` API. CloudAudit will not verify the validity of the `KeyId`. Please enter it with caution to avoid consequent data loss.
+     */
+    public $KeyId;
+
+    /**
+     * @var string KMS region. Currently supported regions can be obtained via the `ListKmsEnableRegion` API. This must be the same as the COS region.
+     */
+    public $KmsRegion;
+
+    /**
+     * @var string Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9). It can be left empty and is set to the account ID by default.
      */
     public $LogFilePrefix;
 
     /**
-     * @param string $AuditName Tracking set name, which can contain 3-128 ASCII letters (a-z; A-Z), digits (0-9), and underscores (_).
-     * @param string $CosBucketName User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
-     * @param string $CosRegion COS region. Supported regions can be queried using the ListCosEnableRegion API.
-     * @param integer $IsCreateNewBucket Whether to create a COS bucket. 1: yes; 0: no.
-     * @param integer $IsEnableCmqNotify Whether to enable CMQ message notification. 1: yes; 0: no. Only CMQ queue service is currently supported. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
-     * @param integer $ReadWriteAttribute Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write).
-     * @param string $CmqQueueName Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of IsEnableCmqNotify is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
-     * @param string $CmqRegion Region where the queue is located. Supported CMQ regions can be queried using the ListCmqEnableRegion API. This field is required if the value of IsEnableCmqNotify is 1.
-     * @param integer $IsCreateNewQueue Whether to create a queue. 1: yes; 0: no. This field is required if the value of IsEnableCmqNotify is 1.
-     * @param string $LogFilePrefix Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9). It can be left empty and is the account ID by default.
+     * @param string $AuditName Tracking set name, which can contain 3–128 ASCII letters (a–z; A–Z), digits (0–9), and underscores (_).
+     * @param string $CosBucketName User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+     * @param string $CosRegion COS region. Supported regions can be queried through the `ListCosEnableRegion` API.
+     * @param integer $IsCreateNewBucket Whether to create a COS bucket. Valid values: 1: yes; 0: no.
+     * @param integer $IsEnableCmqNotify Whether to enable CMQ message notification. Valid values: 1: yes; 0: no. Currently, only CMQ is supported for message queue services. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
+     * @param integer $ReadWriteAttribute Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write).
+     * @param string $CmqQueueName Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of `IsEnableCmqNotify` is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+     * @param string $CmqRegion Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
+     * @param integer $IsCreateNewQueue Whether to create a queue. Valid values: 1: yes; 0: no. This field is required if the value of `IsEnableCmqNotify` is 1.
+     * @param integer $IsEnableKmsEncry Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+     * @param string $KeyId Globally unique ID of the CMK. This value is required if it is not a newly created KMS element. It can be obtained via the `ListKeyAliasByRegion` API. CloudAudit will not verify the validity of the `KeyId`. Please enter it with caution to avoid consequent data loss.
+     * @param string $KmsRegion KMS region. Currently supported regions can be obtained via the `ListKmsEnableRegion` API. This must be the same as the COS region.
+     * @param string $LogFilePrefix Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9). It can be left empty and is set to the account ID by default.
      */
     function __construct()
     {
@@ -152,6 +176,18 @@ class CreateAuditRequest extends AbstractModel
 
         if (array_key_exists("IsCreateNewQueue",$param) and $param["IsCreateNewQueue"] !== null) {
             $this->IsCreateNewQueue = $param["IsCreateNewQueue"];
+        }
+
+        if (array_key_exists("IsEnableKmsEncry",$param) and $param["IsEnableKmsEncry"] !== null) {
+            $this->IsEnableKmsEncry = $param["IsEnableKmsEncry"];
+        }
+
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("KmsRegion",$param) and $param["KmsRegion"] !== null) {
+            $this->KmsRegion = $param["KmsRegion"];
         }
 
         if (array_key_exists("LogFilePrefix",$param) and $param["LogFilePrefix"] !== null) {

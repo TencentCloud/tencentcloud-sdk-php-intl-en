@@ -18,7 +18,7 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CMQ region information
+ * COS region information
  *
  * @method string getCosRegion() Obtain COS region
  * @method void setCosRegion(string $CosRegion) Set COS region

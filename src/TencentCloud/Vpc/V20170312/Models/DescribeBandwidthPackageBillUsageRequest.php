@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `ListCmqEnableRegion` request parameters structure
+ * DescribeBandwidthPackageBillUsage request structure.
  *
- * @method string getWebsiteType() Obtain Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
- * @method void setWebsiteType(string $WebsiteType) Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+ * @method string getBandwidthPackageId() Obtain Unique ID of the pay-as-you-go bandwidth package.
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Unique ID of the pay-as-you-go bandwidth package.
  */
-class ListCmqEnableRegionRequest extends AbstractModel
+class DescribeBandwidthPackageBillUsageRequest extends AbstractModel
 {
     /**
-     * @var string Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @var string Unique ID of the pay-as-you-go bandwidth package.
      */
-    public $WebsiteType;
+    public $BandwidthPackageId;
 
     /**
-     * @param string $WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @param string $BandwidthPackageId Unique ID of the pay-as-you-go bandwidth package.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ListCmqEnableRegionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WebsiteType",$param) and $param["WebsiteType"] !== null) {
-            $this->WebsiteType = $param["WebsiteType"];
+        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
+            $this->BandwidthPackageId = $param["BandwidthPackageId"];
         }
     }
 }

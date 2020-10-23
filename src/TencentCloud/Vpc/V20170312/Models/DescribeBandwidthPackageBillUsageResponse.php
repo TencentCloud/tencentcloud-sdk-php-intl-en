@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Scf\V20180416\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetFunctionLogs response structure.
+ * DescribeBandwidthPackageBillUsage response structure.
  *
- * @method integer getTotalCount() Obtain Total number of function logs
- * @method void setTotalCount(integer $TotalCount) Set Total number of function logs
- * @method array getData() Obtain Function log information
- * @method void setData(array $Data) Set Function log information
- * @method LogSearchContext getSearchContext() Obtain This field is disused.
- * @method void setSearchContext(LogSearchContext $SearchContext) Set This field is disused.
+ * @method array getBandwidthPackageBillBandwidthSet() Obtain Current billable usage.
+ * @method void setBandwidthPackageBillBandwidthSet(array $BandwidthPackageBillBandwidthSet) Set Current billable usage.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class GetFunctionLogsResponse extends AbstractModel
+class DescribeBandwidthPackageBillUsageResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of function logs
+     * @var array Current billable usage.
      */
-    public $TotalCount;
-
-    /**
-     * @var array Function log information
-     */
-    public $Data;
-
-    /**
-     * @var LogSearchContext This field is disused.
-     */
-    public $SearchContext;
+    public $BandwidthPackageBillBandwidthSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +38,7 @@ class GetFunctionLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of function logs
-     * @param array $Data Function log information
-     * @param LogSearchContext $SearchContext This field is disused.
+     * @param array $BandwidthPackageBillBandwidthSet Current billable usage.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,22 +54,13 @@ class GetFunctionLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new FunctionLog();
+        if (array_key_exists("BandwidthPackageBillBandwidthSet",$param) and $param["BandwidthPackageBillBandwidthSet"] !== null) {
+            $this->BandwidthPackageBillBandwidthSet = [];
+            foreach ($param["BandwidthPackageBillBandwidthSet"] as $key => $value){
+                $obj = new BandwidthPackageBillBandwidth();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->BandwidthPackageBillBandwidthSet, $obj);
             }
-        }
-
-        if (array_key_exists("SearchContext",$param) and $param["SearchContext"] !== null) {
-            $this->SearchContext = new LogSearchContext();
-            $this->SearchContext->deserialize($param["SearchContext"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

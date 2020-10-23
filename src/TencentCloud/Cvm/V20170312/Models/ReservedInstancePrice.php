@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Price of the reserved instance. Currently, RIs are only offered to beta users.
  *
- * @method float getOriginalFixedPrice() Obtain Original upfront price, in USD.
- * @method void setOriginalFixedPrice(float $OriginalFixedPrice) Set Original upfront price, in USD.
- * @method float getDiscountFixedPrice() Obtain Discounted upfront price, in USD.
- * @method void setDiscountFixedPrice(float $DiscountFixedPrice) Set Discounted upfront price, in USD.
- * @method float getOriginalUsagePrice() Obtain Original usage price, in USD/hr.
- * @method void setOriginalUsagePrice(float $OriginalUsagePrice) Set Original usage price, in USD/hr.
- * @method float getDiscountUsagePrice() Obtain Discounted usage price, in USD/hr.
- * @method void setDiscountUsagePrice(float $DiscountUsagePrice) Set Discounted usage price, in USD/hr.
+ * @method float getOriginalFixedPrice() Obtain Original upfront payment, in USD.
+ * @method void setOriginalFixedPrice(float $OriginalFixedPrice) Set Original upfront payment, in USD.
+ * @method float getDiscountFixedPrice() Obtain Discounted upfront payment, in USD.
+ * @method void setDiscountFixedPrice(float $DiscountFixedPrice) Set Discounted upfront payment, in USD.
+ * @method float getOriginalUsagePrice() Obtain Original subsequent unit price, in USD/hr.
+ * @method void setOriginalUsagePrice(float $OriginalUsagePrice) Set Original subsequent unit price, in USD/hr.
+ * @method float getDiscountUsagePrice() Obtain Discounted subsequent unit price, in USD/hr.
+ * @method void setDiscountUsagePrice(float $DiscountUsagePrice) Set Discounted subsequent unit price, in USD/hr.
  */
 class ReservedInstancePrice extends AbstractModel
 {
     /**
-     * @var float Original upfront price, in USD.
+     * @var float Original upfront payment, in USD.
      */
     public $OriginalFixedPrice;
 
     /**
-     * @var float Discounted upfront price, in USD.
+     * @var float Discounted upfront payment, in USD.
      */
     public $DiscountFixedPrice;
 
     /**
-     * @var float Original usage price, in USD/hr.
+     * @var float Original subsequent unit price, in USD/hr.
      */
     public $OriginalUsagePrice;
 
     /**
-     * @var float Discounted usage price, in USD/hr.
+     * @var float Discounted subsequent unit price, in USD/hr.
      */
     public $DiscountUsagePrice;
 
     /**
-     * @param float $OriginalFixedPrice Original upfront price, in USD.
-     * @param float $DiscountFixedPrice Discounted upfront price, in USD.
-     * @param float $OriginalUsagePrice Original usage price, in USD/hr.
-     * @param float $DiscountUsagePrice Discounted usage price, in USD/hr.
+     * @param float $OriginalFixedPrice Original upfront payment, in USD.
+     * @param float $DiscountFixedPrice Discounted upfront payment, in USD.
+     * @param float $OriginalUsagePrice Original subsequent unit price, in USD/hr.
+     * @param float $DiscountUsagePrice Discounted subsequent unit price, in USD/hr.
      */
     function __construct()
     {

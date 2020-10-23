@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Scf\V20180416\Models;
+namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetFunctionLogs response structure.
+ * DescribeIpStatus response structure.
  *
- * @method integer getTotalCount() Obtain Total number of function logs
- * @method void setTotalCount(integer $TotalCount) Set Total number of function logs
- * @method array getData() Obtain Function log information
- * @method void setData(array $Data) Set Function log information
- * @method LogSearchContext getSearchContext() Obtain This field is disused.
- * @method void setSearchContext(LogSearchContext $SearchContext) Set This field is disused.
+ * @method array getIps() Obtain Node list
+ * @method void setIps(array $Ips) Set Node list
+ * @method integer getTotalCount() Obtain Total number of nodes
+ * @method void setTotalCount(integer $TotalCount) Set Total number of nodes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class GetFunctionLogsResponse extends AbstractModel
+class DescribeIpStatusResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of function logs
+     * @var array Node list
+     */
+    public $Ips;
+
+    /**
+     * @var integer Total number of nodes
      */
     public $TotalCount;
-
-    /**
-     * @var array Function log information
-     */
-    public $Data;
-
-    /**
-     * @var LogSearchContext This field is disused.
-     */
-    public $SearchContext;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +45,8 @@ class GetFunctionLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of function logs
-     * @param array $Data Function log information
-     * @param LogSearchContext $SearchContext This field is disused.
+     * @param array $Ips Node list
+     * @param integer $TotalCount Total number of nodes
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,22 +62,17 @@ class GetFunctionLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new FunctionLog();
+        if (array_key_exists("Ips",$param) and $param["Ips"] !== null) {
+            $this->Ips = [];
+            foreach ($param["Ips"] as $key => $value){
+                $obj = new IpStatus();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->Ips, $obj);
             }
         }
 
-        if (array_key_exists("SearchContext",$param) and $param["SearchContext"] !== null) {
-            $this->SearchContext = new LogSearchContext();
-            $this->SearchContext->deserialize($param["SearchContext"]);
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

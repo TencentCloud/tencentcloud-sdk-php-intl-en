@@ -18,20 +18,20 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Request parameter structure of ListCosEnableRegion
+ * `ListCosEnableRegion` request parameters structure
  *
- * @method string getWebsiteType() Obtain Website type. zh: Mainland China (default); en: outside Mainland China.
- * @method void setWebsiteType(string $WebsiteType) Set Website type. zh: Mainland China (default); en: outside Mainland China.
+ * @method string getWebsiteType() Obtain Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+ * @method void setWebsiteType(string $WebsiteType) Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
  */
 class ListCosEnableRegionRequest extends AbstractModel
 {
     /**
-     * @var string Website type. zh: Mainland China (default); en: outside Mainland China.
+     * @var string Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
      */
     public $WebsiteType;
 
     /**
-     * @param string $WebsiteType Website type. zh: Mainland China (default); en: outside Mainland China.
+     * @param string $WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFpga(integer $Fpga) Set Number of FPGA cores.
  * @method integer getStorageBlock() Obtain Number of storage blocks.
  * @method void setStorageBlock(integer $StorageBlock) Set Number of storage blocks.
- * @method integer getNetworkCard() Obtain Number of ENIs.
- * @method void setNetworkCard(integer $NetworkCard) Set Number of ENIs.
+ * @method integer getNetworkCard() Obtain Number of NICs.
+ * @method void setNetworkCard(integer $NetworkCard) Set Number of NICs.
  * @method float getMaxBandwidth() Obtain Maximum bandwidth.
  * @method void setMaxBandwidth(float $MaxBandwidth) Set Maximum bandwidth.
  * @method string getFrequency() Obtain CPU frequency.
@@ -82,7 +82,7 @@ class ReservedInstanceTypeItem extends AbstractModel
     public $StorageBlock;
 
     /**
-     * @var integer Number of ENIs.
+     * @var integer Number of NICs.
      */
     public $NetworkCard;
 
@@ -128,7 +128,7 @@ class ReservedInstanceTypeItem extends AbstractModel
      * @param integer $Gpu Number of GPU cores.
      * @param integer $Fpga Number of FPGA cores.
      * @param integer $StorageBlock Number of storage blocks.
-     * @param integer $NetworkCard Number of ENIs.
+     * @param integer $NetworkCard Number of NICs.
      * @param float $MaxBandwidth Maximum bandwidth.
      * @param string $Frequency CPU frequency.
      * @param string $CpuModelName CPU type.

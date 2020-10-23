@@ -18,23 +18,23 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of AttributeKey value
+ * `AttributeKey` value details
  *
- * @method string getLabel() Obtain Chinese label
- * @method void setLabel(string $Label) Set Chinese label
+ * @method string getLabel() Obtain Tag
+ * @method void setLabel(string $Label) Set Tag
  * @method string getLabelType() Obtain Input box type
  * @method void setLabelType(string $LabelType) Set Input box type
  * @method integer getOrder() Obtain Display sort order
  * @method void setOrder(integer $Order) Set Display sort order
  * @method string getStarter() Obtain Initial display
  * @method void setStarter(string $Starter) Set Initial display
- * @method string getValue() Obtain AttributeKey value
- * @method void setValue(string $Value) Set AttributeKey value
+ * @method string getValue() Obtain `AttributeKey` value
+ * @method void setValue(string $Value) Set `AttributeKey` value
  */
 class AttributeKeyDetail extends AbstractModel
 {
     /**
-     * @var string Chinese label
+     * @var string Tag
      */
     public $Label;
 
@@ -54,16 +54,16 @@ class AttributeKeyDetail extends AbstractModel
     public $Starter;
 
     /**
-     * @var string AttributeKey value
+     * @var string `AttributeKey` value
      */
     public $Value;
 
     /**
-     * @param string $Label Chinese label
+     * @param string $Label Tag
      * @param string $LabelType Input box type
      * @param integer $Order Display sort order
      * @param string $Starter Initial display
-     * @param string $Value AttributeKey value
+     * @param string $Value `AttributeKey` value
      */
     function __construct()
     {

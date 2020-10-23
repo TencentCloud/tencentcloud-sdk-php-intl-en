@@ -18,28 +18,28 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Return parameter structure of GetAttributeKey
+ * `GetAttributeKey` response parameters structure
  *
- * @method array getAttributeKeyDetails() Obtain AttributeKey value range
- * @method void setAttributeKeyDetails(array $AttributeKeyDetails) Set AttributeKey value range
- * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+ * @method array getAttributeKeyDetails() Obtain Valid values range of `AttributeKey`
+ * @method void setAttributeKeyDetails(array $AttributeKeyDetails) Set Valid values range of `AttributeKey`
+ * @method string getRequestId() Obtain Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+ * @method void setRequestId(string $RequestId) Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
  */
 class GetAttributeKeyResponse extends AbstractModel
 {
     /**
-     * @var array AttributeKey value range
+     * @var array Valid values range of `AttributeKey`
      */
     public $AttributeKeyDetails;
 
     /**
-     * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @var string Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public $RequestId;
 
     /**
-     * @param array $AttributeKeyDetails AttributeKey value range
-     * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @param array $AttributeKeyDetails Valid values range of `AttributeKey`
+     * @param string $RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     function __construct()
     {

@@ -39,9 +39,10 @@ use TencentCloud\Ecdn\V20191012\Models as Models;
 + Number of 3xx status codes and details of status codes starting with 3
 + Number of 4xx status codes and details of status codes starting with 4
 + Number of 5xx status codes and details of status codes starting with 5
+ * @method Models\DescribeIpStatusResponse DescribeIpStatus(Models\DescribeIpStatusRequest $req) This API is used to query the detailed node information of the acceleration platform to which the domain name is connected.
  * @method Models\DescribePurgeQuotaResponse DescribePurgeQuota(Models\DescribePurgeQuotaRequest $req) This API is used to query the usage quota of the purge API.
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) This API is used to query the submission history of purge tasks and their execution progress.
- * @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) This API is used to batch purge cache directories. One purge task ID will be returned for each submission.
+ * @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) This API is used to purge cache directories in batches. One purge task ID will be returned for each submission.
  * @method Models\PurgeUrlsCacheResponse PurgeUrlsCache(Models\PurgeUrlsCacheRequest $req) This API is used to batch purge URLs. One purge task ID will be returned for each submission.
  * @method Models\StartEcdnDomainResponse StartEcdnDomain(Models\StartEcdnDomainRequest $req) This API is used to enable an acceleration domain name. The domain name to be enabled must be in deactivated status.
  * @method Models\StopEcdnDomainResponse StopEcdnDomain(Models\StopEcdnDomainRequest $req) This API is used to disable an acceleration domain name. The domain name to be disabled must be in enabled or deploying status.

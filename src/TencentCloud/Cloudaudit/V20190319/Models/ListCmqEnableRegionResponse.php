@@ -18,12 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Return parameter structure of ListCmqEnableRegion
+ * `ListCmqEnableRegion` response parameters structure
  *
  * @method array getEnableRegions() Obtain CloudAudit-enabled CMQ AZs
  * @method void setEnableRegions(array $EnableRegions) Set CloudAudit-enabled CMQ AZs
- * @method string getRequestId() Obtain Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
- * @method void setRequestId(string $RequestId) Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+ * @method string getRequestId() Obtain Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+ * @method void setRequestId(string $RequestId) Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
  */
 class ListCmqEnableRegionResponse extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ListCmqEnableRegionResponse extends AbstractModel
     public $EnableRegions;
 
     /**
-     * @var string Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @var string Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public $RequestId;
 
     /**
      * @param array $EnableRegions CloudAudit-enabled CMQ AZs
-     * @param string $RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * @param string $RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     function __construct()
     {
