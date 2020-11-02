@@ -42,6 +42,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getFilterRules() Obtain IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setFilterRules(array $FilterRules) Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class IpFilter extends AbstractModel
 {
@@ -69,6 +73,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Filters;
 
     /**
+     * @var array IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $FilterRules;
+
+    /**
      * @param string $Switch IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
@@ -80,6 +90,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -104,6 +116,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = $param["Filters"];
+        }
+
+        if (array_key_exists("FilterRules",$param) and $param["FilterRules"] !== null) {
+            $this->FilterRules = [];
+            foreach ($param["FilterRules"] as $key => $value){
+                $obj = new IpFilterPathRule();
+                $obj->deserialize($value);
+                array_push($this->FilterRules, $obj);
+            }
         }
     }
 }

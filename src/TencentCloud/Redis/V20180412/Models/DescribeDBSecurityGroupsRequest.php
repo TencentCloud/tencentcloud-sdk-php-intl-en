@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBSecurityGroups request structure.
  *
- * @method string getProduct() Obtain Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
- * @method void setProduct(string $Product) Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+ * @method string getProduct() Obtain Database engine name. For this API, its value is `redis`.
+ * @method void setProduct(string $Product) Set Database engine name. For this API, its value is `redis`.
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * @var string Database engine name. For this API, its value is `redis`.
      */
     public $Product;
 
@@ -38,7 +38,7 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * @param string $Product Database engine name. For this API, its value is `redis`.
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
      */
     function __construct()

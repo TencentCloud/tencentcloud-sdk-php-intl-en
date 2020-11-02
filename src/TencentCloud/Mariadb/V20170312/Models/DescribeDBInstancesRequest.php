@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExclusterType(integer $ExclusterType) Set Instance cluster type. 1: non-dedicated cluster, 2: dedicated cluster, 0: all
  * @method array getExclusterIds() Obtain Filters instances by dedicated cluster ID in the format of `dbdc-4ih6uct9`
  * @method void setExclusterIds(array $ExclusterIds) Set Filters instances by dedicated cluster ID in the format of `dbdc-4ih6uct9`
+ * @method array getTagKeys() Obtain Tag key used in queries
+ * @method void setTagKeys(array $TagKeys) Set Tag key used in queries
+ * @method string getFilterInstanceType() Obtain Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+ * @method void setFilterInstanceType(string $FilterInstanceType) Set Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -129,6 +133,16 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ExclusterIds;
 
     /**
+     * @var array Tag key used in queries
+     */
+    public $TagKeys;
+
+    /**
+     * @var string Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+     */
+    public $FilterInstanceType;
+
+    /**
      * @param array $InstanceIds Queries by instance ID or IDs. Instance ID is in the format of `tdsql-ow728lmc`. Up to 100 instances can be queried in one request.
      * @param string $SearchName Search field name. Valid values: instancename (search by instance name), vip (search by private IP), all (search by instance ID, instance name, and private IP).
      * @param string $SearchKey Search keyword. Fuzzy search is supported. Multiple keywords should be separated by line breaks (`\n`).
@@ -144,6 +158,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param boolean $IsFilterExcluster Identifies whether to use the `ExclusterType` field. false: no, true: yes
      * @param integer $ExclusterType Instance cluster type. 1: non-dedicated cluster, 2: dedicated cluster, 0: all
      * @param array $ExclusterIds Filters instances by dedicated cluster ID in the format of `dbdc-4ih6uct9`
+     * @param array $TagKeys Tag key used in queries
+     * @param string $FilterInstanceType Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("ExclusterIds",$param) and $param["ExclusterIds"] !== null) {
             $this->ExclusterIds = $param["ExclusterIds"];
+        }
+
+        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
+            $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("FilterInstanceType",$param) and $param["FilterInstanceType"] !== null) {
+            $this->FilterInstanceType = $param["FilterInstanceType"];
         }
     }
 }

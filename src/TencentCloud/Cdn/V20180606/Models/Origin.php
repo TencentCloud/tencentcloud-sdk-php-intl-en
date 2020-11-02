@@ -101,6 +101,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBackupServerName(string $BackupServerName) Set Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getBasePath() Obtain 
+ * @method void setBasePath(string $BasePath) Set 
+ * @method array getPathRules() Obtain Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setPathRules(array $PathRules) Set Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class Origin extends AbstractModel
 {
@@ -174,6 +180,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BackupServerName;
 
     /**
+     * @var string 
+     */
+    public $BasePath;
+
+    /**
+     * @var array Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $PathRules;
+
+    /**
      * @param array $Origins Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -211,6 +228,9 @@ When modifying BackupOrigins, you need to enter the corresponding BackupOriginTy
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $BasePath 
+     * @param array $PathRules Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -255,6 +275,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BackupServerName",$param) and $param["BackupServerName"] !== null) {
             $this->BackupServerName = $param["BackupServerName"];
+        }
+
+        if (array_key_exists("BasePath",$param) and $param["BasePath"] !== null) {
+            $this->BasePath = $param["BasePath"];
+        }
+
+        if (array_key_exists("PathRules",$param) and $param["PathRules"] !== null) {
+            $this->PathRules = [];
+            foreach ($param["PathRules"] as $key => $value){
+                $obj = new PathRule();
+                $obj->deserialize($value);
+                array_push($this->PathRules, $obj);
+            }
         }
     }
 }

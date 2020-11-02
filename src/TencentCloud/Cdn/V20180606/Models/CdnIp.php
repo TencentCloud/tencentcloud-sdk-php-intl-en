@@ -42,6 +42,10 @@ unknown: service region unknown
 mainland: cache node in Mainland China
 overseas: cache node outside Mainland China
 unknown: service region unknown
+ * @method string getCity() Obtain City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setCity(string $City) Set City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class CdnIp extends AbstractModel
 {
@@ -77,6 +81,12 @@ unknown: service region unknown
     public $Area;
 
     /**
+     * @var string City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $City;
+
+    /**
      * @param string $Ip IP to be queried
      * @param string $Platform IP ownership:
 yes: Tencent Cloud CDN node
@@ -88,6 +98,8 @@ unknown: unknown node location
 mainland: cache node in Mainland China
 overseas: cache node outside Mainland China
 unknown: service region unknown
+     * @param string $City City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -125,6 +137,10 @@ unknown: service region unknown
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("City",$param) and $param["City"] !== null) {
+            $this->City = $param["City"];
         }
     }
 }

@@ -48,16 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(float $Size) Set Instance capacity in MB
  * @method float getSizeUsed() Obtain This field has been disused
  * @method void setSizeUsed(float $SizeUsed) Set This field has been disused
- * @method integer getType() Obtain Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
- * @method void setType(integer $Type) Set Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
+ * @method integer getType() Obtain Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
+ * @method void setType(integer $Type) Set Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
  * @method integer getAutoRenewFlag() Obtain Whether to set the auto-renewal flag for an instance. 1: auto-renewal set; 0: auto-renewal not set
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether to set the auto-renewal flag for an instance. 1: auto-renewal set; 0: auto-renewal not set
  * @method string getDeadlineTime() Obtain Instance expiration time
  * @method void setDeadlineTime(string $DeadlineTime) Set Instance expiration time
  * @method string getEngine() Obtain Engine: Redis community edition, Tencent Cloud CKV
  * @method void setEngine(string $Engine) Set Engine: Redis community edition, Tencent Cloud CKV
- * @method string getProductType() Obtain Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
- * @method void setProductType(string $ProductType) Set Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+ * @method string getProductType() Obtain Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
+ * @method void setProductType(string $ProductType) Set Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
  * @method string getUniqVpcId() Obtain VPC ID, such as vpc-fk33jsf43kgv
  * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID, such as vpc-fk33jsf43kgv
  * @method string getUniqSubnetId() Obtain VPC subnet ID, such as subnet-fd3j6l35mm0
@@ -208,7 +208,7 @@ class InstanceSet extends AbstractModel
     public $SizeUsed;
 
     /**
-     * @var integer Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
+     * @var integer Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
      */
     public $Type;
 
@@ -228,7 +228,7 @@ class InstanceSet extends AbstractModel
     public $Engine;
 
     /**
-     * @var string Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+     * @var string Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
      */
     public $ProductType;
 
@@ -389,11 +389,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Createtime Instance creation time
      * @param float $Size Instance capacity in MB
      * @param float $SizeUsed This field has been disused
-     * @param integer $Type Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
+     * @param integer $Type Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
      * @param integer $AutoRenewFlag Whether to set the auto-renewal flag for an instance. 1: auto-renewal set; 0: auto-renewal not set
      * @param string $DeadlineTime Instance expiration time
      * @param string $Engine Engine: Redis community edition, Tencent Cloud CKV
-     * @param string $ProductType Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+     * @param string $ProductType Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
      * @param string $UniqVpcId VPC ID, such as vpc-fk33jsf43kgv
      * @param string $UniqSubnetId VPC subnet ID, such as subnet-fd3j6l35mm0
      * @param integer $BillingMode Billing method. 0: pay-as-you-go; 1: monthly subscription

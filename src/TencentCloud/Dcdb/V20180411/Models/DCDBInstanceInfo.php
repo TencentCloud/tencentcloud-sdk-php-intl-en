@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getAppId() Obtain AppID
- * @method void setAppId(integer $AppId) Set AppID
+ * @method integer getAppId() Obtain Application ID
+ * @method void setAppId(integer $AppId) Set Application ID
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getRegion() Obtain Region
@@ -58,12 +58,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodEndTime(string $PeriodEndTime) Set Expiration time
  * @method string getIsolatedTimestamp() Obtain Isolation time
  * @method void setIsolatedTimestamp(string $IsolatedTimestamp) Set Isolation time
- * @method string getUin() Obtain UIN
- * @method void setUin(string $Uin) Set UIN
+ * @method string getUin() Obtain Account ID
+ * @method void setUin(string $Uin) Set Account ID
  * @method array getShardDetail() Obtain Shard details
  * @method void setShardDetail(array $ShardDetail) Set Shard details
- * @method integer getNodeCount() Obtain Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
- * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+ * @method integer getNodeCount() Obtain Number of nodes. 2: one master and one slave; 3: one master and two slaves
+ * @method void setNodeCount(integer $NodeCount) Set Number of nodes. 2: one master and one slave; 3: one master and two slaves
  * @method integer getIsTmp() Obtain Temporary instance flag. 0: non-temporary instance
  * @method void setIsTmp(integer $IsTmp) Set Temporary instance flag. 0: non-temporary instance
  * @method string getExclusterId() Obtain Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
@@ -100,6 +100,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setIsAuditSupported(integer $IsAuditSupported) Set Whether the instance supports audit. 1: yes; 0: no
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
+ * @method integer getIpv6Flag() Obtain IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIpv6Flag(integer $Ipv6Flag) Set IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getVipv6() Obtain Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setVipv6(string $Vipv6) Set Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getWanVipv6() Obtain Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setWanVipv6(string $WanVipv6) Set Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getWanPortIpv6() Obtain Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setWanPortIpv6(integer $WanPortIpv6) Set Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getWanStatusIpv6() Obtain Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setWanStatusIpv6(integer $WanStatusIpv6) Set Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDcnFlag() Obtain DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDcnFlag(integer $DcnFlag) Set DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDcnStatus() Obtain DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDcnStatus(integer $DcnStatus) Set DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDcnDstNum() Obtain The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDcnDstNum(integer $DcnDstNum) Set The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -114,7 +146,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer AppID
+     * @var integer Application ID
      */
     public $AppId;
 
@@ -199,7 +231,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $IsolatedTimestamp;
 
     /**
-     * @var string UIN
+     * @var string Account ID
      */
     public $Uin;
 
@@ -209,7 +241,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $ShardDetail;
 
     /**
-     * @var integer Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+     * @var integer Number of nodes. 2: one master and one slave; 3: one master and two slaves
      */
     public $NodeCount;
 
@@ -300,9 +332,57 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Cpu;
 
     /**
+     * @var integer IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Ipv6Flag;
+
+    /**
+     * @var string Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Vipv6;
+
+    /**
+     * @var string Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $WanVipv6;
+
+    /**
+     * @var integer Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $WanPortIpv6;
+
+    /**
+     * @var integer Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $WanStatusIpv6;
+
+    /**
+     * @var integer DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DcnFlag;
+
+    /**
+     * @var integer DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DcnStatus;
+
+    /**
+     * @var integer The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DcnDstNum;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
-     * @param integer $AppId AppID
+     * @param integer $AppId Application ID
      * @param integer $ProjectId Project ID
      * @param string $Region Region
      * @param string $Zone AZ
@@ -319,9 +399,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ShardCount Number of shards
      * @param string $PeriodEndTime Expiration time
      * @param string $IsolatedTimestamp Isolation time
-     * @param string $Uin UIN
+     * @param string $Uin Account ID
      * @param array $ShardDetail Shard details
-     * @param integer $NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+     * @param integer $NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
      * @param integer $IsTmp Temporary instance flag. 0: non-temporary instance
      * @param string $ExclusterId Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
      * @param string $UniqueVpcId VPC ID in string type
@@ -340,6 +420,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $WanStatus Public network access status. 0: not enabled; 1: enabled; 2: disabled; 3: enabling
      * @param integer $IsAuditSupported Whether the instance supports audit. 1: yes; 0: no
      * @param integer $Cpu Number of CPU cores
+     * @param integer $Ipv6Flag IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Vipv6 Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $WanVipv6 Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $WanPortIpv6 Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $WanStatusIpv6 Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DcnFlag DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DcnStatus DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DcnDstNum The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -513,6 +609,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
+        }
+
+        if (array_key_exists("Vipv6",$param) and $param["Vipv6"] !== null) {
+            $this->Vipv6 = $param["Vipv6"];
+        }
+
+        if (array_key_exists("WanVipv6",$param) and $param["WanVipv6"] !== null) {
+            $this->WanVipv6 = $param["WanVipv6"];
+        }
+
+        if (array_key_exists("WanPortIpv6",$param) and $param["WanPortIpv6"] !== null) {
+            $this->WanPortIpv6 = $param["WanPortIpv6"];
+        }
+
+        if (array_key_exists("WanStatusIpv6",$param) and $param["WanStatusIpv6"] !== null) {
+            $this->WanStatusIpv6 = $param["WanStatusIpv6"];
+        }
+
+        if (array_key_exists("DcnFlag",$param) and $param["DcnFlag"] !== null) {
+            $this->DcnFlag = $param["DcnFlag"];
+        }
+
+        if (array_key_exists("DcnStatus",$param) and $param["DcnStatus"] !== null) {
+            $this->DcnStatus = $param["DcnStatus"];
+        }
+
+        if (array_key_exists("DcnDstNum",$param) and $param["DcnDstNum"] !== null) {
+            $this->DcnDstNum = $param["DcnDstNum"];
         }
     }
 }

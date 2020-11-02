@@ -104,6 +104,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setIsEncryptSupported(integer $IsEncryptSupported) Set Whether data encryption is supported. 1: yes, 0: no
  * @method integer getCpu() Obtain Number of CPU cores of instance
  * @method void setCpu(integer $Cpu) Set Number of CPU cores of instance
+ * @method integer getIpv6Flag() Obtain IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIpv6Flag(integer $Ipv6Flag) Set IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getVipv6() Obtain Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setVipv6(string $Vipv6) Set Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getWanVipv6() Obtain Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setWanVipv6(string $WanVipv6) Set Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getWanPortIpv6() Obtain Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setWanPortIpv6(integer $WanPortIpv6) Set Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getWanStatusIpv6() Obtain Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setWanStatusIpv6(integer $WanStatusIpv6) Set Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDbEngine() Obtain Database engine
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDbEngine(string $DbEngine) Set Database engine
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDbVersion() Obtain Database version
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDbVersion(string $DbVersion) Set Database version
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDcnFlag() Obtain DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDcnFlag(integer $DcnFlag) Set DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDcnStatus() Obtain DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDcnStatus(integer $DcnStatus) Set DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDcnDstNum() Obtain The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDcnDstNum(integer $DcnDstNum) Set The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -306,6 +346,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Cpu;
 
     /**
+     * @var integer IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Ipv6Flag;
+
+    /**
+     * @var string Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Vipv6;
+
+    /**
+     * @var string Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $WanVipv6;
+
+    /**
+     * @var integer Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $WanPortIpv6;
+
+    /**
+     * @var integer Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $WanStatusIpv6;
+
+    /**
+     * @var string Database engine
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DbEngine;
+
+    /**
+     * @var string Database version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DbVersion;
+
+    /**
+     * @var integer DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DcnFlag;
+
+    /**
+     * @var integer DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DcnStatus;
+
+    /**
+     * @var integer The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DcnDstNum;
+
+    /**
      * @param string $InstanceId Instance ID, which uniquely identifies a TDSQL instance
      * @param string $InstanceName Customizable instance name
      * @param integer $AppId Application ID of instance
@@ -348,6 +448,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Machine Model
      * @param integer $IsEncryptSupported Whether data encryption is supported. 1: yes, 0: no
      * @param integer $Cpu Number of CPU cores of instance
+     * @param integer $Ipv6Flag IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Vipv6 Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $WanVipv6 Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $WanPortIpv6 Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $WanStatusIpv6 Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DbEngine Database engine
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DbVersion Database version
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DcnFlag DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DcnStatus DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DcnDstNum The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -516,6 +636,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
+        }
+
+        if (array_key_exists("Vipv6",$param) and $param["Vipv6"] !== null) {
+            $this->Vipv6 = $param["Vipv6"];
+        }
+
+        if (array_key_exists("WanVipv6",$param) and $param["WanVipv6"] !== null) {
+            $this->WanVipv6 = $param["WanVipv6"];
+        }
+
+        if (array_key_exists("WanPortIpv6",$param) and $param["WanPortIpv6"] !== null) {
+            $this->WanPortIpv6 = $param["WanPortIpv6"];
+        }
+
+        if (array_key_exists("WanStatusIpv6",$param) and $param["WanStatusIpv6"] !== null) {
+            $this->WanStatusIpv6 = $param["WanStatusIpv6"];
+        }
+
+        if (array_key_exists("DbEngine",$param) and $param["DbEngine"] !== null) {
+            $this->DbEngine = $param["DbEngine"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
+        }
+
+        if (array_key_exists("DcnFlag",$param) and $param["DcnFlag"] !== null) {
+            $this->DcnFlag = $param["DcnFlag"];
+        }
+
+        if (array_key_exists("DcnStatus",$param) and $param["DcnStatus"] !== null) {
+            $this->DcnStatus = $param["DcnStatus"];
+        }
+
+        if (array_key_exists("DcnDstNum",$param) and $param["DcnDstNum"] !== null) {
+            $this->DcnDstNum = $param["DcnDstNum"];
         }
     }
 }
