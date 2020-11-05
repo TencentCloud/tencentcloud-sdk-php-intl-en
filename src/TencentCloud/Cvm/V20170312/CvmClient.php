@@ -240,6 +240,11 @@ class CvmClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cvm";
+
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
     /**

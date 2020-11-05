@@ -47,6 +47,11 @@ class GseClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "gse";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-11-12";
 
     /**

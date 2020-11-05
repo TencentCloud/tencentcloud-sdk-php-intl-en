@@ -156,6 +156,11 @@ class AsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "as";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-19";
 
     /**

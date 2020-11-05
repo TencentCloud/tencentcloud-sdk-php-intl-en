@@ -44,6 +44,11 @@ class MdpClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "mdp";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-05-27";
 
     /**

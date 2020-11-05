@@ -184,6 +184,11 @@ class LiveClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "live";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-08-01";
 
     /**

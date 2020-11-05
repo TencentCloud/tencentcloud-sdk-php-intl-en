@@ -56,6 +56,11 @@ class MdlClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "mdl";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-03-26";
 
     /**

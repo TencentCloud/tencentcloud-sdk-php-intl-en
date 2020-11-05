@@ -51,6 +51,11 @@ class DcClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "dc";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-10";
 
     /**

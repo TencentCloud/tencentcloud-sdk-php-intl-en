@@ -36,6 +36,11 @@ class FaceidClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "faceid";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-01";
 
     /**

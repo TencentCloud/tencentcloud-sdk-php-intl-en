@@ -37,6 +37,11 @@ class DmsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "dms";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-08-19";
 
     /**

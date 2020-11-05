@@ -73,6 +73,11 @@ class SqlserverClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "sqlserver";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-28";
 
     /**

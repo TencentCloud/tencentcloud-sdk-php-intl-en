@@ -150,6 +150,11 @@ class CdbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cdb";
+
+    /**
+     * @var string
+     */
     protected $version = "2017-03-20";
 
     /**
