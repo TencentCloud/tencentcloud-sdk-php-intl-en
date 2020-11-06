@@ -37,6 +37,7 @@ use TencentCloud\Common\AbstractModel;
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
  * @method void setTaskStatus(string $TaskStatus) Set Instance task status. Valid values:
 "UNDEFINED" - undefined;
 "INITIAL" - initializing;
@@ -46,6 +47,7 @@ use TencentCloud\Common\AbstractModel;
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
  * @method string getTaskType() Obtain Instance task type. Valid values:
 "ROLLBACK" - rolling back a database;
 "SQL OPERATION" - performing an SQL operation;
@@ -115,6 +117,7 @@ class TaskDetail extends AbstractModel
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
      */
     public $TaskStatus;
 
@@ -170,6 +173,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
      * @param string $TaskType Instance task type. Valid values:
 "ROLLBACK" - rolling back a database;
 "SQL OPERATION" - performing an SQL operation;

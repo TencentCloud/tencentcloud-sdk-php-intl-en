@@ -34,6 +34,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setKeyRegion(string $KeyRegion) Set Key region.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDefaultKmsRegion() Obtain The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+ * @method void setDefaultKmsRegion(string $DefaultKmsRegion) Set The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -67,6 +71,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $KeyRegion;
 
     /**
+     * @var string The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public $DefaultKmsRegion;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -79,6 +89,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $KeyRegion Key region.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DefaultKmsRegion The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -112,6 +124,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("KeyRegion",$param) and $param["KeyRegion"] !== null) {
             $this->KeyRegion = $param["KeyRegion"];
+        }
+
+        if (array_key_exists("DefaultKmsRegion",$param) and $param["DefaultKmsRegion"] !== null) {
+            $this->DefaultKmsRegion = $param["DefaultKmsRegion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
