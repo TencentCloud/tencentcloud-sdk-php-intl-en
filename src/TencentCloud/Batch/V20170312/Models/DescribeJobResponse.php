@@ -48,8 +48,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setTags(array $Tags) Set Tag list bound to the job.
 Note: This field may return `null`, indicating that no valid value was found.
- * @method string getNextAction() Obtain 
- * @method void setNextAction(string $NextAction) Set 
+ * @method string getNextAction() Obtain Next action
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setNextAction(string $NextAction) Set Next action
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -122,7 +124,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Tags;
 
     /**
-     * @var string 
+     * @var string Next action
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $NextAction;
 
@@ -146,7 +149,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $StateReason Instance failure reason
      * @param array $Tags Tag list bound to the job.
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $NextAction 
+     * @param string $NextAction Next action
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
