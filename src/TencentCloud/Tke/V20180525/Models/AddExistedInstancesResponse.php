@@ -32,6 +32,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) Set IDs of (successful or failed) nodes that timed out
 Note: This field may return null, indicating that no valid value was found.
+ * @method array getFailedReasons() Obtain Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setFailedReasons(array $FailedReasons) Set Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -56,6 +60,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $TimeoutInstanceIds;
 
     /**
+     * @var array Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $FailedReasons;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -67,6 +77,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param array $TimeoutInstanceIds IDs of (successful or failed) nodes that timed out
 Note: This field may return null, indicating that no valid value was found.
+     * @param array $FailedReasons Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -92,6 +104,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("TimeoutInstanceIds",$param) and $param["TimeoutInstanceIds"] !== null) {
             $this->TimeoutInstanceIds = $param["TimeoutInstanceIds"];
+        }
+
+        if (array_key_exists("FailedReasons",$param) and $param["FailedReasons"] !== null) {
+            $this->FailedReasons = $param["FailedReasons"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

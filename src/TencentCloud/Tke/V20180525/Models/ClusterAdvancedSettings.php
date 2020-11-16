@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditLogsetId(string $AuditLogsetId) Set Specifies the ID of logset to which the audit logs are uploaded.
  * @method string getAuditLogTopicId() Obtain Specifies the ID of topic to which the audit logs are uploaded.
  * @method void setAuditLogTopicId(string $AuditLogTopicId) Set Specifies the ID of topic to which the audit logs are uploaded.
+ * @method string getVpcCniType() Obtain Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+ * @method void setVpcCniType(string $VpcCniType) Set Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ClusterAdvancedSettings extends AbstractModel
     public $AuditLogTopicId;
 
     /**
+     * @var string Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     */
+    public $VpcCniType;
+
+    /**
      * @param boolean $IPVS Whether IPVS is enabled
      * @param boolean $AsEnabled Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
      * @param string $ContainerRuntime Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
@@ -120,6 +127,7 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param boolean $AuditEnabled Indicates whether to enable auditing
      * @param string $AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
      * @param string $AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
+     * @param string $VpcCniType Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("AuditLogTopicId",$param) and $param["AuditLogTopicId"] !== null) {
             $this->AuditLogTopicId = $param["AuditLogTopicId"];
+        }
+
+        if (array_key_exists("VpcCniType",$param) and $param["VpcCniType"] !== null) {
+            $this->VpcCniType = $param["VpcCniType"];
         }
     }
 }

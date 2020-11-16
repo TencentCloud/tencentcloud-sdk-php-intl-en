@@ -124,6 +124,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set EMR-MetaDB instance
  * @method CustomMetaInfo getMetaDBInfo() Obtain Custom MetaDB instance information
  * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set Custom MetaDB instance information
+ * @method string getApplicationRole() Obtain Custom application role.
+ * @method void setApplicationRole(string $ApplicationRole) Set Custom application role.
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -284,6 +286,11 @@ class CreateInstanceRequest extends AbstractModel
     public $MetaDBInfo;
 
     /**
+     * @var string Custom application role.
+     */
+    public $ApplicationRole;
+
+    /**
      * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1.</li>
 <li>2: EMR v2.0.1.</li>
@@ -336,6 +343,7 @@ class CreateInstanceRequest extends AbstractModel
 <li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
      * @param string $UnifyMetaInstanceId EMR-MetaDB instance
      * @param CustomMetaInfo $MetaDBInfo Custom MetaDB instance information
+     * @param string $ApplicationRole Custom application role.
      */
     function __construct()
     {
@@ -468,6 +476,10 @@ class CreateInstanceRequest extends AbstractModel
         if (array_key_exists("MetaDBInfo",$param) and $param["MetaDBInfo"] !== null) {
             $this->MetaDBInfo = new CustomMetaInfo();
             $this->MetaDBInfo->deserialize($param["MetaDBInfo"]);
+        }
+
+        if (array_key_exists("ApplicationRole",$param) and $param["ApplicationRole"] !== null) {
+            $this->ApplicationRole = $param["ApplicationRole"];
         }
     }
 }
