@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMediaByUrl request structure.
  *
- * @method MediaInputInfo getInputInfo() Obtain Information of input video, including video's URL, name, and custom ID.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set Information of input video, including video's URL, name, and custom ID.
+ * @method MediaInputInfo getInputInfo() Obtain This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
  * @method MediaOutputInfo getOutputInfo() Obtain Information of COS path to output file.
  * @method void setOutputInfo(MediaOutputInfo $OutputInfo) Set Information of COS path to output file.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of video content audit task.
@@ -36,15 +36,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasksNotifyMode(string $TasksNotifyMode) Set Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
- * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+ * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+ * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ProcessMediaByUrlRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo Information of input video, including video's URL, name, and custom ID.
+     * @var MediaInputInfo This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
      */
     public $InputInfo;
 
@@ -84,7 +84,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var string The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+     * @var string The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
      */
     public $SessionId;
 
@@ -94,7 +94,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param MediaInputInfo $InputInfo Information of input video, including video's URL, name, and custom ID.
+     * @param MediaInputInfo $InputInfo This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
      * @param MediaOutputInfo $OutputInfo Information of COS path to output file.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of video content audit task.
      * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
@@ -102,7 +102,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
      * @param integer $TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
      * @param string $TasksNotifyMode Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+     * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()

@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setRegex(boolean $Regex) Set Whether regex match is used.
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getPath() Obtain URL path
+ * @method string getPath() Obtain The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setPath(string $Path) Set URL path
+ * @method void setPath(string $Path) Set The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getOrigin() Obtain Origin-pull server when the path matches.
+ * @method string getOrigin() Obtain Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setOrigin(string $Origin) Set Origin-pull server when the path matches.
+ * @method void setOrigin(string $Origin) Set Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getServerName() Obtain Origin-pull host when the path matches.
 Note: this field may return `null`, indicating that no valid value is obtained.
@@ -58,13 +58,13 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $Regex;
 
     /**
-     * @var string URL path
+     * @var string The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Path;
 
     /**
-     * @var string Origin-pull server when the path matches.
+     * @var string Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Origin;
@@ -96,9 +96,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     /**
      * @param boolean $Regex Whether regex match is used.
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $Path URL path
+     * @param string $Path The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $Origin Origin-pull server when the path matches.
+     * @param string $Origin Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $ServerName Origin-pull host when the path matches.
 Note: this field may return `null`, indicating that no valid value is obtained.

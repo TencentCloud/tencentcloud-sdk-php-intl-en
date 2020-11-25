@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getStartTime() Obtain Start time.
- * @method void setStartTime(string $StartTime) Set Start time.
- * @method string getEndTime() Obtain End time.
- * @method void setEndTime(string $EndTime) Set End time.
+ * @method string getStartTime() Obtain Start time, such as "2019-09-10 12:13:14".
+ * @method void setStartTime(string $StartTime) Set Start time, such as "2019-09-10 12:13:14".
+ * @method string getEndTime() Obtain End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+ * @method void setEndTime(string $EndTime) Set End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+ * @method string getProduct() Obtain 
+ * @method void setProduct(string $Product) Set 
  */
 class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
 {
@@ -35,19 +37,25 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Start time.
+     * @var string Start time, such as "2019-09-10 12:13:14".
      */
     public $StartTime;
 
     /**
-     * @var string End time.
+     * @var string End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public $EndTime;
 
     /**
+     * @var string 
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId Instance ID.
-     * @param string $StartTime Start time.
-     * @param string $EndTime End time.
+     * @param string $StartTime Start time, such as "2019-09-10 12:13:14".
+     * @param string $EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+     * @param string $Product 
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

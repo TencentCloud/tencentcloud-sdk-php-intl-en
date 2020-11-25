@@ -20,16 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video processing task statistics.
  *
- * @method string getTaskType() Obtain Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
- * @method void setTaskType(string $TaskType) Set Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
- * @method array getSummary() Obtain Task statistics overview.
-<li>Transcode: usage in seconds</li>
- * @method void setSummary(array $Summary) Set Task statistics overview.
-<li>Transcode: usage in seconds</li>
+ * @method string getTaskType() Obtain Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+ * @method void setTaskType(string $TaskType) Set Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+ * @method array getSummary() Obtain Task statistics overview (usage unit: second).
+ * @method void setSummary(array $Summary) Set Task statistics overview (usage unit: second).
  * @method array getDetails() Obtain Detailed statistics of tasks with different specifications.
 Transcoding specification:
 <li>Remuxing: remuxing</li>
@@ -104,15 +110,18 @@ Transcoding specification:
 class TaskStatData extends AbstractModel
 {
     /**
-     * @var string Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
+     * @var string Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
      */
     public $TaskType;
 
     /**
-     * @var array Task statistics overview.
-<li>Transcode: usage in seconds</li>
+     * @var array Task statistics overview (usage unit: second).
      */
     public $Summary;
 
@@ -156,11 +165,14 @@ Transcoding specification:
     public $Details;
 
     /**
-     * @param string $TaskType Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
-     * @param array $Summary Task statistics overview.
-<li>Transcode: usage in seconds</li>
+     * @param string $TaskType Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+     * @param array $Summary Task statistics overview (usage unit: second).
      * @param array $Details Detailed statistics of tasks with different specifications.
 Transcoding specification:
 <li>Remuxing: remuxing</li>

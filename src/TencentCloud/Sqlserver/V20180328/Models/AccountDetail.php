@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalStatus(string $InternalStatus) Set Internal account status, which should be `enable` normally
  * @method array getDbs() Obtain Information of read and write permissions of this account on relevant databases
  * @method void setDbs(array $Dbs) Set Information of read and write permissions of this account on relevant databases
+ * @method boolean getIsAdmin() Obtain Whether it is an admin account
+ * @method void setIsAdmin(boolean $IsAdmin) Set Whether it is an admin account
  */
 class AccountDetail extends AbstractModel
 {
@@ -80,6 +82,11 @@ class AccountDetail extends AbstractModel
     public $Dbs;
 
     /**
+     * @var boolean Whether it is an admin account
+     */
+    public $IsAdmin;
+
+    /**
      * @param string $Name Account name
      * @param string $Remark Account remarks
      * @param string $CreateTime Account creation time
@@ -88,6 +95,7 @@ class AccountDetail extends AbstractModel
      * @param string $PassTime Password update time
      * @param string $InternalStatus Internal account status, which should be `enable` normally
      * @param array $Dbs Information of read and write permissions of this account on relevant databases
+     * @param boolean $IsAdmin Whether it is an admin account
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class AccountDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dbs, $obj);
             }
+        }
+
+        if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
+            $this->IsAdmin = $param["IsAdmin"];
         }
     }
 }

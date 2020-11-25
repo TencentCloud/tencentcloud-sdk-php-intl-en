@@ -80,8 +80,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTradeIsolateStatus(integer $TradeIsolateStatus) Set Billing status of service.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method array getTags() Obtain Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
+ * @method void setTags(array $Tags) Set Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
  */
 class Service extends AbstractModel
 {
@@ -176,7 +178,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TradeIsolateStatus;
 
     /**
-     * @var array 
+     * @var array Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
      */
     public $Tags;
 
@@ -211,7 +214,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $TradeIsolateStatus Billing status of service.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags 
+     * @param array $Tags Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
      */
     function __construct()
     {

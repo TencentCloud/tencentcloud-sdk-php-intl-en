@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Watermarking template ID.
  * @method void setDefinition(integer $Definition) Set Watermarking template ID.
- * @method string getTextContent() Obtain Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTextContent(string $TextContent) Set Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSvgContent() Obtain SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSvgContent(string $SvgContent) Set SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTextContent() Obtain Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
+ * @method void setTextContent(string $TextContent) Set Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
+ * @method string getSvgContent() Obtain SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
+ * @method void setSvgContent(string $SvgContent) Set SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
  * @method float getStartTimeOffset() Obtain Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
 <li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
@@ -55,14 +55,14 @@ class WatermarkInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
      */
     public $TextContent;
 
     /**
-     * @var string SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
      */
     public $SvgContent;
 
@@ -84,10 +84,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $Definition Watermarking template ID.
-     * @param string $TextContent Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SvgContent SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TextContent Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
+     * @param string $SvgContent SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
      * @param float $StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
 <li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>

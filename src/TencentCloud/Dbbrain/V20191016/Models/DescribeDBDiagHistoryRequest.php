@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getStartTime() Obtain Start time, such as "2019-09-10 12:13:14".
  * @method void setStartTime(string $StartTime) Set Start time, such as "2019-09-10 12:13:14".
- * @method string getEndTime() Obtain End time, such as "2019-09-11 12:13:14".
- * @method void setEndTime(string $EndTime) Set End time, such as "2019-09-11 12:13:14".
+ * @method string getEndTime() Obtain End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+ * @method void setEndTime(string $EndTime) Set End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+ * @method string getProduct() Obtain 
+ * @method void setProduct(string $Product) Set 
  */
 class DescribeDBDiagHistoryRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class DescribeDBDiagHistoryRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time, such as "2019-09-11 12:13:14".
+     * @var string End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
      */
     public $EndTime;
 
     /**
+     * @var string 
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $StartTime Start time, such as "2019-09-10 12:13:14".
-     * @param string $EndTime End time, such as "2019-09-11 12:13:14".
+     * @param string $EndTime End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+     * @param string $Product 
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDBDiagHistoryRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

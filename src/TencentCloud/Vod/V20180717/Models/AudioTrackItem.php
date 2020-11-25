@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio segment information of audio track.
  *
- * @method string getSourceMedia() Obtain Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
- * @method void setSourceMedia(string $SourceMedia) Set Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
+ * @method string getSourceMedia() Obtain Source of media material for audio segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+ * @method void setSourceMedia(string $SourceMedia) Set Source of media material for audio segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
  * @method float getSourceMediaStartTime() Obtain Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
  * @method float getDuration() Obtain Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
@@ -34,7 +40,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class AudioTrackItem extends AbstractModel
 {
     /**
-     * @var string Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
+     * @var string Source of media material for audio segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      */
     public $SourceMedia;
 
@@ -55,7 +64,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AudioOperations;
 
     /**
-     * @param string $SourceMedia Source of media file for audio material, which can be an ID of a VOD file or URL of another file.
+     * @param string $SourceMedia Source of media material for audio segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      * @param float $SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
      * @param float $Duration Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
      * @param array $AudioOperations Operation on audio segment, such as volume adjustment.

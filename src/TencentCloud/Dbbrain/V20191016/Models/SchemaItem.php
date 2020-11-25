@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSubAppIds request structure.
+ * `SchemaItem` array
  *
- * @method array getTags() Obtain Tag information. You can query the list of subapplications with specified tags.
- * @method void setTags(array $Tags) Set Tag information. You can query the list of subapplications with specified tags.
+ * @method string getSchema() Obtain Database name
+ * @method void setSchema(string $Schema) Set Database name
  */
-class DescribeSubAppIdsRequest extends AbstractModel
+class SchemaItem extends AbstractModel
 {
     /**
-     * @var array Tag information. You can query the list of subapplications with specified tags.
+     * @var string Database name
      */
-    public $Tags;
+    public $Schema;
 
     /**
-     * @param array $Tags Tag information. You can query the list of subapplications with specified tags.
+     * @param string $Schema Database name
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class DescribeSubAppIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new ResourceTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
         }
     }
 }

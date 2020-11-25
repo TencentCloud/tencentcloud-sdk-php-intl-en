@@ -72,8 +72,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSetId(integer $SetId) Set Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method array getTags() Obtain Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
+ * @method void setTags(array $Tags) Set Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -186,7 +188,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SetId;
 
     /**
-     * @var array 
+     * @var array Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
      */
     public $Tags;
 
@@ -222,7 +225,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SetId Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags 
+     * @param array $Tags Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

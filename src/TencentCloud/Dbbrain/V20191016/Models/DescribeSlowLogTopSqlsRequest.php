@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getStartTime() Obtain Start time.
- * @method void setStartTime(string $StartTime) Set Start time.
- * @method string getEndTime() Obtain End time.
- * @method void setEndTime(string $EndTime) Set End time.
+ * @method string getStartTime() Obtain Start time, such as "2019-09-10 12:13:14".
+ * @method void setStartTime(string $StartTime) Set Start time, such as "2019-09-10 12:13:14".
+ * @method string getEndTime() Obtain End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+ * @method void setEndTime(string $EndTime) Set End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
  * @method string getSortBy() Obtain Sorting key. Valid values: QueryTime, ExecTimes, RowsSent, LockTime, RowsExamined.
  * @method void setSortBy(string $SortBy) Set Sorting key. Valid values: QueryTime, ExecTimes, RowsSent, LockTime, RowsExamined.
  * @method string getOrderBy() Obtain Sorting order. Valid values: ASC (ascending), DESC (descending).
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method array getSchemaList() Obtain Database name array.
+ * @method void setSchemaList(array $SchemaList) Set Database name array.
+ * @method string getProduct() Obtain 
+ * @method void setProduct(string $Product) Set 
  */
 class DescribeSlowLogTopSqlsRequest extends AbstractModel
 {
@@ -43,12 +47,12 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Start time.
+     * @var string Start time, such as "2019-09-10 12:13:14".
      */
     public $StartTime;
 
     /**
-     * @var string End time.
+     * @var string End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public $EndTime;
 
@@ -73,13 +77,25 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array Database name array.
+     */
+    public $SchemaList;
+
+    /**
+     * @var string 
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId Instance ID.
-     * @param string $StartTime Start time.
-     * @param string $EndTime End time.
+     * @param string $StartTime Start time, such as "2019-09-10 12:13:14".
+     * @param string $EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
      * @param string $SortBy Sorting key. Valid values: QueryTime, ExecTimes, RowsSent, LockTime, RowsExamined.
      * @param string $OrderBy Sorting order. Valid values: ASC (ascending), DESC (descending).
      * @param integer $Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
+     * @param array $SchemaList Database name array.
+     * @param string $Product 
      */
     function __construct()
     {
@@ -120,6 +136,19 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SchemaList",$param) and $param["SchemaList"] !== null) {
+            $this->SchemaList = [];
+            foreach ($param["SchemaList"] as $key => $value){
+                $obj = new SchemaItem();
+                $obj->deserialize($value);
+                array_push($this->SchemaList, $obj);
+            }
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

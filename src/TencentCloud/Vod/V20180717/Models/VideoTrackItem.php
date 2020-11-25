@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video segment information of video track.
  *
- * @method string getSourceMedia() Obtain Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
- * @method void setSourceMedia(string $SourceMedia) Set Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
+ * @method string getSourceMedia() Obtain Source of media material for video segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+ * @method void setSourceMedia(string $SourceMedia) Set Source of media material for video segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
  * @method float getSourceMediaStartTime() Obtain Start time of video segment in material file in seconds. Default value: 0.
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Start time of video segment in material file in seconds. Default value: 0.
  * @method float getDuration() Obtain Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
@@ -84,7 +90,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class VideoTrackItem extends AbstractModel
 {
     /**
-     * @var string Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
+     * @var string Source of media material for video segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      */
     public $SourceMedia;
 
@@ -154,7 +163,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AudioOperations;
 
     /**
-     * @param string $SourceMedia Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
+     * @param string $SourceMedia Source of media material for video segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      * @param float $SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
      * @param float $Duration Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
      * @param string $CoordinateOrigin Video origin position. Valid values:

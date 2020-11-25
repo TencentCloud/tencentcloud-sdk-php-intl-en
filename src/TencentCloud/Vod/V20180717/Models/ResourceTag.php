@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSubAppIds request structure.
+ * Tag key value. For details, see [Tags](https://intl.cloud.tencent.com/document/product/651?from_cn_redirect=1).
  *
- * @method array getTags() Obtain Tag information. You can query the list of subapplications with specified tags.
- * @method void setTags(array $Tags) Set Tag information. You can query the list of subapplications with specified tags.
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method string getTagValue() Obtain Tag value.
+ * @method void setTagValue(string $TagValue) Set Tag value.
  */
-class DescribeSubAppIdsRequest extends AbstractModel
+class ResourceTag extends AbstractModel
 {
     /**
-     * @var array Tag information. You can query the list of subapplications with specified tags.
+     * @var string Tag key.
      */
-    public $Tags;
+    public $TagKey;
 
     /**
-     * @param array $Tags Tag information. You can query the list of subapplications with specified tags.
+     * @var string Tag value.
+     */
+    public $TagValue;
+
+    /**
+     * @param string $TagKey Tag key.
+     * @param string $TagValue Tag value.
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class DescribeSubAppIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new ResourceTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOuterSubDomain(string $OuterSubDomain) Set Default public network domain name.
  * @method string getInnerSubDomain() Obtain Default private network domain name of VPC
  * @method void setInnerSubDomain(string $InnerSubDomain) Set Default private network domain name of VPC
- * @method string getCreatedTime() Obtain Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
- * @method void setCreatedTime(string $CreatedTime) Set Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+ * @method string getCreatedTime() Obtain Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
+ * @method void setCreatedTime(string $CreatedTime) Set Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
  * @method array getNetTypes() Obtain Network type list. INNER: private network access; OUTER: public network access.
  * @method void setNetTypes(array $NetTypes) Set Network type list. INNER: private network access; OUTER: public network access.
  * @method string getIpVersion() Obtain IP version number.
@@ -69,7 +69,7 @@ class CreateServiceResponse extends AbstractModel
     public $InnerSubDomain;
 
     /**
-     * @var string Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+     * @var string Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
      */
     public $CreatedTime;
 
@@ -95,7 +95,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ServiceDesc Custom service description.
      * @param string $OuterSubDomain Default public network domain name.
      * @param string $InnerSubDomain Default private network domain name of VPC
-     * @param string $CreatedTime Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+     * @param string $CreatedTime Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
      * @param array $NetTypes Network type list. INNER: private network access; OUTER: public network access.
      * @param string $IpVersion IP version number.
 Note: this field may return null, indicating that no valid values can be obtained.

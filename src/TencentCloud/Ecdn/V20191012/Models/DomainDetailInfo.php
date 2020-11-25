@@ -80,6 +80,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setReadonly(string $Readonly) Set Domain name lock status. normal: not locked; global: globally locked.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTag() Obtain Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setTag(array $Tag) Set Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method WebSocket getWebSocket() Obtain 
+ * @method void setWebSocket(WebSocket $WebSocket) Set 
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -190,6 +196,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Readonly;
 
     /**
+     * @var array Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $Tag;
+
+    /**
+     * @var WebSocket 
+     */
+    public $WebSocket;
+
+    /**
      * @param string $ResourceId Domain name ID.
      * @param integer $AppId Tencent Cloud account ID.
      * @param string $Domain Acceleration domain name.
@@ -220,6 +237,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Readonly Domain name lock status. normal: not locked; global: globally locked.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Tag Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param WebSocket $WebSocket 
      */
     function __construct()
     {
@@ -316,6 +336,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Readonly",$param) and $param["Readonly"] !== null) {
             $this->Readonly = $param["Readonly"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
+        }
+
+        if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
+            $this->WebSocket = new WebSocket();
+            $this->WebSocket->deserialize($param["WebSocket"]);
         }
     }
 }

@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of sticker on sticker track.
  *
- * @method string getSourceMedia() Obtain Source of media file for sticker material, which can be an ID of a VOD file or URL of another file.
- * @method void setSourceMedia(string $SourceMedia) Set Source of media file for sticker material, which can be an ID of a VOD file or URL of another file.
+ * @method string getSourceMedia() Obtain Source of media material for sticker segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+ * @method void setSourceMedia(string $SourceMedia) Set Source of media material for sticker segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
  * @method float getDuration() Obtain Sticker duration in seconds.
  * @method void setDuration(float $Duration) Set Sticker duration in seconds.
  * @method float getStartTime() Obtain Start time of sticker on track in seconds.
@@ -78,7 +84,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class StickerTrackItem extends AbstractModel
 {
     /**
-     * @var string Source of media file for sticker material, which can be an ID of a VOD file or URL of another file.
+     * @var string Source of media material for sticker segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      */
     public $SourceMedia;
 
@@ -141,7 +150,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ImageOperations;
 
     /**
-     * @param string $SourceMedia Source of media file for sticker material, which can be an ID of a VOD file or URL of another file.
+     * @param string $SourceMedia Source of media material for sticker segment, which can be:
+<li>VOD media file ID;</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      * @param float $Duration Sticker duration in seconds.
      * @param float $StartTime Start time of sticker on track in seconds.
      * @param string $CoordinateOrigin Origin position. Valid values:

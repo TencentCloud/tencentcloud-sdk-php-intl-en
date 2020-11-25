@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
+ * @method integer getRemoveVideo() Obtain Whether to remove a video stream. Valid values:
+<li>0: no,</li>
+<li>1: yes.</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove a video stream. Valid values:
+<li>0: no,</li>
+<li>1: yes.</li>
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -51,9 +57,19 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $RemoveAudio;
 
     /**
+     * @var integer Whether to remove a video stream. Valid values:
+<li>0: no,</li>
+<li>1: yes.</li>
+     */
+    public $RemoveVideo;
+
+    /**
      * @param VideoTemplateInfo $Video Video parameter information.
      * @param AudioTemplateInfo $Audio Audio parameter information.
      * @param integer $RemoveAudio Whether to remove audio stream. Valid values:
+<li>0: no,</li>
+<li>1: yes.</li>
+     * @param integer $RemoveVideo Whether to remove a video stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
      */
@@ -82,6 +98,10 @@ class AdaptiveStreamTemplate extends AbstractModel
 
         if (array_key_exists("RemoveAudio",$param) and $param["RemoveAudio"] !== null) {
             $this->RemoveAudio = $param["RemoveAudio"];
+        }
+
+        if (array_key_exists("RemoveVideo",$param) and $param["RemoveVideo"] !== null) {
+            $this->RemoveVideo = $param["RemoveVideo"];
         }
     }
 }

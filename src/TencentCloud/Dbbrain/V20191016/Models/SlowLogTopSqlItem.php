@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlTemplate(string $SqlTemplate) Set SQL template
  * @method string getSqlText() Obtain SQL with parameter (random)
  * @method void setSqlText(string $SqlText) Set SQL with parameter (random)
- * @method string getSchema() Obtain Schema
- * @method void setSchema(string $Schema) Set Schema
+ * @method string getSchema() Obtain Database name
+ * @method void setSchema(string $Schema) Set Database name
  * @method float getQueryTimeRatio() Obtain Ratio of total duration
  * @method void setQueryTimeRatio(float $QueryTimeRatio) Set Ratio of total duration
  * @method float getLockTimeRatio() Obtain Ratio of total SQL lock wait time
@@ -139,7 +139,7 @@ class SlowLogTopSqlItem extends AbstractModel
     public $SqlText;
 
     /**
-     * @var string Schema
+     * @var string Database name
      */
     public $Schema;
 
@@ -179,7 +179,7 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param integer $ExecTimes Number of executions
      * @param string $SqlTemplate SQL template
      * @param string $SqlText SQL with parameter (random)
-     * @param string $Schema Schema
+     * @param string $Schema Database name
      * @param float $QueryTimeRatio Ratio of total duration
      * @param float $LockTimeRatio Ratio of total SQL lock wait time
      * @param float $RowsExaminedRatio Ratio of total number of scanned rows

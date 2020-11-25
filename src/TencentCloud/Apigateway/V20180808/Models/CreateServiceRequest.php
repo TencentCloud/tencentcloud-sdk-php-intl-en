@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetServerName(string $SetServerName) Set Cluster name, which is reserved and used by the `tsf serverless` type.
  * @method string getAppIdType() Obtain User type, which is reserved and can be used by `serverless` users.
  * @method void setAppIdType(string $AppIdType) Set User type, which is reserved and can be used by `serverless` users.
+ * @method array getTags() Obtain Tag information.
+ * @method void setTags(array $Tags) Set Tag information.
  */
 class CreateServiceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateServiceRequest extends AbstractModel
     public $AppIdType;
 
     /**
+     * @var array Tag information.
+     */
+    public $Tags;
+
+    /**
      * @param string $ServiceName Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
      * @param string $Protocol Service frontend request type, such as `http`, `https`, and `http&https`.
      * @param string $ServiceDesc Custom service description.
@@ -88,6 +95,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $IpVersion IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
      * @param string $SetServerName Cluster name, which is reserved and used by the `tsf serverless` type.
      * @param string $AppIdType User type, which is reserved and can be used by `serverless` users.
+     * @param array $Tags Tag information.
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class CreateServiceRequest extends AbstractModel
 
         if (array_key_exists("AppIdType",$param) and $param["AppIdType"] !== null) {
             $this->AppIdType = $param["AppIdType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

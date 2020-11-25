@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttps(Https $Https) Set HTTPS configuration.
  * @method ForceRedirect getForceRedirect() Obtain Forced access protocol redirection configuration.
  * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Forced access protocol redirection configuration.
+ * @method array getTag() Obtain Tag bound to a domain name.
+ * @method void setTag(array $Tag) Set Tag bound to a domain name.
+ * @method WebSocket getWebSocket() Obtain 
+ * @method void setWebSocket(WebSocket $WebSocket) Set 
  */
 class AddEcdnDomainRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class AddEcdnDomainRequest extends AbstractModel
     public $ForceRedirect;
 
     /**
+     * @var array Tag bound to a domain name.
+     */
+    public $Tag;
+
+    /**
+     * @var WebSocket 
+     */
+    public $WebSocket;
+
+    /**
      * @param string $Domain Domain name.
      * @param Origin $Origin Origin server configuration.
      * @param string $Area Domain name acceleration region. Valid values: mainland (acceleration in Mainland China), overseas (acceleration outside Mainland China), global (global acceleration).
@@ -112,6 +126,8 @@ class AddEcdnDomainRequest extends AbstractModel
      * @param Cache $Cache Caching rule configuration.
      * @param Https $Https HTTPS configuration.
      * @param ForceRedirect $ForceRedirect Forced access protocol redirection configuration.
+     * @param array $Tag Tag bound to a domain name.
+     * @param WebSocket $WebSocket 
      */
     function __construct()
     {
@@ -176,6 +192,20 @@ class AddEcdnDomainRequest extends AbstractModel
         if (array_key_exists("ForceRedirect",$param) and $param["ForceRedirect"] !== null) {
             $this->ForceRedirect = new ForceRedirect();
             $this->ForceRedirect->deserialize($param["ForceRedirect"]);
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
+        }
+
+        if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
+            $this->WebSocket = new WebSocket();
+            $this->WebSocket->deserialize($param["WebSocket"]);
         }
     }
 }

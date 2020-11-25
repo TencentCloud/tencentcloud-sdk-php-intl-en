@@ -24,10 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getEndTime() Obtain End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be on or after the start date.
  * @method void setEndTime(string $EndTime) Set End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be on or after the start date.
- * @method string getType() Obtain Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li>
- * @method void setType(string $Type) Set Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li>
+ * @method string getType() Obtain This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+ * @method void setType(string $Type) Set This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
@@ -44,8 +54,13 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li>
+     * @var string This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
      */
     public $Type;
 
@@ -57,8 +72,13 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
     /**
      * @param string $StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be on or after the start date.
-     * @param string $Type Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li>
+     * @param string $Type This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()

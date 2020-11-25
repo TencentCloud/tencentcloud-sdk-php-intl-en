@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned top tables. Default value: 20. Maximum value: 20.
  * @method string getSortBy() Obtain Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
  * @method void setSortBy(string $SortBy) Set Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
- * @method string getStartDate() Obtain Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
- * @method void setStartDate(string $StartDate) Set Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
- * @method string getEndDate() Obtain End date. It can be as early as 6 days before the current date, and defaults to the current date.
- * @method void setEndDate(string $EndDate) Set End date. It can be as early as 6 days before the current date, and defaults to the current date.
+ * @method string getStartDate() Obtain Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
+ * @method void setStartDate(string $StartDate) Set Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
+ * @method string getEndDate() Obtain End date. It can be as early as 29 days before the current date, and defaults to the current date.
+ * @method void setEndDate(string $EndDate) Set End date. It can be as early as 29 days before the current date, and defaults to the current date.
+ * @method string getProduct() Obtain 
+ * @method void setProduct(string $Product) Set 
  */
 class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
 {
@@ -49,21 +51,27 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
     public $SortBy;
 
     /**
-     * @var string Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
+     * @var string Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
      */
     public $StartDate;
 
     /**
-     * @var string End date. It can be as early as 6 days before the current date, and defaults to the current date.
+     * @var string End date. It can be as early as 29 days before the current date, and defaults to the current date.
      */
     public $EndDate;
+
+    /**
+     * @var string 
+     */
+    public $Product;
 
     /**
      * @param string $InstanceId Instance ID.
      * @param integer $Limit Number of returned top tables. Default value: 20. Maximum value: 20.
      * @param string $SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
-     * @param string $StartDate Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
-     * @param string $EndDate End date. It can be as early as 6 days before the current date, and defaults to the current date.
+     * @param string $StartDate Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
+     * @param string $EndDate End date. It can be as early as 29 days before the current date, and defaults to the current date.
+     * @param string $Product 
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
 
         if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
             $this->EndDate = $param["EndDate"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dbbrain\V20191016\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTopSpaceTables response structure.
+ * DescribeCommonDBInstances response structure.
  *
- * @method array getTopSpaceTables() Obtain List of the returned space statistics of top tables.
- * @method void setTopSpaceTables(array $TopSpaceTables) Set List of the returned space statistics of top tables.
- * @method integer getTimestamp() Obtain Timestamp (in seconds) identifying when the tablespace data is collected.
- * @method void setTimestamp(integer $Timestamp) Set Timestamp (in seconds) identifying when the tablespace data is collected.
+ * @method integer getTotalCount() Obtain Instance quantity
+ * @method void setTotalCount(integer $TotalCount) Set Instance quantity
+ * @method array getInstanceDetails() Obtain Instance information
+ * @method void setInstanceDetails(array $InstanceDetails) Set Instance information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTopSpaceTablesResponse extends AbstractModel
+class DescribeCommonDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var array List of the returned space statistics of top tables.
+     * @var integer Instance quantity
      */
-    public $TopSpaceTables;
+    public $TotalCount;
 
     /**
-     * @var integer Timestamp (in seconds) identifying when the tablespace data is collected.
+     * @var array Instance information
      */
-    public $Timestamp;
+    public $InstanceDetails;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class DescribeTopSpaceTablesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TopSpaceTables List of the returned space statistics of top tables.
-     * @param integer $Timestamp Timestamp (in seconds) identifying when the tablespace data is collected.
+     * @param integer $TotalCount Instance quantity
+     * @param array $InstanceDetails Instance information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeTopSpaceTablesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopSpaceTables",$param) and $param["TopSpaceTables"] !== null) {
-            $this->TopSpaceTables = [];
-            foreach ($param["TopSpaceTables"] as $key => $value){
-                $obj = new TableSpaceData();
-                $obj->deserialize($value);
-                array_push($this->TopSpaceTables, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists("InstanceDetails",$param) and $param["InstanceDetails"] !== null) {
+            $this->InstanceDetails = [];
+            foreach ($param["InstanceDetails"] as $key => $value){
+                $obj = new RedisCommonInstanceList();
+                $obj->deserialize($value);
+                array_push($this->InstanceDetails, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

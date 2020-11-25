@@ -30,9 +30,9 @@ Currently, a resolution within 640x480 must be specified for H.265. and the `av1
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
 Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
- * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0, 60].
+ * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
- * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0, 60].
+ * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
  * @method integer getBitrate() Obtain Bitrate of video stream in Kbps. Value range: 0 and [128, 35,000].
 If the value is 0, the bitrate of the video will be the same as that of the source video.
@@ -76,16 +76,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+ * @method string getFillType() Obtain Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
 Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFillType(string $FillType) Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+ * @method void setFillType(string $FillType) Set Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
 Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getVcrf() Obtain Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter if you have no special requirements.
+ * @method void setVcrf(integer $Vcrf) Set Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter if you have no special requirements.
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -99,7 +107,7 @@ Currently, a resolution within 640x480 must be specified for H.265. and the `av1
     public $Codec;
 
     /**
-     * @var integer Video frame rate in Hz. Value range: [0, 60].
+     * @var integer Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
      */
     public $Fps;
@@ -142,13 +150,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Height;
 
     /**
-     * @var string Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+     * @var string Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
 Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FillType;
+
+    /**
+     * @var integer Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter if you have no special requirements.
+     */
+    public $Vcrf;
 
     /**
      * @param string $Codec Video stream encoder. Valid values:
@@ -156,7 +172,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
 Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
-     * @param integer $Fps Video frame rate in Hz. Value range: [0, 60].
+     * @param integer $Fps Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
      * @param integer $Bitrate Bitrate of video stream in Kbps. Value range: 0 and [128, 35,000].
 If the value is 0, the bitrate of the video will be the same as that of the source video.
@@ -179,11 +195,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+     * @param string $FillType Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
 Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Vcrf Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter if you have no special requirements.
      */
     function __construct()
     {
@@ -224,6 +244,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
+            $this->Vcrf = $param["Vcrf"];
         }
     }
 }

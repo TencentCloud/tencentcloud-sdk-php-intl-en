@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain API frontend parameter name.
  * @method void setName(string $Name) Set API frontend parameter name.
- * @method string getPosition() Obtain API frontend parameter position, such as `head`. Valid values: head, query, path.
- * @method void setPosition(string $Position) Set API frontend parameter position, such as `head`. Valid values: head, query, path.
+ * @method string getPosition() Obtain Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
+ * @method void setPosition(string $Position) Set Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
  * @method string getType() Obtain API frontend parameter type, such as `String` and `int`.
  * @method void setType(string $Type) Set API frontend parameter type, such as `String` and `int`.
  * @method string getDefaultValue() Obtain Default value of API frontend parameter.
@@ -41,7 +41,7 @@ class ReqParameter extends AbstractModel
     public $Name;
 
     /**
-     * @var string API frontend parameter position, such as `head`. Valid values: head, query, path.
+     * @var string Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
      */
     public $Position;
 
@@ -67,7 +67,7 @@ class ReqParameter extends AbstractModel
 
     /**
      * @param string $Name API frontend parameter name.
-     * @param string $Position API frontend parameter position, such as `head`. Valid values: head, query, path.
+     * @param string $Position Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
      * @param string $Type API frontend parameter type, such as `String` and `int`.
      * @param string $DefaultValue Default value of API frontend parameter.
      * @param boolean $Required Whether the API frontend parameter is required. True: yes; False: no.
