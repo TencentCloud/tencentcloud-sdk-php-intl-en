@@ -20,16 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP header setting rules. Up to 100 entries can be set.
  *
- * @method string getHeaderMode() Obtain HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHeaderMode(string $HeaderMode) Set HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getHeaderMode() Obtain HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHeaderMode(string $HeaderMode) Set HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getHeaderName() Obtain HTTP header name. Up to 100 characters can be set.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHeaderName(string $HeaderName) Set HTTP header name. Up to 100 characters can be set.
@@ -70,11 +68,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class HttpHeaderPathRule extends AbstractModel
 {
     /**
-     * @var string HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $HeaderMode;
 
@@ -113,11 +110,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RulePaths;
 
     /**
-     * @param string $HeaderMode HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $HeaderMode HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $HeaderName HTTP header name. Up to 100 characters can be set.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $HeaderValue HTTP header value. Up to 1000 characters can be set.

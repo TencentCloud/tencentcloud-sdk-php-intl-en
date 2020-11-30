@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlushType(string $FlushType) Set Purge type:
 `flush`: purges updated resources
 `delete`: purges all resources
+ * @method boolean getUrlEncode() Obtain Whether to encode Chinese characters before purge.
+ * @method void setUrlEncode(boolean $UrlEncode) Set Whether to encode Chinese characters before purge.
  */
 class PurgePathCacheRequest extends AbstractModel
 {
@@ -44,10 +46,16 @@ class PurgePathCacheRequest extends AbstractModel
     public $FlushType;
 
     /**
+     * @var boolean Whether to encode Chinese characters before purge.
+     */
+    public $UrlEncode;
+
+    /**
      * @param array $Paths List of directories. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $FlushType Purge type:
 `flush`: purges updated resources
 `delete`: purges all resources
+     * @param boolean $UrlEncode Whether to encode Chinese characters before purge.
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class PurgePathCacheRequest extends AbstractModel
 
         if (array_key_exists("FlushType",$param) and $param["FlushType"] !== null) {
             $this->FlushType = $param["FlushType"];
+        }
+
+        if (array_key_exists("UrlEncode",$param) and $param["UrlEncode"] !== null) {
+            $this->UrlEncode = $param["UrlEncode"];
         }
     }
 }

@@ -93,8 +93,7 @@ By default, a maximum of 100 directories can be purged per day for acceleration 
  * @method Models\PurgeUrlsCacheResponse PurgeUrlsCache(Models\PurgeUrlsCacheRequest $req) This API is used to submit multiple URL purge tasks, which are carried out according to the current acceleration region of the domain names in the URLs.
 By default, a maximum of 10,000 URLs can be purged per day for acceleration regions either within or outside Mainland China, and up to 1,000 tasks can be submitted at a time.
  * @method Models\PushUrlsCacheResponse PushUrlsCache(Models\PushUrlsCacheRequest $req) This API is used to cache specified URL resources to CDN nodes. You can specify acceleration regions for the prefetch.
-By default, a maximum of 1,000 URLs can be prefetched per day either within or outside Mainland China, and up to 20 tasks can be submitted at a time.
-This API is in beta test and not fully available yet. Please stay tuned.
+By default, a maximum of 1000 URLs can be prefetched per day either within or outside Chinese mainland, and up to 20 tasks can be submitted at a time.
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) This API is used to search for CLS logs. Search filters can be set to today, 24 hours (one of the last 7 days), and the last 7 days.
  * @method Models\StartCdnDomainResponse StartCdnDomain(Models\StartCdnDomainRequest $req) This API is used to enable the acceleration service for a disabled domain name.
  * @method Models\StopCdnDomainResponse StopCdnDomain(Models\StopCdnDomainRequest $req) This API is used to suspend the acceleration service for a domain name.

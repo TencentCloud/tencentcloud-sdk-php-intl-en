@@ -32,6 +32,8 @@ The acceleration region of the acceleration domain name will be purged if this p
 If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
 If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
 The specified purging region should match the domain name acceleration region
+ * @method boolean getUrlEncode() Obtain Whether to encode Chinese characters before purge.
+ * @method void setUrlEncode(boolean $UrlEncode) Set Whether to encode Chinese characters before purge.
  */
 class PurgeUrlsCacheRequest extends AbstractModel
 {
@@ -50,12 +52,18 @@ The specified purging region should match the domain name acceleration region
     public $Area;
 
     /**
+     * @var boolean Whether to encode Chinese characters before purge.
+     */
+    public $UrlEncode;
+
+    /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $Area Purging region
 The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
 If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
 If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
 The specified purging region should match the domain name acceleration region
+     * @param boolean $UrlEncode Whether to encode Chinese characters before purge.
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ The specified purging region should match the domain name acceleration region
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("UrlEncode",$param) and $param["UrlEncode"] !== null) {
+            $this->UrlEncode = $param["UrlEncode"];
         }
     }
 }
