@@ -78,6 +78,18 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTagList(array $TagList) Set The information of tags associated with instances.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getMasterDBInstanceId() Obtain Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getReadOnlyInstanceNum() Obtain Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setReadOnlyInstanceNum(integer $ReadOnlyInstanceNum) Set Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getStatusInReadonlyGroup() Obtain The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setStatusInReadonlyGroup(string $StatusInReadonlyGroup) Set The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -223,6 +235,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TagList;
 
     /**
+     * @var string Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $MasterDBInstanceId;
+
+    /**
+     * @var integer Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReadOnlyInstanceNum;
+
+    /**
+     * @var string The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $StatusInReadonlyGroup;
+
+    /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
      * @param integer $ProjectId Project ID
@@ -251,6 +281,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Uid Instance `Uid`
      * @param integer $SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
      * @param array $TagList The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReadOnlyInstanceNum Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $StatusInReadonlyGroup The status of a instance in a read-only group
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -386,6 +422,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("MasterDBInstanceId",$param) and $param["MasterDBInstanceId"] !== null) {
+            $this->MasterDBInstanceId = $param["MasterDBInstanceId"];
+        }
+
+        if (array_key_exists("ReadOnlyInstanceNum",$param) and $param["ReadOnlyInstanceNum"] !== null) {
+            $this->ReadOnlyInstanceNum = $param["ReadOnlyInstanceNum"];
+        }
+
+        if (array_key_exists("StatusInReadonlyGroup",$param) and $param["StatusInReadonlyGroup"] !== null) {
+            $this->StatusInReadonlyGroup = $param["StatusInReadonlyGroup"];
         }
     }
 }

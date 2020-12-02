@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionName(string $VersionName) Set Instance version
  * @method integer getRenewFlag() Obtain Instance renewal flag
  * @method void setRenewFlag(integer $RenewFlag) Set Instance renewal flag
- * @method integer getModel() Obtain High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
- * @method void setModel(integer $Model) Set High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
+ * @method integer getModel() Obtain High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+ * @method void setModel(integer $Model) Set High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
  * @method string getRegion() Obtain Instance region name, such as ap-guangzhou
  * @method void setRegion(string $Region) Set Instance region name, such as ap-guangzhou
  * @method string getZone() Obtain Instance AZ name, such as ap-guangzhou-1
@@ -204,7 +204,7 @@ class DBInstance extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var integer High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
+     * @var integer High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
      */
     public $Model;
 
@@ -308,7 +308,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Storage Instance storage capacity in GB
      * @param string $VersionName Instance version
      * @param integer $RenewFlag Instance renewal flag
-     * @param integer $Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
+     * @param integer $Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
      * @param string $Region Instance region name, such as ap-guangzhou
      * @param string $Zone Instance AZ name, such as ap-guangzhou-1
      * @param string $BackupTime Backup time point

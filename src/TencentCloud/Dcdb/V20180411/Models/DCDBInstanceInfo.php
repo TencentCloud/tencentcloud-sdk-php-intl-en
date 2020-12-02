@@ -100,9 +100,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setIsAuditSupported(integer $IsAuditSupported) Set Whether the instance supports audit. 1: yes; 0: no
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
- * @method integer getIpv6Flag() Obtain IPv6 flag for an instance
+ * @method integer getIpv6Flag() Obtain Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpv6Flag(integer $Ipv6Flag) Set IPv6 flag for an instance
+ * @method void setIpv6Flag(integer $Ipv6Flag) Set Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getVipv6() Obtain Private network IPv6 address
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -120,9 +120,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWanStatusIpv6(integer $WanStatusIpv6) Set Public network IPv6 status
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDcnFlag() Obtain DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+ * @method integer getDcnFlag() Obtain DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDcnFlag(integer $DcnFlag) Set DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+ * @method void setDcnFlag(integer $DcnFlag) Set DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getDcnStatus() Obtain DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -332,7 +332,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Cpu;
 
     /**
-     * @var integer IPv6 flag for an instance
+     * @var integer Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Ipv6Flag;
@@ -362,7 +362,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $WanStatusIpv6;
 
     /**
-     * @var integer DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+     * @var integer DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DcnFlag;
@@ -420,7 +420,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $WanStatus Public network access status. 0: not enabled; 1: enabled; 2: disabled; 3: enabling
      * @param integer $IsAuditSupported Whether the instance supports audit. 1: yes; 0: no
      * @param integer $Cpu Number of CPU cores
-     * @param integer $Ipv6Flag IPv6 flag for an instance
+     * @param integer $Ipv6Flag Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Vipv6 Private network IPv6 address
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -430,7 +430,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $WanStatusIpv6 Public network IPv6 status
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $DcnFlag DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+     * @param integer $DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $DcnStatus DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
 Note: this field may return null, indicating that no valid values can be obtained.

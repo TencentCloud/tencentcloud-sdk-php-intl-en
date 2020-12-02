@@ -14,40 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dcdb\V20180411\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDCDBShards response structure.
+ * DescribeServerlessDBInstances response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible shards
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible shards
- * @method array getShards() Obtain Shard information list
- * @method void setShards(array $Shards) Set Shard information list
- * @method integer getDcnFlag() Obtain DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDcnFlag(integer $DcnFlag) Set DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain The number of query results
+ * @method void setTotalCount(integer $TotalCount) Set The number of query results
+ * @method array getDBInstanceSet() Obtain Query results
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDBInstanceSet(array $DBInstanceSet) Set Query results
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDCDBShardsResponse extends AbstractModel
+class DescribeServerlessDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible shards
+     * @var integer The number of query results
      */
     public $TotalCount;
 
     /**
-     * @var array Shard information list
+     * @var array Query results
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public $Shards;
-
-    /**
-     * @var integer DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $DcnFlag;
+    public $DBInstanceSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -55,10 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible shards
-     * @param array $Shards Shard information list
-     * @param integer $DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount The number of query results
+     * @param array $DBInstanceSet Query results
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -78,17 +70,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Shards",$param) and $param["Shards"] !== null) {
-            $this->Shards = [];
-            foreach ($param["Shards"] as $key => $value){
-                $obj = new DCDBShardInfo();
+        if (array_key_exists("DBInstanceSet",$param) and $param["DBInstanceSet"] !== null) {
+            $this->DBInstanceSet = [];
+            foreach ($param["DBInstanceSet"] as $key => $value){
+                $obj = new ServerlessDBInstance();
                 $obj->deserialize($value);
-                array_push($this->Shards, $obj);
+                array_push($this->DBInstanceSet, $obj);
             }
-        }
-
-        if (array_key_exists("DcnFlag",$param) and $param["DcnFlag"] !== null) {
-            $this->DcnFlag = $param["DcnFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
