@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaConnectFlows response structure.
  *
- * @method array getInfos() Obtain Configuration information list of flow.
- * @method void setInfos(array $Infos) Set Configuration information list of flow.
+ * @method array getInfos() Obtain Configuration information list of a flow.
+ * @method void setInfos(array $Infos) Set Configuration information list of a flow.
  * @method integer getPageNum() Obtain Number of current pages.
  * @method void setPageNum(integer $PageNum) Set Number of current pages.
  * @method integer getPageSize() Obtain Number of entries per page.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMediaConnectFlowsResponse extends AbstractModel
 {
     /**
-     * @var array Configuration information list of flow.
+     * @var array Configuration information list of a flow.
      */
     public $Infos;
 
@@ -66,7 +66,7 @@ class DescribeMediaConnectFlowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Infos Configuration information list of flow.
+     * @param array $Infos Configuration information list of a flow.
      * @param integer $PageNum Number of current pages.
      * @param integer $PageSize Number of entries per page.
      * @param integer $TotalNum Total number.

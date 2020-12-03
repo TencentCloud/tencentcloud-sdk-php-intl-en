@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputName(string $OutputName) Set Output name.
  * @method string getDescription() Obtain Output description.
  * @method void setDescription(string $Description) Set Output description.
- * @method string getProtocol() Obtain Output push protocol. Valid values: SRT|RTMP.
- * @method void setProtocol(string $Protocol) Set Output push protocol. Valid values: SRT|RTMP.
+ * @method string getProtocol() Obtain Output push protocol. Valid values: SRT, RTMP.
+ * @method void setProtocol(string $Protocol) Set Output push protocol. Valid values: SRT, RTMP.
  * @method CreateOutputSrtSettings getSRTSettings() Obtain Configuration of SRT push.
  * @method void setSRTSettings(CreateOutputSrtSettings $SRTSettings) Set Configuration of SRT push.
  * @method CreateOutputRTPSettings getRTPSettings() Obtain Configuration of RTP push.
@@ -53,7 +53,7 @@ class ModifyOutput extends AbstractModel
     public $Description;
 
     /**
-     * @var string Output push protocol. Valid values: SRT|RTMP.
+     * @var string Output push protocol. Valid values: SRT, RTMP.
      */
     public $Protocol;
 
@@ -76,7 +76,7 @@ class ModifyOutput extends AbstractModel
      * @param string $OutputId ID of the output to be modified.
      * @param string $OutputName Output name.
      * @param string $Description Output description.
-     * @param string $Protocol Output push protocol. Valid values: SRT|RTMP.
+     * @param string $Protocol Output push protocol. Valid values: SRT, RTMP.
      * @param CreateOutputSrtSettings $SRTSettings Configuration of SRT push.
      * @param CreateOutputRTPSettings $RTPSettings Configuration of RTP push.
      * @param CreateOutputRTMPSettings $RTMPSettings Configuration of RTMP push.

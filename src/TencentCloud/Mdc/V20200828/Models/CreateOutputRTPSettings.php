@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RTP configuration of the created MediaConnect flow output.
  *
- * @method CreateOutputRTPSettingsDestinations getDestinations() Obtain Push destination address. 1–2 addresses can be entered.
- * @method void setDestinations(CreateOutputRTPSettingsDestinations $Destinations) Set Push destination address. 1–2 addresses can be entered.
+ * @method CreateOutputRTPSettingsDestinations getDestinations() Obtain Push destination address. You can enter one or two addresses.
+ * @method void setDestinations(CreateOutputRTPSettingsDestinations $Destinations) Set Push destination address. You can enter one or two addresses.
  * @method string getFEC() Obtain Only `none` can be entered.
  * @method void setFEC(string $FEC) Set Only `none` can be entered.
  * @method integer getIdleTimeout() Obtain Idle timeout period.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateOutputRTPSettings extends AbstractModel
 {
     /**
-     * @var CreateOutputRTPSettingsDestinations Push destination address. 1–2 addresses can be entered.
+     * @var CreateOutputRTPSettingsDestinations Push destination address. You can enter one or two addresses.
      */
     public $Destinations;
 
@@ -45,7 +45,7 @@ class CreateOutputRTPSettings extends AbstractModel
     public $IdleTimeout;
 
     /**
-     * @param CreateOutputRTPSettingsDestinations $Destinations Push destination address. 1–2 addresses can be entered.
+     * @param CreateOutputRTPSettingsDestinations $Destinations Push destination address. You can enter one or two addresses.
      * @param string $FEC Only `none` can be entered.
      * @param integer $IdleTimeout Idle timeout period.
      */

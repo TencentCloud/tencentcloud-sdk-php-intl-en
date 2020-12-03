@@ -80,12 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setReadonly(string $Readonly) Set Domain name lock status. normal: not locked; global: globally locked.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setTag(array $Tag) Set Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method WebSocket getWebSocket() Obtain 
- * @method void setWebSocket(WebSocket $WebSocket) Set 
+ * @method array getTag() Obtain Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setTag(array $Tag) Set Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method WebSocket getWebSocket() Obtain WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -196,13 +198,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Readonly;
 
     /**
-     * @var array Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var array Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Tag;
 
     /**
-     * @var WebSocket 
+     * @var WebSocket WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $WebSocket;
 
@@ -237,9 +240,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Readonly Domain name lock status. normal: not locked; global: globally locked.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Tag Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param WebSocket $WebSocket 
+     * @param array $Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param WebSocket $WebSocket WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

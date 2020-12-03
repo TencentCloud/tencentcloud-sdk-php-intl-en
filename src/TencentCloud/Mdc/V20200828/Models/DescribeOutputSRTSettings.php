@@ -32,9 +32,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLatency(integer $Latency) Set Latency.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getRecvLatency() Obtain Receipt latency.
+ * @method integer getRecvLatency() Obtain Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRecvLatency(integer $RecvLatency) Set Receipt latency.
+ * @method void setRecvLatency(integer $RecvLatency) Set Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getPeerLatency() Obtain Peer latency.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -74,7 +74,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Latency;
 
     /**
-     * @var integer Receipt latency.
+     * @var integer Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RecvLatency;
@@ -110,7 +110,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Latency Latency.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $RecvLatency Receipt latency.
+     * @param integer $RecvLatency Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $PeerLatency Peer latency.
 Note: this field may return null, indicating that no valid values can be obtained.

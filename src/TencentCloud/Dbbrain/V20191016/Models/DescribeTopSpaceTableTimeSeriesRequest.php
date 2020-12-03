@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartDate(string $StartDate) Set Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
  * @method string getEndDate() Obtain End date. It can be as early as 29 days before the current date, and defaults to the current date.
  * @method void setEndDate(string $EndDate) Set End date. It can be as early as 29 days before the current date, and defaults to the current date.
- * @method string getProduct() Obtain 
- * @method void setProduct(string $Product) Set 
+ * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+ * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
  */
 class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
     public $EndDate;
 
     /**
-     * @var string 
+     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     public $Product;
 
@@ -71,7 +71,7 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
      * @param string $SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
      * @param string $StartDate Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
      * @param string $EndDate End date. It can be as early as 29 days before the current date, and defaults to the current date.
-     * @param string $Product 
+     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     function __construct()
     {

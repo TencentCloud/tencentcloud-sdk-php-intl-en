@@ -24,6 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceEnabled(boolean $ServiceEnabled) Set Whether the KMS service has been activated. true: activated
  * @method integer getInvalidType() Obtain Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
  * @method void setInvalidType(integer $InvalidType) Set Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+ * @method integer getUserLevel() Obtain 0: Basic Edition, 1: Ultimate Edition
+ * @method void setUserLevel(integer $UserLevel) Set 0: Basic Edition, 1: Ultimate Edition
+ * @method integer getProExpireTime() Obtain Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProExpireTime(integer $ProExpireTime) Set Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProRenewFlag() Obtain Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProRenewFlag(integer $ProRenewFlag) Set Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getProResourceId() Obtain Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProResourceId(string $ProResourceId) Set Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +54,29 @@ class GetServiceStatusResponse extends AbstractModel
     public $InvalidType;
 
     /**
+     * @var integer 0: Basic Edition, 1: Ultimate Edition
+     */
+    public $UserLevel;
+
+    /**
+     * @var integer Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProExpireTime;
+
+    /**
+     * @var integer Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProRenewFlag;
+
+    /**
+     * @var string Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProResourceId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +84,13 @@ class GetServiceStatusResponse extends AbstractModel
     /**
      * @param boolean $ServiceEnabled Whether the KMS service has been activated. true: activated
      * @param integer $InvalidType Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+     * @param integer $UserLevel 0: Basic Edition, 1: Ultimate Edition
+     * @param integer $ProExpireTime Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProRenewFlag Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ProResourceId Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +112,22 @@ class GetServiceStatusResponse extends AbstractModel
 
         if (array_key_exists("InvalidType",$param) and $param["InvalidType"] !== null) {
             $this->InvalidType = $param["InvalidType"];
+        }
+
+        if (array_key_exists("UserLevel",$param) and $param["UserLevel"] !== null) {
+            $this->UserLevel = $param["UserLevel"];
+        }
+
+        if (array_key_exists("ProExpireTime",$param) and $param["ProExpireTime"] !== null) {
+            $this->ProExpireTime = $param["ProExpireTime"];
+        }
+
+        if (array_key_exists("ProRenewFlag",$param) and $param["ProRenewFlag"] !== null) {
+            $this->ProRenewFlag = $param["ProRenewFlag"];
+        }
+
+        if (array_key_exists("ProResourceId",$param) and $param["ProResourceId"] !== null) {
+            $this->ProResourceId = $param["ProResourceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

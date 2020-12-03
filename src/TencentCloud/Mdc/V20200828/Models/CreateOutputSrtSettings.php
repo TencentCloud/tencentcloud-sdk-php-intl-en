@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SRT configuration of the created MediaConnect flow output.
  *
- * @method array getDestinations() Obtain Push destination address. Please configure 1–2 addresses.
- * @method void setDestinations(array $Destinations) Set Push destination address. Please configure 1–2 addresses.
+ * @method array getDestinations() Obtain Push destination address. Please configure one or two addresses.
+ * @method void setDestinations(array $Destinations) Set Push destination address. Please configure one or two addresses.
  * @method string getStreamId() Obtain Stream ID of SRT push.
  * @method void setStreamId(string $StreamId) Set Stream ID of SRT push.
  * @method integer getLatency() Obtain Total latency of SRT push.
  * @method void setLatency(integer $Latency) Set Total latency of SRT push.
- * @method integer getRecvLatency() Obtain Receipt latency of SRT push.
- * @method void setRecvLatency(integer $RecvLatency) Set Receipt latency of SRT push.
+ * @method integer getRecvLatency() Obtain Receive latency of SRT push.
+ * @method void setRecvLatency(integer $RecvLatency) Set Receive latency of SRT push.
  * @method integer getPeerLatency() Obtain Peer latency of SRT push.
  * @method void setPeerLatency(integer $PeerLatency) Set Peer latency of SRT push.
  * @method integer getPeerIdleTimeout() Obtain Peer idle timeout period of SRT push.
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateOutputSrtSettings extends AbstractModel
 {
     /**
-     * @var array Push destination address. Please configure 1–2 addresses.
+     * @var array Push destination address. Please configure one or two addresses.
      */
     public $Destinations;
 
@@ -55,7 +55,7 @@ class CreateOutputSrtSettings extends AbstractModel
     public $Latency;
 
     /**
-     * @var integer Receipt latency of SRT push.
+     * @var integer Receive latency of SRT push.
      */
     public $RecvLatency;
 
@@ -80,10 +80,10 @@ class CreateOutputSrtSettings extends AbstractModel
     public $PbKeyLen;
 
     /**
-     * @param array $Destinations Push destination address. Please configure 1–2 addresses.
+     * @param array $Destinations Push destination address. Please configure one or two addresses.
      * @param string $StreamId Stream ID of SRT push.
      * @param integer $Latency Total latency of SRT push.
-     * @param integer $RecvLatency Receipt latency of SRT push.
+     * @param integer $RecvLatency Receive latency of SRT push.
      * @param integer $PeerLatency Peer latency of SRT push.
      * @param integer $PeerIdleTimeout Peer idle timeout period of SRT push.
      * @param string $Passphrase Encryption key of SRT push.

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTopSpaceTables() Obtain List of the returned space statistics of top tables.
  * @method void setTopSpaceTables(array $TopSpaceTables) Set List of the returned space statistics of top tables.
- * @method integer getTimestamp() Obtain Timestamp (in seconds) identifying when the tablespace data is collected.
- * @method void setTimestamp(integer $Timestamp) Set Timestamp (in seconds) identifying when the tablespace data is collected.
+ * @method integer getTimestamp() Obtain Timestamp (in seconds) of tablespace data collect points
+ * @method void setTimestamp(integer $Timestamp) Set Timestamp (in seconds) of tablespace data collect points
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeTopSpaceTablesResponse extends AbstractModel
     public $TopSpaceTables;
 
     /**
-     * @var integer Timestamp (in seconds) identifying when the tablespace data is collected.
+     * @var integer Timestamp (in seconds) of tablespace data collect points
      */
     public $Timestamp;
 
@@ -46,7 +46,7 @@ class DescribeTopSpaceTablesResponse extends AbstractModel
 
     /**
      * @param array $TopSpaceTables List of the returned space statistics of top tables.
-     * @param integer $Timestamp Timestamp (in seconds) identifying when the tablespace data is collected.
+     * @param integer $Timestamp Timestamp (in seconds) of tablespace data collect points
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

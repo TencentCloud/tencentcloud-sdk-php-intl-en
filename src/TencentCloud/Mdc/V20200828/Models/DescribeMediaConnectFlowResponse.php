@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaConnectFlow response structure.
  *
- * @method DescribeFlow getInfo() Obtain Configuration information of flow.
- * @method void setInfo(DescribeFlow $Info) Set Configuration information of flow.
+ * @method DescribeFlow getInfo() Obtain Configuration information of a flow.
+ * @method void setInfo(DescribeFlow $Info) Set Configuration information of a flow.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeMediaConnectFlowResponse extends AbstractModel
 {
     /**
-     * @var DescribeFlow Configuration information of flow.
+     * @var DescribeFlow Configuration information of a flow.
      */
     public $Info;
 
@@ -38,7 +38,7 @@ class DescribeMediaConnectFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeFlow $Info Configuration information of flow.
+     * @param DescribeFlow $Info Configuration information of a flow.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

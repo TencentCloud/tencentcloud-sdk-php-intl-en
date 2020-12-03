@@ -36,8 +36,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) Set Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
  * @method boolean getDeletionProtection() Obtain Indicates whether to enable cluster deletion protection.
  * @method void setDeletionProtection(boolean $DeletionProtection) Set Indicates whether to enable cluster deletion protection.
- * @method string getKubeProxyMode() Obtain Cluster network proxy model
- * @method void setKubeProxyMode(string $KubeProxyMode) Set Cluster network proxy model
+ * @method string getKubeProxyMode() Obtain Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
+ * @method void setKubeProxyMode(string $KubeProxyMode) Set Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
  * @method boolean getAuditEnabled() Obtain Indicates whether to enable auditing
  * @method void setAuditEnabled(boolean $AuditEnabled) Set Indicates whether to enable auditing
  * @method string getAuditLogsetId() Obtain Specifies the ID of logset to which the audit logs are uploaded.
@@ -46,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditLogTopicId(string $AuditLogTopicId) Set Specifies the ID of topic to which the audit logs are uploaded.
  * @method string getVpcCniType() Obtain Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
  * @method void setVpcCniType(string $VpcCniType) Set Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+ * @method string getRuntimeVersion() Obtain Runtime version
+ * @method void setRuntimeVersion(string $RuntimeVersion) Set Runtime version
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -90,7 +104,13 @@ class ClusterAdvancedSettings extends AbstractModel
     public $DeletionProtection;
 
     /**
-     * @var string Cluster network proxy model
+     * @var string Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
      */
     public $KubeProxyMode;
 
@@ -115,6 +135,11 @@ class ClusterAdvancedSettings extends AbstractModel
     public $VpcCniType;
 
     /**
+     * @var string Runtime version
+     */
+    public $RuntimeVersion;
+
+    /**
      * @param boolean $IPVS Whether IPVS is enabled
      * @param boolean $AsEnabled Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
      * @param string $ContainerRuntime Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
@@ -123,11 +148,18 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param string $NetworkType Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
      * @param boolean $IsNonStaticIpMode Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
      * @param boolean $DeletionProtection Indicates whether to enable cluster deletion protection.
-     * @param string $KubeProxyMode Cluster network proxy model
+     * @param string $KubeProxyMode Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
      * @param boolean $AuditEnabled Indicates whether to enable auditing
      * @param string $AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
      * @param string $AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
      * @param string $VpcCniType Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     * @param string $RuntimeVersion Runtime version
      */
     function __construct()
     {
@@ -193,6 +225,10 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("VpcCniType",$param) and $param["VpcCniType"] !== null) {
             $this->VpcCniType = $param["VpcCniType"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
         }
     }
 }

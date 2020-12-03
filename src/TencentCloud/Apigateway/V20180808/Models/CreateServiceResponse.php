@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceName(string $ServiceName) Set Custom service name.
  * @method string getServiceDesc() Obtain Custom service description.
  * @method void setServiceDesc(string $ServiceDesc) Set Custom service description.
- * @method string getOuterSubDomain() Obtain Default public network domain name.
- * @method void setOuterSubDomain(string $OuterSubDomain) Set Default public network domain name.
- * @method string getInnerSubDomain() Obtain Default private network domain name of VPC
- * @method void setInnerSubDomain(string $InnerSubDomain) Set Default private network domain name of VPC
+ * @method string getOuterSubDomain() Obtain Default public domain name.
+ * @method void setOuterSubDomain(string $OuterSubDomain) Set Default public domain name.
+ * @method string getInnerSubDomain() Obtain Default VPC domain name.
+ * @method void setInnerSubDomain(string $InnerSubDomain) Set Default VPC domain name.
  * @method string getCreatedTime() Obtain Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
  * @method void setCreatedTime(string $CreatedTime) Set Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
  * @method array getNetTypes() Obtain Network type list. INNER: private network access; OUTER: public network access.
@@ -59,12 +59,12 @@ class CreateServiceResponse extends AbstractModel
     public $ServiceDesc;
 
     /**
-     * @var string Default public network domain name.
+     * @var string Default public domain name.
      */
     public $OuterSubDomain;
 
     /**
-     * @var string Default private network domain name of VPC
+     * @var string Default VPC domain name.
      */
     public $InnerSubDomain;
 
@@ -93,8 +93,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ServiceId Unique service ID.
      * @param string $ServiceName Custom service name.
      * @param string $ServiceDesc Custom service description.
-     * @param string $OuterSubDomain Default public network domain name.
-     * @param string $InnerSubDomain Default private network domain name of VPC
+     * @param string $OuterSubDomain Default public domain name.
+     * @param string $InnerSubDomain Default VPC domain name.
      * @param string $CreatedTime Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
      * @param array $NetTypes Network type list. INNER: private network access; OUTER: public network access.
      * @param string $IpVersion IP version number.

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getEventId() Obtain Event ID, which can be obtained through the `DescribeDBDiagHistory` API.
  * @method void setEventId(integer $EventId) Set Event ID, which can be obtained through the `DescribeDBDiagHistory` API.
+ * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+ * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
  */
 class DescribeDBDiagEventRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDBDiagEventRequest extends AbstractModel
     public $EventId;
 
     /**
+     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param integer $EventId Event ID, which can be obtained through the `DescribeDBDiagHistory` API.
+     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDBDiagEventRequest extends AbstractModel
 
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

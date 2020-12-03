@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time, such as "2019-09-10 12:13:14".
  * @method string getEndTime() Obtain End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
  * @method void setEndTime(string $EndTime) Set End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
- * @method string getProduct() Obtain 
- * @method void setProduct(string $Product) Set 
+ * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+ * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
  */
 class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 
+     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     public $Product;
 
@@ -55,7 +55,7 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
      * @param string $InstanceId Instance ID.
      * @param string $StartTime Start time, such as "2019-09-10 12:13:14".
      * @param string $EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
-     * @param string $Product 
+     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     function __construct()
     {

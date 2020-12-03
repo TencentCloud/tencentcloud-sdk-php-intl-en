@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration information of the created input.
  *
- * @method string getInputName() Obtain Input name, which can contain 1–32 letters, digits, and underscores.
- * @method void setInputName(string $InputName) Set Input name, which can contain 1–32 letters, digits, and underscores.
- * @method string getProtocol() Obtain Input protocol. Valid values: [SRT|RTP].
- * @method void setProtocol(string $Protocol) Set Input protocol. Valid values: [SRT|RTP].
+ * @method string getInputName() Obtain Input name, which can contain 1 to 32 letters, digits, and underscores.
+ * @method void setInputName(string $InputName) Set Input name, which can contain 1 to 32 letters, digits, and underscores.
+ * @method string getProtocol() Obtain Input protocol. Valid values: SRT, RTP.
+ * @method void setProtocol(string $Protocol) Set Input protocol. Valid values: SRT, RTP.
  * @method string getDescription() Obtain Input description. Length: [0, 255].
  * @method void setDescription(string $Description) Set Input description. Length: [0, 255].
  * @method array getAllowIpList() Obtain Allowlist of input IPs in CIDR format.
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateInput extends AbstractModel
 {
     /**
-     * @var string Input name, which can contain 1–32 letters, digits, and underscores.
+     * @var string Input name, which can contain 1 to 32 letters, digits, and underscores.
      */
     public $InputName;
 
     /**
-     * @var string Input protocol. Valid values: [SRT|RTP].
+     * @var string Input protocol. Valid values: SRT, RTP.
      */
     public $Protocol;
 
@@ -66,8 +66,8 @@ class CreateInput extends AbstractModel
     public $RTPSettings;
 
     /**
-     * @param string $InputName Input name, which can contain 1–32 letters, digits, and underscores.
-     * @param string $Protocol Input protocol. Valid values: [SRT|RTP].
+     * @param string $InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
+     * @param string $Protocol Input protocol. Valid values: SRT, RTP.
      * @param string $Description Input description. Length: [0, 255].
      * @param array $AllowIpList Allowlist of input IPs in CIDR format.
      * @param CreateInputSRTSettings $SRTSettings SRT configuration information of input.

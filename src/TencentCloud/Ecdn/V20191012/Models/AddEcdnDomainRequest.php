@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Forced access protocol redirection configuration.
  * @method array getTag() Obtain Tag bound to a domain name.
  * @method void setTag(array $Tag) Set Tag bound to a domain name.
- * @method WebSocket getWebSocket() Obtain 
- * @method void setWebSocket(WebSocket $WebSocket) Set 
+ * @method WebSocket getWebSocket() Obtain WebSocket configuration.
+ * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration.
  */
 class AddEcdnDomainRequest extends AbstractModel
 {
@@ -110,7 +110,7 @@ class AddEcdnDomainRequest extends AbstractModel
     public $Tag;
 
     /**
-     * @var WebSocket 
+     * @var WebSocket WebSocket configuration.
      */
     public $WebSocket;
 
@@ -127,7 +127,7 @@ class AddEcdnDomainRequest extends AbstractModel
      * @param Https $Https HTTPS configuration.
      * @param ForceRedirect $ForceRedirect Forced access protocol redirection configuration.
      * @param array $Tag Tag bound to a domain name.
-     * @param WebSocket $WebSocket 
+     * @param WebSocket $WebSocket WebSocket configuration.
      */
     function __construct()
     {

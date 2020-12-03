@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowId() Obtain Flow ID.
  * @method void setFlowId(string $FlowId) Set Flow ID.
- * @method CreateOutput getOutput() Obtain Output configuration of flow.
- * @method void setOutput(CreateOutput $Output) Set Output configuration of flow.
+ * @method CreateOutput getOutput() Obtain Output configuration of a flow.
+ * @method void setOutput(CreateOutput $Output) Set Output configuration of a flow.
  */
 class CreateMediaConnectOutputRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateMediaConnectOutputRequest extends AbstractModel
     public $FlowId;
 
     /**
-     * @var CreateOutput Output configuration of flow.
+     * @var CreateOutput Output configuration of a flow.
      */
     public $Output;
 
     /**
      * @param string $FlowId Flow ID.
-     * @param CreateOutput $Output Output configuration of flow.
+     * @param CreateOutput $Output Output configuration of a flow.
      */
     function __construct()
     {

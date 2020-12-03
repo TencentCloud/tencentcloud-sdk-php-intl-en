@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method array getSchemaList() Obtain Database name array.
  * @method void setSchemaList(array $SchemaList) Set Database name array.
- * @method string getProduct() Obtain 
- * @method void setProduct(string $Product) Set 
+ * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+ * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
  */
 class DescribeSlowLogTopSqlsRequest extends AbstractModel
 {
@@ -82,7 +82,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $SchemaList;
 
     /**
-     * @var string 
+     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     public $Product;
 
@@ -95,7 +95,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
      * @param integer $Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      * @param array $SchemaList Database name array.
-     * @param string $Product 
+     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     function __construct()
     {

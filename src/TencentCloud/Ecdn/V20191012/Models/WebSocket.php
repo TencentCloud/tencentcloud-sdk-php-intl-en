@@ -18,28 +18,32 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * WebSocket configuration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method integer getTimeout() Obtain 
- * @method void setTimeout(integer $Timeout) Set 
+ * @method string getSwitch() Obtain WebSocket configuration switch, which can be `on` or `off`.
+ * @method void setSwitch(string $Switch) Set WebSocket configuration switch, which can be `on` or `off`.
+ * @method integer getTimeout() Obtain Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTimeout(integer $Timeout) Set Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class WebSocket extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string WebSocket configuration switch, which can be `on` or `off`.
      */
     public $Switch;
 
     /**
-     * @var integer 
+     * @var integer Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Timeout;
 
     /**
-     * @param string $Switch 
-     * @param integer $Timeout 
+     * @param string $Switch WebSocket configuration switch, which can be `on` or `off`.
+     * @param integer $Timeout Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) Set Custom file system name
  * @method array getResourceTags() Obtain File system tag
  * @method void setResourceTags(array $ResourceTags) Set File system tag
+ * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+ * @method void setClientToken(string $ClientToken) Set A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
  */
 class CreateCfsFileSystemRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+     */
+    public $ClientToken;
+
+    /**
      * @param string $Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
      * @param string $NetInterface Network type. Valid values: VPC (VPC), BASIC (basic network)
      * @param string $PGroupId Permission group ID
@@ -104,6 +111,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @param string $MountIP Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
      * @param string $FsName Custom file system name
      * @param array $ResourceTags File system tag
+     * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class CreateCfsFileSystemRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

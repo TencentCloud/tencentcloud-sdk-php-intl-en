@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getRangeDays() Obtain Query period in days. The end date is the current date and the query period is 7 days by default.
  * @method void setRangeDays(integer $RangeDays) Set Query period in days. The end date is the current date and the query period is 7 days by default.
+ * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+ * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
  */
 class DescribeDBSpaceStatusRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDBSpaceStatusRequest extends AbstractModel
     public $RangeDays;
 
     /**
+     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param integer $RangeDays Query period in days. The end date is the current date and the query period is 7 days by default.
+     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDBSpaceStatusRequest extends AbstractModel
 
         if (array_key_exists("RangeDays",$param) and $param["RangeDays"] !== null) {
             $this->RangeDays = $param["RangeDays"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

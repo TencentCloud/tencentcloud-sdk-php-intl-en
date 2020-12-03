@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned top tables. Default value: 20. Maximum value: 20.
  * @method string getSortBy() Obtain Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
  * @method void setSortBy(string $SortBy) Set Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+ * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+ * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
  */
 class DescribeTopSpaceTablesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeTopSpaceTablesRequest extends AbstractModel
     public $SortBy;
 
     /**
+     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param integer $Limit Number of returned top tables. Default value: 20. Maximum value: 20.
      * @param string $SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeTopSpaceTablesRequest extends AbstractModel
 
         if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
             $this->SortBy = $param["SortBy"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

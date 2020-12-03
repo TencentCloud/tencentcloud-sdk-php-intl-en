@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SRT configuration information of the created input.
  *
- * @method string getStreamId() Obtain Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
- * @method void setStreamId(string $StreamId) Set Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
+ * @method string getStreamId() Obtain Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+ * @method void setStreamId(string $StreamId) Set Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
  * @method integer getLatency() Obtain Latency in ms. Default value: 0. Value range: [0, 3000].
  * @method void setLatency(integer $Latency) Set Latency in ms. Default value: 0. Value range: [0, 3000].
- * @method integer getRecvLatency() Obtain Receipt latency in ms. Default value: 120. Value range: [0, 3000].
- * @method void setRecvLatency(integer $RecvLatency) Set Receipt latency in ms. Default value: 120. Value range: [0, 3000].
+ * @method integer getRecvLatency() Obtain Receive latency in ms. Default value: 120. Value range: [0, 3000].
+ * @method void setRecvLatency(integer $RecvLatency) Set Receive latency in ms. Default value: 120. Value range: [0, 3000].
  * @method integer getPeerLatency() Obtain Peer latency in ms. Default value: 0. Value range: [0, 3000].
  * @method void setPeerLatency(integer $PeerLatency) Set Peer latency in ms. Default value: 0. Value range: [0, 3000].
  * @method integer getPeerIdleTimeout() Obtain Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
  * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) Set Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
  * @method string getPassphrase() Obtain Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
  * @method void setPassphrase(string $Passphrase) Set Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
- * @method integer getPbKeyLen() Obtain Key length. Default value: 0. Valid values: [0|16|24|32].
- * @method void setPbKeyLen(integer $PbKeyLen) Set Key length. Default value: 0. Valid values: [0|16|24|32].
+ * @method integer getPbKeyLen() Obtain Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+ * @method void setPbKeyLen(integer $PbKeyLen) Set Key length. Default value: 0. Valid values: 0, 16, 24, 32.
  */
 class CreateInputSRTSettings extends AbstractModel
 {
     /**
-     * @var string Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
+     * @var string Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
      */
     public $StreamId;
 
@@ -48,7 +48,7 @@ class CreateInputSRTSettings extends AbstractModel
     public $Latency;
 
     /**
-     * @var integer Receipt latency in ms. Default value: 120. Value range: [0, 3000].
+     * @var integer Receive latency in ms. Default value: 120. Value range: [0, 3000].
      */
     public $RecvLatency;
 
@@ -68,18 +68,18 @@ class CreateInputSRTSettings extends AbstractModel
     public $Passphrase;
 
     /**
-     * @var integer Key length. Default value: 0. Valid values: [0|16|24|32].
+     * @var integer Key length. Default value: 0. Valid values: 0, 16, 24, 32.
      */
     public $PbKeyLen;
 
     /**
-     * @param string $StreamId Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
+     * @param string $StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
      * @param integer $Latency Latency in ms. Default value: 0. Value range: [0, 3000].
-     * @param integer $RecvLatency Receipt latency in ms. Default value: 120. Value range: [0, 3000].
+     * @param integer $RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
      * @param integer $PeerLatency Peer latency in ms. Default value: 0. Value range: [0, 3000].
      * @param integer $PeerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
      * @param string $Passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
-     * @param integer $PbKeyLen Key length. Default value: 0. Valid values: [0|16|24|32].
+     * @param integer $PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
      */
     function __construct()
     {

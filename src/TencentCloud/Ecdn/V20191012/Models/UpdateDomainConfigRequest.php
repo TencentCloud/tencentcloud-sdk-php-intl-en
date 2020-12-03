@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Forced access protocol redirection configuration.
  * @method string getArea() Obtain Domain name acceleration region. Valid values: mainland (acceleration in Mainland China), overseas (acceleration outside Mainland China), global (global acceleration).
  * @method void setArea(string $Area) Set Domain name acceleration region. Valid values: mainland (acceleration in Mainland China), overseas (acceleration outside Mainland China), global (global acceleration).
+ * @method WebSocket getWebSocket() Obtain WebSocket configuration.
+ * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration.
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Area;
 
     /**
+     * @var WebSocket WebSocket configuration.
+     */
+    public $WebSocket;
+
+    /**
      * @param string $Domain Domain name.
      * @param Origin $Origin Origin server configuration.
      * @param integer $ProjectId Project ID.
@@ -112,6 +119,7 @@ class UpdateDomainConfigRequest extends AbstractModel
      * @param Https $Https HTTPS configuration.
      * @param ForceRedirect $ForceRedirect Forced access protocol redirection configuration.
      * @param string $Area Domain name acceleration region. Valid values: mainland (acceleration in Mainland China), overseas (acceleration outside Mainland China), global (global acceleration).
+     * @param WebSocket $WebSocket WebSocket configuration.
      */
     function __construct()
     {
@@ -176,6 +184,11 @@ class UpdateDomainConfigRequest extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
+            $this->WebSocket = new WebSocket();
+            $this->WebSocket->deserialize($param["WebSocket"]);
         }
     }
 }

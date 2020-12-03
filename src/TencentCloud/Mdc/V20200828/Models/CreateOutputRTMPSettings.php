@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RTMP configuration of the created MediaConnect flow output.
  *
- * @method array getDestinations() Obtain Push destination address. 1–2 addresses can be entered.
- * @method void setDestinations(array $Destinations) Set Push destination address. 1–2 addresses can be entered.
+ * @method array getDestinations() Obtain Push destination address. You can enter one or two addresses.
+ * @method void setDestinations(array $Destinations) Set Push destination address. You can enter one or two addresses.
  * @method integer getChunkSize() Obtain RTMP chunk size. Value range: [4096, 40960].
  * @method void setChunkSize(integer $ChunkSize) Set RTMP chunk size. Value range: [4096, 40960].
  */
 class CreateOutputRTMPSettings extends AbstractModel
 {
     /**
-     * @var array Push destination address. 1–2 addresses can be entered.
+     * @var array Push destination address. You can enter one or two addresses.
      */
     public $Destinations;
 
@@ -38,7 +38,7 @@ class CreateOutputRTMPSettings extends AbstractModel
     public $ChunkSize;
 
     /**
-     * @param array $Destinations Push destination address. 1–2 addresses can be entered.
+     * @param array $Destinations Push destination address. You can enter one or two addresses.
      * @param integer $ChunkSize RTMP chunk size. Value range: [4096, 40960].
      */
     function __construct()

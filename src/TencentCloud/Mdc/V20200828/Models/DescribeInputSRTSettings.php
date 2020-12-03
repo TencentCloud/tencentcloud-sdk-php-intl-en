@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamId(string $StreamId) Set Stream ID.
  * @method integer getLatency() Obtain Latency.
  * @method void setLatency(integer $Latency) Set Latency.
- * @method integer getRecvLatency() Obtain Receipt latency.
- * @method void setRecvLatency(integer $RecvLatency) Set Receipt latency.
+ * @method integer getRecvLatency() Obtain Receive latency.
+ * @method void setRecvLatency(integer $RecvLatency) Set Receive latency.
  * @method integer getPeerLatency() Obtain Peer latency.
  * @method void setPeerLatency(integer $PeerLatency) Set Peer latency.
  * @method integer getPeerIdleTimeout() Obtain Peer idle timeout period.
@@ -48,7 +48,7 @@ class DescribeInputSRTSettings extends AbstractModel
     public $Latency;
 
     /**
-     * @var integer Receipt latency.
+     * @var integer Receive latency.
      */
     public $RecvLatency;
 
@@ -75,7 +75,7 @@ class DescribeInputSRTSettings extends AbstractModel
     /**
      * @param string $StreamId Stream ID.
      * @param integer $Latency Latency.
-     * @param integer $RecvLatency Receipt latency.
+     * @param integer $RecvLatency Receive latency.
      * @param integer $PeerLatency Peer latency.
      * @param integer $PeerIdleTimeout Peer idle timeout period.
      * @param string $Passphrase Decryption key.

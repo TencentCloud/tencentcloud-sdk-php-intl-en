@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowName() Obtain Flow name.
  * @method void setFlowName(string $FlowName) Set Flow name.
- * @method integer getMaxBandwidth() Obtain Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
- * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
+ * @method integer getMaxBandwidth() Obtain Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
+ * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
  * @method array getInputGroup() Obtain Flow input group.
  * @method void setInputGroup(array $InputGroup) Set Flow input group.
  */
@@ -35,7 +35,7 @@ class CreateMediaConnectFlowRequest extends AbstractModel
     public $FlowName;
 
     /**
-     * @var integer Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
+     * @var integer Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
      */
     public $MaxBandwidth;
 
@@ -46,7 +46,7 @@ class CreateMediaConnectFlowRequest extends AbstractModel
 
     /**
      * @param string $FlowName Flow name.
-     * @param integer $MaxBandwidth Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
+     * @param integer $MaxBandwidth Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
      * @param array $InputGroup Flow input group.
      */
     function __construct()
