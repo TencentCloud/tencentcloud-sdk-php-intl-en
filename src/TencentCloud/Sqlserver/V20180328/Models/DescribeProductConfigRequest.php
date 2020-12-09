@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain AZ ID in the format of ap-guangzhou-1
  * @method void setZone(string $Zone) Set AZ ID in the format of ap-guangzhou-1
+ * @method string getInstanceType() Obtain The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+ * @method void setInstanceType(string $InstanceType) Set The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeProductConfigRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var string The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+     */
+    public $InstanceType;
+
+    /**
      * @param string $Zone AZ ID in the format of ap-guangzhou-1
+     * @param string $InstanceType The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeProductConfigRequest extends AbstractModel
         }
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQosLevel(string $QosLevel) Set CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
  * @method string getInstanceChargeType() Obtain The billing method. POSTPAID: postpaid by traffic. Default: POSTPAID.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set The billing method. POSTPAID: postpaid by traffic. Default: POSTPAID.
- * @method string getBandwidthLimitType() Obtain The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
- * @method void setBandwidthLimitType(string $BandwidthLimitType) Set The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
+ * @method string getBandwidthLimitType() Obtain The bandwidth limit type. Valid values: OUTER_REGION_LIMIT: region outbound bandwidth limit; INTER_REGION_LIMIT: inter-region bandwidth limit. Default value: OUTER_REGION_LIMIT. Monthly-subscribed CCN instances only support inter-region bandwidth limit, while pay-as-you-go CCN instances support the both bandwidth limit types.
+ * @method void setBandwidthLimitType(string $BandwidthLimitType) Set The bandwidth limit type. Valid values: OUTER_REGION_LIMIT: region outbound bandwidth limit; INTER_REGION_LIMIT: inter-region bandwidth limit. Default value: OUTER_REGION_LIMIT. Monthly-subscribed CCN instances only support inter-region bandwidth limit, while pay-as-you-go CCN instances support the both bandwidth limit types.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  */
@@ -56,7 +56,7 @@ class CreateCcnRequest extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var string The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
+     * @var string The bandwidth limit type. Valid values: OUTER_REGION_LIMIT: region outbound bandwidth limit; INTER_REGION_LIMIT: inter-region bandwidth limit. Default value: OUTER_REGION_LIMIT. Monthly-subscribed CCN instances only support inter-region bandwidth limit, while pay-as-you-go CCN instances support the both bandwidth limit types.
      */
     public $BandwidthLimitType;
 
@@ -70,7 +70,7 @@ class CreateCcnRequest extends AbstractModel
      * @param string $CcnDescription The description of the CCN. The maximum length is 100 characters.
      * @param string $QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
      * @param string $InstanceChargeType The billing method. POSTPAID: postpaid by traffic. Default: POSTPAID.
-     * @param string $BandwidthLimitType The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
+     * @param string $BandwidthLimitType The bandwidth limit type. Valid values: OUTER_REGION_LIMIT: region outbound bandwidth limit; INTER_REGION_LIMIT: inter-region bandwidth limit. Default value: OUTER_REGION_LIMIT. Monthly-subscribed CCN instances only support inter-region bandwidth limit, while pay-as-you-go CCN instances support the both bandwidth limit types.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     function __construct()

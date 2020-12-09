@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBNames(array $DBNames) Set List of names of databases to be backed up (required only for multi-database backup)
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-i1z41iwd
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-i1z41iwd
- * @method string getBackupName() Obtain Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
- * @method void setBackupName(string $BackupName) Set Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+ * @method string getBackupName() Obtain Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+ * @method void setBackupName(string $BackupName) Set Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateBackupRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+     * @var string Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
      */
     public $BackupName;
 
@@ -55,7 +55,7 @@ class CreateBackupRequest extends AbstractModel
      * @param integer $Strategy Backup policy (0: instance backup, 1: multi-database backup)
      * @param array $DBNames List of names of databases to be backed up (required only for multi-database backup)
      * @param string $InstanceId Instance ID in the format of mssql-i1z41iwd
-     * @param string $BackupName Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+     * @param string $BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
      */
     function __construct()
     {

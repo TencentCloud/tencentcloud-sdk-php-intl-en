@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInPkg(integer $InPkg) Set Inbound packets.
  * @method integer getOutPkg() Obtain Outbound packets.
  * @method void setOutPkg(integer $OutPkg) Set Outbound packets.
- * @method integer getInTraffic() Obtain Inbound bandwidth, unit: `Byte`.
- * @method void setInTraffic(integer $InTraffic) Set Inbound bandwidth, unit: `Byte`.
- * @method integer getOutTraffic() Obtain Outbound bandwidth, unit: `Byte`.
- * @method void setOutTraffic(integer $OutTraffic) Set Outbound bandwidth, unit: `Byte`.
+ * @method integer getInTraffic() Obtain Inbound traffic, in Byte.
+ * @method void setInTraffic(integer $InTraffic) Set Inbound traffic, in Byte.
+ * @method integer getOutTraffic() Obtain Outbound traffic, in Byte.
+ * @method void setOutTraffic(integer $OutTraffic) Set Outbound traffic, in Byte.
  */
 class GatewayFlowMonitorDetail extends AbstractModel
 {
@@ -49,12 +49,12 @@ class GatewayFlowMonitorDetail extends AbstractModel
     public $OutPkg;
 
     /**
-     * @var integer Inbound bandwidth, unit: `Byte`.
+     * @var integer Inbound traffic, in Byte.
      */
     public $InTraffic;
 
     /**
-     * @var integer Outbound bandwidth, unit: `Byte`.
+     * @var integer Outbound traffic, in Byte.
      */
     public $OutTraffic;
 
@@ -62,8 +62,8 @@ class GatewayFlowMonitorDetail extends AbstractModel
      * @param string $PrivateIpAddress Origin `IP`.
      * @param integer $InPkg Inbound packets.
      * @param integer $OutPkg Outbound packets.
-     * @param integer $InTraffic Inbound bandwidth, unit: `Byte`.
-     * @param integer $OutTraffic Outbound bandwidth, unit: `Byte`.
+     * @param integer $InTraffic Inbound traffic, in Byte.
+     * @param integer $OutTraffic Outbound traffic, in Byte.
      */
     function __construct()
     {

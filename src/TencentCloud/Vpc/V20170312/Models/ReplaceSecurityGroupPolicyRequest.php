@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) Set The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() Obtain Security group policy set object.
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) Set Security group policy set object.
+ * @method SecurityGroupPolicySet getOriginalSecurityGroupPolicySet() Obtain (Optional) The old policy set of the security group, which is used for log records.
+ * @method void setOriginalSecurityGroupPolicySet(SecurityGroupPolicySet $OriginalSecurityGroupPolicySet) Set (Optional) The old policy set of the security group, which is used for log records.
  */
 class ReplaceSecurityGroupPolicyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
     public $SecurityGroupPolicySet;
 
     /**
+     * @var SecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
+     */
+    public $OriginalSecurityGroupPolicySet;
+
+    /**
      * @param string $SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet Security group policy set object.
+     * @param SecurityGroupPolicySet $OriginalSecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
      */
     function __construct()
     {
@@ -61,6 +69,11 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
         if (array_key_exists("SecurityGroupPolicySet",$param) and $param["SecurityGroupPolicySet"] !== null) {
             $this->SecurityGroupPolicySet = new SecurityGroupPolicySet();
             $this->SecurityGroupPolicySet->deserialize($param["SecurityGroupPolicySet"]);
+        }
+
+        if (array_key_exists("OriginalSecurityGroupPolicySet",$param) and $param["OriginalSecurityGroupPolicySet"] !== null) {
+            $this->OriginalSecurityGroupPolicySet = new SecurityGroupPolicySet();
+            $this->OriginalSecurityGroupPolicySet->deserialize($param["OriginalSecurityGroupPolicySet"]);
         }
     }
 }

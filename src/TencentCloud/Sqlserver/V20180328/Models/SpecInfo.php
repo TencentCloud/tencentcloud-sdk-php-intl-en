@@ -50,6 +50,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getPayModeStatus() Obtain Billing mode under this specification. POST: pay-as-you-go
  * @method void setPayModeStatus(string $PayModeStatus) Set Billing mode under this specification. POST: pay-as-you-go
+ * @method string getInstanceType() Obtain Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+ * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+ * @method string getMultiZonesStatus() Obtain Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
+ * @method void setMultiZonesStatus(string $MultiZonesStatus) Set Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
  */
 class SpecInfo extends AbstractModel
 {
@@ -125,6 +129,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PayModeStatus;
 
     /**
+     * @var string Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+     */
+    public $InstanceType;
+
+    /**
+     * @var string Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
+     */
+    public $MultiZonesStatus;
+
+    /**
      * @param integer $SpecId Instance specification ID. The `SpecId` returned by `DescribeZones` together with the purchasable specification information returned by `DescribeProductConfig` can be used to find out what specifications can be purchased in a specified AZ
      * @param string $MachineType Model ID
      * @param string $MachineTypeName Model name
@@ -140,6 +154,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $PostPid Pay-as-you-go Pid list corresponding to this specification
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PayModeStatus Billing mode under this specification. POST: pay-as-you-go
+     * @param string $InstanceType Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+     * @param string $MultiZonesStatus Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
      */
     function __construct()
     {
@@ -208,6 +224,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PayModeStatus",$param) and $param["PayModeStatus"] !== null) {
             $this->PayModeStatus = $param["PayModeStatus"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("MultiZonesStatus",$param) and $param["MultiZonesStatus"] !== null) {
+            $this->MultiZonesStatus = $param["MultiZonesStatus"];
         }
     }
 }

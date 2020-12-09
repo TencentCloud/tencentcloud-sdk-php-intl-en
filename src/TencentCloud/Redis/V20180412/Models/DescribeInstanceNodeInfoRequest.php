@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getLimit() Obtain List size
  * @method void setLimit(integer $Limit) Set List size
- * @method integer getOffset() Obtain The offset
- * @method void setOffset(integer $Offset) Set The offset
+ * @method integer getOffset() Obtain The offset value
+ * @method void setOffset(integer $Offset) Set The offset value
  */
 class DescribeInstanceNodeInfoRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeInstanceNodeInfoRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer The offset
+     * @var integer The offset value
      */
     public $Offset;
 
     /**
      * @param string $InstanceId Instance ID
      * @param integer $Limit List size
-     * @param integer $Offset The offset
+     * @param integer $Offset The offset value
      */
     function __construct()
     {

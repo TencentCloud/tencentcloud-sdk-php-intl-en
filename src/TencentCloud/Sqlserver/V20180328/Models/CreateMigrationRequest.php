@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(MigrateTarget $Target) Set Migration target
  * @method array getMigrateDBSet() Obtain Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
  * @method void setMigrateDBSet(array $MigrateDBSet) Set Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
- * @method array getRenameRestore() Obtain Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
- * @method void setRenameRestore(array $RenameRestore) Set Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+ * @method array getRenameRestore() Obtain Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
+ * @method void setRenameRestore(array $RenameRestore) Set Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
  */
 class CreateMigrationRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class CreateMigrationRequest extends AbstractModel
     public $MigrateDBSet;
 
     /**
-     * @var array Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+     * @var array Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
      */
     public $RenameRestore;
 
@@ -79,7 +79,7 @@ class CreateMigrationRequest extends AbstractModel
      * @param MigrateSource $Source Migration source
      * @param MigrateTarget $Target Migration target
      * @param array $MigrateDBSet Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
-     * @param array $RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+     * @param array $RenameRestore Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
      */
     function __construct()
     {

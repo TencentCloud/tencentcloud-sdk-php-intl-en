@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceName(string $NetworkInterfaceName) Set The name of the ENI. The maximum length is 60 bytes.
  * @method string getSubnetId() Obtain The subnet instance ID of the ENI, such as 'subnet-0ap8nwca'.
  * @method void setSubnetId(string $SubnetId) Set The subnet instance ID of the ENI, such as 'subnet-0ap8nwca'.
- * @method string getInstanceId() Obtain The CVM instance ID.
- * @method void setInstanceId(string $InstanceId) Set The CVM instance ID.
+ * @method string getInstanceId() Obtain CVM instance ID.
+ * @method void setInstanceId(string $InstanceId) Set CVM instance ID.
  * @method array getPrivateIpAddresses() Obtain The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
  * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
@@ -57,7 +57,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string The CVM instance ID.
+     * @var string CVM instance ID.
      */
     public $InstanceId;
 
@@ -90,7 +90,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the `VpcId` field in the returned result of the `DescribeVpcs` API.
      * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 bytes.
      * @param string $SubnetId The subnet instance ID of the ENI, such as 'subnet-0ap8nwca'.
-     * @param string $InstanceId The CVM instance ID.
+     * @param string $InstanceId CVM instance ID.
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
      * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
      * @param array $SecurityGroupIds The security group to be bound with, such as ['sg-1dd51d'].
