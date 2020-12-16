@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 Number of nodes (2-50)
  * @method void setNodeNum(integer $NodeNum) Set This parameter has been disused. Please use `NodeInfoList`
 Number of nodes (2-50)
- * @method string getEsConfig() Obtain Configuration item (JSON string)
- * @method void setEsConfig(string $EsConfig) Set Configuration item (JSON string)
+ * @method string getEsConfig() Obtain ES configuration item (JSON string)
+ * @method void setEsConfig(string $EsConfig) Set ES configuration item (JSON string)
  * @method string getPassword() Obtain Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
  * @method void setPassword(string $Password) Set Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
  * @method EsAcl getEsAcl() Obtain Access control list
@@ -78,6 +78,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
  * @method void setMultiZoneInfo(array $MultiZoneInfo) Set Multi-AZ deployment
  * @method integer getSceneType() Obtain Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
  * @method void setSceneType(integer $SceneType) Set Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+ * @method string getKibanaConfig() Obtain Kibana configuration item (JSON string)
+ * @method void setKibanaConfig(string $KibanaConfig) Set Kibana configuration item (JSON string)
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -98,7 +100,7 @@ Number of nodes (2-50)
     public $NodeNum;
 
     /**
-     * @var string Configuration item (JSON string)
+     * @var string ES configuration item (JSON string)
      */
     public $EsConfig;
 
@@ -203,11 +205,16 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $SceneType;
 
     /**
+     * @var string Kibana configuration item (JSON string)
+     */
+    public $KibanaConfig;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
      * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
 Number of nodes (2-50)
-     * @param string $EsConfig Configuration item (JSON string)
+     * @param string $EsConfig ES configuration item (JSON string)
      * @param string $Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
      * @param EsAcl $EsAcl Access control list
      * @param integer $DiskSize This parameter has been disused. Please use `NodeInfoList`
@@ -232,6 +239,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
      * @param integer $ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
      * @param array $MultiZoneInfo Multi-AZ deployment
      * @param integer $SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+     * @param string $KibanaConfig Kibana configuration item (JSON string)
      */
     function __construct()
     {
@@ -349,6 +357,10 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
         if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
             $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("KibanaConfig",$param) and $param["KibanaConfig"] !== null) {
+            $this->KibanaConfig = $param["KibanaConfig"];
         }
     }
 }

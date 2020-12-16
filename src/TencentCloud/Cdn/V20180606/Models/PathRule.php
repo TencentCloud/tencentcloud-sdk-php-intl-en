@@ -24,26 +24,26 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setRegex(boolean $Regex) Set Whether regex match is used.
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getPath() Obtain The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setPath(string $Path) Set The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getOrigin() Obtain Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setOrigin(string $Origin) Set Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getServerName() Obtain Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setServerName(string $ServerName) Set Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getOriginArea() Obtain The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setOriginArea(string $OriginArea) Set The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getForwardUri() Obtain Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setForwardUri(string $ForwardUri) Set Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getPath() Obtain Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPath(string $Path) Set Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getOrigin() Obtain Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOrigin(string $Origin) Set Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getServerName() Obtain Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setServerName(string $ServerName) Set Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getOriginArea() Obtain Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOriginArea(string $OriginArea) Set Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getForwardUri() Obtain Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setForwardUri(string $ForwardUri) Set Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method array getRequestHeaders() Obtain Origin-pull header setting when the path matches.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setRequestHeaders(array $RequestHeaders) Set Origin-pull header setting when the path matches.
@@ -58,32 +58,32 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $Regex;
 
     /**
-     * @var string The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Path;
 
     /**
-     * @var string Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Origin;
 
     /**
-     * @var string Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ServerName;
 
     /**
-     * @var string The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginArea;
 
     /**
-     * @var string Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ForwardUri;
 
@@ -96,16 +96,16 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     /**
      * @param boolean $Regex Whether regex match is used.
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $Path The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $Origin Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $ServerName Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $OriginArea The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $ForwardUri Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Origin Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ServerName Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $OriginArea Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $RequestHeaders Origin-pull header setting when the path matches.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */

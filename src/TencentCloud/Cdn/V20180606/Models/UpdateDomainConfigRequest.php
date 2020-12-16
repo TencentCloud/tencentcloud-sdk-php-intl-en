@@ -102,6 +102,10 @@ global: global acceleration
  * @method void setUrlRedirect(UrlRedirect $UrlRedirect) Set URL redirect configuration
  * @method array getAccessPort() Obtain Access port configuration
  * @method void setAccessPort(array $AccessPort) Set Access port configuration
+ * @method AdvancedAuthentication getAdvancedAuthentication() Obtain Timestamp hotlink protection advanced configuration (allowlist feature)
+ * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) Set Timestamp hotlink protection advanced configuration (allowlist feature)
+ * @method OriginAuthentication getOriginAuthentication() Obtain Origin-pull authentication advanced configuration (allowlist feature)
+ * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) Set Origin-pull authentication advanced configuration (allowlist feature)
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -283,6 +287,16 @@ global: global acceleration
     public $AccessPort;
 
     /**
+     * @var AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+     */
+    public $AdvancedAuthentication;
+
+    /**
+     * @var OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+     */
+    public $OriginAuthentication;
+
+    /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
@@ -324,6 +338,8 @@ global: global acceleration
      * @param AccessControl $AccessControl Access control
      * @param UrlRedirect $UrlRedirect URL redirect configuration
      * @param array $AccessPort Access port configuration
+     * @param AdvancedAuthentication $AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+     * @param OriginAuthentication $OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
      */
     function __construct()
     {
@@ -501,6 +517,16 @@ global: global acceleration
 
         if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
             $this->AccessPort = $param["AccessPort"];
+        }
+
+        if (array_key_exists("AdvancedAuthentication",$param) and $param["AdvancedAuthentication"] !== null) {
+            $this->AdvancedAuthentication = new AdvancedAuthentication();
+            $this->AdvancedAuthentication->deserialize($param["AdvancedAuthentication"]);
+        }
+
+        if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
+            $this->OriginAuthentication = new OriginAuthentication();
+            $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
         }
     }
 }

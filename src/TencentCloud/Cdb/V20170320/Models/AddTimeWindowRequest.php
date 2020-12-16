@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method array getMonday() Obtain Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
- * @method void setMonday(array $Monday) Set Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
- * @method array getTuesday() Obtain Maintenance time window on Tuesday
- * @method void setTuesday(array $Tuesday) Set Maintenance time window on Tuesday
- * @method array getWednesday() Obtain Maintenance time window on Wednesday
- * @method void setWednesday(array $Wednesday) Set Maintenance time window on Wednesday
- * @method array getThursday() Obtain Maintenance time window on Thursday
- * @method void setThursday(array $Thursday) Set Maintenance time window on Thursday
- * @method array getFriday() Obtain Maintenance time window on Friday
- * @method void setFriday(array $Friday) Set Maintenance time window on Friday
- * @method array getSaturday() Obtain Maintenance time window on Saturday
- * @method void setSaturday(array $Saturday) Set Maintenance time window on Saturday
- * @method array getSunday() Obtain Maintenance time window on Sunday
- * @method void setSunday(array $Sunday) Set Maintenance time window on Sunday
+ * @method array getMonday() Obtain Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+ * @method void setMonday(array $Monday) Set Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+ * @method array getTuesday() Obtain Maintenance window on Tuesday. At least one time window is required in a week.
+ * @method void setTuesday(array $Tuesday) Set Maintenance window on Tuesday. At least one time window is required in a week.
+ * @method array getWednesday() Obtain Maintenance window on Wednesday. At least one time window is required in a week.
+ * @method void setWednesday(array $Wednesday) Set Maintenance window on Wednesday. At least one time window is required in a week.
+ * @method array getThursday() Obtain Maintenance window on Thursday. At least one time window is required in a week.
+ * @method void setThursday(array $Thursday) Set Maintenance window on Thursday. At least one time window is required in a week.
+ * @method array getFriday() Obtain Maintenance window on Friday. At least one time window is required in a week.
+ * @method void setFriday(array $Friday) Set Maintenance window on Friday. At least one time window is required in a week.
+ * @method array getSaturday() Obtain Maintenance window on Saturday. At least one time window is required in a week.
+ * @method void setSaturday(array $Saturday) Set Maintenance window on Saturday. At least one time window is required in a week.
+ * @method array getSunday() Obtain Maintenance window on Sunday. At least one time window is required in a week.
+ * @method void setSunday(array $Sunday) Set Maintenance window on Sunday. At least one time window is required in a week.
  */
 class AddTimeWindowRequest extends AbstractModel
 {
@@ -45,49 +45,49 @@ class AddTimeWindowRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
+     * @var array Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
      */
     public $Monday;
 
     /**
-     * @var array Maintenance time window on Tuesday
+     * @var array Maintenance window on Tuesday. At least one time window is required in a week.
      */
     public $Tuesday;
 
     /**
-     * @var array Maintenance time window on Wednesday
+     * @var array Maintenance window on Wednesday. At least one time window is required in a week.
      */
     public $Wednesday;
 
     /**
-     * @var array Maintenance time window on Thursday
+     * @var array Maintenance window on Thursday. At least one time window is required in a week.
      */
     public $Thursday;
 
     /**
-     * @var array Maintenance time window on Friday
+     * @var array Maintenance window on Friday. At least one time window is required in a week.
      */
     public $Friday;
 
     /**
-     * @var array Maintenance time window on Saturday
+     * @var array Maintenance window on Saturday. At least one time window is required in a week.
      */
     public $Saturday;
 
     /**
-     * @var array Maintenance time window on Sunday
+     * @var array Maintenance window on Sunday. At least one time window is required in a week.
      */
     public $Sunday;
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param array $Monday Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
-     * @param array $Tuesday Maintenance time window on Tuesday
-     * @param array $Wednesday Maintenance time window on Wednesday
-     * @param array $Thursday Maintenance time window on Thursday
-     * @param array $Friday Maintenance time window on Friday
-     * @param array $Saturday Maintenance time window on Saturday
-     * @param array $Sunday Maintenance time window on Sunday
+     * @param array $Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+     * @param array $Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
+     * @param array $Wednesday Maintenance window on Wednesday. At least one time window is required in a week.
+     * @param array $Thursday Maintenance window on Thursday. At least one time window is required in a week.
+     * @param array $Friday Maintenance window on Friday. At least one time window is required in a week.
+     * @param array $Saturday Maintenance window on Saturday. At least one time window is required in a week.
+     * @param array $Sunday Maintenance window on Sunday. At least one time window is required in a week.
      */
     function __construct()
     {

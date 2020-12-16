@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() Obtain Unique service ID of API.
  * @method void setServiceId(string $ServiceId) Set Unique service ID of API.
- * @method string getServiceType() Obtain API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
- * @method void setServiceType(string $ServiceType) Set API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+ * @method string getServiceType() Obtain API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
+ * @method void setServiceType(string $ServiceType) Set API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
  * @method integer getServiceTimeout() Obtain API backend service timeout period in seconds.
  * @method void setServiceTimeout(integer $ServiceTimeout) Set API backend service timeout period in seconds.
- * @method string getProtocol() Obtain API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
- * @method void setProtocol(string $Protocol) Set API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+ * @method string getProtocol() Obtain API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
+ * @method void setProtocol(string $Protocol) Set API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
  * @method ApiRequestConfig getRequestConfig() Obtain Request frontend configuration.
  * @method void setRequestConfig(ApiRequestConfig $RequestConfig) Set Request frontend configuration.
  * @method string getApiName() Obtain Custom API name.
@@ -119,7 +119,7 @@ class CreateApiRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+     * @var string API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
      */
     public $ServiceType;
 
@@ -129,7 +129,7 @@ class CreateApiRequest extends AbstractModel
     public $ServiceTimeout;
 
     /**
-     * @var string API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+     * @var string API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
      */
     public $Protocol;
 
@@ -340,9 +340,9 @@ class CreateApiRequest extends AbstractModel
 
     /**
      * @param string $ServiceId Unique service ID of API.
-     * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+     * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
      * @param integer $ServiceTimeout API backend service timeout period in seconds.
-     * @param string $Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+     * @param string $Protocol API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
      * @param ApiRequestConfig $RequestConfig Request frontend configuration.
      * @param string $ApiName Custom API name.
      * @param string $ApiDesc Custom API description.

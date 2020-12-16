@@ -208,6 +208,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Information of tags bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getEnvironments() Obtain Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setEnvironments(array $Environments) Set Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ApiInfo extends AbstractModel
 {
@@ -494,6 +498,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
+     * @var array Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Environments;
+
+    /**
      * @param string $ServiceId Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ServiceName Service name of API.
@@ -587,6 +597,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param boolean $EnableCORS Whether to enable CORS.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Information of tags bound to API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Environments Environment information published for API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -823,6 +835,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Environments",$param) and $param["Environments"] !== null) {
+            $this->Environments = $param["Environments"];
         }
     }
 }

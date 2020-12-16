@@ -21,45 +21,53 @@ use TencentCloud\Common\AbstractModel;
  * MaxAge rules configuration
  *
  * @method string getMaxAgeType() Obtain Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
  * @method void setMaxAgeType(string $MaxAgeType) Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
- * @method array getMaxAgeContents() Obtain Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
- * @method void setMaxAgeContents(array $MaxAgeContents) Set Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
+ * @method array getMaxAgeContents() Obtain Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+ * @method void setMaxAgeContents(array $MaxAgeContents) Set Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
  * @method integer getMaxAgeTime() Obtain MaxAge time (in seconds)
  * @method void setMaxAgeTime(integer $MaxAgeTime) Set MaxAge time (in seconds)
+ * @method string getFollowOrigin() Obtain 
+ * @method void setFollowOrigin(string $FollowOrigin) Set 
  */
 class MaxAgeRule extends AbstractModel
 {
     /**
      * @var string Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
      */
     public $MaxAgeType;
 
     /**
-     * @var array Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+     * @var array Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
      */
     public $MaxAgeContents;
 
@@ -69,17 +77,25 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
     public $MaxAgeTime;
 
     /**
+     * @var string 
+     */
+    public $FollowOrigin;
+
+    /**
      * @param string $MaxAgeType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-     * @param array $MaxAgeContents Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
+     * @param array $MaxAgeContents Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
      * @param integer $MaxAgeTime MaxAge time (in seconds)
+     * @param string $FollowOrigin 
      */
     function __construct()
     {
@@ -104,6 +120,10 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
         if (array_key_exists("MaxAgeTime",$param) and $param["MaxAgeTime"] !== null) {
             $this->MaxAgeTime = $param["MaxAgeTime"];
+        }
+
+        if (array_key_exists("FollowOrigin",$param) and $param["FollowOrigin"] !== null) {
+            $this->FollowOrigin = $param["FollowOrigin"];
         }
     }
 }

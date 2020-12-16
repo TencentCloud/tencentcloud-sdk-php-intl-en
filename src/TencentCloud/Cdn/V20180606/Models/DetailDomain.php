@@ -164,10 +164,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache expiration rule configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method Ipv6 getIpv6() Obtain IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIpv6(Ipv6 $Ipv6) Set IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method Ipv6 getIpv6() Obtain IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIpv6(Ipv6 $Ipv6) Set IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method Compatibility getCompatibility() Obtain Backwards compatibility configuration (compatibility field for internal use)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCompatibility(Compatibility $Compatibility) Set Backwards compatibility configuration (compatibility field for internal use)
@@ -234,6 +234,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setTag(array $Tag) Set Tag configuration
 Note: this field may return null, indicating that no valid value is obtained.
+ * @method AdvancedAuthentication getAdvancedAuthentication() Obtain Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) Set Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method OriginAuthentication getOriginAuthentication() Obtain Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) Set Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -442,8 +450,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MaxAge;
 
     /**
-     * @var Ipv6 IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var Ipv6 IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Ipv6;
 
@@ -537,6 +545,18 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $Tag;
 
     /**
+     * @var AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AdvancedAuthentication;
+
+    /**
+     * @var OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $OriginAuthentication;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Acceleration domain name
@@ -609,8 +629,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param MaxAge $MaxAge Browser cache expiration rule configuration (in beta)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Ipv6 $Ipv6 IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Ipv6 $Ipv6 IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Compatibility $Compatibility Backwards compatibility configuration (compatibility field for internal use)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SpecificConfig $SpecificConfig Region-specific configuration
@@ -644,6 +664,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tag Tag configuration
 Note: this field may return null, indicating that no valid value is obtained.
+     * @param AdvancedAuthentication $AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginAuthentication $OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -886,6 +910,16 @@ Note: this field may return null, indicating that no valid value is obtained.
                 $obj->deserialize($value);
                 array_push($this->Tag, $obj);
             }
+        }
+
+        if (array_key_exists("AdvancedAuthentication",$param) and $param["AdvancedAuthentication"] !== null) {
+            $this->AdvancedAuthentication = new AdvancedAuthentication();
+            $this->AdvancedAuthentication->deserialize($param["AdvancedAuthentication"]);
+        }
+
+        if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
+            $this->OriginAuthentication = new OriginAuthentication();
+            $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
         }
     }
 }

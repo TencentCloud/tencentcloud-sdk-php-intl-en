@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRedirectStatusCode() Obtain Redirect status code. Valid values: 301, 302
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Redirect status code. Valid values: 301, 302
- * @method string getPattern() Obtain Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
- * @method void setPattern(string $Pattern) Set Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
- * @method string getRedirectUrl() Obtain Target URL, which must begin with `/` and can contain up to 1,024 characters.
- * @method void setRedirectUrl(string $RedirectUrl) Set Target URL, which must begin with `/` and can contain up to 1,024 characters.
+ * @method string getPattern() Obtain URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+ * @method void setPattern(string $Pattern) Set URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+ * @method string getRedirectUrl() Obtain Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+ * @method void setRedirectUrl(string $RedirectUrl) Set Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+ * @method string getRedirectHost() Obtain 
+ * @method void setRedirectHost(string $RedirectHost) Set 
  */
 class UrlRedirectRule extends AbstractModel
 {
@@ -35,19 +37,25 @@ class UrlRedirectRule extends AbstractModel
     public $RedirectStatusCode;
 
     /**
-     * @var string Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
+     * @var string URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
      */
     public $Pattern;
 
     /**
-     * @var string Target URL, which must begin with `/` and can contain up to 1,024 characters.
+     * @var string Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
      */
     public $RedirectUrl;
 
     /**
+     * @var string 
+     */
+    public $RedirectHost;
+
+    /**
      * @param integer $RedirectStatusCode Redirect status code. Valid values: 301, 302
-     * @param string $Pattern Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
-     * @param string $RedirectUrl Target URL, which must begin with `/` and can contain up to 1,024 characters.
+     * @param string $Pattern URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+     * @param string $RedirectUrl Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+     * @param string $RedirectHost 
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UrlRedirectRule extends AbstractModel
 
         if (array_key_exists("RedirectUrl",$param) and $param["RedirectUrl"] !== null) {
             $this->RedirectUrl = $param["RedirectUrl"];
+        }
+
+        if (array_key_exists("RedirectHost",$param) and $param["RedirectHost"] !== null) {
+            $this->RedirectHost = $param["RedirectHost"];
         }
     }
 }

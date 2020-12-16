@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set Sorting order. Valid values: ASC (ascending), DESC (descending).
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- * @method integer getLimit() Obtain Number of results to be returned at a time. Maximum value: 400.
- * @method void setLimit(integer $Limit) Set Number of results to be returned at a time. Maximum value: 400.
+ * @method integer getLimit() Obtain The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+ * @method void setLimit(integer $Limit) Set The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
  */
 class DescribeSlowLogDataRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned at a time. Maximum value: 400.
+     * @var integer The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      */
     public $Limit;
 
@@ -103,7 +103,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
      * @param string $SortBy Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
      * @param string $OrderBy Sorting order. Valid values: ASC (ascending), DESC (descending).
      * @param integer $Offset Offset. Default value: 0.
-     * @param integer $Limit Number of results to be returned at a time. Maximum value: 400.
+     * @param integer $Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      */
     function __construct()
     {

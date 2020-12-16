@@ -22,34 +22,38 @@ use TencentCloud\Common\AbstractModel;
 The cache expiration time for all files is 30 days by default. 
 Static acceleration type domain names .php, .jsp, .asp, and .aspx are not cached by default.
  *
- * @method array getRulePaths() Obtain Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setRulePaths(array $RulePaths) Set Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method array getRulePaths() Obtain Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRulePaths(array $RulePaths) Set Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRuleType() Obtain Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRuleType(string $RuleType) Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method RuleCacheConfig getCacheConfig() Obtain Cache configuration
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setCacheConfig(RuleCacheConfig $CacheConfig) Set Cache configuration
@@ -58,24 +62,26 @@ Note: this field may return null, indicating that no valid value is obtained.
 class RuleCache extends AbstractModel
 {
     /**
-     * @var array Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var array Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $RulePaths;
 
     /**
      * @var string Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $RuleType;
 
@@ -86,20 +92,22 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $CacheConfig;
 
     /**
-     * @param array $RulePaths Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param array $RulePaths Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param RuleCacheConfig $CacheConfig Cache configuration
 Note: this field may return null, indicating that no valid value is obtained.
      */

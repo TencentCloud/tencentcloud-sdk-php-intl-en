@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResult(string $Result) Set Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
  * @method string getDescription() Obtain Service result description.
  * @method void setDescription(string $Description) Set Service result description.
+ * @method array getBestFrameList() Obtain 
+ * @method void setBestFrameList(array $BestFrameList) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,6 +56,11 @@ class LivenessCompareResponse extends AbstractModel
     public $Description;
 
     /**
+     * @var array 
+     */
+    public $BestFrameList;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class LivenessCompareResponse extends AbstractModel
      * @param float $Sim Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
      * @param string $Result Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
      * @param string $Description Service result description.
+     * @param array $BestFrameList 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -92,6 +100,10 @@ class LivenessCompareResponse extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("BestFrameList",$param) and $param["BestFrameList"] !== null) {
+            $this->BestFrameList = $param["BestFrameList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

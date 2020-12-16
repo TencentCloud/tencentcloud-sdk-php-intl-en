@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) Set End timestamp.
  * @method array getKeyWords() Obtain List of keywords to match. Up to 15 keywords are supported.
  * @method void setKeyWords(array $KeyWords) Set List of keywords to match. Up to 15 keywords are supported.
- * @method integer getLimit() Obtain Number of results to be returned per page. Maximum value: 400.
- * @method void setLimit(integer $Limit) Set Number of results to be returned per page. Maximum value: 400.
+ * @method integer getLimit() Obtain The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+ * @method void setLimit(integer $Limit) Set The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  */
@@ -56,7 +56,7 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $KeyWords;
 
     /**
-     * @var integer Number of results to be returned per page. Maximum value: 400.
+     * @var integer The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeErrorLogDataRequest extends AbstractModel
      * @param integer $StartTime Start timestamp.
      * @param integer $EndTime End timestamp.
      * @param array $KeyWords List of keywords to match. Up to 15 keywords are supported.
-     * @param integer $Limit Number of results to be returned per page. Maximum value: 400.
+     * @param integer $Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      * @param integer $Offset Offset. Default value: 0.
      */
     function __construct()

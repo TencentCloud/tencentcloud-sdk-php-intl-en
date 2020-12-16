@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateService request structure.
  *
- * @method string getServiceName() Obtain Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
- * @method void setServiceName(string $ServiceName) Set Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+ * @method string getServiceName() Obtain Custom service name.
+ * @method void setServiceName(string $ServiceName) Set Custom service name.
  * @method string getProtocol() Obtain Service frontend request type, such as `http`, `https`, and `http&https`.
  * @method void setProtocol(string $Protocol) Set Service frontend request type, such as `http`, `https`, and `http&https`.
  * @method string getServiceDesc() Obtain Custom service description.
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceRequest extends AbstractModel
 {
     /**
-     * @var string Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+     * @var string Custom service name.
      */
     public $ServiceName;
 
@@ -87,7 +87,7 @@ class CreateServiceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ServiceName Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+     * @param string $ServiceName Custom service name.
      * @param string $Protocol Service frontend request type, such as `http`, `https`, and `http&https`.
      * @param string $ServiceDesc Custom service description.
      * @param string $ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.

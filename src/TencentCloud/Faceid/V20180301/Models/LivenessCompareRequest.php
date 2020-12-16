@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LivenessCompare request structure.
  *
- * @method string getImageBase64() Obtain Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported.
- * @method void setImageBase64(string $ImageBase64) Set Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported.
- * @method string getVideoBase64() Obtain Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported.
- * @method void setVideoBase64(string $VideoBase64) Set Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported.
+ * @method string getImageBase64() Obtain Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+ * @method void setImageBase64(string $ImageBase64) Set Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+ * @method string getVideoBase64() Obtain Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+ * @method void setVideoBase64(string $VideoBase64) Set Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
  * @method string getLivenessType() Obtain Liveness detection type. Valid values: LIP/ACTION/SILENT.
 LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select a mode to input.
  * @method void setLivenessType(string $LivenessType) Set Liveness detection type. Valid values: LIP/ACTION/SILENT.
@@ -44,14 +48,16 @@ Input parameter for silent mode: empty.
 class LivenessCompareRequest extends AbstractModel
 {
     /**
-     * @var string Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported.
+     * @var string Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
      */
     public $ImageBase64;
 
     /**
-     * @var string Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported.
+     * @var string Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
      */
     public $VideoBase64;
 
@@ -74,10 +80,12 @@ Input parameter for silent mode: empty.
     public $Optional;
 
     /**
-     * @param string $ImageBase64 Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported.
-     * @param string $VideoBase64 Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported.
+     * @param string $ImageBase64 Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+     * @param string $VideoBase64 Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
      * @param string $LivenessType Liveness detection type. Valid values: LIP/ACTION/SILENT.
 LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select a mode to input.
      * @param string $ValidateData Input parameter for the numeric mode: numeric verification code (1234). An API needs to be called first to get a numeric verification code;
