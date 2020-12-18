@@ -34,20 +34,26 @@ use TencentCloud\Common\AbstractModel;
 `index`: effective for specified homepages.
  * @method array getMaxAgeContents() Obtain Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
  * @method void setMaxAgeContents(array $MaxAgeContents) Set Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
  * @method integer getMaxAgeTime() Obtain MaxAge time (in seconds)
+Note: the value `0` means not to cache.
  * @method void setMaxAgeTime(integer $MaxAgeTime) Set MaxAge time (in seconds)
- * @method string getFollowOrigin() Obtain 
- * @method void setFollowOrigin(string $FollowOrigin) Set 
+Note: the value `0` means not to cache.
+ * @method string getFollowOrigin() Obtain Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFollowOrigin(string $FollowOrigin) Set Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class MaxAgeRule extends AbstractModel
 {
@@ -64,20 +70,23 @@ class MaxAgeRule extends AbstractModel
     /**
      * @var array Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
      */
     public $MaxAgeContents;
 
     /**
      * @var integer MaxAge time (in seconds)
+Note: the value `0` means not to cache.
      */
     public $MaxAgeTime;
 
     /**
-     * @var string 
+     * @var string Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $FollowOrigin;
 
@@ -90,12 +99,15 @@ For `index`, enter a forward slash `/`.
 `index`: effective for specified homepages.
      * @param array $MaxAgeContents Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
      * @param integer $MaxAgeTime MaxAge time (in seconds)
-     * @param string $FollowOrigin 
+Note: the value `0` means not to cache.
+     * @param string $FollowOrigin Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

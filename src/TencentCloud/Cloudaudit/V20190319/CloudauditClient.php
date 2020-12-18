@@ -23,26 +23,14 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cloudaudit\V20190319\Models as Models;
 
 /**
- * @method Models\CreateAuditResponse CreateAudit(Models\CreateAuditRequest $req) Parameter requirements:
-1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
-2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
- * @method Models\DeleteAuditResponse DeleteAudit(Models\DeleteAuditRequest $req) This API is used to delete a tracking set.
- * @method Models\DescribeAuditResponse DescribeAudit(Models\DescribeAuditRequest $req) This API is used to query the details of a tracking set.
- * @method Models\GetAttributeKeyResponse GetAttributeKey(Models\GetAttributeKeyRequest $req) This API is used to query the valid values range of `AttributeKey`.
- * @method Models\InquireAuditCreditResponse InquireAuditCredit(Models\InquireAuditCreditRequest $req) This API is used to query the number of tracking sets that can be created.
- * @method Models\ListAuditsResponse ListAudits(Models\ListAuditsRequest $req) This API is used to query the summary of tracking sets.
- * @method Models\ListCmqEnableRegionResponse ListCmqEnableRegion(Models\ListCmqEnableRegionRequest $req) This API is used to query CloudAudit-enabled CMQ AZs.
- * @method Models\ListCosEnableRegionResponse ListCosEnableRegion(Models\ListCosEnableRegionRequest $req) This API is used to query CloudAudit-enabled COS AZs.
- * @method Models\LookUpEventsResponse LookUpEvents(Models\LookUpEventsRequest $req) This API is used to search for operation logs to help query relevant operation information.
- * @method Models\StartLoggingResponse StartLogging(Models\StartLoggingRequest $req) This API is used to enable a tracking set.
- * @method Models\StopLoggingResponse StopLogging(Models\StopLoggingRequest $req) This API is used to disable a tracking set.
- * @method Models\UpdateAuditResponse UpdateAudit(Models\UpdateAuditRequest $req) Parameter requirements:
-1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
-2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
+ * @method Models\CreateRecorderResponse CreateRecorder(Models\CreateRecorderRequest $req) This API is used to create resource recorders to detect and record resource configuration changes.
+ * @method Models\DeleteRecorderResponse DeleteRecorder(Models\DeleteRecorderRequest $req) This API is used to delete resource recorders. After deletion, resource configuration changes will not be recorded.
+ * @method Models\DescribeDiscoveredResourceResponse DescribeDiscoveredResource(Models\DescribeDiscoveredResourceRequest $req) This API is used to view the basic information of discovered resources.
+ * @method Models\DescribeRecorderResponse DescribeRecorder(Models\DescribeRecorderRequest $req) This API is used to display current configurations and status of a recorder.
+ * @method Models\GetConfigurationItemsResponse GetConfigurationItems(Models\GetConfigurationItemsRequest $req) This API is used to get the list of resource configuration items and display resource configuration changes in chronological order.
+ * @method Models\ListDiscoveredResourcesResponse ListDiscoveredResources(Models\ListDiscoveredResourcesRequest $req) This API is used to view the list of discovered resources.
+ * @method Models\ListSupportResourceTypesResponse ListSupportResourceTypes(Models\ListSupportResourceTypesRequest $req) This API is used to query the list of all CFA supported resource types.
+ * @method Models\UpdateRecorderResponse UpdateRecorder(Models\UpdateRecorderRequest $req) This API is used to modify the resources to monitor, recorder name, and other recorder configurations.
  */
 
 class CloudauditClient extends AbstractClient

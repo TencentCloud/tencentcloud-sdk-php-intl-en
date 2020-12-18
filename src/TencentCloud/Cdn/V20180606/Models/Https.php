@@ -90,6 +90,10 @@ failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method Hsts getHsts() Obtain HSTS configuration
  * @method void setHsts(Hsts $Hsts) Set HSTS configuration
+ * @method array getTlsVersion() Obtain TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTlsVersion(array $TlsVersion) Set TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Https extends AbstractModel
 {
@@ -165,6 +169,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Hsts;
 
     /**
+     * @var array TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TlsVersion;
+
+    /**
      * @param string $Switch HTTPS configuration switch
 on: enabled
 off: disabled
@@ -200,6 +210,8 @@ deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Hsts $Hsts HSTS configuration
+     * @param array $TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -251,6 +263,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Hsts",$param) and $param["Hsts"] !== null) {
             $this->Hsts = new Hsts();
             $this->Hsts->deserialize($param["Hsts"]);
+        }
+
+        if (array_key_exists("TlsVersion",$param) and $param["TlsVersion"] !== null) {
+            $this->TlsVersion = $param["TlsVersion"];
         }
     }
 }

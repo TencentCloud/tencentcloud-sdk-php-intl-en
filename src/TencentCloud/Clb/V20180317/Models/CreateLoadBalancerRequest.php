@@ -52,12 +52,18 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
  * @method void setVipIsp(string $VipIsp) Set This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
  * @method array getTags() Obtain Tags a CLB instance when purchasing it
  * @method void setTags(array $Tags) Set Tags a CLB instance when purchasing it
- * @method string getVip() Obtain 
- * @method void setVip(string $Vip) Set 
+ * @method string getVip() Obtain Applies for CLB instances for a specified VIP
+ * @method void setVip(string $Vip) Set Applies for CLB instances for a specified VIP
+ * @method string getBandwidthPackageId() Obtain 
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set 
  * @method ExclusiveCluster getExclusiveCluster() Obtain Exclusive cluster information.
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Exclusive cluster information.
  * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
  * @method void setClientToken(string $ClientToken) Set A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+ * @method boolean getSnatPro() Obtain Whether Binding IPs of other VPCs feature switch
+ * @method void setSnatPro(boolean $SnatPro) Set Whether Binding IPs of other VPCs feature switch
+ * @method array getSnatIps() Obtain Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+ * @method void setSnatIps(array $SnatIps) Set Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
  * @method string getClusterTag() Obtain Tag for the STGW exclusive cluster.
  * @method void setClusterTag(string $ClusterTag) Set Tag for the STGW exclusive cluster.
  */
@@ -132,9 +138,14 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $Tags;
 
     /**
-     * @var string 
+     * @var string Applies for CLB instances for a specified VIP
      */
     public $Vip;
+
+    /**
+     * @var string 
+     */
+    public $BandwidthPackageId;
 
     /**
      * @var ExclusiveCluster Exclusive cluster information.
@@ -145,6 +156,16 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @var string A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
      */
     public $ClientToken;
+
+    /**
+     * @var boolean Whether Binding IPs of other VPCs feature switch
+     */
+    public $SnatPro;
+
+    /**
+     * @var array Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+     */
+    public $SnatIps;
 
     /**
      * @var string Tag for the STGW exclusive cluster.
@@ -168,9 +189,12 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @param InternetAccessible $InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
      * @param string $VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
      * @param array $Tags Tags a CLB instance when purchasing it
-     * @param string $Vip 
+     * @param string $Vip Applies for CLB instances for a specified VIP
+     * @param string $BandwidthPackageId 
      * @param ExclusiveCluster $ExclusiveCluster Exclusive cluster information.
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+     * @param boolean $SnatPro Whether Binding IPs of other VPCs feature switch
+     * @param array $SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
      * @param string $ClusterTag Tag for the STGW exclusive cluster.
      */
     function __construct()
@@ -248,6 +272,10 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
             $this->Vip = $param["Vip"];
         }
 
+        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
+            $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        }
+
         if (array_key_exists("ExclusiveCluster",$param) and $param["ExclusiveCluster"] !== null) {
             $this->ExclusiveCluster = new ExclusiveCluster();
             $this->ExclusiveCluster->deserialize($param["ExclusiveCluster"]);
@@ -255,6 +283,19 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
+            $this->SnatPro = $param["SnatPro"];
+        }
+
+        if (array_key_exists("SnatIps",$param) and $param["SnatIps"] !== null) {
+            $this->SnatIps = [];
+            foreach ($param["SnatIps"] as $key => $value){
+                $obj = new SnatIp();
+                $obj->deserialize($value);
+                array_push($this->SnatIps, $obj);
+            }
         }
 
         if (array_key_exists("ClusterTag",$param) and $param["ClusterTag"] !== null) {

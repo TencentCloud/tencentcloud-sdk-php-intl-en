@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of a real server bound to a listener
  *
- * @method string getType() Obtain Real server type. Value range: CVM, ENI (coming soon)
- * @method void setType(string $Type) Set Real server type. Value range: CVM, ENI (coming soon)
+ * @method string getType() Obtain Real server type. Valid values: CVM, ENI.
+ * @method void setType(string $Type) Set Real server type. Valid values: CVM, ENI.
  * @method string getInstanceId() Obtain Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
  * @method void setInstanceId(string $InstanceId) Set Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
  * @method integer getPort() Obtain Listening port of a real server
@@ -52,7 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class Backend extends AbstractModel
 {
     /**
-     * @var string Real server type. Value range: CVM, ENI (coming soon)
+     * @var string Real server type. Valid values: CVM, ENI.
      */
     public $Type;
 
@@ -102,7 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EniId;
 
     /**
-     * @param string $Type Real server type. Value range: CVM, ENI (coming soon)
+     * @param string $Type Real server type. Valid values: CVM, ENI.
      * @param string $InstanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
      * @param integer $Port Listening port of a real server
      * @param integer $Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.

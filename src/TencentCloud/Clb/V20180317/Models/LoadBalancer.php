@@ -122,10 +122,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExpireTime(string $ExpireTime) Set CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getChargeType() Obtain CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setChargeType(string $ChargeType) Set CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getChargeType() Obtain Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setChargeType(string $ChargeType) Set Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method InternetAccessible getNetworkAttributes() Obtain CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNetworkAttributes(InternetAccessible $NetworkAttributes) Set CLB instance network attributes
@@ -200,6 +200,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMixIpTarget(boolean $MixIpTarget) Set If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getZones() Obtain Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setZones(array $Zones) Set Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -363,8 +367,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExpireTime;
 
     /**
-     * @var string CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ChargeType;
 
@@ -482,6 +486,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MixIpTarget;
 
     /**
+     * @var array Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Zones;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -533,8 +543,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExpireTime CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ChargeType CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param InternetAccessible $NetworkAttributes CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param LBChargePrepaid $PrepaidAttributes Prepaid billing attributes of a CLB instance
@@ -572,6 +582,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Zones Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -793,6 +805,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MixIpTarget",$param) and $param["MixIpTarget"] !== null) {
             $this->MixIpTarget = $param["MixIpTarget"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

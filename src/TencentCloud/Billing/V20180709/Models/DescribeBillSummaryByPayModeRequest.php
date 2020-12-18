@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByPayMode request structure.
  *
+ * @method string getBeginTime() Obtain The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+ * @method void setBeginTime(string $BeginTime) Set The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+ * @method string getEndTime() Obtain The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+ * @method void setEndTime(string $EndTime) Set The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
  * @method string getPayerUin() Obtain Query bill data user's UIN
  * @method void setPayerUin(string $PayerUin) Set Query bill data user's UIN
- * @method string getBeginTime() Obtain Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
- * @method void setBeginTime(string $BeginTime) Set Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
- * @method string getEndTime() Obtain Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
- * @method void setEndTime(string $EndTime) Set Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
  */
 class DescribeBillSummaryByPayModeRequest extends AbstractModel
 {
+    /**
+     * @var string The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     */
+    public $BeginTime;
+
+    /**
+     * @var string The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     */
+    public $EndTime;
+
     /**
      * @var string Query bill data user's UIN
      */
     public $PayerUin;
 
     /**
-     * @var string Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
-     */
-    public $BeginTime;
-
-    /**
-     * @var string Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
-     */
-    public $EndTime;
-
-    /**
+     * @param string $BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     * @param string $EndTime The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      * @param string $PayerUin Query bill data user's UIN
-     * @param string $BeginTime Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
-     * @param string $EndTime Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class DescribeBillSummaryByPayModeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
-            $this->PayerUin = $param["PayerUin"];
-        }
-
         if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
             $this->BeginTime = $param["BeginTime"];
         }
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
         }
     }
 }

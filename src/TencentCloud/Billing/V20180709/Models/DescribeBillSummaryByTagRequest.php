@@ -20,29 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByTag request structure.
  *
- * @method string getPayerUin() Obtain Payer UIN
- * @method void setPayerUin(string $PayerUin) Set Payer UIN
- * @method string getBeginTime() Obtain Currently the period to be queried must start from a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-01 00:00:00.
- * @method void setBeginTime(string $BeginTime) Set Currently the period to be queried must start from a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-01 00:00:00.
- * @method string getEndTime() Obtain Currently the period to be queried must end at a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-30 23:59:59.
- * @method void setEndTime(string $EndTime) Set Currently the period to be queried must end at a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-30 23:59:59.
+ * @method string getBeginTime() Obtain The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+ * @method void setBeginTime(string $BeginTime) Set The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+ * @method string getEndTime() Obtain The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+ * @method void setEndTime(string $EndTime) Set The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
  * @method string getTagKey() Obtain Cost allocation tag key
  * @method void setTagKey(string $TagKey) Set Cost allocation tag key
+ * @method string getPayerUin() Obtain Payer UIN
+ * @method void setPayerUin(string $PayerUin) Set Payer UIN
  */
 class DescribeBillSummaryByTagRequest extends AbstractModel
 {
     /**
-     * @var string Payer UIN
-     */
-    public $PayerUin;
-
-    /**
-     * @var string Currently the period to be queried must start from a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-01 00:00:00.
+     * @var string The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      */
     public $BeginTime;
 
     /**
-     * @var string Currently the period to be queried must end at a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-30 23:59:59.
+     * @var string The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      */
     public $EndTime;
 
@@ -52,10 +47,15 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
     public $TagKey;
 
     /**
-     * @param string $PayerUin Payer UIN
-     * @param string $BeginTime Currently the period to be queried must start from a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-01 00:00:00.
-     * @param string $EndTime Currently the period to be queried must end at a time point in the current month, and the starting time and the end time must be in the same month. Example: 2018-09-30 23:59:59.
+     * @var string Payer UIN
+     */
+    public $PayerUin;
+
+    /**
+     * @param string $BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     * @param string $EndTime The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      * @param string $TagKey Cost allocation tag key
+     * @param string $PayerUin Payer UIN
      */
     function __construct()
     {
@@ -70,10 +70,6 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
-            $this->PayerUin = $param["PayerUin"];
-        }
-
         if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
             $this->BeginTime = $param["BeginTime"];
         }
@@ -84,6 +80,10 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
 
         if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
             $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
         }
     }
 }

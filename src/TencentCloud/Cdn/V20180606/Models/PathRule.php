@@ -20,13 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Path-based origin-pull configuration rules
  *
- * @method boolean getRegex() Obtain Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setRegex(boolean $Regex) Set Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getPath() Obtain Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+ * @method boolean getRegex() Obtain Whether to enable wildcard match (`*`).
+false: disable
+true: enable
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+ * @method void setRegex(boolean $Regex) Set Whether to enable wildcard match (`*`).
+false: disable
+true: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPath() Obtain Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPath(string $Path) Set Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getOrigin() Obtain Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -36,13 +40,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setServerName(string $ServerName) Set Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getOriginArea() Obtain Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+ * @method string getOriginArea() Obtain Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setOriginArea(string $OriginArea) Set Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+ * @method void setOriginArea(string $OriginArea) Set Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getForwardUri() Obtain Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+ * @method string getForwardUri() Obtain Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setForwardUri(string $ForwardUri) Set Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+ * @method void setForwardUri(string $ForwardUri) Set Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method array getRequestHeaders() Obtain Origin-pull header setting when the path matches.
 Note: this field may return `null`, indicating that no valid value is obtained.
@@ -52,13 +62,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 class PathRule extends AbstractModel
 {
     /**
-     * @var boolean Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var boolean Whether to enable wildcard match (`*`).
+false: disable
+true: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Regex;
 
     /**
-     * @var string Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+     * @var string Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Path;
@@ -76,13 +88,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ServerName;
 
     /**
-     * @var string Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+     * @var string Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginArea;
 
     /**
-     * @var string Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+     * @var string Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ForwardUri;
@@ -94,17 +109,22 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $RequestHeaders;
 
     /**
-     * @param boolean $Regex Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+     * @param boolean $Regex Whether to enable wildcard match (`*`).
+false: disable
+true: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Origin Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ServerName Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $OriginArea Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+     * @param string $OriginArea Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+     * @param string $ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $RequestHeaders Origin-pull header setting when the path matches.
 Note: this field may return `null`, indicating that no valid value is obtained.
