@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) Set The direct connect gateway name. You can enter any name within 60 characters.
  * @method string getCcnRouteType() Obtain The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
  * @method void setCcnRouteType(string $CcnRouteType) Set The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
+ * @method string getModeType() Obtain CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+ * @method void setModeType(string $ModeType) Set CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
  */
 class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
     public $CcnRouteType;
 
     /**
+     * @var string CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+     */
+    public $ModeType;
+
+    /**
      * @param string $DirectConnectGatewayId The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
      * @param string $DirectConnectGatewayName The direct connect gateway name. You can enter any name within 60 characters.
      * @param string $CcnRouteType The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
+     * @param string $ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
 
         if (array_key_exists("CcnRouteType",$param) and $param["CcnRouteType"] !== null) {
             $this->CcnRouteType = $param["CcnRouteType"];
+        }
+
+        if (array_key_exists("ModeType",$param) and $param["ModeType"] !== null) {
+            $this->ModeType = $param["ModeType"];
         }
     }
 }

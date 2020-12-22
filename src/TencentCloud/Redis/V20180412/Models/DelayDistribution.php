@@ -20,22 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Delay distribution details
  *
- * @method integer getLadder() Obtain Distribution ladder
- * @method void setLadder(integer $Ladder) Set Distribution ladder
- * @method integer getSize() Obtain Size
- * @method void setSize(integer $Size) Set Size
+ * @method integer getLadder() Obtain Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1.
+ * @method void setLadder(integer $Ladder) Set Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1.
+ * @method integer getSize() Obtain The number of commands whose delay falls within the current delay range
+ * @method void setSize(integer $Size) Set The number of commands whose delay falls within the current delay range
  * @method integer getUpdatetime() Obtain Modification time
  * @method void setUpdatetime(integer $Updatetime) Set Modification time
  */
 class DelayDistribution extends AbstractModel
 {
     /**
-     * @var integer Distribution ladder
+     * @var integer Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1.
      */
     public $Ladder;
 
     /**
-     * @var integer Size
+     * @var integer The number of commands whose delay falls within the current delay range
      */
     public $Size;
 
@@ -45,8 +63,14 @@ class DelayDistribution extends AbstractModel
     public $Updatetime;
 
     /**
-     * @param integer $Ladder Distribution ladder
-     * @param integer $Size Size
+     * @param integer $Ladder Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1.
+     * @param integer $Size The number of commands whose delay falls within the current delay range
      * @param integer $Updatetime Modification time
      */
     function __construct()

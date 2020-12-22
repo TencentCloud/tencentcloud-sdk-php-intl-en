@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSdkAppId() Obtain User `sdkappid`
  * @method void setSdkAppId(string $SdkAppId) Set User `sdkappid`
- * @method integer getStartTime() Obtain Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
- * @method void setStartTime(integer $StartTime) Set Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+ * @method integer getStartTime() Obtain Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+ * @method void setStartTime(integer $StartTime) Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
  * @method integer getEndTime() Obtain Query end time in the format of local UNIX timestamp, such as 1588031999s.
  * @method void setEndTime(integer $EndTime) Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
  * @method string getRoomId() Obtain Room ID of uint type
@@ -41,7 +41,7 @@ class DescribeRoomInformationRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+     * @var integer Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
      */
     public $StartTime;
 
@@ -67,7 +67,7 @@ class DescribeRoomInformationRequest extends AbstractModel
 
     /**
      * @param string $SdkAppId User `sdkappid`
-     * @param integer $StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+     * @param integer $StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
      * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
      * @param string $RoomId Room ID of uint type
      * @param string $PageNumber Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)

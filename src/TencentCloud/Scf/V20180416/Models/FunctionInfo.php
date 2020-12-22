@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionId(string $FunctionId) Set Function ID
  * @method string getNamespace() Obtain Namespace
  * @method void setNamespace(string $Namespace) Set Namespace
- * @method string getStatus() Obtain Function status
- * @method void setStatus(string $Status) Set Function status
+ * @method string getStatus() Obtain Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
+ * @method void setStatus(string $Status) Set Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
  * @method string getStatusDesc() Obtain Function status details
  * @method void setStatusDesc(string $StatusDesc) Set Function status details
  * @method string getDescription() Obtain Function description
@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Function tag
  * @method string getType() Obtain Function type. The value is `HTTP` or `Event`.
  * @method void setType(string $Type) Set Function type. The value is `HTTP` or `Event`.
+ * @method array getStatusReasons() Obtain Cause of function failure
+ * @method void setStatusReasons(array $StatusReasons) Set Cause of function failure
+ * @method integer getTotalProvisionedConcurrencyMem() Obtain Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTotalProvisionedConcurrencyMem(integer $TotalProvisionedConcurrencyMem) Set Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getReservedConcurrencyMem() Obtain Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setReservedConcurrencyMem(integer $ReservedConcurrencyMem) Set Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class FunctionInfo extends AbstractModel
 {
@@ -76,7 +86,7 @@ class FunctionInfo extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string Function status
+     * @var string Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
      */
     public $Status;
 
@@ -101,17 +111,39 @@ class FunctionInfo extends AbstractModel
     public $Type;
 
     /**
+     * @var array Cause of function failure
+     */
+    public $StatusReasons;
+
+    /**
+     * @var integer Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $TotalProvisionedConcurrencyMem;
+
+    /**
+     * @var integer Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReservedConcurrencyMem;
+
+    /**
      * @param string $ModTime Modification time
      * @param string $AddTime Creation time
      * @param string $Runtime Running
      * @param string $FunctionName Function name
      * @param string $FunctionId Function ID
      * @param string $Namespace Namespace
-     * @param string $Status Function status
+     * @param string $Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
      * @param string $StatusDesc Function status details
      * @param string $Description Function description
      * @param array $Tags Function tag
      * @param string $Type Function type. The value is `HTTP` or `Event`.
+     * @param array $StatusReasons Cause of function failure
+     * @param integer $TotalProvisionedConcurrencyMem Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReservedConcurrencyMem Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -173,6 +205,23 @@ class FunctionInfo extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("StatusReasons",$param) and $param["StatusReasons"] !== null) {
+            $this->StatusReasons = [];
+            foreach ($param["StatusReasons"] as $key => $value){
+                $obj = new StatusReason();
+                $obj->deserialize($value);
+                array_push($this->StatusReasons, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalProvisionedConcurrencyMem",$param) and $param["TotalProvisionedConcurrencyMem"] !== null) {
+            $this->TotalProvisionedConcurrencyMem = $param["TotalProvisionedConcurrencyMem"];
+        }
+
+        if (array_key_exists("ReservedConcurrencyMem",$param) and $param["ReservedConcurrencyMem"] !== null) {
+            $this->ReservedConcurrencyMem = $param["ReservedConcurrencyMem"];
         }
     }
 }

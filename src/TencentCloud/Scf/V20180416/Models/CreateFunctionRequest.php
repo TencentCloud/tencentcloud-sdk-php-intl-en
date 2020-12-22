@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFunctionName() Obtain Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
  * @method void setFunctionName(string $FunctionName) Set Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
- * @method Code getCode() Obtain Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
- * @method void setCode(Code $Code) Set Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
- * @method string getHandler() Obtain Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
- * @method void setHandler(string $Handler) Set Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+ * @method Code getCode() Obtain Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
+ * @method void setCode(Code $Code) Set Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
+ * @method string getHandler() Obtain Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
+ * @method void setHandler(string $Handler) Set Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
  * @method string getDescription() Obtain Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
  * @method void setDescription(string $Description) Set Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
  * @method integer getMemorySize() Obtain Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
  * @method Environment getEnvironment() Obtain Function environment variable
  * @method void setEnvironment(Environment $Environment) Set Function environment variable
- * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
- * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+ * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
+ * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
  * @method VpcConfig getVpcConfig() Obtain Function VPC configuration
  * @method void setVpcConfig(VpcConfig $VpcConfig) Set Function VPC configuration
  * @method string getNamespace() Obtain Function namespace
@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClsTopicId(string $ClsTopicId) Set CLS Topic ID to which the function logs are shipped
  * @method string getType() Obtain Function type. The default value is `Event`. Enter `Event` if you need to create a trigger function. Enter `HTTP` if you need to create an HTTP function service.
  * @method void setType(string $Type) Set Function type. The default value is `Event`. Enter `Event` if you need to create a trigger function. Enter `HTTP` if you need to create an HTTP function service.
- * @method string getCodeSource() Obtain Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
- * @method void setCodeSource(string $CodeSource) Set Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+ * @method string getCodeSource() Obtain Code source. Valid values: ZipFile, Cos, Demo
+ * @method void setCodeSource(string $CodeSource) Set Code source. Valid values: ZipFile, Cos, Demo
  * @method array getLayers() Obtain List of layer versions to be associate with the function. Layers will be overwritten sequentially in the order in the list.
  * @method void setLayers(array $Layers) Set List of layer versions to be associate with the function. Layers will be overwritten sequentially in the order in the list.
  * @method DeadLetterConfig getDeadLetterConfig() Obtain Dead letter queue parameter
@@ -71,12 +71,12 @@ class CreateFunctionRequest extends AbstractModel
     public $FunctionName;
 
     /**
-     * @var Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
+     * @var Code Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
      */
     public $Code;
 
     /**
-     * @var string Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * @var string Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
      */
     public $Handler;
 
@@ -101,7 +101,7 @@ class CreateFunctionRequest extends AbstractModel
     public $Environment;
 
     /**
-     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
      */
     public $Runtime;
 
@@ -136,7 +136,7 @@ class CreateFunctionRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+     * @var string Code source. Valid values: ZipFile, Cos, Demo
      */
     public $CodeSource;
 
@@ -172,20 +172,20 @@ class CreateFunctionRequest extends AbstractModel
 
     /**
      * @param string $FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
-     * @param Code $Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
-     * @param string $Handler Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * @param Code $Code Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
+     * @param string $Handler Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
      * @param string $Description Function description. It can contain up to 1,000 characters including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
      * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
      * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      * @param Environment $Environment Function environment variable
-     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
      * @param VpcConfig $VpcConfig Function VPC configuration
      * @param string $Namespace Function namespace
      * @param string $Role Role bound to the function
      * @param string $ClsLogsetId CLS Logset ID to which the function logs are shipped
      * @param string $ClsTopicId CLS Topic ID to which the function logs are shipped
      * @param string $Type Function type. The default value is `Event`. Enter `Event` if you need to create a trigger function. Enter `HTTP` if you need to create an HTTP function service.
-     * @param string $CodeSource Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+     * @param string $CodeSource Code source. Valid values: ZipFile, Cos, Demo
      * @param array $Layers List of layer versions to be associate with the function. Layers will be overwritten sequentially in the order in the list.
      * @param DeadLetterConfig $DeadLetterConfig Dead letter queue parameter
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration

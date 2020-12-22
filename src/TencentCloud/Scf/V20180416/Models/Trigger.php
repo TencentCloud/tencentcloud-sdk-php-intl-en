@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomArgument(string $CustomArgument) Set Custom parameter
  * @method string getAvailableStatus() Obtain Trigger status
  * @method void setAvailableStatus(string $AvailableStatus) Set Trigger status
+ * @method string getResourceId() Obtain Minimum resource ID of trigger
+ * @method void setResourceId(string $ResourceId) Set Minimum resource ID of trigger
+ * @method string getBindStatus() Obtain Trigger-Function binding status
+ * @method void setBindStatus(string $BindStatus) Set Trigger-Function binding status
+ * @method string getTriggerAttribute() Obtain Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+ * @method void setTriggerAttribute(string $TriggerAttribute) Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
  */
 class Trigger extends AbstractModel
 {
@@ -80,6 +86,21 @@ class Trigger extends AbstractModel
     public $AvailableStatus;
 
     /**
+     * @var string Minimum resource ID of trigger
+     */
+    public $ResourceId;
+
+    /**
+     * @var string Trigger-Function binding status
+     */
+    public $BindStatus;
+
+    /**
+     * @var string Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     */
+    public $TriggerAttribute;
+
+    /**
      * @param string $ModTime Latest modification time of the trigger
      * @param string $Type Trigger type
      * @param string $TriggerDesc Detailed trigger configuration
@@ -88,6 +109,9 @@ class Trigger extends AbstractModel
      * @param integer $Enable Enabling switch
      * @param string $CustomArgument Custom parameter
      * @param string $AvailableStatus Trigger status
+     * @param string $ResourceId Minimum resource ID of trigger
+     * @param string $BindStatus Trigger-Function binding status
+     * @param string $TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class Trigger extends AbstractModel
 
         if (array_key_exists("AvailableStatus",$param) and $param["AvailableStatus"] !== null) {
             $this->AvailableStatus = $param["AvailableStatus"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("BindStatus",$param) and $param["BindStatus"] !== null) {
+            $this->BindStatus = $param["BindStatus"];
+        }
+
+        if (array_key_exists("TriggerAttribute",$param) and $param["TriggerAttribute"] !== null) {
+            $this->TriggerAttribute = $param["TriggerAttribute"];
         }
     }
 }

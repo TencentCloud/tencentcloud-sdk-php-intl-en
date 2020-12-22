@@ -66,6 +66,14 @@ NAT type supports network address switch configuration. After the type is confir
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setNatGatewayId(string $NatGatewayId) Set ID of the NAT gateway bound.
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method array getVXLANSupport() Obtain Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVXLANSupport(array $VXLANSupport) Set Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getModeType() Obtain CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setModeType(string $ModeType) Set CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DirectConnectGateway extends AbstractModel
 {
@@ -145,6 +153,18 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $NatGatewayId;
 
     /**
+     * @var array Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $VXLANSupport;
+
+    /**
+     * @var string CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ModeType;
+
+    /**
      * @param string $DirectConnectGatewayId Direct Connect `ID`.
      * @param string $DirectConnectGatewayName Direct Connect gateway name.
      * @param string $VpcId The `ID` of the `VPC` instance associated with the Direct Connect gateway.
@@ -168,6 +188,10 @@ NAT type supports network address switch configuration. After the type is confir
      * @param boolean $EnableBGPCommunity Whether to enable BGP's `community` attribute. Valid values: enable, disable
      * @param string $NatGatewayId ID of the NAT gateway bound.
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param array $VXLANSupport Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ModeType CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -232,6 +256,14 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
             $this->NatGatewayId = $param["NatGatewayId"];
+        }
+
+        if (array_key_exists("VXLANSupport",$param) and $param["VXLANSupport"] !== null) {
+            $this->VXLANSupport = $param["VXLANSupport"];
+        }
+
+        if (array_key_exists("ModeType",$param) and $param["ModeType"] !== null) {
+            $this->ModeType = $param["ModeType"];
         }
     }
 }

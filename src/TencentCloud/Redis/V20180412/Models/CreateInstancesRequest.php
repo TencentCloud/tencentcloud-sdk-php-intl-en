@@ -60,8 +60,10 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
  * @method void setInstanceName(string $InstanceName) Set Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
  * @method boolean getNoAuth() Obtain Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
  * @method void setNoAuth(boolean $NoAuth) Set Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
- * @method array getNodeSet() Obtain 
- * @method void setNodeSet(array $NodeSet) Set 
+ * @method array getNodeSet() Obtain Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+ * @method void setNodeSet(array $NodeSet) Set Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+ * @method array getResourceTags() Obtain The tag bound with the instance to be purchased
+ * @method void setResourceTags(array $ResourceTags) Set The tag bound with the instance to be purchased
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -158,9 +160,14 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
     public $NoAuth;
 
     /**
-     * @var array 
+     * @var array Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
      */
     public $NodeSet;
+
+    /**
+     * @var array The tag bound with the instance to be purchased
+     */
+    public $ResourceTags;
 
     /**
      * @param integer $ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
@@ -183,7 +190,8 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
      * @param boolean $ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
      * @param string $InstanceName Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
      * @param boolean $NoAuth Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
-     * @param array $NodeSet 
+     * @param array $NodeSet Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+     * @param array $ResourceTags The tag bound with the instance to be purchased
      */
     function __construct()
     {
@@ -276,6 +284,15 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
                 $obj = new RedisNodeInfo();
                 $obj->deserialize($value);
                 array_push($this->NodeSet, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
             }
         }
     }

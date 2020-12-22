@@ -18,36 +18,36 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Redis master or replica node information
  *
- * @method integer getNodeType() Obtain 
- * @method void setNodeType(integer $NodeType) Set 
- * @method integer getZoneId() Obtain 
- * @method void setZoneId(integer $ZoneId) Set 
- * @method integer getNodeId() Obtain 
- * @method void setNodeId(integer $NodeId) Set 
+ * @method integer getNodeType() Obtain Node type. Valid values: `0` (master node), `1` (replica node)
+ * @method void setNodeType(integer $NodeType) Set Node type. Valid values: `0` (master node), `1` (replica node)
+ * @method integer getZoneId() Obtain ID of the availability zone of the master or replica node
+ * @method void setZoneId(integer $ZoneId) Set ID of the availability zone of the master or replica node
+ * @method integer getNodeId() Obtain ID of the master or replica node, which is not required when creating an instance
+ * @method void setNodeId(integer $NodeId) Set ID of the master or replica node, which is not required when creating an instance
  */
 class RedisNodeInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Node type. Valid values: `0` (master node), `1` (replica node)
      */
     public $NodeType;
 
     /**
-     * @var integer 
+     * @var integer ID of the availability zone of the master or replica node
      */
     public $ZoneId;
 
     /**
-     * @var integer 
+     * @var integer ID of the master or replica node, which is not required when creating an instance
      */
     public $NodeId;
 
     /**
-     * @param integer $NodeType 
-     * @param integer $ZoneId 
-     * @param integer $NodeId 
+     * @param integer $NodeType Node type. Valid values: `0` (master node), `1` (replica node)
+     * @param integer $ZoneId ID of the availability zone of the master or replica node
+     * @param integer $NodeId ID of the master or replica node, which is not required when creating an instance
      */
     function __construct()
     {

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayType(string $GatewayType) Set The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
 <li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+ * @method string getModeType() Obtain CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+ * @method void setModeType(string $ModeType) Set CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
  */
 class CreateDirectConnectGatewayRequest extends AbstractModel
 {
@@ -67,6 +69,11 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
     public $GatewayType;
 
     /**
+     * @var string CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+     */
+    public $ModeType;
+
+    /**
      * @param string $DirectConnectGatewayName The name of the direct connect gateway.
      * @param string $NetworkType The type of the associated network. Valid values:
 <li>VPC</li>
@@ -76,6 +83,7 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
      * @param string $GatewayType The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
 <li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+     * @param string $ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 
         if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
             $this->GatewayType = $param["GatewayType"];
+        }
+
+        if (array_key_exists("ModeType",$param) and $param["ModeType"] !== null) {
+            $this->ModeType = $param["ModeType"];
         }
     }
 }

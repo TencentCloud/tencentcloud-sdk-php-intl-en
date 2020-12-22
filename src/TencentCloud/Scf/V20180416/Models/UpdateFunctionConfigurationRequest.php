@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
  * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
  * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
- * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
- * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+ * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+ * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
  * @method Environment getEnvironment() Obtain Function environment variable
  * @method void setEnvironment(Environment $Environment) Set Function environment variable
  * @method string getNamespace() Obtain Function namespace
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClsLogsetId(string $ClsLogsetId) Set CLS logset ID to which logs are shipped
  * @method string getClsTopicId() Obtain CLS Topic ID to which logs are shipped
  * @method void setClsTopicId(string $ClsTopicId) Set CLS Topic ID to which logs are shipped
- * @method string getPublish() Obtain It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
- * @method void setPublish(string $Publish) Set It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+ * @method string getPublish() Obtain It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+ * @method void setPublish(string $Publish) Set It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
  * @method string getL5Enable() Obtain Whether to enable L5 access. TRUE: enable; FALSE: not enable
  * @method void setL5Enable(string $L5Enable) Set Whether to enable L5 access. TRUE: enable; FALSE: not enable
  * @method array getLayers() Obtain List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Information of a dead letter queue associated with a function
  * @method PublicNetConfigIn getPublicNetConfig() Obtain Public network access configuration
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
- * @method CfsConfig getCfsConfig() Obtain File system configuration input parameter, which is used for the function to bind the file system
- * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration input parameter, which is used for the function to bind the file system
+ * @method CfsConfig getCfsConfig() Obtain File system configuration input parameter, which is used for the function to bind the CFS file system
+ * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration input parameter, which is used for the function to bind the CFS file system
  * @method integer getInitTimeout() Obtain Timeout period for function initialization. Default value: 15 seconds
  * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization. Default value: 15 seconds
  */
@@ -80,7 +80,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $Timeout;
 
     /**
-     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
      */
     public $Runtime;
 
@@ -115,7 +115,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $ClsTopicId;
 
     /**
-     * @var string It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+     * @var string It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
      */
     public $Publish;
 
@@ -140,7 +140,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $PublicNetConfig;
 
     /**
-     * @var CfsConfig File system configuration input parameter, which is used for the function to bind the file system
+     * @var CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
      */
     public $CfsConfig;
 
@@ -154,19 +154,19 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
      * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
      * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
-     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
      * @param Environment $Environment Function environment variable
      * @param string $Namespace Function namespace
      * @param VpcConfig $VpcConfig Function VPC configuration
      * @param string $Role Role bound to the function
      * @param string $ClsLogsetId CLS logset ID to which logs are shipped
      * @param string $ClsTopicId CLS Topic ID to which logs are shipped
-     * @param string $Publish It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+     * @param string $Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
      * @param string $L5Enable Whether to enable L5 access. TRUE: enable; FALSE: not enable
      * @param array $Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
      * @param DeadLetterConfig $DeadLetterConfig Information of a dead letter queue associated with a function
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
-     * @param CfsConfig $CfsConfig File system configuration input parameter, which is used for the function to bind the file system
+     * @param CfsConfig $CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
      * @param integer $InitTimeout Timeout period for function initialization. Default value: 15 seconds
      */
     function __construct()

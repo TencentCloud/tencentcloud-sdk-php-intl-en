@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublish(string $Publish) Set It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
  * @method Code getCode() Obtain Function code
  * @method void setCode(Code $Code) Set Function code
- * @method string getCodeSource() Obtain Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
- * @method void setCodeSource(string $CodeSource) Set Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+ * @method string getCodeSource() Obtain Code source. Valid values: ZipFile, Cos, Inline
+ * @method void setCodeSource(string $CodeSource) Set Code source. Valid values: ZipFile, Cos, Inline
  */
 class UpdateFunctionCodeRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
     public $Code;
 
     /**
-     * @var string Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+     * @var string Code source. Valid values: ZipFile, Cos, Inline
      */
     public $CodeSource;
 
@@ -111,7 +111,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
      * @param string $EnvId Function environment
      * @param string $Publish It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
      * @param Code $Code Function code
-     * @param string $CodeSource Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+     * @param string $CodeSource Code source. Valid values: ZipFile, Cos, Inline
      */
     function __construct()
     {

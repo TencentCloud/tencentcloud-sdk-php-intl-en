@@ -40,6 +40,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setAddTime(string $AddTime) Set Trigger creation time
  * @method string getModTime() Obtain Trigger last modified time
  * @method void setModTime(string $ModTime) Set Trigger last modified time
+ * @method string getResourceId() Obtain Minimum resource ID of trigger
+ * @method void setResourceId(string $ResourceId) Set Minimum resource ID of trigger
+ * @method string getBindStatus() Obtain Trigger-Function binding status
+ * @method void setBindStatus(string $BindStatus) Set Trigger-Function binding status
+ * @method string getTriggerAttribute() Obtain Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+ * @method void setTriggerAttribute(string $TriggerAttribute) Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
  */
 class TriggerInfo extends AbstractModel
 {
@@ -90,6 +96,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ModTime;
 
     /**
+     * @var string Minimum resource ID of trigger
+     */
+    public $ResourceId;
+
+    /**
+     * @var string Trigger-Function binding status
+     */
+    public $BindStatus;
+
+    /**
+     * @var string Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     */
+    public $TriggerAttribute;
+
+    /**
      * @param integer $Enable Whether to enable
      * @param string $Qualifier Function version or alias
      * @param string $TriggerName Trigger name
@@ -100,6 +121,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AddTime Trigger creation time
      * @param string $ModTime Trigger last modified time
+     * @param string $ResourceId Minimum resource ID of trigger
+     * @param string $BindStatus Trigger-Function binding status
+     * @param string $TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
      */
     function __construct()
     {
@@ -148,6 +172,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ModTime",$param) and $param["ModTime"] !== null) {
             $this->ModTime = $param["ModTime"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("BindStatus",$param) and $param["BindStatus"] !== null) {
+            $this->BindStatus = $param["BindStatus"];
+        }
+
+        if (array_key_exists("TriggerAttribute",$param) and $param["TriggerAttribute"] !== null) {
+            $this->TriggerAttribute = $param["TriggerAttribute"];
         }
     }
 }
