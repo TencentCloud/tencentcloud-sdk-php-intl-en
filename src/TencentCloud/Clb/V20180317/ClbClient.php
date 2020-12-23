@@ -67,6 +67,7 @@ This is an async API. After it is returned successfully, you can call the Descri
  * @method Models\DescribeClsLogSetResponse DescribeClsLogSet(Models\DescribeClsLogSetRequest $req) This API is used to get the CLB dedicated logset.
  * @method Models\DescribeListenersResponse DescribeListeners(Models\DescribeListenersRequest $req) This API is used to get the list of listeners by CLB instance ID, listener protocol, or port. If no filter is specified, all listeners under the CLB instance will be returned.
  * @method Models\DescribeLoadBalancerListByCertIdResponse DescribeLoadBalancerListByCertId(Models\DescribeLoadBalancerListByCertIdRequest $req) This API is used to query the list of CLB instances associated with a certificate in a region by certificate ID.
+ * @method Models\DescribeLoadBalancerTrafficResponse DescribeLoadBalancerTraffic(Models\DescribeLoadBalancerTrafficRequest $req) This API is used to query CLB instances with high traffic and return the top 10 results. For queries using a sub-account, only the result CLB instances authorized to the sub-account will be returned.
  * @method Models\DescribeLoadBalancersResponse DescribeLoadBalancers(Models\DescribeLoadBalancersRequest $req) This API is used to query the list of CLB instances in a region.
 
  * @method Models\DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetail(Models\DescribeLoadBalancersDetailRequest $req) This API is used to query CLB instance details, including listener, rules, and target real servers.

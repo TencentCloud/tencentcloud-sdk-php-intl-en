@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeType(integer $NodeType) Set Node type. Valid values: `0` (master node), `1` (replica node)
  * @method integer getZoneId() Obtain ID of the availability zone of the master or replica node
  * @method void setZoneId(integer $ZoneId) Set ID of the availability zone of the master or replica node
- * @method integer getNodeId() Obtain ID of the master or replica node, which is not required when creating an instance
- * @method void setNodeId(integer $NodeId) Set ID of the master or replica node, which is not required when creating an instance
+ * @method integer getNodeId() Obtain ID of the master or replica node, which is not required upon creation of the instance
+ * @method void setNodeId(integer $NodeId) Set ID of the master or replica node, which is not required upon creation of the instance
  */
 class RedisNodeInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RedisNodeInfo extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer ID of the master or replica node, which is not required when creating an instance
+     * @var integer ID of the master or replica node, which is not required upon creation of the instance
      */
     public $NodeId;
 
     /**
      * @param integer $NodeType Node type. Valid values: `0` (master node), `1` (replica node)
      * @param integer $ZoneId ID of the availability zone of the master or replica node
-     * @param integer $NodeId ID of the master or replica node, which is not required when creating an instance
+     * @param integer $NodeId ID of the master or replica node, which is not required upon creation of the instance
      */
     function __construct()
     {

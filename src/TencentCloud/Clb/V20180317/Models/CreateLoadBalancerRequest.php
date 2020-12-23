@@ -26,10 +26,10 @@ OPEN: public network; INTERNAL: private network.
 OPEN: public network; INTERNAL: private network.
  * @method integer getForward() Obtain CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
  * @method void setForward(integer $Forward) Set CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
- * @method string getLoadBalancerName() Obtain CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
- * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+ * @method string getLoadBalancerName() Obtain CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
  * @method string getVpcId() Obtain Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
  * @method void setVpcId(string $VpcId) Set Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
  * @method string getSubnetId() Obtain A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
@@ -54,8 +54,8 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
  * @method void setTags(array $Tags) Set Tags a CLB instance when purchasing it
  * @method string getVip() Obtain Applies for CLB instances for a specified VIP
  * @method void setVip(string $Vip) Set Applies for CLB instances for a specified VIP
- * @method string getBandwidthPackageId() Obtain 
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set 
+ * @method string getBandwidthPackageId() Obtain Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
  * @method ExclusiveCluster getExclusiveCluster() Obtain Exclusive cluster information.
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Exclusive cluster information.
  * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
@@ -81,8 +81,8 @@ OPEN: public network; INTERNAL: private network.
     public $Forward;
 
     /**
-     * @var string CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+     * @var string CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
      */
     public $LoadBalancerName;
 
@@ -143,7 +143,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $Vip;
 
     /**
-     * @var string 
+     * @var string Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
      */
     public $BandwidthPackageId;
 
@@ -176,8 +176,8 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
-     * @param string $LoadBalancerName CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+     * @param string $LoadBalancerName CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
      * @param string $VpcId Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
      * @param string $SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
      * @param integer $ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
@@ -190,7 +190,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @param string $VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
      * @param array $Tags Tags a CLB instance when purchasing it
      * @param string $Vip Applies for CLB instances for a specified VIP
-     * @param string $BandwidthPackageId 
+     * @param string $BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
      * @param ExclusiveCluster $ExclusiveCluster Exclusive cluster information.
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
      * @param boolean $SnatPro Whether Binding IPs of other VPCs feature switch

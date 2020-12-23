@@ -30,10 +30,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTargets() Obtain Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargets(array $Targets) Set Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTargets() Obtain Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTargets(array $Targets) Set Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RuleHealth extends AbstractModel
 {
@@ -55,8 +55,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Url;
 
     /**
-     * @var array Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Targets;
 
@@ -66,8 +66,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Url Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Targets Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Targets Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
