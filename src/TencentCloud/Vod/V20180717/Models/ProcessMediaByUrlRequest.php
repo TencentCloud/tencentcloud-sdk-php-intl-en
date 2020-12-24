@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMediaByUrl request structure.
  *
- * @method MediaInputInfo getInputInfo() Obtain This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+ * @method MediaInputInfo getInputInfo() Obtain This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
  * @method MediaOutputInfo getOutputInfo() Obtain Information of COS path to output file.
  * @method void setOutputInfo(MediaOutputInfo $OutputInfo) Set Information of COS path to output file.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of video content audit task.
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ProcessMediaByUrlRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+     * @var MediaInputInfo This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
      */
     public $InputInfo;
 
@@ -94,7 +94,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param MediaInputInfo $InputInfo This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+     * @param MediaInputInfo $InputInfo This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
      * @param MediaOutputInfo $OutputInfo Information of COS path to output file.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of video content audit task.
      * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.

@@ -26,10 +26,10 @@ OPEN: public network; INTERNAL: private network.
 OPEN: public network; INTERNAL: private network.
  * @method integer getForward() Obtain CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
  * @method void setForward(integer $Forward) Set CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
- * @method string getLoadBalancerName() Obtain CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
- * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+ * @method string getLoadBalancerName() Obtain CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
  * @method string getVpcId() Obtain Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
  * @method void setVpcId(string $VpcId) Set Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
  * @method string getSubnetId() Obtain A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
@@ -81,8 +81,8 @@ OPEN: public network; INTERNAL: private network.
     public $Forward;
 
     /**
-     * @var string CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+     * @var string CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
      */
     public $LoadBalancerName;
 
@@ -176,8 +176,8 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
-     * @param string $LoadBalancerName CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+     * @param string $LoadBalancerName CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
      * @param string $VpcId Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
      * @param string $SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
      * @param integer $ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.

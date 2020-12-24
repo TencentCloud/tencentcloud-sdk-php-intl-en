@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancerTraffic response structure.
  *
- * @method array getLoadBalancerTraffic() Obtain Information of CLB instances descendingly sorted by outbound bandwidth
+ * @method array getLoadBalancerTraffic() Obtain Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setLoadBalancerTraffic(array $LoadBalancerTraffic) Set Information of CLB instances descendingly sorted by outbound bandwidth
+ * @method void setLoadBalancerTraffic(array $LoadBalancerTraffic) Set Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class DescribeLoadBalancerTrafficResponse extends AbstractModel
 {
     /**
-     * @var array Information of CLB instances descendingly sorted by outbound bandwidth
+     * @var array Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $LoadBalancerTraffic;
@@ -41,7 +41,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param array $LoadBalancerTraffic Information of CLB instances descendingly sorted by outbound bandwidth
+     * @param array $LoadBalancerTraffic Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

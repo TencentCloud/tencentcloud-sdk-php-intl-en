@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Speech detection details
  *
- * @method string getLabel() Obtain Violation scenario. For more information, please see the definition of <a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>
- * @method void setLabel(string $Label) Set Violation scenario. For more information, please see the definition of <a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>
+ * @method string getLabel() Obtain Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+ * @method void setLabel(string $Label) Set Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
  * @method string getRate() Obtain Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
  * @method void setRate(string $Rate) Set Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
  * @method string getKeyWord() Obtain Non-compliant keyword
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ScanDetail extends AbstractModel
 {
     /**
-     * @var string Violation scenario. For more information, please see the definition of <a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>
+     * @var string Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
      */
     public $Label;
 
@@ -59,7 +59,7 @@ class ScanDetail extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $Label Violation scenario. For more information, please see the definition of <a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>
+     * @param string $Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
      * @param string $Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
      * @param string $KeyWord Non-compliant keyword
      * @param integer $StartTime Start time offset in milliseconds from 0 of keyword in audio

@@ -56,20 +56,22 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
  * @method integer getHeight() Obtain Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
  * @method void setHeight(integer $Height) Set Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
- * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
- * @method void setFillType(string $FillType) Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
+ * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+ * @method void setFillType(string $FillType) Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
  * @method integer getVcrf() Obtain Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
  * @method void setVcrf(integer $Vcrf) Set Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
+ * @method integer getGop() Obtain 
+ * @method void setGop(integer $Gop) Set 
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -116,19 +118,24 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
     public $Height;
 
     /**
-     * @var string Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
+     * @var string Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
      */
     public $FillType;
 
     /**
      * @var integer Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
      */
     public $Vcrf;
+
+    /**
+     * @var integer 
+     */
+    public $Gop;
 
     /**
      * @param string $Codec Video stream encoder. Valid values:
@@ -149,13 +156,14 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
      * @param integer $Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-     * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
+     * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
      * @param integer $Vcrf Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
+     * @param integer $Gop 
      */
     function __construct()
     {
@@ -200,6 +208,10 @@ We don’t recommend specifying this parameter if you have no special requiremen
 
         if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
             $this->Vcrf = $param["Vcrf"];
+        }
+
+        if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
+            $this->Gop = $param["Gop"];
         }
     }
 }

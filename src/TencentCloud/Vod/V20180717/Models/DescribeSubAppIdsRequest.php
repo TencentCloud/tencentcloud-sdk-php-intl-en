@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAppIds request structure.
  *
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
  * @method array getTags() Obtain Tag information. You can query the list of subapplications with specified tags.
  * @method void setTags(array $Tags) Set Tag information. You can query the list of subapplications with specified tags.
  */
 class DescribeSubAppIdsRequest extends AbstractModel
 {
     /**
+     * @var integer 
+     */
+    public $Limit;
+
+    /**
+     * @var integer 
+     */
+    public $Offset;
+
+    /**
      * @var array Tag information. You can query the list of subapplications with specified tags.
      */
     public $Tags;
 
     /**
+     * @param integer $Limit 
+     * @param integer $Offset 
      * @param array $Tags Tag information. You can query the list of subapplications with specified tags.
      */
     function __construct()
@@ -46,6 +62,14 @@ class DescribeSubAppIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = [];
             foreach ($param["Tags"] as $key => $value){

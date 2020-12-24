@@ -76,24 +76,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFillType() Obtain Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
-Default value: black.
- * @method void setFillType(string $FillType) Set Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
-Default value: black.
+ * @method string getFillType() Obtain Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
+ * @method void setFillType(string $FillType) Set Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
  * @method integer getVcrf() Obtain Video Constant Rate Factor (CRF). Value range: 1-51.
 If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
  * @method void setVcrf(integer $Vcrf) Set Video Constant Rate Factor (CRF). Value range: 1-51.
 If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
+ * @method integer getGop() Obtain 
+ * @method void setGop(integer $Gop) Set 
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -150,21 +152,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Height;
 
     /**
-     * @var string Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
-Default value: black.
+     * @var string Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
      */
     public $FillType;
 
     /**
      * @var integer Video Constant Rate Factor (CRF). Value range: 1-51.
 If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
      */
     public $Vcrf;
+
+    /**
+     * @var integer 
+     */
+    public $Gop;
 
     /**
      * @param string $Codec Video stream encoder. Valid values:
@@ -195,15 +202,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FillType Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
-Default value: black.
+     * @param string $FillType Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
      * @param integer $Vcrf Video Constant Rate Factor (CRF). Value range: 1-51.
 If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
+     * @param integer $Gop 
      */
     function __construct()
     {
@@ -248,6 +256,10 @@ We don’t recommend specifying this parameter if you have no special requiremen
 
         if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
             $this->Vcrf = $param["Vcrf"];
+        }
+
+        if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
+            $this->Gop = $param["Gop"];
         }
     }
 }

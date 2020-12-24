@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() Obtain Subapplication ID.
  * @method void setSubAppId(integer $SubAppId) Set Subapplication ID.
- * @method string getStatus() Obtain Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
- * @method void setStatus(string $Status) Set Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
+ * @method string getStatus() Obtain Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
+ * @method void setStatus(string $Status) Set Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
  */
 class ModifySubAppIdStatusRequest extends AbstractModel
 {
@@ -41,21 +41,21 @@ class ModifySubAppIdStatusRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
+     * @var string Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
      */
     public $Status;
 
     /**
      * @param integer $SubAppId Subapplication ID.
-     * @param string $Status Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
+     * @param string $Status Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
      */
     function __construct()
     {

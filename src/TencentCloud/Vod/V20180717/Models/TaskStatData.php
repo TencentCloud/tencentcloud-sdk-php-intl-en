@@ -21,19 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * Video processing task statistics.
  *
  * @method string getTaskType() Obtain Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
  * @method void setTaskType(string $TaskType) Set Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
  * @method array getSummary() Obtain Task statistics overview (usage unit: second).
  * @method void setSummary(array $Summary) Set Task statistics overview (usage unit: second).
  * @method array getDetails() Obtain Detailed statistics of tasks with different specifications.
@@ -111,12 +111,12 @@ class TaskStatData extends AbstractModel
 {
     /**
      * @var string Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
      */
     public $TaskType;
 
@@ -166,12 +166,12 @@ Transcoding specification:
 
     /**
      * @param string $TaskType Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
      * @param array $Summary Task statistics overview (usage unit: second).
      * @param array $Details Detailed statistics of tasks with different specifications.
 Transcoding specification:

@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Subapplication overview.
  * @method string getCreateTime() Obtain Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getStatus() Obtain Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li>
- * @method void setStatus(string $Status) Set Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li>
+ * @method string getStatus() Obtain Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
+ * @method void setStatus(string $Status) Set Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
  */
 class SubAppIdInfo extends AbstractModel
 {
@@ -62,11 +62,11 @@ class SubAppIdInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li>
+     * @var string Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
      */
     public $Status;
 
@@ -75,11 +75,11 @@ class SubAppIdInfo extends AbstractModel
      * @param string $Name Subapplication name.
      * @param string $Description Subapplication overview.
      * @param string $CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $Status Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li>
+     * @param string $Status Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
      */
     function __construct()
     {

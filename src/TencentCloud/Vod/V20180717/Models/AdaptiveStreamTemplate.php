@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
 <li>0: no,</li>
 <li>1: yes.</li>
  * @method integer getRemoveVideo() Obtain Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+<li>0: no</li>
+<li>1: yes</li>
  * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+<li>0: no</li>
+<li>1: yes</li>
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -58,8 +58,8 @@ class AdaptiveStreamTemplate extends AbstractModel
 
     /**
      * @var integer Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+<li>0: no</li>
+<li>1: yes</li>
      */
     public $RemoveVideo;
 
@@ -70,8 +70,8 @@ class AdaptiveStreamTemplate extends AbstractModel
 <li>0: no,</li>
 <li>1: yes.</li>
      * @param integer $RemoveVideo Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+<li>0: no</li>
+<li>1: yes</li>
      */
     function __construct()
     {

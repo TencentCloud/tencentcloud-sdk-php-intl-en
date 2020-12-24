@@ -67,17 +67,17 @@ In Hz.
 <li>48,000</li>
 In Hz.
  * @method integer getAudioChannel() Obtain Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2.
+Default value: 2
  * @method void setAudioChannel(integer $AudioChannel) Set Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2.
+Default value: 2
  */
 class AudioTemplateInfo extends AbstractModel
 {
@@ -118,11 +118,11 @@ In Hz.
 
     /**
      * @var integer Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2.
+Default value: 2
      */
     public $AudioChannel;
 
@@ -151,11 +151,11 @@ If the value is 0, the bitrate of the audio stream will be the same as that of t
 <li>48,000</li>
 In Hz.
      * @param integer $AudioChannel Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2.
+Default value: 2
      */
     function __construct()
     {
