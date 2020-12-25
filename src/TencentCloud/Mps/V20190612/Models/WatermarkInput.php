@@ -24,12 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set ID of a watermarking template.
  * @method RawWatermarkParameter getRawParameter() Obtain Custom watermark parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
  * @method void setRawParameter(RawWatermarkParameter $RawParameter) Set Custom watermark parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
  * @method string getTextContent() Obtain Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
  * @method void setTextContent(string $TextContent) Set Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
  * @method string getSvgContent() Obtain SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
  * @method void setSvgContent(string $SvgContent) Set SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
  * @method float getStartTimeOffset() Obtain Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.
 <li>If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
@@ -57,16 +63,19 @@ class WatermarkInput extends AbstractModel
     /**
      * @var RawWatermarkParameter Custom watermark parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
      */
     public $RawParameter;
 
     /**
      * @var string Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
      */
     public $TextContent;
 
     /**
      * @var string SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
      */
     public $SvgContent;
 
@@ -90,8 +99,11 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
      * @param integer $Definition ID of a watermarking template.
      * @param RawWatermarkParameter $RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
      * @param string $TextContent Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
      * @param string $SvgContent SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
      * @param float $StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.
 <li>If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>

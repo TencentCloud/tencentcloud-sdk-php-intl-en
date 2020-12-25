@@ -18,16 +18,16 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * JoinGameServerSession request structure.
+ * JoinGameServerSessionBatch request structure.
  *
  * @method string getGameServerSessionId() Obtain Game server session ID. It should contain 1 to 256 ASCII characters.
  * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID. It should contain 1 to 256 ASCII characters.
- * @method string getPlayerId() Obtain Player ID. Up to 1024 ASCII characters are allowed.
- * @method void setPlayerId(string $PlayerId) Set Player ID. Up to 1024 ASCII characters are allowed.
- * @method string getPlayerData() Obtain Player custom data. Up to 2048 ASCII characters are allowed.
- * @method void setPlayerData(string $PlayerData) Set Player custom data. Up to 2048 ASCII characters are allowed.
+ * @method array getPlayerIds() Obtain Player ID list. At least 1 ID and up to 25 IDs.
+ * @method void setPlayerIds(array $PlayerIds) Set Player ID list. At least 1 ID and up to 25 IDs.
+ * @method PlayerDataMap getPlayerDataMap() Obtain Player custom data
+ * @method void setPlayerDataMap(PlayerDataMap $PlayerDataMap) Set Player custom data
  */
-class JoinGameServerSessionRequest extends AbstractModel
+class JoinGameServerSessionBatchRequest extends AbstractModel
 {
     /**
      * @var string Game server session ID. It should contain 1 to 256 ASCII characters.
@@ -35,19 +35,19 @@ class JoinGameServerSessionRequest extends AbstractModel
     public $GameServerSessionId;
 
     /**
-     * @var string Player ID. Up to 1024 ASCII characters are allowed.
+     * @var array Player ID list. At least 1 ID and up to 25 IDs.
      */
-    public $PlayerId;
+    public $PlayerIds;
 
     /**
-     * @var string Player custom data. Up to 2048 ASCII characters are allowed.
+     * @var PlayerDataMap Player custom data
      */
-    public $PlayerData;
+    public $PlayerDataMap;
 
     /**
      * @param string $GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
-     * @param string $PlayerId Player ID. Up to 1024 ASCII characters are allowed.
-     * @param string $PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
+     * @param array $PlayerIds Player ID list. At least 1 ID and up to 25 IDs.
+     * @param PlayerDataMap $PlayerDataMap Player custom data
      */
     function __construct()
     {
@@ -66,12 +66,13 @@ class JoinGameServerSessionRequest extends AbstractModel
             $this->GameServerSessionId = $param["GameServerSessionId"];
         }
 
-        if (array_key_exists("PlayerId",$param) and $param["PlayerId"] !== null) {
-            $this->PlayerId = $param["PlayerId"];
+        if (array_key_exists("PlayerIds",$param) and $param["PlayerIds"] !== null) {
+            $this->PlayerIds = $param["PlayerIds"];
         }
 
-        if (array_key_exists("PlayerData",$param) and $param["PlayerData"] !== null) {
-            $this->PlayerData = $param["PlayerData"];
+        if (array_key_exists("PlayerDataMap",$param) and $param["PlayerDataMap"] !== null) {
+            $this->PlayerDataMap = new PlayerDataMap();
+            $this->PlayerDataMap->deserialize($param["PlayerDataMap"]);
         }
     }
 }

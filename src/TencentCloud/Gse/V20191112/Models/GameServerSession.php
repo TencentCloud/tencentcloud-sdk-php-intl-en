@@ -22,48 +22,48 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCreationTime() Obtain Game server session creation time
  * @method void setCreationTime(string $CreationTime) Set Game server session creation time
- * @method string getCreatorId() Obtain Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCreatorId(string $CreatorId) Set Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getCurrentPlayerSessionCount() Obtain Current number of players
- * @method void setCurrentPlayerSessionCount(integer $CurrentPlayerSessionCount) Set Current number of players
+ * @method string getCreatorId() Obtain Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setCreatorId(string $CreatorId) Set Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getCurrentPlayerSessionCount() Obtain The current number of players, which cannot be less than 0.
+ * @method void setCurrentPlayerSessionCount(integer $CurrentPlayerSessionCount) Set The current number of players, which cannot be less than 0.
  * @method string getDnsName() Obtain CVM DNS ID
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDnsName(string $DnsName) Set CVM DNS ID
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getFleetId() Obtain Fleet ID
  * @method void setFleetId(string $FleetId) Set Fleet ID
- * @method array getGameProperties() Obtain Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setGameProperties(array $GameProperties) Set Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getGameServerSessionData() Obtain Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setGameServerSessionData(string $GameServerSessionData) Set Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getGameServerSessionId() Obtain Game server session ID
- * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID
+ * @method array getGameProperties() Obtain Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setGameProperties(array $GameProperties) Set Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getGameServerSessionData() Obtain The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setGameServerSessionData(string $GameServerSessionData) Set The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getGameServerSessionId() Obtain Game server session ID. It should contain 1 to 48 ASCII characters.
+ * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID. It should contain 1 to 48 ASCII characters.
  * @method string getIpAddress() Obtain CVM IP address
  * @method void setIpAddress(string $IpAddress) Set CVM IP address
- * @method string getMatchmakerData() Obtain Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMatchmakerData(string $MatchmakerData) Set Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaximumPlayerSessionCount() Obtain Maximum number of players
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set Maximum number of players
- * @method string getName() Obtain Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPlayerSessionCreationPolicy() Obtain Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) Set Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPort() Obtain Port number
- * @method void setPort(integer $Port) Set Port number
- * @method string getStatus() Obtain Game server session status
- * @method void setStatus(string $Status) Set Game server session status
+ * @method string getMatchmakerData() Obtain Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setMatchmakerData(string $MatchmakerData) Set Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getMaximumPlayerSessionCount() Obtain The maximum number of players, which cannot be less than 0.
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set The maximum number of players, which cannot be less than 0.
+ * @method string getName() Obtain The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setName(string $Name) Set The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getPlayerSessionCreationPolicy() Obtain Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) Set Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getPort() Obtain Port number. It should be a value between 1 to 60000.
+ * @method void setPort(integer $Port) Set Port number. It should be a value between 1 to 60000.
+ * @method string getStatus() Obtain Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
+ * @method void setStatus(string $Status) Set Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
  * @method string getStatusReason() Obtain Additional information of game server session status
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStatusReason(string $StatusReason) Set Additional information of game server session status
@@ -72,10 +72,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTerminationTime(string $TerminationTime) Set Termination time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setInstanceType(string $InstanceType) Set Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method integer getCurrentCustomCount() Obtain Current custom count
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCurrentCustomCount(integer $CurrentCustomCount) Set Current custom count
@@ -88,10 +88,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWeight(integer $Weight) Set Weight
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAvailabilityStatus() Obtain Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAvailabilityStatus(string $AvailabilityStatus) Set Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAvailabilityStatus() Obtain Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setAvailabilityStatus(string $AvailabilityStatus) Set Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class GameServerSession extends AbstractModel
 {
@@ -101,13 +101,13 @@ class GameServerSession extends AbstractModel
     public $CreationTime;
 
     /**
-     * @var string Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $CreatorId;
 
     /**
-     * @var integer Current number of players
+     * @var integer The current number of players, which cannot be less than 0.
      */
     public $CurrentPlayerSessionCount;
 
@@ -123,19 +123,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $FleetId;
 
     /**
-     * @var array Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $GameProperties;
 
     /**
-     * @var string Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $GameServerSessionData;
 
     /**
-     * @var string Game server session ID
+     * @var string Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public $GameServerSessionId;
 
@@ -145,35 +145,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IpAddress;
 
     /**
-     * @var string Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $MatchmakerData;
 
     /**
-     * @var integer Maximum number of players
+     * @var integer The maximum number of players, which cannot be less than 0.
      */
     public $MaximumPlayerSessionCount;
 
     /**
-     * @var string Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Name;
 
     /**
-     * @var string Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $PlayerSessionCreationPolicy;
 
     /**
-     * @var integer Port number
+     * @var integer Port number. It should be a value between 1 to 60000.
      */
     public $Port;
 
     /**
-     * @var string Game server session status
+     * @var string Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
      */
     public $Status;
 
@@ -190,8 +190,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TerminationTime;
 
     /**
-     * @var string Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $InstanceType;
 
@@ -214,48 +214,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Weight;
 
     /**
-     * @var string Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $AvailabilityStatus;
 
     /**
      * @param string $CreationTime Game server session creation time
-     * @param string $CreatorId Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $CurrentPlayerSessionCount Current number of players
+     * @param string $CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $CurrentPlayerSessionCount The current number of players, which cannot be less than 0.
      * @param string $DnsName CVM DNS ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $FleetId Fleet ID
-     * @param array $GameProperties Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $GameServerSessionData Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $GameServerSessionId Game server session ID
+     * @param array $GameProperties Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      * @param string $IpAddress CVM IP address
-     * @param string $MatchmakerData Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaximumPlayerSessionCount Maximum number of players
-     * @param string $Name Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PlayerSessionCreationPolicy Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Port Port number
-     * @param string $Status Game server session status
+     * @param string $MatchmakerData Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
+     * @param string $Name The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $Port Port number. It should be a value between 1 to 60000.
+     * @param string $Status Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
      * @param string $StatusReason Additional information of game server session status
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TerminationTime Termination time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceType Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $CurrentCustomCount Current custom count
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxCustomCount Maximum custom count
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Weight Weight
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AvailabilityStatus Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AvailabilityStatus Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {

@@ -18,44 +18,44 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP fields to be queried online
+ * IP information to be queried
  *
- * @method boolean getCountry() Obtain Country/region field
- * @method void setCountry(boolean $Country) Set Country/region field
- * @method boolean getProvince() Obtain Province/municipality field
- * @method void setProvince(boolean $Province) Set Province/municipality field
- * @method boolean getCity() Obtain City field
- * @method void setCity(boolean $City) Set City field
- * @method boolean getRegion() Obtain Urban area field
- * @method void setRegion(boolean $Region) Set Urban area field
+ * @method boolean getCountry() Obtain Country/region of the IP
+ * @method void setCountry(boolean $Country) Set Country/region of the IP
+ * @method boolean getProvince() Obtain Province/municipality/state of the IP
+ * @method void setProvince(boolean $Province) Set Province/municipality/state of the IP
+ * @method boolean getCity() Obtain City of the IP
+ * @method void setCity(boolean $City) Set City of the IP
+ * @method boolean getRegion() Obtain City district of the IP
+ * @method void setRegion(boolean $Region) Set City district of the IP
  * @method boolean getIsp() Obtain Access ISP field
  * @method void setIsp(boolean $Isp) Set Access ISP field
  * @method boolean getAsName() Obtain ISP backbone network’s AS field
  * @method void setAsName(boolean $AsName) Set ISP backbone network’s AS field
- * @method boolean getAsId() Obtain AS ID
- * @method void setAsId(boolean $AsId) Set AS ID
+ * @method boolean getAsId() Obtain Backbone AS ID
+ * @method void setAsId(boolean $AsId) Set Backbone AS ID
  * @method boolean getComment() Obtain Comment
  * @method void setComment(boolean $Comment) Set Comment
  */
 class IpField extends AbstractModel
 {
     /**
-     * @var boolean Country/region field
+     * @var boolean Country/region of the IP
      */
     public $Country;
 
     /**
-     * @var boolean Province/municipality field
+     * @var boolean Province/municipality/state of the IP
      */
     public $Province;
 
     /**
-     * @var boolean City field
+     * @var boolean City of the IP
      */
     public $City;
 
     /**
-     * @var boolean Urban area field
+     * @var boolean City district of the IP
      */
     public $Region;
 
@@ -70,7 +70,7 @@ class IpField extends AbstractModel
     public $AsName;
 
     /**
-     * @var boolean AS ID
+     * @var boolean Backbone AS ID
      */
     public $AsId;
 
@@ -80,13 +80,13 @@ class IpField extends AbstractModel
     public $Comment;
 
     /**
-     * @param boolean $Country Country/region field
-     * @param boolean $Province Province/municipality field
-     * @param boolean $City City field
-     * @param boolean $Region Urban area field
+     * @param boolean $Country Country/region of the IP
+     * @param boolean $Province Province/municipality/state of the IP
+     * @param boolean $City City of the IP
+     * @param boolean $Region City district of the IP
      * @param boolean $Isp Access ISP field
      * @param boolean $AsName ISP backbone network’s AS field
-     * @param boolean $AsId AS ID
+     * @param boolean $AsId Backbone AS ID
      * @param boolean $Comment Comment
      */
     function __construct()

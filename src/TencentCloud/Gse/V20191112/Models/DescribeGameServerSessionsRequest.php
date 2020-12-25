@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAliasId(string $AliasId) Set Alias ID
  * @method string getFleetId() Obtain Fleet ID
  * @method void setFleetId(string $FleetId) Set Fleet ID
- * @method string getGameServerSessionId() Obtain Game server session ID
- * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID
+ * @method string getGameServerSessionId() Obtain Game server session ID. It should contain 1 to 48 ASCII characters.
+ * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID. It should contain 1 to 48 ASCII characters.
  * @method integer getLimit() Obtain Maximum number of entries in a single query
  * @method void setLimit(integer $Limit) Set Maximum number of entries in a single query
- * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page
- * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page
+ * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+ * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
  * @method string getStatusFilter() Obtain Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
  * @method void setStatusFilter(string $StatusFilter) Set Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
  */
@@ -46,7 +46,7 @@ class DescribeGameServerSessionsRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var string Game server session ID
+     * @var string Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public $GameServerSessionId;
 
@@ -56,7 +56,7 @@ class DescribeGameServerSessionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Pagination offset, which is used for querying the next page
+     * @var string Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public $NextToken;
 
@@ -68,9 +68,9 @@ class DescribeGameServerSessionsRequest extends AbstractModel
     /**
      * @param string $AliasId Alias ID
      * @param string $FleetId Fleet ID
-     * @param string $GameServerSessionId Game server session ID
+     * @param string $GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      * @param integer $Limit Maximum number of entries in a single query
-     * @param string $NextToken Pagination offset, which is used for querying the next page
+     * @param string $NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      * @param string $StatusFilter Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
      */
     function __construct()

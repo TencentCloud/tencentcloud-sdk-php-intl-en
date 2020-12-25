@@ -28,24 +28,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getFleetId() Obtain Fleet ID
  * @method void setFleetId(string $FleetId) Set Fleet ID
- * @method string getGameServerSessionId() Obtain Game server session ID
- * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID
+ * @method string getGameServerSessionId() Obtain Game server session ID. It should contain 1 to 256 ASCII characters.
+ * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID. It should contain 1 to 256 ASCII characters.
  * @method string getIpAddress() Obtain Address of the CVM instance where the game server session is running
  * @method void setIpAddress(string $IpAddress) Set Address of the CVM instance where the game server session is running
- * @method string getPlayerData() Obtain Player information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPlayerData(string $PlayerData) Set Player information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPlayerId() Obtain Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPlayerId(string $PlayerId) Set Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getPlayerData() Obtain Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setPlayerData(string $PlayerData) Set Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getPlayerId() Obtain Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setPlayerId(string $PlayerId) Set Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getPlayerSessionId() Obtain Player session ID
  * @method void setPlayerSessionId(string $PlayerSessionId) Set Player session ID
- * @method integer getPort() Obtain Port number
- * @method void setPort(integer $Port) Set Port number
- * @method string getStatus() Obtain Player session status
- * @method void setStatus(string $Status) Set Player session status
+ * @method integer getPort() Obtain Port number. It should be a value between 1 to 60000.
+ * @method void setPort(integer $Port) Set Port number. It should be a value between 1 to 60000.
+ * @method string getStatus() Obtain Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
+ * @method void setStatus(string $Status) Set Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
  * @method string getTerminationTime() Obtain Player session termination time
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTerminationTime(string $TerminationTime) Set Player session termination time
@@ -70,7 +70,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $FleetId;
 
     /**
-     * @var string Game server session ID
+     * @var string Game server session ID. It should contain 1 to 256 ASCII characters.
      */
     public $GameServerSessionId;
 
@@ -80,14 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IpAddress;
 
     /**
-     * @var string Player information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $PlayerData;
 
     /**
-     * @var string Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $PlayerId;
 
@@ -97,12 +97,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PlayerSessionId;
 
     /**
-     * @var integer Port number
+     * @var integer Port number. It should be a value between 1 to 60000.
      */
     public $Port;
 
     /**
-     * @var string Player session status
+     * @var string Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
      */
     public $Status;
 
@@ -117,15 +117,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $DnsName ID of the DNS where the game server session is running
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $FleetId Fleet ID
-     * @param string $GameServerSessionId Game server session ID
+     * @param string $GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
      * @param string $IpAddress Address of the CVM instance where the game server session is running
-     * @param string $PlayerData Player information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PlayerId Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $PlayerId Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $PlayerSessionId Player session ID
-     * @param integer $Port Port number
-     * @param string $Status Player session status
+     * @param integer $Port Port number. It should be a value between 1 to 60000.
+     * @param string $Status Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
      * @param string $TerminationTime Player session termination time
 Note: this field may return null, indicating that no valid values can be obtained.
      */

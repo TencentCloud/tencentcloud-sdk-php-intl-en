@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetGameServerSessionLogUrl response structure.
  *
- * @method string getPreSignedUrl() Obtain Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPreSignedUrl(string $PreSignedUrl) Set Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getPreSignedUrl() Obtain Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setPreSignedUrl(string $PreSignedUrl) Set Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class GetGameServerSessionLogUrlResponse extends AbstractModel
 {
     /**
-     * @var string Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $PreSignedUrl;
 
@@ -41,8 +41,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $PreSignedUrl Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $PreSignedUrl Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

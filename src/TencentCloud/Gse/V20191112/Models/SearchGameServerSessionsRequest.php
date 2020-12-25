@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFleetId(string $FleetId) Set Fleet ID
  * @method integer getLimit() Obtain Maximum number of entries in a single query
  * @method void setLimit(integer $Limit) Set Maximum number of entries in a single query
- * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page
- * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page
+ * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+ * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
  * @method string getFilterExpression() Obtain Search filter expression. Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
@@ -39,6 +39,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
  * @method void setFilterExpression(string $FilterExpression) Set Search filter expression. Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
@@ -50,6 +76,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
  * @method string getSortExpression() Obtain Sorting keyword
 Valid values:
 gameServerSessionName: game session name in `String` type
@@ -83,7 +135,7 @@ class SearchGameServerSessionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Pagination offset, which is used for querying the next page
+     * @var string Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public $NextToken;
 
@@ -99,6 +151,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
      */
     public $FilterExpression;
 
@@ -117,7 +195,7 @@ playerSessionCount: current number of player sessions in `Number` type
      * @param string $AliasId Alias ID
      * @param string $FleetId Fleet ID
      * @param integer $Limit Maximum number of entries in a single query
-     * @param string $NextToken Pagination offset, which is used for querying the next page
+     * @param string $NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      * @param string $FilterExpression Search filter expression. Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
@@ -129,6 +207,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
      * @param string $SortExpression Sorting keyword
 Valid values:
 gameServerSessionName: game session name in `String` type

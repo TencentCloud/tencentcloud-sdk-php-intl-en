@@ -57,13 +57,19 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
  * @method integer getGop() Obtain Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
  * @method void setGop(integer $Gop) Set Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
  * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
  * @method void setFillType(string $FillType) Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+ * @method integer getVcrf() Obtain The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
+It is not recommended to specify this parameter if there are no special requirements.
+ * @method void setVcrf(integer $Vcrf) Set The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
+It is not recommended to specify this parameter if there are no special requirements.
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -115,11 +121,18 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 
     /**
      * @var string Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
      */
     public $FillType;
+
+    /**
+     * @var integer The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
+It is not recommended to specify this parameter if there are no special requirements.
+     */
+    public $Vcrf;
 
     /**
      * @param string $Codec Video stream codec. Valid values:
@@ -141,9 +154,12 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
      * @param integer $Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
      * @param integer $Gop Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
      * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * @param integer $Vcrf The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
+It is not recommended to specify this parameter if there are no special requirements.
      */
     function __construct()
     {
@@ -188,6 +204,10 @@ Default value: black.
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
+            $this->Vcrf = $param["Vcrf"];
         }
     }
 }

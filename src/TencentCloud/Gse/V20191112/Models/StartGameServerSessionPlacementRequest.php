@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartGameServerSessionPlacement request structure.
  *
- * @method string getPlacementId() Obtain Unique ID of starting game server session placement
- * @method void setPlacementId(string $PlacementId) Set Unique ID of starting game server session placement
+ * @method string getPlacementId() Obtain The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
+ * @method void setPlacementId(string $PlacementId) Set The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
  * @method string getGameServerSessionQueueName() Obtain Game server session queue name
  * @method void setGameServerSessionQueueName(string $GameServerSessionQueueName) Set Game server session queue name
- * @method integer getMaximumPlayerSessionCount() Obtain Maximum number of concurrent players allowed by the game server to connect to the game session
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set Maximum number of concurrent players allowed by the game server to connect to the game session
+ * @method integer getMaximumPlayerSessionCount() Obtain The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
  * @method array getDesiredPlayerSessions() Obtain Player game session information
  * @method void setDesiredPlayerSessions(array $DesiredPlayerSessions) Set Player game session information
  * @method array getGameProperties() Obtain Player game session attributes
  * @method void setGameProperties(array $GameProperties) Set Player game session attributes
- * @method string getGameServerSessionData() Obtain Game server session data
- * @method void setGameServerSessionData(string $GameServerSessionData) Set Game server session data
- * @method string getGameServerSessionName() Obtain Game server session name
- * @method void setGameServerSessionName(string $GameServerSessionName) Set Game server session name
+ * @method string getGameServerSessionData() Obtain Data of game server sessions. Up to 4096 ASCII characters are allowed.
+ * @method void setGameServerSessionData(string $GameServerSessionData) Set Data of game server sessions. Up to 4096 ASCII characters are allowed.
+ * @method string getGameServerSessionName() Obtain Name of game server sessions. Up to 4096 ASCII characters are allowed.
+ * @method void setGameServerSessionName(string $GameServerSessionName) Set Name of game server sessions. Up to 4096 ASCII characters are allowed.
  * @method array getPlayerLatencies() Obtain Player latency
  * @method void setPlayerLatencies(array $PlayerLatencies) Set Player latency
  */
 class StartGameServerSessionPlacementRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of starting game server session placement
+     * @var string The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
      */
     public $PlacementId;
 
@@ -50,7 +50,7 @@ class StartGameServerSessionPlacementRequest extends AbstractModel
     public $GameServerSessionQueueName;
 
     /**
-     * @var integer Maximum number of concurrent players allowed by the game server to connect to the game session
+     * @var integer The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
      */
     public $MaximumPlayerSessionCount;
 
@@ -65,12 +65,12 @@ class StartGameServerSessionPlacementRequest extends AbstractModel
     public $GameProperties;
 
     /**
-     * @var string Game server session data
+     * @var string Data of game server sessions. Up to 4096 ASCII characters are allowed.
      */
     public $GameServerSessionData;
 
     /**
-     * @var string Game server session name
+     * @var string Name of game server sessions. Up to 4096 ASCII characters are allowed.
      */
     public $GameServerSessionName;
 
@@ -80,13 +80,13 @@ class StartGameServerSessionPlacementRequest extends AbstractModel
     public $PlayerLatencies;
 
     /**
-     * @param string $PlacementId Unique ID of starting game server session placement
+     * @param string $PlacementId The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
      * @param string $GameServerSessionQueueName Game server session queue name
-     * @param integer $MaximumPlayerSessionCount Maximum number of concurrent players allowed by the game server to connect to the game session
+     * @param integer $MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
      * @param array $DesiredPlayerSessions Player game session information
      * @param array $GameProperties Player game session attributes
-     * @param string $GameServerSessionData Game server session data
-     * @param string $GameServerSessionName Game server session name
+     * @param string $GameServerSessionData Data of game server sessions. Up to 4096 ASCII characters are allowed.
+     * @param string $GameServerSessionName Name of game server sessions. Up to 4096 ASCII characters are allowed.
      * @param array $PlayerLatencies Player latency
      */
     function __construct()

@@ -50,8 +50,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setGameProperties(array $GameProperties) Set Game attributes
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaximumPlayerSessionCount() Obtain Maximum number of players
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set Maximum number of players
+ * @method integer getMaximumPlayerSessionCount() Obtain The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
  * @method string getGameServerSessionData() Obtain Game session data
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setGameServerSessionData(string $GameServerSessionData) Set Game session data
@@ -133,7 +133,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $GameProperties;
 
     /**
-     * @var integer Maximum number of players
+     * @var integer The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
      */
     public $MaximumPlayerSessionCount;
 
@@ -194,7 +194,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $GameProperties Game attributes
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaximumPlayerSessionCount Maximum number of players
+     * @param integer $MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
      * @param string $GameServerSessionData Game session data
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IpAddress IP address of the instance where the game session is running

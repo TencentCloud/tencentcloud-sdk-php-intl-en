@@ -18,28 +18,28 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Game attribute details
+ * Player custom data
  *
- * @method string getKey() Obtain Attribute name. Up to 32 ASCII characters are allowed.
- * @method void setKey(string $Key) Set Attribute name. Up to 32 ASCII characters are allowed.
- * @method string getValue() Obtain Attribute value. Up to 96 ASCII characters are allowed.
- * @method void setValue(string $Value) Set Attribute value. Up to 96 ASCII characters are allowed.
+ * @method string getKey() Obtain The key of player custom data. It should contain 1 to 1024 ASCII characters.
+ * @method void setKey(string $Key) Set The key of player custom data. It should contain 1 to 1024 ASCII characters.
+ * @method string getValue() Obtain The value of player custom data. It should contain 1 to 2048 ASCII characters.
+ * @method void setValue(string $Value) Set The value of player custom data. It should contain 1 to 2048 ASCII characters.
  */
-class GameProperty extends AbstractModel
+class PlayerDataMap extends AbstractModel
 {
     /**
-     * @var string Attribute name. Up to 32 ASCII characters are allowed.
+     * @var string The key of player custom data. It should contain 1 to 1024 ASCII characters.
      */
     public $Key;
 
     /**
-     * @var string Attribute value. Up to 96 ASCII characters are allowed.
+     * @var string The value of player custom data. It should contain 1 to 2048 ASCII characters.
      */
     public $Value;
 
     /**
-     * @param string $Key Attribute name. Up to 32 ASCII characters are allowed.
-     * @param string $Value Attribute value. Up to 96 ASCII characters are allowed.
+     * @param string $Key The key of player custom data. It should contain 1 to 1024 ASCII characters.
+     * @param string $Value The value of player custom data. It should contain 1 to 2048 ASCII characters.
      */
     function __construct()
     {

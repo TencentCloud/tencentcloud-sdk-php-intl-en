@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGameServerSession request structure.
  *
- * @method integer getMaximumPlayerSessionCount() Obtain Maximum number of players
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set Maximum number of players
- * @method string getAliasId() Obtain Alias ID
- * @method void setAliasId(string $AliasId) Set Alias ID
- * @method string getCreatorId() Obtain Creator ID
- * @method void setCreatorId(string $CreatorId) Set Creator ID
- * @method string getFleetId() Obtain Fleet ID
- * @method void setFleetId(string $FleetId) Set Fleet ID
- * @method array getGameProperties() Obtain Game attributes
- * @method void setGameProperties(array $GameProperties) Set Game attributes
- * @method string getGameServerSessionData() Obtain Game server session attribute details
- * @method void setGameServerSessionData(string $GameServerSessionData) Set Game server session attribute details
- * @method string getGameServerSessionId() Obtain Custom ID of game server session
- * @method void setGameServerSessionId(string $GameServerSessionId) Set Custom ID of game server session
- * @method string getIdempotencyToken() Obtain Idempotency token
- * @method void setIdempotencyToken(string $IdempotencyToken) Set Idempotency token
- * @method string getName() Obtain Game server session name
- * @method void setName(string $Name) Set Game server session name
+ * @method integer getMaximumPlayerSessionCount() Obtain The maximum number of players, which cannot be less than 0.
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set The maximum number of players, which cannot be less than 0.
+ * @method string getAliasId() Obtain Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+ * @method void setAliasId(string $AliasId) Set Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+ * @method string getCreatorId() Obtain Creator ID. Up to 1024 ASCII characters are allowed.
+ * @method void setCreatorId(string $CreatorId) Set Creator ID. Up to 1024 ASCII characters are allowed.
+ * @method string getFleetId() Obtain Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+ * @method void setFleetId(string $FleetId) Set Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+ * @method array getGameProperties() Obtain Game attributes. Up to 16 groups of attributes are allowed.
+ * @method void setGameProperties(array $GameProperties) Set Game attributes. Up to 16 groups of attributes are allowed.
+ * @method string getGameServerSessionData() Obtain The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+ * @method void setGameServerSessionData(string $GameServerSessionData) Set The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+ * @method string getGameServerSessionId() Obtain The custom ID of game server session. Up to 4096 ASCII characters are allowed.
+ * @method void setGameServerSessionId(string $GameServerSessionId) Set The custom ID of game server session. Up to 4096 ASCII characters are allowed.
+ * @method string getIdempotencyToken() Obtain Idempotency token. Up to 48 ASCII characters are allowed.
+ * @method void setIdempotencyToken(string $IdempotencyToken) Set Idempotency token. Up to 48 ASCII characters are allowed.
+ * @method string getName() Obtain The name of game server session. Up to 1024 ASCII characters are allowed.
+ * @method void setName(string $Name) Set The name of game server session. Up to 1024 ASCII characters are allowed.
  */
 class CreateGameServerSessionRequest extends AbstractModel
 {
     /**
-     * @var integer Maximum number of players
+     * @var integer The maximum number of players, which cannot be less than 0.
      */
     public $MaximumPlayerSessionCount;
 
     /**
-     * @var string Alias ID
+     * @var string Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
      */
     public $AliasId;
 
     /**
-     * @var string Creator ID
+     * @var string Creator ID. Up to 1024 ASCII characters are allowed.
      */
     public $CreatorId;
 
     /**
-     * @var string Fleet ID
+     * @var string Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
      */
     public $FleetId;
 
     /**
-     * @var array Game attributes
+     * @var array Game attributes. Up to 16 groups of attributes are allowed.
      */
     public $GameProperties;
 
     /**
-     * @var string Game server session attribute details
+     * @var string The attribute details of game server session. Up to 4096 ASCII characters are allowed.
      */
     public $GameServerSessionData;
 
     /**
-     * @var string Custom ID of game server session
+     * @var string The custom ID of game server session. Up to 4096 ASCII characters are allowed.
      */
     public $GameServerSessionId;
 
     /**
-     * @var string Idempotency token
+     * @var string Idempotency token. Up to 48 ASCII characters are allowed.
      */
     public $IdempotencyToken;
 
     /**
-     * @var string Game server session name
+     * @var string The name of game server session. Up to 1024 ASCII characters are allowed.
      */
     public $Name;
 
     /**
-     * @param integer $MaximumPlayerSessionCount Maximum number of players
-     * @param string $AliasId Alias ID
-     * @param string $CreatorId Creator ID
-     * @param string $FleetId Fleet ID
-     * @param array $GameProperties Game attributes
-     * @param string $GameServerSessionData Game server session attribute details
-     * @param string $GameServerSessionId Custom ID of game server session
-     * @param string $IdempotencyToken Idempotency token
-     * @param string $Name Game server session name
+     * @param integer $MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
+     * @param string $AliasId Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+     * @param string $CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
+     * @param string $FleetId Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+     * @param array $GameProperties Game attributes. Up to 16 groups of attributes are allowed.
+     * @param string $GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+     * @param string $GameServerSessionId The custom ID of game server session. Up to 4096 ASCII characters are allowed.
+     * @param string $IdempotencyToken Idempotency token. Up to 48 ASCII characters are allowed.
+     * @param string $Name The name of game server session. Up to 1024 ASCII characters are allowed.
      */
     function __construct()
     {

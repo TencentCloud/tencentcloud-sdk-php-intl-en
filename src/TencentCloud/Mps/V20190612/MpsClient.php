@@ -107,11 +107,12 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
 Instead of initiating a video processing task, this API is used to help generate SDKs for various programming languages. You can parse the event notification based on the analytic function of the SDKs.
  * @method Models\ParseNotificationResponse ParseNotification(Models\ParseNotificationRequest $req) This API is used to parse the content of an MPS event notification from the `msgBody` field in the message received from CMQ.
 Instead of initiating a video processing task, this API is used to help generate SDKs for various programming languages. You can parse the event notification based on the analytic function of the SDKs.
- * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate a processing task for a live streaming media file, including:
+ * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate tasks to process live streaming media files. Such tasks include:
 
-* Intelligent content audit (detection of porn, terrorism, and politically sensitive information in image and porn information in speech);
+* Intelligent content moderation (detecting porn, terrorism, and politically sensitive information in image and porn information in speech)
+* Intelligent content recognition (face, full text, text keyword, full speech, and speech keyword)
 
-The live stream processing event notification is written into the specified CMQ queue in real time. You need to obtain the event notification result from CMQ. If a file is output during video processing, it will be written into the specified target bucket.
+Live stream processing event notifications are written into specified CMQ queues in real time. Users need to obtain event notification results from such CMQ queues. Output files of the processing tasks are written into destination buckets specified by users.
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for media files in COS, including:
 1. Video transcoding (with watermark);
 2. Animated image generating;

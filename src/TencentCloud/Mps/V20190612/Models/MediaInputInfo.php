@@ -20,15 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of a video processing input object.
  *
- * @method string getType() Obtain Video processing object type. Only COS is supported currently.
- * @method void setType(string $Type) Set Video processing object type. Only COS is supported currently.
+ * @method string getType() Obtain The type of video processing input object. COS and URL objects are supported.
+ * @method void setType(string $Type) Set The type of video processing input object. COS and URL objects are supported.
  * @method CosInputInfo getCosInputInfo() Obtain This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) Set This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+ * @method UrlInputInfo getUrlInputInfo() Obtain This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) Set This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string Video processing object type. Only COS is supported currently.
+     * @var string The type of video processing input object. COS and URL objects are supported.
      */
     public $Type;
 
@@ -38,8 +42,16 @@ class MediaInputInfo extends AbstractModel
     public $CosInputInfo;
 
     /**
-     * @param string $Type Video processing object type. Only COS is supported currently.
+     * @var UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $UrlInputInfo;
+
+    /**
+     * @param string $Type The type of video processing input object. COS and URL objects are supported.
      * @param CosInputInfo $CosInputInfo This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+     * @param UrlInputInfo $UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -61,6 +73,11 @@ class MediaInputInfo extends AbstractModel
         if (array_key_exists("CosInputInfo",$param) and $param["CosInputInfo"] !== null) {
             $this->CosInputInfo = new CosInputInfo();
             $this->CosInputInfo->deserialize($param["CosInputInfo"]);
+        }
+
+        if (array_key_exists("UrlInputInfo",$param) and $param["UrlInputInfo"] !== null) {
+            $this->UrlInputInfo = new UrlInputInfo();
+            $this->UrlInputInfo->deserialize($param["UrlInputInfo"]);
         }
     }
 }

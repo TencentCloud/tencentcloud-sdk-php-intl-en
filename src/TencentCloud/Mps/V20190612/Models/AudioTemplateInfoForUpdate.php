@@ -68,10 +68,12 @@ In Hz.
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
  * @method void setAudioChannel(integer $AudioChannel) Set Audio channel system. Valid values:
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
  */
 class AudioTemplateInfoForUpdate extends AbstractModel
 {
@@ -114,6 +116,7 @@ In Hz.
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
      */
     public $AudioChannel;
 
@@ -144,6 +147,7 @@ In Hz.
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
      */
     function __construct()
     {

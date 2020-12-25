@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gse\V20191112\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetGameServerSessionLogUrl request structure.
+ * Information of a video processing URL object.
  *
- * @method string getGameServerSessionId() Obtain Game server session ID. It should contain 1 to 48 ASCII characters.
- * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID. It should contain 1 to 48 ASCII characters.
+ * @method string getUrl() Obtain URL of a video.
+ * @method void setUrl(string $Url) Set URL of a video.
  */
-class GetGameServerSessionLogUrlRequest extends AbstractModel
+class UrlInputInfo extends AbstractModel
 {
     /**
-     * @var string Game server session ID. It should contain 1 to 48 ASCII characters.
+     * @var string URL of a video.
      */
-    public $GameServerSessionId;
+    public $Url;
 
     /**
-     * @param string $GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
+     * @param string $Url URL of a video.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetGameServerSessionLogUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSessionId",$param) and $param["GameServerSessionId"] !== null) {
-            $this->GameServerSessionId = $param["GameServerSessionId"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

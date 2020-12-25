@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGameServerSession request structure.
  *
- * @method string getGameServerSessionId() Obtain Game server session ID
- * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID
- * @method integer getMaximumPlayerSessionCount() Obtain Maximum number of players
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set Maximum number of players
- * @method string getName() Obtain Game server session name
- * @method void setName(string $Name) Set Game server session name
- * @method string getPlayerSessionCreationPolicy() Obtain Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
- * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) Set Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
- * @method string getProtectionPolicy() Obtain Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
- * @method void setProtectionPolicy(string $ProtectionPolicy) Set Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+ * @method string getGameServerSessionId() Obtain Game server session ID. It should contain 1 to 256 ASCII characters.
+ * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID. It should contain 1 to 256 ASCII characters.
+ * @method integer getMaximumPlayerSessionCount() Obtain The maximum number of players, which cannot be less than 0.
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) Set The maximum number of players, which cannot be less than 0.
+ * @method string getName() Obtain Name of the game server session. It should contain 1 to 1024 ASCII characters.
+ * @method void setName(string $Name) Set Name of the game server session. It should contain 1 to 1024 ASCII characters.
+ * @method string getPlayerSessionCreationPolicy() Obtain Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+ * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) Set Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+ * @method string getProtectionPolicy() Obtain Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
+ * @method void setProtectionPolicy(string $ProtectionPolicy) Set Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
  */
 class UpdateGameServerSessionRequest extends AbstractModel
 {
     /**
-     * @var string Game server session ID
+     * @var string Game server session ID. It should contain 1 to 256 ASCII characters.
      */
     public $GameServerSessionId;
 
     /**
-     * @var integer Maximum number of players
+     * @var integer The maximum number of players, which cannot be less than 0.
      */
     public $MaximumPlayerSessionCount;
 
     /**
-     * @var string Game server session name
+     * @var string Name of the game server session. It should contain 1 to 1024 ASCII characters.
      */
     public $Name;
 
     /**
-     * @var string Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+     * @var string Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
      */
     public $PlayerSessionCreationPolicy;
 
     /**
-     * @var string Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+     * @var string Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
      */
     public $ProtectionPolicy;
 
     /**
-     * @param string $GameServerSessionId Game server session ID
-     * @param integer $MaximumPlayerSessionCount Maximum number of players
-     * @param string $Name Game server session name
-     * @param string $PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
-     * @param string $ProtectionPolicy Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+     * @param string $GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
+     * @param integer $MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
+     * @param string $Name Name of the game server session. It should contain 1 to 1024 ASCII characters.
+     * @param string $PlayerSessionCreationPolicy Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+     * @param string $ProtectionPolicy Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
      */
     function __construct()
     {

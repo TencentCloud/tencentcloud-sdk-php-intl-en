@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlayerSessions request structure.
  *
- * @method string getGameServerSessionId() Obtain Game server session ID
- * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID
+ * @method string getGameServerSessionId() Obtain Game server session ID. It should contain 1 to 48 ASCII characters.
+ * @method void setGameServerSessionId(string $GameServerSessionId) Set Game server session ID. It should contain 1 to 48 ASCII characters.
  * @method integer getLimit() Obtain Maximum number of entries in a single query
  * @method void setLimit(integer $Limit) Set Maximum number of entries in a single query
- * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page
- * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page
- * @method string getPlayerId() Obtain Player ID
- * @method void setPlayerId(string $PlayerId) Set Player ID
- * @method string getPlayerSessionId() Obtain Player session ID
- * @method void setPlayerSessionId(string $PlayerSessionId) Set Player session ID
+ * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+ * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+ * @method string getPlayerId() Obtain Player ID. It should contain 1 to 1024 ASCII characters.
+ * @method void setPlayerId(string $PlayerId) Set Player ID. It should contain 1 to 1024 ASCII characters.
+ * @method string getPlayerSessionId() Obtain Player session ID. It should contain 1 to 1024 ASCII characters.
+ * @method void setPlayerSessionId(string $PlayerSessionId) Set Player session ID. It should contain 1 to 1024 ASCII characters.
  * @method string getPlayerSessionStatusFilter() Obtain Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
  * @method void setPlayerSessionStatusFilter(string $PlayerSessionStatusFilter) Set Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
  */
 class DescribePlayerSessionsRequest extends AbstractModel
 {
     /**
-     * @var string Game server session ID
+     * @var string Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public $GameServerSessionId;
 
@@ -46,17 +46,17 @@ class DescribePlayerSessionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Pagination offset, which is used for querying the next page
+     * @var string Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public $NextToken;
 
     /**
-     * @var string Player ID
+     * @var string Player ID. It should contain 1 to 1024 ASCII characters.
      */
     public $PlayerId;
 
     /**
-     * @var string Player session ID
+     * @var string Player session ID. It should contain 1 to 1024 ASCII characters.
      */
     public $PlayerSessionId;
 
@@ -66,11 +66,11 @@ class DescribePlayerSessionsRequest extends AbstractModel
     public $PlayerSessionStatusFilter;
 
     /**
-     * @param string $GameServerSessionId Game server session ID
+     * @param string $GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      * @param integer $Limit Maximum number of entries in a single query
-     * @param string $NextToken Pagination offset, which is used for querying the next page
-     * @param string $PlayerId Player ID
-     * @param string $PlayerSessionId Player session ID
+     * @param string $NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * @param string $PlayerId Player ID. It should contain 1 to 1024 ASCII characters.
+     * @param string $PlayerSessionId Player session ID. It should contain 1 to 1024 ASCII characters.
      * @param string $PlayerSessionStatusFilter Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
      */
     function __construct()

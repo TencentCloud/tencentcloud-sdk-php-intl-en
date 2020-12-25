@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setGameServerSessionDetails(array $GameServerSessionDetails) Set List of game server session details
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,8 +40,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $GameServerSessionDetails;
 
     /**
-     * @var string Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $NextToken;
 
@@ -53,8 +53,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param array $GameServerSessionDetails List of game server session details
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $NextToken Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

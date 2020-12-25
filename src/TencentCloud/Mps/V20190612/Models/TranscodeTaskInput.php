@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
  * @method void setRawParameter(RawTranscodeParameter $RawParameter) Set Custom video transcoding parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+ * @method OverrideTranscodeParameter getOverrideParameter() Obtain Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setOverrideParameter(OverrideTranscodeParameter $OverrideParameter) Set Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
  * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
@@ -57,6 +65,14 @@ class TranscodeTaskInput extends AbstractModel
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
      */
     public $RawParameter;
+
+    /**
+     * @var OverrideTranscodeParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $OverrideParameter;
 
     /**
      * @var array List of up to 10 image or text watermarks.
@@ -95,6 +111,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Definition ID of a video transcoding template.
      * @param RawTranscodeParameter $RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+     * @param OverrideTranscodeParameter $OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
@@ -125,6 +145,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("RawParameter",$param) and $param["RawParameter"] !== null) {
             $this->RawParameter = new RawTranscodeParameter();
             $this->RawParameter->deserialize($param["RawParameter"]);
+        }
+
+        if (array_key_exists("OverrideParameter",$param) and $param["OverrideParameter"] !== null) {
+            $this->OverrideParameter = new OverrideTranscodeParameter();
+            $this->OverrideParameter->deserialize($param["OverrideParameter"]);
         }
 
         if (array_key_exists("WatermarkSet",$param) and $param["WatermarkSet"] !== null) {

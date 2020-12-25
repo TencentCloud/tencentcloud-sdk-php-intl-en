@@ -18,32 +18,22 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribePlayerSessions response structure.
+ * JoinGameServerSessionBatch response structure.
  *
- * @method array getPlayerSessions() Obtain Player session list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPlayerSessions(array $PlayerSessions) Set Player session list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getNextToken() Obtain Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+ * @method array getPlayerSessions() Obtain Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setNextToken(string $NextToken) Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+ * @method void setPlayerSessions(array $PlayerSessions) Set Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribePlayerSessionsResponse extends AbstractModel
+class JoinGameServerSessionBatchResponse extends AbstractModel
 {
     /**
-     * @var array Player session list
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $PlayerSessions;
-
-    /**
-     * @var string Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * @var array Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
-    public $NextToken;
+    public $PlayerSessions;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,9 +41,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $RequestId;
 
     /**
-     * @param array $PlayerSessions Player session list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * @param array $PlayerSessions Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -77,10 +65,6 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                 $obj->deserialize($value);
                 array_push($this->PlayerSessions, $obj);
             }
-        }
-
-        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
-            $this->NextToken = $param["NextToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

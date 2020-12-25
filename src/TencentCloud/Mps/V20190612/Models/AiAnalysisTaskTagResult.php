@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0: success; other values: failure.
+ * @method string getErrCodeExt() Obtain Error code, an empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code, an empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskTagInput getInput() Obtain Input of intelligent tagging task.
@@ -39,7 +41,12 @@ class AiAnalysisTaskTagResult extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. 0: success; other values: failure.
+     * @var string Error code, an empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     */
+    public $ErrCodeExt;
+
+    /**
+     * @var integer Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
      */
     public $ErrCode;
 
@@ -60,7 +67,8 @@ class AiAnalysisTaskTagResult extends AbstractModel
 
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param integer $ErrCode Error code. 0: success; other values: failure.
+     * @param string $ErrCodeExt Error code, an empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
      * @param string $Message Error message.
      * @param AiAnalysisTaskTagInput $Input Input of intelligent tagging task.
      * @param AiAnalysisTaskTagOutput $Output Output of intelligent tagging task.
@@ -80,6 +88,10 @@ class AiAnalysisTaskTagResult extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrCodeExt",$param) and $param["ErrCodeExt"] !== null) {
+            $this->ErrCodeExt = $param["ErrCodeExt"];
         }
 
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {

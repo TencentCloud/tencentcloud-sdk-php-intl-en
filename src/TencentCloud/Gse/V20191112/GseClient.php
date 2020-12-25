@@ -31,6 +31,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
  * @method Models\GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(Models\GetGameServerSessionLogUrlRequest $req) This API is used to get the log URL of a game server session.
  * @method Models\GetInstanceAccessResponse GetInstanceAccess(Models\GetInstanceAccessRequest $req) This API is used to get the credentials required for instance login.
  * @method Models\JoinGameServerSessionResponse JoinGameServerSession(Models\JoinGameServerSessionRequest $req) This API is used to join a game server session.
+ * @method Models\JoinGameServerSessionBatchResponse JoinGameServerSessionBatch(Models\JoinGameServerSessionBatchRequest $req) This API is used to join game server sessions in batch.
  * @method Models\SearchGameServerSessionsResponse SearchGameServerSessions(Models\SearchGameServerSessionsRequest $req) This API is used to search in the list of game server sessions.
  * @method Models\StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(Models\StartGameServerSessionPlacementRequest $req) This API is used to start placing a game server session.
  * @method Models\StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(Models\StopGameServerSessionPlacementRequest $req) This API is used to stop placing a game server session.
