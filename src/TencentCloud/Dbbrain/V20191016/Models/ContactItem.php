@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) Set Contact ID.
  * @method string getName() Obtain Contact name.
  * @method void setName(string $Name) Set Contact name.
- * @method string getMail() Obtain The mailbox bound to the contact.
- * @method void setMail(string $Mail) Set The mailbox bound to the contact.
+ * @method string getMail() Obtain The email address of the contact.
+ * @method void setMail(string $Mail) Set The email address of the contact.
  */
 class ContactItem extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ContactItem extends AbstractModel
     public $Name;
 
     /**
-     * @var string The mailbox bound to the contact.
+     * @var string The email address of the contact.
      */
     public $Mail;
 
     /**
      * @param integer $Id Contact ID.
      * @param string $Name Contact name.
-     * @param string $Mail The mailbox bound to the contact.
+     * @param string $Mail The email address of the contact.
      */
     function __construct()
     {

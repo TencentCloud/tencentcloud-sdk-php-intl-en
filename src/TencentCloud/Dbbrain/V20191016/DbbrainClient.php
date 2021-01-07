@@ -23,8 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Dbbrain\V20191016\Models as Models;
 
 /**
- * @method Models\CreateDBDiagReportTaskResponse CreateDBDiagReportTask(Models\CreateDBDiagReportTaskRequest $req) This API is used to create a health report and select whether to send an email.
- * @method Models\CreateMailProfileResponse CreateMailProfile(Models\CreateMailProfileRequest $req) This API is used to create the email configuration. The input parameter “ProfileType” represents the type of the email configuration. Valid values: “dbScan_mail_configuration” (email configuration of database inspection report) and “scheduler_mail_configuration” (email configuration of scheduled task report).
+ * @method Models\CreateDBDiagReportTaskResponse CreateDBDiagReportTask(Models\CreateDBDiagReportTaskRequest $req) This API is used to create a health report and send it via email as configured.
+ * @method Models\CreateMailProfileResponse CreateMailProfile(Models\CreateMailProfileRequest $req) This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email configuration of scheduled task report).
  * @method Models\DescribeAllUserContactResponse DescribeAllUserContact(Models\DescribeAllUserContactRequest $req) This API is used to obtain the information of the contact in the email.
  * @method Models\DescribeAllUserGroupResponse DescribeAllUserGroup(Models\DescribeAllUserGroupRequest $req) This API is used to obtain the information of the contact group in the email.
  * @method Models\DescribeDBDiagEventResponse DescribeDBDiagEvent(Models\DescribeDBDiagEventRequest $req) This API is used to get the details of an instance exception diagnosis event.
@@ -34,7 +34,7 @@ use TencentCloud\Dbbrain\V20191016\Models as Models;
  * @method Models\DescribeSlowLogTopSqlsResponse DescribeSlowLogTopSqls(Models\DescribeSlowLogTopSqlsRequest $req) This API is used to get and sort the top slow SQL statements in a specified time period by the aggregation mode of SQL template plus schema.
  * @method Models\DescribeTopSpaceTableTimeSeriesResponse DescribeTopSpaceTableTimeSeries(Models\DescribeTopSpaceTableTimeSeriesRequest $req) This API is used to query the daily space data of top tables consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
  * @method Models\DescribeTopSpaceTablesResponse DescribeTopSpaceTables(Models\DescribeTopSpaceTablesRequest $req) This API is used to query real-time space statistics of top tables of an instance. The return results are sorted by size by default.
- * @method Models\ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(Models\ModifyDiagDBInstanceConfRequest $req) This API is used to modify instance inspection switch.
+ * @method Models\ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(Models\ModifyDiagDBInstanceConfRequest $req) This API is used to enable/disable instance inspection.
  */
 
 class DbbrainClient extends AbstractClient

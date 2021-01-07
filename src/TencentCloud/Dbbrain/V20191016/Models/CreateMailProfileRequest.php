@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMailProfile request structure.
  *
- * @method ProfileInfo getProfileInfo() Obtain The content of email configuration.
- * @method void setProfileInfo(ProfileInfo $ProfileInfo) Set The content of email configuration.
- * @method string getProfileLevel() Obtain Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
- * @method void setProfileLevel(string $ProfileLevel) Set Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
- * @method string getProfileName() Obtain Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
- * @method void setProfileName(string $ProfileName) Set Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+ * @method ProfileInfo getProfileInfo() Obtain Email configurations
+ * @method void setProfileInfo(ProfileInfo $ProfileInfo) Set Email configurations
+ * @method string getProfileLevel() Obtain Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
+ * @method void setProfileLevel(string $ProfileLevel) Set Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
+ * @method string getProfileName() Obtain Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+ * @method void setProfileName(string $ProfileName) Set Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
  * @method string getProfileType() Obtain Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
  * @method void setProfileType(string $ProfileType) Set Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
  * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
  * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
- * @method array getBindInstanceIds() Obtain Instance ID bound to the configuration, which is set when the configuration level is "Instance".
- * @method void setBindInstanceIds(array $BindInstanceIds) Set Instance ID bound to the configuration, which is set when the configuration level is "Instance".
+ * @method array getBindInstanceIds() Obtain Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
+ * @method void setBindInstanceIds(array $BindInstanceIds) Set Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
  */
 class CreateMailProfileRequest extends AbstractModel
 {
     /**
-     * @var ProfileInfo The content of email configuration.
+     * @var ProfileInfo Email configurations
      */
     public $ProfileInfo;
 
     /**
-     * @var string Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
+     * @var string Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
      */
     public $ProfileLevel;
 
     /**
-     * @var string Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+     * @var string Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
      */
     public $ProfileName;
 
@@ -61,17 +61,17 @@ class CreateMailProfileRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var array Instance ID bound to the configuration, which is set when the configuration level is "Instance".
+     * @var array Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
      */
     public $BindInstanceIds;
 
     /**
-     * @param ProfileInfo $ProfileInfo The content of email configuration.
-     * @param string $ProfileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
-     * @param string $ProfileName Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+     * @param ProfileInfo $ProfileInfo Email configurations
+     * @param string $ProfileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
+     * @param string $ProfileName Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
      * @param string $ProfileType Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
      * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
-     * @param array $BindInstanceIds Instance ID bound to the configuration, which is set when the configuration level is "Instance".
+     * @param array $BindInstanceIds Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
      */
     function __construct()
     {

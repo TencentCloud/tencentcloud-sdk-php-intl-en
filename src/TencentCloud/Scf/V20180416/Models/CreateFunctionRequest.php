@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
  * @method Environment getEnvironment() Obtain Function environment variable
  * @method void setEnvironment(Environment $Environment) Set Function environment variable
- * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
- * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
+ * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
+ * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
  * @method VpcConfig getVpcConfig() Obtain Function VPC configuration
  * @method void setVpcConfig(VpcConfig $VpcConfig) Set Function VPC configuration
  * @method string getNamespace() Obtain Function namespace
@@ -101,7 +101,7 @@ class CreateFunctionRequest extends AbstractModel
     public $Environment;
 
     /**
-     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
+     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
      */
     public $Runtime;
 
@@ -178,7 +178,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
      * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      * @param Environment $Environment Function environment variable
-     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
+     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
      * @param VpcConfig $VpcConfig Function VPC configuration
      * @param string $Namespace Function namespace
      * @param string $Role Role bound to the function

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindStatus(string $BindStatus) Set Trigger-Function binding status
  * @method string getTriggerAttribute() Obtain Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
  * @method void setTriggerAttribute(string $TriggerAttribute) Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+ * @method string getQualifier() Obtain The alias or version bound with the trigger
+ * @method void setQualifier(string $Qualifier) Set The alias or version bound with the trigger
  */
 class Trigger extends AbstractModel
 {
@@ -101,6 +103,11 @@ class Trigger extends AbstractModel
     public $TriggerAttribute;
 
     /**
+     * @var string The alias or version bound with the trigger
+     */
+    public $Qualifier;
+
+    /**
      * @param string $ModTime Latest modification time of the trigger
      * @param string $Type Trigger type
      * @param string $TriggerDesc Detailed trigger configuration
@@ -112,6 +119,7 @@ class Trigger extends AbstractModel
      * @param string $ResourceId Minimum resource ID of trigger
      * @param string $BindStatus Trigger-Function binding status
      * @param string $TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @param string $Qualifier The alias or version bound with the trigger
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class Trigger extends AbstractModel
 
         if (array_key_exists("TriggerAttribute",$param) and $param["TriggerAttribute"] !== null) {
             $this->TriggerAttribute = $param["TriggerAttribute"];
+        }
+
+        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
+            $this->Qualifier = $param["Qualifier"];
         }
     }
 }

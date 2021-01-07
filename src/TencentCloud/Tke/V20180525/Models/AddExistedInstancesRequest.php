@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getInstanceIds() Obtain Instance list
- * @method void setInstanceIds(array $InstanceIds) Set Instance list
+ * @method array getInstanceIds() Obtain Instance list. Spot instance is not supported.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance list. Spot instance is not supported.
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Additional parameter to be set for the instance
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Additional parameter to be set for the instance
  * @method EnhancedService getEnhancedService() Obtain Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
  * @method string getHostName() Obtain When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
  * @method void setHostName(string $HostName) Set When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+ * @method NodePoolOption getNodePool() Obtain Node pool options
+ * @method void setNodePool(NodePoolOption $NodePool) Set Node pool options
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -43,7 +45,7 @@ class AddExistedInstancesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Instance list
+     * @var array Instance list. Spot instance is not supported.
      */
     public $InstanceIds;
 
@@ -73,13 +75,19 @@ class AddExistedInstancesRequest extends AbstractModel
     public $HostName;
 
     /**
+     * @var NodePoolOption Node pool options
+     */
+    public $NodePool;
+
+    /**
      * @param string $ClusterId Cluster ID
-     * @param array $InstanceIds Instance list
+     * @param array $InstanceIds Instance list. Spot instance is not supported.
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Additional parameter to be set for the instance
      * @param EnhancedService $EnhancedService Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
      * @param LoginSettings $LoginSettings Node login information (currently only supports using Password or single KeyIds)
      * @param array $SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
      * @param string $HostName When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+     * @param NodePoolOption $NodePool Node pool options
      */
     function __construct()
     {
@@ -123,6 +131,11 @@ class AddExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
             $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("NodePool",$param) and $param["NodePool"] !== null) {
+            $this->NodePool = new NodePoolOption();
+            $this->NodePool->deserialize($param["NodePool"]);
         }
     }
 }

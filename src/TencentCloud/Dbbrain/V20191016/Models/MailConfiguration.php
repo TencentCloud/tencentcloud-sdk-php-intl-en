@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(array $Region) Set Region configuration, such as "ap-guangzhou", "ap-shanghai".
  * @method array getHealthStatus() Obtain Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
  * @method void setHealthStatus(array $HealthStatus) Set Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
- * @method array getContactPerson() Obtain Contact ID. The contact/contact group cannot be empty.
- * @method void setContactPerson(array $ContactPerson) Set Contact ID. The contact/contact group cannot be empty.
- * @method array getContactGroup() Obtain Contact group ID. The contact/contact group cannot be empty.
- * @method void setContactGroup(array $ContactGroup) Set Contact group ID. The contact/contact group cannot be empty.
+ * @method array getContactPerson() Obtain Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
+ * @method void setContactPerson(array $ContactPerson) Set Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
+ * @method array getContactGroup() Obtain Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
+ * @method void setContactGroup(array $ContactGroup) Set Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
  */
 class MailConfiguration extends AbstractModel
 {
@@ -49,12 +49,12 @@ class MailConfiguration extends AbstractModel
     public $HealthStatus;
 
     /**
-     * @var array Contact ID. The contact/contact group cannot be empty.
+     * @var array Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
      */
     public $ContactPerson;
 
     /**
-     * @var array Contact group ID. The contact/contact group cannot be empty.
+     * @var array Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
      */
     public $ContactGroup;
 
@@ -62,8 +62,8 @@ class MailConfiguration extends AbstractModel
      * @param integer $SendMail Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
      * @param array $Region Region configuration, such as "ap-guangzhou", "ap-shanghai".
      * @param array $HealthStatus Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
-     * @param array $ContactPerson Contact ID. The contact/contact group cannot be empty.
-     * @param array $ContactGroup Contact group ID. The contact/contact group cannot be empty.
+     * @param array $ContactPerson Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
+     * @param array $ContactGroup Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
      */
     function __construct()
     {

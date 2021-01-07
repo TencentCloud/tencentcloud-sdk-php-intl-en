@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaints(array $Taints) Set Taints
  * @method boolean getEnableAutoscale() Obtain Indicates whether auto scaling is enabled.
  * @method void setEnableAutoscale(boolean $EnableAutoscale) Set Indicates whether auto scaling is enabled.
+ * @method string getOsName() Obtain Operating system name
+ * @method void setOsName(string $OsName) Set Operating system name
+ * @method string getOsCustomizeType() Obtain Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+ * @method void setOsCustomizeType(string $OsCustomizeType) Set Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $EnableAutoscale;
 
     /**
+     * @var string Operating system name
+     */
+    public $OsName;
+
+    /**
+     * @var string Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     */
+    public $OsCustomizeType;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
      * @param string $Name Name
@@ -88,6 +102,8 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param array $Labels Labels
      * @param array $Taints Taints
      * @param boolean $EnableAutoscale Indicates whether auto scaling is enabled.
+     * @param string $OsName Operating system name
+     * @param string $OsCustomizeType Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      */
     function __construct()
     {
@@ -142,6 +158,14 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("EnableAutoscale",$param) and $param["EnableAutoscale"] !== null) {
             $this->EnableAutoscale = $param["EnableAutoscale"];
+        }
+
+        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
+            $this->OsName = $param["OsName"];
+        }
+
+        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
+            $this->OsCustomizeType = $param["OsCustomizeType"];
         }
     }
 }

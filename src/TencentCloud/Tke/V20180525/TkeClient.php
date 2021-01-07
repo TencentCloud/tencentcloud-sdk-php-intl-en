@@ -60,6 +60,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) This API is used to obtain all regions supported by TKE.
  * @method Models\DescribeRouteTableConflictsResponse DescribeRouteTableConflicts(Models\DescribeRouteTableConflictsRequest $req) This API is used to query the list of route table conflicts.
  * @method Models\ModifyClusterAsGroupAttributeResponse ModifyClusterAsGroupAttribute(Models\ModifyClusterAsGroupAttributeRequest $req) Modify cluster scaling group attributes
+ * @method Models\ModifyClusterAsGroupOptionAttributeResponse ModifyClusterAsGroupOptionAttribute(Models\ModifyClusterAsGroupOptionAttributeRequest $req) This API is used to modify cluster auto scaling attributes.
  * @method Models\ModifyClusterAttributeResponse ModifyClusterAttribute(Models\ModifyClusterAttributeRequest $req) This API is used to modify cluster attributes.
  * @method Models\ModifyClusterEndpointSPResponse ModifyClusterEndpointSP(Models\ModifyClusterEndpointSPRequest $req) Modify the security policy of the external port of the managed cluster (the old way, only the external port of the managed cluster is supported)
  * @method Models\ModifyClusterNodePoolResponse ModifyClusterNodePool(Models\ModifyClusterNodePoolRequest $req) This API is used to edit a node pool.

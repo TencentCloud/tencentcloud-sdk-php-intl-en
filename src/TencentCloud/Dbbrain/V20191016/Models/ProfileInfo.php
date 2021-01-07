@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information configured by user.
  *
- * @method string getLanguage() Obtain Language, such as “zh”.
- * @method void setLanguage(string $Language) Set Language, such as “zh”.
+ * @method string getLanguage() Obtain Language of the email, such as `en`.
+ * @method void setLanguage(string $Language) Set Language of the email, such as `en`.
  * @method MailConfiguration getMailConfiguration() Obtain The content of email template.
  * @method void setMailConfiguration(MailConfiguration $MailConfiguration) Set The content of email template.
  */
 class ProfileInfo extends AbstractModel
 {
     /**
-     * @var string Language, such as “zh”.
+     * @var string Language of the email, such as `en`.
      */
     public $Language;
 
@@ -38,7 +38,7 @@ class ProfileInfo extends AbstractModel
     public $MailConfiguration;
 
     /**
-     * @param string $Language Language, such as “zh”.
+     * @param string $Language Language of the email, such as `en`.
      * @param MailConfiguration $MailConfiguration The content of email template.
      */
     function __construct()
