@@ -106,6 +106,12 @@ global: global acceleration
  * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) Set Timestamp hotlink protection advanced configuration (allowlist feature)
  * @method OriginAuthentication getOriginAuthentication() Obtain Origin-pull authentication advanced configuration (allowlist feature)
  * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) Set Origin-pull authentication advanced configuration (allowlist feature)
+ * @method Ipv6Access getIpv6Access() Obtain IPv6 access configuration
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
+ * @method OfflineCache getOfflineCache() Obtain 
+ * @method void setOfflineCache(OfflineCache $OfflineCache) Set 
+ * @method OriginCombine getOriginCombine() Obtain 
+ * @method void setOriginCombine(OriginCombine $OriginCombine) Set 
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -297,6 +303,21 @@ global: global acceleration
     public $OriginAuthentication;
 
     /**
+     * @var Ipv6Access IPv6 access configuration
+     */
+    public $Ipv6Access;
+
+    /**
+     * @var OfflineCache 
+     */
+    public $OfflineCache;
+
+    /**
+     * @var OriginCombine 
+     */
+    public $OriginCombine;
+
+    /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
@@ -340,6 +361,9 @@ global: global acceleration
      * @param array $AccessPort Access port configuration
      * @param AdvancedAuthentication $AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
      * @param OriginAuthentication $OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+     * @param Ipv6Access $Ipv6Access IPv6 access configuration
+     * @param OfflineCache $OfflineCache 
+     * @param OriginCombine $OriginCombine 
      */
     function __construct()
     {
@@ -527,6 +551,21 @@ global: global acceleration
         if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
             $this->OriginAuthentication = new OriginAuthentication();
             $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
+        }
+
+        if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
+            $this->Ipv6Access = new Ipv6Access();
+            $this->Ipv6Access->deserialize($param["Ipv6Access"]);
+        }
+
+        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
+            $this->OfflineCache = new OfflineCache();
+            $this->OfflineCache->deserialize($param["OfflineCache"]);
+        }
+
+        if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
+            $this->OriginCombine = new OriginCombine();
+            $this->OriginCombine->deserialize($param["OriginCombine"]);
         }
     }
 }

@@ -28,54 +28,50 @@ Length limit:
 Length limit:
   Standard transcoding: 1-10 characters
   Top speed codec transcoding: 3-10 characters
- * @method integer getVideoBitrate() Obtain Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
- * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
- * @method string getAcodec() Obtain Audio codec: acc by default.
+ * @method integer getVideoBitrate() Obtain Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
+ * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
+ * @method string getAcodec() Obtain Audio codec. Default value: aac.
 Note: this parameter is unsupported now.
- * @method void setAcodec(string $Acodec) Set Audio codec: acc by default.
+ * @method void setAcodec(string $Acodec) Set Audio codec. Default value: aac.
 Note: this parameter is unsupported now.
  * @method integer getAudioBitrate() Obtain Audio bitrate. Default value: 0.
 Value range: 0-500.
  * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. Default value: 0.
 Value range: 0-500.
- * @method string getVcodec() Obtain Video codec: `h264/h265/origin`. Default value: `h264`.
+ * @method string getVcodec() Obtain Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec
- * @method void setVcodec(string $Vcodec) Set Video codec: `h264/h265/origin`. Default value: `h264`.
+ * @method void setVcodec(string $Vcodec) Set Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec
  * @method string getDescription() Obtain Template description.
  * @method void setDescription(string $Description) Set Template description.
  * @method integer getWidth() Obtain Width. Default value: 0.
-Value range: 0-3,000
-It must be a multiple of 2. The original width is 0
+Value range: 0-3000
+It must be a multiple of 2. The original width is 0.
  * @method void setWidth(integer $Width) Set Width. Default value: 0.
-Value range: 0-3,000
-It must be a multiple of 2. The original width is 0
+Value range: 0-3000
+It must be a multiple of 2. The original width is 0.
  * @method integer getNeedVideo() Obtain Whether to keep the video. 0: no; 1: yes. Default value: 1.
  * @method void setNeedVideo(integer $NeedVideo) Set Whether to keep the video. 0: no; 1: yes. Default value: 1.
  * @method integer getNeedAudio() Obtain Whether to keep the audio. 0: no; 1: yes. Default value: 1.
  * @method void setNeedAudio(integer $NeedAudio) Set Whether to keep the audio. 0: no; 1: yes. Default value: 1.
  * @method integer getHeight() Obtain Height. Default value: 0.
-Value range: 0-3,000
-It must be a multiple of 2. The original height is 0
+Value range: 0-3000
+It must be a multiple of 2. The original height is 0.
  * @method void setHeight(integer $Height) Set Height. Default value: 0.
-Value range: 0-3,000
-It must be a multiple of 2. The original height is 0
+Value range: 0-3000
+It must be a multiple of 2. The original height is 0.
  * @method integer getFps() Obtain Frame rate. Default value: 0.
-Range: 0-60 Fps.
+Value range: 0-60
  * @method void setFps(integer $Fps) Set Frame rate. Default value: 0.
-Range: 0-60 Fps.
- * @method integer getGop() Obtain Keyframe interval, unit: second.
-Original interval by default
-Range: 2-6
- * @method void setGop(integer $Gop) Set Keyframe interval, unit: second.
-Original interval by default
-Range: 2-6
+Value range: 0-60
+ * @method integer getGop() Obtain Keyframe interval in seconds. Default value: original interval
+Value range: 2-6
+ * @method void setGop(integer $Gop) Set Keyframe interval in seconds. Default value: original interval
+Value range: 2-6
  * @method integer getRotate() Obtain Rotation angle. Default value: 0.
 Valid values: 0, 90, 180, 270
  * @method void setRotate(integer $Rotate) Set Rotation angle. Default value: 0.
@@ -112,8 +108,8 @@ Value range: 0.0-0.5.
 Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
 
 Value range: 0.0-0.5.
- * @method integer getShortEdgeAsHeight() Obtain This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
- * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) Set This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+ * @method integer getShortEdgeAsHeight() Obtain Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
+ * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) Set Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -126,14 +122,13 @@ Length limit:
     public $TemplateName;
 
     /**
-     * @var integer Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+     * @var integer Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
      */
     public $VideoBitrate;
 
     /**
-     * @var string Audio codec: acc by default.
+     * @var string Audio codec. Default value: aac.
 Note: this parameter is unsupported now.
      */
     public $Acodec;
@@ -145,7 +140,7 @@ Value range: 0-500.
     public $AudioBitrate;
 
     /**
-     * @var string Video codec: `h264/h265/origin`. Default value: `h264`.
+     * @var string Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec
      */
@@ -158,8 +153,8 @@ origin: original codec as the output codec
 
     /**
      * @var integer Width. Default value: 0.
-Value range: 0-3,000
-It must be a multiple of 2. The original width is 0
+Value range: 0-3000
+It must be a multiple of 2. The original width is 0.
      */
     public $Width;
 
@@ -175,21 +170,20 @@ It must be a multiple of 2. The original width is 0
 
     /**
      * @var integer Height. Default value: 0.
-Value range: 0-3,000
-It must be a multiple of 2. The original height is 0
+Value range: 0-3000
+It must be a multiple of 2. The original height is 0.
      */
     public $Height;
 
     /**
      * @var integer Frame rate. Default value: 0.
-Range: 0-60 Fps.
+Value range: 0-60
      */
     public $Fps;
 
     /**
-     * @var integer Keyframe interval, unit: second.
-Original interval by default
-Range: 2-6
+     * @var integer Keyframe interval in seconds. Default value: original interval
+Value range: 2-6
      */
     public $Gop;
 
@@ -240,7 +234,7 @@ Value range: 0.0-0.5.
     public $AdaptBitratePercent;
 
     /**
-     * @var integer This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+     * @var integer Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
      */
     public $ShortEdgeAsHeight;
 
@@ -249,30 +243,28 @@ Value range: 0.0-0.5.
 Length limit:
   Standard transcoding: 1-10 characters
   Top speed codec transcoding: 3-10 characters
-     * @param integer $VideoBitrate Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
-     * @param string $Acodec Audio codec: acc by default.
+     * @param integer $VideoBitrate Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
+     * @param string $Acodec Audio codec. Default value: aac.
 Note: this parameter is unsupported now.
      * @param integer $AudioBitrate Audio bitrate. Default value: 0.
 Value range: 0-500.
-     * @param string $Vcodec Video codec: `h264/h265/origin`. Default value: `h264`.
+     * @param string $Vcodec Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec
      * @param string $Description Template description.
      * @param integer $Width Width. Default value: 0.
-Value range: 0-3,000
-It must be a multiple of 2. The original width is 0
+Value range: 0-3000
+It must be a multiple of 2. The original width is 0.
      * @param integer $NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
      * @param integer $NeedAudio Whether to keep the audio. 0: no; 1: yes. Default value: 1.
      * @param integer $Height Height. Default value: 0.
-Value range: 0-3,000
-It must be a multiple of 2. The original height is 0
+Value range: 0-3000
+It must be a multiple of 2. The original height is 0.
      * @param integer $Fps Frame rate. Default value: 0.
-Range: 0-60 Fps.
-     * @param integer $Gop Keyframe interval, unit: second.
-Original interval by default
-Range: 2-6
+Value range: 0-60
+     * @param integer $Gop Keyframe interval in seconds. Default value: original interval
+Value range: 2-6
      * @param integer $Rotate Rotation angle. Default value: 0.
 Valid values: 0, 90, 180, 270
      * @param string $Profile Encoding quality:
@@ -291,7 +283,7 @@ Default value: 0.
 Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
 
 Value range: 0.0-0.5.
-     * @param integer $ShortEdgeAsHeight This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+     * @param integer $ShortEdgeAsHeight Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
      */
     function __construct()
     {

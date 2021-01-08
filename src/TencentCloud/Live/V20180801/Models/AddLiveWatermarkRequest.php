@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * AddLiveWatermark request structure.
  *
  * @method string getPictureUrl() Obtain Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
  * @method void setPictureUrl(string $PictureUrl) Set Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
  * @method string getWatermarkName() Obtain Watermark name.
 Up to 16 bytes.
  * @method void setWatermarkName(string $WatermarkName) Set Watermark name.
@@ -32,13 +36,15 @@ Up to 16 bytes.
  * @method void setYPosition(integer $YPosition) Set Display position: Y-axis offset in %. Default value: 0.
  * @method integer getWidth() Obtain Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
  * @method void setWidth(integer $Width) Set Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
- * @method integer getHeight() Obtain Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
- * @method void setHeight(integer $Height) Set Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+ * @method integer getHeight() Obtain Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
+ * @method void setHeight(integer $Height) Set Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
  */
 class AddLiveWatermarkRequest extends AbstractModel
 {
     /**
      * @var string Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      */
     public $PictureUrl;
 
@@ -64,18 +70,20 @@ Up to 16 bytes.
     public $Width;
 
     /**
-     * @var integer Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+     * @var integer Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
      */
     public $Height;
 
     /**
      * @param string $PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      * @param string $WatermarkName Watermark name.
 Up to 16 bytes.
      * @param integer $XPosition Display position: X-axis offset in %. Default value: 0.
      * @param integer $YPosition Display position: Y-axis offset in %. Default value: 0.
      * @param integer $Width Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
-     * @param integer $Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+     * @param integer $Height Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
      */
     function __construct()
     {

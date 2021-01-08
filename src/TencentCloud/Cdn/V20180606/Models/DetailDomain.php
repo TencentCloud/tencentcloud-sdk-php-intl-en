@@ -242,6 +242,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) Set Origin-pull authentication advanced configuration (allowlist feature)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method Ipv6Access getIpv6Access() Obtain IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getAdvanceSet() Obtain Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAdvanceSet(array $AdvanceSet) Set Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method OfflineCache getOfflineCache() Obtain 
+ * @method void setOfflineCache(OfflineCache $OfflineCache) Set 
+ * @method OriginCombine getOriginCombine() Obtain 
+ * @method void setOriginCombine(OriginCombine $OriginCombine) Set 
  */
 class DetailDomain extends AbstractModel
 {
@@ -557,6 +569,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $OriginAuthentication;
 
     /**
+     * @var Ipv6Access IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Ipv6Access;
+
+    /**
+     * @var array Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AdvanceSet;
+
+    /**
+     * @var OfflineCache 
+     */
+    public $OfflineCache;
+
+    /**
+     * @var OriginCombine 
+     */
+    public $OriginCombine;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Acceleration domain name
@@ -668,6 +702,12 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param OriginAuthentication $OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Ipv6Access $Ipv6Access IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $AdvanceSet Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OfflineCache $OfflineCache 
+     * @param OriginCombine $OriginCombine 
      */
     function __construct()
     {
@@ -920,6 +960,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
             $this->OriginAuthentication = new OriginAuthentication();
             $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
+        }
+
+        if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
+            $this->Ipv6Access = new Ipv6Access();
+            $this->Ipv6Access->deserialize($param["Ipv6Access"]);
+        }
+
+        if (array_key_exists("AdvanceSet",$param) and $param["AdvanceSet"] !== null) {
+            $this->AdvanceSet = [];
+            foreach ($param["AdvanceSet"] as $key => $value){
+                $obj = new AdvanceConfig();
+                $obj->deserialize($value);
+                array_push($this->AdvanceSet, $obj);
+            }
+        }
+
+        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
+            $this->OfflineCache = new OfflineCache();
+            $this->OfflineCache->deserialize($param["OfflineCache"]);
+        }
+
+        if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
+            $this->OriginCombine = new OriginCombine();
+            $this->OriginCombine->deserialize($param["OriginCombine"]);
         }
     }
 }

@@ -38,6 +38,16 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
 Default value: `mainland`. You can prefetch a URL to nodes in a region provided that CDN service has been enabled for the domain name in the URL in the region.
  * @method string getLayer() Obtain If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
  * @method void setLayer(string $Layer) Set If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+ * @method boolean getParseM3U8() Obtain Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+ * @method void setParseM3U8(boolean $ParseM3U8) Set Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -67,6 +77,15 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     public $Layer;
 
     /**
+     * @var boolean Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+     */
+    public $ParseM3U8;
+
+    /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $UserAgent Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
 Default value: `TencentCdn`
@@ -76,6 +95,11 @@ Default value: `TencentCdn`
 `global`: prefetches resources to global nodes
 Default value: `mainland`. You can prefetch a URL to nodes in a region provided that CDN service has been enabled for the domain name in the URL in the region.
      * @param string $Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+     * @param boolean $ParseM3U8 Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
      */
     function __construct()
     {
@@ -104,6 +128,10 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
 
         if (array_key_exists("Layer",$param) and $param["Layer"] !== null) {
             $this->Layer = $param["Layer"];
+        }
+
+        if (array_key_exists("ParseM3U8",$param) and $param["ParseM3U8"] !== null) {
+            $this->ParseM3U8 = $param["ParseM3U8"];
         }
     }
 }

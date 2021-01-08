@@ -54,6 +54,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setApiAccessIpv6(string $ApiAccessIpv6) Set TcaplusDB SDK connection parameter for accessing IPv6 addresses
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getClusterType() Obtain Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClusterType(integer $ClusterType) Set Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getClusterStatus() Obtain Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClusterStatus(integer $ClusterStatus) Set Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getReadCapacityUnit() Obtain Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setReadCapacityUnit(integer $ReadCapacityUnit) Set Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getWriteCapacityUnit() Obtain Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setWriteCapacityUnit(integer $WriteCapacityUnit) Set Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getDiskVolume() Obtain Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDiskVolume(integer $DiskVolume) Set Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getServerList() Obtain Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setServerList(array $ServerList) Set Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getProxyList() Obtain Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProxyList(array $ProxyList) Set Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ClusterInfo extends AbstractModel
 {
@@ -135,6 +163,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ApiAccessIpv6;
 
     /**
+     * @var integer Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClusterType;
+
+    /**
+     * @var integer Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClusterStatus;
+
+    /**
+     * @var integer Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ReadCapacityUnit;
+
+    /**
+     * @var integer Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $WriteCapacityUnit;
+
+    /**
+     * @var integer Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DiskVolume;
+
+    /**
+     * @var array Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ServerList;
+
+    /**
+     * @var array Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ProxyList;
+
+    /**
      * @param string $ClusterName Cluster name
      * @param string $ClusterId Cluster ID
      * @param string $Region Cluster region
@@ -152,6 +222,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClusterType Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ClusterStatus Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ReadCapacityUnit Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $WriteCapacityUnit Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $DiskVolume Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -224,6 +308,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ApiAccessIpv6",$param) and $param["ApiAccessIpv6"] !== null) {
             $this->ApiAccessIpv6 = $param["ApiAccessIpv6"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
+            $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("ReadCapacityUnit",$param) and $param["ReadCapacityUnit"] !== null) {
+            $this->ReadCapacityUnit = $param["ReadCapacityUnit"];
+        }
+
+        if (array_key_exists("WriteCapacityUnit",$param) and $param["WriteCapacityUnit"] !== null) {
+            $this->WriteCapacityUnit = $param["WriteCapacityUnit"];
+        }
+
+        if (array_key_exists("DiskVolume",$param) and $param["DiskVolume"] !== null) {
+            $this->DiskVolume = $param["DiskVolume"];
+        }
+
+        if (array_key_exists("ServerList",$param) and $param["ServerList"] !== null) {
+            $this->ServerList = [];
+            foreach ($param["ServerList"] as $key => $value){
+                $obj = new ServerDetailInfo();
+                $obj->deserialize($value);
+                array_push($this->ServerList, $obj);
+            }
+        }
+
+        if (array_key_exists("ProxyList",$param) and $param["ProxyList"] !== null) {
+            $this->ProxyList = [];
+            foreach ($param["ProxyList"] as $key => $value){
+                $obj = new ProxyDetailInfo();
+                $obj->deserialize($value);
+                array_push($this->ProxyList, $obj);
+            }
         }
     }
 }

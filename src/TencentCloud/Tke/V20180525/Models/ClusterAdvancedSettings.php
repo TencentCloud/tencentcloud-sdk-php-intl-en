@@ -38,18 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeletionProtection(boolean $DeletionProtection) Set Indicates whether to enable cluster deletion protection.
  * @method string getKubeProxyMode() Obtain Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
 `iptables`: do not set IPVS and KubeProxyMode.
-`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
 `ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
 The following conditions are required to use ipvs-bpf network mode:
 1. The cluster version must be v1.14 or later.
-2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
+2. The system image must be Tencent Linux 2.4.
  * @method void setKubeProxyMode(string $KubeProxyMode) Set Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
 `iptables`: do not set IPVS and KubeProxyMode.
-`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
 `ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
 The following conditions are required to use ipvs-bpf network mode:
 1. The cluster version must be v1.14 or later.
-2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
+2. The system image must be Tencent Linux 2.4.
  * @method boolean getAuditEnabled() Obtain Indicates whether to enable auditing
  * @method void setAuditEnabled(boolean $AuditEnabled) Set Indicates whether to enable auditing
  * @method string getAuditLogsetId() Obtain Specifies the ID of logset to which the audit logs are uploaded.
@@ -106,11 +106,11 @@ class ClusterAdvancedSettings extends AbstractModel
     /**
      * @var string Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
 `iptables`: do not set IPVS and KubeProxyMode.
-`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
 `ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
 The following conditions are required to use ipvs-bpf network mode:
 1. The cluster version must be v1.14 or later.
-2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
+2. The system image must be Tencent Linux 2.4.
      */
     public $KubeProxyMode;
 
@@ -150,11 +150,11 @@ The following conditions are required to use ipvs-bpf network mode:
      * @param boolean $DeletionProtection Indicates whether to enable cluster deletion protection.
      * @param string $KubeProxyMode Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
 `iptables`: do not set IPVS and KubeProxyMode.
-`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
 `ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
 The following conditions are required to use ipvs-bpf network mode:
 1. The cluster version must be v1.14 or later.
-2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
+2. The system image must be Tencent Linux 2.4.
      * @param boolean $AuditEnabled Indicates whether to enable auditing
      * @param string $AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
      * @param string $AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.

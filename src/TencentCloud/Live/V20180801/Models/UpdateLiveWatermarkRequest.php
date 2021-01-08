@@ -25,7 +25,11 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](https://int
  * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
 Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
  * @method string getPictureUrl() Obtain Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
  * @method void setPictureUrl(string $PictureUrl) Set Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
  * @method integer getXPosition() Obtain Display position: X-axis offset in %. Default value: 0.
  * @method void setXPosition(integer $XPosition) Set Display position: X-axis offset in %. Default value: 0.
  * @method integer getYPosition() Obtain Display position: Y-axis offset in %. Default value: 0.
@@ -49,6 +53,8 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](https://int
 
     /**
      * @var string Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      */
     public $PictureUrl;
 
@@ -82,6 +88,8 @@ Up to 16 bytes.
      * @param integer $WatermarkId Watermark ID.
 Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
      * @param string $PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      * @param integer $XPosition Display position: X-axis offset in %. Default value: 0.
      * @param integer $YPosition Display position: Y-axis offset in %. Default value: 0.
      * @param string $WatermarkName Watermark name.

@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Domain name that uses this certificate.
  * @method integer getStatus() Obtain Certificate status.
  * @method void setStatus(integer $Status) Set Certificate status.
+ * @method array getCertDomains() Obtain List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCertDomains(array $CertDomains) Set List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCloudCertId() Obtain Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCloudCertId(string $CloudCertId) Set Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DomainCertInfo extends AbstractModel
 {
@@ -93,6 +103,19 @@ class DomainCertInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var array List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CertDomains;
+
+    /**
+     * @var string Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CloudCertId;
+
+    /**
      * @param integer $CertId Certificate ID.
      * @param string $CertName Certificate name.
      * @param string $Description Description.
@@ -104,6 +127,11 @@ class DomainCertInfo extends AbstractModel
      * @param string $CertExpireTime Certificate expiration time in UTC format.
      * @param string $DomainName Domain name that uses this certificate.
      * @param integer $Status Certificate status.
+     * @param array $CertDomains List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CloudCertId Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -152,6 +180,14 @@ class DomainCertInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CertDomains",$param) and $param["CertDomains"] !== null) {
+            $this->CertDomains = $param["CertDomains"];
+        }
+
+        if (array_key_exists("CloudCertId",$param) and $param["CloudCertId"] !== null) {
+            $this->CloudCertId = $param["CloudCertId"];
         }
     }
 }

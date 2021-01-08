@@ -46,8 +46,8 @@ Default value: 5.
 60: 1-hour granularity (the query time span should be within one month),
 1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
- * @method string getServiceName() Obtain Service name. Valid values: LVB, LEB. Default value: LVB.
- * @method void setServiceName(string $ServiceName) Set Service name. Valid values: LVB, LEB. Default value: LVB.
+ * @method string getServiceName() Obtain Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+ * @method void setServiceName(string $ServiceName) Set Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
  */
 class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
 {
@@ -85,7 +85,7 @@ Default value: 5.
     public $Granularity;
 
     /**
-     * @var string Service name. Valid values: LVB, LEB. Default value: LVB.
+     * @var string Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
      */
     public $ServiceName;
 
@@ -103,7 +103,7 @@ Note: LEB only supports querying data for all regions.
 60: 1-hour granularity (the query time span should be within one month),
 1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
-     * @param string $ServiceName Service name. Valid values: LVB, LEB. Default value: LVB.
+     * @param string $ServiceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
      */
     function __construct()
     {

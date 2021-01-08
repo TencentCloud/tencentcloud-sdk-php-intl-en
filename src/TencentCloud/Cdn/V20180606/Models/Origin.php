@@ -103,10 +103,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getBasePath() Obtain 
  * @method void setBasePath(string $BasePath) Set 
- * @method array getPathRules() Obtain Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setPathRules(array $PathRules) Set Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method array getPathRules() Obtain Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPathRules(array $PathRules) Set Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getPathBasedOrigin() Obtain 
+ * @method void setPathBasedOrigin(array $PathBasedOrigin) Set 
  */
 class Origin extends AbstractModel
 {
@@ -185,10 +187,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BasePath;
 
     /**
-     * @var array Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var array Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $PathRules;
+
+    /**
+     * @var array 
+     */
+    public $PathBasedOrigin;
 
     /**
      * @param array $Origins Master origin server list
@@ -229,8 +236,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $BasePath 
-     * @param array $PathRules Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param array $PathRules Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $PathBasedOrigin 
      */
     function __construct()
     {
@@ -287,6 +295,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                 $obj = new PathRule();
                 $obj->deserialize($value);
                 array_push($this->PathRules, $obj);
+            }
+        }
+
+        if (array_key_exists("PathBasedOrigin",$param) and $param["PathBasedOrigin"] !== null) {
+            $this->PathBasedOrigin = [];
+            foreach ($param["PathBasedOrigin"] as $key => $value){
+                $obj = new PathBasedOriginRule();
+                $obj->deserialize($value);
+                array_push($this->PathBasedOrigin, $obj);
             }
         }
     }

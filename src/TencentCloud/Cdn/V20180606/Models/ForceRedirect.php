@@ -42,6 +42,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirect 
 Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getCarryHeaders() Obtain Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCarryHeaders(string $CarryHeaders) Set Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ForceRedirect extends AbstractModel
 {
@@ -69,6 +73,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RedirectStatusCode;
 
     /**
+     * @var string Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CarryHeaders;
+
+    /**
      * @param string $Switch Access forced redirect configuration switch
 on: enabled
 off: disabled
@@ -80,6 +90,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $RedirectStatusCode Status code returned for forced redirect 
 Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $CarryHeaders Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -104,6 +116,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RedirectStatusCode",$param) and $param["RedirectStatusCode"] !== null) {
             $this->RedirectStatusCode = $param["RedirectStatusCode"];
+        }
+
+        if (array_key_exists("CarryHeaders",$param) and $param["CarryHeaders"] !== null) {
+            $this->CarryHeaders = $param["CarryHeaders"];
         }
     }
 }

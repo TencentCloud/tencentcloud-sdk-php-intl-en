@@ -52,6 +52,18 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setDesiredNodesNum(integer $DesiredNodesNum) Set Desired number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getNodePoolOs() Obtain The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setNodePoolOs(string $NodePoolOs) Set The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getOsCustomizeType() Obtain Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setOsCustomizeType(string $OsCustomizeType) Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getImageId() Obtain Image ID
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setImageId(string $ImageId) Set Image ID
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class NodePool extends AbstractModel
 {
@@ -124,6 +136,24 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $DesiredNodesNum;
 
     /**
+     * @var string The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $NodePoolOs;
+
+    /**
+     * @var string Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $OsCustomizeType;
+
+    /**
+     * @var string Image ID
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $ImageId;
+
+    /**
      * @param string $NodePoolId Node pool ID
      * @param string $Name Node pool name
      * @param string $ClusterInstanceId Cluster instance ID
@@ -139,6 +169,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $MinNodesNum Minimum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $DesiredNodesNum Desired number of nodes
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $NodePoolOs The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $ImageId Image ID
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
@@ -215,6 +251,18 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("DesiredNodesNum",$param) and $param["DesiredNodesNum"] !== null) {
             $this->DesiredNodesNum = $param["DesiredNodesNum"];
+        }
+
+        if (array_key_exists("NodePoolOs",$param) and $param["NodePoolOs"] !== null) {
+            $this->NodePoolOs = $param["NodePoolOs"];
+        }
+
+        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
+            $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
     }
 }

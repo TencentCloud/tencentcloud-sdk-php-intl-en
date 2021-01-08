@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) Set Cluster tag list
  * @method integer getIpv6Enable() Obtain Whether to enable IPv6 address access for clusters
  * @method void setIpv6Enable(integer $Ipv6Enable) Set Whether to enable IPv6 address access for clusters
+ * @method array getServerList() Obtain Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+ * @method void setServerList(array $ServerList) Set Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+ * @method array getProxyList() Obtain Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+ * @method void setProxyList(array $ProxyList) Set Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+ * @method integer getClusterType() Obtain Cluster type. Valid values: `1` (standard), `2` (dedicated)
+ * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: `1` (standard), `2` (dedicated)
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class CreateClusterRequest extends AbstractModel
     public $Ipv6Enable;
 
     /**
+     * @var array Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+     */
+    public $ServerList;
+
+    /**
+     * @var array Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+     */
+    public $ProxyList;
+
+    /**
+     * @var integer Cluster type. Valid values: `1` (standard), `2` (dedicated)
+     */
+    public $ClusterType;
+
+    /**
      * @param string $IdlType Cluster data description language type, such as `PROTO`, `TDR`, or `MIX`
      * @param string $ClusterName Cluster name, which can contain up to 32 letters and digits
      * @param string $VpcId ID of the VPC instance bound to a cluster in the format of `vpc-f49l6u0z`
@@ -80,6 +101,9 @@ class CreateClusterRequest extends AbstractModel
      * @param string $Password Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
      * @param array $ResourceTags Cluster tag list
      * @param integer $Ipv6Enable Whether to enable IPv6 address access for clusters
+     * @param array $ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+     * @param array $ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+     * @param integer $ClusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
      */
     function __construct()
     {
@@ -125,6 +149,28 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("Ipv6Enable",$param) and $param["Ipv6Enable"] !== null) {
             $this->Ipv6Enable = $param["Ipv6Enable"];
+        }
+
+        if (array_key_exists("ServerList",$param) and $param["ServerList"] !== null) {
+            $this->ServerList = [];
+            foreach ($param["ServerList"] as $key => $value){
+                $obj = new MachineInfo();
+                $obj->deserialize($value);
+                array_push($this->ServerList, $obj);
+            }
+        }
+
+        if (array_key_exists("ProxyList",$param) and $param["ProxyList"] !== null) {
+            $this->ProxyList = [];
+            foreach ($param["ProxyList"] as $key => $value){
+                $obj = new MachineInfo();
+                $obj->deserialize($value);
+                array_push($this->ProxyList, $obj);
+            }
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

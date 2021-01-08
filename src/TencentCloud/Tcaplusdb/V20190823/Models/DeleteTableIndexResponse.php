@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateRecordTask response structure.
+ * DeleteTableIndex response structure.
  *
- * @method string getTaskId() Obtain A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
- * @method void setTaskId(string $TaskId) Set A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+ * @method integer getTotalCount() Obtain The number of tables whose global indexes are deleted
+ * @method void setTotalCount(integer $TotalCount) Set The number of tables whose global indexes are deleted
+ * @method array getTableResults() Obtain The list of global index deletion results
+ * @method void setTableResults(array $TableResults) Set The list of global index deletion results
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateRecordTaskResponse extends AbstractModel
+class DeleteTableIndexResponse extends AbstractModel
 {
     /**
-     * @var string A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+     * @var integer The number of tables whose global indexes are deleted
      */
-    public $TaskId;
+    public $TotalCount;
+
+    /**
+     * @var array The list of global index deletion results
+     */
+    public $TableResults;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class CreateRecordTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+     * @param integer $TotalCount The number of tables whose global indexes are deleted
+     * @param array $TableResults The list of global index deletion results
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateRecordTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TableResults",$param) and $param["TableResults"] !== null) {
+            $this->TableResults = [];
+            foreach ($param["TableResults"] as $key => $value){
+                $obj = new TableResultNew();
+                $obj->deserialize($value);
+                array_push($this->TableResults, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

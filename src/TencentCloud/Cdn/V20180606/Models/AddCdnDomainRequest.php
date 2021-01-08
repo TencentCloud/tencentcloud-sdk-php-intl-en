@@ -98,6 +98,10 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
  * @method array getTag() Obtain Tag configuration
  * @method void setTag(array $Tag) Set Tag configuration
+ * @method Ipv6Access getIpv6Access() Obtain IPv6 access configuration
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
+ * @method OfflineCache getOfflineCache() Obtain 
+ * @method void setOfflineCache(OfflineCache $OfflineCache) Set 
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -265,6 +269,16 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     public $Tag;
 
     /**
+     * @var Ipv6Access IPv6 access configuration
+     */
+    public $Ipv6Access;
+
+    /**
+     * @var OfflineCache 
+     */
+    public $OfflineCache;
+
+    /**
      * @param string $Domain Domain name
      * @param string $ServiceType Acceleration domain name service type
 web: static acceleration
@@ -304,6 +318,8 @@ global: global acceleration
 Overseas acceleration service must be enabled to use overseas acceleration and global acceleration.
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
      * @param array $Tag Tag configuration
+     * @param Ipv6Access $Ipv6Access IPv6 access configuration
+     * @param OfflineCache $OfflineCache 
      */
     function __construct()
     {
@@ -471,6 +487,16 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
                 $obj->deserialize($value);
                 array_push($this->Tag, $obj);
             }
+        }
+
+        if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
+            $this->Ipv6Access = new Ipv6Access();
+            $this->Ipv6Access->deserialize($param["Ipv6Access"]);
+        }
+
+        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
+            $this->OfflineCache = new OfflineCache();
+            $this->OfflineCache->deserialize($param["OfflineCache"]);
         }
     }
 }
