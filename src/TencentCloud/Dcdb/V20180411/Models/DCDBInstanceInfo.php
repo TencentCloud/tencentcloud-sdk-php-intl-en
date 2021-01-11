@@ -132,6 +132,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDcnDstNum(integer $DcnDstNum) Set The number of DCN disaster recovery instances
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getInstanceType() Obtain Instance type. Valid values: `1` (primary instance (dedicated)), `2` (primary instance), `3` (disaster recovery instance), `4` (disaster recovery instance (dedicated))
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: `1` (primary instance (dedicated)), `2` (primary instance), `3` (disaster recovery instance), `4` (disaster recovery instance (dedicated))
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -380,6 +384,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DcnDstNum;
 
     /**
+     * @var integer Instance type. Valid values: `1` (primary instance (dedicated)), `2` (primary instance), `3` (disaster recovery instance), `4` (disaster recovery instance (dedicated))
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param integer $AppId Application ID
@@ -436,6 +446,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $DcnDstNum The number of DCN disaster recovery instances
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $InstanceType Instance type. Valid values: `1` (primary instance (dedicated)), `2` (primary instance), `3` (disaster recovery instance), `4` (disaster recovery instance (dedicated))
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -641,6 +653,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DcnDstNum",$param) and $param["DcnDstNum"] !== null) {
             $this->DcnDstNum = $param["DcnDstNum"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }
