@@ -18,20 +18,20 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Whether to enable offline cache
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Whether to enable offline cache. Valid values: `on` and `off`.
+ * @method void setSwitch(string $Switch) Set Whether to enable offline cache. Valid values: `on` and `off`.
  */
 class OfflineCache extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Whether to enable offline cache. Valid values: `on` and `off`.
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Whether to enable offline cache. Valid values: `on` and `off`.
      */
     function __construct()
     {

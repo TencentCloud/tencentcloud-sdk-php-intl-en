@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
  * @method array getRealServerPorts() Obtain List of origin server ports, which only supports the listeners of version 1.0 and connection group.
  * @method void setRealServerPorts(array $RealServerPorts) Set List of origin server ports, which only supports the listeners of version 1.0 and connection group.
+ * @method integer getClientIPMethod() Obtain Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+ * @method void setClientIPMethod(integer $ClientIPMethod) Set Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
  */
 class CreateTCPListenersRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateTCPListenersRequest extends AbstractModel
     public $RealServerPorts;
 
     /**
+     * @var integer Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+     */
+    public $ClientIPMethod;
+
+    /**
      * @param string $ListenerName Listener name.
      * @param array $Ports List of listener ports.
      * @param string $Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
@@ -104,6 +111,7 @@ class CreateTCPListenersRequest extends AbstractModel
      * @param integer $DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].
      * @param integer $ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
      * @param array $RealServerPorts List of origin server ports, which only supports the listeners of version 1.0 and connection group.
+     * @param integer $ClientIPMethod Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateTCPListenersRequest extends AbstractModel
 
         if (array_key_exists("RealServerPorts",$param) and $param["RealServerPorts"] !== null) {
             $this->RealServerPorts = $param["RealServerPorts"];
+        }
+
+        if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
+            $this->ClientIPMethod = $param["ClientIPMethod"];
         }
     }
 }

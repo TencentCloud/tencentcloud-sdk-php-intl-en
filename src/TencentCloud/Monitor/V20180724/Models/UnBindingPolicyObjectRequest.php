@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) Set The value is fixed to monitor.
  * @method integer getGroupId() Obtain Policy group ID.
  * @method void setGroupId(integer $GroupId) Set Policy group ID.
- * @method array getUniqueId() Obtain List of unique IDs of object instances to be deleted.
- * @method void setUniqueId(array $UniqueId) Set List of unique IDs of object instances to be deleted.
+ * @method array getUniqueId() Obtain List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
+ * @method void setUniqueId(array $UniqueId) Set List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
  * @method integer getInstanceGroupId() Obtain Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
  */
@@ -42,7 +42,7 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var array List of unique IDs of object instances to be deleted.
+     * @var array List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
      */
     public $UniqueId;
 
@@ -54,7 +54,7 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     /**
      * @param string $Module The value is fixed to monitor.
      * @param integer $GroupId Policy group ID.
-     * @param array $UniqueId List of unique IDs of object instances to be deleted.
+     * @param array $UniqueId List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
      * @param integer $InstanceGroupId Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
      */
     function __construct()

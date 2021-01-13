@@ -100,6 +100,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolyRealServerCertificateAliasInfo(array $PolyRealServerCertificateAliasInfo) Set Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDomainStatus() Obtain Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDomainStatus(integer $DomainStatus) Set Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -216,6 +226,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PolyRealServerCertificateAliasInfo;
 
     /**
+     * @var integer Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DomainStatus;
+
+    /**
      * @param string $Domain Forwarding rule domain name.
      * @param array $RuleSet Forwarding rule list of the domain name.
      * @param string $CertificateId Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
@@ -256,6 +275,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $PolyRealServerCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DomainStatus Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -355,6 +379,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->PolyRealServerCertificateAliasInfo, $obj);
             }
+        }
+
+        if (array_key_exists("DomainStatus",$param) and $param["DomainStatus"] !== null) {
+            $this->DomainStatus = $param["DomainStatus"];
         }
     }
 }

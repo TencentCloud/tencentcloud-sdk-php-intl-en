@@ -112,10 +112,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setModifyConfigTime(integer $ModifyConfigTime) Set Configuration change time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getProxyType() Obtain Connection type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProxyType(integer $ProxyType) Set Connection type
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProxyType() Obtain Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProxyType(integer $ProxyType) Set Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getClientIPMethod() Obtain Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClientIPMethod(array $ClientIPMethod) Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ProxyInfo extends AbstractModel
 {
@@ -266,10 +270,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ModifyConfigTime;
 
     /**
-     * @var integer Connection type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ProxyType;
+
+    /**
+     * @var array Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClientIPMethod;
 
     /**
      * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -318,8 +328,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ModifyConfigTime Configuration change time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProxyType Connection type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProxyType Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -443,6 +455,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
             $this->ProxyType = $param["ProxyType"];
+        }
+
+        if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
+            $this->ClientIPMethod = $param["ClientIPMethod"];
         }
     }
 }

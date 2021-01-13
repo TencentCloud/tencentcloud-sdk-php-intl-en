@@ -107,8 +107,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPathRules(array $PathRules) Set Origin URL rewrite rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getPathBasedOrigin() Obtain 
- * @method void setPathBasedOrigin(array $PathBasedOrigin) Set 
+ * @method array getPathBasedOrigin() Obtain Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPathBasedOrigin(array $PathBasedOrigin) Set Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Origin extends AbstractModel
 {
@@ -193,7 +195,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $PathRules;
 
     /**
-     * @var array 
+     * @var array Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $PathBasedOrigin;
 
@@ -238,7 +241,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $BasePath 
      * @param array $PathRules Origin URL rewrite rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $PathBasedOrigin 
+     * @param array $PathBasedOrigin Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

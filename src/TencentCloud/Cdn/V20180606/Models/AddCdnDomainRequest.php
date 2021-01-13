@@ -100,8 +100,8 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
  * @method void setTag(array $Tag) Set Tag configuration
  * @method Ipv6Access getIpv6Access() Obtain IPv6 access configuration
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
- * @method OfflineCache getOfflineCache() Obtain 
- * @method void setOfflineCache(OfflineCache $OfflineCache) Set 
+ * @method OfflineCache getOfflineCache() Obtain Offline cache
+ * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -274,7 +274,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     public $Ipv6Access;
 
     /**
-     * @var OfflineCache 
+     * @var OfflineCache Offline cache
      */
     public $OfflineCache;
 
@@ -319,7 +319,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
      * @param array $Tag Tag configuration
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
-     * @param OfflineCache $OfflineCache 
+     * @param OfflineCache $OfflineCache Offline cache
      */
     function __construct()
     {

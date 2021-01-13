@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleId() Obtain Forwarding rule ID
  * @method void setRuleId(string $RuleId) Set Forwarding rule ID
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 1000.
+ * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 1000.
  */
 class DescribeRuleRealServersRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeRuleRealServersRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var integer Offset. Default value: 0.
+     */
+    public $Offset;
+
+    /**
+     * @var integer Number of values to be returned. The default value is 20. Maximum is 1000.
+     */
+    public $Limit;
+
+    /**
      * @param string $RuleId Forwarding rule ID
+     * @param integer $Offset Offset. Default value: 0.
+     * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 1000.
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeRuleRealServersRequest extends AbstractModel
         }
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

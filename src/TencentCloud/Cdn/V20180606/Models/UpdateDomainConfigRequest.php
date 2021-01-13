@@ -108,8 +108,8 @@ global: global acceleration
  * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) Set Origin-pull authentication advanced configuration (allowlist feature)
  * @method Ipv6Access getIpv6Access() Obtain IPv6 access configuration
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
- * @method OfflineCache getOfflineCache() Obtain 
- * @method void setOfflineCache(OfflineCache $OfflineCache) Set 
+ * @method OfflineCache getOfflineCache() Obtain Offline cache
+ * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
  * @method OriginCombine getOriginCombine() Obtain 
  * @method void setOriginCombine(OriginCombine $OriginCombine) Set 
  */
@@ -308,7 +308,7 @@ global: global acceleration
     public $Ipv6Access;
 
     /**
-     * @var OfflineCache 
+     * @var OfflineCache Offline cache
      */
     public $OfflineCache;
 
@@ -362,7 +362,7 @@ global: global acceleration
      * @param AdvancedAuthentication $AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
      * @param OriginAuthentication $OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
-     * @param OfflineCache $OfflineCache 
+     * @param OfflineCache $OfflineCache Offline cache
      * @param OriginCombine $OriginCombine 
      */
     function __construct()

@@ -58,6 +58,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagSet(array $TagSet) Set Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPolicyId() Obtain Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPolicyId(string $PolicyId) Set Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getVersion() Obtain Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVersion(string $Version) Set Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getClientIPMethod() Obtain Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClientIPMethod(array $ClientIPMethod) Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -133,6 +145,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TagSet;
 
     /**
+     * @var string Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PolicyId;
+
+    /**
+     * @var string Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Version;
+
+    /**
+     * @var array Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClientIPMethod;
+
+    /**
      * @param integer $CreateTime Creation time
      * @param integer $ProjectId Project ID
      * @param integer $ProxyNum Number of connections in connection group
@@ -152,6 +182,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $GroupId Connection group ID
      * @param array $TagSet Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PolicyId Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Version Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -222,6 +258,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
+            $this->ClientIPMethod = $param["ClientIPMethod"];
         }
     }
 }

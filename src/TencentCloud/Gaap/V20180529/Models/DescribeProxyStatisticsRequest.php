@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time (2019-03-25 12:00:00)
  * @method string getEndTime() Obtain End time (2019-03-25 12:00:00)
  * @method void setEndTime(string $EndTime) Set End time (2019-03-25 12:00:00)
- * @method array getMetricNames() Obtain Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
- * @method void setMetricNames(array $MetricNames) Set Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
+ * @method array getMetricNames() Obtain Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
+ * @method void setMetricNames(array $MetricNames) Set Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
  * @method integer getGranularity() Obtain Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
 Time range: <= 1 day, supported minimum granularity: 60 seconds;
 Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
@@ -55,7 +55,7 @@ class DescribeProxyStatisticsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
+     * @var array Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
      */
     public $MetricNames;
 
@@ -71,7 +71,7 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
      * @param string $ProxyId Connection ID
      * @param string $StartTime Start time (2019-03-25 12:00:00)
      * @param string $EndTime End time (2019-03-25 12:00:00)
-     * @param array $MetricNames Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
+     * @param array $MetricNames Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
      * @param integer $Granularity Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
 Time range: <= 1 day, supported minimum granularity: 60 seconds;
 Time range: <= 7 days, supported minimum granularity: 3,600 seconds;

@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
 You cannot modify this parameter when calling ModifyRuleAttribute API.
  * @method void setDomain(string $Domain) Set Domain name to be performed health check
 You cannot modify this parameter when calling ModifyRuleAttribute API.
+ * @method integer getFailedCountInter() Obtain Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFailedCountInter(integer $FailedCountInter) Set Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getFailedThreshold() Obtain Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFailedThreshold(integer $FailedThreshold) Set Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getBlockInter() Obtain Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBlockInter(integer $BlockInter) Set Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RuleCheckParams extends AbstractModel
 {
@@ -69,6 +81,24 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
     public $Domain;
 
     /**
+     * @var integer Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FailedCountInter;
+
+    /**
+     * @var integer Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FailedThreshold;
+
+    /**
+     * @var integer Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $BlockInter;
+
+    /**
      * @param integer $DelayLoop Time interval of health check
      * @param integer $ConnectTimeout Response timeout of health check
      * @param string $Path Check path of health check
@@ -76,6 +106,12 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
      * @param array $StatusCode Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
      * @param string $Domain Domain name to be performed health check
 You cannot modify this parameter when calling ModifyRuleAttribute API.
+     * @param integer $FailedCountInter Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $FailedThreshold Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $BlockInter Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -112,6 +148,18 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("FailedCountInter",$param) and $param["FailedCountInter"] !== null) {
+            $this->FailedCountInter = $param["FailedCountInter"];
+        }
+
+        if (array_key_exists("FailedThreshold",$param) and $param["FailedThreshold"] !== null) {
+            $this->FailedThreshold = $param["FailedThreshold"];
+        }
+
+        if (array_key_exists("BlockInter",$param) and $param["BlockInter"] !== null) {
+            $this->BlockInter = $param["BlockInter"];
         }
     }
 }

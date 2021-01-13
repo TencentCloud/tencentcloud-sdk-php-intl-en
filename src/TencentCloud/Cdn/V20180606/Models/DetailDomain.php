@@ -250,8 +250,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAdvanceSet(array $AdvanceSet) Set Advanced configuration set
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method OfflineCache getOfflineCache() Obtain 
- * @method void setOfflineCache(OfflineCache $OfflineCache) Set 
+ * @method OfflineCache getOfflineCache() Obtain Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method OriginCombine getOriginCombine() Obtain 
  * @method void setOriginCombine(OriginCombine $OriginCombine) Set 
  */
@@ -581,7 +583,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AdvanceSet;
 
     /**
-     * @var OfflineCache 
+     * @var OfflineCache Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OfflineCache;
 
@@ -706,7 +709,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $AdvanceSet Advanced configuration set
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OfflineCache $OfflineCache 
+     * @param OfflineCache $OfflineCache Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param OriginCombine $OriginCombine 
      */
     function __construct()

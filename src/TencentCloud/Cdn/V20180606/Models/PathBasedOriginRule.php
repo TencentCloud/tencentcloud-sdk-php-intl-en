@@ -18,36 +18,68 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Path-based origin-pull rules
  *
- * @method string getRuleType() Obtain 
- * @method void setRuleType(string $RuleType) Set 
- * @method array getRulePaths() Obtain 
- * @method void setRulePaths(array $RulePaths) Set 
- * @method array getOrigin() Obtain 
- * @method void setOrigin(array $Origin) Set 
+ * @method string getRuleType() Obtain Rule types:
+`file`: effective for files with specified suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
+ * @method void setRuleType(string $RuleType) Set Rule types:
+`file`: effective for files with specified suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
+ * @method array getRulePaths() Obtain Content for each `RuleType`:
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+ * @method void setRulePaths(array $RulePaths) Set Content for each `RuleType`:
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+ * @method array getOrigin() Obtain Origin server list. Domain names and IPv4 addresses are supported.
+ * @method void setOrigin(array $Origin) Set Origin server list. Domain names and IPv4 addresses are supported.
  */
 class PathBasedOriginRule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Rule types:
+`file`: effective for files with specified suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
      */
     public $RuleType;
 
     /**
-     * @var array 
+     * @var array Content for each `RuleType`:
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
      */
     public $RulePaths;
 
     /**
-     * @var array 
+     * @var array Origin server list. Domain names and IPv4 addresses are supported.
      */
     public $Origin;
 
     /**
-     * @param string $RuleType 
-     * @param array $RulePaths 
-     * @param array $Origin 
+     * @param string $RuleType Rule types:
+`file`: effective for files with specified suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
+     * @param array $RulePaths Content for each `RuleType`:
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+     * @param array $Origin Origin server list. Domain names and IPv4 addresses are supported.
      */
     function __construct()
     {

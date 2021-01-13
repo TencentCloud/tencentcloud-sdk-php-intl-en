@@ -30,14 +30,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setProjectName(string $ProjectName) Set Project name.
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getStatus() Obtain Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setStatus(integer $Status) Set Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
- * @method string getAlarmStatus() Obtain Alarm status.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setAlarmStatus(string $AlarmStatus) Set Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+ * @method integer getStatus() Obtain Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAlarmStatus() Obtain Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAlarmStatus(string $AlarmStatus) Set Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getGroupId() Obtain Policy group ID.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setGroupId(integer $GroupId) Set Policy group ID.
@@ -127,14 +127,14 @@ Note: This field may return null, indicating that no valid value was found.
     public $ProjectName;
 
     /**
-     * @var integer Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
+     * @var integer Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var string Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+     * @var string Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AlarmStatus;
 
@@ -246,10 +246,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $ProjectName Project name.
 Note: This field may return null, indicating that no valid value was found.
-     * @param integer $Status Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
-     * @param string $AlarmStatus Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+     * @param integer $Status Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AlarmStatus Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $GroupId Policy group ID.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $GroupName Policy group name.

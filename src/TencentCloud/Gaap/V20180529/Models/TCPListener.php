@@ -76,6 +76,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
  * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
+ * @method integer getClientIPMethod() Obtain Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClientIPMethod(integer $ClientIPMethod) Set Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class TCPListener extends AbstractModel
 {
@@ -164,6 +168,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
+     * @var integer Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClientIPMethod;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
@@ -192,6 +202,8 @@ lc: least connection.
      * @param array $RealServerSet Information of the origin server bound to listeners
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Listener creation time; using UNIX timestamp.
+     * @param integer $ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -265,6 +277,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
+            $this->ClientIPMethod = $param["ClientIPMethod"];
         }
     }
 }
