@@ -110,8 +110,8 @@ global: global acceleration
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
  * @method OfflineCache getOfflineCache() Obtain Offline cache
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
- * @method OriginCombine getOriginCombine() Obtain 
- * @method void setOriginCombine(OriginCombine $OriginCombine) Set 
+ * @method OriginCombine getOriginCombine() Obtain Merging pull requests
+ * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging pull requests
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -313,7 +313,7 @@ global: global acceleration
     public $OfflineCache;
 
     /**
-     * @var OriginCombine 
+     * @var OriginCombine Merging pull requests
      */
     public $OriginCombine;
 
@@ -363,7 +363,7 @@ global: global acceleration
      * @param OriginAuthentication $OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
      * @param OfflineCache $OfflineCache Offline cache
-     * @param OriginCombine $OriginCombine 
+     * @param OriginCombine $OriginCombine Merging pull requests
      */
     function __construct()
     {

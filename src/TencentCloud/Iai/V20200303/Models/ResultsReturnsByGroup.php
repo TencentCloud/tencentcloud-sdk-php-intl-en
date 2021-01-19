@@ -21,8 +21,8 @@ use TencentCloud\Common\AbstractModel;
  * Recognition result.
 
  *
- * @method FaceRect getFaceRect() Obtain Position of detected face frame.
- * @method void setFaceRect(FaceRect $FaceRect) Set Position of detected face frame.
+ * @method FaceRect getFaceRect() Obtain Position of detected face frame
+ * @method void setFaceRect(FaceRect $FaceRect) Set Position of detected face frame
  * @method array getGroupCandidates() Obtain Recognition result.
  * @method void setGroupCandidates(array $GroupCandidates) Set Recognition result.
  * @method integer getRetCode() Obtain Status return code of detected face image. 0: normal. 
@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
 class ResultsReturnsByGroup extends AbstractModel
 {
     /**
-     * @var FaceRect Position of detected face frame.
+     * @var FaceRect Position of detected face frame
      */
     public $FaceRect;
 
@@ -49,7 +49,7 @@ class ResultsReturnsByGroup extends AbstractModel
     public $RetCode;
 
     /**
-     * @param FaceRect $FaceRect Position of detected face frame.
+     * @param FaceRect $FaceRect Position of detected face frame
      * @param array $GroupCandidates Recognition result.
      * @param integer $RetCode Status return code of detected face image. 0: normal. 
 -1601: the image quality control requirement is not met; in this case, `Candidate` is empty.

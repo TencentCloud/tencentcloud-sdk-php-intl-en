@@ -18,11 +18,11 @@ namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom description field of the person to be modified, which is a `key-value`
+ * Custom description field of the person to be modified, which is a `key-value` pair.
  *
- * @method integer getPersonExDescriptionIndex() Obtain Person description field index, whose value starts from 0
+ * @method integer getPersonExDescriptionIndex() Obtain Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPersonExDescriptionIndex(integer $PersonExDescriptionIndex) Set Person description field index, whose value starts from 0
+ * @method void setPersonExDescriptionIndex(integer $PersonExDescriptionIndex) Set Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getPersonExDescription() Obtain Content of the person description field to be updated
  * @method void setPersonExDescription(string $PersonExDescription) Set Content of the person description field to be updated
@@ -30,7 +30,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class PersonExDescriptionInfo extends AbstractModel
 {
     /**
-     * @var integer Person description field index, whose value starts from 0
+     * @var integer Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PersonExDescriptionIndex;
@@ -41,7 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PersonExDescription;
 
     /**
-     * @param integer $PersonExDescriptionIndex Person description field index, whose value starts from 0
+     * @param integer $PersonExDescriptionIndex Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PersonExDescription Content of the person description field to be updated
      */

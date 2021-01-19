@@ -14,23 +14,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSpotTypeConfig response structure.
+ * ListEmailAddress response structure.
  *
+ * @method array getEmailSenders() Obtain Details of sender addresses.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEmailSenders(array $EmailSenders) Set Details of sender addresses.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeSpotTypeConfigResponse extends AbstractModel
+class ListEmailAddressResponse extends AbstractModel
 {
+    /**
+     * @var array Details of sender addresses.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $EmailSenders;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $EmailSenders Details of sender addresses.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +58,15 @@ class DescribeSpotTypeConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EmailSenders",$param) and $param["EmailSenders"] !== null) {
+            $this->EmailSenders = [];
+            foreach ($param["EmailSenders"] as $key => $value){
+                $obj = new EmailSender();
+                $obj->deserialize($value);
+                array_push($this->EmailSenders, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

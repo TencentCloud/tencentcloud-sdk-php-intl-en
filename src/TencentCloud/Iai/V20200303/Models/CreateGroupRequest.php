@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGroup request structure.
  *
- * @method string getGroupName() Obtain Group name, which is modifiable, must be unique, and can contain 1-60 characters.
- * @method void setGroupName(string $GroupName) Set Group name, which is modifiable, must be unique, and can contain 1-60 characters.
- * @method string getGroupId() Obtain Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
- * @method void setGroupId(string $GroupId) Set Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+ * @method string getGroupName() Obtain Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
+ * @method void setGroupName(string $GroupName) Set Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
+ * @method string getGroupId() Obtain Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
+ * @method void setGroupId(string $GroupId) Set Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
  * @method array getGroupExDescriptions() Obtain Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number.
  * @method void setGroupExDescriptions(array $GroupExDescriptions) Set Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number.
- * @method string getTag() Obtain Group remarks, which can contain 0-40 characters.
- * @method void setTag(string $Tag) Set Group remarks, which can contain 0-40 characters.
+ * @method string getTag() Obtain Group remarks, which can contain 0 to 40 characters.
+ * @method void setTag(string $Tag) Set Group remarks, which can contain 0 to 40 characters.
  * @method string getFaceModelVersion() Obtain Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
 This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
 Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
@@ -50,19 +50,19 @@ Different algorithm model versions correspond to different face recognition algo
 class CreateGroupRequest extends AbstractModel
 {
     /**
-     * @var string Group name, which is modifiable, must be unique, and can contain 1-60 characters.
+     * @var string Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
      */
     public $GroupName;
 
     /**
-     * @var string Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+     * @var string Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
      */
     public $GroupId;
 
     /**
      * @var array Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
@@ -71,7 +71,7 @@ You can enter content in the corresponding field to register a person's student 
     public $GroupExDescriptions;
 
     /**
-     * @var string Group remarks, which can contain 0-40 characters.
+     * @var string Group remarks, which can contain 0 to 40 characters.
      */
     public $Tag;
 
@@ -83,16 +83,16 @@ Different algorithm model versions correspond to different face recognition algo
     public $FaceModelVersion;
 
     /**
-     * @param string $GroupName Group name, which is modifiable, must be unique, and can contain 1-60 characters.
-     * @param string $GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+     * @param string $GroupName Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
+     * @param string $GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
      * @param array $GroupExDescriptions Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number.
-     * @param string $Tag Group remarks, which can contain 0-40 characters.
+     * @param string $Tag Group remarks, which can contain 0 to 40 characters.
      * @param string $FaceModelVersion Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
 This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
 Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.

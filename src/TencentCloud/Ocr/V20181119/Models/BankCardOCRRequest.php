@@ -28,16 +28,26 @@ Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both ar
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
 Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
- * @method string getImageUrl() Obtain URL address of the image.
+ * @method string getImageUrl() Obtain URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
- * @method void setImageUrl(string $ImageUrl) Set URL address of the image.
+ * @method void setImageUrl(string $ImageUrl) Set URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
+ * @method boolean getRetBorderCutImage() Obtain 
+ * @method void setRetBorderCutImage(boolean $RetBorderCutImage) Set 
+ * @method boolean getRetCardNoImage() Obtain 
+ * @method void setRetCardNoImage(boolean $RetCardNoImage) Set 
+ * @method boolean getEnableCopyCheck() Obtain 
+ * @method void setEnableCopyCheck(boolean $EnableCopyCheck) Set 
+ * @method boolean getEnableReshootCheck() Obtain 
+ * @method void setEnableReshootCheck(boolean $EnableReshootCheck) Set 
+ * @method boolean getEnableBorderCheck() Obtain 
+ * @method void setEnableBorderCheck(boolean $EnableBorderCheck) Set 
  */
 class BankCardOCRRequest extends AbstractModel
 {
@@ -50,24 +60,54 @@ Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both ar
     public $ImageBase64;
 
     /**
-     * @var string URL address of the image.
+     * @var string URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public $ImageUrl;
+
+    /**
+     * @var boolean 
+     */
+    public $RetBorderCutImage;
+
+    /**
+     * @var boolean 
+     */
+    public $RetCardNoImage;
+
+    /**
+     * @var boolean 
+     */
+    public $EnableCopyCheck;
+
+    /**
+     * @var boolean 
+     */
+    public $EnableReshootCheck;
+
+    /**
+     * @var boolean 
+     */
+    public $EnableBorderCheck;
 
     /**
      * @param string $ImageBase64 Base64-encoded value of image.
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
 Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-     * @param string $ImageUrl URL address of the image.
+     * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param boolean $RetBorderCutImage 
+     * @param boolean $RetCardNoImage 
+     * @param boolean $EnableCopyCheck 
+     * @param boolean $EnableReshootCheck 
+     * @param boolean $EnableBorderCheck 
      */
     function __construct()
     {
@@ -88,6 +128,26 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("RetBorderCutImage",$param) and $param["RetBorderCutImage"] !== null) {
+            $this->RetBorderCutImage = $param["RetBorderCutImage"];
+        }
+
+        if (array_key_exists("RetCardNoImage",$param) and $param["RetCardNoImage"] !== null) {
+            $this->RetCardNoImage = $param["RetCardNoImage"];
+        }
+
+        if (array_key_exists("EnableCopyCheck",$param) and $param["EnableCopyCheck"] !== null) {
+            $this->EnableCopyCheck = $param["EnableCopyCheck"];
+        }
+
+        if (array_key_exists("EnableReshootCheck",$param) and $param["EnableReshootCheck"] !== null) {
+            $this->EnableReshootCheck = $param["EnableReshootCheck"];
+        }
+
+        if (array_key_exists("EnableBorderCheck",$param) and $param["EnableBorderCheck"] !== null) {
+            $this->EnableBorderCheck = $param["EnableBorderCheck"];
         }
     }
 }

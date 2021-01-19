@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteFace request structure.
  *
- * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API
- * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API
- * @method array getFaceIds() Obtain List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
- * @method void setFaceIds(array $FaceIds) Set List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
+ * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API.
+ * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API.
+ * @method array getFaceIds() Obtain List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
+ * @method void setFaceIds(array $FaceIds) Set List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
  */
 class DeleteFaceRequest extends AbstractModel
 {
     /**
-     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public $PersonId;
 
     /**
-     * @var array List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
+     * @var array List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
      */
     public $FaceIds;
 
     /**
-     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
-     * @param array $FaceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
+     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+     * @param array $FaceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
      */
     function __construct()
     {

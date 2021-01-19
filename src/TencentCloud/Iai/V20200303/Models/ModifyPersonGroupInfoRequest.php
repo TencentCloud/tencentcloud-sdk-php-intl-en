@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonGroupInfo request structure.
  *
- * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API
- * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API
- * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API
- * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API
- * @method array getPersonExDescriptionInfos() Obtain Custom description field of the person to be modified, which is a `key-value`
- * @method void setPersonExDescriptionInfos(array $PersonExDescriptionInfos) Set Custom description field of the person to be modified, which is a `key-value`
+ * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API.
+ * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API.
+ * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API.
+ * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API.
+ * @method array getPersonExDescriptionInfos() Obtain Custom description field of the person to be modified, which is a `key-value` pair.
+ * @method void setPersonExDescriptionInfos(array $PersonExDescriptionInfos) Set Custom description field of the person to be modified, which is a `key-value` pair.
  */
 class ModifyPersonGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API
+     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public $GroupId;
 
     /**
-     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public $PersonId;
 
     /**
-     * @var array Custom description field of the person to be modified, which is a `key-value`
+     * @var array Custom description field of the person to be modified, which is a `key-value` pair.
      */
     public $PersonExDescriptionInfos;
 
     /**
-     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
-     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
-     * @param array $PersonExDescriptionInfos Custom description field of the person to be modified, which is a `key-value`
+     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
+     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+     * @param array $PersonExDescriptionInfos Custom description field of the person to be modified, which is a `key-value` pair.
      */
     function __construct()
     {

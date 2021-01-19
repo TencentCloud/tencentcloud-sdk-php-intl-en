@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mouth information
+ * DeleteBlackList request structure.
  *
- * @method AttributeItem getMouthOpen() Obtain Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
- * @method void setMouthOpen(AttributeItem $MouthOpen) Set Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+ * @method array getEmailAddressList() Obtain List of email addresses to be unblocklisted. Enter at least one address.
+ * @method void setEmailAddressList(array $EmailAddressList) Set List of email addresses to be unblocklisted. Enter at least one address.
  */
-class Mouth extends AbstractModel
+class DeleteBlackListRequest extends AbstractModel
 {
     /**
-     * @var AttributeItem Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+     * @var array List of email addresses to be unblocklisted. Enter at least one address.
      */
-    public $MouthOpen;
+    public $EmailAddressList;
 
     /**
-     * @param AttributeItem $MouthOpen Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+     * @param array $EmailAddressList List of email addresses to be unblocklisted. Enter at least one address.
      */
     function __construct()
     {
@@ -50,9 +46,8 @@ The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MouthOpen",$param) and $param["MouthOpen"] !== null) {
-            $this->MouthOpen = new AttributeItem();
-            $this->MouthOpen->deserialize($param["MouthOpen"]);
+        if (array_key_exists("EmailAddressList",$param) and $param["EmailAddressList"] !== null) {
+            $this->EmailAddressList = $param["EmailAddressList"];
         }
     }
 }

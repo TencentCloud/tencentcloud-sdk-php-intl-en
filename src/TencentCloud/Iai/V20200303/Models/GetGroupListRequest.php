@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetGroupList request structure.
  *
- * @method integer getOffset() Obtain Starting number. Default value: 0
- * @method void setOffset(integer $Offset) Set Starting number. Default value: 0
- * @method integer getLimit() Obtain Number of returned results. Default value: 10. Maximum value: 1000
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 10. Maximum value: 1000
+ * @method integer getOffset() Obtain Starting number. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Starting number. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 10. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 10. Maximum value: 1000.
  */
 class GetGroupListRequest extends AbstractModel
 {
     /**
-     * @var integer Starting number. Default value: 0
+     * @var integer Starting number. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. Default value: 10. Maximum value: 1000
+     * @var integer Number of returned results. Default value: 10. Maximum value: 1000.
      */
     public $Limit;
 
     /**
-     * @param integer $Offset Starting number. Default value: 0
-     * @param integer $Limit Number of returned results. Default value: 10. Maximum value: 1000
+     * @param integer $Offset Starting number. Default value: 0.
+     * @param integer $Limit Number of returned results. Default value: 10. Maximum value: 1000.
      */
     function __construct()
     {

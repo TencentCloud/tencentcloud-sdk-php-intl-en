@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePerson request structure.
  *
- * @method string getGroupId() Obtain ID of the group to join, which is the `GroupId` in the `CreateGroup` API
- * @method void setGroupId(string $GroupId) Set ID of the group to join, which is the `GroupId` in the `CreateGroup` API
- * @method string getPersonName() Obtain Person name, which can contain 1-60 characters and is modifiable and repeatable.
- * @method void setPersonName(string $PersonName) Set Person name, which can contain 1-60 characters and is modifiable and repeatable.
- * @method string getPersonId() Obtain Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
- * @method void setPersonId(string $PersonId) Set Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+ * @method string getGroupId() Obtain ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
+ * @method void setGroupId(string $GroupId) Set ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
+ * @method string getPersonName() Obtain Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
+ * @method void setPersonName(string $PersonName) Set Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
+ * @method string getPersonId() Obtain Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
+ * @method void setPersonId(string $PersonId) Set Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
  * @method integer getGender() Obtain 0: empty; 1: male; 2: female.
  * @method void setGender(integer $Gender) Set 0: empty; 1: male; 2: female.
- * @method array getPersonExDescriptionInfos() Obtain Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
- * @method void setPersonExDescriptionInfos(array $PersonExDescriptionInfos) Set Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
+ * @method array getPersonExDescriptionInfos() Obtain Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
+ * @method void setPersonExDescriptionInfos(array $PersonExDescriptionInfos) Set Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
  * @method string getImage() Obtain Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method void setImage(string $Image) Set Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method string getUrl() Obtain Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method void setUrl(string $Url) Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method integer getUniquePersonControl() Obtain This parameter is used to control the judgment whether the face contained in the image in `Image` or `Url` corresponds to an existing person in the group. 
 If it is judged that a duplicate person exists in the group, no new person will be created, and information of the suspected duplicate person will be returned. 
 Otherwise, the new person will be created. 
@@ -71,17 +71,17 @@ Note: the higher the requirement, the lower the probability of duplicate person.
  * @method integer getQualityControl() Obtain Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
  * @method void setQualityControl(integer $QualityControl) Set Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
  * @method integer getNeedRotateDetection() Obtain Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
@@ -90,17 +90,17 @@ If the image quality does not meet the requirement, the returned result will pro
 class CreatePersonRequest extends AbstractModel
 {
     /**
-     * @var string ID of the group to join, which is the `GroupId` in the `CreateGroup` API
+     * @var string ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
      */
     public $GroupId;
 
     /**
-     * @var string Person name, which can contain 1-60 characters and is modifiable and repeatable.
+     * @var string Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
      */
     public $PersonName;
 
     /**
-     * @var string Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+     * @var string Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
      */
     public $PersonId;
 
@@ -110,24 +110,24 @@ class CreatePersonRequest extends AbstractModel
     public $Gender;
 
     /**
-     * @var array Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
+     * @var array Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
      */
     public $PersonExDescriptionInfos;
 
     /**
      * @var string Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public $Image;
 
     /**
      * @var string Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public $Url;
 
@@ -149,9 +149,9 @@ Note: the higher the requirement, the lower the probability of duplicate person.
      * @var integer Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      */
@@ -163,20 +163,20 @@ If the image quality does not meet the requirement, the returned result will pro
     public $NeedRotateDetection;
 
     /**
-     * @param string $GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API
-     * @param string $PersonName Person name, which can contain 1-60 characters and is modifiable and repeatable.
-     * @param string $PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+     * @param string $GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
+     * @param string $PersonName Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
+     * @param string $PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
      * @param integer $Gender 0: empty; 1: male; 2: female.
-     * @param array $PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
+     * @param array $PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
      * @param string $Image Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      * @param string $Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      * @param integer $UniquePersonControl This parameter is used to control the judgment whether the face contained in the image in `Image` or `Url` corresponds to an existing person in the group. 
 If it is judged that a duplicate person exists in the group, no new person will be created, and information of the suspected duplicate person will be returned. 
 Otherwise, the new person will be created. 
@@ -190,9 +190,9 @@ Note: the higher the requirement, the lower the probability of duplicate person.
      * @param integer $QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      * @param integer $NeedRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.

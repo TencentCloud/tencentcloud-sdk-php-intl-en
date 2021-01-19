@@ -23,28 +23,28 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScore() Obtain Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setScore(integer $Score) Set Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getSharpness() Obtain Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSharpness(integer $Sharpness) Set Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getBrightness() Obtain Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBrightness(integer $Brightness) Set Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method FaceQualityCompleteness getCompleteness() Obtain Completeness of facial features, which assesses the completeness of the eyebrows, eyes, nose, cheeks, mouth, and chin.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -57,7 +57,7 @@ class FaceQualityInfo extends AbstractModel
      * @var integer Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Score;
@@ -65,7 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @var integer Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Sharpness;
@@ -73,7 +73,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @var integer Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Brightness;
@@ -88,15 +88,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Score Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Sharpness Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Brightness Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param FaceQualityCompleteness $Completeness Completeness of facial features, which assesses the completeness of the eyebrows, eyes, nose, cheeks, mouth, and chin.
 Note: this field may return null, indicating that no valid values can be obtained.

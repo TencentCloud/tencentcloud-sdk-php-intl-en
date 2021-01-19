@@ -254,8 +254,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method OriginCombine getOriginCombine() Obtain 
- * @method void setOriginCombine(OriginCombine $OriginCombine) Set 
+ * @method OriginCombine getOriginCombine() Obtain Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -589,7 +591,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $OfflineCache;
 
     /**
-     * @var OriginCombine 
+     * @var OriginCombine Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginCombine;
 
@@ -711,7 +714,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param OfflineCache $OfflineCache Offline cache
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginCombine $OriginCombine 
+     * @param OriginCombine $OriginCombine Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

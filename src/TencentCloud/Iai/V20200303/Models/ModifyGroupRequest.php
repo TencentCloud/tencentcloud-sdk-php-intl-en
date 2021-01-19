@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGroup request structure.
  *
- * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API
- * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API
+ * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API.
+ * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API.
  * @method string getGroupName() Obtain Group name
  * @method void setGroupName(string $GroupName) Set Group name
- * @method array getGroupExDescriptionInfos() Obtain Custom description field of the group to be modified, which is a `key-value`
- * @method void setGroupExDescriptionInfos(array $GroupExDescriptionInfos) Set Custom description field of the group to be modified, which is a `key-value`
+ * @method array getGroupExDescriptionInfos() Obtain Custom description field of the group to be modified, which is a `key-value` pair.
+ * @method void setGroupExDescriptionInfos(array $GroupExDescriptionInfos) Set Custom description field of the group to be modified, which is a `key-value` pair.
  * @method string getTag() Obtain Group remarks
  * @method void setTag(string $Tag) Set Group remarks
  */
 class ModifyGroupRequest extends AbstractModel
 {
     /**
-     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API
+     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public $GroupId;
 
@@ -42,7 +42,7 @@ class ModifyGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var array Custom description field of the group to be modified, which is a `key-value`
+     * @var array Custom description field of the group to be modified, which is a `key-value` pair.
      */
     public $GroupExDescriptionInfos;
 
@@ -52,9 +52,9 @@ class ModifyGroupRequest extends AbstractModel
     public $Tag;
 
     /**
-     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
+     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
      * @param string $GroupName Group name
-     * @param array $GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value`
+     * @param array $GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value` pair.
      * @param string $Tag Group remarks
      */
     function __construct()

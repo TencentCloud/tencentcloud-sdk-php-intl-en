@@ -24,6 +24,7 @@ use TencentCloud\Common\AbstractModel;
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
@@ -35,8 +36,10 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -45,6 +48,7 @@ The following is a list of all availability zones:
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -65,6 +69,7 @@ The following is a list of all availability zones:
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
@@ -76,8 +81,10 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -86,6 +93,7 @@ The following is a list of all availability zones:
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -104,8 +112,8 @@ The following is a list of all availability zones:
 <li> ap-nanjing-2 </li>
  * @method string getZoneName() Obtain Availability zone description, such as Guangzhou Zone 3.
  * @method void setZoneName(string $ZoneName) Set Availability zone description, such as Guangzhou Zone 3.
- * @method string getZoneId() Obtain Availability zone ID
- * @method void setZoneId(string $ZoneId) Set Availability zone ID
+ * @method string getZoneId() Obtain Availability zone ID.
+ * @method void setZoneId(string $ZoneId) Set Availability zone ID.
  * @method string getZoneState() Obtain Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
  * @method void setZoneState(string $ZoneState) Set Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
  */
@@ -116,6 +124,7 @@ class ZoneInfo extends AbstractModel
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
@@ -127,8 +136,10 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -137,6 +148,7 @@ The following is a list of all availability zones:
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -162,7 +174,7 @@ The following is a list of all availability zones:
     public $ZoneName;
 
     /**
-     * @var string Availability zone ID
+     * @var string Availability zone ID.
      */
     public $ZoneId;
 
@@ -176,6 +188,7 @@ The following is a list of all availability zones:
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
@@ -187,8 +200,10 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -197,6 +212,7 @@ The following is a list of all availability zones:
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -214,7 +230,7 @@ The following is a list of all availability zones:
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
      * @param string $ZoneName Availability zone description, such as Guangzhou Zone 3.
-     * @param string $ZoneId Availability zone ID
+     * @param string $ZoneId Availability zone ID.
      * @param string $ZoneState Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
      */
     function __construct()

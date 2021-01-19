@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonListNum request structure.
  *
- * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API
- * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API
+ * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API.
+ * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API.
  */
 class GetPersonListNumRequest extends AbstractModel
 {
     /**
-     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API
+     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public $GroupId;
 
     /**
-     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
+     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     function __construct()
     {

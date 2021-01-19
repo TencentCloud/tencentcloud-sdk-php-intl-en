@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonList request structure.
  *
- * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API
- * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API
- * @method integer getOffset() Obtain Starting number. Default value: 0
- * @method void setOffset(integer $Offset) Set Starting number. Default value: 0
- * @method integer getLimit() Obtain Number of returned results. Default value: 10. Maximum value: 1000
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 10. Maximum value: 1000
+ * @method string getGroupId() Obtain Group ID, which is the `GroupId` in the `CreateGroup` API.
+ * @method void setGroupId(string $GroupId) Set Group ID, which is the `GroupId` in the `CreateGroup` API.
+ * @method integer getOffset() Obtain Starting number. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Starting number. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 10. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 10. Maximum value: 1000.
  */
 class GetPersonListRequest extends AbstractModel
 {
     /**
-     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API
+     * @var string Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public $GroupId;
 
     /**
-     * @var integer Starting number. Default value: 0
+     * @var integer Starting number. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. Default value: 10. Maximum value: 1000
+     * @var integer Number of returned results. Default value: 10. Maximum value: 1000.
      */
     public $Limit;
 
     /**
-     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
-     * @param integer $Offset Starting number. Default value: 0
-     * @param integer $Limit Number of returned results. Default value: 10. Maximum value: 1000
+     * @param string $GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
+     * @param integer $Offset Starting number. Default value: 0.
+     * @param integer $Limit Number of returned results. Default value: 10. Maximum value: 1000.
      */
     function __construct()
     {

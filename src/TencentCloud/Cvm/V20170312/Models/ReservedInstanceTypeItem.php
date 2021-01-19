@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) Set Number of CPU cores.
  * @method integer getMemory() Obtain Memory size.
  * @method void setMemory(integer $Memory) Set Memory size.
- * @method integer getGpu() Obtain Number of GPU cores.
- * @method void setGpu(integer $Gpu) Set Number of GPU cores.
- * @method integer getFpga() Obtain Number of FPGA cores.
- * @method void setFpga(integer $Fpga) Set Number of FPGA cores.
- * @method integer getStorageBlock() Obtain Number of storage blocks.
- * @method void setStorageBlock(integer $StorageBlock) Set Number of storage blocks.
+ * @method integer getGpu() Obtain Number of GPUs.
+ * @method void setGpu(integer $Gpu) Set Number of GPUs.
+ * @method integer getFpga() Obtain Number of FPGAs.
+ * @method void setFpga(integer $Fpga) Set Number of FPGAs.
+ * @method integer getStorageBlock() Obtain Number of local storage blocks.
+ * @method void setStorageBlock(integer $StorageBlock) Set Number of local storage blocks.
  * @method integer getNetworkCard() Obtain Number of NICs.
  * @method void setNetworkCard(integer $NetworkCard) Set Number of NICs.
  * @method float getMaxBandwidth() Obtain Maximum bandwidth.
@@ -67,17 +67,17 @@ class ReservedInstanceTypeItem extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer Number of GPU cores.
+     * @var integer Number of GPUs.
      */
     public $Gpu;
 
     /**
-     * @var integer Number of FPGA cores.
+     * @var integer Number of FPGAs.
      */
     public $Fpga;
 
     /**
-     * @var integer Number of storage blocks.
+     * @var integer Number of local storage blocks.
      */
     public $StorageBlock;
 
@@ -125,9 +125,9 @@ class ReservedInstanceTypeItem extends AbstractModel
      * @param string $InstanceType Instance type.
      * @param integer $Cpu Number of CPU cores.
      * @param integer $Memory Memory size.
-     * @param integer $Gpu Number of GPU cores.
-     * @param integer $Fpga Number of FPGA cores.
-     * @param integer $StorageBlock Number of storage blocks.
+     * @param integer $Gpu Number of GPUs.
+     * @param integer $Fpga Number of FPGAs.
+     * @param integer $StorageBlock Number of local storage blocks.
      * @param integer $NetworkCard Number of NICs.
      * @param float $MaxBandwidth Maximum bandwidth.
      * @param string $Frequency CPU frequency.

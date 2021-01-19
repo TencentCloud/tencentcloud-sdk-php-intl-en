@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonGroupInfo request structure.
  *
- * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API
- * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API
- * @method integer getOffset() Obtain Starting number. Default value: 0
- * @method void setOffset(integer $Offset) Set Starting number. Default value: 0
- * @method integer getLimit() Obtain Number of returned results. Default value: 10. Maximum value: 100
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 10. Maximum value: 100
+ * @method string getPersonId() Obtain Person ID, which is the `PersonId` in the `CreatePerson` API.
+ * @method void setPersonId(string $PersonId) Set Person ID, which is the `PersonId` in the `CreatePerson` API.
+ * @method integer getOffset() Obtain Starting number. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Starting number. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 10. Maximum value: 100.
  */
 class GetPersonGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @var string Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public $PersonId;
 
     /**
-     * @var integer Starting number. Default value: 0
+     * @var integer Starting number. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. Default value: 10. Maximum value: 100
+     * @var integer Number of returned results. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
-     * @param integer $Offset Starting number. Default value: 0
-     * @param integer $Limit Number of returned results. Default value: 10. Maximum value: 100
+     * @param string $PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+     * @param integer $Offset Starting number. Default value: 0.
+     * @param integer $Limit Number of returned results. Default value: 10. Maximum value: 100.
      */
     function __construct()
     {

@@ -116,6 +116,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setSignLaw(boolean $SignLaw) Set Whether the connection associated with the dedicated tunnel has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getCloudAttachId() Obtain Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCloudAttachId(string $CloudAttachId) Set Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DirectConnectTunnel extends AbstractModel
 {
@@ -284,6 +288,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $SignLaw;
 
     /**
+     * @var string Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CloudAttachId;
+
+    /**
      * @param string $DirectConnectTunnelId Dedicated tunnel ID.
      * @param string $DirectConnectId Connection ID.
      * @param string $State Dedicated tunnel status.
@@ -332,6 +342,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $TencentBackupAddress Backup IP address on the Tencent side.
      * @param boolean $SignLaw Whether the connection associated with the dedicated tunnel has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $CloudAttachId Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -471,6 +483,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
             $this->SignLaw = $param["SignLaw"];
+        }
+
+        if (array_key_exists("CloudAttachId",$param) and $param["CloudAttachId"] !== null) {
+            $this->CloudAttachId = $param["CloudAttachId"];
         }
     }
 }

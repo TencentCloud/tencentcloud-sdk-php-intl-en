@@ -28,6 +28,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeInstanceLogsResponse DescribeInstanceLogs(Models\DescribeInstanceLogsRequest $req) This API is used to query the eligible ES cluster logs in the current region.
  * @method Models\DescribeInstanceOperationsResponse DescribeInstanceOperations(Models\DescribeInstanceOperationsRequest $req) This API is used to query the operation history of an instance by specified criteria.
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query all eligible instances in the current region under the current account.
+ * @method Models\GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(Models\GetRequestTargetNodeTypesRequest $req) This API is used to get the node types used to receive client requests.
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) This API is used to restart an ES cluster instance (for operations such as system update). 
  * @method Models\RestartKibanaResponse RestartKibana(Models\RestartKibanaRequest $req) This API is used to restart Kibana. 
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) This API is used to restart cluster nodes.
@@ -40,6 +41,7 @@ use TencentCloud\Es\V20180416\Models as Models;
 - CosBackUp: sets auto-backup to COS for a cluster
 Only one of the parameters or parameter combinations above can be passed in at a time, while passing fewer or more ones will cause the request to fail.
  * @method Models\UpdatePluginsResponse UpdatePlugins(Models\UpdatePluginsRequest $req) This API is used to change the list of plugins.
+ * @method Models\UpdateRequestTargetNodeTypesResponse UpdateRequestTargetNodeTypes(Models\UpdateRequestTargetNodeTypesRequest $req) This API is used to update the node types used to receive client requests.
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to upgrade ES cluster version
  * @method Models\UpgradeLicenseResponse UpgradeLicense(Models\UpgradeLicenseRequest $req) This API is used to upgrade ES X-Pack.
  */

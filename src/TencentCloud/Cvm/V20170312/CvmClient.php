@@ -100,7 +100,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeReservedInstancesResponse DescribeReservedInstances(Models\DescribeReservedInstancesRequest $req) This API is used to list reserved instances the user has purchased.
  * @method Models\DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfos(Models\DescribeReservedInstancesConfigInfosRequest $req) This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
  * @method Models\DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(Models\DescribeReservedInstancesOfferingsRequest $req) This API is used to describe Reserved Instance offerings that are available for purchase.
- * @method Models\DescribeSpotTypeConfigResponse DescribeSpotTypeConfig(Models\DescribeSpotTypeConfigRequest $req) This API is used to query spot instances that are available for purchase.
  * @method Models\DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(Models\DescribeZoneInstanceConfigInfosRequest $req) This API is used to query the configurations of models in an availability zone.
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) This API is used to query availability zones.
  * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) This API is used to unbind one or more key pairs from one or more instances.

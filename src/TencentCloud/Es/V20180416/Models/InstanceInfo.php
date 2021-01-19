@@ -160,6 +160,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSceneType(integer $SceneType) Set Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getKibanaConfig() Obtain Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setKibanaConfig(string $KibanaConfig) Set Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -446,6 +450,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SceneType;
 
     /**
+     * @var string Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $KibanaConfig;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -516,6 +526,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $KibanaConfig Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -760,6 +772,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
             $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("KibanaConfig",$param) and $param["KibanaConfig"] !== null) {
+            $this->KibanaConfig = $param["KibanaConfig"];
         }
     }
 }

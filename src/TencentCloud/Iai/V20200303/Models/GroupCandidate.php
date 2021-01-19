@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() Obtain Group ID.
  * @method void setGroupId(string $GroupId) Set Group ID.
- * @method array getCandidates() Obtain Most matching candidates recognized.
- * @method void setCandidates(array $Candidates) Set Most matching candidates recognized.
+ * @method array getCandidates() Obtain Most matching candidate recognized
+ * @method void setCandidates(array $Candidates) Set Most matching candidate recognized
  */
 class GroupCandidate extends AbstractModel
 {
@@ -33,13 +33,13 @@ class GroupCandidate extends AbstractModel
     public $GroupId;
 
     /**
-     * @var array Most matching candidates recognized.
+     * @var array Most matching candidate recognized
      */
     public $Candidates;
 
     /**
      * @param string $GroupId Group ID.
-     * @param array $Candidates Most matching candidates recognized.
+     * @param array $Candidates Most matching candidate recognized
      */
     function __construct()
     {

@@ -28,15 +28,15 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
 Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
 Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
- * @method string getImageUrl() Obtain URL address of image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+ * @method string getImageUrl() Obtain URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 3 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
- * @method void setImageUrl(string $ImageUrl) Set URL address of image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+ * @method void setImageUrl(string $ImageUrl) Set URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 3 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
  */
 class TableOCRRequest extends AbstractModel
@@ -50,10 +50,10 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
     public $ImageBase64;
 
     /**
-     * @var string URL address of image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+     * @var string URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 3 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public $ImageUrl;
@@ -63,10 +63,10 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
 Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-     * @param string $ImageUrl URL address of image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+     * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 3 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     function __construct()

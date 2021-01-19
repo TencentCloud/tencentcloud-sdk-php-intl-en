@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DetectLiveFaceAccurate response structure.
+ * GetStatisticsReport response structure.
  *
- * @method float getScore() Obtain Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
- * @method void setScore(float $Score) Set Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
- * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition.
- * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition.
+ * @method array getDailyVolumes() Obtain Daily email sending statistics.
+ * @method void setDailyVolumes(array $DailyVolumes) Set Daily email sending statistics.
+ * @method Volume getOverallVolume() Obtain Overall email sending statistics.
+ * @method void setOverallVolume(Volume $OverallVolume) Set Overall email sending statistics.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DetectLiveFaceAccurateResponse extends AbstractModel
+class GetStatisticsReportResponse extends AbstractModel
 {
     /**
-     * @var float Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
+     * @var array Daily email sending statistics.
      */
-    public $Score;
+    public $DailyVolumes;
 
     /**
-     * @var string Algorithm model version used for face recognition.
+     * @var Volume Overall email sending statistics.
      */
-    public $FaceModelVersion;
+    public $OverallVolume;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class DetectLiveFaceAccurateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Score Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
-     * @param string $FaceModelVersion Algorithm model version used for face recognition.
+     * @param array $DailyVolumes Daily email sending statistics.
+     * @param Volume $OverallVolume Overall email sending statistics.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,12 +62,18 @@ class DetectLiveFaceAccurateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists("DailyVolumes",$param) and $param["DailyVolumes"] !== null) {
+            $this->DailyVolumes = [];
+            foreach ($param["DailyVolumes"] as $key => $value){
+                $obj = new Volume();
+                $obj->deserialize($value);
+                array_push($this->DailyVolumes, $obj);
+            }
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists("OverallVolume",$param) and $param["OverallVolume"] !== null) {
+            $this->OverallVolume = new Volume();
+            $this->OverallVolume->deserialize($param["OverallVolume"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

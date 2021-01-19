@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TableOCR response structure.
  *
- * @method array getTextDetections() Obtain Recognized text. For more information, please click the link on the left.
- * @method void setTextDetections(array $TextDetections) Set Recognized text. For more information, please click the link on the left.
+ * @method array getTextDetections() Obtain Recognized text. For more information, please click the link on the left
+ * @method void setTextDetections(array $TextDetections) Set Recognized text. For more information, please click the link on the left
  * @method string getData() Obtain Base64-encoded Excel data.
  * @method void setData(string $Data) Set Base64-encoded Excel data.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class TableOCRResponse extends AbstractModel
 {
     /**
-     * @var array Recognized text. For more information, please click the link on the left.
+     * @var array Recognized text. For more information, please click the link on the left
      */
     public $TextDetections;
 
@@ -45,7 +45,7 @@ class TableOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TextDetections Recognized text. For more information, please click the link on the left.
+     * @param array $TextDetections Recognized text. For more information, please click the link on the left
      * @param string $Data Base64-encoded Excel data.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

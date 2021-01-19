@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 The returned similarity score varies by algorithm version. 
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person. 
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person. 
-If you need to verify whether the faces in the two images are the same person, you are recommended to use the `VerifyFace` API.
+If you need to verify whether the faces in the two images are the same person, we recommend using the `VerifyFace` API.
  * @method void setScore(float $Score) Set Face similarity score between two images.
 The returned similarity score varies by algorithm version. 
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person. 
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person. 
-If you need to verify whether the faces in the two images are the same person, you are recommended to use the `VerifyFace` API.
+If you need to verify whether the faces in the two images are the same person, we recommend using the `VerifyFace` API.
  * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition.
  * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +42,7 @@ class CompareFaceResponse extends AbstractModel
 The returned similarity score varies by algorithm version. 
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person. 
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person. 
-If you need to verify whether the faces in the two images are the same person, you are recommended to use the `VerifyFace` API.
+If you need to verify whether the faces in the two images are the same person, we recommend using the `VerifyFace` API.
      */
     public $Score;
 
@@ -61,7 +61,7 @@ If you need to verify whether the faces in the two images are the same person, y
 The returned similarity score varies by algorithm version. 
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person. 
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person. 
-If you need to verify whether the faces in the two images are the same person, you are recommended to use the `VerifyFace` API.
+If you need to verify whether the faces in the two images are the same person, we recommend using the `VerifyFace` API.
      * @param string $FaceModelVersion Algorithm model version used for face recognition.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

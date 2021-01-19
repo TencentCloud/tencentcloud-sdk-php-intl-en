@@ -68,6 +68,8 @@ Default value: Non-zero.
  * @method void setCustomerAddress(string $CustomerAddress) Set CustomerAddress: User-side IP address.
  * @method string getTencentBackupAddress() Obtain TencentBackupAddress, i.e., Tencent-side standby IP address
  * @method void setTencentBackupAddress(string $TencentBackupAddress) Set TencentBackupAddress, i.e., Tencent-side standby IP address
+ * @method string getCloudAttachId() Obtain Cloud Attached Connection Service ID
+ * @method void setCloudAttachId(string $CloudAttachId) Set Cloud Attached Connection Service ID
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -156,6 +158,11 @@ Default value: Non-zero.
     public $TencentBackupAddress;
 
     /**
+     * @var string Cloud Attached Connection Service ID
+     */
+    public $CloudAttachId;
+
+    /**
      * @param string $DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      * @param string $DirectConnectTunnelName Dedicated tunnel name.
      * @param string $DirectConnectOwnerAccount Connection owner, who is the current customer by default.
@@ -180,6 +187,7 @@ Default value: Non-zero.
      * @param string $TencentAddress TencentAddress: Tencent-side IP address.
      * @param string $CustomerAddress CustomerAddress: User-side IP address.
      * @param string $TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
+     * @param string $CloudAttachId Cloud Attached Connection Service ID
      */
     function __construct()
     {
@@ -258,6 +266,10 @@ Default value: Non-zero.
 
         if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
             $this->TencentBackupAddress = $param["TencentBackupAddress"];
+        }
+
+        if (array_key_exists("CloudAttachId",$param) and $param["CloudAttachId"] !== null) {
+            $this->CloudAttachId = $param["CloudAttachId"];
         }
     }
 }

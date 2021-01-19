@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Position of detected face frame
  *
- * @method integer getX() Obtain Horizontal coordinate of the top-left corner of face frame. 
+ * @method integer getX() Obtain Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
- * @method void setX(integer $X) Set Horizontal coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+ * @method void setX(integer $X) Set Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
- * @method integer getY() Obtain Vertical coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+ * @method integer getY() Obtain Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
- * @method void setY(integer $Y) Set Vertical coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+ * @method void setY(integer $Y) Set Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
  * @method integer getWidth() Obtain Face width
  * @method void setWidth(integer $Width) Set Face width
  * @method integer getHeight() Obtain Face height
@@ -40,16 +40,16 @@ If you want to capture a complete face, you can set the negative coordinates to 
 class FaceRect extends AbstractModel
 {
     /**
-     * @var integer Horizontal coordinate of the top-left corner of face frame. 
+     * @var integer Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
      */
     public $X;
 
     /**
-     * @var integer Vertical coordinate of the top-left corner of face frame. 
+     * @var integer Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
      */
     public $Y;
 
@@ -64,12 +64,12 @@ If you want to capture a complete face, you can set the negative coordinates to 
     public $Height;
 
     /**
-     * @param integer $X Horizontal coordinate of the top-left corner of face frame. 
+     * @param integer $X Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-     * @param integer $Y Vertical coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * @param integer $Y Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
      * @param integer $Width Face width
      * @param integer $Height Face height
      */

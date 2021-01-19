@@ -20,45 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Face information list.
  *
- * @method integer getX() Obtain Horizontal coordinate of the top-left corner of face frame.
+ * @method integer getX() Obtain Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
- * @method void setX(integer $X) Set Horizontal coordinate of the top-left corner of face frame.
+ * @method void setX(integer $X) Set Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
- * @method integer getY() Obtain Vertical coordinate of the top-left corner of face frame. 
+ * @method integer getY() Obtain Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
- * @method void setY(integer $Y) Set Vertical coordinate of the top-left corner of face frame. 
+ * @method void setY(integer $Y) Set Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
- * @method integer getWidth() Obtain Face frame width. 
- * @method void setWidth(integer $Width) Set Face frame width. 
+ * @method integer getWidth() Obtain Face frame width.
+ * @method void setWidth(integer $Width) Set Face frame width.
  * @method integer getHeight() Obtain Face frame height.
  * @method void setHeight(integer $Height) Set Face frame height.
- * @method FaceAttributesInfo getFaceAttributesInfo() Obtain Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
- * @method void setFaceAttributesInfo(FaceAttributesInfo $FaceAttributesInfo) Set Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
- * @method FaceQualityInfo getFaceQualityInfo() Obtain Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
- * @method void setFaceQualityInfo(FaceQualityInfo $FaceQualityInfo) Set Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
+ * @method FaceAttributesInfo getFaceAttributesInfo() Obtain Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
+ * @method void setFaceAttributesInfo(FaceAttributesInfo $FaceAttributesInfo) Set Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
+ * @method FaceQualityInfo getFaceQualityInfo() Obtain Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setFaceQualityInfo(FaceQualityInfo $FaceQualityInfo) Set Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class FaceInfo extends AbstractModel
 {
     /**
-     * @var integer Horizontal coordinate of the top-left corner of face frame.
+     * @var integer Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
     public $X;
 
     /**
-     * @var integer Vertical coordinate of the top-left corner of face frame. 
+     * @var integer Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
     public $Y;
 
     /**
-     * @var integer Face frame width. 
+     * @var integer Face frame width.
      */
     public $Width;
 
@@ -68,26 +72,30 @@ If you want to capture a complete face, you can set the negative coordinates to 
     public $Height;
 
     /**
-     * @var FaceAttributesInfo Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
+     * @var FaceAttributesInfo Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
      */
     public $FaceAttributesInfo;
 
     /**
-     * @var FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
+     * @var FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FaceQualityInfo;
 
     /**
-     * @param integer $X Horizontal coordinate of the top-left corner of face frame.
+     * @param integer $X Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-     * @param integer $Y Vertical coordinate of the top-left corner of face frame. 
+     * @param integer $Y Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-     * @param integer $Width Face frame width. 
+     * @param integer $Width Face frame width.
      * @param integer $Height Face frame height.
-     * @param FaceAttributesInfo $FaceAttributesInfo Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
-     * @param FaceQualityInfo $FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
+     * @param FaceAttributesInfo $FaceAttributesInfo Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
+     * @param FaceQualityInfo $FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageDescription(string $ImageDescription) Set Image description
  * @method string getForcePoweroff() Obtain Whether to force shut down an instance to create an image when a soft shutdown fails
  * @method void setForcePoweroff(string $ForcePoweroff) Set Whether to force shut down an instance to create an image when a soft shutdown fails
- * @method string getSysprep() Obtain Whether to enable Sysprep when creating a Windows image
- * @method void setSysprep(string $Sysprep) Set Whether to enable Sysprep when creating a Windows image
+ * @method string getSysprep() Obtain Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
+ * @method void setSysprep(string $Sysprep) Set Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
  * @method array getDataDiskIds() Obtain Specified data disk ID included in the full image created from the instance.
  * @method void setDataDiskIds(array $DataDiskIds) Set Specified data disk ID included in the full image created from the instance.
  * @method array getSnapshotIds() Obtain Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
@@ -60,7 +60,7 @@ class CreateImageRequest extends AbstractModel
     public $ForcePoweroff;
 
     /**
-     * @var string Whether to enable Sysprep when creating a Windows image
+     * @var string Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
      */
     public $Sysprep;
 
@@ -84,7 +84,7 @@ class CreateImageRequest extends AbstractModel
      * @param string $InstanceId Instance ID used to create an image.
      * @param string $ImageDescription Image description
      * @param string $ForcePoweroff Whether to force shut down an instance to create an image when a soft shutdown fails
-     * @param string $Sysprep Whether to enable Sysprep when creating a Windows image
+     * @param string $Sysprep Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
      * @param array $DataDiskIds Specified data disk ID included in the full image created from the instance.
      * @param array $SnapshotIds Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
      * @param boolean $DryRun Success status of this request, without affecting the resources involved

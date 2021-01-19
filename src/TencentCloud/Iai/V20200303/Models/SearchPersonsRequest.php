@@ -20,87 +20,87 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchPersons request structure.
  *
- * @method array getGroupIds() Obtain List of groups to be searched for (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
- * @method void setGroupIds(array $GroupIds) Set List of groups to be searched for (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+ * @method array getGroupIds() Obtain List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+ * @method void setGroupIds(array $GroupIds) Set List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
  * @method string getImage() Obtain Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method void setImage(string $Image) Set Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method string getUrl() Obtain Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method void setUrl(string $Url) Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
  * @method integer getMaxFaceNum() Obtain Maximum number of recognizable faces. Default value: 1 (i.e., detecting only the face with the largest size in the image). Maximum value: 10.
 `MaxFaceNum` is used to control the number of faces to be searched for if there are multiple faces in the input image to be recognized.
 For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
  * @method void setMaxFaceNum(integer $MaxFaceNum) Set Maximum number of recognizable faces. Default value: 1 (i.e., detecting only the face with the largest size in the image). Maximum value: 10.
 `MaxFaceNum` is used to control the number of faces to be searched for if there are multiple faces in the input image to be recognized.
 For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
- * @method integer getMinFaceSize() Obtain Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. You are recommended to set this parameter to 80.
- * @method void setMinFaceSize(integer $MinFaceSize) Set Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. You are recommended to set this parameter to 80.
- * @method integer getMaxPersonNum() Obtain Number of the most similar persons returned for faces recognized in one single image. Default value: 5. Maximum value: 100.
+ * @method integer getMinFaceSize() Obtain Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. We recommend setting this parameter to 80.
+ * @method void setMinFaceSize(integer $MinFaceSize) Set Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. We recommend setting this parameter to 80.
+ * @method integer getMaxPersonNum() Obtain Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100.
 For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. You are recommended to set a value below 10.
- * @method void setMaxPersonNum(integer $MaxPersonNum) Set Number of the most similar persons returned for faces recognized in one single image. Default value: 5. Maximum value: 100.
+The greater the value, the longer the processing time. We recommend setting a value below 10.
+ * @method void setMaxPersonNum(integer $MaxPersonNum) Set Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100.
 For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. You are recommended to set a value below 10.
+The greater the value, the longer the processing time. We recommend setting a value below 10.
  * @method integer getQualityControl() Obtain Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
  * @method void setQualityControl(integer $QualityControl) Set Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
  * @method float getFaceMatchThreshold() Obtain In the output parameter `Score`, the result will be returned only if the result value is greater than or equal to the `FaceMatchThreshold` value. Default value: 0. Value range: [0.0,100.0).
  * @method void setFaceMatchThreshold(float $FaceMatchThreshold) Set In the output parameter `Score`, the result will be returned only if the result value is greater than or equal to the `FaceMatchThreshold` value. Default value: 0. Value range: [0.0,100.0).
- * @method integer getNeedPersonInfo() Obtain Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default
- * @method void setNeedPersonInfo(integer $NeedPersonInfo) Set Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default
+ * @method integer getNeedPersonInfo() Obtain Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
+ * @method void setNeedPersonInfo(integer $NeedPersonInfo) Set Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
  * @method integer getNeedRotateDetection() Obtain Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
  * @method void setNeedRotateDetection(integer $NeedRotateDetection) Set Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
  */
 class SearchPersonsRequest extends AbstractModel
 {
     /**
-     * @var array List of groups to be searched for (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+     * @var array List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
      */
     public $GroupIds;
 
     /**
      * @var string Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public $Image;
 
     /**
      * @var string Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public $Url;
 
@@ -112,14 +112,14 @@ For example, if the input image in `Image` or `Url` contains multiple faces and 
     public $MaxFaceNum;
 
     /**
-     * @var integer Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. You are recommended to set this parameter to 80.
+     * @var integer Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. We recommend setting this parameter to 80.
      */
     public $MinFaceSize;
 
     /**
-     * @var integer Number of the most similar persons returned for faces recognized in one single image. Default value: 5. Maximum value: 100.
+     * @var integer Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100.
 For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. You are recommended to set a value below 10.
+The greater the value, the longer the processing time. We recommend setting a value below 10.
      */
     public $MaxPersonNum;
 
@@ -127,9 +127,9 @@ The greater the value, the longer the processing time. You are recommended to se
      * @var integer Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      */
@@ -141,7 +141,7 @@ If the image quality does not meet the requirement, the returned result will pro
     public $FaceMatchThreshold;
 
     /**
-     * @var integer Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default
+     * @var integer Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
      */
     public $NeedPersonInfo;
 
@@ -151,34 +151,34 @@ If the image quality does not meet the requirement, the returned result will pro
     public $NeedRotateDetection;
 
     /**
-     * @param array $GroupIds List of groups to be searched for (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+     * @param array $GroupIds List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
      * @param string $Image Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      * @param string $Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      * @param integer $MaxFaceNum Maximum number of recognizable faces. Default value: 1 (i.e., detecting only the face with the largest size in the image). Maximum value: 10.
 `MaxFaceNum` is used to control the number of faces to be searched for if there are multiple faces in the input image to be recognized.
 For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
-     * @param integer $MinFaceSize Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. You are recommended to set this parameter to 80.
-     * @param integer $MaxPersonNum Number of the most similar persons returned for faces recognized in one single image. Default value: 5. Maximum value: 100.
+     * @param integer $MinFaceSize Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. We recommend setting this parameter to 80.
+     * @param integer $MaxPersonNum Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100.
 For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. You are recommended to set a value below 10.
+The greater the value, the longer the processing time. We recommend setting a value below 10.
      * @param integer $QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      * @param float $FaceMatchThreshold In the output parameter `Score`, the result will be returned only if the result value is greater than or equal to the `FaceMatchThreshold` value. Default value: 0. Value range: [0.0,100.0).
-     * @param integer $NeedPersonInfo Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default
+     * @param integer $NeedPersonInfo Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
      * @param integer $NeedRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
      */
     function __construct()

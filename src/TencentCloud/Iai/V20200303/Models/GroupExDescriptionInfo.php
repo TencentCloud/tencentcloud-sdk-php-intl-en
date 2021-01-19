@@ -18,11 +18,11 @@ namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom description field of the group to be modified, which is a `key-value`
+ * Custom description field of the group to be modified, which is a `key-value` pair.
  *
- * @method integer getGroupExDescriptionIndex() Obtain Custom group description field index, whose value starts from 0
+ * @method integer getGroupExDescriptionIndex() Obtain Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setGroupExDescriptionIndex(integer $GroupExDescriptionIndex) Set Custom group description field index, whose value starts from 0
+ * @method void setGroupExDescriptionIndex(integer $GroupExDescriptionIndex) Set Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getGroupExDescription() Obtain Content of the custom group description field to be updated
  * @method void setGroupExDescription(string $GroupExDescription) Set Content of the custom group description field to be updated
@@ -30,7 +30,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class GroupExDescriptionInfo extends AbstractModel
 {
     /**
-     * @var integer Custom group description field index, whose value starts from 0
+     * @var integer Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $GroupExDescriptionIndex;
@@ -41,7 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $GroupExDescription;
 
     /**
-     * @param integer $GroupExDescriptionIndex Custom group description field index, whose value starts from 0
+     * @param integer $GroupExDescriptionIndex Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $GroupExDescription Content of the custom group description field to be updated
      */
